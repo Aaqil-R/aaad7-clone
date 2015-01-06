@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -116,13 +115,13 @@
  * For a single database configuration, the following is sufficient:
  * @code
  * $databases['default']['default'] = array(
- *   'driver' => 'mysql',
- *   'database' => 'databasename',
- *   'username' => 'username',
- *   'password' => 'password',
- *   'host' => 'localhost',
- *   'prefix' => 'main_',
- *   'collation' => 'utf8_general_ci',
+ * 'driver' => 'mysql',
+ * 'database' => 'databasename',
+ * 'username' => 'username',
+ * 'password' => 'password',
+ * 'host' => 'localhost',
+ * 'prefix' => 'main_',
+ * 'collation' => 'utf8_general_ci',
  * );
  * @endcode
  *
@@ -213,7 +212,34 @@
  * @endcode
  */
 $databases = array();
-
+$databases= array (
+  'default' => 
+  array (
+    'default' => 
+    array (
+      'database' => 'ambitiousaboutautism_dev',
+      'username' => 'root',
+      'password' => 'root',
+      'host' => 'localhost',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
+//$databases['aaa'] = array();
+/*  $databases['aaa']=array(
+	'default'=>array(
+		'driver' => 'mysql',
+		'database' => 'ambitiousaboutautism_dev',
+		'username' => 'root',
+		'password' => 'root',
+		'host' => 'localhost',
+		'port'=>'',
+		'prefix' => '',
+		),
+	);  */
+	
 /**
  * Access control for update.php script.
  *
