@@ -1,12 +1,14 @@
 	<div id="wrapper">
 		<a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
 		<!-- Top-Bar // Header Top -->
+		<?php if(render($page['header_top'])): ?>
 		<div class="top-bar">
 			<div class="holder">
 				<?php print render($page['header_top']); ?>
 			</div>
 		</div>
-		<!-- header of the page -->
+		<?php endif ?>
+		<!-- Header of the page -->
 		<header id="header">
 			<!-- top header of the page -->
 			<div class="header-top">
