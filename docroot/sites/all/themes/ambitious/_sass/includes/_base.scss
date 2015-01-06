@@ -1,0 +1,142 @@
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3";
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support";
+
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix";
+
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites";
+
+// Helps set up a vertical rhythm.
+@import "compass/typography/vertical_rhythm";
+
+// Add the Zen Grids responsive layout mixins.
+@import "susy";
+
+//import breakpoint
+@import "breakpoint";
+
+// Now we add our custom helper mixins.
+@import "mixins";
+
+//Gotham bold Fonts
+@import "fonts";
+
+@include border-box-sizing;
+
+// ---------------------------------------------------------------------------
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12, 
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box 
+);
+
+//Breakpoint settings
+$breakpoint-default-feature: min-width;
+
+// The font size style on the root html element.
+$default-font-style : 'Gotham XNarrow SSm A', 'Gotham XNarrow SSm B',"Open Sans",sans-serif;
+
+// Special font style for the menu slogan
+$slogan-font-style : 'gothambold1';
+
+// The font size set on the root html element.
+$base-font-size: 1em; 
+
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+//Breakpoints
+$mobile-landscape: 420px;
+$tablet: 750px;
+$desktop: 1020px;
+$desktop-wide: 2160px;
+// ---------------------------------------------------------------------------
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+$desktop-menu-font: 2em;
+$mobile-menu-font: 0.7em;
+$mobile-submenu-font: 1.7em;
+
+// ---------------------------------------------------------------------------
+//Basic colors
+$default-font-color: #343434;
+
+$robin-green: #37B049;
+$robin-dark-green : #204E25;
+$robin-light-green : #E0EED9; 
+// $robin-light-green : #7acd58;
+$robin-button-green : #48984B;
+$background-green: #37B049;
+
+$gray : #67706a;
+$border-gray : #67706a;
+$background-gray : #67706a;
+$faq-background: #67706a;
+$white: #FFFFFF;
+$black: #000000;
+
+$link-green: #204E25;
+$link-hover: #37B049;
+$border-gray: #dbdbdb;
+$background-gray: #f7f7f7;
+$dashed-gray: #CCC;
+$link-underline: #C8E2C9;
+$home-content-bottom: #F5F5F5;
+$home-content-bottom-border: #50a953;
+$faq-background: #E0EED9;
+
+$menu-background-black: #2B2B2B;
+$menu-gray-font: #959595;
+
+$selected-term-bg: #E4E4E4;
+
+$progress-bg: #50a953;
+$mobile-menu-bg: #3F8827;
+// ---------------------------------------------------------------------------
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+// The height of the navigation container.
+$nav-height: 3em;
+
+// Tab styling.
+$tabs-container-bg: #fff;
+$tabs-border: #bbb;
+
+//Common background green
+$common-green: #3fb21c; 
+
+
+//Sidebar colors
+$sidebar-title-bg : #37B049;
+$sidebar-li-bg: #E0EED9;
+$sidebar-selected-border: #37B049;
+
+$mobile-menu-icon-bar: #009900;
+
+//Home page color variables
+$button-border: #38863A;
+$botton-hover-border: #D7D7D7;
+
+//Single page font sizes
+$single-header: 28px;
+$single-body: 16px;
+$signel-line-space: 23px;
