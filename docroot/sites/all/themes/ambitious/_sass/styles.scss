@@ -1,0 +1,1231 @@
+	// ---------------------------------------------------------------------------
+// Imports
+@import "includes/base";
+
+/* Component (SMACSS module) rules */
+@import "includes/misc";
+$mobile-menu-bg : '';
+$slogan-font-style  : '';
+// ---------------------------------------------------------------------------
+
+.container {
+  @include container($susy);
+  width: 1170px;
+}
+
+.header {
+  @include container($susy);
+  .container {
+    padding: 30px 0px 0px 0px;
+    @include breakpoint($desktop) {
+      padding: 30px 0px 30px 0px;
+    }
+  }
+  .logo {
+    @include span(12);
+    text-align: center;
+    padding: 0 15px 30px 15px;
+    img {
+      max-width: 85%;
+    }
+    @include breakpoint($desktop) {
+      @include span(5);
+      text-align: left;
+      padding: 0px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .button {
+    background: none repeat scroll 0% 0% transparent !important;
+    border-color: transparent;
+    border-radius: 0px;
+    margin-left: 7px;
+    float: right;
+    cursor: pointer;
+    .icon-bar {
+      display: block;
+      width: 22px;
+      height: 3px;
+      border-radius: 1px;
+      background-color: $mobile-menu-icon-bar;
+      margin-top: 0.188em;
+    }
+    @include breakpoint($desktop) {
+      display: none;
+    }
+  }
+  .nav {
+    @include span(12);
+    display: none;
+    margin-top: 10px;
+    ul {
+      li {
+        padding: 10px;        
+        list-style: none;
+        background-color: $robin-green;
+        border-bottom: 1px solid $white;
+        a {
+          color: $white;
+          text-decoration: none;
+          font-size: 1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      display: block;
+      @include span(7 last);
+      margin-top: 0px;
+      ul {
+        /*float: right;
+        width: 80%;*/
+        li {
+          background: none;
+          border-bottom: none;
+          padding: gutter();        
+          list-style: none;
+          float: left;
+          /*margin-left: 25px;*/
+          margin-right: 10px;
+          a {
+            color: $robin-dark-green;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            &:hover {
+              color: $link-hover;
+            }
+          }
+        }
+      }
+    }
+    
+    h2 {
+      display: none;
+    }
+
+  }
+}
+
+.arrow {
+  @include span(12);
+  margin-top: 40px;
+  a {
+    display: block;
+    background: url(../images/btn-arrow-light.png) center center no-repeat;    
+    padding: 32px;
+    height: 0px;
+  }
+}
+
+.highlighted {
+  @include container($susy); 
+  background: url('../images/mobile1.jpg');
+  min-height: 600px;
+  background-size: cover;
+  @include breakpoint($desktop) {
+    background: url('../images/1.jpg');
+  }
+  .container {
+    padding: 30px 15px 30px 15px;
+  }
+  .block {
+    text-align: center;
+    padding-top: 160px;
+    .block-title {
+      display: none;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: 800;
+      color: $white;
+      text-transform: uppercase;
+      @include breakpoint($desktop) {
+        font-size: 4.28em;
+        text-shadow: 0px 0px 10px black;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.petition_counter {
+  .container {
+    padding: 20px 15px 20px 15px;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+      display: none;
+      @include breakpoint($desktop) {
+        display: block;
+        float: left;
+        margin-left: 95px;
+        color: #B1B1B1;
+      }
+    }
+    .count-hold {
+      display: block;
+      color: $robin-green;
+      #count {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.news_image {
+  @include span(12);
+  @include breakpoint($desktop) {
+    @include span(6);
+  }
+}
+
+.news_details {
+  @include span(12);
+  margin-bottom: 35px;
+  border-bottom: 1px dashed $dashed-gray;
+  padding-bottom: 20px;
+  @include breakpoint($tablet) {
+    @include span(6 last);
+    margin-bottom: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+  .news_title {
+    padding-bottom: gutter();
+    padding-top: gutter();
+    min-height: 45px;
+    @include breakpoint($desktop) {
+      padding-top: 0px;
+    }
+    a {
+      color: $robin-dark-green;
+      font-size: 1.8em;
+      font-weight: 700;
+      line-height: 1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  .news_date {
+    color: $link-green;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding-bottom: gutter();
+    .author, .category {
+      color: $menu-gray-font;
+      a {
+        color: $menu-gray-font;          
+      }
+    }
+  }
+  p {
+    color: $default-font-color;
+    font-size: 1.3em;
+    font-weight: lighter;
+    line-height: 1.6em;
+  }
+  hr {
+    display: none;
+    @include breakpoint($desktop) {
+      display: block;
+    }
+  }
+}
+
+.home-content,  .section-take-action .page_content{
+  @include container($susy); 
+  color: $default-font-color;
+  .container {
+    padding: 40px 15px 40px 15px;
+  }
+  .block-title {
+    display: none;
+  }
+  
+  #block-block-5, #block-block-41 {
+    @include span(12);
+    @include breakpoint($desktop) {
+      @include span(6);
+      padding-top: 20px;
+      border-right: 1px solid rgba(225, 225, 225, 0.8);
+    }
+    h1 {
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 3.50em;
+      text-align: center;
+      @include breakpoint($desktop) {
+        font-size: 4.28em;
+        text-align: left;
+      }
+    }
+    p {
+      color: $gray;
+      font-size: 1.5em;
+      line-height: 1.3em;
+      text-align: center;
+      @include breakpoint($desktop) {
+        text-align: left;
+      }
+    }
+  }
+  
+  .view {
+    @include span(12);
+    .news_details {
+      text-align: center;
+    }
+    .news_image {
+      text-align: center;
+    }
+    @include breakpoint($desktop) {
+      @include span(6 last);    
+      padding-top: 50px;
+      padding-left:30px;
+      .news_image {
+        @include span(5);
+      }
+      .news_details {
+        @include span(7 last);
+        text-align: left;
+        padding-top: 35px;
+      }
+      .owl-pagination {
+        margin-top: 80px;
+        .owl-page {
+          span {
+            background-color: $sidebar-title-bg !important;
+          }
+        }
+      }
+    }
+  }
+  .more-link {
+    @include span(12);
+    text-align: center;
+    a {
+      color: $link-green;
+      text-transform: uppercase;
+      border-bottom: 1px solid $link-underline;
+      font-weight: bold;
+      &:hover {
+        border-bottom: none;
+        color: $link-hover;
+      }
+    }
+  }
+}
+
+
+#block-webform-client-block-61, #block-webform-client-block-16 {
+    @include span(12);
+    clear:both;
+    padding: 60px 0px 40px 0px;
+    text-align: center;
+    .block-title {  display: none;  }
+    h2 { display: none; }
+    p {
+      color: $gray;
+      font-size: 1.5em;
+      line-height: 1.3em;
+    }
+    form {
+      @include span(10 center);
+      @include breakpoint($desktop) {
+        @include span(8 center);
+        margin: auto;
+        float: none;
+      }
+      margin: auto;
+      float: none;
+      .form-item {
+        @include span(12);
+        margin-bottom: 10px;
+        @include breakpoint($desktop) {
+          @include span(8);
+        }
+      }
+      .form-actions {
+        @include span(12);
+        padding-top: gutter();
+        @include breakpoint($desktop) {
+          @include span(4 last);
+          padding-top: 0px;
+        }
+      }
+    }
+    input[type=email],  input[type=text], select {
+      width: 100%;
+      background-color: $white;     
+      border: 1px solid $home-content-bottom-border;
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+      color: $gray;
+      display: block;
+      font-size: 14px; 
+      line-height: 1.42857;
+      padding: 6px 12px;
+      padding:20px 30px;
+    }
+    select {
+      padding: 8px 26px;     
+      height: 58px;       
+    }
+    input[type=submit] {
+      width: 100%;
+      background-image: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.42857;
+      padding: 6px 12px;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: $common-green;
+      border: medium none;
+      color: $white;
+      font-size: 1.1em;
+      padding: 18px 10px;
+      text-transform: uppercase;
+    }  
+}
+
+.home-content-bottom {
+  @include container($susy); 
+  .container {
+    padding: 60px 15px 60px 15px;
+    border-top: 4px solid $home-content-bottom-border; 
+  }
+  min-height: 600px;
+  .block-title {
+    display: none;
+  }
+  .news_details {
+    .news_title {
+      a {
+        color: $default-font-color;
+        font-size: 1.2em;
+      }
+    }
+    .news_date {
+      .author, .category {
+        color: $menu-gray-font;
+        a {
+          color: $menu-gray-font;          
+        }
+      }
+    }
+    p {
+      color: $default-font-color; 
+      font-size: 1em; 
+    }
+    hr {
+      display: none;
+    }
+  }
+  .view-footer {
+    @include span(12 break);
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    a {
+      color: $link-green;
+      border-bottom: 1px solid $link-underline;
+      &:hover {
+        color: $link-hover;
+        border-bottom: none;
+      }
+    }
+  }
+  @include breakpoint ($desktop) {
+    .views-row {
+      @include span(4);
+      margin-top: gutter();
+      .news_image {
+        @include span(12);
+        margin-bottom: gutter();
+      }
+      .news_details {
+        @include span(12);
+        .news_title {
+          margin-bottom: 5px;
+        }
+        .news_date {
+          margin-bottom: 10px;
+          font-size: 1em;
+        }
+        p { 
+          display: none;
+        }
+      }
+    }
+    .views-row-3 {
+      @include omega;
+    }
+    #block-views-blog-view-home-page-main-blog {
+      .block-title {
+        display: block;
+        color: $default-font-color;
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .views-row {
+        @include span(12);
+        .news_image {
+          @include span(8);
+          margin-bottom: 0px;
+          img {
+            width: 100%;
+          }
+        }
+        .news_details {
+          @include span(4 last);
+          .news_title {
+            a {
+              font-size: 1.8em;
+            }
+          }
+          p { 
+            display: block;
+            font-size: 1.2em;
+            min-height: 238px;
+          }
+        }
+        .views-field-view-node {
+          display: block !important;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  @include container($susy);
+  background-image: url("../images/Footer-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  min-height: 150px;
+  .container {
+    padding: 30px 15px 30px 15px;
+  }
+  .block-title {
+    display: none;
+  }
+  .block-menu {
+    @include span(12);
+    @include breakpoint($desktop) {
+      @include span(9);
+    }
+    ul {
+      li {
+        list-style: none;
+        margin-right: 40px;
+        clear: both;
+        padding-top: gutter();
+        @include breakpoint($desktop) {
+          clear: none;
+          float: left;
+        }
+        a {
+          color: $white;
+          font-size: 1em;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: 1px solid $white;
+          &:hover {
+            color: $robin-green;
+            border-bottom: none;
+          }
+          @include breakpoint($desktop) {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+    .btn {
+      display: block;
+      background-color: $common-green;
+      border-bottom: medium none;
+      border-radius: 4px;
+      font-weight: normal;
+      padding: 15px;
+      width: 120px;
+      margin-top: 10px;
+      &:hover {
+        background-color: $robin-button-green !important;
+        color: $white !important;
+      }
+      @include breakpoint($desktop) {
+        display: inline;
+      }
+    }
+  }
+  #block-menu-menu-footer {
+    @include breakpoint($desktop) {
+      @include span(4);
+      width: 35.203%;
+    }
+  }
+  #block-menu-menu-take-action {
+    @include breakpoint($desktop) {
+      @include span(5);
+      width: 33.678%;
+      ul {
+        text-align: center;
+        li {
+          display: inline-block;
+          float: none !important;
+        }
+      }
+    }
+  }
+  #block-search-form {
+    @include span(12);
+    padding-top: gutter(5);
+    @include breakpoint($desktop) {
+      @include span(3 last);
+      padding-top: 0px;
+    }
+    .form-actions {
+      display: none;
+    }
+    .form-item input[type=text] {
+      width: auto;
+      background-color: $white;     
+      border: 1px solid $dashed-gray;
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+      color: $gray;
+      display: block;
+      font-size: 14px;
+      height: 34px;
+      line-height: 1.42857;
+      padding: 25px 10px 25px 20px;
+      box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+      @include breakpoint($desktop) {
+        width: 100%;
+      }
+    }
+  }
+  
+  #block-menu-menu-footer-sub-menu {
+    clear: both;
+    a {
+      font-size: 1em;
+      font-weight: normal;
+      text-transform: none;
+      border-bottom: none;
+    }
+  }
+  
+  #block-menu-menu-social-links {
+    @include span(12);
+    @include breakpoint($desktop) {
+      @include span(3 last);
+    }
+    margin-top: 30px;
+    ul{
+      @include breakpoint($desktop) {
+        float: right;
+      }
+      li{
+        float: left;
+        clear: none;
+        margin-right: 0px;
+        a {
+          color: transparent;
+          border-bottom: none;
+          padding: 25px;
+          font-size: 0;
+          background-repeat: no-repeat;
+          background-size: 90%;
+          @include breakpoint($desktop) {
+            padding: 30px;
+          }
+        }
+      }
+      .icon-fb {
+        background-image: url('../images/social_icons/facebook.png');
+        &:hover {
+          background-image: url('../images/social_icons/facebook.svg');
+        }
+      }
+      .icon-twitter {
+        background-image: url('../images/social_icons/twitter.png');
+        &:hover {
+          background-image: url('../images/social_icons/twitter.svg');
+        }
+      }
+      .icon-flickr {
+        background-image: url('../images/social_icons/flickr.png');
+        &:hover {
+          background-image: url('../images/social_icons/flickr.svg');
+        }
+      }
+      .icon-youtube {
+        background-image: url('../images/social_icons/youtube.png');
+        &:hover {
+          background-image: url('../images/social_icons/youtube.svg');
+        }
+      }
+    }
+  }
+} 
+
+.scroll-to-top {  
+	background: url(../images/btn-arr-down.png) no-repeat;   
+	position: fixed;
+	cursor: pointer;
+	bottom: 24px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	display: none;
+	z-index: 999;
+}
+
+//Page styles
+.page_highlighted, .page_bottom, .page_content, .page_help {
+  @include container($susy); 
+}
+
+.page_highlighted {
+  background-image: url('../images/page-header-1.jpg');
+  background-color: $common-green;
+  background-position : center center;
+  background-size : cover;
+  background-repeat: no-repeat;
+  .container {
+    padding: 60px 15px 60px 15px;
+  }
+  h1.title {
+    color: $white;
+    font-size: 2.3em;
+    text-transform: uppercase;
+  }
+}
+//End
+
+//Why we need items
+.why-item {
+  @include span(12);
+  padding-top : 35px;
+  padding-bottom : 30px;
+  border-bottom: 1px dashed $dashed-gray;
+  text-align: center;
+  img {
+    min-width: 98%;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 1.3em;
+    background-color: $common-green;
+    position: relative;
+    margin-bottom: 30px;
+    background-image: url("../images/sidebar/dart_icon.png");
+    background-position: 320px center;
+    background-repeat: no-repeat;
+    background-size: 10% auto;
+    &:before {
+      @include triangle(
+        $direction : bottom,
+        $position  : top 100% left 1em,
+        $color     : $common-green
+      ); 
+    }
+    a {
+      display: block;
+      padding: 15px;
+      color: $white;
+      text-shadow: 0 0 2px black;
+      text-transform: uppercase;
+      font-size: inherit !important; 
+      border: 2px solid $common-green;
+      &:hover {
+        color: $common-green;
+        text-decoration: underline;
+        text-shadow: none;
+      }
+    }
+    &:hover {
+      background-color: none;
+    }
+  }
+  p {
+    color: $default-font-color;
+    front-size: 1.1em;
+    line-height: 1.6em;
+    margin-bottom: 10px;
+  }
+  a {
+    color: $link-green;
+    font-size: 1.1em;
+    &:hover {
+      border-color: transparent;
+      color: $link-hover;
+    }
+  }
+  .read_more {
+    a {
+      position: relative;
+      &:before {
+        position: absolute;
+        border-color: transparent transparent transparent $link-green;
+        border-style: solid;
+        border-width: 5px 7px;
+        content: " ";
+        left: 110px;
+        top: 7px;
+      }
+      &:after {
+        position: absolute;
+        border-color: transparent transparent transparent $link-green;
+        border-style: solid;
+        border-width: 5px 7px;
+        content: " ";
+        left: 103px;
+        top: 7px;
+      }
+    }
+  }
+  @include breakpoint($desktop) {
+    text-align: left;
+    @include span(4);
+    border-bottom: none;
+  }
+}
+//end
+
+.page-node-36, .section-how-it-works,
+.section-what-it-could-do, .page-node-3236
+ {
+  
+  .page_content {
+    color: $default-font-color;
+    .container {
+      padding: 40px 15px 0px 15px;
+    }
+    h2 {
+      font-size: 1.8em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: center;
+      margin: 10px 0px 0px 0px;
+    }
+  }
+  .page_bottom {
+    .container {
+      padding: 30px 15px 80px 15px;
+    }
+    @include breakpoint($desktop) {
+      .why-item {
+        p {
+          min-height: 52px;
+        }
+      }
+    }    
+  }
+  
+  .views-row-3  {
+    .why-item {
+      @include breakpoint($desktop) {
+        @include span(4 last);
+      }
+    }
+  }
+  
+  .block-title {
+    display: none;
+  }
+}
+
+.section-take-action {
+  .page_content {
+    .container {
+      padding: 60px 15px 60px 15px;
+    }
+    .block-title {
+      display: none;
+    }
+    .button {
+      a {
+        padding: 15px;
+        background-color: $robin-button-green;
+        color: $white;
+        font-size: 1.1em;
+        display: block;
+        text-align: center;
+        width: 200px;
+        border-radius: 5px;
+        margin: auto;
+        @include breakpoint($desktop) {
+          margin-top: 15px;
+          float: left;
+        }
+      }
+    }
+  }
+  .page_bottom {
+    .container {
+      padding: 60px 15px 60px 15px;
+      border-top: 2px solid $border-gray;
+      .why-item {
+        h3 {
+          text-transform: uppercase;
+        }
+        .find-out {
+          text-align: center;
+          a {
+            text-align: center;
+            display: inline-block;
+            background-color:  $common-green;
+            color: $white;
+            border-bottom: medium none;
+            border-radius: 4px;
+            font-weight: normal;
+            padding: 15px;
+            text-transform: uppercase;
+            width: 200px;
+            &:hover {
+              background-color: $robin-button-green;
+            }
+          }
+        }
+        .teaser {
+          color: $default-font-color;
+          line-height: 1.6em;
+          margin-bottom: 10px;
+        }
+        @include breakpoint($desktop) {
+          padding-top: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          .teaser{
+            min-height: 160px;
+          }
+        }
+      }
+      .views-row-2 {
+        .why-item {
+          @include breakpoint($desktop) {
+            padding-bottom: 20px;
+            form {
+              margin-top: 70px;
+            }
+          }
+          .find-out {
+            display: none;
+          }
+          input[type=text] {
+            width: 100%;
+            background-color: $white;     
+            border: 1px solid $sidebar-selected-border;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+            color: $gray;
+            display: block;
+            font-size: 14px;
+            line-height: 1.42857;
+            padding: 15px;
+          }
+          .form-actions {
+            text-align: center;
+            input[type=submit] {
+              width: 200px;
+              margin-top: 23px;
+              background-image: none;
+              @include border-radius(4px);
+              cursor: pointer;
+              display: inline-block;
+              font-weight: 400;
+              text-align: center;
+              white-space: nowrap;
+              background-color: $common-green;
+              border: medium none;
+              color: $white;
+              font-size: 1.1em;
+              padding: 15px;
+              text-transform: uppercase;
+              &:hover {
+                background-color: $robin-button-green;
+              }
+            }  
+          }
+        }
+      }
+      .views-row-3 {
+        .why-item {
+          @include breakpoint($desktop) {
+            @include span(4 last);
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-supporters, .section-the-coalition, 
+.section-faq, .section-policy-library,
+.section-countries, .section-media, 
+.section-terms-and-conditions, .section-privacy-policy,
+.section-accessibility, .section-resources, 
+.section-bringrobinhome, .section-contact,
+.node-type-around-the-world, .page-node-4376,
+.section-search, .node-type-press-release
+ {
+  .page_content {
+    color: $default-font-color;
+    line-height: 1.6em;
+    .container {
+      padding: 40px 15px 40px 15px;
+    }
+    h2 {
+      font-size: 1.8em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.1em;
+      margin: 10px 0px 0px 0px;
+    }
+    article {
+      margin-bottom: 40px;
+    } 
+  }
+}
+
+.page_with_sidebar {
+  article {
+    @include span(12);
+    @include breakpoint($desktop) {
+      @include span(8);
+    } 
+  }
+  .sidebars {
+    .block {
+      &:nth-child(1) {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+.header_menu{  
+  @include span(12);  
+  @include breakpoint($desktop) {     
+    @include span(10);  
+    .menu {
+      float: right;
+      width: 100%;
+      padding-left: 45px;
+	  color: $link-green;
+	  
+	  &:hover {
+		color: $link-hover;
+	  }
+    }
+  }
+}
+
+.highlighted {
+  height:600px;
+  overflow:hidden;
+  position: relative; 
+  @include breakpoint($desktop) {
+     background:$common-green; 
+  }
+  video {    
+    display:none;    
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-size: cover; 
+    background: url('../images/1.jpg');
+    @include breakpoint($desktop) {
+      display:block;     
+    }
+  }
+  .video_text{
+    position:absolute;
+    width:100%;
+    Z-index:99;
+    top:0;
+  }
+}
+.scroll-to-top{  
+  &.top{
+    background: url('../images/btn-arr-up.png');  
+  }
+}     
+.container #block-webform-client-block-61{    
+  form{  
+    .form-item {  
+      float:none;
+      margin:0 auto;
+      margin-bottom:20px; 
+      clear:both;
+    }
+	
+    .form-actions {
+      float:none;
+      margin:0 auto;  
+      & input[formnovalidate="formnovalidate"] {
+        display:none;      
+      }
+      input[type=submit] {
+        border:1px solid $button-border;
+        &:hover{  
+          background: $home-content-bottom;
+          color:$common-green;  
+          border:1px solid $botton-hover-border;
+        }
+      }
+    }
+  }
+  .messages{    
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align:left;
+    word-wrap: break-word;
+  }
+  .webform-component-radios{
+    label{
+      float:left;
+    }
+    .form-radios{	  
+      width:60%;
+      float: left;
+      margin-left:30px;  
+      .form-item{
+        float:left;
+        width:40%;
+        clear:none;
+        text-align: left;  
+        input{   
+          float: left;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
+#block-views-list-list-block-supporters .view-display-id-list_block_supporters, #block-views-list-list-block-coalition{
+  .views-row{ border:none}
+  .boxgrid{
+    position: relative;
+    overflow:hidden;
+    padding-bottom:55px;
+    img{
+       width:100%;
+    } 
+	p{
+      padding: 0 10px;
+      margin:0;
+      display:block;
+      @include breakpoint ($desktop) {
+        display:block;
+      }
+	}
+	.cover{
+	  h3{
+	    padding:5px 10px;
+	  }
+	} 
+  }
+  .boxcaption{ 
+    top: 152px; 
+    left: 0;
+	  float: left; 
+    position: absolute; 
+    background:$common-green;
+    color:$white;
+    height: 100%; 
+    width: 100%;
+    @include opacity(0.95);
+    a{
+      color:$white;
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+    p {
+      font-size: 1.1em;
+    }
+  }
+  .views-row{ 
+    min-height: inherit;
+  }
+}   
+
+
+
+
+.top-arrow {
+  height: 18px;				
+  margin-top: -18px;
+  text-indent: -100px;
+  width: 35px;
+  margin-left: 10px;
+  &:before{
+    content: "";
+    height: 0;
+    left: 1em;
+    position: absolute;
+    top: -24px;
+    width: 0;
+    z-index:2;																																																																																																																																																					;
+    border-bottom: 1.5em solid $home-content-bottom-border;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+  }
+}
+
+div#webform-component-share{
+  p{
+    a.bttn{
+      padding: 10px 23px;
+      width: 270px;
+      background: #00b5e7;
+      border-radius: 5px;
+      margin: 15px auto;
+      display: block;
+      color: #fff;
+      font-weight: bold;
+      &:hover{
+        text-decoration: underline;
+      }
+      &.fbook{
+        background:#395693;
+      }
+    }
+  }
+}
+
+
+
