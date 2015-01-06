@@ -84,12 +84,10 @@
 		</header>
 		<!-- visual of the page -->
 		<section class="visual">
+			
 			<div class="img-holder">
 				<div class="caption-frame">
-					<ul class="page-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Understanding autism</a></li>
-					</ul>
+					<?php print $breadcrumb; ?>
 					<div class="caption">
 						<span class="title">Sleeping.</span><br>
 						<span class="text">Make it through the night.</span>
@@ -114,12 +112,11 @@
 				</div>
 				<span class="icon-Rightarrow"></span>
 			</a>
+			<?php print render($page['highlighted']); ?>	
 		</section>
 		<!-- contain main informative part of the site -->
 		<main id="main" role="main">
-			<div id="content" class="column" role="main">
-		      <?php print render($page['highlighted']); ?>
-		      <?php print $breadcrumb; ?>
+			<div id="content" class="column" role="main">		      	      
 		      <a id="main-content"></a>
 		      <?php print render($title_prefix); ?>
 		      <?php if ($title): ?>
@@ -135,267 +132,17 @@
 		      <?php print render($page['content']); ?>
 		      <?php print $feed_icons; ?>
 		    </div>
-			<!-- sort block -->
-			<div class="sort-block">
-				<!-- sort form -->
-				<form action="#" class="sort-by">
-					<fieldset>
-						<legend class="hidden">sort</legend>
-						<label for="select">sort</label>
-						<select id="select">
-							<option>Show most popular</option>
-							<option>Show most popular</option>
-							<option>Show most popular</option>
-							<option>Show most popular</option>
-						</select>
-						<input type="submit" value="sort">
-					</fieldset>
-				</form>
-				<a href="#" class="btn"><span>Share <span class="icon-Share"></span></span></a>
-			</div>
-			<!-- post columns -->
-			<div class="posts-columns">
-				<!-- post column -->
-				<div class="col">
-					<!-- post block -->
-					<section class="text-block">
-						<h1>Struggling to get a good night’s sleep?</h1>
-						<p>Bedtime can be tough on a child with autism - and their parents. Here you'll find articles and tips from parents and professionals to help you find the right solution for your child.</p>
-						<div class="btn-holder">
-							<a href="#" class="btn01">Filter by</a>
-							<a href="#" class="btn"><span>Share <span class="icon-Share"></span></span></a>
-						</div>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<a href="#" class="feature-holder">
-								<span class="icon-Featured"></span>
-								<span class="text">Featured</span>
-							</a>
-							<img src="/sites/all/themes/ambitious/images/img02.jpg" alt="image description">
-						</div>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<img src="/sites/all/themes/ambitious/images/img03.jpg" alt="image description">
-						</div>
-						<div class="info">
-							<h2>#everydayautism</h2>
-							<p>“Lava lamps help my daughter settle.”</p>
-							<span class="cite"><strong>- <a href="#">Sue71</a></strong>  (via Flickr)</span>
-						</div>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<img src="/sites/all/themes/ambitious/images/img04.jpg" alt="image description">
-						</div>
-						<div class="info">
-							<h3><a href="#">Nicky: Life with two daughters with autism</a></h3>
-						</div>
-					</section>
-				</div>
-				<!-- post column -->
-				<div class="col">
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<a href="#" class="feature-holder">
-								<span class="icon-Featured"></span>
-								<span class="text">Featured</span>
-							</a>
-							<img src="/sites/all/themes/ambitious/images/img05.jpg" alt="image description">
-						</div>
-						<div class="info add">
-							<h3><a href="#">Article title here</a></h3>
-							<p>Lorem ipsum dolor sit amet, sit est consectetur adipiscing elit. Sed finibus tincidunt eros, ac laoreet leo rhoncus.</p>
-						</div>
-						<div class="footer">
-							<div class="num-holder">
-								<a href="#">
-									<span class="num">21</span>
-									<span class="text">people are talking about this </span>
-								</a>
-							</div>
-						</div>
-					</section>
-					<!-- post block -->
-					<section class="blockquote-block">
-						<blockquote>
-							<q>For specific sleep issue advice you may want to contact the children's sleep charity.</q>
-							<cite><strong>- <a href="#">Victoria</a></strong>  (Information Officer)</cite>
-						</blockquote>
-						<span class="icon-Speech1"></span>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<img src="/sites/all/themes/ambitious/images/img06.jpg" alt="image description">
-						</div>
-						<div class="info add">
-							<h3><a href="#">Getting the right gear</a></h3>
-							<p>Lorem ipsum dolor sit amet, sit est consectetur adipiscing elit. Sed finibus tincidunt eros, ac laoreet leo rhoncus.</p>
-						</div>
-						<div class="footer">
-							<div class="num-holder">
-								<a href="#">
-									<span class="num">8</span>
-									<span class="text">people are talking about this </span>
-								</a>
-							</div>
-						</div>
-					</section>
-				</div>
-				<!-- post column -->
-				<div class="col">
-					<!-- post block -->
-					<section class="blockquote-block red">
-						<blockquote>
-							<q>Once he's asleep he's fine but he has always described as his brain ‘not stopping’.</q>
-							<cite><strong><a href="#">@JosieB</a></strong> (Community Champion)</cite>
-						</blockquote>
-						<span class="icon-Twitter"></span>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<img src="/sites/all/themes/ambitious/images/img07.jpg" alt="image description">
-						</div>
-						<div class="info">
-							<h2>#everydayautism</h2>
-							<p>“My son Marco has a sleep disorder.”</p>
-							<span class="cite"><strong>- <a href="#">Colin</a></strong>  (via Twitter)</span>
-						</div>
-					</section>
-					<!-- post block -->
-					<section class="post">
-						<div class="img-holder">
-							<img src="/sites/all/themes/ambitious/images/img08.jpg" alt="image description">
-						</div>
-						<div class="info">
-							<h2>#everydayautism</h2>
-							<p>“Daniel can take anything from 20mins to 2hrs to get to sleep.”</p>
-							<span class="cite"><strong>- <a href="#">Danfay12</a></strong>  (via the Community)</span>
-						</div>
-					</section>
-				</div>
-			</div>
-			<span class="more-btn">
-				<a href="#"><span class="icon-Downarrow"></span><em>search</em></a>
-			</span>
 		</main>
-		<!-- action columns -->
+		<!-- Content bottom -->
 		<section class="action-block">
-			<div class="holder">
-				<!-- action symptoms -->
-				<div class="block-symptoms">
-					<strong class="text">
-						<span>Does my child</span><br><span class="add">have autism?</span>
-					</strong>
-					<a href="#" class="btn add">See symptoms <span class="icon-Rightarrow"></span></a>
-				</div>
-				<!-- action inspire -->
-				<div class="block-inspire">
-					<strong class="title">Tell us<br>your real<br>life stories</strong>
-					<a href="#" class="btn">Inspire others<span class="icon-Rightarrow"></span></a>
-				</div>
-			</div>
+			<?php print render($page['content_bottom']); ?>
 		</section>
 		<!-- fourm block -->
 		<section class="forum-block">
-			<div class="holder">
-				<!-- fourm block heading -->
-				<h1>Latest from<br>the community</h1>
-				<div class="block">
-					<!-- fourm block detail -->
-					<ul class="table-from">
-						<!-- fourm block list block -->
-						<li class="hottopic">
-							<ul class="table-row">
-								<li class="col01">
-									<span class="icon-Hottopic"></span>
-									<a href="#">Gluten free diets</a>
-								</li>
-								<li class="col02">
-									<span class="text">Replies:</span>
-									<span class="num">42</span>
-								</li>
-								<li class="col03">
-									<dl>
-										<dt>Created by:</dt>
-										<dd><a href="#">uttleya</a></dd>
-										<dt>Last post:</dt>
-										<dd><time datetime="2013-03-10T22:06:17" class="date">Fri 21 Nov 2014 14:57</time></dd>
-									</dl>
-								</li>
-							</ul>
-						</li>
-						<!-- fourm block list block -->
-						<li>
-							<ul class="table-row">
-								<li class="col01"><a href="#">Sleeping problems</a></li>
-								<li class="col02">
-									<span class="text">Replies:</span>
-									<span class="num">7</span>
-								</li>
-								<li class="col03">
-									<dl>
-										<dt>Created by:</dt>
-										<dd><a href="#">danfay12</a></dd>
-										<dt>Last post:</dt>
-										<dd><time datetime="2013-03-10T22:06:17" class="date">Thu 20 Nov 2014 18:53</time></dd>
-									</dl>
-								</li>
-							</ul>
-						</li>
-						<!-- fourm block list block -->
-						<li class="feature">
-							<ul class="table-row">
-								<li class="col01">
-									<span class="icon-Featured"></span>
-									<a href="#">Medicating my son</a>
-								</li>
-								<li class="col02">
-									<span class="text">Replies:</span>
-									<span class="num">8</span>
-								</li>
-								<li class="col03">
-									<dl>
-										<dt>Created by:</dt>
-										<dd><a href="#">katie 34</a></dd>
-										<dt>Last post:</dt>
-										<dd><time datetime="2013-03-10T22:06:17" class="date">Mon 17 Nov 2014 13:22</time></dd>
-									</dl>
-								</li>
-							</ul>
-						</li>
-						<!-- fourm block list block -->
-						<li>
-							<ul class="table-row">
-								<li class="col01"><a href="#">Anesthetic and recovery</a></li>
-								<li class="col02">
-									<span class="text">Replies:</span>
-									<span class="num">5</span>
-								</li>
-								<li class="col03">
-									<dl>
-										<dt>Created by:</dt>
-										<dd><a href="#">Lizzie P</a></dd>
-										<dt>Last post:</dt>
-										<dd><time datetime="2013-03-10T22:06:17" class="date">Fri 14 Nov 2014 20:03</time></dd>
-									</dl>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<a href="#" class="btn">Go to the community forum <span class="icon-Rightarrow"></span></a>
-				</div>
-			</div>
-			<div class="bg-stretch">
-				<img src="/sites/all/themes/ambitious/images/img09.jpg" alt="image description">
-			</div>
+		</section>
+		<!-- footer Top of the page -->
+		<section>
+			<?php print render($page['footer_top']); ?>
 		</section>
 		<!-- footer of the page -->
 		<footer id="footer">
@@ -453,6 +200,7 @@
 					</div>
 				</div>
 			</div>
+			<?php print render($page['footer']); ?>
 		</footer>
 		<a class="accessibility" href="#wrapper" accesskey="t">Back to top</a>
 	</div>
