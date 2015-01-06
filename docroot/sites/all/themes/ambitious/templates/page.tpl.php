@@ -1,22 +1,9 @@
 	<div id="wrapper">
 		<a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
-		<!-- top bar of the page -->
+		<!-- Top-Bar // Header Top -->
 		<div class="top-bar">
 			<div class="holder">
-				<ul class="links">
-					<li class="desktop"><a href="post-view.html">Understanding autism </a></li>
-					<li class="desktop"><a href="#">Talk to others</a></li>
-					<li class="get-up"><a href="#">Get updates</a></li>
-					<li><a href="#">Give back</a></li>
-					<li class="mob"><a href="#">Logout</a></li>
-				</ul>
-				<div class="login-info">
-					<a href="#" class="name">
-						<img src="./sites/all/themes/ambitious/images/img.jpg" alt="image description" width="27" height="27">
-						<span>Hello Sarah</span>
-					</a>
-					<a href="#" class="logout">Logout</a>
-				</div>
+				<?php print render($page['header_top']); ?>
 			</div>
 		</div>
 		<!-- header of the page -->
@@ -26,8 +13,11 @@
 				<div class="holder">
 					<!-- page logo -->
 					<div class="logo">
-						<a href="index.html" accesskey="1"><img src="./sites/all/themes/ambitious/images/logo.png" alt="Ambitious About Autism"></a>
+					    <?php if ($logo): ?>
+      						<a href="<?php print $front_page; ?>" title="<?php print t('Ambitious About Autism'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>" class="header__logo-image" /></a>
+					    <?php endif; ?>
 					</div>
+					<?php print render($page['header']); ?>
 					<ul class="right-info">
 						<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
 						<li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
@@ -105,7 +95,7 @@
 						<span class="text">Make it through the night.</span>
 					</div>
 				</div>
-				<img src="./sites/all/themes/ambitious/images/img01.jpg" alt="image description">
+				<img src="/sites/all/themes/ambitious/images/img01.jpg" alt="image description">
 			</div>
 			<div class="holder">
 				<span class="pic-by">&copy; Photo by <a href="#">Derek Hall</a>.</span>
@@ -127,6 +117,24 @@
 		</section>
 		<!-- contain main informative part of the site -->
 		<main id="main" role="main">
+			<div id="content" class="column" role="main">
+		      <?php print render($page['highlighted']); ?>
+		      <?php print $breadcrumb; ?>
+		      <a id="main-content"></a>
+		      <?php print render($title_prefix); ?>
+		      <?php if ($title): ?>
+		        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+		      <?php endif; ?>
+		      <?php print render($title_suffix); ?>
+		      <?php print $messages; ?>
+		      <?php print render($tabs); ?>
+		      <?php print render($page['help']); ?>
+		      <?php if ($action_links): ?>
+		        <ul class="action-links"><?php print render($action_links); ?></ul>
+		      <?php endif; ?>
+		      <?php print render($page['content']); ?>
+		      <?php print $feed_icons; ?>
+		    </div>
 			<!-- sort block -->
 			<div class="sort-block">
 				<!-- sort form -->
@@ -165,13 +173,13 @@
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a>
-							<img src="./sites/all/themes/ambitious/images/img02.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img02.jpg" alt="image description">
 						</div>
 					</section>
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="./sites/all/themes/ambitious/images/img03.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img03.jpg" alt="image description">
 						</div>
 						<div class="info">
 							<h2>#everydayautism</h2>
@@ -182,7 +190,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="./sites/all/themes/ambitious/images/img04.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img04.jpg" alt="image description">
 						</div>
 						<div class="info">
 							<h3><a href="#">Nicky: Life with two daughters with autism</a></h3>
@@ -198,7 +206,7 @@
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a>
-							<img src="./sites/all/themes/ambitious/images/img05.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img05.jpg" alt="image description">
 						</div>
 						<div class="info add">
 							<h3><a href="#">Article title here</a></h3>
@@ -224,7 +232,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="./sites/all/themes/ambitious/images/img06.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img06.jpg" alt="image description">
 						</div>
 						<div class="info add">
 							<h3><a href="#">Getting the right gear</a></h3>
@@ -253,7 +261,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="./sites/all/themes/ambitious/images/img07.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img07.jpg" alt="image description">
 						</div>
 						<div class="info">
 							<h2>#everydayautism</h2>
@@ -264,7 +272,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="./sites/all/themes/ambitious/images/img08.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img08.jpg" alt="image description">
 						</div>
 						<div class="info">
 							<h2>#everydayautism</h2>
@@ -386,7 +394,7 @@
 				</div>
 			</div>
 			<div class="bg-stretch">
-				<img src="./sites/all/themes/ambitious/images/img09.jpg" alt="image description">
+				<img src="/sites/all/themes/ambitious/images/img09.jpg" alt="image description">
 			</div>
 		</section>
 		<!-- footer of the page -->
@@ -396,7 +404,7 @@
 				<div class="company-info">
 					<!-- page footer logo -->
 					<div class="logo">
-						<a href="#"><img src="./sites/all/themes/ambitious/images/logo-footer.png" alt="Ambitious About Autism"></a>
+						<a href="#"><img src="/sites/all/themes/ambitious/images/logo-footer.png" alt="Ambitious About Autism"></a>
 					</div>
 					<div class="social-holder">
 						<span class="title">Follow us:</span>
