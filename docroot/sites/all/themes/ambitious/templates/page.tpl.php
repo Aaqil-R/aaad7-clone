@@ -1,208 +1,254 @@
-	<div id="wrapper">
-		<a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
-		<!-- Top-Bar // Header Top -->
-		<?php if(render($page['header_top'])): ?>
-		<div class="top-bar">
-			<div class="holder">
-				<?php print render($page['header_top']); ?>
-			</div>
-		</div>
-		<?php endif ?>
-		<!-- Header of the page -->
-		<header id="header">
-			<!-- top header of the page -->
-			<div class="header-top">
-				<div class="holder">
-					<!-- page logo -->
-					<div class="logo">
-					    <?php if ($logo): ?>
-      						<a href="<?php print $front_page; ?>" title="<?php print t('Ambitious About Autism'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>" class="header__logo-image" /></a>
-					    <?php endif; ?>
-					</div>
-					<?php print render($page['header']); ?>
-					<ul class="right-info">
-						<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
-						<li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
-						<li class="menu"><a href="#" class="menu-opener"><span class="icon-Close"></span> <span class="menu-text">Menu</span><span class="close">Close</span></a></li>
-					</ul>
-				</div>
-				<!-- search form -->
-				<div class="search-slide">
-					<form action="#" class="search-form">
-						<fieldset>
-							<legend class="hidden">search</legend>
-							<label for="search">search</label>
-							<input type="search" placeholder="Start typing to search the site" id="search">
-							<input type="submit" value="search">
-						</fieldset>
-					</form>
-				</div>
-			</div>
-			<!-- nav of the page -->
-			<div class="nav-holder">
-				<a href="#" class="btn"><span>Is my child on the spectrum?<span class="icon-Rightarrow"></span></span></a>
-				<nav id="nav">
-					<ul>
-						<li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-							<ul class="slide">
-								<li><a href="article.html">Talk to others</a></li>
-								<li><a href="#">Our blog</a></li>
-								<li><a href="#">MyVoice blog</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Courses</a></li>
-						<li class="has-drop"><a href="#" class="opener-sub">Take Action<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-							<ul class="slide">
-								<li><a href="#">Talk to others</a></li>
-								<li><a href="#">Our blog</a></li>
-								<li><a href="#">MyVoice blog</a></li>
-							</ul>
-						</li>
-						<li class="has-drop"><a href="#" class="opener-sub">Who We Are<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-							<ul class="slide">
-								<li><a href="#">Talk to others</a></li>
-								<li><a href="#">Our blog</a></li>
-								<li><a href="#">MyVoice blog</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- school nav of the page -->
-			<div class="school-slide">
-				<strong class="title">Schools &amp; College</strong>
-				<ul class="nav">
-					<li>
-						<a href="#">TreeHouse School</a>
-					</li>
-					<li>
-						<a href="#">The Rise School</a>
-					</li>
-					<li>
-						<a href="#">Ambitious College</a>
-					</li>
-				</ul>
-			</div>
-		</header>
-		<!-- visual of the page -->
-		<section class="visual">
-			
-			<div class="img-holder">
-				<div class="caption-frame">
-					<?php print $breadcrumb; ?>
-					<div class="caption">
-						<span class="title">Sleeping.</span><br>
-						<span class="text">Make it through the night.</span>
-					</div>
-				</div>
-				<img src="/sites/all/themes/ambitious/images/img01.jpg" alt="image description">
-			</div>
-			<div class="holder">
-				<span class="pic-by">&copy; Photo by <a href="#">Derek Hall</a>.</span>
-			</div>
-			<a href="#" class="btn-perv">
-				<span class="icon-Leftarrow"></span>
-				<div class="text-area">
-					<span class="title">Previous topic</span>
-					<span class="topic">Eating</span>
-				</div>
-			</a>
-			<a href="#" class="btn-next">
-				<div class="text-area">
-					<span class="title">Next topic:</span>
-					<span class="topic">Eating</span>
-				</div>
-				<span class="icon-Rightarrow"></span>
-			</a>
-			<?php print render($page['highlighted']); ?>	
-		</section>
-		<!-- contain main informative part of the site -->
-		<main id="main" role="main">
-			<div id="content" class="column" role="main">		      	      
-		      <a id="main-content"></a>
-		      <?php print render($title_prefix); ?>
-		      <?php if ($title): ?>
-		        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-		      <?php endif; ?>
-		      <?php print render($title_suffix); ?>
-		      <?php print $messages; ?>
-		      <?php print render($tabs); ?>
-		      <?php print render($page['help']); ?>
-		      <?php if ($action_links): ?>
-		        <ul class="action-links"><?php print render($action_links); ?></ul>
-		      <?php endif; ?>
-		      <?php print render($page['content']); ?>
-		      <?php print $feed_icons; ?>
-		    </div>
-		</main>
-		<!-- Content bottom -->
-		<section class="action-block">
-			<?php print render($page['content_bottom']); ?>
-		</section>
-		<!-- fourm block -->
-		<section class="forum-block">
-		</section>
-		<!-- footer Top of the page -->
-		<section>
-			<?php print render($page['footer_top']); ?>
-		</section>
-		<!-- footer of the page -->
-		<footer id="footer">
-			<div class="holder">
-				<!-- company info block -->
-				<div class="company-info">
-					<!-- page footer logo -->
-					<div class="logo">
-						<a href="#"><img src="/sites/all/themes/ambitious/images/logo-footer.png" alt="Ambitious About Autism"></a>
-					</div>
-					<div class="social-holder">
-						<span class="title">Follow us:</span>
-						<!-- social networks --> 
-						<ul class="social-networks">
-							<li><a href="#"><span class="icon-Facebook"></span><em>facebook</em></a></li>
-							<li><a href="#"><span class="icon-Twitter"></span><em>twitter</em></a></li>
-							<li><a href="#"><span class="icon-YouTube"></span><em>youtube</em></a></li>
-						</ul>
-					</div>
-					<p>Copyright <a href="#">Ambitious about Autism</a>. All rights reserved.<br>Ambitious about Autism is a registered charity in England and Wales: 1063184 and a registered company: 3375255.</p>
-					<span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
-				</div>
-				<div class="right-footer">
-					<!-- contact info block -->
-					<div class="contact-info">
-						<h2>Get in touch</h2>
-						<nav class="nav">
-							<ul>
-								<li><a href="#">Contact us</a></li>
-								<li><a href="#">Work with us</a></li>
-								<li><a href="#">For the press</a></li>
-							</ul>
-						</nav>
-					</div>
-					<!-- school info block -->
-					<div class="school-info">
-						<h2>Schools &amp; College</h2>
-						<nav class="nav">
-							<ul>
-								<li><a href="#">TreeHouse School</a></li>
-								<li><a href="#">The Rise School</a></li>
-								<li><a href="#">Ambitious College</a></li>
-							</ul>
-						</nav>
-					</div>
-					<!-- web info block -->
-					<div class="web-info">
-						<h2>Website info</h2>
-						<nav class="nav">
-							<ul>
-								<li><a href="#">Data protection</a></li>
-								<li><a href="#">Terms &amp; conditions</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-			<?php print render($page['footer']); ?>
-		</footer>
-		<a class="accessibility" href="#wrapper" accesskey="t">Back to top</a>
-	</div>
+<?php
+/**
+ * @file
+ * Bartik's theme implementation to display a single Drupal page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.tpl.php template normally located in the
+ * modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - $base_path: The base URL path of the Drupal installation. At the very
+ *   least, this will always default to /.
+ * - $directory: The directory the template is located in, e.g. modules/system
+ *   or themes/bartik.
+ * - $is_front: TRUE if the current page is the front page.
+ * - $logged_in: TRUE if the user is registered and signed in.
+ * - $is_admin: TRUE if the user has permission to access administration pages.
+ *
+ * Site identity:
+ * - $front_page: The URL of the front page. Use this instead of $base_path,
+ *   when linking to the front page. This includes the language domain or
+ *   prefix.
+ * - $logo: The path to the logo image, as defined in theme configuration.
+ * - $site_name: The name of the site, empty when display has been disabled
+ *   in theme settings.
+ * - $site_slogan: The slogan of the site, empty when display has been disabled
+ *   in theme settings.
+ * - $hide_site_name: TRUE if the site name has been toggled off on the theme
+ *   settings page. If hidden, the "element-invisible" class is added to make
+ *   the site name visually hidden, but still accessible.
+ * - $hide_site_slogan: TRUE if the site slogan has been toggled off on the
+ *   theme settings page. If hidden, the "element-invisible" class is added to
+ *   make the site slogan visually hidden, but still accessible.
+ *
+ * Navigation:
+ * - $main_menu (array): An array containing the Main menu links for the
+ *   site, if they have been configured.
+ * - $secondary_menu (array): An array containing the Secondary menu links for
+ *   the site, if they have been configured.
+ * - $breadcrumb: The breadcrumb trail for the current page.
+ *
+ * Page content (in order of occurrence in the default page.tpl.php):
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title: The page title, for use in the actual HTML content.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ * - $messages: HTML for status and error messages. Should be displayed
+ *   prominently.
+ * - $tabs (array): Tabs linking to any sub-pages beneath the current page
+ *   (e.g., the view and edit tabs when displaying a node).
+ * - $action_links (array): Actions local to the page, such as 'Add menu' on the
+ *   menu administration interface.
+ * - $feed_icons: A string of all feed icons for the current page.
+ * - $node: The node object, if there is an automatically-loaded node
+ *   associated with the page, and the node ID is the second argument
+ *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - regions[header] = Header
+ * - regions[highlighted] = Highlighted
+ * - regions[content] = Content
+ * - regions[content_bottom] = Content bottom
+ * - regions[footer] = Footer
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_page()
+ * @see template_process()
+ * @see bartik_process_page()
+ * @see html.tpl.php
+ */
+ //echo $stand_first;
+ //hide($page['content']['field_stand_first']);
+
+/**
+ * @file
+ * Returns the HTML for a single Drupal page.
+ *
+ * Complete documentation for this file is available online.
+ * @see https://drupal.org/node/1728148
+ */
+?>
+
+<div id="wrapper" class="page">
+  <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
+  
+  <?php if ($page['header']): ?>
+    <section id="header">
+      <?php print render($page['header']); ?>
+    </section> <!-- /header -->
+  <?php endif; ?>
+
+<!-- ########### header -->
+
+    <!-- header of the page -->
+    <header id="header">
+      <!-- top header of the page -->
+      <div class="header-top">
+        <div class="holder">
+          
+          <?php if ($logo): ?>
+            <div class="logo">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
+            </div><!-- /logo -->
+          <?php endif; ?>
+          
+          <ul class="right-info">
+            <li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
+            <li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
+            <li class="menu"><a href="#" class="menu-opener"><span class="icon-Close"></span> <span class="menu-text">Menu</span><span class="close">Close</span></a></li>
+          </ul>
+        </div>
+        <!-- search form -->
+        <div class="search-slide">
+          <form action="#" class="search-form">
+            <fieldset>
+              <legend class="hidden">search</legend>
+              <label for="search">search</label>
+              <input type="search" placeholder="Start typing to search the site" id="search">
+              <input type="submit" value="search">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- nav of the page -->
+      <div class="nav-holder">
+        <a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>
+        <nav id="nav">
+          <ul>
+            <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
+              <ul class="slide">
+                <li><a href="article.html">Talk to others</a></li>
+                <li><a href="#">Our blog</a></li>
+                <li><a href="#">MyVoice blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Courses</a></li>
+            <li class="has-drop"><a href="#" class="opener-sub">Take Action<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
+              <ul class="slide">
+                <li><a href="#">Talk to others</a></li>
+                <li><a href="#">Our blog</a></li>
+                <li><a href="#">MyVoice blog</a></li>
+              </ul>
+            </li>
+            <li class="has-drop"><a href="#" class="opener-sub">Who We Are<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
+              <ul class="slide">
+                <li><a href="#">Talk to others</a></li>
+                <li><a href="#">Our blog</a></li>
+                <li><a href="#">MyVoice blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- school nav of the page -->
+      <div class="school-slide">
+        <strong class="title">Schools &amp; College</strong>
+        <ul class="nav">
+          <li>
+            <a href="#">TreeHouse School</a>
+          </li>
+          <li>
+            <a href="#">The Rise School</a>
+          </li>
+          <li>
+            <a href="#">Ambitious College</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+<!-- ########### / header -->
+
+  <?php if ($page['navigation']): ?>
+    <section id="navigation">
+      <?php print render($page['navigation']); ?>
+    </section> <!-- /navigation -->
+  <?php endif; ?>
+
+  <?php if ($page['highlighted']): ?>
+    <section id="highlighted">
+      <?php print render($page['highlighted']); ?>
+
+      <?php if ($breadcrumb): ?>
+        <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
+      <?php endif; ?>
+
+    </section> <!-- /highlighted -->
+  <?php endif; ?>
+
+  <main id="main">
+
+  <?php if ($page['content_top']): ?>
+    <section id="content_top">
+      <?php print render($page['content_top']); ?>
+    </section> <!-- /content-top -->
+  <?php endif; ?>
+
+    <?php if ($title|| $messages || $tabs || $action_links): ?>
+    <div id="content-header">
+
+      <?php if ($title): ?>
+        <h1 class="title"><?php print $title; ?></h1>
+      <?php endif; ?>
+
+
+      <?php print $messages; ?>
+      <?php print render($page['help']); ?>
+
+
+      <?php if ($tabs): ?>
+        <div class="tabs"><?php print render($tabs); ?></div>
+      <?php endif; ?>
+
+
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      
+    </div> <!-- /content-header -->
+    <?php endif; ?>
+
+
+    <section id="content-area">
+      <?php print render($page['content']) ?>
+    </section> <!-- /content -->
+
+  <?php if ($page['content_bottom']): ?>
+    <section id="content_bottom">
+      <?php print render($page['content_bottom']); ?>
+    </section> <!-- /content-bottom -->
+  <?php endif; ?>
+
+  </main> <!-- /main -->
+
+  <?php if ($page['social']): ?>
+    <section id="social">
+      <?php print render($page['social']); ?>
+    </section> <!-- /social -->
+  <?php endif; ?>
+
+  <?php if ($page['footer']): ?>
+    <section id="footer">
+      <?php print render($page['footer']); ?>
+    </section> <!-- /footer -->
+  <?php endif; ?>
+
+</div>
+
+<?php print render($page['bottom']); ?>

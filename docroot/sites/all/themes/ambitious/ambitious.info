@@ -13,7 +13,7 @@
 
 screenshot  = screenshot.png
 name        = Ambitious
-description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with robin.
+description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Ambitious.
 
 
 
@@ -51,8 +51,7 @@ stylesheets[all][] = system.theme.css
 
 ; Then we add our own stylesheet.
 
-stylesheets[all][] = css/all.css
-stylesheets[all][] = css/jcf.css
+stylesheets[all][] = css/ambitious.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -86,19 +85,17 @@ scripts[] = js/jquery.main.js
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-regions[header_top] = Header Top
-regions[header] = Header
-regions[highlighted] = Highlighted
-regions[help] = Help
-regions[content_top] = Content top
-regions[content] = Content
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content_top]    = Content top
+regions[content]        = Content
 regions[content_bottom] = Content bottom
-regions[footer_top] = Footer Top
-regions[footer] = Footer
-regions[sidebar_first] = Sidebar Left
-regions[sidebar_second] = Sidebar Right
-
-
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[social]     	= Social Block
+regions[footer]         = Footer
 
 
 ; The page_top and page_bottom regions are hidden, which means they will not
