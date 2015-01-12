@@ -7,8 +7,16 @@ function autism_custom_views_post_execute(&$view) {
 	 if ($nidarg > 0) {
     	 $node = node_load($nidarg);
          $data = new stdclass(); 
-         $data->nid = $node->nid;
-         $data->node_created = $node->created;
+         $items = $view->result[0];
+         foreach($items as $key => $item) {
+			 if ($key == 'nid') {
+                $data->nid = $node->nid;
+	         } elseif ($key == 'node_created') {
+                $data->node_created = $node->created;
+             } else {
+			   $data->{$key} = is_array($item) ? array() : '';	 
+			 }
+	     }
          array_unshift($view->result, $data);
     } 
  } 
