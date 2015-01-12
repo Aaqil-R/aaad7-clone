@@ -1,0 +1,16 @@
+<?php
+
+function autism_custom_views_post_execute(&$view) { 
+	 
+ if($view->name == "stream" && $view->current_display == 'block_1') {
+	 $nidarg = arg(1);
+	 if ($nidarg > 0) {
+    	 $node = node_load($nidarg);
+         $data = new stdclass(); 
+         $data->nid = $node->nid;
+         $data->node_created = $node->created;
+         array_unshift($view->result, $data);
+    } 
+ } 
+    
+}
