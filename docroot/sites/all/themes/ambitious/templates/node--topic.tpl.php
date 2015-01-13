@@ -40,10 +40,12 @@
       <?php if(isset($content['field_featured_image'])):?>
 	    <img src="<?php print file_create_url($content['field_featured_image']['#items'][0]['uri']); ?>" alt="<?php print $title; ?>">
 	  <?php endif; ?>
-    </div>
+    </div>	 
+    <?php if(isset($content['field_featured_image_by'])):?>
     <div class="holder">
-      <span class="pic-by">© Photo by <a href="#" title="Derek Hall">Derek Hall</a>.</span>
+      <span class="pic-by">© Photo by <a href="#" title="<?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>"><?php print render($content['field_featured_image_by']['#items'][0]['value']); ?></a>.</span>
     </div>
+     <?php endif; ?> 
     <a href="#" title="Previous topic" class="btn-perv">
       <span class="icon-Leftarrow"></span>
       <div class="text-area">

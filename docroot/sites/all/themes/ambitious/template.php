@@ -131,6 +131,14 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 }
 // */
 
+
+// Adding a Fonts
+//=====================================
+
+function ambitious_preprocess_html(&$variables) {
+  drupal_add_css('http://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
+}
+
 // Adding a custom breadcrumb code
 //=====================================
 
