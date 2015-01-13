@@ -93,6 +93,13 @@
     <section class="top-bar">
       <div class="holder">
         <?php print render($page['header']); ?>
+          <div class="login-info">
+          <a href="#" class="name">
+            <img src="sites/all/themes/ambitious/images/img.jpg" alt="image description" width="27" height="27">
+            <span>Hello Sarah</span>
+          </a>
+          <a href="user/logout" class="logout">Logout</a>
+        </div>
       </div>
     </section> <!-- /header -->
   <?php endif; ?>
@@ -283,5 +290,5 @@
     </footer> <!-- /footer -->
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
-
+<?php print render($user_picture); ?>
 <?php print render($page['bottom']); ?>
