@@ -177,6 +177,28 @@
     </header>
 <!-- ########### / header -->
 
+<section class="visual">
+      <div class="img-holder">
+        <div class="caption-frame">
+
+          <div class="caption">
+            <h1 class="title"><span>Are you ambitious</span>
+            <span class="title-third">about autism.</span></h1><h1>
+          </h1></div>
+          
+          
+        </div>
+        
+          
+        
+        <img alt="image description" src="sites/all/themes/ambitious/images/indexvisual.jpg">
+      </div>
+      <div class="holder">
+        <span class="pic-by">&copy; Photo by <a href="#">Derek Hall</a>.</span>
+      </div>
+      
+</section> <!-- /visual -->
+
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
@@ -240,7 +262,7 @@
   </main> <!-- /main -->
 
   <?php if ($page['social']): ?>
-    <section id="social">
+    <section id="social" class="visual">
       <?php print render($page['social']); ?>
     </section> <!-- /social -->
   <?php endif; ?>
