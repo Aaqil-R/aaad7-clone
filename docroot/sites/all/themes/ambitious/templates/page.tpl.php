@@ -252,6 +252,7 @@
             <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
           </div>
           <?php print render($page['footer_copyright']); ?>
+          <span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
         </div><!-- /footer copyright -->
         <div class="right-footer">
           <?php print render($page['footer_right']); ?>
