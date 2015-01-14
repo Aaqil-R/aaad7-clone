@@ -1,6 +1,7 @@
 // @imports
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
+@import "bourbon/bourbon";
 @import "source/jcf"; // From the source folder
 @import "source/all"; // From the source folder
 @import "source/content"; // From the source folder
@@ -13,17 +14,51 @@
 body{
 	margin-top: -20px;
 }
+.underline{
+	text-decoration: underline;
+}
+
 
 //=== Header Section ===//
 
 .region-header{
 	// Header Top Menu
-	#block-menu-menu-header-top-menu{
+	.header-top-menu{
 		ul.menu{
 			@extend .links;
 		}
 	}
+	// User menu
+	.header-user-menu{
+		ul{
+		margin:0;
+		li{
+			float: left;
+			list-style: none;
+			padding: 0 6px;
+			display: inline;
+			a{
+				margin:0;
+				color: $gray;
+				text-transform: capitalize;
+				vertical-align: middle;
+				&:hover{
+					text-decoration: underline;
+				}
+				img{
+					vertical-align: middle;
+					margin-right: 10px;
+					@include border-radius(5px);
+				}
+
+
+			}
+
+		}
+	}
 }
+}
+
 
 //=== Footer Section ===//
 

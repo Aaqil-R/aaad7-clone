@@ -85,6 +85,7 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
+<?php dpm($page); ?>
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
@@ -93,13 +94,6 @@
     <section class="top-bar">
       <div class="holder">
         <?php print render($page['header']); ?>
-        <div class="login-info">
-          <a href="#" class="name">
-            <img src="sites/all/themes/ambitious/images/img.jpg" alt="image description" width="27" height="27">
-            <span>Hello Sarah</span>
-          </a>
-          <a href="#" class="logout">Logout</a>
-        </div>
       </div>
     </section> <!-- /header -->
   <?php endif; ?>

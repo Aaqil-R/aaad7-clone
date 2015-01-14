@@ -194,3 +194,34 @@ function ambitious_breadcrumb($variables) {
 
   return $output;
 }
+
+// Adding Name in to the User-menu
+
+function ambitious_menu_link(array $variables) {
+  global $user;
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $title = '';
+  // Check if the user is logged in, that you are in the correct menu,
+  // and that you have the right menu item
+  if ($user->uid != 0 && $element['#theme'] == 'menu_link__user_menu' && $element['#title'] == t('My account')) {
+    $element['#title'] = 'Hello ';
+    $element['#title'] .= $user->name;
+    // Add 'html' = TRUE to the link options
+    $element['#localized_options']['html'] = TRUE;
+    // Load the user picture file information; Unnecessary if you use theme_user_picture()
+    $fid = $user->picture;
+    $file = file_load($fid);
+    // I found it necessary to use theme_image_style() instead of theme_user_picture()
+    // because I didn't want any extra html, just the image.
+    $title = theme('image_style', array('style_name' => 'user_menu_thumb', 'path' => $file->uri, 'alt' => $element['#title'], 'title' => $element['#title'])) . $element['#title'];
+  } else {
+    $title = $element['#title'];
+  }
+  $output = l($title, $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
