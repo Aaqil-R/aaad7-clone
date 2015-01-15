@@ -58,7 +58,7 @@ class topicmigration extends articalmigMigration {
 	  //mapping the columns
 		$this->addFieldMapping('title','fTitle')->callbacks(array($this,'manipulateString'));
 		$this->addFieldMapping('nid','fThreadId');
-				//->callbacks(array($this,'changenodeid'));							//for the thread ID adding 100 to crate unique ids
+		//->callbacks(array($this,'changenodeid'));							//for the thread ID adding 100 to crate unique ids
 		$this->addFieldMapping('is_new')->defaultValue(TRUE);
 		$this->addFieldMapping('uid','fMemberId')->callbacks(array($this,'changeuserid'));
 		$this->addFieldMapping('body','fText');

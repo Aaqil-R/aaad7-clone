@@ -45,7 +45,7 @@ class commentmigration extends articalmigMigration {
       );
   
 	  //mapping the columns
-		//$this->addFieldMapping('cid','fThreadId')->callbacks(array($this,'changenodeid'));			//not needed as comments can have new node numbers
+		//$this->addFieldMapping('cid','fThreadId');//->callbacks(array($this,'changenodeid'));			//not needed as comments can have new node numbers
 		$this->addFieldMapping('subject','fTitle')->callbacks(array($this,'manipulateString'));			//comment Subject
 		$this->addFieldMapping('comment_body','fText');													//comment 
 		$this->addFieldMapping('comment_body:format')->defaultValue('full_html');
@@ -80,7 +80,7 @@ class commentmigration extends articalmigMigration {
 	 
 	 protected function changenodeid($value){
 		
-			$value=$value+650;
+			$value=$value+150;
 			return $value;
 	 }
 	 
