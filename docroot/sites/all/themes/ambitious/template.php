@@ -225,3 +225,24 @@ function ambitious_menu_link(array $variables) {
   $output = l($title, $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+function ambitious_preprocess_page(&$variables)
+{
+	$main_menu = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source','main-menu'),NULL,2));
+	
+	$main_menu['#theme_wrappers'] = array('menu_tree__main_menu_primary');
+	
+	$variables['page']['main_menu']= $main_menu;
+}
+
+function ambitious_menu_tree__main_menu_primary($variables) 
+{	
+	//$variables['tree']=str_replace('</a>','<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>',$variables['tree']); 
+	//commented bacause of error "Code to include the image"
+	return '<ul>' .  $variables['tree'] .'</ul>';
+}
+
+function ambitious_menu_tree__main_menu($variables) 
+{
+	return  '<ul class="slide js-slide-hidden">' . $variables['tree'] . '</ul>';
+}

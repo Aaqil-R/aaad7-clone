@@ -133,6 +133,10 @@
       <div class="nav-holder">
         <a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>
         <nav id="nav">
+			<!--<?php
+			print render($page['main_menu']); 
+			?>
+			commented code activate it to get menu in nav bar-->
           <ul>
             <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
               <ul class="slide">
