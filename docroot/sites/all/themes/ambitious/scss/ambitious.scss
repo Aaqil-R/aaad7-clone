@@ -1,7 +1,7 @@
 // @imports
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
-@import "breakpoint";
+//@import "breakpoint";
 @import "bourbon/bourbon";
 @import "source/jcf"; // From the source folder
 @import "source/all"; // From the source folder
@@ -80,17 +80,17 @@ body{
 
 // Home page Stream block
 .posts-columns{
+
 	.post{
 
-		@include span(12 of 12);
-
-		@include breakpoint($tabe){
-			@include span(3 of 12);
-			&:nth-child(3n){
-				@include last;
-			}
+		@include span(4 of 13);
+		&:nth-child(3n){
+			@include last;
 		}
-
+		@include breakpoint(768px){
+			@include span(12 of 13);
+		}
+		
 	}
 
 }
