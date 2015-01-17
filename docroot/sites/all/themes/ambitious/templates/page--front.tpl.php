@@ -175,27 +175,23 @@
         </ul>
       </div>
     </header>
-<!-- ########### / header -->
+<!-- / header -->
 
 <section class="visual">
       <div class="img-holder">
-        <div class="caption-frame">
+        
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
+          <?php endif; ?>
 
-          <div class="caption">
-            <h1 class="title"><span>Are you ambitious</span>
-            <span class="title-third">about autism.</span></h1><h1>
-          </h1></div>
-          
-          
-        </div>
-        
-          
-        
-        <img alt="image description" src="sites/all/themes/ambitious/images/indexvisual.jpg">
+          <?php if ($page['image_holder']): ?>
+            <?php print render($page['image_holder']); ?>
+            <!-- /image holder -->
+          <?php endif; ?>
       </div>
-      <div class="holder">
-        <span class="pic-by">&copy; Photo by <a href="#">Derek Hall</a>.</span>
-      </div>
+
       
 </section> <!-- /visual -->
 

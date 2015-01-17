@@ -85,7 +85,6 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<?php dpm($page); ?>
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>

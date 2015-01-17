@@ -33,7 +33,6 @@ body{
 		ul{
 		margin:0;
 		li{
-			float: left;
 			list-style: none;
 			padding: 0 6px;
 			display: inline;
@@ -58,7 +57,16 @@ body{
 	}
 }
 }
-
+//=== Visual Section ===//
+.visual{
+	.img-holder{
+		.caption-frame{
+			z-index: 1000;
+			position: absolute;
+			top: 0;
+		}
+	}
+}  
 
 //=== Footer Section ===//
 
