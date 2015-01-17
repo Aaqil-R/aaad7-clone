@@ -245,9 +245,9 @@
     <?php endif; ?>
 
 
-    <section id="content-area">
-      <?php print render($page['content']) ?>
-    </section> <!-- /content -->
+    <!-- <section id="content-area"> -->
+      <?php //print render($page['content']) ?>
+    <!-- </section> --> <!-- /content -->
 
   <?php if ($page['content_bottom']): ?>
     <section id="content_bottom">

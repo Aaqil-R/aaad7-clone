@@ -1,6 +1,7 @@
 // @imports
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
+@import "breakpoint";
 @import "bourbon/bourbon";
 @import "source/jcf"; // From the source folder
 @import "source/all"; // From the source folder
@@ -10,6 +11,11 @@
 
 // CUSTOM SCSS STYLES FOR THE AAA
 
+//=== Variables ===//
+// Breakponint
+$tabe : 768px;
+
+
 // Global HTML
 body{
 	margin-top: -20px;
@@ -17,7 +23,10 @@ body{
 .underline{
 	text-decoration: underline;
 }
-
+// Span class
+.span-4{
+	@include span(4 of 12);
+}
 
 //=== Header Section ===//
 
@@ -67,6 +76,25 @@ body{
 		}
 	}
 }  
+//=== Stream Section ===//
+
+// Home page Stream block
+.posts-columns{
+	.post{
+
+		@include span(12 of 12);
+
+		@include breakpoint($tabe){
+			@include span(3 of 12);
+			&:nth-child(3n){
+				@include last;
+			}
+		}
+
+	}
+
+}
+
 
 //=== Footer Section ===//
 
