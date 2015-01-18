@@ -131,7 +131,7 @@
       </div>
       <!-- nav of the page -->
       <div class="nav-holder">
-        <a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>
+        <!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
         <nav id="nav">
 			<?php
 			print render($page['main_menu']); 
@@ -162,9 +162,9 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <!-- school nav of the page -->
-      <div class="school-slide">
+      </div>-->
+      <!-- school nav of the page
+      <!--<div class="school-slide">
         <strong class="title">Schools &amp; College</strong>
         <ul class="nav">
           <li>
@@ -177,7 +177,7 @@
             <a href="#">Ambitious College</a>
           </li>
         </ul>
-      </div>-->
+      </div> -->
     </header>
 <!-- / header -->
 
