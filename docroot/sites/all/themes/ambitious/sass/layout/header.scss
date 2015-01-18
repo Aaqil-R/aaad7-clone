@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import "includes/base";
+// ---------------------------------------------------------------------------
+
+@include breakpoint($desktop) {
+  .page_highlighted {
+    .container {
+      padding: 60px 15px 60px 70px;
+    }
+  }
+  .node-type-blog, .node-type-issues {
+    .page_content {
+      .title {
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+      .blog_date {
+        padding-left: 45px;
+      }
+      .social_share {
+        padding-left: 45px;
+      }
+      .body {
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+    }
+  }
+  
+  .section-how-it-works {
+    .page_content {
+      text-align: left;
+    }
+  }
+  .section-about-the-tax, .page-node-3236
+  ,.section-how-it-works {
+    .page_content {
+      .container {
+        padding-left: 70px;
+        padding-right: 131px;
+      }
+    }
+  }
+}
