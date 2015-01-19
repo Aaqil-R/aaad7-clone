@@ -297,6 +297,29 @@
       <div class="block">
         <div class="social-columns" >
           <?php print render($page['social']); ?>
+          <div class="col">
+            <h3>Founded by parents in 1997</h3>
+            <img src="/sites/all/themes/ambitious/images/ambitious.jpg">
+            <div class="member-count">
+              <p><span class="numbers">15,343</span></p>
+              <a href="#">Community members<br>and supporters</a>
+            </div>
+            <a class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
+            
+            
+          </div>
+          <!-- social column mid -->
+          <div class="col">
+            <h3>Latest from Twitter</h3>
+            <div class="twitter">
+              <img src="/sites/all/themes/ambitious/images/twitter-fillin.jpg">
+            </div>
+          </div>
+          <!-- social column right -->
+          <div class="col">
+            <h3>Find us on Facebook</h3>
+            <img src="/sites/all/themes/ambitious/images/facebook-fillin.jpg">
+          </div>
         </div>
       </div>
     </div>
