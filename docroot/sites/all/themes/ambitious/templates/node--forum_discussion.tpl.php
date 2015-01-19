@@ -12,7 +12,7 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious')
 ?>
  
 
-<section style="width:100%;">
+<section style="width:100%;" class="post">
 					    <em class="icon-Featured forum-icon"></em>	
                         <div class="forum-text">						
 						  <div class="forum-left"> 
