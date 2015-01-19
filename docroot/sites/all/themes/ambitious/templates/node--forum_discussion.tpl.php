@@ -12,7 +12,7 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious')
 ?>
  
 
-<section class="post" style="width:100%;">
+<section style="width:100%;">
 					    <em class="icon-Featured forum-icon"></em>	
                         <div class="forum-text">						
 						  <div class="forum-left"> 
@@ -29,7 +29,7 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious')
 						</div>
 						<div class="footer">
                           <div class="num-holder">
-							<a href="#" title="replies" class="open">
+							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
 							  <span class="num"><?php print render($comment_count); ?></span>
 							  <span class="text">replies</span>
 							</a>
