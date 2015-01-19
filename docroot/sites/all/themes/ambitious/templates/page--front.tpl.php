@@ -312,13 +312,14 @@
           <div class="col">
             <h3>Latest from Twitter</h3>
             <div class="twitter">
-              <img src="/sites/all/themes/ambitious/images/twitter-fillin.jpg">
+              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300"height="500">Tweets by @AmbitiousAutism</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
           </div>
           <!-- social column right -->
           <div class="col">
             <h3>Find us on Facebook</h3>
-            <img src="/sites/all/themes/ambitious/images/facebook-fillin.jpg">
+            <iframe allowtransparency="true" src="http://www.facebook.com/connect/connect.php?id=ambitiousaboutautism&amp;connections=0&amp;stream=1" style="border: none; width: 300px; height: 500px;" frameborder="1" scrolling="no"></iframe>
           </div>
         </div>
       </div>
@@ -327,12 +328,6 @@
         <img src="/sites/all/themes/ambitious/images/socialbg.jpg" alt="image description">
       </div>
     </section>
-
-  <?php if ($page['social']): ?>
-    <section id="social" class="social-block">
-      <?php print render($page['social']); ?>
-    </section> <!-- /social -->
-  <?php endif; ?>
 
   <footer id="footer">
       <div class="holder">
