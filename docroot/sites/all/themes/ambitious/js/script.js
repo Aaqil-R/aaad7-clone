@@ -19,8 +19,16 @@ Drupal.behaviors.ambitious = {
 
     // Place your code here.
 
-  }
+
+}
 };
 
 
 })(jQuery, Drupal, this, this.document);
+    //==Masonry block==//
+    var $container = jQuery('#masonry');
+	// initialize
+	$container.masonry({
+	  //columnWidth: 100,
+	  itemSelector: '.masonry-brick'
+	});

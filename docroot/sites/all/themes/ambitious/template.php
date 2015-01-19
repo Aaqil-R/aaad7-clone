@@ -131,6 +131,14 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 }
 // */
 
+
+// Adding a Fonts
+//=====================================
+
+function ambitious_preprocess_html(&$variables) {
+  drupal_add_css('http://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
+}
+
 // Adding a custom breadcrumb code
 //=====================================
 
@@ -185,4 +193,56 @@ function ambitious_breadcrumb($variables) {
   }
 
   return $output;
+}
+
+// Adding Name in to the User-menu
+
+function ambitious_menu_link(array $variables) {
+  global $user;
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $title = '';
+  // Check if the user is logged in, that you are in the correct menu,
+  // and that you have the right menu item
+  if ($user->uid != 0 && $element['#theme'] == 'menu_link__user_menu' && $element['#title'] == t('My account')) {
+    $element['#title'] = 'Hello ';
+    $element['#title'] .= $user->name;
+    // Add 'html' = TRUE to the link options
+    $element['#localized_options']['html'] = TRUE;
+    // Load the user picture file information; Unnecessary if you use theme_user_picture()
+    $fid = $user->picture;
+    $file = file_load($fid);
+    // I found it necessary to use theme_image_style() instead of theme_user_picture()
+    // because I didn't want any extra html, just the image.
+    $title = theme('image_style', array('style_name' => 'user_menu_thumb', 'path' => $file->uri, 'alt' => $element['#title'], 'title' => $element['#title'])) . $element['#title'];
+  } else {
+    $title = $element['#title'];
+  }
+  $output = l($title, $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+function ambitious_preprocess_page(&$variables)
+{
+	$main_menu = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source','main-menu'),NULL,2));
+	
+	$main_menu['#theme_wrappers'] = array('menu_tree__main_menu_primary');
+	
+	$variables['page']['main_menu']= $main_menu;
+}
+
+function ambitious_menu_tree__main_menu_primary($variables) 
+{	
+	//$variables['tree']=str_replace('</a>','<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>',$variables['tree']); 
+	//commented bacause of error "Code to include the image"
+	return '<ul>' .  $variables['tree'] .'</ul>';
+}
+
+function ambitious_menu_tree__main_menu($variables) 
+{
+	return  '<ul class="slide js-slide-hidden">' . $variables['tree'] . '</ul>';
 }

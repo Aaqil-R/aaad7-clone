@@ -16,3 +16,5 @@ public function __construct($arguments) {
 	return Database::getConnection('default',$connection);
   }
 }
+
+

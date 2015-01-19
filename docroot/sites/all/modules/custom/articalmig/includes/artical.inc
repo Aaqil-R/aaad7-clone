@@ -1,7 +1,7 @@
 <?php
 /**
 * @file
-* migration of artical details
+* migration of article details
 */
 
 class articalmigration extends articalmigMigration {
@@ -11,7 +11,7 @@ class articalmigration extends articalmigMigration {
 		
 		//create a source migration		
 		$query = $this->getConnection()->select('migtblarticle','tba')
-		->fields('tba',array('fArticleId','fObjectId','fTitle','fSummary'));
+		->fields('tba',array('fArticleId','fObjectId','fTitle','fSummary','fCreated'));
 	
 		$this->source = new MigrateSourceSQL($query);
 		
@@ -43,5 +43,12 @@ class articalmigration extends articalmigMigration {
 		
 		$this->addFieldMapping('title','fTitle');
 		$this->addFieldMapping('body','fSummary');	  
+		$this->addFieldMapping('created','fCreated')->callbacks(array($this,'timestampchange'));
 	}
+	
+	protected function timestampchange($value){
+		
+			$value=strtotime($value);
+			return $value;
+	 }
 }

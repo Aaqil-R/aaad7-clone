@@ -11,21 +11,15 @@ class usermigration extends articalmigMigration {
 		
 		//create a source migration		
 		
-		$query = $this->getConnection()->select ('migtbluser', 'tu')
-		->fields('tu',array('fUserId','fEmail','fUsername','fPassword'));
-		
-					//->fields('tu',array('fNickname','fUserId'))
-					//->fields('th',array('fMemberId'))
-					//$query->joins('tblthread','th','tu.fUserId=th.fMemberId');
-		
+		$query = $this->getConnection()->select ('migtbluser', 'tu');
+		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate'));
+
 		$this->source = new MigrateSourceSQL($query);
 		
 		//destination codes
+		$this->destination = new MigrateDestinationUser();
 		
-		//$this->destination = new MigrateDestinationNode('People');
-		$this->destination = new MigrateDestinationTable('users');
 		//mapping objects
-		
 		$this->map = new MigrateSQLMap(
 			$this->machineName,
 			array(
@@ -35,16 +29,29 @@ class usermigration extends articalmigMigration {
 					'not null'=>TRUE,
 					'description'=>'unique identifier in user table',
 					'alias'=>'tu', 
-                    ),
-        ),
+				)
+			),
         MigrateDestinationNode::getKeySchema()			
-      );
+		);
 	  
-	  //mapping the columns
-	  $this->addFieldMapping('uid','fUserId');
-	  $this->addFieldMapping('name','fUsername');
-	  $this->addFieldMapping('mail','fEmail');
-	  $this->addFieldMapping('pass','fPassword');
-	  
+		//mapping the columns
+		$this->addFieldMapping('uid','fUserId')->callbacks(array($this,'changeuserid'));
+		$this->addFieldMapping('name','fUsername');
+		$this->addFieldMapping('mail','fEmail');
+		$this->addFieldMapping('pass','fPassword');
+		$this->addFieldMapping('is_new',NULL)->defaultValue(TRUE);
+		$this->addFieldMapping('created','fDate')->callbacks(array($this,'timestampchange'));
 	}
+	
+	protected function changeuserid($value){
+		
+			$value=$value+100;
+			return $value;
+	 }
+	 
+	 protected function timestampchange($value){
+		
+			$value=strtotime($value);
+			return $value;
+	 }
 }

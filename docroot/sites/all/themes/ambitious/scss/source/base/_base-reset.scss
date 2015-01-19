@@ -3,7 +3,7 @@
  * set default font size, line height and font family
  * set default background
  */
-
+@import "../variables";
 html {box-sizing: border-box;}
 *, *:before, *:after {
     box-sizing: inherit;
@@ -147,3 +147,297 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/*** FOR DURPAL */ 
+
+main{
+  .field-type-text-long{ 
+	margin-bottom:10px;
+  }
+  .filter-guidelines, .filter-wrapper .form-item, .filter-help{
+    padding:0;
+  }
+  .filter-wrapper{
+    padding:10px;
+	max-width: 540px;
+  }
+  .links{ 
+    li{
+      padding:0;
+	  background:none;
+	  margin: 10px 0;
+      display: inline-block;;
+    }
+  }
+  .tabs.primary {
+    padding:0;
+	margin:0; 
+	clear:both;
+	border-bottom:1px solid $gray;
+	margin-bottom:10px;
+    & > li{
+	  background:none;
+	  padding-left:0;
+      display:inline-block;	 
+      margin:0; 
+      &.active a, &:hover a{
+	    background:$orange;
+		color:$white;
+	  }	     
+	  a{
+	    background:none;
+		display:inline-block;	
+		padding:5px 10px;
+		margin:0;
+		background:$gray;
+		text-decoration:none; 
+		color:$base-text-color;
+		border:none;
+		@include border-radius(3px 3px 0 0 ); 
+	  }
+	}  
+  }
+  .tabs.secondary{
+    padding:0;
+	margin:0; 
+	clear:both;
+    & > li{
+	  background:none;
+	  padding:0;
+      display:inline-block;
+	  padding:0 10px;	  
+	  border-left:1px solid $gray;
+	  border-right:none;
+	  &:first-child{
+	     border-left:none;
+	  }
+	  &.active a, &:hover a{
+	    border-bottom:3px solid $green;
+		color:$blue;
+	  }
+	  a{
+	    background:none; 
+		border-bottom:3px solid $white;
+		margin:0; 
+		padding-bottom:5px;
+		color:$gray; 
+		text-decoration:none;
+	  }
+	}  
+  }
+  .element-invisible{
+    display:none;
+  }
+  #comment-body-add-more-wrapper{ 
+    label{
+	  display: inline-block;
+	  margin-right:15px;
+	}
+	select{
+	  width: inherit;
+	} 
+  }
+  table{
+    a, input[type=submit]{
+      padding: 5px 13px;
+	}
+  }
+  .krumo-node {
+    li{
+      padding-left:0;
+	  background-image:none;
+	}
+  }
+}
+
+// Tables
+// ============
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+  border:1px solid $gray;
+  tr{
+    &.even{
+	  background-color: $gray;      
+	}
+	&.odd{
+	  background-color: $white;      
+	}
+    th{
+      padding:10px;
+	  font-weight:bold;
+	  background:$gray;
+	  a{
+	    color:$white; 
+	  }
+    }
+	td{
+      padding:10px;
+	  border-top: 1px solid $gray;
+    }
+  }
+}
+
+
+// Messages
+// ============
+
+div.messages{ 
+  padding:10px;
+  margin:0 0 15px 0;
+  border:none;
+  @include border-radius(3px);
+  padding-left:35px;
+  li{
+    background:none;
+	padding:0;	
+  }
+  a{
+    text-decoration: underline;
+  }
+  &.error{
+    background:$magenta;
+	color:$white ;
+    a{
+      color:$white ;
+    }  
+  }
+  &.warning{ 
+	background:$yellow;
+	color:$white ;
+    a{
+	  color:$white ;
+	}
+  }
+   &.status{ 
+	background:$green-dark;
+	color:$white ;
+    a{
+	   color:$white ;
+	}
+  
+  }
+}
+
+// Forms
+// ============
+
+form{ 
+  color:$base-text-color; 
+  label{
+    display: block;
+    margin-bottom:15px;
+    
+  }
+  .form-type-textfield, .form-type-																																															password{  
+    input[type=text], input[type=email], input[type=password], textarea{    
+      width: 100%;
+      padding: 12px 21px;
+      @include border-radius(5px);
+      border:none;
+      font-size: 18px;
+      color: $base-text-color;  
+      border:$captions-credit 1px solid;
+      min-width: 250px;
+      max-width:400px;
+    }
+  } 
+  textarea{
+    height:100px;
+	width: 100%;
+      padding: 12px 21px;
+      @include border-radius(5px);
+      border:none;
+      font-size: 18px;
+      color: $base-text-color;  
+      border:$captions-credit 1px solid;
+      min-width: 250px;
+      max-width:400px;
+  }
+  .grippie {
+    max-width:400px; 
+  }
+  .description{
+    max-width:578px; 
+	padding:5px 0;
+  } 
+  
+  .form-actions{
+  
+  margin-bottom:15px;
+     input[type=submit]{
+     display:inline-block;  
+  padding:5px 19px;
+  font-size:18px; 
+  line-height:30px;
+  border:none;
+  border-radius:5px;
+  color:$white; 
+  text-align:center;
+  text-decoration:none; 
+  border-bottom:5px solid $orange-dark;
+  background:$orange; 
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
+  em{
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+    word-spacing:3px;  
+	top:6px;
+	margin-left: 10px;
+  } 
+    &:hover {
+      border-bottom-width: 3px;
+      margin-top:2px;
+ 	 text-decoration:none;
+  	 color:$white; 
+     } 
+     &:active, &:focus{
+      border-bottom-width:0px;
+      margin-top:5px;
+  	 text-decoration:none;
+ 	 color:$white; 
+   }
+    &:visited{
+      text-decoration:none;
+	  color:$white; 
+    }
+  }
+  }
+  
+}
+
+
+.field-type-text-long{ 
+	margin-bottom:10px;
+  }
+  .filter-guidelines, .filter-wrapper .form-item, .filter-help{
+    padding:0;
+  }
+.filter-help{
+  float: left;
+width: 100%;
+  margin-bottom:15px;
+  p{
+    a{
+      padding:0;
+    }
+  }
+}
+#comment-body-add-more-wrapper .filter-wrapper{
+   label{
+   visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
