@@ -176,6 +176,21 @@
       </div>
     </header>
 <!-- ########### / header -->
+<section class="visual">
+      <div class="img-holder">
+        
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
+          <?php endif; ?>
+
+          <?php if ($page['image_holder']): ?>
+            <?php print render($page['image_holder']); ?>
+            <!-- /image holder -->
+          <?php endif; ?>
+      </div>
+
 
   <?php if ($page['navigation']): ?>
     <section id="navigation">
@@ -249,7 +264,7 @@
       <div class="holder">
         <div class="company-info">
           <div class="logo">
-            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
+             <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>
           </div>
           <?php print render($page['footer_copyright']); ?>
           <span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
