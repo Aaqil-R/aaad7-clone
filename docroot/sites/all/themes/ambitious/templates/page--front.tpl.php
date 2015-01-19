@@ -327,9 +327,7 @@
           </div>
           <!-- social column right -->
           <div class="col">
-            <h3>Find us on Facebook</h3> 
-            <iframe allowtransparency="true" src="http://www.facebook.com/connect/connect.php?id=ambitiousaboutautism&amp;connections=0&amp;stream=1" style="border: none; width: 300px; height: 500px;" frameborder="1" scrolling="no"></iframe>
- 
+            <h3>Find us on Facebook</h3>  
 <div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
  
           </div>
