@@ -86,6 +86,16 @@
  */
 ?>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513349745593631&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /facebook -->
+
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
   
@@ -252,7 +262,6 @@
     <!-- <section id="content-area"> -->
       <?php //print render($page['content']) ?>
     <!-- </section> --> <!-- /content -->
-
   <?php if ($page['content_bottom']): ?>
     <section id="content_bottom">
       <?php print render($page['content_bottom']); ?>
@@ -319,7 +328,7 @@
           <!-- social column right -->
           <div class="col">
             <h3>Find us on Facebook</h3>
-            <iframe allowtransparency="true" src="http://www.facebook.com/connect/connect.php?id=ambitiousaboutautism&amp;connections=0&amp;stream=1" style="border: none; width: 300px; height: 500px;" frameborder="1" scrolling="no"></iframe>
+<div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
           </div>
         </div>
       </div>
