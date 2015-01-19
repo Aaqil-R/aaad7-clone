@@ -188,7 +188,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+form .form-actions input[type=submit]:after, .btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -438,6 +438,317 @@ sub {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*** FOR DURPAL */
+/* line 154, ../scss/source/base/_base-reset.scss */
+main .field-type-text-long {
+  margin-bottom: 10px;
+}
+/* line 157, ../scss/source/base/_base-reset.scss */
+main .filter-guidelines, main .filter-wrapper .form-item, main .filter-help {
+  padding: 0;
+}
+/* line 160, ../scss/source/base/_base-reset.scss */
+main .filter-wrapper {
+  padding: 10px;
+  max-width: 540px;
+}
+/* line 165, ../scss/source/base/_base-reset.scss */
+main .links li, main .region-header .header-top-menu ul.menu li, .region-header .header-top-menu main ul.menu li {
+  padding: 0;
+  background: none;
+  margin: 10px 0;
+  display: inline-block;
+}
+/* line 172, ../scss/source/base/_base-reset.scss */
+main .tabs.primary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  border-bottom: 1px solid #d2d5d6;
+  margin-bottom: 10px;
+}
+/* line 178, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li {
+  background: none;
+  padding-left: 0;
+  display: inline-block;
+  margin: 0;
+}
+/* line 183, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li.active a, main .tabs.primary > li:hover a {
+  background: #f15500;
+  color: #ffffff;
+}
+/* line 187, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li a {
+  background: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+  background: #d2d5d6;
+  text-decoration: none;
+  color: #2a2e31;
+  border: none;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+/* line 200, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+/* line 204, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li {
+  background: none;
+  padding: 0;
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 1px solid #d2d5d6;
+  border-right: none;
+}
+/* line 211, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li:first-child {
+  border-left: none;
+}
+/* line 214, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li.active a, main .tabs.secondary > li:hover a {
+  border-bottom: 3px solid #00a837;
+  color: #006dc1;
+}
+/* line 218, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li a {
+  background: none;
+  border-bottom: 3px solid #ffffff;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #d2d5d6;
+  text-decoration: none;
+}
+/* line 228, ../scss/source/base/_base-reset.scss */
+main .element-invisible {
+  display: none;
+}
+/* line 232, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper label {
+  display: inline-block;
+  margin-right: 15px;
+}
+/* line 236, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper select {
+  width: inherit;
+}
+/* line 241, ../scss/source/base/_base-reset.scss */
+main table a, main table input[type=submit] {
+  padding: 5px 13px;
+}
+/* line 246, ../scss/source/base/_base-reset.scss */
+main .krumo-node li {
+  padding-left: 0;
+  background-image: none;
+}
+
+/* line 255, ../scss/source/base/_base-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #d2d5d6;
+}
+/* line 261, ../scss/source/base/_base-reset.scss */
+table tr.even {
+  background-color: #d2d5d6;
+}
+/* line 264, ../scss/source/base/_base-reset.scss */
+table tr.odd {
+  background-color: #ffffff;
+}
+/* line 267, ../scss/source/base/_base-reset.scss */
+table tr th {
+  padding: 10px;
+  font-weight: bold;
+  background: #d2d5d6;
+}
+/* line 271, ../scss/source/base/_base-reset.scss */
+table tr th a {
+  color: #ffffff;
+}
+/* line 275, ../scss/source/base/_base-reset.scss */
+table tr td {
+  padding: 10px;
+  border-top: 1px solid #d2d5d6;
+}
+
+/* line 286, ../scss/source/base/_base-reset.scss */
+div.messages {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 35px;
+}
+/* line 292, ../scss/source/base/_base-reset.scss */
+div.messages li {
+  background: none;
+  padding: 0;
+}
+/* line 296, ../scss/source/base/_base-reset.scss */
+div.messages a {
+  text-decoration: underline;
+}
+/* line 299, ../scss/source/base/_base-reset.scss */
+div.messages.error {
+  background: #c3104b;
+  color: #ffffff;
+}
+/* line 302, ../scss/source/base/_base-reset.scss */
+div.messages.error a {
+  color: #ffffff;
+}
+/* line 306, ../scss/source/base/_base-reset.scss */
+div.messages.warning {
+  background: #fbb900;
+  color: #ffffff;
+}
+/* line 309, ../scss/source/base/_base-reset.scss */
+div.messages.warning a {
+  color: #ffffff;
+}
+/* line 313, ../scss/source/base/_base-reset.scss */
+div.messages.status {
+  background: #007e2a;
+  color: #ffffff;
+}
+/* line 316, ../scss/source/base/_base-reset.scss */
+div.messages.status a {
+  color: #ffffff;
+}
+
+/* line 326, ../scss/source/base/_base-reset.scss */
+form {
+  color: #2a2e31;
+}
+/* line 328, ../scss/source/base/_base-reset.scss */
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 334, ../scss/source/base/_base-reset.scss */
+form .form-type-textfield input[type=text], form .form-type-textfield input[type=email], form .form-type-textfield input[type=password], form .form-type-textfield textarea {
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 346, ../scss/source/base/_base-reset.scss */
+form textarea {
+  height: 100px;
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 358, ../scss/source/base/_base-reset.scss */
+form .grippie {
+  max-width: 400px;
+}
+/* line 361, ../scss/source/base/_base-reset.scss */
+form .description {
+  max-width: 578px;
+  padding: 5px 0;
+}
+/* line 366, ../scss/source/base/_base-reset.scss */
+form .form-actions {
+  margin-bottom: 15px;
+}
+/* line 369, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] {
+  display: inline-block;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid #c63502;
+  background: #f15500;
+  font-weight: normal;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+}
+/* line 384, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] em {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: 3px;
+  top: 6px;
+  margin-left: 10px;
+}
+/* line 392, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 398, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:active, form .form-actions input[type=submit]:focus {
+  border-bottom-width: 0px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 404, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 414, ../scss/source/base/_base-reset.scss */
+.field-type-text-long {
+  margin-bottom: 10px;
+}
+
+/* line 417, ../scss/source/base/_base-reset.scss */
+.filter-guidelines, .filter-wrapper .form-item, .filter-help {
+  padding: 0;
+}
+
+/* line 420, ../scss/source/base/_base-reset.scss */
+.filter-help {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 425, ../scss/source/base/_base-reset.scss */
+.filter-help p a {
+  padding: 0;
+}
+
+/* line 431, ../scss/source/base/_base-reset.scss */
+#comment-body-add-more-wrapper .filter-wrapper label {
+  visibility: hidden;
 }
 
 /* button */
@@ -585,7 +896,7 @@ table {
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+form .form-actions input[type=submit]:after, .btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -835,6 +1146,317 @@ sub {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*** FOR DURPAL */
+/* line 154, ../scss/source/base/_base-reset.scss */
+main .field-type-text-long {
+  margin-bottom: 10px;
+}
+/* line 157, ../scss/source/base/_base-reset.scss */
+main .filter-guidelines, main .filter-wrapper .form-item, main .filter-help {
+  padding: 0;
+}
+/* line 160, ../scss/source/base/_base-reset.scss */
+main .filter-wrapper {
+  padding: 10px;
+  max-width: 540px;
+}
+/* line 165, ../scss/source/base/_base-reset.scss */
+main .links li, main .region-header .header-top-menu ul.menu li, .region-header .header-top-menu main ul.menu li {
+  padding: 0;
+  background: none;
+  margin: 10px 0;
+  display: inline-block;
+}
+/* line 172, ../scss/source/base/_base-reset.scss */
+main .tabs.primary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  border-bottom: 1px solid #d2d5d6;
+  margin-bottom: 10px;
+}
+/* line 178, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li {
+  background: none;
+  padding-left: 0;
+  display: inline-block;
+  margin: 0;
+}
+/* line 183, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li.active a, main .tabs.primary > li:hover a {
+  background: #f15500;
+  color: #ffffff;
+}
+/* line 187, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li a {
+  background: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+  background: #d2d5d6;
+  text-decoration: none;
+  color: #2a2e31;
+  border: none;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+/* line 200, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+/* line 204, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li {
+  background: none;
+  padding: 0;
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 1px solid #d2d5d6;
+  border-right: none;
+}
+/* line 211, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li:first-child {
+  border-left: none;
+}
+/* line 214, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li.active a, main .tabs.secondary > li:hover a {
+  border-bottom: 3px solid #00a837;
+  color: #006dc1;
+}
+/* line 218, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li a {
+  background: none;
+  border-bottom: 3px solid #ffffff;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #d2d5d6;
+  text-decoration: none;
+}
+/* line 228, ../scss/source/base/_base-reset.scss */
+main .element-invisible {
+  display: none;
+}
+/* line 232, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper label {
+  display: inline-block;
+  margin-right: 15px;
+}
+/* line 236, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper select {
+  width: inherit;
+}
+/* line 241, ../scss/source/base/_base-reset.scss */
+main table a, main table input[type=submit] {
+  padding: 5px 13px;
+}
+/* line 246, ../scss/source/base/_base-reset.scss */
+main .krumo-node li {
+  padding-left: 0;
+  background-image: none;
+}
+
+/* line 255, ../scss/source/base/_base-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #d2d5d6;
+}
+/* line 261, ../scss/source/base/_base-reset.scss */
+table tr.even {
+  background-color: #d2d5d6;
+}
+/* line 264, ../scss/source/base/_base-reset.scss */
+table tr.odd {
+  background-color: #ffffff;
+}
+/* line 267, ../scss/source/base/_base-reset.scss */
+table tr th {
+  padding: 10px;
+  font-weight: bold;
+  background: #d2d5d6;
+}
+/* line 271, ../scss/source/base/_base-reset.scss */
+table tr th a {
+  color: #ffffff;
+}
+/* line 275, ../scss/source/base/_base-reset.scss */
+table tr td {
+  padding: 10px;
+  border-top: 1px solid #d2d5d6;
+}
+
+/* line 286, ../scss/source/base/_base-reset.scss */
+div.messages {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 35px;
+}
+/* line 292, ../scss/source/base/_base-reset.scss */
+div.messages li {
+  background: none;
+  padding: 0;
+}
+/* line 296, ../scss/source/base/_base-reset.scss */
+div.messages a {
+  text-decoration: underline;
+}
+/* line 299, ../scss/source/base/_base-reset.scss */
+div.messages.error {
+  background: #c3104b;
+  color: #ffffff;
+}
+/* line 302, ../scss/source/base/_base-reset.scss */
+div.messages.error a {
+  color: #ffffff;
+}
+/* line 306, ../scss/source/base/_base-reset.scss */
+div.messages.warning {
+  background: #fbb900;
+  color: #ffffff;
+}
+/* line 309, ../scss/source/base/_base-reset.scss */
+div.messages.warning a {
+  color: #ffffff;
+}
+/* line 313, ../scss/source/base/_base-reset.scss */
+div.messages.status {
+  background: #007e2a;
+  color: #ffffff;
+}
+/* line 316, ../scss/source/base/_base-reset.scss */
+div.messages.status a {
+  color: #ffffff;
+}
+
+/* line 326, ../scss/source/base/_base-reset.scss */
+form {
+  color: #2a2e31;
+}
+/* line 328, ../scss/source/base/_base-reset.scss */
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 334, ../scss/source/base/_base-reset.scss */
+form .form-type-textfield input[type=text], form .form-type-textfield input[type=email], form .form-type-textfield input[type=password], form .form-type-textfield textarea {
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 346, ../scss/source/base/_base-reset.scss */
+form textarea {
+  height: 100px;
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 358, ../scss/source/base/_base-reset.scss */
+form .grippie {
+  max-width: 400px;
+}
+/* line 361, ../scss/source/base/_base-reset.scss */
+form .description {
+  max-width: 578px;
+  padding: 5px 0;
+}
+/* line 366, ../scss/source/base/_base-reset.scss */
+form .form-actions {
+  margin-bottom: 15px;
+}
+/* line 369, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] {
+  display: inline-block;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid #c63502;
+  background: #f15500;
+  font-weight: normal;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+}
+/* line 384, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] em {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: 3px;
+  top: 6px;
+  margin-left: 10px;
+}
+/* line 392, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 398, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:active, form .form-actions input[type=submit]:focus {
+  border-bottom-width: 0px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 404, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 414, ../scss/source/base/_base-reset.scss */
+.field-type-text-long {
+  margin-bottom: 10px;
+}
+
+/* line 417, ../scss/source/base/_base-reset.scss */
+.filter-guidelines, .filter-wrapper .form-item, .filter-help {
+  padding: 0;
+}
+
+/* line 420, ../scss/source/base/_base-reset.scss */
+.filter-help {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 425, ../scss/source/base/_base-reset.scss */
+.filter-help p a {
+  padding: 0;
+}
+
+/* line 431, ../scss/source/base/_base-reset.scss */
+#comment-body-add-more-wrapper .filter-wrapper label {
+  visibility: hidden;
 }
 
 /* ---------------------------------------------------------
@@ -1166,7 +1788,7 @@ blockquote q {
 /* line 210, ../scss/source/_all.scss */
 .messages {
   background: #c3104b;
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 18px;
   padding: 11px 20px;
@@ -6225,7 +6847,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+form .form-actions input[type=submit]:after, .btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -6475,6 +7097,317 @@ sub {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*** FOR DURPAL */
+/* line 154, ../scss/source/base/_base-reset.scss */
+main .field-type-text-long {
+  margin-bottom: 10px;
+}
+/* line 157, ../scss/source/base/_base-reset.scss */
+main .filter-guidelines, main .filter-wrapper .form-item, main .filter-help {
+  padding: 0;
+}
+/* line 160, ../scss/source/base/_base-reset.scss */
+main .filter-wrapper {
+  padding: 10px;
+  max-width: 540px;
+}
+/* line 165, ../scss/source/base/_base-reset.scss */
+main .links li, main .region-header .header-top-menu ul.menu li, .region-header .header-top-menu main ul.menu li {
+  padding: 0;
+  background: none;
+  margin: 10px 0;
+  display: inline-block;
+}
+/* line 172, ../scss/source/base/_base-reset.scss */
+main .tabs.primary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  border-bottom: 1px solid #d2d5d6;
+  margin-bottom: 10px;
+}
+/* line 178, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li {
+  background: none;
+  padding-left: 0;
+  display: inline-block;
+  margin: 0;
+}
+/* line 183, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li.active a, main .tabs.primary > li:hover a {
+  background: #f15500;
+  color: #ffffff;
+}
+/* line 187, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li a {
+  background: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+  background: #d2d5d6;
+  text-decoration: none;
+  color: #2a2e31;
+  border: none;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+/* line 200, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+/* line 204, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li {
+  background: none;
+  padding: 0;
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 1px solid #d2d5d6;
+  border-right: none;
+}
+/* line 211, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li:first-child {
+  border-left: none;
+}
+/* line 214, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li.active a, main .tabs.secondary > li:hover a {
+  border-bottom: 3px solid #00a837;
+  color: #006dc1;
+}
+/* line 218, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li a {
+  background: none;
+  border-bottom: 3px solid #ffffff;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #d2d5d6;
+  text-decoration: none;
+}
+/* line 228, ../scss/source/base/_base-reset.scss */
+main .element-invisible {
+  display: none;
+}
+/* line 232, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper label {
+  display: inline-block;
+  margin-right: 15px;
+}
+/* line 236, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper select {
+  width: inherit;
+}
+/* line 241, ../scss/source/base/_base-reset.scss */
+main table a, main table input[type=submit] {
+  padding: 5px 13px;
+}
+/* line 246, ../scss/source/base/_base-reset.scss */
+main .krumo-node li {
+  padding-left: 0;
+  background-image: none;
+}
+
+/* line 255, ../scss/source/base/_base-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #d2d5d6;
+}
+/* line 261, ../scss/source/base/_base-reset.scss */
+table tr.even {
+  background-color: #d2d5d6;
+}
+/* line 264, ../scss/source/base/_base-reset.scss */
+table tr.odd {
+  background-color: #ffffff;
+}
+/* line 267, ../scss/source/base/_base-reset.scss */
+table tr th {
+  padding: 10px;
+  font-weight: bold;
+  background: #d2d5d6;
+}
+/* line 271, ../scss/source/base/_base-reset.scss */
+table tr th a {
+  color: #ffffff;
+}
+/* line 275, ../scss/source/base/_base-reset.scss */
+table tr td {
+  padding: 10px;
+  border-top: 1px solid #d2d5d6;
+}
+
+/* line 286, ../scss/source/base/_base-reset.scss */
+div.messages {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 35px;
+}
+/* line 292, ../scss/source/base/_base-reset.scss */
+div.messages li {
+  background: none;
+  padding: 0;
+}
+/* line 296, ../scss/source/base/_base-reset.scss */
+div.messages a {
+  text-decoration: underline;
+}
+/* line 299, ../scss/source/base/_base-reset.scss */
+div.messages.error {
+  background: #c3104b;
+  color: #ffffff;
+}
+/* line 302, ../scss/source/base/_base-reset.scss */
+div.messages.error a {
+  color: #ffffff;
+}
+/* line 306, ../scss/source/base/_base-reset.scss */
+div.messages.warning {
+  background: #fbb900;
+  color: #ffffff;
+}
+/* line 309, ../scss/source/base/_base-reset.scss */
+div.messages.warning a {
+  color: #ffffff;
+}
+/* line 313, ../scss/source/base/_base-reset.scss */
+div.messages.status {
+  background: #007e2a;
+  color: #ffffff;
+}
+/* line 316, ../scss/source/base/_base-reset.scss */
+div.messages.status a {
+  color: #ffffff;
+}
+
+/* line 326, ../scss/source/base/_base-reset.scss */
+form {
+  color: #2a2e31;
+}
+/* line 328, ../scss/source/base/_base-reset.scss */
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 334, ../scss/source/base/_base-reset.scss */
+form .form-type-textfield input[type=text], form .form-type-textfield input[type=email], form .form-type-textfield input[type=password], form .form-type-textfield textarea {
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 346, ../scss/source/base/_base-reset.scss */
+form textarea {
+  height: 100px;
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 358, ../scss/source/base/_base-reset.scss */
+form .grippie {
+  max-width: 400px;
+}
+/* line 361, ../scss/source/base/_base-reset.scss */
+form .description {
+  max-width: 578px;
+  padding: 5px 0;
+}
+/* line 366, ../scss/source/base/_base-reset.scss */
+form .form-actions {
+  margin-bottom: 15px;
+}
+/* line 369, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] {
+  display: inline-block;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid #c63502;
+  background: #f15500;
+  font-weight: normal;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+}
+/* line 384, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] em {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: 3px;
+  top: 6px;
+  margin-left: 10px;
+}
+/* line 392, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 398, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:active, form .form-actions input[type=submit]:focus {
+  border-bottom-width: 0px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 404, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 414, ../scss/source/base/_base-reset.scss */
+.field-type-text-long {
+  margin-bottom: 10px;
+}
+
+/* line 417, ../scss/source/base/_base-reset.scss */
+.filter-guidelines, .filter-wrapper .form-item, .filter-help {
+  padding: 0;
+}
+
+/* line 420, ../scss/source/base/_base-reset.scss */
+.filter-help {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 425, ../scss/source/base/_base-reset.scss */
+.filter-help p a {
+  padding: 0;
+}
+
+/* line 431, ../scss/source/base/_base-reset.scss */
+#comment-body-add-more-wrapper .filter-wrapper label {
+  visibility: hidden;
 }
 
 /* button */
@@ -6622,7 +7555,7 @@ table {
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+form .form-actions input[type=submit]:after, .btn:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -6872,6 +7805,317 @@ sub {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*** FOR DURPAL */
+/* line 154, ../scss/source/base/_base-reset.scss */
+main .field-type-text-long {
+  margin-bottom: 10px;
+}
+/* line 157, ../scss/source/base/_base-reset.scss */
+main .filter-guidelines, main .filter-wrapper .form-item, main .filter-help {
+  padding: 0;
+}
+/* line 160, ../scss/source/base/_base-reset.scss */
+main .filter-wrapper {
+  padding: 10px;
+  max-width: 540px;
+}
+/* line 165, ../scss/source/base/_base-reset.scss */
+main .links li, main .region-header .header-top-menu ul.menu li, .region-header .header-top-menu main ul.menu li {
+  padding: 0;
+  background: none;
+  margin: 10px 0;
+  display: inline-block;
+}
+/* line 172, ../scss/source/base/_base-reset.scss */
+main .tabs.primary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  border-bottom: 1px solid #d2d5d6;
+  margin-bottom: 10px;
+}
+/* line 178, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li {
+  background: none;
+  padding-left: 0;
+  display: inline-block;
+  margin: 0;
+}
+/* line 183, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li.active a, main .tabs.primary > li:hover a {
+  background: #f15500;
+  color: #ffffff;
+}
+/* line 187, ../scss/source/base/_base-reset.scss */
+main .tabs.primary > li a {
+  background: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+  background: #d2d5d6;
+  text-decoration: none;
+  color: #2a2e31;
+  border: none;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+/* line 200, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+/* line 204, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li {
+  background: none;
+  padding: 0;
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 1px solid #d2d5d6;
+  border-right: none;
+}
+/* line 211, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li:first-child {
+  border-left: none;
+}
+/* line 214, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li.active a, main .tabs.secondary > li:hover a {
+  border-bottom: 3px solid #00a837;
+  color: #006dc1;
+}
+/* line 218, ../scss/source/base/_base-reset.scss */
+main .tabs.secondary > li a {
+  background: none;
+  border-bottom: 3px solid #ffffff;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #d2d5d6;
+  text-decoration: none;
+}
+/* line 228, ../scss/source/base/_base-reset.scss */
+main .element-invisible {
+  display: none;
+}
+/* line 232, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper label {
+  display: inline-block;
+  margin-right: 15px;
+}
+/* line 236, ../scss/source/base/_base-reset.scss */
+main #comment-body-add-more-wrapper select {
+  width: inherit;
+}
+/* line 241, ../scss/source/base/_base-reset.scss */
+main table a, main table input[type=submit] {
+  padding: 5px 13px;
+}
+/* line 246, ../scss/source/base/_base-reset.scss */
+main .krumo-node li {
+  padding-left: 0;
+  background-image: none;
+}
+
+/* line 255, ../scss/source/base/_base-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #d2d5d6;
+}
+/* line 261, ../scss/source/base/_base-reset.scss */
+table tr.even {
+  background-color: #d2d5d6;
+}
+/* line 264, ../scss/source/base/_base-reset.scss */
+table tr.odd {
+  background-color: #ffffff;
+}
+/* line 267, ../scss/source/base/_base-reset.scss */
+table tr th {
+  padding: 10px;
+  font-weight: bold;
+  background: #d2d5d6;
+}
+/* line 271, ../scss/source/base/_base-reset.scss */
+table tr th a {
+  color: #ffffff;
+}
+/* line 275, ../scss/source/base/_base-reset.scss */
+table tr td {
+  padding: 10px;
+  border-top: 1px solid #d2d5d6;
+}
+
+/* line 286, ../scss/source/base/_base-reset.scss */
+div.messages {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 35px;
+}
+/* line 292, ../scss/source/base/_base-reset.scss */
+div.messages li {
+  background: none;
+  padding: 0;
+}
+/* line 296, ../scss/source/base/_base-reset.scss */
+div.messages a {
+  text-decoration: underline;
+}
+/* line 299, ../scss/source/base/_base-reset.scss */
+div.messages.error {
+  background: #c3104b;
+  color: #ffffff;
+}
+/* line 302, ../scss/source/base/_base-reset.scss */
+div.messages.error a {
+  color: #ffffff;
+}
+/* line 306, ../scss/source/base/_base-reset.scss */
+div.messages.warning {
+  background: #fbb900;
+  color: #ffffff;
+}
+/* line 309, ../scss/source/base/_base-reset.scss */
+div.messages.warning a {
+  color: #ffffff;
+}
+/* line 313, ../scss/source/base/_base-reset.scss */
+div.messages.status {
+  background: #007e2a;
+  color: #ffffff;
+}
+/* line 316, ../scss/source/base/_base-reset.scss */
+div.messages.status a {
+  color: #ffffff;
+}
+
+/* line 326, ../scss/source/base/_base-reset.scss */
+form {
+  color: #2a2e31;
+}
+/* line 328, ../scss/source/base/_base-reset.scss */
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+/* line 334, ../scss/source/base/_base-reset.scss */
+form .form-type-textfield input[type=text], form .form-type-textfield input[type=email], form .form-type-textfield input[type=password], form .form-type-textfield textarea {
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 346, ../scss/source/base/_base-reset.scss */
+form textarea {
+  height: 100px;
+  width: 100%;
+  padding: 12px 21px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #2a2e31;
+  border: #636c73 1px solid;
+  min-width: 250px;
+  max-width: 400px;
+}
+/* line 358, ../scss/source/base/_base-reset.scss */
+form .grippie {
+  max-width: 400px;
+}
+/* line 361, ../scss/source/base/_base-reset.scss */
+form .description {
+  max-width: 578px;
+  padding: 5px 0;
+}
+/* line 366, ../scss/source/base/_base-reset.scss */
+form .form-actions {
+  margin-bottom: 15px;
+}
+/* line 369, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] {
+  display: inline-block;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid #c63502;
+  background: #f15500;
+  font-weight: normal;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+}
+/* line 384, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit] em {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: 3px;
+  top: 6px;
+  margin-left: 10px;
+}
+/* line 392, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 398, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:active, form .form-actions input[type=submit]:focus {
+  border-bottom-width: 0px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 404, ../scss/source/base/_base-reset.scss */
+form .form-actions input[type=submit]:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 414, ../scss/source/base/_base-reset.scss */
+.field-type-text-long {
+  margin-bottom: 10px;
+}
+
+/* line 417, ../scss/source/base/_base-reset.scss */
+.filter-guidelines, .filter-wrapper .form-item, .filter-help {
+  padding: 0;
+}
+
+/* line 420, ../scss/source/base/_base-reset.scss */
+.filter-help {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 425, ../scss/source/base/_base-reset.scss */
+.filter-help p a {
+  padding: 0;
+}
+
+/* line 431, ../scss/source/base/_base-reset.scss */
+#comment-body-add-more-wrapper .filter-wrapper label {
+  visibility: hidden;
 }
 
 /* ---------------------------------------------------------
