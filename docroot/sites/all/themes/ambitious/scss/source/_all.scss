@@ -1416,6 +1416,42 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		padding:0 20px;
 	}
 }
+/* main information part styles */
+.text-section{
+  margin-bottom:59px;
+  margin-top:28px;
+  .text-right-section{
+    float:right;
+	margin-top: 40px;
+	@include breakpoint($tablet) {
+	
+	}
+	a{
+	  font-weight: bold;
+	  font-size: 20px;
+	  display: block;
+	  text-decoration: underline;
+	  text-align: right;
+	  margin-bottom:5px;
+	  &:hover{
+	    text-decoration:none;
+	  }
+	} 
+  }
+  h2{
+    max-width:666px;
+    margin-bottom:23px;
+	@include breakpoint($tablet) {
+	  max-width:inherit;
+	}
+  }
+  p{
+    max-width:666px;
+	@include breakpoint($tablet) {
+	  max-width:inherit;
+	}
+  }
+}
 .approach-main{
 	@include container;
 	@extend %clearfix;
