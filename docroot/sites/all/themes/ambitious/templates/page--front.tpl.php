@@ -261,8 +261,113 @@
 
   </main> <!-- /main -->
 
+
+    <!-- action columns -->
+    <section class="action-block">
+      <div class="holder">
+        <!-- action symptoms -->
+        <div class="block-share">
+          <strong class="text">
+            
+          </strong>
+          <a href="#" class="btn btn-transparent">Share this <em class="icon-Rightarrow"></em></a>
+        </div>
+        <!-- action inspire -->
+        <div class="block-spectrum">
+          <strong class="title">Aged 16-25<br>and on the<br>spectrum?</strong>
+          <a href="#" class="btn btn-transparent">Connect with others<em class="icon-Rightarrow"></em></a>
+        </div>
+      </div>
+    </section>
+    <!-- mission columns -->
+    <section class="articles-block" >
+      <div class="holder">
+        <h2>What We Do</h2>
+        <div class="articles-columns" >
+          <!--column one -->
+          <div class="3-col col">
+            <!-- article block -->
+            <section class="article">
+              <div class="img-holder">
+                <img src="/sites/all/themes/ambitious/images/family.jpg">
+              </div>
+              <h4>Services</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo neque, consequat              consectetur nisi in, tristique aliquet ante lorem ipsum dolor est.
+              <a href="#">Optional link goes here</a>
+              </p>
+            </section>
+          </div>
+          <!--column two -->
+          <div class="3-col col">
+            <!-- article block -->
+            <section class="article">
+              <div class="img-holder">
+                <img src="/sites/all/themes/ambitious/images/studying.jpg">
+              </div>
+              <h4>Raise awareness</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo neque, consequat              consectetur nisi in, tristique aliquet ante lorem ipsum dolor est.
+                <a href="#">Optional link goes here</a>
+              </p>
+            </section>
+        </div>
+        <!--column three -->
+        <div class="3-col col">
+          <!-- article block -->
+          <section class="article">
+          <div class="img-holder">
+            <img src="/sites/all/themes/ambitious/images/winner.jpg">
+          </div>
+            <h4>Campaign for change</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo neque, consequat              consectetur nisi in, tristique aliquet ante lorem ipsum dolor est.
+              <a href="#">Optional link goes here</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+      
+  </section>
+
+
+  <section class="social-block">
+    <div class="holder">
+      <h1>Stay ambitious</h1>
+      <div class="block">
+        <div class="social-columns" >
+        <!-- social column left -->
+          <div class="col">
+            <h3>Founded by parents in 1997</h3>
+            <img src="/sites/all/themes/ambitious/images/ambitious.jpg">
+            <div class="member-count">
+              <p><span class="numbers">15,343</span></p>
+              <a href="#">Community members<br>and supporters</a>
+            </div>
+            <a class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
+            
+            
+          </div>
+          <!-- social column mid -->
+          <div class="col">
+            <h3>Latest from Twitter</h3>
+            <div class="twitter">
+              <img src="/sites/all/themes/ambitious/images/twitter-fillin.jpg">
+            </div>
+          </div>
+          <!-- social column right -->
+          <div class="col">
+            <h3>Find us on Facebook</h3>
+            <img src="/sites/all/themes/ambitious/images/facebook-fillin.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="bg-stretch">
+        <img src="/sites/all/themes/ambitious/images/socialbg.jpg" alt="image description">
+      </div>
+    </section>
+
   <?php if ($page['social']): ?>
-    <section id="social" class="visual">
+    <section id="social" class="social-block">
       <?php print render($page['social']); ?>
     </section> <!-- /social -->
   <?php endif; ?>
