@@ -265,7 +265,18 @@
     <!-- action columns -->
     <section class="action-block">
       <div class="holder">
-        <?php print render($page['action']); ?>
+        <!-- action symptoms -->
+        <div class="block-share">
+          <strong class="text">
+            
+          </strong>
+          <a href="#" class="btn btn-transparent">Share this <em class="icon-Rightarrow"></em></a>
+        </div>
+        <!-- action inspire -->
+        <div class="block-spectrum">
+          <strong class="title">Aged 16-25<br>and on the<br>spectrum?</strong>
+          <a href="#" class="btn btn-transparent">Connect with others<em class="icon-Rightarrow"></em></a>
+        </div>
       </div>
     </section>
     
