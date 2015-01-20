@@ -315,19 +315,19 @@
       <div class="block">
         <div class="social-columns" >
           <?php print render($page['social']); ?>
-          <div class="col">
+          <div class="col block-youtube">
             <h3>Founded by parents in 1997</h3>
             <img src="/sites/all/themes/ambitious/images/ambitious.jpg">
             <div class="member-count">
               <p><span class="numbers">15,343</span></p>
               <a href="#">Community members<br>and supporters</a>
             </div>
-            <a class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
+            <a href="https://www.youtube.com/user/ambitiousaboutautism" target="_bank" class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
             
             
           </div>
           <!-- social column mid -->
-          <div class="col">
+          <div class="col block-twitter">
             <h3>Latest from Twitter</h3>
             <div class="twitter">
               <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300"height="500">Tweets by @AmbitiousAutism</a>
@@ -335,7 +335,7 @@
             </div>
           </div>
           <!-- social column right -->
-          <div class="col">
+          <div class="col block-facebook">
             <h3>Find us on Facebook</h3>  
 <div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
  
