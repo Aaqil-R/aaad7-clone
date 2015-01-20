@@ -7,16 +7,14 @@
  * @see https://drupal.org/node/1728164
  */
 
-/* variables */
-
- 
+/* variables */ 
   
 ?>
-<?php if($teaser): ?>
+<?php if($view_mode == 'posts_columns'): ?>
 <!-- Teaser View of the topic -->
   <section class="text-block">
-    <h1>Struggling to get a good night’s sleep?</h1>
-    <?php print render($content['body']);?>
+    <h1><?php print $title; ?></h1>
+    <?php print render($content['body']); ?>
     <div class="btn-holder clearfix">
       <a href="#" class="btn btn-gray btn-left" title="Filter by">Filter by</a>
       <a href="#" class="btn btn-green btn-left bt-left" title="Share"><span>Share <em class="icon-Share"></em></span></a>

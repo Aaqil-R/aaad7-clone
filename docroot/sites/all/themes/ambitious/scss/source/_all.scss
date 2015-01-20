@@ -4,78 +4,88 @@
 @import "markup-mixins";
 @import "base/base-reset"; // or cms-reset 
 @import "breakpoint";
-/* ---------------------------------------------------------
-   1. Embedded fonts styles
-   2. General reset
-   3. Common site styles
-   4. Custom form styles
-   5. Styles for responsive breakpoints
-   ---------------------------------------------------------*/
 /*embedded fonts styles*/
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-du0j81');
-	src:url('../fonts/icomoon.eot?#iefix-du0j81') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-du0j81') format('woff'),
-		url('../fonts/icomoon.ttf?-du0j81') format('truetype'),
-		url('../fonts/icomoon.svg?-du0j81#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?-du0j81');
+  src:url('../fonts/icomoon.eot?#iefix-du0j81') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-du0j81') format('woff'),
+    url('../fonts/icomoon.ttf?-du0j81') format('truetype'),
+    url('../fonts/icomoon.svg?-du0j81#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 [class^="icon-"], [class*=" icon-"], .jcf-select .jcf-select-opener{
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1; 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-Close:before {
-	content: "\e600";
+  content: "\e601";
 }
 .icon-Downarrow:before {
-	content: "\e601";
+  content: "\e602";
 }
 .icon-Facebook:before {
-	content: "\e602";
+  content: "\e603";
 }
 .icon-Featured:before {
-	content: "\e603";
+  content: "\e604";
 }
 .icon-Hottopic:before {
-	content: "\e604";
+  content: "\e606";
 }
 .icon-Leftarrow:before {
-	content: "\e605";
+  content: "\e607";
 }
 .icon-Playbutton:before {
-	content: "\e606";
+  content: "\e608";
 }
 .icon-Rightarrow:before {
-	content: "\e607";
+  content: "\e60a";
 }
 .icon-Share:before {
-	content: "\e609";
+  content: "\e60c";
 }
 .icon-Speech1:before {
-	content: "\e60a";
+  content: "\e60d";
 }
 .icon-Twitter:before {
-	content: "\e60b";
+  content: "\e610";
 }
 .icon-Uparrow:before {
-	content: "\e60c";
+  content: "\e611";
 }
 .icon-YouTube:before {
-	content: "\e60d";
+  content: "\e613";
 }
 .icon-search:before {
-	content: "\e608";
+  content: "\e60b";
+}
+.icon-Calendar:before{
+  content: "\e600";
+}
+.icon-google:before{
+  content: "\e605";
+}
+.icon-plus:before{
+  content: "\e609";
+}
+.icon-Speech-outline:before{
+  content: "\e60e";
+}
+.icon-Time:before{
+  content: "\e60f";
+}
+.icon-Voice:before{
+  content: "\e612";
 }
 * { font-size: 100.01%; }
 html {
@@ -209,7 +219,7 @@ blockquote{
 } 
 .messages{
   background: #c3104b;
-  color: white;
+  color:$white;
   text-align: center;
   font-size: 18px;
   padding:11px 20px; 
@@ -1133,7 +1143,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		right:0;
 		top:50%;
 		margin:-56px 0 0;
-		z-index:99;
+		z-index:1000;
 		background:$orange;
 		color:$white;
 		text-decoration:none; 
@@ -1200,7 +1210,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		left:0;
 		top:50%;
 		margin:-56px 0 0;
-		z-index:99;
+		z-index:1000;
 		background:$orange;
 		color:$white;
 		text-decoration:none; 
@@ -1747,7 +1757,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 /* main post columns styles */
 .posts-columns {
 	@extend %clearfix; 
-	 &.columns-full{	      
+	 &.columns-full{
+	 .post{
+	      	      
 		  .forum-icon{
 		    position: absolute;
 			right:18px;
@@ -1803,7 +1815,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  padding-left: 184px;
 			  padding-right: 21px;
 			  margin-bottom:-10px;
-			  .text{
+                 .num-holder a .text{
 			    display:inherit; 
 			  }
 			  .times{
@@ -1830,6 +1842,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  .holder{
 		    padding:0;
 		  }
+		}
 		}
 	  }
 	/* post view mode styles */
@@ -1874,6 +1887,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
       }
 	}
 	/* post column styles */
+	
 	.col {
 		float:left;
 		width:31.4%;
@@ -1886,6 +1900,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			margin:0;
 		}
 		}
+		
 		.text-block {
 			@include fontsize(18,16);
 			line-height:1.5em;
@@ -1962,16 +1977,24 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 		.post{
 			padding:20px 18px;
-			position: relative;
-			margin:0 0 31px;
+			position: relative; 
 			background:$white;
 			border:1px solid $gray;
+			width:31.4%;
+		     margin:0 0 31px 1.9%;
 			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
 			@include breakpoint($mobile) {
 				padding:14px 15px;
 				font-size:18px;
 				line-height:27px;
 			} 
+			&.views-row-first{
+	            background:none;
+	            padding:0;
+	            border:none;
+	            @include box-shadow(0px 0px 0px rgba(0,0,0,0));
+	          }
+	      
 			.img-holder {
 				position:relative;
 				time{
@@ -3715,6 +3738,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 /* footer styles */
 #footer {
 	width:100%;
+	float:left;
 	display:table-footer-group;
 	height:1%;
 	background:$base-text-color;
@@ -3928,3 +3952,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     to {top: 0px; opacity:1;}
 } 
  
+.node-type-topic{
+  h1.title, h1.breadcrumb{
+    display:none;
+  }
+}

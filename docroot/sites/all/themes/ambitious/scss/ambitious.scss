@@ -82,9 +82,7 @@ body{
 	.post{
 
 		@include span(4 of 13);
-		&:nth-child(3n){
-			@include last;
-		}
+		 
 		@include breakpoint(768px){
 			@include span(12 of 13);
 		}
@@ -95,6 +93,9 @@ body{
 
 
 //=== Footer Section ===//
+#footer{
+	height: auto;
+}
 
 .region-footer-copyright{
 	// Social menu
