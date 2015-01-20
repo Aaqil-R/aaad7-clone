@@ -1,7 +1,6 @@
 // @imports
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
-//@import "breakpoint";
 @import "bourbon/bourbon";
 @import "source/jcf"; // From the source folder
 @import "source/all"; // From the source folder
@@ -10,10 +9,6 @@
 //@import "misc"; // SMACSS Modules
 
 // CUSTOM SCSS STYLES FOR THE AAA
-
-//=== Variables ===//
-// Breakponint
-$tabe : 768px;
 
 
 // Global HTML
@@ -97,10 +92,22 @@ body{
 	    @include box-shadow(0px 0px 0px rgba(0,0,0,0));
 	}
 
+	.view-footer{
+	text-align: center;
+
+		a.btn{
+			font-family: $base-font-family;
+			@include breakpoint($mobile){
+			width: 100%;
+			}
+		}
+	}
+
 
 }
 
 //=== Services Section ===//
+
 // Home page - list
 .what-we-do{
 	margin-bottom: 130px;
