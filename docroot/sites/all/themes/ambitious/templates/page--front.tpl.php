@@ -86,6 +86,16 @@
  */
 ?>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513349745593631&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /facebook -->
+
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
   
@@ -131,8 +141,12 @@
       </div>
       <!-- nav of the page -->
       <div class="nav-holder">
-        <a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>
+        <!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
         <nav id="nav">
+      <?php
+      print render($page['main_menu']); 
+      ?>
+      <!--commented code activate it to get menu in nav bar
           <ul>
             <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
               <ul class="slide">
@@ -158,9 +172,9 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <!-- school nav of the page -->
-      <div class="school-slide">
+      </div>-->
+      <!-- school nav of the page
+      <!--<div class="school-slide">
         <strong class="title">Schools &amp; College</strong>
         <ul class="nav">
           <li>
@@ -173,9 +187,10 @@
             <a href="#">Ambitious College</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </header>
-<!-- ########### / header -->
+<!-- / header -->
+
 <section class="visual">
       <div class="img-holder">
         
@@ -191,6 +206,8 @@
           <?php endif; ?>
       </div>
 
+      
+</section> <!-- /visual -->
 
   <?php if ($page['navigation']): ?>
     <section id="navigation">
@@ -242,10 +259,9 @@
     <?php endif; ?>
 
 
-    <section id="content-area">
-      <?php print render($page['content']) ?>
-    </section> <!-- /content -->
-
+    <!-- <section id="content-area"> -->
+      <?php //print render($page['content']) ?>
+    <!-- </section> --> <!-- /content -->
   <?php if ($page['content_bottom']): ?>
     <section id="content_bottom">
       <?php print render($page['content_bottom']); ?>
@@ -254,17 +270,80 @@
 
   </main> <!-- /main -->
 
-  <?php if ($page['social']): ?>
-    <section id="social">
-      <?php print render($page['social']); ?>
-    </section> <!-- /social -->
-  <?php endif; ?>
+
+    <!-- action columns -->
+    <section class="action-block">
+      <div class="holder">
+        <!-- action symptoms -->
+        <div class="block-share">
+          <strong class="text">
+            
+          </strong>
+          <a href="#" class="btn btn-transparent">Share this <em class="icon-Rightarrow"></em></a>
+        </div>
+        <!-- action inspire -->
+        <div class="block-spectrum">
+          <strong class="title">Aged 16-25<br>and on the<br>spectrum?</strong>
+          <a href="#" class="btn btn-transparent">Connect with others<em class="icon-Rightarrow"></em></a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="articles-block" >
+      <div class="holder">
+        <h2>What We Do</h2>
+        <div class="articles-columns" >
+          <?php print render($page['services']); ?>
+          <!--column one -->
+        </div>
+      </div>      
+  </section><!-- /services -->
+
+
+  <section class="social-block">
+    <div class="holder">
+      <h1>Stay ambitious</h1>
+      <div class="block">
+        <div class="social-columns" >
+          <?php print render($page['social']); ?>
+          <div class="col">
+            <h3>Founded by parents in 1997</h3>
+            <img src="/sites/all/themes/ambitious/images/ambitious.jpg">
+            <div class="member-count">
+              <p><span class="numbers">15,343</span></p>
+              <a href="#">Community members<br>and supporters</a>
+            </div>
+            <a class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
+            
+            
+          </div>
+          <!-- social column mid -->
+          <div class="col">
+            <h3>Latest from Twitter</h3>
+            <div class="twitter">
+              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300"height="500">Tweets by @AmbitiousAutism</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+          </div>
+          <!-- social column right -->
+          <div class="col">
+            <h3>Find us on Facebook</h3>  
+<div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
+ 
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="bg-stretch">
+        <img src="/sites/all/themes/ambitious/images/socialbg.jpg" alt="image description">
+      </div>
+    </section>
 
   <footer id="footer">
       <div class="holder">
         <div class="company-info">
           <div class="logo">
-             <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>
+            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
           </div>
           <?php print render($page['footer_copyright']); ?>
           <span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
@@ -276,5 +355,5 @@
     </footer> <!-- /footer -->
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
-
+<?php print render($user_picture); ?>
 <?php print render($page['bottom']); ?>
