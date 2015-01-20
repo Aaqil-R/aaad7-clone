@@ -142,10 +142,19 @@
       <!-- nav of the page -->
       <div class="nav-holder">
         <!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
+			<?php
+				//adding the features menu
+			    $menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
+                $tree = menu_tree($menu_name);
+                print drupal_render($tree); 
+			?>
         <nav id="nav">
       <?php
-      print render($page['main_menu']); 
-      ?>
+		//adding the menu function
+      //print render($page['main_menu']); 
+		$menu_name = variable_get('menu_main_links_source', 'main-menu');
+		$tree = menu_tree($menu_name);
+		print drupal_render($tree); ?>
       <!--commented code activate it to get menu in nav bar
           <ul>
             <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
