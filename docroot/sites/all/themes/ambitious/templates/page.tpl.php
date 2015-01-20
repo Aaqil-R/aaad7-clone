@@ -253,7 +253,15 @@
   <?php endif; ?>
 
   </main> <!-- /main -->
-
+  <?php if ($page['action']): ?>
+  <!-- action columns -->
+  <section class="action-block">
+    <div class="holder">
+     <?php print render($page['action']); ?>
+    </div>
+  </section>
+  <!-- fourm block -->
+  <?php endif; ?>
   <?php if ($page['social']): ?>
     <section id="social">
       <?php print render($page['social']); ?>

@@ -2541,7 +2541,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  margin-bottom:20px;
 			}
 		  }
-		}	    
+		}
+	   & > div.region-action{
+	     float:none;
+	     .block-block{
+	        .block-symptoms{
+	          float:right; 
+	        }
+	     }
+	   }
 	} 
 	/* action symptoms block styles */
 	.block-symptoms { 
