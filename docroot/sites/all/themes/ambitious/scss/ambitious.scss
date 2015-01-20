@@ -121,6 +121,20 @@ body{
 	}
 }
 
+//=== Social Section ===//
+.social-block{
+	h1{
+		@include breakpoint($mobile){
+			margin-left: 18px;
+		}
+	}
+
+	.block-facebook{
+		@include breakpoint($mobile){
+			margin-top: 220px;
+		}
+	}
+}
 
 //=== Footer Section ===//
 #footer{
