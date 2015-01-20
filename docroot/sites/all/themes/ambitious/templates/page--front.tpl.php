@@ -85,7 +85,12 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-
+ <?php
+  print '<pre>';
+  dpm(get_defined_vars()); 
+ print '</pre>';
+?>
+<?php dpm($variables['foo']); ?>
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
   
@@ -132,10 +137,26 @@
       <!-- nav of the page -->
       <div class="nav-holder">
         <!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
-        <nav id="nav">
+
+        
 			<?php
-			print render($page['main_menu']); 
-			?>
+					//printing the featured menu item
+				//$menu = menu_navigation_links('menu-main-menu-features-item');
+				//print theme('links__menu-main-menu-features-item', array('links' => $menu));
+				
+				$menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
+				$tree = menu_tree($menu_name);
+				print drupal_render($tree); ?>
+				
+				
+			<nav id="nav">
+				<?php
+					//printing the normal menu items
+				//print render($page['main_menu']);
+				$menu_name = variable_get('menu_main_links_source', 'main-menu');
+				$tree = menu_tree($menu_name);
+				print drupal_render($tree); ?>
+
 			<!--commented code activate it to get menu in nav bar
           <ul>
             <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>

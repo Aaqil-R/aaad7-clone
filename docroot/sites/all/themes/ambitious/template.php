@@ -197,52 +197,123 @@ function ambitious_breadcrumb($variables) {
 
 // Adding Name in to the User-menu
 
-function ambitious_menu_link(array $variables) {
-  global $user;
+function ambitious_menu_link(&$variables) {
+	
+	$element = $variables['element'];	
+	if($element['#theme'] == 'menu_link__main_menu') //if its user menu add the arrows to the links
+	{
+		$element = $variables['element'];		
+		$sub_menu = '';
+		$element['#attributes']['data-menu-parent'] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['attributes']['class'][] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['html'] = TRUE;
+		if ($element['#below']) {
+		$sub_menu = drupal_render($element['#below']);
+		}
+  
+		$output = l($element['#title'].'</span><span class="icon-Downarrow"></span><span class="icon-Uparrow"></span>', $element['#href'], $element['#localized_options']);
+		//return '<li' . drupal_attributes($element['#attributes']) . '>' . '<div id="menu-'.str_replace(' ','-',strtolower($element['#title'])).'" class="menu-item '.$element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'].'">'.$output.'</div>'.$sub_menu . "</li>\n";
+		//return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+	}
+	
+	if($element['#theme'] == 'menu_link__menu_main_menu_features_item') //if its features menu add the arrows to the links
+	{
+		$element = $variables['element'];		
+		$sub_menu = '';
+		$element['#attributes']['data-menu-parent'] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['attributes']['class'][] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['html'] = TRUE;
+		if ($element['#below']) {
+			$sub_menu = drupal_render($element['#below']);
+		}
+  
+		$output = l($element['#title']." ".'<span class="icon-Rightarrow"></span>', $element['#href'], $element['#localized_options']);
+		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+	}
+		//if($element['#theme'] == 'menu_link__user_menu')
+	else
+	{
+			global $user;
+			$element = $variables['element'];		
+			$sub_menu = '';
+			if ($element['#below']) {
+			$sub_menu = drupal_render($element['#below']);
+			}
+			$title = '';
+		// Check if the user is logged in, that you are in the correct menu,
+		// and that you have the right menu item
+		if ($user->uid != 0 && $element['#theme'] == 'menu_link__user_menu' && $element['#title'] == t('My account')) {
+			$element['#title'] = 'Hello ';
+			$element['#title'] .= $user->name;
+			// Add 'html' = TRUE to the link options
+			$element['#localized_options']['html'] = TRUE;
+			// Load the user picture file information; Unnecessary if you use theme_user_picture()
+			$fid = $user->picture;
+			$file = file_load($fid);
+			// I found it necessary to use theme_image_style() instead of theme_user_picture()
+			// because I didn't want any extra html, just the image.
+			$title = theme('image_style', array('style_name' => 'user_menu_thumb', 'path' => $file->uri, 'alt' => $element['#title'], 'title' => $element['#title'])) . $element['#title'];
+		}else {
+			$title = $element['#title'];
+		}
+		$output = l($title, $element['#href'], $element['#localized_options']);
+		return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+	}
+	
+  
+}
+
+  function ambitious_preprocess_page(&$variables)
+{
+	$variables['foo'] = "Good2";
+}
+/*
+function ambitious_menu_tree__main_menu_primary(&$variables) 
+{	
+	//$variables['tree'] = str_replace('</a>','<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>',$variables['tree']); 	
+	//commented bacause of error "Code to include the image"	
+	//return '<ul>' .  $variables['tree'] .'</ul>';
+	//return $variables['tree'] ;
+	
+	//$variables['foo'] = $variables['foo'] . "s" . $variables['tree'];
+	
+	return '<ul>' .  $variables['tree'] . '</ul>';
+}
+
+function ambitious_menu_tree__main_menu(&$variables) 
+{
+	return  '<ul class="slide js-slide-hidden">' . $variables['tree'] . '</ul>';
+} */
+/* 
+function ambitious_menu_link(&$variables) {
   $element = $variables['element'];
   $sub_menu = '';
-
+  
+  $element['#attributes']['data-menu-parent'] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+  $element['#localized_options']['attributes']['class'][] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+  $element['#localized_options']['html'] = TRUE;
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
-  $title = '';
-  // Check if the user is logged in, that you are in the correct menu,
-  // and that you have the right menu item
-  if ($user->uid != 0 && $element['#theme'] == 'menu_link__user_menu' && $element['#title'] == t('My account')) {
-    $element['#title'] = 'Hello ';
-    $element['#title'] .= $user->name;
-    // Add 'html' = TRUE to the link options
-    $element['#localized_options']['html'] = TRUE;
-    // Load the user picture file information; Unnecessary if you use theme_user_picture()
-    $fid = $user->picture;
-    $file = file_load($fid);
-    // I found it necessary to use theme_image_style() instead of theme_user_picture()
-    // because I didn't want any extra html, just the image.
-    $title = theme('image_style', array('style_name' => 'user_menu_thumb', 'path' => $file->uri, 'alt' => $element['#title'], 'title' => $element['#title'])) . $element['#title'];
-  } else {
-    $title = $element['#title'];
+  
+  $output = l($element['#title'].'</span><span class="icon-Downarrow"></span>', $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . '<div id="menu-'.str_replace(' ','-',strtolower($element['#title'])).'" class="menu-item '.$element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'].'">'.$output.'</div>'.$sub_menu . "</li>\n";
+}  */
+
+function ambitious_preprocess_menu_tree(&$variables) {
+  $tree = new DOMDocument();
+  @$tree->loadHTML($variables['tree']);
+  $links = $tree->getElementsByTagname('li');
+  $parent = '';
+  foreach ($links as $link) {
+    $parent = $link->getAttribute('data-menu-parent');
+    break;
   }
-  $output = l($title, $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  
+  $variables['menu_parent'] = $parent;
 }
 
-function ambitious_preprocess_page(&$variables)
-{
-	$main_menu = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source','main-menu'),NULL,2));
-	
-	$main_menu['#theme_wrappers'] = array('menu_tree__main_menu_primary');
-	
-	$variables['page']['main_menu']= $main_menu;
-}
-
-function ambitious_menu_tree__main_menu_primary($variables) 
-{	
-	//$variables['tree']=str_replace('</a>','<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>',$variables['tree']); 
-	//commented bacause of error "Code to include the image"
-	return '<ul>' .  $variables['tree'] .'</ul>';
-}
-
-function ambitious_menu_tree__main_menu($variables) 
-{
-	return  '<ul class="slide js-slide-hidden">' . $variables['tree'] . '</ul>';
+function ambitious_menu_tree(&$variables) {
+  return '<ul class="menu ' . $variables['menu_parent'] . '">' . $variables['tree'] . '</ul>';
 }

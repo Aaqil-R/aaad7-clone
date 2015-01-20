@@ -726,6 +726,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		margin-right:-310px;
 		width:285px;
 	}
+	ul.links{
+		list-style-type:none;
+		padding:0;
+	}
     .btn{
 	   margin-left:32px;
 	   margin-right:32px;
@@ -770,17 +774,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		> li {
 			font-size:18px;
 			line-height:29px;
-			a {
-				color:$heading-link;
-				position:relative;
-				text-decoration:none;
-				display:block;
-				padding:9px 31px 11px;
-				border-bottom:2px solid $border-color;
-				@include breakpoint($mobile) {
-					padding:9px 31px 11px 25px;
-				 }
-				.icon-Downarrow {
+			.icon-Downarrow {
 					position:absolute;
 					right:0;
 					top:0;
@@ -791,6 +785,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					text-align:center;
 					background:$arrow-bg;
 				}
+			a {			
+				color:$heading-link;
+				position:relative;
+				text-decoration:none;
+				display:block;
+				padding:9px 31px 11px;
+				border-bottom:2px solid $border-color;
+				@include breakpoint($mobile) {
+					padding:9px 31px 11px 25px;
+				 }				
 				.icon-Uparrow {
 					display:none;
 					position:absolute;

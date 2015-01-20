@@ -85,6 +85,12 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
+ <?php
+  print '<pre>';
+  dpm(get_defined_vars()); 
+ print '</pre>';
+?>
+<?php dpm($variables['foo']); ?>
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
