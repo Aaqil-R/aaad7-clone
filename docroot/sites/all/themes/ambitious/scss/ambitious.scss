@@ -92,24 +92,12 @@ body{
 	    @include box-shadow(0px 0px 0px rgba(0,0,0,0));
 	}
 
-	.view-footer{
-	text-align: center;
-
-		a.btn{
-			font-family: $base-font-family;
-			@include breakpoint($mobile){
-			width: 100%;
-			}
-		}
-	}
-
-
 }
 
-//=== Services Section ===//
+//=== Buttons ===//
 
-// Home page - list
-.what-we-do{
+// Views - footer button
+.footer-button{
 	margin-bottom: 130px;
 	@include breakpoint($mobile){
 		margin-bottom: 30px;
