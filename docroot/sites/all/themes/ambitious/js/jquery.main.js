@@ -10,6 +10,17 @@ jQuery(function(){
 	jQuery('input, textarea').placeholder();
 });
 
+
+(function ($, Drupal, window, document, undefined) {
+Drupal.behaviors.my_custom_behavior = {
+  attach: function(context, settings) {
+   initCustomForms();
+  }
+};
+
+
+})(jQuery, Drupal, this, this.document);
+
 function initFixedBlock() {
 	var fixedClass = 'fixed-position';
 	var win = jQuery(window);
@@ -57,7 +68,7 @@ function initCustomForms() {
 		wrapNative: false,
 		wrapNativeOnMobile: false
 	});
-	jcf.replaceAll();
+	jcf.replaceAll(); 
 }
 
 // open-close init

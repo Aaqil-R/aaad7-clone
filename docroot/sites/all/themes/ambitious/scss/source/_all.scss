@@ -1166,7 +1166,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:15px 0 0;
 			min-width:111px;
 			display:block;
-	        margin-right: -100px;
+	        margin-right: -145px;
 	        @include transition ($type:all, $time:0.5s, $ease:ease);
 	        opacity:0;
 			.title {
@@ -1232,7 +1232,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:15px 0 0 15px;
 			min-width:111px;
 			display:block;
-            margin-left: -100px; 
+            margin-left: -122px; 
 	        @include transition ($type:all, $time:0.2s, $ease:ease);
             opacity:0; 
 			.title {
@@ -1666,6 +1666,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	@include breakpoint($mobile) {
 		display:none;
 	}
+	label{
+		  display:none;
+		}
 	.sort-by {
         float:left;
 		input[type="submit"] { display:none; }
@@ -1673,6 +1676,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		select {
 			width:250px;
 		}
+		
 	}
 	&.advanced-sort-block{
 		.sort-by { 
@@ -1753,6 +1757,21 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 /* main post columns styles */
 .posts-columns {
 	@extend %clearfix; 
+	&.view-display-id-stream_topic_page{
+	  .ajax-progress-throbber{
+	    position: absolute; 
+	  }
+	  .view-content{
+	     margin-left:-1.9%; 
+	       .views-row-1{
+              padding: 0;
+              background: none;
+              border: none;
+              @include box-shadow(inherit);
+	       }
+
+	  }
+	}
 	 &.columns-full{
 	 .post{
 	      	      
