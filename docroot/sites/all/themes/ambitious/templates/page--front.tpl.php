@@ -315,17 +315,13 @@
       <div class="block">
         <div class="social-columns" >
           <?php print render($page['social']); ?>
-          <div class="col block-youtube">
-            <h3>Founded by parents in 1997</h3>
-            <img src="/sites/all/themes/ambitious/images/ambitious.jpg">
-            <div class="member-count">
-              <p><span class="numbers">15,343</span></p>
-              <a href="#">Community members<br>and supporters</a>
-            </div>
-            <a href="https://www.youtube.com/user/ambitiousaboutautism" target="_bank" class="btn btn-green youtube-btn">Watch us on Youtube <span class="icon-YouTube"></span></a>
-            
-            
-          </div>
+           
+              <?php
+              //Watch us youtube block
+              $block = module_invoke('block', 'block_view', '61');
+              print render($block['content']);
+              ?>
+
           <!-- social column mid -->
           <div class="col block-twitter">
             <h3>Latest from Twitter</h3>
