@@ -1178,6 +1178,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				font-size:22px;
 				line-height:22px;
 				display:block;
+				width: 156px;
 			}
 		}
 		.icon-Rightarrow {
@@ -1211,7 +1212,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		color:$white;
 		text-decoration:none; 
 		@include border-radius(0 5px 5px 0);
-		padding: 0 3px 0 16px;
+		padding: 0 3px 0 12px; 
 		left:0; 
 	    @include transition ($type:all, $time:0.2s, $ease:ease);
         overflow:hidden;
@@ -1232,7 +1233,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:15px 0 0 15px;
 			min-width:111px;
 			display:block;
-            margin-left: -122px; 
+            margin-left:-148px; 
 	        @include transition ($type:all, $time:0.2s, $ease:ease);
             opacity:0; 
 			.title {
@@ -1244,6 +1245,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				font-size:22px;
 				line-height:22px;
 				display:block;
+				width: 156px;
 			}
 		}
 		.icon-Leftarrow {
@@ -1744,9 +1746,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
       &.list{
 	    &.active:after{
           background-position:-26px -91px;  
-        }
+        }  
 	    &:after{
-		  background-position: -26px -114px; 
+		  background-position: -26px -114px;   
 		} 
         &:hover:after{
           background-position:-26px -137px;
