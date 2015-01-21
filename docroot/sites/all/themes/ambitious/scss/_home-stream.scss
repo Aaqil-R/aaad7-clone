@@ -1,0 +1,22 @@
+//=== Stream Section ===//
+
+// Home page Stream block
+.front .posts-columns{
+
+	.post{
+
+		@include span(4 of 13);
+		 
+		@include breakpoint($mobile){
+			@include span(13 of 13);
+		}
+
+	}
+	.views-row:nth-child(1){
+		background:none;
+	    padding:0;
+	    border:none;
+	    @include box-shadow(0px 0px 0px rgba(0,0,0,0));
+	}
+
+}
