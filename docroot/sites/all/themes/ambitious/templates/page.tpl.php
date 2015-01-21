@@ -175,6 +175,8 @@
         </ul>
       </div>
     </header>
+    
+<?php if ($page['caption_holder'] || $page['image_holder']): ?>
 <!-- ########### / header -->
 <section class="visual">
       <div class="img-holder">
@@ -191,7 +193,7 @@
           <?php endif; ?>
       </div>
 </section>
-
+<?php endif; ?>
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
