@@ -149,54 +149,15 @@
                 print drupal_render($tree); 
 			?>
         <nav id="nav">
-      <?php
-		//adding the menu function
-      //print render($page['main_menu']); 
-		$menu_name = variable_get('menu_main_links_source', 'main-menu');
-		$tree = menu_tree($menu_name);
-		print drupal_render($tree); ?>
-      <!--commented code activate it to get menu in nav bar
-          <ul>
-            <li class="has-drop"><a href="post-view.html" class="opener-sub">Understanding autism<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-              <ul class="slide">
-                <li><a href="article.html">Talk to others</a></li>
-                <li><a href="#">Our blog</a></li>
-                <li><a href="#">MyVoice blog</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Courses</a></li>
-            <li class="has-drop"><a href="#" class="opener-sub">Take Action<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-              <ul class="slide">
-                <li><a href="#">Talk to others</a></li>
-                <li><a href="#">Our blog</a></li>
-                <li><a href="#">MyVoice blog</a></li>
-              </ul>
-            </li>
-            <li class="has-drop"><a href="#" class="opener-sub">Who We Are<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>
-              <ul class="slide">
-                <li><a href="#">Talk to others</a></li>
-                <li><a href="#">Our blog</a></li>
-                <li><a href="#">MyVoice blog</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>-->
-      <!-- school nav of the page
-      <!--<div class="school-slide">
-        <strong class="title">Schools &amp; College</strong>
-        <ul class="nav">
-          <li>
-            <a href="#">TreeHouse School</a>
-          </li>
-          <li>
-            <a href="#">The Rise School</a>
-          </li>
-          <li>
-            <a href="#">Ambitious College</a>
-          </li>
-        </ul>
-      </div> -->
+				<?php
+				//adding the menu function
+				//print render($page['main_menu']); 
+				$menu_name = variable_get('menu_main_links_source', 'main-menu');
+				$tree = menu_tree($menu_name);
+				print drupal_render($tree); ?>
+				<!--commented code activate it to get menu in nav bar-->
+			</nav>
+	  </div>
     </header>
 <!-- / header -->
 

@@ -736,40 +736,46 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		margin-right:-310px;
 		width:285px;
 	}
-    .btn{
-	   margin-left:32px;
-	   margin-right:32px;
-	   margin-bottom:33px;
-	   display:block;
-	   padding:10px 9px;
-	   font-size:20px;
-	   em{
-		 right:-20px;
-		 top:5px;
-	   }
-	   @include breakpoint($mobile) {
-	     margin: 0 0 -2px;
-	     position: relative;
-	     z-index: 2; 
-		 @include border-radius(0);
-	     border: none;
-	     padding: 14px 0;
-	     font-size: 18px;
-	     text-align: left;
-		 &:hover{
-		   opacity: .9;
-		 }
-		 span{
-		   padding: 0 0 0 25px;
-		   position: relative;
-		   display: inline-block;
-		   vertical-align: top;    
-		   word-spacing: 3px;
-		   .icon-Rightarrow{
-		      display:none;
-		   } 
-		 }
-	   }
+	ul{
+		li{
+			.btn{
+				margin-left:32px;
+				margin-right:32px;
+				margin-bottom:33px;
+				display:block;
+				padding:10px 9px;
+				font-size:20px;
+				em{
+					right:-20px;
+					top:5px;
+				}
+				@include breakpoint($mobile) {
+					margin: 0 0 -2px;
+					position: relative;
+					z-index: 2; 
+					@include border-radius(0);
+					border: none;
+					padding: 14px 0;
+					font-size: 18px;
+					text-align: left;
+					&:hover{
+						opacity: .9;
+					}
+					span{
+						padding: 0 0 0 25px;
+						position: relative;
+						display: inline-block;
+						vertical-align: top;    
+						word-spacing: 3px;
+						.icon-Rightarrow{
+							display:none;
+							} 
+					}
+				}
+			}
+		}
+		list-style:none;
+		padding:0;
 	}	
 }
 /* nav styles */

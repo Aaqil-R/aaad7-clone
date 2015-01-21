@@ -228,7 +228,7 @@ function ambitious_menu_link(&$variables) {
 			$sub_menu = drupal_render($element['#below']);
 		}
   
-		$output = l($element['#title']." ".'<span class="icon-Rightarrow"></span>', $element['#href'], $element['#localized_options']);
+		$output = l($element['#title'].'<em class="icon-Rightarrow"></em>', $element['#href'], $element['#localized_options']);
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')

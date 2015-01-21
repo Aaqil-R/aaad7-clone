@@ -37,10 +37,45 @@
 						display:none;
 					}
 				}
+				&:hover{
+					color:$orange-dark;
+				}
+			}
+			>ul{
+				>ul{
+						list-style:none;
+						padding:0;
+					>li{
+						a{
+							padding:9px 31px 11px 45px;
+							span{
+									display:none;
+							}
+							&:hover{
+								color:$orange-dark;
+							}
+						}					
+					}
+				}	
 			}
 		}
 	}
 }
+
+#div ul.menu-main-features-item1{
+	list-style:none;
+	}
+	
+#nav ul.main-menu-1 li ul span.icon-Uparrow,
+#nav ul.main-menu-1 li ul span.icon-Downarrow{
+	display: none;
+}
+
+#nav ul.main-menu-1 li.course span.icon-Uparrow,
+#nav ul.main-menu-1 li.course span.icon-Downarrow{
+	display: none;
+}
+
 //visited etc link text
 a{
 	&:visited{color: #000;}
@@ -1147,5 +1182,4 @@ a {
 	}
 }
 
-	
 
