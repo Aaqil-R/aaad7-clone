@@ -1,0 +1,19 @@
+//=== Buttons ===//
+
+// Views - footer button
+.footer-button{
+	margin-bottom: 130px;
+	@include breakpoint($mobile){
+		margin-bottom: 30px;
+	}
+	.view-footer{
+		text-align: center;
+
+		a.btn{
+			font-family: $base-font-family;
+			@include breakpoint($mobile){
+			width: 100%;
+			}
+		}
+	}
+}

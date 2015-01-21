@@ -1,4 +1,4 @@
-// @imports
+// Source @imports : Please
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
 @import "bourbon/bourbon";
@@ -9,125 +9,13 @@
 @import "ambitious/admin_menu"; // Admin menu
 //@import "misc"; // SMACSS Modules
 
+// Please do not edit source files
+
 // CUSTOM SCSS STYLES FOR THE AAA
-
-
-// Global HTML
-body{
-	margin-top: -20px;
-}
-.underline{
-	text-decoration: underline;
-}
-// Span class
-.span-4{
-	@include span(4 of 12);
-}
-
-//=== Header Section ===//
-
-.region-header{
-	// Header Top Menu
-	.header-top-menu{
-		ul.menu{
-			@extend .links;
-		}
-	}
-	// User menu
-	.header-user-menu{
-		ul{
-		margin:0;
-		li{
-			list-style: none;
-			padding: 0 6px;
-			display: inline;
-			a{
-				margin:0;
-				color: $gray;
-				text-transform: capitalize;
-				vertical-align: middle;
-				&:hover{
-					text-decoration: underline;
-				}
-				img{
-					vertical-align: middle;
-					margin-right: 10px;
-					@include border-radius(5px);
-				}
-
-
-			}
-
-		}
-	}
-}
-}
-
-
-//=== Buttons ===//
-
-// Views - footer button
-.footer-button{
-	margin-bottom: 130px;
-	@include breakpoint($mobile){
-		margin-bottom: 30px;
-	}
-	.view-footer{
-		text-align: center;
-
-		a.btn{
-			font-family: $base-font-family;
-			@include breakpoint($mobile){
-			width: 100%;
-			}
-		}
-	}
-}
-
-
-//=== Footer Section ===//
-#footer{
-	height: auto;
-}
-
-.region-footer-copyright{
-	// Social menu
-	.social-holder{
-		h2{
-			@extend .title;
-		}
-		ul{
-			@extend .social-networks;
-		}
-	}
-}
-
-.region-footer-right{
-	ul{
-		list-style: outside none none;
-    	margin: 0;
-    	padding: 0;
-
-		li {
-			font-size:16px;
-			line-height:20px;
-			margin:0 0 16px;
-			a {
-				color:$gray;
-				text-decoration:underline;
-				&:hover { text-decoration:none; }
-			}
-		}
-	}
-}
-
-
-
-// Image Holder - Fixing for the mobile devices
-.img-holder img{
-	width: 100%;
-	height: auto;
-}
-
-
-
+@import "global";
+@import "header";
+@import "footer";
+@import "home-stream";
+@import "buttons";
+@import "social";
+@import "visual";

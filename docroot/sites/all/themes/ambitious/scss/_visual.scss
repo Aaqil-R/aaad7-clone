@@ -1,13 +1,3 @@
-// @imports
-@import "compass/support"; // Add Compass' IE and vendor prefix support variables.
-@import "susy";
-@import "bourbon/bourbon";
-@import "source/jcf"; // From the source folder
-@import "source/all"; // From the source folder
-@import "source/content"; // From the source folder
-@import "source/profile"; // From the source folder
-@import "ambitious/admin_menu"; // Admin menu
-
 //=== Visual Section ===//
 .visual{
 	max-height: 770px;
@@ -41,4 +31,10 @@
 	@include breakpoint($mobile){
 		display: block;
 	}
+}
+
+// Image Holder - Fixing for the mobile devices
+.img-holder img{
+	width: 100%;
+	height: auto;
 }

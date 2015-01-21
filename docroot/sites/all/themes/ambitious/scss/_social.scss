@@ -1,0 +1,20 @@
+//=== Social Section ===//
+.social-block{
+	h1{
+		@include breakpoint($mobile){
+			margin-left: 18px;
+		}
+	}
+
+	.block-facebook{
+		@include breakpoint($mobile){
+			display: none;
+		}
+	}
+	.block-twitter{
+		@include breakpoint($mobile){
+			display: none;
+		}
+	}
+
+}
