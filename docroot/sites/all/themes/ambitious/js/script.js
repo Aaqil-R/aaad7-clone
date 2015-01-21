@@ -16,9 +16,26 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
+  	// Place your code here
 
-    // Place your code here.
+    // ==Close button==//
+		$('.block-close').on("click", function () {
+		    $(this).parent('div').fadeOut();
+		});
 
+		$(document).ready(function(){
+		  $(".block-close").click(function(){
+		    $("section.visual").addClass("no-overlay");
+		  });
+		});
+
+	// ==Masonry block==//
+	var $container = $('#masonry');
+	// initialize
+	$container.masonry({
+	  //columnWidth: 100,
+	  itemSelector: '.masonry-brick'
+	});
 
 }
 };
@@ -36,11 +53,9 @@ Drupal.behaviors.ambitious = {
     //}
   });
 
+
 })(jQuery, Drupal, this, this.document);
-    //==Masonry block==//
-    var $container = jQuery('#masonry');
-	// initialize
-	$container.masonry({
-	  //columnWidth: 100,
-	  itemSelector: '.masonry-brick'
-	});
+
+
+
+

@@ -7,19 +7,9 @@ jQuery(function(){
 	initBackgroundResize();
 	initCustomHover();
 	initViewMode();
+	initMessages();
 	jQuery('input, textarea').placeholder();
 });
-
-
-(function ($, Drupal, window, document, undefined) {
-Drupal.behaviors.my_custom_behavior = {
-  attach: function(context, settings) {
-   initCustomForms();
-  }
-};
-
-
-})(jQuery, Drupal, this, this.document);
 
 function initFixedBlock() {
 	var fixedClass = 'fixed-position';
@@ -49,11 +39,12 @@ function initFixedBlock() {
 		win.on('resize orientationchange', calcHeight).on('scroll', setPanelState);
 	});
 }
+
 // post View mode custom
 function initViewMode() {
 	jQuery(".view-mode").click(function(){
 	   jQuery('.view-mode').removeClass('active');
-	   jQuery(this).addClass('active'); 	   
+	   jQuery(this).addClass('active');
 	   if (jQuery(this).hasClass("list") ) {
          jQuery('#view-mode').addClass('list-view');
 	   }
@@ -62,13 +53,21 @@ function initViewMode() {
       }
 	});
 }
+
+// initMessages
+function initMessages() {
+  jQuery(".messages .close").click(function(){
+    jQuery(this).parents(".messages").hide();
+  });
+}
+
 // initialize custom form elements
 function initCustomForms() {
 	jcf.setOptions('Select', {
 		wrapNative: false,
 		wrapNativeOnMobile: false
 	});
-	jcf.replaceAll(); 
+	jcf.replaceAll();
 }
 
 // open-close init
@@ -102,7 +101,7 @@ function initMobileNav() {
 		menuActiveClass: 'search-active',
 		menuOpener: '.search-opener',
 		menuDrop: '.search-slide'
-	}); 
+	});
 }
 
 // stretch background to fill blocks
@@ -405,7 +404,7 @@ function initCustomHover() {
  *
  * Copyright 2014 PSD2HTML (http://psd2html.com)
  * Released under the MIT license (LICENSE.txt)
- * 
+ *
  * Version: 1.0.2
  */
 ;(function (root, factory) {
@@ -604,7 +603,7 @@ function initCustomHover() {
 			var origEvent = e || window.event;
 			e = $.event.fix(origEvent);
 			e.type = shimEventName;
-		
+
 			// old wheel events handler
 			if('detail'      in origEvent) { e.deltaY = -origEvent.detail;      }
 			if('wheelDelta'  in origEvent) { e.deltaY = -origEvent.wheelDelta;  }
@@ -637,7 +636,7 @@ function initCustomHover() {
 		// provide function for firing native events
 		fireNativeEvent: function(elements, eventName) {
 			$(elements).each(function() {
-				var element = this, eventObject;					
+				var element = this, eventObject;
 				if(element.dispatchEvent) {
 					eventObject = document.createEvent('HTMLEvents');
 					eventObject.initEvent(eventName, true, true);
@@ -693,7 +692,7 @@ function initCustomHover() {
 
 				// bind event handlers to instance
 				this.bindHandlers();
-				
+
 				// call constructor
 				this.init.apply(this, arguments);
 			};
@@ -831,7 +830,7 @@ function initCustomHover() {
  *
  * Copyright 2014 PSD2HTML (http://psd2html.com)
  * Released under the MIT license (LICENSE.txt)
- * 
+ *
  * Version: 1.0.2
  */
 ;(function($, window) {
@@ -1006,7 +1005,7 @@ function initCustomHover() {
 			}
 		},
 		onSelectDropPress: function() {
-			this.pressedFlag = true;	
+			this.pressedFlag = true;
 		},
 		onSelectDropRelease: function(e, pointerEvent) {
 			this.pressedFlag = false;
@@ -1148,7 +1147,7 @@ function initCustomHover() {
 			this.dropdown.add(this.fakeElement).toggleClass(this.options.flipDropClass, this.options.flipDropToFit && needFlipDrop);
 		},
 		showDropdown: function() {
-			// do not show empty custom dropdown 
+			// do not show empty custom dropdown
 			if(!this.realElement.prop('options').length) {
 				return;
 			}
@@ -1196,6 +1195,7 @@ function initCustomHover() {
 			var selectedIndex = this.realElement.prop('selectedIndex'),
 				selectedOption = this.realElement.prop('options')[selectedIndex],
 				selectedOptionImage = selectedOption ? selectedOption.getAttribute('data-image') : null,
+				selectedOptionUrl = selectedOption ? selectedOption.getAttribute('data-url') : null,
 				selectedOptionClasses,
 				selectedFakeElement;
 
@@ -1204,7 +1204,7 @@ function initCustomHover() {
 					this.selectImage.hide();
 				}
 				this.selectText.removeAttr('class').empty();
-			} else if(this.currentSelectedText !== selectedOption.innerHTML || this.currentSelectedImage !== selectedOptionImage) {
+			} else if(this.currentSelectedText !== selectedOption.innerHTML || this.currentSelectedImage !== selectedOptionImage || this.currentSelectedUrl !== selectedOptionUrl) {
 				selectedOptionClasses = getPrefixedClasses(selectedOption.className, this.options.optionClassPrefix);
 				this.selectText.attr('class', selectedOptionClasses).html(selectedOption.innerHTML);
 
@@ -1215,6 +1215,10 @@ function initCustomHover() {
 					this.selectImage.attr('src', selectedOptionImage).show();
 				} else if(this.selectImage) {
 					this.selectImage.hide();
+				}
+
+				if(selectedOptionUrl) {
+				   window.location.href =selectedOptionUrl;
 				}
 
 				this.currentSelectedText = selectedOption.innerHTML;
@@ -1234,7 +1238,7 @@ function initCustomHover() {
 
 			// handle disabled state
 			this.fakeElement.toggleClass(this.options.disabledClass, this.realElement.is(':disabled'));
-		},	
+		},
 		destroy: function() {
 			// restore structure
 			if(this.options.wrapNative) {

@@ -216,7 +216,8 @@
       </div>      
 </section> <!-- /visual -->
 
-<section class=" slider-block">
+    <!-- slider block -->
+    <section class=" slider-block">
       <div class="holder">
         <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
         <div class="block">
@@ -237,8 +238,8 @@
               <h2>Are you with us?<a class="tooltips mobile"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a></h2>
               <form class="signup-form">
                 <input type="text" name="fname" placeholder="First name">
-                <input type="email" required="" name="email" placeholder="Email address"> <a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a>
-                <a href="#" class="btn btn-left">Yes I am <span class="icon-Rightarrow"></span></a>
+                <input type="email" required name="email" placeholder="Email address"> <a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a>
+                <a href="#"class="btn btn-left">Yes I am <span class="icon-Rightarrow"></span></a>
                 <a href="#" class="btn btn-right">Not right now
                   <span class="icon-Rightarrow"></span>
                 </a>
