@@ -1,16 +1,17 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'last_updated', 'name', 'comment_count', 'counter');
+$ourfields = array('title', 'body', 'last_updated', 'name', 'comment_count', 'counter');
+$counter = strip_tags($fields['counter']->content);
 ?>
 <ul class="table-row">
 		<li class="col01">
-		<?php if ($fields['comment_count']->raw > 5): ?>
+		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw > 5): ?>
 		   <span class="icon-Hottopic"></span>
 		<?php endif; ?>
-		<?php if ($fields['counter']->raw <= 3 && $fields['comment_count']->raw <= 5): ?>
+		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw <= 5): ?>
 		   <span class="icon-Featured"></span>
 		<?php endif; ?>
-		<?php print $fields['title']->content; ?>
+		<?php print $fields['body']->content; ?>
 		</li>
 		<li class="col02"> 
 			<span class="num"><?php print $fields['comment_count']->content; ?></span>
@@ -29,7 +30,6 @@ $ourfields = array('title', 'last_updated', 'name', 'comment_count', 'counter');
 	  <?php if (!empty($field->separator)): ?>
 	    <?php print $field->separator; ?>
 	  <?php endif; ?>
-	<?php  dpm($id);?>
 	  <?php print $field->wrapper_prefix; ?>
 	    <?php print $field->label_html; ?>
 	    <?php print $field->content; ?>
