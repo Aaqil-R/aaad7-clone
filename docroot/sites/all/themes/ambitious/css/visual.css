@@ -11367,35 +11367,40 @@ body.sidebar #sidebar:before {
   z-index: 99999;
 }
 
-/* line 14, ../scss/visual.scss */
+/* line 12, ../scss/visual.scss */
+.visual {
+  max-height: 770px;
+  overflow: hidden;
+}
+/* line 16, ../scss/visual.scss */
 .visual .img-holder .caption-frame {
   z-index: 1000;
   position: absolute;
   top: 0;
 }
 
-/* line 23, ../scss/visual.scss */
+/* line 25, ../scss/visual.scss */
 .slider-block {
   z-index: 1100;
   position: relative;
   top: 30px;
 }
-/* line 28, ../scss/visual.scss */
+/* line 30, ../scss/visual.scss */
 .slider-block a.btn-left {
   margin-right: 10px;
 }
-/* line 31, ../scss/visual.scss */
+/* line 33, ../scss/visual.scss */
 .slider-block a.btn {
   padding: 11px 16px;
 }
 @media (max-width: 1040px) {
-  /* line 23, ../scss/visual.scss */
+  /* line 25, ../scss/visual.scss */
   .slider-block {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 23, ../scss/visual.scss */
+  /* line 25, ../scss/visual.scss */
   .slider-block {
     display: block;
   }
