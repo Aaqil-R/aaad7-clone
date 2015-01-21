@@ -9704,3 +9704,28 @@ body {
 .region-footer-right ul li a:hover {
   text-decoration: none;
 }
+
+/* line 155, ../scss/ambitious.scss */
+.slider-block {
+  z-index: 1100;
+}
+/* line 158, ../scss/ambitious.scss */
+.slider-block a.btn-left {
+  margin-right: 10px;
+}
+/* line 161, ../scss/ambitious.scss */
+.slider-block a.btn {
+  padding: 11px 16px;
+}
+@media (max-width: 1040px) {
+  /* line 155, ../scss/ambitious.scss */
+  .slider-block {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  /* line 155, ../scss/ambitious.scss */
+  .slider-block {
+    display: block;
+  }
+}

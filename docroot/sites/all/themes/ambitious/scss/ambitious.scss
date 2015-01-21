@@ -150,3 +150,23 @@ body{
 		}
 	}
 }
+
+//=== Slider Block Section ===//
+.slider-block{
+	z-index: 1100;
+	a{
+		&.btn-left{
+			margin-right: 10px;	
+		}
+		&.btn{
+			padding: 11px 16px;
+		}
+				
+	}
+	@include breakpoint(1040px){
+		display: none;
+	}
+	@include breakpoint($mobile){
+		display: block;
+	}
+}
