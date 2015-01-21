@@ -25,7 +25,7 @@ Drupal.behaviors.ambitious = {
 
  $(window).bind('views_load_more.new_content', function(){
     // Reload the masonry view after "load more"
-    if (typeOf Drupal.settings.masonry === 'object' && Drupal.settings.masonry != 'null'){
+   // if (typeOf Drupal.settings.masonry == 'object' && Drupal.settings.masonry != 'null'){
       var view-ids = object.keys(Drupal.settings.masonry);
       for(id in view-ids) {
        if (myobj.hasOwnProperty(key)) {
@@ -33,7 +33,7 @@ Drupal.behaviors.ambitious = {
           console.log(id);
        }
       }
-    }
+    //}
   });
 
 })(jQuery, Drupal, this, this.document);
