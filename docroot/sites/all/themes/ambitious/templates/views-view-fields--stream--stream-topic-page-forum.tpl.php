@@ -5,7 +5,7 @@ $counter = strip_tags($fields['counter']->content);
 ?>
 <ul class="table-row">
 		<li class="col01">
-		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw > 5): ?>
+		<?php if ($fields['comment_count']->raw > 5): ?>
 		   <span class="icon-Hottopic"></span>
 		<?php endif; ?>
 		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw <= 5): ?>
