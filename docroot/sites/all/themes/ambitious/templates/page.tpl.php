@@ -190,7 +190,7 @@
             <!-- /image holder -->
           <?php endif; ?>
       </div>
-
+</section>
 
   <?php if ($page['navigation']): ?>
     <section id="navigation">
