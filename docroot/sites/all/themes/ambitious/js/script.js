@@ -17,7 +17,7 @@
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
   	// Place your code here
-
+    	initCustomForms();
     // ==Close button==//
 		$('.block-close').on("click", function () {
 		    $(this).parent('div').fadeOut();
