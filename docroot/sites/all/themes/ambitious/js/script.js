@@ -42,15 +42,12 @@ Drupal.behaviors.ambitious = {
 
  $(window).bind('views_load_more.new_content', function(){
     // Reload the masonry view after "load more"
-   // if (typeOf Drupal.settings.masonry == 'object' && Drupal.settings.masonry != 'null'){
-      var viewids = object.keys(Drupal.settings.masonry);
-      for(id in viewids) {
-       if (myobj.hasOwnProperty(key)) {
-          $(id).masonry('reload');
-          console.log(id);
-       }
+    if (typeof Drupal.settings.masonry === 'object' ){
+      var viewids = Object.keys(Drupal.settings.masonry);
+      for(i=0;i<viewids.length; i++) {
+          $(viewids[i]).masonry('reloadItems');
       }
-    //}
+    }
   });
 
 

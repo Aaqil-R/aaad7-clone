@@ -15,7 +15,7 @@
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"], [class*=" icon-"], .jcf-select .jcf-select-opener{
+[class^="icon-"], [class*=" icon-"], .jcf-select .jcf-select-opener, .pager-load-more a{
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1771,7 +1771,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  }
 	  .view-content{
 	     margin-left:-1.9%; 
-	       .views-row-1{
+	       .views-row-first{
               padding: 0;
               background: none;
               border: none;
@@ -1779,6 +1779,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	       }
 
 	  }
+	   
 	}
 	 &.columns-full{
 	 .post{
@@ -2484,6 +2485,28 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 }
+
+
+.pager-load-more{
+   @extend %listreset;
+   padding: 29px 0 61px;
+   li{
+     text-align:center;
+     a{
+        font-size: 0;
+        color:$gray;
+        &:before{
+           font-size: 101px; 
+           @extend .icon-Downarrow;
+        }
+        &:hover {
+	     color:$heading-link;
+	     text-decoration: none;  
+	  }
+     }
+   }
+}
+
 .see-btn{
   width: 100%;
   text-align: center;
@@ -2975,9 +2998,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 /* forum table styles */
 .table-from {
-	text-align:left;
-	margin:0 0 41px;
-	@extend %listreset;
+	text-align:left;  
+	margin:0 0 41px; 
+	padding:0;
 	@include breakpoint($mobile) {
 		margin:0 0 30px;
 	}
@@ -2990,7 +3013,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:8px 15px 15px 18px;
 			margin:0 0 14px;
 		}
-		&.hottopic {
+		&.hottopic.views-row-1, &.hottopic.views-row-2, &.hottopic.views-row-3 {
 			.num {
 				border-color:$orange;
 				color:$orange;
