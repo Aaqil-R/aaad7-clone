@@ -1,6 +1,6 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'last_updated', 'name', 'comment_count', 'counter');
+$ourfields = array('title', 'body', 'last_comment_timestamp', 'name', 'comment_count', 'counter');
 $counter = strip_tags($fields['counter']->content);
 ?>
 <ul class="table-row">
@@ -11,7 +11,7 @@ $counter = strip_tags($fields['counter']->content);
 		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw <= 5): ?>
 		   <span class="icon-Featured"></span>
 		<?php endif; ?>
-		<?php print $fields['body']->content; ?>
+		<?php print $fields['body']->content;?>
 		</li>
 		<li class="col02"> 
 			<span class="num"><?php print $fields['comment_count']->content; ?></span>
@@ -22,7 +22,7 @@ $counter = strip_tags($fields['counter']->content);
      		<dt>Created by</dt>
 			<dd><?php print $fields['name']->content; ?></dd>
 			<dt>Last reply</dt>
-			<dd><time datetime="<?php print date('Y-m-d H:i:s',$fields['last_updated']->raw);?>" class="date"><?php print $fields['last_updated']->content; ?></time></dd>
+			<dd><time datetime="<?php print date('Y-m-d H:i:s',$fields['last_comment_timestamp']->raw);?>" class="date"><?php print $fields['last_comment_timestamp']->content; ?></time></dd>
 		</dl>
 		</li>
 <?php foreach ($fields as $id => $field): ?>
