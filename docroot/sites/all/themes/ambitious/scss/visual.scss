@@ -1,0 +1,42 @@
+// @imports
+@import "compass/support"; // Add Compass' IE and vendor prefix support variables.
+@import "susy";
+@import "bourbon/bourbon";
+@import "source/jcf"; // From the source folder
+@import "source/all"; // From the source folder
+@import "source/content"; // From the source folder
+@import "source/profile"; // From the source folder
+@import "ambitious/admin_menu"; // Admin menu
+
+//=== Visual Section ===//
+.visual{
+	.img-holder{
+		.caption-frame{
+			z-index: 1000;
+			position: absolute;
+			top: 0;
+		}
+	}
+}  
+
+//=== Slider Block Section ===//
+.slider-block{
+	z-index: 1100;
+	position: relative;
+	top: 30px;
+	a{
+		&.btn-left{
+			margin-right: 10px;	
+		}
+		&.btn{
+			padding: 11px 16px;
+		}
+				
+	}
+	@include breakpoint(1040px){
+		display: none;
+	}
+	@include breakpoint($mobile){
+		display: block;
+	}
+}

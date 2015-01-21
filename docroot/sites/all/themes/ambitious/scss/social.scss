@@ -1,0 +1,30 @@
+// @imports
+@import "compass/support"; // Add Compass' IE and vendor prefix support variables.
+@import "susy";
+@import "bourbon/bourbon";
+@import "source/jcf"; // From the source folder
+@import "source/all"; // From the source folder
+@import "source/content"; // From the source folder
+@import "source/profile"; // From the source folder
+@import "ambitious/admin_menu"; // Admin menu
+
+//=== Social Section ===//
+.social-block{
+	h1{
+		@include breakpoint($mobile){
+			margin-left: 18px;
+		}
+	}
+
+	.block-facebook{
+		@include breakpoint($mobile){
+			display: none;
+		}
+	}
+	.block-twitter{
+		@include breakpoint($mobile){
+			display: none;
+		}
+	}
+
+}
