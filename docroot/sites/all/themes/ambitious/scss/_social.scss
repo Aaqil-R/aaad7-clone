@@ -1,19 +1,71 @@
 //=== Social Section ===//
 .social-block{
+	@include breakpoint($mobile){
+	background: $wrapper-bg;
+	}
+
 	h1{
 		@include breakpoint($mobile){
 			margin-left: 18px;
+			font-size: 30px;
+			font-weight: bold;
+			background: none;
 		}
 	}
+	.block{
+		
+		@include breakpoint($mobile){
+			padding: 0 20px 13px;
+			background: none;
 
-	.block-facebook{
-		@include breakpoint($mobile){
-			display: none;
+			&.numbers{
+				font-weight: bold;
+			}
 		}
-	}
-	.block-twitter{
-		@include breakpoint($mobile){
-			display: none;
+		.block-facebook{
+			@include breakpoint($mobile){
+				display: none;
+			}
+		}
+		.block-twitter{
+			@include breakpoint($mobile){
+				display: none;
+			}
+		}
+		.block-youtube{
+			.btn{
+				padding: 16px 0;
+			}
+
+			.youtube-btn{
+				@include breakpoint($mobile){
+					margin-bottom: 12px;
+				}
+				span.icon-YouTube{
+					@include breakpoint($mobile){
+						display: none;
+					}
+				}
+			}
+
+			}
+			.twitter-btn{
+				display: none;
+				@include breakpoint($mobile){
+					display: block;
+					margin-bottom: 12px;
+				}
+
+			}
+
+			.facebook-btn{
+				display: none;
+				@include breakpoint($mobile){
+					display: block;
+					margin-bottom: 12px;
+				}
+
+
 		}
 	}
 

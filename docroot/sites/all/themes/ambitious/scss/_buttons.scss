@@ -14,7 +14,20 @@
 			padding: 12px 19px;
 			@include breakpoint($mobile){
 			width: 100%;
+			margin-bottom: 25px;
 			}
 		}
 	}
+}
+
+// Facebook button
+.facebook-btn{
+	border-bottom: 5px solid $facebook-border;
+	background: $facebook-bg;
+}
+
+// Twitter button
+.twitter-btn{
+	border-bottom: 5px solid $twitter-border;
+	background: $twitter-bg;
 }

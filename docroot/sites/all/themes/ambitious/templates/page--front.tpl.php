@@ -85,7 +85,6 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

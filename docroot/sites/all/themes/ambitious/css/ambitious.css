@@ -11391,17 +11391,17 @@ body.sidebar #sidebar:before {
   z-index: 99999;
 }
 
-/* line 2, ../scss/_global.scss */
+/* line 9, ../scss/_global.scss */
 body {
   margin-top: -20px;
 }
 
-/* line 5, ../scss/_global.scss */
+/* line 12, ../scss/_global.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 9, ../scss/_global.scss */
+/* line 16, ../scss/_global.scss */
 .span-4 {
   width: 32.20339%;
   float: left;
@@ -11521,25 +11521,96 @@ body {
   /* line 12, ../scss/_buttons.scss */
   .footer-button .view-footer a.btn {
     width: 100%;
+    margin-bottom: 25px;
   }
 }
 
+/* line 24, ../scss/_buttons.scss */
+.facebook-btn {
+  border-bottom: 5px solid #1a427e;
+  background: #4b69aa;
+}
+
+/* line 30, ../scss/_buttons.scss */
+.twitter-btn {
+  border-bottom: 5px solid #0275d1;
+  background: #2289ff;
+}
+
 @media (max-width: 767px) {
-  /* line 3, ../scss/_social.scss */
+  /* line 2, ../scss/_social.scss */
+  .social-block {
+    background: #eef2f3;
+  }
+}
+@media (max-width: 767px) {
+  /* line 7, ../scss/_social.scss */
   .social-block h1 {
     margin-left: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    background: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 9, ../scss/_social.scss */
-  .social-block .block-facebook {
+  /* line 15, ../scss/_social.scss */
+  .social-block .block {
+    padding: 0 20px 13px;
+    background: none;
+  }
+  /* line 21, ../scss/_social.scss */
+  .social-block .block.numbers {
+    font-weight: bold;
+  }
+}
+@media (max-width: 767px) {
+  /* line 25, ../scss/_social.scss */
+  .social-block .block .block-facebook {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 14, ../scss/_social.scss */
-  .social-block .block-twitter {
+  /* line 30, ../scss/_social.scss */
+  .social-block .block .block-twitter {
     display: none;
+  }
+}
+/* line 36, ../scss/_social.scss */
+.social-block .block .block-youtube .btn {
+  padding: 16px 0;
+}
+@media (max-width: 767px) {
+  /* line 40, ../scss/_social.scss */
+  .social-block .block .block-youtube .youtube-btn {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 44, ../scss/_social.scss */
+  .social-block .block .block-youtube .youtube-btn span.icon-YouTube {
+    display: none;
+  }
+}
+/* line 52, ../scss/_social.scss */
+.social-block .block .twitter-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 52, ../scss/_social.scss */
+  .social-block .block .twitter-btn {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+/* line 61, ../scss/_social.scss */
+.social-block .block .facebook-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 61, ../scss/_social.scss */
+  .social-block .block .facebook-btn {
+    display: block;
+    margin-bottom: 12px;
   }
 }
 
