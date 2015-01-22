@@ -196,7 +196,7 @@
               </p>
             </div>
             <div class="2-col col">
-              <h2>Are you with us?<a class="tooltips mobile"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a></h2>
+              <h2>Are you with us?<a class="tooltips mobile"><!-- <span class="btn-tooltip">?</span> --><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a></h2>
               <form class="signup-form">
                 <input type="text" name="fname" placeholder="First name">
                 <input type="email" required name="email" placeholder="Email address"> <a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a>

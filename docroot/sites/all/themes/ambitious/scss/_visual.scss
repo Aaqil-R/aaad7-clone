@@ -7,6 +7,14 @@
 			z-index: 1000;
 			position: absolute;
 			top: 0;
+			.caption{ 
+				padding: 70px 0 0;
+				.title{
+					position: relative;
+					right: 50px;
+				}				
+
+			}
 		}
 	}
 }  
@@ -15,13 +23,30 @@
 .slider-block{
 	z-index: 1100;
 	position: relative;
-	top: 30px;
+	top: -30px;
+	.r-s-arrow{
+		a{
+			text-decoration: none;
+		}
+	}
+	.l-s-arrow{
+		a{
+			text-decoration: none;
+		}
+	}
 	a{
 		&.btn-left{
 			margin-right: 10px;	
 		}
 		&.btn{
 			padding: 11px 16px;
+		}
+		&.btn-right{
+			position: relative;
+			right: 85px;
+			@include breakpoint($mobile){
+				right: 0;
+			}
 		}
 				
 	}
@@ -38,3 +63,4 @@
 	width: 100%;
 	height: auto;
 }
+

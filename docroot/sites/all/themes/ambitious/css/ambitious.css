@@ -11493,6 +11493,10 @@ body {
   -webkit-box-shadow: 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px transparent;
 }
+/* line 21, ../scss/_home-stream.scss */
+.front .posts-columns .btn {
+  padding: 12px 19px;
+}
 
 /* line 4, ../scss/_buttons.scss */
 .footer-button {
@@ -11511,6 +11515,7 @@ body {
 /* line 12, ../scss/_buttons.scss */
 .footer-button .view-footer a.btn {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+  padding: 12px 19px;
 }
 @media (max-width: 767px) {
   /* line 12, ../scss/_buttons.scss */
@@ -11549,35 +11554,63 @@ body {
   position: absolute;
   top: 0;
 }
+/* line 10, ../scss/_visual.scss */
+.visual .img-holder .caption-frame .caption {
+  padding: 70px 0 0;
+}
+/* line 12, ../scss/_visual.scss */
+.visual .img-holder .caption-frame .caption .title, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2 {
+  position: relative;
+  right: 50px;
+}
 
-/* line 15, ../scss/_visual.scss */
+/* line 23, ../scss/_visual.scss */
 .slider-block {
   z-index: 1100;
   position: relative;
-  top: 30px;
+  top: -30px;
 }
-/* line 20, ../scss/_visual.scss */
+/* line 28, ../scss/_visual.scss */
+.slider-block .r-s-arrow a {
+  text-decoration: none;
+}
+/* line 33, ../scss/_visual.scss */
+.slider-block .l-s-arrow a {
+  text-decoration: none;
+}
+/* line 38, ../scss/_visual.scss */
 .slider-block a.btn-left {
   margin-right: 10px;
 }
-/* line 23, ../scss/_visual.scss */
+/* line 41, ../scss/_visual.scss */
 .slider-block a.btn {
   padding: 11px 16px;
 }
+/* line 44, ../scss/_visual.scss */
+.slider-block a.btn-right {
+  position: relative;
+  right: 85px;
+}
+@media (max-width: 767px) {
+  /* line 44, ../scss/_visual.scss */
+  .slider-block a.btn-right {
+    right: 0;
+  }
+}
 @media (max-width: 1040px) {
-  /* line 15, ../scss/_visual.scss */
+  /* line 23, ../scss/_visual.scss */
   .slider-block {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 15, ../scss/_visual.scss */
+  /* line 23, ../scss/_visual.scss */
   .slider-block {
     display: block;
   }
 }
 
-/* line 37, ../scss/_visual.scss */
+/* line 62, ../scss/_visual.scss */
 .img-holder img {
   width: 100%;
   height: auto;
