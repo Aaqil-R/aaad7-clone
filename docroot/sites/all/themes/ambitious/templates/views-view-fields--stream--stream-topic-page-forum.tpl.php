@@ -1,8 +1,9 @@
 <?php
 $i = 1;
 $ourfields = array('title', 'body', 'last_comment_timestamp', 'name', 'comment_count', 'counter');
-$counter = strip_tags($fields['counter']->content);
+$counter = strip_tags($fields['counter']->content); 
 ?>
+ 
 <ul class="table-row">
 		<li class="col01">
 		<?php if ($fields['comment_count']->raw > 5): ?>

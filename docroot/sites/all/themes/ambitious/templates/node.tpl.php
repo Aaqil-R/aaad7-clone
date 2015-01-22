@@ -10,7 +10,8 @@
 
 <?php if($view_mode == 'posts_columns'): ?> 
 <section>
-						<div class="img-holder">
+						<div class="img-holder video-<?php print render($content['field_has_video'][0]); ?>">
+						     <span class="icon-Playbutton video-icon"></span>
 							<a href="#" title="Featured" class="feature-holder">
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>

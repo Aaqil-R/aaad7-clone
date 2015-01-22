@@ -14,7 +14,7 @@
 <!-- Teaser View of the topic -->
   <section class="text-block">
     <h1><?php print $title; ?></h1>
-    <?php print render($content['body']); ?>
+    <?php print render($content['body']);?>
     <div class="btn-holder clearfix">
       <a href="#" class="btn btn-gray btn-left" title="Filter by">Filter by</a>
       <a href="#" class="btn btn-green btn-left bt-left" title="Share"><span>Share <em class="icon-Share"></em></span></a>
@@ -39,9 +39,7 @@ if(0 < $next_nid){
 $next_title = node_load($next_nid);    
 $next_title = $next_title->title;    
 $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
-}
-
-
+} 
 
 ?>
 <!-- FULL View of the topic -->

@@ -18,6 +18,11 @@
  *
  * @ingroup views_templates
  */
+ 
+ // var 
+ 
+  $node = node_load(152);
+  $links = sharethis_node_view($node, 'full', 'en');
 ?>
 <?php if (!empty($q)): ?>
   <?php
@@ -26,6 +31,7 @@
     print $q;
   ?>
 <?php endif; ?>
+ 
 
 <div class="sort-block">
 				 <?php foreach ($widgets as $id => $widget): ?>
@@ -75,7 +81,7 @@
       <div class="views-exposed-widget views-reset-button">
         <?php print $reset_button; ?>
       </div>
-    <?php endif; ?>
-				<a href="#" class="btn btn-green btn-right" title="Share"><span>Share <em class="icon-Share"></em></span></a>
-			</div>
+    <?php endif; ?> 
+    <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
+</div>
  
