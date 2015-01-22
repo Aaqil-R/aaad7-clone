@@ -21,7 +21,7 @@
  
  // var 
  
-  $node = node_load(152);
+  $node = node_load(arg(0));
   $links = sharethis_node_view($node, 'full', 'en');
 ?>
 <?php if (!empty($q)): ?>
