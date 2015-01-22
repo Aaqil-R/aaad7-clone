@@ -9,6 +9,8 @@
 
 /* variables */ 
   
+  $node = node_load(arg(1)); 
+  $links = sharethis_node_view($node, 'full', 'en');
 ?>
 <?php if($view_mode == 'posts_columns'): ?>
 <!-- Teaser View of the topic -->
@@ -17,7 +19,7 @@
     <?php print render($content['body']);?>
     <div class="btn-holder clearfix">
       <a href="#" class="btn btn-gray btn-left" title="Filter by">Filter by</a>
-      <a href="#" class="btn btn-green btn-left bt-left" title="Share"><span>Share <em class="icon-Share"></em></span></a>
+      <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
     </div>
   </section>	 
     <!-- Teaser ends here -->				
