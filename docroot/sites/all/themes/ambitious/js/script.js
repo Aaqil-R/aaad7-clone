@@ -39,7 +39,10 @@ Drupal.behaviors.ambitious = {
 
 }
 };
-
+/*load more button with masonry - masonry was not applied when new content loads
+ * here is fix to apply or reload the masonry items and apply the style
+ * here is the discussion https://www.drupal.org/node/2201335 comment #12
+ */
  $(window).bind('views_load_more.new_content', function(){
     // Reload the masonry view after "load more"
     if (typeof Drupal.settings.masonry === 'object' ){
