@@ -310,10 +310,32 @@ function ambitious_preprocess_menu_tree(&$variables) {
     $parent = $link->getAttribute('data-menu-parent');
     break;
   }
-  
+  	
   $variables['menu_parent'] = $parent;
 }
 
 function ambitious_menu_tree(&$variables) {
   return '<ul class="menu ' . $variables['menu_parent'] . '">' . $variables['tree'] . '</ul>';
 }
+
+
+/* SHARE BUTTON CUSTOM */
+function ambitious_preprocess_views_exposed_form(&$vars) {
+ if($vars['form']['#id'] == 'views-exposed-form-stream-stream-topic-page'){
+   $node = node_load(arg(1)); 
+   $links = sharethis_node_view($node, 'full', 'en');
+   $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+ }
+}
+function ambitious_preprocess_views_view_masonry(&$vars) {  
+  if($vars['view']->current_display == 'stream_topic_page' && $vars['view']->query->pager->current_page === 0){
+     $node = node_load(arg(1)); 
+     $links = sharethis_node_view($node, 'full', 'en');
+     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+     $vars['node'] = $node;
+  } 
+   
+}
+
+
+ 

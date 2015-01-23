@@ -21,8 +21,6 @@
  
  // var 
  
-  $node = node_load(arg(1)); 
-  $links = sharethis_node_view($node, 'full', 'en');
 ?>
 <?php if (!empty($q)): ?>
   <?php
@@ -30,9 +28,7 @@
     // it shows up first in the URL.
     print $q;
   ?>
-<?php endif; ?>
- 
-
+<?php endif; ?> 
 <div class="sort-block">
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
@@ -82,6 +78,6 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-    <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
+    <?php print render($variables['share_button']) ; ?>
 </div>
  
