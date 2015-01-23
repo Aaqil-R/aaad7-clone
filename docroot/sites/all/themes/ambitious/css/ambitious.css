@@ -195,7 +195,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -911,7 +911,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1502,7 +1502,7 @@ form .form-actions input[type=submit]:visited {
 }
 
 /* line 34, ../scss/source/_font-icons.scss */
-.icon-Downarrow:before {
+.icon-Downarrow:before, .view-display-id-stream_topic_page .pager-load-more li a:before {
   content: "\e602";
 }
 
@@ -2685,7 +2685,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 750, ../scss/source/_all.scss */
-#nav > ul > li a .icon-Downarrow {
+#nav > ul > li a .icon-Downarrow, .view-display-id-stream_topic_page .pager-load-more #nav > ul > li a a:before {
   position: absolute;
   right: 0;
   top: 0;
@@ -2710,7 +2710,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   background: #eef2f3;
 }
 /* line 776, ../scss/source/_all.scss */
-#nav > ul li.active .icon-Downarrow {
+#nav > ul li.active .icon-Downarrow, #nav > ul .view-display-id-stream_topic_page .pager-load-more li.active a:before, .view-display-id-stream_topic_page .pager-load-more #nav > ul li.active a:before {
   display: none;
 }
 /* line 777, ../scss/source/_all.scss */
@@ -4833,7 +4833,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   color: #d2d5d6;
 }
 /* line 2334, ../scss/source/_all.scss */
-.more-btn a .icon-Downarrow {
+.more-btn a .icon-Downarrow, .more-btn a .view-display-id-stream_topic_page .pager-load-more li a:before, .view-display-id-stream_topic_page .pager-load-more li .more-btn a a:before {
   font-size: 101px;
 }
 /* line 2337, ../scss/source/_all.scss */
@@ -6923,7 +6923,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -7639,7 +7639,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -9632,7 +9632,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10348,7 +10348,7 @@ form .form-actions input[type=submit]:after, .btn:after, .topic-share .st_sharet
 }
 
 /* line 11, ../scss/source/_markup-mixins.scss */
-.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul {
+.top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu, .right-info, .school-slide .nav, #nav > ul, #nav .slide, .visual .img-holder .caption-frame .page-links, .slider-pager, .about-us .coming-up, .about-us .coming-up ul, .table-from, .table-from .table-row, .top-header .top-header-inner .page-links, #main2 .article-left .article-left-holder .comment-list ul.comment-listing, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul, #main2 .article-left .article-left-holder .article-info .article-updated ul, #footer .nav ul, #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul, .region-footer-copyright #footer .social-holder ul, .view-display-id-stream_topic_page .pager-load-more {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -11756,4 +11756,32 @@ body.node-type-topic .easy-breadcrumb {
 /* line 99, ../scss/_design.scss */
 .view-display-id-stream_topic_page .featured-button .feature-holder {
   display: inherit;
+}
+/* line 103, ../scss/_design.scss */
+.view-display-id-stream_topic_page .pager-load-more {
+  padding: 29px 0 61px;
+}
+/* line 106, ../scss/_design.scss */
+.view-display-id-stream_topic_page .pager-load-more li {
+  text-align: center;
+}
+/* line 108, ../scss/_design.scss */
+.view-display-id-stream_topic_page .pager-load-more li a {
+  font-size: 0;
+  color: #d2d5d6;
+}
+/* line 111, ../scss/_design.scss */
+.view-display-id-stream_topic_page .pager-load-more li a:before {
+  font-size: 101px;
+}
+/* line 115, ../scss/_design.scss */
+.view-display-id-stream_topic_page .pager-load-more li a:hover {
+  color: #081318;
+  text-decoration: none;
+}
+
+/* TITLE HIDE*/
+/* line 126, ../scss/_design.scss */
+.node-type-topic h1.title, .node-type-topic h1.breadcrumb {
+  display: none;
 }

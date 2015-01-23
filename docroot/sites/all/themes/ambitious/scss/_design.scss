@@ -100,7 +100,30 @@ body.node-type-topic{
        display:inherit;     
      }  
   } 
+  .pager-load-more{
+   @extend %listreset;
+   padding: 29px 0 61px;
+   li{
+     text-align:center;
+     a{
+        font-size: 0;
+        color:$gray;
+        &:before{
+           font-size: 101px; 
+           @extend .icon-Downarrow;
+        }
+        &:hover {
+	     color:$heading-link;
+	     text-decoration: none;  
+	  }
+     }
+   }
+  }
 }
 
-
-
+/* TITLE HIDE*/ 
+.node-type-topic{
+  h1.title, h1.breadcrumb{
+    display:none;
+  }
+}
