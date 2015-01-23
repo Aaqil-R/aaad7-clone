@@ -115,7 +115,8 @@ body.node-type-topic{
         color:$gray;
         &:before{
            font-size: 101px; 
-           @extend .icon-Downarrow;
+           @extend [class*=" icon-"];
+           @extend .icon-Downarrow;          
         }
         &:hover {
 	     color:$heading-link;
