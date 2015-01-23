@@ -2,99 +2,20 @@
 @import "variables";
 @import "buttons";
 @import "markup-mixins";
-@import "base/base-reset"; // or cms-reset 
+@import "base/base-reset"; // or cms-reset
 @import "breakpoint";
-/*embedded fonts styles*/
-@font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?-du0j81');
-  src:url('../fonts/icomoon.eot?#iefix-du0j81') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?-du0j81') format('woff'),
-    url('../fonts/icomoon.ttf?-du0j81') format('truetype'),
-    url('../fonts/icomoon.svg?-du0j81#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"], .jcf-select .jcf-select-opener, .pager-load-more a{
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-Close:before {
-  content: "\e601";
-}
-.icon-Downarrow:before {
-  content: "\e602";
-}
-.icon-Facebook:before {
-  content: "\e603";
-}
-.icon-Featured:before {
-  content: "\e604";
-}
-.icon-Hottopic:before {
-  content: "\e606";
-}
-.icon-Leftarrow:before {
-  content: "\e607";
-}
-.icon-Playbutton:before {
-  content: "\e608";
-}
-.icon-Rightarrow:before {
-  content: "\e60a";
-}
-.icon-Share:before {
-  content: "\e60c";
-}
-.icon-Speech1:before {
-  content: "\e60d";
-}
-.icon-Twitter:before {
-  content: "\e610";
-}
-.icon-Uparrow:before {
-  content: "\e611";
-}
-.icon-YouTube:before {
-  content: "\e613";
-}
-.icon-search:before {
-  content: "\e60b";
-}
-.icon-Calendar:before{
-  content: "\e600";
-}
-.icon-google:before{
-  content: "\e605";
-}
-.icon-plus:before{
-  content: "\e609";
-}
-.icon-Speech-outline:before{
-  content: "\e60e";
-}
-.icon-Time:before{
-  content: "\e60f";
-}
-.icon-Voice:before{
-  content: "\e612";
-}
+@import "font-icons";
 * { font-size: 100.01%; }
 html {
 	height:100%;
 	font-size: 62.5%;
 }
-body {
+html body {
 	height: 100%;
-	background:url(../images/wid_bg.jpg) $page-background;  
+	background: $page-background;
+	&.myvoice{
+		background: url(../images/wid_bg.jpg)$page-background;
+	}
 }
 h1{
   font-weight:normal;
@@ -113,7 +34,7 @@ h1{
 h2{
   font-weight:normal;
   @include fontsize(45,16);
-  line-height:50px; 
+  line-height:50px;
   @include breakpoint($tablet) {
     @include fontsize(42,16);
 	line-height:47px;
@@ -124,7 +45,7 @@ h2{
   }
 }
 h3{
-  font-weight:normal; 
+  font-weight:normal;
   @include fontsize(36,16);
   line-height:40px;
   @include breakpoint($tablet) {
@@ -137,31 +58,31 @@ h3{
   }
 }
 h4{
-  font-weight:normal; 
+  font-weight:normal;
   @include fontsize(27,16);
-  line-height:30px; 
+  line-height:30px;
   @include breakpoint($mobile) {
     @include fontsize(24,16);
 	line-height:30px;
   }
 }
 h5{
-  font-weight:normal; 
+  font-weight:normal;
   @include fontsize(22,16);
-  line-height:30px;  
+  line-height:30px;
   @include breakpoint($mobile) {
     @include fontsize(20,16);
 	line-height:26px;
   }
 }
 h6{
-  font-weight:normal; 
+  font-weight:normal;
   @include fontsize(18,16);
-  line-height:24px; 
+  line-height:24px;
 }
-.subheading{ 
+.subheading{
   @include fontsize(24,16);
-  line-height:36px; 
+  line-height:36px;
   font-weight:normal;
   margin:0 0 20px;
   font-family:$base-font-family;
@@ -170,8 +91,8 @@ p {
   @include fontsize(18,16);
   line-height:30px;
   margin-bottom:20px;
-  margin-top:0;   
-  color:$base-text-color;  
+  margin-top:0;
+  color:$base-text-color;
   @include breakpoint($mobile){
     @include fontsize(16,16);
     line-height:25px;
@@ -181,19 +102,19 @@ p {
 	font-weight:bold;
     &:hover{
       text-decoration:none;
-    } 
+    }
   }
 }
 a{
-  @include link-color($base-link-color); 
-  &:hover{  
+  @include link-color($base-link-color);
+  &:hover{
     text-decoration:none;
-  }  
+  }
 }
 .p2{
   @include fontsize(13,16);
   line-height:18px;
-   color:$gray;  
+   color:$gray;
   @include breakpoint($mobile){
     @include fontsize(12,16);
 	line-height:17px;
@@ -215,14 +136,20 @@ blockquote{
       line-height:25px;
       margin-left:25px;
     }
-  } 
-} 
+  }
+}
+img{
+	max-width: 100%;
+}
 .messages{
-  background: #c3104b;
-  color:$white;
+  background:$magenta;
+  color: white;
   text-align: center;
   font-size: 18px;
-  padding:11px 20px; 
+  padding:11px 20px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
   @include breakpoint($tablet){
     font-size: 13px;
   }
@@ -230,14 +157,11 @@ blockquote{
     @include container;
 	.close{
 	  float:right;
-	  color:$white;  
+	  color:$white;
 	  @include breakpoint($mobile){
 	    position: absolute;
 	    top: 21px;
-	    right: 30px;	  
-	  }
-	  &:hover, &:focus, &:active{
-	     color:$magenta-dark;
+	    right: 30px;
 	  }
 	}
   }
@@ -254,13 +178,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	position:relative;
 	table-layout:fixed;
 	overflow:hidden;
+	margin-top:50px;
 }
 /* top bar style */
 .top-bar {
-	position:relative;
+	position:fixed;
 	z-index:999;
 	background:$base-text-color;
 	width:100%;
+	min-height: 50px;
+	top:0;
 	.holder {
 		@include container;
 		@extend %clearfix;
@@ -273,7 +200,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		float:left;
 		max-width:67%;
 		@extend %listreset;
-		padding:5px 0 0; 
+		padding:5px 0 0;
 		&.float-right{
 		  float:right;
 		  @include breakpoint($mobile) {
@@ -281,12 +208,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  }
 		  .last-child{
 		    padding-right:0;
-		  }		  
+		  }
 		}
 		@include breakpoint($mobile) {
 			max-width:100%;
 			float:none;
-			text-align:center; 
+			text-align:center;
 		}
 		li {
 			position:relative;
@@ -363,14 +290,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				vertical-align:middle;
 				color:$gray;
 			}
-			img { 
+			img {
 				@include border-radius(5px);
 				display:inline-block;
 				vertical-align:middle;
 			}
 			&:hover span {
 				text-decoration:underline;
-			} 
+			}
 		}
 		.logout {
 			float:left;
@@ -385,12 +312,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	width:100%;
 	z-index:9999;
 	position:relative;
+	margin-bottom: 102px;
 	.header-top {
 		width:100%;
-		position:relative;
 		z-index:9999;
 		background:$white;
+		position: fixed;
+		left: 0;
+		top: 50px;
 		@include box-shadow(0 0 10px rgba(24,24,24,.25));
+		@include transition(all);
 		.holder {
 			@include container;
 			@extend %clearfix;
@@ -405,6 +336,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		float:left;
 		width:259px;
 		height:50px;
+		@include transition(all);
 		@include breakpoint($mobile) {
 			width:202px;
 			height:39px;
@@ -413,14 +345,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 		img {
 			display:block;
-			width:100%;
 			height:auto;
+			@include transition(all);
 		}
 	}
 	&.fixed-position {
+		margin-bottom: 49px;
 		.header-top {
-			position:fixed;
-			left:0;
 			top:0;
 		}
 		.holder {
@@ -439,6 +370,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			margin:6px 0 0;
 			width:195px;
 			height:38px;
+			.page-school &{
+				margin: 0;
+				img{
+					width: 137px;
+				}
+			}
+			img{
+				width: 186px;
+			}
 			@include breakpoint($mobile) {
 				display:none;
 			}
@@ -512,6 +452,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			@include link-color($heading-link);
 			&:hover {
 				color:$orange;
+				.page-school &{
+					color:$green;
+				}
 			}
 		}
 	}
@@ -547,7 +490,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			background:url(../images/sprite.png) no-repeat;
 		}
 		&:hover {
-			&:after { background-position:0 -29px; }
+			&:after {
+				background-position:0 -29px;
+				.page-school &{
+					background-position: -50px -89px;
+				}
+			}
 		}
 		.menu-text {
 			@include breakpoint($mobile) {
@@ -574,7 +522,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			@include breakpoint($mobile) {
 				font-size:22px;
 			}
-			&:hover { color:$orange; }
+			&:hover {
+				color:$orange;
+				.page-school &{
+					color:$green;
+				}
+			}
 		}
 		em { display:none; }
 	}
@@ -586,14 +539,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	.search-slide  {
-		max-height:400px;
+		max-height:138px;
 	}
 }
 /* search slide styles */
 .search-slide {
 	overflow:hidden;
 	max-height:0;
-	@include transition ($type:all, $time:0.4s, $ease:ease);
+	@include transition(all, 0.4s, ease-in-out);
 	@include container;
 	.search-form {
 		padding:20px 15px 41px;
@@ -632,8 +585,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	right:0;
 	margin-right:-550px;
 	z-index:99;
-	@include box-shadow(0 2px 7px rgba(24,24,24,.5));
-	@include transition ($type:all, $time:0.4s, $ease:ease);
+	@include box-shadow(0 2px 7px rgba(24,24,24,.5)); 
 	@include breakpoint($mobile) {
 		width:285px;
 		left:0;
@@ -662,6 +614,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			a {
 				color:$heading-link;
 				text-decoration:none;
+				&:hover{
+					color:$orange;
+					.page-school & {
+						color:$green
+					}
+				}
 			}
 		}
 	}
@@ -678,7 +636,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		@include breakpoint($mobile) {
 			margin-left:285px;
 		}
-	}  
+	}
 	#main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
 		width:100%;
 		max-width:none;
@@ -688,10 +646,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		margin:0;
 		left:0;
 		padding:0 20px;
-	} 
-	 
+	}
+
 	li {
-		a.school-opener { 
+		a.school-opener {
 		padding:0 0 0 39px;
 		.icon-Close {
 			display:block;
@@ -730,53 +688,46 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	margin-right:-460px;
 	z-index:99;
 	@include box-shadow(0 2px 7px rgba(24,24,24,.5));
-	overflow-y: scroll;
-	@include transition ($type:all, $time:0.4s, $ease:ease);
+	overflow-y: scroll; 
 	@include breakpoint($mobile) {
 		margin-right:-310px;
 		width:285px;
 	}
-	ul{
-		li{
-			.btn{
-				margin-left:32px;
-				margin-right:32px;
-				margin-bottom:33px;
-				display:block;
-				padding:10px 9px;
-				font-size:20px;
-				em{
-					right:-20px;
-					top:5px;
-				}
-				@include breakpoint($mobile) {
-					margin: 0 0 -2px;
-					position: relative;
-					z-index: 2; 
-					@include border-radius(0);
-					border: none;
-					padding: 14px 0;
-					font-size: 18px;
-					text-align: left;
-					&:hover{
-						opacity: .9;
-					}
-					span{
-						padding: 0 0 0 25px;
-						position: relative;
-						display: inline-block;
-						vertical-align: top;    
-						word-spacing: 3px;
-						.icon-Rightarrow{
-							display:none;
-							} 
-					}
-				}
-			}
-		}
-		list-style:none;
-		padding:0;
-	}	
+    .btn{
+	   margin-left:32px;
+	   margin-right:32px;
+	   margin-bottom:33px;
+	   display:block;
+	   padding:10px 9px;
+	   font-size:20px;
+	   em{
+		 right:-20px;
+		 top:5px;
+	   }
+	   @include breakpoint($mobile) {
+	     margin: 0 0 -2px;
+	     position: relative;
+	     z-index: 2;
+		 @include border-radius(0);
+	     border: none;
+	     padding: 14px 0;
+	     font-size: 18px;
+	     text-align: left;
+		 &:hover{
+		   opacity: .9;
+		 }
+		 span{
+		   padding: 0 0 0 25px;
+		   position: relative;
+		   display: inline-block;
+		   vertical-align: top;
+		   word-spacing: 3px;
+		   .icon-Rightarrow{
+		      display:none;
+		   }
+		 }
+	   }
+	}
 }
 /* nav styles */
 #nav {
@@ -829,7 +780,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	.slide {
 		@extend %listreset;
 		> li {
-			
+
 			font-size:18px;
 			line-height:29px;
 			a {
@@ -841,8 +792,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 	}
-	a {
-		&:hover { opacity:0.7; } 
+	ul li a {
+		&:hover {
+			color:$orange;
+			.page-school & {
+				color:$green
+			}
+		}
 	}
 }
 /* nav active styles */
@@ -857,11 +813,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		margin-left:-430px;
 		@include breakpoint($mobile) {
 			margin-left:-285px;
-		} 
+		}
 		#main2 .action-block{
 		  margin-left:0;
 		}
-	}  
+	}
 	#main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
 		width:100%;
 		max-width:none;
@@ -889,6 +845,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		&:after { display:none; }
 		.close {
 			display:block;
+			&:hover{
+				color:$orange;
+			}
 			@include breakpoint($mobile) {
 				display:none;
 			}
@@ -900,7 +859,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 .visual {
 	width:100%;
 	position:relative;
-	margin:0 0 20px;
+	margin: 0 0 38px;
 	@include transition ($type:all, $time:0.4s, $ease:ease);
 	&.visual-white{
 	  background:$white;
@@ -908,13 +867,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
       padding-bottom: 20px;
 	   @include breakpoint($tablet) {
 	    .img-holder .caption-frame{
-		  padding:0; 
+		  padding:0;
 		  br{
 		    display:block;
 		  }
-		}  
+		}
 	  }
-      @include breakpoint($mobile) {	  
+      @include breakpoint($mobile) {
 	    .img-holder .caption-frame .caption .title{
 		  font-size: 27px;
 		}
@@ -923,6 +882,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	.img-holder {
 		width:100%;
 		position:relative;
+		max-height: 41em;
+		overflow: hidden;
+		//background: url(../images/img26.jpg) no-repeat 0 0;
+		.myvoice & {
+			max-height: 30em;
+		}
 		img {
 			display:block;
 			width:100%;
@@ -935,22 +900,22 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			left:50%;
 			height:100%;
 			width:1080px;
-			margin:0 0 0 -540px; 
+			margin:0 0 0 -540px;
 			@include breakpoint($desktop) {
 			  &.caption-frame-arrows{
 			    padding:0 0 0 70px;
-			  } 
+			  }
 			}
 			@include breakpoint($mobile) {
 			  &.caption-frame-arrows{
 			    padding:0;
-			  } 
+			  }
 			}
-			
+
 			@include breakpoint($desktop) {
 				width:100%;
-				margin:0; 
-				left:0; 
+				margin:0;
+				left:0;
 			}
 			@include breakpoint($mobile) {
 				padding:0 30px;
@@ -960,7 +925,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				}
 			}
 			.caption {
-				padding:44px 0 0; 
+				padding:44px 0 0;
 				h1{
 				  margin:0;
 				}
@@ -982,13 +947,17 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				}
 				.title{
 					display:inline-block;
-					vertical-align:top; 
+					vertical-align:top;
 					font-size:66px;
-					line-height:75px;  
+					line-height:75px;
 					margin:0 0 10px;
 					padding:0 0 0 40px;
 					font-weight:normal;
 					width:100%;
+					color:$heading-link;
+					.page-school &{
+						padding:0 0 0 40px;
+					}
 					@include breakpoint($mobile) {
 					 padding:0;
 					}
@@ -998,27 +967,36 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					  display:inline-block;
 					}
 					&.title-second{
-					   margin:40px 0 10px; 
+					   margin:40px 0 10px;
 					   @include breakpoint($tablet) {
-						  margin:25px 0 0 10px;  
+						  margin:25px 0 0 10px;
 					   }
 					   @include breakpoint($mobile) {
-						  margin:10px 0 0 0px; 
+						  margin:10px 0 0 0px;
+						  br{
+						    display:block;
+						  }
+						  span{
+						    padding:2px 10px;
+						  }
 					   }
 					   span{
 					     @extend %clearfix;
 					   }
 					}
-					.title-third{ 
+					.title-third{
 					  margin: 10px 0 0 188px;
 					  @include breakpoint($tablet) {
 					     margin:10px 0 0 140px;
 					  }
 					  @include breakpoint($mobile) {
-						display:none;
+						margin-left:0;
+						span{
+						  padding:2px 10px;
+						}
 					  }
-					} 
-					.title-fourth{ 
+					}
+					.title-fourth{
 					  margin: 10px 0 0 188px;
 					  @include breakpoint($tablet) {
 					     margin:10px 0 0 130px;
@@ -1026,9 +1004,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					  @include breakpoint($mobile) {
 						 margin-left:0px;
 					  }
-					} 
-					.title-five{ 
-					  margin: 10px 0 0 330px;
+					}
+					.title-five{
+					  margin: 10px 0 0 180px;
 					  @include breakpoint($tablet) {
 					     margin:10px 0 0 140px;
 					  }
@@ -1036,7 +1014,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 						 margin:10px 0 0 10px;
 					  }
 					}
-					@include breakpoint($tablet) {	
+					@include breakpoint($tablet) {
 						font-size:45px;
 						line-height:45px;
 						span{
@@ -1045,14 +1023,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					}
 					@include breakpoint($mobile) {
 						font-size:33px;
-						line-height:36px;						
+						line-height:36px;
 						vertical-align:middle;
 						white-space:nowrap;
-						margin:0; 
+						margin:0;
 						span{
 						  padding:10px;
 						}
-					} 
+					}
 				}
 				.text {
 					display:inline-block;
@@ -1100,7 +1078,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 						width:10px;
 						height:16px;
 						background:url(../images/sprite.png) no-repeat 0 -62px;
-						
+
 					}
 					a {
 						color:$white;
@@ -1112,7 +1090,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	.holder {
-		@include container; 
+		@include container;
 		padding:11px 15px;
 		@include breakpoint($mobile) {
 			padding:7px 21px;
@@ -1127,15 +1105,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			@include breakpoint($mobile) {
 				font-size:12px;
 				line-height:15px;
-				text-align:left;
-				margin-left:-20px;
+				text-align:left; 
 			}
 			a {
 			  color:$heading-link;
 			  font-weight: bold;
               text-decoration: underline;
 			  &:hover{
-			    text-decoration:none; 
+			    text-decoration:none;
 			  }
 			}
 		}
@@ -1145,15 +1122,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		right:0;
 		top:50%;
 		margin:-56px 0 0;
-		z-index:1000;
+		z-index:99;
 		background:$orange;
 		color:$white;
-		text-decoration:none; 
+		text-decoration:none;
 		@include border-radius(5px 0 0 5px);
 		padding: 0 18px 0 12px;
 		right:0;
 		overflow:hidden;
-        @include transition ($type:all, $time:0.2s, $ease:ease); 
+        @include transition ($type:all, $time:0.2s, $ease:ease);
 		@include breakpoint($mobile) {
 			background:none;
 			padding:0;
@@ -1172,7 +1149,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:15px 0 0;
 			min-width:111px;
 			display:block;
-	        margin-right: -145px;
+	        margin-right: -100px;
 	        @include transition ($type:all, $time:0.5s, $ease:ease);
 	        opacity:0;
 			.title {
@@ -1184,7 +1161,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				font-size:22px;
 				line-height:22px;
 				display:block;
-				width: 156px;
 			}
 		}
 		.icon-Rightarrow {
@@ -1213,13 +1189,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		left:0;
 		top:50%;
 		margin:-56px 0 0;
-		z-index:1000;
+		z-index:99;
 		background:$orange;
 		color:$white;
-		text-decoration:none; 
+		text-decoration:none;
 		@include border-radius(0 5px 5px 0);
-		padding: 0 3px 0 8px; 
-		left:0; 
+		padding: 0 3px 0 16px;
+		left:0;
 	    @include transition ($type:all, $time:0.2s, $ease:ease);
         overflow:hidden;
 		@include breakpoint($mobile) {
@@ -1239,9 +1215,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:15px 0 0 15px;
 			min-width:111px;
 			display:block;
-            margin-left:-148px; 
+            margin-left: -100px;
 	        @include transition ($type:all, $time:0.2s, $ease:ease);
-            opacity:0; 
+            opacity:0;
 			.title {
 				display:block;
 				font-size:16px;
@@ -1251,7 +1227,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				font-size:22px;
 				line-height:22px;
 				display:block;
-				width: 156px;
 			}
 		}
 		.icon-Leftarrow {
@@ -1278,12 +1253,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	}
 	.slider-main{
       position:absolute;
-	  bottom:70px;
+	  bottom:80px;
 	  left:auto;
 	  right:auto;
 	  margin-left:auto;
 	  margin-right:auto;
-	  width:100%;   
+	  width:100%;
       @include breakpoint($mobile) {
 	    position: static;
 		background:$white;
@@ -1291,36 +1266,36 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
         padding: 14px 18px 16px;
 		max-width:91%;
 		margin-top:20px;
-	  }	  
-	.slider-box{ 
+	  }
+	.slider-box{
 	  max-width: 872px;
 	  @include transition ($type:all, $time:0.4s, $ease:ease);
-	  margin:0 auto; 
+	  margin:0 auto;
 	  position:relative;
 	  margin-top: 32px;
-	  @include breakpoint($large-screen) { 
+	  @include breakpoint($large-screen) {
 		width: 95%;
 		max-width:1080px;
-	  }  
+	  }
 	  @include breakpoint($mobile) {
 	    margin:0px;
 		width:auto;
-	  } 
+	  }
 	  .slider-action{
-	    @extend %clearfix;  
-	  } 
+	    @extend %clearfix;
+	  }
 	  .slider-action{
-	    @extend %clearfix;  
+	    @extend %clearfix;
 	    a{
 		  top:102px;
 		  position: absolute;
 		  font-size: 39px;
-		  color:$green; 
+		  color:$green;
 		  left: 34px;
 		  @include breakpoint($large-screen) {
 		    left: 24px;
 			top:78px;
-		  } 
+		  }
 		  &.right-arrow{
 		    left:auto;
 			right: 34px;
@@ -1338,10 +1313,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  left:auto;
 			  right: 14px;
 			}
-		  } 
+		  }
 		  @include breakpoint($tablet) {
 		    top:62px;
-		  } 
+		  }
 		  @include breakpoint($mobile) {
 		    top: 40%;
 		    font-size: 22px;
@@ -1349,13 +1324,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			&.right-arrow{
 			  right: 0px;
 			}
-		  }  
+		  }
 		}
 	  }
 	  .slider-box-text{
 	    @include transition ($type:all, $time:0.4s, $ease:ease);
 	    background:$white;
-		padding: 43px 94px; 
+		padding: 43px 94px;
 		@include breakpoint($large-screen) {
 		  padding:23px 84px;
 		}
@@ -1367,7 +1342,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		      display:none;
 		   }
 		}
-		h4{ 
+		h4{
 		  font-size: 24px;
 		  font-weight: normal;
 		  font-family:$base-font-family;
@@ -1375,57 +1350,57 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  @include breakpoint($tablet) {
 		     font-size: 19px;
 			 font-weight: bold;
-		  }  
+		  }
 		}
-		p{ 
+		p{
 		  font-size: 18px;
 		  @include breakpoint($tablet) {
 		     font-size: 16px;
 		  }
 		}
-		a{ 
+		a{
 		   font-size: 19px;
 		   font-weight:bold;
 		   text-decoration: underline;
 		}
 		@include breakpoint($desktop) {
 		  padding:17px 54px;
-		} 
+		}
 		@include breakpoint($tablet) {
 		  padding:23px 54px;
 		  margin-top:10px;
 		  img{
 		    display:none;
-		  } 
+		  }
 		}
-		@include breakpoint($mobile) { 
-		  padding:0px 30px; 
+		@include breakpoint($mobile) {
+		  padding:0px 30px;
 		}
-	  } 
+	  }
 	}
 	}
 }
 /* slider pager part styles */
 .slider-pager{
-  @extend %listreset;  
+  @extend %listreset;
   text-align:center;
-  margin:18px 0 0; 
-  @include breakpoint($tablet) { 
-     display:none; 
+  margin:18px 0 0;
+  @include breakpoint($tablet) {
+     display:none;
   }
   li{
     width:17px;
-	height:17px; 
+	height:17px;
 	margin:0px 2px;
 	border:2px solid $white;
-	display: inline-block; 
+	display: inline-block;
 	@include border-radius(100px);
 	@extend %texthide;
     &.active{
 	  background:$white;
-	}	
-  } 
-} 
+	}
+  }
+}
 /* main informative part styles */
 #main {
 	@include container;
@@ -1433,42 +1408,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	@include breakpoint($mobile) {
 		padding:0 20px;
 	}
-}
-/* main information part styles */
-.text-section{
-  margin-bottom:59px;
-  margin-top:28px;
-  .text-right-section{
-    float:right;
-	margin-top: 40px;
-	@include breakpoint($tablet) {
-	
-	}
-	a{
-	  font-weight: bold;
-	  font-size: 20px;
-	  display: block;
-	  text-decoration: underline;
-	  text-align: right;
-	  margin-bottom:5px;
-	  &:hover{
-	    text-decoration:none;
-	  }
-	} 
-  }
-  h2{
-    max-width:666px;
-    margin-bottom:23px;
-	@include breakpoint($tablet) {
-	  max-width:inherit;
-	}
-  }
-  p{
-    max-width:666px;
-	@include breakpoint($tablet) {
-	  max-width:inherit;
-	}
-  }
 }
 .approach-main{
 	@include container;
@@ -1498,10 +1437,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	    width:100%;
 	  }
 	  h5{
-	    margin:14px 0; 
+	    margin:14px 0;
 	  }
 	  p{
-	    font-size: 17px; line-height: 1.5em; 
+	    font-size: 17px; line-height: 1.5em;
 	  }
 	  a.more-bt{
 	     font-size:17px;
@@ -1509,7 +1448,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		 text-decoration: underline;
 		 &:hover{
 		    text-decoration: none;
-		 } 
+		 }
 	  }
 	  span.formate{
 		    color:$captions-credit;
@@ -1526,11 +1465,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   padding:14px 15px 85px;
   @extend %clearfix;
   .content{
-    @extend %clearfix; 
+    @extend %clearfix;
   }
   @include breakpoint($mobile){
     .btn{
-	  width: 100%; 
+	  width: 100%;
 	  em{
 	    display:none;
 	  }
@@ -1538,12 +1477,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
   .find-us{
     float:left;
-	width:63%; 
+	width:63.8%;
 	@include breakpoint($tablet){
 	  width:60%;
 	}
 	@include breakpoint($mobile){
-	  width:100%;	
+	  width:100%;
 	  padding-bottom: 60px;
 	}
 	margin-right:20px;
@@ -1573,15 +1512,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  }
 	  img{
 	    float:right;
-		margin-left:36px; 
+		margin-left:36px;
 		@include breakpoint($desktop){
 		   max-width:50%;
-		}  
+		}
 		@include breakpoint($mobile){
 		   max-width:inherit;
 		   width:100%;
 		   margin-left:0;
-		} 
+		}
 	  }
 	  address{
 	    margin-bottom:29px;
@@ -1592,13 +1531,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   .coming-up{
     @extend %listreset;
 	float:right;
-    width:31%; 
+    width:31.7%;
 	@include breakpoint($tablet){
 	  width:37%;
 	}
 	@include breakpoint($mobile){
 	  width:auto;
-      float:none;	  
+      float:none;
 	}
 	h4{
 	  margin-bottom: 20px;
@@ -1623,23 +1562,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  font-family:$base-font-family;
 		  width:53%;
 		  float:left;
-		  margin:0;
+		  margin:10px 0 0 0;
 		  font-size:18px;
 		}
 		.coming-up-col{
 		  width:22%;
 		  float:left;
 		  text-align:center;
-		  color: green;
+		  color:$green;
 		  margin-top:4px;
 		  font-size: 25px;
-		  .cal-icon{
-		    background:url(../images/sprite.png) no-repeat;
-			width:32px;
-			height:29px;
-			background-position:-55px -86px;
-			display: inline-block;
-		  }
 		}
 		time{
 		  width:25%;
@@ -1647,6 +1579,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  text-align:center;
 		  font-weight: bold;
 		  font-size:13px;
+		  margin-top:4px;
 		  .date{
 		     display: block;
 			 font-size: 21px;
@@ -1654,8 +1587,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  .month{
 		     font-size:17px;
 			 display: block;
+			 margin-bottom: -4px;
 		  }
-		} 
+		}
 		&:first-child{
 		  border-top:none;
 		}
@@ -1669,14 +1603,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	background:$white;
 	border:1px solid $gray;
 	@extend %clearfix;
-	padding:14px 18px 16px;
-	margin:0 0 58px;
+	padding: 15px 18px 15px;
+	margin: 0 0 41px;
 	@include breakpoint($mobile) {
 		display:none;
 	}
-	label{
-		  display:none;
-		}
 	.sort-by {
         float:left;
 		input[type="submit"] { display:none; }
@@ -1684,10 +1615,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		select {
 			width:250px;
 		}
-		
 	}
 	&.advanced-sort-block{
-		.sort-by { 
+		.sort-by {
 			float:left;
 			input[type="submit"] { display:none; }
 			label { display:none; }
@@ -1702,178 +1632,81 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 			fieldset{
 				float:left;
-				margin:0 20px 0 0; 
+				margin:0 20px 0 0;
 			}
 		}
-	} 
-	.view-mode{ 
-	  float: left;
-	  position: relative;
-	  padding: 2px;  
-	  @include border-radius(5px);
-	  min-width: 49px; 
-	  height: 49px;
-	  text-indent: -100px;
-      overflow: hidden;
-	  @include linear-gradient($captions-credit,$page-background);
-	  &:hover{
-	    background:$base-input-border-color;
-	  } 
-      &:before {
-        position:absolute;	 
-        right:2px;
-        bottom:2px;
-        content:"";
-        background:$white;
-        width:45px;
-        height:45px;  
+	}
+	.view-mode{
+		float: left;
+		position: relative;
+		padding: 2px;
 		@include border-radius(5px);
-      }	
-      &:after{
-        position:absolute;	 
-        right:14px;
-        bottom:14px;
-        content:"";
-        background:url(../images/sprite.png) no-repeat;
-        width:20px;
-        height:20px;    
-      }
-	  &.grid{
-	    &.active:after{
-          background-position:-4px -91px;
-        }
-	    &:after{
-		  background-position: -4px -114px;
-		} 
-        &:hover:after{
-          background-position:-4px -137px;
-        } 
-	  }
-      &.list{
-	    &.active:after{
-          background-position:-26px -91px;  
-        }  
-	    &:after{
-		  background-position: -26px -114px;   
-		} 
-        &:hover:after{
-          background-position:-26px -137px;
-        }
-	  }	  
+		min-width: 49px;
+		height: 49px;
+		text-indent: -100px;
+		color: #2a2e31;
+		overflow: hidden;
+		background: #AEAEAE;
+		&.active{
+			@include linear-gradient(#8E8E8E,#DFDFDF);
+			&:before{
+				background:#F3F4F6;
+			}
+		}
+		&:hover{
+			background:#58666F;
+		}
+		&:before {
+			position:absolute;
+			right:2px;
+			bottom:2px;
+			content:"";
+			background:$white;
+			width:45px;
+			height:45px;
+			@include border-radius(5px);
+		}
+		&:after{
+			position:absolute;
+			right:14px;
+			bottom:14px;
+			content:"";
+			background:url(../images/sprite.png) no-repeat;
+			width:20px;
+			height:20px;
+		}
+		&.grid{
+			&.active:after{
+				background-position:-4px -91px;
+			}
+			&:after{
+				background-position:-4px -137px;
+			}
+			&:hover:after{
+				background-position:-4px -91px;
+			}
+		}
+		&.list{
+			&.active:after{
+				background-position:-26px -91px;
+			}
+			&:after{
+				background-position: -26px -137px;
+			}
+			&:hover:after{
+				background-position:-26px -91px;
+			}
+		}
 	}
 }
 /* main post columns styles */
 .posts-columns {
-	@extend %clearfix; 
-	&.view-display-id-stream_topic_page{
-	  .ajax-progress-throbber{
-	    position: absolute; 
-	  }
-	  .view-content{
-	     margin-left:-1.9%; 
-	       .views-row-first{
-              padding: 0;
-              background: none;
-              border: none;
-              @include box-shadow(inherit);
-	       }
-
-	  }
-	   
-	}
-	 &.columns-full{
-	 .post{
-	      	      
-		  .forum-icon{
-		    position: absolute;
-			right:18px;
-			font-size:40px;
-			top: 27px;
-			color:$orange;
-			&.icon-Featured{
-			  color:$yellow;
-			}
-		  } 
-		  .forum-text{
-		    @extend %clearfix;
-			.forum-left{
-			  float: left;
-			  line-height: 15px;
-			  width:108px;
-			  margin-left:12px;
-			  margin-top:13px;
-			  .image-holder{
-			    overflow:hidden;
-			    border-radius:5px;
-			    margin-bottom:11px; 
-				img{
-				  width:100%;
-				} 
-			  }
-			  cite{
-			    font-style:normal;
-			    display: block;
-			    margin-top: 20px;
-			    margin-bottom: 11px;
-			    font-size:16px;
-			  }
-			  time{
-			    font-size: 14px;
- 			  }
-			}
-			.forum-right{
-			  margin-left:156px;
-			  margin-bottom:11px;
-			  margin-right:100px;
-			  padding-top: 9px;
-			  h3{
-			    margin-bottom: 22px;
-			  }
-			  p{
-			    font-size:18px;
-				margin-bottom:20px;
-			  }
-			} 
-		  }
-		  .footer{
-			  padding-left: 184px;
-			  padding-right: 21px;
-			  margin-bottom:-10px;
-                 .num-holder a .text{
-			    display:inherit; 
-			  }
-			  .times{
-			    font-size: 15px;
-				margin-left: 40px;
-				margin-top: 8px;
-				color:$captions-credit; 
-				display: inline-block;
-				em{
-				  font-size: 29px;
-				  margin-right: 10px; 
-				  float:left;
-				}
-				cite{  
-				  font-style:normal;
-				  font-weight:bold;
-				}
-			  }
-			}
-	     
-		.action-block{
-		  background:none;
-		  padding:12px 0 44px 0;
-		  .holder{
-		    padding:0;
-		  }
-		}
-		}
-	  }
+	@extend %clearfix;
 	/* post view mode styles */
 	.age{
 	     background: $pink;
 	     padding: 10px 10px;
-	     color: $white; 
+	     color: $white;
 		 float: right;
 		 margin-top: -20px;
          @include breakpoint($mobile) {
@@ -1882,14 +1715,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  }
 	  &.news-post{
 	      h2.title{
-		    padding:80px 0 41px 0; 
-			margin:0; 
-			@include fontsize(37,16); 
+		    padding:65px 0 41px 0;
+			margin:0;
+			@include fontsize(37,16);
             @include breakpoint($mobile) {
 	           font-size:24px;
 			   padding:30px 0 30px 0;
-	         }			
-		  } 
+	         }
+		  }
 	   }
 	&#view-mode{
       h3{
@@ -1907,11 +1740,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
        }
 	   .info.add{
 	     padding:0px 0 0px 11px;
-	   } 
+	   }
       }
 	}
 	/* post column styles */
-	
 	.col {
 		float:left;
 		width:31.4%;
@@ -1924,7 +1756,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			margin:0;
 		}
 		}
-		
 		.text-block {
 			@include fontsize(18,16);
 			line-height:1.5em;
@@ -1959,18 +1790,27 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					.btn.btn-green.btn-left.bt-left{
 					  float:right;
 					}
-				} 
+				}
 			}
-					
+
 		}
 		.text-block-second{
 			@include fontsize(18,16);
 			line-height:1.5em;
-			margin:0 0 24px;  
+			margin: 0 0 31px;
+			min-height: 322px;
+			@include breakpoint($tablet) {
+				min-height: 338px;
+			}
+			@include breakpoint($tablet) {
+				min-height: 0;
+			}
 			h1 {
-				line-height:1.156em; 
-				@include fontsize(42,18);  
+				line-height: 1.08em;
+				font-size: 2.5em;
 				margin:-10px 0 21px;
+				color:$heading-link;
+				letter-spacing: 0px;
 				@include breakpoint($tablet) {
 					@include fontsize(36,18);
 					br{
@@ -1984,7 +1824,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				}
 			}
 			p {
-				margin:0 0 10px;
+				margin: 0 10px 10px 0;
+				font-size: 18px;
+				line-height: 28px;
 				@include breakpoint($mobile) {
 					margin:0 0 38px;
 				}
@@ -1995,24 +1837,22 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				@include breakpoint($mobile) {
 					display:block;
 				}
-				
+
 			}
-					
+
 		}
 		.post{
-			padding:20px 18px;
-			position: relative; 
+			padding: 20px 21px;
+			position: relative;
+			margin: 0 0 30px;
 			background:$white;
 			border:1px solid $gray;
-			width:31.4%;
-		     margin:0 0 31px 1.9%;
 			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
 			@include breakpoint($mobile) {
 				padding:14px 15px;
 				font-size:18px;
 				line-height:27px;
-			} 
-	      
+			}
 			.img-holder {
 				position:relative;
 				time{
@@ -2032,10 +1872,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					position:absolute;
 					z-index:2;
 					bottom:0;
-					left:11px; 
+					left:11px;
 					@include breakpoint($mobile) {
 						left:15px;
-					} 
+					}
 					&.hover {
 						.text {
 							display:block;
@@ -2097,8 +1937,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 						}
 					}
 					background:$pink ;
-					.icon-Featured {
-						font-size:24px;
+					.icon-Voice {
+						font-size:29px;
 						padding:6px 0 0;
 						float:left;
 						background:$white;
@@ -2132,11 +1972,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 						}
 					}
 				}
-				img {
-					display:block;
-					width:100%;
-					height:auto;
-				}
 			}
 			.info {
 				padding:24px 0 4px 11px;
@@ -2157,7 +1992,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				h3 {
 					line-height:1.363em;
 					@include fontsize(22,16);
-					margin:-4px 0 8px; 
+					margin:-4px 0 8px;
 					@include breakpoint($mobile) {
 						font-size:22px;
 						line-height:28px;
@@ -2169,7 +2004,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					}
 				}
 				&.add {
-					padding:24px 0 13px 11px;
+					padding: 12px 0 13px 9px;
 					@include breakpoint($tablet) {
 						padding:24px 0 13px;
 					}
@@ -2179,6 +2014,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					h3 {
 						margin:-2px 0 12px;
 					}
+				}
+				&.spacing{
+				  p{
+				     letter-spacing: -0.1px;
+				  }
 				}
 				p {
 					margin:0 0 10px;
@@ -2251,9 +2091,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 							@include breakpoint($tablet) {
 								margin:0 5px 0 0;
 							}
-							@include breakpoint($mobile) { 
+							@include breakpoint($mobile) {
 								font-size:16px;
-								line-height:18px; 
+								line-height:18px;
 								@include border-radius(5px);
 								min-width:39px;
 								height:28px;
@@ -2266,7 +2106,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 								background:url(../images/sprite.png) no-repeat -40px 0;
 								width:11px;
 								height:13px;
-								@include breakpoint($mobile) { 
+								@include breakpoint($mobile) {
 									right:6px;
 								}
 							}
@@ -2300,75 +2140,90 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 		.post-actions{
-		    padding:60px 30px 30px 30px; 
-			background:url(../images/bg04.jpg) no-repeat $pink;
-			background-size: cover;
+			background: $pink;
 			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+			position: relative;
+			max-height: 315px;
+			&:hover{
+				background: #CF005B;
+			}
+			&:before{
+				content: "";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 200px 0 0 200px;
+				border-color: transparent transparent transparent #db0076;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			&:hover:before{
+				border-color: transparent transparent transparent #C80042;
+			}
 			@include breakpoint($mobile) {
 				padding:14px 15px;
 				font-size:18px;
 				line-height:27px;
 				background-position: right top;
-			} 
+			}
 			.action{
-			  color:$white;
-			  font-size:39px; 
-			  line-height: normal;
-			  outline: none;
-			  @extend %clearfix;
-			  display: block;
-			  @include breakpoint($tablet) {
-			      font-size:30px;  
-			  }
-			  @include breakpoint($mobile) {
-			    .text{
-			      br{
-				    display:none;
-				  }
-			    }
-			  }
-			  .icon-Rightarrow{
-				  color:$white;
-				  text-decoration:none; 
-			      margin-top:41px;
-				  outline: none;
-				  display: block; 
-				  font-size:61px;
-				  text-align: right;
-			  } 
-			  &:hover, &:active, &:focus{ 
-				  text-decoration:none;  
-				  .icon-Rightarrow{
-				    color:$pink-dark;
-				  }
+				padding:60px 30px 30px 30px;
+				color:$white;
+				font-size:39px;
+				line-height: normal;
+				outline: none;
+				position: relative;
+				@extend %clearfix;
+				display: block;
+				@include breakpoint($tablet) {
+					font-size:30px;
+				}
+				@include breakpoint($mobile) {
+					.text br{
+						display:none;
+					}
+		  		}
+				.icon-Rightarrow{
+					color:$white;
+					text-decoration:none;
+					margin-top:41px;
+					outline: none;
+					display: block;
+					font-size:61px;
+					text-align: right;
+				}
+				&:hover, &:active, &:focus{
+					text-decoration:none;
 				}
 			}
 		}
 		.post-my-voice-actions{
-		    padding:20px 30px 48px 30px; 
+		    padding:20px 30px 48px 30px;
 			background:url(../images/bg09.jpg) no-repeat $pink;
 			background-size: cover;
 			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+			max-height: 315px;
 			@include breakpoint($tablet) {
-			  background-position: left bottom;  
+			  background-position: left bottom;
 			}
 			@include breakpoint($mobile) {
 				padding:14px 15px;
 				font-size:18px;
 				line-height:27px;
-				background-position: left bottom;  
+				background-position: left bottom;
 				background-size: inherit;
-			} 
-			
+			}
+
 			.action{
 			  color:$white;
-			  font-size:39px; 
+			  font-size:39px;
 			  line-height: normal;
 			  outline: none;
 			  @extend %clearfix;
 			  display: block;
 			  @include breakpoint($tablet) {
-			      font-size:30px;  
+			      font-size:30px;
 			  }
 			  @include breakpoint($mobile) {
 			    .text{
@@ -2379,7 +2234,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  }
 			  .icon-Rightarrow{
 				  color:$white;
-				  text-decoration:none; 
+				  text-decoration:none;
 			      margin-top:61px;
 				  outline: none;
 				  display: block;
@@ -2389,9 +2244,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				    text-align: left;
                     margin-left: 160px;
 				  }
-			  } 
-			  &:hover, &:active, &:focus{ 
-				  text-decoration:none;  
+			  }
+			  &:hover, &:active, &:focus{
+				  text-decoration:none;
 				  .icon-Rightarrow{
 				    color:$pink-dark;
 				  }
@@ -2411,7 +2266,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				text-align:left;
 				padding:0;
 				margin:0 0 19px;
-				position:relative; 
+				position:relative;
 				&:after {
 					position:absolute;
 					content:"";
@@ -2427,9 +2282,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				q {
 					display:block;
 					line-height:1.333em;
-					@include fontsize(24,16); 
+					@include fontsize(24,16);
 					margin:0 0 18px;
-					@include breakpoint($mobile) { 
+					@include breakpoint($mobile) {
 						margin:0 0 10px;
 					}
 				}
@@ -2471,53 +2326,31 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	text-align:center;
 	@include breakpoint($mobile) {
 		display:none;
-	} 
+	}
 	em { display:none; }
 	a {
 		text-decoration:none;
 		color:$gray;
 		.icon-Downarrow {
-			font-size:53px;
+			font-size:101px;
 		}
 		&:hover {
-		  color:$heading-link;
-		  text-decoration: none;  
+		  color:#b6bcc1;
+		  text-decoration: none;
 		}
 	}
 }
-
-
-.pager-load-more{
-   @extend %listreset;
-   padding: 29px 0 61px;
-   li{
-     text-align:center;
-     a{
-        font-size: 0;
-        color:$gray;
-        &:before{
-           font-size: 101px; 
-           @extend .icon-Downarrow;
-        }
-        &:hover {
-	     color:$heading-link;
-	     text-decoration: none;  
-	  }
-     }
-   }
-}
-
 .see-btn{
   width: 100%;
   text-align: center;
   display: block;
   margin-bottom: 107px;
   @include breakpoint($tablet) {
-      margin-bottom:20px; 
+      margin-bottom:20px;
   }
   .btn{
     padding: 10px 29px 10px 28px;
-    font-size: 18px; 
+    font-size: 18px;
 	i{
 	  margin-left: 25px;
 	}
@@ -2554,16 +2387,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		    display:none;
 		  }
 		}
-	} 
+	}
 	.holder {
 		@include container;
-		padding:134px 15px 126px;
+		padding:102px 15px 126px;
 		@extend %clearfix;
 		@include breakpoint($mobile) {
 			padding:20px 20px 37px;
 		}
         & > div{
-		  float:right; 
+		  float:right;
 		  &:first-child{
 		    float:left;
 			@include breakpoint($mobile) {
@@ -2571,17 +2404,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		  }
 		}
-	   & > div.region-action{
-	     float:none;
-	     .block-block{
-	        .block-symptoms{
-	          float:right; 
-	        }
-	     }
-	   }
-	} 
+	}
 	/* action symptoms block styles */
-	.block-symptoms { 
+	.block-symptoms {
 		width:48.5%;
 		padding: 50px 10px 37px 39px;
 		background-image:url(../images/bg.jpg);
@@ -2605,7 +2430,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			line-height:48px;
 			margin:0 0 55px;
 			font-family:$header-font-family;
-			font-weight: normal; 
+			font-weight: normal;
 			#main2 &{
 			  margin:0 0 6px;
 			}
@@ -2637,7 +2462,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	/* action inspire block styles */
-	.block-inspire { 
+	.block-inspire {
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
@@ -2668,28 +2493,28 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	/* action report block styles */
-	.block-report{ 
+	.block-report{
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
 		background-image:url(../images/bg02.jpg);
-		background-size:cover;	
+		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
 			.btn{
 				font-size:16px;
 				padding:10px 14px;
 			}
-		}		
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
-			padding:24px 10px 20px 21px; 
+			padding:24px 10px 20px 21px;
 			background-position: right top;
 			.btn{
 				font-size:14px;
 			}
-		} 
+		}
 		.title {
 			display:block;
 			font-size:45px;
@@ -2709,12 +2534,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	/* action blog block styles */
-	.block-blog{ 
+	.block-blog{
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
 		background-image:url(../images/bg03.jpg);
-		background-size:cover;	
+		background-size:cover;
 		background-position:top right;
         @include breakpoint($tablet) {
 		    background-position:top right;
@@ -2722,14 +2547,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			.btn{
 				font-size:16px;
 			}
-		}		
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			background-position: right center;
 			float:none;
-			padding:24px 10px 20px 21px;  
+			padding:24px 10px 20px 21px;
 		}
-		
+
 		.title {
 			display:block;
 			font-size:45px;
@@ -2749,28 +2574,28 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	/* Connect with others block styles */
-	.block-connect{ 
+	.block-connect{
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
 		background-image:url(../images/bg.jpg);
-		background-size:cover;	
+		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
 			.btn{
 				font-size:16px;
 			}
-		}	 
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
-			padding:24px 10px 20px 21px; 
+			padding:24px 10px 20px 21px;
 			background-position: right top;
 			margin: 0 0 34px;
 			.btn{
 				font-size:14px;
 			}
-		} 
+		}
 		.title {
 			display:block;
 			font-size:45px;
@@ -2790,29 +2615,29 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 	/* Vacancies block styles */
-	  .block-vacancies{ 
+	  .block-vacancies{
 		color:$white;
 		width:48.5%;
 		@extend %action-background;
 		@extend %action-image-right;
-		padding: 48px 10px 34px 39px;  
+		padding: 48px 10px 34px 39px;
         @include breakpoint($tablet) {
 		    background-position:top right;
 			.btn{
 				font-size:16px;
 			}
 			padding:48px 10px 34px 32px;
-		}	 
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
-			padding:24px 10px 20px 21px; 
+			padding:24px 10px 20px 21px;
 			background-position: right top;
 			margin: 0 0 34px;
 			.btn{
 				font-size:14px;
 			}
-		} 
+		}
 		.title {
 			display:block;
 			font-size: 35px;
@@ -2823,7 +2648,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			@include breakpoint($tablet) {
 				font-size:28px;
 				line-height:33px;
-			} 
+			}
 			@include breakpoint($mobile) {
 				font-size:25px;
 				line-height:25px;
@@ -2831,22 +2656,22 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 	}
-	.block-image{ 
+	.block-image{
 		color:$white;
 		width:48.5%;
-		padding: 48px 10px 39px 39px; 
-	    @extend %action-background;	
-        @extend %action-image-right;			
+		padding: 48px 10px 39px 39px;
+	    @extend %action-background;
+        @extend %action-image-right;
         @include breakpoint($tablet) {
 		    background-position:top right;
 			.btn{
 				font-size:16px;
 			}
-		}	 
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
-			padding:24px 10px 20px 21px; 
+			padding:24px 10px 20px 21px;
 			background-position: right top;
 			margin: 0 0 34px;
 			.btn{
@@ -2854,7 +2679,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				padding-left: 10px;
 				padding-right: 10px;
 			}
-		} 
+		}
 		.title {
 			display:block;
 			font-size:45px;
@@ -2873,18 +2698,18 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 	}
-	
+
 	/* share this block styles */
-	.block-share{ 
+	.block-share{
 		color:$white;
 		width:48.5%;
 		text-align: right;
 		background-image:url(../images/action-bg4.jpg);
 		padding:22px 3% 30px 5%;
 		background-position:center left;
-		background-size:cover;	
+		background-size:cover;
         &.share-lavender{
-		  background-image:url(../images/action-bg1.jpg); 
+		  background-image:url(../images/action-bg1.jpg);
 		}
 		.btn{
 		  padding:10px 18px;
@@ -2893,7 +2718,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  display:block;
 		  max-width:66%;
 		  margin-bottom: -70px;
-		}		
+		}
         @include breakpoint($tablet) {
 		    background-position:center center;
 			padding:48px 11px 40px 39px;
@@ -2903,11 +2728,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			img{
 			  max-width:190px;
 			}
-		}		
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
-			padding:24px 10px 40px 21pxx; 
+			padding:24px 10px 40px 21pxx;
 			background-position: center left;
 			img{
 			  max-width:50%;
@@ -2921,7 +2746,25 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				  padding-left: 10px;
 				}
 			}
-		}  
+		}
+	}
+	.lavender-box .btn:hover{
+		background-color: $lavender;
+	}
+	.blue-box .btn:hover{
+		background-color: $blue;
+	}
+	.green-box .btn:hover{
+		background-color: $green;
+	}
+	.magenta-box .btn:hover{
+		background-color: $magenta;
+	}
+	.orange-box .btn:hover{
+		background-color: $orange;
+	}
+	.pink-box .btn:hover{
+		background-color: $pink;
 	}
 }
 /* forum block styles */
@@ -2971,7 +2814,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		background:$white;
 		padding:52px 32px 49px;
 		.btn{
-		  @include breakpoint($mobile) { 
+		  @include breakpoint($mobile) {
             width:100%;
 			.icon-Rightarrow{
 			  display:none;
@@ -2979,8 +2822,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  }
 		}
 		@include breakpoint($mobile) {
-			padding:0 0 49px; 
-		} 
+			padding:0 0 49px;
+		}
 	}
 	.bg-stretch {
 		position:absolute;
@@ -2998,14 +2841,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 /* forum table styles */
 .table-from {
-	text-align:left;  
-	margin:0 0 41px; 
-	padding:0;
+	text-align:left;
+	margin:0 0 41px;
+	@extend %listreset;
 	@include breakpoint($mobile) {
 		margin:0 0 30px;
 	}
 	> li {
-		background:$page-background ; 
+		background:$page-background ;
 		@include border-radius(5px);
 		padding:19px 0 7px;
 		margin:0 0 10px;
@@ -3013,7 +2856,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:8px 15px 15px 18px;
 			margin:0 0 14px;
 		}
-		&.hottopic.views-row-1, &.hottopic.views-row-2, &.hottopic.views-row-3 {
+		&.hottopic {
 			.num {
 				border-color:$orange;
 				color:$orange;
@@ -3103,9 +2946,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					margin:0;
 					dt {
 						display:inline-block;
-						vertical-align:top;  
+						vertical-align:top;
 						margin:0 0 9px;
-						@include breakpoint($tablet) { 
+						@include breakpoint($tablet) {
 						}
 						@include breakpoint($mobile) {
 							width:auto;
@@ -3141,14 +2984,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		.num {
 			min-width:50px;
 			height:38px;
-			border:2px solid #cdd1d2; 
+			border:2px solid $gray;
 			@include border-radius(9px);
 			font-size:18px;
 			font-weight:bold;
 			line-height:25px;
 			padding:4px;
 			position:relative;
-			color:$heading-link;
+			color:$gray;
 			display:inline-block;
 			vertical-align:middle;
 			text-align:center;
@@ -3212,7 +3055,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 
 /* article styles */
-.top-header{ 
+.top-header{
   background:url(../images/top-header-bg.png) no-repeat left $blue-light;
   height:83px;
   width:100%;
@@ -3226,7 +3069,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
        text-align:right;
        padding:20px 0px 0 0;
        @include breakpoint($mobile) {
-      	   
+
        }
        li {
        display:inline-block;
@@ -3234,7 +3077,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
        letter-spacing:normal;
        font-size:16px;
        line-height:20px;
-       position:relative; 
+       position:relative;
        padding:0 3px 0 13px;
        &:first-child {
          &:after { display:none; }
@@ -3255,8 +3098,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
        }
      }
    }
-  } 
-} 	  
+  }
+}
 .page-main{
   @extend %clearfix;
   width:100%;
@@ -3274,17 +3117,17 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   width:100%;
   @include transition ($type:all, $time:0.4s, $ease:ease);
   @include breakpoint($desktop){
-    background-position: right;  
+    background-position: right;
 	padding: 0 20px;
   }
   @include breakpoint($tablet){
     background-position: right;
 	padding: 0 10px;
   }
-   @include breakpoint($mobile){ 
+   @include breakpoint($mobile){
    }
   .article{
-    @include container;  
+    @include container;
   }
   .info{
    &.add{
@@ -3298,50 +3141,56 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   h3{
     margin-top: 40px;
     margin-bottom: 13px;
-    @include breakpoint($tablet){ 
-	  @include fontsize(30,16); 
+    @include breakpoint($tablet){
+	  @include fontsize(30,16);
     }
-	@include breakpoint($mobile){ 
-	  @include fontsize(20,16); 
+	@include breakpoint($mobile){
+	  @include fontsize(20,16);
     }
   }
 .article-tags{
 	  @extend %clearfix;
-	}  
+	}
   .article-left{
 	float:left;
 	width:71%;
 	padding:0 65px 48px 7px;
 	@include breakpoint($desktop){
-	  padding:0 20px 48px 20px;  
+	  padding:0 20px 48px 20px;
 	}
-	background:$white; 
-	@include breakpoint($tablet){ 
+	background:$white;
+	@include breakpoint($tablet){
 	  float:left;
 	  width:auto;
 	  padding:0 20px;
 	}
-   @include breakpoint($mobile){  
+   @include breakpoint($mobile){
 	  padding:0 20px;
 	  width:100%;
-	}	
+	}
 	.visual{
-	  margin:0 0 39px 0; 
+	  margin:0 0 39px 0;
 	  .holder{
 	    padding:11px 0 0 0;
 	    .pic-caption{
 	      color:$captions-credit;
 	      float:left;
-		  font-size:13px; 
+		  font-size:13px;
 	    }
 		@include breakpoint($mobile){
-		  .pic-by, .pic-caption{
-            float:none;
-            margin-bottom:10px;			
-          }
+		  max-width:inherit;  
+		  .pic-by{
+              float:none;
+              margin-bottom:10px;
+            }
+            .pic-caption{
+		    float:none;	
+              margin-bottom:20px;
+              display:block;
+		  }
 		}
 	  }
-	}  
+	}
 	.article-left-holder{
 	  float:right;
 	  @include breakpoint($mobile){
@@ -3350,26 +3199,26 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  }
 	  .img-holder{
 	    img{
-		  width:100%; 
+		  width:100%;
 		  max-width:100%;
 		}
 	    @include breakpoint($mobile){
 		img{
-			max-width:100%;  
+			max-width:100%;
 		    width:100%;
 		  }
 	     }
 		}
-	 
+
 	  .btn-gray-perv{
-	    position:absolute; 
+	    position:absolute;
 		left:0;
 		top:50%;
 		margin:-41px 0 0;
 		z-index:99;
 		background:$captions-credit;
 		color:$white;
-		text-decoration:none; 
+		text-decoration:none;
 		@include border-radius(0 5px 5px 0);
 		padding:19px 18px;
 		font-size:30px;
@@ -3380,7 +3229,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		@include breakpoint($mobile) {
 			background:none;
 			padding:0;
-			margin:-36px 0 0  21px;
+			margin:-16px 0 0 11px;
 			&:hover{
 		     color:$orange;
 		     background:none;
@@ -3395,7 +3244,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		z-index:99;
 		background:$captions-credit;
 		color:$white;
-		text-decoration:none; 
+		text-decoration:none;
 		@include border-radius(5px 0 0 5px);
 		padding:19px 18px;
 		font-size:30px;
@@ -3403,30 +3252,30 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		  color:$white;
 		  background:$orange;
 		  @include breakpoint($mobile) {
-		    background:none; 
+		    background:none;
 			color:$orange;
 		  }
 		}
 		@include breakpoint($mobile) {
 			background:none;
 			padding:0;
-			margin:-36px 21px 0 0;
+			margin:-16px 11px 0 0;
 		}
 	  }
-      blockquote { 
+      blockquote {
         border-left: 6px solid $blue-light;
-        margin:22px 88px 36px; 
-        padding:0 0 0 33px;  
+        margin:22px 88px 36px;
+        padding:0 0 0 33px;
 		font-size:24px;
 		line-height:1.5em;
 		float: left;
 		@include breakpoint($mobile){
-		   margin:6px 20px 15px; 
+		   margin:6px 20px 15px;
 		   line-height:2em;
 		   font-size: 17px;
-		}  
+		}
 		p{
-		  display: inline; 
+		  display: inline;
         }
 	  }
 	  .comment-block{
@@ -3439,7 +3288,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		h4{
 		  margin: 0 0 17px;
 		}
-		.comments{	 
+		.comments{
           font-size:18px;
           color:$captions-credit;
 		  .required{
@@ -3450,7 +3299,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		   &.label-block{
 		     width:100%;
 		   }
-		  }		  
+		  }
           fieldset{
             margin:0 0 20px 0;
 			@include breakpoint($mobile){
@@ -3459,7 +3308,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			&.submit-actions{
 			  margin:0;
 			  @include breakpoint($mobile) {
-			    .btn.btn-left{ 
+			    .btn.btn-left{
 	              margin-left: 6px;
 	              padding: 3px 15px;
 				  &:first-child{
@@ -3468,35 +3317,35 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				}
 	           }
 			}
-          } 
+          }
           strong{
 		    color:$heading-link;
 			margin-left:10px;
 			@include breakpoint($tablet){
 			  font-weight:normal;
 			}
-		  } 
+		  }
 		  .form-element{
 		    @include linear-gradient($captions-credit,$page-background);
-            padding:2px; 
-            float:left;  
+            padding:2px;
+            float:left;
 			margin:6px 0 0 0;
 			@include border-radius(5px);
             max-width:506px;
-            width:100%; 
-		    input[type=text],input[type=email],textarea{ 
+            width:100%;
+		    input[type=text],input[type=email],textarea{
 		      float:left;
 			  @include border-radius(5px);
 			  width:100%;
-			  border:none; 
+			  border:none;
 			}
 			textarea{
 			  height:183px;
 			}
-          }  
+          }
 		}
 	  }
-	  .comment-list{ 
+	  .comment-list{
 		h4{
 		   @include fontsize(23,16);
 		  a{
@@ -3507,7 +3356,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 		ul.comment-listing{
 		  @extend %listreset;
-		  position: relative;	 
+		  position: relative;
 		  &.children{
 		    margin-left:30px;
 		  }
@@ -3515,11 +3364,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		    .comment-left{
 			  float:left;
 			  width:79px;
-			  font-size:13px;  
+			  font-size:13px;
 			  img{
 				 @include border-radius(5px);
 				 overflow:hidden;
-				 margin:0 0 10px 0;
+				 margin:0 0 4px 0;
 			  }
 			  a{
 				    text-decoration:underline;
@@ -3530,7 +3379,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				    }
 					}
 			  cite{
-			     margin:0 0 13px 0;
+			     margin:0 0 7px 0;
 				 font-style:normal;
 				 display:block;
 			  }
@@ -3539,7 +3388,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  }
 			}
 			.comment-right{
-			  border:2px solid $border-color; 
+			  border:2px solid $border-color;
 			  padding:16px 26px 13px 26px;
 			  margin:0 0 27px 112px;
 			  font-size:16px;
@@ -3562,7 +3411,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			  ul{
 			     @extend %clearfix;
 				 @extend %listreset;
-			    li{ 
+			    li{
                   float: left;
                   margin:0 11px 0 0;
 				  a{
@@ -3583,8 +3432,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		   padding:75px 0px 107px;
 		   @include breakpoint($mobile){
 		     padding:75px 0px 50px;
-		   }		   
-		   & > div{  
+		   }
+		   & > div{
 			 a{
 			   color:$white;
 			   text-decoration:none;
@@ -3596,32 +3445,32 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			     color:$white;
 			     text-decoration:none;
 			   }
-			 } 
+			 }
 			 &.block-symptoms{
-			   padding:35px 20px; 
+			   padding: 43px 10px 37px 39px;
                .text{
-			      font-size:31px; 
+			      font-size:31px;
 				  @include breakpoint($tablet){
-				    font-size:30px; 
+				    font-size:30px;
 				  }
-			    }			 
-			   span.add{ 
-			     margin: 0 0 10px 30px; 
+			    }
+			   span.add{
+			     margin: 0 0 10px 30px;
 				 @include breakpoint($mobile){
 				   margin: 0 0 10px 20px;
 				 }
 			   }
 			 }
-			 &.block-blog{ 
+			 &.block-blog{
                .title{
-			      font-size:36px; 
-				  margin:0 0 27px; 
+			      font-size:36px;
+				  margin:0 0 27px;
 				  line-height: 37px;
 				  @include breakpoint($tablet){
-				      font-size:25px; 
+				      font-size:25px;
 					  line-height: 33px;
 				  }
-			    }	 
+			    }
 			 }
 		   }
 		 }
@@ -3633,13 +3482,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		 padding:21px 0 21px 0;
 		 margin:33px 0 45px 0;
 		 @include breakpoint($tablet){
-		   margin:0 0 38px 0; 
+		   margin:0 0 38px 0;
 		 }
 		 @include breakpoint($mobile){
 		   margin:0 0 20px 0;
 		   .btn{
 		      float:left;
-		   } 
+		   }
 		 }
 		 @extend %clearfix;
 		 .article-updated{
@@ -3649,18 +3498,18 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		     width:100%;
 			 margin-bottom:13px;
 		   }
-		   color:$captions-credit; 
+		   color:$captions-credit;
 		   strong{
 		     font-weight:normal;
 		   }
 		   span{
 		     float:left;
-		   } 
+		   }
 		   ul{
 		     @extend %listreset;
 			 li{
 			   float:left;
-			   margin-left:10px;  
+			   margin-left:10px;
 			   font-weight:bold;
 			   a{
 			     text-decoration:underline;
@@ -3681,20 +3530,20 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		   }
 		   span{
 		     @extend %clearfix;
-             margin-bottom:10px;	
-             font-weight:bold;		
-             em{  
+             margin-bottom:10px;
+             font-weight:bold;
+             em{
 			    font-style:normal;
-				font-weight:normal;	
-			 }			 
+				font-weight:normal;
+			 }
 		   }
 		   a{
 		     font-size:16px;
-			 @include link-color($heading-link); 
+			 @include link-color($heading-link);
 			 position: relative;
 			 padding:0 0 0 14px;
              font-weight: bold;
-             text-decoration: underline;			 
+             text-decoration: underline;
 			 &:after {
 			   position:absolute;
 			   left:0;
@@ -3716,14 +3565,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		   }
 		 }
 	  }
-	} 
+	}
   }
   .article-right{
     float:left;
 	width:29%;
-	padding:0 0 0 54px; 
+	padding:0 0 0 54px;
 	@include breakpoint($desktop){
-	padding:0 20px; 
+	padding:0 20px;
 	}
 	@include breakpoint($tablet){
 	  padding:0 45px 100px 45px;
@@ -3733,15 +3582,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  padding:0 15px 100px 15px;
 	}
 	.posts-columns{
-	  @include breakpoint($tablet){ 
+	  @include breakpoint($tablet){
 	    width:100%;
-		
+
 	  }
 	}
 	.col{
-	  width:242px; 
+	  width:242px;
 	  max-width:100%;
-	  @include breakpoint($tablet){ 
+	  @include breakpoint($tablet){
 	    width:auto;
 		.post{
 		  width: 31%;
@@ -3753,14 +3602,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	    .post{
 	      width:100%;
 		}
-     } 
+     }
 	}
 	h2{
 	  @include fontsize(38,16);
 	  font-weight:normal;
-	  width:242px; 
+	  width:242px;
 	  margin:52px 0 6px 0;
-	  @include breakpoint($tablet){ 
+	  @include breakpoint($tablet){
 	    width:auto;
 		margin:52px 0 15px 0;
 	  }
@@ -3786,7 +3635,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 /* footer styles */
 #footer {
 	width:100%;
-	float:left;
 	display:table-footer-group;
 	height:1%;
 	background:$base-text-color;
@@ -3846,7 +3694,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		float:left;
 		width:45%;
 		@include transition ($type:all, $time:0.4s, $ease:ease);
-		p { margin:0 0 14px;  color:$footer-copyright; } 
+		p {
+		  margin:0 0 14px;
+		  color:$footer-copyright;
+		  font-size: 15px;
+          line-height: 24px;
+		}
 		@include breakpoint($mobile) {
 			width:100%;
 			float:none;
@@ -3855,6 +3708,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		a {
 		  color:$footer-copyright;
 		  font-weight: normal;
+		  text-decoration: none;
 		  &:hover{
 		    color:$white;
 		  }
@@ -3864,7 +3718,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			display:block;
 			color:$footer-copyright;
 		}
-	} 
+	}
 	.social-holder {
 		@extend %clearfix;
 		margin:0 0 28px;
@@ -3905,6 +3759,18 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		float:right;
 		width:48.6%;
 		@include transition ($type:all, $time:0.4s, $ease:ease);
+		@include breakpoint($tablet) {
+			width:55%;
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			overflow:hidden;
+		}
+	}
+	.left-footer {
+		float:left;
+		width:45%;
 		@include breakpoint($tablet) {
 			width:55%;
 		}
@@ -3958,22 +3824,22 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	width:1px;
 	height:1px;
 	overflow:hidden;
-} 
+}
 
 .img-holder{
   .caption{
     .title{
 	  -webkit-animation: title 2s; /* Chrome, Safari, Opera */
-      animation: title 1s; 
+      animation: title 1s;
 	  position: relative;
 	}
 	.text{
 	  -webkit-animation: subtitle 1s; /* Chrome, Safari, Opera */
-      animation: subtitle 2s; 
+      animation: subtitle 2s;
 	  position: relative;
 	}
   }
-} 
+}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes subtitle {
@@ -3998,10 +3864,5 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 @keyframes title {
    from {top: -30px; opacity:0;}
     to {top: 0px; opacity:1;}
-} 
- 
-.node-type-topic{
-  h1.title, h1.breadcrumb{
-    display:none;
-  }
 }
+
