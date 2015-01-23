@@ -99,7 +99,12 @@ body.node-type-topic{
      .feature-holder{
        display:inherit;     
      }  
-  } 
+  }
+  .sort-block{
+    label{
+      display:none;
+    }
+  }
   .pager-load-more{
    @extend %listreset;
    padding: 29px 0 61px;
@@ -121,9 +126,12 @@ body.node-type-topic{
   }
 }
 
+
 /* TITLE HIDE*/ 
 .node-type-topic{
   h1.title, h1.breadcrumb{
     display:none;
   }
 }
+
+
