@@ -127,7 +127,6 @@ body.node-type-topic{
   }
 }
 
-
 /* TITLE HIDE*/ 
 .node-type-topic{
   h1.title, h1.breadcrumb{
@@ -135,4 +134,16 @@ body.node-type-topic{
   }
 }
 
-
+.action-block{
+  .region-action{
+     .holder {
+       & > div{
+         float:left;
+         & > div:first-child{
+           float: left;
+         }
+       } 
+     }
+  }
+}
+ 
