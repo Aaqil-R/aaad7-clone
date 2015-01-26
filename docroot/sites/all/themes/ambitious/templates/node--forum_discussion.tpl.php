@@ -8,18 +8,26 @@
  */
 
 /* variables */ 
-$themeurl =  base_path().drupal_get_path('theme', 'ambitious')
-?>
+$themeurl =  base_path().drupal_get_path('theme', 'ambitious');
  
-
+?>  
 <section style="width:100%;" class="post">
-					    <em class="icon-Featured forum-icon"></em>	
+   <?php if($comment_count > 5): ?>
+     <em class="icon-Featured forum-icon"></em>	
+   <?php elseif($comment_count < 5): ?>
+    <em class="icon-Hottopic forum-icon"></em>	
+   <?php endif; ?>
+  
                         <div class="forum-text">						
 						  <div class="forum-left"> 
 						    <div class="image-holder">
+						      <?php if(!empty($user_picture)):?>
+  						        <?php print render($user_picture); ?>
+						      <?php else: ?>
 						      <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
+						      <?php endif; ?>						      
 						    </div>
-                            <cite>by <strong><?php print $name; ?></strong></cite>
+                            <cite>by <strong> <?php print strip_tags($name); ?></strong></cite>
                             <time pubdate="pubdate"><?php print $date; ?></time>  
 						  </div>
 						  <div class="info add forum-right">

@@ -19,8 +19,7 @@
  * @ingroup views_templates
  */
  
- // var 
- 
+ // var  
 ?>
 <?php if (!empty($q)): ?>
   <?php
@@ -30,6 +29,7 @@
   ?>
 <?php endif; ?> 
 <div class="sort-block">
+<div class="search-text forum-page"><input type="text" value="Search the community"></div><div class="forum-page search-button icon-search"><input type="submit" class="icon-search"></div>
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -78,6 +78,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-    <?php print render($variables['share_button']) ; ?>
+<a href="#" class="btn btn-left forum-page topic" title="Filter by topic"><span>Filter by topic <em class="icon-plus"></em></span></a>
+    <?php print render($variables['share_button']); ?>
 </div>
  
