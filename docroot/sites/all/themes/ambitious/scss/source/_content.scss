@@ -17,11 +17,15 @@
 .btn {
 	&.btn-facebook{
 	    border-bottom:5px solid $fb-blue-dark;
-	    background:$fb-blue; 
+	    background:$fb-blue;
 	}
 	&.btn-twitter{
 	    border-bottom:5px solid $tw-blue-dark;
-	    background:$tw-blue; 
+	    background:$tw-blue;
+	}
+	&.btn-google{
+	    border-bottom:5px solid #ab1005;
+	    background:#f44336;
 	}
 }
 
@@ -31,51 +35,10 @@
 		>li {
 			a {
 				font-weight: lighter;
-				&.btn {
-					color:white;
-					span {	
-						display:none;
-					}
-				}
-				&:hover{
-					color:$orange-dark;
-				}
-			}
-			>ul{
-				>ul{
-						list-style:none;
-						padding:0;
-					>li{
-						a{
-							padding:9px 31px 11px 45px;
-							span{
-									display:none;
-							}
-							&:hover{
-								color:$orange-dark;
-							}
-						}					
-					}
-				}	
 			}
 		}
 	}
 }
-
-#div ul.menu-main-features-item1{
-	list-style:none;
-	}
-	
-#nav ul.main-menu-1 li ul span.icon-Uparrow,
-#nav ul.main-menu-1 li ul span.icon-Downarrow{
-	display: none;
-}
-
-#nav ul.main-menu-1 li.course span.icon-Uparrow,
-#nav ul.main-menu-1 li.course span.icon-Downarrow{
-	display: none;
-}
-
 //visited etc link text
 a{
 	&:visited{color: #000;}
@@ -83,21 +46,36 @@ a{
 		color: #000;
 		text-decoration: none;
 	}
-}	
+}
 a.btn {
 	color: $white;
 	&:visited{color: $white;}
 	&:hover {
 		color: $white;
 		text-decoration: none;
+		cursor: pointer;
 	}
-}	
+}
+
+.more-btn {
+	a {
+		.icon-Downarrow{
+			color: $gray;
+
+		}
+	}
+}
 
 //2. general
 
-//TODO sitewide
-body{
-	background-image: url(../images/wid_bg.jpg);
+//header updates
+.top-bar .links li{
+	img{
+		padding-right: 24px;
+	}
+	a{
+		vertical-align: top;
+	}
 }
 
 //tooltips
@@ -121,12 +99,26 @@ body{
 			background-image: radial-gradient(circle cover at 90px 90px 90deg, #fff 0%, #d9d9d9 100%, #eee 95%);
 			border-color: #F6BF4F;
 		}
-		
+		@include breakpoint($mobile) {
+			float: right;
+		}
+
 	}
 a {
   &.tooltips {
     position: relative;
     display: inline;
+	@include breakpoint($mobile) {
+		display:none;
+		}
+	&.mobile{
+		display:none;
+			@include breakpoint($mobile) {
+				display: block;
+				top: -3px;
+				float: right;
+				}
+			}
     span.tooltip-content {
       position: absolute;
       width: 245px;
@@ -143,6 +135,9 @@ a {
       h3 {
         font-size: 14px;
 		margin-bottom: 5px;
+		@include breakpoint($mobile) {
+			margin-top: -10px;
+		}
       }
       &:before {
         content: '';
@@ -181,8 +176,10 @@ a {
 }
 
 .larger{
-	@include fontsize(26,16);
+	@include fontsize(24,16);
 }
+
+
 
 //columns
 
@@ -196,7 +193,7 @@ a {
 	}
 	&:first-child {
 		margin:0;
-		
+
 	}
 }
 
@@ -220,12 +217,11 @@ a {
 		.caption-frame {
 			.caption{
 				padding: 5px 0 0;
-				margin-left: -40px;
 					.title{
 						span.pink{
 						color: $pink;
 						padding: 0;
-						
+
 						}
 					}
 				}
@@ -238,10 +234,10 @@ a {
 .my-voice-block{
 	position: relative;
 	z-index: 3;
-	margin-top: -140px;
+	margin-top: -234px;
 	@include breakpoint($mobile) {
-		margin-top: 0;}
-	
+		margin-top: 0;
+	}
 }
 
 .my-voice-intro{
@@ -250,6 +246,7 @@ a {
 	}
 	margin-top: 80px;
 	display: inline-block;
+	@extend %clearfix;
 	@include breakpoint($mobile) {
 		margin-top: 20px;
 	}
@@ -259,8 +256,8 @@ a {
 		clear: both;
 	}
 	.holder{
-		p{ 
-			width: 65%;
+		p{
+			width: 64%;
 			margin-bottom: 50px;
 			float: left;
 			@include breakpoint($mobile) {
@@ -278,7 +275,7 @@ a {
 		margin-top: 10px;
 		input, select, .btn{
 			width: 100%;
-			margin-bottom: 10px;			
+			margin-bottom: 10px;
 		}
 	}
 	.selected-filters{
@@ -286,6 +283,8 @@ a {
 		clear: both;
 		list-style-type: none;
 		padding: 0;
+		//display none - this is shown in the photoshop version not invision.
+		display:none;
 		.this-filter{
 			float: left;
 			padding: 10px;
@@ -303,7 +302,7 @@ a {
 					float: right;
 					padding-top: 3px;}
 			}
-			
+
 		}
 	}
 }
@@ -320,18 +319,20 @@ a {
 		display: none;
 	}
 	h4{	margin: 0 0 8px;}
-}	
+}
 
 .my-voice-mobile-menu{
 	display: none;
 	list-style-type: none;
 	@include fontsize(12,16);
-	float: left;
-	margin: 20px 0;
+	float: left; 
 	text-align: center;
 	-webkit-padding-start: 0;
 	@include breakpoint($mobile) {
-		display: inline-block;
+		display: block;
+		float: none;
+		padding: 0;
+		margin:0;
 	}
 		li{
 			float:left;
@@ -340,7 +341,7 @@ a {
 				padding-left:0;
 			}
 			a{	text-decoration: underline;}
-	
+
 	}
 }
 
@@ -353,7 +354,7 @@ a {
 		background: transparent;
 		.block-symptoms, .block-share, .block-spectrum{
 			background-image: url(../images/bg06.jpg);
-			color:$white;	
+			color:$white;
 			width:48.5%;
 			padding: 50px 10px 37px 39px;
 			background-size:cover;
@@ -364,7 +365,7 @@ a {
 				padding:26px 10px 17px 20px;
 				margin:0 0 34px;
 				background-position: right center;
-			}		
+			}
 			.title {
 				display:block;
 				font-size:45px;
@@ -377,9 +378,9 @@ a {
 					line-height:33px;
 				}
 				@include breakpoint($mobile) {
-					font-size:25px;
-					line-height:25px;
-					margin:0 0 16px;
+					margin:0 0 19px;
+					font-size: 24px;
+					line-height: 30px;
 				}
 				&.smaller{
 					@include fontsize(18,16);
@@ -393,19 +394,19 @@ a {
 						line-height:25px;
 						margin:0 0 16px;
 					}
-					
+
 				}
 			}
 			.block-spectrum{
 				float:left;
 			}
 		}
-		
+
 	}
 	.block-share{
 		background-image: url(../images/bg08.jpg);
 	}
-	
+
 	.block-spectrum{
 		background-image: url(../images/bg07.jpg);
 	}
@@ -414,9 +415,11 @@ a {
 		float:right;
 	}
 	.sort-block{
-        margin: 0 -20px;
-        padding: 14px 28px 16px;
+        margin: 0;
+        padding: 14px 20px 16px;
 	    margin-bottom: 20px;
+	    @extend %clearfix;
+	    display: block;
 	}
 }
 
@@ -428,6 +431,7 @@ a {
 		margin:0 0 30px;
 		background:$white;
 		border:1px solid $gray;
+		width: 100%;
 		@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
 		@include breakpoint($mobile) {
 			padding:14px 15px;
@@ -436,15 +440,15 @@ a {
 		}
 		img{
 			float: left;
-			@include breakpoint($mobile) {
+			@media (max-width: 480px){
 				width: 100%;
 			}
 		}
-		
+
 
 		.content{
 				float: left;
-				width: 60%;
+				width: 56%;
 				padding-left: 50px;
 				@include breakpoint($tablet) {
 					width: 45%;
@@ -453,10 +457,14 @@ a {
 					width: 100%;
 					padding: 0;
 				}
+				p{
+					@include fontsize(16,16);
+				}
 				h3{
-					font-weight:bold; 
-					 @include fontsize(24,16);
-					 line-height:32px; 
+					font-weight:bold;
+					 @include fontsize(22,16);
+					 line-height:32px;
+					 text-decoration: underline;
 					 @include breakpoint($mobile) {
 						 @include fontsize(20,16);
 						 margin: 10px 0;
@@ -500,7 +508,7 @@ a {
 							@include breakpoint($tablet) {
 								margin:0 5px 0 0;
 							}
-							@include breakpoint($mobile) { 
+							@include breakpoint($mobile) {
 								font-size:16px;
 								line-height:18px;
 								border-radius:5px;
@@ -515,7 +523,7 @@ a {
 								background:url(../images/sprite.png) no-repeat -128px 0;
 								width:12px;
 								height:13px;
-								@include breakpoint($mobile) { 
+								@include breakpoint($mobile) {
 									right:6px;
 								}
 							}
@@ -546,7 +554,7 @@ a {
 						}
 					}
 				}
-			
+
 				.comment-count{
 					background: no-repeat url(../images/comment-sprite.png);
 					padding: 7px 0px 17px 0;
@@ -555,7 +563,7 @@ a {
 					color: $pink;
 					 @include breakpoint($mobile) {float: left;}
 					.count{
-						 @include fontsize(20,16);	 
+						 @include fontsize(20,16);
 					}
 					&.zero{
 						background: no-repeat url(../images/comment-sprite.png)0 -52px;
@@ -580,30 +588,32 @@ a {
 				margin: 0;
 				background: $white;
 				@include breakpoint($mobile) {
-					margin-top: -183px;
-					padding: 5px;
+					padding: 5px 5px 5px 9px;
+					position: absolute;
+					right: 14px;
+					top: 14px;
 				}
 			.day{
-					font-weight:bold; 
+					font-weight:bold;
  					 @include fontsize(24,16);
-  					 line-height:24px; 
+  					 line-height:24px;
   					 @include breakpoint($mobile) {
    						 @include fontsize(22,16);
 						 line-height:24px;
   					 }
 				 }
 			.month{
-					 font-weight:bold; 
+					 font-weight:bold;
 					@include fontsize(16,16);
-					line-height:25px;  
-					@include breakpoint($mobile) {					  
+					line-height:25px;
+					@include breakpoint($mobile) {
 						@include fontsize(18,16);
 			  			line-height:24px;
 						}
 					}
 				.year{
 			 	   @include fontsize(12,16);
-					line-height:12px;  
+					line-height:12px;
 					@include breakpoint($mobile) {
 						display: none;
 					}
@@ -619,7 +629,7 @@ a {
 	text-align: center;
 	padding: 80px 0;
 	a{
-		font-weight: bold;
+		font-family: $header-font-family;
 		color: #000;
 	}
 }
@@ -644,9 +654,10 @@ a {
 	.img-holder {
 		.caption-frame {
 			padding: 0;
-			.caption{ 
+			.caption{
 				.title{
 					margin-top: 10px;
+					padding: 0;
 					.title-third{
 						@include breakpoint($mobile) {
 							display: block;
@@ -668,7 +679,7 @@ a {
 
 
 
-// main page columns styles 
+// main page columns styles
 
  .articles-block, .my-voice-block {
 	width: 100%;
@@ -693,7 +704,8 @@ a {
 				z-index: 7;
 				float: none;
 				width: 0;
-				margin: 0 0 0 -30px;
+				margin: 0 0 0 -21px;
+				top: -15px;
 				}
 			}
 		}
@@ -706,6 +718,17 @@ a {
 
 .articles-block{
 	background: $white;
+	.article{
+		h4{
+			padding: 25px 0;
+			margin: 0;
+			@include fontsize(22,16);
+		}
+		p{
+			@include fontsize(16,16);
+			line-height: 25px;
+		}
+	}
 }
 
 //main page -- action-blocks
@@ -713,8 +736,11 @@ a {
 	float: left;
 	padding-bottom: 30px;
 	background-color: $white;
+	.holder{
+		padding: 95px 15px 85px;
+	}
 	.block-share, .block-spectrum{
-		color:$white;	
+		color:$white;
 		width:48.5%;
 		padding: 50px 10px 37px 39px;
 		background-size:cover;
@@ -724,7 +750,7 @@ a {
 			padding:26px 10px 17px 20px;
 			margin:0 0 34px;
 			background-position: right center;
-		}		
+		}
 		.title {
 			display:block;
 			font-size:45px;
@@ -753,11 +779,11 @@ a {
 					line-height:25px;
 					margin:0 0 16px;
 				}
-				
+
 			}
 		}
 	}
-	
+
 }
 //TODO is this a repeat?
 .action-block{
@@ -773,7 +799,7 @@ a {
 				margin: 146px 10px 0 0;
 			}
 		}
-		@include breakpoint($mobile){
+		@include breakpoint($mobile) {
 			height: 324px;
 			.btn{margin: 223px 10px 0 0;}
 		}
@@ -789,7 +815,7 @@ a {
 
 
 
-// social block styles - TODO merge with forum block styles 
+// social block styles - TODO merge with forum block styles
 
 
 .social-block, .signup-block, .slider-block, .my-voice-block, .social-action-block {
@@ -810,10 +836,24 @@ a {
 			left: 100%;
 			position: relative;
 			margin-left: -37px;
+			@include breakpoint($mobile) {
+				margin: 0 0 0 -21px;
+				top: -15px;
+			}
+		}
+		.block-close{
+			padding: 0;
+			width: 57px;
+			height: 54px;
+			text-align: center;
+			vertical-align: middle;
+			line-height: 57px;
+			margin-left:-57px;
+			font-size: 1.5em;
 		}
 	}
 	.btn{
-	  font-size: 22px;//this font size is not good for the youtube button in social block
+	  @include fontsize(20,16);
 	  padding: 11px 26px;
 	  @include breakpoint($mobile) {
 	    padding: 6px 19px;
@@ -823,6 +863,9 @@ a {
 	.twitter{
 		height: 300px;
 		display: block;
+		@include breakpoint($mobile) {
+			height: auto;
+		}
 	}
 	h1 {
 		display:inline-block;
@@ -842,11 +885,12 @@ a {
 	}
 	h3 {
 		line-height:1.363em;
-		@include fontsize(22,16);
-		margin:-4px 0 8px; 
+		font-size: 1.67em;
+		margin:-4px 0 8px;
 		@include breakpoint($mobile) {
 			font-size:22px;
 			line-height:28px;
+			margin-top: 15px;
 		}
 	}
 	.block {
@@ -862,8 +906,8 @@ a {
 		  }
 		}
 		@include breakpoint($mobile) {
-			padding:0 0 49px; 
-		} 
+			padding:0 0 49px;
+		}
 	}
 	.bg-stretch {
 		position:absolute;
@@ -881,10 +925,25 @@ a {
 }
 //myvoice block overrides + specifics
 .my-voice-block{
-	float: left; 
+	float: left;
 	input[type=submit].btn-pink{
 		border: 0;
 		border-bottom: 5px solid $pink-dark;
+	}
+	@include breakpoint($mobile) {
+		background: transparent;
+		.block{
+			@include breakpoint($mobile) {
+				margin: -15px;
+				padding: 10px 15px 20px;
+			}
+		}
+	}
+	.holder{
+		padding: 0 15px 0 0;
+		@include breakpoint($mobile) {
+				padding: 15px 15px;
+			}
 	}
 	//overwrite jcf settings TODO check this + border is still darker than the others
 	.jcf-select.jcf-unselectable{
@@ -895,11 +954,11 @@ a {
 		border-color:#e4e4e4;
 		@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
 		margin-bottom: 20px;
-		
+
 	}
-	
+
 }
-//INDEX PAGE SPECIFIC MOBILE 
+//INDEX PAGE SPECIFIC MOBILE
 //remove filters from mobile view
 .index-page {
 	.advanced-sort-block{
@@ -910,11 +969,6 @@ a {
 	.visual .img-holder .caption-frame .caption .title{
 		@include breakpoint($mobile) {
 			margin-top: 40px;
-		}
-	}
-	.slider-block .block{
-		@include breakpoint($mobile) {
-			padding: 0;	
 		}
 	}
 }
@@ -930,16 +984,18 @@ a {
   		@include breakpoint($mobile) {
   			display:none;
   			}
-		}
 		&.mobile{
 			display:none;
-			@include breakpoint($mobile) {
-				display: block;
-				top: -3px;
-				float: right;
-			}	
+				@include breakpoint($mobile) {
+					display: block;
+					top: -3px;
+					float: right;
+					}
+				}
 		}
-	}
+
+		}
+
 }
 
 
@@ -949,11 +1005,14 @@ a {
 		position: relative;
 		z-index: 4;
 		margin-top: 15px;
-		padding: 32px 0;
+		padding: 32px 15px 80px;
 		.youtube-btn{
 			@include fontsize(18,16);
 			width: 100%;
 		}
+	}
+	h3{
+		@include fontsize(20,16);
 	}
 	.block{ padding: 40px 32px 25px;}
 	.member-count{
@@ -976,10 +1035,16 @@ a {
 	margin-top: -470px;
 	@include breakpoint($mobile) {
 		margin-top: 0;
+		background: transparent;
 	}
-	.block{ 
-		padding: 50px 80px 0;
+	.block{
+		padding: 40px 0 0;
+		@include breakpoint($mobile) {
+			margin: -15px;
+			padding: 10px 15px 70px;
+		}
 		.slider-container{
+			margin: 0 90px;
 			.l-s-arrow, .r-s-arrow{
 				width: 0;
 				height: 0;
@@ -1006,19 +1071,20 @@ a {
 			}
 		}
 	}
-	.holder{ 
+	.holder{
 		padding-top: 20px;
 		margin-bottom: 130px;
 		@include breakpoint($mobile) {
 			margin-bottom: 20px;
 		}
+
 	}
 }
 
 //signup overlay columns
 // 2 columns
 .signup-columns, .my-voice-columns, community-columns{
-	@extend %clearfix; 
+	@extend %clearfix;
 	/* article column styles */
 	.col {
 		float:left;
@@ -1038,17 +1104,17 @@ a {
 	}
 	h2{
 		line-height:1.363em;
-		@include fontsize(28,16);
-		margin:-4px 0 8px; 
+		font-size: 1.7em;
+		margin:-4px 0 8px;
 		@include breakpoint($mobile) {
 			font-size:24px;
 			line-height:28px;
+			margin-top: 10px;
 			}
 		}
 	.signup-form{
-		padding: 10px 0;
-	}
-	input[type="email"], input[type="text"], .select {	
+		padding: 14px 0;
+	input[type="email"], input[type="text"], .select {
 			float:left;
 			clear:both;
 			width:80%;
@@ -1056,10 +1122,11 @@ a {
 			border-color:#e4e4e4;
 			@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
 			margin-bottom: 20px;
-			padding: 10px;
+			padding: 12px 23px;
 			@include breakpoint($mobile) {
 				width: 100%;
 			}
+			font-size:18px;
 		}
 	input[type="submit"]{
 			float:left;
@@ -1068,25 +1135,51 @@ a {
 			border-bottom: 5px solid $orange-dark;
 			margin-right: 20px;
 			@include breakpoint($mobile) {
-				margin-bottom: 20px;	
+				margin-bottom: 20px;
 			}
 		    &:hover {
 		      border-bottom-width: 3px;
 		  	text-decoration:none;
-		  	color:$white; 
+		  	color:$white;
 			}
 		}
 	.btn{
 		float:left;
+		&.btn-left { margin-right:27px ;}
+		span{
+			padding-left: 15px;
+		}
 	}
-	
+}
+}
+
+
+
+//overrides for overlay block margins
+// might be able to make this global
+.my-voice-block .block{
+	padding: 45px 0 49px;
+}
+.my-voice-columns .col{
+	margin:0;
+	&:first-child{
+		padding: 0 90px;
+	}
+	p{
+		font-size: 1.11em;
+	}
+	.larger{
+		font-size: 1.475em;
+		line-height: 1.5em;
+		margin-bottom: 0.7em;
+	}
 }
 
 
 // General Slider Columns
 //TODO can this be moved to the other .slider-container section?
 .slider-container{
-	@extend %clearfix; 
+	@extend %clearfix;
 	height: 270px;
 	/* article column styles */
 	&>div{float:left;}
@@ -1096,6 +1189,25 @@ a {
 		}
 		.btn{
 			width: 100%;
+			margin-top: 15px;
+		}
+	}
+	.share-columns{
+		.col{
+			&:first-child{
+				margin-right:9.5%;
+			}
+		}
+		.col-left{
+			width: 32%;
+		}
+		.col-mid{
+			width: 27.3%;
+			margin: 0;
+		}
+		.col-right{
+			width:27.3%;
+			margin-left: 3.2%;
 		}
 	}
 	.support-columns{
@@ -1104,8 +1216,17 @@ a {
 				.btn {
 					width: 45%;
 					margin-right: 10px;
+					margin-bottom: 0;
 				}
-			}	
+			}
+			a{
+				text-decoration: underline;
+				font-family: $header-font-family;
+				&.btn{
+					text-decoration: none;
+					font-family:inherit;
+				}
+			}
 		}
 	}
 	.col {
@@ -1128,7 +1249,24 @@ a {
 	a{
 		&.btn { margin-bottom: 10px;}
 	}
+	//signup column overrides
+	.signup-columns{
+		.col {
+			width: 51.5%;
+			margin-left: 9%;
+			padding: 0;
+			&:first-child {
+				width:38.5%;
+				margin: 0;
+			}
+			input[type="email"],  input[type="text"]{
+				width: 89%;
+			}
+		}
+	}
 }
+
+//Share
 
 // posts columns
 .posts-columns{
@@ -1140,19 +1278,48 @@ a {
 		clear: both;
 		text-align: center;
 	}
+	.post{
+		.footer{
+			.num-holder{
+				a {
+					.text{
+						@include fontsize(12,16);
+					}
+
+				}
+			}
+		}
+	}
 }
+
+//read more spacing
+.read-more{
+	display: block;
+	text-align: center;
+	padding: 25px 0 105px;
+	.btn{
+		padding: 10px 19px;
+		.icon-Rightarrow{
+			padding-left: 15px;
+		}
+	}
+}
+
 // slider sub column overrides
 .community-columns {
 	.col{
+		width: 58.7%;
+		margin: 0;
 		&:first-child{
-			width: 40%;
+			width: 36.7%;
+			margin-right: 4.6%;
 		};
 	}
-	
+
 }
 
 .articles-columns, .social-columns {
-	@extend %clearfix; 
+	@extend %clearfix;
 	/* article column styles */
 	.col {
 		float:left;
@@ -1167,7 +1334,7 @@ a {
 		}
 		}
 	}
-	
+
 .social-columns{
 	img{
 		width: 100%;
@@ -1178,8 +1345,9 @@ a {
 	p {
 		a{font-family:$header-font-family;
 			font-weight: normal;}
-		
+
 	}
 }
+
 
 

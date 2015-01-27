@@ -191,7 +191,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	.holder {
 		@include container;
 		@extend %clearfix;
-		padding:10px 15px 12px;
+		padding:10px 15px 12px; 
 		@include breakpoint($mobile) {
 			padding:6px 5px 7px;
 		}
@@ -397,6 +397,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				padding:53px 0 0;
 			}
 		}
+		.filter-slide {
+			position:fixed;
+			padding:100px 0 0;
+			@include breakpoint($mobile) {
+				padding:53px 0 0;
+			}
+		}
 	}
 }
 /* headre right info styles */
@@ -576,7 +583,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 /* school slide styles */
 .school-slide {
-	width:510px;
+	width:430px;
 	height:100vh;
 	padding:133px 0 0;
 	background:$white;
@@ -626,13 +633,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 .school-active {
 	.visual {
-		margin:0 0 0 -510px;
+		margin:0 0 0 -430px;
 		@include breakpoint($mobile) {
-			margin-left:285px;
+			margin-left:285px; 
 		}
 	}
 	#main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
-		margin-left:-510px;
+		margin-left:-430px;
 		@include breakpoint($mobile) {
 			margin-left:285px;
 		}
@@ -729,6 +736,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	   }
 	}
 }
+ 
 /* nav styles */
 #nav {
 	>ul {
@@ -801,6 +809,114 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 	}
 }
+
+/* school slide styles */
+.filter-slide{
+	width:430px;
+	height:100vh;
+	padding:133px 0 0;
+	background:$white;
+	position:absolute;
+	overflow-y:scroll;
+	top:0;
+	right:0;
+	margin-right:-550px;
+	z-index:99;
+	@include box-shadow(0 2px 7px rgba(24,24,24,.5)); 
+	@include breakpoint($mobile) {
+		width:285px;
+		left:0;
+		margin-left:-300px;
+	}
+	.filterbutton{
+	  float: right;
+       cursor: pointer;
+	  &:hover{
+	    color:$orange;
+	  }
+	}
+	.button-holder{
+	   margin:20px 32px 30px;
+	   a.btn{
+	     width:100%;
+	   }
+	}
+	.title {
+		display:block;
+		font-size:27px;
+		line-height:35px;
+		color:$heading-link;
+		padding:7px 31px 29px;
+		margin:0;
+		@include breakpoint($mobile) {
+			font-size:22px;
+			line-height:30px;
+			padding:24px 31px 19px;
+		}
+	}
+	.nav-filter{
+		@extend %listreset;
+		 
+		li {
+			font-size:18px;
+			line-height:29px;
+			padding:0 31px; 
+			a {
+				color:$heading-link;
+				text-decoration:none;
+				background:$page-background;
+				padding:10px 15px;
+				display: block;
+				margin-bottom: 10px;
+				@include border-radius(5px);	
+				span{
+				  display:none; 
+                      float: right;
+                      margin-top: 6px;
+				}			
+				&:hover, &.active{
+                      color:$orange;
+				}
+				&.active{ 
+                      span{
+                        display: inline-block;
+                      }
+				}
+			}
+		}
+	}
+}
+.filter-active {
+	.visual {
+		margin:0 0 0 -430px;
+		@include breakpoint($mobile) {
+			margin-left:285px; 
+		}
+	}
+	#main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+		margin-left:-430px;
+		@include breakpoint($mobile) {
+			margin-left:285px;
+		}
+	}
+	#main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
+		width:100%;
+		max-width:none;
+	}
+	.visual .img-holder .caption-frame{
+		width:100%;
+		margin:0;
+		left:0;
+		padding:0 20px;
+	} 
+	.filter-slide {
+		margin-right:0;
+		@include breakpoint($mobile) {
+			margin-left:0;
+		}
+	}
+}
+
 /* nav active styles */
 .nav-active {
 	.visual {
@@ -855,6 +971,121 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		.menu-text { display:none; }
 	}
 }
+/* main information part styles */
+.text-section{
+  margin-bottom:59px;
+  margin-top:28px;
+  .text-right-section{
+    float:right;
+	margin-top: 40px;
+	@include breakpoint($tablet) {
+	
+	}
+	a{
+	  font-weight: bold;
+	  font-size: 20px;
+	  display: block;
+	  text-decoration: underline;
+	  text-align: right;
+	  margin-bottom:5px;
+	  &:hover{
+	    text-decoration:none;
+	  }
+	} 
+  }
+  h2{
+    max-width:666px;
+    margin-bottom:23px;
+	@include breakpoint($tablet) {
+	  max-width:inherit;
+	}
+  }
+  p{
+    max-width:666px;
+	@include breakpoint($tablet) {
+	  max-width:inherit;
+	}
+  }
+}
+/* filter search block styles */
+.sort-by {
+        float:left;
+		input[type="submit"] { display:none; }
+		label { display:none; }
+		select {
+			width:250px;
+		}
+		.search-text{ 
+		    @include linear-gradient($captions-credit,$page-background);
+	        @include border-radius(5px);
+            position: relative;
+	        padding:2px;
+ 	        min-width: 250px;
+	        height: 49px; 
+			input[type="text"]{
+			  width: 100%;
+			  padding: 12px 21px;
+			  @include border-radius(5px);
+			  border:none;
+			  font-size: 18px;
+              color: $base-text-color;
+			}
+		}
+	}
+	
+.myvoice-filter{
+  fieldset{
+    width:100%;
+    .this-filter{
+      margin-left:0;
+    }
+  }
+}
+.forum{
+	  .btn.topic{
+        font-size: 19px;
+	  }
+      fieldset{
+        float:left;
+		@include breakpoint($tablet) { 
+		  width:44%;  
+		}
+        margin-right:22px;
+        .search-text{
+          width: 381px;
+          float:left;  
+		  @include breakpoint($tablet) {
+		  
+		  }
+        }  
+        .search-button{
+          float: left;
+          width: 43px;
+          height: 47px;
+          text-align: center;
+          line-height: 47px;
+          font-size: 28px;
+          margin-left: -52px;
+          position: relative;
+		  &:hover{
+		    color:$orange;
+		  }
+		  input[type="submit"]{
+		    display: inherit;
+		    width: 100%;
+		    position: absolute;
+		    top: 0;
+		    height: 100%;
+		    right: 0;
+		    background: none;
+		    border: none;
+		    text-indent: 50px;
+		    overflow: hidden;
+		    cursor: pointer;
+		  }
+		}
+      }
+    }
 /* visual block styles */
 .visual {
 	width:100%;
@@ -1621,6 +1852,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			float:left;
 			input[type="submit"] { display:none; }
 			label { display:none; }
+			@include breakpoint($mobile){
+			  width:100%;
+			}
 			select {
 				width:250px;
             }
@@ -1630,10 +1864,35 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 					width: 187px;
 				}
 			}
+			@include breakpoint($mobile){
+				.jcf-select{
+					min-width: inherit;
+					width: 100%;
+					margin-bottom:15px;
+				}
+			}
 			fieldset{
 				float:left;
-				margin:0 20px 0 0;
+				margin:0 20px 0 0; 
 			}
+		}
+		&.filter-option{
+		  @include breakpoint($mobile){
+		    .short-buttons{
+		      .btn{
+		        float:right;
+		        width:49%;
+		        &:first-child{
+		          float:left;
+		        }
+		      }
+		    }
+		    .selected-filters{
+		      display:inherit;
+		      margin-top:0;
+		      width: 100%;
+		    }
+		  }
 		}
 	}
 	.view-mode{
@@ -1702,6 +1961,95 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 /* main post columns styles */
 .posts-columns {
 	@extend %clearfix;
+	
+	&.columns-full{
+	    .row{
+	      width:100%; 
+		  .forum-icon{
+		    position: absolute;
+			right:18px;
+			font-size:40px;
+			top: 27px;
+			color:$orange;
+			&.icon-Featured{
+			  color:$yellow;
+			}
+		  } 
+		  .forum-text{
+		    @extend %clearfix;
+			.forum-left{
+			  float: left;
+			  line-height: 15px;
+			  width:113px;
+			  margin-left:12px;
+			  margin-top:13px;
+			  .image-holder{
+			    overflow:hidden;
+			    border-radius:5px;
+			    margin-bottom:11px; 
+				img{
+				  width:100%;
+				} 
+			  }
+			  cite{
+			    font-style:normal;
+			    display: block;
+			    margin-top: 20px;
+			    margin-bottom: 11px;
+			    font-size:16px;
+			  }
+			  time{
+			    font-size: 14px;
+			    line-height: 24px;
+ 			  }
+			}
+			.forum-right{
+			  margin-left:156px;
+			  margin-bottom:11px;
+			  margin-right:100px;
+			  padding-top: 9px;
+			  h3{
+			    margin-bottom: 22px;
+			  }
+			  p{
+			    font-size:18px;
+				margin-bottom:20px;
+			  }
+			} 
+		  }
+		  .footer{
+			  padding-left: 184px;
+			  padding-right: 21px;
+			  margin-bottom:-10px;
+			  .text{
+			    display:inherit; 
+			  }
+			  .times{
+			    font-size: 15px;
+				margin-left: 40px;
+				margin-top: 8px;
+				color:$captions-credit; 
+				display: inline-block;
+				em{
+				  font-size: 29px;
+				  margin-right: 10px; 
+				  float:left;
+				}
+				cite{  
+				  font-style:normal;
+				  font-weight:bold;
+				}
+			  }
+			}
+	    }
+		.action-block{
+		  background:none;
+		  padding:12px 0 44px 0;
+		  .holder{
+		    padding:0;
+		  }
+		}
+	  } 
 	/* post view mode styles */
 	.age{
 	     background: $pink;

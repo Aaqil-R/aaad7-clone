@@ -96,6 +96,14 @@ function initMobileNav() {
 		menuOpener: '.menu-opener',
 		menuDrop: '.nav-holder'
 	});
+	
+	jQuery('body').mobileNav({
+		hideOnClickOutside: true,
+		menuActiveClass: 'filter-active',
+		menuOpener: '.filterbutton',
+		menuDrop: '.filter-slide'
+	});
+	
 	jQuery('body').mobileNav({
 		hideOnClickOutside: true,
 		menuActiveClass: 'search-active',
