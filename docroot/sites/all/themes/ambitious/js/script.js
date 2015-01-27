@@ -30,13 +30,17 @@ Drupal.behaviors.ambitious = {
 		});
 
 	// ==Masonry block==//
-	var $container = $('#masonry');
+	/*var $container = $('#masonry');
 	// initialize
 	$container.masonry({
 	  //columnWidth: 100,
 	  itemSelector: '.masonry-brick'
-	});
-
+	});*/
+	
+	if($("#block-views-stream-stream-forum-page .nav-filter .form-type-bef-link").hasClass("selected")){
+	  $("body").addClass("filter-active");
+	}
+    
 }
 };
 /*load more button with masonry - masonry was not applied when new content loads

@@ -9,8 +9,8 @@
 
 /* variables */ 
 $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
- 
-?>  
+$name = strip_tags($name); 
+?>   
 <section style="width:100%;" class="post">
    <?php if($comment_count != 0 && $comment_count < 5) : ?>
      <em class="icon-Featured forum-icon"></em>	
@@ -27,7 +27,7 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 						      <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
 						      <?php endif; ?>						      
 						    </div>
-                            <cite>by <strong> <?php print strip_tags($name); ?></strong></cite>
+                            <cite>by <strong title="<?php print $name; ?>"> <?php print truncate_utf8($name,12,TRUE,4);?></strong></cite>
                             <time pubdate="pubdate"><?php print $date; ?></time>  
 						  </div>
 						  <div class="info add forum-right">
@@ -48,14 +48,16 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 						  </div>
 						  <div class="times">
 						    <em class="icon-Time"></em> 
-							Last reply by <cite>titch</cite>, <time pubdate="pubdate"> <?php print $date; ?></time> 
+							Last reply by <cite><?php print user_load($variables['last_comment_uid'])->name;  ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
 					     </div> 
 						  <a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> 
 					  </div>  
 					</section>   
  
  
-  <?php print render($content['comments']); ?>
+  <?php  print render($content['comments']); ?>
+  
+  
 
  
 

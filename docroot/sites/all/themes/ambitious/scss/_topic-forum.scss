@@ -88,6 +88,9 @@ body.page-node-74566, body.page-node-155 {
   .forum-page{
     display:block;
   }
+  .filterbutton{
+      margin-left: 10px;
+    }
 }
 
 
@@ -362,7 +365,7 @@ body.page-node-74566, body.page-node-155 {
             position: relative;
 	        padding:2px;
  	        min-width: 250px;
- 	        width: 350px;
+ 	        width: 399px;
 float: left;
 margin-right: 10px;
 	        height: 49px; 
@@ -402,3 +405,137 @@ margin-right: 10px;
 		    cursor: pointer;
 		  }
 		}
+		
+
+/* school slide styles */
+.filter-slide{
+	width:430px;
+	height:100vh;
+	padding:133px 0 0;
+	background:$white;
+	position:fixed;
+	overflow-y:scroll;
+	top:0;
+	right:0;
+	margin-right:-550px;
+	z-index:99;
+	@include box-shadow(0 2px 7px rgba(24,24,24,.5)); 
+	@include breakpoint($mobile) {
+		width:285px;
+		left:0;
+		margin-left:-300px;
+	}
+	.filterbutton{
+	  float: right;
+       cursor: pointer;
+	  &:hover{
+	    color:$orange;
+	  }
+	}
+	.button-holder{
+	   margin:20px 32px 30px;
+	   .form-submit{
+	       width:100%;
+	       border-left:none;
+	       border-top:none;
+	       border-right:none;
+	       @extend .btn;
+	   } 
+	}
+	.title {
+		display:block;
+		font-size:27px;
+		line-height:35px;
+		color:$heading-link;
+		padding:7px 31px 29px;
+		margin:0;
+		@include breakpoint($mobile) {
+			font-size:22px;
+			line-height:30px;
+			padding:24px 31px 19px;
+		}
+	}
+	.nav-filter{
+		@extend %listreset;
+		 
+		.form-type-bef-link{
+			font-size:18px;
+			line-height:29px;
+			padding:0 31px; 
+			a {
+				color:$heading-link;
+				text-decoration:none;
+				background:$page-background;
+				padding:10px 15px;
+				display: block;
+				margin-bottom: 10px;
+				@include border-radius(5px);	
+				span{
+				  display:none; 
+                      float: right;
+                      margin-top: 6px;
+				}			
+				&:hover, &.active{
+                      color:$orange;
+				}
+				&.active{ 
+                      span{
+                        display: inline-block;
+                      }
+				}
+			}
+			&.selected{
+			  line-height: 29px;
+			  a{
+			     color:$orange;
+			     position: relative;
+			     line-height:33px;
+			     @extend .icon-Rightarrow;
+			     @extend [class^="icon-"];
+			     &:before{
+			      position: absolute;
+                     right:15px; 
+                     float:none;
+			     }
+			  } 
+			  
+			}
+		}
+	}
+}
+.filter-active {
+	.visual {
+		margin:0 0 0 -430px;
+		@include breakpoint($mobile) {
+			margin-left:285px; 
+		}
+	}
+	#main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+		margin-left:-430px;
+		@include breakpoint($mobile) {
+			margin-left:285px;
+		}
+	}
+	#main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
+		width:100%;
+		max-width:none;
+	}
+	.visual .img-holder .caption-frame{
+		width:100%;
+		margin:0;
+		left:0;
+		padding:0 20px;
+	} 
+	.filter-slide {
+		margin-right:0;
+		@include breakpoint($mobile) {
+			margin-left:0;
+		}
+	}
+}
+
+
+		
+ .top-bar{
+   display:none;
+ }
