@@ -23,8 +23,12 @@
         display: none;
     }
   }
-
-
+  // Text block
+  .text-block{
+    p{
+      font-size: 1em;
+    }
+  }
   // Load more
   .pager-load-more{
      @extend %listreset;
@@ -50,10 +54,23 @@
   // Action box
   .action-block .holder .region .block:nth-child(1){
     @include span(6 of 12);
+
+    @include breakpoint($mobile){
+      @include span(12 of 12);
+    }
   }
 
   .action-block .holder .region .block:nth-child(2){
     @include span(6 of 12 last);
+
+    @include breakpoint($mobile){
+      @include span(12 of 12);
+    }
+  }
+
+  // Post
+  .post{
+    min-height: 315px;
   }
 
 }
