@@ -12,9 +12,9 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
  
 ?>  
 <section style="width:100%;" class="post">
-   <?php if($comment_count > 5): ?>
+   <?php if($comment_count < 5): ?>
      <em class="icon-Featured forum-icon"></em>	
-   <?php elseif($comment_count < 5): ?>
+   <?php elseif($comment_count > 5): ?>
     <em class="icon-Hottopic forum-icon"></em>	
    <?php endif; ?>
   
