@@ -6,42 +6,53 @@
   .easy-breadcrumb{
     display: none;
   }
-}
 
-// View Stream
-.understanding-autism{
-  .post-actions{
-    overflow: hidden;
-    .action{
-      display: initial;
-      text-decoration: none;
-      position: relative;
-      top: -20px;
+    // View Stream
+  .understanding-autism{
+    .post-actions{
+      overflow: hidden;
+      .action{
+        display: initial;
+        text-decoration: none;
+        position: relative;
+        top: -20px;
+      }      
     }
-    .edit-sort-by{
-      display: none;
+
+    .form-item-sort-by label{
+        display: none;
     }
   }
+
+
+  // Load more
+  .pager-load-more{
+     @extend %listreset;
+     padding: 29px 0 61px;
+     li{
+       text-align:center;
+       a{
+          font-size: 0;
+          color:$gray;
+          &:before{
+             font-size: 101px; 
+             @extend [class*=" icon-"];
+             @extend .icon-Downarrow;          
+          }
+          &:hover {
+         color:$heading-link;
+         text-decoration: none;  
+      }
+       }
+    }
+  }
+
+  // Blue box
+  .blue-box{
+    width: 
+  }
+
 }
 
-// Load more
-.pager-load-more{
-   @extend %listreset;
-   padding: 29px 0 61px;
-   li{
-     text-align:center;
-     a{
-        font-size: 0;
-        color:$gray;
-        &:before{
-           font-size: 101px; 
-           @extend [class*=" icon-"];
-           @extend .icon-Downarrow;          
-        }
-        &:hover {
-       color:$heading-link;
-       text-decoration: none;  
-    }
-     }
-   }
-  }
+
+
