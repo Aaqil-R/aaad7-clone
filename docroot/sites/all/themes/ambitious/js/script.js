@@ -33,13 +33,15 @@ Drupal.behaviors.ambitious = {
 	  $("body").addClass("filter-active");
 	}
 	// ==Masonry block==//
-	var $container = $('#masonry');
-	// initialize
-	$container.masonry({
-	  //columnWidth: 100,
-	  itemSelector: '.masonry-brick'
-	});
+	var $container = $('#masonry');  
 	
+	if ("$container".masonry != undefined) {
+	  // initialize
+	  $container.masonry({
+	  //columnWidth: 100,
+	    itemSelector: '.masonry-brick'
+	  });
+	}
 	
     
 }
