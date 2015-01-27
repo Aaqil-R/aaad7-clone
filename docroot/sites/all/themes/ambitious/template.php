@@ -333,9 +333,14 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
      $links = sharethis_node_view($node, 'full', 'en');
      $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
      $vars['node'] = $node;
+  }
+
+  if($vars['view']->current_display == 'understanding_autism_page' && $vars['view']->query->pager->current_page === 0){
+   $node = node_load(arg(1)); 
+   $vars['node'] = $node;
   } 
-   
 }
+
 
 
  
