@@ -47,9 +47,13 @@
     }
   }
 
-  // Blue box
-  .blue-box{
-    width: 
+  // Action box
+  .action-block .holder .region .block:nth-child(1){
+    @include span(6 of 12);
+  }
+
+  .action-block .holder .region .block:nth-child(2){
+    @include span(6 of 12 last);
   }
 
 }
