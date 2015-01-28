@@ -325,7 +325,13 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
    $node = node_load(arg(1)); 
    $links = sharethis_node_view($node, 'full', 'en');
    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
- } 
+ }
+
+  if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page' || $vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'){
+    $node = node_load(arg(1));
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+  }
 }
 function ambitious_preprocess_views_view_masonry(&$vars) {  
   if($vars['view']->current_display == 'stream_topic_page' && $vars['view']->query->pager->current_page === 0){
