@@ -10177,6 +10177,39 @@ body {
   height: 100%;
 }
 
+/* these apply to auto-completing form fields */
+/* line 28, ../scss/_global.scss */
+html.js input.form-autocomplete {
+  background-image: url(../images/ajax-loader.gif);
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+}
+
+/* line 33, ../scss/_global.scss */
+html.js input.throbbing {
+  background-position: 100% -16px;
+}
+
+/* these apply to all ajax progresses */
+/* line 38, ../scss/_global.scss */
+.ajax-progress {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+}
+
+/* line 45, ../scss/_global.scss */
+.ajax-progress .throbber {
+  background: transparent url(../images/ajax-loader.gif) no-repeat 0px 0px;
+  float: left;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 5px;
+  right: 40px;
+}
+
 /* line 2, ../scss/_header.scss */
 .top-bar {
   z-index: 1001;
