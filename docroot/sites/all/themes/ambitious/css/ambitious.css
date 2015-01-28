@@ -10154,44 +10154,44 @@ body.sidebar #sidebar:before {
   z-index: 99999;
 }
 
-/* line 9, ../scss/_global.scss */
+/* line 18, ../scss/_global.scss */
 body {
   margin-top: -20px;
 }
 
-/* line 12, ../scss/_global.scss */
+/* line 21, ../scss/_global.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 16, ../scss/_global.scss */
+/* line 25, ../scss/_global.scss */
 .span-4 {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
 }
 
-/* line 20, ../scss/_global.scss */
+/* line 29, ../scss/_global.scss */
 .region-action {
   width: 100%;
   height: 100%;
 }
 
 /* these apply to auto-completing form fields */
-/* line 28, ../scss/_global.scss */
+/* line 37, ../scss/_global.scss */
 html.js input.form-autocomplete {
   background-image: url(../images/ajax-loader.gif);
   background-position: 100% 0px;
   background-repeat: no-repeat;
 }
 
-/* line 33, ../scss/_global.scss */
+/* line 42, ../scss/_global.scss */
 html.js input.throbbing {
   background-position: 100% -16px;
 }
 
 /* these apply to all ajax progresses */
-/* line 38, ../scss/_global.scss */
+/* line 47, ../scss/_global.scss */
 .ajax-progress {
   display: inline-block;
   *display: inline;
@@ -10199,7 +10199,7 @@ html.js input.throbbing {
   position: relative;
 }
 
-/* line 45, ../scss/_global.scss */
+/* line 54, ../scss/_global.scss */
 .ajax-progress .throbber {
   background: transparent url(../images/ajax-loader.gif) no-repeat 0px 0px;
   float: left;
@@ -10208,6 +10208,47 @@ html.js input.throbbing {
   position: absolute;
   top: 5px;
   right: 40px;
+}
+
+/* line 66, ../scss/_global.scss */
+.messages {
+  position: inherit;
+}
+
+/* line 70, ../scss/_global.scss */
+.status {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #9ee19e;
+  color: #3aad3a;
+  margin-bottom: 10px;
+}
+
+/* line 78, ../scss/_global.scss */
+.warning {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #fdfdc4;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+/* line 86, ../scss/_global.scss */
+.error {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #fed3d1;
+  color: #b30200;
+  margin-bottom: 10px;
 }
 
 /* line 2, ../scss/_header.scss */
