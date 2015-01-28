@@ -332,6 +332,12 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
+  
+ if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page' || $vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
+    $node = node_load(arg(1));
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+  }
 }
 function ambitious_preprocess_views_view_masonry(&$vars) {  
   if($vars['view']->current_display == 'stream_topic_page' && $vars['view']->query->pager->current_page === 0){
@@ -345,6 +351,11 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
    $node = node_load(arg(1)); 
    $vars['node'] = $node;
   } 
+  
+ if($vars['view']->current_display == 'voices_from_the_spectrum_page' && $vars['view']->query->pager->current_page === 0){
+   $node = node_load(arg(1)); 
+   $vars['node'] = $node;
+  }
 }
 
 
