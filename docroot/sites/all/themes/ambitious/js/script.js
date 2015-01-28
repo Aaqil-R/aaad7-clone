@@ -35,7 +35,7 @@ Drupal.behaviors.ambitious = {
 	// ==Masonry block==//
 	var $container = $('#masonry');  
 	
-	if ("$container".masonry != undefined) {
+	if ($container.masonry != undefined) {
 	  // initialize
 	  $container.masonry({
 	  //columnWidth: 100,

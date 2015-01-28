@@ -956,7 +956,7 @@ table {
 }
 
 /* line 61, ../scss/source/_font-icons.scss */
-.icon-Rightarrow:before, .filter-slide .nav-filter .form-type-bef-link.selected a:before {
+.icon-Rightarrow:before {
   content: "\e60b";
 }
 
@@ -1006,7 +1006,7 @@ table {
 }
 
 /* line 91, ../scss/source/_font-icons.scss */
-.icon-Tick:before {
+.icon-Tick:before, .filter-slide .nav-filter .form-type-bef-link.selected a:before {
   content: "\e600";
 }
 
@@ -2079,7 +2079,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     word-spacing: 3px;
   }
   /* line 732, ../scss/source/_all.scss */
-  .nav-holder .btn span .icon-Rightarrow, .nav-holder .form-submit span .icon-Rightarrow, .nav-holder .topic-share .st_sharethis_button span .icon-Rightarrow, .topic-share .nav-holder .st_sharethis_button span .icon-Rightarrow, .nav-holder .btn span .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .nav-holder .btn span a, .nav-holder .form-submit span .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .nav-holder .form-submit span a, .nav-holder .topic-share .st_sharethis_button span .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .nav-holder .topic-share .st_sharethis_button span a, .topic-share .nav-holder .st_sharethis_button span .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .nav-holder .st_sharethis_button span a, .nav-holder .filter-slide .button-holder .form-submit span .nav-filter .form-type-bef-link.selected a, .nav-holder .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit span a, .filter-slide .button-holder .nav-holder .form-submit span .nav-filter .form-type-bef-link.selected a {
+  .nav-holder .btn span .icon-Rightarrow, .nav-holder .form-submit span .icon-Rightarrow, .nav-holder .topic-share .st_sharethis_button span .icon-Rightarrow, .topic-share .nav-holder .st_sharethis_button span .icon-Rightarrow {
     display: none;
   }
 }
@@ -2958,7 +2958,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   display: block;
 }
 /* line 1397, ../scss/source/_all.scss */
-.visual .btn-next .icon-Rightarrow, .visual .btn-next .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .visual .btn-next a {
+.visual .btn-next .icon-Rightarrow {
   float: left;
   font-size: 27px;
   line-height: 40px;
@@ -2967,7 +2967,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 1397, ../scss/source/_all.scss */
-  .visual .btn-next .icon-Rightarrow, .visual .btn-next .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .visual .btn-next a {
+  .visual .btn-next .icon-Rightarrow {
     padding: 0;
     font-size: 32px;
   }
@@ -4474,7 +4474,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 2535, ../scss/source/_all.scss */
-.posts-columns .post-actions .action .icon-Rightarrow, .posts-columns .post-actions .action .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-actions .action a {
+.posts-columns .post-actions .action .icon-Rightarrow {
   color: #ffffff;
   text-decoration: none;
   margin-top: 41px;
@@ -4533,7 +4533,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 2583, ../scss/source/_all.scss */
-.posts-columns .post-my-voice-actions .action .icon-Rightarrow, .posts-columns .post-my-voice-actions .action .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-my-voice-actions .action a {
+.posts-columns .post-my-voice-actions .action .icon-Rightarrow {
   color: #ffffff;
   text-decoration: none;
   margin-top: 61px;
@@ -4544,7 +4544,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 2583, ../scss/source/_all.scss */
-  .posts-columns .post-my-voice-actions .action .icon-Rightarrow, .posts-columns .post-my-voice-actions .action .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-my-voice-actions .action a {
+  .posts-columns .post-my-voice-actions .action .icon-Rightarrow {
     text-align: left;
     margin-left: 160px;
   }
@@ -4554,7 +4554,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   text-decoration: none;
 }
 /* line 2598, ../scss/source/_all.scss */
-.posts-columns .post-my-voice-actions .action:hover .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:hover .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-my-voice-actions .action:hover a, .posts-columns .post-my-voice-actions .action:active .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:active .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-my-voice-actions .action:active a, .posts-columns .post-my-voice-actions .action:focus .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:focus .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .posts-columns .post-my-voice-actions .action:focus a {
+.posts-columns .post-my-voice-actions .action:hover .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:active .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:focus .icon-Rightarrow {
   color: #b3066b;
 }
 /* line 2604, ../scss/source/_all.scss */
@@ -5347,7 +5347,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     width: 100%;
   }
   /* line 3167, ../scss/source/_all.scss */
-  .forum-block .block .btn .icon-Rightarrow, .forum-block .block .form-submit .icon-Rightarrow, .forum-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .forum-block .block .st_sharethis_button .icon-Rightarrow, .forum-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .forum-block .block .btn a, .forum-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .forum-block .block .form-submit a, .forum-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .forum-block .block .topic-share .st_sharethis_button a, .topic-share .forum-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .forum-block .block .st_sharethis_button a, .forum-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .forum-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .forum-block .block .form-submit .nav-filter .form-type-bef-link.selected a {
+  .forum-block .block .btn .icon-Rightarrow, .forum-block .block .form-submit .icon-Rightarrow, .forum-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .forum-block .block .st_sharethis_button .icon-Rightarrow {
     display: none;
   }
 }
@@ -8519,7 +8519,7 @@ a:hover.tooltips span.tooltip-content {
     width: 100%;
   }
   /* line 903, ../scss/source/_content.scss */
-  .social-block .block .btn .icon-Rightarrow, .social-block .block .form-submit .icon-Rightarrow, .social-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-block .block .st_sharethis_button .icon-Rightarrow, .social-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-block .block .btn a, .social-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-block .block .form-submit a, .social-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-block .block .topic-share .st_sharethis_button a, .topic-share .social-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .social-block .block .st_sharethis_button a, .social-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .social-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .social-block .block .form-submit .nav-filter .form-type-bef-link.selected a, .signup-block .block .btn .icon-Rightarrow, .signup-block .block .form-submit .icon-Rightarrow, .signup-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .signup-block .block .st_sharethis_button .icon-Rightarrow, .signup-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .signup-block .block .btn a, .signup-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .signup-block .block .form-submit a, .signup-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .signup-block .block .topic-share .st_sharethis_button a, .topic-share .signup-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .signup-block .block .st_sharethis_button a, .signup-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .signup-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .signup-block .block .form-submit .nav-filter .form-type-bef-link.selected a, .slider-block .block .btn .icon-Rightarrow, .slider-block .block .form-submit .icon-Rightarrow, .slider-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .slider-block .block .st_sharethis_button .icon-Rightarrow, .slider-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .slider-block .block .btn a, .slider-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .slider-block .block .form-submit a, .slider-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .slider-block .block .topic-share .st_sharethis_button a, .topic-share .slider-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .slider-block .block .st_sharethis_button a, .slider-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .slider-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .slider-block .block .form-submit .nav-filter .form-type-bef-link.selected a, .my-voice-block .block .btn .icon-Rightarrow, .my-voice-block .block .form-submit .icon-Rightarrow, .my-voice-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .my-voice-block .block .st_sharethis_button .icon-Rightarrow, .my-voice-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .my-voice-block .block .btn a, .my-voice-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .my-voice-block .block .form-submit a, .my-voice-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .my-voice-block .block .topic-share .st_sharethis_button a, .topic-share .my-voice-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .my-voice-block .block .st_sharethis_button a, .my-voice-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .my-voice-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .my-voice-block .block .form-submit .nav-filter .form-type-bef-link.selected a, .social-action-block .block .btn .icon-Rightarrow, .social-action-block .block .form-submit .icon-Rightarrow, .social-action-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-action-block .block .st_sharethis_button .icon-Rightarrow, .social-action-block .block .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-action-block .block .btn a, .social-action-block .block .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-action-block .block .form-submit a, .social-action-block .block .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .social-action-block .block .topic-share .st_sharethis_button a, .topic-share .social-action-block .block .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .social-action-block .block .st_sharethis_button a, .social-action-block .block .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .social-action-block .block .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .social-action-block .block .form-submit .nav-filter .form-type-bef-link.selected a {
+  .social-block .block .btn .icon-Rightarrow, .social-block .block .form-submit .icon-Rightarrow, .social-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-block .block .st_sharethis_button .icon-Rightarrow, .signup-block .block .btn .icon-Rightarrow, .signup-block .block .form-submit .icon-Rightarrow, .signup-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .signup-block .block .st_sharethis_button .icon-Rightarrow, .slider-block .block .btn .icon-Rightarrow, .slider-block .block .form-submit .icon-Rightarrow, .slider-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .slider-block .block .st_sharethis_button .icon-Rightarrow, .my-voice-block .block .btn .icon-Rightarrow, .my-voice-block .block .form-submit .icon-Rightarrow, .my-voice-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .my-voice-block .block .st_sharethis_button .icon-Rightarrow, .social-action-block .block .btn .icon-Rightarrow, .social-action-block .block .form-submit .icon-Rightarrow, .social-action-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-action-block .block .st_sharethis_button .icon-Rightarrow {
     display: none;
   }
 }
@@ -8989,7 +8989,7 @@ a:hover.tooltips span.tooltip-content {
   padding: 10px 19px;
 }
 /* line 1302, ../scss/source/_content.scss */
-.read-more .btn .icon-Rightarrow, .read-more .form-submit .icon-Rightarrow, .read-more .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .read-more .st_sharethis_button .icon-Rightarrow, .read-more .btn .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .read-more .btn a, .read-more .form-submit .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .read-more .form-submit a, .read-more .topic-share .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .read-more .topic-share .st_sharethis_button a, .topic-share .read-more .st_sharethis_button .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .topic-share .read-more .st_sharethis_button a, .read-more .filter-slide .button-holder .form-submit .nav-filter .form-type-bef-link.selected a, .read-more .filter-slide .nav-filter .form-type-bef-link.selected .button-holder .form-submit a, .filter-slide .button-holder .read-more .form-submit .nav-filter .form-type-bef-link.selected a {
+.read-more .btn .icon-Rightarrow, .read-more .form-submit .icon-Rightarrow, .read-more .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .read-more .st_sharethis_button .icon-Rightarrow {
   padding-left: 15px;
 }
 
@@ -10883,7 +10883,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 }
 @media (max-width: 767px) {
   /* line 229, ../scss/_topic-forum.scss */
-  .node-type-topic .visual .btn-next .icon-Rightarrow, .node-type-topic .visual .btn-next .filter-slide .nav-filter .form-type-bef-link.selected a, .filter-slide .nav-filter .form-type-bef-link.selected .node-type-topic .visual .btn-next a {
+  .node-type-topic .visual .btn-next .icon-Rightarrow {
     padding-right: 30px;
   }
   /* line 232, ../scss/_topic-forum.scss */

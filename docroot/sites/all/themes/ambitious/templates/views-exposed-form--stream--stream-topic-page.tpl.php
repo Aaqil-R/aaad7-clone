@@ -32,7 +32,6 @@
 
 
 <div class="sort-block">
-<div class="search-text forum-page"><input type="text" value="Search the community"></div><div class="forum-page search-button icon-search"><input type="submit" class="icon-search"></div>
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -45,15 +44,6 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-      <div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
-				<ul class="nav-filter ">
-					 <?php print $widget->widget; ?> 
-				</ul> 
-   
-      <div class="button-holder"><?php print $button; ?></div> 
-				
-        </div>
         <?php if (!empty($widget->description)): ?>
           <div class="description">
             <?php print $widget->description; ?>
@@ -79,13 +69,14 @@
         <?php print $offset; ?>
       </div>
     <?php endif; ?>
-    
+     <div class="views-exposed-widget views-submit-button">
+      <?php print $button; ?>
+    </div>
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button">
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-<a href="#" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-plus"></em></span></a>
     <?php print render($variables['share_button']); ?>
 </div>
  
