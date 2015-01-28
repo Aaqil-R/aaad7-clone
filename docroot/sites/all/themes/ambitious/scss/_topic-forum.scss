@@ -322,6 +322,25 @@ body.page-node-74566, body.page-node-155 {
 			  .text{
 			    display:inherit; 
 			  }
+			  .links.inline{
+			    float:right;
+			    margin-top:6px;
+                   @extend %listreset;
+                   li{
+                     color:$captions-credit;
+                     a{
+                       color:$orange;
+                       text-decoration:underline;
+                       &.btn{
+                         color:$white;
+                         text-decoration:none;
+                       }
+                       &:hover{
+                         text-decoration:none;
+                       }
+                     }
+                   }
+			  }
 			  .times{
 			    font-size: 15px;
 				margin-left: 40px;
@@ -535,5 +554,14 @@ margin-right: 10px;
 }
 #block-views-stream-stream-forum-page{
   position: inherit;
+}
+.posts-columns.columns-full .row .forum-text .forum-left cite{
+  text-align: center;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.posts-columns .post .footer .num-holder a .text{
+  display:inherit;
+  font-size:15px;
 }
  
