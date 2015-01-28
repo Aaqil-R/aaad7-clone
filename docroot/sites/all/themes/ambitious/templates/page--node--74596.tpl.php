@@ -106,7 +106,6 @@
         <div class="holder">
           
           <?php if ($logo): ?>
-          test
             <div class="logo">
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="/sites/all/themes/ambitious/images/my-voice-logo.png" alt="<?php print t('Ambitious About Autism'); ?>"></a>
             </div><!-- /logo -->
@@ -198,7 +197,6 @@
 
     </section> <!-- /highlighted -->
   <?php endif; ?>
-test
   <main id="main">
 
   <?php if ($page['content_top']): ?>
