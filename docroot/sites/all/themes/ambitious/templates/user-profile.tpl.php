@@ -63,7 +63,7 @@
 		               </header>
 		               <div class="profile-main">
 		               		<section class="profile-info">
-		               			<img class="profile-picture" alt="Profile image" src="images/profile-picture.jpg" width="200" height="200">
+		               			<img class="profile-picture" alt="Profile image" src="images/profile-picture.jpg" width="200" height="200" />
 				               	<h3>Anna76</h3>
 				               	<dl>
 				               		<dt>Name:</dt>
@@ -135,7 +135,7 @@
      			               		<div id="comments" class="clearfix">
      			               			<article id="comment-1" class="comment first">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-molly.jpg" width="60" height="60">
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-molly.jpg" width="60" height="60" />
      			               					<h4><a href="#">Molly</a></h4>
      			               					<span class="time-ago">5 hours ago</span>
      			               				</div>
@@ -145,7 +145,7 @@
      			               			</article>
      			               			<article id="comment-2" class="comment">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-mikes.jpg" width="60" height="60">
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-mikes.jpg" width="60" height="60" />
      			               					<h4><a href="#">MikeS</a></h4>
      			               					<span class="time-ago">12 hours ago</span>
      			               				</div>
@@ -155,7 +155,7 @@
      			               			</article>
      			               			<article id="comment-3" class="comment">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-dave.jpg" width="60" height="60">
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-dave.jpg" width="60" height="60" />
      			               					<h4><a href="#">Dave</a></h4>
      			               					<span class="time-ago">2 days ago</span>
      			               				</div>
