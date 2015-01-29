@@ -567,3 +567,14 @@ margin-right: 10px;
 .view-display-id-stream .action-block .block-share .btn{
     margin: 182px 10px 0 0;
 }
+ 
+/* user profile page cutom*/
+
+.page-user{
+  @extend body.sidebar;  
+  @extend body.profile;  
+  .profile-body{
+    background:$white;
+  }
+}
+

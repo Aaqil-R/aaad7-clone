@@ -9696,16 +9696,16 @@ table {
 }
 
 /* line 8, ../scss/source/_profile.scss */
-body.sidebar #main {
+body.sidebar #main, .page-user #main {
   max-width: none;
   padding: 0;
 }
 /* line 12, ../scss/source/_profile.scss */
-body.sidebar #sidebar, body.sidebar #sidebar:before {
+body.sidebar #sidebar, .page-user #sidebar, body.sidebar #sidebar:before, .page-user #sidebar:before {
   width: 25%;
 }
 /* line 15, ../scss/source/_profile.scss */
-body.sidebar #sidebar {
+body.sidebar #sidebar, .page-user #sidebar {
   float: left;
   padding-top: 5em;
   text-align: right;
@@ -9714,28 +9714,28 @@ body.sidebar #sidebar {
   letter-spacing: -1px;
 }
 /* line 22, ../scss/source/_profile.scss */
-body.sidebar #sidebar ul {
+body.sidebar #sidebar ul, .page-user #sidebar ul {
   list-style: none;
   float: right;
 }
 /* line 25, ../scss/source/_profile.scss */
-body.sidebar #sidebar ul a {
+body.sidebar #sidebar ul a, .page-user #sidebar ul a {
   padding: 0.8em 1.5em 0.8em 2.5em;
   display: block;
   color: #5e666e;
   text-align: left;
 }
 /* line 30, ../scss/source/_profile.scss */
-body.sidebar #sidebar ul a.active {
+body.sidebar #sidebar ul a.active, .page-user #sidebar ul a.active {
   background: #FFF;
   color: inherit;
 }
 /* line 34, ../scss/source/_profile.scss */
-body.sidebar #sidebar ul a:hover {
+body.sidebar #sidebar ul a:hover, .page-user #sidebar ul a:hover {
   color: inherit;
 }
 /* line 39, ../scss/source/_profile.scss */
-body.sidebar #sidebar:before {
+body.sidebar #sidebar:before, .page-user #sidebar:before {
   content: '';
   position: absolute;
   top: 0;
@@ -9746,13 +9746,13 @@ body.sidebar #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 39, ../scss/source/_profile.scss */
-  body.sidebar #sidebar:before {
+  body.sidebar #sidebar:before, .page-user #sidebar:before {
     content: none;
   }
 }
 @media (max-width: 767px) {
   /* line 15, ../scss/source/_profile.scss */
-  body.sidebar #sidebar {
+  body.sidebar #sidebar, .page-user #sidebar {
     width: 100%;
     padding: 1em;
     background: #ecf0f1;
@@ -9809,7 +9809,7 @@ body.sidebar #sidebar:before {
 
 @media (max-width: 767px) {
   /* line 102, ../scss/source/_profile.scss */
-  body.profile .top-header {
+  body.profile .top-header, .page-user .top-header {
     display: none;
   }
 }
@@ -10143,7 +10143,7 @@ body.sidebar #sidebar:before {
 
 @media (max-width: 767px) {
   /* line 364, ../scss/source/_profile.scss */
-  body.profile .btn, body.profile .form-submit, body.profile .topic-share .st_sharethis_button, .topic-share body.profile .st_sharethis_button, body.profile .filter-slide .button-holder .form-submit, .filter-slide .button-holder body.profile .form-submit {
+  body.profile .btn, .page-user .btn, body.profile .form-submit, .page-user .form-submit, body.profile .topic-share .st_sharethis_button, .topic-share body.profile .st_sharethis_button, .page-user .topic-share .st_sharethis_button, .topic-share .page-user .st_sharethis_button, body.profile .filter-slide .button-holder .form-submit, .filter-slide .button-holder body.profile .form-submit, .page-user .filter-slide .button-holder .form-submit, .filter-slide .button-holder .page-user .form-submit {
     width: 100%;
     margin: 0.6em 0;
   }
@@ -11282,6 +11282,12 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   margin: 182px 10px 0 0;
 }
 
+/* user profile page cutom*/
+/* line 576, ../scss/_topic-forum.scss */
+.page-user .profile-body {
+  background: #ffffff;
+}
+
 /* line 3, ../scss/_understanding-autism.scss */
 .page-node-74591 h1.title {
   display: none;
@@ -11362,11 +11368,6 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   }
 }
 /* line 72, ../scss/_understanding-autism.scss */
-.page-node-74591 .btn-transparent:hover {
-  border-bottom-width: 2px;
-  box-shadow: 0 1px #ffffff;
-}
-/* line 79, ../scss/_understanding-autism.scss */
 .page-node-74591 .post {
   min-height: 315px;
 }
@@ -11416,42 +11417,5 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 }
 /* line 48, ../scss/_voice-page.scss */
 .page-node-74596 .title, .page-node-74596 .region-footer-copyright .social-holder h2, .region-footer-copyright .social-holder .page-node-74596 h2 {
-  display: none;
-}
-
-/*new codes for menu stlying*/
-/* line 56, ../scss/_voice-page.scss */
-.nav-holder ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* line 65, ../scss/_voice-page.scss */
-#nav .main-menu-1 .course a .icon-Downarrow, #nav .main-menu-1 .course a .pager-load-more li a:before, .pager-load-more li #nav .main-menu-1 .course a a:before {
-  display: none;
-}
-/* line 68, ../scss/_voice-page.scss */
-#nav .main-menu-1 .course a .icon-Uparrow {
-  display: none;
-}
-
-/* line 77, ../scss/_voice-page.scss */
-#nav .main-menu-2 {
-  padding: 0;
-}
-/* line 78, ../scss/_voice-page.scss */
-#nav .main-menu-2 li {
-  list-style: none;
-}
-/* line 79, ../scss/_voice-page.scss */
-#nav .main-menu-2 li a {
-  padding: 9px 31px 11px 45px;
-}
-/* line 81, ../scss/_voice-page.scss */
-#nav .main-menu-2 li a .icon-Downarrow, #nav .main-menu-2 .pager-load-more li a a:before, .pager-load-more #nav .main-menu-2 li a a:before {
-  display: none;
-}
-/* line 84, ../scss/_voice-page.scss */
-#nav .main-menu-2 li a .icon-Uparrow {
   display: none;
 }
