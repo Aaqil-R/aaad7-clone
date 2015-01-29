@@ -436,3 +436,43 @@ $links = $variables['links'];
 
   return $output;
 }
+/**
+ * Returns HTML for primary and secondary local tasks.
+ *
+ * @ingroup themeable
+ */
+function ambitious_menu_local_tasks(&$variables) {
+  $output = '';
+
+  // Add theme hook suggestions for tab type.
+  foreach (array('primary', 'secondary') as $type) {
+    if (!empty($variables[$type])) {
+      foreach (array_keys($variables[$type]) as $key) {
+        if (isset($variables[$type][$key]['#theme']) && ($variables[$type][$key]['#theme'] == 'menu_local_task' || is_array($variables[$type][$key]['#theme']) && in_array('menu_local_task', $variables[$type][$key]['#theme']))) {
+          $variables[$type][$key]['#theme'] = array('menu_local_task__' . $type, 'menu_local_task');
+        }
+      }
+    }
+  }
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
+    if (arg(0) != 'user') {
+    $variables['primary']['#prefix'] .= '<ul class="tabs-primary tabs primary">';
+    } else {
+    $variables['primary']['#prefix'] .= '<ul class="">';
+    }
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<ul class="tabs-secondary tabs secondary">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
+
+

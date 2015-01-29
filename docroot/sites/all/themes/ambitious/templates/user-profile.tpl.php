@@ -33,44 +33,16 @@
  *
  * @ingroup themeable
  */
-?>
-<section class="top-header">
-			<div class="top-header-inner">
-				<ul class="page-links">
-					<li><a href="#" title="Home">Home</a></li>
-					<li><a href="#" title="Understanding autism">Understanding autism</a></li>
-					<li><a href="#" title="Talk to others">Talk to others</a></li>
-				</ul>
-			</div>
-		</section>
-		<main id="main" role="main">
-
-			<nav id="sidebar">
-				<ul>
-					<li><a href="#profile" class="active">My profile</a></li>
-					<li><a href="#edit">Edit profile</a></li>
-					<li><a href="#reset">Reset password</a></li>
-				</ul>
-			</nav>
-
-			<div class="profile-body">
-				<div class="holder">
-		               <header>
-		                	<h1>My profile</h1>
-		                	<span class="member-since">
-		                		Member since 19 December 2014
-		                	</span>
-		               </header>
-		               <div class="profile-main">
+?> 
 		               		<section class="profile-info">
-		               			<img class="profile-picture" alt="Profile image" src="images/profile-picture.jpg" width="200" height="200" />
-				               	<h3>Anna76</h3>
+		               			<?php print render($user_profile['user_picture']); ?>
+				               	<h3><?php print $elements['#account']->name; ?></h3>
 				               	<dl>
 				               		<dt>Name:</dt>
 				               		<dd>Anna Smith</dd>
 
 				               		<dt>Email:</dt>
-				               		<dd>anna76@gmail.com</dd>
+				               		<dd><?php print $elements['#account']->mail;?></dd>
 
 				               		<dt>Location:</dt>
 				               		<dd>Hampshire</dd>
@@ -86,7 +58,7 @@
 				               		</dd>
 
 				               		<dt>Signature:</dt>
-				               		<dd>Anna - Community champion</dd>
+				               		<dd><?php print $elementsp['#account']->signature; ?></dd>
 
 				               	</dl>
 			               	</section>
@@ -95,7 +67,7 @@
 			               		<p>
 			               			At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
 			               		</p>
-			               		<a href="#" class="btn btn-red" title="Edit your profile">
+			               		<a href="<?php print url('user/'.$elements['#account']->uid.'/edit'); ?>" class="btn btn-red" title="Edit your profile">
 			               			<span>
 			               				Edit your profile <em class="icon-Rightarrow"></em>
 			               			</span>
@@ -135,7 +107,7 @@
      			               		<div id="comments" class="clearfix">
      			               			<article id="comment-1" class="comment first">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-molly.jpg" width="60" height="60" />
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-molly.jpg" width="60" height="60">
      			               					<h4><a href="#">Molly</a></h4>
      			               					<span class="time-ago">5 hours ago</span>
      			               				</div>
@@ -145,7 +117,7 @@
      			               			</article>
      			               			<article id="comment-2" class="comment">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-mikes.jpg" width="60" height="60" />
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-mikes.jpg" width="60" height="60">
      			               					<h4><a href="#">MikeS</a></h4>
      			               					<span class="time-ago">12 hours ago</span>
      			               				</div>
@@ -155,7 +127,7 @@
      			               			</article>
      			               			<article id="comment-3" class="comment">
      			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-dave.jpg" width="60" height="60" />
+     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-dave.jpg" width="60" height="60">
      			               					<h4><a href="#">Dave</a></h4>
      			               					<span class="time-ago">2 days ago</span>
      			               				</div>
@@ -167,11 +139,7 @@
      		               		</section>
 
 
-		               </div>
-				</div>
-			</div>
-
-		</main>
+		            
 <div class="profile"<?php print $attributes; ?>>
   <?php print render($user_profile); ?>
 </div>
