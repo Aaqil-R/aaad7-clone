@@ -65,6 +65,10 @@ Drupal.behaviors.ambitious = {
 		  }
 	  });
 
+	  //Sets the width of masonry when click on toggle list and grid
+	  $("a.list, a.grid").click(function(){
+		  setTimeout(function(){ $('.view-content').masonry() }, 400);
+	  });
 }
 };
 /*load more button with masonry - masonry was not applied when new content loads
@@ -82,6 +86,10 @@ Drupal.behaviors.ambitious = {
   });
 
 })(jQuery, Drupal, this, this.document);
+
+jQuery(window).click(function(event){
+	jQuery(window).trigger('resize');
+});
 
 
 
