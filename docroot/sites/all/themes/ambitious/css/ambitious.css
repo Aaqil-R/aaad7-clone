@@ -10626,10 +10626,23 @@ ul.tabs-primary li.is-active {
 /* line 5, ../scss/_action-block.scss */
 .action-block .holder .region .block:nth-child(1) {
   float: left;
+  max-height: 325px;
 }
-/* line 8, ../scss/_action-block.scss */
+/* line 9, ../scss/_action-block.scss */
 .action-block .holder .region .block:nth-child(2) {
   float: right;
+  max-height: 325px;
+}
+
+/* line 20, ../scss/_action-block.scss */
+.btn-transparent:hover {
+  border-bottom-width: 2px;
+  box-shadow: 0 1px #ffffff;
+}
+
+/* line 29, ../scss/_action-block.scss */
+.front .block-share .btn-transparent:hover {
+  margin: 182px 10px 0 0;
 }
 
 /*Message*/
@@ -11417,5 +11430,42 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 }
 /* line 48, ../scss/_voice-page.scss */
 .page-node-74596 .title, .page-node-74596 .region-footer-copyright .social-holder h2, .region-footer-copyright .social-holder .page-node-74596 h2 {
+  display: none;
+}
+
+/*new codes for menu stlying*/
+/* line 56, ../scss/_voice-page.scss */
+.nav-holder ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 65, ../scss/_voice-page.scss */
+#nav .main-menu-1 .course a .icon-Downarrow, #nav .main-menu-1 .course a .pager-load-more li a:before, .pager-load-more li #nav .main-menu-1 .course a a:before {
+  display: none;
+}
+/* line 68, ../scss/_voice-page.scss */
+#nav .main-menu-1 .course a .icon-Uparrow {
+  display: none;
+}
+
+/* line 77, ../scss/_voice-page.scss */
+#nav .main-menu-2 {
+  padding: 0;
+}
+/* line 78, ../scss/_voice-page.scss */
+#nav .main-menu-2 li {
+  list-style: none;
+}
+/* line 79, ../scss/_voice-page.scss */
+#nav .main-menu-2 li a {
+  padding: 9px 31px 11px 45px;
+}
+/* line 81, ../scss/_voice-page.scss */
+#nav .main-menu-2 li a .icon-Downarrow, #nav .main-menu-2 .pager-load-more li a a:before, .pager-load-more #nav .main-menu-2 li a a:before {
+  display: none;
+}
+/* line 84, ../scss/_voice-page.scss */
+#nav .main-menu-2 li a .icon-Uparrow {
   display: none;
 }

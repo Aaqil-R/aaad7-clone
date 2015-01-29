@@ -4,10 +4,30 @@
 		.region{
 			.block:nth-child(1){
 				float: left;
+			  	max-height: 325px;
 			}
 			.block:nth-child(2){
 				float: right;
+			  	max-height: 325px;
 			}
 		}
 	}
-} 
+
+}
+
+// Fix the button border issue
+.btn-transparent{
+  &:hover{
+	border-bottom-width:2px;
+	box-shadow: 0 1px $white;
+  }
+}
+
+// Fix the block share a tag hover issue
+.front .block-share{
+  .btn-transparent{
+	&:hover{
+	  margin: 182px 10px 0 0;
+	}
+  }
+}
