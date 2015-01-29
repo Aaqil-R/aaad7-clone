@@ -10214,8 +10214,12 @@ html.js input.throbbing {
 .messages {
   position: inherit;
 }
+/* line 68, ../scss/_global.scss */
+.messages .placeholder {
+  text-decoration: underline;
+}
 
-/* line 70, ../scss/_global.scss */
+/* line 73, ../scss/_global.scss */
 .status {
   width: 100%;
   float: left;
@@ -10227,7 +10231,7 @@ html.js input.throbbing {
   margin-bottom: 10px;
 }
 
-/* line 78, ../scss/_global.scss */
+/* line 81, ../scss/_global.scss */
 .warning {
   width: 100%;
   float: left;
@@ -10239,7 +10243,7 @@ html.js input.throbbing {
   margin-bottom: 10px;
 }
 
-/* line 86, ../scss/_global.scss */
+/* line 89, ../scss/_global.scss */
 .error {
   width: 100%;
   float: left;
@@ -10251,18 +10255,18 @@ html.js input.throbbing {
   margin-bottom: 10px;
 }
 
-/* line 100, ../scss/_global.scss */
+/* line 103, ../scss/_global.scss */
 ul.tabs-primary {
   padding: 12px 6px;
 }
-/* line 102, ../scss/_global.scss */
+/* line 105, ../scss/_global.scss */
 ul.tabs-primary li {
   list-style: none;
   display: inline-block;
   padding: 10px;
   background: #d2d5d6;
 }
-/* line 107, ../scss/_global.scss */
+/* line 110, ../scss/_global.scss */
 ul.tabs-primary li.is-active {
   background: #f15500;
 }
@@ -10532,7 +10536,7 @@ ul.tabs-primary li.is-active {
 .slider-block {
   z-index: 1100;
   position: relative;
-  top: -30px;
+  top: 24px;
 }
 /* line 28, ../scss/_visual.scss */
 .slider-block .r-s-arrow a {
@@ -10561,7 +10565,7 @@ ul.tabs-primary li.is-active {
     right: 0;
   }
 }
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
   /* line 23, ../scss/_visual.scss */
   .slider-block {
     display: none;
@@ -11315,10 +11319,6 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 .page-node-74591 h1.title {
   display: none;
 }
-/* line 6, ../scss/_understanding-autism.scss */
-.page-node-74591 .easy-breadcrumb {
-  display: none;
-}
 /* line 12, ../scss/_understanding-autism.scss */
 .page-node-74591 .understanding-autism .post-actions {
   overflow: hidden;
@@ -11393,6 +11393,24 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 /* line 72, ../scss/_understanding-autism.scss */
 .page-node-74591 .post {
   min-height: 315px;
+}
+/* line 77, ../scss/_understanding-autism.scss */
+.page-node-74591 fieldset {
+  float: left;
+  margin-right: 20px;
+}
+/* line 83, ../scss/_understanding-autism.scss */
+.page-node-74591 .list-view .img-holder {
+  display: none;
+}
+/* line 86, ../scss/_understanding-autism.scss */
+.page-node-74591 .list-view .post {
+  min-height: 1px;
+  padding: 20px 21px;
+}
+/* line 90, ../scss/_understanding-autism.scss */
+.page-node-74591 .list-view .post-actions {
+  display: none;
 }
 
 /*breadcrump for all the pages*/

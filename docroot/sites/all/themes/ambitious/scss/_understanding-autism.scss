@@ -4,7 +4,7 @@
     display: none;
   }
   .easy-breadcrumb{
-    display: none;
+    //display: none;
   }
 
     // View Stream
@@ -72,5 +72,25 @@
   .post{
     min-height: 315px;
   }
+
+  // Views exposed forms on toggle class
+  fieldset{
+    float: left;
+    margin-right: 20px;
+  }
+
+  .list-view{
+    .img-holder{
+      display: none;
+    }
+    .post{
+      min-height: 1px;
+      padding: 20px 21px;
+    }
+    .post-actions{
+      display: none;
+    }
+  }
+
 }
 
