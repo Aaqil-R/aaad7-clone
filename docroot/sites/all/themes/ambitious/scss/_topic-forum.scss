@@ -240,7 +240,7 @@ body.page-node-74566, body.page-node-155 {
    
  }
 }
-.columns-full{
+.posts-columns.columns-full{
 	    .row{
 	      width:100%; 
 		  .forum-icon{
@@ -249,6 +249,12 @@ body.page-node-74566, body.page-node-155 {
 			font-size:40px;
 			top: 27px;
 			color:$orange;
+			@include breakpoint($mobile) {
+			  background: $white;
+			  top: 13px;
+			  right: 13px;
+			  padding: 10px;
+			}
 			&.icon-Featured{
 			  color:$yellow;
 			}
@@ -261,6 +267,11 @@ body.page-node-74566, body.page-node-155 {
 			  width:108px;
 			  margin-left:12px;
 			  margin-top:13px;
+			  @include breakpoint($mobile) {
+ 			    float:none;
+ 			    width:auto;
+ 			    margin: 0;
+ 			  }
 			  .image-holder{
 			    overflow:hidden;
 			    border-radius:5px;
@@ -275,16 +286,24 @@ body.page-node-74566, body.page-node-155 {
 			    margin-top: 20px;
 			    margin-bottom: 11px;
 			    font-size:16px;
+			    @include breakpoint($mobile) {
+			      text-align: left;
+			    }
 			  }
 			  time{
 			    font-size: 14px;
  			  }
+ 			  
 			}
 			.forum-right{
 			  margin-left:156px;
 			  margin-bottom:11px;
 			  margin-right:100px;
 			  padding-top: 9px;
+			  @include breakpoint($mobile) {
+			    margin: 0;
+			    padding: 0;
+			  }
 			  h3{
 			    margin-bottom: 22px;
 			  }
@@ -298,12 +317,14 @@ body.page-node-74566, body.page-node-155 {
 			  padding-left: 184px;
 			  padding-right: 21px;
 			  margin-bottom:-10px;
+			  @include breakpoint($mobile) {
+			    padding-left: 20px;
+			  }
 			  .text{
 			    display:inherit; 
 			  }
 			  .links.inline{
 			    float:right;
-			    margin-top:6px;
                    @extend %listreset;
                    li{
                      color:$captions-credit;
@@ -326,6 +347,11 @@ body.page-node-74566, body.page-node-155 {
 				margin-top: 8px;
 				color:$captions-credit; 
 				display: inline-block;
+				@include breakpoint($mobile) {
+				  margin-top: 30px;
+				  margin-left:0;
+				  display: block;
+				}
 				em{
 				  font-size: 29px;
 				  margin-right: 10px; 
@@ -334,6 +360,18 @@ body.page-node-74566, body.page-node-155 {
 				cite{  
 				  font-style:normal;
 				  font-weight:bold;
+				}
+				.links.inline{
+				  @include breakpoint($mobile) {
+				    float: none;
+				    margin-top: 26px;
+				    li{
+				      a{
+				        float:none;
+				        width:100%;
+				      }
+				    }
+				  }
 				}
 			  }
 			}
@@ -536,6 +574,7 @@ margin-right: 10px;
 .posts-columns .post .footer .num-holder a .text{
   display:inherit;
   font-size:15px;
+  margin-top:0px;
 }
 .view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .btn:hover{
     margin: 182px 10px 0 0;
@@ -574,4 +613,3 @@ margin-right: 10px;
 
 }
 
- 
