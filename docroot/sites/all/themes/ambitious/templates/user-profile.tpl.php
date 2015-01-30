@@ -48,7 +48,7 @@
 				               		<dt>Name:</dt>
 				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
 									<?php endif; ?>
-                                             <?php if(!empty($elements['#account']->mail)):?>
+                                             <?php if(isset($elements['#account']->mail['und'])):?>
 				               		<dt>Email:</dt>
 				               		<dd><?php print $elements['#account']->mail['und'];?></dd>
 									<?php endif; ?>
