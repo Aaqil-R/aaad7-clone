@@ -207,9 +207,11 @@
 				<div class="holder">
 		               <header> 
 						   <h1>My profile</h1> 
+						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
 		                	</span>
+		                	<?php endif; ?>
 		                	<?php if ($messages || $action_links): ?>
 						  <div id="content-header">
 						   <?php print $messages; ?>
@@ -222,6 +224,11 @@
 		               </header>
 		               <div class="profile-main">
 		               <?php print render($page['content']) ?>
+		               <?php if ($page['content_bottom']): ?>   
+		                 <section class="recent-activity">		                 
+					    <?php print render($page['content_bottom']); ?> 
+					  </section> <!-- /content-bottom -->
+					<?php endif; ?>
 		               </div>
 				</div>
 			</div>

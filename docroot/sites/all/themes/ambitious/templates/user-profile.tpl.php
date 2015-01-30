@@ -33,40 +33,59 @@
  *
  * @ingroup themeable
  */
+
+
+ 
+  
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
-				               	<h3><?php print $elements['#account']->name; ?></h3>
-				               	<dl>
+		               			<?php if(!empty($elements['#account']->name)):?>
+  				               	  <h3><?php print $elements['#account']->name; ?></h3>
+				               	<?php endif; ?>
+				               	<dl> 
+				               		<?php if(!empty($elements['#account']->field_name)):?>
 				               		<dt>Name:</dt>
-				               		<dd>Anna Smith</dd>
-
+				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
+									<?php endif; ?>
+                                             <?php if(!empty($elements['#account']->mail)):?>
 				               		<dt>Email:</dt>
 				               		<dd><?php print $elements['#account']->mail;?></dd>
-
+									<?php endif; ?>
+									<?php if(!empty($elements['#account']->field_location)):?>
 				               		<dt>Location:</dt>
-				               		<dd>Hampshire</dd>
+				               		<dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
 
 				               		<dt>No. of posts:</dt>
 				               		<dd>92</dd>
-
+                                             <?php if(!empty($elements['#account']->field_blog || $elements['#account']->field_twitter)): ?>
 				               		<dt>Links:</dt>
 				               		<dd>
 				               			<strong>
-				               				<a href="http://weare.thesmallaxe.com/blog/">Blog</a> / <a href="https://twitter.com/">Twitter</a>
+				               			 <?php if(!empty($elements['#account']->field_blog)): ?>
+				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
+				               			  <?php endif; ?>
+				               			  <?php if(!empty($elements['#account']->field_blog && $elements['#account']->field_twitter)): ?> / <?php endif; ?>
+				               			  <?php if(!empty($elements['#account']->field_twitter)): ?>
+				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
+				               			  <?php endif; ?>
 				               			</strong>
 				               		</dd>
-
-				               		<dt>Signature:</dt>
-				               		<dd><?php print $elementsp['#account']->signature; ?></dd>
-
+				               		<?php endif; ?>
+ 									<?php if(!empty($elementsp['#account']->signature)) :?>
+  				               		  <dt>Signature:</dt>
+				               		  <dd><?php print $elementsp['#account']->signature; ?></dd>
+									<?php endif; ?>
 				               	</dl>
 			               	</section>
 			               	<section class="about-me">
+			               	<?php if(!empty($elementsp['#account']->field_about_me)) :?>
 			               		<h2>About me</h2>
 			               		<p>
-			               			At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+			               		   <?php print $elementsp['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
+			               		<?php endif; ?>
 			               		<a href="<?php print url('user/'.$elements['#account']->uid.'/edit'); ?>" class="btn btn-red" title="Edit your profile">
 			               			<span>
 			               				Edit your profile <em class="icon-Rightarrow"></em>
@@ -91,55 +110,7 @@
 			               			</span>
 			               		</a>
 		               		</section>
-     			               	<section class="recent-activity">
-     			               		<h2>Recent Activity</h2>
-     			               		<ul class="tabs">
-     			               			<li>
-     			               				<a href="#" class="active"><strong>12</strong> Comments</a>
-     			               			</li>
-     			               			<li>
-     			               				<a href="#"><strong>10</strong> Bookmarks</a>
-     			               			</li>
-     			               			<li>
-     			               				<a href="#"><strong>27</strong> Messages</a>
-     			               			</li>
-     			               		</ul>
-     			               		<div id="comments" class="clearfix">
-     			               			<article id="comment-1" class="comment first">
-     			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-molly.jpg" width="60" height="60">
-     			               					<h4><a href="#">Molly</a></h4>
-     			               					<span class="time-ago">5 hours ago</span>
-     			               				</div>
-     			               				<div class="comment-body">
-     			               					Mollis blandit vitae dis amet dis nostra curabitur class curabitur cubilia metus arcu dignissim quam suspendisse a sed lobortis arcu malesuada gravida enim parturient a at molestie. A odio condimentum litora egestas a euismod consectetur accumsan dapibus parturient consequat lectus vestibulum suspendisse scelerisque parturient justo a at.
-     			               				</div>
-     			               			</article>
-     			               			<article id="comment-2" class="comment">
-     			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-mikes.jpg" width="60" height="60">
-     			               					<h4><a href="#">MikeS</a></h4>
-     			               					<span class="time-ago">12 hours ago</span>
-     			               				</div>
-     			               				<div class="comment-body">
-     			               					Praesent ante vitae a nam suscipit hac nam nam a a laoreet convallis morbi torquent nullam. Tincidunt tincidunt curae a tempus duis diam per a at est accumsan laoreet nam risus eu bibendum mollis suspendisse sociosqu sociis velit a.
-     			               				</div>
-     			               			</article>
-     			               			<article id="comment-3" class="comment">
-     			               				<div class="comment-left">
-     			               					<img class="profile-picture small" alt="Profile image" src="images/profile-picture-dave.jpg" width="60" height="60">
-     			               					<h4><a href="#">Dave</a></h4>
-     			               					<span class="time-ago">2 days ago</span>
-     			               				</div>
-     			               				<div class="comment-body">
-     			               					Per adipiscing ultrices ad a eleifend dolor in morbi commodo cum suscipit vestibulum parturient feugiat consequat leo. Suspendisse condimentum cursus mauris parturient eu accumsan mus dui a faucibus a tristique scelerisque adipiscing a ac nibh aptent fermentum condimentum.
-     			               				</div>
-     			               			</article>
-     			               		</div>
-     		               		</section>
-
-
-		            
+     			               	  
 <div class="profile"<?php print $attributes; ?>>
-  <?php print render($user_profile); ?>
+  <?php // print render($user_profile); ?>
 </div>

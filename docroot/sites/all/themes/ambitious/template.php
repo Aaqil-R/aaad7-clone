@@ -436,6 +436,8 @@ $links = $variables['links'];
 
   return $output;
 }
+
+
 /**
  * Returns HTML for primary and secondary local tasks.
  *
@@ -473,6 +475,26 @@ function ambitious_menu_local_tasks(&$variables) {
   }
 
   return $output;
+}   
+function ambitious_qt_quicktabs_tabset($vars) {
+  $variables = array(
+    'attributes' => array(
+      'class' => 'quicktabs-tabs quicktabs-style-' . $vars['tabset']['#options']['style'].' tabs',
+    ),
+    'items' => array(),
+  );
+  foreach (element_children($vars['tabset']['tablinks']) as $key) {
+    $item = array();
+    if (is_array($vars['tabset']['tablinks'][$key])) {
+      $tab = $vars['tabset']['tablinks'][$key];
+      if ($key == $vars['tabset']['#options']['active']) {
+        $item['class'] = array('active');
+      } 
+      $item['data'] = drupal_render($tab);
+      $variables['items'][] = $item;
+    }
+  }
+  return theme('item_list', $variables);
 }
 
 
