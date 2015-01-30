@@ -145,22 +145,7 @@
 				$tree = menu_tree($menu_name);
 				print drupal_render($tree); ?>
         </nav>
-      </div>
-      <!-- school nav of the page -->
-      <div class="school-slide">
-        <strong class="title">Schools &amp; College</strong>
-        <ul class="nav">
-          <li>
-            <a href="#">TreeHouse School</a>
-          </li>
-          <li>
-            <a href="#">The Rise School</a>
-          </li>
-          <li>
-            <a href="#">Ambitious College</a>
-          </li>
-        </ul>
-      </div>
+      </div> 
     </header>
     
 <?php if ($page['caption_holder'] || $page['image_holder']): ?>
@@ -196,66 +181,59 @@
       <?php endif; ?>
 
     </section> <!-- /highlighted -->
+    <?php print render($page['help']); ?>
   <?php endif; ?>
 
-  <main id="main">
+<!-- top header of the page -->
+		<section class="top-header">
+			<div class="top-header-inner">
+				<ul class="page-links">
+					<li><a href="#" title="Home">Home</a></li>
+					<li><a href="#" title="Understanding autism">Understanding autism</a></li>
+					<li><a href="#" title="Talk to others">Talk to others</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- contain main informative part of the site -->
 
-  <?php if ($page['content_top']): ?>
-    <section id="content_top">
-      <?php print render($page['content_top']); ?>
-    </section> <!-- /content-top -->
-  <?php endif; ?>
+<main id="main" role="main">
+          <?php if ($tabs): ?>
+			<nav id="sidebar">
+				<?php print render($tabs);?>
+			</nav>
+			<?php endif; ?>   
+               
+			<div class="profile-body">
+				<div class="holder">
+		               <header> 
+						   <h1>My profile</h1> 
+						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
+		                	<span class="member-since">
+		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
+		                	</span>
+		                	<?php endif; ?>
+		                	<?php if ($messages || $action_links): ?>
+						  <div id="content-header">
+						   <?php print $messages; ?>
+						   <?php print render($page['help']); ?> 
+						   <?php if ($action_links): ?>
+							<ul class="action-links"><?php print render($action_links); ?></ul>
+						  <?php endif; ?>
+						 </div> <!-- /content-header -->
+					    <?php endif; ?>
+		               </header>
+		               <div class="profile-main">
+		               <?php print render($page['content']) ?>
+		               <?php if ($page['content_bottom']): ?>   
+		                 <section class="recent-activity">		                 
+					    <?php print render($page['content_bottom']); ?> 
+					  </section> <!-- /content-bottom -->
+					<?php endif; ?>
+		               </div>
+				</div>
+			</div>
 
-    <?php if ($title|| $messages || $tabs || $action_links): ?>
-    <div id="content-header">
-
-      <?php if ($title): ?>
-        <h1 class="title"><?php print $title; ?></h1>
-      <?php endif; ?>
-
-
-      <?php print $messages; ?>
-      <?php print render($page['help']); ?>
-
-
-      <?php if ($tabs): ?>
-        <div class="tabs"><?php print render($tabs); ?></div>
-      <?php endif; ?>
-
-
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      
-    </div> <!-- /content-header -->
-    <?php endif; ?>
-
-
-    <section id="content-area">
-      <?php print render($page['content']) ?>
-    </section> <!-- /content -->
-
-  <?php if ($page['content_bottom']): ?>
-    <section id="content_bottom">
-      <?php print render($page['content_bottom']); ?>
-    </section> <!-- /content-bottom -->
-  <?php endif; ?>
-
-  </main> <!-- /main -->
-  <?php if ($page['action']): ?>
-  <!-- action columns -->
-  <section class="action-block">
-    <div class="holder">
-     <?php print render($page['action']); ?>
-    </div>
-  </section>
-  <!-- fourm block -->
-  <?php endif; ?>
-  <?php if ($page['social']): ?>
-    <section id="social">
-      <?php print render($page['social']); ?>
-    </section> <!-- /social -->
-  <?php endif; ?>
+		</main> 
 
   <footer id="footer">
       <div class="holder">
