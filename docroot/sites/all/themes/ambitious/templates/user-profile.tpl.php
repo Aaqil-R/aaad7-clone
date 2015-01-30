@@ -1,4 +1,3 @@
- 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
 		               			<?php if(!empty($elements['#account']->name)):?>
@@ -24,11 +23,11 @@
 				               		<dt>Links:</dt>
 				               		<dd>
 				               			<strong>
-				               			 <?php if(!empty($elements['#account']->field_blog)): ?>
+				               			 <?php if(!empty($elements['#account']->field_blog['und'][0]['url'])): ?>
 				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
 				               			  <?php endif; ?>
-				               			  <?php if(!empty($elements['#account']->field_blog && $elements['#account']->field_twitter)): ?> / <?php endif; ?>
-				               			  <?php if(!empty($elements['#account']->field_twitter)): ?>
+				               			  <?php if(!empty($elements['#account']->field_blog['und'][0]['url'] && $elements['#account']->field_twitter['und'][0]['url'])): ?> / <?php endif; ?>
+				               			  <?php if(!empty($elements['#account']->field_twitter['und'][0]['url'])): ?>
 				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
 				               			  <?php endif; ?>
 				               			</strong>
