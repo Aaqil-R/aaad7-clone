@@ -40,7 +40,7 @@
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
-		               			<?php if(isset($elements['#account']->name)):?>
+		               			<?php if(!empty($elements['#account']->name)):?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
 				               	<?php endif; ?>
 				               	<dl> 
@@ -48,9 +48,9 @@
 				               		<dt>Name:</dt>
 				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
 									<?php endif; ?>
-                                             <?php if(isset($elements['#account']->mail['und'])):?>
+                                             <?php if(!empty($elements['#account']->mail)):?>
 				               		<dt>Email:</dt>
-				               		<dd><?php print $elements['#account']->mail['und'];?></dd>
+				               		<dd><?php print $elements['#account']->mail;?></dd>
 									<?php endif; ?>
 									<?php if(isset($elements['#account']->field_location['und'])):?>
 				               		<dt>Location:</dt>
@@ -59,7 +59,7 @@
 
 				               		<dt>No. of posts:</dt>
 				               		<dd>92</dd>
-                                             <?php if(isset($elements['#account']->field_blog['und'] || $elements['#account']->field_twitter['und'])): ?>
+                                             <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?>
 				               		<dt>Links:</dt>
 				               		<dd>
 				               			<strong>
@@ -73,7 +73,7 @@
 				               			</strong>
 				               		</dd>
 				               		<?php endif; ?>
- 									<?php if(isset($elementsp['#account']->signature)) :?>
+ 									<?php if(!empty($elementsp['#account']->signature)) :?>
   				               		  <dt>Signature:</dt>
 				               		  <dd><?php print $elementsp['#account']->signature; ?></dd>
 									<?php endif; ?>
