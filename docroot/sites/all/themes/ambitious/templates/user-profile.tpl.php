@@ -40,47 +40,47 @@
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
-		               			<?php if(!empty($elements['#account']->name)):?>
+		               			<?php if(isset($elements['#account']->name)):?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
 				               	<?php endif; ?>
 				               	<dl> 
-				               		<?php if(!empty($elements['#account']->field_name)):?>
+				               		<?php if(isset($elements['#account']->field_name['und'])):?>
 				               		<dt>Name:</dt>
 				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
 									<?php endif; ?>
                                              <?php if(!empty($elements['#account']->mail)):?>
 				               		<dt>Email:</dt>
-				               		<dd><?php print $elements['#account']->mail;?></dd>
+				               		<dd><?php print $elements['#account']->mail['und'];?></dd>
 									<?php endif; ?>
-									<?php if(!empty($elements['#account']->field_location)):?>
+									<?php if(isset($elements['#account']->field_location['und'])):?>
 				               		<dt>Location:</dt>
 				               		<dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
 									<?php endif; ?> 
 
 				               		<dt>No. of posts:</dt>
 				               		<dd>92</dd>
-                                             <?php if(!empty($elements['#account']->field_blog || $elements['#account']->field_twitter)): ?>
+                                             <?php if(isset($elements['#account']->field_blog['und'] || $elements['#account']->field_twitter['und'])): ?>
 				               		<dt>Links:</dt>
 				               		<dd>
 				               			<strong>
-				               			 <?php if(!empty($elements['#account']->field_blog)): ?>
+				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
 				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
 				               			  <?php endif; ?>
-				               			  <?php if(!empty($elements['#account']->field_blog && $elements['#account']->field_twitter)): ?> / <?php endif; ?>
-				               			  <?php if(!empty($elements['#account']->field_twitter)): ?>
+				               			  <?php if(isset($elements['#account']->field_blog['und']) && isset($elements['#account']->field_twitter['und'])): ?> / <?php endif; ?>
+				               			  <?php if(isset($elements['#account']->field_twitter['und'])): ?>
 				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
 				               			  <?php endif; ?>
 				               			</strong>
 				               		</dd>
 				               		<?php endif; ?>
- 									<?php if(!empty($elementsp['#account']->signature)) :?>
+ 									<?php if(isset($elementsp['#account']->signature)) :?>
   				               		  <dt>Signature:</dt>
 				               		  <dd><?php print $elementsp['#account']->signature; ?></dd>
 									<?php endif; ?>
 				               	</dl>
 			               	</section>
 			               	<section class="about-me">
-			               	<?php if(!empty($elementsp['#account']->field_about_me)) :?>
+			               	<?php if(isset($elementsp['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
 			               		<p>
 			               		   <?php print $elementsp['#account']->field_about_me['und'][0]['safe_value']; ?>
@@ -112,5 +112,5 @@
 		               		</section>
      			               	  
 <div class="profile"<?php print $attributes; ?>>
-  <?php // print render($user_profile); ?>
+  <?php  print render($user_profile); ?>
 </div>
