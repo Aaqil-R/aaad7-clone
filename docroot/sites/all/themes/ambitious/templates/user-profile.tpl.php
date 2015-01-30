@@ -40,52 +40,52 @@
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
-		               			<?php if(!empty($elements['#account']->name)):?>
+		               			<?php //if(!empty($elements['#account']->name)):?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
-				               	<?php endif; ?>
+				               	<?php //endif; ?>
 				               	<dl> 
-				               		<?php if(isset($elements['#account']->field_name['und'])):?>
+				               		<?php //if(isset($elements['#account']->field_name['und'])):?>
 				               		<dt>Name:</dt>
 				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
-									<?php endif; ?>
-                                             <?php if(!empty($elements['#account']->mail)):?>
+									<?php// endif; ?>
+                                             <?php //if(!empty($elements['#account']->mail)):?>
 				               		<dt>Email:</dt>
 				               		<dd><?php print $elements['#account']->mail;?></dd>
-									<?php endif; ?>
-									<?php if(isset($elements['#account']->field_location['und'])):?>
+									<?php //endif; ?>
+									<?php //if(isset($elements['#account']->field_location['und'])):?>
 				               		<dt>Location:</dt>
 				               		<dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
+									<?php //endif; ?> 
 
 				               		<dt>No. of posts:</dt>
 				               		<dd>92</dd>
-                                             <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?>
+                                             <?php //if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?>
 				               		<dt>Links:</dt>
 				               		<dd>
 				               			<strong>
-				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
+				               			 <?php //if(isset($elements['#account']->field_blog['und'])): ?>
 				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
-				               			  <?php endif; ?>
-				               			  <?php if(isset($elements['#account']->field_blog['und']) && isset($elements['#account']->field_twitter['und'])): ?> / <?php endif; ?>
-				               			  <?php if(isset($elements['#account']->field_twitter['und'])): ?>
+				               			  <?php //endif; ?>
+				               			  <?php //if(isset($elements['#account']->field_blog['und']) && isset($elements['#account']->field_twitter['und'])): ?> / <?php //endif; ?>
+				               			  <?php //if(isset($elements['#account']->field_twitter['und'])): ?>
 				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
-				               			  <?php endif; ?>
+				               			  <?php //endif; ?>
 				               			</strong>
 				               		</dd>
-				               		<?php endif; ?>
- 									<?php if(!empty($elementsp['#account']->signature)) :?>
+				               		<?php// endif; ?>
+ 									<?php //if(!empty($elementsp['#account']->signature)) :?>
   				               		  <dt>Signature:</dt>
 				               		  <dd><?php print $elementsp['#account']->signature; ?></dd>
-									<?php endif; ?>
+									<?php //endif; ?>
 				               	</dl>
 			               	</section>
 			               	<section class="about-me">
-			               	<?php if(isset($elementsp['#account']->field_about_me['und'])) :?>
+			               	<?php //if(isset($elementsp['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
 			               		<p>
 			               		   <?php print $elementsp['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
-			               		<?php endif; ?>
+			               		<?php //endif; ?>
 			               		<a href="<?php print url('user/'.$elements['#account']->uid.'/edit'); ?>" class="btn btn-red" title="Edit your profile">
 			               			<span>
 			               				Edit your profile <em class="icon-Rightarrow"></em>
