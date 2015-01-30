@@ -73,17 +73,17 @@
 				               			</strong>
 				               		</dd>
 				               		<?php endif; ?>
- 									<?php if(!empty($elementsp['#account']->signature)) :?>
+ 									<?php if(!empty($elements['#account']->signature)) :?>
   				               		  <dt>Signature:</dt>
-				               		  <dd><?php print $elementsp['#account']->signature; ?></dd>
+				               		  <dd><?php print $elements['#account']->signature; ?></dd>
 									<?php endif; ?>
 				               	</dl>
 			               	</section>
 			               	<section class="about-me">
-			               	<?php if(isset($elementsp['#account']->field_about_me['und'])) :?>
+			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
 			               		<p>
-			               		   <?php print $elementsp['#account']->field_about_me['und'][0]['safe_value']; ?>
+			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
 			               		<?php endif; ?>
 			               		<a href="<?php print url('user/'.$elements['#account']->uid.'/edit'); ?>" class="btn btn-red" title="Edit your profile">
