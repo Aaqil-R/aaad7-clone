@@ -7,6 +7,7 @@
 class commentmigration extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
+		$options = array('track_changes' => 1);
 		$this->description = t('Import comments of threads data from AAA');
 		
 		//create a source migration		

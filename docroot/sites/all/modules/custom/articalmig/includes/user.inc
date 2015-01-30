@@ -7,13 +7,14 @@
 class usermigration extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
+		$options = array('track_changes' => 1);
 		$this->description = t('Import user data from AAA');
 		
 		//create a source migration		
 		
 		$query = $this->getConnection()->select ('migtbluser', 'tu');
-		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate'));
-
+//		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate'));
+		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate','fForename','fSurname'));
 		$this->source = new MigrateSourceSQL($query);
 		
 		//destination codes
@@ -41,6 +42,8 @@ class usermigration extends articalmigMigration {
 		$this->addFieldMapping('pass','fPassword');
 		$this->addFieldMapping('is_new',NULL)->defaultValue(TRUE);
 		$this->addFieldMapping('created','fDate')->callbacks(array($this,'timestampchange'));
+		$this->addFieldMapping('field_first_name','fForename');
+		$this->addFieldMapping('field_last_name','fSurname');		
 	}
 	
 	protected function changeuserid($value){

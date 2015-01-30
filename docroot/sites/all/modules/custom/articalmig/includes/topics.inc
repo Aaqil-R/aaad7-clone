@@ -7,6 +7,8 @@
 class topicmigration extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
+	
+		$options = array('track_changes' => 1);
 		$this->description = t('Import Topic data from AAA');
 		
 		//create a source migration		
@@ -73,8 +75,8 @@ class topicmigration extends articalmigMigration {
 		if(strlen($value)>255)
 		{
 			$value=substr($value,0,250);
-			return $value;
 		}
+		return $value;		
 	 }
 	 
 	 protected function changeuserid($value){
