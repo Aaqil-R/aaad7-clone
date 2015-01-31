@@ -104,8 +104,11 @@ body.page-node-74566, body.page-node-155 {
 	br{
 	  display:none;
 	}
-	@include breakpoint($tablet) {
-	
+	@include breakpoint($mobile) {
+	  float: none; 
+       display: block;
+       margin-bottom: 40px;
+       text-align: left;
 	}
 	a{
 	  font-weight: bold;
@@ -114,6 +117,9 @@ body.page-node-74566, body.page-node-155 {
 	  text-decoration: underline;
 	  text-align: right;
 	  margin-bottom:5px;
+	  @include breakpoint($mobile) {
+	    text-align:left;
+	  }
 	  &:hover{
 	    text-decoration:none;
 	  }
@@ -326,11 +332,19 @@ body.page-node-74566, body.page-node-155 {
 			  .links.inline{
 			    float:right;
                    @extend %listreset;
+                   @include breakpoint($mobile) {
+                     float:none;
+                     padding-top: 20px;
+                   }
                    li{
                      color:$captions-credit;
                      a{
                        color:$orange;
                        text-decoration:underline;
+                       @include breakpoint($mobile) {
+                         float: none;
+                         width: 100%; 
+                       }
                        &.btn{
                          color:$white;
                          text-decoration:none;
