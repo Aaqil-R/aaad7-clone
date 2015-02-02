@@ -508,3 +508,41 @@ function ambitious_qt_quicktabs_tabset($vars) {
   return theme('item_list', $variables);
 }
 
+function ambitious_field__field_event_date(&$variables){
+ $output = '';
+ $formatdate = array();
+ $dateval = $variables['element']['#items'][0]['value'];
+
+ 
+ if(isset($dateval)){
+ $formatdate[1] = format_date($dateval, 'custom', 'd');
+ $formatdate[2] = format_date($dateval, 'custom', 'M');
+ $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
+ $dateclass = array('','day','month','year');
+ $output .= '<ul class="date" >';
+ foreach ($formatdate as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
+ }
+ $output .= '</ul>';
+ } 
+ $dateval2 = $variables['element']['#items'][0]['value2'];
+ 
+ if($dateval != $dateval2){
+ $formatdate2[1] = format_date($dateval2, 'custom', 'd');
+ $formatdate2[2] = format_date($dateval2, 'custom', 'M');
+ $formatdate2[3] = format_date($dateval2, 'custom', 'Y');
+ 
+ $output .= '<ul class="date"> <span class="day line">-</span>';
+ foreach ($formatdate2 as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'" >'.$value.'</li>';
+ }
+ $output .= '</ul>';
+ }
+ 
+ return $output;	
+}
+
+
+
+
+ 
