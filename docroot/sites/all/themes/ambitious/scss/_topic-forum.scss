@@ -79,7 +79,7 @@ body.node-type-topic{
  .forum-page{
     display:none;
  }
-body.page-node-74566, body.page-node-155 {
+body.page-node-74566, body.page-node-74606 {
   .easy-breadcrumb, h1.title{
     display:none;
    } 
@@ -661,8 +661,11 @@ margin-right: 10px;
    display: inline-block;
    margin-top: -6px; 
 }
-.my-voice-columns{
-  .webform-client-form{
-    @extend .signup-form; 
+#content_top{
+   z-index: 9999;
+  .my-voice-columns{
+    .webform-client-form{
+      @extend .signup-form; 
+    }
   }
 }
