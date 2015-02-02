@@ -197,14 +197,20 @@
 
     </section> <!-- /highlighted -->
   <?php endif; ?>
-
+  <?php if ($page['content_top']): ?>  
+  <section class="my-voice-block" id="content_top">
+			<div class="holder">
+				<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
+				<div class="block">
+					<div class="my-voice-columns">
+						<?php print render($page['content_top']); ?>
+					</div>
+				</div>
+			</div>
+		</section>
+		<?php endif; ?>
   <main id="main">
-
-  <?php if ($page['content_top']): ?>
-    <section id="content_top">
-      <?php print render($page['content_top']); ?>
-    </section> <!-- /content-top -->
-  <?php endif; ?>
+ 
 
     <?php if ($title|| $messages || $tabs || $action_links): ?>
     <div id="content-header">
