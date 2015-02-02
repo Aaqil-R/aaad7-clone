@@ -57,3 +57,8 @@
 .signup-columns .signup-form .btn.btn-left{
 	margin-right: 100px;
 }
+.desktop{
+	@include breakpoint($mobile){
+		display: none;
+	}
+}
