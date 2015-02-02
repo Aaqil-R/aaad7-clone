@@ -86,11 +86,3 @@ Drupal.behaviors.ambitious = {
   });
 
 })(jQuery, Drupal, this, this.document);
-
-jQuery(window).click(function(event){
-	jQuery(window).trigger('resize');
-});
-
-
-
-

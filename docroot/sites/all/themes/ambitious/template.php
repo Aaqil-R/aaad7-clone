@@ -327,18 +327,19 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
  }
 
-  if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page' || $vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'){
+  if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'){
     $node = node_load(arg(1));
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
   
- if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page' || $vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
+ if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
     $node = node_load(arg(1));
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
 }
+
 function ambitious_preprocess_views_view_masonry(&$vars) {  
   if($vars['view']->current_display == 'stream_topic_page' && $vars['view']->query->pager->current_page === 0){
      $node = node_load(arg(1)); 
@@ -347,18 +348,21 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
      $vars['node'] = $node;
   }
 
-  if($vars['view']->current_display == 'understanding_autism_page' && $vars['view']->query->pager->current_page === 0){
-   $node = node_load(arg(1)); 
-   $vars['node'] = $node;
-  } 
+  if($vars['view']->current_display == 'understanding_autism_page'/*&& $vars['view']->query->pager->current_page === 0*/){
+    $node = node_load(arg(1));
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+    $vars['node'] = $node;
+  }
   
  if($vars['view']->current_display == 'voices_from_the_spectrum_page' && $vars['view']->query->pager->current_page === 0){
-   $node = node_load(arg(1)); 
+   $node = node_load(arg(1));
+   $links = sharethis_node_view($node, 'full', 'en');
+   $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
    $vars['node'] = $node;
   }
 }
- 
- 
+
 function ambitious_links__node__comment($variables) {
  if (isset($variables['links']['comment-add']) && isset($variables['links']['comment-add']['title'])) {
   $variables['links']['comment-add']['title'] = 'Reply';
@@ -496,5 +500,4 @@ function ambitious_qt_quicktabs_tabset($vars) {
   }
   return theme('item_list', $variables);
 }
-
 
