@@ -397,13 +397,13 @@
 
   <footer id="footer">
       <div class="holder">
+		<div class="logo">
+            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
+        </div>
 		<div class="right-footer">
           <?php print render($page['footer_right']); ?>
         </div><!-- /footer Right --> 
-        <div class="company-info">
-          <div class="logo">
-            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
-          </div>
+        <div class="company-info">          
           <?php print render($page['footer_copyright']); ?>
           <span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
         </div><!-- /footer copyright -->              
