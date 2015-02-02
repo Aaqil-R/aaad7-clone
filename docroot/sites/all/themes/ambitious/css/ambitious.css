@@ -10645,24 +10645,13 @@ ul.tabs-primary li.is-active {
   font-size: 0.75em;
 }
 
-/* line 5, ../scss/_action-block.scss */
-.action-block .holder .region .block:nth-child(1) {
-  float: left;
-  max-height: 325px;
-}
-/* line 9, ../scss/_action-block.scss */
-.action-block .holder .region .block:nth-child(2) {
-  float: right;
-  max-height: 325px;
-}
-
-/* line 20, ../scss/_action-block.scss */
+/* line 4, ../scss/_action-block.scss */
 .btn-transparent:hover {
   border-bottom-width: 2px;
   box-shadow: 0 1px #ffffff;
 }
 
-/* line 29, ../scss/_action-block.scss */
+/* line 13, ../scss/_action-block.scss */
 .front .block-share .btn-transparent:hover {
   margin: 182px 10px 0 0;
 }
@@ -11640,3 +11629,11 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 }
 
 /* end of menu styling */
+/* line 6, ../scss/_issue-fixing.scss */
+.action-block .holder .region .block-main > div {
+  float: right;
+}
+/* line 8, ../scss/_issue-fixing.scss */
+.action-block .holder .region .block-main > div:fitst-child {
+  float: left;
+}
