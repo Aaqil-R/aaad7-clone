@@ -11459,6 +11459,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 
 /* line 673, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder {
+  display: none;
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -11471,11 +11472,11 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     left: 15px;
   }
 }
-/* line 682, ../scss/_topic-forum.scss */
+/* line 684, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.hover .text {
   display: block;
 }
-/* line 687, ../scss/_topic-forum.scss */
+/* line 689, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .icon-Featured {
   font-size: 24px;
   padding: 6px 0 0;
@@ -11488,7 +11489,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 687, ../scss/_topic-forum.scss */
+  /* line 689, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .icon-Featured {
     height: 33px;
     width: 34px;
@@ -11496,15 +11497,15 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     font-size: 16px;
   }
 }
-/* line 704, ../scss/_topic-forum.scss */
+/* line 706, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon {
   background: #00a837;
 }
-/* line 706, ../scss/_topic-forum.scss */
+/* line 708, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon .icon-Featured {
   color: #00a837;
 }
-/* line 710, ../scss/_topic-forum.scss */
+/* line 712, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .text {
   display: none;
   float: left;
@@ -11516,7 +11517,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 710, ../scss/_topic-forum.scss */
+  /* line 712, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .text {
     padding: 5px 6px;
     line-height: 24px;
@@ -11524,6 +11525,10 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     padding: 4px 5px;
     min-width: 97px;
   }
+}
+/* line 731, ../scss/_topic-forum.scss */
+.my-voice-post .views-row-first .feature-holder {
+  display: inherit;
 }
 
 /* line 4, ../scss/_understanding-autism.scss */

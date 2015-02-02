@@ -671,6 +671,8 @@ margin-right: 10px;
 }
 .my-voice-post{
    .feature-holder {
+   display:none;
+   
 					position:absolute;
 					z-index:2;
 					bottom:0;
@@ -724,5 +726,10 @@ margin-right: 10px;
 							min-width:97px;
 						}
 					}
+				}
+				.views-row-first{
+				  .feature-holder{
+				    display: inherit;
+				  }
 				}
 }
