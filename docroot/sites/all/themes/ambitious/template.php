@@ -333,7 +333,7 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
   
- if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
+ if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page-age'){
     $node = node_load(arg(1));
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
@@ -349,6 +349,13 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
   }
 
   if($vars['view']->current_display == 'understanding_autism_page' && $vars['view']->query->pager->current_page === 0){
+    $node = node_load(arg(1));
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+    $vars['node'] = $node;
+  }
+
+  if($vars['view']->current_display == 'understanding_autism_page_age' && $vars['view']->query->pager->current_page === 0){
     $node = node_load(arg(1));
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';

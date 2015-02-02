@@ -3,6 +3,8 @@
  * @file
  * Default view template to display content in a Masonry layout.
  */
+// Variable
+
 ?>
 
 <?php if (!empty($title)): ?>
@@ -21,11 +23,11 @@
 			<?php endif; ?>
 		</div>
 			<!-- Teaser ends here -->
-	<?php elseif($id == 7): ?>
+	<?php elseif($id == 7 ): ?>
 		<div class="masonry-item views-row views-row-8 views-row-even views-row-last post-actions post masonry-brick">
 			<?php
 			//D7
-			$block = module_invoke('block', 'block_view', '91');
+			$block = module_invoke('block', 'block_view', '126');
 			print render($block['content']);
 			?>
 		</div>
