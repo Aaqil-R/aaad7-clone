@@ -1,38 +1,41 @@
 /*breadcrump for all the pages*/
 .img-holder{
 	.block-easy-breadcrumb{
-	margin: 0 auto;
-	max-width: 1080px;
-	padding: 10px 20px 10px 20px;
-	.easy-breadcrumb{
-		letter-spacing:-4px;
-		text-align:right;
-		padding:20px 0px 0 0;
-		color:black;
-		@include breakpoint($mobile) {
-					display:none;
-				}
-		.easy-breadcrumb_segment {
-		display:inline-block;
-		vertical-align:top;
-		letter-spacing:normal;
-		font-size:16px;
-		line-height:20px;
-		position:relative;
-		padding:0 3px 0 13px;
-		
-		color:black;
-			text-decoration:underline;
-			&:hover { text-decoration:none; }
-			
-		}
-				
-		a {
+		margin: 0 auto;
+		max-width: 1080px;
+		padding: 10px 20px 10px 20px;
+		.easy-breadcrumb{
+			letter-spacing:-4px;
+			text-align:right;
+			padding:20px 0px 0 0;
 			color:black;
-			text-decoration:underline;
-			&:hover { text-decoration:none; }
+			@include breakpoint($mobile) {
+				display:none;
+			}
+			.easy-breadcrumb_segment {
+				display:inline-block;
+				vertical-align:top;
+				letter-spacing:normal;
+				font-size:16px;
+				line-height:20px;
+				position:relative;
+				padding:0 3px 0 13px;
+		
+				color:black;
+				text-decoration:underline;
+				&:hover { 
+					text-decoration:none; 
+				}
+			}
+			
+			a {
+				color:black;
+				text-decoration:underline;
+				&:hover { 
+					text-decoration:none; 
+				}
+			}
 		}
-	}
 	}
 }
 
@@ -47,43 +50,50 @@
 		
 	}
 	
-	.easy-breadcrumb{
-		letter-spacing:-4px;
-		text-align:right;
-		padding:30px 12px 0 0;
-		color:white;
-		@include breakpoint($mobile) {
-					display:none;
-				}
-		.easy-breadcrumb_segment {
-		display:inline-block;
-		vertical-align:top;
-		letter-spacing:normal;
-		font-size:16px;
-		line-height:20px;
-		position:relative;
-		text-shadow: 0 0 3px rgba(0,0,0,.5);
-		padding:0 3px 0 13px;
+	.block-easy-breadcrumb{
+		margin: 0 auto;
+		max-width: 1080px;
+		padding: 10px 20px 10px 20px;
+		.easy-breadcrumb{
+			letter-spacing:-4px;
+			text-align:right;
+			padding:20px 0px 0 0;
+			color:$white;
+			@include breakpoint($mobile) {
+				display:none;
+			}
+			.easy-breadcrumb_segment {
+				display:inline-block;
+				vertical-align:top;
+				letter-spacing:normal;
+				font-size:16px;
+				line-height:20px;
+				position:relative;
+				padding:0 3px 0 13px;
 		
-		color:white;
-			text-decoration:underline;
-			&:hover { text-decoration:none; }
+				color:$white;
+				text-decoration:underline;
+				&:hover { 
+					text-decoration:none; 
+				}
 			
-		}
-				
-		a {
-			color:white;
-			text-decoration:underline;
-			&:hover { text-decoration:none; }
-		}
+			}
+			a {
+				color:$white;
+				text-decoration:underline;
+				&:hover { 
+					text-decoration:none; 
+				}
+			}
+		}	
 	}
 	
-	.region-image-holder
-	{
-		.easy-breadcrumb{
-			display:none;
-		}
-	}
+//	.region-image-holder
+//	{
+//		.easy-breadcrumb{
+//			display:none;
+//		}
+//	}
 	
 	//.title
 	//{	display:none;
