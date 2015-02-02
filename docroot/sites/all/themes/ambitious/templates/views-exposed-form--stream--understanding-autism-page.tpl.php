@@ -61,15 +61,6 @@
         <?php endif; ?>
       </div>
     <?php endforeach; ?>
-    <fieldset>
-            <legend class="hidden">For</legend>
-            <label class="hidden">For</label>
-            <select id="select2">
-              <option data-url="understanding-autism">For everyone</option>              
-              <option data-url="understanding-autism-age">For age 16-25</option>
-              <option>For professionals</option>
-            </select>
-    </fieldset>
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
