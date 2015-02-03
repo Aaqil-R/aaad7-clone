@@ -545,7 +545,7 @@ function ambitious_field__field_event_date(&$variables){
  function ambitious_form_alter(&$form, &$form_state, $form_id)
 {
   if($form_id == 'webform_client_form_74601'){
-    $form['submitted']['email_address']['#description'] == "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>'.$form['submitted']['email_address']['#description'] .'</span></a>"
+    $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>'.$form['submitted']['email_address']['#description'] .'</span></a>"
   }
 }
 
