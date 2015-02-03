@@ -321,7 +321,7 @@ function ambitious_menu_tree(&$variables) {
 
 /* SHARE BUTTON CUSTOM */
 function ambitious_preprocess_views_exposed_form(&$vars) { 
- if($vars['form']['#id'] == 'views-exposed-form-stream-stream-topic-page' || $vars['form']['#id'] == 'views-exposed-form-stream-stream-forum-page'){
+ if($vars['form']['#id'] == 'views-exposed-form-stream-stream-topic-page' || $vars['form']['#id'] == 'views-exposed-form-stream-stream-forum-page' || $vars['form']['#id'] == 'views-exposed-form-stream-events-page'){
    $node = node_load(arg(1)); 
    $links = sharethis_node_view($node, 'full', 'en');
    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
