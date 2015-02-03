@@ -513,18 +513,6 @@ function ambitious_field__field_event_date(&$variables){
  $formatdate = array();
  $dateval = $variables['element']['#items'][0]['value'];
 
- 
- if(isset($dateval)){
- $formatdate[1] = format_date($dateval, 'custom', 'd');
- $formatdate[2] = format_date($dateval, 'custom', 'M');
- $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
- $dateclass = array('','day','month','year');
- $output .= '<ul class="date" >';
- foreach ($formatdate as $key => $value){
-   $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
- }
- $output .= '</ul>';
- } 
  $dateval2 = $variables['element']['#items'][0]['value2'];
  
  if($dateval != $dateval2){
@@ -538,6 +526,19 @@ function ambitious_field__field_event_date(&$variables){
  }
  $output .= '</ul>';
  }
+ 
+ if(isset($dateval)){
+ $formatdate[1] = format_date($dateval, 'custom', 'd');
+ $formatdate[2] = format_date($dateval, 'custom', 'M');
+ $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
+ $dateclass = array('','day','month','year');
+ $output .= '<ul class="date" >';
+ foreach ($formatdate as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
+ }
+ $output .= '</ul>';
+ } 
+
  
  return $output;	
 }
