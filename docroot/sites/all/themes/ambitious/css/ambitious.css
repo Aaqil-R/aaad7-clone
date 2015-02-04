@@ -219,7 +219,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -474,7 +474,7 @@ table {
 
 /* button */
 /* line 7, ../scss/source/_buttons.scss */
-.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit {
+.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   display: inline-block;
   border: none;
   padding: 5px 19px;
@@ -490,7 +490,7 @@ table {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
 }
 /* line 22, ../scss/source/_buttons.scss */
-.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em {
+.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em, #webform_client_form_74621 .form-action input[type=submit] em {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -499,7 +499,7 @@ table {
   margin-left: 10px;
 }
 /* line 30, ../scss/source/_buttons.scss */
-.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-green[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   border-bottom: 5px solid #007e2a;
   background: #00a837;
 }
@@ -508,12 +508,12 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
+.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
 /* line 41, ../scss/source/_buttons.scss */
-.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit {
+.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit, #webform_client_form_74621 .form-action input.btn-gray[type=submit] {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
   background: #ffffff;
@@ -521,32 +521,32 @@ table {
   color: #636c73;
 }
 /* line 47, ../scss/source/_buttons.scss */
-.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover {
+.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:hover {
   color: #636c73;
 }
 /* line 50, ../scss/source/_buttons.scss */
-.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus {
+.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
 /* line 55, ../scss/source/_buttons.scss */
-.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited {
+.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:visited {
   text-decoration: none;
   color: #636c73;
 }
 /* line 60, ../scss/source/_buttons.scss */
-.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
   /* line 60, ../scss/source/_buttons.scss */
-  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
     margin: 0 0 0 11px;
   }
 }
 /* line 66, ../scss/source/_buttons.scss */
-.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
   display: inline-block;
   vertical-align: top;
   background: none;
@@ -561,36 +561,36 @@ table {
   margin: 0;
 }
 /* line 79, ../scss/source/_buttons.scss */
-.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
   /* line 66, ../scss/source/_buttons.scss */
-  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
     font-size: 14px;
     padding: 7px 18px;
   }
   /* line 85, ../scss/source/_buttons.scss */
-  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
     padding-left: 5px;
   }
 }
 /* line 90, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover {
+.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover {
   margin: 0;
 }
 /* line 92, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange {
+.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.orange {
   border: 2px solid #ffffff;
   background: #f15500;
 }
 /* line 96, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender {
+.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.lavender {
   border: 2px solid #ffffff;
   background: #734889;
 }
 /* line 102, ../scss/source/_buttons.scss */
-.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited {
+.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:visited {
   text-decoration: none;
   border: 2px solid #ffffff;
   background: #f15500;
@@ -598,35 +598,35 @@ table {
   color: #ffffff;
 }
 /* line 110, ../scss/source/_buttons.scss */
-.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit {
+.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   float: left;
 }
 /* line 113, ../scss/source/_buttons.scss */
-.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-right[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   float: right;
 }
 /* line 116, ../scss/source/_buttons.scss */
-.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover {
+.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover, #webform_client_form_74621 .form-action input[type=submit]:hover {
   border-bottom-width: 3px;
   margin-top: 2px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 122, ../scss/source/_buttons.scss */
-.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active {
+.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active, #webform_client_form_74621 .form-action input[type=submit]:active {
   border-bottom-width: 0px;
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 128, ../scss/source/_buttons.scss */
-.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited {
+.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited, #webform_client_form_74621 .form-action input[type=submit]:visited {
   text-decoration: none;
   color: #ffffff;
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -2044,7 +2044,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 703, ../scss/source/_all.scss */
-.nav-holder .btn, .nav-holder .form-submit, .nav-holder .topic-share .st_sharethis_button, .topic-share .nav-holder .st_sharethis_button, .nav-holder .filter-slide .button-holder .form-submit, .filter-slide .button-holder .nav-holder .form-submit {
+.nav-holder .btn, .nav-holder .form-submit, .nav-holder .topic-share .st_sharethis_button, .topic-share .nav-holder .st_sharethis_button, .nav-holder .filter-slide .button-holder .form-submit, .filter-slide .button-holder .nav-holder .form-submit, .nav-holder #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .nav-holder input[type=submit] {
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: 33px;
@@ -2053,13 +2053,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   font-size: 20px;
 }
 /* line 710, ../scss/source/_all.scss */
-.nav-holder .btn em, .nav-holder .form-submit em, .nav-holder .topic-share .st_sharethis_button em, .topic-share .nav-holder .st_sharethis_button em, .nav-holder .filter-slide .button-holder .form-submit em, .filter-slide .button-holder .nav-holder .form-submit em {
+.nav-holder .btn em, .nav-holder .form-submit em, .nav-holder .topic-share .st_sharethis_button em, .topic-share .nav-holder .st_sharethis_button em, .nav-holder .filter-slide .button-holder .form-submit em, .filter-slide .button-holder .nav-holder .form-submit em, .nav-holder #webform_client_form_74621 .form-action input[type=submit] em, #webform_client_form_74621 .form-action .nav-holder input[type=submit] em {
   right: -20px;
   top: 5px;
 }
 @media (max-width: 767px) {
   /* line 703, ../scss/source/_all.scss */
-  .nav-holder .btn, .nav-holder .form-submit, .nav-holder .topic-share .st_sharethis_button, .topic-share .nav-holder .st_sharethis_button, .nav-holder .filter-slide .button-holder .form-submit, .filter-slide .button-holder .nav-holder .form-submit {
+  .nav-holder .btn, .nav-holder .form-submit, .nav-holder .topic-share .st_sharethis_button, .topic-share .nav-holder .st_sharethis_button, .nav-holder .filter-slide .button-holder .form-submit, .filter-slide .button-holder .nav-holder .form-submit, .nav-holder #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .nav-holder input[type=submit] {
     margin: 0 0 -2px;
     position: relative;
     z-index: 2;
@@ -2072,11 +2072,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     text-align: left;
   }
   /* line 723, ../scss/source/_all.scss */
-  .nav-holder .btn:hover, .nav-holder .form-submit:hover, .nav-holder .topic-share .st_sharethis_button:hover, .topic-share .nav-holder .st_sharethis_button:hover {
+  .nav-holder .btn:hover, .nav-holder .form-submit:hover, .nav-holder .topic-share .st_sharethis_button:hover, .topic-share .nav-holder .st_sharethis_button:hover, .nav-holder #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .nav-holder input[type=submit]:hover {
     opacity: .9;
   }
   /* line 726, ../scss/source/_all.scss */
-  .nav-holder .btn span, .nav-holder .form-submit span, .nav-holder .topic-share .st_sharethis_button span, .topic-share .nav-holder .st_sharethis_button span, .nav-holder .filter-slide .button-holder .form-submit span, .filter-slide .button-holder .nav-holder .form-submit span {
+  .nav-holder .btn span, .nav-holder .form-submit span, .nav-holder .topic-share .st_sharethis_button span, .topic-share .nav-holder .st_sharethis_button span, .nav-holder .filter-slide .button-holder .form-submit span, .filter-slide .button-holder .nav-holder .form-submit span, .nav-holder #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action .nav-holder input[type=submit] span {
     padding: 0 0 0 25px;
     position: relative;
     display: inline-block;
@@ -2084,7 +2084,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     word-spacing: 3px;
   }
   /* line 732, ../scss/source/_all.scss */
-  .nav-holder .btn span .icon-Rightarrow, .nav-holder .form-submit span .icon-Rightarrow, .nav-holder .topic-share .st_sharethis_button span .icon-Rightarrow, .topic-share .nav-holder .st_sharethis_button span .icon-Rightarrow, .nav-holder .btn span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .btn span .form-actions, .nav-holder .form-submit span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .form-submit span .form-actions, .nav-holder .topic-share .st_sharethis_button span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .topic-share .st_sharethis_button span .form-actions, .topic-share .nav-holder .st_sharethis_button span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .nav-holder .st_sharethis_button span .form-actions {
+  .nav-holder .btn span .icon-Rightarrow, .nav-holder .form-submit span .icon-Rightarrow, .nav-holder .topic-share .st_sharethis_button span .icon-Rightarrow, .topic-share .nav-holder .st_sharethis_button span .icon-Rightarrow, .nav-holder #webform_client_form_74621 .form-action input[type=submit] span .icon-Rightarrow, #webform_client_form_74621 .form-action .nav-holder input[type=submit] span .icon-Rightarrow, .nav-holder .btn span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .btn span .form-actions, .nav-holder .form-submit span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .form-submit span .form-actions, .nav-holder .topic-share .st_sharethis_button span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder .topic-share .st_sharethis_button span .form-actions, .topic-share .nav-holder .st_sharethis_button span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .nav-holder .st_sharethis_button span .form-actions, .nav-holder #webform_client_form_74621 .form-action input[type=submit] span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .nav-holder #webform_client_form_74621 .form-action input[type=submit] span .form-actions, #webform_client_form_74621 .form-action .nav-holder input[type=submit] span #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .nav-holder input[type=submit] span .form-actions {
     display: none;
   }
 }
@@ -2485,7 +2485,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 
 /* line 1045, ../scss/source/_all.scss */
-.forum .btn.topic, .forum .topic.form-submit, .forum .topic-share .topic.st_sharethis_button, .topic-share .forum .topic.st_sharethis_button {
+.forum .btn.topic, .forum .topic.form-submit, .forum .topic-share .topic.st_sharethis_button, .topic-share .forum .topic.st_sharethis_button, .forum #webform_client_form_74621 .form-action input.topic[type=submit], #webform_client_form_74621 .form-action .forum input.topic[type=submit] {
   font-size: 19px;
 }
 /* line 1048, ../scss/source/_all.scss */
@@ -3389,11 +3389,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 1702, ../scss/source/_all.scss */
-  .about-us .btn, .about-us .form-submit, .about-us .topic-share .st_sharethis_button, .topic-share .about-us .st_sharethis_button, .about-us .filter-slide .button-holder .form-submit, .filter-slide .button-holder .about-us .form-submit {
+  .about-us .btn, .about-us .form-submit, .about-us .topic-share .st_sharethis_button, .topic-share .about-us .st_sharethis_button, .about-us .filter-slide .button-holder .form-submit, .filter-slide .button-holder .about-us .form-submit, .about-us #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .about-us input[type=submit] {
     width: 100%;
   }
   /* line 1704, ../scss/source/_all.scss */
-  .about-us .btn em, .about-us .form-submit em, .about-us .topic-share .st_sharethis_button em, .topic-share .about-us .st_sharethis_button em, .about-us .filter-slide .button-holder .form-submit em, .filter-slide .button-holder .about-us .form-submit em {
+  .about-us .btn em, .about-us .form-submit em, .about-us .topic-share .st_sharethis_button em, .topic-share .about-us .st_sharethis_button em, .about-us .filter-slide .button-holder .form-submit em, .filter-slide .button-holder .about-us .form-submit em, .about-us #webform_client_form_74621 .form-action input[type=submit] em, #webform_client_form_74621 .form-action .about-us input[type=submit] em {
     display: none;
   }
 }
@@ -3421,13 +3421,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin-bottom: 20px;
 }
 /* line 1724, ../scss/source/_all.scss */
-.about-us .find-us .btn, .about-us .find-us .form-submit, .about-us .find-us .topic-share .st_sharethis_button, .topic-share .about-us .find-us .st_sharethis_button {
+.about-us .find-us .btn, .about-us .find-us .form-submit, .about-us .find-us .topic-share .st_sharethis_button, .topic-share .about-us .find-us .st_sharethis_button, .about-us .find-us #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .about-us .find-us input[type=submit] {
   font-size: 18px;
   padding: 10px 19px;
 }
 @media (max-width: 1180px) {
   /* line 1724, ../scss/source/_all.scss */
-  .about-us .find-us .btn, .about-us .find-us .form-submit, .about-us .find-us .topic-share .st_sharethis_button, .topic-share .about-us .find-us .st_sharethis_button {
+  .about-us .find-us .btn, .about-us .find-us .form-submit, .about-us .find-us .topic-share .st_sharethis_button, .topic-share .about-us .find-us .st_sharethis_button, .about-us .find-us #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .about-us .find-us input[type=submit] {
     font-size: 17px;
   }
 }
@@ -3498,13 +3498,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin-bottom: 20px;
 }
 /* line 1777, ../scss/source/_all.scss */
-.about-us .coming-up .btn, .about-us .coming-up .form-submit, .about-us .coming-up .topic-share .st_sharethis_button, .topic-share .about-us .coming-up .st_sharethis_button {
+.about-us .coming-up .btn, .about-us .coming-up .form-submit, .about-us .coming-up .topic-share .st_sharethis_button, .topic-share .about-us .coming-up .st_sharethis_button, .about-us .coming-up #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .about-us .coming-up input[type=submit] {
   font-size: 18px;
   padding: 10px 19px;
 }
 @media (max-width: 1180px) {
   /* line 1777, ../scss/source/_all.scss */
-  .about-us .coming-up .btn, .about-us .coming-up .form-submit, .about-us .coming-up .topic-share .st_sharethis_button, .topic-share .about-us .coming-up .st_sharethis_button {
+  .about-us .coming-up .btn, .about-us .coming-up .form-submit, .about-us .coming-up .topic-share .st_sharethis_button, .topic-share .about-us .coming-up .st_sharethis_button, .about-us .coming-up #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .about-us .coming-up input[type=submit] {
     font-size: 17px;
   }
 }
@@ -3634,12 +3634,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 1882, ../scss/source/_all.scss */
-  .sort-block.advanced-sort-block.filter-option .short-buttons .btn, .sort-block.advanced-sort-block.filter-option .short-buttons .form-submit, .sort-block.advanced-sort-block.filter-option .short-buttons .topic-share .st_sharethis_button, .topic-share .sort-block.advanced-sort-block.filter-option .short-buttons .st_sharethis_button {
+  .sort-block.advanced-sort-block.filter-option .short-buttons .btn, .sort-block.advanced-sort-block.filter-option .short-buttons .form-submit, .sort-block.advanced-sort-block.filter-option .short-buttons .topic-share .st_sharethis_button, .topic-share .sort-block.advanced-sort-block.filter-option .short-buttons .st_sharethis_button, .sort-block.advanced-sort-block.filter-option .short-buttons #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .sort-block.advanced-sort-block.filter-option .short-buttons input[type=submit] {
     float: right;
     width: 49%;
   }
   /* line 1885, ../scss/source/_all.scss */
-  .sort-block.advanced-sort-block.filter-option .short-buttons .btn:first-child, .sort-block.advanced-sort-block.filter-option .short-buttons .form-submit:first-child, .sort-block.advanced-sort-block.filter-option .short-buttons .topic-share .st_sharethis_button:first-child, .topic-share .sort-block.advanced-sort-block.filter-option .short-buttons .st_sharethis_button:first-child {
+  .sort-block.advanced-sort-block.filter-option .short-buttons .btn:first-child, .sort-block.advanced-sort-block.filter-option .short-buttons .form-submit:first-child, .sort-block.advanced-sort-block.filter-option .short-buttons .topic-share .st_sharethis_button:first-child, .topic-share .sort-block.advanced-sort-block.filter-option .short-buttons .st_sharethis_button:first-child, .sort-block.advanced-sort-block.filter-option .short-buttons #webform_client_form_74621 .form-action input[type=submit]:first-child, #webform_client_form_74621 .form-action .sort-block.advanced-sort-block.filter-option .short-buttons input[type=submit]:first-child {
     float: left;
   }
   /* line 1890, ../scss/source/_all.scss */
@@ -3956,7 +3956,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     display: block;
   }
   /* line 2138, ../scss/source/_all.scss */
-  .posts-columns .text-block .btn-holder .btn.btn-green.btn-left.bt-left, .posts-columns .text-block .btn-holder .btn-green.btn-left.bt-left.form-submit, .posts-columns .text-block .btn-holder .topic-share .btn-left.bt-left.st_sharethis_button, .topic-share .posts-columns .text-block .btn-holder .btn-left.bt-left.st_sharethis_button {
+  .posts-columns .text-block .btn-holder .btn.btn-green.btn-left.bt-left, .posts-columns .text-block .btn-holder .btn-green.btn-left.bt-left.form-submit, .posts-columns .text-block .btn-holder .topic-share .btn-left.bt-left.st_sharethis_button, .topic-share .posts-columns .text-block .btn-holder .btn-left.bt-left.st_sharethis_button, .posts-columns .text-block .btn-holder .topic-share #webform_client_form_74621 .form-action input.bt-left.st_sharethis_button[type=submit], .topic-share #webform_client_form_74621 .form-action .posts-columns .text-block .btn-holder input.bt-left.st_sharethis_button[type=submit], .posts-columns .text-block .btn-holder #webform_client_form_74621 .form-action .topic-share input.bt-left.st_sharethis_button[type=submit], #webform_client_form_74621 .form-action .topic-share .posts-columns .text-block .btn-holder input.bt-left.st_sharethis_button[type=submit], .posts-columns .text-block .btn-holder #webform_client_form_74621 .form-action input.btn-green.bt-left[type=submit], #webform_client_form_74621 .form-action .posts-columns .text-block .btn-holder input.btn-green.bt-left[type=submit] {
     float: right;
   }
 }
@@ -4702,21 +4702,21 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 2699, ../scss/source/_all.scss */
-.see-btn .btn, .see-btn .form-submit, .see-btn .topic-share .st_sharethis_button, .topic-share .see-btn .st_sharethis_button, .see-btn .filter-slide .button-holder .form-submit, .filter-slide .button-holder .see-btn .form-submit {
+.see-btn .btn, .see-btn .form-submit, .see-btn .topic-share .st_sharethis_button, .topic-share .see-btn .st_sharethis_button, .see-btn .filter-slide .button-holder .form-submit, .filter-slide .button-holder .see-btn .form-submit, .see-btn #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .see-btn input[type=submit] {
   padding: 10px 29px 10px 28px;
   font-size: 18px;
 }
 /* line 2702, ../scss/source/_all.scss */
-.see-btn .btn i, .see-btn .form-submit i, .see-btn .topic-share .st_sharethis_button i, .topic-share .see-btn .st_sharethis_button i, .see-btn .filter-slide .button-holder .form-submit i, .filter-slide .button-holder .see-btn .form-submit i {
+.see-btn .btn i, .see-btn .form-submit i, .see-btn .topic-share .st_sharethis_button i, .topic-share .see-btn .st_sharethis_button i, .see-btn .filter-slide .button-holder .form-submit i, .filter-slide .button-holder .see-btn .form-submit i, .see-btn #webform_client_form_74621 .form-action input[type=submit] i, #webform_client_form_74621 .form-action .see-btn input[type=submit] i {
   margin-left: 25px;
 }
 @media (max-width: 767px) {
   /* line 2699, ../scss/source/_all.scss */
-  .see-btn .btn, .see-btn .form-submit, .see-btn .topic-share .st_sharethis_button, .topic-share .see-btn .st_sharethis_button, .see-btn .filter-slide .button-holder .form-submit, .filter-slide .button-holder .see-btn .form-submit {
+  .see-btn .btn, .see-btn .form-submit, .see-btn .topic-share .st_sharethis_button, .topic-share .see-btn .st_sharethis_button, .see-btn .filter-slide .button-holder .form-submit, .filter-slide .button-holder .see-btn .form-submit, .see-btn #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .see-btn input[type=submit] {
     width: 100%;
   }
   /* line 2707, ../scss/source/_all.scss */
-  .see-btn .btn i, .see-btn .form-submit i, .see-btn .topic-share .st_sharethis_button i, .topic-share .see-btn .st_sharethis_button i, .see-btn .filter-slide .button-holder .form-submit i, .filter-slide .button-holder .see-btn .form-submit i {
+  .see-btn .btn i, .see-btn .form-submit i, .see-btn .topic-share .st_sharethis_button i, .topic-share .see-btn .st_sharethis_button i, .see-btn .filter-slide .button-holder .form-submit i, .filter-slide .button-holder .see-btn .form-submit i, .see-btn #webform_client_form_74621 .form-action input[type=submit] i, #webform_client_form_74621 .form-action .see-btn input[type=submit] i {
     display: none;
   }
 }
@@ -4928,7 +4928,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-position: top right;
   }
   /* line 2852, ../scss/source/_all.scss */
-  .action-block .block-report .btn, .action-block .block-report .form-submit, .action-block .block-report .topic-share .st_sharethis_button, .topic-share .action-block .block-report .st_sharethis_button {
+  .action-block .block-report .btn, .action-block .block-report .form-submit, .action-block .block-report .topic-share .st_sharethis_button, .topic-share .action-block .block-report .st_sharethis_button, .action-block .block-report #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-report input[type=submit] {
     font-size: 16px;
     padding: 10px 14px;
   }
@@ -4942,7 +4942,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-position: right top;
   }
   /* line 2862, ../scss/source/_all.scss */
-  .action-block .block-report .btn, .action-block .block-report .form-submit, .action-block .block-report .topic-share .st_sharethis_button, .topic-share .action-block .block-report .st_sharethis_button {
+  .action-block .block-report .btn, .action-block .block-report .form-submit, .action-block .block-report .topic-share .st_sharethis_button, .topic-share .action-block .block-report .st_sharethis_button, .action-block .block-report #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-report input[type=submit] {
     font-size: 14px;
   }
 }
@@ -4986,7 +4986,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     padding: 17px 10px 30px 29px;
   }
   /* line 2895, ../scss/source/_all.scss */
-  .action-block .block-blog .btn, .action-block .block-blog .form-submit, .action-block .block-blog .topic-share .st_sharethis_button, .topic-share .action-block .block-blog .st_sharethis_button {
+  .action-block .block-blog .btn, .action-block .block-blog .form-submit, .action-block .block-blog .topic-share .st_sharethis_button, .topic-share .action-block .block-blog .st_sharethis_button, .action-block .block-blog #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-blog input[type=submit] {
     font-size: 16px;
   }
 }
@@ -5037,7 +5037,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-position: top right;
   }
   /* line 2933, ../scss/source/_all.scss */
-  .action-block .block-connect .btn, .action-block .block-connect .form-submit, .action-block .block-connect .topic-share .st_sharethis_button, .topic-share .action-block .block-connect .st_sharethis_button {
+  .action-block .block-connect .btn, .action-block .block-connect .form-submit, .action-block .block-connect .topic-share .st_sharethis_button, .topic-share .action-block .block-connect .st_sharethis_button, .action-block .block-connect #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-connect input[type=submit] {
     font-size: 16px;
   }
 }
@@ -5051,7 +5051,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin: 0 0 34px;
   }
   /* line 2943, ../scss/source/_all.scss */
-  .action-block .block-connect .btn, .action-block .block-connect .form-submit, .action-block .block-connect .topic-share .st_sharethis_button, .topic-share .action-block .block-connect .st_sharethis_button {
+  .action-block .block-connect .btn, .action-block .block-connect .form-submit, .action-block .block-connect .topic-share .st_sharethis_button, .topic-share .action-block .block-connect .st_sharethis_button, .action-block .block-connect #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-connect input[type=submit] {
     font-size: 14px;
   }
 }
@@ -5092,7 +5092,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     padding: 48px 10px 34px 32px;
   }
   /* line 2974, ../scss/source/_all.scss */
-  .action-block .block-vacancies .btn, .action-block .block-vacancies .form-submit, .action-block .block-vacancies .topic-share .st_sharethis_button, .topic-share .action-block .block-vacancies .st_sharethis_button {
+  .action-block .block-vacancies .btn, .action-block .block-vacancies .form-submit, .action-block .block-vacancies .topic-share .st_sharethis_button, .topic-share .action-block .block-vacancies .st_sharethis_button, .action-block .block-vacancies #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-vacancies input[type=submit] {
     font-size: 16px;
   }
 }
@@ -5106,7 +5106,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin: 0 0 34px;
   }
   /* line 2985, ../scss/source/_all.scss */
-  .action-block .block-vacancies .btn, .action-block .block-vacancies .form-submit, .action-block .block-vacancies .topic-share .st_sharethis_button, .topic-share .action-block .block-vacancies .st_sharethis_button {
+  .action-block .block-vacancies .btn, .action-block .block-vacancies .form-submit, .action-block .block-vacancies .topic-share .st_sharethis_button, .topic-share .action-block .block-vacancies .st_sharethis_button, .action-block .block-vacancies #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-vacancies input[type=submit] {
     font-size: 14px;
   }
 }
@@ -5146,7 +5146,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-position: top right;
   }
   /* line 3015, ../scss/source/_all.scss */
-  .action-block .block-image .btn, .action-block .block-image .form-submit, .action-block .block-image .topic-share .st_sharethis_button, .topic-share .action-block .block-image .st_sharethis_button {
+  .action-block .block-image .btn, .action-block .block-image .form-submit, .action-block .block-image .topic-share .st_sharethis_button, .topic-share .action-block .block-image .st_sharethis_button, .action-block .block-image #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-image input[type=submit] {
     font-size: 16px;
   }
 }
@@ -5160,7 +5160,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin: 0 0 34px;
   }
   /* line 3025, ../scss/source/_all.scss */
-  .action-block .block-image .btn, .action-block .block-image .form-submit, .action-block .block-image .topic-share .st_sharethis_button, .topic-share .action-block .block-image .st_sharethis_button {
+  .action-block .block-image .btn, .action-block .block-image .form-submit, .action-block .block-image .topic-share .st_sharethis_button, .topic-share .action-block .block-image .st_sharethis_button, .action-block .block-image #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-image input[type=submit] {
     font-size: 14px;
     padding-left: 10px;
     padding-right: 10px;
@@ -5205,7 +5205,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   background-image: url(../images/action-bg1.jpg);
 }
 /* line 3062, ../scss/source/_all.scss */
-.action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+.action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
   padding: 10px 18px;
 }
 /* line 3065, ../scss/source/_all.scss */
@@ -5221,7 +5221,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     padding: 48px 11px 40px 39px;
   }
   /* line 3073, ../scss/source/_all.scss */
-  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
     font-size: 16px;
   }
   /* line 3076, ../scss/source/_all.scss */
@@ -5244,37 +5244,37 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin-bottom: 0px;
   }
   /* line 3090, ../scss/source/_all.scss */
-  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
     font-size: 14px;
     padding: 6px 20px;
   }
   /* line 3093, ../scss/source/_all.scss */
-  .action-block .block-share .btn em, .action-block .block-share .form-submit em, .action-block .block-share .topic-share .st_sharethis_button em, .topic-share .action-block .block-share .st_sharethis_button em {
+  .action-block .block-share .btn em, .action-block .block-share .form-submit em, .action-block .block-share .topic-share .st_sharethis_button em, .topic-share .action-block .block-share .st_sharethis_button em, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit] em, #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] em {
     padding-left: 10px;
   }
 }
 /* line 3099, ../scss/source/_all.scss */
-.action-block .lavender-box .btn:hover, .action-block .lavender-box .form-submit:hover, .action-block .lavender-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .lavender-box .st_sharethis_button:hover {
+.action-block .lavender-box .btn:hover, .action-block .lavender-box .form-submit:hover, .action-block .lavender-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .lavender-box .st_sharethis_button:hover, .action-block .lavender-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .lavender-box input[type=submit]:hover {
   background-color: #734889;
 }
 /* line 3102, ../scss/source/_all.scss */
-.action-block .blue-box .btn:hover, .action-block .blue-box .form-submit:hover, .action-block .blue-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .blue-box .st_sharethis_button:hover {
+.action-block .blue-box .btn:hover, .action-block .blue-box .form-submit:hover, .action-block .blue-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .blue-box .st_sharethis_button:hover, .action-block .blue-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .blue-box input[type=submit]:hover {
   background-color: #006dc1;
 }
 /* line 3105, ../scss/source/_all.scss */
-.action-block .green-box .btn:hover, .action-block .green-box .form-submit:hover, .action-block .green-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .green-box .st_sharethis_button:hover {
+.action-block .green-box .btn:hover, .action-block .green-box .form-submit:hover, .action-block .green-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .green-box .st_sharethis_button:hover, .action-block .green-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .green-box input[type=submit]:hover {
   background-color: #00a837;
 }
 /* line 3108, ../scss/source/_all.scss */
-.action-block .magenta-box .btn:hover, .action-block .magenta-box .form-submit:hover, .action-block .magenta-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .magenta-box .st_sharethis_button:hover {
+.action-block .magenta-box .btn:hover, .action-block .magenta-box .form-submit:hover, .action-block .magenta-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .magenta-box .st_sharethis_button:hover, .action-block .magenta-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .magenta-box input[type=submit]:hover {
   background-color: #c3104b;
 }
 /* line 3111, ../scss/source/_all.scss */
-.action-block .orange-box .btn:hover, .action-block .orange-box .form-submit:hover, .action-block .orange-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .orange-box .st_sharethis_button:hover {
+.action-block .orange-box .btn:hover, .action-block .orange-box .form-submit:hover, .action-block .orange-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .orange-box .st_sharethis_button:hover, .action-block .orange-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .orange-box input[type=submit]:hover {
   background-color: #f15500;
 }
 /* line 3114, ../scss/source/_all.scss */
-.action-block .pink-box .btn:hover, .action-block .pink-box .form-submit:hover, .action-block .pink-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .pink-box .st_sharethis_button:hover {
+.action-block .pink-box .btn:hover, .action-block .pink-box .form-submit:hover, .action-block .pink-box .topic-share .st_sharethis_button:hover, .topic-share .action-block .pink-box .st_sharethis_button:hover, .action-block .pink-box #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .action-block .pink-box input[type=submit]:hover {
   background-color: #e30087;
 }
 
@@ -5310,13 +5310,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 3136, ../scss/source/_all.scss */
-.forum-block .btn, .forum-block .form-submit, .forum-block .topic-share .st_sharethis_button, .topic-share .forum-block .st_sharethis_button, .forum-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .forum-block .form-submit {
+.forum-block .btn, .forum-block .form-submit, .forum-block .topic-share .st_sharethis_button, .topic-share .forum-block .st_sharethis_button, .forum-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .forum-block .form-submit, .forum-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .forum-block input[type=submit] {
   font-size: 22px;
   padding: 11px 30px;
 }
 @media (max-width: 767px) {
   /* line 3136, ../scss/source/_all.scss */
-  .forum-block .btn, .forum-block .form-submit, .forum-block .topic-share .st_sharethis_button, .topic-share .forum-block .st_sharethis_button, .forum-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .forum-block .form-submit {
+  .forum-block .btn, .forum-block .form-submit, .forum-block .topic-share .st_sharethis_button, .topic-share .forum-block .st_sharethis_button, .forum-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .forum-block .form-submit, .forum-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .forum-block input[type=submit] {
     padding: 6px 19px;
     font-size: 18px;
   }
@@ -5348,11 +5348,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 3164, ../scss/source/_all.scss */
-  .forum-block .block .btn, .forum-block .block .form-submit, .forum-block .block .topic-share .st_sharethis_button, .topic-share .forum-block .block .st_sharethis_button {
+  .forum-block .block .btn, .forum-block .block .form-submit, .forum-block .block .topic-share .st_sharethis_button, .topic-share .forum-block .block .st_sharethis_button, .forum-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .forum-block .block input[type=submit] {
     width: 100%;
   }
   /* line 3167, ../scss/source/_all.scss */
-  .forum-block .block .btn .icon-Rightarrow, .forum-block .block .form-submit .icon-Rightarrow, .forum-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .forum-block .block .st_sharethis_button .icon-Rightarrow, .forum-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .btn .form-actions, .forum-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .form-submit .form-actions, .forum-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .forum-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .forum-block .block .st_sharethis_button .form-actions {
+  .forum-block .block .btn .icon-Rightarrow, .forum-block .block .form-submit .icon-Rightarrow, .forum-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .forum-block .block .st_sharethis_button .icon-Rightarrow, .forum-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .forum-block .block input[type=submit] .icon-Rightarrow, .forum-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .btn .form-actions, .forum-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .form-submit .form-actions, .forum-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .forum-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .forum-block .block .st_sharethis_button .form-actions, .forum-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .forum-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .forum-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .forum-block .block input[type=submit] .form-actions {
     display: none;
   }
 }
@@ -6021,12 +6021,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 @media (max-width: 767px) {
   /* line 3659, ../scss/source/_all.scss */
-  #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn.btn-left, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.form-submit, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .topic-share .btn-left.st_sharethis_button, .topic-share #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.st_sharethis_button {
+  #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn.btn-left, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.form-submit, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .topic-share .btn-left.st_sharethis_button, .topic-share #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.st_sharethis_button, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions input[type=submit] {
     margin-left: 6px;
     padding: 3px 15px;
   }
   /* line 3662, ../scss/source/_all.scss */
-  #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn.btn-left:first-child, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.form-submit:first-child, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .topic-share .btn-left.st_sharethis_button:first-child, .topic-share #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.st_sharethis_button:first-child {
+  #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn.btn-left:first-child, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.form-submit:first-child, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .topic-share .btn-left.st_sharethis_button:first-child, .topic-share #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions .btn-left.st_sharethis_button:first-child, #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions #webform_client_form_74621 .form-action input[type=submit]:first-child, #webform_client_form_74621 .form-action #main2 .article-left .article-left-holder .comment-block .comments fieldset.submit-actions input[type=submit]:first-child {
     margin-left: 0;
   }
 }
@@ -6250,7 +6250,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin: 0 0 20px 0;
   }
   /* line 3837, ../scss/source/_all.scss */
-  #main2 .article-left .article-left-holder .article-info .btn, #main2 .article-left .article-left-holder .article-info .form-submit, #main2 .article-left .article-left-holder .article-info .topic-share .st_sharethis_button, .topic-share #main2 .article-left .article-left-holder .article-info .st_sharethis_button {
+  #main2 .article-left .article-left-holder .article-info .btn, #main2 .article-left .article-left-holder .article-info .form-submit, #main2 .article-left .article-left-holder .article-info .topic-share .st_sharethis_button, .topic-share #main2 .article-left .article-left-holder .article-info .st_sharethis_button, #main2 .article-left .article-left-holder .article-info #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #main2 .article-left .article-left-holder .article-info input[type=submit] {
     float: left;
   }
 }
@@ -6762,7 +6762,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -7017,7 +7017,7 @@ table {
 
 /* button */
 /* line 7, ../scss/source/_buttons.scss */
-.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit {
+.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   display: inline-block;
   border: none;
   padding: 5px 19px;
@@ -7033,7 +7033,7 @@ table {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
 }
 /* line 22, ../scss/source/_buttons.scss */
-.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em {
+.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em, #webform_client_form_74621 .form-action input[type=submit] em {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -7042,7 +7042,7 @@ table {
   margin-left: 10px;
 }
 /* line 30, ../scss/source/_buttons.scss */
-.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-green[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   border-bottom: 5px solid #007e2a;
   background: #00a837;
 }
@@ -7051,12 +7051,12 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
+.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
 /* line 41, ../scss/source/_buttons.scss */
-.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit {
+.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit, #webform_client_form_74621 .form-action input.btn-gray[type=submit] {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
   background: #ffffff;
@@ -7064,32 +7064,32 @@ table {
   color: #636c73;
 }
 /* line 47, ../scss/source/_buttons.scss */
-.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover {
+.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:hover {
   color: #636c73;
 }
 /* line 50, ../scss/source/_buttons.scss */
-.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus {
+.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
 /* line 55, ../scss/source/_buttons.scss */
-.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited {
+.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:visited {
   text-decoration: none;
   color: #636c73;
 }
 /* line 60, ../scss/source/_buttons.scss */
-.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
   /* line 60, ../scss/source/_buttons.scss */
-  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
     margin: 0 0 0 11px;
   }
 }
 /* line 66, ../scss/source/_buttons.scss */
-.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
   display: inline-block;
   vertical-align: top;
   background: none;
@@ -7104,36 +7104,36 @@ table {
   margin: 0;
 }
 /* line 79, ../scss/source/_buttons.scss */
-.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
   /* line 66, ../scss/source/_buttons.scss */
-  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
     font-size: 14px;
     padding: 7px 18px;
   }
   /* line 85, ../scss/source/_buttons.scss */
-  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
     padding-left: 5px;
   }
 }
 /* line 90, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover {
+.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover {
   margin: 0;
 }
 /* line 92, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange {
+.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.orange {
   border: 2px solid #ffffff;
   background: #f15500;
 }
 /* line 96, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender {
+.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.lavender {
   border: 2px solid #ffffff;
   background: #734889;
 }
 /* line 102, ../scss/source/_buttons.scss */
-.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited {
+.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:visited {
   text-decoration: none;
   border: 2px solid #ffffff;
   background: #f15500;
@@ -7141,35 +7141,35 @@ table {
   color: #ffffff;
 }
 /* line 110, ../scss/source/_buttons.scss */
-.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit {
+.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   float: left;
 }
 /* line 113, ../scss/source/_buttons.scss */
-.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-right[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   float: right;
 }
 /* line 116, ../scss/source/_buttons.scss */
-.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover {
+.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover, #webform_client_form_74621 .form-action input[type=submit]:hover {
   border-bottom-width: 3px;
   margin-top: 2px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 122, ../scss/source/_buttons.scss */
-.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active {
+.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active, #webform_client_form_74621 .form-action input[type=submit]:active {
   border-bottom-width: 0px;
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 128, ../scss/source/_buttons.scss */
-.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited {
+.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited, #webform_client_form_74621 .form-action input[type=submit]:visited {
   text-decoration: none;
   color: #ffffff;
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -7429,17 +7429,17 @@ table {
    4. My voice styles
    ---------------------------------------------------------*/
 /* line 18, ../scss/source/_content.scss */
-.btn.btn-facebook, .btn-facebook.form-submit, .topic-share .btn-facebook.st_sharethis_button, .filter-slide .button-holder .btn-facebook.form-submit {
+.btn.btn-facebook, .btn-facebook.form-submit, .topic-share .btn-facebook.st_sharethis_button, .filter-slide .button-holder .btn-facebook.form-submit, #webform_client_form_74621 .form-action input.btn-facebook[type=submit] {
   border-bottom: 5px solid #1a427e;
   background: #4b69aa;
 }
 /* line 22, ../scss/source/_content.scss */
-.btn.btn-twitter, .btn-twitter.form-submit, .topic-share .btn-twitter.st_sharethis_button, .filter-slide .button-holder .btn-twitter.form-submit {
+.btn.btn-twitter, .btn-twitter.form-submit, .topic-share .btn-twitter.st_sharethis_button, .filter-slide .button-holder .btn-twitter.form-submit, #webform_client_form_74621 .form-action input.btn-twitter[type=submit] {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
 }
 /* line 26, ../scss/source/_content.scss */
-.btn.btn-google, .btn-google.form-submit, .topic-share .btn-google.st_sharethis_button, .filter-slide .button-holder .btn-google.form-submit {
+.btn.btn-google, .btn-google.form-submit, .topic-share .btn-google.st_sharethis_button, .filter-slide .button-holder .btn-google.form-submit, #webform_client_form_74621 .form-action input.btn-google[type=submit] {
   border-bottom: 5px solid #ab1005;
   background: #f44336;
 }
@@ -7710,7 +7710,7 @@ a:hover.tooltips span.tooltip-content {
     margin-top: 10px;
   }
   /* line 276, ../scss/source/_content.scss */
-  .advanced-sort-block input, .advanced-sort-block select, .advanced-sort-block .btn, .advanced-sort-block .form-submit, .advanced-sort-block .topic-share .st_sharethis_button, .topic-share .advanced-sort-block .st_sharethis_button, .advanced-sort-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .advanced-sort-block .form-submit {
+  .advanced-sort-block input, .advanced-sort-block select, .advanced-sort-block .btn, .advanced-sort-block .form-submit, .advanced-sort-block .topic-share .st_sharethis_button, .topic-share .advanced-sort-block .st_sharethis_button, .advanced-sort-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .advanced-sort-block .form-submit, .advanced-sort-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .advanced-sort-block input[type=submit] {
     width: 100%;
     margin-bottom: 10px;
   }
@@ -8374,14 +8374,14 @@ a:hover.tooltips span.tooltip-content {
   float: left;
 }
 /* line 794, ../scss/source/_content.scss */
-.action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+.action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
   float: right;
   margin: 182px 10px 0 0;
   display: block;
 }
 @media (max-width: 990px) {
   /* line 794, ../scss/source/_content.scss */
-  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
     margin: 146px 10px 0 0;
   }
 }
@@ -8391,7 +8391,7 @@ a:hover.tooltips span.tooltip-content {
     height: 324px;
   }
   /* line 804, ../scss/source/_content.scss */
-  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button {
+  .action-block .block-share .btn, .action-block .block-share .form-submit, .action-block .block-share .topic-share .st_sharethis_button, .topic-share .action-block .block-share .st_sharethis_button, .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .action-block .block-share input[type=submit] {
     margin: 223px 10px 0 0;
   }
 }
@@ -8455,14 +8455,14 @@ a:hover.tooltips span.tooltip-content {
   font-size: 1.5em;
 }
 /* line 855, ../scss/source/_content.scss */
-.social-block .btn, .social-block .form-submit, .social-block .topic-share .st_sharethis_button, .topic-share .social-block .st_sharethis_button, .social-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-block .form-submit, .signup-block .btn, .signup-block .form-submit, .signup-block .topic-share .st_sharethis_button, .topic-share .signup-block .st_sharethis_button, .signup-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .signup-block .form-submit, .slider-block .btn, .slider-block .form-submit, .slider-block .topic-share .st_sharethis_button, .topic-share .slider-block .st_sharethis_button, .slider-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .slider-block .form-submit, .my-voice-block .btn, .my-voice-block .form-submit, .my-voice-block .topic-share .st_sharethis_button, .topic-share .my-voice-block .st_sharethis_button, .my-voice-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .my-voice-block .form-submit, .social-action-block .btn, .social-action-block .form-submit, .social-action-block .topic-share .st_sharethis_button, .topic-share .social-action-block .st_sharethis_button, .social-action-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-action-block .form-submit {
+.social-block .btn, .social-block .form-submit, .social-block .topic-share .st_sharethis_button, .topic-share .social-block .st_sharethis_button, .social-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-block .form-submit, .social-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-block input[type=submit], .signup-block .btn, .signup-block .form-submit, .signup-block .topic-share .st_sharethis_button, .topic-share .signup-block .st_sharethis_button, .signup-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .signup-block .form-submit, .signup-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-block input[type=submit], .slider-block .btn, .slider-block .form-submit, .slider-block .topic-share .st_sharethis_button, .topic-share .slider-block .st_sharethis_button, .slider-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .slider-block .form-submit, .slider-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-block input[type=submit], .my-voice-block .btn, .my-voice-block .form-submit, .my-voice-block .topic-share .st_sharethis_button, .topic-share .my-voice-block .st_sharethis_button, .my-voice-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .my-voice-block .form-submit, .my-voice-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-block input[type=submit], .social-action-block .btn, .social-action-block .form-submit, .social-action-block .topic-share .st_sharethis_button, .topic-share .social-action-block .st_sharethis_button, .social-action-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-action-block .form-submit, .social-action-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-action-block input[type=submit] {
   font-size: 20px;
   font-size: 1.25em;
   padding: 11px 26px;
 }
 @media (max-width: 767px) {
   /* line 855, ../scss/source/_content.scss */
-  .social-block .btn, .social-block .form-submit, .social-block .topic-share .st_sharethis_button, .topic-share .social-block .st_sharethis_button, .social-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-block .form-submit, .signup-block .btn, .signup-block .form-submit, .signup-block .topic-share .st_sharethis_button, .topic-share .signup-block .st_sharethis_button, .signup-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .signup-block .form-submit, .slider-block .btn, .slider-block .form-submit, .slider-block .topic-share .st_sharethis_button, .topic-share .slider-block .st_sharethis_button, .slider-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .slider-block .form-submit, .my-voice-block .btn, .my-voice-block .form-submit, .my-voice-block .topic-share .st_sharethis_button, .topic-share .my-voice-block .st_sharethis_button, .my-voice-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .my-voice-block .form-submit, .social-action-block .btn, .social-action-block .form-submit, .social-action-block .topic-share .st_sharethis_button, .topic-share .social-action-block .st_sharethis_button, .social-action-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-action-block .form-submit {
+  .social-block .btn, .social-block .form-submit, .social-block .topic-share .st_sharethis_button, .topic-share .social-block .st_sharethis_button, .social-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-block .form-submit, .social-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-block input[type=submit], .signup-block .btn, .signup-block .form-submit, .signup-block .topic-share .st_sharethis_button, .topic-share .signup-block .st_sharethis_button, .signup-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .signup-block .form-submit, .signup-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-block input[type=submit], .slider-block .btn, .slider-block .form-submit, .slider-block .topic-share .st_sharethis_button, .topic-share .slider-block .st_sharethis_button, .slider-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .slider-block .form-submit, .slider-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-block input[type=submit], .my-voice-block .btn, .my-voice-block .form-submit, .my-voice-block .topic-share .st_sharethis_button, .topic-share .my-voice-block .st_sharethis_button, .my-voice-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .my-voice-block .form-submit, .my-voice-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-block input[type=submit], .social-action-block .btn, .social-action-block .form-submit, .social-action-block .topic-share .st_sharethis_button, .topic-share .social-action-block .st_sharethis_button, .social-action-block .filter-slide .button-holder .form-submit, .filter-slide .button-holder .social-action-block .form-submit, .social-action-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-action-block input[type=submit] {
     padding: 6px 19px;
     font-size: 18px;
   }
@@ -8523,11 +8523,11 @@ a:hover.tooltips span.tooltip-content {
 }
 @media (max-width: 767px) {
   /* line 900, ../scss/source/_content.scss */
-  .social-block .block .btn, .social-block .block .form-submit, .social-block .block .topic-share .st_sharethis_button, .topic-share .social-block .block .st_sharethis_button, .signup-block .block .btn, .signup-block .block .form-submit, .signup-block .block .topic-share .st_sharethis_button, .topic-share .signup-block .block .st_sharethis_button, .slider-block .block .btn, .slider-block .block .form-submit, .slider-block .block .topic-share .st_sharethis_button, .topic-share .slider-block .block .st_sharethis_button, .my-voice-block .block .btn, .my-voice-block .block .form-submit, .my-voice-block .block .topic-share .st_sharethis_button, .topic-share .my-voice-block .block .st_sharethis_button, .social-action-block .block .btn, .social-action-block .block .form-submit, .social-action-block .block .topic-share .st_sharethis_button, .topic-share .social-action-block .block .st_sharethis_button {
+  .social-block .block .btn, .social-block .block .form-submit, .social-block .block .topic-share .st_sharethis_button, .topic-share .social-block .block .st_sharethis_button, .social-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-block .block input[type=submit], .signup-block .block .btn, .signup-block .block .form-submit, .signup-block .block .topic-share .st_sharethis_button, .topic-share .signup-block .block .st_sharethis_button, .signup-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-block .block input[type=submit], .slider-block .block .btn, .slider-block .block .form-submit, .slider-block .block .topic-share .st_sharethis_button, .topic-share .slider-block .block .st_sharethis_button, .slider-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-block .block input[type=submit], .my-voice-block .block .btn, .my-voice-block .block .form-submit, .my-voice-block .block .topic-share .st_sharethis_button, .topic-share .my-voice-block .block .st_sharethis_button, .my-voice-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-block .block input[type=submit], .social-action-block .block .btn, .social-action-block .block .form-submit, .social-action-block .block .topic-share .st_sharethis_button, .topic-share .social-action-block .block .st_sharethis_button, .social-action-block .block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-action-block .block input[type=submit] {
     width: 100%;
   }
   /* line 903, ../scss/source/_content.scss */
-  .social-block .block .btn .icon-Rightarrow, .social-block .block .form-submit .icon-Rightarrow, .social-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-block .block .st_sharethis_button .icon-Rightarrow, .social-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .btn .form-actions, .social-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .form-submit .form-actions, .social-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .social-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .social-block .block .st_sharethis_button .form-actions, .signup-block .block .btn .icon-Rightarrow, .signup-block .block .form-submit .icon-Rightarrow, .signup-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .signup-block .block .st_sharethis_button .icon-Rightarrow, .signup-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .btn .form-actions, .signup-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .form-submit .form-actions, .signup-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .signup-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .signup-block .block .st_sharethis_button .form-actions, .slider-block .block .btn .icon-Rightarrow, .slider-block .block .form-submit .icon-Rightarrow, .slider-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .slider-block .block .st_sharethis_button .icon-Rightarrow, .slider-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .btn .form-actions, .slider-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .form-submit .form-actions, .slider-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .slider-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .slider-block .block .st_sharethis_button .form-actions, .my-voice-block .block .btn .icon-Rightarrow, .my-voice-block .block .form-submit .icon-Rightarrow, .my-voice-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .my-voice-block .block .st_sharethis_button .icon-Rightarrow, .my-voice-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .btn .form-actions, .my-voice-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .form-submit .form-actions, .my-voice-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .my-voice-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .my-voice-block .block .st_sharethis_button .form-actions, .social-action-block .block .btn .icon-Rightarrow, .social-action-block .block .form-submit .icon-Rightarrow, .social-action-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-action-block .block .st_sharethis_button .icon-Rightarrow, .social-action-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .btn .form-actions, .social-action-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .form-submit .form-actions, .social-action-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .social-action-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .social-action-block .block .st_sharethis_button .form-actions {
+  .social-block .block .btn .icon-Rightarrow, .social-block .block .form-submit .icon-Rightarrow, .social-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-block .block .st_sharethis_button .icon-Rightarrow, .social-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .social-block .block input[type=submit] .icon-Rightarrow, .social-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .btn .form-actions, .social-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .form-submit .form-actions, .social-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .social-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .social-block .block .st_sharethis_button .form-actions, .social-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .social-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .social-block .block input[type=submit] .form-actions, .signup-block .block .btn .icon-Rightarrow, .signup-block .block .form-submit .icon-Rightarrow, .signup-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .signup-block .block .st_sharethis_button .icon-Rightarrow, .signup-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .signup-block .block input[type=submit] .icon-Rightarrow, .signup-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .btn .form-actions, .signup-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .form-submit .form-actions, .signup-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .signup-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .signup-block .block .st_sharethis_button .form-actions, .signup-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .signup-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .signup-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .signup-block .block input[type=submit] .form-actions, .slider-block .block .btn .icon-Rightarrow, .slider-block .block .form-submit .icon-Rightarrow, .slider-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .slider-block .block .st_sharethis_button .icon-Rightarrow, .slider-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .slider-block .block input[type=submit] .icon-Rightarrow, .slider-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .btn .form-actions, .slider-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .form-submit .form-actions, .slider-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .slider-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .slider-block .block .st_sharethis_button .form-actions, .slider-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .slider-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .slider-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .slider-block .block input[type=submit] .form-actions, .my-voice-block .block .btn .icon-Rightarrow, .my-voice-block .block .form-submit .icon-Rightarrow, .my-voice-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .my-voice-block .block .st_sharethis_button .icon-Rightarrow, .my-voice-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .my-voice-block .block input[type=submit] .icon-Rightarrow, .my-voice-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .btn .form-actions, .my-voice-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .form-submit .form-actions, .my-voice-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .my-voice-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .my-voice-block .block .st_sharethis_button .form-actions, .my-voice-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .my-voice-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .my-voice-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .my-voice-block .block input[type=submit] .form-actions, .social-action-block .block .btn .icon-Rightarrow, .social-action-block .block .form-submit .icon-Rightarrow, .social-action-block .block .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .social-action-block .block .st_sharethis_button .icon-Rightarrow, .social-action-block .block #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .social-action-block .block input[type=submit] .icon-Rightarrow, .social-action-block .block .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .btn .form-actions, .social-action-block .block .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .form-submit .form-actions, .social-action-block .block .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block .topic-share .st_sharethis_button .form-actions, .topic-share .social-action-block .block .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .social-action-block .block .st_sharethis_button .form-actions, .social-action-block .block #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .social-action-block .block #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .social-action-block .block input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .social-action-block .block input[type=submit] .form-actions {
     display: none;
   }
 }
@@ -8561,7 +8561,7 @@ a:hover.tooltips span.tooltip-content {
   float: left;
 }
 /* line 929, ../scss/source/_content.scss */
-.my-voice-block input[type=submit].btn-pink, .my-voice-block .webform_client_form_74621 .form-action input[type=submit], .webform_client_form_74621 .form-action .my-voice-block input[type=submit] {
+.my-voice-block input[type=submit].btn-pink, .my-voice-block #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-block input[type=submit] {
   border: 0;
   border-bottom: 5px solid #b3066b;
 }
@@ -8833,15 +8833,15 @@ a:hover.tooltips span.tooltip-content {
   color: #ffffff;
 }
 /* line 1146, ../scss/source/_content.scss */
-.signup-columns .signup-form .btn, .signup-columns #content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns .signup-columns .webform-client-form .btn, .signup-columns .signup-form .form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .form-submit, .signup-columns .signup-form .topic-share .st_sharethis_button, .topic-share .signup-columns .signup-form .st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .st_sharethis_button, .my-voice-columns .signup-form .btn, #content_top .my-voice-columns .webform-client-form .btn, .my-voice-columns .signup-form .form-submit, #content_top .my-voice-columns .webform-client-form .form-submit, .my-voice-columns .signup-form .topic-share .st_sharethis_button, .topic-share .my-voice-columns .signup-form .st_sharethis_button, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button, community-columns .signup-form .btn, community-columns #content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns community-columns .webform-client-form .btn, community-columns .signup-form .form-submit, community-columns #content_top .my-voice-columns .webform-client-form .form-submit, #content_top .my-voice-columns community-columns .webform-client-form .form-submit, community-columns .signup-form .topic-share .st_sharethis_button, .topic-share community-columns .signup-form .st_sharethis_button, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .st_sharethis_button, community-columns .signup-form .filter-slide .button-holder .form-submit, .filter-slide .button-holder community-columns .signup-form .form-submit {
+.signup-columns .signup-form .btn, .signup-columns #content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns .signup-columns .webform-client-form .btn, .signup-columns .signup-form .form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .form-submit, .signup-columns .signup-form .topic-share .st_sharethis_button, .topic-share .signup-columns .signup-form .st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .st_sharethis_button, .signup-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns .signup-form input[type=submit], .signup-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns .signup-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .signup-columns .webform-client-form input[type=submit], .my-voice-columns .signup-form .btn, #content_top .my-voice-columns .webform-client-form .btn, .my-voice-columns .signup-form .form-submit, #content_top .my-voice-columns .webform-client-form .form-submit, .my-voice-columns .signup-form .topic-share .st_sharethis_button, .topic-share .my-voice-columns .signup-form .st_sharethis_button, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button, .my-voice-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-columns .signup-form input[type=submit], #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .webform-client-form input[type=submit], community-columns .signup-form .btn, community-columns #content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns community-columns .webform-client-form .btn, community-columns .signup-form .form-submit, community-columns #content_top .my-voice-columns .webform-client-form .form-submit, #content_top .my-voice-columns community-columns .webform-client-form .form-submit, community-columns .signup-form .topic-share .st_sharethis_button, .topic-share community-columns .signup-form .st_sharethis_button, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .st_sharethis_button, community-columns .signup-form .filter-slide .button-holder .form-submit, .filter-slide .button-holder community-columns .signup-form .form-submit, community-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action community-columns .signup-form input[type=submit], community-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action community-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns community-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns community-columns .webform-client-form input[type=submit] {
   float: left;
 }
 /* line 1148, ../scss/source/_content.scss */
-.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button, .my-voice-columns .signup-form .btn.btn-left, #content_top .my-voice-columns .webform-client-form .btn.btn-left, .my-voice-columns .signup-form .btn-left.form-submit, #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, .my-voice-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .my-voice-columns .signup-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, community-columns .signup-form .btn.btn-left, community-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns community-columns .webform-client-form .btn.btn-left, community-columns .signup-form .btn-left.form-submit, community-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns community-columns .webform-client-form .btn-left.form-submit, community-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share community-columns .signup-form .btn-left.st_sharethis_button, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .btn-left.st_sharethis_button {
+.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button, .signup-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns .signup-form input[type=submit], .signup-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns .signup-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .signup-columns .webform-client-form input[type=submit], .my-voice-columns .signup-form .btn.btn-left, #content_top .my-voice-columns .webform-client-form .btn.btn-left, .my-voice-columns .signup-form .btn-left.form-submit, #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, .my-voice-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .my-voice-columns .signup-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, .my-voice-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .my-voice-columns .signup-form input[type=submit], #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .webform-client-form input[type=submit], community-columns .signup-form .btn.btn-left, community-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns community-columns .webform-client-form .btn.btn-left, community-columns .signup-form .btn-left.form-submit, community-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns community-columns .webform-client-form .btn-left.form-submit, community-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share community-columns .signup-form .btn-left.st_sharethis_button, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .btn-left.st_sharethis_button, community-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action community-columns .signup-form input[type=submit], community-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action community-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns community-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns community-columns .webform-client-form input[type=submit] {
   margin-right: 27px;
 }
 /* line 1149, ../scss/source/_content.scss */
-.signup-columns .signup-form .btn span, .signup-columns #content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns .signup-columns .webform-client-form .btn span, .signup-columns .signup-form .form-submit span, .signup-columns #content_top .my-voice-columns .webform-client-form .form-submit span, #content_top .my-voice-columns .signup-columns .webform-client-form .form-submit span, .signup-columns .signup-form .topic-share .st_sharethis_button span, .topic-share .signup-columns .signup-form .st_sharethis_button span, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .st_sharethis_button span, .my-voice-columns .signup-form .btn span, #content_top .my-voice-columns .webform-client-form .btn span, .my-voice-columns .signup-form .form-submit span, #content_top .my-voice-columns .webform-client-form .form-submit span, .my-voice-columns .signup-form .topic-share .st_sharethis_button span, .topic-share .my-voice-columns .signup-form .st_sharethis_button span, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, community-columns .signup-form .btn span, community-columns #content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns community-columns .webform-client-form .btn span, community-columns .signup-form .form-submit span, community-columns #content_top .my-voice-columns .webform-client-form .form-submit span, #content_top .my-voice-columns community-columns .webform-client-form .form-submit span, community-columns .signup-form .topic-share .st_sharethis_button span, .topic-share community-columns .signup-form .st_sharethis_button span, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .st_sharethis_button span, community-columns .signup-form .filter-slide .button-holder .form-submit span, .filter-slide .button-holder community-columns .signup-form .form-submit span {
+.signup-columns .signup-form .btn span, .signup-columns #content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns .signup-columns .webform-client-form .btn span, .signup-columns .signup-form .form-submit span, .signup-columns #content_top .my-voice-columns .webform-client-form .form-submit span, #content_top .my-voice-columns .signup-columns .webform-client-form .form-submit span, .signup-columns .signup-form .topic-share .st_sharethis_button span, .topic-share .signup-columns .signup-form .st_sharethis_button span, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .st_sharethis_button span, .signup-columns .signup-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action .signup-columns .signup-form input[type=submit] span, .signup-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action .signup-columns #content_top .my-voice-columns .webform-client-form input[type=submit] span, #content_top .my-voice-columns .signup-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action #content_top .my-voice-columns .signup-columns .webform-client-form input[type=submit] span, .my-voice-columns .signup-form .btn span, #content_top .my-voice-columns .webform-client-form .btn span, .my-voice-columns .signup-form .form-submit span, #content_top .my-voice-columns .webform-client-form .form-submit span, .my-voice-columns .signup-form .topic-share .st_sharethis_button span, .topic-share .my-voice-columns .signup-form .st_sharethis_button span, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, .my-voice-columns .signup-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action .my-voice-columns .signup-form input[type=submit] span, #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action #content_top .my-voice-columns .webform-client-form input[type=submit] span, community-columns .signup-form .btn span, community-columns #content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns community-columns .webform-client-form .btn span, community-columns .signup-form .form-submit span, community-columns #content_top .my-voice-columns .webform-client-form .form-submit span, #content_top .my-voice-columns community-columns .webform-client-form .form-submit span, community-columns .signup-form .topic-share .st_sharethis_button span, .topic-share community-columns .signup-form .st_sharethis_button span, community-columns #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share community-columns #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns community-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns community-columns .webform-client-form .st_sharethis_button span, community-columns .signup-form .filter-slide .button-holder .form-submit span, .filter-slide .button-holder community-columns .signup-form .form-submit span, community-columns .signup-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action community-columns .signup-form input[type=submit] span, community-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action community-columns #content_top .my-voice-columns .webform-client-form input[type=submit] span, #content_top .my-voice-columns community-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit] span, #webform_client_form_74621 .form-action #content_top .my-voice-columns community-columns .webform-client-form input[type=submit] span {
   padding-left: 15px;
 }
 
@@ -8883,7 +8883,7 @@ a:hover.tooltips span.tooltip-content {
   width: 100%;
 }
 /* line 1190, ../scss/source/_content.scss */
-.slider-container .share-columns .btn, .slider-container .share-columns .form-submit, .slider-container .share-columns .topic-share .st_sharethis_button, .topic-share .slider-container .share-columns .st_sharethis_button, .slider-container .support-columns .btn, .slider-container .support-columns .form-submit, .slider-container .support-columns .topic-share .st_sharethis_button, .topic-share .slider-container .support-columns .st_sharethis_button {
+.slider-container .share-columns .btn, .slider-container .share-columns .form-submit, .slider-container .share-columns .topic-share .st_sharethis_button, .topic-share .slider-container .share-columns .st_sharethis_button, .slider-container .share-columns #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-container .share-columns input[type=submit], .slider-container .support-columns .btn, .slider-container .support-columns .form-submit, .slider-container .support-columns .topic-share .st_sharethis_button, .topic-share .slider-container .support-columns .st_sharethis_button, .slider-container .support-columns #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-container .support-columns input[type=submit] {
   width: 100%;
   margin-top: 15px;
 }
@@ -8906,7 +8906,7 @@ a:hover.tooltips span.tooltip-content {
   margin-left: 3.2%;
 }
 /* line 1216, ../scss/source/_content.scss */
-.slider-container .support-columns .col-3:nth-child(2) .btn, .slider-container .support-columns .col-3:nth-child(2) .form-submit, .slider-container .support-columns .col-3:nth-child(2) .topic-share .st_sharethis_button, .topic-share .slider-container .support-columns .col-3:nth-child(2) .st_sharethis_button {
+.slider-container .support-columns .col-3:nth-child(2) .btn, .slider-container .support-columns .col-3:nth-child(2) .form-submit, .slider-container .support-columns .col-3:nth-child(2) .topic-share .st_sharethis_button, .topic-share .slider-container .support-columns .col-3:nth-child(2) .st_sharethis_button, .slider-container .support-columns .col-3:nth-child(2) #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .slider-container .support-columns .col-3:nth-child(2) input[type=submit] {
   width: 45%;
   margin-right: 10px;
   margin-bottom: 0;
@@ -8993,11 +8993,11 @@ a:hover.tooltips span.tooltip-content {
   padding: 25px 0 105px;
 }
 /* line 1300, ../scss/source/_content.scss */
-.read-more .btn, .read-more .form-submit, .read-more .topic-share .st_sharethis_button, .topic-share .read-more .st_sharethis_button, .read-more .filter-slide .button-holder .form-submit, .filter-slide .button-holder .read-more .form-submit {
+.read-more .btn, .read-more .form-submit, .read-more .topic-share .st_sharethis_button, .topic-share .read-more .st_sharethis_button, .read-more .filter-slide .button-holder .form-submit, .filter-slide .button-holder .read-more .form-submit, .read-more #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .read-more input[type=submit] {
   padding: 10px 19px;
 }
 /* line 1302, ../scss/source/_content.scss */
-.read-more .btn .icon-Rightarrow, .read-more .form-submit .icon-Rightarrow, .read-more .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .read-more .st_sharethis_button .icon-Rightarrow, .read-more .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .btn .form-actions, .read-more .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .form-submit .form-actions, .read-more .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .topic-share .st_sharethis_button .form-actions, .topic-share .read-more .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .read-more .st_sharethis_button .form-actions {
+.read-more .btn .icon-Rightarrow, .read-more .form-submit .icon-Rightarrow, .read-more .topic-share .st_sharethis_button .icon-Rightarrow, .topic-share .read-more .st_sharethis_button .icon-Rightarrow, .read-more #webform_client_form_74621 .form-action input[type=submit] .icon-Rightarrow, #webform_client_form_74621 .form-action .read-more input[type=submit] .icon-Rightarrow, .read-more .btn #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .btn .form-actions, .read-more .form-submit #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .form-submit .form-actions, .read-more .topic-share .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more .topic-share .st_sharethis_button .form-actions, .topic-share .read-more .st_sharethis_button #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .topic-share .read-more .st_sharethis_button .form-actions, .read-more #webform_client_form_74621 .form-action input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns .read-more #webform_client_form_74621 .form-action input[type=submit] .form-actions, #webform_client_form_74621 .form-action .read-more input[type=submit] #content_top .my-voice-columns .form-actions, #content_top .my-voice-columns #webform_client_form_74621 .form-action .read-more input[type=submit] .form-actions {
   padding-left: 15px;
 }
 
@@ -9046,7 +9046,7 @@ a:hover.tooltips span.tooltip-content {
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -9301,7 +9301,7 @@ table {
 
 /* button */
 /* line 7, ../scss/source/_buttons.scss */
-.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit {
+.btn, .form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   display: inline-block;
   border: none;
   padding: 5px 19px;
@@ -9317,7 +9317,7 @@ table {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
 }
 /* line 22, ../scss/source/_buttons.scss */
-.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em {
+.btn em, .form-submit em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em, #webform_client_form_74621 .form-action input[type=submit] em {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -9326,7 +9326,7 @@ table {
   margin-left: 10px;
 }
 /* line 30, ../scss/source/_buttons.scss */
-.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-green, .btn-green.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-green[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   border-bottom: 5px solid #007e2a;
   background: #00a837;
 }
@@ -9335,12 +9335,12 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
+.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
 /* line 41, ../scss/source/_buttons.scss */
-.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit {
+.btn.btn-gray, .btn-gray.form-submit, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit, #webform_client_form_74621 .form-action input.btn-gray[type=submit] {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
   background: #ffffff;
@@ -9348,32 +9348,32 @@ table {
   color: #636c73;
 }
 /* line 47, ../scss/source/_buttons.scss */
-.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover {
+.btn.btn-gray:hover, .btn-gray.form-submit:hover, .topic-share .btn-gray.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:hover {
   color: #636c73;
 }
 /* line 50, ../scss/source/_buttons.scss */
-.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus {
+.btn.btn-gray:active, .btn-gray.form-submit:active, .topic-share .btn-gray.st_sharethis_button:active, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:active, .btn.btn-gray:focus, .btn-gray.form-submit:focus, .topic-share .btn-gray.st_sharethis_button:focus, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
 /* line 55, ../scss/source/_buttons.scss */
-.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited {
+.btn.btn-gray:visited, .btn-gray.form-submit:visited, .topic-share .btn-gray.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-gray[type=submit]:visited {
   text-decoration: none;
   color: #636c73;
 }
 /* line 60, ../scss/source/_buttons.scss */
-.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+.btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
   /* line 60, ../scss/source/_buttons.scss */
-  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+  .btn.bt-left, .bt-left.form-submit, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, #webform_client_form_74621 .form-action input.bt-left[type=submit] {
     margin: 0 0 0 11px;
   }
 }
 /* line 66, ../scss/source/_buttons.scss */
-.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+.btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
   display: inline-block;
   vertical-align: top;
   background: none;
@@ -9388,36 +9388,36 @@ table {
   margin: 0;
 }
 /* line 79, ../scss/source/_buttons.scss */
-.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+.btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
   /* line 66, ../scss/source/_buttons.scss */
-  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+  .btn.btn-transparent, .btn-transparent.form-submit, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] {
     font-size: 14px;
     padding: 7px 18px;
   }
   /* line 85, ../scss/source/_buttons.scss */
-  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+  .btn.btn-transparent em, .btn-transparent.form-submit em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, #webform_client_form_74621 .form-action input.btn-transparent[type=submit] em {
     padding-left: 5px;
   }
 }
 /* line 90, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover {
+.btn.btn-transparent:hover, .btn-transparent.form-submit:hover, .topic-share .btn-transparent.st_sharethis_button:hover, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover {
   margin: 0;
 }
 /* line 92, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange {
+.btn.btn-transparent:hover.orange, .btn-transparent.form-submit:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.orange {
   border: 2px solid #ffffff;
   background: #f15500;
 }
 /* line 96, ../scss/source/_buttons.scss */
-.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender {
+.btn.btn-transparent:hover.lavender, .btn-transparent.form-submit:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:hover.lavender {
   border: 2px solid #ffffff;
   background: #734889;
 }
 /* line 102, ../scss/source/_buttons.scss */
-.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited {
+.btn.btn-transparent:visited, .btn-transparent.form-submit:visited, .topic-share .btn-transparent.st_sharethis_button:visited, #webform_client_form_74621 .form-action input.btn-transparent[type=submit]:visited {
   text-decoration: none;
   border: 2px solid #ffffff;
   background: #f15500;
@@ -9425,35 +9425,35 @@ table {
   color: #ffffff;
 }
 /* line 110, ../scss/source/_buttons.scss */
-.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit {
+.btn.btn-left, .btn-left.form-submit, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit, #webform_client_form_74621 .form-action input[type=submit] {
   float: left;
 }
 /* line 113, ../scss/source/_buttons.scss */
-.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-right, .btn-right.form-submit, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, #webform_client_form_74621 .form-action input.btn-right[type=submit], #webform_client_form_74621 .form-action .topic-share input[type=submit].st_sharethis_button, .topic-share #webform_client_form_74621 .form-action input[type=submit].st_sharethis_button {
   float: right;
 }
 /* line 116, ../scss/source/_buttons.scss */
-.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover {
+.btn:hover, .form-submit:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover, #webform_client_form_74621 .form-action input[type=submit]:hover {
   border-bottom-width: 3px;
   margin-top: 2px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 122, ../scss/source/_buttons.scss */
-.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active {
+.btn:active, .form-submit:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active, #webform_client_form_74621 .form-action input[type=submit]:active {
   border-bottom-width: 0px;
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 128, ../scss/source/_buttons.scss */
-.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited {
+.btn:visited, .form-submit:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited, #webform_client_form_74621 .form-action input[type=submit]:visited {
   text-decoration: none;
   color: #ffffff;
 }
 
 /* line 3, ../scss/source/_markup-mixins.scss */
-.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
+.btn:after, .form-submit:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, #webform_client_form_74621 .form-action input[type=submit]:after, .top-bar .holder:after, #header .header-top .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption .region-footer-copyright .social-holder h2.title-second span:after, .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .action-block .holder:after, .page-main:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after, #footer .holder:after, #footer .social-holder:after, .my-voice-intro:after, .my-voice-main .sort-block:after, .page-node-74596 .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after {
   content: " ";
   display: block;
   clear: both;
@@ -9979,7 +9979,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
   margin-bottom: 0.5em;
 }
 /* line 215, ../scss/source/_profile.scss */
-.profile-body .about-me .btn, .profile-body .about-me .form-submit, .profile-body .about-me .topic-share .st_sharethis_button, .topic-share .profile-body .about-me .st_sharethis_button {
+.profile-body .about-me .btn, .profile-body .about-me .form-submit, .profile-body .about-me .topic-share .st_sharethis_button, .topic-share .profile-body .about-me .st_sharethis_button, .profile-body .about-me #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .profile-body .about-me input[type=submit] {
   font-size: 1.3em;
   line-height: 1.7em;
   padding: 0.4em 1.4em;
@@ -9987,13 +9987,13 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 215, ../scss/source/_profile.scss */
-  .profile-body .about-me .btn, .profile-body .about-me .form-submit, .profile-body .about-me .topic-share .st_sharethis_button, .topic-share .profile-body .about-me .st_sharethis_button {
+  .profile-body .about-me .btn, .profile-body .about-me .form-submit, .profile-body .about-me .topic-share .st_sharethis_button, .topic-share .profile-body .about-me .st_sharethis_button, .profile-body .about-me #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .profile-body .about-me input[type=submit] {
     font-size: 1.4em;
     line-height: 1.9em;
   }
 }
 /* line 224, ../scss/source/_profile.scss */
-.profile-body .about-me .btn em, .profile-body .about-me .form-submit em, .profile-body .about-me .topic-share .st_sharethis_button em, .topic-share .profile-body .about-me .st_sharethis_button em {
+.profile-body .about-me .btn em, .profile-body .about-me .form-submit em, .profile-body .about-me .topic-share .st_sharethis_button em, .topic-share .profile-body .about-me .st_sharethis_button em, .profile-body .about-me #webform_client_form_74621 .form-action input[type=submit] em, #webform_client_form_74621 .form-action .profile-body .about-me input[type=submit] em {
   margin-left: 20px;
   top: 8px;
 }
@@ -10008,12 +10008,12 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
   }
 }
 /* line 237, ../scss/source/_profile.scss */
-.profile-body .connect .btn, .profile-body .connect .form-submit, .profile-body .connect .topic-share .st_sharethis_button, .topic-share .profile-body .connect .st_sharethis_button {
+.profile-body .connect .btn, .profile-body .connect .form-submit, .profile-body .connect .topic-share .st_sharethis_button, .topic-share .profile-body .connect .st_sharethis_button, .profile-body .connect #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .profile-body .connect input[type=submit] {
   margin-right: 1.2em;
 }
 @media (max-width: 767px) {
   /* line 241, ../scss/source/_profile.scss */
-  .profile-body .connect .btn, .profile-body .connect .form-submit, .profile-body .connect .topic-share .st_sharethis_button, .topic-share .profile-body .connect .st_sharethis_button {
+  .profile-body .connect .btn, .profile-body .connect .form-submit, .profile-body .connect .topic-share .st_sharethis_button, .topic-share .profile-body .connect .st_sharethis_button, .profile-body .connect #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .profile-body .connect input[type=submit] {
     font-size: 1.3em;
     line-height: 1.9em;
   }
@@ -10154,7 +10154,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 
 @media (max-width: 767px) {
   /* line 364, ../scss/source/_profile.scss */
-  body.profile .btn, .page-user .btn, body.profile .form-submit, .page-user .form-submit, body.profile .topic-share .st_sharethis_button, .topic-share body.profile .st_sharethis_button, .page-user .topic-share .st_sharethis_button, .topic-share .page-user .st_sharethis_button, body.profile .filter-slide .button-holder .form-submit, .filter-slide .button-holder body.profile .form-submit, .page-user .filter-slide .button-holder .form-submit, .filter-slide .button-holder .page-user .form-submit {
+  body.profile .btn, .page-user .btn, body.profile .form-submit, .page-user .form-submit, body.profile .topic-share .st_sharethis_button, .topic-share body.profile .st_sharethis_button, .page-user .topic-share .st_sharethis_button, .topic-share .page-user .st_sharethis_button, body.profile .filter-slide .button-holder .form-submit, .filter-slide .button-holder body.profile .form-submit, .page-user .filter-slide .button-holder .form-submit, .filter-slide .button-holder .page-user .form-submit, body.profile #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action body.profile input[type=submit], .page-user #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .page-user input[type=submit] {
     width: 100%;
     margin: 0.6em 0;
   }
@@ -10386,7 +10386,7 @@ ul.tabs-primary li.is-active {
   box-shadow: 0px 0px 0px transparent;
 }
 /* line 25, ../scss/_stream.scss */
-.home-stream .btn, .home-stream .form-submit, .home-stream .topic-share .st_sharethis_button, .topic-share .home-stream .st_sharethis_button, .home-stream .filter-slide .button-holder .form-submit, .filter-slide .button-holder .home-stream .form-submit {
+.home-stream .btn, .home-stream .form-submit, .home-stream .topic-share .st_sharethis_button, .topic-share .home-stream .st_sharethis_button, .home-stream .filter-slide .button-holder .form-submit, .filter-slide .button-holder .home-stream .form-submit, .home-stream #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .home-stream input[type=submit] {
   padding: 12px 19px;
 }
 
@@ -10406,7 +10406,7 @@ ul.tabs-primary li.is-active {
   }
 }
 /* line 46, ../scss/_stream.scss */
-.understanding-autism .btn, .understanding-autism .form-submit, .understanding-autism .topic-share .st_sharethis_button, .topic-share .understanding-autism .st_sharethis_button, .understanding-autism .filter-slide .button-holder .form-submit, .filter-slide .button-holder .understanding-autism .form-submit {
+.understanding-autism .btn, .understanding-autism .form-submit, .understanding-autism .topic-share .st_sharethis_button, .topic-share .understanding-autism .st_sharethis_button, .understanding-autism .filter-slide .button-holder .form-submit, .filter-slide .button-holder .understanding-autism .form-submit, .understanding-autism #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .understanding-autism input[type=submit] {
   padding: 12px 19px;
 }
 
@@ -10416,7 +10416,7 @@ ul.tabs-primary li.is-active {
 }
 
 /* line 57, ../scss/_stream.scss */
-.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button {
+.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button, .signup-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns .signup-form input[type=submit], .signup-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns .signup-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .signup-columns .webform-client-form input[type=submit] {
   margin-right: 100px;
 }
 
@@ -10505,7 +10505,7 @@ ul.tabs-primary li.is-active {
   }
 }
 /* line 36, ../scss/_social.scss */
-.social-block .block .block-youtube .btn, .social-block .block .block-youtube .form-submit, .social-block .block .block-youtube .topic-share .st_sharethis_button, .topic-share .social-block .block .block-youtube .st_sharethis_button {
+.social-block .block .block-youtube .btn, .social-block .block .block-youtube .form-submit, .social-block .block .block-youtube .topic-share .st_sharethis_button, .topic-share .social-block .block .block-youtube .st_sharethis_button, .social-block .block .block-youtube #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .social-block .block .block-youtube input[type=submit] {
   padding: 16px 0;
 }
 @media (max-width: 767px) {
@@ -10644,7 +10644,7 @@ ul.tabs-primary li.is-active {
   box-shadow: 0px 0px 0px transparent;
 }
 /* line 25, ../scss/_stream.scss */
-.home-stream .btn, .home-stream .form-submit, .home-stream .topic-share .st_sharethis_button, .topic-share .home-stream .st_sharethis_button, .home-stream .filter-slide .button-holder .form-submit, .filter-slide .button-holder .home-stream .form-submit {
+.home-stream .btn, .home-stream .form-submit, .home-stream .topic-share .st_sharethis_button, .topic-share .home-stream .st_sharethis_button, .home-stream .filter-slide .button-holder .form-submit, .filter-slide .button-holder .home-stream .form-submit, .home-stream #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .home-stream input[type=submit] {
   padding: 12px 19px;
 }
 
@@ -10664,7 +10664,7 @@ ul.tabs-primary li.is-active {
   }
 }
 /* line 46, ../scss/_stream.scss */
-.understanding-autism .btn, .understanding-autism .form-submit, .understanding-autism .topic-share .st_sharethis_button, .topic-share .understanding-autism .st_sharethis_button, .understanding-autism .filter-slide .button-holder .form-submit, .filter-slide .button-holder .understanding-autism .form-submit {
+.understanding-autism .btn, .understanding-autism .form-submit, .understanding-autism .topic-share .st_sharethis_button, .topic-share .understanding-autism .st_sharethis_button, .understanding-autism .filter-slide .button-holder .form-submit, .filter-slide .button-holder .understanding-autism .form-submit, .understanding-autism #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .understanding-autism input[type=submit] {
   padding: 12px 19px;
 }
 
@@ -10674,7 +10674,7 @@ ul.tabs-primary li.is-active {
 }
 
 /* line 57, ../scss/_stream.scss */
-.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button {
+.signup-columns .signup-form .btn.btn-left, .signup-columns #content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .signup-columns .webform-client-form .btn.btn-left, .signup-columns .signup-form .btn-left.form-submit, .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.form-submit, .signup-columns .signup-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns .signup-form .btn-left.st_sharethis_button, .signup-columns #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share .signup-columns #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .signup-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .signup-columns .webform-client-form .btn-left.st_sharethis_button, .signup-columns .signup-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns .signup-form input[type=submit], .signup-columns #content_top .my-voice-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .signup-columns #content_top .my-voice-columns .webform-client-form input[type=submit], #content_top .my-voice-columns .signup-columns .webform-client-form #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action #content_top .my-voice-columns .signup-columns .webform-client-form input[type=submit] {
   margin-right: 100px;
 }
 
@@ -11397,7 +11397,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
 }
 
 /* line 593, ../scss/_topic-forum.scss */
-.view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .form-submit, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button, .view-display-id-stream .action-block .block-share .btn:hover, .view-display-id-stream .action-block .block-share .form-submit:hover, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button:hover, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button:hover {
+.view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .form-submit, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button, .view-display-id-stream .action-block .block-share #webform_client_form_74621 .form-action input[type=submit], #webform_client_form_74621 .form-action .view-display-id-stream .action-block .block-share input[type=submit], .view-display-id-stream .action-block .block-share .btn:hover, .view-display-id-stream .action-block .block-share .form-submit:hover, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button:hover, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button:hover, .view-display-id-stream .action-block .block-share #webform_client_form_74621 .form-action input[type=submit]:hover, #webform_client_form_74621 .form-action .view-display-id-stream .action-block .block-share input[type=submit]:hover {
   margin: 182px 10px 0 0;
 }
 
@@ -11495,12 +11495,12 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   font-size: 16px;
 }
 
-/* line 713, ../scss/_topic-forum.scss */
+/* line 715, ../scss/_topic-forum.scss */
 .views-row-first .my-voice-pos .feature-holder {
   display: inherit;
 }
 
-/* line 719, ../scss/_topic-forum.scss */
+/* line 721, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder {
   display: none;
   position: absolute;
@@ -11510,16 +11510,16 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   background: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 719, ../scss/_topic-forum.scss */
+  /* line 721, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder {
     left: 15px;
   }
 }
-/* line 729, ../scss/_topic-forum.scss */
+/* line 731, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.hover .text {
   display: block;
 }
-/* line 734, ../scss/_topic-forum.scss */
+/* line 736, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .icon-Featured {
   font-size: 24px;
   padding: 6px 0 0;
@@ -11532,7 +11532,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 734, ../scss/_topic-forum.scss */
+  /* line 736, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .icon-Featured {
     height: 33px;
     width: 34px;
@@ -11540,15 +11540,15 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     font-size: 16px;
   }
 }
-/* line 751, ../scss/_topic-forum.scss */
+/* line 753, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon {
   background: #00a837;
 }
-/* line 753, ../scss/_topic-forum.scss */
+/* line 755, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon .icon-Featured {
   color: #00a837;
 }
-/* line 757, ../scss/_topic-forum.scss */
+/* line 759, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .text {
   display: none;
   float: left;
@@ -11560,7 +11560,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 757, ../scss/_topic-forum.scss */
+  /* line 759, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .text {
     padding: 5px 6px;
     line-height: 24px;
@@ -11570,7 +11570,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   }
 }
 
-/* line 779, ../scss/_topic-forum.scss */
+/* line 781, ../scss/_topic-forum.scss */
 .page-node-74606 .visual.no-overlay {
   margin-bottom: 10px;
 }
