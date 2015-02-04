@@ -73,7 +73,7 @@
 </fieldset>
 						 
 </div>
-  <a href="#" class="btn btn-left btn-pink filterbuttonfilterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
+  <a href="#" class="btn btn-left btn-pink filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
 		</div>
       <div class="views-exposed-widget views-widget-sort-order">
         <?php print $sort_order; ?>
