@@ -45,6 +45,23 @@
           </div>
         <?php endif; ?>
 
+ <div class="filter-slide">
+				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
+				<div class="nav-filter ">
+					 <ul>
+					   <li><a href="#">list 1</a></li>
+					   <li><a href="#">list 2</a></li>
+					   <li><a href="#">list 3</a></li>
+					 </ul>
+				</div> 
+   
+      <div class="button-holder"><div class="views-exposed-widget views-submit-button">
+      <?php print $button; ?>
+    </div></div> 
+				
+        </div>
+
+
 		<div class="filter-slide">
 				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
 				<ul class="nav-filter ">
@@ -109,7 +126,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-		
+		<a href="#" class="btn btn-pink btn-left forum-page topic filterbutton" title="Filter by topic"><span>Add filter <em class="icon-Plus"></em></span></a>
 		<div class="short-buttons">
           <?php print render($variables['share_button']); ?>
 		</div>
