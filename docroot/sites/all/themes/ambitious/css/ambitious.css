@@ -895,7 +895,7 @@ table {
   font-style: normal;
 }
 /* line 19, ../scss/source/_font-icons.scss */
-[class^="icon-"], .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, .page-node-74591 .pager-load-more li a:before,
+[class^="icon-"], .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, #content_top .my-voice-columns .form-actions, .page-node-74591 .pager-load-more li a:before,
 .page-node-74611 .pager-load-more li a:before, .jcf-select .jcf-select-opener {
   font-family: 'icomoon';
   speak: none;
@@ -11463,13 +11463,29 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   padding-top: 0;
   padding-bottom: 0;
 }
+/* line 676, ../scss/_topic-forum.scss */
+#content_top .my-voice-columns .form-actions {
+  float: left;
+}
+/* line 680, ../scss/_topic-forum.scss */
+#content_top .my-voice-columns .form-actions input[type=submit] {
+  padding-right: 40px;
+}
+/* line 683, ../scss/_topic-forum.scss */
+#content_top .my-voice-columns .form-actions:before {
+  position: relative;
+  left: -38px;
+  top: 14px;
+  color: #fff;
+  font-size: 16px;
+}
 
-/* line 682, ../scss/_topic-forum.scss */
+/* line 694, ../scss/_topic-forum.scss */
 .views-row-first .my-voice-pos .feature-holder {
   display: inherit;
 }
 
-/* line 688, ../scss/_topic-forum.scss */
+/* line 700, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder {
   display: none;
   position: absolute;
@@ -11479,16 +11495,16 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   background: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 688, ../scss/_topic-forum.scss */
+  /* line 700, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder {
     left: 15px;
   }
 }
-/* line 698, ../scss/_topic-forum.scss */
+/* line 710, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.hover .text {
   display: block;
 }
-/* line 703, ../scss/_topic-forum.scss */
+/* line 715, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .icon-Featured {
   font-size: 24px;
   padding: 6px 0 0;
@@ -11501,7 +11517,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 703, ../scss/_topic-forum.scss */
+  /* line 715, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .icon-Featured {
     height: 33px;
     width: 34px;
@@ -11509,15 +11525,15 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     font-size: 16px;
   }
 }
-/* line 720, ../scss/_topic-forum.scss */
+/* line 732, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon {
   background: #00a837;
 }
-/* line 722, ../scss/_topic-forum.scss */
+/* line 734, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon .icon-Featured {
   color: #00a837;
 }
-/* line 726, ../scss/_topic-forum.scss */
+/* line 738, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .text {
   display: none;
   float: left;
@@ -11529,7 +11545,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 726, ../scss/_topic-forum.scss */
+  /* line 738, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .text {
     padding: 5px 6px;
     line-height: 24px;
@@ -11539,22 +11555,22 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   }
 }
 
-/* line 747, ../scss/_topic-forum.scss */
+/* line 759, ../scss/_topic-forum.scss */
 #webform-client-form-74601 .form-item {
   float: left;
 }
-/* line 749, ../scss/_topic-forum.scss */
+/* line 761, ../scss/_topic-forum.scss */
 #webform-client-form-74601 .form-item label {
   left: 24px;
   top: 12px;
 }
-/* line 754, ../scss/_topic-forum.scss */
+/* line 766, ../scss/_topic-forum.scss */
 #webform-client-form-74601 a.tooltips span.tooltip-content {
   left: -45px;
   bottom: 30px;
 }
 
-/* line 761, ../scss/_topic-forum.scss */
+/* line 773, ../scss/_topic-forum.scss */
 .page-node-74606 .visual.no-overlay {
   margin-bottom: 10px;
 }

@@ -674,7 +674,19 @@ margin-right: 10px;
       padding-bottom:0;
     }    
    .form-actions{
+      float:left;
+      @extend [class*=" icon-"];
       @extend .icon-Rightarrow;  
+      input[type=submit]{
+        padding-right: 40px;
+      }
+      &:before{
+        position: relative;
+        left: -38px;
+        top: 14px;
+        color: #fff;
+        font-size: 16px;
+      }
    }	
   }
 }
