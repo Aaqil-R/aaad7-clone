@@ -672,7 +672,18 @@ margin-right: 10px;
     .col{
       padding-top:0;
       padding-bottom:0;
-    }    
+    }
+    .form-item{
+      float:left;
+      label{
+        left: 24px;
+        top: 12px;
+      }
+    }
+    a.tooltips span.tooltip-content{
+      left: -45px;
+      bottom: 30px;
+    }
    .form-actions{
       float:left;
       @extend [class*=" icon-"];
@@ -682,12 +693,12 @@ margin-right: 10px;
       }
       &:before{
         position: relative;
-        left: -38px;
-        top: 14px;
+        left: -49px;
+        top: 19px;
         color: #fff;
         font-size: 16px;
       }
-   }	
+    }	
   }
 }
 .views-row-first{
@@ -754,20 +765,7 @@ margin-right: 10px;
      }
    }
 }
-
-#webform-client-form-74601{
-  .form-item{
-    float:left;
-    label{
-      left: 24px;
-      top: 12px;
-    }
-  }
-  a.tooltips span.tooltip-content{
-    left: -45px;
-    bottom: 30px;
-  }
-}
+ 
 
 
 .page-node-74606 .visual.no-overlay{
