@@ -508,7 +508,7 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit {
+.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
@@ -7051,7 +7051,7 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit {
+.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
@@ -8561,7 +8561,7 @@ a:hover.tooltips span.tooltip-content {
   float: left;
 }
 /* line 929, ../scss/source/_content.scss */
-.my-voice-block input[type=submit].btn-pink {
+.my-voice-block input[type=submit].btn-pink, .my-voice-block .webform_client_form_74621 .form-action input[type=submit], .webform_client_form_74621 .form-action .my-voice-block input[type=submit] {
   border: 0;
   border-bottom: 5px solid #b3066b;
 }
@@ -9335,7 +9335,7 @@ table {
   border-radius: 5px;
 }
 /* line 37, ../scss/source/_buttons.scss */
-.btn.btn-pink, .btn-pink.form-submit, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit {
+.btn.btn-pink, .btn-pink.form-submit, .webform_client_form_74621 .form-action input.form-submit[type=submit], .topic-share .btn-pink.st_sharethis_button, .topic-share .webform_client_form_74621 .form-action input.st_sharethis_button[type=submit], .webform_client_form_74621 .form-action .topic-share input.st_sharethis_button[type=submit], .filter-slide .button-holder .btn-pink.form-submit, .webform_client_form_74621 .form-action input.btn[type=submit] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
@@ -11495,12 +11495,12 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   font-size: 16px;
 }
 
-/* line 706, ../scss/_topic-forum.scss */
+/* line 713, ../scss/_topic-forum.scss */
 .views-row-first .my-voice-pos .feature-holder {
   display: inherit;
 }
 
-/* line 712, ../scss/_topic-forum.scss */
+/* line 719, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder {
   display: none;
   position: absolute;
@@ -11510,16 +11510,16 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   background: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 712, ../scss/_topic-forum.scss */
+  /* line 719, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder {
     left: 15px;
   }
 }
-/* line 722, ../scss/_topic-forum.scss */
+/* line 729, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.hover .text {
   display: block;
 }
-/* line 727, ../scss/_topic-forum.scss */
+/* line 734, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .icon-Featured {
   font-size: 24px;
   padding: 6px 0 0;
@@ -11532,7 +11532,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 727, ../scss/_topic-forum.scss */
+  /* line 734, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .icon-Featured {
     height: 33px;
     width: 34px;
@@ -11540,15 +11540,15 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
     font-size: 16px;
   }
 }
-/* line 744, ../scss/_topic-forum.scss */
+/* line 751, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon {
   background: #00a837;
 }
-/* line 746, ../scss/_topic-forum.scss */
+/* line 753, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder.green-icon .icon-Featured {
   color: #00a837;
 }
-/* line 750, ../scss/_topic-forum.scss */
+/* line 757, ../scss/_topic-forum.scss */
 .my-voice-post .feature-holder .text {
   display: none;
   float: left;
@@ -11560,7 +11560,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 750, ../scss/_topic-forum.scss */
+  /* line 757, ../scss/_topic-forum.scss */
   .my-voice-post .feature-holder .text {
     padding: 5px 6px;
     line-height: 24px;
@@ -11570,7 +11570,7 @@ body.page-node-74566 .easy-breadcrumb, body.page-node-74566 h1.title, body.page-
   }
 }
 
-/* line 772, ../scss/_topic-forum.scss */
+/* line 779, ../scss/_topic-forum.scss */
 .page-node-74606 .visual.no-overlay {
   margin-bottom: 10px;
 }
