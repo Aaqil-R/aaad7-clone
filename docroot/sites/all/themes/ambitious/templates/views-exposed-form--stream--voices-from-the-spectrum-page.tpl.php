@@ -44,41 +44,15 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-
- <div class="filter-slide">
+   <div class="filter-slide">
 				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
 				<div class="nav-filter ">
-					 <ul>
-					   <li><a href="#">list 1</a></li>
-					   <li><a href="#">list 2</a></li>
-					   <li><a href="#">list 3</a></li>
-					 </ul>
+					 <?php print $widget->widget; ?> 
 				</div> 
    
       <div class="button-holder"><div class="views-exposed-widget views-submit-button">
       <?php print $button; ?>
     </div></div> 
-				
-        </div>
-
-
-		<div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
-				<ul class="nav-filter ">
-					 <?php print $widget->widget; ?> 
-				</ul> 
-   
-				<div class="button-holder">
-					<div class="views-exposed-widget views-submit-button">
-						<a href="#" class="btn btn-pink">
-							<span>"I'm done"
-								<em class="icon-Rightarrow">
-								</em>
-							</span>
-						<?php print $button; ?>
-						</a>
-					</div>
-				</div> 
 				
         </div>
 		
@@ -97,8 +71,9 @@
 <fieldset>	  
         <?php print $sort_by; ?>
 </fieldset>
-						<a href="#" class="btn btn-pink filterbutton"><span>Add filter +</span></a>
+						 
 </div>
+  <a href="#" class="btn btn-left btn-pink filterbuttonfilterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
 		</div>
       <div class="views-exposed-widget views-widget-sort-order">
         <?php print $sort_order; ?>
@@ -126,7 +101,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-		<a href="#" class="btn btn-pink btn-left forum-page topic filterbutton" title="Filter by topic"><span>Add filter <em class="icon-Plus"></em></span></a>
+		
 		<div class="short-buttons">
           <?php print render($variables['share_button']); ?>
 		</div>
