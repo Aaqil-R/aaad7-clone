@@ -548,10 +548,7 @@ function ambitious_field__field_event_date(&$variables){
 {
   if($form_id == 'webform_client_form_74601' || $form_id == 'webform_client_form_74621'){
     $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email_address']['#description']."</span></a>";
-  }
-    if($form_id == 'webform_client_form_74621'){
-      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-pink'; 
-    }
+  } 
 }
 
 
