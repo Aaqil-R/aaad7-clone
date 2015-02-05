@@ -795,3 +795,9 @@ margin-right: 10px;
 .page-node-74596 .visual.no-overlay{
   margin-bottom:0;
 }
+
+.view-id-stream.view-display-id-stream_forum_page  .posts-columns .post{
+  @include breakpoint($mobile) {
+    float:left;
+  }
+}
