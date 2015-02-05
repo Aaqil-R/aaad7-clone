@@ -44,17 +44,28 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-   <div class="filter-slide">
+   <div class="filter-slide" id="topics-slide">
 				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
 				<div class="nav-filter ">
-					 <?php print $widget->widget; ?> 
+					<ul class="options">
+				<li>Autism and me<span class="icon-Tick"></span></li>
+				<li>Bullying<span class="icon-Tick"></span></li>
+				<li>Ready for work<span class="icon-Tick"></span></li>
+				<li>Relationships<span class="icon-Tick"></span></li>
+				<li>Lorem ipsum<span class="icon-Tick"></span></li>
+				<li>Dolor sit amet<span class="icon-Tick"></span></li>
+			</ul>
 				</div> 
    
       <div class="button-holder"><div class="views-exposed-widget views-submit-button">
+      <span class="btn btn-pink submit">I'm done</span>
       <?php print $button; ?>
     </div></div> 
 				
         </div>
+        
+        
+    
 		
 		
         <?php if (!empty($widget->description)): ?>
