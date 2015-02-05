@@ -230,8 +230,8 @@ function ambitious_menu_link(&$variables) {
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
-		//amalan new codes
-
+		
+		//codes to include school and colleges menu
 	if($element['#theme'] == 'menu_link__menu_schools_college') //if its user menu add the arrows to the links
 	{
 		$element = $variables['element'];		
@@ -247,7 +247,7 @@ function ambitious_menu_link(&$variables) {
 		
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
 	}
-	//end of the new changes		
+		//end of school and colleges menu code		
 		
 		
 		
