@@ -59,7 +59,7 @@
    
       <div class="button-holder"><div class="views-exposed-widget views-submit-button">
       <span class="btn btn-pink submit">I'm done</span>
-     
+     <div style="display:none;"> <?php print $button; ?></div>
     </div></div> 
 				
         </div>
@@ -112,7 +112,6 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-     <?php print $button; ?>
 		
 		<div class="short-buttons">
           <?php print render($variables['share_button']); ?>
