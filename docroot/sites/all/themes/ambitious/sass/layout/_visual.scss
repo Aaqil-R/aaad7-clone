@@ -1,0 +1,66 @@
+//=== Visual Section ===//
+.visual{
+	max-height: 770px;
+	overflow: hidden;
+	.img-holder{
+		.caption-frame{
+			z-index: 1000;
+			position: absolute;
+			top: 0;
+			.caption{ 
+				padding: 70px 0 0;
+				.title{
+					position: relative;
+					right: 50px;
+				}				
+
+			}
+		}
+	}
+}  
+
+//=== Slider Block Section ===//
+.slider-block{
+	z-index: 1100;
+	position: relative;
+	top: 24px;
+	.r-s-arrow{
+		a{
+			text-decoration: none;
+		}
+	}
+	.l-s-arrow{
+		a{
+			text-decoration: none;
+		}
+	}
+	a{
+		&.btn-left{
+			margin-right: 10px;	
+		}
+		&.btn{
+			padding: 11px 16px;
+		}
+		&.btn-right{
+			position: relative;
+			right: 85px;
+			@include breakpoint($mobile){
+				right: 0;
+			}
+		}
+				
+	}
+	@include breakpoint(1200px){
+		display: none;
+	}
+	@include breakpoint($mobile){
+		display: block;
+	}
+}
+
+// Image Holder - Fixing for the mobile devices
+.img-holder img{
+	width: 100%;
+	height: auto;
+}
+

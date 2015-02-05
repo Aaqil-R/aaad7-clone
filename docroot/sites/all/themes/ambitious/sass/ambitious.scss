@@ -1,103 +1,31 @@
-// @imports
+// Source @imports
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
 @import "susy";
 @import "bourbon/bourbon";
 @import "source/jcf"; // From the source folder
 @import "source/all"; // From the source folder
 @import "source/content"; // From the source folder
+@import "source/profile"; // From the source folder
 @import "ambitious/admin_menu"; // Admin menu
 //@import "misc"; // SMACSS Modules
 
+// Please do not edit source files
+
 // CUSTOM SCSS STYLES FOR THE AAA
-
-// Global HTML
-body{
-	margin-top: -20px;
-}
-.underline{
-	text-decoration: underline;
-}
-
-
-//=== Header Section ===//
-
-.region-header{
-	// Header Top Menu
-	.header-top-menu{
-		ul.menu{
-			@extend .links;
-		}
-	}
-	// User menu
-	.header-user-menu{
-		ul{
-		margin:0;
-		li{
-			list-style: none;
-			padding: 0 6px;
-			display: inline;
-			a{
-				margin:0;
-				color: $gray;
-				text-transform: capitalize;
-				vertical-align: middle;
-				&:hover{
-					text-decoration: underline;
-				}
-				img{
-					vertical-align: middle;
-					margin-right: 10px;
-					@include border-radius(5px);
-				}
+@import "global";
+@import "header";
+@import "wrapper";
+@import "footer";
+@import "stream";
+@import "buttons";
+@import "social";
+@import "visual";
+@import "stream";
+@import "action-block";
+@import "topic-forum";
+@import "understanding-autism";
+@import "voice-page";
+@import "issue-fixing";
 
 
-			}
-
-		}
-	}
-}
-}
-//=== Visual Section ===//
-.visual{
-	.img-holder{
-		.caption-frame{
-			z-index: 1000;
-			position: absolute;
-			top: 0;
-		}
-	}
-}  
-
-//=== Footer Section ===//
-
-.region-footer-copyright{
-	// Social menu
-	.social-holder{
-		h2{
-			@extend .title;
-		}
-		ul{
-			@extend .social-networks;
-		}
-	}
-}
-
-.region-footer-right{
-	ul{
-		list-style: outside none none;
-    	margin: 0;
-    	padding: 0;
-
-		li {
-			font-size:16px;
-			line-height:20px;
-			margin:0 0 16px;
-			a {
-				color:$gray;
-				text-decoration:underline;
-				&:hover { text-decoration:none; }
-			}
-		}
-	}
-}
 

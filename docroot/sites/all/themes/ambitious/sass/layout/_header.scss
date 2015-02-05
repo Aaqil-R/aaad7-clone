@@ -1,0 +1,54 @@
+//=== Header Section ===//
+.top-bar{
+	z-index: 9998;
+	.holder{
+		padding: 16px 15px 12px;
+	}
+}
+
+.region-header{
+	// Header Top Menu
+	.header-top-menu{
+		ul.menu{
+			@extend .links;
+		}
+	}
+	// User menu
+	.header-user-menu{
+		ul{
+		margin:0;
+		li{
+			list-style: none;
+			padding: 0 6px;
+			display: inline;
+			a{
+				margin:0;
+				color: $gray;
+				text-transform: capitalize;
+				vertical-align: middle;
+				&:hover{
+					text-decoration: underline;
+				}
+				img{
+					vertical-align: middle;
+					margin-right: 10px;
+					@include border-radius(5px);
+				}
+
+
+			}
+
+		}
+	}
+}
+}
+
+// Header Margin Issue
+#header.fixed-position{
+	margin-bottom: -4px;
+}
+
+// User menu
+#block-system-user-menu li.last{
+	padding-right: 0;
+}

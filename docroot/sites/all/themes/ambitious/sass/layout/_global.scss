@@ -1,0 +1,133 @@
+// Custom Variables for AAA
+$facebook-bg: #4b69aa;
+$facebook-border: #1a427e;
+$twitter-bg: #2289ff;
+$twitter-border: #0275d1;
+$wrapper-bg:#eef2f3;
+
+$status-bg:#9ee19e;
+$status-text:#3aad3a;
+$warning-bg:#fdfdc4;
+$warning-text:#222222;
+$error-bg:#fed3d1;
+$error-text:#b30200;
+
+
+
+// Global HTML
+body{
+	margin-top: -24px;
+}
+.underline{
+	text-decoration: underline;
+}
+// Span class
+.span-4{
+	@include span(4 of 12);
+}
+// Fixing the regions width isse
+.region-action{
+	width: 100%;
+	height: 100%;
+}
+
+// Ajax Throbber
+
+/* these apply to auto-completing form fields */
+html.js input.form-autocomplete {
+  background-image: url(../images/ajax-loader.gif);
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 100% -16px;
+}
+
+/* these apply to all ajax progresses */
+.ajax-progress {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+}
+
+.ajax-progress .throbber {
+  background: transparent url(../images/ajax-loader.gif) no-repeat 0px 0px;
+  float: left;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top:5px;
+  right: 40px;
+}
+
+// System Messages
+
+.messages{
+  position: inherit;
+  .placeholder{
+    text-decoration: underline;
+  }
+}
+
+.status{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $status-bg;
+  color: $status-text;
+  margin-bottom: 10px;
+}
+
+.warning{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $warning-bg;
+  color: $warning-text;
+  margin-bottom: 10px;
+}
+
+.error{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $error-bg;
+  color: $error-text;
+  margin-bottom: 10px;
+}
+
+// System buttons
+.form-submit{
+  @extend .btn;
+}
+
+// System tabs
+ul.tabs-primary{
+  padding: 12px 6px;
+  li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    background: $gray;
+    &.is-active{
+      background: $orange;
+    }
+  }
+
+}
+// Admin menu
+
+// Fix admin menu's z-index issue
+div#admin-toolbar{
+  z-index: 11000;
+}
+div#admin-toolbar.vertical div.admin-tab{
+  width: auto;
+  min-height: 25px;
+}
+#admin-toolbar ul.menu li a{
+  height:auto;
+}
+
+// Main Section
+#main{
+  position: relative;
+}

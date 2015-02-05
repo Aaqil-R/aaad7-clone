@@ -74,61 +74,50 @@ $mobile-submenu-font: 1.7em;
 // find any of the fonts in the list.
 
 // First, let's create some font stacks.
-$helvetica-cn: 'HelveticaNeueW01-57Cn', Tahoma, Verdana, Arial, sans-serif;
-$helvetica-it: 'HelveticaNeueW01-57CnOb', Tahoma, Verdana, Arial, sans-serif;
-$helvetica-bd: 'HelveticaNeueW01-77BdCn 692722', Tahoma, Verdana, Arial, sans-serif;
-$bebas: "bebas-neue", Impact, "Arial Black", Arial, sans-serif;
-$iconfont: "icomoon";
+
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$helvetica-cn: 'HelveticaNeueW01-55Roma', Helvetica, Tahoma, Verdana, Arial, sans-serif;
+// $helvetica-it: 'HelveticaNeueW01-57CnOb', Tahoma, Verdana, Arial, sans-serif;
+$helvetica-bd: 'HelveticaNeueW01-75Bold', Helvetica, Tahoma, Verdana, Arial, sans-serif;
+// TODO: Remove $bebas, once we have refactored.
+// $bebas: "bebas-neue", Impact, "Arial Black", Arial, sans-serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$iconfont: "icomoon";
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $helvetica-cn; // The font family set on the html element.
-$font-body:        $helvetica-cn;
-$heading: $bebas;
+$font-body: $helvetica-cn;
+$header-font-family: $helvetica-bd;
 $font-bold: $helvetica-bd;
-$font-italic: $helvetica-it;
+// TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
+// $font-italic: $helvetica-it;
+// TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
 $font-monospace:   $courier;
 
+// Font sizes
+$base-font-size: 1.6em;
+$base-line-height: 1.562em;
+
 
 //
-// Colors, etc.
+// Add references to defined colours.
 //
-$black: #000000;
-$background-grey: #f1f2f2;
-$grey: #333333;
-$mid-grey:#A7A9AC;
-$pale-grey:#939598;
-$caroline-green: #3BB34A;
-$purple: #762B85;
-$blue: #00B5D5;
-$red: #EC3123;
-$dark-green: #176734;
-$mid-green: #62BA46;
-$pale-green: #95D212;
-$screen-green: #60FF00;
-$dark-blue: #005BA0;
-$yellow: #FFDE00;
-$pink: #EE4491;
-$white: #FFFFFF;
-$latest-news-blue:#00B4D4;
-$latest-news-red:#ED3525;
-$latest-news-grey:#6D6E71;
+@import "colours";
 
-//Breakpoints
-$mobile-landscape: 420px;
-$tablet: 750px;
-$desktop: 1020px;
-$desktop-wide: 1500px;
+// 
+// Add references to the defined breakpoints.
 
+// TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
 
+// TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
 // The height of the navigation container.
 $nav-height: 3em;
 
+// TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
 // Tab styling.
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
@@ -150,11 +139,161 @@ $tabs-border: #bbb;
 @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
 @import "susy";
-
 //import breakpoint
 @import "breakpoint";
-
 // Now we add our custom helper mixins.
 @import "mixins";
 
 @include border-box-sizing;
+
+/*
+ * set default text color
+ * set default font size, line height and font family
+ * set default background
+ */
+
+// TODO: Need to re-evaluate; removing it because of line 146 above.
+// html {box-sizing: border-box;}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {max-height: 100000em;}
+body {
+    margin: 0;
+    color: $base-text-color;
+    background: $base-background-color;
+    font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+    min-width: $base-min-width;
+    overflow-y: scroll;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:none;
+}
+ 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+ 
+img {border-style: none;}
+ 
+a {
+	outline:none;
+    text-decoration: none;
+    color: $base-link-color;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+ 
+input,
+textarea,
+select {
+    font: 100% $base-font-family;
+    color: $base-form-text-color;
+    vertical-align: middle;
+}
+ 
+form,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+ 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+ 
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
+}
+ 
+input[type="submit"]:hover,
+button:hover {
+    cursor: pointer;
+}
+ 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    margin: 0;
+    padding: 4px 7px;
+    border: 1px solid $base-input-border-color;
+    &:focus {
+        border-color: darken($base-input-border-color, 30%);
+        //outline: none;
+    }
+}
+ 
+textarea {
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+}
+ 
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+ 
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+ 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+    line-height: 1.2em;
+    margin: 0 0 1.2em;
+}
+ 
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+ 
+sup {
+    top: -0.5em;
+}
+ 
+sub {
+    bottom: -0.25em;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
