@@ -212,8 +212,6 @@ function ambitious_menu_link(&$variables) {
 		}
   
 		$output = l($element['#title'].'</span><span class="icon-Downarrow"></span><span class="icon-Uparrow"></span>', $element['#href'], $element['#localized_options']);
-		//return '<li' . drupal_attributes($element['#attributes']) . '>' . '<div id="menu-'.str_replace(' ','-',strtolower($element['#title'])).'" class="menu-item '.$element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'].'">'.$output.'</div>'.$sub_menu . "</li>\n";
-		//return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
 	}
 	
@@ -232,6 +230,28 @@ function ambitious_menu_link(&$variables) {
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
+		//amalan new codes
+
+	if($element['#theme'] == 'menu_link__menu_schools_college') //if its user menu add the arrows to the links
+	{
+		$element = $variables['element'];		
+		$sub_menu = '';
+		$element['#attributes']['data-menu-parent'] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['attributes']['class'][] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
+		$element['#localized_options']['html'] = TRUE;
+		if ($element['#below']) {
+		$sub_menu = drupal_render($element['#below']);
+		}
+  
+		$output = l($element['#title'].'', $element['#href'], $element['#localized_options']);
+		
+		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+	}
+	//end of the new changes		
+		
+		
+		
+		
 	else
 	{
 			global $user;

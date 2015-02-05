@@ -147,19 +147,21 @@
         </nav>
       </div>
       <!-- school nav of the page -->
-      <div class="school-slide">
-        <strong class="title">Schools &amp; College</strong>
-        <ul class="nav">
-          <li>
-            <a href="#">TreeHouse School</a>
-          </li>
-          <li>
-            <a href="#">The Rise School</a>
-          </li>
-          <li>
-            <a href="#">Ambitious College</a>
-          </li>
-        </ul>
+        <div class="school-slide">
+		<h4 class="title"> Schools & College
+			<?php
+				//adding the features menu
+			    //$menu_name = variable_get('menu_main_links_source', 'menu-schools-featured-menu');
+                //$tree = menu_tree($menu_name);
+                //print drupal_render($tree); 
+			?>
+		</h4>
+			<nav id="nav">
+				<?php
+				$menu_name = variable_get('menu_main_links_source', 'menu-schools-college');
+				$tree = menu_tree($menu_name);
+				print drupal_render($tree); ?>
+			</nav>
       </div>
     </header>
     
