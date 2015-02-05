@@ -27,7 +27,7 @@
 		<div class="masonry-item views-row views-row-8 views-row-even views-row-last post-actions post masonry-brick">
 			<?php
 			//D7
-			$block = module_invoke('block', 'block_view', '126');
+			$block = module_invoke('block', 'block_view', '91');
 			print render($block['content']);
 			?>
 		</div>
