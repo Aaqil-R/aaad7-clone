@@ -10288,13 +10288,18 @@ ul.tabs-primary li.is-active {
 }
 
 /* line 118, ../scss/_global.scss */
+div#admin-toolbar {
+  z-index: 11000;
+}
+
+/* line 123, ../scss/_global.scss */
 #main {
   position: relative;
 }
 
 /* line 2, ../scss/_header.scss */
 .top-bar {
-  z-index: 1001;
+  z-index: 9998;
 }
 /* line 4, ../scss/_header.scss */
 .top-bar .holder {
@@ -10329,6 +10334,11 @@ ul.tabs-primary li.is-active {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+/* line 47, ../scss/_header.scss */
+#header {
+  margin-bottom: 98px;
 }
 
 /* line 3, ../scss/_wrapper.scss */
