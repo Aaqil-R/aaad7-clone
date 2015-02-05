@@ -156,12 +156,12 @@
                 //print drupal_render($tree); 
 			?>
 		</h4>
-			<ul class="nav">
+			<nav id="nav">
 				<?php
 				$menu_name = variable_get('menu_main_links_source', 'menu-schools-college');
 				$tree = menu_tree($menu_name);
 				print drupal_render($tree); ?>
-			</ul>
+			</nav>
       </div>
     </header>
     
