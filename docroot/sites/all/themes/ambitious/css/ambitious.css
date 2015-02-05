@@ -1015,6 +1015,11 @@ table {
   content: "\e600";
 }
 
+/* line 95, ../scss/source/_font-icons.scss */
+.icon-connection:before {
+  content: "\e615";
+}
+
 /* line 8, ../scss/source/_all.scss */
 * {
   font-size: 100.01%;
@@ -10464,6 +10469,28 @@ ul.tabs-primary li.is-active {
 .twitter-btn {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
+}
+
+/* line 34, ../scss/_buttons.scss */
+.icon-connection {
+  font-size: 29px;
+  padding: 6px 0 0;
+  float: left;
+  background: #ffffff;
+  line-height: 30px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  color: #e30087;
+}
+@media (max-width: 767px) {
+  /* line 34, ../scss/_buttons.scss */
+  .icon-connection {
+    height: 33px;
+    width: 34px;
+    padding: 2px 0 0;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 767px) {
