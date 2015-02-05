@@ -16,9 +16,37 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
+     
+        
+        
+        $(":checkbox").on('click', function(){
+           $(this).parent().toggleClass("checked");
+         }); 
     
   	// Place your code here
     	initCustomForms();
+    	
+    	    $('.view-display-id-stream_forum_page').mobileNav({
+    	       container: $('body'),
+		  hideOnClickOutside: true,
+		  menuActiveClass: 'filter-active',
+		  menuOpener: '.filterbutton',
+		  menuDrop: '.filter-slide'
+	    }); 
+         $( document ).ajaxComplete(function() {
+           $('.view-display-id-stream_forum_page').mobileNav({
+    	        container: $('body'),           
+		   hideOnClickOutside: true,
+		   menuActiveClass: 'filter-active',
+		   menuOpener: '.filterbutton',
+ 		   menuDrop: '.filter-slide'
+	      });
+        }); 
+        $("form#views-exposed-form-stream-stream-forum-page .form-item-sort-by select").change(function() {
+          $('#edit-submit-stream').trigger( "click" );
+        });
+        
+    	
     // ==Close button==//
 		$('.block-close').on("click", function () {
 		    $(this).parent('div').fadeOut();
@@ -28,11 +56,10 @@ Drupal.behaviors.ambitious = {
 		  $(".block-close").click(function(){
 		    $("section.visual").addClass("no-overlay");
 		  });
+
 		});
     
-    if($("#block-views-stream-stream-forum-page .nav-filter .form-type-bef-link").hasClass("selected")){
-	  $("body").addClass("filter-active");
-	}
+
 	// ==Masonry block==//
 	var $container = $('#masonry');
 	

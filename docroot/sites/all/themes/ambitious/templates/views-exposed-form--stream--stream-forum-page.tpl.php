@@ -45,17 +45,7 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-         <div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
-				<div class="nav-filter ">
-					 <?php print $widget->widget; ?> 
-				</div> 
-   
-      <div class="button-holder"><div class="views-exposed-widget views-submit-button">
-      <?php print $button; ?>
-    </div></div> 
-				
-        </div>
+         
         <?php if (!empty($widget->description)): ?>
           <div class="description">
             <?php print $widget->description; ?>
@@ -81,15 +71,28 @@
         <?php print $offset; ?>
       </div>
     <?php endif; ?>
-     <div class="views-exposed-widget views-submit-button element-invisible">
+    
+    
+    
+    <div class="filter-slide">
+				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
+				<div class="nav-filter ">
+					 <?php print $widget->widget; ?> 
+				</div> 
+   
+      <div class="button-holder">
+       <div class="views-exposed-widget views-submit-button">
       <?php print $button; ?>
     </div>
+       </div> 
+				
+        </div>
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button">
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-    <a href="#" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
+    <a href="javascript:void()" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
     <?php print render($variables['share_button']); ?>
 </div>
  
