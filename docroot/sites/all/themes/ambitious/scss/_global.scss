@@ -113,10 +113,18 @@ ul.tabs-primary{
   }
 
 }
+// Admin menu
 
 // Fix admin menu's z-index issue
 div#admin-toolbar{
   z-index: 11000;
+}
+div#admin-toolbar.vertical div.admin-tab{
+  width: auto;
+  min-height: 25px;
+}
+#admin-toolbar ul.menu li a{
+  height:auto;
 }
 
 // Main Section

@@ -10287,12 +10287,23 @@ ul.tabs-primary li.is-active {
   background: #f15500;
 }
 
-/* line 118, ../scss/_global.scss */
+/* line 119, ../scss/_global.scss */
 div#admin-toolbar {
   z-index: 11000;
 }
 
-/* line 123, ../scss/_global.scss */
+/* line 122, ../scss/_global.scss */
+div#admin-toolbar.vertical div.admin-tab {
+  width: auto;
+  min-height: 25px;
+}
+
+/* line 126, ../scss/_global.scss */
+#admin-toolbar ul.menu li a {
+  height: auto;
+}
+
+/* line 131, ../scss/_global.scss */
 #main {
   position: relative;
 }
