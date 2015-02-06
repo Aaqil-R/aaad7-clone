@@ -28,7 +28,7 @@
   font-style: normal;
 }
 /* line 21, ../../sass/base/_font-icons.scss */
-[class^="icon-"], .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, #content_top .my-voice-columns .form-actions {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, #content_top .my-voice-columns .form-actions {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -152,7 +152,7 @@
 }
 
 /* custom select styles */
-/* line 2, ../../sass/base/_jcf.scss */
+/* line 4, ../../sass/base/_jcf.scss */
 .jcf-select {
   float: left;
   position: relative;
@@ -168,7 +168,7 @@
   background-image: linear-gradient(to bottom, #aeaeae, #eef2f3);
 }
 
-/* line 16, ../../sass/base/_jcf.scss */
+/* line 18, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -176,21 +176,21 @@
   background: #CACACA;
 }
 
-/* line 22, ../../sass/base/_jcf.scss */
+/* line 24, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active .jcf-select-text {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom: 0;
 }
 
-/* line 27, ../../sass/base/_jcf.scss */
+/* line 29, ../../sass/base/_jcf.scss */
 .jcf-select select {
   z-index: 1;
   left: 0;
   top: 0;
 }
 
-/* line 32, ../../sass/base/_jcf.scss */
+/* line 34, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-text {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -205,7 +205,7 @@
   background: #fff;
 }
 
-/* line 45, ../../sass/base/_jcf.scss */
+/* line 47, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-opener {
   position: absolute;
   text-align: center;
@@ -215,7 +215,7 @@
   top: 0;
 }
 
-/* line 53, ../../sass/base/_jcf.scss */
+/* line 55, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-opener:after {
   position: absolute;
   left: 2px;
@@ -224,7 +224,7 @@
   font-size: 23px;
 }
 
-/* line 60, ../../sass/base/_jcf.scss */
+/* line 63, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active .jcf-select-opener:after {
   position: absolute;
   left: 2px;
@@ -233,19 +233,19 @@
   font-size: 23px;
 }
 
-/* line 68, ../../sass/base/_jcf.scss */
+/* line 72, ../../sass/base/_jcf.scss */
 body > .jcf-select-drop {
   position: absolute;
   margin: -2px 0 0;
   z-index: 9999;
 }
 
-/* line 73, ../../sass/base/_jcf.scss */
+/* line 77, ../../sass/base/_jcf.scss */
 body > .jcf-select-drop.jcf-drop-flipped {
   margin: 1px 0 0;
 }
 
-/* line 76, ../../sass/base/_jcf.scss */
+/* line 80, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-drop {
   position: absolute;
   margin-top: 0px;
@@ -256,19 +256,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-size: 14px;
 }
 
-/* line 85, ../../sass/base/_jcf.scss */
+/* line 89, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-drop-flipped {
   bottom: 100%;
   top: auto;
 }
 
-/* line 89, ../../sass/base/_jcf.scss */
+/* line 93, ../../sass/base/_jcf.scss */
 .jcf-select-drop .jcf-select-drop-content {
   border: 2px solid #CACACA;
 }
 
 /* multiple select styles */
-/* line 93, ../../sass/base/_jcf.scss */
+/* line 97, ../../sass/base/_jcf.scss */
 .jcf-list-box {
   overflow: hidden;
   display: inline-block;
@@ -278,7 +278,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* select options styles */
-/* line 101, ../../sass/base/_jcf.scss */
+/* line 105, ../../sass/base/_jcf.scss */
 .jcf-list {
   display: inline-block;
   vertical-align: top;
@@ -289,7 +289,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 100%;
 }
 
-/* line 110, ../../sass/base/_jcf.scss */
+/* line 114, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-list-content {
   vertical-align: top;
   display: inline-block;
@@ -297,31 +297,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 100%;
 }
 
-/* line 116, ../../sass/base/_jcf.scss */
+/* line 120, ../../sass/base/_jcf.scss */
 .jcf-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 121, ../../sass/base/_jcf.scss */
+/* line 125, ../../sass/base/_jcf.scss */
 .jcf-list ul li {
   overflow: hidden;
   display: block;
   border-top: 2px solid #E0E0E0;
 }
 
-/* line 126, ../../sass/base/_jcf.scss */
+/* line 130, ../../sass/base/_jcf.scss */
 .jcf-list ul li:first-child {
   border-top: 0;
 }
 
-/* line 129, ../../sass/base/_jcf.scss */
+/* line 133, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-overflow {
   overflow: auto;
 }
 
-/* line 132, ../../sass/base/_jcf.scss */
+/* line 136, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-option {
   white-space: nowrap;
   overflow: hidden;
@@ -333,20 +333,20 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-size: 1.25em;
 }
 
-/* line 142, ../../sass/base/_jcf.scss */
+/* line 146, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-disabled {
   background: #fff !important;
   color: #aaa !important;
 }
 
-/* line 146, ../../sass/base/_jcf.scss */
+/* line 150, ../../sass/base/_jcf.scss */
 .jcf-select-drop .jcf-hover,
 .jcf-list-box .jcf-selected {
   background: #e6e6e6;
   color: #000;
 }
 
-/* line 151, ../../sass/base/_jcf.scss */
+/* line 155, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-optgroup-caption {
   white-space: nowrap;
   display: block;
@@ -355,18 +355,18 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #000;
 }
 
-/* line 158, ../../sass/base/_jcf.scss */
+/* line 162, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-optgroup .jcf-option {
   padding-left: 30px;
 }
 
 /* common custom form elements styles */
-/* line 162, ../../sass/base/_jcf.scss */
+/* line 166, ../../sass/base/_jcf.scss */
 .jcf-disabled {
   background: #ddd !important;
 }
 
-/* line 163, ../../sass/base/_jcf.scss */
+/* line 167, ../../sass/base/_jcf.scss */
 .jcf-focus, .jcf-focus * {
   border-color: #fbb900 !important;
 }
@@ -799,7 +799,7 @@ table {
   font-style: normal;
 }
 /* line 21, ../../sass/base/_font-icons.scss */
-[class^="icon-"], .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, #content_top .my-voice-columns .form-actions {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, .filter-slide .nav-filter .form-type-bef-link.selected a, [class*=" icon-"], .pager-load-more li a:before, #content_top .my-voice-columns .form-actions {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -923,7 +923,7 @@ table {
 }
 
 /* custom select styles */
-/* line 2, ../../sass/base/_jcf.scss */
+/* line 4, ../../sass/base/_jcf.scss */
 .jcf-select {
   float: left;
   position: relative;
@@ -939,7 +939,7 @@ table {
   background-image: linear-gradient(to bottom, #aeaeae, #eef2f3);
 }
 
-/* line 16, ../../sass/base/_jcf.scss */
+/* line 18, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -947,21 +947,21 @@ table {
   background: #CACACA;
 }
 
-/* line 22, ../../sass/base/_jcf.scss */
+/* line 24, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active .jcf-select-text {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom: 0;
 }
 
-/* line 27, ../../sass/base/_jcf.scss */
+/* line 29, ../../sass/base/_jcf.scss */
 .jcf-select select {
   z-index: 1;
   left: 0;
   top: 0;
 }
 
-/* line 32, ../../sass/base/_jcf.scss */
+/* line 34, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-text {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -976,7 +976,7 @@ table {
   background: #fff;
 }
 
-/* line 45, ../../sass/base/_jcf.scss */
+/* line 47, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-opener {
   position: absolute;
   text-align: center;
@@ -986,7 +986,7 @@ table {
   top: 0;
 }
 
-/* line 53, ../../sass/base/_jcf.scss */
+/* line 55, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-opener:after {
   position: absolute;
   left: 2px;
@@ -995,7 +995,7 @@ table {
   font-size: 23px;
 }
 
-/* line 60, ../../sass/base/_jcf.scss */
+/* line 63, ../../sass/base/_jcf.scss */
 .jcf-select.jcf-drop-active .jcf-select-opener:after {
   position: absolute;
   left: 2px;
@@ -1004,19 +1004,19 @@ table {
   font-size: 23px;
 }
 
-/* line 68, ../../sass/base/_jcf.scss */
+/* line 72, ../../sass/base/_jcf.scss */
 body > .jcf-select-drop {
   position: absolute;
   margin: -2px 0 0;
   z-index: 9999;
 }
 
-/* line 73, ../../sass/base/_jcf.scss */
+/* line 77, ../../sass/base/_jcf.scss */
 body > .jcf-select-drop.jcf-drop-flipped {
   margin: 1px 0 0;
 }
 
-/* line 76, ../../sass/base/_jcf.scss */
+/* line 80, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-select-drop {
   position: absolute;
   margin-top: 0px;
@@ -1027,19 +1027,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-size: 14px;
 }
 
-/* line 85, ../../sass/base/_jcf.scss */
+/* line 89, ../../sass/base/_jcf.scss */
 .jcf-select .jcf-drop-flipped {
   bottom: 100%;
   top: auto;
 }
 
-/* line 89, ../../sass/base/_jcf.scss */
+/* line 93, ../../sass/base/_jcf.scss */
 .jcf-select-drop .jcf-select-drop-content {
   border: 2px solid #CACACA;
 }
 
 /* multiple select styles */
-/* line 93, ../../sass/base/_jcf.scss */
+/* line 97, ../../sass/base/_jcf.scss */
 .jcf-list-box {
   overflow: hidden;
   display: inline-block;
@@ -1049,7 +1049,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* select options styles */
-/* line 101, ../../sass/base/_jcf.scss */
+/* line 105, ../../sass/base/_jcf.scss */
 .jcf-list {
   display: inline-block;
   vertical-align: top;
@@ -1060,7 +1060,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 100%;
 }
 
-/* line 110, ../../sass/base/_jcf.scss */
+/* line 114, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-list-content {
   vertical-align: top;
   display: inline-block;
@@ -1068,31 +1068,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 100%;
 }
 
-/* line 116, ../../sass/base/_jcf.scss */
+/* line 120, ../../sass/base/_jcf.scss */
 .jcf-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 121, ../../sass/base/_jcf.scss */
+/* line 125, ../../sass/base/_jcf.scss */
 .jcf-list ul li {
   overflow: hidden;
   display: block;
   border-top: 2px solid #E0E0E0;
 }
 
-/* line 126, ../../sass/base/_jcf.scss */
+/* line 130, ../../sass/base/_jcf.scss */
 .jcf-list ul li:first-child {
   border-top: 0;
 }
 
-/* line 129, ../../sass/base/_jcf.scss */
+/* line 133, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-overflow {
   overflow: auto;
 }
 
-/* line 132, ../../sass/base/_jcf.scss */
+/* line 136, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-option {
   white-space: nowrap;
   overflow: hidden;
@@ -1104,20 +1104,20 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-size: 1.25em;
 }
 
-/* line 142, ../../sass/base/_jcf.scss */
+/* line 146, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-disabled {
   background: #fff !important;
   color: #aaa !important;
 }
 
-/* line 146, ../../sass/base/_jcf.scss */
+/* line 150, ../../sass/base/_jcf.scss */
 .jcf-select-drop .jcf-hover,
 .jcf-list-box .jcf-selected {
   background: #e6e6e6;
   color: #000;
 }
 
-/* line 151, ../../sass/base/_jcf.scss */
+/* line 155, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-optgroup-caption {
   white-space: nowrap;
   display: block;
@@ -1126,18 +1126,18 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #000;
 }
 
-/* line 158, ../../sass/base/_jcf.scss */
+/* line 162, ../../sass/base/_jcf.scss */
 .jcf-list .jcf-optgroup .jcf-option {
   padding-left: 30px;
 }
 
 /* common custom form elements styles */
-/* line 162, ../../sass/base/_jcf.scss */
+/* line 166, ../../sass/base/_jcf.scss */
 .jcf-disabled {
   background: #ddd !important;
 }
 
-/* line 163, ../../sass/base/_jcf.scss */
+/* line 167, ../../sass/base/_jcf.scss */
 .jcf-focus, .jcf-focus * {
   border-color: #fbb900 !important;
 }
