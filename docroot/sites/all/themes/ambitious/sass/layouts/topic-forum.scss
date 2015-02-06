@@ -230,7 +230,13 @@ body.node-type-topic{
     display:none;
  }
 body.page-node-74566, body.page-node-74606 {
-  .easy-breadcrumb, h1.title{
+  .img-holder .block-easy-breadcrumb .easy-breadcrumb{
+    color:$white;
+    a, span{
+      color:$white;
+    }
+   }
+   h1.title{
     display:none;
    } 
 }
@@ -954,5 +960,16 @@ margin-right: 10px;
 .view-id-stream.view-display-id-stream_forum_page  .post{
   @include breakpoint($mobile) {
     float:left; 
+  }
+}
+
+.page-user .top-header .top-header-inner .page-links{
+  letter-spacing: inherit;
+  a{
+    text-decoration:underline;
+    &:hover{
+      text-decoration:none;
+    }
+    
   }
 }
