@@ -9,6 +9,8 @@
 
 //1. Font styles
 
+ 
+
 //font-weights -  TODO change this sitewide
 .btn {
 	&.btn-facebook{
@@ -349,7 +351,7 @@ a {
 		margin-bottom: 30px;
 		background: transparent;
 		.block-symptoms, .block-share, .block-spectrum{
-			background-image: url(../images/bg06.jpg);
+			background-image: url(../../images/bg06.jpg);
 			color:$white;
 			width:48.5%;
 			padding: 50px 10px 37px 39px;
@@ -407,7 +409,7 @@ a {
 		background-image: url(../images/bg07.jpg);
 	}
 	.block-report{
-		background-image: url(../images/bg05.jpg);
+		background-image: url(../../images/bg05.jpg);
 		float:right;
 	}
 	.sort-block{
@@ -1128,6 +1130,10 @@ a {
 			float:left;
 			clear:both;
 			border: none;
+			// added backgournd, color, border-radius - > nanda Globalsoftlab
+			@include border-radius(5px);
+			background:$orange;
+			color:$white;
 			border-bottom: 5px solid $orange-dark;
 			margin-right: 20px;
 			@include breakpoint($mobile) {

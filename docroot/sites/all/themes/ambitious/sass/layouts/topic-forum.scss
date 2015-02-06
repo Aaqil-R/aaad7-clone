@@ -1,3 +1,4 @@
+@import "buttons";
 @import "content";
 
 body.sidebar{
@@ -164,8 +165,8 @@ div.messages.status{
 .topic-share{ 
   .st_sharethis_button{
     @extend .btn;  
-    //@extend .btn-green;
-    //@extend .btn-right; 
+    @extend .btn-green;
+    @extend .btn-right; 
      cursor: pointer; 
     span span{
       background:none!important;
@@ -367,8 +368,13 @@ body.page-node-74566, body.page-node-74606 {
    float: left;
    width: 100%;
  }
- .visual .btn-perv .text-area{
-   margin-left: -130px;
+ .visual .btn-perv{
+   .icon-Leftarrow{
+     margin-left:-5px;
+   }
+   .text-area{
+     margin-left:-137px;
+   }
  }
  .visual .btn-next .text-area{
    margin-right: -140px; 
@@ -429,7 +435,7 @@ body.page-node-74566, body.page-node-74606 {
  			  }
 			  .image-holder{
 			    overflow:hidden;
-			    border-radius:5px;
+			    @include border-radius(5px);
 			    margin-bottom:11px; 
 				img{
 				  width:100%;
@@ -811,7 +817,7 @@ margin-right: 10px;
    margin-top: -6px; 
 }
 #content_top{
-   z-index: 9999;
+   z-index: 99;
    margin-top: -112px;
    margin-bottom:30px;
   .my-voice-columns{
