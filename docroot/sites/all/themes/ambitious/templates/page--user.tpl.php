@@ -183,19 +183,17 @@
     </section> <!-- /highlighted -->
     <?php print render($page['help']); ?>
   <?php endif; ?>
-
+<?php if ($page['content_top']): ?> 
 <!-- top header of the page -->
 		<section class="top-header">
 			<div class="top-header-inner">
-				<ul class="page-links">
-					<li><a href="#" title="Home">Home</a></li>
-					<li><a href="#" title="Understanding autism">Understanding autism</a></li>
-					<li><a href="#" title="Talk to others">Talk to others</a></li>
-				</ul>
+				<div class="page-links">
+				   <?php print render($page['content_top']); ?> 
+				</div>
 			</div>
 		</section>
 		<!-- contain main informative part of the site -->
-
+<?php endif; ?>
 <main id="main" role="main">
           <?php if ($tabs): ?>
 			<nav id="sidebar">
