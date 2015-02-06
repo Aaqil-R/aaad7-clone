@@ -48,13 +48,14 @@ $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
   <section class="visual">
     <div class="img-holder">
       <div class="caption-frame caption-frame-arrows"> 
+      <?php
+print theme('breadcrumb', drupal_get_breadcrumb());
+?>
         <div class="caption">
           <?php if(isset($content['field_main_caption'])):?>
             <h1 class="title"><span><?php print render($content['field_main_caption']['#items'][0]['value']); ?></span></h1>
           <?php endif; ?>
-          <?php
-print theme('breadcrumb', drupal_get_breadcrumb());
-?>
+          
           <?php if(isset($content['field_sub_caption'])):?>
             <span class="text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></span>
           <?php endif; ?>
