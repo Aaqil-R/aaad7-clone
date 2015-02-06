@@ -14,7 +14,15 @@ class usermigration extends articalmigMigration {
 		
 		$query = $this->getConnection()->select ('migtbluser', 'tu');
 //		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate'));
-		$query->fields('tu',array('fUserId','fEmail','fUsername','fPassword','fDate','fForename','fSurname'));
+		
+		$query->fields('tu',array('fUserId',
+								'fEmail',
+								'fUsername',
+								'fPassword',
+								'fDate',
+								'fForename',
+								'fSurname'));
+								
 		$this->source = new MigrateSourceSQL($query);
 		
 		//destination codes
