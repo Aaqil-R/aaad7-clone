@@ -30,6 +30,7 @@
 				}
 			}
 			
+			
 			a {
 				color:black;
 				text-decoration:underline;
@@ -106,12 +107,55 @@
 
 /*new codes for menu stlying*/
 
-//.nav-holder 
-	.menu-main-menu-features-item-1{
+.menu-main-menu-features-item-1{
 		list-style:none;
 		padding:0;
+		//li { a {
+		.menu__item{ .btn{
+			display:inline-block;
+			border:none;
+			padding:10px 9px;
+			width:349px;
+			font-size:18px;
+			line-height:30px;
+			border-radius:5px;
+			color:$white;
+			text-align:center;
+			text-decoration:none;
+			border-bottom:5px solid $orange-dark;
+			background:$orange;
+			@extend %clearfix;
+			font-weight:normal;
+			font-family:$base-font-family;
+			em{
+				position:relative;
+				display:inline-block;
+				vertical-align:top;
+				word-spacing:3px;
+				top:6px;
+				margin-left: 10px;
+			}
+			
+
+			&:hover {
+				border-bottom-width: 3px;
+				margin-top:2px;
+				text-decoration:none;
+				color:$white;
+			}	
+			&:active{
+				border-bottom-width:0px;
+				margin-top:5px;
+				text-decoration:none;
+				color:$white;
+			}
+			&:visited{
+				text-decoration:none;
+				color:$white;
+			}
+		}}
+		//}} 
 	}
-//}
 
 #nav {
 	.main-menu-1 {
@@ -120,7 +164,7 @@
 				.icon-Downarrow{
 				display:none;
 				}
-			.icon-Uparrow{
+				.icon-Uparrow{
 					display:none;
 				}
 			}
@@ -153,5 +197,3 @@
 .school-slide{
 	top:20px;
 }
-
-
