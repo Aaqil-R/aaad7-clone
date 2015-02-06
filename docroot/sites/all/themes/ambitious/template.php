@@ -284,10 +284,6 @@ function ambitious_menu_link(&$variables) {
   
 }
 
-  function ambitious_preprocess_page(&$variables)
-{
-	$variables['foo'] = "Good2";
-}
 /*
 function ambitious_menu_tree__main_menu_primary(&$variables) 
 {	
@@ -580,6 +576,13 @@ function ambitious_field__field_event_date(&$variables){
   } 
 }
 
+// Naming convention for .tpl.php
+function ambitious_preprocess_page(&$vars) {
+
+  if (isset($vars['node']->type)) {
+    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+  }
+}
 
 
 
