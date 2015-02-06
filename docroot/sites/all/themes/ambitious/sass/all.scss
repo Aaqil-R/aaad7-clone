@@ -1,10 +1,5 @@
-//@import "compass";
-@import "variables";
-@import "buttons";
-@import "markup-mixins";
-@import "base/base-reset"; // or cms-reset
-@import "breakpoint";
-@import "font-icons";
+@import "base/base";
+
 * { font-size: 100.01%; }
 html {
 	height:100%;
@@ -196,81 +191,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:6px 5px 7px;
 		}
 	}
-	.links {
-		float:left;
-		max-width:67%;
-		@extend %listreset;
-		padding:5px 0 0;
-		&.float-right{
-		  float:right;
-		  @include breakpoint($mobile) {
-		    float:none;
-		  }
-		  .last-child{
-		    padding-right:0;
-		  }
-		}
-		@include breakpoint($mobile) {
-			max-width:100%;
-			float:none;
-			text-align:center;
-		}
-		li {
-			position:relative;
-			font-size:16px;
-			line-height:18px;
-			float:left;
-			padding:0 24px 0 19px;
-			@include breakpoint($tablet) {
-				padding:0 11px;
-			}
-			@include breakpoint($mobile) {
-				float:none;
-				padding:0 15px;
-				display:inline-block;
-				vertical-align:top;
-			}
-			&:after {
-				position:absolute;
-				content:"";
-				width:1px;
-				height:17px;
-				left:0;
-				top:2px;
-				background:$captions-credit;
-				@include breakpoint($mobile) {
-					left:-4px;
-				}
-			}
-			&:first-child {
-				padding-left:0;
-				&:after {
-					display:none;
-				}
-			}
-			a {
-				@include link-color($gray);
-			}
-			&.mob {
-				display:none;
-				@include breakpoint($mobile) {
-					display:inline-block;
-				}
-			}
-			&.desktop {
-				@include breakpoint($mobile) {
-					display:none;
-				}
-			}
-			&.get-up {
-				&:after {
-					@include breakpoint($mobile) {
-						display:none;
-					}
-				}
-			}
-		}
-	}
+	
 	/* login info styles */
 	.login-info {
 		float:right;

@@ -1,0 +1,180 @@
+@import "base/base";
+
+/* button */
+.btn {
+  display:inline-block;
+  border:none;
+  padding:5px 19px;
+  font-size:18px;
+  line-height:30px;
+  border-radius:5px;
+  color:$white;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:5px solid $orange-dark;
+  background:$orange;
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
+  em{
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+    word-spacing:3px;
+	top:6px;
+	margin-left: 10px;
+  }
+  &.btn-green{
+    border-bottom:5px solid $green-dark;
+    background:$green;
+  }
+  &input[type=submit]{
+    border-radius:5px;
+  }
+  &.btn-pink{
+	  border-bottom: 5px solid $pink-dark;
+	  background:$pink;
+  }
+  &.btn-gray{
+    border:1px solid $captions-credit;
+	border-bottom-width: 5px;
+    background:$white;
+	padding:5px 22px;
+	color:$captions-credit;
+	&:hover{
+	  color:$captions-credit;
+	}
+    &:active, &:focus{
+	  border-width: 1px;
+	  margin-top:4px;
+	  color:$captions-credit;
+	}
+	&:visited{
+      text-decoration:none;
+	  color:$captions-credit;
+    }
+  }
+  &.bt-left{
+    margin:0 0 0 23px;
+	@include breakpoint($mobile) {
+	  margin:0 0 0 11px;
+	}
+  }
+  &.btn-transparent{
+    display: inline-block;
+    vertical-align: top;
+	background:none;
+    border: 2px solid $white;
+    font-size: 20px;
+    line-height: 30px;
+    color:$white;
+    text-decoration: none;
+    position: relative;
+    border-radius: 5px;
+    padding:10px 28px;
+    margin:0;
+    em{
+      padding-left:25px;
+    }
+    @include breakpoint($mobile) {
+    font-size:14px;
+    padding:7px 18px;
+      em{
+        padding-left:5px;
+      }
+    }
+
+    &:hover {
+      margin:0;
+      &.orange{
+        border: 2px solid $white;
+        background:$orange;
+      }
+      &.lavender{
+        border: 2px solid $white;
+        background:$lavender;
+      }
+    }
+
+	&:visited{
+      text-decoration:none;
+	  border: 2px solid $white;
+	  background:$orange;
+	  margin:0;
+	  color:$white;
+    }
+  }
+  &.btn-left{
+    float:left;
+  }
+  &.btn-right{
+    float:right;
+  }
+  &:hover {
+    border-bottom-width: 3px;
+    margin-top:2px;
+	text-decoration:none;
+	color:$white;
+  }
+  &:active{
+    border-bottom-width:0px;
+    margin-top:5px;
+	text-decoration:none;
+	color:$white;
+  }
+  &:visited{
+    text-decoration:none;
+	color:$white;
+  }
+} 
+
+//=== Buttons ===//
+
+// Views - footer button
+.footer-button{
+	margin-bottom: 130px;
+	@include breakpoint($mobile){
+		margin-bottom: 30px;
+	}
+	.view-footer{
+		text-align: center;
+
+		a.btn{
+			font-family: $base-font-family;
+			padding: 12px 19px;
+			@include breakpoint($mobile){
+			width: 100%;
+			margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+// Facebook button
+.facebook-btn{
+	border-bottom: 5px solid $facebook-border;
+	background: $facebook-bg;
+}
+
+// Twitter button
+.twitter-btn{
+	border-bottom: 5px solid $twitter-border;
+	background: $twitter-bg;
+}
+.icon-connection {
+	font-size:29px;
+	padding:6px 0 0;
+	float:left;
+	background:$white;
+	line-height:30px;
+	height:45px;
+	width:45px;
+	text-align:center;
+	color:$pink ;
+	@include breakpoint($mobile) {
+		height:33px;
+		width:34px;
+		padding:2px 0 0;
+		font-size:16px;
+	}
+}

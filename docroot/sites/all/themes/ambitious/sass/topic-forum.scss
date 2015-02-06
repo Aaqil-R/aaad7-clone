@@ -1,6 +1,155 @@
+@import "content";
 
+body.sidebar{
+  #main{
+    max-width: none;
+    padding: 0;
+  }
+  #sidebar, #sidebar:before {
+    width: 25%;
+  }
+  #sidebar{
+    float:left;
+    padding-top: 5em;
+    text-align: right;
+    font-size: 1.2em;
+    min-height: 16em;
+    letter-spacing: -1px;
+    ul{
+      list-style: none;
+      float: right;
+      a{
+        padding: 0.8em 1.5em 0.8em 2.5em;
+        display: block;
+        color:#5e666e;
+        text-align: left;
+        &.active{
+          background: #FFF;
+          color: inherit;
+        }
+        &:hover{
+          color:inherit;
+        }
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      left: 0;
+      background:#ecf0f1;
+      @include breakpoint($mobile) {
+        content: none;
+      }
+    }
+    @include breakpoint($mobile) {
+      width: 100%;
+      padding: 1em;
+      background:#ecf0f1;
+      min-height: 0;
+    }
+  }
+}
 
+body.profile .top-header{
+  @include breakpoint($mobile) {
+    display: none;
+  }
+}
 
+#comments{
+  clear: both;
+  padding-top: 2em;
+  .comment{
+    margin: 2em 0;
+  }
+  .profile-picture{
+    float: none;
+  }
+  h4{
+    font-size: 1.1em;
+    margin: 0.3em 0;
+  }
+  .comment-left{
+    float:left;
+  }
+  .comment-body{
+    padding: 1.4em 2em;
+    border: 2px solid #d2d5d6;
+    margin-left: 6em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    position: relative;
+    &:before{
+      background: url("../images/comment-tip-left.png") 0 0 no-repeat;
+      width: 26px;
+      height: 31px;
+      content: '';
+      display: block;
+      position: absolute;
+      right:100%;
+      //left:-10px;
+      top:16px;
+    }
+  }
+  @include breakpoint($mobile) {
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .comment{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .profile-picture{
+      float: left;
+      margin: 0 1em 1.5em 0;
+      width: 35%;
+      height: auto;
+    }
+    .comment-left{
+      float: none;
+      margin-bottom: 1em;
+      width: 100%;
+    }
+    .comment-body{
+      border: none;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      height: 100%;
+      white-space: normal;
+      &:before{
+        content: none;
+      }
+    }
+  }
+}
+
+.social-networks {
+			@extend %listreset;
+			float:left;
+			li {
+				display:inline-block;
+				vertical-align:middle;
+				font-size:20px;
+				margin:0 11px 0 0;
+				a {
+					color:$gray;
+					text-decoration:none;
+					&:hover { color:$white; }
+				}
+				em { display:none; }
+				.icon-YouTube {
+					font-size:23px;
+					display:block;
+					margin:-4px 0 0 -2px;
+				}
+			}
+			}
+			
 /*Message*/
 div.messages.status{
    .krumo-root{
@@ -15,8 +164,8 @@ div.messages.status{
 .topic-share{ 
   .st_sharethis_button{
     @extend .btn;  
-    @extend .btn-green;
-    @extend .btn-right; 
+    //@extend .btn-green;
+    //@extend .btn-right; 
      cursor: pointer; 
     span span{
       background:none!important;

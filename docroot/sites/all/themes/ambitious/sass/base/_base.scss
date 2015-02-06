@@ -51,6 +51,7 @@
 
 $base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+$base-min-width: 320px;
 
 $h1-font-size: 2    * $base-font-size;
 $h2-font-size: 1.5  * $base-font-size;
@@ -100,7 +101,6 @@ $font-monospace:   $courier;
 $base-font-size: 1.6em;
 $base-line-height: 1.562em;
 
-
 //
 // Add references to defined colours.
 //
@@ -108,6 +108,9 @@ $base-line-height: 1.562em;
 
 // 
 // Add references to the defined breakpoints.
+//
+@import "breakpoints";
+
 
 // TODO: Wasn't in the original style sheet, re-evaluate in the refactor.
 // The amount lists, blockquotes and comments are indented.
@@ -122,7 +125,6 @@ $nav-height: 3em;
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
-
 // =============================================================================
 // Partials to be shared with all .scss files.
 // =============================================================================
@@ -136,13 +138,20 @@ $tabs-border: #bbb;
 // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/css3";
 // Helps set up a vertical rhythm.
-@import "compass/typography/vertical_rhythm";
+// @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
 @import "susy";
-//import breakpoint
+// Add the breakpoint library
 @import "breakpoint";
+// Add the helper mixins
+@import "markup-mixins";
+
+// TODO: Re-evaluate; these are from the _all.scss
+@import "font-icons";
+@import "jcf";
+
 // Now we add our custom helper mixins.
-@import "mixins";
+//@import "mixins";
 
 @include border-box-sizing;
 
@@ -154,9 +163,9 @@ $tabs-border: #bbb;
 
 // TODO: Need to re-evaluate; removing it because of line 146 above.
 // html {box-sizing: border-box;}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+// *, *:before, *:after {
+//     box-sizing: inherit;
+// }
 
 * {max-height: 100000em;}
 body {
