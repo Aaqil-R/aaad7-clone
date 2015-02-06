@@ -19,8 +19,8 @@ class userupdatemigration extends articalmigMigration {
 								'fBlog',
 								'fTwitter',
 								'fAdditional'));
-		$query->leftjoin('migtblarea','ta','tu.fArea = ta.fId');
-		$query->addField('ta','fName');
+		$query->leftjoin('mappinglocation','ma','tu.fArea = ma.OldID');
+		$query->addField('ma','NewID');
 		
 		$this->source = new MigrateSourceSQL($query);
 		
@@ -46,7 +46,8 @@ class userupdatemigration extends articalmigMigration {
 		$this->addFieldMapping('uid','fUserId')->callbacks(array($this,'changeuserid'));
 		
 		$this->addFieldMapping('field_name','fNickname');		
-		$this->addFieldMapping('field_location','fName');
+		$this->addFieldMapping('field_location_reference','NewID');
+		$this->addFieldMapping('field_location_reference:source_type')->defaultValue('tid');
 		$this->addFieldMapping('field_blog','fBlog');
 		$this->addFieldMapping('field_twitter','fTwitter');
 		$this->addFieldMapping('field_about_me','fAdditional');		
