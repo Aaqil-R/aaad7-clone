@@ -306,22 +306,12 @@
 
   <main id="main">
 
-  <?php if ($page['content_top']): ?>
-    <section id="content_top">
-      <?php print render($page['content_top']); ?>
-    </section> <!-- /content-top -->
-  <?php endif; ?>
-
-    <?php if ($title|| $messages || $tabs || $action_links): ?>
+  <?php if ($title|| $messages || $tabs || $action_links): ?>
     <div id="content-header">
 
       <?php if ($title): ?>
         <h1 class="title"><?php print $title; ?></h1>
       <?php endif; ?>
-
-
-      <?php print $messages; ?>
-      <?php print render($page['help']); ?>
 
 
       <?php if ($tabs): ?>
@@ -336,10 +326,13 @@
     </div> <!-- /content-header -->
     <?php endif; ?>
 
+  <?php if ($page['content_top']): ?>
+    <section id="content_top">
+      <?php print render($page['content_top']); ?>
+    </section> <!-- /content-top -->
+  <?php endif; ?>   
 
-    <!-- <section id="content-area"> -->
-      <?php //print render($page['content']) ?>
-    <!-- </section> --> <!-- /content -->
+
   <?php if ($page['content_bottom']): ?>
     <section id="content_bottom">
       <?php print render($page['content_bottom']); ?>
