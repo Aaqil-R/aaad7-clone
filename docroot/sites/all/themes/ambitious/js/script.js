@@ -27,7 +27,7 @@ Drupal.behaviors.ambitious = {
     	initCustomForms();
     	
     	    $('.view-display-id-stream_forum_page').mobileNav({
-    	       container: $('body'),
+    	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',
@@ -35,7 +35,7 @@ Drupal.behaviors.ambitious = {
 	    }); 
          $( document ).ajaxComplete(function() {
            $('.view-display-id-stream_forum_page').mobileNav({
-    	        container: $('body'),           
+    	               
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',

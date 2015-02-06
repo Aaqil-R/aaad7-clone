@@ -401,13 +401,8 @@ function initCustomHover() {
 	$.fn.mobileNav = function(options) {
 		return this.each(function() {
            // edited by kamalakannan globalsoftlab to make filtertopic work in ajax load	  
-		  if (typeof options.container != 'undefined') {
-		  var params = $.extend({}, options),
+		 var params = $.extend({}, options, {container: this}),
 				instance = new MobileNav(params);
-		  } else {
-			var params = $.extend({}, options, {container: this}),
-				instance = new MobileNav(params);
-		  }
 			$.data(this, 'MobileNav', instance);
 		});
 	};
