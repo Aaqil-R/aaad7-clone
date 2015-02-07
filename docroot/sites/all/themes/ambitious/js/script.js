@@ -26,7 +26,7 @@ Drupal.behaviors.ambitious = {
   	// Place your code here
     	initCustomForms();
     	
-    	    $('#views-exposed-form-stream-stream-forum-page').mobileNav({
+    	    $('#block-views-stream-stream-forum-page').mobileNav({
     	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
@@ -34,7 +34,7 @@ Drupal.behaviors.ambitious = {
 		  menuDrop: '.filter-slide'
 	    }); 
          $( document ).ajaxComplete(function() {
-           $('#views-exposed-form-stream-stream-forum-page').mobileNav({
+           $('#block-views-stream-stream-forum-page').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',
