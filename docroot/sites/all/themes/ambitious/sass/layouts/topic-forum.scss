@@ -1,5 +1,5 @@
-@import "buttons";
-@import "content";
+@import "buttons"; 
+@import "content"; 
 
 body.sidebar{
   #main{
@@ -692,7 +692,7 @@ margin-right: 10px;
 	 .nav-filter{
 		  padding:0 31px;
 			.form-type-bef-checkbox {
-			   
+			  
 			     font-size:18px;
 			     line-height:29px;
 			    
@@ -708,8 +708,17 @@ margin-right: 10px;
                       float: right;
                       margin-top: 6px;
 				}			
-				&:hover, &.active{
-                      color:$orange;
+				&:hover, &.active, &.checked, &.highlight{
+                       color:$orange;
+			     position: relative;
+			     line-height:29px;
+			     @extend .icon-Tick; 
+			     &:before{
+			      position: absolute;
+                     right:15px; 
+                     float:none;
+                     @extend [class^="icon-"];
+			     } 
 				}
 				&.active{ 
                       span{
@@ -725,7 +734,7 @@ margin-right: 10px;
 			  paddin-right:10px;
 			  cursor: pointer; 
 			}
-			&.checked, &.highlight, &:focuts{ 
+			&.checked, &.highlight, &:focus{ 
 			     color:$orange;
 			     position: relative;
 			     line-height:29px;
