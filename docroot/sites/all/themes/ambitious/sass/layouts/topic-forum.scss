@@ -689,14 +689,13 @@ margin-right: 10px;
 			padding:24px 31px 19px;
 		}
 	}
-	.nav-filter{
-		@extend %listreset;
-		 
-		.form-type-bef-link{
-			font-size:18px;
-			line-height:29px;
-			padding:0 31px; 
-			a {
+	 .nav-filter{
+		  padding:0 31px;
+			.form-type-bef-checkbox {
+			   
+			     font-size:18px;
+			     line-height:29px;
+			    
 				color:$heading-link;
 				text-decoration:none;
 				background:$page-background;
@@ -716,23 +715,27 @@ margin-right: 10px;
                       span{
                         display: inline-block;
                       }
-				}
+			 
 			}
-			&.selected{
-			  line-height: 29px;
-			  a{
+			input[type=checkbox]{
+			  display:none;
+			}
+			label{
+			  display:block;
+			  paddin-right:10px;
+			  cursor: pointer; 
+			}
+			&.checked, &.highlight, &:focuts{ 
 			     color:$orange;
 			     position: relative;
-			     line-height:33px;
-			     @extend .icon-Tick;
-			     @extend [class^="icon-"];
+			     line-height:29px;
+			     @extend .icon-Tick; 
 			     &:before{
 			      position: absolute;
                      right:15px; 
                      float:none;
-			     }
-			  } 
-			  
+                     @extend [class^="icon-"];
+			     } 
 			}
 		}
 	}
