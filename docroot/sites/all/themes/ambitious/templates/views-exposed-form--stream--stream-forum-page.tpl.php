@@ -81,7 +81,7 @@
 				</div> 
    
       <div class="button-holder">
-       <div class="views-exposed-widget views-submit-button element-invisible">
+       <div class="views-exposed-widget views-submit-button">
       <?php print $button; ?>
     </div>
        </div> 
