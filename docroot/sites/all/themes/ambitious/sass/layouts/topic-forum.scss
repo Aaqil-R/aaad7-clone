@@ -420,7 +420,8 @@ body.page-node-74566, body.page-node-74606 {
    
  }
 }
-.posts-columns.columns-full{ 
+.posts-columns.columns-full{
+      
 	    .row{
 	      width:100%; 
 		  .forum-icon{
@@ -995,8 +996,7 @@ margin-right: 10px;
 }
 
 .view-id-stream.view-display-id-stream_forum_page  .post{
-  display: block;
-  float: left;
+  @extend %clearfix;
   @include breakpoint($mobile) {
     float:left; 
   }
