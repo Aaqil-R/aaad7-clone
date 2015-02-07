@@ -81,14 +81,14 @@
 				</div> 
    
       <div class="button-holder">
-       <div class="views-exposed-widget views-submit-button">
+       <div class="views-exposed-widget views-submit-button element-invisible">
       <?php print $button; ?>
     </div>
        </div> 
 				
         </div>
     <?php if (!empty($reset_button)): ?>
-      <div class="views-exposed-widget views-reset-button">
+      <div class="views-exposed-widget views-reset-button element-invisible">
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
