@@ -665,10 +665,20 @@ margin-right: 10px;
  
  
  
-.view-display-id-stream_forum_page.posts-columns.columns-full .row .footer .links.inline{
-   float: right;
-   display: inline-block;
-   margin-top: -6px; 
+.view-display-id-stream_forum_page.posts-columns.columns-full .row .footer{
+   .times{
+     @include breakpoint($tablet) {
+       width: 52%;
+     }
+     @include breakpoint($mobile) {
+       width: 100%;
+     }
+   }
+  .links.inline{
+    float: right;
+    display: inline-block;
+    margin-top: -6px; 
+  }
 }
 #content_top{
    z-index: 9999;
