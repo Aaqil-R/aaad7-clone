@@ -397,13 +397,12 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
 
 function ambitious_links__node__comment($variables) {
    
-  if(isset($variables['links']['comment_forbidden']]['title'])){
+  if(isset($variables['links']['comment_forbidden']['title'])){
     preg_match_all('/href=[\'"]?([^\s\>\'"]*)[\'"\>]/', $variables['links']['comment_forbidden']['title'], $matches);
     $hrefs = ($matches[1] ? $matches[1] : false);
     $hrefs = urldecode($hrefs[0]); 
     $url = parse_url($hrefs); 
-    parse_str($url['query'], $query);
-        
+    parse_str($url['query'], $query); 
     $variables['links']['comment_forbidden']['title'] = l(t('Reply'), 'user/login', array('attributes' => array('class' => 'btn btn-right',  'title' => 'Share your thoughts and opinions related to this posting.'), 'query' => array ($query), 'fragment' => $url['fragment'], ));
  }
 
