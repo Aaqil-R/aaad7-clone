@@ -535,10 +535,14 @@ body.page-node-74566, body.page-node-74606 {
 				margin-top: 8px;
 				color:$captions-credit; 
 				display: inline-block;
+				 @include breakpoint($tablet) {
+				  width: 52%;
+				}
 				@include breakpoint($mobile) {
 				  margin-top: 30px;
 				  margin-left:0;
 				  display: block;
+				  width: 100%;
 				}
 				em{
 				  font-size: 29px;
