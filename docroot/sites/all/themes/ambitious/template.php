@@ -397,7 +397,7 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
 
 function ambitious_links__node__comment($variables) {
    
-  if(isset($variables['links']['comment-add']['title'])){
+  if(isset($variables['links']['comment_forbidden']]['title'])){
     preg_match_all('/href=[\'"]?([^\s\>\'"]*)[\'"\>]/', $variables['links']['comment_forbidden']['title'], $matches);
     $hrefs = ($matches[1] ? $matches[1] : false);
     $hrefs = urldecode($hrefs[0]); 
