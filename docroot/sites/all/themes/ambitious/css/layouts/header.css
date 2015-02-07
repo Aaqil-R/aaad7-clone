@@ -6,7 +6,7 @@
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-.right-info, .school-slide .nav, #nav > ul, #nav .slide, .filter-slide .nav-filter, #header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu {
+.right-info, .school-slide .nav, #nav > ul, #nav .slide, .filter-slide .nav-filter, #header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu, .top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1616,35 +1616,35 @@ table {
 }
 
 /* line 784, ../../sass/layouts/header.scss */
-#header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu {
+#header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu, .top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu {
   float: left;
   max-width: 67%;
   padding: 5px 0 0;
 }
 /* line 789, ../../sass/layouts/header.scss */
-#header .links.float-right, #header .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu #header ul.float-right.menu {
+#header .links.float-right, #header .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu #header ul.float-right.menu, .top-bar .links.float-right, .top-bar .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu .top-bar ul.float-right.menu {
   float: right;
 }
 @media (max-width: 767px) {
   /* line 789, ../../sass/layouts/header.scss */
-  #header .links.float-right, #header .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu #header ul.float-right.menu {
+  #header .links.float-right, #header .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu #header ul.float-right.menu, .top-bar .links.float-right, .top-bar .region-header .header-top-menu ul.float-right.menu, .region-header .header-top-menu .top-bar ul.float-right.menu {
     float: none;
   }
 }
 /* line 794, ../../sass/layouts/header.scss */
-#header .links.float-right .last-child, #header .region-header .header-top-menu ul.float-right.menu .last-child, .region-header .header-top-menu #header ul.float-right.menu .last-child {
+#header .links.float-right .last-child, #header .region-header .header-top-menu ul.float-right.menu .last-child, .region-header .header-top-menu #header ul.float-right.menu .last-child, .top-bar .links.float-right .last-child, .top-bar .region-header .header-top-menu ul.float-right.menu .last-child, .region-header .header-top-menu .top-bar ul.float-right.menu .last-child {
   padding-right: 0;
 }
 @media (max-width: 767px) {
   /* line 784, ../../sass/layouts/header.scss */
-  #header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu {
+  #header .links, #header .region-header .header-top-menu ul.menu, .region-header .header-top-menu #header ul.menu, .top-bar .links, .top-bar .region-header .header-top-menu ul.menu, .region-header .header-top-menu .top-bar ul.menu {
     max-width: 100%;
     float: none;
     text-align: center;
   }
 }
 /* line 803, ../../sass/layouts/header.scss */
-#header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li {
+#header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li, .top-bar .links li, .top-bar .region-header .header-top-menu ul.menu li, .region-header .header-top-menu .top-bar ul.menu li {
   position: relative;
   font-size: 16px;
   line-height: 18px;
@@ -1653,13 +1653,13 @@ table {
 }
 @media (max-width: 990px) {
   /* line 803, ../../sass/layouts/header.scss */
-  #header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li {
+  #header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li, .top-bar .links li, .top-bar .region-header .header-top-menu ul.menu li, .region-header .header-top-menu .top-bar ul.menu li {
     padding: 0 11px;
   }
 }
 @media (max-width: 767px) {
   /* line 803, ../../sass/layouts/header.scss */
-  #header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li {
+  #header .links li, #header .region-header .header-top-menu ul.menu li, .region-header .header-top-menu #header ul.menu li, .top-bar .links li, .top-bar .region-header .header-top-menu ul.menu li, .region-header .header-top-menu .top-bar ul.menu li {
     float: none;
     padding: 0 15px;
     display: inline-block;
@@ -1667,7 +1667,7 @@ table {
   }
 }
 /* line 818, ../../sass/layouts/header.scss */
-#header .links li:after, #header .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu #header ul.menu li:after {
+#header .links li:after, #header .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu #header ul.menu li:after, .top-bar .links li:after, .top-bar .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu .top-bar ul.menu li:after {
   position: absolute;
   content: "";
   width: 1px;
@@ -1678,46 +1678,46 @@ table {
 }
 @media (max-width: 767px) {
   /* line 818, ../../sass/layouts/header.scss */
-  #header .links li:after, #header .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu #header ul.menu li:after {
+  #header .links li:after, #header .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu #header ul.menu li:after, .top-bar .links li:after, .top-bar .region-header .header-top-menu ul.menu li:after, .region-header .header-top-menu .top-bar ul.menu li:after {
     left: -4px;
   }
 }
 /* line 830, ../../sass/layouts/header.scss */
-#header .links li:first-child, #header .region-header .header-top-menu ul.menu li:first-child, .region-header .header-top-menu #header ul.menu li:first-child {
+#header .links li:first-child, #header .region-header .header-top-menu ul.menu li:first-child, .region-header .header-top-menu #header ul.menu li:first-child, .top-bar .links li:first-child, .top-bar .region-header .header-top-menu ul.menu li:first-child, .region-header .header-top-menu .top-bar ul.menu li:first-child {
   padding-left: 0;
 }
 /* line 832, ../../sass/layouts/header.scss */
-#header .links li:first-child:after, #header .region-header .header-top-menu ul.menu li:first-child:after, .region-header .header-top-menu #header ul.menu li:first-child:after {
+#header .links li:first-child:after, #header .region-header .header-top-menu ul.menu li:first-child:after, .region-header .header-top-menu #header ul.menu li:first-child:after, .top-bar .links li:first-child:after, .top-bar .region-header .header-top-menu ul.menu li:first-child:after, .region-header .header-top-menu .top-bar ul.menu li:first-child:after {
   display: none;
 }
 /* line 836, ../../sass/layouts/header.scss */
-#header .links li a, #header .region-header .header-top-menu ul.menu li a, .region-header .header-top-menu #header ul.menu li a {
+#header .links li a, #header .region-header .header-top-menu ul.menu li a, .region-header .header-top-menu #header ul.menu li a, .top-bar .links li a, .top-bar .region-header .header-top-menu ul.menu li a, .region-header .header-top-menu .top-bar ul.menu li a {
   color: #d2d5d6;
 }
 /* line 77, ../../sass/base/_markup-mixins.scss */
-#header .links li a:hover, #header .region-header .header-top-menu ul.menu li a:hover, .region-header .header-top-menu #header ul.menu li a:hover, #header .links li a:active, #header .region-header .header-top-menu ul.menu li a:active, .region-header .header-top-menu #header ul.menu li a:active, #header .links li a:focus, #header .region-header .header-top-menu ul.menu li a:focus, .region-header .header-top-menu #header ul.menu li a:focus {
+#header .links li a:hover, #header .region-header .header-top-menu ul.menu li a:hover, .region-header .header-top-menu #header ul.menu li a:hover, #header .links li a:active, #header .region-header .header-top-menu ul.menu li a:active, .region-header .header-top-menu #header ul.menu li a:active, #header .links li a:focus, #header .region-header .header-top-menu ul.menu li a:focus, .region-header .header-top-menu #header ul.menu li a:focus, .top-bar .links li a:hover, .top-bar .region-header .header-top-menu ul.menu li a:hover, .region-header .header-top-menu .top-bar ul.menu li a:hover, .top-bar .links li a:active, .top-bar .region-header .header-top-menu ul.menu li a:active, .region-header .header-top-menu .top-bar ul.menu li a:active, .top-bar .links li a:focus, .top-bar .region-header .header-top-menu ul.menu li a:focus, .region-header .header-top-menu .top-bar ul.menu li a:focus {
   color: white;
   text-decoration: none;
 }
 /* line 839, ../../sass/layouts/header.scss */
-#header .links li.mob, #header .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu #header ul.menu li.mob {
+#header .links li.mob, #header .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu #header ul.menu li.mob, .top-bar .links li.mob, .top-bar .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu .top-bar ul.menu li.mob {
   display: none;
 }
 @media (max-width: 767px) {
   /* line 839, ../../sass/layouts/header.scss */
-  #header .links li.mob, #header .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu #header ul.menu li.mob {
+  #header .links li.mob, #header .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu #header ul.menu li.mob, .top-bar .links li.mob, .top-bar .region-header .header-top-menu ul.menu li.mob, .region-header .header-top-menu .top-bar ul.menu li.mob {
     display: inline-block;
   }
 }
 @media (max-width: 767px) {
   /* line 845, ../../sass/layouts/header.scss */
-  #header .links li.desktop, #header .region-header .header-top-menu ul.menu li.desktop, .region-header .header-top-menu #header ul.menu li.desktop {
+  #header .links li.desktop, #header .region-header .header-top-menu ul.menu li.desktop, .region-header .header-top-menu #header ul.menu li.desktop, .top-bar .links li.desktop, .top-bar .region-header .header-top-menu ul.menu li.desktop, .region-header .header-top-menu .top-bar ul.menu li.desktop {
     display: none;
   }
 }
 @media (max-width: 767px) {
   /* line 851, ../../sass/layouts/header.scss */
-  #header .links li.get-up:after, #header .region-header .header-top-menu ul.menu li.get-up:after, .region-header .header-top-menu #header ul.menu li.get-up:after {
+  #header .links li.get-up:after, #header .region-header .header-top-menu ul.menu li.get-up:after, .region-header .header-top-menu #header ul.menu li.get-up:after, .top-bar .links li.get-up:after, .top-bar .region-header .header-top-menu ul.menu li.get-up:after, .region-header .header-top-menu .top-bar ul.menu li.get-up:after {
     display: none;
   }
 }
