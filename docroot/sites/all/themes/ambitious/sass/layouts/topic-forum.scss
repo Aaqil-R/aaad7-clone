@@ -500,12 +500,20 @@ body.page-node-74566, body.page-node-74606 {
 			  @include breakpoint($mobile) {
 			    padding-left: 20px;
 			  }
+			  .num-holder{
+			    display: inline-block;
+			    margin-top: 9px;
+			    .text{
+			      font-size: 15px;
+			    }
+			  }
 			  .text{
 			    display:inherit; 
 			  }
 			  .links.inline{
 			    float:right;
                    @extend %listreset;
+                   
                    @include breakpoint($mobile) {
                      float:none;
                      padding-top: 20px;
@@ -532,7 +540,7 @@ body.page-node-74566, body.page-node-74606 {
 			  .times{
 			    font-size: 15px;
 				margin-left: 40px;
-				margin-top: 8px;
+				margin-top: 15px;
 				color:$captions-credit; 
 				display: inline-block;
 				 @include breakpoint($tablet) {
@@ -837,7 +845,7 @@ margin-right: 10px;
 .view-display-id-stream_forum_page.posts-columns.columns-full .row .footer .links.inline{
    float: right;
    display: inline-block;
-   margin-top: -6px; 
+   margin-top: 6px; 
 }
 #content_top{
    z-index: 99;
