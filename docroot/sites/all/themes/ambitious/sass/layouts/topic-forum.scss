@@ -846,6 +846,15 @@ margin-right: 10px;
    float: right;
    display: inline-block;
    margin-top: 6px; 
+   @include breakpoint($mobile) {
+     float:none;
+     width:100%;
+     li{
+       padding-right: 0;
+       width: 100%;
+       float: left;
+     } 
+   }
 }
 #content_top{
    z-index: 99;
