@@ -42,7 +42,7 @@ Drupal.behaviors.ambitious = {
  		   menuDrop: '.filter-slide'
 	      });
         }); 
-        $("form#views-exposed-form-stream-stream-forum-page .form-item-sort-by select").change(function() {
+        $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
         
