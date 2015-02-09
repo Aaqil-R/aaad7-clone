@@ -252,10 +252,10 @@
 
               <img src="images/filler3.png">
 
-          </div>
+          </div>  -->
+            
 
-
-            <!-- support columns-
+            <!-- support columns
             <div class="support-columns">
             <div class="col-3 col">
               <h3> Lend your support</h3>
@@ -277,7 +277,7 @@
               </a>
             </div>
           </div>
-           <!--end support columns -->
+           end support columns -->
             <div class="r-s-arrow">
             <a href="#"><span class="icon-Rightarrow"></span></a>
             <p class="skip"><a href="#">skip</a></p>
