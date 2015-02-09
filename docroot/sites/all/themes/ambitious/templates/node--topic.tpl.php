@@ -54,7 +54,7 @@
             <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
           <?php endif; ?> 
         </div> 
-        <div class="banner_nav">
+        <div class="banner_nav visual">
           <?php 
             if (0 < $prev_nid){
               print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-prev')));
