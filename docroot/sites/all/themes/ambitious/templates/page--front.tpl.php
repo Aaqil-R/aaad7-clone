@@ -97,85 +97,10 @@
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
-  
-  <?php if ($page['header']): ?>
-    <section class="top-bar">
-      <div class="holder">
-        <?php print render($page['header']); ?>
-      </div>
-    </section> <!-- /header -->
-  <?php endif; ?>
-
-<!-- ########### header -->
-
-    <!-- header of the page -->
-    <header id="header">
-      <!-- top header of the page -->
-      <div class="header-top">
-        <div class="holder">
-          
-          <?php if ($logo): ?>
-            <div class="logo">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
-            </div><!-- /logo -->
-          <?php endif; ?>
-          
-          <ul class="right-info">
-            <li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
-            <li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
-            <li class="menu"><a href="#" class="menu-opener"><span class="icon-Close"></span> <span class="menu-text">Menu</span><span class="close">Close</span></a></li>
-          </ul>
-        </div>
-        <!-- search form -->
-        <div class="search-slide">
-          <form action="#" class="search-form">
-            <fieldset>
-              <legend class="hidden">search</legend>
-              <label for="search">search</label>
-              <input type="search" placeholder="Start typing to search the site" id="search">
-              <input type="submit" value="search">
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <!-- nav of the page -->
-      <div class="nav-holder">
-        <!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
-			<?php
-				//adding the features menu
-			    $menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
-                $tree = menu_tree($menu_name);
-                print drupal_render($tree); 
-			?>
-        <nav id="nav">
-				<?php
-				//adding the menu function
-				//print render($page['main_menu']); 
-				$menu_name = variable_get('menu_main_links_source', 'main-menu');
-				$tree = menu_tree($menu_name);
-				print drupal_render($tree); ?>
-				<!--commented code activate it to get menu in nav bar-->
-			</nav>
-	  </div>
-	  
-	  <!-- school nav of the page -->
-      <div class="school-slide">
-		<h4 class="title"> Schools & College
-			<?php
-				//adding the features menu
-			    //$menu_name = variable_get('menu_main_links_source', 'menu-schools-featured-menu');
-                //$tree = menu_tree($menu_name);
-                //print drupal_render($tree); 
-			?>
-		</h4>
-			<nav id="nav">
-				<?php
-				$menu_name = variable_get('menu_main_links_source', 'menu-schools-college');
-				$tree = menu_tree($menu_name);
-				print drupal_render($tree); ?>
-			</nav>
-      </div>
-    </header>
+  <!-- including header region into the template -->
+  <?php
+    print render($page['header']); 
+  ?>
 <!-- / header -->
 
 <section class="visual">
@@ -388,7 +313,7 @@
           <div class="col block-twitter">
             <h3>Latest from Twitter</h3>
             <div class="twitter">
-              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300"height="500">Tweets by @AmbitiousAutism</a>
+              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300" height="500">Tweets by @AmbitiousAutism</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
           </div>

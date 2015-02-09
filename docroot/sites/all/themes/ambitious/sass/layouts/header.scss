@@ -484,7 +484,7 @@
 }
  
 /* nav styles */
-#nav {
+nav {
   >ul {
     @extend %listreset;
     border-top:2px solid $border-color;
@@ -496,6 +496,7 @@
         position:relative;
         text-decoration:none;
         display:block;
+		font-weight: lighter;
         padding:9px 31px 11px;
         border-bottom:2px solid $border-color;
         @include breakpoint($mobile) {
