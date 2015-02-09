@@ -89,79 +89,11 @@
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
   
-  <?php if ($page['header']): ?>
-    <section class="top-bar">
-      <div class="holder">
-        <?php print render($page['header']); ?>
-      </div>
-    </section> <!-- /header -->
-  <?php endif; ?>
-
-<!-- ########### header -->
-
+  <!-- including header region into the template -->
+    <?php
+     print render($page['header']); 
+    ?>
     <!-- header of the page -->
-    <header id="header">
-      <!-- top header of the page -->
-      <div class="header-top">
-        <div class="holder">
-          
-          <?php if ($logo): ?>
-            <div class="logo">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="/sites/all/themes/ambitious/images/my-voice-logo.png" alt="<?php print t('Ambitious About Autism'); ?>"></a>
-            </div><!-- /logo -->
-          <?php endif; ?>
-          
-          <ul class="right-info">
-            <li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
-            <li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
-            <li class="menu"><a href="#" class="menu-opener"><span class="icon-Close"></span> <span class="menu-text">Menu</span><span class="close">Close</span></a></li>
-          </ul>
-        </div>
-        <!-- search form -->
-        <div class="search-slide">
-          <form action="#" class="search-form">
-            <fieldset>
-              <legend class="hidden">search</legend>
-              <label for="search">search</label>
-              <input type="search" placeholder="Start typing to search the site" id="search">
-              <input type="submit" value="search">
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <!-- nav of the page -->
-      <div class="nav-holder">
-			<?php
-				//adding the features menu
-			    $menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
-                $tree = menu_tree($menu_name);
-                print drupal_render($tree); 
-			?>
-        <nav id="nav">
-          <?php
-				//adding the menu function
-				//print render($page['main_menu']); 
-				$menu_name = variable_get('menu_main_links_source', 'main-menu');
-				$tree = menu_tree($menu_name);
-				print drupal_render($tree); ?>
-        </nav>
-      </div>
-      <!-- school nav of the page -->
-      <div class="school-slide">
-        <strong class="title">Schools &amp; College</strong>
-        <ul class="nav">
-          <li>
-            <a href="#">TreeHouse School</a>
-          </li>
-          <li>
-            <a href="#">The Rise School</a>
-          </li>
-          <li>
-            <a href="#">Ambitious College</a>
-          </li>
-        </ul>
-      </div>
-    </header>
     
 <?php if ($page['caption_holder'] || $page['image_holder']): ?>
 <!-- ########### / header -->

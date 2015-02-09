@@ -25,11 +25,11 @@
 	<!-- top header of the page -->
 	<div class="header-top">
 		<div class="holder">
-			<?php if ($logo): ?>
+
 				<div class="logo">
 					<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
-				</div><!-- /logo -->
-			<?php endif; ?>
+				</div> <!-- /logo -->
+
 			<ul class="right-info">
 				<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
 				<li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
@@ -57,7 +57,7 @@
 			$tree = menu_tree($menu_name);
 			print drupal_render($tree); 
 		?>
-		<nav id="nav-main">
+		<nav id="nav-main" role="navigation">
 			<?php
 				//adding the menu function
 				//print render($page['main_menu']); 
@@ -69,7 +69,7 @@
 	</div>
 
 	<!-- school nav of the page -->
-	<div class="school-slide">
+	<div class="school-slide" >
 		<h4 class="title"> Schools & College
 		<?php
 		//adding the features menu
@@ -78,7 +78,7 @@
 		//print drupal_render($tree); 
 		?>
 		</h4>
-		 <nav id="nav-schools"> 
+		 <nav id="nav-schools" role="navigation"> 
 			<?php
 			$menu_name = variable_get('menu_main_links_source', 'menu-schools-college');
 			$tree = menu_tree($menu_name);
