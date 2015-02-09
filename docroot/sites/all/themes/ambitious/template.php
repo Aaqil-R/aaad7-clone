@@ -139,6 +139,22 @@ function ambitious_preprocess_html(&$variables) {
   drupal_add_css('http://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
 }
 
+function ambitious_preprocess_region(&$variables) {
+      
+        $variables['node'] = menu_get_object();
+            //need to check with the id
+            //if($variables['node']->title == "Voices From the spectrum")
+            if($variables['node']->nid == 74596)
+            { 
+              $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
+            }
+            else
+            {
+              $variables['logo'] = theme_get_setting('logo'); 
+            }
+
+ 
+}
 // Adding a custom breadcrumb code
 //=====================================
 

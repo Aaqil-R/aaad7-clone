@@ -102,7 +102,7 @@
     print render($page['header']); 
   ?>
 <!-- / header -->
-
+<?php print $messages; ?>
 <section class="visual">
       <div class="img-holder">
         
