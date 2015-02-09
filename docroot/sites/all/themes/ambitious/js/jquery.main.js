@@ -22,11 +22,11 @@ function initFixedBlock() {
 
 		function setPanelState() {
 			if(win.scrollTop() >= holder.offset().top && !holder.hasClass(fixedClass)) {
-				holder.addClass(fixedClass);
+				holder.addClass(fixedClass).parents('body').addClass('header_fixed');;
 				calcHeight();
 				holder.css('height', panelHeight);
 			} else if(win.scrollTop() < holder.offset().top && holder.hasClass(fixedClass)) {
-				holder.removeClass(fixedClass).css('height', '');
+				holder.removeClass(fixedClass).css('height', '').parents('body').removeClass('header_fixed');;
 			}
 		}
 		setPanelState();
