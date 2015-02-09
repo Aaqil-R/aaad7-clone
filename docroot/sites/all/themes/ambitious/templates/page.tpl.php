@@ -94,7 +94,7 @@
     print render($page['header']); 
   ?>
 <!-- / header -->
-
+<?php /* ?>
 <?php if ($page['caption_holder'] || $page['image_holder']): ?>
   <!-- ########### / header -->
   <section class="visual">
@@ -111,8 +111,27 @@
     <!-- /image holder -->
   <?php endif; ?>
 </div>
+
 </section>
+
 <?php endif; ?>
+<?php */ ?>
+
+<section class="header_banner banner-nav">
+     <div class="banner_text_main">
+        <?php if ($page['caption_holder']): ?>
+          <div class="banner_text_inner">
+            <?php print render($page['caption_holder']); ?>   
+          </div> 
+        <?php endif; ?> 
+      </div> 
+    <div class="header_image">
+      <?php if ($page['image_holder']): ?>
+        <?php print render($page['image_holder']); ?>
+      <?php endif; ?>
+  </section>
+
+
 <?php if ($page['navigation']): ?>
   <section id="navigation">
     <?php print render($page['navigation']); ?>
@@ -152,7 +171,7 @@
   <?php endif; ?>
 
 
-  <?php print $messages; ?>
+  <?php print  $messages; ?>
   <?php print render($page['help']); ?>
 
 

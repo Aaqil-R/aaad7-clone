@@ -913,3 +913,135 @@ nav {
 #block-system-user-menu li.last{
   padding-right: 0;
 }
+
+
+
+/* nanda - globalsoftlab */
+
+.header_fixed{
+  .header_banner{
+    margin-top:0;
+  }
+}
+.header_banner{
+  margin-top:103px;
+  -webkit-transition: margin 0.5s, -webkit-transform 2s;  /* For Safari 3.1 to 6.0 */
+  transition: margin 0.5s, transform 2s;
+  position:relative;  
+  .header_image img{
+    width:100%;
+  } 
+  .header_image{
+    max-height:407px;
+    overflow:hidden;
+  }
+  .banner_desktop{
+    display:inherit;
+    @include breakpoint($mobile) {
+      display:none;
+    }
+  }
+  .banner_mobile{
+    display:none;
+    @include breakpoint($mobile) {
+      display:inherit;
+    }
+  }
+  .banner_text{
+    font-size: 5vw;
+    line-height: 75px; 
+    padding: 18px 25px;
+    margin: 0 0 12px 16px;
+    font-weight: normal;
+    background:#fff;
+    display: inline-block;
+    color: #081318; 
+    line-height:100%;
+    clear:both;
+    @include breakpoint($tablet) {
+      margin:0 90px 12px;
+    }
+    @include breakpoint($mobile) {
+       margin: 5% 18% 0 18%;
+       padding: 18px 13px;
+       text-align:center;
+       line-height:normal;
+    }
+      
+  } 
+  .banner_text:after{
+    clear:both;
+  }
+  .banner_sub_text{ 
+    vertical-align: top;
+    background: #ffffff; 
+    font-size: 2vw; 
+    display: inline-block;
+    margin: 0 0 0 159px;
+    padding: 19px 24px;
+    font-weight:normal;
+    line-height:100%;
+    font-family:"HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+    @include breakpoint($tablet) {
+      margin:0 0 0 100px;
+    }
+    @include breakpoint($mobile) {
+       display:none;
+    } 
+  }
+  .banner_text_main{
+    position: absolute;
+    width:100%;
+    top:24%; 
+  }
+  .banner_text_inner{
+    max-width:1080px;
+    margin:0 auto;
+  }
+  .pic-by{
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    line-height: 16px;
+    color: #636c73;
+    max-width:1080px;
+    margin:0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include breakpoint($mobile) {
+      text-align:left;
+      padding:10px 20px;
+    }
+    a{
+      color: #081318;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  .btn-prev{
+    background:#f15500;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    .icon-Leftarrow{
+      font-size: 27px;
+      color:#fff;
+    }
+  }
+  .btn-next{
+    background:#f15500;
+  }
+  &.banner-nav{
+    .banner_text{
+      @include breakpoint($mobile) {
+        margin: 5% 10% 0;
+        padding: 18px 13px;
+        text-align: center;
+        line-height: normal;
+        width: 80%;
+      }
+    }
+  }
+  
+}
+
