@@ -1034,3 +1034,203 @@ margin-right: 10px;
 
 
 
+
+
+
+.node-type-forum-discussion, .page-comment-reply{
+.comment-block{ 
+	padding:35px 50px 37px 44px;
+	position: relative;
+	margin: 0 0 30px;
+	background:$white;
+	border: 1px solid $gray;
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	    #edit-author--2{
+	      label{
+	        float:left;
+	        width:auto;
+	      }
+	      .form-element{
+	        background: none;
+	        margin-left: 10px;
+	        margin-top: 0;
+	      }
+	    }
+		@include breakpoint($mobile){
+		  padding: 27px 15px;
+		}
+		h4{
+		  margin: 0 0 17px;
+		}
+		.form-required{
+		  color: $orange;
+		}
+		.comment-form{
+          font-size:18px;
+          color:$captions-credit;
+		  .required{
+		    color:$orange;
+		  }
+		  label{
+		   float:left;
+		    width:100%;
+		   &.label-block{
+		     width:100%;
+		   }
+		  }
+		.jcf-select{
+		  width: 100%;
+		  border: none;
+		}  
+          fieldset{
+            margin:0 0 20px 0;
+			@include breakpoint($mobile){
+			  margin:0 0 10px 0;
+			} 
+			fieldset{
+			  margin:0;
+			  padding:0;
+			}
+			.filter-help{
+                 float: left;
+                 width: 100%;
+                 padding: 0;
+                 margin: 0 0 20px 0;
+                   a{
+                     padding: 0;
+                   }
+                 }
+               }
+            strong{
+		    color:$heading-link;
+			margin-left:10px;
+			@include breakpoint($tablet){
+			  font-weight:normal;
+			}
+		  }
+		  .form-element{
+		    @include linear-gradient($captions-credit,$page-background);
+            padding:2px;
+            float:left;
+			margin:6px 0 0 0;
+			@include border-radius(5px);
+            max-width:506px;
+            width:100%;
+		    input[type=text],input[type=email], textarea{
+		      float:left;
+			  @include border-radius(5px);
+			  width:100%;
+			  color:$captions-credit;
+			  border:none;
+			}
+			textarea{
+			  height:183px;
+			}
+          }
+		} 
+		.form-actions{
+		  #edit-submit, #edit-preview{
+		    @extend .btn;
+		    @extend .btn-gray;  
+		    &:hover{
+		      color:$captions-credit;
+		    }
+		  }
+		  margin:0;
+			  @include breakpoint($mobile) {
+			    .btn.btn-left{
+	              margin-left: 6px;
+	              padding: 3px 15px;
+				  &:first-child{
+				    margin-left:0
+				  }
+				}
+	           }
+		} 
+	  }
+
+ .comment-list{
+		h4{
+		   @include fontsize(23,16);
+		  a{
+		    font-size:16px;
+			text-decoration: underline;
+			margin-left:0;
+		  }
+		}
+		ul.comment-listing{
+		  @extend %listreset;
+		  position: relative;
+		  &.children{
+		    margin-left:30px;
+		  }
+		  li{
+		    .comment-left{
+			  float:left;
+			  width:79px;
+			  font-size:13px;
+			  img{
+				 @include border-radius(5px);
+				 overflow:hidden;
+				 margin:0 0 4px 0;
+			  }
+			  a{
+				    text-decoration:underline;
+				    font-weight:bold;
+					color:$base-link-color;
+				    &:hover{
+				      text-decoration:none;
+				    }
+					}
+			  cite{
+			     margin:0 0 7px 0;
+				 font-style:normal;
+				 display:block;
+			  }
+			  time{
+			    margin:0 0 17px 0;
+			  }
+			}
+			.comment-right{
+			  border:2px solid $border-color;
+			  padding:16px 26px 13px 26px;
+			  margin:0 0 27px 112px;
+			  font-size:16px;
+			  background:$white;
+			  word-wrap: break-word;
+			  @include breakpoint($mobile){
+			    padding:15px;
+			  }
+			  &:before{
+			    content: "";
+			    position: absolute;
+			    left: 90px;
+			    background:url(../../images/sprite.png) no-repeat -1px -162px;
+			    width: 24px;
+				top: 15px;
+			    height: 32px;
+			  }
+			  .links{
+			    margin-bottom: 17px;
+			  }
+			  ul{
+			     @extend %clearfix;
+				 @extend %listreset;
+			    li{
+                  float: left;
+                  margin:0 11px 0 0;
+				  a{
+				    text-decoration:underline;
+				    font-weight:bold;
+				    &:hover{
+				      text-decoration:none;
+				    }
+				  }
+				}
+			  }
+			}
+		  }
+        }
+	  }
+}
