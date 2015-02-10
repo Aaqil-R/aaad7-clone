@@ -11,6 +11,8 @@
 $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 $name = strip_tags($name); 
 ?>   
+<div class="posts-columns columns-full">
+<div class="row">
 <section style="width:100%;" class="post">
    <?php if($comment_count != 0 && $comment_count < 5) : ?>
      <em class="icon-Featured forum-icon"></em>	
@@ -57,21 +59,6 @@ $name = strip_tags($name);
  
   <?php  print render($content['comments']); ?>
   
-  
-
- 
-
- 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ </div>
+  </div>
  
