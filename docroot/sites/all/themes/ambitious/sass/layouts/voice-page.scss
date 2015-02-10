@@ -1,4 +1,5 @@
-@import "content";
+@import "base/base";
+@import "extends";
 
 /*breadcrump for all the pages*/
 .img-holder{
@@ -45,9 +46,9 @@
 /*end of breadcrumb codes*/
 
 .page-node-74596{
-	@extend .my-voice-main;
+	@extend %my-voice-main;
 	.visual{
-		@extend .my-voice-visual;
+		@extend %my-voice-visual;
 	}
 	.action-block{
 		

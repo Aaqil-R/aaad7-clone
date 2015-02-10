@@ -1,0 +1,148 @@
+@import "base/base";
+
+%my-voice-main {
+	//TODO remove this style and do it properly instead of piggybacking
+	.action-block{
+		float: left;
+		margin-bottom: 30px;
+		background: transparent;
+		.block-symptoms, .block-share, .block-spectrum{
+			background-image: url(../../images/bg06.jpg);
+			color:$white;
+			width:48.5%;
+			padding: 50px 10px 37px 39px;
+			background-size:cover;
+			float:left;
+			@include breakpoint($mobile) {
+				width:100%;
+				float:none;
+				padding:26px 10px 17px 20px;
+				margin:0 0 34px;
+				background-position: right center;
+			}
+			.title {
+				display:block;
+				font-size:45px;
+				line-height:46px;
+				margin:0 0 13px;
+				font-family:$header-font-family;
+				font-weight: normal;
+				@include breakpoint($tablet) {
+					font-size:30px;
+					line-height:33px;
+				}
+				@include breakpoint($mobile) {
+					margin:0 0 19px;
+					font-size: 24px;
+					line-height: 30px;
+				}
+				&.smaller{
+					@include fontsize(18,16);
+					margin:0 0 32px;
+					@include breakpoint($tablet) {
+						@include fontsize(14,16);
+						line-height:33px;
+					}
+					@include breakpoint($mobile) {
+						@include fontsize(12,16);
+						line-height:25px;
+						margin:0 0 16px;
+					}
+
+				}
+			}
+			.block-spectrum{
+				float:left;
+			}
+		}
+
+	}
+	.block-share{
+		background-image: url(../images/bg08.jpg);
+	}
+
+	.block-spectrum{
+		background-image: url(../images/bg07.jpg);
+	}
+	.block-report{
+		background-image: url(../../images/bg05.jpg);
+		float:right;
+	}
+	.sort-block{
+        margin: 0;
+        padding: 14px 20px 16px;
+	    margin-bottom: 20px;
+	    @extend %clearfix;
+	    display: block;
+	}
+}
+
+//postioning my voice caption text
+%my-voice-visual {
+	.img-holder {
+		.caption-frame {
+			.caption{
+				padding: 5px 0 0;
+					.title{
+						span.pink{
+						color: $pink;
+						padding: 0;
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+%signup-form{
+	
+	padding: 14px 0;
+	
+	input[type="email"], input[type="text"], .select {
+		float:left;
+		clear:both;
+		width:80%;
+		border-radius:5px;
+		border-color:#e4e4e4;
+		
+		@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+			margin-bottom: 20px;
+			padding: 12px 23px;
+		
+		@include breakpoint($mobile) {
+			width: 100%;
+		}
+		
+		font-size:18px;
+	}
+
+	input[type="submit"] {
+		float:left;
+		clear:both;
+		border: none;
+		// added backgournd, color, border-radius - > nanda Globalsoftlab
+		@include border-radius(5px);
+		background:$orange;
+		color:$white;
+		border-bottom: 5px solid $orange-dark;
+		margin-right: 20px;
+		@include breakpoint($mobile) {
+			margin-bottom: 20px;
+		}
+	    &:hover {
+	      border-bottom-width: 3px;
+	  	text-decoration:none;
+	  	color:$white;
+		}
+	}
+
+	.btn {
+		float:left;
+		&.btn-left { margin-right:27px ;}
+		
+		span{
+			padding-left: 15px;
+		}
+	}
+}

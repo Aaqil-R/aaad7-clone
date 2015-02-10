@@ -1,5 +1,5 @@
 @import "buttons"; 
-@import "content"; 
+@import "extends"; 
 
 body.sidebar{
   #main{
@@ -878,7 +878,7 @@ margin-right: 10px;
    margin-bottom:30px;
   .my-voice-columns{
     .webform-client-form{
-      @extend .signup-form; 
+      @extend %signup-form; 
     }
     .col{
       padding-top:0;
