@@ -116,7 +116,7 @@
 
 <?php endif; ?>
 <?php */ ?>
-
+ <?php if ($page['image_holder'] || $page['caption_holder']  ): ?>
 <section class="header_banner banner-nav">
      <div class="banner_text_main">
         <?php if ($page['caption_holder']): ?>
@@ -130,7 +130,7 @@
         <?php print render($page['image_holder']); ?>
       <?php endif; ?>
   </section>
-
+<?php endif; ?>
 
 <?php if ($page['navigation']): ?>
   <section id="navigation">
