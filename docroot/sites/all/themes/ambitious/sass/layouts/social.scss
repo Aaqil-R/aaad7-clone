@@ -35,12 +35,18 @@
 			}
 		}
 		.block-youtube{
+			p{
+				position: relative;
+				
+			}
 			.btn{
-				//padding: 16px 0;
+				
 			}
 
 			.youtube-btn{
+				position: absolute;
 				@include breakpoint($mobile){
+					padding: 16px 0;
 					margin-bottom: 12px;
 				}
 				span.icon-YouTube{
@@ -52,8 +58,11 @@
 
 			}
 			.twitter-btn{
+				position: absolute;
 				display: none;
 				@include breakpoint($mobile){
+					padding: 16px 0;
+					top:85px;
 					display: block;
 					margin-bottom: 12px;
 				}
@@ -61,8 +70,11 @@
 			}
 
 			.facebook-btn{
+				position: absolute;
 				display: none;
 				@include breakpoint($mobile){
+					padding: 16px 0;
+					top:168px;
 					display: block;
 					margin-bottom: 12px;
 				}

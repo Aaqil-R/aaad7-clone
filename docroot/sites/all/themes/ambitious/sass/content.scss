@@ -1003,7 +1003,10 @@ a {
 		position: relative;
 		z-index: 4;
 		margin-top: 15px;
-		padding: 32px 15px 80px;
+		padding: 60px 15px 80px;
+		@include breakpoint($mobile){
+			padding: 60px 15px 240px;
+		}
 		.youtube-btn{
 			@include fontsize(18,16);
 			width: 100%;
@@ -1331,7 +1334,7 @@ a {
 	/* article column styles */
 	.col {
 		float:left;
-		@include span(4 of 12);
+		width:31.4%;
 		margin:0 0 0 2.9%;
 		@include breakpoint($mobile) {
 			width:100%;
