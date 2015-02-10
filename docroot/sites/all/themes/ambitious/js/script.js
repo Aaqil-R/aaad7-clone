@@ -60,7 +60,7 @@ Drupal.behaviors.ambitious = {
     
 
 	// ==Masonry block==//
-	var $container = $('#masonry');
+	var $container = $('.masonry');
 	
 	if ($container.masonry != undefined) {
 	  // initialize
@@ -122,5 +122,9 @@ Drupal.behaviors.ambitious = {
       }
     }
   });
+
+$(window).resize(function () {
+    $('.masonry').masonry('reloadItems');
+});
 
 })(jQuery, Drupal, this, this.document);
