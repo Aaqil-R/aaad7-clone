@@ -116,7 +116,7 @@
 
 <?php endif; ?>
 <?php */ ?>
- <?php if ($page['image_holder'] || $page['caption_holder']  ): ?>
+ <?php if ($page['image_holder']): ?>
 <section class="header_banner banner-nav">
      <div class="banner_text_main">
         <?php if ($page['caption_holder']): ?>
