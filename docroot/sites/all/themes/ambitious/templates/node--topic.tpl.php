@@ -45,7 +45,7 @@
 ?>
   <section class="header_banner">
      <div class="banner_text_main">
-        <div class="banner_text_inner">
+        <div class="banner_text_inner" >
           <?php if(isset($content['field_main_caption'])):?>
             <h2 class="banner_text"><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
           <?php endif; ?>
