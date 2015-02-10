@@ -1,0 +1,542 @@
+/* ---------------------------------------------------------
+   1. Embedded fonts styles
+   2. General reset
+   3. Common site styles
+   4. Custom form styles
+   5. Styles for responsive breakpoints
+   ---------------------------------------------------------*/
+/*embedded fonts styles*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?y5zyxa");
+  src: url("../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../fonts/icomoon.woff?y5zyxa") format("woff"), url("../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 21, ../sass/base/_font-icons.scss */
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 35, ../sass/base/_font-icons.scss */
+.icon-connection:before {
+  content: "\e615";
+}
+
+/* line 39, ../sass/base/_font-icons.scss */
+.icon-Calendar:before {
+  content: "\e601";
+}
+
+/* line 43, ../sass/base/_font-icons.scss */
+.icon-Close:before {
+  content: "\e602";
+}
+
+/* line 47, ../sass/base/_font-icons.scss */
+.icon-Downarrow:before {
+  content: "\e603";
+}
+
+/* line 51, ../sass/base/_font-icons.scss */
+.icon-Facebook:before {
+  content: "\e604";
+}
+
+/* line 55, ../sass/base/_font-icons.scss */
+.icon-Featured:before {
+  content: "\e605";
+}
+
+/* line 59, ../sass/base/_font-icons.scss */
+.icon-google:before {
+  content: "\e606";
+}
+
+/* line 63, ../sass/base/_font-icons.scss */
+.icon-Hottopic:before {
+  content: "\e607";
+}
+
+/* line 67, ../sass/base/_font-icons.scss */
+.icon-Leftarrow:before {
+  content: "\e608";
+}
+
+/* line 71, ../sass/base/_font-icons.scss */
+.icon-Playbutton:before {
+  content: "\e609";
+}
+
+/* line 75, ../sass/base/_font-icons.scss */
+.icon-Plus:before {
+  content: "\e60a";
+}
+
+/* line 79, ../sass/base/_font-icons.scss */
+.icon-Rightarrow:before {
+  content: "\e60b";
+}
+
+/* line 83, ../sass/base/_font-icons.scss */
+.icon-search:before {
+  content: "\e60c";
+}
+
+/* line 87, ../sass/base/_font-icons.scss */
+.icon-Share:before {
+  content: "\e60d";
+}
+
+/* line 91, ../sass/base/_font-icons.scss */
+.icon-Speech1:before {
+  content: "\e60e";
+}
+
+/* line 95, ../sass/base/_font-icons.scss */
+.icon-Speech-outline:before {
+  content: "\e60f";
+}
+
+/* line 99, ../sass/base/_font-icons.scss */
+.icon-Time:before {
+  content: "\e610";
+}
+
+/* line 103, ../sass/base/_font-icons.scss */
+.icon-Twitter:before {
+  content: "\e611";
+}
+
+/* line 107, ../sass/base/_font-icons.scss */
+.icon-Uparrow:before {
+  content: "\e612";
+}
+
+/* line 111, ../sass/base/_font-icons.scss */
+.icon-Voice:before {
+  content: "\e613";
+}
+
+/* line 115, ../sass/base/_font-icons.scss */
+.icon-YouTube:before {
+  content: "\e614";
+}
+
+/* line 119, ../sass/base/_font-icons.scss */
+.icon-Tick:before {
+  content: "\e600";
+}
+
+/* custom select styles */
+/* line 4, ../sass/base/_jcf.scss */
+.jcf-select {
+  float: left;
+  position: relative;
+  padding: 2px;
+  border-radius: 5px;
+  min-width: 250px;
+  height: 49px;
+  background-color: #eef2f3;
+  background-image: -webkit-linear-gradient(top, #AEAEAE, #eef2f3);
+  background-image: -moz-linear-gradient(top, #AEAEAE, #eef2f3);
+  background-image: -ms-linear-gradient(top, #AEAEAE, #eef2f3);
+  background-image: -o-linear-gradient(top, #AEAEAE, #eef2f3);
+  background-image: linear-gradient(to bottom, #aeaeae, #eef2f3);
+}
+
+/* line 18, ../sass/base/_jcf.scss */
+.jcf-select.jcf-drop-active {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 0;
+  background: #CACACA;
+}
+
+/* line 24, ../sass/base/_jcf.scss */
+.jcf-select.jcf-drop-active .jcf-select-text {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 0;
+}
+
+/* line 29, ../sass/base/_jcf.scss */
+.jcf-select select {
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+/* line 34, ../sass/base/_jcf.scss */
+.jcf-select .jcf-select-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  display: block;
+  font-size: 19px;
+  color: #2a2e31;
+  line-height: 41px;
+  padding: 2px 44px 2px 24px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* line 47, ../sass/base/_jcf.scss */
+.jcf-select .jcf-select-opener {
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+/* line 55, ../sass/base/_jcf.scss */
+.jcf-select .jcf-select-opener:after {
+  position: absolute;
+  left: 2px;
+  top: 13px;
+  content: "\e603";
+  font-size: 23px;
+}
+
+/* line 63, ../sass/base/_jcf.scss */
+.jcf-select.jcf-drop-active .jcf-select-opener:after {
+  position: absolute;
+  left: 2px;
+  top: 13px;
+  content: "\e612";
+  font-size: 23px;
+}
+
+/* line 72, ../sass/base/_jcf.scss */
+body > .jcf-select-drop {
+  position: absolute;
+  margin: -2px 0 0;
+  z-index: 9999;
+}
+
+/* line 77, ../sass/base/_jcf.scss */
+body > .jcf-select-drop.jcf-drop-flipped {
+  margin: 1px 0 0;
+}
+
+/* line 80, ../sass/base/_jcf.scss */
+.jcf-select .jcf-select-drop {
+  position: absolute;
+  margin-top: 0px;
+  z-index: 9999;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  font-size: 14px;
+}
+
+/* line 89, ../sass/base/_jcf.scss */
+.jcf-select .jcf-drop-flipped {
+  bottom: 100%;
+  top: auto;
+}
+
+/* line 93, ../sass/base/_jcf.scss */
+.jcf-select-drop .jcf-select-drop-content {
+  border: 2px solid #CACACA;
+}
+
+/* multiple select styles */
+/* line 97, ../sass/base/_jcf.scss */
+.jcf-list-box {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #b8c3c9;
+  min-width: 200px;
+  margin: 0 15px;
+}
+
+/* select options styles */
+/* line 105, ../sass/base/_jcf.scss */
+.jcf-list {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  background: #fff;
+  line-height: 22px;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* line 114, ../sass/base/_jcf.scss */
+.jcf-list .jcf-list-content {
+  vertical-align: top;
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+}
+
+/* line 120, ../sass/base/_jcf.scss */
+.jcf-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 125, ../sass/base/_jcf.scss */
+.jcf-list ul li {
+  overflow: hidden;
+  display: block;
+  border-top: 2px solid #E0E0E0;
+}
+
+/* line 130, ../sass/base/_jcf.scss */
+.jcf-list ul li:first-child {
+  border-top: 0;
+}
+
+/* line 133, ../sass/base/_jcf.scss */
+.jcf-list .jcf-overflow {
+  overflow: auto;
+}
+
+/* line 136, ../sass/base/_jcf.scss */
+.jcf-list .jcf-option {
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  display: block;
+  padding: 11px 23px;
+  color: #1D2328;
+  height: 1%;
+  font-size: 1.25em;
+}
+
+/* line 146, ../sass/base/_jcf.scss */
+.jcf-list .jcf-disabled {
+  background: #fff !important;
+  color: #aaa !important;
+}
+
+/* line 150, ../sass/base/_jcf.scss */
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+  background: #e6e6e6;
+  color: #000;
+}
+
+/* line 155, ../sass/base/_jcf.scss */
+.jcf-list .jcf-optgroup-caption {
+  white-space: nowrap;
+  display: block;
+  padding: 5px 9px;
+  cursor: default;
+  color: #000;
+}
+
+/* line 162, ../sass/base/_jcf.scss */
+.jcf-list .jcf-optgroup .jcf-option {
+  padding-left: 30px;
+}
+
+/* common custom form elements styles */
+/* line 166, ../sass/base/_jcf.scss */
+.jcf-disabled {
+  background: #ddd !important;
+}
+
+/* line 167, ../sass/base/_jcf.scss */
+.jcf-focus, .jcf-focus * {
+  border-color: #fbb900 !important;
+}
+
+/* line 21, ../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * set default text color
+ * set default font size, line height and font family
+ * set default background
+ */
+/* line 170, ../sass/base/_base.scss */
+* {
+  max-height: 100000em;
+}
+
+/* line 171, ../sass/base/_base.scss */
+body {
+  margin: 0;
+  color: #2a2e31;
+  background: #ffffff;
+  font: 1.6em/1.562em "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  min-width: 320px;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+/* line 182, ../sass/base/_base.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 197, ../sass/base/_base.scss */
+img {
+  border-style: none;
+}
+
+/* line 199, ../sass/base/_base.scss */
+a {
+  outline: none;
+  text-decoration: none;
+  color: #081318;
+}
+/* line 203, ../sass/base/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 208, ../sass/base/_base.scss */
+input,
+textarea,
+select {
+  font: 100% "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  color: #d2d5d6;
+  vertical-align: middle;
+}
+
+/* line 216, ../sass/base/_base.scss */
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+/* line 223, ../sass/base/_base.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 229, ../sass/base/_base.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 238, ../sass/base/_base.scss */
+input[type="submit"]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* line 243, ../sass/base/_base.scss */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  margin: 0;
+  padding: 4px 7px;
+  border: 1px solid #d2d5d6;
+}
+/* line 253, ../sass/base/_base.scss */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: #828a8d;
+}
+
+/* line 259, ../sass/base/_base.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+/* line 265, ../sass/base/_base.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 271, ../sass/base/_base.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 278, ../sass/base/_base.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 283, ../sass/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  line-height: 1.2em;
+  margin: 0 0 1.2em;
+}
+
+/* line 289, ../sass/base/_base.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 297, ../sass/base/_base.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 301, ../sass/base/_base.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 305, ../sass/base/_base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
