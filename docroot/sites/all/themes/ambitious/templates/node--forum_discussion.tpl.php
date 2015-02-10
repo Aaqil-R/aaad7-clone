@@ -34,9 +34,9 @@ $name = strip_tags($name);
 						  </div>
 						  <div class="info add forum-right">
 						     <?php if(isset($title)): ?>
-						     <h3><a href="<?php print $node_url; ?>" title="Discussion">Discussion</a></h3>
+						    <h3><a href="<?php print $node_url; ?>" title="<?php print $title; ?>"><?php print $title; ?></a></h3>
 						     <?php else :?>
-							<h3><a href="<?php print $node_url; ?>" title="<?php print $title; ?>"><?php print $title; ?></a></h3>
+							<h3><a href="<?php print $node_url; ?>" title="Discussion">Discussion</a></h3>
 							<?php endif;?>
 							<?php print render($content['body']);?>		 
 						  </div>
