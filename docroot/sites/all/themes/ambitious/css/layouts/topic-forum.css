@@ -1,12 +1,12 @@
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.btn:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after {
+.btn:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-preview:after, .page-comment-reply .comment-block .form-actions #edit-submit:after, .page-comment-reply .comment-block .form-actions #edit-preview:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
   content: " ";
   display: block;
   clear: both;
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-.social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline {
+.social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -371,7 +371,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -558,7 +558,7 @@ table {
 
 /* button */
 /* line 4, ../../sass/buttons.scss */
-.btn, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit {
+.btn, .topic-share .st_sharethis_button, .filter-slide .button-holder .form-submit, .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions #edit-preview {
   display: inline-block;
   border: none;
   padding: 5px 19px;
@@ -574,7 +574,7 @@ table {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 /* line 19, ../../sass/buttons.scss */
-.btn em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em {
+.btn em, .topic-share .st_sharethis_button em, .filter-slide .button-holder .form-submit em, .node-type-forum-discussion .comment-block .form-actions #edit-submit em, .node-type-forum-discussion .comment-block .form-actions #edit-preview em, .page-comment-reply .comment-block .form-actions #edit-submit em, .page-comment-reply .comment-block .form-actions #edit-preview em {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -583,7 +583,7 @@ table {
   margin-left: 10px;
 }
 /* line 27, ../../sass/buttons.scss */
-.btn.btn-green, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-green, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-green.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, .node-type-forum-discussion .comment-block .form-actions .btn-green#edit-submit, .node-type-forum-discussion .comment-block .form-actions .topic-share #edit-submit.st_sharethis_button, .topic-share .node-type-forum-discussion .comment-block .form-actions #edit-submit.st_sharethis_button, .node-type-forum-discussion .comment-block .form-actions .btn-green#edit-preview, .node-type-forum-discussion .comment-block .form-actions .topic-share #edit-preview.st_sharethis_button, .topic-share .node-type-forum-discussion .comment-block .form-actions #edit-preview.st_sharethis_button, .page-comment-reply .comment-block .form-actions .btn-green#edit-submit, .page-comment-reply .comment-block .form-actions .topic-share #edit-submit.st_sharethis_button, .topic-share .page-comment-reply .comment-block .form-actions #edit-submit.st_sharethis_button, .page-comment-reply .comment-block .form-actions .btn-green#edit-preview, .page-comment-reply .comment-block .form-actions .topic-share #edit-preview.st_sharethis_button, .topic-share .page-comment-reply .comment-block .form-actions #edit-preview.st_sharethis_button {
   border-bottom: 5px solid #007e2a;
   background: #00a837;
 }
@@ -592,12 +592,12 @@ table {
   border-radius: 5px;
 }
 /* line 34, ../../sass/buttons.scss */
-.btn.btn-pink, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit {
+.btn.btn-pink, .topic-share .btn-pink.st_sharethis_button, .filter-slide .button-holder .btn-pink.form-submit, .node-type-forum-discussion .comment-block .form-actions .btn-pink#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-pink#edit-preview, .page-comment-reply .comment-block .form-actions .btn-pink#edit-submit, .page-comment-reply .comment-block .form-actions .btn-pink#edit-preview {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
 /* line 38, ../../sass/buttons.scss */
-.btn.btn-gray, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit {
+.btn.btn-gray, .topic-share .btn-gray.st_sharethis_button, .filter-slide .button-holder .btn-gray.form-submit, .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions #edit-preview {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
   background: #ffffff;
@@ -605,32 +605,32 @@ table {
   color: #636c73;
 }
 /* line 44, ../../sass/buttons.scss */
-.btn.btn-gray:hover, .topic-share .btn-gray.st_sharethis_button:hover, .filter-slide .button-holder .btn-gray.form-submit:hover {
+.btn.btn-gray:hover, .topic-share .btn-gray.st_sharethis_button:hover, .filter-slide .button-holder .btn-gray.form-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-preview:hover, .page-comment-reply .comment-block .form-actions #edit-submit:hover, .page-comment-reply .comment-block .form-actions #edit-preview:hover {
   color: #636c73;
 }
 /* line 47, ../../sass/buttons.scss */
-.btn.btn-gray:active, .topic-share .btn-gray.st_sharethis_button:active, .filter-slide .button-holder .btn-gray.form-submit:active, .btn.btn-gray:focus, .topic-share .btn-gray.st_sharethis_button:focus, .filter-slide .button-holder .btn-gray.form-submit:focus {
+.btn.btn-gray:active, .topic-share .btn-gray.st_sharethis_button:active, .filter-slide .button-holder .btn-gray.form-submit:active, .node-type-forum-discussion .comment-block .form-actions #edit-submit:active, .node-type-forum-discussion .comment-block .form-actions #edit-preview:active, .page-comment-reply .comment-block .form-actions #edit-submit:active, .page-comment-reply .comment-block .form-actions #edit-preview:active, .btn.btn-gray:focus, .topic-share .btn-gray.st_sharethis_button:focus, .filter-slide .button-holder .btn-gray.form-submit:focus, .node-type-forum-discussion .comment-block .form-actions #edit-submit:focus, .node-type-forum-discussion .comment-block .form-actions #edit-preview:focus, .page-comment-reply .comment-block .form-actions #edit-submit:focus, .page-comment-reply .comment-block .form-actions #edit-preview:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
 /* line 52, ../../sass/buttons.scss */
-.btn.btn-gray:visited, .topic-share .btn-gray.st_sharethis_button:visited, .filter-slide .button-holder .btn-gray.form-submit:visited {
+.btn.btn-gray:visited, .topic-share .btn-gray.st_sharethis_button:visited, .filter-slide .button-holder .btn-gray.form-submit:visited, .node-type-forum-discussion .comment-block .form-actions #edit-submit:visited, .node-type-forum-discussion .comment-block .form-actions #edit-preview:visited, .page-comment-reply .comment-block .form-actions #edit-submit:visited, .page-comment-reply .comment-block .form-actions #edit-preview:visited {
   text-decoration: none;
   color: #636c73;
 }
 /* line 57, ../../sass/buttons.scss */
-.btn.bt-left, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+.btn.bt-left, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, .node-type-forum-discussion .comment-block .form-actions .bt-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions .bt-left#edit-preview, .page-comment-reply .comment-block .form-actions .bt-left#edit-submit, .page-comment-reply .comment-block .form-actions .bt-left#edit-preview {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
   /* line 57, ../../sass/buttons.scss */
-  .btn.bt-left, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit {
+  .btn.bt-left, .topic-share .bt-left.st_sharethis_button, .filter-slide .button-holder .bt-left.form-submit, .node-type-forum-discussion .comment-block .form-actions .bt-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions .bt-left#edit-preview, .page-comment-reply .comment-block .form-actions .bt-left#edit-submit, .page-comment-reply .comment-block .form-actions .bt-left#edit-preview {
     margin: 0 0 0 11px;
   }
 }
 /* line 63, ../../sass/buttons.scss */
-.btn.btn-transparent, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+.btn.btn-transparent, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview {
   display: inline-block;
   vertical-align: top;
   background: none;
@@ -645,36 +645,36 @@ table {
   margin: 0;
 }
 /* line 76, ../../sass/buttons.scss */
-.btn.btn-transparent em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+.btn.btn-transparent em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit em, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview em, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit em, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
   /* line 63, ../../sass/buttons.scss */
-  .btn.btn-transparent, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit {
+  .btn.btn-transparent, .topic-share .btn-transparent.st_sharethis_button, .filter-slide .button-holder .btn-transparent.form-submit, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview {
     font-size: 14px;
     padding: 7px 18px;
   }
   /* line 82, ../../sass/buttons.scss */
-  .btn.btn-transparent em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em {
+  .btn.btn-transparent em, .topic-share .btn-transparent.st_sharethis_button em, .filter-slide .button-holder .btn-transparent.form-submit em, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit em, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview em, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit em, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview em {
     padding-left: 5px;
   }
 }
 /* line 87, ../../sass/buttons.scss */
-.btn.btn-transparent:hover, .topic-share .btn-transparent.st_sharethis_button:hover, .filter-slide .button-holder .btn-transparent.form-submit:hover {
+.btn.btn-transparent:hover, .topic-share .btn-transparent.st_sharethis_button:hover, .filter-slide .button-holder .btn-transparent.form-submit:hover, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview:hover, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit:hover, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview:hover {
   margin: 0;
 }
 /* line 89, ../../sass/buttons.scss */
-.btn.btn-transparent:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange, .filter-slide .button-holder .btn-transparent.form-submit:hover.orange {
+.btn.btn-transparent:hover.orange, .topic-share .btn-transparent.st_sharethis_button:hover.orange, .filter-slide .button-holder .btn-transparent.form-submit:hover.orange, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit:hover.orange, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview:hover.orange, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit:hover.orange, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview:hover.orange {
   border: 2px solid #ffffff;
   background: #f15500;
 }
 /* line 93, ../../sass/buttons.scss */
-.btn.btn-transparent:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender, .filter-slide .button-holder .btn-transparent.form-submit:hover.lavender {
+.btn.btn-transparent:hover.lavender, .topic-share .btn-transparent.st_sharethis_button:hover.lavender, .filter-slide .button-holder .btn-transparent.form-submit:hover.lavender, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit:hover.lavender, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview:hover.lavender, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit:hover.lavender, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview:hover.lavender {
   border: 2px solid #ffffff;
   background: #734889;
 }
 /* line 99, ../../sass/buttons.scss */
-.btn.btn-transparent:visited, .topic-share .btn-transparent.st_sharethis_button:visited, .filter-slide .button-holder .btn-transparent.form-submit:visited {
+.btn.btn-transparent:visited, .topic-share .btn-transparent.st_sharethis_button:visited, .filter-slide .button-holder .btn-transparent.form-submit:visited, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit:visited, .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview:visited, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit:visited, .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview:visited {
   text-decoration: none;
   border: 2px solid #ffffff;
   background: #f15500;
@@ -682,29 +682,29 @@ table {
   color: #ffffff;
 }
 /* line 107, ../../sass/buttons.scss */
-.btn.btn-left, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit {
+.btn.btn-left, .topic-share .btn-left.st_sharethis_button, .filter-slide .button-holder .btn-left.form-submit, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview, .page-comment-reply .comment-block .form-actions .btn-left#edit-submit, .page-comment-reply .comment-block .form-actions .btn-left#edit-preview {
   float: left;
 }
 /* line 110, ../../sass/buttons.scss */
-.btn.btn-right, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button {
+.btn.btn-right, .topic-share .st_sharethis_button, .filter-slide .button-holder .btn-right.form-submit, .filter-slide .button-holder .topic-share .form-submit.st_sharethis_button, .topic-share .filter-slide .button-holder .form-submit.st_sharethis_button, .node-type-forum-discussion .comment-block .form-actions .btn-right#edit-submit, .node-type-forum-discussion .comment-block .form-actions .topic-share #edit-submit.st_sharethis_button, .topic-share .node-type-forum-discussion .comment-block .form-actions #edit-submit.st_sharethis_button, .node-type-forum-discussion .comment-block .form-actions .btn-right#edit-preview, .node-type-forum-discussion .comment-block .form-actions .topic-share #edit-preview.st_sharethis_button, .topic-share .node-type-forum-discussion .comment-block .form-actions #edit-preview.st_sharethis_button, .page-comment-reply .comment-block .form-actions .btn-right#edit-submit, .page-comment-reply .comment-block .form-actions .topic-share #edit-submit.st_sharethis_button, .topic-share .page-comment-reply .comment-block .form-actions #edit-submit.st_sharethis_button, .page-comment-reply .comment-block .form-actions .btn-right#edit-preview, .page-comment-reply .comment-block .form-actions .topic-share #edit-preview.st_sharethis_button, .topic-share .page-comment-reply .comment-block .form-actions #edit-preview.st_sharethis_button {
   float: right;
 }
 /* line 113, ../../sass/buttons.scss */
-.btn:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover {
+.btn:hover, .topic-share .st_sharethis_button:hover, .filter-slide .button-holder .form-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-preview:hover, .page-comment-reply .comment-block .form-actions #edit-submit:hover, .page-comment-reply .comment-block .form-actions #edit-preview:hover {
   border-bottom-width: 2px;
   margin-top: 2px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 120, ../../sass/buttons.scss */
-.btn:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active {
+.btn:active, .topic-share .st_sharethis_button:active, .filter-slide .button-holder .form-submit:active, .node-type-forum-discussion .comment-block .form-actions #edit-submit:active, .node-type-forum-discussion .comment-block .form-actions #edit-preview:active, .page-comment-reply .comment-block .form-actions #edit-submit:active, .page-comment-reply .comment-block .form-actions #edit-preview:active {
   border-bottom-width: 0px;
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
 }
 /* line 126, ../../sass/buttons.scss */
-.btn:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited {
+.btn:visited, .topic-share .st_sharethis_button:visited, .filter-slide .button-holder .form-submit:visited, .node-type-forum-discussion .comment-block .form-actions #edit-submit:visited, .node-type-forum-discussion .comment-block .form-actions #edit-preview:visited, .page-comment-reply .comment-block .form-actions #edit-submit:visited, .page-comment-reply .comment-block .form-actions #edit-preview:visited {
   text-decoration: none;
   color: #ffffff;
 }
@@ -724,13 +724,13 @@ table {
   text-align: center;
 }
 /* line 143, ../../sass/buttons.scss */
-.footer-button .view-footer a.btn, .footer-button .view-footer .topic-share a.st_sharethis_button, .topic-share .footer-button .view-footer a.st_sharethis_button, .footer-button .view-footer .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .footer-button .view-footer a.form-submit {
+.footer-button .view-footer a.btn, .footer-button .view-footer .topic-share a.st_sharethis_button, .topic-share .footer-button .view-footer a.st_sharethis_button, .footer-button .view-footer .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .footer-button .view-footer a.form-submit, .footer-button .view-footer .node-type-forum-discussion .comment-block .form-actions a#edit-submit, .node-type-forum-discussion .comment-block .form-actions .footer-button .view-footer a#edit-submit, .footer-button .view-footer .node-type-forum-discussion .comment-block .form-actions a#edit-preview, .node-type-forum-discussion .comment-block .form-actions .footer-button .view-footer a#edit-preview, .footer-button .view-footer .page-comment-reply .comment-block .form-actions a#edit-submit, .page-comment-reply .comment-block .form-actions .footer-button .view-footer a#edit-submit, .footer-button .view-footer .page-comment-reply .comment-block .form-actions a#edit-preview, .page-comment-reply .comment-block .form-actions .footer-button .view-footer a#edit-preview {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   padding: 12px 19px;
 }
 @media (max-width: 767px) {
   /* line 143, ../../sass/buttons.scss */
-  .footer-button .view-footer a.btn, .footer-button .view-footer .topic-share a.st_sharethis_button, .topic-share .footer-button .view-footer a.st_sharethis_button, .footer-button .view-footer .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .footer-button .view-footer a.form-submit {
+  .footer-button .view-footer a.btn, .footer-button .view-footer .topic-share a.st_sharethis_button, .topic-share .footer-button .view-footer a.st_sharethis_button, .footer-button .view-footer .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .footer-button .view-footer a.form-submit, .footer-button .view-footer .node-type-forum-discussion .comment-block .form-actions a#edit-submit, .node-type-forum-discussion .comment-block .form-actions .footer-button .view-footer a#edit-submit, .footer-button .view-footer .node-type-forum-discussion .comment-block .form-actions a#edit-preview, .node-type-forum-discussion .comment-block .form-actions .footer-button .view-footer a#edit-preview, .footer-button .view-footer .page-comment-reply .comment-block .form-actions a#edit-submit, .page-comment-reply .comment-block .form-actions .footer-button .view-footer a#edit-submit, .footer-button .view-footer .page-comment-reply .comment-block .form-actions a#edit-preview, .page-comment-reply .comment-block .form-actions .footer-button .view-footer a#edit-preview {
     width: 100%;
     margin-bottom: 25px;
   }
@@ -776,14 +776,14 @@ table {
 }
 
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.btn:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after {
+.btn:after, .topic-share .st_sharethis_button:after, .filter-slide .button-holder .form-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-preview:after, .page-comment-reply .comment-block .form-actions #edit-submit:after, .page-comment-reply .comment-block .form-actions #edit-preview:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
   content: " ";
   display: block;
   clear: both;
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-.social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline {
+.social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1148,7 +1148,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1382,15 +1382,15 @@ table {
   color: #ffffff;
 }
 /* line 140, ../../sass/_extends.scss */
-#content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .form-submit, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .form-submit {
+#content_top .my-voice-columns .webform-client-form .btn, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .form-submit, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .form-submit, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-submit, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-preview, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-submit, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-preview {
   float: left;
 }
 /* line 142, ../../sass/_extends.scss */
-#content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .btn-left.form-submit, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .btn-left.form-submit {
+#content_top .my-voice-columns .webform-client-form .btn.btn-left, #content_top .my-voice-columns .webform-client-form .topic-share .btn-left.st_sharethis_button, .topic-share #content_top .my-voice-columns .webform-client-form .btn-left.st_sharethis_button, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .btn-left.form-submit, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .btn-left.form-submit, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form .btn-left#edit-submit, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form .btn-left#edit-preview, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions .btn-left#edit-submit, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form .btn-left#edit-submit, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions .btn-left#edit-preview, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form .btn-left#edit-preview {
   margin-right: 27px;
 }
 /* line 144, ../../sass/_extends.scss */
-#content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .form-submit span, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .form-submit span {
+#content_top .my-voice-columns .webform-client-form .btn span, #content_top .my-voice-columns .webform-client-form .topic-share .st_sharethis_button span, .topic-share #content_top .my-voice-columns .webform-client-form .st_sharethis_button span, #content_top .my-voice-columns .webform-client-form .filter-slide .button-holder .form-submit span, .filter-slide .button-holder #content_top .my-voice-columns .webform-client-form .form-submit span, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions #edit-submit span, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-submit span, #content_top .my-voice-columns .webform-client-form .node-type-forum-discussion .comment-block .form-actions #edit-preview span, .node-type-forum-discussion .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-preview span, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions #edit-submit span, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-submit span, #content_top .my-voice-columns .webform-client-form .page-comment-reply .comment-block .form-actions #edit-preview span, .page-comment-reply .comment-block .form-actions #content_top .my-voice-columns .webform-client-form #edit-preview span {
   padding-left: 15px;
 }
 
@@ -2026,7 +2026,7 @@ body.page-node-74566 h1.title, body.page-node-74606 h1.title {
   }
 }
 /* line 531, ../../sass/layouts/topic-forum.scss */
-.posts-columns.columns-full .row .footer .links.inline li a.btn, .posts-columns.columns-full .row .footer .links.inline li .topic-share a.st_sharethis_button, .topic-share .posts-columns.columns-full .row .footer .links.inline li a.st_sharethis_button, .posts-columns.columns-full .row .footer .links.inline li .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .posts-columns.columns-full .row .footer .links.inline li a.form-submit {
+.posts-columns.columns-full .row .footer .links.inline li a.btn, .posts-columns.columns-full .row .footer .links.inline li .topic-share a.st_sharethis_button, .topic-share .posts-columns.columns-full .row .footer .links.inline li a.st_sharethis_button, .posts-columns.columns-full .row .footer .links.inline li .filter-slide .button-holder a.form-submit, .filter-slide .button-holder .posts-columns.columns-full .row .footer .links.inline li a.form-submit, .posts-columns.columns-full .row .footer .links.inline li .node-type-forum-discussion .comment-block .form-actions a#edit-submit, .node-type-forum-discussion .comment-block .form-actions .posts-columns.columns-full .row .footer .links.inline li a#edit-submit, .posts-columns.columns-full .row .footer .links.inline li .node-type-forum-discussion .comment-block .form-actions a#edit-preview, .node-type-forum-discussion .comment-block .form-actions .posts-columns.columns-full .row .footer .links.inline li a#edit-preview, .posts-columns.columns-full .row .footer .links.inline li .page-comment-reply .comment-block .form-actions a#edit-submit, .page-comment-reply .comment-block .form-actions .posts-columns.columns-full .row .footer .links.inline li a#edit-submit, .posts-columns.columns-full .row .footer .links.inline li .page-comment-reply .comment-block .form-actions a#edit-preview, .page-comment-reply .comment-block .form-actions .posts-columns.columns-full .row .footer .links.inline li a#edit-preview {
   color: #ffffff;
   text-decoration: none;
 }
@@ -2341,7 +2341,7 @@ body.page-node-74566 h1.title, body.page-node-74606 h1.title {
 }
 
 /* line 795, ../../sass/layouts/topic-forum.scss */
-.view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button, .view-display-id-stream .action-block .block-share .filter-slide .button-holder .form-submit, .filter-slide .button-holder .view-display-id-stream .action-block .block-share .form-submit, .view-display-id-stream .action-block .block-share .btn:hover, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button:hover, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button:hover, .view-display-id-stream .action-block .block-share .filter-slide .button-holder .form-submit:hover, .filter-slide .button-holder .view-display-id-stream .action-block .block-share .form-submit:hover {
+.view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button, .view-display-id-stream .action-block .block-share .filter-slide .button-holder .form-submit, .filter-slide .button-holder .view-display-id-stream .action-block .block-share .form-submit, .view-display-id-stream .action-block .block-share .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-submit, .view-display-id-stream .action-block .block-share .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-preview, .view-display-id-stream .action-block .block-share .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-submit, .view-display-id-stream .action-block .block-share .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-preview, .view-display-id-stream .action-block .block-share .btn:hover, .view-display-id-stream .action-block .block-share .topic-share .st_sharethis_button:hover, .topic-share .view-display-id-stream .action-block .block-share .st_sharethis_button:hover, .view-display-id-stream .action-block .block-share .filter-slide .button-holder .form-submit:hover, .filter-slide .button-holder .view-display-id-stream .action-block .block-share .form-submit:hover, .view-display-id-stream .action-block .block-share .node-type-forum-discussion .comment-block .form-actions #edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-submit:hover, .view-display-id-stream .action-block .block-share .node-type-forum-discussion .comment-block .form-actions #edit-preview:hover, .node-type-forum-discussion .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-preview:hover, .view-display-id-stream .action-block .block-share .page-comment-reply .comment-block .form-actions #edit-submit:hover, .page-comment-reply .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-submit:hover, .view-display-id-stream .action-block .block-share .page-comment-reply .comment-block .form-actions #edit-preview:hover, .page-comment-reply .comment-block .form-actions .view-display-id-stream .action-block .block-share #edit-preview:hover {
   margin: 182px 10px 0 0;
 }
 
@@ -2580,4 +2580,246 @@ body.page-node-74566 h1.title, body.page-node-74606 h1.title {
 /* line 1030, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .title {
   display: none;
+}
+
+/* line 1042, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block, .page-comment-reply .comment-block {
+  padding: 35px 50px 37px 44px;
+  position: relative;
+  margin: 0 0 30px;
+  background: #ffffff;
+  border: 1px solid #d2d5d6;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+/* line 1051, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block #edit-author--2 label, .page-comment-reply .comment-block #edit-author--2 label {
+  float: left;
+  width: auto;
+}
+/* line 1055, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block #edit-author--2 .form-element, .page-comment-reply .comment-block #edit-author--2 .form-element {
+  background: none;
+  margin-left: 10px;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  /* line 1042, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-block, .page-comment-reply .comment-block {
+    padding: 27px 15px;
+  }
+}
+/* line 1064, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block h4, .page-comment-reply .comment-block h4 {
+  margin: 0 0 17px;
+}
+/* line 1067, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .form-required, .page-comment-reply .comment-block .form-required {
+  color: #f15500;
+}
+/* line 1070, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form, .page-comment-reply .comment-block .comment-form {
+  font-size: 18px;
+  color: #636c73;
+}
+/* line 1073, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form .required, .page-comment-reply .comment-block .comment-form .required {
+  color: #f15500;
+}
+/* line 1076, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form label, .page-comment-reply .comment-block .comment-form label {
+  float: left;
+  width: 100%;
+}
+/* line 1079, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form label.label-block, .page-comment-reply .comment-block .comment-form label.label-block {
+  width: 100%;
+}
+/* line 1083, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form .jcf-select, .page-comment-reply .comment-block .comment-form .jcf-select {
+  width: 100%;
+  border: none;
+}
+/* line 1087, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form fieldset, .page-comment-reply .comment-block .comment-form fieldset {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 767px) {
+  /* line 1087, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-block .comment-form fieldset, .page-comment-reply .comment-block .comment-form fieldset {
+    margin: 0 0 10px 0;
+  }
+}
+/* line 1092, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form fieldset fieldset, .page-comment-reply .comment-block .comment-form fieldset fieldset {
+  margin: 0;
+  padding: 0;
+}
+/* line 1096, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form fieldset .filter-help, .page-comment-reply .comment-block .comment-form fieldset .filter-help {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+/* line 1101, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form fieldset .filter-help a, .page-comment-reply .comment-block .comment-form fieldset .filter-help a {
+  padding: 0;
+}
+/* line 1106, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form strong, .page-comment-reply .comment-block .comment-form strong {
+  color: #081318;
+  margin-left: 10px;
+}
+@media (max-width: 990px) {
+  /* line 1106, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-block .comment-form strong, .page-comment-reply .comment-block .comment-form strong {
+    font-weight: normal;
+  }
+}
+/* line 1113, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form .form-element, .page-comment-reply .comment-block .comment-form .form-element {
+  background-color: #eef2f3;
+  background-image: -webkit-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -moz-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -ms-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -o-linear-gradient(top, #636c73, #eef2f3);
+  background-image: linear-gradient(to bottom, #636c73, #eef2f3);
+  padding: 2px;
+  float: left;
+  margin: 6px 0 0 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  max-width: 506px;
+  width: 100%;
+}
+/* line 1121, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form .form-element input[type=text], .node-type-forum-discussion .comment-block .comment-form .form-element input[type=email], .node-type-forum-discussion .comment-block .comment-form .form-element textarea, .page-comment-reply .comment-block .comment-form .form-element input[type=text], .page-comment-reply .comment-block .comment-form .form-element input[type=email], .page-comment-reply .comment-block .comment-form .form-element textarea {
+  float: left;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  color: #636c73;
+  border: none;
+}
+/* line 1128, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .comment-form .form-element textarea, .page-comment-reply .comment-block .comment-form .form-element textarea {
+  height: 183px;
+}
+/* line 1133, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .form-actions, .page-comment-reply .comment-block .form-actions {
+  margin: 0;
+}
+/* line 1137, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-block .form-actions #edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-preview:hover, .page-comment-reply .comment-block .form-actions #edit-submit:hover, .page-comment-reply .comment-block .form-actions #edit-preview:hover {
+  color: #636c73;
+}
+@media (max-width: 767px) {
+  /* line 1143, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-block .form-actions .btn.btn-left, .node-type-forum-discussion .comment-block .form-actions .topic-share .btn-left.st_sharethis_button, .topic-share .node-type-forum-discussion .comment-block .form-actions .btn-left.st_sharethis_button, .node-type-forum-discussion .comment-block .form-actions .filter-slide .button-holder .btn-left.form-submit, .filter-slide .button-holder .node-type-forum-discussion .comment-block .form-actions .btn-left.form-submit, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview, .page-comment-reply .comment-block .form-actions .btn.btn-left, .page-comment-reply .comment-block .form-actions .topic-share .btn-left.st_sharethis_button, .topic-share .page-comment-reply .comment-block .form-actions .btn-left.st_sharethis_button, .page-comment-reply .comment-block .form-actions .filter-slide .button-holder .btn-left.form-submit, .filter-slide .button-holder .page-comment-reply .comment-block .form-actions .btn-left.form-submit, .page-comment-reply .comment-block .form-actions .btn-left#edit-submit, .page-comment-reply .comment-block .form-actions .btn-left#edit-preview {
+    margin-left: 6px;
+    padding: 3px 15px;
+  }
+  /* line 1146, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-block .form-actions .btn.btn-left:first-child, .node-type-forum-discussion .comment-block .form-actions .topic-share .btn-left.st_sharethis_button:first-child, .topic-share .node-type-forum-discussion .comment-block .form-actions .btn-left.st_sharethis_button:first-child, .node-type-forum-discussion .comment-block .form-actions .filter-slide .button-holder .btn-left.form-submit:first-child, .filter-slide .button-holder .node-type-forum-discussion .comment-block .form-actions .btn-left.form-submit:first-child, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit:first-child, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview:first-child, .page-comment-reply .comment-block .form-actions .btn.btn-left:first-child, .page-comment-reply .comment-block .form-actions .topic-share .btn-left.st_sharethis_button:first-child, .topic-share .page-comment-reply .comment-block .form-actions .btn-left.st_sharethis_button:first-child, .page-comment-reply .comment-block .form-actions .filter-slide .button-holder .btn-left.form-submit:first-child, .filter-slide .button-holder .page-comment-reply .comment-block .form-actions .btn-left.form-submit:first-child, .page-comment-reply .comment-block .form-actions .btn-left#edit-submit:first-child, .page-comment-reply .comment-block .form-actions .btn-left#edit-preview:first-child {
+    margin-left: 0;
+  }
+}
+/* line 1155, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list h4, .page-comment-reply .comment-list h4 {
+  font-size: 23px;
+  font-size: 1.4375em;
+}
+/* line 1157, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list h4 a, .page-comment-reply .comment-list h4 a {
+  font-size: 16px;
+  text-decoration: underline;
+  margin-left: 0;
+}
+/* line 1163, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing {
+  position: relative;
+}
+/* line 1166, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing.children, .page-comment-reply .comment-list ul.comment-listing.children {
+  margin-left: 30px;
+}
+/* line 1170, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left, .page-comment-reply .comment-list ul.comment-listing li .comment-left {
+  float: left;
+  width: 79px;
+  font-size: 13px;
+}
+/* line 1174, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left img, .page-comment-reply .comment-list ul.comment-listing li .comment-left img {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 0 4px 0;
+}
+/* line 1179, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left a, .page-comment-reply .comment-list ul.comment-listing li .comment-left a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #081318;
+}
+/* line 1183, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left a:hover, .page-comment-reply .comment-list ul.comment-listing li .comment-left a:hover {
+  text-decoration: none;
+}
+/* line 1187, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left cite, .page-comment-reply .comment-list ul.comment-listing li .comment-left cite {
+  margin: 0 0 7px 0;
+  font-style: normal;
+  display: block;
+}
+/* line 1192, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-left time, .page-comment-reply .comment-list ul.comment-listing li .comment-left time {
+  margin: 0 0 17px 0;
+}
+/* line 1196, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right, .page-comment-reply .comment-list ul.comment-listing li .comment-right {
+  border: 2px solid #d2d5d6;
+  padding: 16px 26px 13px 26px;
+  margin: 0 0 27px 112px;
+  font-size: 16px;
+  background: #ffffff;
+  word-wrap: break-word;
+}
+@media (max-width: 767px) {
+  /* line 1196, ../../sass/layouts/topic-forum.scss */
+  .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right, .page-comment-reply .comment-list ul.comment-listing li .comment-right {
+    padding: 15px;
+  }
+}
+/* line 1206, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right:before, .page-comment-reply .comment-list ul.comment-listing li .comment-right:before {
+  content: "";
+  position: absolute;
+  left: 90px;
+  background: url(../../images/sprite.png) no-repeat -1px -162px;
+  width: 24px;
+  top: 15px;
+  height: 32px;
+}
+/* line 1215, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right .links, .page-comment-reply .comment-list ul.comment-listing li .comment-right .links {
+  margin-bottom: 17px;
+}
+/* line 1221, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li {
+  float: left;
+  margin: 0 11px 0 0;
+}
+/* line 1224, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li a, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 1227, ../../sass/layouts/topic-forum.scss */
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li a:hover, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li a:hover {
+  text-decoration: none;
 }
