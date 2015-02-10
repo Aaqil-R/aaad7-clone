@@ -953,9 +953,9 @@ nav {
     padding: 18px 25px;
     margin: 0 0 12px 16px;
     font-weight: normal;
-    background:#fff;
+    background:$white;
     display: inline-block;
-    color: #081318; 
+    color:$heading-link; 
     line-height:100%;
     clear:both;
     @include breakpoint($tablet) {
@@ -974,7 +974,7 @@ nav {
   }
   .banner_sub_text{ 
     vertical-align: top;
-    background: #ffffff; 
+    background:$white; 
     font-size: 2vw; 
     display: inline-block;
     margin: 0 0 0 159px;
@@ -1004,7 +1004,7 @@ nav {
     text-align: right;
     font-size: 13px;
     line-height: 16px;
-    color: #636c73;
+    color:$captions-credit;
     max-width:1080px;
     margin:0 auto;
     padding-top: 10px;
@@ -1014,19 +1014,19 @@ nav {
       padding:10px 20px;
     }
     a{
-      color: #081318;
+      color:$heading-link;
       font-weight: bold;
       text-decoration: underline;
     }
   }
   .btn-prev{
-    background:#f15500;
+    background:$orange;
     -moz-border-radius: 0 5px 5px 0;
     -webkit-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
     .icon-Leftarrow{
       font-size: 27px;
-      color:#fff;
+      color:$white;
     }
   } 
   &.banner-nav{
@@ -1044,12 +1044,12 @@ nav {
     position: absolute;
     top: -71px;
     right:13px;
-    color: #fff;
+    color:$white;
     @include breakpoint($mobile) {
       top:-31px;
     }
     a{
-      color: #fff;
+      color:$white;
       text-decoration: underline;
     }
   } 
@@ -1078,12 +1078,12 @@ nav {
     position: absolute;
     top: -71px;
     right:13px;
-    color: #fff;
+    color:$white;
     @include breakpoint($mobile) {
       top:-31px;
     }
     a{
-      color: #fff;
+      color:$white;
       text-decoration: underline;
     }
   } 
