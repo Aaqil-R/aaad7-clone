@@ -48,13 +48,14 @@
          <div class="filter-overlay"></div>
     
     <div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
+				<h4 class="title">Filter by..  <span class="filteroption icon-Close"></span></h4>
 				<div class="nav-filter ">
 					 <?php print $widget->widget; ?> 
 				</div> 
    
       <div class="button-holder">
        <div class="views-exposed-widget views-submit-button">
+        <span class="btn btn-pink submit">I'm done</span>
       <?php print $button; ?>
     </div>
        </div> 
