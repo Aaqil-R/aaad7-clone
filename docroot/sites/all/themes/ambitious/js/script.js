@@ -26,19 +26,7 @@ Drupal.behaviors.ambitious = {
 		    $(view).waypoint('destroy');
 		  });
 		});
-		/*load more button with masonry - masonry was not applied when new content loads
-		 * here is fix to apply or reload the masonry items and apply the style
-		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
-		 */
-		 $(window).bind('views_load_more.new_content', function(){
-		    // Reload the masonry view after "load more"
-		    if (typeof Drupal.settings.masonry === 'object' ){
-			 var viewids = Object.keys(Drupal.settings.masonry);
-			 for(i=0;i<viewids.length; i++) {
-				$(viewids[i]).masonry('reloadItems');
-			 }
-		    }
-		  });
+		
 		
         // views filter opiton
         $(":checkbox").on('click', function(){
@@ -48,19 +36,31 @@ Drupal.behaviors.ambitious = {
   	// Place your code here
     	initCustomForms();
     	     
-	     $('.view-id-stream').mobileNav({ 
+	     $('#block-views-stream-stream-forum-page').mobileNav({ 
+		  hideOnClickOutside: true,
+		  menuActiveClass: 'filter-active',
+		  menuOpener: '.filterbutton',
+		  menuDrop: '.filter-slide'
+	    }); 
+	     $('#block-views-f5e2d7eec66e26c14feaa017ac406a98).mobileNav({ 
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filteroption',
 		  menuDrop: '.filter-slide'
 	    }); 
          $( document ).ajaxComplete(function() {
-	      $('.view-id-stream').mobileNav({
+	      $('#block-views-stream-stream-forum-page').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
-		   menuOpener: '.filteroption',
+		   menuOpener: '.filterbutton',
  		   menuDrop: '.filter-slide'
 	      }); 
+	       $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({ 
+		  hideOnClickOutside: true,
+		  menuActiveClass: 'filter-active',
+		  menuOpener: '.filteroption',
+		  menuDrop: '.filter-slide'
+	    }); 
         }); 
         $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
@@ -133,7 +133,19 @@ Drupal.behaviors.ambitious = {
       stButtons.locateElements();
     }
   };
-
+/*load more button with masonry - masonry was not applied when new content loads
+		 * here is fix to apply or reload the masonry items and apply the style
+		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
+		 */
+		 $(window).bind('views_load_more.new_content', function(){
+		    // Reload the masonry view after "load more"
+		    if (typeof Drupal.settings.masonry === 'object' ){
+			 var viewids = Object.keys(Drupal.settings.masonry);
+			 for(i=0;i<viewids.length; i++) {
+				$(viewids[i]).masonry('reloadItems');
+			 }
+		    }
+		  });
 
 $(window).resize(function () {
     $('.masonry').masonry('reloadItems');
