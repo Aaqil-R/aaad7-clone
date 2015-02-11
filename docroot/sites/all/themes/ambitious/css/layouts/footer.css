@@ -557,6 +557,9 @@ body > .jcf-select-drop.jcf-drop-flipped {
 #footer .right-footer {
   float: right;
   width: 48.6%;
+  position: absolute;
+  right: 0;
+  top: 33px;
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -566,71 +569,73 @@ body > .jcf-select-drop.jcf-drop-flipped {
   /* line 137, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 55%;
+    position: none;
   }
 }
 @media (max-width: 767px) {
   /* line 137, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 100%;
+    position: none;
     float: none;
     overflow: hidden;
   }
 }
-/* line 150, ../../sass/layouts/footer.scss */
+/* line 155, ../../sass/layouts/footer.scss */
 #footer .left-footer {
   float: left;
   width: 45%;
 }
 @media (max-width: 990px) {
-  /* line 150, ../../sass/layouts/footer.scss */
+  /* line 155, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 55%;
   }
 }
 @media (max-width: 767px) {
-  /* line 150, ../../sass/layouts/footer.scss */
+  /* line 155, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 100%;
     float: none;
     overflow: hidden;
   }
 }
-/* line 162, ../../sass/layouts/footer.scss */
+/* line 167, ../../sass/layouts/footer.scss */
 #footer .contact-info {
   float: left;
   width: 31.7%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 162, ../../sass/layouts/footer.scss */
+  /* line 167, ../../sass/layouts/footer.scss */
   #footer .contact-info {
     width: 50%;
   }
 }
-/* line 170, ../../sass/layouts/footer.scss */
+/* line 175, ../../sass/layouts/footer.scss */
 #footer .school-info {
   float: left;
   width: 39%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 170, ../../sass/layouts/footer.scss */
+  /* line 175, ../../sass/layouts/footer.scss */
   #footer .school-info {
     display: none;
   }
 }
-/* line 178, ../../sass/layouts/footer.scss */
+/* line 183, ../../sass/layouts/footer.scss */
 #footer .web-info {
   float: left;
   width: 29%;
 }
 @media (max-width: 767px) {
-  /* line 178, ../../sass/layouts/footer.scss */
+  /* line 183, ../../sass/layouts/footer.scss */
   #footer .web-info {
     width: 50%;
   }
 }
-/* line 186, ../../sass/layouts/footer.scss */
+/* line 191, ../../sass/layouts/footer.scss */
 #footer .title, #footer .region-footer-copyright .social-holder h2 {
   display: block;
   font-size: 27px;
@@ -638,61 +643,61 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #081318;
 }
 @media (max-width: 767px) {
-  /* line 186, ../../sass/layouts/footer.scss */
+  /* line 191, ../../sass/layouts/footer.scss */
   #footer .title, #footer .region-footer-copyright .social-holder h2 {
     font-size: 22px;
     line-height: 30px;
     padding: 24px 31px 19px;
   }
 }
-/* line 199, ../../sass/layouts/footer.scss */
+/* line 204, ../../sass/layouts/footer.scss */
 #footer .social-networks, #footer .region-footer-copyright .social-holder ul {
   float: left;
 }
-/* line 202, ../../sass/layouts/footer.scss */
+/* line 207, ../../sass/layouts/footer.scss */
 #footer .social-networks li, #footer .region-footer-copyright .social-holder ul li {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin: 0 11px 0 0;
 }
-/* line 207, ../../sass/layouts/footer.scss */
+/* line 212, ../../sass/layouts/footer.scss */
 #footer .social-networks li a, #footer .region-footer-copyright .social-holder ul li a {
   color: #d2d5d6;
   text-decoration: none;
 }
-/* line 210, ../../sass/layouts/footer.scss */
+/* line 215, ../../sass/layouts/footer.scss */
 #footer .social-networks li a:hover, #footer .region-footer-copyright .social-holder ul li a:hover {
   color: #ffffff;
 }
-/* line 212, ../../sass/layouts/footer.scss */
+/* line 217, ../../sass/layouts/footer.scss */
 #footer .social-networks li em, #footer .region-footer-copyright .social-holder ul li em {
   display: none;
 }
-/* line 213, ../../sass/layouts/footer.scss */
+/* line 218, ../../sass/layouts/footer.scss */
 #footer .social-networks li .icon-YouTube, #footer .region-footer-copyright .social-holder ul li .icon-YouTube {
   font-size: 23px;
   display: block;
   margin: -4px 0 0 -2px;
 }
-/* line 234, ../../sass/layouts/footer.scss */
+/* line 239, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul {
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-/* line 239, ../../sass/layouts/footer.scss */
+/* line 244, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li {
   font-size: 16px;
   line-height: 20px;
   margin: 0 0 16px;
 }
-/* line 243, ../../sass/layouts/footer.scss */
+/* line 248, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a {
   color: #d2d5d6;
   text-decoration: underline;
 }
-/* line 246, ../../sass/layouts/footer.scss */
+/* line 251, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a:hover {
   text-decoration: none;
 }

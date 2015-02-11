@@ -137,12 +137,17 @@
 	.right-footer {
 		float:right;
 		width:48.6%;
+		position: absolute;
+		right: 0;
+		top:33px;
 		@include transition ($type:all, $time:0.4s, $ease:ease);
 		@include breakpoint($tablet) {
 			width:55%;
+			position: none;
 		}
 		@include breakpoint($mobile) {
 			width:100%;
+			position: none;
 			float:none;
 			overflow:hidden;
 		}
