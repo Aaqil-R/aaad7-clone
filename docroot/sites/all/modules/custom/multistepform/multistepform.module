@@ -191,6 +191,7 @@ function multistepform_node_delete($node) {
 }
 
 function multistepform_block_info() {
+ $blocks = array();
   $result = db_select('multistepform_settings')
     ->fields('multistepform_settings')
     ->condition('block', 1)
