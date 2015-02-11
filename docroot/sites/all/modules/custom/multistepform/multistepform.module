@@ -189,3 +189,35 @@ function multistepform_node_delete($node) {
     db_delete('multistepform_settings')->condition('nid', $node->nid)->execute();    
   }
 }
+
+function multistepform_block_info() {
+  $result = db_select('multistepform_settings')
+    ->fields('multistepform_settings')
+    ->condition('block', 1)
+    ->execute()
+    ->fetchAll();
+   foreach($result as  $multistepform) {
+     $node = node_load($multistepform->nid);
+     $blocks['multistep_'.$multistepform->nid] = array(
+      'info' => t('Multi Step Form:'.$node->title),
+      'cache' => DRUPAL_NO_CACHE,
+     );   
+    } 
+  return $blocks;
+}
+
+function multistepform_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  // Get the node ID from delta.
+  $nid = drupal_substr($delta, strrpos($delta, '_') + 1);
+  $node = node_load($nid);
+  $subject = $node->title;
+  $form = drupal_get_form('multistepform_client_form', $node);
+   $block = array(
+    'subject' => $subject,
+    'content' => drupal_render($form),
+  );
+  return $block;
+}
