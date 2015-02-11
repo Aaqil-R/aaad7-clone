@@ -2,6 +2,9 @@
 @import "extends"; 
 @import "content"; 
 
+.icon-Close{
+  cursor: pointer;
+}
 body.sidebar{
   #main{
     max-width: none;
@@ -318,6 +321,11 @@ body.page-node-74566, body.page-node-74606 {
     }
   }
 }
+.filter-option .sort-block{
+    label{
+      display:none;
+    }
+  }
 .view-display-id-stream_topic_page{
   &.posts-columns{
     max-width: 1080px;
@@ -666,16 +674,7 @@ margin-right: 10px;
 	    color:$orange;
 	  }
 	}
-	.button-holder{
-	   margin:20px 32px 30px;
-	   .form-submit{
-	       width:100%;
-	       border-left:none;
-	       border-top:none;
-	       border-right:none;
-	       @extend .btn;
-	   } 
-	}
+	
 	.title {
 		display:block;
 		font-size:27px;
@@ -856,7 +855,16 @@ margin-right: 10px;
   }
 }
  
- 
+ .button-holder{
+	   margin:20px 32px 30px;
+	   .form-submit{
+	       width:100%;
+	       border-left:none;
+	       border-top:none;
+	       border-right:none;
+	       @extend .btn;
+	   } 
+	}
  
 .view-display-id-stream_forum_page.posts-columns.columns-full .row .footer .links.inline{
    float: right;
