@@ -78,7 +78,7 @@
 </fieldset>
 						 
 </div>
- <a href="javascript:void()" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
+ <a href="javascript:void()" class="btn btn-left" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
 		</div>
       <div class="views-exposed-widget views-widget-sort-order">
         <?php print $sort_order; ?>
