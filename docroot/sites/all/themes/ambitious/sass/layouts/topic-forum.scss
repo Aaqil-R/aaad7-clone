@@ -1,4 +1,4 @@
-@import "buttons"; 
+@import "base/base"; 
 @import "extends"; 
 
 body.sidebar{
@@ -165,8 +165,8 @@ div.messages.status{
 .topic-share{ 
   .st_sharethis_button{
     @extend .btn;  
-    @extend .btn-green;
-    @extend .btn-right; 
+    @extend .btn-green !optional;
+    @extend .btn-right !optional; 
      cursor: pointer; 
     span span{
       background:none!important;
@@ -1134,7 +1134,7 @@ margin-right: 10px;
 		.form-actions{
 		  #edit-submit, #edit-preview{
 		    @extend .btn;
-		    @extend .btn-gray;  
+		    @extend .btn-gray !optional;  
 		    &:hover{
 		      color:$captions-credit;
 		    }

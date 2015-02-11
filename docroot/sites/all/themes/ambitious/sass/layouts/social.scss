@@ -15,7 +15,9 @@
 		}
 	}
 	.block{
-		padding: 0;
+		// TODO: Remove; commenting this out because it causes the front page; social block to 
+		// lose all its padding.
+		// padding: 0;
 		@include breakpoint($mobile){
 			padding: 0 20px 13px;
 			background: none;
@@ -43,12 +45,13 @@
 				
 			}
 
-			.youtube-btn{
+			.youtube-btn {
 				position: absolute;
 				@include breakpoint($mobile){
 					padding: 16px 0;
-					margin-bottom: 12px;
-				}
+					margin-bottom: 12px;				
+				}			
+
 				span.icon-YouTube{
 					@include breakpoint($mobile){
 						display: none;
