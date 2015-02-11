@@ -371,7 +371,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -756,7 +756,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2270,4 +2270,73 @@ fieldset {
   z-index: 99;
   position: absolute;
   top: 45%;
+}
+
+/* line 1250, ../../sass/layouts/topic-forum.scss */
+.feature-holder {
+  overflow: hidden;
+}
+/* line 1252, ../../sass/layouts/topic-forum.scss */
+.feature-holder .icon-Featured {
+  position: relative;
+  z-index: 999;
+}
+/* line 1256, ../../sass/layouts/topic-forum.scss */
+.feature-holder .text {
+  display: block !important;
+  margin-left: -134p	x;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 1262, ../../sass/layouts/topic-forum.scss */
+.feature-holder:hover .text {
+  margin-left: 0px;
+}
+
+/*SHARE BUTTON*/
+/* line 1271, ../../sass/layouts/topic-forum.scss */
+.topic-share .st_sharethis_button {
+  cursor: pointer;
+}
+/* line 1274, ../../sass/layouts/topic-forum.scss */
+.topic-share .st_sharethis_button span span {
+  background: none !important;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 1287, ../../sass/layouts/topic-forum.scss */
+.topic-share .st_sharethis_button span span:after {
+  font-size: 18px;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+  content: "Share";
+  color: #ffffff;
+}
+/* line 1294, ../../sass/layouts/topic-forum.scss */
+.topic-share .st_sharethis_button span span:before {
+  float: right;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  /* line 1305, ../../sass/layouts/topic-forum.scss */
+  .node-type-topic .block-inspire.orange-box {
+    background: url('../../images/action-bg2.jpg?1423646641');
+  }
+}
+
+/* line 1313, ../../sass/layouts/topic-forum.scss */
+.view-display-id-stream_topic_page_forum .view-footer {
+  margin: 0;
+  min-height: 66px;
 }
