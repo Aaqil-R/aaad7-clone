@@ -28,9 +28,13 @@
     print $q;
   ?>
 <?php endif; ?> 
-
-
-
+<div class="text-block text-block-second post mobile-view">
+  <h1><?php print $variables['node']->title;?></h1>
+      <?php endif; ?>
+      <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
+        <?php print $variables['node']->body['und'][0]['safe_value']; ?>
+      <?php endif; ?>
+</div>
 <div class="sort-block">
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">

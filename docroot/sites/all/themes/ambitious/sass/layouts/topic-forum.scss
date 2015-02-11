@@ -167,7 +167,7 @@ div.messages.status{
 
 /*SHARE BUTTON*/
  
-  .st_sharethis_button .stButton span{
+  .st_sharethis_button .stButton{
     display:inline-block;
   border:none;
   padding:5px 19px;
@@ -1368,3 +1368,24 @@ fieldset{
   }
 
 }
+.mobile-view{
+  display:none;
+}
+.desktop-view{
+  display:inherit;
+}
+
+.mobile-view{
+   @include breakpoint($mobile){
+     display:inherit;
+   }
+}
+.desktop-view{
+  @include breakpoint($mobile){
+     display:none;
+   }
+}
+
+
+
+ 
