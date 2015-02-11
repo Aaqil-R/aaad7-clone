@@ -72,7 +72,7 @@
       </div>
     <?php endif; ?>
     
-    <div class="filter-overlay">.</div>
+    <div class="filter-overlay"></div>
     
     <div class="filter-slide">
 				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>

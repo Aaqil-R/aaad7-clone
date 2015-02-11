@@ -44,28 +44,22 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-   <div class="filter-slide" id="topics-slide">
+        
+         <div class="filter-overlay"></div>
+    
+    <div class="filter-slide">
 				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
 				<div class="nav-filter ">
-					<ul class="options">
-				<li>Autism and me<span class="icon-Tick"></span></li>
-				<li>Bullying<span class="icon-Tick"></span></li>
-				<li>Ready for work<span class="icon-Tick"></span></li>
-				<li>Relationships<span class="icon-Tick"></span></li>
-				<li>Lorem ipsum<span class="icon-Tick"></span></li>
-				<li>Dolor sit amet<span class="icon-Tick"></span></li>
-			</ul>
+					 <?php print $widget->widget; ?> 
 				</div> 
    
-      <div class="button-holder"><div class="views-exposed-widget views-submit-button">
-      <span class="btn btn-pink submit">I'm done</span>
-     <div style="display:none;"> <?php print $button; ?></div>
-    </div></div> 
+      <div class="button-holder">
+       <div class="views-exposed-widget views-submit-button">
+      <?php print $button; ?>
+    </div>
+       </div> 
 				
-        </div>
-        
-        
-    
+        </div> 
 		
 		
         <?php if (!empty($widget->description)): ?>
@@ -84,7 +78,7 @@
 </fieldset>
 						 
 </div>
-  <a href="#" class="btn btn-left btn-pink filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
+ <a href="javascript:void()" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
 		</div>
       <div class="views-exposed-widget views-widget-sort-order">
         <?php print $sort_order; ?>

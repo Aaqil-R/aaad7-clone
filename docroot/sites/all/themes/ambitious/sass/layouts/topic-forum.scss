@@ -1269,8 +1269,12 @@ fieldset{
   min-height:50px;
 }
 
-.block-inspire.orange-box{
-   background:image-url('action-bg2.jpg');
+.node-type-topic{
+  .block-inspire.orange-box{
+     @include breakpoint($mobile){
+       background:image-url('action-bg2.jpg');
+     }
+  }
 }
 
 

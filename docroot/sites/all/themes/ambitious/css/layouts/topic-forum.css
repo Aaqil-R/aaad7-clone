@@ -4325,12 +4325,14 @@ fieldset {
   min-height: 50px;
 }
 
-/* line 1272, ../../sass/layouts/topic-forum.scss */
-.block-inspire.orange-box {
-  background: url('../../images/action-bg2.jpg?1423646641');
+@media (max-width: 767px) {
+  /* line 1273, ../../sass/layouts/topic-forum.scss */
+  .node-type-topic .block-inspire.orange-box {
+    background: url('../../images/action-bg2.jpg?1423646641');
+  }
 }
 
-/* line 1278, ../../sass/layouts/topic-forum.scss */
+/* line 1282, ../../sass/layouts/topic-forum.scss */
 .view-display-id-stream_topic_page_forum .view-footer {
   margin: 0;
   min-height: 66px;
