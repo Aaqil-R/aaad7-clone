@@ -1,3 +1,56 @@
+/* line 3, ../sass/base/_markup-mixins.scss */
+.action-block .holder:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 25, ../sass/base/_markup-mixins.scss */
+.action-block .lavender-line.block-vacancies, .action-block .lavender-line.block-image {
+  background-image: url(../images/action-bg3.jpg);
+  background-repeat: no-repeat;
+  background-color: #734889;
+  background-size: cover;
+}
+/* line 31, ../sass/base/_markup-mixins.scss */
+.action-block .lavender-box.block-vacancies, .action-block .lavender-box.block-image {
+  background-image: url(../images/action-bg1.jpg);
+  background-repeat: no-repeat;
+  background-color: #734889;
+  background-size: cover;
+}
+/* line 37, ../sass/base/_markup-mixins.scss */
+.action-block .orange-line.block-vacancies, .action-block .orange-line.block-image {
+  background-image: url(../images/action-bg2.jpg);
+  background-repeat: no-repeat;
+  background-color: #f15500;
+  background-size: cover;
+}
+/* line 43, ../sass/base/_markup-mixins.scss */
+.action-block .green-box.block-vacancies, .action-block .green-box.block-image {
+  background: url(../images/action-bg4.jpg) no-repeat #00a837;
+  background-image: url(../images/action-bg3.jpg);
+  background-repeat: no-repeat;
+  background-color: #734889;
+  background-size: cover;
+}
+/* line 50, ../sass/base/_markup-mixins.scss */
+.action-block .blue-box.block-vacancies, .action-block .blue-box.block-image {
+  background-image: url(../images/action-bg5.jpg);
+  background-repeat: no-repeat;
+  background-color: #006dc1;
+  background-size: cover;
+}
+
+/* line 58, ../sass/base/_markup-mixins.scss */
+.action-block .block-vacancies img, .action-block .block-image img {
+  float: right;
+  max-width: 36%;
+  margin-bottom: 10px;
+  margin-right: 19px;
+  margin-top: -11px;
+}
+
 /* ---------------------------------------------------------
    1. Embedded fonts styles
    2. General reset
@@ -369,19 +422,563 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* // Fix the button border issue
-.btn-transparent{
-  &:hover{
-	border-bottom-width:2px;
-	box-shadow: 0 1px $white;
+/* action block styles */
+/* line 4, ../sass/action-block.scss */
+.action-block {
+  background: #ffffff;
+  width: 100%;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  /* action symptoms block styles */
+  /* action inspire block styles */
+  /* action report block styles */
+  /* action blog block styles */
+  /* Connect with others block styles */
+  /* Vacancies block styles */
+  /* share this block styles */
+}
+@media (max-width: 767px) {
+  /* line 4, ../sass/action-block.scss */
+  .action-block {
+    background: none;
+  }
+  /* line 10, ../sass/action-block.scss */
+  .action-block .text, .action-block .title {
+    width: 50%;
+  }
+  /* line 12, ../sass/action-block.scss */
+  .action-block .text br, .action-block .title br {
+    display: none;
   }
 }
-
-// Fix the block share a tag hover issue
-.front .block-share{
-  .btn-transparent{
-	&:hover{
-	  margin: 182px 10px 0 0;
-	}
+/* line 17, ../sass/action-block.scss */
+.action-block .holder {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 102px 15px 126px;
+}
+@media (max-width: 767px) {
+  /* line 17, ../sass/action-block.scss */
+  .action-block .holder {
+    padding: 20px 20px 37px;
   }
-}*/
+}
+/* line 24, ../sass/action-block.scss */
+.action-block .holder > div {
+  float: right;
+}
+/* line 26, ../sass/action-block.scss */
+.action-block .holder > div:first-child {
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 26, ../sass/action-block.scss */
+  .action-block .holder > div:first-child {
+    margin-bottom: 20px;
+  }
+}
+/* line 35, ../sass/action-block.scss */
+.action-block .block-symptoms {
+  width: 48.5%;
+  padding: 50px 10px 37px 39px;
+  background-image: url('../images/bg.jpg?1420173963');
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  /* line 35, ../sass/action-block.scss */
+  .action-block .block-symptoms {
+    width: 100%;
+    float: none;
+    padding: 26px 10px 17px 20px;
+    margin: 0 0 34px;
+    background-position: right center;
+  }
+  /* line 46, ../sass/action-block.scss */
+  .action-block .block-symptoms .text {
+    width: 100%;
+  }
+  /* line 48, ../sass/action-block.scss */
+  .action-block .block-symptoms .text span.add {
+    margin-left: 0;
+  }
+}
+/* line 53, ../sass/action-block.scss */
+.action-block .block-symptoms .text {
+  display: block;
+  font-size: 45px;
+  line-height: 48px;
+  margin: 0 0 55px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+/* line 60, ../sass/action-block.scss */
+#main2 .action-block .block-symptoms .text {
+  margin: 0 0 6px;
+}
+@media (max-width: 990px) {
+  /* line 53, ../sass/action-block.scss */
+  .action-block .block-symptoms .text {
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 53, ../sass/action-block.scss */
+  .action-block .block-symptoms .text {
+    margin: 0 0 5px;
+  }
+}
+/* line 70, ../sass/action-block.scss */
+.action-block .block-symptoms .text span {
+  color: #081318;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 11px;
+  background: #ffffff;
+  padding: 6px 19px 5px;
+}
+@media (max-width: 767px) {
+  /* line 70, ../sass/action-block.scss */
+  .action-block .block-symptoms .text span {
+    padding: 3px 10px 6px;
+    margin: 0 0 5px;
+  }
+}
+/* line 81, ../sass/action-block.scss */
+.action-block .block-symptoms .text span.add {
+  margin: 0 0 0px 62px;
+}
+@media (max-width: 767px) {
+  /* line 81, ../sass/action-block.scss */
+  .action-block .block-symptoms .text span.add {
+    margin: 0 0 0px 19px;
+  }
+}
+/* line 91, ../sass/action-block.scss */
+.action-block .block-inspire {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 39px 39px;
+  background-image: url('../images/bg01.jpg?1420173963');
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  /* line 91, ../sass/action-block.scss */
+  .action-block .block-inspire {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 20px 21px;
+    background-position: right center;
+  }
+}
+/* line 103, ../sass/action-block.scss */
+.action-block .block-inspire .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 45px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 103, ../sass/action-block.scss */
+  .action-block .block-inspire .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 103, ../sass/action-block.scss */
+  .action-block .block-inspire .title {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 122, ../sass/action-block.scss */
+.action-block .block-report {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 39px 39px;
+  background-image: url('../images/bg02.jpg?1420173963');
+  background-size: cover;
+}
+@media (max-width: 990px) {
+  /* line 122, ../sass/action-block.scss */
+  .action-block .block-report {
+    background-position: top right;
+  }
+  /* line 130, ../sass/action-block.scss */
+  .action-block .block-report .btn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 122, ../sass/action-block.scss */
+  .action-block .block-report {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 20px 21px;
+    background-position: right top;
+  }
+  /* line 140, ../sass/action-block.scss */
+  .action-block .block-report .btn {
+    font-size: 14px;
+  }
+}
+/* line 144, ../sass/action-block.scss */
+.action-block .block-report .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 45px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 144, ../sass/action-block.scss */
+  .action-block .block-report .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 144, ../sass/action-block.scss */
+  .action-block .block-report .title {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 163, ../sass/action-block.scss */
+.action-block .block-blog {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 39px 39px;
+  background-image: url('../images/bg03.jpg?1420173963');
+  background-size: cover;
+  background-position: top right;
+}
+@media (max-width: 990px) {
+  /* line 163, ../sass/action-block.scss */
+  .action-block .block-blog {
+    background-position: top right;
+    padding: 17px 10px 30px 29px;
+  }
+  /* line 173, ../sass/action-block.scss */
+  .action-block .block-blog .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 163, ../sass/action-block.scss */
+  .action-block .block-blog {
+    width: 100%;
+    background-position: right center;
+    float: none;
+    padding: 24px 10px 20px 21px;
+  }
+}
+/* line 184, ../sass/action-block.scss */
+.action-block .block-blog .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 45px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 184, ../sass/action-block.scss */
+  .action-block .block-blog .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 184, ../sass/action-block.scss */
+  .action-block .block-blog .title {
+    font-size: 24px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 203, ../sass/action-block.scss */
+.action-block .block-connect {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 39px 39px;
+  background-image: url('../images/bg.jpg?1420173963');
+  background-size: cover;
+}
+@media (max-width: 990px) {
+  /* line 203, ../sass/action-block.scss */
+  .action-block .block-connect {
+    background-position: top right;
+  }
+  /* line 211, ../sass/action-block.scss */
+  .action-block .block-connect .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 203, ../sass/action-block.scss */
+  .action-block .block-connect {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 20px 21px;
+    background-position: right top;
+    margin: 0 0 34px;
+  }
+  /* line 221, ../sass/action-block.scss */
+  .action-block .block-connect .btn {
+    font-size: 14px;
+  }
+}
+/* line 225, ../sass/action-block.scss */
+.action-block .block-connect .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 45px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 225, ../sass/action-block.scss */
+  .action-block .block-connect .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 225, ../sass/action-block.scss */
+  .action-block .block-connect .title {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 244, ../sass/action-block.scss */
+.action-block .block-vacancies {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 34px 39px;
+}
+@media (max-width: 990px) {
+  /* line 244, ../sass/action-block.scss */
+  .action-block .block-vacancies {
+    background-position: top right;
+    padding: 48px 10px 34px 32px;
+  }
+  /* line 252, ../sass/action-block.scss */
+  .action-block .block-vacancies .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 244, ../sass/action-block.scss */
+  .action-block .block-vacancies {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 20px 21px;
+    background-position: right top;
+    margin: 0 0 34px;
+  }
+  /* line 263, ../sass/action-block.scss */
+  .action-block .block-vacancies .btn {
+    font-size: 14px;
+  }
+}
+/* line 267, ../sass/action-block.scss */
+.action-block .block-vacancies .title {
+  display: block;
+  font-size: 35px;
+  line-height: 41px;
+  margin: 0 0 23px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 267, ../sass/action-block.scss */
+  .action-block .block-vacancies .title {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 267, ../sass/action-block.scss */
+  .action-block .block-vacancies .title {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 285, ../sass/action-block.scss */
+.action-block .block-image {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 48px 10px 39px 39px;
+}
+@media (max-width: 990px) {
+  /* line 285, ../sass/action-block.scss */
+  .action-block .block-image {
+    background-position: top right;
+  }
+  /* line 293, ../sass/action-block.scss */
+  .action-block .block-image .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 285, ../sass/action-block.scss */
+  .action-block .block-image {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 20px 21px;
+    background-position: right top;
+    margin: 0 0 34px;
+  }
+  /* line 303, ../sass/action-block.scss */
+  .action-block .block-image .btn {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* line 309, ../sass/action-block.scss */
+.action-block .block-image .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 45px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 309, ../sass/action-block.scss */
+  .action-block .block-image .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 309, ../sass/action-block.scss */
+  .action-block .block-image .title {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 329, ../sass/action-block.scss */
+.action-block .block-share {
+  color: #ffffff;
+  width: 48.5%;
+  text-align: right;
+  background-image: url('../images/action-bg4.jpg?1420616002');
+  padding: 22px 3% 30px 5%;
+  background-position: center left;
+  background-size: cover;
+}
+/* line 337, ../sass/action-block.scss */
+.action-block .block-share.share-lavender {
+  background-image: url('../images/action-bg1.jpg?1420616002');
+}
+/* line 340, ../sass/action-block.scss */
+.action-block .block-share .btn {
+  padding: 10px 18px;
+}
+/* line 343, ../sass/action-block.scss */
+.action-block .block-share img {
+  display: block;
+  max-width: 66%;
+  margin-bottom: -70px;
+}
+@media (max-width: 990px) {
+  /* line 329, ../sass/action-block.scss */
+  .action-block .block-share {
+    background-position: center center;
+    padding: 48px 11px 40px 39px;
+  }
+  /* line 351, ../sass/action-block.scss */
+  .action-block .block-share .btn {
+    font-size: 16px;
+  }
+  /* line 354, ../sass/action-block.scss */
+  .action-block .block-share img {
+    max-width: 190px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 329, ../sass/action-block.scss */
+  .action-block .block-share {
+    width: 100%;
+    float: none;
+    padding: 24px 10px 40px 21pxx;
+    background-position: center left;
+  }
+  /* line 363, ../sass/action-block.scss */
+  .action-block .block-share img {
+    max-width: 50%;
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  /* line 368, ../sass/action-block.scss */
+  .action-block .block-share .btn {
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+  /* line 371, ../sass/action-block.scss */
+  .action-block .block-share .btn em {
+    padding-left: 10px;
+  }
+}
+/* line 377, ../sass/action-block.scss */
+.action-block .lavender-box .btn:hover {
+  background-color: #734889;
+}
+/* line 380, ../sass/action-block.scss */
+.action-block .blue-box .btn:hover {
+  background-color: #006dc1;
+}
+/* line 383, ../sass/action-block.scss */
+.action-block .green-box .btn:hover {
+  background-color: #00a837;
+}
+/* line 386, ../sass/action-block.scss */
+.action-block .magenta-box .btn:hover {
+  background-color: #c3104b;
+}
+/* line 389, ../sass/action-block.scss */
+.action-block .orange-box .btn:hover {
+  background-color: #f15500;
+}
+/* line 392, ../sass/action-block.scss */
+.action-block .pink-box .btn:hover {
+  background-color: #e30087;
+}
+
+/* line 401, ../sass/action-block.scss */
+.front .btn-transparent:hover {
+  border-bottom-width: 2px;
+  box-shadow: 0 1px #ffffff;
+}
+
+/* line 408, ../sass/action-block.scss */
+.front .block-share {
+  background: url('../images/bg08.jpg?1420616002');
+  padding: 50px 10px 37px 39px;
+}
+/* line 412, ../sass/action-block.scss */
+.front .block-share .btn-transparent:hover {
+  margin: 182px 10px 0 0;
+}
+@media (max-width: 900px) {
+  /* line 412, ../sass/action-block.scss */
+  .front .block-share .btn-transparent:hover {
+    margin: 145px 10px 0 0;
+  }
+}
