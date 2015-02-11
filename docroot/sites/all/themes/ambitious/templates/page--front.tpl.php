@@ -326,8 +326,7 @@
         </div>
       </div>
     </div>
-      <div class="bg-stretch">
-        <img src="/sites/all/themes/ambitious/images/socialbg.jpg" alt="image description">
+      <div class="bg-stretch home-bg-stretch">
       </div>
     </section>
 
