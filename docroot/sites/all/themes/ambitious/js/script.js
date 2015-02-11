@@ -29,7 +29,7 @@ Drupal.behaviors.ambitious = {
 		
 		
         // views filter opiton
-        $(":checkbox").on('click', function(){
+        $(".view :checkbox").on('click', function(){
            $(this).parent().toggleClass("checked").toggleClass("highlight");
          }); 
     
