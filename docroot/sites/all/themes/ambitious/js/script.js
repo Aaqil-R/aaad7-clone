@@ -25,33 +25,20 @@ Drupal.behaviors.ambitious = {
     
   	// Place your code here
     	initCustomForms();
-    	    $('#block-views-stream-stream-forum-page').mobileNav({
+    	    $('.filter-option').mobileNav({
     	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',
 		  menuDrop: '.filter-slide'
-	    }); 
-	    $('.view-stream view-id-stream').mobileNav({
-    	       
-		  hideOnClickOutside: true,
-		  menuActiveClass: 'filter-active',
-		  menuOpener: '.filterbutton',
-		  menuDrop: '.filter-slide'
-	    }); 
+	    });  
          $( document ).ajaxComplete(function() {
-           $('#block-views-stream-stream-forum-page').mobileNav({
+           $('.filter-option').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',
  		   menuDrop: '.filter-slide'
-	      });
-	      $('.view-stream view-id-stream').mobileNav({
-		   hideOnClickOutside: true,
-		   menuActiveClass: 'filter-active',
-		   menuOpener: '.filterbutton',
- 		   menuDrop: '.filter-slide'
-	      });
+	      }); 
         }); 
         $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
