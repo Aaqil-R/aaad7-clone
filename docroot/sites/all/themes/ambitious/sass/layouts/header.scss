@@ -191,8 +191,7 @@
       @include breakpoint($mobile) {
         padding: 12px 1px 14px 20px;
         width: 55%;
-        border:none;
-        text-align:left;
+        border:none;        
       }
       &:after {
         display:none;
@@ -237,7 +236,7 @@
       content:"";
       width:31px;
       height:23px;
-      background:url(../images/sprite.png) no-repeat;
+      background:image-url('sprite.png') no-repeat;
     }
     &:hover {
       &:after {
