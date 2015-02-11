@@ -169,8 +169,9 @@ div.messages.status{
  
   .st_sharethis_button{
     @extend .btn;  
-    @extend .btn-green !optional;
-    @extend .btn-right !optional; 
+    border-bottom:5px solid $green-dark;
+    background:$green;
+    float:right;
      cursor: pointer; 
     span span{
       background:none!important;

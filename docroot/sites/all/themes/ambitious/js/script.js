@@ -17,7 +17,15 @@
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
-        
+     
+        // grid view auto click
+        var settings = Drupal.settings;
+ $.each(settings.viewsLoadMore, function(i, setting) {
+          var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a',
+  $('windows').load(function () {           
+          $(view).waypoint('destroy');
+  });
+});
         // views filter opiton
         $(":checkbox").on('click', function(){
            $(this).parent().toggleClass("checked").toggleClass("highlight");
