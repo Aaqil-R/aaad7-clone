@@ -141,19 +141,18 @@ function ambitious_preprocess_html(&$variables) {
 
 function ambitious_preprocess_region(&$variables) {
       
-        $variables['node'] = menu_get_object();
-            //need to check with the id
-            //if($variables['node']->title == "Voices From the spectrum")
-            if($variables['node']->nid == 74596)
-            { 
-              $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
-            }
-            else
-            {
-              $variables['logo'] = theme_get_setting('logo'); 
-            }
+  $currentNode = menu_get_object();
 
- 
+  // TODO: This should become redundant as soon as we move to a different site.
+  if ($currentNode) {
+    if($currentNode->nid == 74596) { 
+      $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
+    }
+    else
+    {
+      $variables['logo'] = theme_get_setting('logo'); 
+    }
+  }
 }
 // Adding a custom breadcrumb code
 //=====================================
