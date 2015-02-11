@@ -18,9 +18,9 @@ Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
         
-        
+        // views filter opiton
         $(":checkbox").on('click', function(){
-           $(this).parent().toggleClass("checked");
+           $(this).parent().toggleClass("checked").removeClass("highlight");
          }); 
     
   	// Place your code here
@@ -54,6 +54,9 @@ Drupal.behaviors.ambitious = {
 	      }); 
         }); 
         $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
+          $('#edit-submit-stream').trigger( "click" );
+        });
+        $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
         
