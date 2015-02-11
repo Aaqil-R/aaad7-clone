@@ -55,7 +55,7 @@
    
       <div class="button-holder">
        <div class="views-exposed-widget views-submit-button filter-pink"> 
-        <span class="btn btn-pink submit"><?php print $button; ?></span>
+        <span class=" submit"><?php print $button; ?></span>
       
     </div>
        </div> 
