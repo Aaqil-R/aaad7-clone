@@ -34,7 +34,7 @@ Drupal.behaviors.ambitious = {
   	// Place your code here
     	initCustomForms();
     	     
-	     $('.view-stream.view-id-stream').mobileNav({
+	     $('.view-stream').mobileNav({
     	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
@@ -43,7 +43,7 @@ Drupal.behaviors.ambitious = {
 	    }); 
          $( document ).ajaxComplete(function() {
             
-	      $('.view-stream.view-id-stream').mobileNav({
+	      $('.view-stream').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filteroption',
