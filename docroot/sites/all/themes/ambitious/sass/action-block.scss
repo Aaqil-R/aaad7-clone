@@ -1,9 +1,401 @@
 @import "base/base";
 
+/* action block styles */
+.action-block {
+	background:$white;
+	width:100%;
+	@include transition ($type:all, $time:0.4s, $ease:ease);
+	@include breakpoint($mobile) {
+		background:none;
+		.text, .title{
+		  width:50%;
+		  br{
+		    display:none;
+		  }
+		}
+	}
+	.holder {
+		@include container;
+		padding:102px 15px 126px;
+		@extend %clearfix;
+		@include breakpoint($mobile) {
+			padding:20px 20px 37px;
+		}
+        & > div{
+		  float:right;
+		  &:first-child{
+		    float:left;
+			@include breakpoint($mobile) {
+			  margin-bottom:20px;
+			}
+		  }
+		}
+	}
+	/* action symptoms block styles */
+	.block-symptoms {
+		width:48.5%;
+		padding: 50px 10px 37px 39px;
+		background-image:image-url('bg.jpg');
+		background-size:cover;
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:26px 10px 17px 20px;
+			margin:0 0 34px;
+			background-position: right center;
+			.text{
+			  width: 100%;
+			  span.add{
+			    margin-left:0;
+			  }
+			}
+		}
+		.text {
+			display:block;
+			font-size:45px;
+			line-height:48px;
+			margin:0 0 55px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			#main2 &{
+			  margin:0 0 6px;
+			}
+			@include breakpoint($tablet) {
+				font-size:25px;
+				line-height:28px;
+			}
+			@include breakpoint($mobile) {
+				margin:0 0 5px;
+			}
+			span {
+				color:$heading-link;
+				display:inline-block;
+				vertical-align:top;
+				margin:0 0 11px;
+				background:$white;
+				padding:6px 19px 5px;
+				@include breakpoint($mobile) {
+					padding:3px 10px 6px;
+					margin:0 0 5px;
+				}
+				&.add {
+					margin:0 0 0px 62px;
+					@include breakpoint($mobile) {
+						margin:0 0 0px 19px;
+					}
+				}
+			}
+		}
+	}
+	/* action inspire block styles */
+	.block-inspire {
+		color:$white;
+		width:48.5%;
+		padding: 48px 10px 39px 39px;
+		background-image:image-url('bg01.jpg');
+		background-size:cover;
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 20px 21px;
+			background-position: right center;
+		}
+		.title {
+			display:block;
+			font-size:45px;
+			line-height:46px;
+			margin:0 0 45px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:30px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:25px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+	/* action report block styles */
+	.block-report{
+		color:$white;
+		width:48.5%;
+		padding: 48px 10px 39px 39px;
+		background-image:image-url('bg02.jpg');
+		background-size:cover;
+        @include breakpoint($tablet) {
+		    background-position:top right;
+			.btn{
+				font-size:16px;
+				padding:10px 14px;
+			}
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 20px 21px;
+			background-position: right top;
+			.btn{
+				font-size:14px;
+			}
+		}
+		.title {
+			display:block;
+			font-size:45px;
+			line-height:46px;
+			margin:0 0 45px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:30px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:25px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+	/* action blog block styles */
+	.block-blog{
+		color:$white;
+		width:48.5%;
+		padding: 48px 10px 39px 39px;
+		background-image:image-url('bg03.jpg');
+		background-size:cover;
+		background-position:top right;
+        @include breakpoint($tablet) {
+		    background-position:top right;
+			padding:17px 10px 30px 29px;
+			.btn{
+				font-size:16px;
+			}
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			background-position: right center;
+			float:none;
+			padding:24px 10px 20px 21px;
+		}
 
-// editd by nanda - globalsoftlab 
-/* // Fix the button border issue
-.btn-transparent{
+		.title {
+			display:block;
+			font-size:45px;
+			line-height:46px;
+			margin:0 0 45px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:30px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:24px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+	/* Connect with others block styles */
+	.block-connect{
+		color:$white;
+		width:48.5%;
+		padding: 48px 10px 39px 39px;
+		background-image:image-url('bg.jpg');
+		background-size:cover;
+        @include breakpoint($tablet) {
+		    background-position:top right;
+			.btn{
+				font-size:16px;
+			}
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 20px 21px;
+			background-position: right top;
+			margin: 0 0 34px;
+			.btn{
+				font-size:14px;
+			}
+		}
+		.title {
+			display:block;
+			font-size:45px;
+			line-height:46px;
+			margin:0 0 45px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:30px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:25px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+	/* Vacancies block styles */
+	  .block-vacancies{
+		color:$white;
+		width:48.5%;
+		@extend %action-background;
+		@extend %action-image-right;
+		padding: 48px 10px 34px 39px;
+        @include breakpoint($tablet) {
+		    background-position:top right;
+			.btn{
+				font-size:16px;
+			}
+			padding:48px 10px 34px 32px;
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 20px 21px;
+			background-position: right top;
+			margin: 0 0 34px;
+			.btn{
+				font-size:14px;
+			}
+		}
+		.title {
+			display:block;
+			font-size: 35px;
+            line-height: 41px;
+			margin:0 0 23px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:28px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:25px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+	.block-image{
+		color:$white;
+		width:48.5%;
+		padding: 48px 10px 39px 39px;
+	    @extend %action-background;
+        @extend %action-image-right;
+        @include breakpoint($tablet) {
+		    background-position:top right;
+			.btn{
+				font-size:16px;
+			}
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 20px 21px;
+			background-position: right top;
+			margin: 0 0 34px;
+			.btn{
+				font-size:14px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+		.title {
+			display:block;
+			font-size:45px;
+			line-height:46px;
+			margin:0 0 45px;
+			font-family:$header-font-family;
+			font-weight: normal;
+			@include breakpoint($tablet) {
+				font-size:30px;
+				line-height:33px;
+			}
+			@include breakpoint($mobile) {
+				font-size:25px;
+				line-height:25px;
+				margin:0 0 16px;
+			}
+		}
+	}
+
+	/* share this block styles */
+	.block-share{
+		color:$white;
+		width:48.5%;
+		text-align: right;
+		background-image:image-url('action-bg4.jpg');
+		padding:22px 3% 30px 5%;
+		background-position:center left;
+		background-size:cover;
+        &.share-lavender{
+		  background-image:image-url('action-bg1.jpg');
+		}
+		.btn{
+		  padding:10px 18px;
+		}
+        img{
+		  display:block;
+		  max-width:66%;
+		  margin-bottom: -70px;
+		}
+        @include breakpoint($tablet) {
+		    background-position:center center;
+			padding:48px 11px 40px 39px;
+			.btn{
+				font-size:16px;
+			}
+			img{
+			  max-width:190px;
+			}
+		}
+		@include breakpoint($mobile) {
+			width:100%;
+			float:none;
+			padding:24px 10px 40px 21pxx;
+			background-position: center left;
+			img{
+			  max-width:50%;
+			  width:50%;
+			  margin-bottom:0px;
+			}
+			.btn{
+				font-size:14px;
+				padding:6px 20px;
+				em{
+				  padding-left: 10px;
+				}
+			}
+		}
+	}
+	.lavender-box .btn:hover{
+		background-color: $lavender;
+	}
+	.blue-box .btn:hover{
+		background-color: $blue;
+	}
+	.green-box .btn:hover{
+		background-color: $green;
+	}
+	.magenta-box .btn:hover{
+		background-color: $magenta;
+	}
+	.orange-box .btn:hover{
+		background-color: $orange;
+	}
+	.pink-box .btn:hover{
+		background-color: $pink;
+	}
+}
+
+// Fix the button border issue
+.front .btn-transparent{
   &:hover{
 	border-bottom-width:2px;
 	box-shadow: 0 1px $white;
@@ -12,9 +404,10 @@
 
 // Fix the block share a tag hover issue
 .front .block-share{
+	background: image-url('bg08.jpg');
   .btn-transparent{
 	&:hover{
 	  margin: 182px 10px 0 0;
 	}
   }
-}*/
+}
