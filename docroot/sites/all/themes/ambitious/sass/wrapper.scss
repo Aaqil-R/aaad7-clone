@@ -1,1 +1,16 @@
 @import "base/base";
+
+
+#wrapper {
+	background: $wrapper-bg;
+	width: 100%;
+	display: table;
+	height: 100%;
+	position:relative;
+	table-layout:fixed;
+	overflow:hidden;
+	margin-top:143px;
+	@include breakpoint($mobile){
+		margin-top: 175px;
+	}
+}
