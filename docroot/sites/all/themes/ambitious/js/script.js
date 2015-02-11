@@ -25,18 +25,31 @@ Drupal.behaviors.ambitious = {
     
   	// Place your code here
     	initCustomForms();
-    	    $('.filter-option').mobileNav({
+    	    $('#block-views-stream-stream-forum-page').mobileNav({
     	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',
 		  menuDrop: '.filter-slide'
 	    });  
+	     $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({
+    	       
+		  hideOnClickOutside: true,
+		  menuActiveClass: 'filter-active',
+		  menuOpener: '.filteroption',
+		  menuDrop: '.filter-slide'
+	    }); 
          $( document ).ajaxComplete(function() {
-           $('.filter-option').mobileNav({
+           $('#block-views-stream-stream-forum-page').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',
+ 		   menuDrop: '.filter-slide'
+	      });
+	      $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({
+		   hideOnClickOutside: true,
+		   menuActiveClass: 'filter-active',
+		   menuOpener: '.filteroption',
  		   menuDrop: '.filter-slide'
 	      }); 
         }); 
