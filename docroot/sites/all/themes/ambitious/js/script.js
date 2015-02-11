@@ -32,7 +32,7 @@ Drupal.behaviors.ambitious = {
 		  menuOpener: '.filterbutton',
 		  menuDrop: '.filter-slide'
 	    }); 
-	    $('#views-exposed-form-stream-voices-from-the-spectrum-page').mobileNav({
+	    $('.view-stream view-id-stream').mobileNav({
     	       
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
@@ -46,7 +46,7 @@ Drupal.behaviors.ambitious = {
 		   menuOpener: '.filterbutton',
  		   menuDrop: '.filter-slide'
 	      });
-	      $('#views-exposed-form-stream-voices-from-the-spectrum-pagee').mobileNav({
+	      $('.view-stream view-id-stream').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',
