@@ -3,7 +3,7 @@
 /* top bar style */
 .top-bar {
   position:fixed;
-  z-index:999;
+  z-index: 9998;
   background:$base-text-color;
   width:100%;
   min-height: 50px;
@@ -11,10 +11,7 @@
   .holder {
     @include container;
     @extend %clearfix;
-    padding:10px 15px 12px; 
-    @include breakpoint($mobile) {
-      padding:6px 5px 7px;
-    }
+    padding:12px 15px 12px;
   }
   
   /* login info styles */
@@ -860,12 +857,6 @@ nav {
 }
 
 //=== Header Section ===//
-.top-bar{
-  z-index: 9998;
-  .holder{
-    padding: 16px 15px 12px;
-  }
-}
 
 .region-header{
   // Header Top Menu
