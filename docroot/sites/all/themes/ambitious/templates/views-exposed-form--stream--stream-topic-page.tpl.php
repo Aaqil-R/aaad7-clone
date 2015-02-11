@@ -29,8 +29,7 @@
   ?>
 <?php endif; ?> 
 <div class="text-block text-block-second post mobile-view">
-  <h1><?php print $variables['node']->title;?></h1>
-      <?php endif; ?>
+  <h1><?php print $variables['node']->title;?></h1> 
       <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
         <?php print $variables['node']->body['und'][0]['safe_value']; ?>
       <?php endif; ?>
