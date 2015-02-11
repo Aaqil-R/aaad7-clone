@@ -351,7 +351,7 @@ a {
 		margin-bottom: 30px;
 		background: transparent;
 		.block-symptoms, .block-share, .block-spectrum{
-			background-image: url(../../images/bg06.jpg);
+			background-image: image-url('bg06.jpg');
 			color:$white;
 			width:48.5%;
 			padding: 50px 10px 37px 39px;
@@ -402,14 +402,14 @@ a {
 
 	}
 	.block-share{
-		background-image: url(../images/bg08.jpg);
+		background-image: image-url('bg08.jpg');
 	}
 
 	.block-spectrum{
-		background-image: url(../images/bg07.jpg);
+		background-image: image-url('bg07.jpg');
 	}
 	.block-report{
-		background-image: url(../../images/bg05.jpg);
+		background-image: image-url('bg05.jpg');
 		float:right;
 	}
 	.sort-block{
@@ -518,7 +518,7 @@ a {
 								right:8px;
 								bottom:-13px;
 								content:"";
-								background:url(../images/sprite.png) no-repeat -128px 0;
+								background:image-url('sprite.png') no-repeat -128px 0;
 								width:12px;
 								height:13px;
 								@include breakpoint($mobile) {
@@ -554,7 +554,7 @@ a {
 				}
 
 				.comment-count{
-					background: no-repeat url(../images/comment-sprite.png);
+					background: no-repeat image-url('comment-sprite.png');
 					padding: 7px 0px 17px 0;
 					width: 46px;
 					text-align: center;
@@ -564,7 +564,7 @@ a {
 						 @include fontsize(20,16);
 					}
 					&.zero{
-						background: no-repeat url(../images/comment-sprite.png)0 -52px;
+						background: no-repeat image-url('comment-sprite.png')0 -52px;
 						.count{
 							color: $gray;
 						}

@@ -1,24 +1,5 @@
 @import "base/base";
 
-
-// editd by nanda - globalsoftlab 
-/* // Fix the button border issue
-.btn-transparent{
-  &:hover{
-	border-bottom-width:2px;
-	box-shadow: 0 1px $white;
-  }
-}
-
-// Fix the block share a tag hover issue
-.front .block-share{
-  .btn-transparent{
-	&:hover{
-	  margin: 182px 10px 0 0;
-	}
-  }
-}*/
-
 /* action block styles */
 .action-block {
 	background:$white;
@@ -54,7 +35,7 @@
 	.block-symptoms {
 		width:48.5%;
 		padding: 50px 10px 37px 39px;
-		background-image:url(../images/bg.jpg);
+		background-image:image-url('bg.jpg');
 		background-size:cover;
 		@include breakpoint($mobile) {
 			width:100%;
@@ -111,7 +92,7 @@
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
-		background-image:url(../images/bg01.jpg);
+		background-image:image-url('bg01.jpg');
 		background-size:cover;
 		@include breakpoint($mobile) {
 			width:100%;
@@ -142,7 +123,7 @@
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
-		background-image:url(../images/bg02.jpg);
+		background-image:image-url('bg02.jpg');
 		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
@@ -183,7 +164,7 @@
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
-		background-image:url(../images/bg03.jpg);
+		background-image:image-url('bg03.jpg');
 		background-size:cover;
 		background-position:top right;
         @include breakpoint($tablet) {
@@ -223,7 +204,7 @@
 		color:$white;
 		width:48.5%;
 		padding: 48px 10px 39px 39px;
-		background-image:url(../images/bg.jpg);
+		background-image:image-url('bg.jpg');
 		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
@@ -349,12 +330,12 @@
 		color:$white;
 		width:48.5%;
 		text-align: right;
-		background-image:url(../images/action-bg4.jpg);
+		background-image:image-url('action-bg4.jpg');
 		padding:22px 3% 30px 5%;
 		background-position:center left;
 		background-size:cover;
         &.share-lavender{
-		  background-image:url(../images/action-bg1.jpg);
+		  background-image:image-url('action-bg1.jpg');
 		}
 		.btn{
 		  padding:10px 18px;
@@ -411,4 +392,22 @@
 	.pink-box .btn:hover{
 		background-color: $pink;
 	}
+}
+
+// Fix the button border issue
+.front .btn-transparent{
+  &:hover{
+	border-bottom-width:2px;
+	box-shadow: 0 1px $white;
+  }
+}
+
+// Fix the block share a tag hover issue
+.front .block-share{
+	background: image-url('bg08.jpg');
+  .btn-transparent{
+	&:hover{
+	  margin: 182px 10px 0 0;
+	}
+  }
 }
