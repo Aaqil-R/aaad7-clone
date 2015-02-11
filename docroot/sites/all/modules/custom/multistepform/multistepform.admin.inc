@@ -159,7 +159,6 @@ function multistepform_config_validate($form, &$form_state) {
 function multistepform_config_submit($form, &$form_state) {
   $steps = array();
   $values = array();
-  dpm($form_state['values']);
   foreach($form_state['values']['step'] as $step) {
     if(is_array($step) && isset($step['node'])) {
       $values[] = array('nid' => $form_state['values']['multistep_node']->nid, 'wnid' => $step['node'], 'weight' => $step['node-weight']);
