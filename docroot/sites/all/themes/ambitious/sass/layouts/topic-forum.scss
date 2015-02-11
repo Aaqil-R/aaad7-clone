@@ -854,17 +854,7 @@ margin-right: 10px;
     }
   }
 }
- 
- .button-holder{
-	   margin:20px 32px 30px;
-	   .form-submit{
-	       width:100%;
-	       border-left:none;
-	       border-top:none;
-	       border-right:none;
-	       @extend .btn;
-	   } 
-	}
+
  
 .view-display-id-stream_forum_page.posts-columns.columns-full .row .footer .links.inline{
    float: right;
@@ -1302,3 +1292,20 @@ fieldset{
     @extend .btn-pink;
   }
 }
+
+
+ 
+ .button-holder{
+	   margin:20px 32px 30px;
+	   input[type=submit]{
+	       width:100%;
+	       border-left:none;
+	       border-top:none;
+	       border-right:none;
+	       @extend .btn;
+	   }
+	   .filter-pink{
+	     @extend .btn;
+	     @extend .btn-pink;
+	   } 
+	}
