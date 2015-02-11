@@ -143,14 +143,12 @@ function ambitious_preprocess_region(&$variables) {
       
   $currentNode = menu_get_object();
 
+  $variables['logo'] = theme_get_setting('logo'); 
+
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
     if($currentNode->nid == 74596) { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
-    }
-    else
-    {
-      $variables['logo'] = theme_get_setting('logo'); 
     }
   }
 }
