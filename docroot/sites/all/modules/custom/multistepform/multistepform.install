@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ *   multistepform module install/schema hooks.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function multistepform_schema() {
+  $schema['multistepform'] = array(
+    'description' => 'stores data about the list of webform to be rendered in multistep',
+      'fields' => array(
+        'nid' => array(
+        'description' => 'The node identifier of a webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+       'wnid' => array(
+        'description' => 'The node identifier of a webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'weight' => array(
+        'description' => 'weight of the webform in the order to render',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      ),
+      'primary key' => array('nid', 'wnid'),
+  );
+  $schema['multistepform_settings'] = array(
+   'description' => 'stores data about the settings for last page',
+   'fields' => array(
+      'nid' => array(
+        'description' => 'The node identifier of a webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'confirmation' => array(
+        'description' => 'The confirmation message or URL displayed to the user after submitting a form.',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'confirmation_format' => array(
+        'description' => 'The {filter_format}.format of the confirmation message.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ),
+      'redirect_url' => array(
+        'description' => 'The URL a user is redirected to after submitting a form.',
+        'type' => 'varchar',
+        'length' => 2048,
+        'default' => '<confirmation>',
+      ),
+      'block'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+      'confirmation_status'   => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+   ),
+   'primary key' => array('nid'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function multistepform_install() {
+      // Disable comments by default on Webform nodes.
+    variable_set('comment_multistepform', '0');
+}
