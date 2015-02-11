@@ -50,10 +50,15 @@
 				@include breakpoint($mobile){
 					padding: 16px 0;
 					margin-bottom: 12px;				
-				}			
+				}
+
+				// &:after {
+				// 	font-family: icomoon;
+				// 	content: '\e614'
+				// }			
 
 				span.icon-YouTube{
-					@include breakpoint($mobile){
+					@include breakpoint(999px){
 						display: none;
 					}
 				}
