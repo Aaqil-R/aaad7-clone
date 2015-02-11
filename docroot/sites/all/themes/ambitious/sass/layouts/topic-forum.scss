@@ -187,6 +187,9 @@ div.messages.status{
         font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
         content :"Share";
         color:$white;
+        float: left;
+		margin-top: -22px;
+		padding-right: 29px;
       }    
       &:before{
           font-family: 'icomoon';
@@ -221,6 +224,9 @@ div.messages.status{
 	    text-decoration:none;
 		color:$white;
 	  }  
+	  .st-sharethis-counter{
+	    display:none !important;
+	  }
     }
    
 .video-icon{
@@ -1377,6 +1383,12 @@ fieldset{
 
 .mobile-view{
    @include breakpoint($mobile){
+     display:inherit;
+      .sort-block{
+		display:inherit;
+	   }
+   }
+   .sort-block{
      display:inherit;
    }
 }
