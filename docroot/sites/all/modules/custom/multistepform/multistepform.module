@@ -191,7 +191,7 @@ function multistepform_node_delete($node) {
 }
 
 function multistepform_block_info() {
-  $result = db_select('multistepform_settings')
+ /* $result = db_select('multistepform_settings')
     ->fields('multistepform_settings')
     ->condition('block', 1)
     ->execute()
@@ -202,7 +202,7 @@ function multistepform_block_info() {
       'info' => t('Multi Step Form:'.$node->title),
       'cache' => DRUPAL_NO_CACHE,
      );   
-    } 
+    } */
   return $blocks;
 }
 
