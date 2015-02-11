@@ -101,6 +101,23 @@
 		}	
 	}
 	
+	fieldset{
+		@include breakpoint($mobile){
+		width:100%;
+		}
+	}
+	
+	.btn.btn-left.btn-pink.filterbutton{
+		@include breakpoint($mobile) {
+        width:49%;
+      }
+	}
+	.st_sharethis_button{
+		@include breakpoint($mobile) {
+        width:49%;
+		}
+	}
+	
 //	.region-image-holder
 //	{
 //		.easy-breadcrumb{
