@@ -378,3 +378,78 @@ body > .jcf-select-drop.jcf-drop-flipped {
   float: left;
   margin-right: 30px;
 }
+
+/* line 26, ../sass/issue-fixing.scss */
+.front .slider-block {
+  z-index: 1100;
+  position: relative;
+  top: 24px;
+}
+/* line 31, ../sass/issue-fixing.scss */
+.front .slider-block .r-s-arrow a {
+  text-decoration: none;
+}
+/* line 36, ../sass/issue-fixing.scss */
+.front .slider-block .l-s-arrow a {
+  text-decoration: none;
+}
+/* line 41, ../sass/issue-fixing.scss */
+.front .slider-block a.btn-left {
+  margin-right: 10px;
+}
+/* line 44, ../sass/issue-fixing.scss */
+.front .slider-block a.btn {
+  padding: 11px 16px;
+}
+/* line 47, ../sass/issue-fixing.scss */
+.front .slider-block a.btn-right {
+  position: relative;
+  right: 85px;
+}
+@media (max-width: 767px) {
+  /* line 47, ../sass/issue-fixing.scss */
+  .front .slider-block a.btn-right {
+    right: 0;
+  }
+}
+@media (max-width: 1200px) {
+  /* line 26, ../sass/issue-fixing.scss */
+  .front .slider-block {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  /* line 26, ../sass/issue-fixing.scss */
+  .front .slider-block {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  /* line 66, ../sass/issue-fixing.scss */
+  .front .slider-container .signup-columns .col {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 72, ../sass/issue-fixing.scss */
+  .front .slider-container .signup-columns .col input {
+    width: 100%;
+  }
+  /* line 76, ../sass/issue-fixing.scss */
+  .front .slider-block .block {
+    margin-top: -116px;
+    padding: 10px 15px 85px;
+    margin-bottom: 38px;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  /* line 83, ../sass/issue-fixing.scss */
+  .front .slider-block .block .slider-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* line 88, ../sass/issue-fixing.scss */
+  .front .slider-block .holder .block-close {
+    margin-left: -42px;
+  }
+}
