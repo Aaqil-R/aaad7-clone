@@ -1381,6 +1381,11 @@ fieldset{
   display:inherit;
 }
 
+.sort-block{
+@include breakpoint($mobile){
+		display:inherit;
+	   }
+	   }
 .mobile-view{
    @include breakpoint($mobile){
      display:inherit;
