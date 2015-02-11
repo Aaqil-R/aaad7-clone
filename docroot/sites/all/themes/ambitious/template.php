@@ -147,7 +147,7 @@ function ambitious_preprocess_region(&$variables) {
 
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
-    if($currentNode->nid == 74596) { 
+    if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
     }
   }
