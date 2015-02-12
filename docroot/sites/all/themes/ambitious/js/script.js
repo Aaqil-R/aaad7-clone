@@ -94,14 +94,8 @@ Drupal.behaviors.ambitious = {
 	  $container.masonry({
 	  //columnWidth: 100,
 	    itemSelector: '.masonry-brick'
-	  });
-	  
-	  // removed masonry in mobile view
-	  if($(window).width() < 480){
-	    $('.masonry').masonry('destroy'); 
-	  }
-	  
-	  
+	  }); 
+	   
 	}
 
 
@@ -160,14 +154,7 @@ Drupal.behaviors.ambitious = {
 		  });
 
 $(window).resize(function () {
-    $('.masonry').masonry('reloadItems');
-   
-	if ($container.masonry != undefined) {   
-	  // removed masonry in mobile view
-	  if($(window).width() < 480){
-	    $('.masonry').masonry('destroy'); 
-	  }	  
-	};
+    $('.masonry').masonry('reloadItems'); 
     
 });
 })(jQuery, Drupal, this, this.document);
