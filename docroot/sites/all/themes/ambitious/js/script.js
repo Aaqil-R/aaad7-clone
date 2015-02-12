@@ -76,14 +76,22 @@ Drupal.behaviors.ambitious = {
 		    $(this).parent('div').fadeOut();
 		});
 
-		$(document).ready(function(){
-		  $(".block-close").click(function(){
+		$(".block-close").click(function(){
 		    $("section.visual").addClass("no-overlay");
-		  });
-
 		});
-		
-		
+
+	// Change Position when click on close on Home page form
+
+		$(".block-close").click(function(){		  
+		  
+		  
+		  if($(window).width() < 767){
+		  	$("#main").css("top","100px");
+		  }else{
+		  	$("#main").css("top","50px");
+		  }
+		    
+		});
     
 
 	// ==Masonry block==//
