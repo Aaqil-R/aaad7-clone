@@ -20,13 +20,17 @@
 
 
 
-//=== Home page-Slider Block Section ===//
+//=== Home page-Issue fixing ===//
 .front{
 	// Form on Home page
 	.slider-block{
 	z-index: 1100;
 	position: relative;
 	top: 24px;
+	@include breakpoint($not-mobile){
+		top:-82px;
+	}
+	
 	.r-s-arrow{
 		a{
 			text-decoration: none;
@@ -92,6 +96,24 @@
 			margin-left: -42px;
 		}
 
+	}
+
+	// .visual .img-holder
+
+	.visual{
+		max-height: none;
+
+	}
+	.visual .img-holder{
+		max-height: 765px;
+	}
+	.visual .img-holder .caption-frame .caption{
+		@include breakpoint($mobile){
+			padding: 25px 0 0;
+		}
+		@include breakpoint($not-mobile){
+			padding: 80px 0 0;
+		}
 	}
 
 } 
