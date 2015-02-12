@@ -169,6 +169,7 @@ div.messages.status{
  
   .st_sharethis_button .stButton{
     display:inline-block;
+    float:right;
   border:none;
   padding:5px 19px;
   font-size:18px;
@@ -1391,6 +1392,9 @@ fieldset{
 		    width:100%;
 		  }
 		    margin-bottom:15px;
+		  .stButton{
+		    float:right;
+		  }
 		}
 		.stButton{
 		  width:100%; 
@@ -1412,5 +1416,11 @@ fieldset{
   @include breakpoint($mobile){
      display:none;
    }
+}
+
+.view-display-id-stream_topic_page .text-block.post{
+  @include breakpoint($mobile){
+    float:none;
+  }
 }
  
