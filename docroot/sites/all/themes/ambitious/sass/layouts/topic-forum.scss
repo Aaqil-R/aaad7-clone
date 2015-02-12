@@ -1325,6 +1325,55 @@ fieldset{
 }
 
 
+.sort-block{
+@include breakpoint($mobile){
+		display:inherit;
+		fieldset{
+		  width:100%;
+		  .form-element, .jcf-select-text, .jcf-select{
+		    width:100%;
+		  }
+		    margin-bottom:15px;
+		  .stButton{
+		    float:right;
+		  }
+		}
+		.stButton{
+		  width:100%; 
+		}
+	   }
+	   }
+ .mobile-view{
+  display:none;
+}
+.desktop-view{
+  display:inherit;
+  float: left;
+}
+
+.mobile-view{
+   @include breakpoint($mobile){
+     display:inherit;
+      .sort-block{
+		display:inherit;
+	   }
+   }
+   .sort-block{
+     display:inherit;
+   }
+}
+.desktop-view{
+  @include breakpoint($mobile){
+     display:none;
+   }
+}
+
+.view-display-id-stream_topic_page .text-block.post{
+  @include breakpoint($mobile){
+    float:none;
+  }
+}
+
  
  .button-holder{
 	   margin:20px 32px 30px;
@@ -1375,52 +1424,8 @@ fieldset{
   }
 
 }
-.mobile-view{
-  display:none;
-}
-.desktop-view{
-  display:inherit;
-  float: left;
-}
 
-.sort-block{
-@include breakpoint($mobile){
-		display:inherit;
-		fieldset{
-		  width:100%;
-		  .form-element, .jcf-select-text, .jcf-select{
-		    width:100%;
-		  }
-		    margin-bottom:15px;
-		  .stButton{
-		    float:right;
-		  }
-		}
-		.stButton{
-		  width:100%; 
-		}
-	   }
-	   }
-.mobile-view{
-   @include breakpoint($mobile){
-     display:inherit;
-      .sort-block{
-		display:inherit;
-	   }
-   }
-   .sort-block{
-     display:inherit;
-   }
-}
-.desktop-view{
-  @include breakpoint($mobile){
-     display:none;
-   }
-}
-
-.view-display-id-stream_topic_page .text-block.post{
-  @include breakpoint($mobile){
-    float:none;
-  }
+.text-block-second{
+  margin-left:1%;
 }
  
