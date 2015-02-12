@@ -127,6 +127,7 @@ Drupal.behaviors.ambitious = {
 }
 };
 //share this buttons - this snippet help to build the share button on ajax load
+if (typeof Drupal.behaviors.osShareThis === 'object' ){
  Drupal.behaviors.osShareThis = {
     attach: function(context, settings) {
       stLight.options({
@@ -137,7 +138,7 @@ Drupal.behaviors.ambitious = {
       stButtons.locateElements();
     }
   };
-  
+};  
 /*load more button with masonry - masonry was not applied when new content loads
 		 * here is fix to apply or reload the masonry items and apply the style
 		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
@@ -154,7 +155,8 @@ Drupal.behaviors.ambitious = {
 		  });
 
 $(window).resize(function () {
+if ($('.masonry').masonry != undefined) {
     $('.masonry').masonry('reloadItems'); 
-    
+      }; 
 });
 })(jQuery, Drupal, this, this.document);
