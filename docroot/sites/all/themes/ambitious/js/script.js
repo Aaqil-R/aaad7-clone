@@ -140,7 +140,7 @@ Drupal.behaviors.ambitious = {
 		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
 		 */
 		 
-		/* $(window).bind('views_load_more.new_content', function(){
+		$(window).bind('views_load_more.new_content', function(){
 		    // Reload the masonry view after "load more"
 		    if (typeof Drupal.settings.masonry === 'object' ){
 			 var viewids = Object.keys(Drupal.settings.masonry);
@@ -152,6 +152,6 @@ Drupal.behaviors.ambitious = {
 
 $(window).resize(function () {
     $('.masonry').masonry('reloadItems');
-});*/
+});
 
 })(jQuery, Drupal, this, this.document);
