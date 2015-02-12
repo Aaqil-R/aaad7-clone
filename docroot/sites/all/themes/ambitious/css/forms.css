@@ -1,3 +1,10 @@
+/* line 3, ../sass/base/_markup-mixins.scss */
+.webform-submit:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 /* ---------------------------------------------------------
    1. Embedded fonts styles
    2. General reset
@@ -369,90 +376,96 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 8, ../sass/issue-fixing.scss */
-.action-block .holder .region .block-main > div {
-  float: right;
+/* line 3, ../sass/forms.scss */
+.webform-submit {
+  display: inline-block;
+  border: none;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid #c63502;
+  background: #f15500;
+  font-weight: normal;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 10, ../sass/issue-fixing.scss */
-.action-block .holder .region .block-main > div:first-child {
-  float: left;
-  margin-right: 30px;
+/* line 19, ../sass/forms.scss */
+.webform-submit:after {
+  content: "\e60b";
+}
+/* line 23, ../sass/forms.scss */
+.webform-submit em {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: 3px;
+  top: 6px;
+  margin-left: 10px;
+}
+/* line 32, ../sass/forms.scss */
+.webform-submit:hover {
+  color: #636c73;
+  border-bottom-width: 3px;
+  margin-top: 2px;
+}
+/* line 38, ../sass/forms.scss */
+.webform-submit:active, .webform-submit:focus {
+  border-width: 1px;
+  margin-top: 4px;
+  color: #636c73;
+}
+/* line 44, ../sass/forms.scss */
+.webform-submit:visited {
+  text-decoration: none;
+  color: #636c73;
 }
 
-/* line 26, ../sass/issue-fixing.scss */
-.front .slider-block {
-  z-index: 1100;
-  position: relative;
-  top: 24px;
+/* line 50, ../sass/forms.scss */
+.webform-component-textifield {
+  background-color: #eef2f3;
+  background-image: -webkit-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -moz-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -ms-linear-gradient(top, #636c73, #eef2f3);
+  background-image: -o-linear-gradient(top, #636c73, #eef2f3);
+  background-image: linear-gradient(to bottom, #636c73, #eef2f3);
+  padding: 2px;
+  float: left;
+  margin: 6px 0 0 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  max-width: 506px;
+  width: 100%;
 }
-/* line 31, ../sass/issue-fixing.scss */
-.front .slider-block .r-s-arrow a {
-  text-decoration: none;
+/* line 58, ../sass/forms.scss */
+.webform-component-textifield input[type=text], .webform-component-textifield input[type=email], .webform-component-textifield textarea {
+  float: left;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  color: #636c73;
+  border: none;
 }
-/* line 36, ../sass/issue-fixing.scss */
-.front .slider-block .l-s-arrow a {
-  text-decoration: none;
+/* line 65, ../sass/forms.scss */
+.webform-component-textifield textarea {
+  height: 183px;
 }
-/* line 41, ../sass/issue-fixing.scss */
-.front .slider-block a.btn-left {
-  margin-right: 10px;
-}
-/* line 44, ../sass/issue-fixing.scss */
-.front .slider-block a.btn {
-  padding: 11px 25px;
-}
-/* line 47, ../sass/issue-fixing.scss */
-.front .slider-block a.btn-right {
-  position: relative;
-  right: 9px;
-}
-@media (max-width: 767px) {
-  /* line 47, ../sass/issue-fixing.scss */
-  .front .slider-block a.btn-right {
-    right: 0;
-  }
-}
-@media (max-width: 1200px) {
-  /* line 26, ../sass/issue-fixing.scss */
-  .front .slider-block {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  /* line 26, ../sass/issue-fixing.scss */
-  .front .slider-block {
-    display: block;
-  }
-}
-@media (max-width: 767px) {
-  /* line 66, ../sass/issue-fixing.scss */
-  .front .slider-block {
-    margin-top: -116px;
-  }
-  /* line 70, ../sass/issue-fixing.scss */
-  .front .slider-container .signup-columns .col {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 76, ../sass/issue-fixing.scss */
-  .front .slider-container .signup-columns .col input {
-    width: 100%;
-  }
-  /* line 80, ../sass/issue-fixing.scss */
-  .front .slider-block .block {
-    padding: 10px 15px 85px;
-    margin-bottom: 38px;
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  }
-  /* line 86, ../sass/issue-fixing.scss */
-  .front .slider-block .block .slider-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  /* line 91, ../sass/issue-fixing.scss */
-  .front .slider-block .holder .block-close {
-    margin-left: -42px;
-  }
+
+/* line 70, ../sass/forms.scss */
+.webform-component-select {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+  display: block;
+  font-size: 19px;
+  color: #2a2e31;
+  line-height: 41px;
+  border-radius: 5px;
+  background: #fff;
 }

@@ -1,5 +1,5 @@
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.page-node-74596 .sort-block:after, .menu-main-menu-features-item-1 .menu__item .btn:after {
+.page-node-74596 .sort-block:after {
   content: " ";
   display: block;
   clear: both;
@@ -377,7 +377,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.page-node-74596 .sort-block:after, .menu-main-menu-features-item-1 .menu__item .btn:after {
+.page-node-74596 .sort-block:after {
   content: " ";
   display: block;
   clear: both;
@@ -862,205 +862,179 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /*breadcrump for all the pages*/
-/* line 6, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb {
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 10px 20px 10px 20px;
-}
-/* line 10, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb .easy-breadcrumb {
-  letter-spacing: -4px;
-  text-align: right;
-  padding: 20px 0px 0 0;
-  color: black;
-}
-@media (max-width: 767px) {
-  /* line 10, ../../sass/layouts/voice-page.scss */
-  .img-holder .block-easy-breadcrumb .easy-breadcrumb {
-    display: none;
-  }
-}
-/* line 18, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb .easy-breadcrumb .easy-breadcrumb_segment {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  font-size: 16px;
-  line-height: 20px;
-  position: relative;
-  padding: 0 3px 0 13px;
-  color: black;
-  text-decoration: underline;
-}
-/* line 29, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb .easy-breadcrumb .easy-breadcrumb_segment:hover {
-  text-decoration: none;
-}
-/* line 35, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb .easy-breadcrumb a {
-  color: black;
-  text-decoration: underline;
-}
-/* line 38, ../../sass/layouts/voice-page.scss */
-.img-holder .block-easy-breadcrumb .easy-breadcrumb a:hover {
-  text-decoration: none;
+/* line 5, ../../sass/layouts/voice-page.scss */
+.img-holder {
+  	/*.block-easy-breadcrumb{
+  		margin: 0 auto;
+  		max-width: 1080px;
+  		padding: 10px 20px 10px 20px;
+  		.easy-breadcrumb{
+  			letter-spacing:-4px;
+  			text-align:right;
+  			padding:20px 0px 0 0;
+  			color:$white;
+  			@include breakpoint($mobile) {
+  				display:none;
+  			}
+  			.easy-breadcrumb_segment {
+  				display:inline-block;
+  				vertical-align:top;
+  				letter-spacing:normal;
+  				font-size:16px;
+  				line-height:20px;
+  
+  				position:relative;
+  				padding:0 3px 0 13px;
+  		
+  				color:$white;
+  				text-decoration:underline;
+  				&:hover { 
+  					text-decoration:none; 
+  				}
+  			}
+  			
+  			
+  			a {
+  				color:$white;
+  				text-decoration:underline;
+  				&:hover { 
+  					text-decoration:none; 
+  				}
+  			}
+  		}
+  	}*/
 }
 
 /*end of breadcrumb codes*/
-/* line 59, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .menu-main-menu-features-item-1 .menu__item .btn {
-  background: #e30087;
-  border-bottom-color: #b3066b;
+/* line 49, ../../sass/layouts/voice-page.scss */
+.page-node-74596 {
+  /*.visual .img-holder .caption-frame {
+  	z-index: 1000;
+  	position: absolute;
+  	top: 75px;
+  }*/
+  	/*.region.region-image-holder{
+  		padding-top: 90px;
+  	}
+  */
+  /*
+  	.visual .img-holder .caption-frame .caption .title {
+  		display: inline-block;
+  		vertical-align: top;
+  		font-size: 66px;
+  		line-height: 75px;
+  		margin: 0 0 10px;
+  		padding: 0 0 0 0px;
+  		font-weight: normal;
+  		width: 100%;
+  		color: #081318;
+  	}
+  	*/
+  /*
+  	.block-easy-breadcrumb{
+  		margin: 0 auto;
+  		max-width: 1080px;
+  		padding: 10px 20px 10px 20px;
+  		.easy-breadcrumb{
+  			letter-spacing:-4px;
+  			text-align:right;
+  			padding:20px 0px 0 0;
+  			color:$white;
+  			@include breakpoint($mobile) {
+  				display:none;
+  			}
+  			.easy-breadcrumb_segment {
+  				display:inline-block;
+  				vertical-align:top;
+  				letter-spacing:normal;
+  				font-size:16px;
+  				line-height:20px;
+  				position:relative;
+  				padding:0 3px 0 13px;
+  		
+  				color:$white;
+  				text-decoration:underline;
+  				&:hover { 
+  					text-decoration:none; 
+  				}
+  			
+  			}
+  			a {
+  				color:$white;
+  				text-decoration:underline;
+  				&:hover { 
+  					text-decoration:none; 
+  				}
+  			}
+  		}	
+  	}
+  */
 }
-/* line 66, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb {
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 10px 20px 10px 20px;
-}
-/* line 70, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb .easy-breadcrumb {
-  letter-spacing: -4px;
-  text-align: right;
-  padding: 20px 0px 0 0;
-  color: #ffffff;
+/* line 68, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top {
+  z-index: 99;
+  margin-top: -15%;
+  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
-  /* line 70, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 .block-easy-breadcrumb .easy-breadcrumb {
-    display: none;
-  }
-}
-/* line 78, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb .easy-breadcrumb .easy-breadcrumb_segment {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  font-size: 16px;
-  line-height: 20px;
-  position: relative;
-  padding: 0 3px 0 13px;
-  color: #ffffff;
-  text-decoration: underline;
-}
-/* line 89, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb .easy-breadcrumb .easy-breadcrumb_segment:hover {
-  text-decoration: none;
-}
-/* line 94, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb .easy-breadcrumb a {
-  color: #ffffff;
-  text-decoration: underline;
-}
-/* line 97, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .block-easy-breadcrumb .easy-breadcrumb a:hover {
-  text-decoration: none;
-}
-@media (max-width: 767px) {
-  /* line 104, ../../sass/layouts/voice-page.scss */
+  /* line 125, ../../sass/layouts/voice-page.scss */
   .page-node-74596 fieldset {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  /* line 110, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 .btn.btn-left.btn-pink.filterbutton {
+  /* line 131, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 .btn.btn-left.filteroption {
     width: 49%;
   }
 }
 @media (max-width: 767px) {
-  /* line 115, ../../sass/layouts/voice-page.scss */
+  /* line 136, ../../sass/layouts/voice-page.scss */
   .page-node-74596 .st_sharethis_button {
     width: 49%;
   }
 }
 
 /*new codes for menu stlying*/
-/* line 137, ../../sass/layouts/voice-page.scss */
+/* line 159, ../../sass/layouts/voice-page.scss */
 .menu-main-menu-features-item-1 {
   list-style: none;
   padding: 0;
 }
-/* line 141, ../../sass/layouts/voice-page.scss */
-.menu-main-menu-features-item-1 .menu__item .btn {
-  display: inline-block;
-  border: none;
-  padding: 10px 9px;
-  width: 349px;
-  font-size: 18px;
-  line-height: 30px;
-  border-radius: 5px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  border-bottom: 5px solid #c63502;
-  background: #f15500;
-  font-weight: normal;
-  font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-}
-/* line 157, ../../sass/layouts/voice-page.scss */
-.menu-main-menu-features-item-1 .menu__item .btn em {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  word-spacing: 3px;
-  top: 6px;
-  margin-left: 10px;
-}
-/* line 167, ../../sass/layouts/voice-page.scss */
-.menu-main-menu-features-item-1 .menu__item .btn:hover {
-  border-bottom-width: 3px;
-  margin-top: 2px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 173, ../../sass/layouts/voice-page.scss */
-.menu-main-menu-features-item-1 .menu__item .btn:active {
-  border-bottom-width: 0px;
-  margin-top: 5px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 179, ../../sass/layouts/voice-page.scss */
-.menu-main-menu-features-item-1 .menu__item .btn:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
 
-/* line 191, ../../sass/layouts/voice-page.scss */
+/* line 175, ../../sass/layouts/voice-page.scss */
 nav .main-menu-1 .course a .icon-Downarrow {
   display: none;
 }
-/* line 194, ../../sass/layouts/voice-page.scss */
+/* line 178, ../../sass/layouts/voice-page.scss */
 nav .main-menu-1 .course a .icon-Uparrow {
   display: none;
 }
 
-/* line 203, ../../sass/layouts/voice-page.scss */
+/* line 187, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 {
   padding: 0;
 }
-/* line 204, ../../sass/layouts/voice-page.scss */
+/* line 188, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li {
   list-style: none;
 }
-/* line 205, ../../sass/layouts/voice-page.scss */
+/* line 189, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a {
   padding: 9px 31px 11px 45px;
 }
-/* line 207, ../../sass/layouts/voice-page.scss */
+/* line 191, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a .icon-Downarrow {
   display: none;
 }
-/* line 210, ../../sass/layouts/voice-page.scss */
+/* line 194, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a .icon-Uparrow {
   display: none;
 }
 
 /* end of menu styling */
 /* new styling to get the menu down by 20px */
-/* line 224, ../../sass/layouts/voice-page.scss */
+/* line 208, ../../sass/layouts/voice-page.scss */
 .school-slide {
   top: 20px;
 }
