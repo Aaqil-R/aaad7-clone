@@ -36,7 +36,7 @@ Drupal.behaviors.ambitious = {
      
     	     $(document).ready(function(){ 
     	     initCustomForms();
-	    $('#block-views-stream-stream-forum-page').once('mobile').mobileNav({ 
+	    $('#block-views-stream-stream-forum-page').mobileNav({ 
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',

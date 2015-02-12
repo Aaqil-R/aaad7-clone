@@ -13,7 +13,7 @@
 <?php endif; ?>
 <?php foreach ($rows as $id => $row):?>
 <div class="clearfix">
-<?php if($id == 3){
+<?php if($id == 3 && $view->query->pager->current_page === 0){
        $block = module_invoke('block', 'block_view', '96');
 	  print render($block['content']);
      } ?>
