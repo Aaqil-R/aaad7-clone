@@ -45,16 +45,7 @@
 ?>
   <section class="header_banner">
      <div class="banner_text_main">
-        <div class="banner_text_inner" >
-          <?php if(isset($content['field_main_caption'])):?>
-            <h2 class="banner_text"><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
-          <?php endif; ?>
-          <br>
-          <?php if(isset($content['field_sub_caption'])):?>
-            <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
-          <?php endif; ?> 
-        </div> 
-        <div class="banner_nav visual">
+      <div class="banner_nav visual">
           <?php 
             if (0 < $prev_nid){
               print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
@@ -67,6 +58,15 @@
         }
         ?>
         </div>
+        <div class="banner_text_inner" >
+          <?php if(isset($content['field_main_caption'])):?>
+            <h2 class="banner_text"><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
+          <?php endif; ?>
+          <br>
+          <?php if(isset($content['field_sub_caption'])):?>
+            <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
+          <?php endif; ?> 
+        </div>  
       </div> 
     <div class="header_image">
       <div class="banner_desktop">
