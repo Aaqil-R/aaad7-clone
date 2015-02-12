@@ -33,11 +33,10 @@ Drupal.behaviors.ambitious = {
         $(".view :checkbox").on('click', function(){
            $(this).parent().toggleClass("checked").toggleClass("highlight");
          }); 
-    
-  	// Place your code here
-    	initCustomForms();
+     
     	     $(document).ready(function(){ 
-	     $('#block-views-stream-stream-forum-page').mobileNav({ 
+    	     initCustomForms();
+	    $('#block-views-stream-stream-forum-page').once('mobile').mobileNav({ 
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',
