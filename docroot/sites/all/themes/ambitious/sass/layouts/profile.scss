@@ -208,20 +208,6 @@ body.profile .top-header{
 		h2{
 			margin-bottom: 0.5em;
 		}
-		.btn{
-			font-size: 1.3em;
-			line-height: 1.7em;
-			padding: 0.4em 1.4em;
-			margin: 1em 0 0;
-			@include breakpoint($mobile) {
-				font-size: 1.4em;
-				line-height: 1.9em;
-			}
-			em{
-				margin-left: 20px;
-				top: 8px;
-			}
-		}
 	}
 	.connect{
 		h3{
@@ -229,16 +215,7 @@ body.profile .top-header{
 			@include breakpoint($mobile) {
 				font-size: 1.4em;
 			}
-		}
-		.btn{
-			margin-right: 1.2em;
-		}
-		@include breakpoint($mobile) {
-			.btn{
-				font-size: 1.3em;
-				line-height: 1.9em;
-			}
-		}
+		}		
 	}
 
 	.recent-activity{
@@ -350,9 +327,6 @@ body.profile .top-header{
 				content: none;
 			}
 		}
-
-
-
 	}
 }
 
