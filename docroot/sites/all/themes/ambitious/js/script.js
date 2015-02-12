@@ -18,14 +18,15 @@ Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
      
-        //load more button first loads the content only on click, so removed the waypoint binding.
-         var settings = Drupal.settings;
-		 $.each(settings.viewsLoadMore, function(i, setting) {
-		 var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
-		  $(window).load(function () {           
-		    $(view).waypoint('destroy');
-		  });
-		});
+        // load more button first loads the content only on click, so removed the waypoint binding.
+        //
+  		// var settings = Drupal.settings;
+		// $.each(settings.viewsLoadMore, function(i, setting) {
+		// var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
+		//  	$(window).load(function () {           
+		//     		$(view).waypoint('destroy');
+		//   	});
+		// });
 		
 		
         // views filter opiton
