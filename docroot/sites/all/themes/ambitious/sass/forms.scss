@@ -1,0 +1,82 @@
+@import "base/base";
+
+.webform-submit{
+	display:inline-block;
+  border:none;
+  padding:5px 19px;
+  font-size:18px;
+  line-height:30px;
+  border-radius:5px;
+  color:$white;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:5px solid $orange-dark;
+  background:$orange;
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
+
+  &:after {
+  	content: "\e60b";
+  }
+
+  em {
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+    word-spacing:3px;
+    top:6px;
+    margin-left: 10px;
+  }
+
+  &:hover{
+    color:$captions-credit;
+    border-bottom-width: 3px;
+	margin-top: 2px;
+  }
+
+  &:active, &:focus{
+    border-width: 1px;
+    margin-top:4px;
+    color:$captions-credit;
+  }
+
+  &:visited{
+    text-decoration:none;
+    color:$captions-credit;
+  }
+}
+
+.webform-component-textifield {
+	@include linear-gradient($captions-credit,$page-background);
+	padding:2px;
+	float:left;
+	margin:6px 0 0 0;
+	@include border-radius(5px);
+	max-width:506px;
+	width:100%;
+	input[type=text],input[type=email], textarea{
+		float:left;
+		@include border-radius(5px);
+		width:100%;
+		color:$captions-credit;
+		border:none;
+	}
+	textarea{
+		height:183px;
+	}
+}
+
+ .webform-component-select {
+ 	width: 100%;
+ 	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	display: block;
+	font-size: 19px;
+	color: #2a2e31;
+	line-height: 41px;
+	border-radius: 5px;
+	background: #fff;
+ }

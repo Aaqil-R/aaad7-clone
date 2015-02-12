@@ -142,3 +142,21 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.easy-breadcrumb{
+    //letter-spacing: 
+
+    text-align: right;
+    padding: 45px 12px 0 0;
+    color: $white;
+
+    a {
+        &:visited {
+           color: $white; 
+        }
+        
+    }
+    @include breakpoint($mobile) {
+        display:none;
+    }
+}
