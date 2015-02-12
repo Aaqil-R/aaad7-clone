@@ -19,17 +19,17 @@ Drupal.behaviors.ambitious = {
      
      
         //load more button first loads the content only on click, so removed the waypoint binding.
-        /*var settings = Drupal.settings;
+         var settings = Drupal.settings;
 		 $.each(settings.viewsLoadMore, function(i, setting) {
 		 var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
 		  $(window).load(function () {           
 		    $(view).waypoint('destroy');
 		  });
 		});
-		*/
+		
 		
         // views filter opiton
-        $(":checkbox").on('click', function(){
+        $(".view :checkbox").on('click', function(){
            $(this).parent().toggleClass("checked").toggleClass("highlight");
          }); 
     
@@ -133,11 +133,12 @@ Drupal.behaviors.ambitious = {
       stButtons.locateElements();
     }
   };
-  /*
+  
 /*load more button with masonry - masonry was not applied when new content loads
 		 * here is fix to apply or reload the masonry items and apply the style
 		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
 		 */
+		 
 		/* $(window).bind('views_load_more.new_content', function(){
 		    // Reload the masonry view after "load more"
 		    if (typeof Drupal.settings.masonry === 'object' ){

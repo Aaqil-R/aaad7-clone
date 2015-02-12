@@ -167,39 +167,68 @@ div.messages.status{
 
 /*SHARE BUTTON*/
  
-  .st_sharethis_button{
-    @extend .btn;  
-    border-bottom:5px solid $green-dark;
+  .st_sharethis_button .stButton{
+    display:inline-block;
+  border:none;
+  padding:5px 19px;
+  font-size:18px;
+  line-height:30px;
+  border-radius:5px;
+  color:$white;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:5px solid $green-dark;
     background:$green;
-    float:right;
-     cursor: pointer; 
-    span span{
-      background:none!important;
-      font-family: 'icomoon';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-     
-      -moz-osx-font-smoothing: grayscale; 
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
        &:after{
         font-size: 18px;
         font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
         content :"Share";
         color:$white;
-      }
-      @extend .icon-Share;    
+        float: left;
+		margin-top: -22px;
+		padding-right: 29px;
+      }    
       &:before{
+          font-family: 'icomoon';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
          float: right;
          font-size: 20px;
          color:$white;
-      }     
+         font-family: 'icomoon';
+         content: "\e60d";
+      }   
+      &:hover {
+	    border-bottom-width: 3px;
+	    margin-top:2px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:active{
+	    border-bottom-width:0px;
+	    margin-top:5px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:visited{
+	    text-decoration:none;
+		color:$white;
+	  }  
+	  .st-sharethis-counter{
+	    display:none !important;
+	  }
     }
-  }   
+   
 .video-icon{
   display:none;
 }
@@ -332,8 +361,8 @@ body.page-node-74566, body.page-node-74606 {
     max-width: 1080px;
     width: 100%;
     .post{ 
-      width:32%;
-      margin:0 1% 30px 0;
+      width: 31%;
+      margin: 0 1% 30px 1%;
       @include breakpoint($tablet) {
         width:49%;
       }
@@ -1310,3 +1339,78 @@ fieldset{
 	     @extend .btn-pink;
 	   } 
 	}
+.forum-block{	
+.table-from{
+  h6{
+   margin:0;  
+  }
+  .num, li.col03 a{
+     font-family:"HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+     font-weight: normal;
+  }
+} 
+.view-footer{
+  a{
+    font-size: 20px;
+  }
+}
+}
+
+.node-type-topic {
+  #block-easy-breadcrumb-easy-breadcrumb--2{
+    display: block;
+	position: absolute;
+	top: 90px;
+	width: 82%;
+	left: 9%;
+	max-width: 1060px;
+	.easy-breadcrumb{
+	  top: 0;
+		right: 13px;
+		color: #ffffff;
+		float: right;
+		margin-right: 0;
+	}
+  }
+
+}
+.mobile-view{
+  display:none;
+}
+.desktop-view{
+  display:inherit;
+  float: left;
+}
+
+.sort-block{
+@include breakpoint($mobile){
+		display:inherit;
+		fieldset{
+		  width:100%;
+		  .form-element, .jcf-select-text, .jcf-select{
+		    width:100%;
+		  }
+		    margin-bottom:15px;
+		}
+		.stButton{
+		  width:100%; 
+		}
+	   }
+	   }
+.mobile-view{
+   @include breakpoint($mobile){
+     display:inherit;
+      .sort-block{
+		display:inherit;
+	   }
+   }
+   .sort-block{
+     display:inherit;
+   }
+}
+.desktop-view{
+  @include breakpoint($mobile){
+     display:none;
+   }
+}
+ 
