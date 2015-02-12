@@ -102,7 +102,7 @@
     print render($page['header']); 
   ?>
 <!-- / header -->
-<?php print $messages; ?>
+<?php print $messages; ?>      
 <section class="visual">
       <div class="img-holder">
         
@@ -116,7 +116,12 @@
             <?php print render($page['image_holder']); ?>
             <!-- /image holder -->
           <?php endif; ?>
-      </div>      
+      </div>
+      <?php
+      // Photo credit block
+      $block = module_invoke('block', 'block_view', '146');
+      print render($block['content']);
+      ?>        
 </section> <!-- /visual -->
 
     <!-- slider block -->
@@ -228,6 +233,8 @@
 
     </section> <!-- /highlighted -->
   <?php endif; ?>
+
+
 
   <main id="main">
 
