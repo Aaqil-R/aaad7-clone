@@ -584,47 +584,53 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .footer-button .view-footer {
   text-align: center;
 }
-/* line 231, ../sass/buttons.scss */
+@media (max-width: 767px) {
+  /* line 228, ../sass/buttons.scss */
+  .footer-button .view-footer {
+    margin-bottom: 10px;
+  }
+}
+/* line 234, ../sass/buttons.scss */
 .footer-button .view-footer a.btn {
   padding: 12px 19px;
 }
 @media (max-width: 767px) {
-  /* line 231, ../sass/buttons.scss */
+  /* line 234, ../sass/buttons.scss */
   .footer-button .view-footer a.btn {
     width: 100%;
     margin-bottom: 25px;
   }
 }
 
-/* line 245, ../sass/buttons.scss */
+/* line 248, ../sass/buttons.scss */
 .btn.btn-facebook {
   border-bottom: 5px solid #1a427e;
   background: #4b69aa;
 }
-/* line 249, ../sass/buttons.scss */
+/* line 252, ../sass/buttons.scss */
 .btn.btn-twitter {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
 }
-/* line 253, ../sass/buttons.scss */
+/* line 256, ../sass/buttons.scss */
 .btn.btn-google {
   border-bottom: 5px solid #ab1005;
   background: #f44336;
 }
 
-/* line 260, ../sass/buttons.scss */
+/* line 263, ../sass/buttons.scss */
 .facebook-btn {
   border-bottom: 5px solid #1a427e;
   background: #4b69aa;
 }
 
-/* line 266, ../sass/buttons.scss */
+/* line 269, ../sass/buttons.scss */
 .twitter-btn {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
 }
 
-/* line 271, ../sass/buttons.scss */
+/* line 274, ../sass/buttons.scss */
 .icon-connection {
   font-size: 29px;
   padding: 6px 0 0;
@@ -637,7 +643,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #e30087;
 }
 @media (max-width: 767px) {
-  /* line 271, ../sass/buttons.scss */
+  /* line 274, ../sass/buttons.scss */
   .icon-connection {
     height: 33px;
     width: 34px;
@@ -646,7 +652,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 
-/* line 291, ../sass/buttons.scss */
+/* line 294, ../sass/buttons.scss */
 .shadow-btn:hover {
   box-shadow: 0 1px #ffffff;
 }
