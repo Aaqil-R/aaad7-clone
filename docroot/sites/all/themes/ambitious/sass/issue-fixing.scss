@@ -27,6 +27,12 @@
 	z-index: 1100;
 	position: relative;
 	top: 24px;
+	.block{
+		// Add box shadow to Home page Form
+		@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
+	}
+		
+
 	@include breakpoint($not-mobile){
 		top:-82px;
 	}
@@ -116,4 +122,23 @@
 		}
 	}
 
+	// Social Holder
+	.social-block .holder{
+		@include breakpoint($mobile){
+			padding-top: 0;
+		}
+	}
+
+	.social-block .block {
+		@include breakpoint($mobile){
+			padding: 0px 0 45px;
+		}
+	}
+
+	// Action Block
+	.action-block .holder {
+		@include breakpoint($mobile){
+			padding: 95px 15px 0;
+		}		
+	}
 } 
