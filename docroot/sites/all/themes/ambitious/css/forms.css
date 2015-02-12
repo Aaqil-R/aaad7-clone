@@ -1,5 +1,5 @@
 /* line 3, ../sass/base/_markup-mixins.scss */
-.webform-submit:after {
+.webform-submit:after, input[type=submit]:after {
   content: " ";
   display: block;
   clear: both;
@@ -377,7 +377,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* line 3, ../sass/forms.scss */
-.webform-submit {
+.webform-submit, input[type=submit] {
   display: inline-block;
   border: none;
   padding: 5px 19px;
@@ -393,11 +393,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 /* line 19, ../sass/forms.scss */
-.webform-submit:after {
+.webform-submit:after, input[type=submit]:after {
   content: "\e60b";
 }
 /* line 23, ../sass/forms.scss */
-.webform-submit em {
+.webform-submit em, input[type=submit] em {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -406,19 +406,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-left: 10px;
 }
 /* line 32, ../sass/forms.scss */
-.webform-submit:hover {
+.webform-submit:hover, input[type=submit]:hover {
   color: #636c73;
   border-bottom-width: 3px;
   margin-top: 2px;
 }
 /* line 38, ../sass/forms.scss */
-.webform-submit:active, .webform-submit:focus {
+.webform-submit:active, .webform-submit:focus, input[type=submit]:active, input[type=submit]:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
 /* line 44, ../sass/forms.scss */
-.webform-submit:visited {
+.webform-submit:visited, input[type=submit]:visited {
   text-decoration: none;
   color: #636c73;
 }
