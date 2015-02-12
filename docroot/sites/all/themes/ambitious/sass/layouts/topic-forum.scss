@@ -1,6 +1,6 @@
 @import "base/base"; 
 @import "extends"; 
-// @import "content"; 
+@import "content"; 
 
 .icon-Close{
   cursor: pointer;
@@ -1321,7 +1321,7 @@ fieldset{
 .filter-pink{
   input[type=submit]{
     @extend .btn;
-    @extend .btn-pink !optional;
+    @extend .btn-pink;
   }
 }
 
@@ -1393,7 +1393,7 @@ fieldset{
 	   }
 	   .filter-pink{
 	     @extend .btn;
-	     @extend .btn-pink !optional;
+	     @extend .btn-pink;
 	   } 
 	}
 .forum-block{	

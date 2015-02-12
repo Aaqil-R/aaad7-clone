@@ -9,22 +9,24 @@
 
 //1. Font styles
 
+ 
+
 //font-weights -  TODO change this sitewide
-// [BUTTON-REFACTOR]
-// .btn {
-// 	&.btn-facebook{
-// 	    border-bottom:5px solid $fb-blue-dark;
-// 	    background:$fb-blue;
-// 	}
-// 	&.btn-twitter{
-// 	    border-bottom:5px solid $tw-blue-dark;
-// 	    background:$tw-blue;
-// 	}
-// 	&.btn-google{
-// 	    border-bottom:5px solid #ab1005;
-// 	    background:#f44336;
-// 	}
-// }
+.btn {
+	&.btn-facebook{
+	    border-bottom:5px solid $fb-blue-dark;
+	    background:$fb-blue;
+	}
+	&.btn-twitter{
+	    border-bottom:5px solid $tw-blue-dark;
+	    background:$tw-blue;
+	}
+	&.btn-google{
+	    border-bottom:5px solid #ab1005;
+	    background:#f44336;
+	}
+}
+
 
 #nav {
 	>ul {
@@ -35,7 +37,6 @@
 		}
 	}
 }
-
 //visited etc link text
 a{
 	&:visited{color: #000;}
@@ -44,17 +45,15 @@ a{
 		text-decoration: none;
 	}
 }
-
-// [BUTTON-REFACTOR]
-// a.btn {
-// 	color: $white;
-// 	&:visited{color: $white;}
-// 	&:hover {
-// 		color: $white;
-// 		text-decoration: none;
-// 		cursor: pointer;
-// 	}
-// }
+a.btn {
+	color: $white;
+	&:visited{color: $white;}
+	&:hover {
+		color: $white;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
 
 .more-btn {
 	a {
@@ -782,6 +781,7 @@ a {
 			}
 		}
 	}
+
 }
 //TODO is this a repeat?
 .action-block{
@@ -789,19 +789,17 @@ a {
 	.block-share{
 		background-image: image-url('bg08.jpg');
 		float: left;
-		// [BUTTON-REFACTOR]
-		// .btn{
-		// 	float: right;
-		// 	margin: 182px 10px 0 0;
-		// 	display: block;
-		// 	@include breakpoint($tablet) {
-		// 		margin: 146px 10px 0 0;
-		// 	}
-		// }
+		.btn{
+			float: right;
+			margin: 182px 10px 0 0;
+			display: block;
+			@include breakpoint($tablet) {
+				margin: 146px 10px 0 0;
+			}
+		}
 		@include breakpoint($mobile) {
 			height: 324px;
-			// [BUTTON-REFACTOR]
-			// .btn{margin: 223px 10px 0 0;}
+			.btn{margin: 223px 10px 0 0;}
 		}
 	}
 
@@ -852,14 +850,13 @@ a {
 			font-size: 1.5em;
 		}
 	}
-	// [BUTTON-REFACTOR]
-	// .btn{
-	//   @include fontsize(20,16);
-	//   padding: 11px 26px;
-	//   @include breakpoint($mobile) {
-	//     padding: 6px 19px;
-	// 	font-size: 18px;
-	//   }
+	.btn{
+	  @include fontsize(20,16);
+	  padding: 11px 26px;
+	  @include breakpoint($mobile) {
+	    padding: 6px 19px;
+		font-size: 18px;
+	  }
 	}
 	.twitter{
 		height: 300px;
@@ -898,15 +895,14 @@ a {
 		text-align:left;
 		background:$white;
 		padding:52px 32px 49px;
-		// [BUTTON-REFACTOR]
-		// .btn{
-		//   @include breakpoint($mobile) {
-		// 	width:100%;
-		// 	.icon-Rightarrow{
-		// 	  display:none;
-		// 	}
-		//   }
-		// }
+		.btn{
+		  @include breakpoint($mobile) {
+			width:100%;
+			.icon-Rightarrow{
+			  display:none;
+			}
+		  }
+		}
 		@include breakpoint($mobile) {
 			padding:0 0 49px;
 		}
@@ -924,7 +920,7 @@ a {
 			display:block;
 		}
 	}
-// }
+}
 //myvoice block overrides + specifics
 .my-voice-block{
 	float: left;
@@ -1158,14 +1154,13 @@ a {
 		  	color:$white;
 			}
 		}
-	// [BUTTON-REFACTOR]
-	// .btn{
-	// 	float:left;
-	// 	&.btn-left { margin-right:27px ;}
-	// 	span{
-	// 		padding-left: 15px;
-	// 	}
-	// }
+	.btn{
+		float:left;
+		&.btn-left { margin-right:27px ;}
+		span{
+			padding-left: 15px;
+		}
+	}
 }
 }
 
@@ -1203,11 +1198,10 @@ a {
 		img{
 			width: 100%;
 		}
-		// [BUTTON-REFACTOR]
-		// .btn{
-		// 	width: 100%;
-		// 	margin-top: 15px;
-		// }
+		.btn{
+			width: 100%;
+			margin-top: 15px;
+		}
 	}
 	.share-columns{
 		.col{
@@ -1230,12 +1224,11 @@ a {
 	.support-columns{
 		.col-3{
 			&:nth-child(2){
-				// [BUTTON-REFACTOR]
-				// .btn {
-				// 	width: 45%;
-				// 	margin-right: 10px;
-				// 	margin-bottom: 0;
-				// }
+				.btn {
+					width: 45%;
+					margin-right: 10px;
+					margin-bottom: 0;
+				}
 			}
 			a{
 				text-decoration: underline;
@@ -1315,13 +1308,12 @@ a {
 	display: block;
 	text-align: center;
 	padding: 25px 0 105px;
-	// [BUTTON-REFACTOR]
-	// .btn{
-	// 	padding: 10px 19px;
-	// 	.icon-Rightarrow{
-	// 		padding-left: 15px;
-	// 	}
-	// }
+	.btn{
+		padding: 10px 19px;
+		.icon-Rightarrow{
+			padding-left: 15px;
+		}
+	}
 }
 
 // slider sub column overrides
