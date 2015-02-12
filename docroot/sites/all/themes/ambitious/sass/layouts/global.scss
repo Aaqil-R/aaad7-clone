@@ -280,3 +280,22 @@ div#admin-toolbar.vertical div.admin-tab{
 		  }
         }
 	  }
+	  
+// edited by nanda kumar - globalsoftlab for forum page page filter option
+
+.filter-overlay{
+  display:none;
+}
+.filter-active{
+	.filter-overlay{
+		background: #000;
+		display:inherit;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		opacity: 0.6;
+	}
+}

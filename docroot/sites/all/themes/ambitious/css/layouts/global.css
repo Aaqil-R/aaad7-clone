@@ -371,7 +371,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -717,4 +717,22 @@ div#admin-toolbar.vertical div.admin-tab {
 /* line 273, ../../sass/layouts/global.scss */
 .comment-list ul.comment-listing li .comment-right ul li a:hover {
   text-decoration: none;
+}
+
+/* line 286, ../../sass/layouts/global.scss */
+.filter-overlay {
+  display: none;
+}
+
+/* line 290, ../../sass/layouts/global.scss */
+.filter-active .filter-overlay {
+  background: #000;
+  display: inherit;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0.6;
 }
