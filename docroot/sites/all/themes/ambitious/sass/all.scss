@@ -176,9 +176,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   }
 }
 .forum{
-	  .btn.topic{
-        font-size: 19px;
-	  }
+		// [BUTTON-REFACTOR]
+	  	// .btn.topic{
+   		//      font-size: 19px;
+	  	// }
+
       fieldset{
         float:left;
 		@include breakpoint($tablet) { 
@@ -833,12 +835,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     @extend %clearfix;
   }
   @include breakpoint($mobile){
-    .btn{
-	  width: 100%;
-	  em{
-	    display:none;
-	  }
-	}
+  	// [BUTTON-REFACTOR]
+ //    .btn{
+	//   width: 100%;
+	//   em{
+	//     display:none;
+	//   }
+	// }
   }
   .find-us{
     float:left;
@@ -855,13 +858,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  margin-bottom:20px;
 	  @extend %clearfix;
 	}
-	.btn{
-	  font-size:18px;
-	  padding:10px 19px;
-	  @include breakpoint($desktop){
-	     font-size: 17px;
-	  }
-	}
+	// [BUTTON-REFACTOR]
+	// .btn{
+	//   font-size:18px;
+	//   padding:10px 19px;
+	//   @include breakpoint($desktop){
+	//      font-size: 17px;
+	//   }
+	// }
 	.content{
 	  margin-bottom:21px;
 	  font-size:17px;
@@ -908,13 +912,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	  margin-bottom: 20px;
 	  @extend %clearfix;
 	}
-	.btn{
-	  font-size: 18px;
-      padding: 10px 19px;
-	  @include breakpoint($desktop){
-	     font-size: 17px;
-	  }
-	}
+	// [BUTTON-REFACTOR]
+	// .btn{
+	//   font-size: 18px;
+ //      padding: 10px 19px;
+	//   @include breakpoint($desktop){
+	//      font-size: 17px;
+	//   }
+	// }
     ul{
 	  @extend %listreset;
 	  border:1px solid $gray;
@@ -1831,19 +1836,20 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   @include breakpoint($tablet) {
       margin-bottom:20px;
   }
-  .btn{
-    padding: 10px 29px 10px 28px;
-    font-size: 18px;
-	i{
-	  margin-left: 25px;
-	}
-	@include breakpoint($mobile) {
-	   width:100%;
-	   i{
-	      display:none;
-	   }
-	 }
-  }
+  // [BUTTON-REFACTOR]
+ //  .btn{
+ //    padding: 10px 29px 10px 28px;
+ //    font-size: 18px;
+	// i{
+	//   margin-left: 25px;
+	// }
+	// @include breakpoint($mobile) {
+	//    width:100%;
+	//    i{
+	//       display:none;
+	//    }
+	//  }
+ //  }
 }
 .brought-btn{
     display:block;
@@ -1876,14 +1882,15 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			padding:62px 20px 40px;
 		}
 	}
-	.btn{
-	  font-size: 22px;
-      padding: 11px 30px;
-	  @include breakpoint($mobile) {
-	    padding: 6px 19px;
-		font-size: 18px;
-	  }
-	}
+	// [BUTTON-REFACTOR]
+	// .btn{
+	//   font-size: 22px;
+ //      padding: 11px 30px;
+	//   @include breakpoint($mobile) {
+	//     padding: 6px 19px;
+	// 	font-size: 18px;
+	//   }
+	// }
 	h1 {
 		display:inline-block;
 		vertical-align:top;
@@ -1904,14 +1911,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		text-align:center;
 		background:$white;
 		padding:52px 32px 49px;
-		.btn{
-		  @include breakpoint($mobile) {
-            width:100%;
-			.icon-Rightarrow{
-			  display:none;
-			}
-		  }
-		}
+
+		// [BUTTON-REFACTOR]
+		// .btn{
+		//   @include breakpoint($mobile) {
+  //           width:100%;
+		// 	.icon-Rightarrow{
+		// 	  display:none;
+		// 	}
+		//   }
+		// }
 		@include breakpoint($mobile) {
 			padding:0 0 49px;
 		}
