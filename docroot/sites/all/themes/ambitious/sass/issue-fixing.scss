@@ -110,38 +110,119 @@
 		max-height: none;
 
 	}
+	.visual .holder{
+		@include breakpoint($mobile){
+			position: relative;
+			top: -10px;
+		}
+	}
 	.visual .img-holder{
 		max-height: 765px;
 	}
 	.visual .img-holder .caption-frame .caption{
 		@include breakpoint($mobile){
-			padding: 25px 0 0;
+			padding: 60px 0 0;
 		}
 		@include breakpoint($not-mobile){
 			padding: 80px 0 0;
 		}
 	}
 
+	.visual .img-holder img{
+		@include breakpoint($mobile){
+			width: 100%;
+			height: 250px;
+		}
+	}
+
+	.visual .img-holder .caption-frame .caption .title{
+		@include breakpoint($mobile){
+			right: 0;
+		}
+	}
+
 	// Social Holder
+	.social-block{
+		@include breakpoint($mobile){
+			background: transparent;
+		}
+	}
+	
 	.social-block .holder{
 		@include breakpoint($mobile){
-			padding-top: 0;
+			padding-top: 18px;
+			padding-bottom: 160px;
 		}
 	}
 
 	.social-block .block {
 		@include breakpoint($mobile){
 			padding: 0px 0 45px;
+			background: transparent;
+
+			.member-count{
+				margin: -10px 0 40px;
+			}
+
+			.youtube-btn{
+				padding: 6px 0;
+				margin-bottom: 12px;
+			}
+
+			.twitter-btn{
+				padding: 6px 0;
+				top: 60px;
+			}
+
+			.facebook-btn{
+				padding: 6px 0;
+				top: 120px;
+			}
+
+
+		}
+	}
+
+	.social-block h1{
+		@include breakpoint($mobile){
+			background: transparent;
+			padding: 0 0 6px;
+		}
+	}
+
+	.social-block h3{
+		@include breakpoint($mobile){
+			margin-bottom: 15px;
 		}
 	}
 
 	// Action Block
 	.action-block .holder {
 		@include breakpoint($mobile){
-			padding: 95px 15px 0;
+			padding: 50px 15px 0;
 		}		
 	}
-} 
+
+	// Article Block - Remove Images on Mobile View
+
+	.articles-block{
+		.views-row-2,
+		.views-row-3{
+			.img-holder{
+				@include breakpoint($mobile){
+				display: none
+				}
+			}
+		}
+
+		.views-row-last{
+			@include breakpoint($mobile){
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+}  
 
 // footer logo space fixed
 

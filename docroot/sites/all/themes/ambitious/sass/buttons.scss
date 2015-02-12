@@ -227,6 +227,9 @@
 	}
 	.view-footer{
 		text-align: center;
+    @include breakpoint($mobile){
+       margin-bottom: 10px;
+    }
 
 		a.btn{
 			// font-family: $base-font-family;
