@@ -981,12 +981,9 @@ nav {
     max-width:1080px;
     margin:0 auto;
   }
-  .btn-perv{
+  .btn-{
     margin: -46px 0 0;
-    padding-right: 23px;
-    @include breakpoint($mobile) {
-    
-    }
+    padding-right: 23px; 
   }
   .pic-by{
     display: block;
@@ -1018,7 +1015,7 @@ nav {
       color:$white;
     }
   } 
-  .btn-prev{
+  .btn-perv{
     @include breakpoint($mobile) {
       padding-left:30px;
     }
