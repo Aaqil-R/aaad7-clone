@@ -45,7 +45,7 @@
 ?>
   <section class="header_banner">
      <div class="banner_text_main">
-      <div class="banner_nav visual">
+      <div class="banner_nav">
           <?php 
             if (0 < $prev_nid){
               print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
