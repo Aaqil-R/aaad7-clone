@@ -1466,15 +1466,40 @@ fieldset{
   .forum-block .block{
     padding: 52px 32px 0;
   } 
-  .action-block .holder .btn.btn-transparent{
-     @include breakpoint($mobile){
-       width: auto;
+  .action-block .holder{
+     .btn.btn-transparent{
+       @include breakpoint($mobile){
+         width: auto;
+         margin-left: 20px;
+         margin-top: 20px;
+         font-size: 18px;
+       }
+     }
+     .region .block-main{
+       & > div{
+         padding:40px 0;
+         strong{
+           padding-left: 22px;
+           line-height: normal;
+           font-size: 32px;
+           padding-right: 0;
+           width: 74%;
+         }
+       }
+       & > div:first-child{
+         padding: 20px 0 30px 0px;
+       }
      }  
   }
+   
   .topic-share{
     .stButton{
       @include breakpoint($mobile){
         padding: 10px 40%;
+        &:before{
+          font-size: 30px;
+          margin-bottom: -7px;
+        }
       }
     }
   }

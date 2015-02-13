@@ -4542,14 +4542,38 @@ fieldset {
   padding: 52px 32px 0;
 }
 @media (max-width: 767px) {
-  /* line 1469, ../../sass/layouts/topic-forum.scss */
+  /* line 1470, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder .btn.btn-transparent, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .filter-pink input.btn-transparent[type=submit], .filter-pink .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder input.btn-transparent[type=submit], .button-holder .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder .btn-transparent.filter-pink, .button-holder .node-type-topic .action-block .holder .btn-transparent.filter-pink {
     width: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 18px;
   }
 }
+/* line 1479, ../../sass/layouts/topic-forum.scss */
+.node-type-topic .action-block .holder .region .block-main > div {
+  padding: 40px 0;
+}
+/* line 1481, ../../sass/layouts/topic-forum.scss */
+.node-type-topic .action-block .holder .region .block-main > div strong {
+  padding-left: 22px;
+  line-height: normal;
+  font-size: 32px;
+  padding-right: 0;
+  width: 74%;
+}
+/* line 1489, ../../sass/layouts/topic-forum.scss */
+.node-type-topic .action-block .holder .region .block-main > div:first-child {
+  padding: 20px 0 30px 0px;
+}
 @media (max-width: 767px) {
-  /* line 1475, ../../sass/layouts/topic-forum.scss */
+  /* line 1496, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .topic-share .stButton {
     padding: 10px 40%;
+  }
+  /* line 1499, ../../sass/layouts/topic-forum.scss */
+  .node-type-topic .topic-share .stButton:before {
+    font-size: 30px;
+    margin-bottom: -7px;
   }
 }
