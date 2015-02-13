@@ -1493,6 +1493,9 @@ fieldset{
   }
    
   .topic-share{
+    height: 60px;
+    float: left;
+    width: 100%; 
     .stButton{
       @include breakpoint($mobile){
         padding: 10px 40%;
@@ -1502,6 +1505,12 @@ fieldset{
         }
       }
     }
+  }
+  .banner_text{
+     @include breakpoint($mobile){
+       width: 70%;
+       margin: 3% 15%;
+     }
   }
   
 }
