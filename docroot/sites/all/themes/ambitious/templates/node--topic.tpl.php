@@ -60,11 +60,11 @@
         </div>
         <div class="banner_text_inner" >
           <?php if(isset($content['field_main_caption'])):?>
-            <h2 class="banner_text"><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
+            <h2><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
           <?php endif; ?>
           <br>
           <?php if(isset($content['field_sub_caption'])):?>
-            <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
+            <h4 class="sub_title"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h4>
           <?php endif; ?> 
         </div>  
       </div> 
