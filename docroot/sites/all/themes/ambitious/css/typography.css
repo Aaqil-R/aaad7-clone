@@ -641,3 +641,105 @@ h6 {
     line-height: 32px;
   }
 }
+
+/* line 95, ../sass/typography.scss */
+.subheading {
+  font-size: 24px;
+  font-size: 1.5em;
+  line-height: 36px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+}
+
+/* line 102, ../sass/typography.scss */
+p {
+  font-size: 18px;
+  font-size: 1.125em;
+  line-height: 30px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: #2a2e31;
+}
+@media (max-width: 767px) {
+  /* line 102, ../sass/typography.scss */
+  p {
+    font-size: 16px;
+    font-size: 1em;
+    line-height: 25px;
+  }
+}
+/* line 112, ../sass/typography.scss */
+p a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 115, ../sass/typography.scss */
+p a:hover {
+  text-decoration: none;
+}
+
+/* line 120, ../sass/typography.scss */
+a {
+  color: #081318;
+}
+/* line 77, ../sass/base/_markup-mixins.scss */
+a:hover, a:active, a:focus {
+  color: #285f78;
+  text-decoration: none;
+}
+/* line 122, ../sass/typography.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 126, ../sass/typography.scss */
+.p2 {
+  font-size: 13px;
+  font-size: 0.8125em;
+  line-height: 18px;
+  color: #d2d5d6;
+}
+@media (max-width: 767px) {
+  /* line 126, ../sass/typography.scss */
+  .p2 {
+    font-size: 12px;
+    font-size: 0.75em;
+    line-height: 17px;
+  }
+}
+
+/* line 135, ../sass/typography.scss */
+blockquote {
+  quotes: none;
+  margin-bottom: 30px;
+  margin-left: 36px;
+}
+/* line 139, ../sass/typography.scss */
+blockquote q {
+  font-size: 24px;
+  font-size: 1.5em;
+  line-height: 36px;
+}
+@media (max-width: 990px) {
+  /* line 139, ../sass/typography.scss */
+  blockquote q {
+    font-size: 22px;
+    font-size: 1.375em;
+    line-height: 34px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 139, ../sass/typography.scss */
+  blockquote q {
+    font-size: 16px;
+    font-size: 1em;
+    line-height: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* line 153, ../sass/typography.scss */
+img {
+  max-width: 100%;
+}

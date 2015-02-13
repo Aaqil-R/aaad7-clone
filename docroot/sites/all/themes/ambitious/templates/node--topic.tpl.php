@@ -60,7 +60,7 @@
         </div>
         <div class="banner_text_inner" >
           <?php if(isset($content['field_main_caption'])):?>
-            <h2><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h2>
+            <h1><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h1>
           <?php endif; ?>
           <br>
           <?php if(isset($content['field_sub_caption'])):?>

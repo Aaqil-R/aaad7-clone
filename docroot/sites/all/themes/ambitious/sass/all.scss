@@ -12,67 +12,6 @@ html body {
 		background: url(../images/wid_bg.jpg)$page-background;
 	}
 }
-.subheading{
-  @include fontsize(24,16);
-  line-height:36px;
-  font-weight:normal;
-  margin:0 0 20px;
-  font-family:$base-font-family;
-}
-p {
-  @include fontsize(18,16);
-  line-height:30px;
-  margin-bottom:20px;
-  margin-top:0;
-  color:$base-text-color;
-  @include breakpoint($mobile){
-    @include fontsize(16,16);
-    line-height:25px;
-  }
-  a{
-    text-decoration:underline;
-	font-weight:bold;
-    &:hover{
-      text-decoration:none;
-    }
-  }
-}
-a{
-  @include link-color($base-link-color);
-  &:hover{
-    text-decoration:none;
-  }
-}
-.p2{
-  @include fontsize(13,16);
-  line-height:18px;
-   color:$gray;
-  @include breakpoint($mobile){
-    @include fontsize(12,16);
-	line-height:17px;
-  }
-}
-blockquote{
- quotes: none;
-  margin-bottom:30px;
-  margin-left:36px;
-  q{
-    @include fontsize(24,16);
-      line-height:36px;
-      @include breakpoint($tablet){
-      @include fontsize(22,16);
-      line-height:34px;
-    }
-    @include breakpoint($mobile){
-      @include fontsize(16,16);
-      line-height:25px;
-      margin-left:25px;
-    }
-  }
-}
-img{
-	max-width: 100%;
-}
 .messages{
   background:$magenta;
   color: white;
