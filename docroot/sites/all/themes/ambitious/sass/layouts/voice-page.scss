@@ -65,10 +65,18 @@
 	//.my-voice-block{
 	//	margin-top: -250px;
 	//}
+	// #content_top{
+	// 	z-index: 99;
+	// 	margin-top: -15%;
+	// 	margin-bottom: 30px;
+	// }
 	#content_top{
 		z-index: 99;
-		margin-top: -15%;
+		margin-top: -20%;
 		margin-bottom: 30px;
+		@include breakpoint($mobile) {
+			margin-top: -5%;
+		}
 	}
 /*
 	.visual .img-holder .caption-frame .caption .title {
