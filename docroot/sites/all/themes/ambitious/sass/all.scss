@@ -1414,10 +1414,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				.voice-holder {
 					position:absolute;
 					z-index:2;
-					bottom:0;
+					bottom:6px;
 					left:11px;
 					@include breakpoint($mobile) {
 						left:15px;
+						bottom: 7px;
 					}
 					&:hover {
 						.text {
