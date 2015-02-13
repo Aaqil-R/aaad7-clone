@@ -1464,6 +1464,11 @@ fieldset{
     padding: 52px 32px 0;
   }
   .view-display-id-stream_topic_page.posts-columns .post{
-     width:31%;
+     @include breakpoint($tablet){
+       width:31%;
+     }
+     @include breakpoint($mobile){
+       width:48%;
+     }
   }
 }

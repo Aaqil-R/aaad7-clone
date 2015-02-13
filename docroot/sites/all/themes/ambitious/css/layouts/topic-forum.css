@@ -4536,7 +4536,15 @@ fieldset {
 .node-type-topic .forum-block .block {
   padding: 52px 32px 0;
 }
-/* line 1466, ../../sass/layouts/topic-forum.scss */
-.node-type-topic .view-display-id-stream_topic_page.posts-columns .post {
-  width: 31%;
+@media (max-width: 990px) {
+  /* line 1466, ../../sass/layouts/topic-forum.scss */
+  .node-type-topic .view-display-id-stream_topic_page.posts-columns .post {
+    width: 31%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1466, ../../sass/layouts/topic-forum.scss */
+  .node-type-topic .view-display-id-stream_topic_page.posts-columns .post {
+    width: 48%;
+  }
 }
