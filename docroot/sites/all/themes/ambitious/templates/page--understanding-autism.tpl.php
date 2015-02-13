@@ -195,8 +195,7 @@
     </section> <!-- /social -->
   <?php endif; ?>
 
-  <footer id="footer">
-  hoo
+	<footer id="footer">
       <div class="holder">
 		<div class="logo">
              <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>

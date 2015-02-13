@@ -1,25 +1,21 @@
-@import "base/base";  
-@import "base/colours";
-@import "base/font-icons";  
-@import "base/breakpoint";
-@import "base/breakpoints"; 
-
-
+@import "base/base"; 
 
 // Headings 
 // ============
-h1, h2, h3, h4, h5, h6{
+#{headings()}{
   font-weight:normal;
   font-family: $header-font-family;   
   margin:0;
   padding:0;
+  margin-bottom: 0.5em;
   a{
 	text-decoration:underline;
-	&:hover{
-	  text-decoration:none;
-	}
+  	&:hover{
+  	  text-decoration:none;
+  	}
   }
 }
+
 h1, .h1{
   line-height:70px;
   font-size:66px;
