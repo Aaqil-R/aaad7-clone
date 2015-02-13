@@ -1471,5 +1471,13 @@ fieldset{
        width: auto;
      }  
   }
+  .topic-share{
+    .stButton{
+      @include breakpoint($mobile){
+        padding: 10px 40%;
+      }
+    }
+  }
+  
 }
  
