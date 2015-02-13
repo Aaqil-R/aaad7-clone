@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6{
 	}
   }
 }
-h1, %h1{
+h1, .h1{
   line-height:70px;
   font-size:66px;
   letter-spacing:-1px;
@@ -33,7 +33,7 @@ h1, %h1{
     line-height:36px; 
   }
 }
-h2, %h2{
+h2, .h2{
   font-size:45px;
   line-height:50px; 
   @include breakpoint($tablet) {
@@ -45,7 +45,7 @@ h2, %h2{
     line-height:32px;   
   }
 }
-h3, %h3{
+h3, .h3{
   font-size:36px;
   line-height:40px; 
   @include breakpoint($tablet) {
@@ -57,7 +57,7 @@ h3, %h3{
     line-height:32px;   
   }
 }
-h4, %h4{
+h4, .h4{
   font-size:27px;
   line-height:30px; 
   &.sub_title{
@@ -68,7 +68,7 @@ h4, %h4{
     line-height:30px;   
   }
 }
-h5, %h5{
+h5, .h5{
   font-size:45px;
   line-height:50px; 
   @include breakpoint($tablet) {
@@ -80,7 +80,7 @@ h5, %h5{
     line-height:32px;   
   }
 }
-h6, %h6{
+h6, .h6{
   font-size:45px;
   line-height:50px; 
   @include breakpoint($tablet) {
