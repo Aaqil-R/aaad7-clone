@@ -73,7 +73,7 @@
         <img src="<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>" />
       </div>
       <div class="banner_mobile">
-        <img src="<?php print image_style_url('banner-mobile',$content['field_featured_image']['#items'][0]['uri']); ?>" />
+        <img src="<?php print image_style_url('banner-mobile',$content['field_featured_image_mobile']['#items'][0]['uri']); ?>" />
       </div> 
     </div>
     <?php if(isset($content['field_featured_image_by'])):?>
