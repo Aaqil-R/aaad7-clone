@@ -1639,7 +1639,7 @@ nav ul li a:hover {
 @media (max-width: 767px) {
   /* line 932, ../../sass/layouts/header.scss */
   .header_banner .banner_text {
-    margin: 5% 23% 0 23%;
+    margin: 5% 33% 0;
     padding: 18px 13px;
     text-align: center;
     line-height: normal;
@@ -1691,7 +1691,7 @@ nav ul li a:hover {
   margin: -46px 0 0;
   padding-right: 23px;
 }
-/* line 988, ../../sass/layouts/header.scss */
+/* line 991, ../../sass/layouts/header.scss */
 .header_banner .pic-by {
   display: block;
   text-align: right;
@@ -1704,32 +1704,44 @@ nav ul li a:hover {
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
-  /* line 988, ../../sass/layouts/header.scss */
+  /* line 991, ../../sass/layouts/header.scss */
   .header_banner .pic-by {
     text-align: left;
     padding: 10px 20px;
   }
 }
-/* line 1002, ../../sass/layouts/header.scss */
+/* line 1005, ../../sass/layouts/header.scss */
 .header_banner .pic-by a {
   color: #081318;
   font-weight: bold;
   text-decoration: underline;
 }
-/* line 1008, ../../sass/layouts/header.scss */
+/* line 1011, ../../sass/layouts/header.scss */
 .header_banner .btn-prev {
   background: #f15500;
   -moz-border-radius: 0 5px 5px 0;
   -webkit-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-/* line 1013, ../../sass/layouts/header.scss */
+/* line 1016, ../../sass/layouts/header.scss */
 .header_banner .btn-prev .icon-Leftarrow {
   font-size: 27px;
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 1019, ../../sass/layouts/header.scss */
+  /* line 1021, ../../sass/layouts/header.scss */
+  .header_banner .btn-prev {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1026, ../../sass/layouts/header.scss */
+  .header_banner .btn-next {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1032, ../../sass/layouts/header.scss */
   .header_banner.banner-nav .banner_text {
     margin: 5% 10% 0;
     padding: 18px 13px;
@@ -1739,12 +1751,12 @@ nav ul li a:hover {
   }
 }
 
-/* line 1033, ../../sass/layouts/header.scss */
+/* line 1046, ../../sass/layouts/header.scss */
 .node-type-topic .visual {
   overflow: visible;
 }
 
-/* line 1036, ../../sass/layouts/header.scss */
+/* line 1049, ../../sass/layouts/header.scss */
 .visual .btn-perv .text-area .topic {
   font-size: 22px;
   line-height: 22px;
@@ -1754,29 +1766,29 @@ nav ul li a:hover {
   white-space: pre;
 }
 
-/* line 1045, ../../sass/layouts/header.scss */
+/* line 1058, ../../sass/layouts/header.scss */
 .node-type-topic .block-easy-breadcrumb {
   position: absolute;
   top: 18px;
   z-index: 99;
   width: 100%;
 }
-/* line 1050, ../../sass/layouts/header.scss */
+/* line 1063, ../../sass/layouts/header.scss */
 .node-type-topic .block-easy-breadcrumb .easy-breadcrumb {
   margin: 0 auto;
   max-width: 1080px;
   padding-right: 20px;
 }
-/* line 1054, ../../sass/layouts/header.scss */
+/* line 1067, ../../sass/layouts/header.scss */
 .node-type-topic .block-easy-breadcrumb .easy-breadcrumb a {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 1059, ../../sass/layouts/header.scss */
+/* line 1072, ../../sass/layouts/header.scss */
 .node-type-topic .header_banner.banner-nav {
   display: none;
 }
 
-/* line 1066, ../../sass/layouts/header.scss */
+/* line 1079, ../../sass/layouts/header.scss */
 #block-system-user-menu a:hover {
   text-decoration: none;
   color: #ffffff;

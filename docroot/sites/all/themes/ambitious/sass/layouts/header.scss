@@ -943,7 +943,7 @@ nav {
       margin:0 90px 12px;
     }
     @include breakpoint($mobile) {
-       margin: 5% 23% 0 23%;
+       margin: 5% 33% 0;
        padding: 18px 13px;
        text-align:center;
        line-height:normal;
@@ -984,6 +984,9 @@ nav {
   .btn-perv{
     margin: -46px 0 0;
     padding-right: 23px;
+    @include breakpoint($mobile) {
+    
+    }
   }
   .pic-by{
     display: block;
@@ -1005,7 +1008,7 @@ nav {
       text-decoration: underline;
     }
   }
-  .btn-prev{
+  .btn-prev{ 
     background:$orange;
     -moz-border-radius: 0 5px 5px 0;
     -webkit-border-radius: 0 5px 5px 0;
@@ -1015,6 +1018,16 @@ nav {
       color:$white;
     }
   } 
+  .btn-prev{
+    @include breakpoint($mobile) {
+      padding-left:30px;
+    }
+  }
+  .btn-next{
+    @include breakpoint($mobile) {
+      padding-right:30px;
+    }
+  }
   &.banner-nav{
     .banner_text{
       @include breakpoint($mobile) {
