@@ -1037,13 +1037,26 @@ nav {
   overflow: hidden;
   white-space: pre;
 }
-.node-type-topic .header_banner.banner-nav{
-   display: none;
+.node-type-topic {
+  .block-easy-breadcrumb{
+    position: absolute;
+    top: 18px;
+    z-index: 99;
+    width: 100%; 
+    .easy-breadcrumb{
+      margin: 0 auto;
+      max-width: 1080px;
+      padding-right: 20px;
+      a{
+        font-family:$header-font-family;
+      }
+    }
+  }
+  .header_banner.banner-nav{
+    display: none;
+  }
 }
 
-
-
- 
 
 #block-system-user-menu a{
   &:hover{
