@@ -907,7 +907,7 @@ nav {
 
 
 /* nanda - globalsoftlab */
- /*
+ 
 .header_banner{
   position:relative;  
   .header_image img{
@@ -929,9 +929,7 @@ nav {
       display:inherit;
     }
   }
-  .banner_text{
-    line-height:70px;
-    font-size:66px;
+  .banner_text{ 
     padding: 18px 25px;
     margin: 0 0 12px 16px;
     font-weight: normal;
@@ -939,39 +937,25 @@ nav {
     display: inline-block;
     color:$heading-link; 
     line-height:100%;
-    clear:both;   
-    @include breakpoint($large-screen) {
-      font-size: 5vw;
-      line-height: 75px; 
-    }
-    @include breakpoint($tablet) {
-      margin:0 90px 12px;
-    }
+    clear:both;    
     @include breakpoint($mobile) {
        margin: 5% 23% 0 23%;
        padding: 18px 13px;
-       text-align:center;
-       line-height:normal;
+       text-align:center; 
     }
       
   } 
   .banner_text:after{
     clear:both;
   }
-  .banner_sub_text{ 
+  .sub_title{ 
     vertical-align: top;
-    background:$white; 
-    font-size:27px;
-    line-height:30px; 
+    background:$white;  
     display: inline-block;
     margin: 0 0 0 159px;
     padding: 19px 24px;
     font-weight:normal;
-    line-height:100%;
-    font-family:"HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-    @include breakpoint($large-screen) {
-       font-size: 2vw; 
-    }
+    line-height:100%;  
     @include breakpoint($tablet) {
       margin:0 0 0 100px;
     }
@@ -1026,7 +1010,7 @@ nav {
 .node-type-topic .header_banner.banner-nav{
    display: none;
 } 
-*/
+ 
 #block-system-user-menu a{
   &:hover{
     text-decoration:none;
