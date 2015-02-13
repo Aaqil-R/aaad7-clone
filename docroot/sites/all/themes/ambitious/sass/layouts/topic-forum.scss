@@ -1384,7 +1384,7 @@ fieldset{
     
    @include breakpoint($mobile){
       .table-from{
-        li{
+        > li{
           display:none;
           &.views-row-1, &.views-row-2{
             display:block;
