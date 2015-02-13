@@ -369,280 +369,142 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* ---------------------------------------------------------
-   1. Embedded fonts styles
-   2. General reset
-   3. Common site styles
-   4. Custom form styles
-   5. Styles for responsive breakpoints
-   ---------------------------------------------------------*/
-/*embedded fonts styles*/
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?y5zyxa");
-  src: url("../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../fonts/icomoon.woff?y5zyxa") format("woff"), url("../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 21, ../sass/base/_font-icons.scss */
-[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 35, ../sass/base/_font-icons.scss */
-.icon-connection:before {
-  content: "\e615";
-}
-
-/* line 39, ../sass/base/_font-icons.scss */
-.icon-Calendar:before {
-  content: "\e601";
-}
-
-/* line 43, ../sass/base/_font-icons.scss */
-.icon-Close:before {
-  content: "\e602";
-}
-
-/* line 47, ../sass/base/_font-icons.scss */
-.icon-Downarrow:before {
-  content: "\e603";
-}
-
-/* line 51, ../sass/base/_font-icons.scss */
-.icon-Facebook:before {
-  content: "\e604";
-}
-
-/* line 55, ../sass/base/_font-icons.scss */
-.icon-Featured:before {
-  content: "\e605";
-}
-
-/* line 59, ../sass/base/_font-icons.scss */
-.icon-google:before {
-  content: "\e606";
-}
-
-/* line 63, ../sass/base/_font-icons.scss */
-.icon-Hottopic:before {
-  content: "\e607";
-}
-
-/* line 67, ../sass/base/_font-icons.scss */
-.icon-Leftarrow:before {
-  content: "\e608";
-}
-
-/* line 71, ../sass/base/_font-icons.scss */
-.icon-Playbutton:before {
-  content: "\e609";
-}
-
-/* line 75, ../sass/base/_font-icons.scss */
-.icon-Plus:before {
-  content: "\e60a";
-}
-
-/* line 79, ../sass/base/_font-icons.scss */
-.icon-Rightarrow:before {
-  content: "\e60b";
-}
-
-/* line 83, ../sass/base/_font-icons.scss */
-.icon-search:before {
-  content: "\e60c";
-}
-
-/* line 87, ../sass/base/_font-icons.scss */
-.icon-Share:before {
-  content: "\e60d";
-}
-
-/* line 91, ../sass/base/_font-icons.scss */
-.icon-Speech1:before {
-  content: "\e60e";
-}
-
-/* line 95, ../sass/base/_font-icons.scss */
-.icon-Speech-outline:before {
-  content: "\e60f";
-}
-
-/* line 99, ../sass/base/_font-icons.scss */
-.icon-Time:before {
-  content: "\e610";
-}
-
-/* line 103, ../sass/base/_font-icons.scss */
-.icon-Twitter:before {
-  content: "\e611";
-}
-
-/* line 107, ../sass/base/_font-icons.scss */
-.icon-Uparrow:before {
-  content: "\e612";
-}
-
-/* line 111, ../sass/base/_font-icons.scss */
-.icon-Voice:before {
-  content: "\e613";
-}
-
-/* line 115, ../sass/base/_font-icons.scss */
-.icon-YouTube:before {
-  content: "\e614";
-}
-
-/* line 119, ../sass/base/_font-icons.scss */
-.icon-Tick:before {
-  content: "\e600";
-}
-
-/* line 11, ../sass/typography.scss */
+/* line 5, ../sass/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  margin-bottom: 0.5em;
 }
-/* line 16, ../sass/typography.scss */
+/* line 11, ../sass/typography.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: underline;
 }
-/* line 18, ../sass/typography.scss */
+/* line 13, ../sass/typography.scss */
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   text-decoration: none;
 }
 
-/* line 23, ../sass/typography.scss */
+/* line 19, ../sass/typography.scss */
 h1, .h1 {
   line-height: 70px;
   font-size: 66px;
   letter-spacing: -1px;
 }
 @media (max-width: 990px) {
-  /* line 23, ../sass/typography.scss */
+  /* line 19, ../sass/typography.scss */
   h1, .h1 {
     font-size: 54px;
     line-height: 58px;
   }
 }
 @media (max-width: 767px) {
-  /* line 23, ../sass/typography.scss */
+  /* line 19, ../sass/typography.scss */
   h1, .h1 {
     font-size: 32px;
     line-height: 36px;
   }
 }
 
-/* line 36, ../sass/typography.scss */
+/* line 32, ../sass/typography.scss */
 h2, .h2 {
   font-size: 45px;
   line-height: 50px;
 }
 @media (max-width: 990px) {
-  /* line 36, ../sass/typography.scss */
+  /* line 32, ../sass/typography.scss */
   h2, .h2 {
     font-size: 42px;
     line-height: 47px;
   }
 }
 @media (max-width: 767px) {
-  /* line 36, ../sass/typography.scss */
+  /* line 32, ../sass/typography.scss */
   h2, .h2 {
     font-size: 27px;
     line-height: 32px;
   }
 }
 
-/* line 48, ../sass/typography.scss */
+/* line 44, ../sass/typography.scss */
 h3, .h3 {
   font-size: 36px;
   line-height: 40px;
 }
 @media (max-width: 990px) {
-  /* line 48, ../sass/typography.scss */
+  /* line 44, ../sass/typography.scss */
   h3, .h3 {
     font-size: 32px;
     line-height: 38px;
   }
 }
 @media (max-width: 767px) {
-  /* line 48, ../sass/typography.scss */
+  /* line 44, ../sass/typography.scss */
   h3, .h3 {
     font-size: 27px;
     line-height: 32px;
   }
 }
 
-/* line 60, ../sass/typography.scss */
+/* line 56, ../sass/typography.scss */
 h4, .h4 {
   font-size: 27px;
   line-height: 30px;
 }
-/* line 63, ../sass/typography.scss */
+/* line 59, ../sass/typography.scss */
 h4.sub_title, .h4.sub_title {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 @media (max-width: 767px) {
-  /* line 60, ../sass/typography.scss */
+  /* line 56, ../sass/typography.scss */
   h4, .h4 {
     font-size: 24px;
     line-height: 30px;
   }
 }
 
-/* line 71, ../sass/typography.scss */
+/* line 67, ../sass/typography.scss */
 h5, .h5 {
   font-size: 45px;
   line-height: 50px;
 }
 @media (max-width: 990px) {
-  /* line 71, ../sass/typography.scss */
+  /* line 67, ../sass/typography.scss */
   h5, .h5 {
     font-size: 42px;
     line-height: 47px;
   }
 }
 @media (max-width: 767px) {
-  /* line 71, ../sass/typography.scss */
+  /* line 67, ../sass/typography.scss */
   h5, .h5 {
     font-size: 27px;
     line-height: 32px;
   }
 }
 
-/* line 83, ../sass/typography.scss */
+/* line 79, ../sass/typography.scss */
 h6, .h6 {
   font-size: 45px;
   line-height: 50px;
 }
 @media (max-width: 990px) {
-  /* line 83, ../sass/typography.scss */
+  /* line 79, ../sass/typography.scss */
   h6, .h6 {
     font-size: 42px;
     line-height: 47px;
   }
 }
 @media (max-width: 767px) {
-  /* line 83, ../sass/typography.scss */
+  /* line 79, ../sass/typography.scss */
   h6, .h6 {
     font-size: 27px;
     line-height: 32px;
   }
 }
 
-/* line 95, ../sass/typography.scss */
+/* line 91, ../sass/typography.scss */
 .subheading {
   font-suize: 24px;
   line-height: 36px;
@@ -651,7 +513,7 @@ h6, .h6 {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 102, ../sass/typography.scss */
+/* line 98, ../sass/typography.scss */
 p {
   font-size: 18px;
   line-height: 30px;
@@ -660,23 +522,23 @@ p {
   color: #2a2e31;
 }
 @media (max-width: 767px) {
-  /* line 102, ../sass/typography.scss */
+  /* line 98, ../sass/typography.scss */
   p {
     font-size: 16px;
     line-height: 25px;
   }
 }
-/* line 112, ../sass/typography.scss */
+/* line 108, ../sass/typography.scss */
 p a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 115, ../sass/typography.scss */
+/* line 111, ../sass/typography.scss */
 p a:hover {
   text-decoration: none;
 }
 
-/* line 120, ../sass/typography.scss */
+/* line 116, ../sass/typography.scss */
 a {
   color: #081318;
 }
@@ -685,45 +547,45 @@ a:hover, a:active, a:focus {
   color: #285f78;
   text-decoration: none;
 }
-/* line 122, ../sass/typography.scss */
+/* line 118, ../sass/typography.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 126, ../sass/typography.scss */
+/* line 122, ../sass/typography.scss */
 .p2 {
   font-size: 13px;
   line-height: 18px;
   color: #d2d5d6;
 }
 @media (max-width: 767px) {
-  /* line 126, ../sass/typography.scss */
+  /* line 122, ../sass/typography.scss */
   .p2 {
     font-size: 12px;
     line-height: 17px;
   }
 }
 
-/* line 135, ../sass/typography.scss */
+/* line 131, ../sass/typography.scss */
 blockquote {
   quotes: none;
   margin-bottom: 30px;
   margin-left: 36px;
 }
-/* line 139, ../sass/typography.scss */
+/* line 135, ../sass/typography.scss */
 blockquote q {
   font-size: 24px;
   line-height: 36px;
 }
 @media (max-width: 990px) {
-  /* line 139, ../sass/typography.scss */
+  /* line 135, ../sass/typography.scss */
   blockquote q {
     font-size: 22px;
     line-height: 34px;
   }
 }
 @media (max-width: 767px) {
-  /* line 139, ../sass/typography.scss */
+  /* line 135, ../sass/typography.scss */
   blockquote q {
     font-size: 16px;
     line-height: 25px;
@@ -731,7 +593,7 @@ blockquote q {
   }
 }
 
-/* line 153, ../sass/typography.scss */
+/* line 149, ../sass/typography.scss */
 img {
   max-width: 100%;
 }
