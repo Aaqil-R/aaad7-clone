@@ -930,8 +930,7 @@ nav {
     }
   }
   .banner_text{
-    font-size: 5vw;
-    line-height: 75px; 
+    @extent  %h1;
     padding: 18px 25px;
     margin: 0 0 12px 16px;
     font-weight: normal;
@@ -956,14 +955,14 @@ nav {
   }
   .banner_sub_text{ 
     vertical-align: top;
-    background:$white; 
-    font-size: 2vw; 
+    background:$white;  
+    @extent  %h4;
     display: inline-block;
     margin: 0 0 0 159px;
     padding: 19px 24px;
     font-weight:normal;
     line-height:100%;
-    font-family:"HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+    font-family:$helvetica-cn;
     @include breakpoint($tablet) {
       margin:0 0 0 100px;
     }
