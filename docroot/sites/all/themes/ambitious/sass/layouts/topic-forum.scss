@@ -1469,6 +1469,9 @@ fieldset{
      }
      @include breakpoint($mobile){
        width:48%;
+       &.text-block{
+         display:none;
+       }
      }
   }
 }
