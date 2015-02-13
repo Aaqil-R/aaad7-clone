@@ -1476,6 +1476,7 @@ fieldset{
        }
      }
      .region .block-main{
+       @include breakpoint($mobile){
        & > div{
          padding:40px 0;
          strong{
@@ -1489,6 +1490,7 @@ fieldset{
        & > div:first-child{
          padding: 20px 0 30px 0px;
        }
+       }
      }  
   }
    
@@ -1498,7 +1500,7 @@ fieldset{
     width: 100%; 
     .stButton{
       @include breakpoint($mobile){
-        padding: 10px 40%;
+        padding: 10px 33%;
         &:before{
           font-size: 30px;
           margin-bottom: -7px;
