@@ -371,7 +371,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -715,7 +715,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   content: "";
   width: 31px;
   height: 23px;
-  background: url('../../images/sprite.png?1422363543') no-repeat;
+  background: url('../../images/sprite.png?1423646641') no-repeat;
 }
 /* line 242, ../../sass/layouts/header.scss */
 .right-info a.menu-opener:hover:after {
@@ -1620,8 +1620,8 @@ nav ul li a:hover {
 }
 /* line 932, ../../sass/layouts/header.scss */
 .header_banner .banner_text {
-  font-size: 5vw;
-  line-height: 75px;
+  line-height: 70px;
+  font-size: 66px;
   padding: 18px 25px;
   margin: 0 0 12px 16px;
   font-weight: normal;
@@ -1630,6 +1630,13 @@ nav ul li a:hover {
   color: #081318;
   line-height: 100%;
   clear: both;
+}
+@media (max-width: 1300px) {
+  /* line 932, ../../sass/layouts/header.scss */
+  .header_banner .banner_text {
+    font-size: 5vw;
+    line-height: 75px;
+  }
 }
 @media (max-width: 990px) {
   /* line 932, ../../sass/layouts/header.scss */
@@ -1646,15 +1653,16 @@ nav ul li a:hover {
     line-height: normal;
   }
 }
-/* line 954, ../../sass/layouts/header.scss */
+/* line 958, ../../sass/layouts/header.scss */
 .header_banner .banner_text:after {
   clear: both;
 }
-/* line 957, ../../sass/layouts/header.scss */
+/* line 961, ../../sass/layouts/header.scss */
 .header_banner .banner_sub_text {
   vertical-align: top;
   background: #ffffff;
-  font-size: 2vw;
+  font-size: 27px;
+  line-height: 30px;
   display: inline-block;
   margin: 0 0 0 159px;
   padding: 19px 24px;
@@ -1662,19 +1670,25 @@ nav ul li a:hover {
   line-height: 100%;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
 }
+@media (max-width: 1300px) {
+  /* line 961, ../../sass/layouts/header.scss */
+  .header_banner .banner_sub_text {
+    font-size: 2vw;
+  }
+}
 @media (max-width: 990px) {
-  /* line 957, ../../sass/layouts/header.scss */
+  /* line 961, ../../sass/layouts/header.scss */
   .header_banner .banner_sub_text {
     margin: 0 0 0 100px;
   }
 }
 @media (max-width: 767px) {
-  /* line 957, ../../sass/layouts/header.scss */
+  /* line 961, ../../sass/layouts/header.scss */
   .header_banner .banner_sub_text {
     display: none;
   }
 }
-/* line 974, ../../sass/layouts/header.scss */
+/* line 982, ../../sass/layouts/header.scss */
 .header_banner .banner_text_main {
   position: absolute;
   width: 100%;
@@ -1682,12 +1696,12 @@ nav ul li a:hover {
   top: 24%;
   height: 76%;
 }
-/* line 981, ../../sass/layouts/header.scss */
+/* line 989, ../../sass/layouts/header.scss */
 .header_banner .banner_text_inner {
   max-width: 1080px;
   margin: 0 auto;
 }
-/* line 985, ../../sass/layouts/header.scss */
+/* line 993, ../../sass/layouts/header.scss */
 .header_banner .pic-by {
   display: block;
   text-align: right;
@@ -1700,32 +1714,32 @@ nav ul li a:hover {
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
-  /* line 985, ../../sass/layouts/header.scss */
+  /* line 993, ../../sass/layouts/header.scss */
   .header_banner .pic-by {
     text-align: left;
     padding: 10px 20px;
   }
 }
-/* line 999, ../../sass/layouts/header.scss */
+/* line 1007, ../../sass/layouts/header.scss */
 .header_banner .pic-by a {
   color: #081318;
   font-weight: bold;
   text-decoration: underline;
 }
-/* line 1005, ../../sass/layouts/header.scss */
+/* line 1013, ../../sass/layouts/header.scss */
 .header_banner .btn-prev {
   background: #f15500;
   -moz-border-radius: 0 5px 5px 0;
   -webkit-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-/* line 1010, ../../sass/layouts/header.scss */
+/* line 1018, ../../sass/layouts/header.scss */
 .header_banner .btn-prev .icon-Leftarrow {
   font-size: 27px;
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 1016, ../../sass/layouts/header.scss */
+  /* line 1024, ../../sass/layouts/header.scss */
   .header_banner.banner-nav .banner_text {
     margin: 5% 10% 0;
     padding: 18px 13px;
@@ -1734,7 +1748,7 @@ nav ul li a:hover {
     width: 80%;
   }
 }
-/* line 1026, ../../sass/layouts/header.scss */
+/* line 1034, ../../sass/layouts/header.scss */
 .header_banner .easy-breadcrumb {
   position: absolute;
   top: -71px;
@@ -1742,24 +1756,24 @@ nav ul li a:hover {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 1026, ../../sass/layouts/header.scss */
+  /* line 1034, ../../sass/layouts/header.scss */
   .header_banner .easy-breadcrumb {
     top: -31px;
     display: none;
   }
 }
-/* line 1035, ../../sass/layouts/header.scss */
+/* line 1043, ../../sass/layouts/header.scss */
 .header_banner .easy-breadcrumb a {
   color: #ffffff;
   text-decoration: underline;
 }
 
-/* line 1043, ../../sass/layouts/header.scss */
+/* line 1051, ../../sass/layouts/header.scss */
 .node-type-topic .visual {
   overflow: visible;
 }
 
-/* line 1046, ../../sass/layouts/header.scss */
+/* line 1054, ../../sass/layouts/header.scss */
 .visual .btn-perv .text-area .topic {
   font-size: 22px;
   line-height: 22px;
@@ -1769,12 +1783,12 @@ nav ul li a:hover {
   white-space: pre;
 }
 
-/* line 1054, ../../sass/layouts/header.scss */
+/* line 1062, ../../sass/layouts/header.scss */
 .node-type-topic .header_banner.banner-nav {
   display: none;
 }
 
-/* line 1061, ../../sass/layouts/header.scss */
+/* line 1069, ../../sass/layouts/header.scss */
 .node-type-topic #block-easy-breadcrumb-easy-breadcrumb--2 .easy-breadcrumb {
   position: absolute;
   top: -71px;
@@ -1782,19 +1796,19 @@ nav ul li a:hover {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 1061, ../../sass/layouts/header.scss */
+  /* line 1069, ../../sass/layouts/header.scss */
   .node-type-topic #block-easy-breadcrumb-easy-breadcrumb--2 .easy-breadcrumb {
     top: -31px;
     display: none;
   }
 }
-/* line 1070, ../../sass/layouts/header.scss */
+/* line 1078, ../../sass/layouts/header.scss */
 .node-type-topic #block-easy-breadcrumb-easy-breadcrumb--2 .easy-breadcrumb a {
   color: #ffffff;
   text-decoration: underline;
 }
 
-/* line 1078, ../../sass/layouts/header.scss */
+/* line 1086, ../../sass/layouts/header.scss */
 #block-system-user-menu a:hover {
   text-decoration: none;
   color: #ffffff;
