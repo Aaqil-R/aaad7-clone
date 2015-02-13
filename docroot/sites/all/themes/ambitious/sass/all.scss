@@ -12,69 +12,6 @@ html body {
 		background: url(../images/wid_bg.jpg)$page-background;
 	}
 }
-h1{
-  font-weight:normal;
-  @include fontsize(66,16);
-  line-height:70px;
-  letter-spacing:-1px;
-  @include breakpoint($tablet) {
-    @include fontsize(54,16);
-	line-height:58px;
-  }
-  @include breakpoint($mobile) {
-    @include fontsize(32,16);
-	line-height:36px;
-  }
-}
-h2{
-  font-weight:normal;
-  @include fontsize(45,16);
-  line-height:50px;
-  @include breakpoint($tablet) {
-    @include fontsize(42,16);
-	line-height:47px;
-  }
-  @include breakpoint($mobile) {
-    @include fontsize(27,16);
-	line-height:32px;
-  }
-}
-h3{
-  font-weight:normal;
-  @include fontsize(36,16);
-  line-height:40px;
-  @include breakpoint($tablet) {
-    @include fontsize(32,16);
-	line-height:38px;
-  }
-  @include breakpoint($mobile) {
-    @include fontsize(27,16);
-	line-height:32px;
-  }
-}
-h4{
-  font-weight:normal;
-  @include fontsize(27,16);
-  line-height:30px;
-  @include breakpoint($mobile) {
-    @include fontsize(24,16);
-	line-height:30px;
-  }
-}
-h5{
-  font-weight:normal;
-  @include fontsize(22,16);
-  line-height:30px;
-  @include breakpoint($mobile) {
-    @include fontsize(20,16);
-	line-height:26px;
-  }
-}
-h6{
-  font-weight:normal;
-  @include fontsize(18,16);
-  line-height:24px;
-}
 .subheading{
   @include fontsize(24,16);
   line-height:36px;
