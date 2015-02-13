@@ -1293,8 +1293,15 @@ fieldset{
     margin: 0;
     height: 108px;
     padding-top: 6px;
+    p{
+      padding-top: 22px;
+      @include breakpoint($mobile){
+        padding-top: 5px;
+      }
+    }
     a{
       margin-right: 0;
+      padding: 10px 38px;
     }
   }
 }
@@ -1483,13 +1490,7 @@ fieldset{
           left:auto;
           right:0;
         }
-      } 
-      & > li{
-        padding-top: 12px;
-        &.col01{
-          padding-bottom: 0;
-        }
-      }
+      }  
       .num{
         margin-top: 12px;
         @include breakpoint($mobile){
