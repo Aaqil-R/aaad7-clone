@@ -1380,7 +1380,18 @@ fieldset{
 	     @extend .btn-pink;
 	   } 
 	}
-.forum-block{	
+.forum-block{
+    
+   @include breakpoint($mobile){
+      .table-from{
+        li{
+          display:none;
+          &.views-row-1, &.views-row-2{
+            display:block;
+          }
+        }
+      }
+   }
   .holder{
     @include breakpoint($mobile){
       padding:12px 20px 40px;
@@ -1404,6 +1415,12 @@ fieldset{
 .view-footer{
   a{
     font-size: 20px;
+    @include breakpoint($mobile){
+      font-size: 18px;
+      em{
+        display:none;
+      }
+    }
   }
 }
 }
@@ -1475,6 +1492,10 @@ fieldset{
       }
       .num{
         margin-top: 12px;
+        @include breakpoint($mobile){
+          margin-top: 5px;
+          margin-right: 5px;
+        }
       }
     }
      
