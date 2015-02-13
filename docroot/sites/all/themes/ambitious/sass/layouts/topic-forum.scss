@@ -348,7 +348,7 @@ div.messages.status{
       width: 31%;
       margin: 0 1% 30px 1%;
       @include breakpoint($tablet) {
-        width:49%;
+        width:47%;
       }
       @include breakpoint($mobile) {
         width:100%;
@@ -1464,11 +1464,8 @@ fieldset{
     padding: 52px 32px 0;
   }
   .view-display-id-stream_topic_page.posts-columns .post{
-     @include breakpoint($tablet){
-       width:30%;
-     }
-     @include breakpoint($mobile){
-       width:100%;
+     
+     @include breakpoint($mobile){ 
        &.text-block{
          display:none;
        }
