@@ -327,7 +327,7 @@
 .school-slide {
   width:430px;
   height:100vh;
-  padding:133px 0 0;
+  padding:45px 0 0;
   background:$white;
   position:absolute;
   top:0;
@@ -429,7 +429,7 @@
 .nav-holder {
   width:430px;
   height:100vh;
-  padding:133px 0 50px;
+  padding:45px 0 50px;
   background:$white;
   position:absolute;
   top:20px;
@@ -1081,3 +1081,13 @@ nav {
     color:$white;
   }
 }
+
+.right-info{
+    li{
+      &:nth-child(1){
+        @include breakpoint($mobile) {
+              text-align: left;
+       }
+     } 
+   }
+ }
