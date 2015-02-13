@@ -1535,9 +1535,11 @@ fieldset{
   }
    
   .topic-share{
+  @include breakpoint($mobile){
     height: 60px;
     float: left;
     width: 100%; 
+    }
     .stButton{
       @include breakpoint($mobile){
         padding: 10px 33%;
