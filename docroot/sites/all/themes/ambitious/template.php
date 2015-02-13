@@ -240,7 +240,15 @@ function ambitious_menu_link(&$variables) {
 		}
   
 		$output = l($element['#title'].'<em class="icon-Rightarrow"></em>', $element['#href'], $element['#localized_options']);
-		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+		//checking the node type to render the menu
+		$currentNode = menu_get_object();
+		$variables['logo'] = theme_get_setting('logo'); 
+		if ($currentNode) {
+				if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
+					return '<li class="btn btn-pink"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+				}
+		}
+		return '<li class="btn"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
 		
