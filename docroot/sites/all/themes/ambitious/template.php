@@ -603,10 +603,6 @@ function ambitious_field__field_event_date(&$variables){
 // Naming convention for .tpl.php
 function ambitious_preprocess_page(&$vars) {
 
-  // if (isset($vars['node']->type)) {
-  //   $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-  // }
-
   if (isset($vars['node']->type)) { // We don't want to apply this on taxonomy or view pages
     // Splice (2) is based on existing default suggestions. Change it if you need to.
     array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
@@ -630,7 +626,7 @@ function ambitious_preprocess_page(&$vars) {
       array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
     }
   }
-  
+
 }
 
 function ambitious_form_element($variables) {

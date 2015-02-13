@@ -60,9 +60,23 @@
 	}
 }
 
+//=== Visual Section - not Front page ===//
+.not-front{
+
+	.visual .img-holder .caption-frame .caption{
+		@include breakpoint($not-mobile){
+			padding: 0;
+			margin-top: -4em;
+		}
+	}
+
+}
+
 // Image Holder - Fixing for the mobile devices
 .img-holder img{
 	width: 100%;
 	height: auto;
 }
+
+
 
