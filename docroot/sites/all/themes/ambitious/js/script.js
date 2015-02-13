@@ -135,18 +135,21 @@ Drupal.behaviors.ambitious = {
 }
 };
 //share this buttons - this snippet help to build the share button on ajax load
-if (typeof Drupal.behaviors.osShareThis === 'object' ){
+
  Drupal.behaviors.osShareThis = {
     attach: function(context, settings) {
+    if (typeof stLight === 'object' ){
       stLight.options({
         publisher: settings.publisherId
       });
+    }
+    if (typeof stButtons === 'object' ){
       // In case we're being attached after new content was placed via Ajax,
       // force ShareThis to create the new buttons.
       stButtons.locateElements();
     }
-  };
-};  
+    }
+  };  
 /*load more button with masonry - masonry was not applied when new content loads
 		 * here is fix to apply or reload the masonry items and apply the style
 		 * here is the discussion https://www.drupal.org/node/2201335 comment #12
