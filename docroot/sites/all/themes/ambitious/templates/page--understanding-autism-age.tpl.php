@@ -184,6 +184,7 @@
   <!-- action columns -->
   <section class="action-block">
     <div class="holder">
+    <p>hoo</p>
      <?php print render($page['action']); ?>
     </div>
   </section>
