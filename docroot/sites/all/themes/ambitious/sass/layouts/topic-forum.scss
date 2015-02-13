@@ -1426,6 +1426,9 @@ fieldset{
   .action-block{
     .holder{
       padding: 139px 15px 97px;
+      @include breakpoint($mobile){
+        padding:29px 15px 97px
+      }
       .block-symptoms{
          padding:50px 10px 37px 39px;
       }
@@ -1469,5 +1472,4 @@ fieldset{
      }  
   }
 }
-
  

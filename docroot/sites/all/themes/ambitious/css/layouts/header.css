@@ -851,7 +851,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .school-slide {
   width: 430px;
   height: 100vh;
-  padding: 133px 0 0;
+  padding: 45px 0 0;
   background: #ffffff;
   position: absolute;
   top: 0;
@@ -986,7 +986,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .nav-holder {
   width: 430px;
   height: 100vh;
-  padding: 133px 0 50px;
+  padding: 45px 0 50px;
   background: #ffffff;
   position: absolute;
   top: 20px;
@@ -1792,4 +1792,11 @@ nav ul li a:hover {
 #block-system-user-menu a:hover {
   text-decoration: none;
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  /* line 1087, ../../sass/layouts/header.scss */
+  .right-info li:nth-child(1) {
+    text-align: left;
+  }
 }
