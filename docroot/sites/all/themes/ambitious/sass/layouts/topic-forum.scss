@@ -1596,11 +1596,15 @@ fieldset{
     margin-bottom: 0;
     margin-left: 20px;
     margin-right: 0;
+    &:hover{
+      margin-bottom:3px;
+    }
     span{
       font-size: 17px;
     }
     @include breakpoint($mobile){
-      margin-left:0;      
+      margin-left:0;  
+      padding:11px 0;    
     }
   }
   .sort-block{
