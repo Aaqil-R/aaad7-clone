@@ -1585,7 +1585,7 @@ fieldset{
   }
   .sort-block{
     @include breakpoint($mobile){
-      height:280px;
+      height:291px;
     }
   }
   .text-section{
@@ -1622,13 +1622,34 @@ fieldset{
         }
       } 
     }
+    
     .block-symptoms{
       background-image:url('../../images/action-bg6.jpg');
+      .btn{
+         @include breakpoint($mobile){
+           width:auto;
+         }
+      }
+    }
+    .block-share {
+      @include breakpoint($mobile){
+        background-size: 123%; 
+        .btn{
+          margin: 163px 10px 0 0;
+          float: right;
+          width: auto;
+        }
+          height:244px;
+        } 
+        .btn{
+             width:auto;
+          }
+      
     }
   } 
   .topic-share{ 
   @include breakpoint($mobile){
-    height: 60px;
+    height: 90px;
     padding-top: 12px;
     float: left;
     width: 100%; 
