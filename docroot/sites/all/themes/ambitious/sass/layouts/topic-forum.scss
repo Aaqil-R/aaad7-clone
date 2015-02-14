@@ -626,10 +626,11 @@ div.messages.status{
              margin-right: 24px;
 	        height: 49px; 
 	          @include breakpoint($desktop) {
-	            width:387px;
+	            width:300px;
 	          }
 	          @include breakpoint($tablet) {
-	            width:217px;
+	            width: 100%;
+	            margin-bottom: 20px;
 	          }
 			input[type="text"]{
 			  width: 100%;
@@ -1581,6 +1582,9 @@ fieldset{
       display:none;
     }
   }
+  .sort-block{
+    height:280px;
+  }
   .text-section{
     margin-top: 17px;
   }
@@ -1591,6 +1595,9 @@ fieldset{
     margin-right: 0;
     span{
       font-size: 17px;
+    }
+    @include breakpoint($mobile){
+      margin-left:0;      
     }
   }
   .sort-block{
@@ -1610,6 +1617,23 @@ fieldset{
     }
     .block-symptoms{
       background-image:url('../../images/action-bg6.jpg');
+    }
+  } 
+  .topic-share{ 
+  @include breakpoint($mobile){
+    height: 60px;
+    padding-top: 12px;
+    float: left;
+    width: 100%; 
+    }
+    .stButton{
+      @include breakpoint($mobile){
+        padding: 10px 33%;
+        &:before{
+          font-size: 30px;
+          margin-bottom: -7px;
+        }
+      }
     }
   }
 }
