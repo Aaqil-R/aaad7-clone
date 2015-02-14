@@ -1078,7 +1078,18 @@ nav {
     .banner_text{
       font-size: 70px;
       margin-top: -15px;
-    }  
+      @include breakpoint($tablet) {
+          font-sie:40px;
+      }
+      @include breakpoint($mobile) {
+        
+      }
+    }
+    .banner_sub_text{
+      @include breakpoint($tablet) {
+        font-size: 20px;
+      }
+    } 
   }  
 }
 
