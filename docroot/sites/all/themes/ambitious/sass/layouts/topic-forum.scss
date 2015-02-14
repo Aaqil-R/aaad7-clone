@@ -616,15 +616,21 @@ div.messages.status{
 }
 /* SEARCH */
 .search-text{ 
-		    @include linear-gradient($captions-credit,$page-background);
+		   @include linear-gradient($captions-credit,$page-background);
 	        @include border-radius(5px);
-            position: relative;
+             position: relative;
 	        padding:2px;
  	        min-width: 250px;
  	        width: 379px;
-float: left;
-margin-right: 24px;
+             float: left;
+             margin-right: 24px;
 	        height: 49px; 
+	          @include breakpoint($desktop) {
+	            width:387px;
+	          }
+	          @include breakpoint($tablet) {
+	            width:217px;
+	          }
 			input[type="text"]{
 			  width: 100%;
 			  padding: 12px 21px;
