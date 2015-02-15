@@ -124,13 +124,10 @@
     </section>
     <!-- contain main informative part of the site -->
 <?php endif; ?>
-<main id="main2">
-
-
-  <?php print  $messages; ?>
+    <?php print  $messages; ?>
   <?php print render($page['help']); ?>
 
-  <?php if ($tabs): ?>
+    <?php if ($tabs): ?>
     <div class="tabs"><?php print render($tabs); ?></div>
   <?php endif; ?>
 
@@ -138,10 +135,9 @@
     <ul class="action-links"><?php print render($action_links); ?></ul>
   <?php endif; ?>
 
-
-<section id="content-area">
+<main id="main2">
   <?php print render($page['content']) ?>
-</section> <!-- /content -->
+<!-- /content -->
 
 <?php if ($page['content_bottom']): ?>
   <section id="content_bottom">
