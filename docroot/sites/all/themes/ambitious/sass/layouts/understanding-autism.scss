@@ -141,3 +141,9 @@
       position: absolute;      
     }
 }
+// Fix icon font size issue
+.icon-connection:before{
+  @include breakpoint($mobile){
+    font-size: 1.5em;
+  }
+}
