@@ -116,6 +116,21 @@
     }    
   }
 
+  // Fix title issue
+  .visual .img-holder .caption-frame .caption{
+    @include breakpoint($mobile){
+      padding: 30px 0 0;
+    }
+    @include breakpoint($mini-mobile){
+      padding: 0;
+    }
+  }
+  .visual .img-holder .caption-frame .caption .title .title-third{
+    @include breakpoint($mobile){
+      margin-top: 4px;
+    }
+  }
+
 }
 
 // Fix Grid and List view icon on Mobile view
@@ -154,3 +169,4 @@
     line-height: 1.1;
   }
 }
+
