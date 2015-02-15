@@ -117,3 +117,16 @@
   }
 
 }
+@include breakpoint($mobile){
+  .sort-block fieldset.grid-view{
+    width: 49px;
+    float: left;
+  }
+  .sort-block fieldset.list-view{
+    width: 49px;
+    float: left;
+  }
+  .sort-block .stButton{
+    margin-right: 0;
+  }
+}

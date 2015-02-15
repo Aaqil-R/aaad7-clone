@@ -357,6 +357,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
+/*
+ * set default text color
+ * set default font size, line height and font family
+ * set default background
+ */
 /* line 21, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -364,12 +369,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   box-sizing: border-box;
 }
 
-/*
- * set default text color
- * set default font size, line height and font family
- * set default background
- */
-/* line 6, ../sass/styles.scss */
+/* line 8, ../sass/styles.scss */
 body {
   margin: 0;
   color: #2a2e31;
@@ -381,7 +381,7 @@ body {
   -ms-text-size-adjust: none;
 }
 
-/* line 17, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
 article,
 aside,
 details,
@@ -397,23 +397,18 @@ summary {
   display: block;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 34, ../sass/styles.scss */
 img {
   border-style: none;
 }
 
-/* line 34, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 a {
   outline: none;
-  text-decoration: none;
   color: #081318;
 }
-/* line 38, ../sass/styles.scss */
-a:hover {
-  text-decoration: underline;
-}
 
-/* line 43, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 input,
 textarea,
 select {
@@ -422,7 +417,7 @@ select {
   vertical-align: middle;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 form,
 fieldset {
   margin: 0;
@@ -430,14 +425,14 @@ fieldset {
   border-style: none;
 }
 
-/* line 58, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 64, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -447,13 +442,13 @@ input[type="submit"] {
   *overflow: visible;
 }
 
-/* line 73, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 input[type="submit"]:hover,
 button:hover {
   cursor: pointer;
 }
 
-/* line 78, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -465,7 +460,7 @@ textarea {
   padding: 4px 7px;
   border: 1px solid #d2d5d6;
 }
-/* line 88, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
@@ -476,21 +471,21 @@ textarea:focus {
   border-color: #828a8d;
 }
 
-/* line 94, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 textarea {
   overflow: auto;
   resize: vertical;
   vertical-align: top;
 }
 
-/* line 100, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -498,13 +493,13 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 113, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 118, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   line-height: 1.2em;
@@ -512,7 +507,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* line 125, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 sub,
 sup {
   font-size: 75%;
@@ -521,34 +516,34 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 133, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 137, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 141, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 146, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 .easy-breadcrumb {
   text-align: right;
   padding: 45px 12px 0 0;
   color: #ffffff;
 }
-/* line 154, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 .easy-breadcrumb a:visited {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 146, ../sass/styles.scss */
+  /* line 148, ../sass/styles.scss */
   .easy-breadcrumb {
     display: none;
   }

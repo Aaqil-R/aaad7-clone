@@ -95,7 +95,10 @@
   fieldset{
     float: left;
     margin-right: 20px;
+
   }
+
+
 
   .list-view{
     .img-holder{
@@ -114,4 +117,21 @@
     }    
   }
 
+}
+@include breakpoint($mobile){
+  .sort-block fieldset.grid-view{
+    width: 49px;
+    float: left;
+  }
+  .sort-block fieldset.list-view{
+    width: 49px;
+    float: right;
+  }
+  .form-item-sort-by{
+    float: right;
+    margin-right:0;
+  } 
+  .sort-block .stButton{
+    margin-right: 0;
+  }
 }

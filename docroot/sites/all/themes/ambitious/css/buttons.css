@@ -364,48 +364,47 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-color: #fbb900 !important;
 }
 
-/* line 21, ../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /*
  * set default text color
  * set default font size, line height and font family
  * set default background
  */
 /* button */
-/* line 35, ../sass/buttons.scss */
+/* line 49, ../sass/buttons.scss */
 .btn {
-  margin-right: 32px;
-  margin-bottom: 33px;
-  display: block;
-  padding: 10px 9px;
-  font-size: 20px;
+  border: medium none;
+  cursor: pointer;
   display: inline-block;
-  border: none;
-  padding: 5px 19px;
-  font-size: 20px;
-  line-height: 30px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  border-bottom: 5px solid #c63502;
-  background: #f15500;
-  font-weight: normal;
-  font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-  cursor: pointer;
+  margin: 15px 30px;
+  outline: medium none;
+  padding: 25px 80px;
+  position: relative;
+  line-height: 30px;
+  background: none, repeat, scroll, 0, 0, #f15500;
+  -webkit-box-shadow: 0px 6px #c63502;
+  box-shadow: 0px 6px #c63502;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 37, ../sass/buttons.scss */
-.btn a {
-  color: #ffffff;
+/* line 91, ../sass/buttons.scss */
+.btn:hover {
+  top: 2px;
+  -webkit-box-shadow: 0px 4px #c63502;
+  box-shadow: 0px 4px #c63502;
 }
-/* line 65, ../sass/buttons.scss */
+/* line 98, ../sass/buttons.scss */
+.btn:active {
+  top: 6px;
+  -webkit-box-shadow: 0px 0px #c63502;
+  box-shadow: 0px 0px #c63502;
+}
+/* line 105, ../sass/buttons.scss */
 .btn em {
   position: relative;
   display: inline-block;
@@ -414,47 +413,53 @@ body > .jcf-select-drop.jcf-drop-flipped {
   top: 6px;
   margin-left: 10px;
 }
-/* line 75, ../sass/buttons.scss */
-.btn span {
-  padding: 0 0 0 25px;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  word-spacing: 3px;
-}
 @media (max-width: 990px) {
-  /* line 82, ../sass/buttons.scss */
+  /* line 122, ../sass/buttons.scss */
   .btn span .icon-Rightarrow {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  /* line 82, ../sass/buttons.scss */
+  /* line 122, ../sass/buttons.scss */
   .btn span .icon-Rightarrow {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 35, ../sass/buttons.scss */
+  /* line 49, ../sass/buttons.scss */
   .btn {
     width: 100%;
   }
 }
-/* line 102, ../sass/buttons.scss */
+/* line 142, ../sass/buttons.scss */
 .btn.btn-green {
-  border-bottom: 5px solid #007e2a;
+  -webkit-box-shadow: 0px 6px #007e2a;
+  box-shadow: 0px 6px #007e2a;
   background: #00a837;
 }
-/* line 107, ../sass/buttons.scss */
+/* line 146, ../sass/buttons.scss */
+.btn.btn-green:hover {
+  top: 2px;
+  -webkit-box-shadow: 0px 4px #007e2a;
+  box-shadow: 0px 4px #007e2a;
+}
+/* line 153, ../sass/buttons.scss */
+.btn.btn-green:active {
+  top: 6px;
+  -webkit-box-shadow: 0px 0px #007e2a;
+  box-shadow: 0px 0px #007e2a;
+}
+/* line 159, ../sass/buttons.scss */
 .btninput[type=submit] {
   border-radius: 5px;
 }
-/* line 111, ../sass/buttons.scss */
+/* line 163, ../sass/buttons.scss */
 .btn.btn-pink {
-  border-bottom: 5px solid #b3066b;
+  -webkit-box-shadow: 0px 6px #b3066b;
+  box-shadow: 0px 6px #b3066b;
   background: #e30087;
 }
-/* line 116, ../sass/buttons.scss */
+/* line 168, ../sass/buttons.scss */
 .btn.btn-gray {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
@@ -462,179 +467,136 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 5px 22px;
   color: #636c73;
 }
-/* line 123, ../sass/buttons.scss */
+/* line 175, ../sass/buttons.scss */
 .btn.btn-gray:hover {
   color: #636c73;
   text-decoration: none;
 }
-/* line 128, ../sass/buttons.scss */
+/* line 180, ../sass/buttons.scss */
 .btn.btn-gray:active, .btn.btn-gray:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
-/* line 134, ../sass/buttons.scss */
+/* line 186, ../sass/buttons.scss */
 .btn.btn-gray:visited {
   text-decoration: none;
   color: #636c73;
 }
-/* line 140, ../sass/buttons.scss */
+/* line 192, ../sass/buttons.scss */
 .btn.bt-left {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
-  /* line 140, ../sass/buttons.scss */
+  /* line 192, ../sass/buttons.scss */
   .btn.bt-left {
     margin: 0 0 0 11px;
   }
 }
-/* line 147, ../sass/buttons.scss */
+/* line 199, ../sass/buttons.scss */
 .btn.btn-transparent {
-  display: inline-block;
-  vertical-align: top;
   background: none;
   border: 2px solid #ffffff;
-  font-size: 20px;
-  line-height: 30px;
-  color: #ffffff;
-  text-decoration: none;
-  position: relative;
-  border-radius: 5px;
-  padding: 10px 28px;
-  margin: 0;
+  -webkit-box-shadow: 0px 3px #ffffff;
+  box-shadow: 0px 3px #ffffff;
 }
-/* line 160, ../sass/buttons.scss */
+/* line 214, ../sass/buttons.scss */
+.btn.btn-transparent:hover {
+  top: 2px;
+  -webkit-box-shadow: 0px 1px #ffffff;
+  box-shadow: 0px 1px #ffffff;
+}
+/* line 221, ../sass/buttons.scss */
 .btn.btn-transparent em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
-  /* line 147, ../sass/buttons.scss */
+  /* line 199, ../sass/buttons.scss */
   .btn.btn-transparent {
     font-size: 14px;
     padding: 7px 18px;
   }
-  /* line 166, ../sass/buttons.scss */
+  /* line 228, ../sass/buttons.scss */
   .btn.btn-transparent em {
     padding-left: 5px;
   }
 }
-/* line 171, ../sass/buttons.scss */
-.btn.btn-transparent:hover {
-  margin: 0;
-}
-/* line 173, ../sass/buttons.scss */
-.btn.btn-transparent:hover.orange {
-  border: 2px solid #ffffff;
-  background: #f15500;
-}
-/* line 177, ../sass/buttons.scss */
-.btn.btn-transparent:hover.lavender {
-  border: 2px solid #ffffff;
-  background: #734889;
-}
-/* line 183, ../sass/buttons.scss */
-.btn.btn-transparent:visited {
-  text-decoration: none;
-  border: 2px solid #ffffff;
-  background: #f15500;
-  margin: 0;
-  color: #ffffff;
-}
-/* line 191, ../sass/buttons.scss */
+/* line 241, ../sass/buttons.scss */
 .btn.btn-left {
   float: left;
 }
-/* line 194, ../sass/buttons.scss */
+/* line 244, ../sass/buttons.scss */
 .btn.btn-right {
   float: right;
 }
-/* line 197, ../sass/buttons.scss */
-.btn:hover {
-  border-bottom-width: 2px;
-  margin-top: 2px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 204, ../sass/buttons.scss */
-.btn:active {
-  border-bottom-width: 0px;
-  margin-top: 5px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 210, ../sass/buttons.scss */
-.btn:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
 @media (max-width: 767px) {
-  /* line 215, ../sass/buttons.scss */
+  /* line 252, ../sass/buttons.scss */
   .btn .desktop {
     display: none;
   }
 }
 
-/* line 226, ../sass/buttons.scss */
+/* line 263, ../sass/buttons.scss */
 .footer-button {
   margin-bottom: 130px;
 }
 @media (max-width: 767px) {
-  /* line 226, ../sass/buttons.scss */
+  /* line 263, ../sass/buttons.scss */
   .footer-button {
     margin-bottom: 30px;
   }
 }
-/* line 231, ../sass/buttons.scss */
+/* line 268, ../sass/buttons.scss */
 .footer-button .view-footer {
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 231, ../sass/buttons.scss */
+  /* line 268, ../sass/buttons.scss */
   .footer-button .view-footer {
     margin-bottom: 10px;
   }
 }
-/* line 237, ../sass/buttons.scss */
+/* line 274, ../sass/buttons.scss */
 .footer-button .view-footer a.btn {
   padding: 12px 19px;
 }
 @media (max-width: 767px) {
-  /* line 237, ../sass/buttons.scss */
+  /* line 274, ../sass/buttons.scss */
   .footer-button .view-footer a.btn {
     width: 100%;
     margin-bottom: 25px;
   }
 }
 
-/* line 251, ../sass/buttons.scss */
+/* line 288, ../sass/buttons.scss */
 .btn.btn-facebook {
   border-bottom: 5px solid #1a427e;
   background: #4b69aa;
 }
-/* line 255, ../sass/buttons.scss */
+/* line 292, ../sass/buttons.scss */
 .btn.btn-twitter {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
 }
-/* line 259, ../sass/buttons.scss */
+/* line 296, ../sass/buttons.scss */
 .btn.btn-google {
   border-bottom: 5px solid #ab1005;
   background: #f44336;
 }
 
-/* line 266, ../sass/buttons.scss */
+/* line 303, ../sass/buttons.scss */
 .facebook-btn {
   border-bottom: 5px solid #1a427e;
   background: #4b69aa;
 }
 
-/* line 272, ../sass/buttons.scss */
+/* line 309, ../sass/buttons.scss */
 .twitter-btn {
   border-bottom: 5px solid #0275d1;
   background: #2289ff;
 }
 
-/* line 277, ../sass/buttons.scss */
+/* line 314, ../sass/buttons.scss */
 .icon-connection {
   font-size: 29px;
   padding: 6px 0 0;
@@ -647,7 +609,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #e30087;
 }
 @media (max-width: 767px) {
-  /* line 277, ../sass/buttons.scss */
+  /* line 314, ../sass/buttons.scss */
   .icon-connection {
     height: 33px;
     width: 34px;
@@ -656,7 +618,57 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 
-/* line 297, ../sass/buttons.scss */
+/* line 334, ../sass/buttons.scss */
 .shadow-btn:hover {
   box-shadow: 0 1px #ffffff;
+}
+
+/* line 339, ../sass/buttons.scss */
+.youtube-btn {
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  /* line 339, ../sass/buttons.scss */
+  .youtube-btn {
+    padding: 16px 0;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 999px) {
+  /* line 353, ../sass/buttons.scss */
+  .youtube-btn span.icon-YouTube {
+    display: none;
+  }
+}
+
+/* line 360, ../sass/buttons.scss */
+.twitter-btn {
+  position: absolute;
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 360, ../sass/buttons.scss */
+  .twitter-btn {
+    padding: 16px 0;
+    top: 85px;
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+/* line 371, ../sass/buttons.scss */
+.facebook-btn {
+  position: absolute;
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 371, ../sass/buttons.scss */
+  .facebook-btn {
+    padding: 16px 0;
+    top: 168px;
+    display: block;
+    margin-bottom: 12px;
+  }
 }
