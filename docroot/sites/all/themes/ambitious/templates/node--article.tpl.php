@@ -1,4 +1,17 @@
+<?php
+/**
+ * @file
+ * Returns the HTML for a node.
+ *
+ * Complete documentation for this file is available online.
+ * @see https://drupal.org/node/1728164
+ */
 
+/* variables */ 
+  
+  $node = node_load(arg(1)); 
+  $links = sharethis_node_view($node, 'full', 'en');
+?> 
 		<!-- contain main informative part of the site -->
 		<section class="article">
 		 <div class="article-left">
@@ -7,8 +20,10 @@
              <article>
                <header>
                  <h1><?php print $title; ?></h1>
-                 <h2 class="subheading">Introduction or subheading text goes here, lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-	             <div class="article-info">
+				<?php if ($content['field_standfirst']) : ?> 
+                 	<h2 class="subheading"><?php print render($content['field_standfirst']); ?></h2>
+                <?php endif; ?> 
+                 <div class="article-info">
 				   <cite>
 				      <span>By Martyn, <em>Community Champion</em></span>
 				      <a href="#" class="first" title="@martyn71">@martyn71</a>

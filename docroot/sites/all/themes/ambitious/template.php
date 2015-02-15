@@ -704,3 +704,7 @@ function ambitious_form_element($variables) {
   return $output;
   
 }
+
+function ambitious_preprocess_node(&$vars){
+  kpr($vars);
+}
