@@ -117,6 +117,8 @@
   }
 
 }
+
+// Fix Grid and List view icon on Mobile view
 @include breakpoint($mobile){
   .sort-block fieldset.grid-view{
     width: 49px;
@@ -129,4 +131,13 @@
   .sort-block .stButton{
     margin-right: 0;
   }
+}
+// Fix Ajax loading gif positioning issue
+.sort-block{
+    .form-item-sort-by{
+      position: relative;
+    }
+    .ajax-progress{
+      position: absolute;      
+    }
 }
