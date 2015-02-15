@@ -1,14 +1,12 @@
 
 		<!-- contain main informative part of the site -->
-		<main id="main2" role="main">
-
 		<section class="article">
 		 <div class="article-left">
            <section class="article-left-holder">
 		   <!-- article -->
              <article>
                <header>
-                 <h1>Martyn: My son <br> Percy's story</h1>
+                 <h1><?php print $title; ?></h1>
                  <h2 class="subheading">Introduction or subheading text goes here, lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 	             <div class="article-info">
 				   <cite>
@@ -30,22 +28,7 @@
 			       <span class="pic-by">&copy; Photo by <a href="#" title="Derek Hall">Derek Hall</a>.</span>
 			     </div> 
 			  </section>
-			   <p>Percy was born in 2004 along with his twin brother Oswald. They both arrived prematurely at 27 weeks and as a consequence Oswald remained in hospital for three months and Percy for six months. When Percy came home he needed oxygen 24 hours a day to help with his breathing and a feeding tube to feed him as he was unable to suck milk or eat puree food. Percy remained on oxygen until after his first birthday and had a feeding tube until he was five years old.</p>
-			   <h3>Percy's early years</h3>
-			   <p>Percy never reached any of his early milestones but we were constantly reassured that he would catch up with his brother. Many other parents with an autistic child talk about their child developing until the age of two or so and then steadily regressing but this was not the case with Percy. Percy started walking when he was two and half years old. We were delighted and hoped that his speech would start to develop but after a Speech and Language appointment just weeks later we were told he might have a <a href="#" title="Social Communication Disorder.">Social Communication Disorder.</a></p>
-			   <p>Neither of us had heard of the condition and we went home and looked it up on the internet. This was our first alert of the possibility of autism and I think we were both very shocked at what we read about the condition. Neither of us really thought that Percy would be diagnosed as having autism but six months later it was confirmed; Percy was diagnosed with having severe autism with severe learning difficulties.</p>
-			   <h3>Percy joins TreeHouse School</h3>
-			   <p>A work contact recommended that we try Applied Behaviour Analysis (ABA) when Percy was first diagnosed so we started a self-funded home ABA programme when Percy turned three years old. Within a few months we could see the benefits in Percy and therefore we decided to apply to the local authority for funding. We were told that it would be very difficult to get the funding for an ABA home programme as the local authority had never funded an ABA home programme but after submitting concrete evidence on Percy’s progress through using the ABA approach we received funding.</p>
-			   <p>As Percy’s skills flourished, we applied for him to attend <a href="#" title="TreeHouse School">TreeHouse School</a> and in September 2009 when Percy was five years old he started at the school. It literally changed our lives over night and we are now confident that Percy will be able to reach his full potential attending a school which can fully meet his special needs.</p>
-			   <blockquote>
-			     "Early intervention has definitely helped us and Percy to manage his disability and has enabled Percy to make real progress in terms of behaviour management, education and every day skills."
-			   </blockquote>
-			   <p>Percy is non-verbal and his behaviour is very repetitive but to look at him, he appears like any typical child. He has a number of sensory issues too which makes cutting his nails or hair impossible. Feeding is also a problem. He cannot chew food which means that all his food has to be pureed and he is small for his age. Percy’s behaviour is generally good which we believe is due to obtaining an early diagnosis and the ABA strategies that have been put in place at school and home. Early intervention has definitely helped us and Percy to manage his disability and has enabled Percy to make real progress in terms of behaviour management, education and every day skills.</p>
-			   <h3>The future</h3>
-			   <p>We worry a lot about Percy’s safety and future as he is extremely vulnerable, especially being non-verbal and having no sense of fear. At present, Percy is seven years old and can remain at Treehouse School until he is nineteen with local authority funding but what happens to young adults with autism?</p>
-			   <p>We constantly wonder whether Percy will be able to do a job, live independently or form relationships with others. We particularly worry about what will happen to him when we are gone? I have met so many parents of children who feel the same way. The absolute unknowns, the complete uncertainties of life, they just sit there in your thoughts constantly – you can’t plan for the future, you don’t know what it is. That high level of background stress is probably something that goes with having a disabled child.</p>
-			   <p>Being Percy’s dad has definitely given me a new perspective on life. Being a parent changes you, but when you have a disabled child that is entirely dependent upon you it definitely puts constrains on what you can do individually and as a family, however, like all children, Percy loves his weekends and especially his school holidays abroad and to places like Disneyland Paris. He feels totally secure and loves being with his family and he knows that his family love him very much.</p>
-			   <p>Percy’s autism might be seen as having a life-limiting impact on us, but his daily progress and achievements at school and home make us all incredibly proud of him. </p>
+			  <?php print $content['body']; ?>
                <footer>
 			     <div class="article-info">
 			       <div class="article-updated">
@@ -203,4 +186,3 @@
 			</div>
 		</div>
 		</section>
-		</main>
