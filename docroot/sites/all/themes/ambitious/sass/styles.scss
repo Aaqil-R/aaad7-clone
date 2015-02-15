@@ -3,6 +3,8 @@
 // TODO: Re-evaluate use of max height here.
 // * {max-height: 100000em;}
 
+@include border-box-sizing;
+
 body {
     margin: 0;
     color: $base-text-color;
@@ -33,11 +35,11 @@ img {border-style: none;}
  
 a {
 	outline:none;
-    text-decoration: none;
+    // text-decoration: none;
     color: $base-link-color;
-    &:hover {
-        text-decoration: underline;
-    }
+    // &:hover {
+    //     text-decoration: underline;
+    // }
 }
  
 input,

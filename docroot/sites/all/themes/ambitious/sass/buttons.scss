@@ -113,11 +113,11 @@
   }
 
   span {
-    padding: 0 0 0 25px;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    word-spacing: 3px;
+    // padding: 0 0 0 25px;
+    // position: relative;
+    // display: inline-block;
+    // vertical-align: top;
+    // word-spacing: 3px;
 
     .icon-Rightarrow {
       @include breakpoint($tablet){
@@ -140,8 +140,20 @@
   };
 
   &.btn-green{
-    border-bottom:5px solid $green-dark;
+    @include box-shadow(0px 6px $green-dark);
     background:$green;
+
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+      // displace the button shadow 
+      @include box-shadow(0px 4px $green-dark);   
+    }
+
+    &:active {
+      top: 6px;
+      @include box-shadow(0px 0px $green-dark);
+    }
   }
 
   &input[type=submit]{
@@ -149,7 +161,7 @@
   }
 
   &.btn-pink{
-   border-bottom: 5px solid $pink-dark;
+    @include box-shadow(0px 6px $pink-dark);
    background:$pink;
   }
 
@@ -189,7 +201,7 @@
   // vertical-align: top;
   background:none;
   border: 2px solid $white;
-  @include box-shadow(none);
+  @include box-shadow(0px 3px $white);
   // font-size: 20px;
   // line-height: 30px;
   // color:$white;
@@ -200,7 +212,10 @@
   // margin:0;
 
   &:hover {
-    border-width: 2px;
+    // replace the displacement of the button from the top
+    top: 2px;
+    // displace the button shadow 
+    @include box-shadow(0px 1px $white);
   }
 
   em{
@@ -215,13 +230,13 @@
     }
   }  
 
-  &:visited{
-    text-decoration:none;
-    border: 2px solid $white;
-    background:$orange;
-    margin:0;
-    color:$white;
-  }
+  // &:visited{
+  //   text-decoration:none;
+  //   border: 2px solid $white;
+  //   background:$orange;
+  //   margin:0;
+  //   color:$white;
+  // }
 }
 &.btn-left{
   float:left;
@@ -318,5 +333,48 @@
 .shadow-btn{
   &:hover{
     box-shadow: 0 1px $white; 
+  }
+}
+
+.youtube-btn {
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  @include breakpoint($mobile){
+    padding: 16px 0;
+    margin-bottom: 12px;        
+  }
+
+  // &:after {
+  //  font-family: icomoon;
+  //  content: '\e614'
+  // }      
+
+  span.icon-YouTube{
+    @include breakpoint(999px){
+      display: none;
+    }
+  }
+}
+
+.twitter-btn{
+  position: absolute;
+  display: none;
+  @include breakpoint($mobile){
+    padding: 16px 0;
+    top:85px;
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+.facebook-btn{
+  position: absolute;
+  display: none;
+  @include breakpoint($mobile){
+    padding: 16px 0;
+    top:168px;
+    display: block;
+    margin-bottom: 12px;
   }
 }

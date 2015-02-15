@@ -38,28 +38,27 @@
 	}
 }
 //visited etc link text
-a{
-	&:visited{color: #000;}
-	&:hover {
-		color: #000;
-		text-decoration: none;
-	}
-}
-a.btn {
-	color: $white;
-	&:visited{color: $white;}
-	&:hover {
-		color: $white;
-		text-decoration: none;
-		cursor: pointer;
-	}
-}
+// a{
+// 	&:visited{color: #000;}
+// 	&:hover {
+// 		color: #000;
+// 		text-decoration: none;
+// 	}
+// }
+// a.btn {
+// 	color: $white;
+// 	&:visited{color: $white;}
+// 	&:hover {
+// 		color: $white;
+// 		text-decoration: none;
+// 		cursor: pointer;
+// 	}
+// }
 
 .more-btn {
 	a {
 		.icon-Downarrow{
 			color: $gray;
-
 		}
 	}
 }
@@ -71,9 +70,9 @@ a.btn {
 	img{
 		padding-right: 24px;
 	}
-	a{
-		vertical-align: top;
-	}
+	// a{
+	// 	vertical-align: top;
+	// }
 }
 
 //tooltips
@@ -1297,7 +1296,6 @@ a {
 					.text{
 						@include fontsize(12,16);
 					}
-
 				}
 			}
 		}

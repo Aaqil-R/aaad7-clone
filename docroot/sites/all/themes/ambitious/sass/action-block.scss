@@ -249,9 +249,9 @@
 		padding: 48px 10px 34px 39px;
         @include breakpoint($tablet) {
 		    background-position:top right;
-			.btn{
-				font-size:16px;
-			}
+			// .btn{
+			// 	font-size:16px;
+			// }
 			padding:48px 10px 34px 32px;
 		}
 		@include breakpoint($mobile) {
@@ -397,23 +397,23 @@
 // Home page Block Share //
 // ===========================
 // Fix the button border issue
-.front .btn-transparent{
-  &:hover{
-	border-bottom-width:2px;
-	box-shadow: 0 1px $white;
-  }
-}
+// .front .btn-transparent{
+//   &:hover{
+// 	border-bottom-width:2px;
+// 	box-shadow: 0 1px $white;
+//   }
+// }
 
 //Fix the block share a tag hover issue
 .front .block-share{
 	background: image-url('bg08.jpg');
 	padding: 50px 10px 37px 39px;
-  .btn-transparent{
-	&:hover{
-	  margin: 182px 10px 0 0;
-	  @include breakpoint(900px){
-	  	margin: 145px 10px 0 0;
-	  }
-	}
-  }
+ //  .btn-transparent{
+	// &:hover{
+	//   margin: 182px 10px 0 0;
+	//   @include breakpoint(900px){
+	//   	margin: 145px 10px 0 0;
+	//   }
+	// }
+ //  }
 }
