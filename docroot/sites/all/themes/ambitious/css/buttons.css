@@ -380,7 +380,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  margin: 15px 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   outline: medium none;
   padding: 25px 80px;
   position: relative;
@@ -392,19 +393,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 91, ../sass/buttons.scss */
+/* line 92, ../sass/buttons.scss */
 .btn:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #c63502;
   box-shadow: 0px 4px #c63502;
 }
-/* line 98, ../sass/buttons.scss */
+/* line 99, ../sass/buttons.scss */
 .btn:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #c63502;
   box-shadow: 0px 0px #c63502;
 }
-/* line 105, ../sass/buttons.scss */
+/* line 106, ../sass/buttons.scss */
 .btn em {
   position: relative;
   display: inline-block;
@@ -414,13 +415,13 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-left: 10px;
 }
 @media (max-width: 990px) {
-  /* line 122, ../sass/buttons.scss */
+  /* line 123, ../sass/buttons.scss */
   .btn span .icon-Rightarrow {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  /* line 122, ../sass/buttons.scss */
+  /* line 123, ../sass/buttons.scss */
   .btn span .icon-Rightarrow {
     display: none;
   }
@@ -431,35 +432,35 @@ body > .jcf-select-drop.jcf-drop-flipped {
     width: 100%;
   }
 }
-/* line 142, ../sass/buttons.scss */
+/* line 143, ../sass/buttons.scss */
 .btn.btn-green {
   -webkit-box-shadow: 0px 6px #007e2a;
   box-shadow: 0px 6px #007e2a;
   background: #00a837;
 }
-/* line 146, ../sass/buttons.scss */
+/* line 147, ../sass/buttons.scss */
 .btn.btn-green:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #007e2a;
   box-shadow: 0px 4px #007e2a;
 }
-/* line 153, ../sass/buttons.scss */
+/* line 154, ../sass/buttons.scss */
 .btn.btn-green:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #007e2a;
   box-shadow: 0px 0px #007e2a;
 }
-/* line 159, ../sass/buttons.scss */
+/* line 160, ../sass/buttons.scss */
 .btninput[type=submit] {
   border-radius: 5px;
 }
-/* line 163, ../sass/buttons.scss */
+/* line 164, ../sass/buttons.scss */
 .btn.btn-pink {
   -webkit-box-shadow: 0px 6px #b3066b;
   box-shadow: 0px 6px #b3066b;
   background: #e30087;
 }
-/* line 168, ../sass/buttons.scss */
+/* line 169, ../sass/buttons.scss */
 .btn.btn-gray {
   border: 1px solid #636c73;
   border-bottom-width: 5px;
@@ -467,136 +468,157 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 5px 22px;
   color: #636c73;
 }
-/* line 175, ../sass/buttons.scss */
+/* line 176, ../sass/buttons.scss */
 .btn.btn-gray:hover {
   color: #636c73;
   text-decoration: none;
 }
-/* line 180, ../sass/buttons.scss */
+/* line 181, ../sass/buttons.scss */
 .btn.btn-gray:active, .btn.btn-gray:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #636c73;
 }
-/* line 186, ../sass/buttons.scss */
+/* line 187, ../sass/buttons.scss */
 .btn.btn-gray:visited {
   text-decoration: none;
   color: #636c73;
 }
-/* line 192, ../sass/buttons.scss */
+/* line 193, ../sass/buttons.scss */
 .btn.bt-left {
   margin: 0 0 0 23px;
 }
 @media (max-width: 767px) {
-  /* line 192, ../sass/buttons.scss */
+  /* line 193, ../sass/buttons.scss */
   .btn.bt-left {
     margin: 0 0 0 11px;
   }
 }
-/* line 199, ../sass/buttons.scss */
+/* line 200, ../sass/buttons.scss */
 .btn.btn-transparent {
   background: none;
-  border: 2px solid #ffffff;
-  -webkit-box-shadow: 0px 3px #ffffff;
-  box-shadow: 0px 3px #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 3px solid #ffffff;
 }
-/* line 214, ../sass/buttons.scss */
+/* line 217, ../sass/buttons.scss */
 .btn.btn-transparent:hover {
-  top: 2px;
-  -webkit-box-shadow: 0px 1px #ffffff;
-  box-shadow: 0px 1px #ffffff;
+  top: 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #ffffff;
 }
-/* line 221, ../sass/buttons.scss */
+/* line 226, ../sass/buttons.scss */
 .btn.btn-transparent em {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
-  /* line 199, ../sass/buttons.scss */
+  /* line 200, ../sass/buttons.scss */
   .btn.btn-transparent {
     font-size: 14px;
     padding: 7px 18px;
   }
-  /* line 228, ../sass/buttons.scss */
+  /* line 233, ../sass/buttons.scss */
   .btn.btn-transparent em {
     padding-left: 5px;
   }
 }
-/* line 241, ../sass/buttons.scss */
+/* line 246, ../sass/buttons.scss */
 .btn.btn-left {
   float: left;
 }
-/* line 244, ../sass/buttons.scss */
+/* line 249, ../sass/buttons.scss */
 .btn.btn-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 252, ../sass/buttons.scss */
+  /* line 257, ../sass/buttons.scss */
   .btn .desktop {
     display: none;
   }
 }
 
-/* line 263, ../sass/buttons.scss */
+/* line 268, ../sass/buttons.scss */
 .footer-button {
   margin-bottom: 130px;
 }
 @media (max-width: 767px) {
-  /* line 263, ../sass/buttons.scss */
+  /* line 268, ../sass/buttons.scss */
   .footer-button {
     margin-bottom: 30px;
   }
 }
-/* line 268, ../sass/buttons.scss */
+/* line 273, ../sass/buttons.scss */
 .footer-button .view-footer {
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 268, ../sass/buttons.scss */
+  /* line 273, ../sass/buttons.scss */
   .footer-button .view-footer {
     margin-bottom: 10px;
   }
 }
-/* line 274, ../sass/buttons.scss */
+/* line 279, ../sass/buttons.scss */
 .footer-button .view-footer a.btn {
   padding: 12px 19px;
 }
 @media (max-width: 767px) {
-  /* line 274, ../sass/buttons.scss */
+  /* line 279, ../sass/buttons.scss */
   .footer-button .view-footer a.btn {
     width: 100%;
     margin-bottom: 25px;
   }
 }
 
-/* line 288, ../sass/buttons.scss */
-.btn.btn-facebook {
-  border-bottom: 5px solid #1a427e;
-  background: #4b69aa;
+/* line 294, ../sass/buttons.scss */
+.btn.facebook-btn {
+  display: none;
 }
-/* line 292, ../sass/buttons.scss */
-.btn.btn-twitter {
-  border-bottom: 5px solid #0275d1;
-  background: #2289ff;
+@media (max-width: 767px) {
+  /* line 294, ../sass/buttons.scss */
+  .btn.facebook-btn {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 6px #1a427e;
+    box-shadow: 0px 6px #1a427e;
+    background: #4b69aa;
+  }
+  /* line 304, ../sass/buttons.scss */
+  .btn.facebook-btn:hover {
+    top: 2px;
+    -webkit-box-shadow: 0px 4px #1a427e;
+    box-shadow: 0px 4px #1a427e;
+  }
 }
-/* line 296, ../sass/buttons.scss */
+/* line 314, ../sass/buttons.scss */
+.btn.twitter-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 314, ../sass/buttons.scss */
+  .btn.twitter-btn {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 6px #0275d1;
+    box-shadow: 0px 6px #0275d1;
+    background: #2289ff;
+  }
+  /* line 325, ../sass/buttons.scss */
+  .btn.twitter-btn:hover {
+    top: 2px;
+    -webkit-box-shadow: 0px 4px #0275d1;
+    box-shadow: 0px 4px #0275d1;
+  }
+}
+/* line 333, ../sass/buttons.scss */
 .btn.btn-google {
   border-bottom: 5px solid #ab1005;
   background: #f44336;
 }
 
-/* line 303, ../sass/buttons.scss */
-.facebook-btn {
-  border-bottom: 5px solid #1a427e;
-  background: #4b69aa;
-}
-
-/* line 309, ../sass/buttons.scss */
-.twitter-btn {
-  border-bottom: 5px solid #0275d1;
-  background: #2289ff;
-}
-
-/* line 314, ../sass/buttons.scss */
+/* line 339, ../sass/buttons.scss */
 .icon-connection {
   font-size: 29px;
   padding: 6px 0 0;
@@ -609,7 +631,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #e30087;
 }
 @media (max-width: 767px) {
-  /* line 314, ../sass/buttons.scss */
+  /* line 339, ../sass/buttons.scss */
   .icon-connection {
     height: 33px;
     width: 34px;
@@ -618,57 +640,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 
-/* line 334, ../sass/buttons.scss */
+/* line 359, ../sass/buttons.scss */
 .shadow-btn:hover {
   box-shadow: 0 1px #ffffff;
 }
 
-/* line 339, ../sass/buttons.scss */
+/* line 364, ../sass/buttons.scss */
 .youtube-btn {
-  position: absolute;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (max-width: 767px) {
-  /* line 339, ../sass/buttons.scss */
-  .youtube-btn {
-    padding: 16px 0;
-    margin-bottom: 12px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 999px) {
-  /* line 353, ../sass/buttons.scss */
+  /* line 378, ../sass/buttons.scss */
   .youtube-btn span.icon-YouTube {
     display: none;
-  }
-}
-
-/* line 360, ../sass/buttons.scss */
-.twitter-btn {
-  position: absolute;
-  display: none;
-}
-@media (max-width: 767px) {
-  /* line 360, ../sass/buttons.scss */
-  .twitter-btn {
-    padding: 16px 0;
-    top: 85px;
-    display: block;
-    margin-bottom: 12px;
-  }
-}
-
-/* line 371, ../sass/buttons.scss */
-.facebook-btn {
-  position: absolute;
-  display: none;
-}
-@media (max-width: 767px) {
-  /* line 371, ../sass/buttons.scss */
-  .facebook-btn {
-    padding: 16px 0;
-    top: 168px;
-    display: block;
-    margin-bottom: 12px;
   }
 }
