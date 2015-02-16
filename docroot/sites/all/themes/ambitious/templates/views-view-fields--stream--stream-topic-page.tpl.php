@@ -5,12 +5,17 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
  
 
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block">
-						<blockquote style="background:"<?php print $fields['field_background_colour']->raw; ?>" >
+<section class="blockquote-block" style="background:#"<?php print $fields['field_background_colour']->raw; ?>" >
+						<blockquote >
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
 						</blockquote>
+						<?php if ($fields['field_source']->raw == 'Community'):?>
 						<span class="icon-Speech1"></span>
+						<?php endif; ?>
+						<?php if ($fields['field_source']->raw == 'Twitter'):?>
+						<span class="icon-Twitter"></span>
+						<?php endif; ?>
 					</section>
 <?php else:?>
 <section >
