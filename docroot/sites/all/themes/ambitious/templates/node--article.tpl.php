@@ -21,8 +21,8 @@
              <article>
                <header>
                  <h1><?php print $title; ?></h1>
-				<?php if ($content['field_standfirst']) : ?> 
-                 	<h2 class="subheading"><?php print render($content['field_standfirst']); ?></h2>
+				<?php if (isset($content['field_standfirst'])) : ?> 
+                 	<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
                 <?php endif; ?> 
                  <div class="article-info">
 				   <cite>
@@ -33,7 +33,7 @@
 			       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
                </header>
-               <?php if (!empty($content['field_featured_image'])): ?>
+               <?php if (isset($content['field_featured_image'])): ?>
                 <section class="visual">
 			     <div class="img-holder">
 			       <?php print render($content['field_featured_image']); ?>
