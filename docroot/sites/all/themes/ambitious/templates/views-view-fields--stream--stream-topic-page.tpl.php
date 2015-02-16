@@ -1,6 +1,8 @@
 <?php
 $i = 1;
 $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour', 'field_featured_author', 'field_source', 'nid');
+
+print $fields['field_source']->content;
 ?>
  
 
