@@ -267,14 +267,14 @@ div.messages.status{
       color:$white;
     }
 }
-.view-display-id-stream_forum_page{
-  .forum-page{
-    display:block;
-  }
-  .filterbutton{
-      margin-left: 10px;
-    }
-}
+// .view-display-id-stream_forum_page{
+//   .forum-page{
+//     display:block;
+//   }
+//   .filterbutton{
+//       margin-left: 10px;
+//     }
+// }
 
 .page-user  #header{
   margin-bottom: 103px;
@@ -895,8 +895,9 @@ div.messages.status{
 }
 #content_top{
    z-index: 99;
-   margin-top: -112px;
+   margin-top: -100px;
    margin-bottom:30px;
+   margin-left: 15px;
   .my-voice-columns{
     // [TODO] this style is being applied from forms.scss
     // .webform-client-form{
@@ -925,7 +926,7 @@ div.messages.status{
       input[type=submit]{
         padding-right: 40px;
       }
-      &:before{
+      &:after{
         position: relative;
         left: -49px;
         top: 19px;
@@ -1592,22 +1593,22 @@ fieldset{
   .text-section{
     margin-top: 17px;
   }
-  .btn-left.forum-page{
-    padding-left: 0; 
-    margin-bottom: 0;
-    margin-left: 20px;
-    margin-right: 0;
-    &:hover{
-      margin-bottom:3px;
-    }
-    span{
-      font-size: 17px;
-    }
-    @include breakpoint($mobile){
-      margin-left:0;  
-      padding:11px 0;    
-    }
-  }
+  // .btn-left.forum-page{
+  //   padding-left: 0; 
+  //   margin-bottom: 0;
+  //   margin-left: 20px;
+  //   margin-right: 0;
+  //   &:hover{
+  //     margin-bottom:3px;
+  //   }
+  //   span{
+  //     font-size: 17px;
+  //   }
+  //   @include breakpoint($mobile){
+  //     margin-left:0;  
+  //     padding:11px 0;    
+  //   }
+  // }
   .sort-block{
     margin: 0 0 35px;
   }
