@@ -50,12 +50,23 @@
 	<!-- nav of the page -->
 	<div class="nav-holder">
 		<!--<a href="#" class="btn"><span>Is my child on the spectrum?<em class="icon-Rightarrow"></em></span></a>-->
+		<div>
 		<?php
 			//adding the features menu
-			$menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
-			$tree = menu_tree($menu_name);
-			print drupal_render($tree); 
+			//$menu_name = variable_get('menu_main_links_source', 'menu-main-menu-features-item');
+
+			//$block =block_load('block',151);
+			//$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+			//print $output;
+			
+			//print render_block_content('block', 151);
+			//print render_my_block_content('block', 151);
+			print render_my_block_content();
+
+			//$tree = menu_tree($menu_name);
+			//print drupal_render($tree); 
 		?>
+		<div>
 		<nav id="nav-main" role="navigation">
 			<?php
 				//adding the menu function
