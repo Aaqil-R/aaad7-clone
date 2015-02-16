@@ -34,7 +34,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 						<div class="footer">
 							<div class="num-holder">
 								<a href="node/nid" title="people are talking about this" class="">
-									<span class="num"><?php print $fields['field_comment_count']->raw; ?></span>
+									<span class="num"><?php print $fields['comment_count']->raw; ?></span>
 									<span class="text">people are talking about this </span>
 								</a>
 							</div>
