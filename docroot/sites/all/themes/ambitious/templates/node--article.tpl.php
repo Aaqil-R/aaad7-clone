@@ -32,21 +32,23 @@
 			       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
                </header>
-			   <section class="visual">
+               <?php if (!empty($content['field_featured_image'])): ?>
+                <section class="visual">
 			     <div class="img-holder">
-			       <img src="images/img25.jpg" alt="image description">
+			       <?php print render($content['field_featured_image']); ?>
 			       <a href="#" class="btn-gray-perv" title="Leftarrow"><span class="icon-Leftarrow"></span></a>
 			       <a href="#" class="btn-gray-next" title="Rightarrow"><span class="icon-Rightarrow"></span></a>
 			     </div>
 			     <div class="holder">
-			     	<?php if ($content['field_image_caption']): ?>
+			     	<?php if (!empty($content['field_image_caption'])): ?>
 			       		<span class="pic-caption"><?php print render($content['field_image_caption']); ?></span>
 			       <?php endif; ?>
-			       <?php if ($content['field_image_credit']): ?>
+			       <?php if (!empty($content['field_image_credit'])): ?>
 			       	<span class="pic-by">&copy; Photo by <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
 			       <?php endif; ?>
 			     </div> 
 			  </section>
+			<?php endif; ?>
 			  <?php print render($content['body']); ?>
                <footer>
 			     <div class="article-info">
@@ -54,7 +56,7 @@
 
 				     <strong>Last updated: <time pubdate="pubdate">22 December 2014</time></strong>
 
-				  	<?php if ($content['field_tags']): ?>   
+				  	<?php if (!empty($content['field_tags'])): ?>   
 						 <div class="article-tags">
 						   <span>Tags: </span>
 							<?php print render($content['field_tags']); ?>
@@ -94,7 +96,7 @@
 		     <li>
 			   <div class="comment-left">
 			     <div class="comment-img-holder">
-				   <img src="images/img22.jpg" alt="Sarah" />
+				   <img src="/sites/all/themes/ambitious/images/img22.jpg" alt="Sarah" />
 				 </div>
 			     <cite>Sarah</cite>
 			     <time pubdate="pubdate">Thursday <br>20 Nov 2014 <br>23:54</time>
@@ -112,7 +114,7 @@
 		     <li>
 			   <div class="comment-left">
 			     <div class="comment-img-holder">
-				   <img src="images/img23.jpg" alt="Molly" />
+				   <img src="/sites/all/themes/ambitious/images/img23.jpg" alt="Molly" />
 				 </div>
 			     <cite>Molly</cite>
 			     <time pubdate="pubdate">Friday <br>21 Nov 2014 <br>09:24</time>
@@ -130,7 +132,7 @@
 		     <li>
 			   <div class="comment-left">
 			     <div class="comment-img-holder">
-				   <img src="images/img24.jpg" alt="Dave" />
+				   <img src="/sites/all/themes/ambitious/images/img24.jpg" alt="Dave" />
 				 </div>
 			     <cite>Dave</cite>
 			     <time pubdate="pubdate">Friday <br>21 Nov 2014 <br>13:07</time>
@@ -178,7 +180,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="images/img04.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img04.jpg" alt="image description">
 						</div>
 						<div class="info add">
 							<h3><a href="#" title="Nicky: Life with two daughters with autism">Nicky: Life with two daughters with autism</a></h3>
@@ -187,7 +189,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="images/img05.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img05.jpg" alt="image description">
 						</div>
 						<div class="info add">
 							<h3><a href="#" title="Article title here">Article title here</a></h3>
@@ -196,7 +198,7 @@
 					<!-- post block -->
 					<section class="post">
 						<div class="img-holder">
-							<img src="images/img07.jpg" alt="image description">
+							<img src="/sites/all/themes/ambitious/images/img07.jpg" alt="image description">
 						</div>
 						<div class="info add">
 							<h3><a href="#" title="everydayautism">#everydayautism</a></h3>
