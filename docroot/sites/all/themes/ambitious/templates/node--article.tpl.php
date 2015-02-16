@@ -11,10 +11,11 @@
   
   $node = node_load(arg(1)); 
   $links = sharethis_node_view($node, 'full', 'en');
+  $base_path = '/';
 ?> 
 		<!-- contain main informative part of the site -->
-		<section class="article">
-		 <div class="article-left">
+		<section class="article node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+		<div class="article-left">
            <section class="article-left-holder">
 		   <!-- article -->
              <article>
@@ -26,8 +27,8 @@
                  <div class="article-info">
 				   <cite>
 				      <span>By <?php print render($content['field_featured_author']); ?></span>
-				      <a href="#" class="first" title="@martyn71">@martyn71</a>
-					  <a href="#" title="email the author">email the author</a>
+				      <a href="<?php print $base_path.'user/'.$uid; ?>" class="first">@<?php print $node->name; ?></a>
+					  <a href="<?php print url('messages/new/'. $node->uid, array ('query' => drupal_get_destination())); ?>" title="email the author">email the author</a>
 				   </cite>
 			       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
