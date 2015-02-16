@@ -6,6 +6,7 @@
  *
  * @ingroup views_templates
  */
+ dpm(get_defined_vars());
 ?>
 
 <?php if (!empty($title)): ?>
@@ -14,6 +15,6 @@
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
     <?php print $row; ?>
-    <?php dpm($row); ?>
+    <?php dpm($vars); ?>
   </div>
 <?php endforeach; ?>
