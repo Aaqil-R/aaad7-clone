@@ -722,3 +722,7 @@ function ambitious_preprocess_node(&$variables){
   
  
 }
+
+function ambitious_preprocess_views_view__block_stream(&$variables) {
+  dpm($variables);
+}
