@@ -20,6 +20,16 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						<?php endif; ?>
 						
 					</section>
+<?php elseif ($fields['type']->raw == 'social_mention'):?>
+
+						<div class="img-holder">
+							<?php print $fields['field_featured_image']->content; ?>
+						</div>
+						<div class="info">
+							<h2><?php print $fields['title']->content; ?></h2>
+							<p>“<?php print strip_tags($fields['body']->content); ?>”</p>
+							<span class="cite"><strong>- <a href="#" title="Danfay12">Danfay12</a></strong>  (via the Community)</span>
+						</div>
 <?php else:?>
 <section >
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
