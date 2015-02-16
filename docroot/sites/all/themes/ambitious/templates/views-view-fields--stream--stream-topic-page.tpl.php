@@ -2,8 +2,7 @@
 $i = 1;
 $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type',);
 ?>
-
-<?php print_r($fields); ?>
+ 
 <?php if ($fields['type']->raw == 'quote'):?>
 <section class="blockquote-block" style="">
 						<blockquote>
