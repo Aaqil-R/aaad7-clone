@@ -727,8 +727,8 @@ function ambitious_preprocess_views_view(&$vars) {
      $file_uri = file_create_url(file_build_uri('images/example.jpeg'));
      $backgroundurl = array();
      foreach ($vars['view']->result as $key=>$value){
-         dpm($value);
+        $backgroundurl[$key] = $value;  
      }
-
+     dpm($backgroundurl);
   }
 }
