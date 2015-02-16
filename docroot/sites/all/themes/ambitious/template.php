@@ -724,7 +724,7 @@ function ambitious_preprocess_node(&$variables){
 }
 
 function render_my_block_content() {
-   $output = '';
+  $output = '';
 
   $currentNode = menu_get_object();
   if ($currentNode) {
@@ -735,7 +735,9 @@ function render_my_block_content() {
         $block =block_load('block', 156);
       }
   }
-   
-   $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-   return $output;
+  else{
+    $block =block_load('block', 156);
+  } 
+  $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+  return $output;
  } 
