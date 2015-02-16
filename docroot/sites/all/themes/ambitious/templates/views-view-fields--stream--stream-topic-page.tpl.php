@@ -2,10 +2,10 @@
 $i = 1;
 $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour','field_featured_author','field_source');
 ?>
-<?php dpm($fields['field_background_colour']); ?>
-<?php dpm( $fields['field_featured_author']); ?>
-<?php dpm( $fields['field_source']); ?>
-<?php dpm( $fields['comment_count']); ?>
+<?php print $fields['field_background_colour']; ?>
+<?php print $fields['field_featured_author']; ?>
+<?php print $fields['field_source']; ?> 
+<?php print $fields['comment_count']; ?>
 
 <?php if ($fields['type']->raw == 'quote'):?>
 <section class="blockquote-block">
