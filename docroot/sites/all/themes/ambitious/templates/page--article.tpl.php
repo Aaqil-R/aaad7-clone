@@ -139,13 +139,6 @@
   <?php print render($page['content']) ?>
 <!-- /content -->
 
-  <?php if($sidebar_second): ?>
-      <div class="article-right">
-        <?php print render($page['sidebar_second']); ?>
-      </div>
-  <?php endif; ?>
-
-
 <?php if ($page['content_bottom']): ?>
   <section id="content_bottom">
     <?php print render($page['content_bottom']); ?>
