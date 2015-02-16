@@ -42,10 +42,10 @@
 			     </div>
 			     <div class="holder">
 			     	<?php if (isset($content['field_image_caption'])): ?>
-			       		<span class="pic-caption"><?php print render($content['field_image_caption']); ?></span>
+			       		<span class="pic-caption"><?php print $content['field_image_caption']['#items'][0]['value']; ?></span>
 			       <?php endif; ?>
 			       <?php if (isset($content['field_image_credit'])): ?>
-			       	<span class="pic-by"><?php print t('&copy; Photo by');?> <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
+			       	<span class="pic-by"><?php print t('&copy; Photo by');?> <a href="#" title=""><?php print $content['field_image_credit']['#items'][0]['value']; ?></a>.</span>
 			       <?php endif; ?>
 			     </div> 
 			  </section>
