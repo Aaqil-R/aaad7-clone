@@ -32,8 +32,9 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						</div>
 <?php else:?>
 <section >
+<?php print $fields['field_has_video']->content; ?>
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
-                                                        <span class="icon-Playbutton video-icon"></span>
+                                   <span class="icon-Playbutton video-icon"></span>
 							<a href="#" title="Featured" class="feature-holder">
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
