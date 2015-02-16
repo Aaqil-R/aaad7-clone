@@ -2,7 +2,7 @@
 $i = 1;
 $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour', 'field_featured_author', 'field_source', 'nid');
 
-print $fields['field_source']->content;
+$ourfieldsourse =  strip_tags($fields['field_source']->content);
 ?>
  
 
@@ -12,12 +12,13 @@ print $fields['field_source']->content;
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
 						</blockquote>
-						<?php if ($fields['field_source']->content == 'Community'):?>
+						<?php if ($ourfieldsourse== 'Community'):?>
 						<span class="icon-Speech1"></span>
 						<?php endif; ?>
-						<?php if ($fields['field_source']->content == 'Twitter'):?>
+						<?php if ($ourfieldsourse == 'Twitter'):?>
 						<span class="icon-Twitter"></span>
 						<?php endif; ?>
+						
 					</section>
 <?php else:?>
 <section >
