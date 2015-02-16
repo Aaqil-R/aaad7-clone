@@ -6,6 +6,7 @@
  *
  * @ingroup views_templates
  */
+ dpm(get_defined_vars());
 ?>
 
 <?php if (!empty($title)): ?>
