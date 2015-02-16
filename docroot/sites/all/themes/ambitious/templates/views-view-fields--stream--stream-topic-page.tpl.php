@@ -1,7 +1,7 @@
 <?php
 $i = 1;
 $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count',);
- 
+  dpm($fields['type']->content);
 ?>
 
 
@@ -10,7 +10,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 
 
 
-<section class="post">
+<section >
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
                                                         <span class="icon-Playbutton video-icon"></span>
 							<a href="#" title="Featured" class="feature-holder">
