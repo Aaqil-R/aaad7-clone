@@ -245,10 +245,11 @@ function ambitious_menu_link(&$variables) {
 		$variables['logo'] = theme_get_setting('logo'); 
 		if ($currentNode) {
 				if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
-					return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+					//return '<li class="menu-list-item btn btn-pink"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+          return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn btn-pink"'.$output . $sub_menu . "</a></li>\n";
 				}
 		}
-		return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+		return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn"'.$output . $sub_menu . "</a></li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
 		
