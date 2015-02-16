@@ -7,7 +7,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
  
 
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block" style="background:<?php print strip_tags($fields['field_background_colour']->content); ?>" >
+<section class="blockquote-block" style="margin:-22px; background:<?php print strip_tags($fields['field_background_colour']->content); ?>" >
 						<blockquote >
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
