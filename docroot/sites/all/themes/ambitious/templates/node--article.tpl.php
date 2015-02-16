@@ -74,15 +74,14 @@
 	                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 </div>
 	              </footer>
-	          </article>
-	          <?php if($region['sidebar_second']): ?>
-      			<div class="article-right">
-        			<?php print render($region['sidebar_second']); ?>
-      			</div>
-  				<?php endif; ?>
-		      <!-- comment columns -->
-			<?php  print render($content['comments']); ?>
+	              <!-- comment columns -->		
+	              <?php  print render($content['comments']); ?>
+	          </article>	              
+			</section>		      
 
+			</div>
+			<div class="article-right">
+				<?php print render($region['sidebar_second']); ?>
 			</div>
 						
 		</section>
