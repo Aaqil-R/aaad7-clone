@@ -403,3 +403,27 @@
     margin-top: 0px;    
   }
 }
+
+
+.featured-mobile-btn{
+  @include breakpoint($mobile) {
+    padding:0px;
+    margin-bottom:0px;
+  }
+    a.btn{
+    @include breakpoint($mobile) {
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.nav-holder{
+  top:0px;
+}
+
+
+
+
