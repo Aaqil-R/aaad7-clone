@@ -1,36 +1,45 @@
 <?php
-
-/**
- * @file
- * Default simple view template to all the fields as a row.
- *
- * - $view: The view in use.
- * - $fields: an array of $field objects. Each one contains:
- *   - $field->content: The output of the field.
- *   - $field->raw: The raw data for the field, if it exists. This is NOT output safe.
- *   - $field->class: The safe class id to use.
- *   - $field->handler: The Views field handler object controlling this field. Do not use
- *     var_export to dump this object, as it can't handle the recursion.
- *   - $field->inline: Whether or not the field should be inline.
- *   - $field->inline_html: either div or span based on the above flag.
- *   - $field->wrapper_prefix: A complete wrapper containing the inline_html to use.
- *   - $field->wrapper_suffix: The closing tag for the wrapper.
- *   - $field->separator: an optional separator that may appear before a field.
- *   - $field->label: The wrap label text to use.
- *   - $field->label_html: The full HTML of the label to use including
- *     configured element type.
- * - $row: The raw result object from the query, with all data it fetched.
- *
- * @ingroup views_templates
- */
+$i = 1;
+$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count',);
+ dpm($fields);
 ?>
-<?php foreach ($fields as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; dpr($field); ?>
 
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
-  <?php print $field->wrapper_suffix; ?>
+
+
+
+
+
+
+<section class="post">
+						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
+                                                        <span class="icon-Playbutton video-icon"></span>
+							<a href="#" title="Featured" class="feature-holder">
+								<span class="icon-Featured"></span>
+								<span class="text">Featured</span>
+							</a>
+                                  <?php print $fields['field_featured_image']->content; ?>
+						</div>
+						<div class="info add">
+							<h3><?php print $fields['title']->content; ?></h3>
+							<?php print $fields['body']->content; ?>
+						</div>
+						<div class="footer">
+							<div class="num-holder">
+								<a href="node/nid" title="people are talking about this" class="">
+									<span class="num"><?php print $fields['comment_count']->raw; ?> </span>
+									<span class="text">people are talking about this </span>
+								</a>
+							</div>
+						</div>
+					</section>
+<?php foreach ($fields as $id => $field): ?>
+<?php if (!in_array($id, $ourfields)): ?>
+	  <?php if (!empty($field->separator)): ?>
+	    <?php print $field->separator; ?>
+	  <?php endif; ?>
+	  <?php print $field->wrapper_prefix; ?>
+	    <?php print $field->label_html; ?>
+	    <?php print $field->content; ?>
+	  <?php print $field->wrapper_suffix; ?>
+  <?php endif;?>
 <?php endforeach; ?>
