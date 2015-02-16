@@ -5,7 +5,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
  
 
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block" style="background:#<?php print $fields['field_background_colour']->content; ?>" >
+<section class="blockquote-block" style="background:#<?php print strip_tags($fields['field_background_colour']->content); ?>" >
 						<blockquote >
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
@@ -34,7 +34,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 						<div class="footer">
 							<div class="num-holder">
 								<a href="node/nid" title="people are talking about this" class="">
-									<span class="num"><?php print $fields['comment_count']->raw; ?></span>
+									<span class="num"><?php print strip_tags($fields['comment_count']->raw); ?></span>
 									<span class="text">people are talking about this </span>
 								</a>
 							</div>
