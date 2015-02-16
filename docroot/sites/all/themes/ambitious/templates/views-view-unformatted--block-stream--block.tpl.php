@@ -14,8 +14,8 @@
 <?php if (!empty($title)): ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
-
-<section class="action-block">
+ 
+<section class="action-block ">
 <div class="holder">
 <div class="region">
 <div class="block-main">
@@ -24,7 +24,8 @@
     <?php print $row; ?>   
   </div>
   </div>
-  </div>
-  </div>
+   </div>
 </section>
 <?php endforeach; ?>
+
+48.5%;
