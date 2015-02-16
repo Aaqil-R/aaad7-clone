@@ -1,14 +1,14 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image',);
+$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type');
 ?>
  
 
 <?php if ($fields['type']->raw == 'quote'):?>
 <section class="blockquote-block">
-						<blockquote>
-							<q>For specific sleep issue advice you may want to contact the children's sleep charity.</q>
-							<cite><strong>- <a href="#" title="Victoria">Victoria</a></strong>  (Information Officer)</cite>
+						<blockquote <?php print $fields['field_background_colour']->content; ?>>
+							<q><?php print $fields['body']->content; ?></q>
+							<cite><?php print$fields['field_featured_author']-content; ?></cite>
 						</blockquote>
 						<span class="icon-Speech1"></span>
 					</section>
