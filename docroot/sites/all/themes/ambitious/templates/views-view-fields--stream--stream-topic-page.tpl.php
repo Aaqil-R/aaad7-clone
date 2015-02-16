@@ -5,7 +5,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
  
 
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block" style="background:#<?php print $fields['field_background-colour']->content; ?>" >
+<section class="blockquote-block" style="background:#<?php print $fields['field_background_colour']->content; ?>" >
 						<blockquote >
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
