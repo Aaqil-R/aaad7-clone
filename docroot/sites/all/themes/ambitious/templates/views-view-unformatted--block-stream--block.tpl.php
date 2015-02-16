@@ -15,9 +15,7 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
-  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
-    <?php print $row; ?>
-    <?php $myid = $id-1; dpm($id); ?>
-    <?php print $myvar['variables']['view']->result[$myid]->field_field_background_image[0]['raw']['uri'];?> 
+  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?> style="background-image: <?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['uri'])); ?>">
+    <?php print $row; ?>   
   </div>
 <?php endforeach; ?>
