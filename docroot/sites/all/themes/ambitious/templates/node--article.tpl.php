@@ -25,11 +25,11 @@
                 <?php endif; ?> 
                  <div class="article-info">
 				   <cite>
-				      <span>By Martyn, <em>Community Champion</em></span>
+				      <span>By <?php print render($content['field_featured_author']); ?></span>
 				      <a href="#" class="first" title="@martyn71">@martyn71</a>
 					  <a href="#" title="email the author">email the author</a>
 				   </cite>
-			       <a href="#" class="btn btn-green btn-right" title="Share"><span>Share <em class="icon-Share"></em></span></a>
+			       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
                </header>
 			   <section class="visual">
@@ -39,23 +39,29 @@
 			       <a href="#" class="btn-gray-next" title="Rightarrow"><span class="icon-Rightarrow"></span></a>
 			     </div>
 			     <div class="holder">
-			       <span class="pic-caption">Photo caption goes here lorem ipsum dolor est amet it.</span>
-			       <span class="pic-by">&copy; Photo by <a href="#" title="Derek Hall">Derek Hall</a>.</span>
+			     	<?php if ($content['field_image_caption']): ?>
+			       		<span class="pic-caption"><?php print render($content['field_image_caption']); ?></span>
+			       <?php endif; ?>
+			       <?php if ($content['field_image_credit']): ?>
+			       	<span class="pic-by">&copy; Photo by <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
+			       <?php endif; ?>
 			     </div> 
 			  </section>
-			  <?php print $content['body']; ?>
+			  <?php print render($content['body']); ?>
                <footer>
 			     <div class="article-info">
 			       <div class="article-updated">
+
 				     <strong>Last updated: <time pubdate="pubdate">22 December 2014</time></strong>
-					 <div class="article-tags">
-					   <span>Tags: </span>
-					   <ul class="tags">
-					     <li><a href="#" title="For parents and carers">For parents and carers,</a></li>
-						 <li class="tag-last"><a href="#" title="diagnosis">diagnosis </a></li>
-					 </div>
+
+				  	<?php if ($content['field_tags']): ?>   
+						 <div class="article-tags">
+						   <span>Tags: </span>
+							<?php print render($content['field_tags']); ?>
+						 </div>
+					<?php endif; ?>
 				   </div>
-                   <a href="#" class="btn btn-green btn-right" title="Share"><span>Share <em class="icon-Share"></em></span></a>
+                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
               </footer>
           </article>
