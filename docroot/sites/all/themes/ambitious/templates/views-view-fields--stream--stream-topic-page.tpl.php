@@ -10,10 +10,10 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 							<q><?php print $fields['body']->content; ?></q>
 							<cite><?php print$fields['field_featured_author']->content; ?></cite>
 						</blockquote>
-						<?php if ($fields['field_source']->raw == 'Community'):?>
+						<?php if ($fields['field_source']->content == 'Community'):?>
 						<span class="icon-Speech1"></span>
 						<?php endif; ?>
-						<?php if ($fields['field_source']->raw == 'Twitter'):?>
+						<?php if ($fields['field_source']->content == 'Twitter'):?>
 						<span class="icon-Twitter"></span>
 						<?php endif; ?>
 					</section>
