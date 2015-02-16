@@ -31,8 +31,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 							<span class="cite"><strong>- <?php print strip_tags($fields['field_featured_author']->content); ?></strong>  (via the <?php print $ourfieldsourse; ?>)</span>
 						</div>
 <?php else:?>
-<section >
-<?php print $fields['field_has_video']->content; ?>
+<section > 
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
                                    <span class="icon-Playbutton video-icon"></span>
 							<a href="#" title="Featured" class="feature-holder">
