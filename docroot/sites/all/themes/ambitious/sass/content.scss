@@ -27,6 +27,36 @@
 // 	}
 // }
 
+.quote {
+    border-left: 1em $orange-dark solid;
+    padding: 1em;
+    margin: 0;
+    //font-family: $font-italic;
+    color: lighten($grey, 30%);
+    p {margin: 0;}
+    &.pink {
+      border-left-color: $pink;
+    }
+    &.yellow {
+      border-left-color: yellow;
+    }
+    &.red {
+      border-left-color: red;
+    }
+    &.blue {
+      border-left-color: $tw-blue;
+    }
+    @include breakpoint($tablet) {
+      margin-right: - span(4 of 8) - gutter()/2;
+      width: 75%;
+      float: right;
+      margin-left: 2em;
+      font-size: 1.1em;
+      clear: right;
+      &.small {width: span(4 of 8);}
+    }
+  }
+
 
 #nav {
 	>ul {

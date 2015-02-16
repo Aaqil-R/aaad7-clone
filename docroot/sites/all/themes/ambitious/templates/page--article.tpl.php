@@ -139,6 +139,13 @@
   <?php print render($page['content']) ?>
 <!-- /content -->
 
+  <?php if($sidebar_second): ?>
+      <div class="article-right">
+        <?php print render($page['sidebar_second']); ?>
+      </div>
+  <?php endif; ?>
+
+
 <?php if ($page['content_bottom']): ?>
   <section id="content_bottom">
     <?php print render($page['content_bottom']); ?>
@@ -177,5 +184,6 @@
     </footer> <!-- /footer -->
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
+
 <?php print render($user_picture); ?>
 <?php print render($page['bottom']); ?>
