@@ -21,7 +21,7 @@
   font-style: normal;
 }
 /* line 21, ../sass/base/_font-icons.scss */
-[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"], .form-actions {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -90,7 +90,7 @@
 }
 
 /* line 79, ../sass/base/_font-icons.scss */
-.icon-Rightarrow:before {
+.icon-Rightarrow:before, .form-actions:before {
   content: "\e60b";
 }
 
@@ -416,39 +416,64 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #636c73;
 }
 
-/* line 50, ../sass/forms.scss */
-.webform-component-textifield {
-  background-color: #eef2f3;
-  background-image: -webkit-linear-gradient(top, #636c73, #eef2f3);
-  background-image: -moz-linear-gradient(top, #636c73, #eef2f3);
-  background-image: -ms-linear-gradient(top, #636c73, #eef2f3);
-  background-image: -o-linear-gradient(top, #636c73, #eef2f3);
-  background-image: linear-gradient(to bottom, #636c73, #eef2f3);
-  padding: 2px;
+/* line 51, ../sass/forms.scss */
+.webform-component-textfield input[type=submit]
+, .webform-component-textfield input[type=text]
+, .webform-component-textfield input[type=search]
+, .webform-component-textfield input[type=tel]
+, .webform-component-textfield input[type=password]
+, .webform-component-textfield input[type=email]
+, .webform-component-textfield input[type=file]
+, .webform-component-textfield textarea, .webform-component-email input[type=submit]
+, .webform-component-email input[type=text]
+, .webform-component-email input[type=search]
+, .webform-component-email input[type=tel]
+, .webform-component-email input[type=password]
+, .webform-component-email input[type=email]
+, .webform-component-email input[type=file]
+, .webform-component-email textarea {
   float: left;
-  margin: 6px 0 0 0;
+  clear: both;
+  width: 80%;
+  border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  max-width: 506px;
-  width: 100%;
-}
-/* line 58, ../sass/forms.scss */
-.webform-component-textifield input[type=text], .webform-component-textifield input[type=email], .webform-component-textifield textarea {
-  float: left;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 100%;
-  color: #636c73;
+  font-size: 18px;
   border: none;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  margin-bottom: 20px;
+  padding: 12px 23px;
 }
-/* line 65, ../sass/forms.scss */
-.webform-component-textifield textarea {
+@media (max-width: 767px) {
+  /* line 51, ../sass/forms.scss */
+  .webform-component-textfield input[type=submit]
+  , .webform-component-textfield input[type=text]
+  , .webform-component-textfield input[type=search]
+  , .webform-component-textfield input[type=tel]
+  , .webform-component-textfield input[type=password]
+  , .webform-component-textfield input[type=email]
+  , .webform-component-textfield input[type=file]
+  , .webform-component-textfield textarea, .webform-component-email input[type=submit]
+  , .webform-component-email input[type=text]
+  , .webform-component-email input[type=search]
+  , .webform-component-email input[type=tel]
+  , .webform-component-email input[type=password]
+  , .webform-component-email input[type=email]
+  , .webform-component-email input[type=file]
+  , .webform-component-email textarea {
+    width: 100%;
+  }
+}
+
+/* line 89, ../sass/forms.scss */
+textarea {
   height: 183px;
 }
 
-/* line 70, ../sass/forms.scss */
+/* line 93, ../sass/forms.scss */
 .webform-component-select {
   width: 100%;
   text-overflow: ellipsis;
@@ -461,4 +486,26 @@ body > .jcf-select-drop.jcf-drop-flipped {
   line-height: 41px;
   border-radius: 5px;
   background: #fff;
+}
+
+/* line 107, ../sass/forms.scss */
+.form-actions {
+  float: left;
+}
+/* line 111, ../sass/forms.scss */
+.form-actions input[type=submit] {
+  padding-right: 40px;
+}
+/* line 114, ../sass/forms.scss */
+.form-actions:after {
+  position: relative;
+  left: -49px;
+  top: 19px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* line 124, ../sass/forms.scss */
+.block-close a {
+  text-decoration: none;
 }
