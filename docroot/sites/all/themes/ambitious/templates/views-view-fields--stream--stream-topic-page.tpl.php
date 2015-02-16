@@ -1,15 +1,16 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count',);
-  dpm($fields['type']->content);
+$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count');
 ?>
-
-
-
-
-
-
-
+<?php if ($fields['type']->raw == 'quote'):?>
+<section class="blockquote-block">
+						<blockquote>
+							<q>For specific sleep issue advice you may want to contact the children's sleep charity.</q>
+							<cite><strong>- <a href="#" title="Victoria">Victoria</a></strong>  (Information Officer)</cite>
+						</blockquote>
+						<span class="icon-Speech1"></span>
+					</section>
+<?php else:?>
 <section >
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>">
                                                         <span class="icon-Playbutton video-icon"></span>
@@ -32,6 +33,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 							</div>
 						</div>
 					</section>
+<?php endif; ?>
 <?php foreach ($fields as $id => $field): ?>
 <?php if (!in_array($id, $ourfields)): ?>
 	  <?php if (!empty($field->separator)): ?>
