@@ -1,10 +1,14 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type',);
+$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour','field_featured_author','field_source');
 ?>
- 
+<?php dpm($fields['field_background_colour']); ?>
+<?php dpm( $fields['field_featured_author']); ?>
+<?php dpm( $fields['field_source']); ?>
+<?php dpm( $fields['comment_count']); ?>
+
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block" style="">
+<section class="blockquote-block">
 						<blockquote>
 							<q>For specific sleep issue advice you may want to contact the children's sleep charity.</q>
 							<cite><strong>- <a href="#" title="Victoria">Victoria</a></strong>  (Information Officer)</cite>
@@ -28,7 +32,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 						<div class="footer">
 							<div class="num-holder">
 								<a href="node/nid" title="people are talking about this" class="">
-									<span class="num"><?php print $fields['comment_count']->raw; ?> </span>
+									<span class="num"></span>
 									<span class="text">people are talking about this </span>
 								</a>
 							</div>
