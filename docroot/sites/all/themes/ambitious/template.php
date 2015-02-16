@@ -706,5 +706,5 @@ function ambitious_form_element($variables) {
 }
 
 function ambitious_preprocess_node(&$vars){
-  kpr($vars);
+  //kpr($vars);
 }
