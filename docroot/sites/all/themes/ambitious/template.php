@@ -673,7 +673,7 @@ function ambitious_form_element($variables) {
     $element['#title_display'] = 'none';
   }
   $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
-  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
+  $suffix = isset($element['#field_suffix']) ? '<span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
 
   switch ($element['#title_display']) {
     case 'before':
@@ -706,6 +706,19 @@ function ambitious_form_element($variables) {
   
 }
 
-function ambitious_preprocess_node(&$vars){
-  //kpr($vars);
+function ambitious_preprocess_node(&$variables){
+
+  // Get a list of all the regions for this theme
+  foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
+
+    // Get the content for each region and add it to the $region variable
+    if ($blocks = block_get_blocks_by_region($region_key)) {
+      $variables['region'][$region_key] = $blocks;
+    }
+    else {
+      $variables['region'][$region_key] = array();
+    }
+  }
+  
+ 
 }

@@ -1,4 +1,7 @@
+@import "base/base";
+
 .node-type-article{
+
 	// Field Tags
 	.field-label{
 		float: left;
@@ -34,7 +37,9 @@
 	.visual .img-holder{
 		min-height: 5em;
 	}
-
+	#main2{
+		@include container;
+	}
 	#main2 footer{
 		clear: both;
 	}
@@ -43,4 +48,9 @@
 		line-height: 16px;
 	}
 
+	#content_bottom{
+		@include span(4 of 12 last);
+	}
+
 }
+

@@ -9,7 +9,7 @@ html body {
 	height: 100%;
 	background: $page-background;
 	&.myvoice{
-		background: url(../images/wid_bg.jpg)$page-background;
+		background: image-url('wid_bg.jpg') $page-background;
 	}
 }
 .messages{
@@ -2066,7 +2066,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
          content:"";
          width:10px;
          height:16px;
-         background:url(../images/sprite.png) no-repeat -14px -62px;
+         background:image-url('sprite.png') no-repeat -14px -62px;
        }
        a{
          color:$heading-link;
@@ -2085,7 +2085,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 #main2{
   color:$heading-link;
-  background:url(../images/wid_bg.png) repeat-y center $white;
+  background:image-url('wid_bg.png') repeat-y center $white;
   @extend %clearfix;
   &.page-main{
     background:$white;
@@ -2104,7 +2104,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
    @include breakpoint($mobile){
    }
   .article{
-    @include container;
+    @include span(8 of 12);
   }
   .info{
    &.add{
@@ -2130,7 +2130,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	}
   .article-left{
 	float:left;
-	width:71%;
+	//width:71%;
 	padding:0 65px 48px 7px;
 	@include breakpoint($desktop){
 	  padding:0 20px 48px 20px;
@@ -2377,7 +2377,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			    content: "";
 			    position: absolute;
 			    left: 90px;
-			    background:url(../images/sprite.png) no-repeat -1px -162px;
+			    background:image-url('sprite.png') no-repeat -1px -162px;
 			    width: 24px;
 				top: 15px;
 			    height: 32px;
@@ -2528,7 +2528,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			   content:"";
 			   width:10px;
 			   height:16px;
-			   background:url(../images/sprite.png) no-repeat -14px -62px;
+			   background:image-url('sprite.png') no-repeat -14px -62px;
 			 }
 			 &.first{
 			   padding:0;
