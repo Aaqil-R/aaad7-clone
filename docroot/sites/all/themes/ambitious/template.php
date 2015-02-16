@@ -723,10 +723,12 @@ function ambitious_preprocess_node(&$variables){
  
 }
 function ambitious_preprocess_views_view(&$vars) {
-  if ($vars['view']->name == 'block_stream' || $vars['view']->vid) == '26'){
-//     $file_uri = file_create_url(file_build_uri('images/example.jpeg'));
+  if ($vars['view']->vid == '26'){
+     $file_uri = file_create_url(file_build_uri('images/example.jpeg'));
      $backgroundurl = array();
-     dpm($vars['view']->result);
+     foreach ($vars['view']->result as $key=>$value){
+         dpm($value);
+     }
 
   }
 }
