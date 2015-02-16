@@ -37,7 +37,11 @@
 	.visual .img-holder{
 		min-height: 5em;
 	}
+	#wrapper{
+		background: image-url('wid_bg.png') repeat-y center #ffffff;
+	}
 	#main2{
+		background: transparent;
 		@include container;
 	}
 	#main2 footer{
@@ -48,8 +52,14 @@
 		line-height: 16px;
 	}
 
+	#main2 .article-left{
+		@include breakpoint($not-mobile){
+			padding: 0 15px;
+		}		
+	}
+
 	#content_bottom{
-		@include span(4 of 12 last);
+		@include span(3 of 12 last);
 	}
 
 }

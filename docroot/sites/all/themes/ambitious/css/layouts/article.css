@@ -400,21 +400,32 @@ body > .jcf-select-drop.jcf-drop-flipped {
   min-height: 5em;
 }
 /* line 40, ../../sass/layouts/article.scss */
+.node-type-article #wrapper {
+  background: url('../../images/wid_bg.png?1420173964') repeat-y center #ffffff;
+}
+/* line 43, ../../sass/layouts/article.scss */
 .node-type-article #main2 {
+  background: transparent;
   margin: 0 auto;
   max-width: 1080px;
 }
-/* line 43, ../../sass/layouts/article.scss */
+/* line 47, ../../sass/layouts/article.scss */
 .node-type-article #main2 footer {
   clear: both;
 }
-/* line 47, ../../sass/layouts/article.scss */
+/* line 51, ../../sass/layouts/article.scss */
 .node-type-article #main2 .article-left .visual .holder .pic-caption {
   line-height: 16px;
 }
-/* line 51, ../../sass/layouts/article.scss */
+@media (min-width: 767px) {
+  /* line 55, ../../sass/layouts/article.scss */
+  .node-type-article #main2 .article-left {
+    padding: 0 15px;
+  }
+}
+/* line 61, ../../sass/layouts/article.scss */
 .node-type-article #content_bottom {
-  width: 32.20339%;
+  width: 23.72881%;
   float: right;
   margin-right: 0;
 }

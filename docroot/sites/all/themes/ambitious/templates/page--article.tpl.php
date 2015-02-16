@@ -139,6 +139,12 @@
   <?php print render($page['content']) ?>
 <!-- /content -->
 
+<?php
+  // Render the sidebars to see if there's anything in them.
+  $sidebar_first  = render($page['sidebar_first']);
+  $sidebar_second = render($page['sidebar_second']);
+?>
+
 <?php if ($page['content_bottom']): ?>
   <section id="content_bottom">
     <?php print render($page['content_bottom']); ?>
