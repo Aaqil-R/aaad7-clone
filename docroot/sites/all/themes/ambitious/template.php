@@ -721,4 +721,23 @@ function ambitious_preprocess_node(&$variables){
   }
   
  
-} 
+}
+
+function render_my_block_content() {
+  $output = '';
+
+  $currentNode = menu_get_object();
+  if ($currentNode) {
+      if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
+        $block =block_load('block', 151);
+      }
+      else{
+        $block =block_load('block', 156);
+      }
+  }
+  else{
+    $block =block_load('block', 156);
+  } 
+  $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+  return $output;
+ } 
