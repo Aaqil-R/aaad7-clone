@@ -38,6 +38,11 @@ function articalmig_migrate_api()
 				'class_name'=>'userupdatemigration',
 				'group_name'=>'users',
 			),
+
+			'userupdate2'=>array(
+				'class_name'=>'userupdatemigration2',
+				'group_name'=>'users',
+			),
 		),
 	);
 }
