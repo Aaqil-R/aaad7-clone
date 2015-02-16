@@ -27,8 +27,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						</div>
 						<div class="info">
 							<h2><?php print $fields['title']->content; ?></h2>
-							<p>“<?php print strip_tags($fields['body']->content); ?>”</p>
-							<span class="cite"><strong>-</strong> </span>
+							<p>“<?php print strip_tags($fields['body']->content); ?>”</p> 
 							<span class="cite"><strong>- <?php print strip_tags($fields['field_featured_author']->content); ?></strong>  (via the <?php print $ourfieldsourse; ?>)</span>
 						</div>
 <?php else:?>
