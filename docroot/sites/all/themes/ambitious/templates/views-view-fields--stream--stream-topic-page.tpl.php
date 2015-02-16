@@ -1,9 +1,9 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count');
+$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour');
 ?>
 <?php if ($fields['type']->raw == 'quote'):?>
-<section class="blockquote-block">
+<section class="blockquote-block" style="background-color:<?php print $fields['field_background_colour']; ?>">
 						<blockquote>
 							<q>For specific sleep issue advice you may want to contact the children's sleep charity.</q>
 							<cite><strong>- <a href="#" title="Victoria">Victoria</a></strong>  (Information Officer)</cite>
