@@ -75,6 +75,11 @@
 	                 </div>
 	              </footer>
 	          </article>
+	          <?php if($region['sidebar_second']): ?>
+      			<div class="article-right">
+        			<?php print render($region['sidebar_second']); ?>
+      			</div>
+  				<?php endif; ?>
 		      <!-- comment columns -->
 			<?php  print render($content['comments']); ?>
 
