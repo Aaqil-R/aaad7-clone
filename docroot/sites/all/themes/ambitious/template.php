@@ -249,7 +249,7 @@ function ambitious_menu_link(&$variables) {
           return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn btn-pink"'.$output . $sub_menu . "</a></li>\n";
 				}
 		}
-		return '<li class="menu-list-item btn"' . drupal_attributes($element['#attributes']). '><a class="btn"'.$output . $sub_menu . "</a></li>\n";
+		return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn"'.$output . $sub_menu . "</a></li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
 		
