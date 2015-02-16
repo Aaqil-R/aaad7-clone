@@ -11,23 +11,31 @@
   
   $node = node_load(arg(1)); 
   $links = sharethis_node_view($node, 'full', 'en');
+  $base_path = '/';
+
+  global $user;
+  $user_fields = user_load($user->uid);
+  $first_name = field_get_items('user', user_load($node->uid), 'field_first_name');
+  
 ?> 
 		<!-- contain main informative part of the site -->
-		<section class="article">
-		 <div class="article-left">
+		<section class="article node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+		<div class="article-left">
            <section class="article-left-holder">
 		   <!-- article -->
              <article>
                <header>
                  <h1><?php print $title; ?></h1>
-				<?php if ($content['field_standfirst']) : ?> 
-                 	<h2 class="subheading"><?php print render($content['field_standfirst']); ?></h2>
+				<?php if (!empty($content['field_standfirst'])) : ?> 
+                 	<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
                 <?php endif; ?> 
                  <div class="article-info">
 				   <cite>
-				      <span>By <?php print render($content['field_featured_author']); ?></span>
-				      <a href="#" class="first" title="@martyn71">@martyn71</a>
-					  <a href="#" title="email the author">email the author</a>
+				   <?php if (!empty($first_name)): ?>
+				      <span><?php print t('By') ?> <?php print $first_name; ?></span>
+				    <?php endif; ?>
+				      <a href="<?php print $base_path.'user/'.$uid; ?>" class="first">@<?php print $node->name; ?></a>
+					  <a href="<?php print url('messages/new/'. $node->uid, array ('query' => drupal_get_destination())); ?>" title="email the author">email the author</a>
 				   </cite>
 			       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
                  </div>
@@ -41,10 +49,10 @@
 			     </div>
 			     <div class="holder">
 			     	<?php if (!empty($content['field_image_caption'])): ?>
-			       		<span class="pic-caption"><?php print render($content['field_image_caption']); ?></span>
+			       		<span class="pic-caption"><?php print $content['field_image_caption']['#items'][0]['value']; ?></span>
 			       <?php endif; ?>
 			       <?php if (!empty($content['field_image_credit'])): ?>
-			       	<span class="pic-by">&copy; Photo by <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
+			       	<span class="pic-by"><?php print t('&copy; Photo by');?> <a href="#" title=""><?php print $content['field_image_credit']['#items'][0]['value']; ?></a>.</span>
 			       <?php endif; ?>
 			     </div> 
 			  </section>
@@ -54,7 +62,7 @@
 			     <div class="article-info">
 			       <div class="article-updated">
 
-				     <strong>Last updated: <time pubdate="pubdate">22 December 2014</time></strong>
+				     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 
 				  	<?php if (!empty($content['field_tags'])): ?>   
 						 <div class="article-tags">
