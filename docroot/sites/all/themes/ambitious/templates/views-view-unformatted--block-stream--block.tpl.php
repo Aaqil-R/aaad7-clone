@@ -5,8 +5,7 @@
  * Default simple view template to display a list of rows.
  *
  * @ingroup views_templates
- */
- dpm(get_defined_vars());
+ */ 
  $myvar = get_defined_vars();
  
 ?>
