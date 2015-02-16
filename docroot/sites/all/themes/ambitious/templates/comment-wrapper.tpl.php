@@ -46,7 +46,15 @@
 <section id="comments" class="comment-list <?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
-    <h4>3 <?php print t('Comments'); ?> <a href="#" title="Read our guidelines">Read our guidelines</a></h4>
+    
+    <h4><?php print $node->comment_count; ?> 
+    <?php if($node->comment_count > 1){
+      print t('Comments');
+      }else{
+        print t('Comment');
+      }
+    ?>
+     <a href="#" title="Read our guidelines">Read our guidelines</a></h4>
     <?php print render($title_suffix); ?>
   <?php endif; ?> 
   <ul class="comment-listing">
