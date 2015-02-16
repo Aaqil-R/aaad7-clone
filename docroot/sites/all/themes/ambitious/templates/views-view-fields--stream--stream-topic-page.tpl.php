@@ -28,7 +28,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						<div class="info">
 							<h2><?php print $fields['title']->content; ?></h2>
 							<p>“<?php print strip_tags($fields['body']->content); ?>”</p>
-							<span class="cite"><strong>- <a href="#" title="Danfay12">Danfay12</a></strong>  (via the Community)</span>
+							<span class="cite"><strong>-</strong> <?php print$fields['field_featured_author']->content; ?></span>
 						</div>
 <?php else:?>
 <section >
