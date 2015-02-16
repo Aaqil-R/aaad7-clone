@@ -17,8 +17,7 @@
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
     <?php print $row; ?>
-    <?php $myid = $id-1; ?>
+    <?php $myid = $id-1; dpm($id); ?>
     <?php print $myvar['variables']['view']->result[$myid]->field_field_background_image[0]['raw']['uri'];?> 
-   
   </div>
 <?php endforeach; ?>
