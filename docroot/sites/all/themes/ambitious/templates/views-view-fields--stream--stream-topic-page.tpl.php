@@ -8,7 +8,7 @@ $ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', '
 <section class="blockquote-block">
 						<blockquote <?php print $fields['field_background_colour']->content; ?>>
 							<q><?php print $fields['body']->content; ?></q>
-							<cite><?php print$fields['field_featured_author']-content; ?></cite>
+							<cite><?php print$fields['field_featured_author']->content; ?></cite>
 						</blockquote>
 						<span class="icon-Speech1"></span>
 					</section>
