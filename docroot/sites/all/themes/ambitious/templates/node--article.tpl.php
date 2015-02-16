@@ -40,11 +40,11 @@
 			       <a href="#" class="btn-gray-next" title="Rightarrow"><span class="icon-Rightarrow"></span></a>
 			     </div>
 			     <div class="holder">
-			     	<?php if (!empty($content['field_image_caption'])): ?>
+			     	<?php if (isset($content['field_image_caption'])): ?>
 			       		<span class="pic-caption"><?php print render($content['field_image_caption']); ?></span>
 			       <?php endif; ?>
-			       <?php if (!empty($content['field_image_credit'])): ?>
-			       	<span class="pic-by">&copy; Photo by <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
+			       <?php if (isset($content['field_image_credit'])): ?>
+			       	<span class="pic-by"><?php print t('&copy; Photo by');?> <a href="#" title=""><?php print render($content['field_image_credit']); ?></a>.</span>
 			       <?php endif; ?>
 			     </div> 
 			  </section>
@@ -54,9 +54,9 @@
 			     <div class="article-info">
 			       <div class="article-updated">
 
-				     <strong>Last updated: <time pubdate="pubdate">22 December 2014</time></strong>
+				     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 
-				  	<?php if (!empty($content['field_tags'])): ?>   
+				  	<?php if (isset($content['field_tags'])): ?>   
 						 <div class="article-tags">
 						   <span>Tags: </span>
 							<?php print render($content['field_tags']); ?>
