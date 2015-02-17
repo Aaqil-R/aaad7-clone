@@ -1567,6 +1567,15 @@ fieldset{
 
 
 .view-display-id-events_page{
+   .stButton{
+      @include breakpoint($mobile){
+        padding: 10px 33%;
+        &:before{
+          font-size: 30px;
+          margin-bottom: -7px;
+        }
+      }
+    } 
   .my-voice-post{
     .content{
       width: 45%;
@@ -1582,15 +1591,7 @@ fieldset{
         margin-bottom:15px;
       } 
     }
-    .stButton{
-      @include breakpoint($mobile){
-        padding: 10px 33%;
-        &:before{
-          font-size: 30px;
-          margin-bottom: -7px;
-        }
-      }
-    } 
+    
     .place{
       width: 12%;
       float: left;
