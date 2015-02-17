@@ -1,0 +1,107 @@
+<?php
+function header_form_menu() {
+  // A menu callback is required when using ajax outside of the Form API.
+  $items['header/form'] = array(
+    'page callback' => 'ajax_next_form_response',
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+}
+
+function header_form_block_info() {
+  $blocks['are_you_with_us'] = array(
+    'info' => t('Are you with us? header form'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+function header_form_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'are_you_with_us':
+      $block['subject'] = t('Are you with us?');
+      $block['content'] = get_header_form(0);
+      break;
+  }
+  return $block;
+}
+
+function get_header_form($pageno) {
+  switch ($pageno) {
+        case 0:
+          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
+          $output .= '<div id="slider-container" class="slider-container">';      
+          $block = module_invoke('block', 'webform', 'client-block-74666');
+          $output .= render($block['content']);
+          $link = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
+          $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
+          $output .= '</div>';        
+        break;
+        case 1:
+          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
+          $output .= '<div id="slider-container" class="slider-container">';
+          $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/0', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
+          $output .= '<div class="l-s-arrow">'.$plink.'</div>';
+          $block = module_invoke('block', 'webform', 'client-block-74671');
+          $output .= render($block['content']);
+          $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
+          $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
+          $output .= '</div>';
+        break;
+        case 2:
+           $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
+          $output .= '<div id="slider-container" class="slider-container">';
+          $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
+          $output .= '<div class="l-s-arrow">'.$plink.'</div>';
+          $block = module_invoke('block', 'webform', 'client-block-74676');
+          $output .= render($block['content']);
+          $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/3', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
+          $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
+          $output .= '</div>' ;      
+        break;
+        case 3:
+          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
+          $output .= '<div id="slider-container" class="slider-container">';
+          $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
+          $output .= '<div class="l-s-arrow">'.$plink.'</div>';
+          $block = module_invoke('block', 'webform', 'client-block-74681');
+          $output .= render($block['content']);
+          $output .= '</div>';
+        break;
+    }
+    return $output;
+}
+
+function ajax_next_form_response($ajax, $pageno) {
+   drupal_add_library('system', 'drupal.ajax');
+   if ($type == 'ajax') {
+    $output = get_header_form($pageno);     
+    $commands = array();
+    // See ajax_example_advanced.inc for more details on the available commands
+    // and how to use them.
+    $commands[] = ajax_command_replace('#slider-container', $output);
+    $page = array('#type' => 'ajax', '#commands' => $commands);
+    ajax_deliver($page);
+   } else {
+    $output = t("This is some content delivered via a page load.");
+    return $output;
+  }
+}
+
+function header_form_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'webform_client_form_74666':
+      $form['submitted']['yes-i-am'] = array(
+        '#type' => 'submit',
+        '#value' => 'Yes  I am',
+      );
+      $form['submitted']['not_right_now'] = array(
+        '#type' => 'submit',
+        '#value' => 'Not Right Now',
+      );
+      break;      
+    default:  
+  }
+}
