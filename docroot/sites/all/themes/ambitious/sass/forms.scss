@@ -105,19 +105,10 @@
  }
 
 .form-actions{
-  float:left;
-  @extend [class*=" icon-"];
-  @extend .icon-Rightarrow;  
+  float:left; 
   input[type=submit]{
     padding-right: 40px;
-  }
-  &:after{
-    position: relative;
-    left: -49px;
-    top: 19px;
-    color: #fff;
-    font-size: 16px;
-  }
+  } 
 }
 
 .block-close {

@@ -21,7 +21,7 @@
   font-style: normal;
 }
 /* line 21, ../sass/base/_font-icons.scss */
-[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"], .form-actions {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -90,7 +90,7 @@
 }
 
 /* line 79, ../sass/base/_font-icons.scss */
-.icon-Rightarrow:before, .form-actions:before {
+.icon-Rightarrow:before {
   content: "\e60b";
 }
 
@@ -492,20 +492,12 @@ textarea {
 .form-actions {
   float: left;
 }
-/* line 111, ../sass/forms.scss */
+/* line 109, ../sass/forms.scss */
 .form-actions input[type=submit] {
   padding-right: 40px;
 }
-/* line 114, ../sass/forms.scss */
-.form-actions:after {
-  position: relative;
-  left: -49px;
-  top: 19px;
-  color: #fff;
-  font-size: 16px;
-}
 
-/* line 124, ../sass/forms.scss */
+/* line 115, ../sass/forms.scss */
 .block-close a {
   text-decoration: none;
 }
