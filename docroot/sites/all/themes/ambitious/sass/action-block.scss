@@ -19,15 +19,7 @@
     .field-content {
 		float:left;
 		@include clearfix();
-	}
-
-	// There must be a better way of doing this; basically for .core-block
-	// the items should float right instead.
-	.core-block {
-		.field-content {
-			float:right;
-		}
-	}    
+	}  
 
     .ambitious-block-element {  
     	height: 320px;
