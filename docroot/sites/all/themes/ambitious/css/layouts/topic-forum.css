@@ -1,5 +1,5 @@
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .st_sharethis_button .stButton:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
+.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
   content: " ";
   display: block;
   clear: both;
@@ -377,7 +377,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .st_sharethis_button .stButton:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
+.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
   content: " ";
   display: block;
   clear: both;
@@ -755,7 +755,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .st_sharethis_button .stButton:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
+.my-voice-intro:after, .my-voice-main .sort-block:after, .signup-columns:after, .my-voice-columns:after, community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .posts-columns.columns-full .row .forum-text:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after {
   content: " ";
   display: block;
   clear: both;
@@ -2971,75 +2971,69 @@ div.messages.status .krumo-root a {
 }
 
 /*SHARE BUTTON*/
-/* line 170, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton {
-  display: inline-block;
-  float: right;
-  border: none;
-  padding: 5px 19px;
-  font-size: 18px;
-  line-height: 30px;
-  border-radius: 5px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  border-bottom: 5px solid #007e2a;
-  background: #00a837;
-  font-weight: normal;
-  font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-}
-/* line 186, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton:after {
-  font-size: 18px;
-  font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-  content: "Share";
-  color: #ffffff;
-  float: left;
-  margin-top: -22px;
-  padding-right: 29px;
-}
-/* line 195, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton:before {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  float: right;
-  font-size: 20px;
-  color: #ffffff;
-  font-family: 'icomoon';
-  content: "\e60d";
-}
-/* line 212, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton:hover {
-  border-bottom-width: 3px;
-  margin-top: 2px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 218, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton:active {
-  border-bottom-width: 0px;
-  margin-top: 5px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 224, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 228, ../../sass/layouts/topic-forum.scss */
-.st_sharethis_button .stButton .st-sharethis-counter {
-  display: none !important;
-}
-
+ /*
+  .st_sharethis_button .stButton{
+    display:inline-block;
+    float:right;
+  border:none;
+  padding:5px 19px;
+  font-size:18px;
+  line-height:30px;
+  border-radius:5px;
+  color:$white;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:5px solid $green-dark;
+    background:$green;
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
+       &:after{
+        font-size: 18px;
+        font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+        content :"Share";
+        color:$white;
+        float: left;
+		margin-top: -22px;
+		padding-right: 29px;
+      }    
+      &:before{
+          font-family: 'icomoon';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+         float: right;
+         font-size: 20px;
+         color:$white;
+         font-family: 'icomoon';
+         content: "\e60d";
+      }   
+      &:hover {
+	    border-bottom-width: 3px;
+	    margin-top:2px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:active{
+	    border-bottom-width:0px;
+	    margin-top:5px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:visited{
+	    text-decoration:none;
+		color:$white;
+	  }  
+	  .st-sharethis-counter{
+	    display:none !important;
+	  }
+    }
+    */
 /* line 233, ../../sass/layouts/topic-forum.scss */
 .video-icon {
   display: none;
@@ -3822,28 +3816,35 @@ div.messages.status .krumo-root a {
 /* line 911, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns .form-item {
   float: left;
-  width: 100%;
+  width: 96%;
+  margin-bottom: 9px;
 }
-/* line 914, ../../sass/layouts/topic-forum.scss */
+/* line 915, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns .form-item label {
   left: 24px;
   top: 12px;
 }
-/* line 919, ../../sass/layouts/topic-forum.scss */
+/* line 920, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns a.tooltips span.tooltip-content {
   left: -45px;
   bottom: 30px;
 }
-/* line 923, ../../sass/layouts/topic-forum.scss */
+/* line 924, ../../sass/layouts/topic-forum.scss */
+.page-node-74606 #content_top .my-voice-columns .description {
+  margin-top: 11px;
+}
+/* line 927, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns .form-actions {
   float: left;
   position: relative;
 }
-/* line 928, ../../sass/layouts/topic-forum.scss */
+/* line 932, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns .form-actions input[type=submit] {
-  padding-right: 40px;
+  padding: 9px 42px;
+  font-size: 20px;
+  margin-top: -10px;
 }
-/* line 931, ../../sass/layouts/topic-forum.scss */
+/* line 937, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 #content_top .my-voice-columns .form-actions:before {
   color: #ffffff;
   position: absolute;
@@ -3852,22 +3853,22 @@ div.messages.status .krumo-root a {
   font-size: 20px;
 }
 
-/* line 942, ../../sass/layouts/topic-forum.scss */
+/* line 948, ../../sass/layouts/topic-forum.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"] {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
-/* line 945, ../../sass/layouts/topic-forum.scss */
+/* line 951, ../../sass/layouts/topic-forum.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:hover {
   border-bottom-width: 3px;
 }
 
-/* line 950, ../../sass/layouts/topic-forum.scss */
+/* line 956, ../../sass/layouts/topic-forum.scss */
 .views-row-first .my-voice-pos .feature-holder {
   display: inherit;
 }
 
-/* line 956, ../../sass/layouts/topic-forum.scss */
+/* line 962, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder {
   display: none;
   position: absolute;
@@ -3877,16 +3878,16 @@ div.messages.status .krumo-root a {
   background: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 956, ../../sass/layouts/topic-forum.scss */
+  /* line 962, ../../sass/layouts/topic-forum.scss */
   .my-voice-post .feature-holder {
     left: 15px;
   }
 }
-/* line 966, ../../sass/layouts/topic-forum.scss */
+/* line 972, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder.hover .text {
   display: block;
 }
-/* line 971, ../../sass/layouts/topic-forum.scss */
+/* line 977, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder .icon-Featured {
   font-size: 24px;
   padding: 6px 0 0;
@@ -3899,7 +3900,7 @@ div.messages.status .krumo-root a {
   color: #f15500;
 }
 @media (max-width: 767px) {
-  /* line 971, ../../sass/layouts/topic-forum.scss */
+  /* line 977, ../../sass/layouts/topic-forum.scss */
   .my-voice-post .feature-holder .icon-Featured {
     height: 33px;
     width: 34px;
@@ -3907,15 +3908,15 @@ div.messages.status .krumo-root a {
     font-size: 16px;
   }
 }
-/* line 988, ../../sass/layouts/topic-forum.scss */
+/* line 994, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder.green-icon {
   background: #00a837;
 }
-/* line 990, ../../sass/layouts/topic-forum.scss */
+/* line 996, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder.green-icon .icon-Featured {
   color: #00a837;
 }
-/* line 994, ../../sass/layouts/topic-forum.scss */
+/* line 1000, ../../sass/layouts/topic-forum.scss */
 .my-voice-post .feature-holder .text {
   display: none;
   float: left;
@@ -3927,7 +3928,7 @@ div.messages.status .krumo-root a {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 994, ../../sass/layouts/topic-forum.scss */
+  /* line 1000, ../../sass/layouts/topic-forum.scss */
   .my-voice-post .feature-holder .text {
     padding: 5px 6px;
     line-height: 24px;
@@ -3937,47 +3938,47 @@ div.messages.status .krumo-root a {
   }
 }
 
-/* line 1017, ../../sass/layouts/topic-forum.scss */
+/* line 1023, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .visual.no-overlay, .page-node-74621 .visual.no-overlay {
   margin-bottom: 10px;
 }
 
-/* line 1023, ../../sass/layouts/topic-forum.scss */
+/* line 1029, ../../sass/layouts/topic-forum.scss */
 .view-display-id-voices_from_the_spectrum_page .views-exposed-widget.views-submit-button {
   float: left;
 }
 
-/* line 1030, ../../sass/layouts/topic-forum.scss */
+/* line 1036, ../../sass/layouts/topic-forum.scss */
 .page-node-74596 .visual.no-overlay {
   margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 1034, ../../sass/layouts/topic-forum.scss */
+  /* line 1040, ../../sass/layouts/topic-forum.scss */
   .view-id-stream.view-display-id-stream_forum_page .post {
     float: left;
   }
 }
 
-/* line 1041, ../../sass/layouts/topic-forum.scss */
+/* line 1047, ../../sass/layouts/topic-forum.scss */
 .page-user .top-header .top-header-inner .page-links {
   letter-spacing: inherit;
 }
-/* line 1043, ../../sass/layouts/topic-forum.scss */
+/* line 1049, ../../sass/layouts/topic-forum.scss */
 .page-user .top-header .top-header-inner .page-links a {
   text-decoration: underline;
 }
-/* line 1045, ../../sass/layouts/topic-forum.scss */
+/* line 1051, ../../sass/layouts/topic-forum.scss */
 .page-user .top-header .top-header-inner .page-links a:hover {
   text-decoration: none;
 }
 
-/* line 1053, ../../sass/layouts/topic-forum.scss */
+/* line 1059, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .title {
   display: none;
 }
 
-/* line 1065, ../../sass/layouts/topic-forum.scss */
+/* line 1071, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block, .page-comment-reply .comment-block {
   padding: 35px 50px 37px 44px;
   position: relative;
@@ -3987,93 +3988,93 @@ div.messages.status .krumo-root a {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 1074, ../../sass/layouts/topic-forum.scss */
+/* line 1080, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block #edit-author--2 label, .page-comment-reply .comment-block #edit-author--2 label {
   float: left;
   width: auto;
 }
-/* line 1078, ../../sass/layouts/topic-forum.scss */
+/* line 1084, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block #edit-author--2 .form-element, .page-comment-reply .comment-block #edit-author--2 .form-element {
   background: none;
   margin-left: 10px;
   margin-top: 0;
 }
 @media (max-width: 767px) {
-  /* line 1065, ../../sass/layouts/topic-forum.scss */
+  /* line 1071, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-block, .page-comment-reply .comment-block {
     padding: 27px 15px;
   }
 }
-/* line 1087, ../../sass/layouts/topic-forum.scss */
+/* line 1093, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block h4, .page-comment-reply .comment-block h4 {
   margin: 0 0 17px;
 }
-/* line 1090, ../../sass/layouts/topic-forum.scss */
+/* line 1096, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .form-required, .page-comment-reply .comment-block .form-required {
   color: #f15500;
 }
-/* line 1093, ../../sass/layouts/topic-forum.scss */
+/* line 1099, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form, .page-comment-reply .comment-block .comment-form {
   font-size: 18px;
   color: #636c73;
 }
-/* line 1096, ../../sass/layouts/topic-forum.scss */
+/* line 1102, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form .required, .page-comment-reply .comment-block .comment-form .required {
   color: #f15500;
 }
-/* line 1099, ../../sass/layouts/topic-forum.scss */
+/* line 1105, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form label, .page-comment-reply .comment-block .comment-form label {
   float: left;
   width: 100%;
 }
-/* line 1102, ../../sass/layouts/topic-forum.scss */
+/* line 1108, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form label.label-block, .page-comment-reply .comment-block .comment-form label.label-block {
   width: 100%;
 }
-/* line 1106, ../../sass/layouts/topic-forum.scss */
+/* line 1112, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form .jcf-select, .page-comment-reply .comment-block .comment-form .jcf-select {
   width: 100%;
   border: none;
 }
-/* line 1110, ../../sass/layouts/topic-forum.scss */
+/* line 1116, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form fieldset, .page-comment-reply .comment-block .comment-form fieldset {
   margin: 0 0 20px 0;
   float: none;
 }
 @media (max-width: 767px) {
-  /* line 1110, ../../sass/layouts/topic-forum.scss */
+  /* line 1116, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-block .comment-form fieldset, .page-comment-reply .comment-block .comment-form fieldset {
     margin: 0 0 10px 0;
   }
 }
-/* line 1116, ../../sass/layouts/topic-forum.scss */
+/* line 1122, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form fieldset fieldset, .page-comment-reply .comment-block .comment-form fieldset fieldset {
   margin: 0;
   padding: 0;
 }
-/* line 1120, ../../sass/layouts/topic-forum.scss */
+/* line 1126, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form fieldset .filter-help, .page-comment-reply .comment-block .comment-form fieldset .filter-help {
   float: left;
   width: 100%;
   padding: 0;
   margin: 0 0 20px 0;
 }
-/* line 1125, ../../sass/layouts/topic-forum.scss */
+/* line 1131, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form fieldset .filter-help a, .page-comment-reply .comment-block .comment-form fieldset .filter-help a {
   padding: 0;
 }
-/* line 1130, ../../sass/layouts/topic-forum.scss */
+/* line 1136, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form strong, .page-comment-reply .comment-block .comment-form strong {
   color: #081318;
   margin-left: 10px;
 }
 @media (max-width: 990px) {
-  /* line 1130, ../../sass/layouts/topic-forum.scss */
+  /* line 1136, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-block .comment-form strong, .page-comment-reply .comment-block .comment-form strong {
     font-weight: normal;
   }
 }
-/* line 1137, ../../sass/layouts/topic-forum.scss */
+/* line 1143, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form .form-element, .page-comment-reply .comment-block .comment-form .form-element {
   background-color: #eef2f3;
   background-image: -webkit-linear-gradient(top, #636c73, #eef2f3);
@@ -4090,7 +4091,7 @@ div.messages.status .krumo-root a {
   max-width: 506px;
   width: 100%;
 }
-/* line 1145, ../../sass/layouts/topic-forum.scss */
+/* line 1151, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form .form-element input[type=text], .node-type-forum-discussion .comment-block .comment-form .form-element input[type=email], .node-type-forum-discussion .comment-block .comment-form .form-element textarea, .page-comment-reply .comment-block .comment-form .form-element input[type=text], .page-comment-reply .comment-block .comment-form .form-element input[type=email], .page-comment-reply .comment-block .comment-form .form-element textarea {
   float: left;
   -moz-border-radius: 5px;
@@ -4100,55 +4101,55 @@ div.messages.status .krumo-root a {
   color: #636c73;
   border: none;
 }
-/* line 1152, ../../sass/layouts/topic-forum.scss */
+/* line 1158, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .comment-form .form-element textarea, .page-comment-reply .comment-block .comment-form .form-element textarea {
   height: 183px;
 }
-/* line 1157, ../../sass/layouts/topic-forum.scss */
+/* line 1163, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .form-actions, .page-comment-reply .comment-block .form-actions {
   margin: 0;
 }
-/* line 1161, ../../sass/layouts/topic-forum.scss */
+/* line 1167, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-block .form-actions #edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions #edit-preview:hover, .page-comment-reply .comment-block .form-actions #edit-submit:hover, .page-comment-reply .comment-block .form-actions #edit-preview:hover {
   color: #636c73;
 }
 @media (max-width: 767px) {
-  /* line 1167, ../../sass/layouts/topic-forum.scss */
+  /* line 1173, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-block .form-actions .btn.btn-left, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview, .node-type-forum-discussion .comment-block .form-actions .filter-pink input.btn-left[type=submit], .filter-pink .node-type-forum-discussion .comment-block .form-actions input.btn-left[type=submit], .node-type-forum-discussion .comment-block .form-actions .button-holder input.btn-left[type=submit], .button-holder .node-type-forum-discussion .comment-block .form-actions input.btn-left[type=submit], .node-type-forum-discussion .comment-block .form-actions .button-holder .btn-left.filter-pink, .button-holder .node-type-forum-discussion .comment-block .form-actions .btn-left.filter-pink, .page-comment-reply .comment-block .form-actions .btn.btn-left, .page-comment-reply .comment-block .form-actions .btn-left#edit-submit, .page-comment-reply .comment-block .form-actions .btn-left#edit-preview, .page-comment-reply .comment-block .form-actions .filter-pink input.btn-left[type=submit], .filter-pink .page-comment-reply .comment-block .form-actions input.btn-left[type=submit], .page-comment-reply .comment-block .form-actions .button-holder input.btn-left[type=submit], .button-holder .page-comment-reply .comment-block .form-actions input.btn-left[type=submit], .page-comment-reply .comment-block .form-actions .button-holder .btn-left.filter-pink, .button-holder .page-comment-reply .comment-block .form-actions .btn-left.filter-pink {
     margin-left: 6px;
     padding: 3px 15px;
   }
-  /* line 1170, ../../sass/layouts/topic-forum.scss */
+  /* line 1176, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-block .form-actions .btn.btn-left:first-child, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-submit:first-child, .node-type-forum-discussion .comment-block .form-actions .btn-left#edit-preview:first-child, .node-type-forum-discussion .comment-block .form-actions .filter-pink input.btn-left[type=submit]:first-child, .filter-pink .node-type-forum-discussion .comment-block .form-actions input.btn-left[type=submit]:first-child, .node-type-forum-discussion .comment-block .form-actions .button-holder input.btn-left[type=submit]:first-child, .button-holder .node-type-forum-discussion .comment-block .form-actions input.btn-left[type=submit]:first-child, .node-type-forum-discussion .comment-block .form-actions .button-holder .btn-left.filter-pink:first-child, .button-holder .node-type-forum-discussion .comment-block .form-actions .btn-left.filter-pink:first-child, .page-comment-reply .comment-block .form-actions .btn.btn-left:first-child, .page-comment-reply .comment-block .form-actions .btn-left#edit-submit:first-child, .page-comment-reply .comment-block .form-actions .btn-left#edit-preview:first-child, .page-comment-reply .comment-block .form-actions .filter-pink input.btn-left[type=submit]:first-child, .filter-pink .page-comment-reply .comment-block .form-actions input.btn-left[type=submit]:first-child, .page-comment-reply .comment-block .form-actions .button-holder input.btn-left[type=submit]:first-child, .button-holder .page-comment-reply .comment-block .form-actions input.btn-left[type=submit]:first-child, .page-comment-reply .comment-block .form-actions .button-holder .btn-left.filter-pink:first-child, .button-holder .page-comment-reply .comment-block .form-actions .btn-left.filter-pink:first-child {
     margin-left: 0;
   }
 }
-/* line 1179, ../../sass/layouts/topic-forum.scss */
+/* line 1185, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list h4, .page-comment-reply .comment-list h4 {
   font-size: 23px;
   font-size: 1.4375em;
 }
-/* line 1181, ../../sass/layouts/topic-forum.scss */
+/* line 1187, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list h4 a, .page-comment-reply .comment-list h4 a {
   font-size: 16px;
   text-decoration: underline;
   margin-left: 0;
 }
-/* line 1187, ../../sass/layouts/topic-forum.scss */
+/* line 1193, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing {
   position: relative;
 }
-/* line 1190, ../../sass/layouts/topic-forum.scss */
+/* line 1196, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing.children, .page-comment-reply .comment-list ul.comment-listing.children {
   margin-left: 30px;
 }
-/* line 1194, ../../sass/layouts/topic-forum.scss */
+/* line 1200, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left, .page-comment-reply .comment-list ul.comment-listing li .comment-left {
   float: left;
   width: 79px;
   font-size: 13px;
 }
-/* line 1198, ../../sass/layouts/topic-forum.scss */
+/* line 1204, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left img, .page-comment-reply .comment-list ul.comment-listing li .comment-left img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -4156,27 +4157,27 @@ div.messages.status .krumo-root a {
   overflow: hidden;
   margin: 0 0 4px 0;
 }
-/* line 1203, ../../sass/layouts/topic-forum.scss */
+/* line 1209, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left a, .page-comment-reply .comment-list ul.comment-listing li .comment-left a {
   text-decoration: underline;
   font-weight: bold;
   color: #081318;
 }
-/* line 1207, ../../sass/layouts/topic-forum.scss */
+/* line 1213, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left a:hover, .page-comment-reply .comment-list ul.comment-listing li .comment-left a:hover {
   text-decoration: none;
 }
-/* line 1211, ../../sass/layouts/topic-forum.scss */
+/* line 1217, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left cite, .page-comment-reply .comment-list ul.comment-listing li .comment-left cite {
   margin: 0 0 7px 0;
   font-style: normal;
   display: block;
 }
-/* line 1216, ../../sass/layouts/topic-forum.scss */
+/* line 1222, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left time, .page-comment-reply .comment-list ul.comment-listing li .comment-left time {
   margin: 0 0 17px 0;
 }
-/* line 1220, ../../sass/layouts/topic-forum.scss */
+/* line 1226, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right, .page-comment-reply .comment-list ul.comment-listing li .comment-right {
   border: 2px solid #d2d5d6;
   padding: 16px 26px 13px 26px;
@@ -4186,12 +4187,12 @@ div.messages.status .krumo-root a {
   word-wrap: break-word;
 }
 @media (max-width: 767px) {
-  /* line 1220, ../../sass/layouts/topic-forum.scss */
+  /* line 1226, ../../sass/layouts/topic-forum.scss */
   .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right, .page-comment-reply .comment-list ul.comment-listing li .comment-right {
     padding: 15px;
   }
 }
-/* line 1230, ../../sass/layouts/topic-forum.scss */
+/* line 1236, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right:before, .page-comment-reply .comment-list ul.comment-listing li .comment-right:before {
   content: "";
   position: absolute;
@@ -4201,47 +4202,47 @@ div.messages.status .krumo-root a {
   top: 15px;
   height: 32px;
 }
-/* line 1239, ../../sass/layouts/topic-forum.scss */
+/* line 1245, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right .links, .page-comment-reply .comment-list ul.comment-listing li .comment-right .links {
   margin-bottom: 17px;
 }
-/* line 1245, ../../sass/layouts/topic-forum.scss */
+/* line 1251, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li {
   float: left;
   margin: 0 11px 0 0;
 }
-/* line 1248, ../../sass/layouts/topic-forum.scss */
+/* line 1254, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li a, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 1251, ../../sass/layouts/topic-forum.scss */
+/* line 1257, ../../sass/layouts/topic-forum.scss */
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul li a:hover, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul li a:hover {
   text-decoration: none;
 }
 
-/* line 1262, ../../sass/layouts/topic-forum.scss */
+/* line 1268, ../../sass/layouts/topic-forum.scss */
 fieldset {
   float: left;
 }
 
-/* line 1265, ../../sass/layouts/topic-forum.scss */
+/* line 1271, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .banner_nav.visual {
   z-index: 99;
   position: absolute;
   top: 32%;
 }
 
-/* line 1273, ../../sass/layouts/topic-forum.scss */
+/* line 1279, ../../sass/layouts/topic-forum.scss */
 .feature-holder {
   overflow: hidden;
 }
-/* line 1275, ../../sass/layouts/topic-forum.scss */
+/* line 1281, ../../sass/layouts/topic-forum.scss */
 .feature-holder .icon-Featured {
   position: relative;
   z-index: 999;
 }
-/* line 1279, ../../sass/layouts/topic-forum.scss */
+/* line 1285, ../../sass/layouts/topic-forum.scss */
 .feature-holder .text {
   display: block !important;
   margin-left: -134px;
@@ -4250,40 +4251,40 @@ fieldset {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 1285, ../../sass/layouts/topic-forum.scss */
+/* line 1291, ../../sass/layouts/topic-forum.scss */
 .feature-holder:hover .text {
   margin-left: 0px;
 }
 
-/* line 1291, ../../sass/layouts/topic-forum.scss */
+/* line 1297, ../../sass/layouts/topic-forum.scss */
 .posts-columns .post .img-holder {
   min-height: 50px;
 }
 
 @media (max-width: 767px) {
-  /* line 1296, ../../sass/layouts/topic-forum.scss */
+  /* line 1302, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .block-inspire.orange-box {
     background-image: url('../../images/action-bg2.jpg?1424101657');
   }
 }
 
-/* line 1305, ../../sass/layouts/topic-forum.scss */
+/* line 1311, ../../sass/layouts/topic-forum.scss */
 .view-display-id-stream_topic_page_forum .view-footer {
   margin: 0;
   height: 108px;
   padding-top: 6px;
 }
-/* line 1309, ../../sass/layouts/topic-forum.scss */
+/* line 1315, ../../sass/layouts/topic-forum.scss */
 .view-display-id-stream_topic_page_forum .view-footer p {
   padding-top: 22px;
 }
 @media (max-width: 767px) {
-  /* line 1309, ../../sass/layouts/topic-forum.scss */
+  /* line 1315, ../../sass/layouts/topic-forum.scss */
   .view-display-id-stream_topic_page_forum .view-footer p {
     padding-top: 5px;
   }
 }
-/* line 1315, ../../sass/layouts/topic-forum.scss */
+/* line 1321, ../../sass/layouts/topic-forum.scss */
 .view-display-id-stream_topic_page_forum .view-footer a {
   margin-right: 0;
   padding: 10px 38px;
@@ -4291,96 +4292,96 @@ fieldset {
 
 /*voice page*/
 @media (max-width: 767px) {
-  /* line 1331, ../../sass/layouts/topic-forum.scss */
+  /* line 1337, ../../sass/layouts/topic-forum.scss */
   .visual .btn-perv {
     margn: -36px 0 0 11px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 1337, ../../sass/layouts/topic-forum.scss */
+  /* line 1343, ../../sass/layouts/topic-forum.scss */
   .visual .btn-next {
     margin: -36px 10px 0 0;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 1343, ../../sass/layouts/topic-forum.scss */
+  /* line 1349, ../../sass/layouts/topic-forum.scss */
   .sort-block {
     display: inherit;
     margin-left: -20px;
     margin-right: -21px;
   }
-  /* line 1348, ../../sass/layouts/topic-forum.scss */
+  /* line 1354, ../../sass/layouts/topic-forum.scss */
   .sort-block fieldset {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 1350, ../../sass/layouts/topic-forum.scss */
+  /* line 1356, ../../sass/layouts/topic-forum.scss */
   .sort-block fieldset .form-element, .sort-block fieldset .jcf-select-text, .sort-block fieldset .jcf-select {
     width: 100%;
   }
-  /* line 1354, ../../sass/layouts/topic-forum.scss */
+  /* line 1360, ../../sass/layouts/topic-forum.scss */
   .sort-block fieldset .stButton {
     float: right;
   }
-  /* line 1358, ../../sass/layouts/topic-forum.scss */
+  /* line 1364, ../../sass/layouts/topic-forum.scss */
   .sort-block .stButton {
     width: 100%;
     padding-top: 12px;
   }
 }
 
-/* line 1364, ../../sass/layouts/topic-forum.scss */
+/* line 1370, ../../sass/layouts/topic-forum.scss */
 .mobile-view {
   display: none;
 }
 
-/* line 1367, ../../sass/layouts/topic-forum.scss */
+/* line 1373, ../../sass/layouts/topic-forum.scss */
 .desktop-view {
   display: inherit;
   float: left;
 }
 
-/* line 1371, ../../sass/layouts/topic-forum.scss */
+/* line 1377, ../../sass/layouts/topic-forum.scss */
 .view-display-id-stream_topic_page .text-block.post {
   margin-left: 1%;
 }
 
 @media (max-width: 767px) {
-  /* line 1375, ../../sass/layouts/topic-forum.scss */
+  /* line 1381, ../../sass/layouts/topic-forum.scss */
   .mobile-view {
     display: inherit;
   }
-  /* line 1378, ../../sass/layouts/topic-forum.scss */
+  /* line 1384, ../../sass/layouts/topic-forum.scss */
   .mobile-view .sort-block {
     display: inherit;
   }
 }
-/* line 1382, ../../sass/layouts/topic-forum.scss */
+/* line 1388, ../../sass/layouts/topic-forum.scss */
 .mobile-view .sort-block {
   display: inherit;
 }
 
 @media (max-width: 767px) {
-  /* line 1386, ../../sass/layouts/topic-forum.scss */
+  /* line 1392, ../../sass/layouts/topic-forum.scss */
   .desktop-view {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 1392, ../../sass/layouts/topic-forum.scss */
+  /* line 1398, ../../sass/layouts/topic-forum.scss */
   .view-display-id-stream_topic_page .text-block.post {
     height: 350px;
   }
 }
 
-/* line 1399, ../../sass/layouts/topic-forum.scss */
+/* line 1405, ../../sass/layouts/topic-forum.scss */
 .button-holder {
   margin: 20px 32px 30px;
 }
-/* line 1401, ../../sass/layouts/topic-forum.scss */
+/* line 1407, ../../sass/layouts/topic-forum.scss */
 .button-holder input[type=submit] {
   width: 100%;
   border-left: none;
@@ -4389,150 +4390,150 @@ fieldset {
 }
 
 @media (max-width: 767px) {
-  /* line 1417, ../../sass/layouts/topic-forum.scss */
+  /* line 1423, ../../sass/layouts/topic-forum.scss */
   .forum-block .table-from > li {
     display: none;
   }
-  /* line 1419, ../../sass/layouts/topic-forum.scss */
+  /* line 1425, ../../sass/layouts/topic-forum.scss */
   .forum-block .table-from > li.views-row-1, .forum-block .table-from > li.views-row-2 {
     display: block;
   }
 }
 @media (max-width: 767px) {
-  /* line 1425, ../../sass/layouts/topic-forum.scss */
+  /* line 1431, ../../sass/layouts/topic-forum.scss */
   .forum-block .holder {
     padding: 12px 20px 40px;
   }
-  /* line 1428, ../../sass/layouts/topic-forum.scss */
+  /* line 1434, ../../sass/layouts/topic-forum.scss */
   .forum-block .holder h1 {
     padding-bottom: 0;
   }
 }
-/* line 1433, ../../sass/layouts/topic-forum.scss */
+/* line 1439, ../../sass/layouts/topic-forum.scss */
 .forum-block .block {
   padding: 40px 0px 0;
 }
-/* line 1437, ../../sass/layouts/topic-forum.scss */
+/* line 1443, ../../sass/layouts/topic-forum.scss */
 .forum-block .table-from h6 {
   margin: 0;
 }
-/* line 1440, ../../sass/layouts/topic-forum.scss */
+/* line 1446, ../../sass/layouts/topic-forum.scss */
 .forum-block .table-from .num, .forum-block .table-from li.col03 a {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   font-weight: normal;
 }
-/* line 1446, ../../sass/layouts/topic-forum.scss */
+/* line 1452, ../../sass/layouts/topic-forum.scss */
 .forum-block .view-footer a {
   font-size: 20px;
 }
 @media (max-width: 767px) {
-  /* line 1446, ../../sass/layouts/topic-forum.scss */
+  /* line 1452, ../../sass/layouts/topic-forum.scss */
   .forum-block .view-footer a {
     font-size: 18px;
   }
-  /* line 1450, ../../sass/layouts/topic-forum.scss */
+  /* line 1456, ../../sass/layouts/topic-forum.scss */
   .forum-block .view-footer a em {
     display: none;
   }
 }
 
-/* line 1459, ../../sass/layouts/topic-forum.scss */
+/* line 1465, ../../sass/layouts/topic-forum.scss */
 .text-block-second {
   margin-left: 1%;
 }
 
-/* line 1465, ../../sass/layouts/topic-forum.scss */
+/* line 1471, ../../sass/layouts/topic-forum.scss */
 .node-type-topic #content_bottom {
   margin-top: 21px;
 }
-/* line 1468, ../../sass/layouts/topic-forum.scss */
+/* line 1474, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .sort-block {
   margin-bottom: 56px;
 }
-/* line 1472, ../../sass/layouts/topic-forum.scss */
+/* line 1478, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .posts-columns .post .info.add h3 {
   .margin-top: 5px;
 }
-/* line 1475, ../../sass/layouts/topic-forum.scss */
+/* line 1481, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .posts-columns .post .num-holder a .num {
   margin-left: -4px;
 }
-/* line 1479, ../../sass/layouts/topic-forum.scss */
+/* line 1485, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .pager-load-more {
   padding: 0px 0 61px;
   margin-top: -21px;
   margin-bottom: -30px;
 }
-/* line 1485, ../../sass/layouts/topic-forum.scss */
+/* line 1491, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .action-block .holder {
   padding: 139px 15px 97px;
 }
 @media (max-width: 767px) {
-  /* line 1485, ../../sass/layouts/topic-forum.scss */
+  /* line 1491, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder {
     padding: 49px 15px 0;
   }
 }
-/* line 1490, ../../sass/layouts/topic-forum.scss */
+/* line 1496, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .action-block .holder .block-symptoms {
   padding: 50px 10px 37px 39px;
 }
-/* line 1493, ../../sass/layouts/topic-forum.scss */
+/* line 1499, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .action-block .holder .btn.btn-transparent, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .filter-pink input.btn-transparent[type=submit], .filter-pink .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder input.btn-transparent[type=submit], .button-holder .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder .btn-transparent.filter-pink, .button-holder .node-type-topic .action-block .holder .btn-transparent.filter-pink {
   padding-right: 20px;
 }
-/* line 1495, ../../sass/layouts/topic-forum.scss */
+/* line 1501, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .action-block .holder .btn.btn-transparent em, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit em, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit em, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview em, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview em, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit em, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit em, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview em, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview em, .node-type-topic .action-block .holder .filter-pink input.btn-transparent[type=submit] em, .filter-pink .node-type-topic .action-block .holder input.btn-transparent[type=submit] em, .node-type-topic .action-block .holder .button-holder input.btn-transparent[type=submit] em, .button-holder .node-type-topic .action-block .holder input.btn-transparent[type=submit] em, .node-type-topic .action-block .holder .button-holder .btn-transparent.filter-pink em, .button-holder .node-type-topic .action-block .holder .btn-transparent.filter-pink em {
   padding-left: 2px;
 }
-/* line 1501, ../../sass/layouts/topic-forum.scss */
+/* line 1507, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .table-from {
   margin: 0 0 29px;
 }
-/* line 1503, ../../sass/layouts/topic-forum.scss */
+/* line 1509, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .table-from > li {
   padding-top: 6px;
 }
-/* line 1506, ../../sass/layouts/topic-forum.scss */
+/* line 1512, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .table-from .table-row {
   padding-bottom: 2px;
 }
-/* line 1508, ../../sass/layouts/topic-forum.scss */
+/* line 1514, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .table-from .table-row .icon-Hottopic {
   margin: -22px 0 0;
   left: 28px;
 }
 @media (max-width: 767px) {
-  /* line 1508, ../../sass/layouts/topic-forum.scss */
+  /* line 1514, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .table-from .table-row .icon-Hottopic {
     margin: 0;
     left: auto;
     right: 0;
   }
 }
-/* line 1517, ../../sass/layouts/topic-forum.scss */
+/* line 1523, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .table-from .table-row .num {
   margin-top: 12px;
 }
 @media (max-width: 767px) {
-  /* line 1517, ../../sass/layouts/topic-forum.scss */
+  /* line 1523, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .table-from .table-row .num {
     margin-top: 5px;
     margin-right: 5px;
   }
 }
-/* line 1527, ../../sass/layouts/topic-forum.scss */
+/* line 1533, ../../sass/layouts/topic-forum.scss */
 .node-type-topic .forum-block .block {
   padding: 52px 32px 0;
 }
 @media (max-width: 767px) {
-  /* line 1527, ../../sass/layouts/topic-forum.scss */
+  /* line 1533, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .forum-block .block {
     padding: 15px 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 1534, ../../sass/layouts/topic-forum.scss */
+  /* line 1540, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder .btn.btn-transparent, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview, .node-type-forum-discussion .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-submit, .node-type-topic .action-block .holder .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview, .page-comment-reply .comment-block .form-actions .node-type-topic .action-block .holder .btn-transparent#edit-preview, .node-type-topic .action-block .holder .filter-pink input.btn-transparent[type=submit], .filter-pink .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder input.btn-transparent[type=submit], .button-holder .node-type-topic .action-block .holder input.btn-transparent[type=submit], .node-type-topic .action-block .holder .button-holder .btn-transparent.filter-pink, .button-holder .node-type-topic .action-block .holder .btn-transparent.filter-pink {
     width: auto;
     margin-left: 20px;
@@ -4541,11 +4542,11 @@ fieldset {
   }
 }
 @media (max-width: 767px) {
-  /* line 1544, ../../sass/layouts/topic-forum.scss */
+  /* line 1550, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder .region .block-main > div {
     padding: 40px 0 24px;
   }
-  /* line 1546, ../../sass/layouts/topic-forum.scss */
+  /* line 1552, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder .region .block-main > div strong {
     padding-left: 22px;
     line-height: normal;
@@ -4553,13 +4554,13 @@ fieldset {
     padding-right: 0;
     width: 74%;
   }
-  /* line 1554, ../../sass/layouts/topic-forum.scss */
+  /* line 1560, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .action-block .holder .region .block-main > div:first-child {
     padding: 20px 0 30px 0px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1561, ../../sass/layouts/topic-forum.scss */
+  /* line 1567, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .topic-share {
     height: 60px;
     float: left;
@@ -4567,75 +4568,75 @@ fieldset {
   }
 }
 @media (max-width: 767px) {
-  /* line 1567, ../../sass/layouts/topic-forum.scss */
+  /* line 1573, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .topic-share .stButton {
     padding: 10px 33%;
   }
-  /* line 1570, ../../sass/layouts/topic-forum.scss */
+  /* line 1576, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .topic-share .stButton:before {
     font-size: 30px;
     margin-bottom: -7px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1577, ../../sass/layouts/topic-forum.scss */
+  /* line 1583, ../../sass/layouts/topic-forum.scss */
   .node-type-topic .banner_text {
     width: 70%;
     margin: 3% 15%;
   }
 }
 
-/* line 1587, ../../sass/layouts/topic-forum.scss */
+/* line 1593, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 #content-header .title {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 1591, ../../sass/layouts/topic-forum.scss */
+  /* line 1597, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .sort-block {
     height: 291px;
   }
 }
-/* line 1596, ../../sass/layouts/topic-forum.scss */
+/* line 1602, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 .text-section {
   margin-top: 17px;
 }
-/* line 1615, ../../sass/layouts/topic-forum.scss */
+/* line 1621, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 .sort-block {
   margin: 0 0 35px;
 }
-/* line 1623, ../../sass/layouts/topic-forum.scss */
+/* line 1629, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a.btn, .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li .node-type-forum-discussion .comment-block .form-actions a#edit-submit, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a#edit-submit, .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li .node-type-forum-discussion .comment-block .form-actions a#edit-preview, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a#edit-preview, .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li .page-comment-reply .comment-block .form-actions a#edit-submit, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a#edit-submit, .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li .page-comment-reply .comment-block .form-actions a#edit-preview, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a#edit-preview, .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li .button-holder a.filter-pink, .button-holder .page-node-74566 .posts-columns.columns-full .row .footer .links.inline li a.filter-pink {
   margin-right: 0;
 }
-/* line 1631, ../../sass/layouts/topic-forum.scss */
+/* line 1637, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 .posts-columns.columns-full .block-symptoms {
   background-image: url("../../images/action-bg6.jpg");
 }
 @media (max-width: 767px) {
-  /* line 1633, ../../sass/layouts/topic-forum.scss */
+  /* line 1639, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .posts-columns.columns-full .block-symptoms .btn, .page-node-74566 .posts-columns.columns-full .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-symptoms #edit-submit, .page-node-74566 .posts-columns.columns-full .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-symptoms #edit-preview, .page-node-74566 .posts-columns.columns-full .block-symptoms .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-symptoms #edit-submit, .page-node-74566 .posts-columns.columns-full .block-symptoms .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-symptoms #edit-preview, .page-node-74566 .posts-columns.columns-full .block-symptoms .filter-pink input[type=submit], .filter-pink .page-node-74566 .posts-columns.columns-full .block-symptoms input[type=submit], .page-node-74566 .posts-columns.columns-full .block-symptoms .button-holder input[type=submit], .button-holder .page-node-74566 .posts-columns.columns-full .block-symptoms input[type=submit], .page-node-74566 .posts-columns.columns-full .block-symptoms .button-holder .filter-pink, .button-holder .page-node-74566 .posts-columns.columns-full .block-symptoms .filter-pink {
     width: auto;
   }
 }
 @media (max-width: 767px) {
-  /* line 1639, ../../sass/layouts/topic-forum.scss */
+  /* line 1645, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .posts-columns.columns-full .block-share {
     background-size: 123%;
     height: 244px;
   }
-  /* line 1642, ../../sass/layouts/topic-forum.scss */
+  /* line 1648, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .posts-columns.columns-full .block-share .btn, .page-node-74566 .posts-columns.columns-full .block-share .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-submit, .page-node-74566 .posts-columns.columns-full .block-share .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-preview, .page-node-74566 .posts-columns.columns-full .block-share .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-submit, .page-node-74566 .posts-columns.columns-full .block-share .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-preview, .page-node-74566 .posts-columns.columns-full .block-share .filter-pink input[type=submit], .filter-pink .page-node-74566 .posts-columns.columns-full .block-share input[type=submit], .page-node-74566 .posts-columns.columns-full .block-share .button-holder input[type=submit], .button-holder .page-node-74566 .posts-columns.columns-full .block-share input[type=submit], .page-node-74566 .posts-columns.columns-full .block-share .button-holder .filter-pink, .button-holder .page-node-74566 .posts-columns.columns-full .block-share .filter-pink {
     margin: 163px 10px 0 0;
     float: right;
     width: auto;
   }
 }
-/* line 1649, ../../sass/layouts/topic-forum.scss */
+/* line 1655, ../../sass/layouts/topic-forum.scss */
 .page-node-74566 .posts-columns.columns-full .block-share .btn, .page-node-74566 .posts-columns.columns-full .block-share .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-submit, .page-node-74566 .posts-columns.columns-full .block-share .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-preview, .page-node-74566 .posts-columns.columns-full .block-share .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-submit, .page-node-74566 .posts-columns.columns-full .block-share .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .page-node-74566 .posts-columns.columns-full .block-share #edit-preview, .page-node-74566 .posts-columns.columns-full .block-share .filter-pink input[type=submit], .filter-pink .page-node-74566 .posts-columns.columns-full .block-share input[type=submit], .page-node-74566 .posts-columns.columns-full .block-share .button-holder input[type=submit], .button-holder .page-node-74566 .posts-columns.columns-full .block-share input[type=submit], .page-node-74566 .posts-columns.columns-full .block-share .button-holder .filter-pink, .button-holder .page-node-74566 .posts-columns.columns-full .block-share .filter-pink {
   width: auto;
 }
 @media (max-width: 767px) {
-  /* line 1655, ../../sass/layouts/topic-forum.scss */
+  /* line 1661, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .topic-share {
     height: 90px;
     padding-top: 12px;
@@ -4644,36 +4645,36 @@ fieldset {
   }
 }
 @media (max-width: 767px) {
-  /* line 1662, ../../sass/layouts/topic-forum.scss */
+  /* line 1668, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .topic-share .stButton {
     padding: 10px 33%;
   }
-  /* line 1665, ../../sass/layouts/topic-forum.scss */
+  /* line 1671, ../../sass/layouts/topic-forum.scss */
   .page-node-74566 .topic-share .stButton:before {
     font-size: 30px;
     margin-bottom: -7px;
   }
 }
 
-/* line 1675, ../../sass/layouts/topic-forum.scss */
+/* line 1681, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .forum-page, .page-node-74606 h1.title {
   display: none;
 }
-/* line 1679, ../../sass/layouts/topic-forum.scss */
+/* line 1685, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .header_banner .banner_text_main {
   top: 0;
 }
-/* line 1681, ../../sass/layouts/topic-forum.scss */
+/* line 1687, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .header_banner .banner_text_main .easy-breadcrumb {
   padding: 28px 12px 0 0;
 }
-/* line 1684, ../../sass/layouts/topic-forum.scss */
+/* line 1690, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .header_banner .banner_text_main .banner_text {
   font-size: 65px;
   margin-left: 0px;
   margin-top: 31px;
 }
-/* line 1689, ../../sass/layouts/topic-forum.scss */
+/* line 1695, ../../sass/layouts/topic-forum.scss */
 .page-node-74606 .header_banner .banner_text_main .banner_sub_text {
   font-size: 26px;
   margin-top: 8px;
