@@ -208,9 +208,9 @@
 <?php if ($page['action']): ?>
   <!-- action columns -->
   <section class="action-block">
-    <div class="holder">
-     <?php print render($page['action']); ?>
-   </div>
+    <!-- <div class="holder"> -->
+    <?php print render($page['action']); ?>
+    <!-- </div> -->
  </section>
  <!-- fourm block -->
 <?php endif; ?>
