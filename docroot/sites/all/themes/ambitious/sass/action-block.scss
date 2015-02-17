@@ -25,7 +25,6 @@
 
     .ambitious-block-element {  
     	height: 320px;
-
 	    padding: 2em;
 
 	    padding-bottom:gutter();
@@ -39,6 +38,15 @@
 
 	    @include breakpoint($mobile) {
 			@include span(12 of 12);
+		}
+
+		@include breakpoint($mobile) {
+			.views-field-field-featured-image {
+				display: none;
+			}
+
+			height:	auto;
+			width: 100%;
 		}
 	}	
 }

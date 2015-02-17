@@ -178,22 +178,6 @@ function multistepform_form_alter(&$form, &$form_state, $form_id) {
         $form['actions']['submit']['#value'] = 'Next';
       }
       break;
-    case 'webform_client_form_74601':
-      dpm($form);
-      //$form['submitted']['are_you_with_us']['#theme'] = 'form_are_you_with_us';
-      break;
-    case 'webform_client_form_74666':
-      $form['submitted']['yes-i-am'] = array(
-        '#type' => 'submit',
-        '#value' => 'Yes  I am',
-        '#attributes' => array('class' => array('btn','btn-left')),
-      );
-      $form['submitted']['not_right_now'] = array(
-        '#type' => 'submit',
-        '#value' => 'Not Right Now',
-        '#attributes' => array('class' => array('btn','btn-right')),
-      );
-      break;      
     default:  
   }
 }
