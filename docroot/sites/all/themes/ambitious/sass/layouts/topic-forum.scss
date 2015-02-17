@@ -1570,26 +1570,35 @@ fieldset{
   .my-voice-post{
     .content{
       width: 45%;
+       @include breakpoint($mobile) {
+          float:none;
+         width:auto;
+       }
     }
-    @include breakpoint($mobile) {
-      img{
+    img{
+      @include breakpoint($mobile) {
         float:left;
         width:100%;
-      }
-      .content{
-         float:none;
-         width:atuo;
-       }
-       .place{
-         float:none;
-         width:atuo;
-         margin-bottom:15px;
-       }
+        margin-bottom:15px;
+      } 
     }
-    
+    .stButton{
+      @include breakpoint($mobile){
+        padding: 10px 33%;
+        &:before{
+          font-size: 30px;
+          margin-bottom: -7px;
+        }
+      }
+    } 
     .place{
       width: 12%;
       float: left;
+       @include breakpoint($mobile) {
+         float:none;
+         width:auto;
+         margin-bottom:15px;
+       }
     }
     .line{
       position: absolute;

@@ -21,7 +21,7 @@
   font-style: normal;
 }
 /* line 21, ../sass/base/_font-icons.scss */
-[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"], .page-node-74606 .form-actions:after {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -491,20 +491,20 @@ textarea {
 /* line 108, ../sass/forms.scss */
 .page-node-74606 .form-actions {
   float: left;
+  /* &:after{
+     @extend [class*=" icon-"];
+     position: relative;
+     left: -49px;
+     top: 19px;
+     color: $white;
+     font-size: 16px;
+     content :"\e60b";
+   } */
 }
 /* line 110, ../sass/forms.scss */
 .page-node-74606 .form-actions input[type=submit] {
   padding: 10px;
   padding-right: 45px;
-}
-/* line 114, ../sass/forms.scss */
-.page-node-74606 .form-actions:after {
-  position: relative;
-  left: -49px;
-  top: 19px;
-  color: #ffffff;
-  font-size: 16px;
-  content: "\e60b";
 }
 
 /* line 127, ../sass/forms.scss */
