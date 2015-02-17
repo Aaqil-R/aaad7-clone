@@ -94,17 +94,17 @@
 		               		</section>
 		               		<section class="connect">
 			               		<h3>Connect for faster login</h3>
-			               		<a href="#" class="btn btn-facebook" title="Facebook">
+			               		<a href="#" class="btn facebook-btn" title="Facebook">
 			               			<span>
 			               				Facebook <em class="icon-Facebook"></em>
 			               			</span>
 			               		</a>
-			               		<a href="#" class="btn btn-twitter" title="Twitter">
+			               		<a href="#" class="btn twitter-btn" title="Twitter">
 			               			<span>
 			               				Twitter <em class="icon-Twitter"></em>
 			               			</span>
 			               		</a>
-			               		<a href="#" class="btn btn-google" title="Google">
+			               		<a href="#" class="btn google-btn" title="Google">
 			               			<span>
 			               				Google <em class="icon-google"></em>
 			               			</span>
