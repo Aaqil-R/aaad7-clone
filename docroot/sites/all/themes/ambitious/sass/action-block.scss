@@ -1,11 +1,42 @@
 @import "base/base";
 
-.block-system {
-	@include span(6 of 12);
+.tout-text {
+	color: $white;
+	width: 60%;
 }
 
-.block-element {
-	width:100%;
+.block-system {
+	@include container;
+	padding: 1em;
+	background: $white;
+
+	.view-content {
+      @include clearfix();
+    }
+
+    .field-content {
+    	float: left;
+		@include clearfix();
+	}
+
+    .block-element {  
+    	height: 510px;
+
+	    padding: 2em;
+
+	    padding-bottom:gutter()/4;
+      	margin-bottom:gutter()/4;
+
+		@include span(6 of 12);	
+
+		&:last-child {
+	      @include last;
+	    }
+
+	    @include breakpoint($mobile) {
+			@include span(12 of 12);
+		}
+	}	
 }
 
 /* action block styles */

@@ -146,8 +146,9 @@ $tabs-border: #bbb;
 // Add the helper mixins
 @import "markup-mixins";
 
-// TODO: Re-evaluate; these are from the _all.scss
 @import "font-icons";
+
+// TODO: Re-evaluate; these are from the _all.scss
 @import "jcf";
 
 // Now we add our custom helper mixins.
@@ -168,7 +169,9 @@ $tabs-border: #bbb;
 $susy: (
   columns: 12,
   gutters: 1/4,
+  container: 1080px,
   math: fluid,
   output: float,
-  gutter-position: after
+  gutter-position: after,
+  global-box-sizing: border-box
 );
