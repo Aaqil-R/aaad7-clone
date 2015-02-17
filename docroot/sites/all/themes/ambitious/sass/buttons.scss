@@ -412,6 +412,31 @@
 }
 
 
+.btn-facebook{
+  @include box-shadow(0px 6px $fb-blue-dark);
+  background:$fb-blue;
+
+  &:hover {
+    // replace the displacement of the button from the top
+    top: 2px;
+    // displace the button shadow 
+    @include box-shadow(0px 4px $fb-blue-dark);   
+  }
+}
+
+// Twitter button
+.btn-twitter{
+  @include box-shadow(0px 6px $tw-blue-dark);
+  background:$tw-blue;
+
+  &:hover {
+    // replace the displacement of the button from the top
+    top: 2px;
+    // displace the button shadow 
+    @include box-shadow(0px 4px $tw-blue-dark);   
+  }
+}
+
 .featured-mobile-btn{
   margin-bottom: 0px;
   @include breakpoint($mobile) {
