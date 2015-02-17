@@ -1568,16 +1568,25 @@ fieldset{
 
 .view-display-id-events_page{
   .my-voice-post{
-    
+    .content{
+      width: 45%;
+    }
     @include breakpoint($mobile) {
       img{
         float:left;
         width:100%;
       }
+      .content{
+         float:none;
+         width:atuo;
+       }
+       .place{
+         float:none;
+         width:atuo;
+         margin-bottom:15px;
+       }
     }
-    .content{
-      width: 45%;
-    }
+    
     .place{
       width: 12%;
       float: left;
@@ -1684,10 +1693,7 @@ fieldset{
         }
       }
      }
-     .content{
-       float:none;
-       width:atuo;
-     }
+     
      .text { 
        display:none;
        float:left;
