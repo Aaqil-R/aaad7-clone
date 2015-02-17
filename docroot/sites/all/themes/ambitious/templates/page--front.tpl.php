@@ -127,7 +127,6 @@
   <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">
       <div class="holder">
-      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
       <?php print render($page['header_form']); ?>       
       </div>
     </section>
