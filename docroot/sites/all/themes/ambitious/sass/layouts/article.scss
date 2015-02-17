@@ -646,8 +646,12 @@
 }
 // Comments blcok
 .comment-block{
-	float: left;
-
+	.form-type-textarea{
+		clear: both;
+		.form-element{
+			clear: both;
+		}
+	}
 	.form-actions{
 		clear: both;
 	}
