@@ -21,7 +21,7 @@
   font-style: normal;
 }
 /* line 21, ../sass/base/_font-icons.scss */
-[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
+[class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"], .page-node-74606 .form-actions {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -90,7 +90,7 @@
 }
 
 /* line 79, ../sass/base/_font-icons.scss */
-.icon-Rightarrow:before {
+.icon-Rightarrow:before, .page-node-74606 .form-actions:before {
   content: "\e60b";
 }
 
@@ -489,15 +489,24 @@ textarea {
 }
 
 /* line 107, ../sass/forms.scss */
-.form-actions {
+.page-node-74606 .form-actions {
   float: left;
+  position: relative;
 }
-/* line 109, ../sass/forms.scss */
-.form-actions input[type=submit] {
+/* line 112, ../sass/forms.scss */
+.page-node-74606 .form-actions input[type=submit] {
   padding-right: 40px;
 }
-
 /* line 115, ../sass/forms.scss */
+.page-node-74606 .form-actions:before {
+  position: relative;
+  left: -49px;
+  top: 19px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* line 125, ../sass/forms.scss */
 .block-close a {
   text-decoration: none;
 }

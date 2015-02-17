@@ -103,14 +103,24 @@
 	border-radius: 5px;
 	background: #fff;
  }
-
-.form-actions{
-  float:left; 
-  input[type=submit]{
-    padding-right: 40px;
-  } 
+.page-node-74606{
+	.form-actions{
+	  float:left;
+	  position: relative;
+	  @extend [class*=" icon-"];
+	  @extend .icon-Rightarrow;  
+	  input[type=submit]{
+	    padding-right: 40px;
+	  }
+	  &:before{
+	    position: relative;
+	    left: -49px;
+	    top: 19px;
+	    color: #fff;
+	    font-size: 16px;
+	  }
+	}
 }
-
 .block-close {
     a {
       text-decoration: none;    
