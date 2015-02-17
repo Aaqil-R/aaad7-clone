@@ -7,7 +7,7 @@
 class userupdatemigration extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
-		$this->description = t('Update user data from AAA');
+		$this->description = t('Update user data name, Reference, blog, twitter and additional details from AAA');
 		
 	
 		

@@ -4,7 +4,7 @@
 *migration of user details
 */
 
-class userupdatemigration2 extends articalmigMigration {
+class userupdatemigration3 extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
 		$this->description = t('Update user datas with signature, gender, avatar ref, thumbnail ref from AAA');
@@ -14,11 +14,9 @@ class userupdatemigration2 extends articalmigMigration {
 		$query = $this->getConnection()->select ('migtbluser', 'tu');
 		
 		$query->fields('tu',array('fUserId',
-								'fSignature',
-								'fAvatarGender',
-								'fAvatar',
-								'fThumbnail'));
-
+								'fTypeOfPerson'));
+		//$query->leftjoin('migtblrole','mt','tu.fTypeOfPerson = mt.fId');
+		//$query->addField('mt','fName');
 		$this->source = new MigrateSourceSQL($query);
 		
 		//destination codes
@@ -41,11 +39,8 @@ class userupdatemigration2 extends articalmigMigration {
 		$this->systemOfRecord = Migration::DESTINATION;
 		//mapping the columns
 		$this->addFieldMapping('uid','fUserId')->callbacks(array($this,'changeuserid'));
-		
-		$this->addFieldMapping('field_signature','fSignature');
-		$this->addFieldMapping('field_avatar_gender','fAvatarGender');
-		$this->addFieldMapping('field_avatar_ref','fAvatar');
-		$this->addFieldMapping('field_thumbnail_ref','fThumbnail');		
+		//$this->addFieldMapping('field_type_of_user','fName');
+		$this->addFieldMapping('field_type_of_user','fTypeOfPerson');
 	}
 	
 	protected function changeuserid($value){
