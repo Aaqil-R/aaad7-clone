@@ -9,8 +9,8 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 <?php if ($fields['type']->raw == 'quote'):?>
 <section class="blockquote-block" style="margin:-22px; background:<?php print strip_tags($fields['field_background_colour']->content); ?>" >
 						<blockquote >
-							<q><?php print $fields['body']->content; ?></q>
-							<cite><?php print$fields['field_featured_author']->content; ?></cite>
+							<q><?php print strip_tags($fields['body']->content); ?></q>
+							<cite><?php print strip_tags($fields['field_featured_author']->content); ?></cite>
 						</blockquote>
 						<?php if ($ourfieldsourse== 'Community'):?>
 						<span class="icon-Speech1"></span>
@@ -26,7 +26,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 							<?php print $fields['field_featured_image']->content; ?>
 						</div>
 						<div class="info">
-							<h2><?php print $fields['title']->content; ?></h2>
+							<h2><?php print strip_tags($fields['title']->content, '<a>'); ?></h2>
 							<p>“<?php print strip_tags($fields['body']->content); ?>”</p> 
 							<span class="cite"><strong>- <?php print strip_tags($fields['field_featured_author']->content); ?></strong>  (via the <?php print $ourfieldsourse; ?>)</span>
 						</div>
