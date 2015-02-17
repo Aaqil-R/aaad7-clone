@@ -642,22 +642,23 @@
 		@include container;
 	}
 
-	// Comments
-	.comment-block{
-		float: left;
+}
 
-		.form-actions{
-			clear: both;
-		}
-		// Name
-		.form-element{
-			width: auto;
-			padding: 0;
-			margin: 0;
-			padding-left: 1em;
-			background: none;
-		}
+// Comments blcok
+.comment-block{
+	float: left;
+
+	.form-actions{
+		clear: both;
 	}
-
+	// Name
+	.form-element{
+		width: auto;
+		padding: 0;
+		margin: 0;
+		padding-left: 1em;
+		background: none;
+		display: inline;
+	}
 }
 
