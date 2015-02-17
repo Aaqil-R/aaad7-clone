@@ -104,20 +104,23 @@
 	background: #fff;
  }
 
-.form-actions{
-  float:left;
-  @extend [class*=" icon-"];
-  @extend .icon-Rightarrow;  
-  input[type=submit]{
-    padding-right: 40px;
-  }
-  &:after{
-    position: relative;
-    left: -49px;
-    top: 19px;
-    color: #fff;
-    font-size: 16px;
-  }
+.page-node-74606{
+	.form-actions{
+	  float:left; 
+	  input[type=submit]{
+	    padding:10px;
+	    padding-right: 45px;
+	  }
+	  &:after{
+	    @extend [class*=" icon-"];
+	    position: relative;
+	    left: -49px;
+	    top: 19px;
+	    color: $white;
+	    font-size: 16px;
+	    content :"\e60b";
+	  }
+	}
 }
 
 .block-close {

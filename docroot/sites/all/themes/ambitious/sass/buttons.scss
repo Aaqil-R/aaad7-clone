@@ -426,6 +426,67 @@
 }
 
 
-
-
-
+/*SHARE BUTTON*/
+ 
+  .st_sharethis_button .stButton{
+    display:inline-block;
+    float:right;
+  border:none;
+  padding:5px 19px;
+  font-size:18px;
+  line-height:30px;
+  border-radius:5px;
+  color:$white;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:5px solid $green-dark;
+    background:$green;
+  @extend %clearfix;
+  font-weight:normal;
+  font-family:$base-font-family;
+       &:after{
+        font-size: 18px;
+        font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+        content :"Share";
+        color:$white;
+        float: left;
+		margin-top: -22px;
+		padding-right: 29px;
+      }    
+      &:before{
+          font-family: 'icomoon';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+         float: right;
+         font-size: 20px;
+         color:$white;
+         font-family: 'icomoon';
+         content: "\e60d";
+      }   
+      &:hover {
+	    border-bottom-width: 3px;
+	    margin-top:2px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:active{
+	    border-bottom-width:0px;
+	    margin-top:5px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:visited{
+	    text-decoration:none;
+		color:$white;
+	  }  
+	  .st-sharethis-counter{
+	    display:none !important;
+	  }
+    }
