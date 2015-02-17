@@ -250,7 +250,16 @@ function ambitious_menu_link(&$variables) {
 		}
   
 		$output = l($element['#title'].'<em class="icon-Rightarrow"></em>', $element['#href'], $element['#localized_options']);
-		return '<li' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+		//checking the node type to render the menu
+		$currentNode = menu_get_object();
+		$variables['logo'] = theme_get_setting('logo'); 
+		if ($currentNode) {
+				if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
+					//return '<li class="menu-list-item btn btn-pink"' . drupal_attributes($element['#attributes']). '>'.$output . $sub_menu . "</li>\n";
+          return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn btn-pink"'.$output . $sub_menu . "</a></li>\n";
+				}
+		}
+		return '<li class="menu-list-item"' . drupal_attributes($element['#attributes']). '><a class="btn"'.$output . $sub_menu . "</a></li>\n";
 	}
 		//if($element['#theme'] == 'menu_link__user_menu')
 		
@@ -607,17 +616,36 @@ function ambitious_field__field_event_date(&$variables){
 {
   if($form_id == 'webform_client_form_74601' || $form_id == 'webform_client_form_74621'){
     $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email_address']['#description']."</span></a>";
-  } else if ($form_id == 'webform_client_form_74666') {
-    $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email']['#description']."</span></a>";
-  }
+  } 
 }
 
 // Naming convention for .tpl.php
 function ambitious_preprocess_page(&$vars) {
 
-  if (isset($vars['node']->type)) {
-    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+  if (isset($vars['node']->type)) { // We don't want to apply this on taxonomy or view pages
+    // Splice (2) is based on existing default suggestions. Change it if you need to.
+    array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
+    // Get the url_alias and make each item part of an array
+    $url_alias = drupal_get_path_alias($_GET['q']);
+    $split_url = explode('/', $url_alias);
+    // Add the full path template pages
+    // Insert 2nd to last to allow page--node--[nid] to be last
+    $cumulative_path = '';
+    foreach ($split_url as $path) {
+      $cumulative_path .= '__' . $path;
+      $path_name = 'page' . $cumulative_path;
+      array_splice($vars['theme_hook_suggestions'], -1, 0, str_replace('-','_',$path_name));
+    }
+    // This does just the page name on its own & is considered more specific than the longest path
+    // (because sometimes those get too long)
+    // Also we don't want to do this if there were no paths on the URL
+    // Again, add 2nd to last to preserve page--node--[nid] if we do add it in
+    if (count($split_url) > 1) {
+      $page_name = end($split_url);
+      array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+    }
   }
+
 }
 
 function ambitious_form_element($variables) {
@@ -655,7 +683,7 @@ function ambitious_form_element($variables) {
     $element['#title_display'] = 'none';
   }
   $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
-  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
+  $suffix = isset($element['#field_suffix']) ? '<span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
 
   switch ($element['#title_display']) {
     case 'before':
@@ -688,10 +716,26 @@ function ambitious_form_element($variables) {
   
 }
 
+function ambitious_preprocess_node(&$variables){
+
+  // Get a list of all the regions for this theme
+  foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
+
+    // Get the content for each region and add it to the $region variable
+    if ($blocks = block_get_blocks_by_region($region_key)) {
+      $variables['region'][$region_key] = $blocks;
+    }
+    else {
+      $variables['region'][$region_key] = array();
+    }
+  }
+  
+ 
+}
+
 function ambitious_preprocess_comment_wrapper(&$vars){
 
   //kpr($vars);
   $vars['content']['comment_form']['#attributes']['class'][] = 'comments'; // Add class for form
   
 }
-

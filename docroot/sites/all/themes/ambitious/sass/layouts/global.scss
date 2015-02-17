@@ -214,8 +214,9 @@ div#admin-toolbar.vertical div.admin-tab{
 		  }
 		  li{
 		    .comment-left{
-			  float:left;
-			  width:79px;
+		    	@include span(2 of 8);
+			  //float:left;
+			  //width:79px;
 			  font-size:13px;
 			  img{
 				 @include border-radius(5px);
@@ -240,14 +241,16 @@ div#admin-toolbar.vertical div.admin-tab{
 			  }
 			}
 			.comment-right{
+				@include span(6 of 8 last);
 			  border:2px solid $border-color;
-			  padding:16px 26px 13px 26px;
-			  margin:0 0 27px 112px;
+			  //padding:16px 26px 13px 26px;
+			  //margin:0 0 27px 112px;
 			  font-size:16px;
 			  background:$white;
 			  word-wrap: break-word;
 			  @include breakpoint($mobile){
 			    padding:15px;
+			    @include span(8 of 8);
 			  }
 			  &:before{
 			    content: "";
