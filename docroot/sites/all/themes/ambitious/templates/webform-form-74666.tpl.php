@@ -18,11 +18,9 @@
                <div class="signup-form">
                 <?php print drupal_render($form['submitted']['title']);?>
                 <?php print drupal_render($form['submitted']['first_name']);?>
-                <?php print drupal_render($form['submitted']['email']);?>
-                <div class="webform_buttons">
+                <?php print drupal_render($form['submitted']['email']);?> 
                   <?php print drupal_render($form['submitted']['yes-i-am']);?>
-                  <?php print drupal_render($form['submitted']['not_right_now']);?>
-                </div>
+                  <?php print drupal_render($form['submitted']['not_right_now']);?> 
                 </div>
             </div>
           </div>
