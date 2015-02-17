@@ -926,64 +926,7 @@ div.messages.status{
   }
 }
 
-.my-voice-post{
-  .feature-holder {
-    display:none;
-    position:absolute;
-    z-index:2;
-    bottom:0;
-    left:11px;
-    @include breakpoint($mobile) {
-      left:15px;
-	}
-	&.hover {
-	  .text {
-	    display:block;
-       }
-     }
-     background:$orange;
-	.icon-Featured {
-       font-size:24px;
-       padding:6px 0 0;
-       float:left;
-       background:$white;
-       line-height:30px;
-       height:45px;
-       width:45px;
-       text-align:center;
-       color:$orange;
-       @include breakpoint($mobile) {
-         height:33px;
-         width:34px;
-         padding:2px 0 0;
-         font-size:16px;
-       }
-     }
-	&.green-icon{
-	  background:$green;
-	  .icon-Featured{
-	    color:$green;
-       }
-     }
-     .text {
-       display:none;
-       float:left;
-       font-size:18px;
-       line-height:25px;
-       padding:10px 5px;
-       min-width:109px;
-       text-align:center;
-       color:$white;
-       @include breakpoint($mobile) {
-         padding:5px 6px;
-         line-height:24px;
-         font-size:16px;
-         padding:4px 5px;
-         min-width:97px;
-       }
-     }
-   }
-}
+
  
 
 
