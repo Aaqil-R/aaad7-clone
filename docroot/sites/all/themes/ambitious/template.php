@@ -141,13 +141,15 @@ function ambitious_preprocess_html(&$variables) {
 
 function ambitious_preprocess_region(&$variables) {
       
+  if($variables['region']=='header')
+  {
+    $block =block_load('block', 156);
+    $block1=_block_render_blocks(array($block));
+    $block2=_block_get_renderable_array($block1);
+    $variables['myblock']= drupal_render($block2);
+  }
+
   $currentNode = menu_get_object();
-  
-  $block = block_load('block',156);
-  $block1 = _block_render_blocks(array($block));
-  $block2 = _block_get_renderable_array($block1);
-  $variables['myblock'] = drupal_render($block2);
-  
   $variables['logo'] = theme_get_setting('logo'); 
 
   // TODO: This should become redundant as soon as we move to a different site.
@@ -155,14 +157,13 @@ function ambitious_preprocess_region(&$variables) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
 
-      $block = block_load('block',151);
-      $block1 = _block_render_blocks(array($block));
-      $block2 = _block_get_renderable_array($block1);
-      $variables['myblock'] = drupal_render($block2);
+      $block =block_load('block', 151);
+      //$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+      $variables['myblock']= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+
     }
   }
 }
-
 // Adding a custom breadcrumb code
 //=====================================
 
@@ -613,13 +614,11 @@ function ambitious_field__field_event_date(&$variables){
  return $output;	
 }
  
-function ambitious_form_alter(&$form, &$form_state, $form_id)
+ function ambitious_form_alter(&$form, &$form_state, $form_id)
 {
   if($form_id == 'webform_client_form_74601' || $form_id == 'webform_client_form_74621'){
     $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email_address']['#description']."</span></a>";
-  }  else if ($form_id == 'webform_client_form_74666') {
-   $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email']['#description']."</span></a>";
-  }
+  } 
 }
 
 // Naming convention for .tpl.php
@@ -716,13 +715,6 @@ function ambitious_form_element($variables) {
   $output .= "</fieldset>\n";
 
   return $output;
-  
-}
-
-function ambitious_preprocess_comment_wrapper(&$vars){
-
-  //kpr($vars);
-  $vars['content']['comment_form']['#attributes']['class'][] = 'comments'; // Add class for form
   
 }
 
