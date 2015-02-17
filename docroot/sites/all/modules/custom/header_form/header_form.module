@@ -3,6 +3,7 @@ function header_form_menu() {
   // A menu callback is required when using ajax outside of the Form API.
   $items['header/form/%/%'] = array(
     'page callback' => 'ajax_next_form_response',
+    'page arguments' => array(2,3),
     'access callback' => 'user_access',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
