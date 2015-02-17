@@ -582,6 +582,10 @@
 	#main2{
 		background: transparent;
 		@include container;
+		@include breakpoint($tablet){
+			padding: 0;
+		}	
+
 	}
 	#main2 footer{
 		clear: both;
@@ -614,12 +618,28 @@
 			background: image-url('wid_bg.png') repeat-y center #ffffff;
 			background-position: 75%;
 			padding: 0 10px;
+	
+			.views-row{				
+					@include span(4 of 13);
+			}
+		}
+
+		@include breakpoint($tablet){
+			.views-row{		
+				@include span(4 of 13);
+			}
+
 		}	
 
 		.region-content-bottom{
 			padding-top: 50px;
 		}
 
+	}
+
+	// Tab Region
+	ul.tabs-primary{
+		@include container;
 	}
 
 }
