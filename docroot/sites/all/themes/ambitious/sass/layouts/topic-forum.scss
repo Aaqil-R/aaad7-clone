@@ -1600,6 +1600,15 @@ fieldset{
 
 .page-node-74606{
   #content_top{
+  .stButton{
+      @include breakpoint($mobile){
+        padding: 10px 33%;
+        &:before{
+          font-size: 30px;
+          margin-bottom: -7px;
+        }
+      }
+    }
    z-index: 99;
    margin-top: -131px;
    margin-bottom:30px;
