@@ -124,99 +124,13 @@
       ?>        
 </section> <!-- /visual -->
 
-    <!-- slider block -->
+  <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">
       <div class="holder">
-        <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
-        <div class="block">
-          <div class="slider-container">
-            <div class="l-s-arrow">
-            <a href="#"><span class="icon-Leftarrow"></span></a>
-            </div>
-          <!-- signup columns -->
-          <div class="signup-columns">
-            <div class="2-col col">
-              <p class="larger">We’re working to make the ordinary possible for children and young people with                    autism.
-              </p>
-              <p>We began as parents who decided to start a school and campaign for change because
-                we never wanted our children’s potential to be compromised.
-              </p>
-            </div>
-            <div class="2-col col">
-              <h2>Are you with us?<a class="tooltips mobile"><!-- <span class="btn-tooltip">?</span> --><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a></h2>
-              <form class="signup-form">
-                <input type="text" name="fname" placeholder="First name">
-                <input type="email" required name="email" placeholder="Email address"> <a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content"><h3>tooltip content</h3>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolor sit amet, consectetur adipiscing elit, sed do</span></a>
-                <a href="#"class="btn btn-left">Yes I am <span class="icon-Rightarrow"></span></a>
-                <a href="#" class="btn btn-right">Not right now
-                  <span class="icon-Rightarrow"></span>
-                </a>
-              </form>
-            </div>
-          </div>
-          <!--end signup columns -->
-          <!-- share columns
-          <div class="share-columns">
-            <div class="col-left col">
-              <h3> Share your ambition</h3>
-            <p>Glad to have you with us Sarah, now you can take the next step in being
-            ambitious about autism - Share with your friends and family </p>
-          </div>
-            <div class="col-mid col">
-              <img src="images/filler1.png">
-              <a href="#" class="btn btn-facebook">Share on Facebook</a>
-            </div>
-            <div class="col-right col">
-              <img src="images/filler2.png">
-              <a href="#" class="btn btn-twitter">Share on Twitter</a>
-            </div>
-          </div>
-           end share columns-->
-            <!-- community columns
-            <div class="community-columns">
-            <div class="col">
-              <h3>Stay Ambitious</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore </p>
-          </div>
-          <div class="col">
-
-              <img src="images/filler3.png">
-
-          </div>  -->
-            
-
-            <!-- support columns
-            <div class="support-columns">
-            <div class="col-3 col">
-              <h3> Lend your support</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore </p>
-            <a href="#">Ask  me in a week.</a>
-          </div>
-            <div class="col-3 col">
-              <h3>Give what you can</h3>
-              <a href="#" class="btn btn-orange">5</a>
-              <a href="#" class="btn btn-orange">10</a>
-              <a href="#" class="btn btn-orange">50</a>
-              <a href="#" class="btn btn-orange">Other</a>
-            </div>
-            <div class="col-3 col">
-              <h3> Other ways to help</h3>
-              <a href="#" class="btn btn-orange">Volunteer <span class="icon-Rightarrow"></span></a>
-              <a href="#" class="btn btn-orange">Share your story
-                <span class="icon-Rightarrow"></span>
-              </a>
-            </div>
-          </div>
-           end support columns -->
-            <div class="r-s-arrow">
-            <a href="#"><span class="icon-Rightarrow"></span></a>
-            <p class="skip"><a href="#">skip</a></p>
-            </div>
-          </div>
-        </div>
+      <?php print render($page['header_form']); ?>       
       </div>
     </section>
-
+  <?php endif; ?>
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
@@ -276,23 +190,20 @@
 
     <!-- action columns -->
     <section class="action-block">
-      <!-- Render the action block region. -->
-      <?php print render($page['action']); ?>
-      <!-- HARD CODED SHARE BLOCK -->
-      <!-- <div class="holder"> -->
+      <div class="holder">
         <!-- action symptoms -->
-        <!-- <div class="block-share">
+        <div class="block-share">
           <strong class="text">
             
           </strong>
           <a href="#" class="btn btn-transparent shadow-btn">Share this <em class="icon-Rightarrow"></em></a>
-        </div> -->
+        </div>
         <!-- action inspire -->
-        <!-- <div class="block-spectrum">
+        <div class="block-spectrum">
           <strong class="title">Aged 16-25<br>and on the<br>spectrum?</strong>
           <a href="#" class="btn btn-transparent shadow-btn">Connect with others<em class="icon-Rightarrow"></em></a>
         </div>
-      </div> -->
+      </div>
     </section>
     
     <section class="articles-block" >
