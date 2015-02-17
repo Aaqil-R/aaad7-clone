@@ -64,12 +64,11 @@
 
 					     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 
-					  	<?php if (!empty($content['field_tags'])): ?>   
-							 <div class="article-tags">
+					  	 <div class="article-tags">
 							   <span>Tags: </span>
 								<?php print render($content['field_tags']); ?>
-							 </div>
-						<?php endif; ?>
+						 </div>
+						
 					   </div>
 	                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 </div>
