@@ -31,42 +31,38 @@ function header_form_block_view($delta = '') {
 function get_header_form($pageno) {
   switch ($pageno) {
         case 0:
-          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
-          $output .= '<div id="slider-container" class="slider-container">';      
-          $block = module_invoke('block', 'webform', 'client-block-74666');
+          $output = '<div id="slider-container" class="slider-container">';      
+          $block = module_invoke('webform', 'block_view', 'client-block-74666');
           $output .= render($block['content']);
           $link = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
           $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
           $output .= '</div>';        
         break;
         case 1:
-          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
-          $output .= '<div id="slider-container" class="slider-container">';
+          $output = '<div id="slider-container" class="slider-container">';
           $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/0', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
           $output .= '<div class="l-s-arrow">'.$plink.'</div>';
-          $block = module_invoke('block', 'webform', 'client-block-74671');
+          $block = module_invoke('webform', 'block_view', 'client-block-74671');
           $output .= render($block['content']);
           $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
           $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
           $output .= '</div>';
         break;
         case 2:
-           $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
-          $output .= '<div id="slider-container" class="slider-container">';
+          $output = '<div id="slider-container" class="slider-container">';
           $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
           $output .= '<div class="l-s-arrow">'.$plink.'</div>';
-          $block = module_invoke('block', 'webform', 'client-block-74676');
+          $block = module_invoke('webform', 'block_view','client-block-74676');
           $output .= render($block['content']);
           $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/nojs/3', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
           $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
           $output .= '</div>' ;      
         break;
         case 3:
-          $output = '<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>';
-          $output .= '<div id="slider-container" class="slider-container">';
+          $output = '<div id="slider-container" class="slider-container">';
           $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/nojs/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
           $output .= '<div class="l-s-arrow">'.$plink.'</div>';
-          $block = module_invoke('block', 'webform', 'client-block-74681');
+          $block = module_invoke('webform', 'block_view', 'client-block-74681');
           $output .= render($block['content']);
           $output .= '</div>';
         break;
