@@ -642,24 +642,81 @@
 		@include container;
 	}
 
-	// Comments blcok
-	.comment-block{
-		float: left;
 
-		.form-actions{
-			clear: both;
-		}
-		// Name
-		.form-element{
-			width: auto;
-			padding: 0;
-			margin: 0;
-			padding-left: 1em;
-			background: none;		
+}
+// Comments blcok
+.comment-block{
+	float: left;
+
+	.form-actions{
+		clear: both;
 	}
 }
-
+#main2 .article-left .article-left-holder .comment-block .comments .form-type-item .form-element{
+	width: auto;
+	padding: 0;
+	margin: 0;
+	padding-left: 1em;
+	background: none;	
 }
 
+// #main2 input[type=submit]{
+
+//     border:1px solid $captions-credit;
+//     border-bottom-width: 5px;
+//     background:$white;
+//     padding:5px 22px;
+//     color:$captions-credit;
+
+//     &:hover{
+//       color:$captions-credit;
+//       text-decoration: none;    
+//     }
+
+//     &:active{
+//       border-width: 1px;
+//       margin-top:4px;
+//       color:$captions-credit;
+//     }
+
+//     &:focus{
+//       border-width: 1px;
+//       margin-top:4px;
+//       color:$captions-credit;
+//     }
+
+//     &:visited{
+//       text-decoration:none;
+//       color:$captions-credit;
+//     }
+// }
+
+#main2 input[type=submit]{
+	position: relative;
+	background: $white;
+	padding:5px 22px;
+	color: $captions-credit;
+	box-shadow: 0 6px $captions-credit;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border-radius: 5px;
+	margin:0 20px 0 0;
+	border: 1px solid $captions-credit;
 
 
+	&:hover {
+		box-shadow: 0 4px $captions-credit;
+		top: 2px;
+	}
+	&:active {
+		box-shadow: 0 0 $captions-credit;
+		top: 6px;
+	}
+
+	&:visited{
+	  text-decoration:none;
+	  color:$captions-credit;
+	}
+
+}
