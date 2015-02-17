@@ -572,7 +572,7 @@
 			background-position: 43.3%;
 		}
 		@include breakpoint($tablet){
-			background-position: 45%;
+			background: $white;
 		}	
 
 	}
@@ -582,6 +582,12 @@
 	}
 	#main2 footer{
 		clear: both;
+	}
+	#main2 .article{
+		@include breakpoint($tablet){
+			@include span(12 of 12);
+		}	
+
 	}
 
 	#main2 .article-left .visual .holder .pic-caption{
@@ -599,7 +605,11 @@
 		h3{
 			margin: 0;
 		}
-		
+
+		@include breakpoint($tablet){
+			@include span(12 of 12);
+		}	
+
 		.region-content-bottom{
 			padding-top: 50px;
 		}
