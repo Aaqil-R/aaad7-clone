@@ -61,7 +61,7 @@
 			
 			//print render_block_content('block', 151);
 			//print render_my_block_content('block', 151);
-			print render_my_block_content();
+			print $myblock;
 
 			//$tree = menu_tree($menu_name);
 			//print drupal_render($tree); 

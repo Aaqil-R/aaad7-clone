@@ -141,14 +141,26 @@ function ambitious_preprocess_html(&$variables) {
 
 function ambitious_preprocess_region(&$variables) {
       
-  $currentNode = menu_get_object();
+  if($variables['region']=='header')
+  {
+    $block =block_load('block', 156);
+    $block1=_block_render_blocks(array($block));
+    $block2=_block_get_renderable_array($block1);
+    $variables['myblock']= drupal_render($block2);
+  }
 
+  $currentNode = menu_get_object();
   $variables['logo'] = theme_get_setting('logo'); 
 
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
+
+      $block =block_load('block', 151);
+      //$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+      $variables['myblock']= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+
     }
   }
 }
@@ -722,22 +734,3 @@ function ambitious_preprocess_node(&$variables){
   
  
 }
-
-function render_my_block_content() {
-  $output = '';
-
-  $currentNode = menu_get_object();
-  if ($currentNode) {
-      if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
-        $block =block_load('block', 151);
-      }
-      else{
-        $block =block_load('block', 156);
-      }
-  }
-  else{
-    $block =block_load('block', 156);
-  } 
-  $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-  return $output;
- } 
