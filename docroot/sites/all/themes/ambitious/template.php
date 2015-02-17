@@ -607,6 +607,14 @@ function ambitious_field__field_event_date(&$variables){
   if($form_id == 'webform_client_form_74601' || $form_id == 'webform_client_form_74621'){
     $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email_address']['#description']."</span></a>";
   } 
+  $form['actions']['submit'] = array(
+      '#type'   => 'markup',
+      '#prefix' => '<button type="submit" class="btn btn-primary">',
+      '#suffix' => '</button>',
+      '#markup' => '<i class="icon-search icon-white"></i>'
+    );
+    $form['actions']['submit']['#executes_submit_callback'] = true;
+    $form['actions']['#type'] = 'none';
 }
 
 // Naming convention for .tpl.php

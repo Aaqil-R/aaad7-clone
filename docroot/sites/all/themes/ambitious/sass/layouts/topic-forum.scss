@@ -910,7 +910,8 @@ div.messages.status{
     }
     .form-item{
       float:left;
-      width:100%;
+      width:96%;
+      margin-bottom: 9px;
       label{
         left: 24px;
         top: 12px;
@@ -920,19 +921,25 @@ div.messages.status{
       left: -45px;
       bottom: 30px;
     }
+   .description{
+      margin-top:11px;
+   }
    .form-actions{
       float:left;
+      position: relative;
       @extend [class*=" icon-"];
       @extend .icon-Rightarrow;  
       input[type=submit]{
-        padding-right: 40px;
+        padding: 9px 42px;
+        font-size: 20px;
+        margin-top: -10px;
       }
-      &:before{
-        position: relative;
-        left: -49px;
-        top: 19px;
-        color:$white;
-        font-size: 16px;
+      &:before{ 
+        color:$white; 
+        position: absolute;
+        right: 6px;
+        top: 11px; 
+        font-size: 20px;
       }
      }	
    }
