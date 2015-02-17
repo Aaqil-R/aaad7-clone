@@ -925,22 +925,22 @@ div.messages.status{
       margin-top:11px;
    }
    .form-actions{
-      float:left;
-      position: relative;
-      @extend [class*=" icon-"];
-      @extend .icon-Rightarrow;  
-      input[type=submit]{
+      float:left;  
+      .form-submit{
         padding: 9px 42px;
         font-size: 20px;
         margin-top: -10px;
+        &:before{ 
+          color:$white; 
+          position: absolute;
+          right: 6px;
+          top: 11px; 
+          font-size: 20px;
+          @extend [class*=" icon-"];
+          @extend .icon-Rightarrow;  
+        }
       }
-      &:before{ 
-        color:$white; 
-        position: absolute;
-        right: 6px;
-        top: 11px; 
-        font-size: 20px;
-      }
+      
      }	
    }
   }
