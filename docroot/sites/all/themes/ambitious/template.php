@@ -157,10 +157,10 @@ function ambitious_preprocess_region(&$variables) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
 
-      $block = block_load('block',151);
-      $block1 = _block_render_blocks(array($block));
-      $block2 = _block_get_renderable_array($block1);
-      $variables['myblock'] = drupal_render($block2);
+      $block =block_load('block', 151);
+      //$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+      $variables['myblock']= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+
     }
   }
 }
@@ -717,14 +717,6 @@ function ambitious_form_element($variables) {
   return $output;
   
 }
-
-function ambitious_preprocess_comment_wrapper(&$vars){
-
-  //kpr($vars);
-  $vars['content']['comment_form']['#attributes']['class'][] = 'comments'; // Add class for form
-  
-}
-
 
 function ambitious_preprocess_node(&$variables){
 
