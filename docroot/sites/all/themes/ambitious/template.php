@@ -611,7 +611,7 @@ function ambitious_field__field_event_date(&$variables){
       '#type'   => 'markup',
       '#prefix' => '<button type="submit" class="btn btn-primary">',
       '#suffix' => '</button>',
-      '#markup' => '<i></i>'
+      '#markup' => 'submit<i></i>'
     );
     $form['actions']['submit']['#executes_submit_callback'] = true;
     $form['actions']['#type'] = 'none';
