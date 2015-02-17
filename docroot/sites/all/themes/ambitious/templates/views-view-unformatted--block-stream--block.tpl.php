@@ -12,15 +12,9 @@
 
 <?php if (!empty($title)): ?>
   <h3><?php print $title; ?></h3>
-<?php endif; ?>
- 
-<section class="action-block">
- 
+<?php endif; ?> 
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?> style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
     <?php print $row; ?>   
-  </div>
- 
+  </div> 
 <?php endforeach; ?>
-  
-</section> 
