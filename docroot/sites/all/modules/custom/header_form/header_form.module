@@ -72,7 +72,7 @@ function get_header_form($pageno) {
     return $output;
 }
 
-function ajax_next_form_response($ajax, $pageno) {
+function ajax_next_form_response($type, $pageno) {
    drupal_add_library('system', 'drupal.ajax');
    if ($type == 'ajax') {
     $output = get_header_form($pageno);     
