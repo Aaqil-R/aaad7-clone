@@ -105,22 +105,18 @@
  }
 .page-node-74606{
 	.form-actions{
-	  float:left;
-	  position: relative;
-	  @extend [class*=" icon-"];
-	  @extend .icon-Rightarrow;  
-	  input[type=submit]{ 
-		padding: 11px 44px 10px 28px;
-		margin-left: -6px;
-		margin-top: -10px;
-		font-size: 23px;
+	  float:left; 
+	  input[type=submit]{
+	    padding-right: 40px;
 	  }
-	  &:before{
+	  &:after{
+	    @extend [class*=" icon-"];
 	    position: relative;
-	    right: 18px;
-         top: 3px;
-	    color: #fff;
+	    left: -49px;
+	    top: 19px;
+	    color: $white;
 	    font-size: 16px;
+	    content :"\e60b";
 	  }
 	}
 }
