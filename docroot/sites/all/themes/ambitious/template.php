@@ -734,3 +734,10 @@ function ambitious_preprocess_node(&$variables){
   
  
 }
+
+function ambitious_preprocess_comment_wrapper(&$vars){
+
+  //kpr($vars);
+  $vars['content']['comment_form']['#attributes']['class'][] = 'comments'; // Add class for form
+  
+}
