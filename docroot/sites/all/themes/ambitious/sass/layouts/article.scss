@@ -550,6 +550,9 @@
 		a{
 			color: black;
 		}
+		@include breakpoint($mobile){
+			display: block;
+		}
 	}
 
 	// Comment List
@@ -608,6 +611,9 @@
 
 		@include breakpoint($tablet){
 			@include span(12 of 12);
+			background: image-url('wid_bg.png') repeat-y center #ffffff;
+			background-position: 75%;
+			padding: 0 10px;
 		}	
 
 		.region-content-bottom{
