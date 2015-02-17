@@ -930,14 +930,14 @@ div.messages.status{
         padding: 9px 42px;
         font-size: 20px;
         margin-top: -10px;
+        @extend [class*=" icon-"];
+        @extend .icon-Rightarrow;  
         &:before{ 
           color:$white; 
           position: absolute;
           right: 6px;
           top: 11px; 
-          font-size: 20px;
-          @extend [class*=" icon-"];
-          @extend .icon-Rightarrow;  
+          font-size: 20px; 
         }
       }
       
