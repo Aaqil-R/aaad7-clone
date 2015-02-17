@@ -177,6 +177,24 @@ function multistepform_form_alter(&$form, &$form_state, $form_id) {
       if (isset($form_state['stage']) && ($form_state['stage'] != ($count - 1))) {
         $form['actions']['submit']['#value'] = 'Next';
       }
+      break;
+    case 'webform_client_form_74601':
+      dpm($form);
+      //$form['submitted']['are_you_with_us']['#theme'] = 'form_are_you_with_us';
+      break;
+    case 'webform_client_form_74666':
+      $form['submitted']['yes-i-am'] = array(
+        '#type' => 'submit',
+        '#value' => 'Yes  I am',
+        '#attributes' => array('class' => array('btn','btn-left')),
+      );
+      $form['submitted']['not_right_now'] = array(
+        '#type' => 'submit',
+        '#value' => 'Not Right Now',
+        '#attributes' => array('class' => array('btn','btn-right')),
+      );
+      break;      
+    default:  
   }
 }
 
@@ -190,9 +208,23 @@ function multistepform_node_delete($node) {
   }
 }
 
+function multistepform_theme() {
+ $themes = array(
+    'form_are_you_with_us' => array(
+      'render element' => 'element',
+    ),
+  );
+  return $themes;
+}
+function theme_form_are_you_with_us($variables) {
+  $element = $variables['element'];
+  //dpm($element['#children']);
+  $output = drupal_render($element);
+  return $output;
+}
 function multistepform_block_info() {
  $blocks = array();
-  $result = db_select('multistepform_settings')
+/*  $result = db_select('multistepform_settings')
     ->fields('multistepform_settings')
     ->condition('block', 1)
     ->execute()
@@ -203,7 +235,7 @@ function multistepform_block_info() {
       'info' => t('Multi Step Form:'.$node->title),
       'cache' => DRUPAL_NO_CACHE,
      );   
-    } 
+    } */
   return $blocks;
 }
 
