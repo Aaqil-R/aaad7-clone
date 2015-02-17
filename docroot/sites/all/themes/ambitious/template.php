@@ -142,13 +142,23 @@ function ambitious_preprocess_html(&$variables) {
 function ambitious_preprocess_region(&$variables) {
       
   $currentNode = menu_get_object();
-
+  
+  $block = block_load('block',156);
+  $block1 = _block_render_blocks(array($block));
+  $block2 = _block_get_renderable_array($block1);
+  $variables['myblock'] = drupal_render($block2);
+  
   $variables['logo'] = theme_get_setting('logo'); 
 
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
+
+      $block = block_load('block',151);
+      $block1 = _block_render_blocks(array($block));
+      $block2 = _block_get_renderable_array($block1);
+      $variables['myblock'] = drupal_render($block2);
     }
   }
 }
