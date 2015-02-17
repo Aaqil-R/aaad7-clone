@@ -21,7 +21,6 @@
                 <?php print drupal_render($form['submitted']['email']);?>
                 <?php print drupal_render($form['submitted']['yes-i-am']);?>
                 <?php print drupal_render($form['submitted']['not_right_now']);?>
-                <span class="icon-Rightarrow"></span>
                 </div>
             </div>
           </div>

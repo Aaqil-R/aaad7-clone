@@ -127,6 +127,7 @@
   <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">
       <div class="holder">
+      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
       <?php print render($page['header_form']); ?>       
       </div>
     </section>
@@ -190,20 +191,23 @@
 
     <!-- action columns -->
     <section class="action-block">
-      <div class="holder">
+      <!-- Render the action block region. -->
+      <?php print render($page['action']); ?>
+
+      <!-- <div class="holder"> -->
         <!-- action symptoms -->
-        <div class="block-share">
+        <!-- <div class="block-share">
           <strong class="text">
             
           </strong>
           <a href="#" class="btn btn-transparent shadow-btn">Share this <em class="icon-Rightarrow"></em></a>
-        </div>
+        </div> -->
         <!-- action inspire -->
-        <div class="block-spectrum">
+        <!-- <div class="block-spectrum">
           <strong class="title">Aged 16-25<br>and on the<br>spectrum?</strong>
           <a href="#" class="btn btn-transparent shadow-btn">Connect with others<em class="icon-Rightarrow"></em></a>
         </div>
-      </div>
+      </div> -->
     </section>
     
     <section class="articles-block" >
