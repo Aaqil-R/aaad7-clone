@@ -620,8 +620,7 @@ function ambitious_field__field_event_date(&$variables){
     $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email']['#description']."</span></a>";
   }
   else if ($form_id == 'user_login') {
-    $form['submitted']['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['name']['#description']."</span></a>";
-    $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['pass']['#description']."</span></a>";
+    dpm($form); 
   }
 }
 
