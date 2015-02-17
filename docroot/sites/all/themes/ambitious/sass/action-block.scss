@@ -5,7 +5,9 @@
 	width: 60%;
 }
 
-.block-system {
+.ambitious-block-system {
+	@include transition ($type:all, $time:0.4s, $ease:ease);
+
 	@include container;
 	padding: 1em;
 	background: $white;
@@ -15,17 +17,18 @@
     }
 
     .field-content {
-    	float: left;
+    	// display: inline-block;
+		float:left;
 		@include clearfix();
 	}
 
-    .block-element {  
-    	height: 510px;
+    .ambitious-block-element {  
+    	// height: 510px;
 
 	    padding: 2em;
 
-	    padding-bottom:gutter()/4;
-      	margin-bottom:gutter()/4;
+	    padding-bottom:gutter();
+      	margin-bottom:gutter();
 
 		@include span(6 of 12);	
 
