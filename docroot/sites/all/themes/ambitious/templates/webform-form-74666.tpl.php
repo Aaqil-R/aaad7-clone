@@ -17,8 +17,8 @@
             <div class="2-col col">
                <div class="signup-form">
                 <?php print drupal_render($form['submitted']['title']);?>
-                <?php print drupal_render($form['submitted']['are_you_with_us']['first_name']);?>
-                <?php print drupal_render($form['submitted']['are_you_with_us']['email']);?>
+                <?php print drupal_render($form['submitted']['first_name']);?>
+                <?php print drupal_render($form['submitted']['email']);?>
                 <?php print drupal_render($form['submitted']['yes-i-am']);?>
                 <?php print drupal_render($form['submitted']['not_right_now']);?>
                 <span class="icon-Rightarrow"></span>
