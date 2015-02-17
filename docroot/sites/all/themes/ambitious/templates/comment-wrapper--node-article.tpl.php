@@ -43,6 +43,7 @@
         <?php
           
           unset($content['comment_form']['subject']); // Hide subject
+          $content['comment_form']['comment_body']['und']['#title'] = t('Your comment'); // Change comment body title
           $content['actions']['submit']['#value'] = t('Submit'); // Change Submit value
           $content['#attributes']['class'][] = 'comments'; 
 
