@@ -563,8 +563,18 @@
 		min-height: 5em;
 	}
 	#wrapper{
-		background: image-url('wid_bg.png') repeat-y center #ffffff;
-		background-position: 42%;		
+		background: $white;
+		@include breakpoint($not-mobile){
+			background: image-url('wid_bg.png') repeat-y center #ffffff;
+			background-position: 42%;
+		}
+		@include breakpoint(1030px){
+			background-position: 43.3%;
+		}
+		@include breakpoint($tablet){
+			background-position: 45%;
+		}	
+
 	}
 	#main2{
 		background: transparent;
@@ -589,6 +599,7 @@
 		h3{
 			margin: 0;
 		}
+
 	}
 
 }
