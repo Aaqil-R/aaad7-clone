@@ -38,8 +38,19 @@
  ?>
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
-		    <h4><?php print t('Add a new comment'); ?></h4>
-			<?php print render($content['comment_form']); ?>
+		  <h4><?php print t('Add a new comment'); ?></h4>
+      
+        <?php
+          
+          unset($content['comment_form']['subject']); // Hide subject
+          $content['actions']['submit']['#value'] = t('Submit'); // Change Submit value
+          $content['#attributes']['class'][] = 'comments'; 
+
+          print render($content['comment_form']); // Print form
+
+        ?>
+      
+
 		</section>
   <?php endif; ?>
 
