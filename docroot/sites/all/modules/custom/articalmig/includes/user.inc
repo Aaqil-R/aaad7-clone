@@ -8,7 +8,7 @@ class usermigration extends articalmigMigration {
 	public function __construct ($arguments)
 	{	parent::__construct($arguments);
 		$options = array('track_changes' => 1);
-		$this->description = t('Import user data from AAA');
+		$this->description = t('Import initial user data from AAA');
 		
 		//create a source migration		
 		
