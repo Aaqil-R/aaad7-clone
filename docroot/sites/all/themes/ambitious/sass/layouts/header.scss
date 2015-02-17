@@ -98,6 +98,15 @@ ul a {
       @include transition(all);
     }
   }
+  .school-slide {
+      position:fixed;
+      padding:100px 0 0;
+      margin-top: 50px;
+      @include transition(margin-top);
+      @include breakpoint($mobile) {
+        padding:53px 0 0;
+      }
+  }
   &.fixed-position {
     margin-bottom: 49px;
     .header-top {
@@ -135,6 +144,7 @@ ul a {
     .school-slide {
       position:fixed;
       padding:100px 0 0;
+      margin-top:0px;
       @include breakpoint($mobile) {
         padding:53px 0 0;
       }
