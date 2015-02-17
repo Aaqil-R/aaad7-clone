@@ -17,15 +17,23 @@
     }
 
     .field-content {
-    	// display: inline-block;
 		float:left;
 		@include clearfix();
 	}
 
+	// There must be a better way of doing this; basically for .core-block
+	// the items should float right instead.
+	.core-block {
+		.field-content {
+			float:right;
+		}
+	}    
+
     .ambitious-block-element {  
-    	// height: 510px;
+    	height: 320px;
 
 	    padding: 2em;
+	    margin: 0.15em;
 
 	    padding-bottom:gutter();
       	margin-bottom:gutter();
