@@ -788,7 +788,7 @@ body.sidebar #sidebar:before {
   float: left;
 }
 /* line 346, ../../sass/layouts/profile.scss */
-.profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select {
+.profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
   float: left;
   clear: both;
   width: 80%;
@@ -802,7 +802,7 @@ body.sidebar #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 346, ../../sass/layouts/profile.scss */
-  .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select {
+  .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
     width: 100%;
   }
 }
@@ -830,4 +830,8 @@ body.sidebar #sidebar:before {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
+}
+/* line 380, ../../sass/layouts/profile.scss */
+.profile-main #hybridauth-widget-wrapper {
+  clear: both;
 }

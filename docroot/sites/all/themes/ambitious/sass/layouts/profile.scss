@@ -343,7 +343,7 @@ body.profile .top-header{
   min-height:430px;
   #user-login { 
     float: left;
-    input[type="email"], input[type="text"], .select {
+    input[type="email"], input[type="text"], .select, input[type="password"] {
       float:left;
       clear:both;
       width:80%;
@@ -377,5 +377,8 @@ body.profile .top-header{
       }
     }   
 }
+  #hybridauth-widget-wrapper{
+    clear: both;
+  }
 
 }
