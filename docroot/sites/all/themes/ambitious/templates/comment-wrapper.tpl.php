@@ -35,12 +35,14 @@
  *
  * @ingroup themeable
  */
+$node = node_load(2191);
+ dpm($node); 
  ?>
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
 		    <h4><?php print t('Add a new comment'); ?></h4>
 			<?php print render($content['comment_form']); ?>
-			<?php dpm(node_load(2191)); ?>
+			 
 		</section>
   <?php endif; ?>
 
