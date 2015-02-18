@@ -40,6 +40,7 @@
   <section class="comment-block">
 		    <h4><?php print t('Add a new comment'); ?></h4>
 			<?php print render($content['comment_form']); ?>
+			<?php dpm(node_load(arg(0))); ?>
 		</section>
   <?php endif; ?>
 
