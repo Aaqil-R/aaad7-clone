@@ -46,8 +46,10 @@
 			<?php print render($content['comment_form']); ?>
 			<?php  if (!$user->uid ) { ?>
 			   <a href="/user/login?destination=node/<?php print $node->nid; ?>">Log in</a> or <a href="/user/register?destination=node/<?php print $node->nid; ?>">register</a> to post comments 
+			   </br>
+			   <?php print $share_button; ?> 
 			<?php } ?>
-			<?php print $share_button; ?> 
+			
 		</section>
   <?php endif; ?>
 
