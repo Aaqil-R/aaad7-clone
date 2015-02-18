@@ -84,7 +84,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
-   dpm($logged_in);
+ 
 ?>
 
 
@@ -151,8 +151,11 @@
                
 			<div class="profile-body">
 				<div class="holder">
-		               <header> 
-						   <h1>My profile</h1> 
+		               <header> <?php if($logged_in != 1):?>
+						   <h1><?php print $title; ?></h1> 
+						   <?php else:?>
+						    <h1><?php print t('My profile'); ?></h1> 
+						   <?php endif; ?>
 						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
