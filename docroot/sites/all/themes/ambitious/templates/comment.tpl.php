@@ -58,6 +58,7 @@
  *
  * @ingroup themeable
  */
+ dpm(get_defined_vars());
 ?>
 	
 <li class="<?php print $classes; ?>">
