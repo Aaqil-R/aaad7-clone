@@ -84,7 +84,9 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
+   dpm($logged_in);
 ?>
+
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
