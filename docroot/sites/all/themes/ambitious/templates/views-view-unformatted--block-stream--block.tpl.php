@@ -7,7 +7,7 @@
  * @ingroup views_templates
  */ 
  $myvar = get_defined_vars();
- 
+ dpm($myvar['variables']['view']->result);
 ?>
 
 <?php if (!empty($title)): ?>
