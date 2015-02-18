@@ -35,15 +35,19 @@
  *
  * @ingroup themeable
  */ 
- 
+  global $user;
+  $node = node_load(arg(1));
+  $links = sharethis_node_view($node, 'full', 'en');
+  $share_button = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>'; 
  ?>
- 
- <a href="/user/login?destination=node/6496%23comment-form">Log in</a> or <a href="/user/register?destination=node/6496%23comment-form">register</a> to post comments 
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
 		    <h4><?php print t('Add a new comment'); ?></h4>
 			<?php print render($content['comment_form']); ?>
-			 
+			<?php  if (!$user->uid ) { ?>
+			   <a href="/user/login?destination=node/<?php print $node->nid; ?>">Log in</a> or <a href="/user/register?destination=node/<?php print $node->nid; ?>">register</a> to post comments 
+			<?php } ?>
+			<?php print $share_button; ?> 
 		</section>
   <?php endif; ?>
 
