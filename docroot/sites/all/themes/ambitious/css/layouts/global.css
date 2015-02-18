@@ -738,7 +738,7 @@ div#admin-toolbar.vertical div.admin-tab {
 /* line 307, ../../sass/layouts/global.scss */
 .pager {
   text-align: center;
-  margin: 20px;
+  padding: 30px 10px 60px 10px;
   display: block;
   width: 100%;
   clear: both;
@@ -746,22 +746,27 @@ div#admin-toolbar.vertical div.admin-tab {
 /* line 313, ../../sass/layouts/global.scss */
 .pager li {
   background: #ffffff;
-  float: left;
+  display: inline-flex;
+  list-style: none;
   margin-right: 3px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 318, ../../sass/layouts/global.scss */
+/* line 319, ../../sass/layouts/global.scss */
 .pager li:hover, .pager li.pager-current {
   color: #ffffff;
-  background: #d2d5d6;
+  background: #2a2e31;
 }
 /* line 322, ../../sass/layouts/global.scss */
+.pager li:hover a, .pager li.pager-current a {
+  color: #ffffff;
+}
+/* line 326, ../../sass/layouts/global.scss */
 .pager li.pager-ellipsis, .pager li.pager-current {
   padding: 4px 12px;
 }
-/* line 325, ../../sass/layouts/global.scss */
+/* line 329, ../../sass/layouts/global.scss */
 .pager li a {
   text-decoration: none;
   line-height: 1.5em;
