@@ -791,22 +791,22 @@ body.sidebar #sidebar:before {
   }
 }
 /* line 348, ../../sass/layouts/profile.scss */
-.profile-main #user-login {
+.profile-main #user-login, .profile-main #user-pass, .profile-main #user-register-form {
   float: left;
 }
 /* line 350, ../../sass/layouts/profile.scss */
-.profile-main #user-login label {
+.profile-main #user-login label, .profile-main #user-pass label, .profile-main #user-register-form label {
   position: absolute;
   top: 11px;
   left: 24px;
 }
 /* line 355, ../../sass/layouts/profile.scss */
-.profile-main #user-login span.tooltip-content {
+.profile-main #user-login span.tooltip-content, .profile-main #user-pass span.tooltip-content, .profile-main #user-register-form span.tooltip-content {
   left: -45px;
   bottom: 30px;
 }
 /* line 359, ../../sass/layouts/profile.scss */
-.profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
+.profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"] {
   float: left;
   clear: both;
   width: 80%;
@@ -820,12 +820,12 @@ body.sidebar #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 359, ../../sass/layouts/profile.scss */
-  .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
+  .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"] {
     width: 100%;
   }
 }
 /* line 373, ../../sass/layouts/profile.scss */
-.profile-main #user-login input[type="submit"] {
+.profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
   float: left;
   clear: both;
   border: none;
@@ -839,12 +839,12 @@ body.sidebar #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 373, ../../sass/layouts/profile.scss */
-  .profile-main #user-login input[type="submit"] {
+  .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
     margin-bottom: 20px;
   }
 }
 /* line 386, ../../sass/layouts/profile.scss */
-.profile-main #user-login input[type="submit"]:hover {
+.profile-main #user-login input[type="submit"]:hover, .profile-main #user-pass input[type="submit"]:hover, .profile-main #user-register-form input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
