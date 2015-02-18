@@ -788,6 +788,17 @@ body.sidebar #sidebar:before {
   float: left;
 }
 /* line 346, ../../sass/layouts/profile.scss */
+.profile-main #user-login label {
+  position: absolute;
+  top: 11px;
+  left: 24px;
+}
+/* line 351, ../../sass/layouts/profile.scss */
+.profile-main #user-login span.tooltip-content {
+  left: -45px;
+  bottom: 30px;
+}
+/* line 355, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
   float: left;
   clear: both;
@@ -801,12 +812,12 @@ body.sidebar #sidebar:before {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 346, ../../sass/layouts/profile.scss */
+  /* line 355, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"] {
     width: 100%;
   }
 }
-/* line 360, ../../sass/layouts/profile.scss */
+/* line 369, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"] {
   float: left;
   clear: both;
@@ -820,18 +831,18 @@ body.sidebar #sidebar:before {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 360, ../../sass/layouts/profile.scss */
+  /* line 369, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 373, ../../sass/layouts/profile.scss */
+/* line 382, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 380, ../../sass/layouts/profile.scss */
+/* line 389, ../../sass/layouts/profile.scss */
 .profile-main .hybridauth-widget-wrapper {
   clear: both;
 }
