@@ -34,10 +34,8 @@
  * @see template_preprocess_comment_wrapper()
  *
  * @ingroup themeable
- */
-print '<pre>';
-print_r(get_defined_vars());
-print '</pre>';
+ */ 
+dpm(get_defined_vars()); 
  ?>
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
