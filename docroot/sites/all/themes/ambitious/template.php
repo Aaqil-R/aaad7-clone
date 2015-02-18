@@ -627,7 +627,7 @@ function ambitious_field__field_event_date(&$variables){
   
    else if ($form_id == 'user_register_form') {
     $form['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['name']['#description']."</span></a>";
-    $form['mail']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['mail']['#description']."</span></a>";  
+    $form['mail']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['mail']['#description']."</span></a>";   
   } 
 }
 
