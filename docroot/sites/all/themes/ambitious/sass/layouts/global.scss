@@ -304,30 +304,25 @@ div#admin-toolbar.vertical div.admin-tab{
 }
 
 
-.pager {
-    text-align: center;
-    margin: 20px
-}
-.pager a, .pager strong, .pager li{
-    background: #fff;
+.pager{
+  text-align: center;
+  margin: 20px;
+  display: block;
+  width: 100%;
+  clear: both;
+  li{
+    background:$white;
     display: inline-block;
-    margin-right: 3px;
-    padding: 4px 12px;
-    text-decoration: none;
-	line-height: 1.5em;
-	
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    margin-right: 3px; 
+    &:hover, &.pager-current{
+      color:$white;
+      background:$gray;
+    }
+    a{
+      text-decoration: none;
+      line-height: 1.5em;
+      padding: 4px 12px; 
+    }
+  }
 }
-.pager a:hover {
-    background-color: #BEBEBE;
-    color: #fff;
-}
-.pager a:active {
-	background: rgba(190, 190, 190, 0.75);
-}
-.pager strong {
-    color: #fff;
-    background-color: #BEBEBE;
-}
+  
