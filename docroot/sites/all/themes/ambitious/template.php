@@ -623,6 +623,12 @@ function ambitious_field__field_event_date(&$variables){
     $form['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['name']['#description']."</span></a>";
     $form['pass']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['pass']['#description']."</span></a>"; 
   }
+   
+  
+   else if ($form_id == 'user_register_form') {
+    $form['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['name']['#description']."</span></a>";
+    $form['mail']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['mail']['#description']."</span></a>";  
+  } 
 }
 
 // Naming convention for .tpl.php
