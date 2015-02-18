@@ -58,7 +58,6 @@
  *
  * @ingroup themeable
  */
- dpm($node);
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -78,8 +77,11 @@
 					 hide($content['links']);
 					 print render($content);
 				    ?>
-				  <div class="links">
-				    <?php print render($content['links']) ?>
-				  </div>
+				    <?php global $user;
+				      if ( $user->uid ) { ?>
+				       <div class="links">
+					    <?php print render($content['links']) ?>
+					  </div>
+				      <?php } ?> 			 
 			   </div>  
 			 </li> 
