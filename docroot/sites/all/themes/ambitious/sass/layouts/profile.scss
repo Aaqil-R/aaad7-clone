@@ -341,6 +341,10 @@ body.profile .top-header{
 /* LOGIN PAGE */
 .profile-main{
   min-height:430px;
+  @include breakpoint($mobile) {
+    padding-left:15px;
+    padding-right:15px;
+  }
   #user-login { 
     float: left;
     label{
