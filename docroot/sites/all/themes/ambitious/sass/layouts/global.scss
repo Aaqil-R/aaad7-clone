@@ -302,3 +302,32 @@ div#admin-toolbar.vertical div.admin-tab{
 		opacity: 0.6;
 	}
 }
+
+
+.pager {
+    text-align: center;
+    margin: 20px
+}
+.pager a, .pager strong, .pager li{
+    background: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+	line-height: 1.5em;
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.pager a:hover {
+    background-color: #BEBEBE;
+    color: #fff;
+}
+.pager a:active {
+	background: rgba(190, 190, 190, 0.75);
+}
+.pager strong {
+    color: #fff;
+    background-color: #BEBEBE;
+}
