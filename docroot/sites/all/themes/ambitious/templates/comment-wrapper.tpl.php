@@ -35,8 +35,9 @@
  *
  * @ingroup themeable
  */
-$node = node_load(2191);
- dpm($node); 
+print '<pre>';
+print_r(get_defined_vars());
+print '</pre>';
  ?>
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
