@@ -1,12 +1,169 @@
 @import "base/base";
 
 //====== CAPTION TEXT : ( MOBILE FIRST STYLES ) ======//
+/*
+	<div class="caption-text">
+		<h1 class="caption-text-titles">
+			<span class="caption-text-title-1">Are you ambitious</span>
+			<span class="caption-text-title-2">about autism?</span>
+		</h1>
+	</div>
+*/
 
+// Caption Block
 .caption-text{
-	display: block;
 
-	.caption-text-title{
+	// Main wrapper of titles
+	.caption-text-titles{
+
+		-webkit-animation: title 2s; /* Chrome, Safari, Opera */
+      	animation: title 1s;
+	  	position: relative;
+
+		@include breakpoint($not-all-mobile){
+				// 768px +
+				float: left;
+				margin-top: 50px;				
+		}
+		@include breakpoint($mobile){
+				// 767px -
+				margin-top: 85px;
+		}
+		@include breakpoint($all-small-mobile){
+				// 480px -
+				margin-top: 75px;			
+
+		}
+
+		// All 2 Titles
+		span{
+			display: block;
+			letter-spacing: -1px;
+			background: $white;			
+		}
+
+		// Titles
+		.caption-text-title{
+			
+
+			@include breakpoint($mobile){
+				// 767px -
+				font-size: 32px;
+				line-height: 36px;
+				padding: 10px;				
+
+			}
+			@include breakpoint($all-small-mobile){
+				// 480px -
+				font-size: 26px;
+				line-height: 30px;
+				padding: 10px;				
+
+			}
+			@include breakpoint($all-tiny-mobile){
+				// 320px -
+				font-size: 26px;
+				line-height: 30px;
+				padding: 10px;				
+
+			}
+			@include breakpoint($not-all-mobile){
+				// 768px +
+				font-size: 54px;
+				line-height: 58px;
+				padding: 20px;	
+
+			}
+			@include breakpoint($all-desktop){
+				// 1080px +
+				font-size: 66px;
+				line-height: 70px;
+				padding: 25px;
+
+			}
+			
+
+		}
+		// Title 01
+		.caption-text-title-1{
+			margin-top: 10px;
+			@include breakpoint($mobile){
+				// 768px -
+				margin-left: 90px;
+				margin-right: 90px;
+
+			}
+			@include breakpoint($all-small-mobile){
+				// 480px -
+				margin-left: 50px;
+				margin-right: 50px;
+
+			}
+			@include breakpoint($all-tiny-mobile){
+				// 320px
+				margin-left: 10px;
+				margin-right: 10px;
+
+			}
+
+		}
+		// Title 02
+		.caption-text-title-2{
+			margin-top: 10px;
+			
+			@include breakpoint($not-all-mobile){
+				// 768px +
+				margin-left: 150px;
+				margin-right: -50px;
+
+			}
+			@include breakpoint($mobile){
+				// 768px -
+				margin-left: 120px;
+				margin-right: 120px;
+
+			}
+			@include breakpoint($all-small-mobile){
+				// 480px -
+				margin-left: 60px;
+				margin-right: 60px;
+
+			}
+			@include breakpoint($all-tiny-mobile){
+				// 320px
+				margin-left: 20px;
+				margin-right: 20px;
+
+			}
+
+		}
+
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes subtitle {
+		    from {bottom: -30px; opacity:0;}
+		    to {bottom: 0px; opacity:1;}
+		}
+
+		/* Standard syntax */
+		@keyframes subtitle {
+		   from {bottom: -30px; opacity:0;}
+		    to {bottom: 0px; opacity:1;}
+		}
+
+
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes title {
+		    from {top: -30px; opacity:0;}
+		    to {top: 0px; opacity:1;}
+		}
+
+		/* Standard syntax */
+		@keyframes title {
+		   from {top: -30px; opacity:0;}
+		    to {top: 0px; opacity:1;}
+		}
 
 	}
+
 
 }

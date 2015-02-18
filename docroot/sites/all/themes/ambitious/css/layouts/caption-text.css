@@ -362,7 +362,184 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 5, ../../sass/layouts/caption-text.scss */
-.caption-text {
+/*
+	<div class="caption-text">
+		<h1 class="caption-text-titles">
+			<span class="caption-text-title-1">Are you ambitious</span>
+			<span class="caption-text-title-2">about autism?</span>
+		</h1>
+	</div>
+*/
+/* line 17, ../../sass/layouts/caption-text.scss */
+.caption-text .caption-text-titles {
+  -webkit-animation: title 2s;
+  /* Chrome, Safari, Opera */
+  animation: title 1s;
+  position: relative;
+  /* Chrome, Safari, Opera */
+  /* Standard syntax */
+  /* Chrome, Safari, Opera */
+  /* Standard syntax */
+}
+@media (min-width: 768px) {
+  /* line 17, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles {
+    float: left;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 17, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles {
+    margin-top: 85px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 17, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles {
+    margin-top: 75px;
+  }
+}
+/* line 39, ../../sass/layouts/caption-text.scss */
+.caption-text .caption-text-titles span {
   display: block;
+  letter-spacing: -1px;
+  background: #ffffff;
+}
+@media (max-width: 767px) {
+  /* line 46, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title {
+    font-size: 32px;
+    line-height: 36px;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 46, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title {
+    font-size: 26px;
+    line-height: 30px;
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  /* line 46, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title {
+    font-size: 26px;
+    line-height: 30px;
+    padding: 10px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 46, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title {
+    font-size: 54px;
+    line-height: 58px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  /* line 46, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title {
+    font-size: 66px;
+    line-height: 70px;
+    padding: 25px;
+  }
+}
+/* line 88, ../../sass/layouts/caption-text.scss */
+.caption-text .caption-text-titles .caption-text-title-1 {
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  /* line 88, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-1 {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 88, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-1 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 320px) {
+  /* line 88, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+/* line 111, ../../sass/layouts/caption-text.scss */
+.caption-text .caption-text-titles .caption-text-title-2 {
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  /* line 111, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-2 {
+    margin-left: 150px;
+    margin-right: -50px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 111, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-2 {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 111, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-2 {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+@media (max-width: 320px) {
+  /* line 111, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title-2 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@-webkit-keyframes subtitle {
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes subtitle {
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes title {
+  from {
+    top: -30px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes title {
+  from {
+    top: -30px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
