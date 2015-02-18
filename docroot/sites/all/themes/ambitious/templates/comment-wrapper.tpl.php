@@ -35,8 +35,10 @@
  *
  * @ingroup themeable
  */ 
-dpm(get_defined_vars()); 
+ 
  ?>
+ 
+ <a href="/user/login?destination=node/6496%23comment-form">Log in</a> or <a href="/user/register?destination=node/6496%23comment-form">register</a> to post comments 
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
 		    <h4><?php print t('Add a new comment'); ?></h4>
