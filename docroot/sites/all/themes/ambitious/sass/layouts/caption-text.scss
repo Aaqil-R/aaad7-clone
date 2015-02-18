@@ -4,21 +4,20 @@
 /*
 	<div class="caption-text">
 		<h1 class="caption-text-titles">
-			<span class="caption-text-title-1">Are you ambitious</span>
-			<span class="caption-text-title-2">about autism?</span>
+			<span class="caption-text-title caption-text-title-1">Are you ambitious</span>
+			<span class="caption-text-title caption-text-title-2">about autism?</span>
 		</h1>
 	</div>
 */
 
 // Caption Block
 .caption-text{
+	-webkit-animation: caption-text-titles 3s; /* Chrome, Safari, Opera */
+  	animation: caption-text-titles 3s;
+  	position: relative;
 
 	// Main wrapper of titles
 	.caption-text-titles{
-
-		-webkit-animation: title 2s; /* Chrome, Safari, Opera */
-      	animation: title 1s;
-	  	position: relative;
 
 		@include breakpoint($not-all-mobile){
 				// 768px +
@@ -138,32 +137,18 @@
 
 		}
 
-		/* Chrome, Safari, Opera */
-		@-webkit-keyframes subtitle {
-		    from {bottom: -30px; opacity:0;}
-		    to {bottom: 0px; opacity:1;}
-		}
-
-		/* Standard syntax */
-		@keyframes subtitle {
-		   from {bottom: -30px; opacity:0;}
-		    to {bottom: 0px; opacity:1;}
-		}
-
-
-		/* Chrome, Safari, Opera */
-		@-webkit-keyframes title {
-		    from {top: -30px; opacity:0;}
-		    to {top: 0px; opacity:1;}
-		}
-
-		/* Standard syntax */
-		@keyframes title {
-		   from {top: -30px; opacity:0;}
-		    to {top: 0px; opacity:1;}
-		}
-
 	}
 
+}
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes caption-text-titles {
+    from {top: -30px; opacity:0;}
+    to {top: 0px; opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes caption-text-titles {
+   from {top: -30px; opacity:0;}
+    to {top: 0px; opacity:1;}
 }
