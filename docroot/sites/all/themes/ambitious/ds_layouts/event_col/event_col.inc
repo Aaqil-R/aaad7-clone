@@ -1,10 +1,12 @@
 <?php
-function ds_small_left_col() {
+function ds_event_col() {
   return array(
     'label' => t('Small Left Column'),
     'regions' => array(
-      'left' => t('Left'),
-      'right' => t('Right'),
+      'image' => t('Image'),
+      'content' => t('Content'),
+      'place' => t('Place'),
+      'date' => t('Date'),
     ),
     // Add this line if there is a default css file.
     'css' => TRUE,
