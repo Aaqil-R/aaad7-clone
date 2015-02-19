@@ -59,7 +59,7 @@
  * @ingroup themeable
  */
  
-  $node = node_load(arg(1);
+  $node = node_load(arg(1));
    
    dpm($node);
 ?>
