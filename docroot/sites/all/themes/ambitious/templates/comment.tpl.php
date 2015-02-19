@@ -61,7 +61,9 @@
  
 ?>
 <?php
- dpm(get_defined_vars());
+  print '<pre>';
+  print_r(get_defined_vars());
+ print '</pre>';
 ?>
 	
 <li class="<?php print $classes; ?>">
