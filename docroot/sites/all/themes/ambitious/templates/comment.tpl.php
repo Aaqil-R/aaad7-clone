@@ -62,8 +62,9 @@
   $node = node_load(arg(1));
   
   //$privatemsg = privatemsg_get_link($node->uid, '', '');
-  //$user = user_load();
-  $privatemsg = privatemsg_get_link($node->uid);
+  
+//  $user = user_load($node->uid);
+  $privatemsg = privatemsg_get_link($node);
   dpm($privatemsg);
    
    
