@@ -36,7 +36,7 @@
  * @ingroup themeable
  */ 
   global $user;
-  $node = node_load(arg(1)); 
+  $node = node_load(arg(1));  
  ?>
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
