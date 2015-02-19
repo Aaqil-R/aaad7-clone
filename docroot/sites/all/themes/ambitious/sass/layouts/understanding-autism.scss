@@ -49,27 +49,27 @@
       font-size: 1em;
     }
   }
-  // Load more
-  .pager-load-more{
-     @extend %listreset;
-     padding: 29px 0 61px;
-     li{
-       text-align:center;
-       a{
-          font-size: 0;
-          color:$gray;
-          &:before{
-             font-size: 101px; 
-             @extend [class*=" icon-"];
-             @extend .icon-Downarrow;          
-          }
-          &:hover {
-         color:$heading-link;
-         text-decoration: none;  
-      }
-       }
-    }
-  }
+  // Load more -> please refer to global scss line 320. appended it there.
+  // .pager-load-more{
+  //    @extend %listreset;
+  //    padding: 29px 0 61px;
+  //    li{
+  //      text-align:center;
+  //      a{
+  //         font-size: 0;
+  //         color:$gray;
+  //         &:before{
+  //            font-size: 101px; 
+  //            @extend [class*=" icon-"];
+  //            @extend .icon-Downarrow;          
+  //         }
+  //         &:hover {
+  //        color:$heading-link;
+  //        text-decoration: none;  
+  //     }
+  //      }
+  //   }
+  // }
 
   // Action box
   .action-block .holder .region .block:nth-child(1){
