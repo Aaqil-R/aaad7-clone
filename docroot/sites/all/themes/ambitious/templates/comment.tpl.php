@@ -59,9 +59,9 @@
  * @ingroup themeable
  */
  
-?>
-<?php
-   dpm(node_load(arg(0)));
+  $node = node_load(arg(1);
+   
+   dpm($node);
 ?>
 	
 <li class="<?php print $classes; ?>">
