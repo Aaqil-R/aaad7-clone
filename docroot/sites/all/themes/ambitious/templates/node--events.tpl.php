@@ -3,8 +3,7 @@
                          <a href="#" title="Featured" class="feature-holder">
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
-							</a></div>
-                         
+							</a></div> 
 			<div class="content">
 				<h3><?php print $title; ?></h3>
  <div class="place mobile"><?php print render($content['field_place']); ?></div> 
