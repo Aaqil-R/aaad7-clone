@@ -62,10 +62,12 @@
   $node = node_load(arg(1));
   
   //$privatemsg = privatemsg_get_link($node->uid, '', '');
-   
-  $privatemsg = privatemsg_get_link($node->uid);
+  $user = user_load($node->uid);
+  $privatemsg = privatemsg_get_link($user);
   dpm($privatemsg);
    
+   
+    
 ?>
 	
 <li class="<?php print $classes; ?>">
