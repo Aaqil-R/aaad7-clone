@@ -58,6 +58,7 @@
  *
  * @ingroup themeable
  */
+ dpm(privatemsg_get_link());
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -68,10 +69,10 @@
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
 			   </div>
-			   <div style="" class="comment-right">
+			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
-			       <h4<?php print $title_attributes; ?>><?php print $title ?></h4>
-   			     <?php print render($title_suffix); ?>
+			         <h4<?php print $title_attributes; ?>><?php print $title ?></h4>
+   			       <?php print render($title_suffix); ?>
 			     <?php
 					 // We hide the comments and links now so that we can render them later.
 					 hide($content['links']);
@@ -81,6 +82,7 @@
 				      if ( $user->uid ) { ?>
 				       <div class="links">
 					    <?php print render($content['links']) ?>
+					    <a href="#">Private Message</a>
 					  </div>
 				      <?php } ?> 			
 				      <?php $node = node_load(arg(1));
