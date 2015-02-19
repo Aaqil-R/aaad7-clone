@@ -61,9 +61,7 @@
  
 ?>
 <?php
-  print '<pre>';
-  print_r(get_defined_vars());
- print '</pre>';
+   dpm(node_load(arg(0)));
 ?>
 	
 <li class="<?php print $classes; ?>">
