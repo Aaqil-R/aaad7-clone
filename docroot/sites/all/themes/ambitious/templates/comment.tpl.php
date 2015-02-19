@@ -58,7 +58,10 @@
  *
  * @ingroup themeable
  */
- dpm(privatemsg_get_link());
+ 
+?>
+<?php
+ dpm(get_defined_vars());
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -68,6 +71,7 @@
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
+			      <a href="#">Private Message</a>
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
@@ -78,11 +82,11 @@
 					 hide($content['links']);
 					 print render($content);
 				    ?>
+				    
 				    <?php global $user;
 				      if ( $user->uid ) { ?>
 				       <div class="links">
-					    <?php print render($content['links']) ?>
-					    <a href="#">Private Message</a>
+					    <?php print render($content['links']) ?> 
 					  </div>
 				      <?php } ?> 			
 				      <?php $node = node_load(arg(1));
