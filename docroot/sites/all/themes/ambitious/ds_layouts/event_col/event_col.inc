@@ -1,7 +1,7 @@
 <?php
 function ds_event_col() {
   return array(
-    'label' => t('Small Left Column'),
+    'label' => t('Events list Column'),
     'regions' => array(
       'image' => t('Image'),
       'content' => t('Content'),
