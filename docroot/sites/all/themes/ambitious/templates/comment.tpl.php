@@ -63,11 +63,11 @@
   
   //$privatemsg = privatemsg_get_link($node->uid, '', '');
    
-  $privatemsg = privatemsg_get_link(76);
-   
-   dpm($privatemsg);
+  $privatemsg = privatemsg_get_link($node->uid);
+    
    print "<pre>";
    print_r($privatemsg);
+   
 ?>
 	
 <li class="<?php print $classes; ?>">
