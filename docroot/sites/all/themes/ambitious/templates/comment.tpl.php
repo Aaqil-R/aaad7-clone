@@ -59,16 +59,8 @@
  * @ingroup themeable
  */
  
-  $node = node_load(arg(1));
-  
-  //$privatemsg = privatemsg_get_link($node->uid, '', '');
-  
-//  $user = user_load($node->uid);
+  $node = node_load(arg(1)); 
   $privatemsg = privatemsg_get_link($node);
-  dpm($privatemsg);
-   
-   
-    
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -78,7 +70,7 @@
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
-			      <a href="#">Private Message</a>
+			      <a href="<?php print $privatemsg; ?>">Private Message</a>
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
