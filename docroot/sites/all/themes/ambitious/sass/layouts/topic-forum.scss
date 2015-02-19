@@ -521,6 +521,7 @@ div.messages.status{
 			  padding-left: 184px;
 			  padding-right: 21px;
 			  margin-bottom:-10px;
+			   @extend %clearfix;
 			  @include breakpoint($mobile) {
 			    padding-left: 20px;
 			  }
