@@ -11,8 +11,7 @@
      </a>
    </div> 
    <?php print $date; ?>
-   <div class="content">
-     <h3><?php print $title; ?></h3>
+   <div class="content"> 
      <div class="place mobile"><?php print $place; ?></div> 
      <?php print $content; ?>
    </div>
