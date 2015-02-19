@@ -12,10 +12,10 @@
    </div> 
    <?php print $date; ?>
    <div class="content"> 
-     <div class="place mobile"><?php print $place; ?></div> 
+     <div class="place mobile-view"><?php print $place; ?></div> 
      <?php print $content; ?>
    </div>
-   <div class="place desktop"><?php print $place; ?></div> 
+   <div class="place desktop-view"><?php print $place; ?></div> 
 </section>  
 </div>
 <?php if (!empty($drupal_render_children)): ?>
