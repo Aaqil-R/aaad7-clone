@@ -778,10 +778,12 @@ function ambitious_preprocess_webform_confirmation(&$vars) {
     $submission = webform_get_submission($vars['node']->nid, $vars['sid']);
     if ($submission->data[5][0] == 'Yes I am') {
       if (module_exists('header_form')){
-       $vars['confirmation_message'] = = get_header_form(1);
+       $vars['confirmation_message'] = get_header_form(1);
       }
     } else if ($submission->data[5][0] == 'Not Right Now') {
+          if (module_exists('header_form')){
        $vars['confirmation_message'] = get_header_form('not_now');
+       }
     }
   }
 }
