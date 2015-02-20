@@ -1,5 +1,5 @@
 /* line 3, ../sass/base/_markup-mixins.scss */
-.webform-submit:after, input[type=submit]:after {
+.webform-submit:after, input[type=submit]:after, .home_forum_share:after {
   content: " ";
   display: block;
   clear: both;
@@ -510,4 +510,25 @@ textarea {
 /* line 127, ../sass/forms.scss */
 .block-close a {
   text-decoration: none;
+}
+
+/* line 134, ../sass/forms.scss */
+.home_forum_share .home_forum_share_left {
+  float: left;
+  width: 50%;
+}
+/* line 138, ../sass/forms.scss */
+.home_forum_share .home_forum_share_right {
+  float: left;
+  width: 50%;
+}
+/* line 141, ../sass/forms.scss */
+.home_forum_share .home_forum_share_right .home_forum_share_set {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+/* line 145, ../sass/forms.scss */
+.home_forum_share .home_forum_share_right .home_forum_share_set .btn {
+  display: block;
 }

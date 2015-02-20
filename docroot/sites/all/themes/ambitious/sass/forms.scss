@@ -128,3 +128,23 @@
       text-decoration: none;    
     }  
 }
+
+.home_forum_share{
+   @extend %clearfix;
+   .home_forum_share_left{
+     float:left;
+     width:50%;
+   }
+   .home_forum_share_right{
+     float:left;
+     width:50%;
+     .home_forum_share_set{
+        float:left;
+        width:50%;
+        text-align:center;
+        .btn{
+          display:block;
+        }       
+     }
+   }
+}
