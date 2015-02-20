@@ -1805,6 +1805,10 @@ fieldset{
   @include breakpoint($mobile) {
     .first_date{
       right: 70px;
+    }    
+    img{
+      width:100%;
+      height:auto;
     }
   } 
  @include breakpoint($tablet) {
@@ -1813,9 +1817,6 @@ fieldset{
    }
    .place.mobile-view{
      display:inherit;
-   }
-   img{
-     width:100%;
    }
  }
   
@@ -1833,3 +1834,4 @@ fieldset{
     }
   }
 }
+
