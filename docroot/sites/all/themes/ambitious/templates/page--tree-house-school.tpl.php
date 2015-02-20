@@ -86,7 +86,7 @@
  */
 ?>
 
-<div id="wrapper" class="page">
+<div id="wrapper" class="page tree-house-school">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
   <!-- including header region into the template -->
   <?php
