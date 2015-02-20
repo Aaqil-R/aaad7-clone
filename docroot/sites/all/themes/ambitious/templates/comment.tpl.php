@@ -57,8 +57,7 @@
  * @see theme_comment()
  *
  * @ingroup themeable
- */
-  
+ */ 
   
 ?>
 	
@@ -67,7 +66,11 @@
 			     <div class="comment-img-holder">
 				   <?php print $picture ?>
 				 </div> 
-			     <time pubdate="pubdate"><?php print $submitted;?></time> 
+			     <time pubdate="pubdate"><?php print $submitted;?></time>
+			      <?php print $permalink; ?>
+			      <?php if($privatemsg){
+                          print $privatemsg; 
+                        } ?>
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
