@@ -230,8 +230,20 @@ nav {
 	padding-bottom: 49px;
 }
 .page-node-74596{
+	#wrapper{
+		background-image:image-url('wid_bg.jpg');
+	}
 	.in-field-labels-processed{
 		display: none;
+	}
+
+	#content-header{
+		h1{
+			&:nth-child(1)
+			{
+				display: none;
+			}
+		}
 	}
 }
 
