@@ -70,7 +70,7 @@
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
-			      <a href="<?php print url($privatemsg); ?>">Private Message</a>
+			      <a href="<?php print $privatemsg; ?>">Private Message</a>
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
