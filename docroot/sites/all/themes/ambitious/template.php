@@ -753,5 +753,12 @@ function ambitious_preprocess_comment_wrapper(&$vars){
 }
 
 function ambitious_preprocess_comment(&$vars){
-  dpm($vars);
+  
+  if(isset($vars['content']['links']['privatemsg'])){
+     $vars['content']['links']['privatemsg']['#links']['privatemsg_link']['title'] = 'Contact Author';
+     $vars['privatemsg'] = $vars['content']['links']['privatemsg'];
+//     unset($vars['content']['links']['privatemsg']);
+  }
+  
+  
 }
