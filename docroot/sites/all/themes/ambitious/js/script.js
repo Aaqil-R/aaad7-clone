@@ -31,11 +31,8 @@ Drupal.behaviors.ambitious = {
 		
         // views filter opiton
         $(".view :checkbox").on('click', function(){
-           var crrentcheck = $(this).parent()
-           crrentcheck.toggleClass("checked").removeClass("highlight");
-            if (crrentcheck).hasClass('highlight')){
-               crrentcheck.removeClass("highlight");
-            }
+           var crtcheck = $(this).parent();
+           crtcheck.toggleClass("checked").removeClass("highlight"); 
          }); 
     	     $(document).ready(function(){ 
     	     initCustomForms();
