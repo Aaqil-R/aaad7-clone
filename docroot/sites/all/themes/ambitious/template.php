@@ -751,3 +751,7 @@ function ambitious_preprocess_comment_wrapper(&$vars){
   $vars['content']['comment_form']['#attributes']['class'][] = 'comments'; // Add class for form
   
 }
+
+function ambitious_preprocess_comment(&$vars){
+  dpm($vars);
+}

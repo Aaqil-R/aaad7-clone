@@ -58,8 +58,7 @@
  *
  * @ingroup themeable
  */
-  $user = user_load($node->uid); 
-  $privatemsg = privatemsg_get_link(array($user));
+  
   
 ?>
 	
@@ -68,11 +67,7 @@
 			     <div class="comment-img-holder">
 				   <?php print $picture ?>
 				 </div> 
-			     <time pubdate="pubdate"><?php print $submitted;?></time>
-			      <?php print $permalink; ?>
-			      <?php if ($privatemsg) {
-			        print l('Contact Author', $privatemsg);
-			      } ?>
+			     <time pubdate="pubdate"><?php print $submitted;?></time> 
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
