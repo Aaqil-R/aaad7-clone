@@ -4783,7 +4783,19 @@ fieldset {
     display: none;
   }
   /* line 1814, ../../sass/layouts/topic-forum.scss */
-  .page-node-74606 .place.desktop-view {
+  .page-node-74606 .place.mobile-view {
     display: inherit;
   }
+}
+
+@media (max-width: 767px) {
+  /* line 1821, ../../sass/layouts/topic-forum.scss */
+  .node-type-events .my-voice-post .content {
+    width: auto;
+  }
+}
+
+/* line 1828, ../../sass/layouts/topic-forum.scss */
+.page-node-74596 h4.title .icon-Close {
+  float: right;
 }
