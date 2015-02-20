@@ -19,7 +19,7 @@
     <?php if ($place): ?>
      <div class="place mobile-view"><?php print $place; ?></div> 
        <?php endif; ?>
-      <?php if ($content): ?> <?php print $content; ?><?php endif; ?>
+      <?php if($text): ?> <?php print $text; ?><?php endif; ?>
    </div>
    <div class="place desktop-view"><?php if ($place): ?><?php print $place; ?><?php endif; ?></div> 
 </section>  

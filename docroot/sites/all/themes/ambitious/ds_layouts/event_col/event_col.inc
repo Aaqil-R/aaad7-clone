@@ -4,7 +4,7 @@ function ds_event_col() {
     'label' => t('Events list Column'),
     'regions' => array(
       'image' => t('Image'),
-      'content' => t('Content'),
+      'text' => t('Text'),
       'place' => t('Place'),
       'date' => t('Date'),
     ),
