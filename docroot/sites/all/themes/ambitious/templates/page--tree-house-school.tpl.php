@@ -112,7 +112,29 @@
       // Photo credit block
       $block = module_invoke('block', 'block_view', '171');
       print render($block['content']);
-      ?>        
+      ?>
+      <div class="slider-main">
+                <div class="slider-box">
+            <div class="slider-action">
+              <a href="#" title="Prev Slide"><i class="icon-Leftarrow"></i></a>
+            <a href="#" title="Next Slide" class="right-arrow"><i class="icon-Rightarrow"></i></a>
+            </div>
+            <div class="slider-box-text">
+              <img src="sites/all/themes/ambitious/images/img37.jpg" alt="Making the">
+              <h4>Enabling children with autism to learn, thrive and achieve.</h4>
+              <p>We have over 85 pupils on roll with our youngest pupils being 4 and our oldest being 19 years old.</p>
+              <a href="#" title="Read about the school">Read about the school</a>
+            </div>
+            <div class="slider-box-pager">
+               <ul class="slider-pager">
+               <li class="active">1</li>
+               <li>2</li>
+               <li>3</li>
+               <li>4</li>
+             </ul>
+            </div>
+          </div>
+                 </div>        
 </section> <!-- /visual -->
 <section class="page-main" id="main2">
     <div class="about-us">
