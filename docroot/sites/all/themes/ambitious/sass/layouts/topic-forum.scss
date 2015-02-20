@@ -277,6 +277,13 @@ div.messages.status{
 //     }
 // }
 
+.view-display-id-stream_forum_page{
+ @include breakpoint($mobile) {
+   .filterbutton{
+      margin-left:0;
+   }
+ }
+}
 .page-user  #header{
   margin-bottom: 103px;
 }
