@@ -58,9 +58,9 @@
  *
  * @ingroup themeable
  */
-   dpm($node);
   $user = user_load($node->uid); 
-  $privatemsg = privatemsg_get_link($user);
+  $privatemsg = privatemsg_get_link(array($user));
+  
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -70,7 +70,9 @@
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
-			      <a href="<?php print $privatemsg; ?>">Private Message</a>
+			      <?php if ($privatemsg) {
+			        print l('Contact Author', $privatemsg);
+			      } ?>
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
