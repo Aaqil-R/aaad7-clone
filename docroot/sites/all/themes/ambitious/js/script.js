@@ -31,9 +31,8 @@ Drupal.behaviors.ambitious = {
 		
         // views filter opiton
         $(".view :checkbox").on('click', function(){
-           $(this).parent().toggleClass("checked").toggleClass("highlight");
+           $(this).parent().toggleClass("checked").removeClass("highlight");
          }); 
-     
     	     $(document).ready(function(){ 
     	     initCustomForms();
 	    $('#block-views-stream-stream-forum-page').mobileNav({ 
