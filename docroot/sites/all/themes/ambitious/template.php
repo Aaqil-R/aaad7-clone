@@ -161,6 +161,14 @@ function ambitious_preprocess_region(&$variables) {
       $variables['myblock'] = drupal_render($block2);
     }
   }
+
+  // Tree School logo
+  if ($currentNode) {
+    if($currentNode->nid == 74856 ) { 
+      $variables['logo'] = "/sites/all/themes/ambitious/images/tree-school-logo.png"; 
+
+    }
+  }
 }
 // Adding a custom breadcrumb code
 //=====================================
