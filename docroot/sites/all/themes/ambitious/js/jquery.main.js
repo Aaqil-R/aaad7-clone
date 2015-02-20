@@ -347,7 +347,7 @@ function initCustomHover() {
 				self.toggle();
 			};
 
-			this.opener.on(this.options.toggleEvent, this.openerClickHandler);
+			this.opener.once('navigation').on(this.options.toggleEvent, this.openerClickHandler);
 		},
 		isOpened: function() {
 			return this.container.hasClass(this.options.menuActiveClass);
