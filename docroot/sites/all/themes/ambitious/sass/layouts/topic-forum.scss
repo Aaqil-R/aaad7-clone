@@ -1566,11 +1566,6 @@ fieldset{
       .easy-breadcrumb{
         padding: 28px 12px 0 0;
       }
-      .banner_text{
-        font-size: 65px;
-        margin-left: 0px;
-        margin-top: 31px;
-      }
       .banner_sub_text{
         font-size: 26px;
         margin-top: 8px;
@@ -1647,6 +1642,9 @@ fieldset{
     .col{
       padding-top:0;
       padding-bottom:0;
+      @include breakpoint($mobile) {
+        padding:10px 30px;
+      }
     }
     .form-item{
       float:left;
