@@ -752,12 +752,12 @@ function ambitious_preprocess_comment_wrapper(&$vars){
   
 }
 
-function ambitious_preprocess_comment(&$variables){
+function ambitious_preprocess_comment(&$vars){
   
-  if(isset($variables['content']['links']['privatemsg'])){
-     $variables['content']['links']['privatemsg']['#links']['privatemsg_link']['title'] = 'Contact Author';
-     $variables['privatemsg'] = $variables['privatemsg']['#links']['privatemsg_link'];
-     dpm($variables);
+  if(isset($vars['content']['links']['privatemsg'])){
+     $vars['content']['links']['privatemsg']['#links']['privatemsg_link']['title'] = 'Contact Author';
+     $vars['privatemsg'] = $vars['privatemsg']['#links']['privatemsg_link'];
+     dpm($vars);
 //     unset($vars['content']['links']['privatemsg']);
   }
   
