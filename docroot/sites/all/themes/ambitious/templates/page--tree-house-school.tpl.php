@@ -114,7 +114,73 @@
       print render($block['content']);
       ?>        
 </section> <!-- /visual -->
-
+<section class="page-main" id="main2">
+    <div class="about-us">
+          <div class="find-us">
+          <h4>Find us</h4>
+        <div class="content">
+          <img src="sites/all/themes/ambitious/images/img27.jpg" alt="img decription">
+            <address>The Pears National Centre for Autism Education, Woodside Avenue, London, N10 3JA</address>
+                  <p>Tel:  020 8815 5424</p>
+                  <a href="#" title="Email for general enquiries">Email for general enquiries</a><br>
+                  <a href="#" title="Email Admissions">Email Admissions</a><br>
+                  <a href="#" title="Attend an open afternoon">Attend an open afternoon</a>
+        </div>
+          <a href="#" class="btn btn-green" title="Visit the School">Visit the School <em class="icon-Rightarrow"></em></a>
+        </div>
+        <div class="coming-up">
+          <h4>Coming up</h4>
+        <ul>
+          <li>
+             <time datetime="2013-03-10T22:06:17"><span class="date">19 </span><span class="month">Dec </span>2014</time>
+           <h6>School ends</h6>
+           <div class="coming-up-col"><span class="icon-Calendar"></span></div>
+          </li>
+           <li>
+             <time datetime="2013-03-10T22:06:17"><span class="date">19 </span><span class="month">Dec </span>2014</time>
+           <h6>Start of Christmas holiday</h6>
+           <div class="coming-up-col"><span class="icon-Calendar"></span></div>
+          </li>
+           <li>
+             <time datetime="2013-03-10T22:06:17"><span class="date">19 </span><span class="month">Dec </span>2014</time>
+           <h6>End of Christmas holiday</h6>
+           <div class="coming-up-col"><span class="icon-Calendar"></span></div>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-green" title="Calendar &amp; term dates">Calendar &amp; term dates  <em class="icon-Rightarrow"></em></a>
+        </div>
+    </div>
+    <div class="approach-main">
+      <h2 class="title">Our approach and outcomes</h2>
+      <div class="posts-columns">
+        <!-- post column -->
+        <div class="col approach-section">
+        <img src="sites/all/themes/ambitious/images/img28.jpg" alt="image description">
+        <h5>Our people</h5>
+        <p>The school has 140 members of staff including qualified teachers, behaviour professionals, speech and language therapists and occupational therapists.</p>
+        <a href="#" class="more-bt" title="Meet the people behind TreeHouse">Meet the people behind TreeHouse</a>
+        </div>
+      <!-- post column -->
+       <div class="col approach-section">
+        <img src="sites/all/themes/ambitious/images/img29.jpg" alt="image description">
+        <h5>Ofsted outstanding rated</h5>
+        <p>Ofsted inspected TreeHouse School on 24 and 25 October 2012 and found it to be ‘outstanding’ in all key areas of the inspection framework.</p>
+        <a href="#" class="more-bt" title="Read the Ofsted report">Read the Ofsted report</a>
+        <span class="formate">(PDF 138KB)</span>
+        </div>
+      <!-- post column -->
+       <div class="col approach-section">
+        <img src="sites/all/themes/ambitious/images/img30.jpg" alt="image description">
+        <h5>Title goes here</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo neque, consequat consectetur nisi in, tristique aliquet ante lorem ipsum dolor est.</p>
+        <a href="#" class="more-bt" title="Optional link goes here">Optional link goes here</a>
+        </div>
+       </div>
+     <span class="see-btn">
+         <a href="#" class="btn btn-green" title="Learn more about us"><span>Learn more about us<i class="icon-Rightarrow"></i></span></a>
+      </span>
+    </div>
+    </section>
   <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">
       <div class="holder">
