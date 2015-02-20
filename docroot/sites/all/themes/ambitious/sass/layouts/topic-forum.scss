@@ -1801,8 +1801,20 @@ fieldset{
      }
    }
 }  
-
-
-
-
+.page-node-74606{
+  @include breakpoint($mobile) {
+    .date.first{
+      right: 70px;
+    }
+  } 
+ @include breakpoint($tablet) {
+   .place.desktop-view{
+     display:none;
+   }
+   .place.desktop-view{
+     display:inherit;
+   }
+ }
+  
  
+}
