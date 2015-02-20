@@ -770,3 +770,18 @@ function ambitious_preprocess_comment(&$vars){
   
   
 }
+/**
+ * Prepare for theming of the webform submission confirmation.
+ */
+function ambitious_preprocess_webform_confirmation(&$vars) {
+  if ($vars['node']->nid == 74666) {
+    $submission = webform_get_submission($vars['node']->nid, $vars['sid']);
+    if ($submission->data[5][0] == 'Yes I am') {
+      if (module_exists('header_form')){
+       $vars['confirmation_message'] = = get_header_form(1);
+      }
+    } else if ($submission->data[5][0] == 'Not Right Now') {
+       $vars['confirmation_message'] = get_header_form('not_now');
+    }
+  }
+}
