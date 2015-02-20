@@ -58,7 +58,7 @@
  *
  * @ingroup themeable
  */
- 
+   dpm($node);
   $user = user_load($node->uid); 
   $privatemsg = privatemsg_get_link($user);
 ?>
