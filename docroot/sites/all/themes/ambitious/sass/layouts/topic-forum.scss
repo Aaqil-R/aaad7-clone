@@ -1281,9 +1281,9 @@ fieldset{
    }
 }
 
-.view-display-id-stream_topic_page .text-block.post{
+.view-display-id-stream_topic_page .view-content .text-block.post{
   @include breakpoint($mobile){
-    height:350px;
+    height:50px;
   }
 }
 
@@ -1359,6 +1359,8 @@ fieldset{
   }
   .sort-block{
     margin-bottom: 56px;
+     display: block;
+     clear: both;
   }
   .posts-columns .post{
     .info.add h3{  
