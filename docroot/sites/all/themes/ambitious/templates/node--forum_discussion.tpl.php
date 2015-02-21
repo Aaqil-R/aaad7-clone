@@ -52,7 +52,7 @@ $name = strip_tags($name);
 						    <em class="icon-Time"></em> 
 							Last reply by <cite><?php print user_load($variables['last_comment_uid'])->name;  ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
 					     </div> 
-						 <div class="form_replay"><a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> </div>
+						 <div class="forum_replay"><a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> </div>
 					  </div>  
 					</section>   
  
