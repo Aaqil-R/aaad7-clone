@@ -1570,6 +1570,21 @@ fieldset{
     display: none;
   }
   .header_banner{
+    .banner_text{
+      font-size: 64px;
+	 margin-left: 2px;
+	 margin-top: 30px;
+	 @include breakpoint($tablet){
+	    font-size: 44px;
+		margin-left: 22px;
+		margin-top: 0px;
+		margin-bottom: 0;
+	 }
+	 @include breakpoint($mobile){
+	    font-size:34px;
+	    marrgin:inherit;
+	 }
+    }
     .banner_text_main{      
       top:0;
       .easy-breadcrumb{
@@ -1579,6 +1594,10 @@ fieldset{
         font-size: 26px;
         margin-top: 8px;
         margin-left: 143px;
+         @include breakpoint($tablet){
+           font-size: 17px;
+            margin-left: 103px;
+         }
       }
     }
   }
