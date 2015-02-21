@@ -133,14 +133,17 @@
    @extend %clearfix;
    .home_forum_share_left{
      float:left;
-     width:50%;
+     width:45%;
    }
    .home_forum_share_right{
      float:left;
-     width:50%;
+     width:45%;
      .home_forum_share_set{
-        float:left;
-        width:50%;
+        &:first-child{
+          float:left;
+        }
+        float:right;
+        width:48%;
         text-align:center;
         .btn{
           display:block;

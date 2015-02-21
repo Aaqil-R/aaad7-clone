@@ -515,20 +515,24 @@ textarea {
 /* line 134, ../sass/forms.scss */
 .home_forum_share .home_forum_share_left {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 /* line 138, ../sass/forms.scss */
 .home_forum_share .home_forum_share_right {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 /* line 141, ../sass/forms.scss */
 .home_forum_share .home_forum_share_right .home_forum_share_set {
-  float: left;
-  width: 50%;
+  float: right;
+  width: 48%;
   text-align: center;
 }
-/* line 145, ../sass/forms.scss */
+/* line 142, ../sass/forms.scss */
+.home_forum_share .home_forum_share_right .home_forum_share_set:first-child {
+  float: left;
+}
+/* line 148, ../sass/forms.scss */
 .home_forum_share .home_forum_share_right .home_forum_share_set .btn {
   display: block;
 }
