@@ -1658,7 +1658,7 @@ fieldset{
         }
       }
     }
-   z-index: 99;
+   z-index: 9999;
    margin-top: -131px;
    margin-bottom:30px;
    margin-left: 15px;
@@ -1692,6 +1692,12 @@ fieldset{
       margin-top:11px;
    } 	
    }
+  }
+  .pic-by{
+    display:none;
+    @include breakpoint($mobile) {
+      display: block;
+    }
   }
 }
  #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]{
