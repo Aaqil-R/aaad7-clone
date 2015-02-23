@@ -56,6 +56,39 @@
 				               		<dt>Location:</dt>
 				               		<dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
 									<?php endif; ?> 
+									
+									<?php if(isset($elements['#account']->field_first_name['und'])):?>
+				               		<dt>First name:</dt>
+				               		<dd><?php print $elements['#account']->field_first_name['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_last_name['und'])):?>
+				               		<dt>Last name:</dt>
+				               		<dd><?php print $elements['#account']->field_last_name['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_migrate_example_gender['und'])):?>
+				               		<dt>Gender:</dt>
+				               		<dd><?php print $elements['#account']->field_migrate_example_gender['und'][0]['safe_value'];?></dd>
+									<?php endif; ?>  
+									<?php if(isset($elements['#account']->field_location_reference['und'])):?>
+				               		<dt>Location Reference:</dt>
+				               		<dd><?php print $elements['#account']->field_location_reference['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_signature['und'])):?>
+				               		<dt>Signature:</dt>
+				               		<dd><?php print $elements['#account']->field_signature['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_avatar_gender['und'])):?>
+				               		<dt>Avatar gender:</dt>
+				               		<dd><?php print $elements['#account']->field_avatar_gender['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_avatar_ref['und'])):?>
+				               		<dt>Avatar ref:</dt>
+				               		<dd><?php print $elements['#account']->field_avatar_ref['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_thumbnail_ref['und'])):?>
+				               		<dt>Thumbnail Ref:</dt>
+				               		<dd><?php print $elements['#account']->field_thumbnail_ref['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
 
 				               		<dt>No. of posts:</dt>
 				               		<dd>92</dd>
