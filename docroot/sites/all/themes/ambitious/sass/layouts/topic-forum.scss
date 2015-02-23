@@ -939,6 +939,12 @@ div.messages.status{
   .forum_replay{
       margin-top: 10px;
    }
+   .header_image{
+     @extend .top-header;
+     .region-image-holder{
+       @extend .page-links;
+     }
+   }
 }
 
 
@@ -1139,6 +1145,10 @@ div.messages.status{
 				    }
 				  }
 				}
+			  }
+			  .quote{
+			    border: none;
+			    padding: 0;
 			  }
 			}
 		  }
