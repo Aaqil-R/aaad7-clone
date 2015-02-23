@@ -98,14 +98,42 @@
     float: left;
     margin-right: 20px;
   }
-
-  .list-view{
-    .img-holder{
-      display: none;
+  .grid-view{
+    a{
+      .text{
+        display: none;
+      }
     }
+  }
+  .list-view{
+    .info.add{
+      padding-top: 0px;
+      padding-bottom: 0px;
+      }
+    .img-holder{
+      a{
+        img{
+          display: none;
+        }
+        .icon-connection{
+          display: none;
+        }
+        .text{
+          display: inherit;
+        }
+      }
+    
+
+      .voice-holder{
+        margin-left: 150px;
+      }
+
+    }
+
+
     .post{
       min-height: 1px;
-      padding: 20px 21px;
+      padding: 0px 21px;
     }
     // Remove padding from Text block
     .text-block{
@@ -114,6 +142,10 @@
     .post-actions{
       display: none;
     }    
+  }
+
+  .views-row-1{
+    //margin-bottom:95px;
   }
 
   // Fix title issue
