@@ -381,7 +381,9 @@
   //  font-family: icomoon;
   //  content: '\e614'
   // }      
-
+  @include breakpoint($mobile) {
+    margin-bottom:0px;
+  }
   span.icon-YouTube{
     @include breakpoint(999px){
       display: none;
