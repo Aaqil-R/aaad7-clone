@@ -67,10 +67,11 @@
 				   <?php print $picture ?>
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
-			      <?php print $permalink; ?>
-			      <?php if($privatemsg){
+			        <?php if($privatemsg){
                           print render($content['privatemsg']); 
                         } ?>
+			      <?php print $permalink; ?>
+			   
 			   </div>
 			   <div class="comment-right">
 			       <?php print render($title_prefix); ?>
