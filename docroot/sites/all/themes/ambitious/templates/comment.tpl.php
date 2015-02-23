@@ -68,14 +68,14 @@
 			     <div class="comment-img-holder">
 				   <?php print $picture ?>
 				 </div> 
-			     <time pubdate="pubdate"><?php print $submitted;?></time>
-			     <?php
+			     <time pubdate="pubdate"><?php print $submitted;?></time> 
+			      <?php print $permalink; ?>
+			      <?php
 				      if ( $user->uid ) { ?>
 			        <?php if($content['privatemsg']){
                           print render($content['privatemsg']); 
                         } ?> 
-				      <?php } ?> 		
-			      <?php print $permalink; ?>
+				      <?php } ?> 
 			   
 			   </div>
 			   <div class="comment-right">

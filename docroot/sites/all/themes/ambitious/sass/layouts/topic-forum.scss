@@ -80,6 +80,9 @@ body.profile .top-header{
   }
   .comment-left{
     float:left;
+    ul{
+      @extend %listreset;
+    }
   }
   .comment-body{
     padding: 1.4em 2em;
