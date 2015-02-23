@@ -59,6 +59,7 @@
  * @ingroup themeable
  */ 
    hide($content['links']);
+    global $user;
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -67,9 +68,15 @@
 				   <?php print $picture ?>
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
-			        <?php if($privatemsg){
+			        <?php /* if($privatemsg){
                           print render($content['privatemsg']); 
-                        } ?>
+                        } */ ?>
+                        <?php
+				      if ( $user->uid ) { ?>
+				       <div class="links">
+					    <?php print render($content['links']) ?> 
+					  </div>
+				      <?php } ?> 		
 			      <?php print $permalink; ?>
 			   
 			   </div>
@@ -82,7 +89,7 @@
 					 print render($content);
 				    ?>
 				    
-				    <?php global $user;
+				    <?php
 				      if ( $user->uid ) { ?>
 				       <div class="links">
 					    <?php print render($content['links']) ?> 
