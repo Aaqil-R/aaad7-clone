@@ -609,7 +609,7 @@ function ambitious_field__field_event_date(&$variables){
  $formatdate[2] = format_date($dateval, 'custom', 'M');
  $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
 
- $output .= '<ul class="date" >';
+ $output .= '<ul class="date first_date" >';
  foreach ($formatdate as $key => $value){
    $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
  }
@@ -767,7 +767,6 @@ function ambitious_preprocess_comment(&$vars){
      $vars['content']['privatemsg'] = $vars['content']['links'];
      $vars['content']['links']['privatemsg']['#links']['privatemsg_link'] = '';
      $vars['content']['privatemsg']['comment']= '';     
-     dpm( $vars['content']['privatemsg'] );
   }
   
   
