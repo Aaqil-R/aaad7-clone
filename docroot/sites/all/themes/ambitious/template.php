@@ -149,7 +149,7 @@ function ambitious_preprocess_region(&$variables) {
   $variables['myblock'] = drupal_render($block2);
   
   $variables['logo'] = theme_get_setting('logo'); 
-
+  $variables['headerlogo'] = null;
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
@@ -159,6 +159,8 @@ function ambitious_preprocess_region(&$variables) {
       $block1 = _block_render_blocks(array($block));
       $block2 = _block_get_renderable_array($block1);
       $variables['myblock'] = drupal_render($block2);
+
+      $variables['headerlogo'] = "/sites/all/themes/ambitious/images/logo-no-text.png";
     }
   }
 

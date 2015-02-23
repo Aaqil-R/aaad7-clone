@@ -11,7 +11,11 @@
 <?php if ($content): ?>
 	<section class="top-bar">
 		<div class="holder">
+			
 			<div class="<?php print $classes; ?>">
+				<div class= "logo">
+				<img src="<?php print $headerlogo; ?>">
+			</div>
 				<?php print $content; ?>
 			</div>				  
 		</div>

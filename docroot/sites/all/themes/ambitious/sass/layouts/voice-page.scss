@@ -3,45 +3,7 @@
 
 /*breadcrump for all the pages*/
 .img-holder{
-	/*.block-easy-breadcrumb{
-		margin: 0 auto;
-		max-width: 1080px;
-		padding: 10px 20px 10px 20px;
-		.easy-breadcrumb{
-			letter-spacing:-4px;
-			text-align:right;
-			padding:20px 0px 0 0;
-			color:$white;
-			@include breakpoint($mobile) {
-				display:none;
-			}
-			.easy-breadcrumb_segment {
-				display:inline-block;
-				vertical-align:top;
-				letter-spacing:normal;
-				font-size:16px;
-				line-height:20px;
 
-				position:relative;
-				padding:0 3px 0 13px;
-		
-				color:$white;
-				text-decoration:underline;
-				&:hover { 
-					text-decoration:none; 
-				}
-			}
-			
-			
-			a {
-				color:$white;
-				text-decoration:underline;
-				&:hover { 
-					text-decoration:none; 
-				}
-			}
-		}
-	}*/
 }
 
 /*end of breadcrumb codes*/
@@ -52,31 +14,43 @@
 		@extend %my-voice-visual;
 	}
 
-	/*.visual .img-holder .caption-frame {
-		z-index: 1000;
-		position: absolute;
-		top: 75px;
-	}*/
-	
-	/*.region.region-image-holder{
-		padding-top: 90px;
-	}
-*/
-	//.my-voice-block{
-	//	margin-top: -250px;
-	//}
-	// #content_top{
-	// 	z-index: 99;
-	// 	margin-top: -15%;
-	// 	margin-bottom: 30px;
-	// }
 	#content_top{
 		z-index: 99;
-		margin-top: -20%;
+		margin-top: -15%;
 		margin-bottom: 30px;
 		@include breakpoint($mobile) {
 			margin-top: -5%;
 		}
+
+		.my-voice-columns{
+    // [TODO] this style is being applied from forms.scss
+    // .webform-client-form{
+    //   @extend %signup-form; 
+    // }
+		    .col{
+    		  padding-top:0;
+    		  padding-bottom:0;
+    		  @include breakpoint($mobile) {
+        		padding:10px 30px;
+      			}
+    		}	
+   			.form-item{
+    			float:left;
+    		  	width:96%;
+      			margin-bottom: 9px;
+      			label{
+        			left: 24px;
+        			top: 12px;
+      			}
+    		}
+    		a.tooltips span.tooltip-content{
+      			left: -45px;
+      			bottom: 30px;
+    		}
+   			.description{
+      			margin-top:11px;
+   			} 	
+   		}
 	}
 /*
 	.visual .img-holder .caption-frame .caption .title {
@@ -158,6 +132,25 @@
 	//.title
 	//{	display:none;
 	//}
+	.logo{
+		display: inline;
+		float: left;
+		@include breakpoint($mobile) {
+        	display: none;
+		}
+	}
+
+	.header__region.region.header{
+		div{
+			display: inline;
+		}
+	}
+
+	.block.block-menu.header-top-menu.contextual-links-region.first.odd{
+		ul{
+			padding-left: 15px;
+		}
+	}
 
 }
 
@@ -254,3 +247,8 @@ nav {
 .my-voice-intro{
 	margin-top:0px;
 } */
+
+
+.logo{
+	display: none;
+}
