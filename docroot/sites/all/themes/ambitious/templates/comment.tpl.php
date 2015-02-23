@@ -58,7 +58,7 @@
  *
  * @ingroup themeable
  */ 
-  
+   hide($content['links']);
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -77,8 +77,7 @@
 			         <h4<?php print $title_attributes; ?>><?php print $title ?></h4>
    			       <?php print render($title_suffix); ?>
 			     <?php
-					 // We hide the comments and links now so that we can render them later.
-					 hide($content['links']);
+					 // We hide the comments and links now so that we can render them later. 
 					 print render($content);
 				    ?>
 				    
