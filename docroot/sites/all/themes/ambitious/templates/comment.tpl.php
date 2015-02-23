@@ -69,7 +69,7 @@
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
 			      <?php print $permalink; ?>
 			      <?php if($privatemsg){
-                          print $privatemsg; 
+                          print render($content['privatemsg']); 
                         } ?>
 			   </div>
 			   <div class="comment-right">
