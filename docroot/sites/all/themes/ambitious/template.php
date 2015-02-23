@@ -769,10 +769,7 @@ function ambitious_preprocess_comment(&$vars){
      $vars['content']['links']['privatemsg']['#links']['privatemsg_link'] = '';
      $vars['content']['links']['privatemsg']['comment']['#links']['comment-reply'] = '';
      $vars['content']['privatemsg']['comment']= '';          
-     
   }
-  
-  
 }
 /**
  * Prepare for theming of the webform submission confirmation.
