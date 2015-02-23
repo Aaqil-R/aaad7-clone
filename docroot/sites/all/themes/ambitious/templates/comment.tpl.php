@@ -59,6 +59,7 @@
  * @ingroup themeable
  */ 
    hide($content['links']);
+   hide($content['privatemsg']);
     global $user;
 ?>
 	
@@ -68,14 +69,11 @@
 				   <?php print $picture ?>
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time>
-			        <?php /* if($privatemsg){
-                          print render($content['privatemsg']); 
-                        } */ ?>
-                        <?php
+			     <?php
 				      if ( $user->uid ) { ?>
-				       <div class="links">
-					    <?php print render($content['links']) ?> 
-					  </div>
+			        <?php if($content['privatemsg']){
+                          print render($content['privatemsg']); 
+                        } ?> 
 				      <?php } ?> 		
 			      <?php print $permalink; ?>
 			   
