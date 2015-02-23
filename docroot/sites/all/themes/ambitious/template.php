@@ -316,11 +316,9 @@ function ambitious_menu_link(&$variables) {
 			if($fid == 0){
 			  $file = variable_get('user_picture_default'); 
 			}
-			$title = image_style_url('user_picture_thumb', $file). $element['#title'];  
 			// I found it necessary to use theme_image_style() instead of theme_user_picture()
 			// because I didn't want any extra html, just the image.			
-			//$title = theme('image', array('path' => $file, 'alt' => $element['#title'], 'title' => $element['#title'])). $element['#title'];    
-			
+			$title = theme('image', array('path' => $file, 'alt' => $element['#title'], 'title' => $element['#title'])). $element['#title'];    
 			//$title = theme('image_style', array('style_name' => 'user_picture_thumb', 'path' => $file->uri, 'alt' => $element['#title'], 'title' => $element['#title'])) . $element['#title'];
 		}else {
 			$title = $element['#title'];
