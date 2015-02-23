@@ -766,6 +766,7 @@ function ambitious_preprocess_comment(&$vars){
      $vars['content']['links']['privatemsg']['#links']['privatemsg_link']['title'] = 'Contact Author';
      $vars['content']['privatemsg'] = $vars['content']['links'];
      $vars['content']['links']['privatemsg']['#links']['privatemsg_link'] = '';
+     $vars['content']['privatemsg']['comment']= '';     
      dpm( $vars['content']['privatemsg'] );
   }
   
