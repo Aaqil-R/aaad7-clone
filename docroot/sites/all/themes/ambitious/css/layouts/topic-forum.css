@@ -6,7 +6,7 @@
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
+#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .page-comment #content-area .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -384,7 +384,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
+#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .page-comment #content-area .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -762,7 +762,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* line 11, ../../sass/base/_markup-mixins.scss */
-#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
+#comments .comment-left ul, .page-user .quicktabs_main .comment-left ul, .page-comment #content-area .comment-left ul, .social-networks, .pager-load-more, .posts-columns.columns-full .row .footer .links.inline, .node-type-forum-discussion .comment-list ul.comment-listing, .page-comment-reply .comment-list ul.comment-listing, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1741,7 +1741,7 @@ a:hover.tooltips span.tooltip-content {
   right: 8px;
   bottom: -13px;
   content: "";
-  background: url('../../images/sprite.png?1424101657') no-repeat -128px 0;
+  background: url('../../images/sprite.png?1424690784') no-repeat -128px 0;
   width: 12px;
   height: 13px;
 }
@@ -2821,34 +2821,34 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 
 /* line 67, ../../sass/layouts/topic-forum.scss */
-#comments, .page-user .quicktabs_main {
+#comments, .page-user .quicktabs_main, .page-comment #content-area {
   clear: both;
   padding-top: 2em;
 }
 /* line 70, ../../sass/layouts/topic-forum.scss */
-#comments .comment, .page-user .quicktabs_main .comment {
+#comments .comment, .page-user .quicktabs_main .comment, .page-comment #content-area .comment {
   margin: 2em 0;
   clear: both;
 }
 /* line 74, ../../sass/layouts/topic-forum.scss */
-#comments .profile-picture, .page-user .quicktabs_main .profile-picture {
+#comments .profile-picture, .page-user .quicktabs_main .profile-picture, .page-comment #content-area .profile-picture {
   float: none;
 }
 /* line 77, ../../sass/layouts/topic-forum.scss */
-#comments h4, .page-user .quicktabs_main h4 {
+#comments h4, .page-user .quicktabs_main h4, .page-comment #content-area h4 {
   font-size: 1.1em;
   margin: 0.3em 0;
 }
 /* line 81, ../../sass/layouts/topic-forum.scss */
-#comments .comment-left, .page-user .quicktabs_main .comment-left {
+#comments .comment-left, .page-user .quicktabs_main .comment-left, .page-comment #content-area .comment-left {
   float: left;
 }
 /* line 86, ../../sass/layouts/topic-forum.scss */
-#comments .comment-left .quote, .page-user .quicktabs_main .comment-left .quote {
+#comments .comment-left .quote, .page-user .quicktabs_main .comment-left .quote, .page-comment #content-area .comment-left .quote {
   display: none;
 }
 /* line 90, ../../sass/layouts/topic-forum.scss */
-#comments .comment-body, .page-user .quicktabs_main .comment-body {
+#comments .comment-body, .page-user .quicktabs_main .comment-body, .page-comment #content-area .comment-body {
   padding: 1.4em 2em;
   border: 2px solid #d2d5d6;
   margin-left: 6em;
@@ -2857,7 +2857,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
   position: relative;
 }
 /* line 97, ../../sass/layouts/topic-forum.scss */
-#comments .comment-body:before, .page-user .quicktabs_main .comment-body:before {
+#comments .comment-body:before, .page-user .quicktabs_main .comment-body:before, .page-comment #content-area .comment-body:before {
   background: url("../images/comment-tip-left.png") 0 0 no-repeat;
   width: 26px;
   height: 31px;
@@ -2869,32 +2869,32 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 @media (max-width: 767px) {
   /* line 67, ../../sass/layouts/topic-forum.scss */
-  #comments, .page-user .quicktabs_main {
+  #comments, .page-user .quicktabs_main, .page-comment #content-area {
     padding: 0;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
   }
   /* line 114, ../../sass/layouts/topic-forum.scss */
-  #comments .comment, .page-user .quicktabs_main .comment {
+  #comments .comment, .page-user .quicktabs_main .comment, .page-comment #content-area .comment {
     display: inline-block;
     vertical-align: top;
   }
   /* line 118, ../../sass/layouts/topic-forum.scss */
-  #comments .profile-picture, .page-user .quicktabs_main .profile-picture {
+  #comments .profile-picture, .page-user .quicktabs_main .profile-picture, .page-comment #content-area .profile-picture {
     float: left;
     margin: 0 1em 1.5em 0;
     width: 35%;
     height: auto;
   }
   /* line 124, ../../sass/layouts/topic-forum.scss */
-  #comments .comment-left, .page-user .quicktabs_main .comment-left {
+  #comments .comment-left, .page-user .quicktabs_main .comment-left, .page-comment #content-area .comment-left {
     float: none;
     margin-bottom: 1em;
     width: 100%;
   }
   /* line 129, ../../sass/layouts/topic-forum.scss */
-  #comments .comment-body, .page-user .quicktabs_main .comment-body {
+  #comments .comment-body, .page-user .quicktabs_main .comment-body, .page-comment #content-area .comment-body {
     border: none;
     margin: 0;
     padding: 0;
@@ -2903,7 +2903,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
     white-space: normal;
   }
   /* line 136, ../../sass/layouts/topic-forum.scss */
-  #comments .comment-body:before, .page-user .quicktabs_main .comment-body:before {
+  #comments .comment-body:before, .page-user .quicktabs_main .comment-body:before, .page-comment #content-area .comment-body:before {
     content: none;
   }
 }
