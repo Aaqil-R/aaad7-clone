@@ -28,14 +28,7 @@
     print $q;
   ?>
 <?php endif; ?> 
-
-<?php
-  $flag = flag_get_flag('bookmarks'); 
-  dpm($flag);
-  if (  $flag && $flag->is_flagged($node->nid)) {
-    print "This node is bookmarked!";
- }
-?>
+ 
 
 <div class="sort-block">
 <div class="search-text forum-page"><input type="text" value="Search the community"></div>
