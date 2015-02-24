@@ -38,7 +38,9 @@ $name = strip_tags($name);
 						     <?php else :?>
 							<h3><a href="<?php print $node_url; ?>" title="Discussion">Discussion</a></h3>
 							<?php endif;?>
-							<?php print flag_create_link('bookmarks', $node->nid); ?>
+							<div style="margin-bottom: 20px;">
+							  <?php print flag_create_link('bookmarks', $node->nid); ?>
+							</div>
 							<?php print render($content['body']);?>		 
 						  </div>
 						</div>
