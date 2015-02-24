@@ -32,8 +32,7 @@
 <?php
  $node = node_load(arg(1)); 
  // print flag_create_link('bookmarks', $node->nid);
- $nodelink = flag_create_link('bookmarks', $node->nid); 
-   dpm($nodelink);
+   print flag_get_flag('bookmarks'); 
  ?>
 
 <div class="sort-block">
