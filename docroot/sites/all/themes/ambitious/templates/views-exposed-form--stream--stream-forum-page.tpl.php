@@ -30,6 +30,7 @@
 <?php endif; ?> 
 
 <?php
+$node = node_load(arg(1)); 
  $flage = flag_create_link('bookmarks',$node->nid);
  dpm($flage);
  print $flage;
