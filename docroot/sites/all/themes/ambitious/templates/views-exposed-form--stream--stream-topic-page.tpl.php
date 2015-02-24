@@ -82,13 +82,7 @@
       <div class="views-exposed-widget views-reset-button element-invisible">
         <?php print $reset_button; ?>
       </div>
-    <?php endif; ?> 
-    <div style="float: left; margin-left: 270px;">
-    <?php
-   $node = node_load(arg(1)); 
-   print flag_create_link('bookmarks', $node->nid);
-?>
-</div>
+    <?php endif; ?>  
     <?php print render($variables['share_button']); ?>
 </div>
  
