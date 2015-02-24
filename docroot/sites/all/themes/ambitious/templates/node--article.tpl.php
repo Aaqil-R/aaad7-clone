@@ -26,6 +26,7 @@
 	             <article>
 	               <header>
 	                 <h1><?php print $title; ?></h1>
+	                 <?php print flag_create_link('bookmarks', $node->nid); ?>
 					<?php if (!empty($content['field_standfirst'])) : ?> 
 	                 	<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
 	                <?php endif; ?> 

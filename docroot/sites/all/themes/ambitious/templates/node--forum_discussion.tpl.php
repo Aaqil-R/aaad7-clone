@@ -30,8 +30,7 @@ $name = strip_tags($name);
 						      <?php endif; ?>						      
 						    </div>
                             <cite>by <strong title="<?php print $name; ?>"> <?php print truncate_utf8($name,12,TRUE,4);?></strong></cite>
-                            <time pubdate="pubdate"><?php print $date; ?></time>  
-                                <?php print flag_create_link('bookmarks', $node->nid); ?>
+                            <time pubdate="pubdate"><?php print $date; ?></time>   
 						  </div>
 						  <div class="info add forum-right">
 						     <?php if(isset($title)): ?>
@@ -39,6 +38,7 @@ $name = strip_tags($name);
 						     <?php else :?>
 							<h3><a href="<?php print $node_url; ?>" title="Discussion">Discussion</a></h3>
 							<?php endif;?>
+							<?php print flag_create_link('bookmarks', $node->nid); ?>
 							<?php print render($content['body']);?>		 
 						  </div>
 						</div>
