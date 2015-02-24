@@ -184,3 +184,14 @@ table {
 .field-type-text {
     font-family: $base-font-family;
 }
+
+// Floating the system error messages to the bottom of the viewport.
+.messages--error {
+    position: fixed;
+    bottom: 0px;
+    // TODO: Ideally would have wanted this to be 100% but this is inside the 
+    // main wrapper which is constrained. Needs to be looked into.
+    width: 1065px;
+    margin: 0px;
+    z-index: 9999;
+}
