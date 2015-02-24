@@ -1,4 +1,4 @@
-<?php
+<?php	
 /**
  * @file
  * Default view template to display content in a Masonry layout.
