@@ -12,14 +12,15 @@
       <?php if(isset($variables['node']->title)): ?>
         <h1><?php print $variables['node']->title;?></h1>
       <?php endif; ?> 
-      <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
-        <?php print $variables['node']->body['und'][0]['safe_value']; ?>
-      <?php endif; ?>
-      <p>
+       <p>
       <?php $node = node_load(arg(1));
          print flag_create_link('bookmarks', $node->nid);
        ?> 
       </p>
+      <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
+        <?php print $variables['node']->body['und'][0]['safe_value']; ?>
+      <?php endif; ?>
+     
          
       <!-- Teaser ends here -->	
     </div>
