@@ -952,6 +952,7 @@ div.messages.status{
 
 .node-type-forum-discussion, .page-comment-reply, .page-comment{
 .comment-block, #content-area form.comment-form{ 
+     @extend %clearfix;
 	padding:35px 50px 37px 44px;
 	position: relative;
 	margin: 0 0 30px;
@@ -1883,6 +1884,9 @@ fieldset{
 
 
 .page-comment{
+.form-actions{
+  clear: both;
+}
 		h4{
 		   @include fontsize(23,16);
 		  a{
@@ -1970,3 +1974,4 @@ fieldset{
 		  }
         }
 	  }
+	   
