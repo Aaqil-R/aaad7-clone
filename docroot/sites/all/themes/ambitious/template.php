@@ -391,8 +391,7 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
    $vars['node'] = node_load(arg(1)); 
    $links = sharethis_node_view($node, 'full', 'en');
    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-   $vars['bookmarks'] = flag_create_link('bookmarks',$node->nid);
-   dpm($vars['bookmarks']);
+ 
  }
 
   if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'){

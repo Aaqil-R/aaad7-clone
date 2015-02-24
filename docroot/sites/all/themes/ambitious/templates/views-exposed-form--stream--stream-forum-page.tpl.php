@@ -28,7 +28,12 @@
     print $q;
   ?>
 <?php endif; ?> 
- 
+
+<?php
+ $flage = flag_create_link('bookmarks',$node->nid);
+ dpm($flage);
+ print $flage;
+?>
 
 <div class="sort-block">
 <div class="search-text forum-page"><input type="text" value="Search the community"></div>
