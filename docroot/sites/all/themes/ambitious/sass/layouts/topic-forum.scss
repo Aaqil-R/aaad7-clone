@@ -951,7 +951,7 @@ div.messages.status{
 
 
 .node-type-forum-discussion, .page-comment-reply, .page-comment{
-.comment-block, #content-area form.comment-form{ 
+.comment-block{ 
      @extend %clearfix;
 	padding:35px 50px 37px 44px;
 	position: relative;
@@ -1884,6 +1884,119 @@ fieldset{
 
 
 .page-comment{
+#content-area form.comment-form{ 
+     @extend %clearfix;
+	padding:35px 50px 37px 44px;
+	position: relative;
+	margin: 0 0 30px;
+	background:$white;
+	border: 1px solid $gray;
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	    #edit-author--2{
+	      label{
+	        float:left;
+	        width:auto;
+	      }
+	      .form-element{
+	        background: none;
+	        margin-left: 10px;
+	        margin-top: 0;
+	      }
+	    }
+		@include breakpoint($mobile){
+		  padding: 27px 15px;
+		}
+		h4{
+		  margin: 0 0 17px;
+		}
+		.form-required{
+		  color: $orange;
+		}
+		.comment-form{
+          font-size:18px;
+          color:$captions-credit;
+		  .required{
+		    color:$orange;
+		  }
+		  label{
+		   float:left;
+		    width:100%;
+		   &.label-block{
+		     width:100%;
+		   }
+		  }
+		.jcf-select{
+		  width: 100%;
+		  border: none;
+		}  
+          fieldset{
+            margin:0 0 20px 0;
+            float:none;
+			@include breakpoint($mobile){
+			  margin:0 0 10px 0;
+			} 
+			fieldset{
+			  margin:0;
+			  padding:0;
+			}
+			.filter-help{
+                 float: left;
+                 width: 100%;
+                 padding: 0;
+                 margin: 0 0 20px 0;
+                   a{
+                     padding: 0;
+                   }
+                 }
+               }
+            strong{
+		    color:$heading-link;
+			margin-left:10px;
+			@include breakpoint($tablet){
+			  font-weight:normal;
+			}
+		  }
+		  .form-element{
+		    @include linear-gradient($captions-credit,$page-background);
+            padding:2px;
+            float:left;
+			margin:6px 0 0 0;
+			@include border-radius(5px);
+            max-width:506px;
+            width:100%;
+		    input[type=text],input[type=email], textarea{
+		      float:left;
+			  @include border-radius(5px);
+			  width:100%;
+			  color:$captions-credit;
+			  border:none;
+			}
+			textarea{
+			  height:183px;
+			}
+          }
+		} 
+		.form-actions{
+		  #edit-submit, #edit-preview{
+		    @extend .btn;
+		    @extend .btn-gray !optional;  
+		    &:hover{
+		      color:$white;
+		    }
+		  }
+		  margin:0;
+			  @include breakpoint($mobile) {
+			    .btn.btn-left{
+	              margin-left: 6px;
+	              padding: 3px 15px;
+				  &:first-child{
+				    margin-left:0
+				  }
+				}
+	           }
+		} 
+	  }
  #edit-author--2{
 	      label{
 	        float:left;
