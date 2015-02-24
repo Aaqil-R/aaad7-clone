@@ -30,10 +30,8 @@
 <?php endif; ?> 
 
 <?php
-  $node = node_load(arg(1)); 
-  $flags = flag_create_link('bookmarks',$node->nid);
-  dpm($flags);
-?>
+ $node = node_load(arg(1)); 
+ print flag_create_link('bookmarks', $node->nid); ?>
 
 <div class="sort-block">
 <div class="search-text forum-page"><input type="text" value="Search the community"></div>
