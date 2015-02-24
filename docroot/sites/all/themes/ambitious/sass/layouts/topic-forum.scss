@@ -1064,7 +1064,7 @@ div.messages.status{
 		} 
 	  }
 
- .comment-list, .page-comment #main{
+ .comment-list{
 		h4{
 		   @include fontsize(23,16);
 		  a{
@@ -1073,7 +1073,7 @@ div.messages.status{
 			margin-left:0;
 		  }
 		}
-		ul.comment-listing, .content-area{
+		ul.comment-listing{
 		  @extend %listreset;
 		  position: relative;
 		  &.children{
@@ -1876,3 +1876,96 @@ fieldset{
   }
 }
 
+
+
+
+
+
+
+.page-comment{
+		h4{
+		   @include fontsize(23,16);
+		  a{
+		    font-size:16px;
+			text-decoration: underline;
+			margin-left:0;
+		  }
+		}
+		#content-area{
+		  @extend %listreset;
+		  position: relative;
+		  &.children{
+		    margin-left:30px;
+		  }
+		  li{
+		    .comment-left{
+			  float:left;
+			  width:100px;
+			  font-size:13px;
+			  img{
+				 @include border-radius(5px);
+				 overflow:hidden;
+				 margin:0 0 4px 0;
+			  }
+			  a{
+				    text-decoration:underline;
+				    font-weight:bold;
+					color:$base-link-color;
+				    &:hover{
+				      text-decoration:none;
+				    }
+					}
+			  cite{
+			     margin:0 0 7px 0;
+				 font-style:normal;
+				 display:block;
+			  }
+			  time{
+			    margin:0 0 17px 0;
+			  }
+			}
+			.comment-right{
+			  border:2px solid $border-color;
+			  padding:16px 26px 13px 26px;
+			  margin:0 0 27px 132px;
+			  font-size:16px;
+			  background:$white;
+			  word-wrap: break-word;
+			  @include breakpoint($mobile){
+			    padding:15px;
+			  }
+			  &:before{
+			    content: "";
+			    position: absolute;
+			    left: 110px;
+			    background:url(../../images/sprite.png) no-repeat -1px -162px;
+			    width: 24px;
+				top: 15px;
+			    height: 32px;
+			  }
+			  .links{
+			    margin-bottom: 17px;
+			  }
+			  ul{
+			     @extend %clearfix;
+				 @extend %listreset;
+			    li{
+                  float: left;
+                  margin:0 11px 0 0;
+				  a{
+				    text-decoration:underline;
+				    font-weight:bold;
+				    &:hover{
+				      text-decoration:none;
+				    }
+				  }
+				}
+			  }
+			  .quote{
+			    border: none;
+			    padding: 0;
+			  }
+			}
+		  }
+        }
+	  }
