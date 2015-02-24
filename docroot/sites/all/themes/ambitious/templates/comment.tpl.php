@@ -91,6 +91,7 @@
 				      if ( $user->uid ) { ?>
 				       <div class="links">
 					    <?php print render($content['links']) ?> 
+					     <?php print flag_create_link('bookmarks', $comment->cid); ?>
 					  </div>
 				      <?php } ?> 			
 				      <?php $node = node_load(arg(1));
