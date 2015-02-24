@@ -1883,7 +1883,11 @@ fieldset{
 
 
 
-.page-comment{
+.page-comment, .page-messages{
+fieldset{
+  float: left;
+  width: 100%;
+}
 #content-area form.comment-form{ 
      @extend %clearfix;
 	padding:35px 50px 37px 44px;
