@@ -31,6 +31,7 @@ $name = strip_tags($name);
 						    </div>
                             <cite>by <strong title="<?php print $name; ?>"> <?php print truncate_utf8($name,12,TRUE,4);?></strong></cite>
                             <time pubdate="pubdate"><?php print $date; ?></time>  
+                                <?php print flag_create_link('bookmarks', $node->nid); ?>
 						  </div>
 						  <div class="info add forum-right">
 						     <?php if(isset($title)): ?>
