@@ -30,10 +30,9 @@
 <?php endif; ?> 
 
 <?php
-$node = node_load(arg(1)); 
- $flage = flag_create_link('bookmarks',$node->nid);
- dpm($flage);
- print $flage;
+  $node = node_load(arg(1)); 
+  $flags = flag_create_link('bookmarks',$node->nid);
+  dpm($flags);
 ?>
 
 <div class="sort-block">
