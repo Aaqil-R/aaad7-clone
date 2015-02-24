@@ -86,11 +86,13 @@
 	//.title
 	//{	display:none;
 	//}
-	.logo{
-		display: inline;
-		float: left;
-		@include breakpoint($mobile) {
-        	display: none;
+	.top-bar{
+		.logo{
+			display: inline;
+			float: left;
+			@include breakpoint($mobile) {
+    	    	display: none;
+			}
 		}
 	}
 
@@ -194,6 +196,8 @@ nav {
 	padding-top:20px;
 }
 
-.logo{
-	display: none;
+.top-bar{
+	.logo{
+		display: none;
+	}
 }
