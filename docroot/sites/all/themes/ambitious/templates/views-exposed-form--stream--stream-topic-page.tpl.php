@@ -34,12 +34,13 @@
         <?php print $variables['node']->body['und'][0]['safe_value']; ?>
       <?php endif; ?>
 </div>
+
+
+<div class="sort-block">
 <?php
    $node = node_load(arg(1)); 
    print flag_create_link('bookmarks', $node->nid);
 ?>
-
-<div class="sort-block">
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
