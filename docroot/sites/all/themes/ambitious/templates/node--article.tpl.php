@@ -68,8 +68,10 @@
 							   <span>Tags: </span>
 								<?php print render($content['field_tags']); ?>
 						 </div>
-						
-					   </div>
+						 <div>
+						 	<span>Bookmark: </span>
+							<?php print render($content['flag']); ?>
+						 </div>
 	                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 </div>
 	              </footer>
