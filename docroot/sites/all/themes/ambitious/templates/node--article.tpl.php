@@ -63,11 +63,14 @@
 				       <div class="article-updated">
 
 					     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
-
+					     <div class="article-tags">
+						 	<span>Related topics: </span>
+							<?php print render($content['field_related_topic']); ?>
+						 </div>
 					  	 <div class="article-tags">
 							   <span>Tags: </span>
 								<?php print render($content['field_tags']); ?>
-						 </div>
+						 </div class="article-tags" >
 						 <div>
 						 	<span>Bookmark: </span>
 							<?php print render($content['flag']); ?>
