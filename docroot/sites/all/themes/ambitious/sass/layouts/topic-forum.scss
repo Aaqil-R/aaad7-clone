@@ -950,7 +950,7 @@ div.messages.status{
 
 
 
-.node-type-forum-discussion, .page-comment-reply{
+.node-type-forum-discussion, .page-comment-reply, .page-comment{
 .comment-block{ 
 	padding:35px 50px 37px 44px;
 	position: relative;
@@ -1894,6 +1894,7 @@ fieldset{
 		#content-area{
 		  @extend %listreset;
 		  position: relative;
+		  clear: both;
 		  &.children{
 		    margin-left:30px;
 		  }
