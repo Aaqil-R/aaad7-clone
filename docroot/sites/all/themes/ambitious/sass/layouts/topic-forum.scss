@@ -64,7 +64,7 @@ body.profile .top-header{
   }
 }
 
-#comments, .page-comment #content-area{
+#comments{
   clear: both;
   padding-top: 2em;
   .comment{
@@ -1064,7 +1064,7 @@ div.messages.status{
 		} 
 	  }
 
- .comment-list{
+ .comment-list, .page-comment #main{
 		h4{
 		   @include fontsize(23,16);
 		  a{
@@ -1073,7 +1073,7 @@ div.messages.status{
 			margin-left:0;
 		  }
 		}
-		ul.comment-listing{
+		ul.comment-listing, .content-area{
 		  @extend %listreset;
 		  position: relative;
 		  &.children{
