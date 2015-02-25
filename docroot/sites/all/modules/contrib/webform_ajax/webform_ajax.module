@@ -158,7 +158,7 @@ function webform_ajax_callback($form, &$form_state) {
  * Generates a redirect if needed, or displays the appropriate content.
  */
 function _webform_ajax_callback_completed($form, $form_state) {
-  $output = '';dpm($form_state['redirect']);
+  $output = '';
   if (isset($form_state['redirect'])) {
     // If a redirect is set, then use it to send a redirect instruction via AJAX.
     ctools_include('ajax');
