@@ -141,7 +141,7 @@ function webform_ajax_form_webform_client_form_alter(&$form, $form_state, $form_
  */
 function webform_ajax_callback($form, &$form_state) {
   $output = array();
-  dpm($form_state['webform_completed']);
+  dpm(var_dump($form_state['webform_completed']), 'webform completed');
   dpm($form_state['save_draft']);
   // If user completed his submission, determine what to do.
   if (!empty($form_state['webform_completed']) && empty($form_state['save_draft'])) {
