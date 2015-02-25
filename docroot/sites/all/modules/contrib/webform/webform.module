@@ -3179,7 +3179,8 @@ function webform_client_form_pages($form, &$form_state) {
       }
 
     }
-
+    dpm($form_state['storage']['page_num'], 'page_num');
+    dpm($form_state['storage']['page_count'], 'page_count');
     // The form is done if the page number is greater than the page count.
     $form_state['webform_completed'] = $form_state['storage']['page_num'] > $form_state['storage']['page_count'];
   }
@@ -3226,8 +3227,8 @@ function webform_client_form_submit($form, &$form_state) {
  
   if (empty($form_state['save_draft']) && empty($form_state['webform_completed'])) {
     return;
-  }
-
+  }dpm('inside submit');
+ 
   $node = $form['#node'];
   $sid = $form_state['values']['details']['sid'] ? (int) $form_state['values']['details']['sid'] : NULL;
 
