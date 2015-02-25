@@ -346,7 +346,8 @@ table {
   width: 100%; 
   border-collapse:collapse;
   border-spacing: 0;  
-  padding:15px 0;
+  padding-top:15px;
+  margin-bottom:15px;
   td, th{
     border: 1px solid transparent; 
     min-height: 30px; 
@@ -356,11 +357,16 @@ table {
     background:$grey;
     font-weight: bold;
     color:$white;
+    padding: 9px;
+    a{
+      color:$white;
+    }
   }  
   tr{
     td {
       background:$white;
       text-align: center;
+      padding: 10px;
       &:hover, &:hover a{
         background:$captions-credit;
         color:$white;
@@ -369,6 +375,7 @@ table {
     &:nth-child(odd), &.odd{
       td{
         background:$captions-credit;  
+        color:$white;
       }
     }
     

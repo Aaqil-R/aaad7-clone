@@ -784,9 +784,10 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  padding: 15px 0;
+  padding-top: 15px;
+  margin-bottom: 15px;
 }
-/* line 350, ../../sass/layouts/global.scss */
+/* line 351, ../../sass/layouts/global.scss */
 table td, table th {
   border: 1px solid transparent;
   min-height: 30px;
@@ -795,23 +796,30 @@ table td, table th {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 355, ../../sass/layouts/global.scss */
+/* line 356, ../../sass/layouts/global.scss */
 table th {
   background: #333333;
   font-weight: bold;
   color: #ffffff;
+  padding: 9px;
 }
 /* line 361, ../../sass/layouts/global.scss */
+table th a {
+  color: #ffffff;
+}
+/* line 366, ../../sass/layouts/global.scss */
 table tr td {
   background: #ffffff;
   text-align: center;
+  padding: 10px;
 }
-/* line 364, ../../sass/layouts/global.scss */
+/* line 370, ../../sass/layouts/global.scss */
 table tr td:hover, table tr td:hover a {
   background: #636c73;
   color: #ffffff;
 }
-/* line 370, ../../sass/layouts/global.scss */
+/* line 376, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td, table tr.odd td {
   background: #636c73;
+  color: #ffffff;
 }
