@@ -3213,7 +3213,7 @@ function webform_client_form_pages($form, &$form_state) {
     // Remove the form state storage now that we're done with the pages.
     $form_state['rebuild'] = FALSE;
     unset($form_state['storage']);
-  }
+  }dpm($form_state, 'webform_pages');
 }
 
 /**
@@ -3222,8 +3222,8 @@ function webform_client_form_pages($form, &$form_state) {
 function webform_client_form_submit($form, &$form_state) {
   module_load_include('inc', 'webform', 'includes/webform.submissions');
   module_load_include('inc', 'webform', 'includes/webform.components');
-  global $user;
-
+  global $user;dpm($form_state['webform_completed'],'submit');
+ 
   if (empty($form_state['save_draft']) && empty($form_state['webform_completed'])) {
     return;
   }
