@@ -143,6 +143,6 @@ function yes_i_am_validate($form, &$form_state) {
     form_set_error('submitted][firs_name', 'Fill field first name');
   }
   if (empty($form_state['values']['submitted']['email'])) {
-    form_set_error('submitted][firs_name', 'Fill field email');
+    form_set_error('submitted][email', 'Fill field email');
   }  
 }
