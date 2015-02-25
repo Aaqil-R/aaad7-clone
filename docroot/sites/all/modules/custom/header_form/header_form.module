@@ -103,6 +103,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
       $form['submitted']['yes-i-am'] = array(
         '#type' => 'submit',
         '#value' => 'Yes I am',
+        '#submit' => $form['#submit'],
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
           'wrapper' => 'webform-ajax-wrapper-74666',
@@ -116,6 +117,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
       $form['submitted']['not_right_now'] = array(
         '#type' => 'submit',
         '#value' => 'Not Right Now',
+        '#submit' => $form['#submit'],
         '#ajax' =>  array(
           'callback' => 'webform_ajax_callback',
           'wrapper' => 'webform-ajax-wrapper-74666',
