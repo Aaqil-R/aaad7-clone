@@ -124,6 +124,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
             'type' => 'throbber',
           ),
         ),
+        '#id' => drupal_html_id('edit-webform-ajax-not-right-now-' .$form['#node']->nid)
       );
     break;
     default:  
