@@ -784,7 +784,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 5%;
+  padding: 15px 0;
 }
 /* line 350, ../../sass/layouts/global.scss */
 table td, table th {
@@ -797,20 +797,21 @@ table td, table th {
 }
 /* line 355, ../../sass/layouts/global.scss */
 table th {
-  background: #636c73;
+  background: #333333;
   font-weight: bold;
+  color: #ffffff;
 }
-/* line 360, ../../sass/layouts/global.scss */
+/* line 361, ../../sass/layouts/global.scss */
 table tr td {
   background: #ffffff;
   text-align: center;
 }
-/* line 363, ../../sass/layouts/global.scss */
-table tr td:hover {
+/* line 364, ../../sass/layouts/global.scss */
+table tr td:hover, table tr td:hover a {
   background: #636c73;
   color: #ffffff;
 }
-/* line 369, ../../sass/layouts/global.scss */
+/* line 370, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td, table tr.odd td {
-  background: #333333;
+  background: #636c73;
 }

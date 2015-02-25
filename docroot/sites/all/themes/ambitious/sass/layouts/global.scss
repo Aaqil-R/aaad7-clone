@@ -345,29 +345,30 @@ table {
   color:$grey;  
   width: 100%; 
   border-collapse:collapse;
-  border-spacing: 0; 
-  margin: 5%;
+  border-spacing: 0;  
+  padding:15px 0;
   td, th{
     border: 1px solid transparent; 
     min-height: 30px; 
     @include transition ($type:all, $time:0.2s, $ease:ease);
   }
-  th{
-    background:$captions-credit;  
+  th{    
+    background:$grey;
     font-weight: bold;
+    color:$white;
   }  
   tr{
     td {
       background:$white;
       text-align: center;
-      &:hover{
+      &:hover, &:hover a{
         background:$captions-credit;
         color:$white;
       }
     }
     &:nth-child(odd), &.odd{
       td{
-        background:$grey;
+        background:$captions-credit;  
       }
     }
     
