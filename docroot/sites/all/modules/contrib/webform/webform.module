@@ -3074,7 +3074,7 @@ function webform_client_form_pages($form, &$form_state) {
     $form_state['storage']['page_count'] = $form_state['webform']['page_count'];
     $form_state['storage']['page_num'] = $form_state['webform']['page_num'];
     $form_state['storage']['preview'] = $form_state['webform']['preview'];
-  }
+  }dpm($form_state['storage']['page_count']);
 
   // Flatten trees within the submission.
   $form_state['values']['submitted'] = _webform_client_form_submit_flatten($node, $form_state['values']['submitted']);
@@ -3114,8 +3114,7 @@ function webform_client_form_pages($form, &$form_state) {
       $forward = 0;
     }
     $current_page = $form_state['storage']['page_num'];
-dpr($forward, 'forward');
-dpr(var_dump(isset($forward)), 'var_dump');
+
     if (isset($forward)) {
       // Find the
       //    1) previous/next non-empty page, or
