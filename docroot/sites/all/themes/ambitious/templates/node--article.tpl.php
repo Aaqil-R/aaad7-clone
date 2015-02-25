@@ -36,7 +36,6 @@
 					    <?php endif; ?>
 					      <a href="<?php print $base_path.'user/'.$uid; ?>" class="first">@<?php print $node->name; ?></a>
 						  <a href="<?php print url('messages/new/'. $node->uid, array ('query' => drupal_get_destination())); ?>" title="email the author">email the author</a>
-						  <?php print flag_create_link('bookmarks', $node->nid); ?>
 					   </cite>
 				       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 </div>
@@ -72,10 +71,7 @@
 							   <span>Tags: </span>
 								<?php print render($content['field_tags']); ?>
 						 </div class="article-tags" >
-						 <div>
-						 	<span>Bookmark: </span>
-							<?php print render($content['flag']); ?>
-						 </div>
+
 	                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 </div>
 	              </footer>
