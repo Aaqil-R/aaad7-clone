@@ -104,9 +104,10 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#type' => 'submit',
         '#value' => 'Yes I am',
         '#submit' => $form['#submit'],
+        '#validate' = array('yes_i_am_validate');
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
-          'wrapper' => 'webform-ajax-wrapper-74666',
+          'wrapper' => 'slider-container',
           'progress' => array(
             'message' => '',
             'type' => 'throbber',
@@ -136,4 +137,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
 function are_you_with_us_submit($form, &$form_state) {
   $form_state['values']['submitted']['button_clicked'] = $form_state['values']['op'];
   $form_state['values']['op'] = $form['actions']['submit']['#value'];
+}
+function yes_i_am_validate($form, &$form_state) {
+  dpm($form_state);
 }
