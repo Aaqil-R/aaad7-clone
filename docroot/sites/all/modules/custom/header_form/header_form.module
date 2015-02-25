@@ -120,7 +120,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#submit' => $form['#submit'],
         '#ajax' =>  array(
           'callback' => 'webform_ajax_callback',
-          'wrapper' => 'webform-ajax-wrapper-74666',
+          'wrapper' => 'slider-container',
           'progress' => array(
             'message' => '',
             'type' => 'throbber',
