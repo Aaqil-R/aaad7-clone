@@ -3115,7 +3115,7 @@ function webform_client_form_pages($form, &$form_state) {
     }
     $current_page = $form_state['storage']['page_num'];
 dpm($forward, 'forward');
-dpm(var_dump($forward), 'var_dump');
+dpm(var_dump(isset($forward)), 'var_dump');
     if (isset($forward)) {
       // Find the
       //    1) previous/next non-empty page, or
