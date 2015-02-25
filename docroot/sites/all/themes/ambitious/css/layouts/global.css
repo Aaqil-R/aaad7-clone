@@ -778,53 +778,39 @@ div#admin-toolbar.vertical div.admin-tab {
 }
 
 /* TABLE STYLE */
-/* line 345, ../../sass/layouts/global.scss */
+/* line 344, ../../sass/layouts/global.scss */
 table {
-  color: #333;
-  font-family: Helvetica, Arial, sans-serif;
-  width: 640px;
+  color: #333333;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 5%;
 }
-
-/* line 353, ../../sass/layouts/global.scss */
-td, th {
+/* line 350, ../../sass/layouts/global.scss */
+table td, table th {
   border: 1px solid transparent;
-  /* No more visible border */
-  height: 30px;
-  transition: all 0.3s;
-  /* Simple transition for hover effect */
+  min-height: 30px;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-
-/* line 359, ../../sass/layouts/global.scss */
-th {
-  background: #DFDFDF;
-  /* Darken header a bit */
+/* line 355, ../../sass/layouts/global.scss */
+table th {
+  background: #636c73;
   font-weight: bold;
 }
-
-/* line 364, ../../sass/layouts/global.scss */
-td {
-  background: #FAFAFA;
+/* line 360, ../../sass/layouts/global.scss */
+table tr td {
+  background: #ffffff;
   text-align: center;
 }
-
-/* Cells in even rows (2,4,6...) are one color */
-/* line 370, ../../sass/layouts/global.scss */
-tr:nth-child(even) td {
-  background: #F1F1F1;
+/* line 363, ../../sass/layouts/global.scss */
+table tr td:hover {
+  background: #636c73;
+  color: #ffffff;
 }
-
-/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-/* line 373, ../../sass/layouts/global.scss */
-tr:nth-child(odd) td {
-  background: #FEFEFE;
+/* line 369, ../../sass/layouts/global.scss */
+table tr:nth-child(odd) td, table tr.odd td {
+  background: #333333;
 }
-
-/* line 375, ../../sass/layouts/global.scss */
-tr td:hover {
-  background: #666;
-  color: #FFF;
-}
-
-/* Hover cell effect! */
