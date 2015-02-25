@@ -396,6 +396,7 @@ body.profile .top-header{
 
 }
 .page-user{
+
   .view-user-profile {
     img{
        display:none;
@@ -406,6 +407,17 @@ body.profile .top-header{
         display:inherit;
         border-radius: 5px;
       }
+    }
+  }
+  tr{
+    fieldset{
+      padding:0;
+    }
+  }
+  #privatemsg-list-form{
+    .form-item-operation{
+      padding-top: 0;
+      padding-left: 0;
     }
   }
 }
