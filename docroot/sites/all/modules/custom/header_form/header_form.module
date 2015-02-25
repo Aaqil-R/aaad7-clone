@@ -116,7 +116,6 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
       $form['submitted']['not_right_now'] = array(
         '#type' => 'submit',
         '#value' => 'Not Right Now',
-        '#limit_validation_errors' => array(),
         '#ajax' =>  array(
           'callback' => 'webform_ajax_callback',
           'wrapper' => 'webform-ajax-wrapper-74666',
