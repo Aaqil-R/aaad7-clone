@@ -352,9 +352,10 @@ table {
     border: 1px solid transparent; 
     min-height: 30px; 
     @include transition ($type:all, $time:0.2s, $ease:ease);
+    text-align: left;
   }
   th{    
-    background:$grey;
+    background:$captions-credit;
     font-weight: bold;
     color:$white;
     padding: 9px;
@@ -365,7 +366,7 @@ table {
   tr{
     td {
       background:$white;
-      text-align: center;
+      text-align: left;
       padding: 10px;
       &:hover, &:hover a{
         background:$captions-credit;
@@ -374,8 +375,11 @@ table {
     }
     &:nth-child(odd), &.odd{
       td{
-        background:$captions-credit;  
+        background:$page-background;  
         color:$white;
+        a{
+          color:$white;
+        }
       }
     }
     
