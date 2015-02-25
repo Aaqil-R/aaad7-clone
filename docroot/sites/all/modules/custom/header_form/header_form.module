@@ -113,10 +113,18 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         ),
         '#id' => drupal_html_id('edit-webform-ajax-yes-i-am-' .$form['#node']->nid)
       );
-      drupal_add_library('system', 'drupal.ajax');
-      $nlink = l('Not Right Now<span class="icon-Rightarrow"></span>', 'header/form/ajax/not_now', array('attributes' => array('class' => array('use-ajax btn')),'html' => TRUE));
       $form['submitted']['not_right_now'] = array(
-        '#markup' => $nlink,
+        '#type' => 'submit',
+        '#value' => 'Not Right Now',
+        '#limit_validation_errors' => array(),
+        '#ajax' =>  array(
+          'callback' => 'webform_ajax_callback',
+          'wrapper' => 'webform-ajax-wrapper-74666',
+          'progress' => array(
+            'message' => '',
+            'type' => 'throbber',
+          ),
+        ),
       );
     break;
     default:  
