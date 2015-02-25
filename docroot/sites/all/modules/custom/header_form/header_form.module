@@ -107,7 +107,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#validate' => array('yes_i_am_validate'),
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
-          'wrapper' => 'slider-container',
+          'wrapper' => 'webform-ajax-wrapper-74666',
           'progress' => array(
             'message' => '',
             'type' => 'throbber',
