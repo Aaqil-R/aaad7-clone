@@ -139,5 +139,10 @@ function are_you_with_us_submit($form, &$form_state) {
   $form_state['values']['op'] = $form['actions']['submit']['#value'];
 }
 function yes_i_am_validate($form, &$form_state) {
-  dpm($form_state);
+  if (empty($form_state['values']['submitted']['first_name'])) {
+    form_set_error('submitted][firs_name', 'Fill field first name');
+  }
+  if (empty($form_state['values']['submitted']['email'])) {
+    form_set_error('submitted][firs_name', 'Fill field email');
+  }  
 }
