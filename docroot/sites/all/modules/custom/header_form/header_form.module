@@ -135,5 +135,6 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function are_you_with_us_submit($form, &$form_state) {
-  $form_state['values']['submitted']['button_clicked'] = $form_state['values']['op'];  
+  $form_state['values']['submitted']['button_clicked'] = $form_state['values']['op'];
+  $form_state['values']['op'] = $form['actions']['submit']['#value'];
 }
