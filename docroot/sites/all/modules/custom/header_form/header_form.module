@@ -104,7 +104,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#type' => 'submit',
         '#value' => 'Yes I am',
         '#submit' => $form['#submit'],
-        '#validate' = array('yes_i_am_validate');
+        '#validate' = array('yes_i_am_validate'),
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
           'wrapper' => 'slider-container',
