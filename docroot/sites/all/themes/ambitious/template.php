@@ -793,7 +793,7 @@ function ambitious_preprocess_webform_confirmation(&$vars) {
       }
     } else if ($submission->data[5][0] == 'Not Right Now') {
           if (module_exists('header_form')){
-       $vars['confirmation_message'] = get_header_form('not_now');
+       $vars['confirmation_message'] = get_header_form(4);
        }
     }
   }

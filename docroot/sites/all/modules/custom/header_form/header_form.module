@@ -68,7 +68,7 @@ function get_header_form($pageno) {
           $output .= render($block['content']);
           $output .= '</div>';
         break;
-        case 'not_now':
+        case 4:
           $output = '<div id="slider-container" class="slider-container">';
           $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/ajax/0', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
           $output .= '<div class="l-s-arrow">'.$plink.'</div>';
