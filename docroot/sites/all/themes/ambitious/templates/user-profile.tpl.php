@@ -126,6 +126,16 @@
 			               		</a>
 		               		</section>
 		               		<section class="connect">
+		               		      <?php if (module_exists('hybridauth')) {
+                                          $element = array(
+									 '#type' => 'hybridauth_widget',
+									 '#title' => t('Connect for faster login'),
+									 '#weight' => 10,
+									 '#hybridauth_widget_type' => 'list',
+									 '#hybridauth_destination' => '',
+								    );
+                                          print drupal_render($element);
+                                        }?> 
 			               		<h3>Connect for faster login</h3>
 			               		<a href="#" class="btn btn-facebook" title="Facebook">
 			               			<span>
