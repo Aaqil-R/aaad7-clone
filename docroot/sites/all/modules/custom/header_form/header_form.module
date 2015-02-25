@@ -100,10 +100,9 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'webform_client_form_74666':
     array_unshift($form['#submit'], 'are_you_with_us_submit' );
-      $form['actions']['yes-i-am'] = array(
+      $form['submitted']['yes-i-am'] = array(
         '#type' => 'submit',
         '#value' => 'Yes I am',
-        '#submit' => $form['#submit'],
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
           'wrapper' => 'webform-ajax-wrapper-74666',
@@ -114,10 +113,9 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         ),
         '#id' => drupal_html_id('edit-webform-ajax-yes-i-am-' .$form['#node']->nid)
       );
-      $form['actions']['not_right_now'] = array(
+      $form['submitted']['not_right_now'] = array(
         '#type' => 'submit',
         '#value' => 'Not Right Now',
-        '#submit' => $form['#submit'],        
         '#ajax' =>  array(
           'callback' => 'webform_ajax_callback',
           'wrapper' => 'webform-ajax-wrapper-74666',
@@ -127,7 +125,6 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
           ),
         ),
       );
-      array_unshift($form['#submit'], 'are_you_with_us_submit' );
     break;
     default:  
   }
