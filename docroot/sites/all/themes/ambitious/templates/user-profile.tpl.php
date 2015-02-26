@@ -126,16 +126,10 @@
 			               		</a>
 		               		</section>
 		               		<section class="connect">
-		               		      <?php if (module_exists('hybridauth')) {
-                                          $element = array(
-									 '#type' => 'hybridauth_widget',
-									 '#title' => t('Connect for faster login'),
-									 '#weight' => 10,
-									 '#hybridauth_widget_type' => 'list',
-									 '#hybridauth_destination' => '',
-								    );
-                                          print drupal_render($element);
-                                        }?> 
+		               		     <ul class="hybridauth-widget"><li class="first"><a href="/ambitiousaboutautism/hybridauth/window/Twitter?destination=user/76&amp;destination_error=user/76" title="Twitter" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Twitter</a></li>
+<li><a href="/ambitiousaboutautism/hybridauth/window/Google?destination=user/76&amp;destination_error=user/76" title="Google" class="hybridauth-widget-provider hybridauth-onclick-current hybridauth-onclick-processed hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Google" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Google</a></li>
+<li class="last"><a href="/ambitiousaboutautism/hybridauth/window/Facebook?destination=user/76&amp;destination_error=user/76" title="Facebook" class="hybridauth-widget-provider hybridauth-onclick-current hybridauth-onclick-processed hybridauth-last-provider hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Facebook" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Facebook</a></li>
+</ul>
 			               		<h3>Connect for faster login</h3>
 			               		<a href="#" class="btn btn-facebook" title="Facebook">
 			               			<span>
