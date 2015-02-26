@@ -1,6 +1,6 @@
 @import "base/base"; 
 @import "extends"; 
-@import "content"; 
+//@import "content"; 
 
 .icon-Close{
   cursor: pointer;
@@ -1227,12 +1227,12 @@ fieldset{
 
 
 /*voice page*/
-.filter-pink{
+/* .filter-pink{
   input[type=submit]{
     @extend .btn;
     @extend .btn-pink;
   }
-}
+} */
 .visual .btn-perv{
   @include breakpoint($mobile){
     margn:-36px 0 0 11px;
@@ -1301,7 +1301,7 @@ fieldset{
 }
 
  
- .button-holder{
+/*  .button-holder{
 	   margin:20px 32px 30px;
 	   input[type=submit]{
 	       width:100%;
@@ -1314,7 +1314,7 @@ fieldset{
 	     @extend .btn;
 	     @extend .btn-pink;
 	   } 
-	}
+	} */
 .forum-block{
     
    @include breakpoint($mobile){
