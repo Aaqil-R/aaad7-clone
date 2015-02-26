@@ -125,27 +125,25 @@
 			               			</span>
 			               		</a>
 		               		</section>
-		               		<section class="connect"> 
-
-<a data-hybridauth-provider="Facebook" title="Facebook" href="http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/hybridauth/window/Facebook?destination=user/76&amp;destination_error=user/76">Facebook</a>
-
- 
+		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
-			               		<a href="#" class="btn btn-facebook" title="Facebook">
+			               		<a href="/hybridauth/window/Facebook?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-facebook" title="Facebook" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
 			               			<span>
 			               				Facebook <em class="icon-Facebook"></em>
 			               			</span>
 			               		</a>
-			               		<a href="#" class="btn btn-twitter" title="Twitter">
+			               		
+			               		<a href="/hybridauth/window/Twitter?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-twitter" title="Twitter" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
 			               			<span>
 			               				Twitter <em class="icon-Twitter"></em>
 			               			</span>
 			               		</a>
-			               		<a href="#" class="btn btn-google" title="Google">
+			               		
+			               		<a href="/hybridauth/window/Google?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-google" title="Google" rel="nofollow" data-hybridauth-provider="Google" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
 			               			<span>
-			               				Google <em class="icon-google"></em>
+			               				Google <em class="icon-Google"></em>
 			               			</span>
-			               		</a>
+			               		</a> 
 		               		</section>
      			               	  
 <div class="profile"<?php print $attributes; ?>>
