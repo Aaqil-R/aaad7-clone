@@ -128,15 +128,9 @@ $userid = $elements['#account']->uid;
 		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
 			               		<?php 
-			               		$data="<span>Facebook<em class='icon-Facebook'></em></span>";
-								$url="/hybridauth/window/Facebook?destination=user/".$userid."&destination_error=user/".$userid;
-								print l($data, $url, array( 'attributes' => (array('class' => array('btn btn-facebook'))),'html' => TRUE,'external' => TRUE) );
-			               		$data="<span>Twitter<em class='icon-Twitter'></em></span>";
-								$url='/hybridauth/window/Twitter?destination=user/'.$userid.'&destination_error=user/'.$userid;
-								print l($data, $url, array( 'attributes' => (array('class' => array('btn btn-twitter'))),'html' => TRUE,'external' => TRUE) );
-								$data="<span>Google<em class='icon-google'></em></span>";
-								$url="/hybridauth/window/Google?destination=user/".$userid."&destination_error=user/".$userid;
-								print l($data, $url, array( 'attributes' => (array('class' => array('btn btn-google'))),'html' => TRUE,'external' => TRUE) );
+								print l("<span>Facebook<em class='icon-Facebook'></em></span>", "/hybridauth/window/Facebook?destination=user/".$userid."&destination_error=user/".$userid, array( 'attributes' => (array('class' => array('btn btn-facebook'))),'html' => TRUE,'external' => TRUE) );
+								print l("<span>Twitter<em class='icon-Twitter'></em></span>", '/hybridauth/window/Twitter?destination=user/'.$userid.'&destination_error=user/'.$userid, array( 'attributes' => (array('class' => array('btn btn-twitter'))),'html' => TRUE,'external' => TRUE) );
+								print l("<span>Google<em class='icon-google'></em></span>", "/hybridauth/window/Google?destination=user/".$userid."&destination_error=user/".$userid, array( 'attributes' => (array('class' => array('btn btn-google'))),'html' => TRUE,'external' => TRUE) );
 			               		?>
 			             
 		               		</section>
