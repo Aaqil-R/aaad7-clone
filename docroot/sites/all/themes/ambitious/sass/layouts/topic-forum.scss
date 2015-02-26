@@ -1,6 +1,6 @@
 @import "base/base"; 
 @import "extends"; 
-@import "content"; 
+//@import "content"; 
 
 .icon-Close{
   cursor: pointer;
@@ -1227,12 +1227,12 @@ fieldset{
 
 
 /*voice page*/
-.filter-pink{
+/* .filter-pink{
   input[type=submit]{
     @extend .btn;
     @extend .btn-pink;
   }
-}
+} */
 .visual .btn-perv{
   @include breakpoint($mobile){
     margn:-36px 0 0 11px;
@@ -1301,7 +1301,7 @@ fieldset{
 }
 
  
- .button-holder{
+/*  .button-holder{
 	   margin:20px 32px 30px;
 	   input[type=submit]{
 	       width:100%;
@@ -1314,7 +1314,7 @@ fieldset{
 	     @extend .btn;
 	     @extend .btn-pink;
 	   } 
-	}
+	} */
 .forum-block{
     
    @include breakpoint($mobile){
@@ -1817,25 +1817,7 @@ fieldset{
       }
       font-size:18px;
     }
-    input[type="submit"]{
-      float:left;
-      clear:both;
-      border: none;
-      // added backgournd, color, border-radius - > nanda Globalsoftlab
-      @include border-radius(5px);
-      background:$orange;
-      color:$white;
-      border-bottom: 5px solid $orange-dark;
-      margin-right: 20px;
-      @include breakpoint($mobile) {
-            margin-bottom: 20px;
-      }
-      &:hover {
-        border-bottom-width: 3px;
-        text-decoration:none;
-        color:$white;
-      }
-    }
+    
     #edit-submitted-not-right-now{
       // float: right;
       clear: none;
