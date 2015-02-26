@@ -125,11 +125,11 @@
 			               			</span>
 			               		</a>
 		               		</section>
-		               		<section class="connect">
-		               		     <ul class="hybridauth-widget"><li class="first"><a href="http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/hybridauth/window/Twitter?destination=user/76&amp;destination_error=user/76" title="Twitter" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Twitter</a></li>
-<li><a href="http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/hybridauth/window/Google?destination=user/76&amp;destination_error=user/76" title="Google" class="hybridauth-widget-provider hybridauth-onclick-current hybridauth-onclick-processed hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Google" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Google</a></li>
-<li class="last"><a href="http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/hybridauth/window/Facebook?destination=user/76&amp;destination_error=user/76" title="Facebook" class="hybridauth-widget-provider hybridauth-onclick-current hybridauth-onclick-processed hybridauth-last-provider hybridauth-provider-processed" rel="nofollow" data-hybridauth-provider="Facebook" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">Facebook</a></li>
-</ul>
+		               		<section class="connect"> 
+
+<a data-hybridauth-provider="Facebook" title="Facebook" href="http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/hybridauth/window/Facebook?destination=user/76&amp;destination_error=user/76">Facebook</a>
+
+ 
 			               		<h3>Connect for faster login</h3>
 			               		<a href="#" class="btn btn-facebook" title="Facebook">
 			               			<span>
