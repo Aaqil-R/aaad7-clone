@@ -1817,25 +1817,7 @@ fieldset{
       }
       font-size:18px;
     }
-    input[type="submit"]{
-      float:left;
-      clear:both;
-      border: none;
-      // added backgournd, color, border-radius - > nanda Globalsoftlab
-      @include border-radius(5px);
-      background:$orange;
-      color:$white;
-      border-bottom: 5px solid $orange-dark;
-      margin-right: 20px;
-      @include breakpoint($mobile) {
-            margin-bottom: 20px;
-      }
-      &:hover {
-        border-bottom-width: 3px;
-        text-decoration:none;
-        color:$white;
-      }
-    }
+    
     #edit-submitted-not-right-now{
       // float: right;
       clear: none;
