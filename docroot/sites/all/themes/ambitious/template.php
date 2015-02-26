@@ -584,18 +584,19 @@ $uid=arg(1);
   foreach (element_children($vars['tabset']['tablinks']) as $key) {
   	$val=0;
     $item = array();
-    if (is_array($vars['tabset']['tablinks'][$key])) { 
+     if (is_array($vars['tabset']['tablinks'][$key])) { 
     	 $tab = $vars['tabset']['tablinks'][$key];
-    	 if($tab['#title'] == 'Comments'){
-    	   $tab['#title'] = ambitious_get_user_comments_count($uid).$tab['#title'];
-    	 }
-    	 if($tab['#title'] == 'Bookmarks'){
-    	   $tab['#title'] = ambitious_get_user_bookmark_count($uid).'  '.$tab['#title'];
-    	 }
-    	 if($tab['#title'] == 'Messages'){
-    	   $tab['#title'] = ambitious_get_user_message_count($uid).'  '.$tab['#title'];
-    	 }
-     
+    	 if($vars['tabset']['tablinks'][1]['#options']['fragment'] == 'qt-user_profile_page'){    	  
+    	   if($tab['#title'] == 'Comments'){
+    	     $tab['#title'] = ambitious_get_user_comments_count($uid).'  '.$tab['#title']; 
+    	   }
+    	   if($tab['#title'] == 'Bookmarks'){
+    	     $tab['#title'] = ambitious_get_user_bookmark_count($uid).'  '.$tab['#title'];
+    	   }
+    	   if($tab['#title'] == 'Messages'){
+    	     $tab['#title'] = ambitious_get_user_message_count($uid).'  '.$tab['#title'];
+    	   }
+    	 }     
       if ($key == $vars['tabset']['#options']['active']) {
         $item['class'] = array('active');
       } 
