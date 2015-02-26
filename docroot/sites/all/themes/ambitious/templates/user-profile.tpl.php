@@ -34,7 +34,7 @@
  * @ingroup themeable
  */
 
-
+$userid = $elements['#account']->uid;
  
   
 ?> 
@@ -127,23 +127,18 @@
 		               		</section>
 		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
-			               		<a href="/hybridauth/window/Facebook?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-facebook" title="Facebook" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
-			               			<span>
-			               				Facebook <em class="icon-Facebook"></em>
-			               			</span>
-			               		</a>
-			               		
-			               		<a href="/hybridauth/window/Twitter?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-twitter" title="Twitter" rel="nofollow" data-hybridauth-provider="Twitter" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
-			               			<span>
-			               				Twitter <em class="icon-Twitter"></em>
-			               			</span>
-			               		</a>
-			               		
-			               		<a href="/hybridauth/window/Google?destination=user/76/hybridauth&amp;destination_error=user/76/hybridauth" class="hybridauth-widget-provider hybridauth-onclick-popup hybridauth-onclick-processed hybridauth-provider-processed btn btn-google" title="Google" rel="nofollow" data-hybridauth-provider="Google" data-ajax="false" data-hybridauth-width="800" data-hybridauth-height="500">
-			               			<span>
-			               				Google <em class="icon-Google"></em>
-			               			</span>
-			               		</a> 
+			               		<?php 
+			               		$data="<span>Twitter<em class='icon-Twitter'></em></span>";
+								$url="/hybridauth/window/Twitter?destination=user/".$userid."&destination_error=user/".$userid;
+								print l($data, $url, array( 'html' => TRUE,'external' => TRUE) );
+								$data="<span>Google<em class='icon-Google'></em></span>";
+								$url="/hybridauth/window/Google?destination=user/".$userid."&destination_error=user/".$userid;
+								print l($data, $url, array( 'html' => TRUE,'external' => TRUE) );
+								$data="<span>Facebook<em class='icon-Facebook'></em></span>";
+								$url="/hybridauth/window/Facebook?destination=user/".$userid"&destination_error=user/".$userid;
+								print l($data, $url, array( 'html' => TRUE,'external' => TRUE) );
+			               		?>
+			             
 		               		</section>
      			               	  
 <div class="profile"<?php print $attributes; ?>>
