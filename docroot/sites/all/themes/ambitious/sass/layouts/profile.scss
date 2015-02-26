@@ -396,10 +396,19 @@ body.profile .top-header{
 
 }
 .page-user{
-  .easy-breadcrumb{
-    padding-top:0;	
+  
+  .quicktabs-tabs{
+       a{
+          &::first-letter{
+            font-weight:bold; 
+          }
+        }
+    }
+    .easy-breadcrumb{
+    padding-top:0;	   
   }
   .view-user-profile {
+    
     img{
        display:none;
     }
