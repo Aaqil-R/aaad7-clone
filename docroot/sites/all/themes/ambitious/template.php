@@ -574,16 +574,28 @@ function ambitious_menu_local_tasks(&$variables) {
   return $output;
 }   
 function ambitious_qt_quicktabs_tabset($vars) {
+$uid=arg(1);
   $variables = array(
     'attributes' => array(
       'class' => 'quicktabs-tabs quicktabs-style-' . $vars['tabset']['#options']['style'].' tabs',
     ),
     'items' => array(),
-  );
+  ); 
   foreach (element_children($vars['tabset']['tablinks']) as $key) {
+  	$val=0;
     $item = array();
-    if (is_array($vars['tabset']['tablinks'][$key])) {
-      $tab = $vars['tabset']['tablinks'][$key];
+    if (is_array($vars['tabset']['tablinks'][$key])) { 
+    	 $tab = $vars['tabset']['tablinks'][$key];
+    	 if($tab['#title'] == 'Comments'){
+    	   $tab['#title'] = ambitious_get_user_comments_count($uid).$tab['#title'];
+    	 }
+    	 if($tab['#title'] == 'Bookmarks'){
+    	   $tab['#title'] = ambitious_get_user_bookmark_count($uid).'  '.$tab['#title'];
+    	 }
+    	 if($tab['#title'] == 'Messages'){
+    	   $tab['#title'] = ambitious_get_user_message_count($uid).'  '.$tab['#title'];
+    	 }
+     
       if ($key == $vars['tabset']['#options']['active']) {
         $item['class'] = array('active');
       } 
@@ -797,4 +809,42 @@ function ambitious_preprocess_webform_confirmation(&$vars) {
        }
     }
   }
+}
+function ambitious_get_user_comments_count($uid) {
+  $query = db_select('comment', 'c');
+  $query->condition('uid', $uid, '=');
+  $query->condition('status', '1', '=');
+  $query->addExpression('COUNT(1)', 'count');
+  $result = $query->execute();
+ 
+  if ($record = $result->fetchAssoc())
+    return $record['count'];
+   
+  return 0;
+}
+
+function ambitious_get_user_message_count($uid) {
+  $query = db_select('pm_message', 'm');
+  $query->condition('author', $uid, '=');
+  $query->addExpression('COUNT(1)', 'count');
+  $result = $query->execute();
+ 
+  if ($record = $result->fetchAssoc())
+    return $record['count'];
+   
+  return 0;
+}
+
+function ambitious_get_user_bookmark_count($uid) {
+  $query = db_select('flagging', 'f');
+  $query->join('flag','flg','flg.fid=f.fid');
+  $query->condition('f.uid', $uid, '=');
+  $query->condition('flg.name','bookmarks','=');
+  $query->addExpression('COUNT(1)', 'count');
+  $result = $query->execute();
+ 
+  if ($record = $result->fetchAssoc())
+    return $record['count'];
+  
+  return 0;
 }
