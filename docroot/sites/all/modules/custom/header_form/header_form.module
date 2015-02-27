@@ -98,8 +98,9 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'webform_client_form_74666':
     array_unshift($form['#submit'], 'are_you_with_us_submit' );
+    $form['#prefix'] = '<div class="clearfix">';
     $link = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
-      $form['#suffix'] = '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
+      $form['#suffix'] = '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div></div>';
       $form['submitted']['yes-i-am'] = array(
         '#type' => 'submit',
         '#value' => 'Yes I am',
@@ -144,7 +145,7 @@ function yes_i_am_validate($form, &$form_state) {
   }
   if (empty($form_state['values']['submitted']['email'])) {
     form_set_error('submitted][email', 'Fill field email');
-  } /*else (!valid_email_address($form_state['values']['submitted']['email'])) {
+  } elseif (!valid_email_address($form_state['values']['submitted']['email'])) {
     form_set_error('submitted][email', 'Enter valid email');
-  }*/
+  }
 }
