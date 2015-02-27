@@ -37,9 +37,20 @@
 $userid = $elements['#account']->uid;
  hide($user_profile['summary']);
  hide($user_profile['hybridauth_identities']);
+ 
+ hide($user_profile['field_name']);
+ hide($user_profile['mail']);
+ hide($user_profile['field_location']);
  hide($user_profile['field_first_name']);
  hide($user_profile['field_last_name']);
+ hide($user_profile['migrate_example_gender']);
+ hide($user_profile['field_migrate_example_gender']);
+ hide($user_profile['field_location_reference']);
  hide($user_profile['field_website']);
+ hide($user_profile['field_signature']);
+ hide($user_profile['field_avatar_gender']);
+ hide($user_profile['field_avatar_ref']);
+ hide($user_profile['field_thumbnail_ref']);
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
