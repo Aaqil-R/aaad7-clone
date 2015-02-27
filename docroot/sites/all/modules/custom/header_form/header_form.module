@@ -144,7 +144,7 @@ function yes_i_am_validate($form, &$form_state) {
   }
   if (empty($form_state['values']['submitted']['email'])) {
     form_set_error('submitted][email', 'Fill field email');
-  } else (!valid_email_address($form_state['values']['submitted']['email'])) {
+  } /*else (!valid_email_address($form_state['values']['submitted']['email'])) {
     form_set_error('submitted][email', 'Enter valid email');
-  }
+  }*/
 }
