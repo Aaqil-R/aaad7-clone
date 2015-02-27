@@ -98,7 +98,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
     array_unshift($form['#submit'], 'are_you_with_us_submit' );
     $form['#prefix'] = '<div id="slider-container" class="slider-container">';
     $link = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
-      $form['#suffix'] = '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div></div>';
+      $form['#suffix'] = '<div class="r-s-arrow">'.$link.'</div></div>';
       $form['submitted']['yes-i-am'] = array(
         '#type' => 'submit',
         '#value' => 'Yes I am',
