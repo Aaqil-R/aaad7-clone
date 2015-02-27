@@ -37,6 +37,9 @@
 $userid = $elements['#account']->uid;
  hide($user_profile['summary']);
  hide($user_profile['hybridauth_identities']);
+ hide($user_profile['field_first_name']);
+ hide($user_profile['field_last_name']);
+ hide($user_profile['field_website']);
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
