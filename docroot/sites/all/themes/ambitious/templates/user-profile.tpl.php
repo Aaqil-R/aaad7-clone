@@ -73,6 +73,10 @@ $userid = $elements['#account']->uid;
 				               		<dt>Location Reference:</dt>
 				               		<dd><?php print $elements['#account']->field_location_reference['und'][0]['safe_value'];?></dd>
 									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_website['und'])):?>
+				               		<dt>Website:</dt>
+				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
 									<?php if(isset($elements['#account']->field_signature['und'])):?>
 				               		<dt>Signature:</dt>
 				               		<dd><?php print $elements['#account']->field_signature['und'][0]['safe_value'];?></dd>
