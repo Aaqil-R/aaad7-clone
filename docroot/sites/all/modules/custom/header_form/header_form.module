@@ -33,10 +33,8 @@ function header_form_block_view($delta = '') {
 function get_header_form($pageno) {
   switch ($pageno) {
         case 0:
-          $output = '<div id="slider-container" class="slider-container">';      
           $block = module_invoke('webform', 'block_view', 'client-block-74666');
-          $output .= render($block['content']);
-          $output .= '</div>';        
+          $output = render($block['content']);
         break;
         case 1:
           $output = '<div id="slider-container" class="slider-container">';
@@ -98,7 +96,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'webform_client_form_74666':
     array_unshift($form['#submit'], 'are_you_with_us_submit' );
-    $form['#prefix'] = '<div class="clearfix">';
+    $form['#prefix'] = '<div id="slider-container" class="slider-container">';
     $link = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
       $form['#suffix'] = '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div></div>';
       $form['submitted']['yes-i-am'] = array(
