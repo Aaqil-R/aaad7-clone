@@ -36,8 +36,6 @@ function get_header_form($pageno) {
           $output = '<div id="slider-container" class="slider-container">';      
           $block = module_invoke('webform', 'block_view', 'client-block-74666');
           $output .= render($block['content']);
-          $link = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
-          $output .= '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
           $output .= '</div>';        
         break;
         case 1:
@@ -100,6 +98,8 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'webform_client_form_74666':
     array_unshift($form['#submit'], 'are_you_with_us_submit' );
+    $link = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/1', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
+      $form['#suffix'] = '<div class="r-s-arrow">'.$link.'<p class="skip"><a href="#">skip</a></p></div>';
       $form['submitted']['yes-i-am'] = array(
         '#type' => 'submit',
         '#value' => 'Yes I am',
@@ -107,7 +107,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#validate' => array('yes_i_am_validate'),
         '#ajax' =>  array(
         'callback' => 'webform_ajax_callback',
-          'wrapper' => 'webform-ajax-wrapper-74666',
+          'wrapper' => 'slider-container',
           'progress' => array(
             'message' => '',
             'type' => 'throbber',
