@@ -36,6 +36,7 @@
 
 $userid = $elements['#account']->uid;
  hide($user_profile['summary']);
+ hide($user_profile['hybridauth_identities']);
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
@@ -140,5 +141,4 @@ $userid = $elements['#account']->uid;
      			               	  
 <div class="profile"<?php print $attributes; ?>>
   <?php  print render($user_profile); ?>
-  <?php dpm($user_profile); ?>
 </div>
