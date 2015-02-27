@@ -33,12 +33,9 @@ Drupal.behaviors.ambitious = {
         $(".view :checkbox").on('click', function(){
            var crtcheck = $(this).parent();
            crtcheck.toggleClass("checked").removeClass("highlight"); 
-         }); 
-         $('.region-header-form').hasClass('messages').append("<span class='icon-Close'></span>");
+         });  
     	     $(document).ready(function(){ 
-    	     initCustomForms();
-    	    $('.region-header-form').hasClass('messages').append("<span class='icon-Close'></span>");
-    
+    	     initCustomForms(); 
 	    $('#block-views-stream-stream-forum-page').mobileNav({ 
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
