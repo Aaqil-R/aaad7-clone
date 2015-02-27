@@ -126,7 +126,7 @@
 .block-close {
     a {
       text-decoration: none;    
-    }  
+    }   
 }
 
 .home_forum_share{
@@ -149,9 +149,19 @@
           display:block;
         }       
      }
-   }
-   .form_col3{
-     float:left;
-     width:33.3%;
-   }
+   } 
+}
+.webform-client-form-74681{
+  &.form-item{
+    float:left;
+    width:33.3%;
+    &.webform-component-radios{
+      & > label{
+        line-height: 1.363em;
+        font-size: 1.67em;
+        font-weight: normal;
+        font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+      }
+    }
+  }
 }
