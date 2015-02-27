@@ -14,7 +14,9 @@
 			
 			<div class="<?php print $classes; ?>">
 				<div class= "logo">
-				<img src="<?php print $headerlogo; ?>">
+				<a href="/" title="<?php print t('Home'); ?>" rel="home">
+					<img src="<?php print $headerlogo; ?>">
+				</a>
 			</div>
 				<?php print $content; ?>
 			</div>				  
