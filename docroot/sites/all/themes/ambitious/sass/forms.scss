@@ -161,12 +161,41 @@
         font-size: 1.67em;
         font-weight: normal;
         font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-      }
-      div{
-        label{
-          @extend .btn;
-        }
       } 
     }
   }
+  .form-radios{
+        label{
+           border: medium none;
+cursor: pointer;
+display: inline-block;
+font-family: inherit;
+font-size: inherit;
+color: #ffffff;
+text-align: center;
+text-decoration: none;
+margin-top: 5px;
+margin-bottom: 5px;
+outline: medium none;
+padding: 25px 80px;
+position: relative;
+line-height: 30px;
+background: none, repeat, scroll, 0, 0, #f15500;
+-webkit-box-shadow: 0px 6px #c63502;
+box-shadow: 0px 6px #c63502;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+&:hover{
+  top: 2px;
+-webkit-box-shadow: 0px 4px #c63502;
+box-shadow: 0px 4px #c63502;
+}
+&:active{
+  top: 6px;
+-webkit-box-shadow: 0px 0px #c63502;
+box-shadow: 0px 0px #c63502;
+}
+        }
+      }
 }
