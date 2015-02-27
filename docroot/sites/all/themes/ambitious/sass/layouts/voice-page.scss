@@ -23,10 +23,6 @@
 		}
 
 		.my-voice-columns{
-    // [TODO] this style is being applied from forms.scss
-    // .webform-client-form{
-    //   @extend %signup-form; 
-    // }
 		    .col{
     		  padding-top:0;
     		  padding-bottom:0;
@@ -75,17 +71,6 @@
 		}
 	}
 
-
-//	.region-image-holder
-//	{
-//		.easy-breadcrumb{
-//			display:none;
-//		}
-//	}
-	
-	//.title
-	//{	display:none;
-	//}
 	.top-bar{
 		.logo{
 			display: inline;
@@ -117,6 +102,12 @@
 			}
 		}	
 	}
+	.easy-breadcrumb{
+		a{
+			color: $white;
+		}
+		
+	}
 }
 
 
@@ -125,13 +116,8 @@
 .menu-main-menu-features-item-1{
 		list-style:none;
 		padding:0;
-		//li { a {
 		.menu__item{ 
-				//testplace
-				//background: $pink;
-				//border-bottom-color:$pink-dark;
 		}
-		//}} 
 	}
 
 nav {
