@@ -849,3 +849,28 @@ function ambitious_get_user_bookmark_count($uid) {
   
   return 0;
 }
+
+
+function ambitious_get_user_post_count($uid) {
+  $a=0;
+  $query = db_select('comment', 'c');
+  $query->condition('uid', $uid, '=');
+  $query->condition('status', '1', '=');
+  $query->addExpression('COUNT(1)', 'count');
+  $result = $query->execute();
+ 
+  if ($record = $result->fetchAssoc()){
+     $a=$record['count'];
+  }
+   $query = db_select('node', 'n');
+   $query->condition('uid', $uid, '=');
+   $query->condition('status', '1', '=');
+   $query->addExpression('COUNT(1)', 'count');
+   $result = $query->execute();
+ 
+   if ($record = $result->fetchAssoc()){
+      $a+=$record['count'];
+   }
+   return $a;
+}
+

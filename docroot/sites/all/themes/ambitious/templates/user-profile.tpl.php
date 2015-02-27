@@ -91,7 +91,7 @@ $userid = $elements['#account']->uid;
 									<?php endif; ?> 
 
 				               		<dt>No. of posts:</dt>
-				               		<dd>92</dd>
+				               		<dd><?php print ambitious_get_user_post_count($userid); ?></dd>
                                              <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?>
 				               		<dt>Links:</dt>
 				               		<dd>
