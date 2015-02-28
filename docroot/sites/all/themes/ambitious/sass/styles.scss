@@ -144,6 +144,38 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+// System Messages
+
+.messages{
+  position: inherit;
+  .placeholder{
+    text-decoration: underline;
+  }
+}
+
+.status{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $status-bg;
+  color: $status-text;
+  margin-bottom: 10px;
+}
+
+.warning{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $warning-bg;
+  color: $warning-text;
+  margin-bottom: 10px;
+}
+
+.error{
+  @include span(12 of 12);
+  z-index: 1000;
+  background: $error-bg;
+  color: $error-text;
+  margin-bottom: 10px;
+}
 
 .easy-breadcrumb {
     text-align: right;
@@ -191,7 +223,8 @@ table {
     bottom: 0px;
     // TODO: Ideally would have wanted this to be 100% but this is inside the 
     // main wrapper which is constrained. Needs to be looked into.
-    width: 1065px;
+    width: 100%;
     margin: 0px;
     z-index: 9999;
+    left:0;
 }
