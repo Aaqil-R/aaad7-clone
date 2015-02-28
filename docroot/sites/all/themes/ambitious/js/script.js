@@ -135,16 +135,18 @@ Drupal.behaviors.ambitious = {
 					  Uautism.removeClass("grid-view"); // removes .grid-view from the view class
 					   Uautism.parent().attr('data-view','list-view');
 				  }
-				 
+				 $(this).addClass('active');
+				 $(".grid").removeClass('active');
 			  });
 
 			  $(".grid").click(function() {
 				  if (Uautism.hasClass("list-view")) {
 					  Uautism.addClass("grid-view"); // adds .grid-view to the view class
 					  Uautism.removeClass("list-view"); // removes .list-view from the view class
-					 Uautism.parent().attr('data-view','grid-view');
+					  Uautism.parent().attr('data-view','grid-view');
 				  }
-				  
+				  $(this).addClass('active');
+				 $(".list").removeClass('active');
 			  });
 
 	  //Sets the width of masonry when click on toggle list and grid
