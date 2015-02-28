@@ -362,7 +362,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 14, C:\Compilers\Ruby193\lib\ruby\gems\1.9.1\gems\susy-2.1.3\sass\susy\language\susy\_box-sizing.scss */
+/* line 21, ../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -531,38 +531,83 @@ table {
   border-spacing: 0;
 }
 
-/* line 148, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
+.messages {
+  position: inherit;
+}
+/* line 151, ../sass/styles.scss */
+.messages .placeholder {
+  text-decoration: underline;
+}
+
+/* line 156, ../sass/styles.scss */
+.status {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #9ee19e;
+  color: #3aad3a;
+  margin-bottom: 10px;
+}
+
+/* line 164, ../sass/styles.scss */
+.warning {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #fdfdc4;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+/* line 172, ../sass/styles.scss */
+.error {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 1000;
+  background: #fed3d1;
+  color: #b30200;
+  margin-bottom: 10px;
+}
+
+/* line 180, ../sass/styles.scss */
 .easy-breadcrumb {
   text-align: right;
   padding: 45px 12px 0 0;
   color: #ffffff;
 }
-/* line 154, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .easy-breadcrumb a:visited {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 148, ../sass/styles.scss */
+  /* line 180, ../sass/styles.scss */
   .easy-breadcrumb {
     display: none;
   }
 }
 
-/* line 165, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .main-layout {
   background-color: #ffffff;
   padding: 1em;
   padding-bottom: 4em;
 }
 
-/* line 171, ../sass/styles.scss */
+/* line 203, ../sass/styles.scss */
 .field-name-field-salary
 , .field-name-field-time-commitment
 , .field-name-field-vacancy-location {
   font-weight: bold;
 }
 
-/* line 177, ../sass/styles.scss */
+/* line 209, ../sass/styles.scss */
 .field-name-field-standfirst
 , .field-name-field-body {
   font-style: italic;
@@ -570,12 +615,12 @@ table {
   margin-bottom: 1em;
 }
 
-/* line 184, ../sass/styles.scss */
+/* line 216, ../sass/styles.scss */
 .field-type-text {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 189, ../sass/styles.scss */
+/* line 221, ../sass/styles.scss */
 .messages--error {
   position: fixed;
   bottom: 0px;

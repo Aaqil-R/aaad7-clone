@@ -48,39 +48,6 @@ html.js input.throbbing {
   right: 40px;
 }
 
-// System Messages
-
-.messages{
-  position: inherit;
-  .placeholder{
-    text-decoration: underline;
-  }
-}
-
-.status{
-  @include span(12 of 12);
-  z-index: 1000;
-  background: $status-bg;
-  color: $status-text;
-  margin-bottom: 10px;
-}
-
-.warning{
-  @include span(12 of 12);
-  z-index: 1000;
-  background: $warning-bg;
-  color: $warning-text;
-  margin-bottom: 10px;
-}
-
-.error{
-  @include span(12 of 12);
-  z-index: 1000;
-  background: $error-bg;
-  color: $error-text;
-  margin-bottom: 10px;
-}
-
 // System buttons
 .form-submit{
   @extend .btn;
