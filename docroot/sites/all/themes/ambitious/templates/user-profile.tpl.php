@@ -137,11 +137,7 @@ $userid = $elements['#account']->uid;
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
 			               		<?php endif; ?>
-			               		<a href="<?php print url('user/'.$elements['#account']->uid.'/edit'); ?>" class="btn btn-red" title="Edit your profile">
-			               			<span>
-			               				Edit your profile <em class="icon-Rightarrow"></em>
-			               			</span>
-			               		</a>
+                       <?php if ($edit_url) print $edit_url;  ?>
 		               		</section>
 		               		<?php if (!empty($hybridauth_user)):?>
 		               		<section class="connect">  
