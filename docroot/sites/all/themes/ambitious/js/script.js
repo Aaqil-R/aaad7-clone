@@ -32,7 +32,7 @@ Drupal.behaviors.ambitious = {
 		   $('input[name=submitted[give_what_you_can]]').click(function () {
 		     var href = $('input[name=submitted[donate_page]]').val();
 		     console.log(href);
-		   }
+		   });
 		
         // views filter opiton
         $(".view :checkbox").on('click', function(){
