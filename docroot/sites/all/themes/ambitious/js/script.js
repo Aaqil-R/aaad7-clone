@@ -119,6 +119,13 @@ Drupal.behaviors.ambitious = {
 		    var view = $('.view').parent().attr('data-view');
 		   if (view != 'undefined') {
 			  $(".view").addClass(view); // Sets .grid-view as default class on the view
+			  if (view == 'list-view') {
+			    $('#list').addClass('active');
+			    $('#grid').removeClass('active');
+			  } else {
+			    $('#grid').addClass('active');
+			    $('#list').removeClass('active');
+			  }
 			 } else {
 			   $(".view").addClass("grid-view"); // Sets .grid-view as default class on the view
 			 }
