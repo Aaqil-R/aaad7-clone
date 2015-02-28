@@ -40,7 +40,7 @@ Drupal.behaviors.ambitious = {
          });  
     	     $(document).ready(function(){ 
     	     initCustomForms(); 
-	    $('#block-views-stream-stream-forum-page').mobileNav({ 
+	    $('.view-display-id-stream_forum_page').mobileNav({ 
 		  hideOnClickOutside: true,
 		  menuActiveClass: 'filter-active',
 		  menuOpener: '.filterbutton',
