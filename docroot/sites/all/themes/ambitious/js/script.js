@@ -117,7 +117,7 @@ Drupal.behaviors.ambitious = {
 	  $('#main').once('understanding-autism', function() {
 		  if ($(".view").hasClass("understanding-autism")) {
 		    var view = $('.view').parent().attr('data-view');
-		   if (view != 'undefined') {
+		   if (view != undefined) {
 			  $(".view").addClass(view); // Sets .grid-view as default class on the view
 			  if (view == 'list-view') {
 			    $('#list').addClass('active');
