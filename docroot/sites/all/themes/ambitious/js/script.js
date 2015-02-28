@@ -42,7 +42,7 @@ Drupal.behaviors.ambitious = {
 		          menuOpener: '.filterbutton',
 		          menuDrop: '.filter-slide'
 	            }); 
-	             $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({ 
+	             $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
 		          hideOnClickOutside: true,
 		          menuActiveClass: 'filter-active',
 		          menuOpener: '.filteroption',
@@ -62,7 +62,7 @@ Drupal.behaviors.ambitious = {
 		         menuOpener: '.filterbutton',
        		   menuDrop: '.filter-slide'
 	            }); 
-	             $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({ 
+	             $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
 		        hideOnClickOutside: true,
 		        menuActiveClass: 'filter-active',
 		        menuOpener: '.filteroption',
