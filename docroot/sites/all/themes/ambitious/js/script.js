@@ -27,7 +27,12 @@ Drupal.behaviors.ambitious = {
 		//     		$(view).waypoint('destroy');
 		//   	});
 		// });
-		
+		   
+		   //navigate to donate page with the value from give what you can
+		   $('input[name=submitted[give_what_you_can]]').click(function () {
+		     var href = $('input[name=submitted[donate_page]]').val();
+		     console.log(href);
+		   }
 		
         // views filter opiton
         $(".view :checkbox").on('click', function(){
