@@ -139,7 +139,7 @@ function are_you_with_us_submit($form, &$form_state) {
 }
 function yes_i_am_validate($form, &$form_state) {
   if (empty($form_state['values']['submitted']['first_name'])) {
-    form_set_error('submitted][firs_name', 'Fill field first name');
+    form_set_error('submitted][first_name', 'Fill field first name');
   }
   if (empty($form_state['values']['submitted']['email'])) {
     form_set_error('submitted][email', 'Fill field email');
