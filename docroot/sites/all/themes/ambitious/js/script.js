@@ -33,28 +33,29 @@ Drupal.behaviors.ambitious = {
          window.location = location.origin + $("input[name='submitted[donate_page]']").val() + '?amt='+$(this).val();
 		   });
 		
-        // views filter opiton
-        $(".view :checkbox").on('click', function(){
-           var crtcheck = $(this).parent();
-           crtcheck.toggleClass("checked").removeClass("highlight"); 
-         });  
+ 
     	     $(document).ready(function(){ 
     	     initCustomForms(); 
-	    $('.view-display-id-stream_forum_page').mobileNav({ 
-		  hideOnClickOutside: true,
-		  menuActiveClass: 'filter-active',
-		  menuOpener: '.filterbutton',
-		  menuDrop: '.filter-slide'
-	    }); 
-	     $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({ 
-		  hideOnClickOutside: true,
-		  menuActiveClass: 'filter-active',
-		  menuOpener: '.filteroption',
-		  menuDrop: '.filter-slide'
-	    }); 
+	            $('.view-display-id-stream_forum_page').mobileNav({ 
+		          hideOnClickOutside: true,
+		          menuActiveClass: 'filter-active',
+		          menuOpener: '.filterbutton',
+		          menuDrop: '.filter-slide'
+	            }); 
+	             $('#block-views-f5e2d7eec66e26c14feaa017ac406a98').mobileNav({ 
+		          hideOnClickOutside: true,
+		          menuActiveClass: 'filter-active',
+		          menuOpener: '.filteroption',
+		          menuDrop: '.filter-slide'
+	            });
+	                  // views filter opiton
+              $(".view :checkbox").on('click', function(){
+                 var crtcheck = $(this).parent();
+                 crtcheck.toggleClass("checked").removeClass("highlight"); 
+               });  
 	    }); 
          $( document ).ajaxComplete(function() {
-	      $('#block-views-stream-stream-forum-page').mobileNav({
+	      $('.view-display-id-stream_forum_page').mobileNav({
 		   hideOnClickOutside: true,
 		   menuActiveClass: 'filter-active',
 		   menuOpener: '.filterbutton',
