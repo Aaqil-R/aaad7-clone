@@ -48,7 +48,7 @@ Drupal.behaviors.ambitious = {
 		          menuOpener: '.filteroption',
 		          menuDrop: '.filter-slide'
 	            });
-	            $(".view .bef-checkboxes input[type='checkbox']:checked").addClass('checked');
+	            $(".view .bef-checkboxes input[type=checkbox]:checked").addClass('checked');
 	                  // views filter opiton
               $(".view .bef-checkboxes :checkbox").once('check-processed').on('click', function(){
                  var crtcheck = $(this).parent();
