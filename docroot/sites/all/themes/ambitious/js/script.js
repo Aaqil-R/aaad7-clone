@@ -29,8 +29,8 @@ Drupal.behaviors.ambitious = {
 		// });
 		   
 		   //navigate to donate page with the value from give what you can
-		   $("input[name='submitted[give_what_you_can]]'").click(function () {
-		     var href = $("input[name='submitted[donate_page]]'").val();
+		   $("input[name='submitted[give_what_you_can]']").click(function () {
+		     var href = $("input[name='submitted[donate_page]']").val();
 		     console.log(href);
 		   });
 		
