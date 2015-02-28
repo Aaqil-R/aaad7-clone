@@ -116,20 +116,29 @@ Drupal.behaviors.ambitious = {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
 	  $('#main').once('understanding-autism', function() {
 		  if ($(".view").hasClass("understanding-autism")) {
-			  $(".view").addClass("grid-view"); // Sets .grid-view as default class on the view
+		    var view = $('.view').parent().attr('data-view');
+		   if (view != 'undefined') {
+			  $(".view").addClass(view); // Sets .grid-view as default class on the view
+			 } else {
+			   $(".view").addClass("grid-view"); // Sets .grid-view as default class on the view
+			 }
 
 			  $(".list").click(function() {
 				  if ($(".view").hasClass("grid-view")) {
 					  $(".view").addClass("list-view"); // adds .list-view to the view class
 					  $(".view").removeClass("grid-view"); // removes .grid-view from the view class
+					   $(".view").parent().attr('data-view','list-view');
 				  }
+				 
 			  });
 
 			  $(".grid").click(function() {
 				  if ($(".view").hasClass("list-view")) {
 					  $(".view").addClass("grid-view"); // adds .grid-view to the view class
 					  $(".view").removeClass("list-view"); // removes .list-view from the view class
+					 $(".view").parent().attr('data-view','grid-view');
 				  }
+				  
 			  });
 		  }
 	  });
