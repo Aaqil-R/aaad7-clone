@@ -880,7 +880,7 @@ global $user;
     $providers = hybridauth_get_enabled_providers();
     $output = '';
     foreach($providers as $provider_id => $provider_name){
-       $output .= l("<span>Facebook<em class='icon-".$provider_id."'></em></span>", "/hybridauth/window/".$provider_id."?destination=user/".$user->uid."&destination_error=user/".$user->uid, array( 'attributes' => (array('class' => array('btn btn-facebook'))),'html' => TRUE,'external' => TRUE) );
+       $output .= l("<span>".$provider_id."<em class='icon-".$provider_id."'></em></span>", "/hybridauth/window/".$provider_id."?destination=user/".$user->uid."&destination_error=user/".$user->uid, array( 'attributes' => (array('class' => array('btn btn-' . $provider_id))),'html' => TRUE,'external' => TRUE) );
     }
     $variables['hybridauth_user'] = $output;
   }
