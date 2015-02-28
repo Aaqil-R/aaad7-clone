@@ -143,15 +143,12 @@ $userid = $elements['#account']->uid;
 			               			</span>
 			               		</a>
 		               		</section>
+		               		<?php if (!empty($hybridauth_user)):?>
 		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
-			               		<?php 
-								print l("<span>Facebook<em class='icon-Facebook'></em></span>", "/hybridauth/window/Facebook?destination=user/".$userid."&destination_error=user/".$userid, array( 'attributes' => (array('class' => array('btn btn-facebook'))),'html' => TRUE,'external' => TRUE) );
-								print l("<span>Twitter<em class='icon-Twitter'></em></span>", '/hybridauth/window/Twitter?destination=user/'.$userid.'&destination_error=user/'.$userid, array( 'attributes' => (array('class' => array('btn btn-twitter'))),'html' => TRUE,'external' => TRUE) );
-								print l("<span>Google<em class='icon-google'></em></span>", "/hybridauth/window/Google?destination=user/".$userid."&destination_error=user/".$userid, array( 'attributes' => (array('class' => array('btn btn-google'))),'html' => TRUE,'external' => TRUE) );
-			               		?>
-			             
+			               		<?php print $hybridauth_user;	?>
 		               		</section>
+		               		<?php endif; ?>
      			               	  
 <div class="profile"<?php print $attributes; ?>>
   <?php  print render($user_profile); ?>
