@@ -891,6 +891,5 @@ global $user;
 }
 
 function ambitious_form_comment_form_alter(&$form, &$form_state) {
-  dpm($form);
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
 } 
