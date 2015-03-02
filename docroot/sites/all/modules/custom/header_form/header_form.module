@@ -43,7 +43,7 @@ function get_header_form($pageno) {
           $block = module_invoke('webform', 'block_view', 'client-block-74671');
           $output .= render($block['content']);
           $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
-          $output .= '<div class="r-s-arrow">'.$nlink.'<p class="skip"><a href="#">skip</a></p></div>';
+          $output .= '<div class="r-s-arrow">'.$nlink.'<p class="skip"><a href="/header/form/ajax/2">skip</a></p></div>';
           $output .= '</div>';
         break;
         case 2:
@@ -53,7 +53,7 @@ function get_header_form($pageno) {
           $block = module_invoke('webform', 'block_view','client-block-74676');
           $output .= render($block['content']);
           $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/3', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));
-          $output .= '<div class="r-s-arrow">'.$nlink.'<p class="skip"><a href="#">skip</a></p></div>';
+          $output .= '<div class="r-s-arrow">'.$nlink.'<p class="skip"><a href="/header/form/ajax/3">skip</a></p></div>';
           $output .= '</div>' ;      
         break;
         case 3:
