@@ -91,7 +91,10 @@
 			width: 100%;
 			margin-bottom: 10px;
 			&:hover{
-			  margin-bottom:7px;
+			  margin-bottom:12px;
+			}
+			&:focus{
+			  margin-bottom:11px;
 			}
 		}
 		
@@ -104,6 +107,9 @@
 		.slider-block .block .slider-container {
 			width: 90%;
 			margin: 0 auto;
+			@include breakpoint($mobile){
+			  width:auto;
+			}
 		}
 
 		.slider-block .holder .block-close{

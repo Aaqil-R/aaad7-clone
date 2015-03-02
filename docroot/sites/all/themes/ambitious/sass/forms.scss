@@ -135,10 +135,19 @@
      float:left;
      width:45%;
      padding-right: 30px;
+     @include breakpoint($mobile){
+       float:none;
+       width:auto;
+       padding-right:0;      
+     }
    }
    .home_forum_share_right{
      float:left;
      width:55%;
+      @include breakpoint($mobile){
+       float:none;
+       width:auto;    
+     }
      .home_forum_share_set{
         &:first-child{
           float:left;
@@ -156,6 +165,10 @@
   div.form-item{
     float:left;
     width:33.3%;
+    @include breakpoint($mobile){
+      float:none;
+      width:auto; 
+    }
     &.webform-component-radios{
       & > label{
         line-height: 1.363em;
@@ -168,6 +181,10 @@
   div.form-item.webform-component--other-ways-to-help{
     width: 30%;
     float: right; 
+    @include breakpoint($mobile){
+      float:none;
+      width:auto; 
+    }
   }
   .form-radios{
         label{

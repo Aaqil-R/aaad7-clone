@@ -84,6 +84,10 @@ div#admin-toolbar.vertical div.admin-tab{
 // Main Section
 #main{
   position: relative;
+  @include breakpoint($mobile){
+    padding-left:0;
+    padding-right:0;
+  }
 }
 
 
