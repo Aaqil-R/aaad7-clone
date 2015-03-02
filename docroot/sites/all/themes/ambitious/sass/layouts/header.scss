@@ -797,8 +797,12 @@ nav {
     }
   }
   
-// #header add by nanda globalsoftlab  
+// #header add by nanda globalsoftlab 
+.header_fixed .top-bar {
+   top:-100px;
+}
 #header, .top-bar{
+  @include transition ($type:top, $time:0.4s, $ease:ease);
   .links {
     float:left;
     max-width:67%;
