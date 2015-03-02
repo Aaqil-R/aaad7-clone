@@ -432,3 +432,21 @@ body.profile .top-header{
     }
   }
 }
+
+.tabs-style-linemove nav a {
+	padding: 1em 0;
+	color: #74777b;
+	line-height: 1;
+	-webkit-transition: color 0.3s, -webkit-transform 0.3s; 
+	transition: color 0.3s, transform 0.3s;
+}
+
+.tabs-style-linemove nav li.tab-current a {
+	color: #2CC185;
+	-webkit-transform: translate3d(0,8px,0);
+	transform: translate3d(0,8px,0);
+}
+
+.tabs-style-linemove nav a span {
+	font-weight: 700;
+}
