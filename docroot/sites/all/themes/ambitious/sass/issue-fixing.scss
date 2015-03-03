@@ -67,14 +67,8 @@
 		}
 				
 	}
-	@include breakpoint(1330px){
-		display: none;
-	}
-	@include breakpoint($mobile){
-		display: block;
-	}
 
-	}
+}
 	@include breakpoint($mobile){
 
 		.slider-block{
@@ -116,6 +110,14 @@
 			margin-left: -42px;
 		}
 
+	}
+
+	// Main without webform in the slider area
+	#main.no-form{
+		margin-top: 50px;
+		@include breakpoint($mobile){
+			margin-top: 100px;  
+		}
 	}
 
 	// .visual .img-holder
@@ -210,11 +212,18 @@
 	}
 
 	// Action Block
-	.action-block .holder {
-		@include breakpoint($mobile){
-			padding: 50px 15px 0;
-		}		
-	}
+	.action-block{
+		@include breakpoint($not-mobile){
+			margin-top: 66px;
+		}
+		
+		.holder {
+			@include breakpoint($mobile){
+				padding: 50px 15px 0;
+			}		
+		}
+
+	} 
 
 	// Article Block - Remove Images on Mobile View
 
