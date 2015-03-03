@@ -84,7 +84,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
- 
+ global $user; 
 ?>
 
 
@@ -154,12 +154,18 @@
 		               <header> <?php if($logged_in != 1):?>
 						   <h1><?php print $title; ?></h1> 
 						   <?php else:?>
+						    <?php if($user->uid == arg(1)):?>
 						    <h1><?php print t('My profile'); ?></h1> 
+						    <?php else: ?>
+						     <h1><?php print t('Users'); ?></h1> 
+						    <?php endif; ?>
 						   <?php endif; ?>
 						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
+						    <?php if($user->uid == arg(1)):?> 
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
 		                	</span>
+		                	<?php endif; ?>
 		                	<?php endif; ?>
 		                	<?php if ($messages || $action_links): ?>
 						  <div id="content-header">
