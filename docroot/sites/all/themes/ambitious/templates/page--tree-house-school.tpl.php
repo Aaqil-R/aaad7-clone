@@ -123,7 +123,7 @@
               <img src="sites/all/themes/ambitious/images/img37.jpg" alt="Making the">
               <h4>Enabling children with autism to learn, thrive and achieve.</h4>
               <p>We have over 85 pupils on roll with our youngest pupils being 4 and our oldest being 19 years old.</p>
-              <a href="#" title="Read about the school">Read about the school</a>
+              <a href="#" title="Read about the school" class="read-more-link">Read about the school</a>
             </div>
             <div class="slider-box-pager">
                <ul class="slider-pager">
