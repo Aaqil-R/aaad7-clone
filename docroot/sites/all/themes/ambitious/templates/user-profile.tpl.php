@@ -51,8 +51,8 @@ $userid = $elements['#account']->uid;
  hide($user_profile['field_avatar_gender']);
  hide($user_profile['field_avatar_ref']);
  hide($user_profile['field_thumbnail_ref']);
- 
- dpm($user_profile);
+  
+  dpm($current_user);
  
 ?> 
 		               		<section class="profile-info">
