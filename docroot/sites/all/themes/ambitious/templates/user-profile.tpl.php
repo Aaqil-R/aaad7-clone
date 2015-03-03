@@ -120,7 +120,9 @@ $userid = $elements['#account']->uid;
 		               		<?php if (!empty($hybridauth_user)):?>
 		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
-			               		<?php print $hybridauth_user;	?>
+			               		<?php print $hybridauth_user['Facebook'];	?>
+			               		<?php print $hybridauth_user['Twitter'];	?>
+			               		<?php print $hybridauth_user['Google'];	?>
 		               		</section>
 		               		<?php endif; ?>
      			               	  

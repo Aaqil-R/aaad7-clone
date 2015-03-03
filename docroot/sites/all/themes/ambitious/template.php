@@ -881,11 +881,12 @@ global $user;
   if($user->uid == arg(1)){
      $variables['current_user'] = '';
   } 
+  
   if (arg(0) == 'user' && $user->uid == arg(1)) {
     $providers = hybridauth_get_enabled_providers();
     $output = '';
     foreach($providers as $provider_id => $provider_name){
-       $output .= l("<span>".$provider_id."<em class='icon-".$provider_id."'></em></span>", "/hybridauth/window/".$provider_id."?destination=user/".$user->uid."&destination_error=user/".$user->uid, array( 'attributes' => (array('class' => array('btn btn-' . strtolower($provider_id)))),'html' => TRUE,'external' => TRUE) );
+       $output[$provider_id]= l("<span>".$provider_id."<em class='icon-".$provider_id."'></em></span>", "/hybridauth/window/".$provider_id."?destination=user/".$user->uid."&destination_error=user/".$user->uid, array( 'attributes' => (array('class' => array('btn btn-' . strtolower($provider_id)))),'html' => TRUE,'external' => TRUE) );
     }
     $variables['hybridauth_user'] = $output;
 		$variables['edit_url'] = l('<span>Edit your profile <em class="icon-Rightarrow"></em></span>','user/' . $user->uid.'/edit',array('attributes' => array('class' => array('btn','btn-red')), 'html' => TRUE));
