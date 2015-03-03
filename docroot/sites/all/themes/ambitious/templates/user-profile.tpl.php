@@ -57,8 +57,8 @@ $userid = $elements['#account']->uid;
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
-		               			<?php if(!empty($elements['#account']->name)):?>
-  				               	  <h3><?php print $elements['#account']->name; ?></h3>
+		               			<?php if(isset($elements['#account']->field_name['und'])):?>
+  				               	  <h3><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></h3>
 				               	<?php endif; ?>
 				               	<dl> 
 				               	  <?php if(isset($current_user)):?> 
@@ -89,7 +89,40 @@ $userid = $elements['#account']->uid;
 				               		<dt>Website:</dt>
 				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
 									<?php endif; ?>
-                                           <?php endif; ?>							
+                                           <?php endif; ?>	
+                                           <?php if(isset($elements['#account']->field_migrate_example_gender['und'])):?>
+				               		<dt>Gender:</dt>
+				               		<dd><?php print $elements['#account']->field_migrate_example_gender['und'][0]['safe_value'];?></dd>
+									<?php endif; ?>  
+									<?php if(isset($elements['#account']->field_location_reference['und'])):?>
+				               		<dt>Location Reference:</dt>
+				               		<dd><?php print $elements['#account']->field_location_reference['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									  
+									<?php if(isset($elements['#account']->field_avatar_gender['und'])):?>
+				               		<dt>Avatar gender:</dt>
+				               		<dd><?php print $elements['#account']->field_avatar_gender['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_avatar_ref['und'])):?>
+				               		<dt>Avatar ref:</dt>
+				               		<dd><?php print $elements['#account']->field_avatar_ref['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_thumbnail_ref['und'])):?>
+				               		<dt>Thumbnail Ref:</dt>
+				               		<dd><?php print $elements['#account']->field_thumbnail_ref['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<dt>Links:</dt>
+				               		<dd>
+				               			<strong>
+				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
+				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
+				               			  <?php endif; ?>
+				               			  <?php if(isset($elements['#account']->field_blog['und']) && isset($elements['#account']->field_twitter['und'])): ?> / <?php endif; ?>
+				               			  <?php if(isset($elements['#account']->field_twitter['und'])): ?>
+				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
+				               			  <?php endif; ?>
+				               			</strong>
+				               		</dd>						
 				               	  </dl>
 			               	</section>
 			               	<section class="about-me">
