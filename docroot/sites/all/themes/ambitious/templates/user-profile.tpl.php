@@ -51,84 +51,27 @@ $userid = $elements['#account']->uid;
  hide($user_profile['field_avatar_gender']);
  hide($user_profile['field_avatar_ref']);
  hide($user_profile['field_thumbnail_ref']);
+ 
+ dpm($user_profile);
+ 
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
 		               			<?php if(!empty($elements['#account']->name)):?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
 				               	<?php endif; ?>
-				               	<dl> 
-				               		<?php if(isset($elements['#account']->field_name['und'])):?>
-				               		<dt>Name:</dt>
-				               		<dd><?php print $elements['#account']->field_name['und'][0]['safe_value']; ?></dd>
-									<?php endif; ?>
-                                             <?php if(!empty($elements['#account']->mail)):?>
-				               		<dt>Email:</dt>
-				               		<dd><?php print $elements['#account']->mail;?></dd>
-									<?php endif; ?>
-									<?php if(isset($elements['#account']->field_location['und'])):?>
-				               		<dt>Location:</dt>
-				               		<dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									
-									<?php if(isset($elements['#account']->field_first_name['und'])):?>
-				               		<dt>First name:</dt>
-				               		<dd><?php print $elements['#account']->field_first_name['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_last_name['und'])):?>
-				               		<dt>Last name:</dt>
-				               		<dd><?php print $elements['#account']->field_last_name['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_migrate_example_gender['und'])):?>
-				               		<dt>Gender:</dt>
-				               		<dd><?php print $elements['#account']->field_migrate_example_gender['und'][0]['safe_value'];?></dd>
-									<?php endif; ?>  
-									<?php if(isset($elements['#account']->field_location_reference['und'])):?>
-				               		<dt>Location Reference:</dt>
-				               		<dd><?php print $elements['#account']->field_location_reference['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_website['und'])):?>
+				               	<dl>  
+				               	  <?php if(isset($elements['#account']->field_location['und'])):?>
+				               	    <dt>Location:</dt>
+				               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
+								  <?php endif; ?> 
+				               	    <dt>No. of posts:</dt>
+				               	    <dd><?php print ambitious_get_user_post_count($userid); ?></dd>
+				               	    <?php if(isset($elements['#account']->field_website['und'])):?>
 				               		<dt>Website:</dt>
 				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_signature['und'])):?>
-				               		<dt>Signature:</dt>
-				               		<dd><?php print $elements['#account']->field_signature['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_avatar_gender['und'])):?>
-				               		<dt>Avatar gender:</dt>
-				               		<dd><?php print $elements['#account']->field_avatar_gender['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_avatar_ref['und'])):?>
-				               		<dt>Avatar ref:</dt>
-				               		<dd><?php print $elements['#account']->field_avatar_ref['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-									<?php if(isset($elements['#account']->field_thumbnail_ref['und'])):?>
-				               		<dt>Thumbnail Ref:</dt>
-				               		<dd><?php print $elements['#account']->field_thumbnail_ref['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
-
-				               		<dt>No. of posts:</dt>
-				               		<dd><?php print ambitious_get_user_post_count($userid); ?></dd>
-                                             <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?>
-				               		<dt>Links:</dt>
-				               		<dd>
-				               			<strong>
-				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
-				               			  <?php print l('Blog', $elements['#account']->field_blog['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
-				               			  <?php endif; ?>
-				               			  <?php if(isset($elements['#account']->field_blog['und']) && isset($elements['#account']->field_twitter['und'])): ?> / <?php endif; ?>
-				               			  <?php if(isset($elements['#account']->field_twitter['und'])): ?>
-				               			  <?php print l('Twitter', $elements['#account']->field_twitter['und'][0]['url'], array('absolute' => TRUE,'attributes' => array('target'=>'_blank'))); ?> 
-				               			  <?php endif; ?>
-				               			</strong>
-				               		</dd>
-				               		<?php endif; ?>
- 									<?php if(!empty($elements['#account']->signature)) :?>
-  				               		  <dt>Signature:</dt>
-				               		  <dd><?php print $elements['#account']->signature; ?></dd>
 									<?php endif; ?>
-				               	</dl>
+				               	  </dl>
 			               	</section>
 			               	<section class="about-me">
 			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
