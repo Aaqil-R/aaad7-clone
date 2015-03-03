@@ -689,7 +689,7 @@ nav {
 
 /* nav active styles */
 .nav-active {
-  .visual, .banner_text_inner, .block-easy-breadcrumb {
+  .visual, .banner_text_inner, .block-easy-breadcrumb, .banner_text_inner{
     margin:0 0 0 -430px;
     @include breakpoint($mobile) {
       margin-left:-285px;
@@ -704,7 +704,7 @@ nav {
       margin-left:0;
     }
   }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .banner_text_inner, .block-easy-breadcrumb{
     width:100%;
     max-width:none;
     @include transition ($type:all, $time:0.4s, $ease:ease);
@@ -1064,9 +1064,10 @@ nav {
     }
   }
    
+} 
+.easy-breadcrumb{
+  @include transition ($type:margin-left, $time:0.4s, $ease:ease);
 }
-
-
 .node-type-topic .visual{
   overflow: visible;
 }
@@ -1082,7 +1083,7 @@ nav {
   .block-easy-breadcrumb{
     position: absolute;
     top: 18px;
-    z-index: 9999;
+    z-index: 999;
     width: 100%; 
     .easy-breadcrumb{
       margin: 0 auto;
