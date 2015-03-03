@@ -119,7 +119,7 @@ Drupal.behaviors.ambitious = {
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
-	      var Uautism = $('.view-display-id-understanding_autism_page');
+	      var Uautism = $('.understanding-autism');
 		    var view = Uautism.parent().attr('data-view');
 		   if (view != undefined) {
 			  $(".view").addClass(view); // Sets .grid-view as default class on the view
