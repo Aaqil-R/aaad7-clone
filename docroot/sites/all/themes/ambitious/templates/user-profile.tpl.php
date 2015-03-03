@@ -52,7 +52,7 @@ $userid = $elements['#account']->uid;
  hide($user_profile['field_avatar_ref']);
  hide($user_profile['field_thumbnail_ref']);
   
-  dpm($current_user);
+ 
  
 ?> 
 		               		<section class="profile-info">
@@ -60,7 +60,8 @@ $userid = $elements['#account']->uid;
 		               			<?php if(!empty($elements['#account']->name)):?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
 				               	<?php endif; ?>
-				               	<dl>  
+				               	<dl> 
+				               	  <?php if(isset($current_user)):?> 
 				               	  <?php if(isset($elements['#account']->field_location['und'])):?>
 				               	    <dt>Location:</dt>
 				               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
@@ -71,6 +72,7 @@ $userid = $elements['#account']->uid;
 				               		<dt>Website:</dt>
 				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
 									<?php endif; ?>
+                                           <?php endif; ?>							
 				               	  </dl>
 			               	</section>
 			               	<section class="about-me">
