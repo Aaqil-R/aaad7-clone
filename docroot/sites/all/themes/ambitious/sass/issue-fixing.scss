@@ -245,6 +245,7 @@
 
 	}
 
+
 	// FB Box on Home page
 	._4s7c{
 		@include breakpoint(1024px){
@@ -323,3 +324,12 @@
   content: "\e606";
 }
 
+
+// Fixing the padding issue on content bottom 
+#content_bottom{
+
+	@include breakpoint($mobile){
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
