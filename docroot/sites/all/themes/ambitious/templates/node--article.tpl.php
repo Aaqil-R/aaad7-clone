@@ -61,6 +61,7 @@
 				  <?php print render($content['body']); ?>
 	               <footer>
 				     <div class="article-info">
+				     	<div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 				       <div class="article-updated">
 
 					     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
@@ -72,8 +73,7 @@
 							   <span>Tags: </span>
 								<?php print render($content['field_tags']); ?>
 						 </div class="article-tags" >
-
-	                   <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
+	                   
 	                 </div>
 	              </footer>
 	              <!-- comment columns -->		
