@@ -877,7 +877,10 @@ function ambitious_get_user_post_count($uid) {
 }
 
 function ambitious_preprocess_user_profile(&$variables){
-global $user;
+global $user; 
+  if($user->uid == arg(1)){
+     $variables['current_user'] = '';
+  } 
   if (arg(0) == 'user' && $user->uid == arg(1)) {
     $providers = hybridauth_get_enabled_providers();
     $output = '';
