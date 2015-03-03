@@ -877,8 +877,8 @@ function ambitious_get_user_post_count($uid) {
 }
 
 function ambitious_preprocess_user_profile(&$variables){
-global $user; 
-  if($user->uid == arg(1)){
+global $user;
+if($user->uid == arg(1)){
      $variables['current_user'] = '';
   } 
   
@@ -893,6 +893,7 @@ global $user;
   }
   
 }
+ 
 
 function ambitious_form_comment_form_alter(&$form, &$form_state) {
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
