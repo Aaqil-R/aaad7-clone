@@ -62,7 +62,7 @@ ul a {
 /* header styles */
 #header {
   width:100%;
-  z-index:999;
+  z-index:9999;
   position:relative;
   margin-bottom: 33px;
   .header-top {
@@ -689,7 +689,7 @@ nav {
 
 /* nav active styles */
 .nav-active {
-  .visual {
+  .visual, .banner_text_inner {
     margin:0 0 0 -430px;
     @include breakpoint($mobile) {
       margin-left:-285px;

@@ -157,7 +157,7 @@
 						    <?php if($user->uid == arg(1)):?>
 						    <h1><?php print t('My profile'); ?></h1> 
 						    <?php else: ?>
-						     <h1><?php print t('Users'); ?></h1> 
+						     <h1><?php print t('User'); ?></h1> 
 						    <?php endif; ?>
 						   <?php endif; ?>
 						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>

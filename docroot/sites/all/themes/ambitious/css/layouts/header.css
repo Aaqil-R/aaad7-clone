@@ -454,7 +454,7 @@ ul a {
 /* line 63, ../../sass/layouts/header.scss */
 #header {
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
   position: relative;
   margin-bottom: 33px;
   /* page logo styles */
@@ -737,7 +737,7 @@ ul a {
   content: "";
   width: 31px;
   height: 23px;
-  background: url('../../images/sprite.png?1425372324') no-repeat;
+  background: url('../../images/sprite.png?1425305972') no-repeat;
 }
 /* line 262, ../../sass/layouts/header.scss */
 .right-info a.menu-opener:hover:after {
@@ -853,22 +853,22 @@ ul a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 61, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]:-moz-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 64, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]::-moz-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 67, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]:-ms-input-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 56, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]::-webkit-input-placeholder {
   font-weight: 200;
   color: #636c73;
@@ -1305,12 +1305,12 @@ nav ul li a:hover {
 
 /* nav active styles */
 /* line 692, ../../sass/layouts/header.scss */
-.nav-active .visual {
+.nav-active .visual, .nav-active .banner_text_inner {
   margin: 0 0 0 -430px;
 }
 @media (max-width: 767px) {
   /* line 692, ../../sass/layouts/header.scss */
-  .nav-active .visual {
+  .nav-active .visual, .nav-active .banner_text_inner {
     margin-left: -285px;
   }
 }
@@ -1872,7 +1872,7 @@ nav ul li a:hover {
 /* BREAD CRUMB */
 /* line 1148, ../../sass/layouts/header.scss */
 .node-type-forum-discussion .header_image {
-  background: url('../../images/top-header-bg.png?1424183361') no-repeat left #5bc5ed;
+  background: url('../../images/top-header-bg.png?1424101657') no-repeat left #5bc5ed;
   height: 83px;
   width: 100%;
   -moz-transition: all 0.4s ease;
