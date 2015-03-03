@@ -89,14 +89,8 @@ Drupal.behaviors.ambitious = {
 	// Change Position when click on close on Home page form
 
 		$(".block-close").click(function(){		  
-		  
-		  
-		  if($(window).width() < 767){
-		  	$("#main").css("top","100px");		  	
-		  }else{
-		  	$("#main").css("top","50px");
-		  	$(".action-block").css("margin-top","118px");
-		  }
+		  		  
+		  $("#main").addClass("no-form");
 		    
 		});
     
