@@ -245,6 +245,15 @@
 
 	}
 
+	// Content bottom
+	#content_bottom{
+
+		@include breakpoint($mobile){
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+	}
+
 	// FB Box on Home page
 	._4s7c{
 		@include breakpoint(1024px){
