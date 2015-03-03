@@ -326,6 +326,12 @@ ul a {
     label { display:none; }
     input[type="submit"] { display:none; }
     input[type="search"] {
+
+      @include input-placeholder {
+        font-weight: 200;
+        color: $menu-grey;
+      }
+
       border:none;
       width:100%;
       height:76px;
@@ -1137,10 +1143,10 @@ nav {
    }
  }
  
- /* BREDCRUME */
+ /* BREAD CRUMB */
  .node-type-forum-discussion { 
    .header_image{
-     background: url(../../images/top-header-bg.png) no-repeat left #5bc5ed;
+     background: image-url('top-header-bg.png') no-repeat left #5bc5ed;
 	height: 83px;
 	width: 100%;
 	@include transition ($type:all, $time:0.4s, $ease:ease);
@@ -1155,3 +1161,8 @@ nav {
      }
    } 
  }
+
+  /* Menu Text */
+  .menu-text {
+    color: $menu-grey;
+  }
