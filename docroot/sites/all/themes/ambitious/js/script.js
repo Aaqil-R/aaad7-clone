@@ -75,8 +75,13 @@ Drupal.behaviors.ambitious = {
         $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
-        
-    	
+		$("form#views-exposed-form-stream-understanding-autism-page #edit-sort-by").change(function() {
+          $('#edit-submit-stream').trigger( "click" );
+        });
+		$("form#views-exposed-form-stream-understanding-autism-page-age #edit-sort-by").change(function() {
+          $('#edit-submit-stream').trigger( "click" );
+        });
+        //Understanding autism added filter to load understanding autism page
     // ==Close button==//
 		$('.block-close').on("click", function () {
 		    $(this).parent('div').fadeOut();
@@ -89,8 +94,13 @@ Drupal.behaviors.ambitious = {
 	// Change Position when click on close on Home page form
 
 		$(".block-close").click(function(){		  
-		  		  
-		  $("#main").addClass("no-form");
+		  
+		  
+		  if($(window).width() < 767){
+		  	$("#main").css("top","100px");
+		  }else{
+		  	$("#main").css("top","50px");
+		  }
 		    
 		});
     
@@ -148,6 +158,15 @@ Drupal.behaviors.ambitious = {
 	  $("a.list, a.grid").click(function(){
 		  setTimeout(function(){ $('.view-content').masonry() }, 400);
 	  });
+
+		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
+          window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
+          e.preventDefault();
+       });
+		$("form#views-exposed-form-stream-understanding-autism-page-age .autism-age").change(function (e) {
+		  	window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
+            e.preventDefault();	
+		});
 	  });
 }
 };

@@ -66,7 +66,9 @@
         <?php print $sort_by; ?>
       </div>
       <div class="views-exposed-widget views-widget-sort-order">
+<select id="select2" class="jcf-hidden autism-age"> <option data-href="understanding-autism">For everyone</option> <option data-href="understanding-autism-age">For age 16-25</option>    </select>
         <?php print $sort_order; ?>
+		
       </div>
     <?php endif; ?>
     <?php if (!empty($items_per_page)): ?>

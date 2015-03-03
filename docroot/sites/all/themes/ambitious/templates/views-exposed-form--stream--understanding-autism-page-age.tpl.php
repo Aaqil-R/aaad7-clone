@@ -29,8 +29,6 @@
   ?>
 <?php endif; ?> 
 
-
-
 <div class="sort-block">
     <fieldset class="grid-view">
         <legend class="hidden">Grid View</legend>
@@ -66,6 +64,7 @@
         <?php print $sort_by; ?>
       </div>
       <div class="views-exposed-widget views-widget-sort-order">
+		<select id="select2" class="jcf-hidden autism-age"> <option data-href="understanding-autism-age">For age 16-25</option>  <option data-href="understanding-autism">For everyone</option>  </select>
         <?php print $sort_order; ?>
       </div>
     <?php endif; ?>
@@ -89,4 +88,3 @@
     <?php endif; ?> 
     <?php print render($variables['share_button']); ?>
 </div>
- 
