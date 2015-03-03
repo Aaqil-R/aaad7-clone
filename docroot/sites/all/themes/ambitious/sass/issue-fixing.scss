@@ -210,11 +210,18 @@
 	}
 
 	// Action Block
-	.action-block .holder {
-		@include breakpoint($mobile){
-			padding: 50px 15px 0;
-		}		
-	}
+	.action-block{
+		@include breakpoint($not-mobile){
+			margin-top: 66px;
+		}
+		
+		.holder {
+			@include breakpoint($mobile){
+				padding: 50px 15px 0;
+			}		
+		}
+
+	} 
 
 	// Article Block - Remove Images on Mobile View
 

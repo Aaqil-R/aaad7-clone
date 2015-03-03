@@ -92,9 +92,10 @@ Drupal.behaviors.ambitious = {
 		  
 		  
 		  if($(window).width() < 767){
-		  	$("#main").css("top","100px");
+		  	$("#main").css("top","100px");		  	
 		  }else{
 		  	$("#main").css("top","50px");
+		  	$(".action-block").css("margin-top","118px");
 		  }
 		    
 		});
