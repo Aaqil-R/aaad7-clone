@@ -62,6 +62,23 @@ $userid = $elements['#account']->uid;
 				               	<?php endif; ?>
 				               	<dl> 
 				               	  <?php if(isset($current_user)):?> 
+				               	     <?php if(isset($elements['#account']->field_first_name['und'])):?>
+				               		<dt>First name:</dt>
+				               		<dd><?php print $elements['#account']->field_first_name['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(isset($elements['#account']->field_last_name['und'])):?>
+				               		<dt>Last name:</dt>
+				               		<dd><?php print $elements['#account']->field_last_name['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+									<?php if(!empty($elements['#account']->mail)):?>
+				               		<dt>Email:</dt>
+				               		<dd><?php print $elements['#account']->mail;?></dd>
+									<?php endif; ?>
+									<?php if(isset($elements['#account']->field_signature['und'])):?>
+				               		<dt>Signature:</dt>
+				               		<dd><?php print $elements['#account']->field_signature['und'][0]['safe_value'];?></dd>
+									<?php endif; ?> 
+				               	  <?php else: ?>
 				               	  <?php if(isset($elements['#account']->field_location['und'])):?>
 				               	    <dt>Location:</dt>
 				               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
