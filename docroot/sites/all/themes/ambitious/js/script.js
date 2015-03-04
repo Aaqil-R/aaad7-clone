@@ -95,12 +95,7 @@ Drupal.behaviors.ambitious = {
 
 		$(".block-close").click(function(){		  
 		  
-		  
-		  if($(window).width() < 767){
-		  	$("#main").css("top","100px");
-		  }else{
-		  	$("#main").css("top","50px");
-		  }
+		  $("#main").addClass("no-form");
 		    
 		});
     
