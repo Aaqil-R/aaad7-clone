@@ -1502,6 +1502,10 @@ fieldset{
   }
   .text-section{
     margin-top: 17px;
+     @include breakpoint($mobile){
+       padding-left:20px;
+       padding-right:20px;
+     }
   }
   // .btn-left.forum-page{
   //   padding-left: 0; 
