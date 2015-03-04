@@ -359,7 +359,9 @@
    }
   } 
   .slider-block .block{
-    padding-bottom: 40px;   
+    @include breakpoint($tablet){
+      padding-bottom: 40px;   
+    }
   }
 }
 
