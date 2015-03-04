@@ -65,11 +65,18 @@
         width:49%;
       }
 	}
-	.st_sharethis_button{
+	.sort-block .stButton{
 		@include breakpoint($mobile) {
         width:49%;
 		}
 	}
+
+	//commented to fix the mobile view issue on voice page
+	/* .st_sharethis_button{
+		@include breakpoint($mobile) {
+        width:49%;
+		}
+	} */
 
 	.top-bar{
 		.logo{
