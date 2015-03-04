@@ -34,6 +34,9 @@
 		// Add box shadow to Home page Form
 		@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
 	}  
+	@include breakpoint($desktop){
+	  top:64px;
+	}
 	@include breakpoint($tablet){
 		top: 100px; 
 	}
