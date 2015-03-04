@@ -790,3 +790,121 @@ table tr:nth-child(odd) td, table tr.odd td {
 table tr:nth-child(odd) td a, table tr.odd td a {
   color: #636c73;
 }
+
+/* line 363, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul {
+  background: #fff;
+}
+/* line 366, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li:last-child::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #2CC185;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+/* line 377, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li:first-child.active ~ li:last-child::before {
+  -webkit-transform: translate3d(-400%, 0, 0);
+  transform: translate3d(-400%, 0, 0);
+}
+/* line 381, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li:nth-child(2).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-300%, 0, 0);
+  transform: translate3d(-300%, 0, 0);
+}
+/* line 385, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li:nth-child(3).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
+}
+/* line 389, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li:nth-child(4).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+/* line 394, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul a {
+  padding: 1em 0;
+  color: #74777b;
+  line-height: 1;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+}
+/* line 401, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li.active a {
+  color: #2CC185;
+  -webkit-transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 8px, 0);
+}
+/* line 406, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul a span {
+  font-weight: 700;
+}
+
+/* Nav */
+/* line 415, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page {
+  text-align: center;
+}
+/* line 417, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+/* line 438, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+/* line 450, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2.5;
+}
+/* line 457, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page a span {
+  vertical-align: middle;
+  font-size: 0.75em;
+}
+/* line 462, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page li.active a {
+  color: #74777b;
+}
+/* line 465, ../../sass/layouts/global.scss */
+.quicktabs-user_profile_page a:focus {
+  outline: none;
+}
