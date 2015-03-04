@@ -26,52 +26,90 @@
 
 //=== Home page-Issue fixing ===//
 .front{
-  .slider-block{
-    top: -16px;
-  } 
-	// Form on Home page
-	.slider-block{
-	z-index: 998;
-	position: relative; 
-	.block{
-		// Add box shadow to Home page Form
-		@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
-	}  
-	@include breakpoint($desktop){
-	  top:64px;
-	}
-	@include breakpoint($tablet){
-		top: 111px; 
-	}
-	
-	.r-s-arrow{
-		a{
-			text-decoration: none;
+	// Webform paragraphp
+	.form-item p:nth-child(2){
+		@include breakpoint($tablet-range){
+		 	font-size: 15px;
+			line-height: 28px;
 		}
 	}
-	.l-s-arrow{
-		a{
-			text-decoration: none;
+	// Caption text changing on the AAA front page
+	#block-block-26.caption-text .caption-text-titles{
+		@include breakpoint($all-desktop){
+		 	margin-top: 70px;
 		}
 	}
-	a{
-		&.btn-left{
-			margin-right: 10px;	
+	#block-block-26.caption-text .caption-text-titles .caption-text-title{
+		@include breakpoint(1320px){
+		 	line-height: 55px;
 		}
-		&.btn{
-			padding: 11px 25px;
+		@include breakpoint(1118px){
+		 	line-height: 22px;
 		}
-		&.btn-right{
-			position: relative;
-			right: 9px;
-			@include breakpoint($mobile){
-				right: 0;
-			}
-		}
-				
 	}
 
-}
+	// Form on Home page
+	.slider-block{
+		z-index: 998;
+		position: relative;
+		top: -16px;
+
+		.block{
+			// Add box shadow to Home page Form
+			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
+		}  
+		@include breakpoint($all-desktop){
+		 	top:-80px;
+		}
+		@include breakpoint(1345px){
+			top: -60px; 
+		}
+		@include breakpoint(1265px){
+			top: -45px; 
+		}
+		@include breakpoint(1190px){
+			top: 50px; 
+		}
+		@include breakpoint(1100px){
+			top: 35px; 
+		}
+		@include breakpoint(930px){
+			top: 60px; 
+		}
+		@include breakpoint(856px){
+			top: 70px; 
+		}
+		@include breakpoint(780px){
+			top: 95px; 
+		}
+		.r-s-arrow{
+			a{
+				text-decoration: none;
+			}
+		}
+		.l-s-arrow{
+			a{
+				text-decoration: none;
+			}
+		}
+		a{
+			&.btn-left{
+				margin-right: 10px;	
+			}
+			&.btn{
+				padding: 11px 25px;
+			}
+			&.btn-right{
+				position: relative;
+				right: 9px;
+				@include breakpoint($mobile){
+					right: 0;
+				}
+			}
+					
+		}
+
+	}
 	@include breakpoint($mobile){
 
 		.slider-block{
