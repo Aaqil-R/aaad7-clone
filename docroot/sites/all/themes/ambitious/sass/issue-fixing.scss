@@ -33,12 +33,9 @@
 	.block{
 		// Add box shadow to Home page Form
 		@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
-	} 
-	@include breakpoint($desktop){
-		top:-82px;
-	}
+	}  
 	@include breakpoint($tablet){
-		top: 24px;
+		top: 24px; 
 	}
 	
 	.r-s-arrow{
@@ -338,5 +335,12 @@
     #edit-submit-stream{
       display:none;
     }
+  }
+}
+
+
+.front{
+  .slider-container{
+    height:auto;
   }
 }
