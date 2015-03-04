@@ -345,7 +345,9 @@
 
 .front{
   .slider-container{
-    height:auto;
+    @include breakpoint($tablet){
+      height:auto;
+    }
   }
   .slider-block{
     @include breakpoint($mobile){
