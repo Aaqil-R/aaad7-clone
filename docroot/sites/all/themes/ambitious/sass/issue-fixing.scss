@@ -377,7 +377,11 @@
   z-index: 0;
 }
 
-
+.text-section .text-right-section{
+  @include breakpoint($mobile){
+     margin: 10px 0 30px 0;
+  }
+}
 .page-node-74606 .header_image{
   #block-easy-breadcrumb-easy-breadcrumb--2{
     .easy-breadcrumb{

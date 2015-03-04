@@ -400,19 +400,19 @@ ul a {
   }
 }
 .school-active {
-  .visual {
+  .visual, .block-easy-breadcrumb {
     margin:0 0 0 -430px;
     @include breakpoint($mobile) {
       margin-left:285px; 
     }
   }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb{
     margin-left:-430px;
     @include breakpoint($mobile) {
       margin-left:285px;
     }
   }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb{
     width:100%;
     max-width:none;
   }
@@ -1172,4 +1172,4 @@ nav {
   /* Menu Text */
   .menu-text {
     color: $menu-grey;
-  }
+  } 	
