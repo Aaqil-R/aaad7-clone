@@ -35,7 +35,7 @@
 		@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
 	}  
 	@include breakpoint($tablet){
-		top: 24px; 
+		top: 100px; 
 	}
 	
 	.r-s-arrow{
@@ -343,4 +343,17 @@
   .slider-container{
     height:auto;
   }
+  .caption-text .caption-text-titles .caption-text-title{
+    @include breakpoint($tablet){
+      font-size: 42px;
+      line-height: 26px;
+    }
+  }
+  .slider-block{
+    @include breakpoint($mobile){
+      margin-top:0;
+      top: -70px;
+    }
+  }
 }
+

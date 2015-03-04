@@ -390,7 +390,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 @media (max-width: 990px) {
   /* line 30, ../sass/issue-fixing.scss */
   .front .slider-block {
-    top: 24px;
+    top: 100px;
   }
 }
 /* line 42, ../sass/issue-fixing.scss */
@@ -666,4 +666,18 @@ body > .jcf-select-drop.jcf-drop-flipped {
 /* line 343, ../sass/issue-fixing.scss */
 .front .slider-container {
   height: auto;
+}
+@media (max-width: 990px) {
+  /* line 346, ../sass/issue-fixing.scss */
+  .front .caption-text .caption-text-titles .caption-text-title {
+    font-size: 42px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 352, ../sass/issue-fixing.scss */
+  .front .slider-block {
+    margin-top: 0;
+    top: -70px;
+  }
 }
