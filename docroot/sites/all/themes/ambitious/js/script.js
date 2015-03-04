@@ -75,10 +75,10 @@ Drupal.behaviors.ambitious = {
         $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
-		$("form#views-exposed-form-stream-understanding-autism-page #edit-sort-by").change(function() {
+		   $("form#views-exposed-form-stream-understanding-autism-page #edit-sort-by").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
-		$("form#views-exposed-form-stream-understanding-autism-page-age #edit-sort-by").change(function() {
+		   $("form#views-exposed-form-stream-understanding-autism-page-age #edit-sort-by").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
         //Understanding autism added filter to load understanding autism page
@@ -120,48 +120,51 @@ Drupal.behaviors.ambitious = {
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
 	      var Uautism = $('.understanding-autism');
-		    var view = Uautism.parent().attr('data-view');
-		   if (view != undefined) {
-			  $(".view").addClass(view); // Sets .grid-view as default class on the view
-			  if (view == 'list-view') {
-			    $('#list').addClass('active');
-			    $('#grid').removeClass('active');
-			  } else {
-			    $('#grid').addClass('active');
-			    $('#list').removeClass('active');
-			  }
-			 } else {
-			   Uautism.addClass("grid-view"); // Sets .grid-view as default class on the view
-			 }
+	      if (Uautism.length > 0){
+		      var view = Uautism.parent().attr('data-view');
+		     if (view != undefined) {
+			    $(".view").addClass(view); // Sets .grid-view as default class on the view
+			    if (view == 'list-view') {
+			      $('#list').addClass('active');
+			      $('#grid').removeClass('active');
+			    } else {
+			      $('#grid').addClass('active');
+			      $('#list').removeClass('active');
+			    }
+			   } else {
+			     Uautism.addClass("grid-view"); // Sets .grid-view as default class on the view
+			   }
+			    $(".list").click(function() {
+				    if (Uautism.hasClass("grid-view")) {
+					    Uautism.addClass("list-view"); // adds .list-view to the view class
+					    Uautism.removeClass("grid-view"); // removes .grid-view from the view class
+					     Uautism.parent().attr('data-view','list-view');
+				    }
+				   $(this).addClass('active');
+				   $(".grid").removeClass('active');
+			    });
 
-			  $(".list").click(function() {
-				  if (Uautism.hasClass("grid-view")) {
-					  Uautism.addClass("list-view"); // adds .list-view to the view class
-					  Uautism.removeClass("grid-view"); // removes .grid-view from the view class
-					   Uautism.parent().attr('data-view','list-view');
-				  }
-				 $(this).addClass('active');
-				 $(".grid").removeClass('active');
-			  });
-
-			  $(".grid").click(function() {
-				  if (Uautism.hasClass("list-view")) {
-					  Uautism.addClass("grid-view"); // adds .grid-view to the view class
-					  Uautism.removeClass("list-view"); // removes .list-view from the view class
-					  Uautism.parent().attr('data-view','grid-view');
-				  }
-				  $(this).addClass('active');
-				 $(".list").removeClass('active');
-			  });
-
+			    $(".grid").click(function() {
+				    if (Uautism.hasClass("list-view")) {
+					    Uautism.addClass("grid-view"); // adds .grid-view to the view class
+					    Uautism.removeClass("list-view"); // removes .list-view from the view class
+					    Uautism.parent().attr('data-view','grid-view');
+				    }
+				    $(this).addClass('active');
+				   $(".list").removeClass('active');
+			    });
+    }
+    $('.search-opener').click(function (){
+      $('.search-form input[type=search]').focus();
+    });
 	  //Sets the width of masonry when click on toggle list and grid
 	  $("a.list, a.grid").click(function(){
 		  setTimeout(function(){ $('.view-content').masonry() }, 400);
 	  });
 
 		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
-          window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
-          e.preventDefault();
+       window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
+       e.preventDefault();
        });
 		$("form#views-exposed-form-stream-understanding-autism-page-age .autism-age").change(function (e) {
 		  	window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
