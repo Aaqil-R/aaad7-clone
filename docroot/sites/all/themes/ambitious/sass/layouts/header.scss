@@ -1023,6 +1023,8 @@ nav {
     padding-right: 23px; 
   }
   .pic-by{
+    z-index: 1000;
+    position: relative;
     display: block;
     text-align: right;
     font-size: 13px;
@@ -1037,9 +1039,14 @@ nav {
       padding:10px 20px;
     }
     a{
-      color:$heading-link;
+      color:$captions-credit;
+      //color:$heading-link;
       font-weight: bold;
-      text-decoration: underline;
+      text-decoration: none;
+      &:hover{
+        color:$heading-link;
+        text-decoration: underline;
+      }
     }
   }
   .btn-prev{ 

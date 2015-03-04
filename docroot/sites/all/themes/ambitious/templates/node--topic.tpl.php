@@ -77,7 +77,11 @@
       </div> 
     </div>
     <?php if(isset($content['field_featured_image_by'])):?>
-     <div class="pic-by"><?php print t('© Photo by'); ?> <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?></div>
+     <div class="pic-by"><?php print t('© Photo by'); ?> 
+      <a>
+        <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>
+      </a>
+    </div>
    <?php endif; ?> 
   </section>
   
