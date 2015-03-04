@@ -63,11 +63,16 @@
 	.btn.btn-left.filteroption{
 		@include breakpoint($mobile) {
         width:49%;
+        padding-top: 9px;
+      	/* &:hover{
+      		border-bottom-width: 3px;
+      	} */
       }
 	}
 	.sort-block .stButton{
 		@include breakpoint($mobile) {
         width:49%;
+
 		}
 	}
 
