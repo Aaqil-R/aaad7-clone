@@ -3,7 +3,7 @@
 // Understanding autism page ( node-74591 ) and 16-25 age page ( node-74611 )
 .page-node-74591,
 .page-node-74611{
-  
+
   #main h1.title{
     display: none;
   }
@@ -21,7 +21,7 @@
 
   // Adding more margings to caption
   .visual .img-holder .caption-frame .caption .title .title-third{
-    @include breakpoint($not-mobile){
+    @include breakpoint($all-desktop){
       margin: 10px 0 0 324px;
     }
   }
