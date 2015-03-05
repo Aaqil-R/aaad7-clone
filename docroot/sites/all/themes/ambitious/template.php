@@ -827,10 +827,11 @@ function ambitious_get_user_comments_count($uid) {
 }
 
 function ambitious_get_user_message_count($uid) {
-  $query = db_select('pm_message', 'm');
-  $query->condition('author', $uid, '=');
+  $query = db_select('pm_index', 'm');
+   $query->JOIN ('pm_message', 'pm', 'pm.mid = m.mid');
+  $query->condition('recipient', $uid, '=');
   $query->addExpression('COUNT(1)', 'count');
-  $result = $query->execute();
+  $result = $query->execute(); 
  
   if ($record = $result->fetchAssoc())
     return $record['count'];
