@@ -375,12 +375,12 @@ table {
       transition: transform 0.3s;
     }
     &:first-child.active ~ li:last-child::before {
-      -webkit-transform: translate3d(-400%, 0, 0);
+      -webkit-transform: translate3d(-200%, 0, 0);
       transform: translate3d(-400%, 0, 0);
     }
     &:nth-child(2).active ~ li:last-child::before {
       -webkit-transform: translate3d(-300%, 0, 0);
-      transform: translate3d(-300%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
     }
     &:nth-child(3).active ~ li:last-child::before {
       -webkit-transform: translate3d(-200%, 0, 0);
@@ -393,7 +393,7 @@ table {
   }
   a {
     padding: 1em 0;
-    color: #74777b;
+    color: $orange;
     line-height: 1;
     -webkit-transition: color 0.3s, -webkit-transform 0.3s;
     transition: color 0.3s, transform 0.3s;
@@ -460,7 +460,8 @@ table {
     }
   }
   li.active a {
-    color: #74777b;
+    color:$orange;
+    paddgin:18px 0;
   }
   a:focus {
     outline: none;
