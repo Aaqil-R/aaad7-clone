@@ -66,6 +66,7 @@ body.profile .top-header{
 
 #comments{
   clear: both;
+  .ajax-progress, .ajax-progress-throbber,
   .throbber{
      position:absolute;
   }
@@ -839,6 +840,10 @@ div.messages.status{
 /* user profile page cutom*/
 
 .page-user{
+.ajax-progress, .ajax-progress-throbber,
+  .throbber{
+     position:absolute;
+  }
   @extend body.sidebar;  
   @extend body.profile;  
   .profile-body{
