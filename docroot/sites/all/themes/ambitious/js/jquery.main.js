@@ -40,6 +40,8 @@ function initFixedBlock() {
 	});
 }
 
+ 
+
 // post View mode custom
 function initViewMode() {
 	jQuery(".view-mode").click(function(){

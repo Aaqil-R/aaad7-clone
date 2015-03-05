@@ -792,11 +792,11 @@ table tr:nth-child(odd) td a, table tr.odd td a {
 }
 
 /* line 363, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul {
+#quicktabs-user_profile_page ul {
   background: #fff;
 }
 /* line 366, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li:last-child::before {
+#quicktabs-user_profile_page ul li:last-child::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -808,27 +808,27 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   transition: transform 0.3s;
 }
 /* line 377, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li:first-child.active ~ li:last-child::before {
+#quicktabs-user_profile_page ul li:first-child.active ~ li:last-child::before {
   -webkit-transform: translate3d(-400%, 0, 0);
   transform: translate3d(-400%, 0, 0);
 }
 /* line 381, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li:nth-child(2).active ~ li:last-child::before {
+#quicktabs-user_profile_page ul li:nth-child(2).active ~ li:last-child::before {
   -webkit-transform: translate3d(-300%, 0, 0);
   transform: translate3d(-300%, 0, 0);
 }
 /* line 385, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li:nth-child(3).active ~ li:last-child::before {
+#quicktabs-user_profile_page ul li:nth-child(3).active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
 /* line 389, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li:nth-child(4).active ~ li:last-child::before {
+#quicktabs-user_profile_page ul li:nth-child(4).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 /* line 394, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul a {
+#quicktabs-user_profile_page ul a {
   padding: 1em 0;
   color: #74777b;
   line-height: 1;
@@ -836,23 +836,23 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   transition: color 0.3s, transform 0.3s;
 }
 /* line 401, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li.active a {
+#quicktabs-user_profile_page ul li.active a {
   color: #2CC185;
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
 }
 /* line 406, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul a span {
+#quicktabs-user_profile_page ul a span {
   font-weight: 700;
 }
 
 /* Nav */
 /* line 415, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page {
+#quicktabs-user_profile_page {
   text-align: center;
 }
 /* line 417, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul {
+#quicktabs-user_profile_page ul {
   position: relative;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -875,7 +875,7 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   justify-content: center;
 }
 /* line 438, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page ul li {
+#quicktabs-user_profile_page ul li {
   position: relative;
   z-index: 1;
   display: block;
@@ -887,7 +887,7 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   flex: 1;
 }
 /* line 450, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page a {
+#quicktabs-user_profile_page a {
   position: relative;
   display: block;
   overflow: hidden;
@@ -896,15 +896,15 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   line-height: 2.5;
 }
 /* line 457, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page a span {
+#quicktabs-user_profile_page a span {
   vertical-align: middle;
   font-size: 0.75em;
 }
 /* line 462, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page li.active a {
+#quicktabs-user_profile_page li.active a {
   color: #74777b;
 }
 /* line 465, ../../sass/layouts/global.scss */
-.quicktabs-user_profile_page a:focus {
+#quicktabs-user_profile_page a:focus {
   outline: none;
 }
