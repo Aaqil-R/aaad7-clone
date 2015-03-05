@@ -373,6 +373,7 @@ table {
       content: '';
       -webkit-transition: -webkit-transform 0.3s;
       transition: transform 0.3s;
+      z-index: 99;
     }
     &:first-child.active ~ li:last-child::before {
       -webkit-transform: translate3d(-200%, 0, 0);
