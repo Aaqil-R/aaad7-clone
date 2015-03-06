@@ -915,3 +915,64 @@ table tr:nth-child(odd) td a, table tr.odd td a {
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }
+
+/* line 474, ../../sass/layouts/global.scss */
+.popups-container label {
+  position: absolute;
+  top: 11px;
+  left: 24px;
+}
+/* line 479, ../../sass/layouts/global.scss */
+.popups-container span.tooltip-content {
+  left: -45px;
+  bottom: 30px;
+}
+/* line 483, ../../sass/layouts/global.scss */
+.popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+  float: left;
+  clear: both;
+  width: 80%;
+  border-radius: 5px;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  margin-bottom: 20px;
+  padding: 12px 23px;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  /* line 483, ../../sass/layouts/global.scss */
+  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+    width: 100%;
+  }
+}
+/* line 497, ../../sass/layouts/global.scss */
+.popups-container input[type="submit"] {
+  float: left;
+  clear: both;
+  border: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f15500;
+  color: #ffffff;
+  border-bottom: 5px solid #c63502;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  /* line 497, ../../sass/layouts/global.scss */
+  .popups-container input[type="submit"] {
+    margin-bottom: 20px;
+  }
+}
+/* line 510, ../../sass/layouts/global.scss */
+.popups-container input[type="submit"]:hover {
+  border-bottom-width: 3px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 517, ../../sass/layouts/global.scss */
+.hybridauth-widget-wrapper {
+  clear: both;
+}
