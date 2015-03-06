@@ -1277,7 +1277,13 @@ fieldset{
 		  padding-top:12px;
 		}
 	   }
-	   }
+}
+.jcf-select{
+  @include breakpoint($mobile){
+      width:100%;
+  }        
+}
+
  .mobile-view{
   display:none;
 }
