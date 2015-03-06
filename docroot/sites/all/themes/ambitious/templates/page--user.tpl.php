@@ -161,11 +161,10 @@
 						    <?php endif; ?>
 						   <?php endif; ?>
 						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
-						    <?php if($user->uid == arg(1)):?> 
+						    
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
-		                	</span>
-		                	<?php endif; ?>
+		                	</span> 
 		                	<?php endif; ?>
 		                	<?php if ($messages || $action_links): ?>
 						  <div id="content-header">
