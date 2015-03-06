@@ -547,3 +547,23 @@
     margin-top:1em;
   }
 }
+
+// Button Classes for After
+.right-arrow{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:after{
+    content: "\e60b";
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: 4px;
+  }
+}
