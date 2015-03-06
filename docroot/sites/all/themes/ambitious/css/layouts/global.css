@@ -923,11 +923,21 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   left: 24px;
 }
 /* line 479, ../../sass/layouts/global.scss */
+.popups-container fieldset {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+/* line 483, ../../sass/layouts/global.scss */
+.popups-container fieldset .description {
+  clear: none;
+}
+/* line 487, ../../sass/layouts/global.scss */
 .popups-container span.tooltip-content {
   left: -45px;
   bottom: 30px;
 }
-/* line 483, ../../sass/layouts/global.scss */
+/* line 492, ../../sass/layouts/global.scss */
 .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
   float: left;
   clear: both;
@@ -941,12 +951,12 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 483, ../../sass/layouts/global.scss */
+  /* line 492, ../../sass/layouts/global.scss */
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     width: 100%;
   }
 }
-/* line 497, ../../sass/layouts/global.scss */
+/* line 506, ../../sass/layouts/global.scss */
 .popups-container input[type="submit"] {
   float: left;
   clear: both;
@@ -960,19 +970,19 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 497, ../../sass/layouts/global.scss */
+  /* line 506, ../../sass/layouts/global.scss */
   .popups-container input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 510, ../../sass/layouts/global.scss */
+/* line 519, ../../sass/layouts/global.scss */
 .popups-container input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
 
-/* line 517, ../../sass/layouts/global.scss */
+/* line 526, ../../sass/layouts/global.scss */
 .hybridauth-widget-wrapper {
   clear: both;
 }

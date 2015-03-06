@@ -476,10 +476,19 @@ table {
       top: 11px;
       left: 24px;
     }
+    fieldset{
+      float:left;
+      width:100%;
+      position: relative;
+      .description{
+          clear: none;
+      }
+    }
     span.tooltip-content{
       left: -45px;
       bottom: 30px;
     }
+   
     input[type="email"], input[type="text"], .select, input[type="password"] {
       float:left;
       clear:both;
