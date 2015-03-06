@@ -896,7 +896,21 @@ table tr:nth-child(odd) td a, table tr.odd td a {
     width: 100%;
   }
 }
-/* line 453, ../../sass/layouts/global.scss */
+/* line 452, ../../sass/layouts/global.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li a {
+  padding-top: 22.4px;
+  padding-bottom: 24px;
+  -moz-transition: padding 0.3s ease;
+  -webkit-transition: padding 0.3s ease;
+  -o-transition: padding 0.3s ease;
+  transition: padding 0.3s ease;
+}
+/* line 456, ../../sass/layouts/global.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li a.active {
+  padding-top: 15.4px;
+  padding-bottom: 31px;
+}
+/* line 463, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }
