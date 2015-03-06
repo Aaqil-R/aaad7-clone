@@ -808,37 +808,43 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   transition: transform 0.3s;
   z-index: 99;
 }
-/* line 378, ../../sass/layouts/global.scss */
+@media (max-width: 767px) {
+  /* line 366, ../../sass/layouts/global.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
+    display: none;
+  }
+}
+/* line 382, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:first-child.active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 382, ../../sass/layouts/global.scss */
+/* line 386, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(2).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 386, ../../sass/layouts/global.scss */
+/* line 390, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(3).active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 390, ../../sass/layouts/global.scss */
+/* line 394, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(4).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 395, ../../sass/layouts/global.scss */
+/* line 399, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   color: #f15500;
 }
 
 /* Nav */
-/* line 404, ../../sass/layouts/global.scss */
+/* line 408, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page {
   text-align: center;
 }
-/* line 406, ../../sass/layouts/global.scss */
+/* line 410, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   position: relative;
   display: -ms-flexbox;
@@ -861,7 +867,7 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   -ms-justify-content: center;
   justify-content: center;
 }
-/* line 427, ../../sass/layouts/global.scss */
+/* line 431, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li {
   position: relative;
   z-index: 1;
@@ -873,7 +879,16 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   -ms-flex: 1;
   flex: 1;
 }
-/* line 440, ../../sass/layouts/global.scss */
+@media (max-width: 767px) {
+  /* line 431, ../../sass/layouts/global.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs li {
+    -webkit-flex: inherit;
+    -moz-flex: inherit;
+    -ms-flex: inherit;
+    flex: inherit;
+  }
+}
+/* line 448, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }

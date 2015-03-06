@@ -444,5 +444,9 @@ body.profile .top-header{
 	color: #2CC185;
 	-webkit-transform: translate3d(0,8px,0);
 	transform: translate3d(0,8px,0);
+	@include breakpoint($mobile){
+	  color:$orange;
+	}
+	
 }
  

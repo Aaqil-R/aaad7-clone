@@ -374,7 +374,11 @@ table {
       -webkit-transition: -webkit-transform 0.3s;
       transition: transform 0.3s;
       z-index: 99;
+      @include breakpoint($mobile){
+        display:none; 
+      }
     }
+   
     &:first-child.active ~ li:last-child::before {
       -webkit-transform: translate3d(-200%, 0, 0);
       transform: translate3d(-200%, 0, 0);
@@ -423,7 +427,7 @@ table {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
-    justify-content: center;
+    justify-content: center; 
     li {
       position: relative;
       z-index: 1;
@@ -434,9 +438,13 @@ table {
       -moz-flex: 1;
       -ms-flex: 1;
       flex: 1;
-    }   
-  li.active a { 
-  }
+      @include breakpoint($mobile){
+        -webkit-flex:inherit;
+        -moz-flex:inherit;
+        -ms-flex:inherit;
+        flex:inherit;
+      }
+    }  
   a:focus {
     outline: none;
   }
