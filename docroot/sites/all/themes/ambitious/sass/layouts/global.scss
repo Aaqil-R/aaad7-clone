@@ -391,21 +391,10 @@ table {
       -webkit-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0);
     }
-  }
-  a {
-    padding: 1em 0; 
-    line-height: 1;
-    -webkit-transition: color 0.3s, -webkit-transform 0.3s;
-    transition: color 0.3s, transform 0.3s;
-  }
+  } 
   li.active a {
-    color:$orange;
-    -webkit-transform: translate3d(0, 8px, 0);
-    transform: translate3d(0, 8px, 0);
-  }
-  a span {
-    font-weight: 700;
-  }
+    color:$orange; 
+  } 
 }
 
  
@@ -445,18 +434,7 @@ table {
       -moz-flex: 1;
       -ms-flex: 1;
       flex: 1;
-    } 
-  a {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; 
-    span {
-      vertical-align: middle;
-      font-size: 0.75em;
-    }
-  }
+    }   
   li.active a {
     color:$orange;
     padding:18px 0;
