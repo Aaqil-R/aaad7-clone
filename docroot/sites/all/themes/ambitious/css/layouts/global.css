@@ -867,7 +867,13 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   -ms-justify-content: center;
   justify-content: center;
 }
-/* line 431, ../../sass/layouts/global.scss */
+@media (max-width: 767px) {
+  /* line 410, ../../sass/layouts/global.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs {
+    margin-bottom: 15px;
+  }
+}
+/* line 434, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li {
   position: relative;
   z-index: 1;
@@ -880,7 +886,7 @@ table tr:nth-child(odd) td a, table tr.odd td a {
   flex: 1;
 }
 @media (max-width: 767px) {
-  /* line 431, ../../sass/layouts/global.scss */
+  /* line 434, ../../sass/layouts/global.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li {
     -webkit-flex: inherit;
     -moz-flex: inherit;
@@ -890,7 +896,7 @@ table tr:nth-child(odd) td a, table tr.odd td a {
     width: 100%;
   }
 }
-/* line 450, ../../sass/layouts/global.scss */
+/* line 453, ../../sass/layouts/global.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }

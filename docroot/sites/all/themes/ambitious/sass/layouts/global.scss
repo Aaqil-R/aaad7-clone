@@ -428,6 +428,9 @@ table {
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center; 
+    @include breakpoint($mobile){
+      margin-bottom:15px;
+    }
     li {
       position: relative;
       z-index: 1;
