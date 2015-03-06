@@ -452,11 +452,13 @@ table {
       a{
          padding-top:22.4px;
          padding-bottom:24px;
-         @include transition ($type:padding, $time:0.3s, $ease:ease);
-         &.active{
-           padding-top:15.4px;
-           padding-bottom:31px;
+         @include transition ($type:padding, $time:0.3s, $ease:ease); 
          }
+       &.active{
+           a{
+             padding-top:15.4px;
+             padding-bottom:31px;
+           }
          }
       }
   
