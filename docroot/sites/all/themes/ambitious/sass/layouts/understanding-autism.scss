@@ -4,6 +4,12 @@
 .page-node-74591,
 .page-node-74611{
 
+  .jcf-select:nth-child(2){
+  @include breakpoint($mobile){
+     margin-bottom: 15px;
+  }  
+}
+
   #main h1.title{
     display: none;
   }
@@ -194,7 +200,6 @@
   }
   .sort-block .stButton{
     margin-right: 0;
-    margin-top: 15px;
   }
 }
 // Fix Ajax loading gif positioning issue
@@ -220,11 +225,5 @@
   }
 }
 
-@include breakpoint($mobile){
-  .sort-block .stButton{
-    margin-right: 0;
-    margin-top: 15px;
-  }
-}
 
 
