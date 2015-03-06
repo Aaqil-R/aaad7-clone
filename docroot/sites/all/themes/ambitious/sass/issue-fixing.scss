@@ -434,6 +434,12 @@
   }
 
 }
-
-
-
+.signup-columns{
+  p{
+    br{
+      @include breakpoint($tablet){
+        display:none;
+      }
+    }
+  }
+}
