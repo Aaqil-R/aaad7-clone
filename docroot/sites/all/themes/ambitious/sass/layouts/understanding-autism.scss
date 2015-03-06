@@ -194,6 +194,7 @@
   }
   .sort-block .stButton{
     margin-right: 0;
+    margin-top: 15px;
   }
 }
 // Fix Ajax loading gif positioning issue
@@ -218,4 +219,12 @@
     line-height: 1.1;
   }
 }
+
+@include breakpoint($mobile){
+  .sort-block .stButton{
+    margin-right: 0;
+    margin-top: 15px;
+  }
+}
+
 
