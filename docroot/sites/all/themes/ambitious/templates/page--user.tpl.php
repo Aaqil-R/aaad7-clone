@@ -142,12 +142,20 @@
 		</section>
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
-<main id="main" role="main">
-          <?php if ($tabs): ?>
+<main id="main" role="main"> 
 			<nav id="sidebar">
-				<?php print render($tabs);?>
+			     <?php if($user->uid == 'arg(0)'): ?>
+				<ul>
+					<li><a href="/user" class="active">My profile</a></li>
+					<li><a href="/user<?php print $user->uid; ?>"/edit>Edit profile</a></li>
+					<li><a href="/user#reset">Reset password</a></li>
+				</ul>
+				<?php else: ?>
+				<ul>
+					<li><a href="#profile" class="active">My profile</a></li>
+			     </ul>
+				<?php endif; ?>
 			</nav>
-			<?php endif; ?>   
                
 			<div class="profile-body">
 				<div class="holder">
