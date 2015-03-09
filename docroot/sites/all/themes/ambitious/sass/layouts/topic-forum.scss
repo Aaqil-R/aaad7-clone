@@ -82,6 +82,9 @@ body.profile .top-header{
   h4{
     font-size: 1.1em;
     margin: 0.3em 0;
+    a{
+      text-decoration: none;
+    }
   }
   .comment-left{
     float:left;
@@ -92,6 +95,11 @@ body.profile .top-header{
       display:none;
     }
   }
+  .time-ago{
+    em{
+      font-style: normal;
+    }
+  }
   .comment-body{
     padding: 1.4em 2em;
     border: 2px solid #d2d5d6;
@@ -100,7 +108,7 @@ body.profile .top-header{
     line-height: 1.4em;
     position: relative;
     &:before{
-      background: url("../images/comment-tip-left.png") 0 0 no-repeat;
+      background: url("../../images/comment-tip-left.png") 0 0 no-repeat;
       width: 26px;
       height: 31px;
       content: '';
