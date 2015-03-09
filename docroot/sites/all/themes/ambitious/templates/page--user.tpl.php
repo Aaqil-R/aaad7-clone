@@ -146,7 +146,7 @@
 			<nav id="sidebar"
 			     <?php if($logged_in != 1):?>
 			       <?php print render($tabs);?>
-			     <?php endif; ?>
+			     <?php else: ?>
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
@@ -158,6 +158,8 @@
 					<li><a href="/user" class="active">User profile</a></li>
 			     </ul>
 				<?php endif; ?>
+				<?php endif; ?>
+				
 			</nav>
                
 			<div class="profile-body">
