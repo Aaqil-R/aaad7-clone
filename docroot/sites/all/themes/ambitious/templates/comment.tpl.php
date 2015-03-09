@@ -62,9 +62,7 @@
    hide($content['privatemsg']);
     global $user;
     
- 
-   
-   //ago
+  
 ?>
 	
 <li class="<?php print $classes; ?>">
