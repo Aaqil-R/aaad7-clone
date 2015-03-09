@@ -102,6 +102,9 @@
    // Post
   .post{
     min-height: 315px;
+    @include breakpoint($mobile){
+       min-height:inherit; 
+    }
   }
 
   // Views exposed forms on toggle class
