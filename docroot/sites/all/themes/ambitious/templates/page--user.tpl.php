@@ -143,10 +143,8 @@
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
 <main id="main" role="main"> 
-			<nav id="sidebar"
-			     <?php if($logged_in != 1):?>
-			       <?php print render($tabs);?>
-			     <?php else: ?>
+			<nav id="sidebar">
+			      
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
@@ -157,9 +155,9 @@
 				<ul>
 					<li><a href="/user" class="active">User profile</a></li>
 			     </ul>
+			     <?php else: ?>
+			     <?php print render($tabs);?>
 				<?php endif; ?>
-				<?php endif; ?>
-				
 			</nav>
                
 			<div class="profile-body">
