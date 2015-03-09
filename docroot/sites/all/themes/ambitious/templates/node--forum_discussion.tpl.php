@@ -10,6 +10,7 @@
 /* variables */ 
 $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 $name = strip_tags($name); 
+drupal_add_library('waypoints', 'waypoints');
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
