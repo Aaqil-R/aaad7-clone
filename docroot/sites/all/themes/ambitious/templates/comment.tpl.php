@@ -61,6 +61,10 @@
    hide($content['links']);
    hide($content['privatemsg']);
     global $user;
+    
+ 
+   
+   //ago
 ?>
 	
 <li class="<?php print $classes; ?>">
