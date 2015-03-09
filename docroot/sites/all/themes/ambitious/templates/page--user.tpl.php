@@ -147,12 +147,12 @@
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
-					<li><a href="/user<?php print $user->uid; ?>"/edit>Edit profile</a></li>
-					<li><a href="/user#reset">Reset password</a></li>
+					<li><a href="/user/<?php print $user->uid; ?>/edit">Edit profile</a></li>
+					<li><a href="/user/<?php print $user->uid; ?>/edit">Reset password</a></li>
 				</ul>
 				<?php else: ?>
 				<ul>
-					<li><a href="#profile" class="active">My profile</a></li>
+					<li><a href="/user" class="active">My profile</a></li>
 			     </ul>
 				<?php endif; ?>
 			</nav>
