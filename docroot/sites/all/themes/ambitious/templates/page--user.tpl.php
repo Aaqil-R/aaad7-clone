@@ -144,7 +144,7 @@
 <?php endif; ?>
 <main id="main" role="main"> 
 			<nav id="sidebar">
-			     <?php if($user->uid == 'arg(0)'): ?>
+			     <?php if($user->uid == arg(0) ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
 					<li><a href="/user<?php print $user->uid; ?>"/edit>Edit profile</a></li>
