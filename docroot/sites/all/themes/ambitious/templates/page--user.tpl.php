@@ -143,7 +143,7 @@
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
 <main id="main" role="main"> 
-			<nav id="sidebar">
+			<nav id="sidebar"
 			      
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
@@ -155,9 +155,11 @@
 				<ul>
 					<li><a href="/user" class="active">User profile</a></li>
 			     </ul>
-			     <?php else: ?>
-			     <?php print render($tabs);?>
-				<?php endif; ?>
+			     <?php
+			       if(empty($user->uid)){
+			         print render($tabs);
+			       }
+			     ?>
 			</nav>
                
 			<div class="profile-body">
