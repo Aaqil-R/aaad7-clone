@@ -144,7 +144,7 @@
 <?php endif; ?>
 <main id="main" role="main"> 
 			<nav id="sidebar">
-			      
+			     <?php if($user->uid){?>
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
@@ -155,8 +155,8 @@
 				<ul>
 					<li><a href="/user" class="active">User profile</a></li>
 			     </ul>
-			     <?php
-			       if(empty($user->uid)){
+			     <?php endif; ?>
+			     <?php } else {
 			         print render($tabs);
 			       }
 			     ?>
