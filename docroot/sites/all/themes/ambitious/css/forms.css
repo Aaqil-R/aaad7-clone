@@ -639,3 +639,96 @@ textarea {
 .front .slider-block .ajax-progress {
   position: absolute;
 }
+
+/* line 248, ../sass/forms.scss */
+div.ctools-modal-content .form-item .description {
+  clear: none;
+}
+
+/* line 252, ../sass/forms.scss */
+.popups-container .modal-title {
+  font-size: 23px;
+}
+/* line 255, ../sass/forms.scss */
+.popups-container label {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+/* line 261, ../sass/forms.scss */
+.popups-container .item-list ul {
+  margin: 0px 0 9px 0px;
+  padding: 0;
+}
+/* line 264, ../sass/forms.scss */
+.popups-container .item-list ul li {
+  margin: 0;
+}
+/* line 269, ../sass/forms.scss */
+.popups-container h3 {
+  font-size: 19px;
+}
+/* line 272, ../sass/forms.scss */
+.popups-container fieldset {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+/* line 276, ../sass/forms.scss */
+.popups-container fieldset .description {
+  clear: none;
+}
+/* line 280, ../sass/forms.scss */
+.popups-container span.tooltip-content {
+  left: -45px;
+  bottom: 30px;
+}
+/* line 285, ../sass/forms.scss */
+.popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+  float: left;
+  clear: both;
+  width: 80%;
+  border-radius: 5px;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  margin-bottom: 20px;
+  padding: 12px 23px;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  /* line 285, ../sass/forms.scss */
+  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+    width: 100%;
+  }
+}
+/* line 299, ../sass/forms.scss */
+.popups-container input[type="submit"] {
+  float: left;
+  clear: both;
+  border: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f15500;
+  color: #ffffff;
+  border-bottom: 5px solid #c63502;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  /* line 299, ../sass/forms.scss */
+  .popups-container input[type="submit"] {
+    margin-bottom: 20px;
+  }
+}
+/* line 312, ../sass/forms.scss */
+.popups-container input[type="submit"]:hover {
+  border-bottom-width: 3px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 319, ../sass/forms.scss */
+.hybridauth-widget-wrapper {
+  clear: both;
+}

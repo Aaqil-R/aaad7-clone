@@ -898,3 +898,128 @@ body.sidebar #sidebar:before {
     color: #f15500;
   }
 }
+
+/* line 456, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs {
+  background: #fff;
+}
+/* line 459, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 99%;
+  height: 6px;
+  background: #f15500;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  z-index: 99;
+}
+@media (max-width: 767px) {
+  /* line 459, ../../sass/layouts/profile.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
+    display: none;
+  }
+}
+/* line 475, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li:first-child.active ~ li:last-child::before {
+  -webkit-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
+}
+/* line 479, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(2).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+/* line 483, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(3).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
+}
+/* line 487, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(4).active ~ li:last-child::before {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+/* line 492, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
+  color: #f15500;
+}
+
+/* Nav */
+/* line 501, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page {
+  text-align: center;
+}
+/* line 503, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  margin-bottom: -10px;
+}
+@media (max-width: 767px) {
+  /* line 503, ../../sass/layouts/profile.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs {
+    margin-bottom: 15px;
+  }
+}
+/* line 528, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (max-width: 767px) {
+  /* line 528, ../../sass/layouts/profile.scss */
+  #quicktabs-user_profile_page ul.quicktabs-tabs li {
+    -webkit-flex: inherit;
+    -moz-flex: inherit;
+    -ms-flex: inherit;
+    flex: inherit;
+    float: left;
+    width: 100%;
+  }
+}
+/* line 546, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li a {
+  padding-top: 22.4px;
+  padding-bottom: 24px;
+  -moz-transition: padding 0.3s ease;
+  -webkit-transition: padding 0.3s ease;
+  -o-transition: padding 0.3s ease;
+  transition: padding 0.3s ease;
+}
+/* line 552, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
+  padding-top: 30.4px;
+  padding-bottom: 14px;
+}
+/* line 559, ../../sass/layouts/profile.scss */
+#quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
+  outline: none;
+}

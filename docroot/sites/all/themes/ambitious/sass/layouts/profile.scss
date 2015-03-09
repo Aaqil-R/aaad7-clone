@@ -448,3 +448,116 @@ body.profile .top-header{
 	
 }
  
+ 
+ 
+  
+// TAB Animation
+
+#quicktabs-user_profile_page ul.quicktabs-tabs{
+  background: #fff;
+  li {
+    &:last-child::before {
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      width: 99%;
+      height: 6px;
+      background: $orange;
+      content: '';
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      z-index: 99;
+      @include breakpoint($mobile){
+        display:none; 
+      }
+    }
+   
+    &:first-child.active ~ li:last-child::before {
+      -webkit-transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-200%, 0, 0);
+    }
+    &:nth-child(2).active ~ li:last-child::before {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+    &:nth-child(3).active ~ li:last-child::before {
+      -webkit-transform: translate3d(-200%, 0, 0);
+      transform: translate3d(-200%, 0, 0);
+    }
+    &:nth-child(4).active ~ li:last-child::before {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  } 
+  li.active a {
+    color:$orange; 
+  } 
+}
+
+ 
+
+/* Nav */
+
+#quicktabs-user_profile_page{
+  text-align: center;
+  ul.quicktabs-tabs{
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center; 
+    margin-bottom:-10px;
+    @include breakpoint($mobile){
+      margin-bottom:15px;
+    }
+    li {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: 0;
+      text-align: center;
+      -webkit-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      @include breakpoint($mobile){
+        -webkit-flex:inherit;
+        -moz-flex:inherit;
+        -ms-flex:inherit;
+        flex:inherit;
+        float: left;
+        width: 100%;
+      }
+      a{
+         padding-top:22.4px;
+         padding-bottom:24px;
+         @include transition ($type:padding, $time:0.3s, $ease:ease); 
+         }
+       &.active{
+           a{
+             padding-top: 30.4px;
+             padding-bottom: 14px;
+           }
+         }
+      }
+  
+  a:focus {
+    outline: none;
+  }
+  }
+}
