@@ -891,3 +891,15 @@ if($user->uid == arg(1)){
 function ambitious_form_comment_form_alter(&$form, &$form_state) {
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
 } 
+
+function ago($timestamp){
+   $difference = time() - $timestamp;
+   $periods = array("second", "minute", "hour", "day", "week", "month", "years", "decade");
+   $lengths = array("60","60","24","7","4.35","12","10");
+   for($j = 0; $difference >= $lengths[$j]; $j++)
+   $difference /= $lengths[$j];
+   $difference = round($difference);
+   if($difference != 1) $periods[$j].= "s";
+   $text = "$difference $periods[$j] ago";
+   return $text;
+  }
