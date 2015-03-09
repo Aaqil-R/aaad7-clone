@@ -143,7 +143,7 @@
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
 <main id="main" role="main"> 
-			<nav id="sidebar"
+			<nav id="sidebar">
 			      
 			     <?php if($user->uid == arg(1) ): ?>
 				<ul>
