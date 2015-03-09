@@ -3,7 +3,9 @@
  * @file
  * Default view template to display content in a Masonry layout.
  */
+
 // Variable
+$last=count($rows) - 1;
 
 ?>
 
@@ -12,6 +14,7 @@
 <?php endif; ?>
 
 <?php foreach ($rows as $id => $row): ?>
+	<?php render($row); ?>
 	<?php if ($id == 0 && isset($variables['node'])):?>
 		<div class="masonry-item views-row views-row-1 views-row-odd views-row-first text-block post masonry-brick ">
 			<!-- Teaser View of the topic -->
@@ -23,17 +26,22 @@
 			<?php endif; ?>
 		</div>
 			<!-- Teaser ends here -->
-	<?php elseif($id == 7 ): ?>
-		<div class="masonry-item views-row views-row-8 views-row-even views-row-last post-actions post masonry-brick">
-			<?php
-			//D7
-			$block = module_invoke('block', 'block_view', '91');
-			print render($block['content']);
-			?>
-		</div>
-	<?php else: ?>
+	<?php endif; ?>
+
 		<div class="masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?>">
 			<?php print $row; ?>
 		</div>
+
+	<?php if($id == $last): ?>
+		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
+			<?php
+			//D7
+			$block = module_invoke('block', 'block_view', '126');
+			print render($block['content']);
+			?>
+		</div>
 	<?php endif; ?>
+
+
+
 <?php endforeach; ?>
