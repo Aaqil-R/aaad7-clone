@@ -32,11 +32,13 @@ $last=count($rows) - 1;
 			<?php print $row; ?>
 		</div>
 
-	<?php if($id == $last && $view->query->pager->current_page === 0): ?>
+	<?php if($id == $last): ?>
 		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
 			<?php
 			//D7
-			$block = module_invoke('block', 'block_view', '126');
+			if($view->query->pager->current_page === 0){
+			  $block = module_invoke('block', 'block_view', '126');
+			}
 			print render($block['content']);
 			?>
 		</div>
