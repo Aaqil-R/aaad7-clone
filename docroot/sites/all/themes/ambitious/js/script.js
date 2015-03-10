@@ -48,6 +48,12 @@ Drupal.behaviors.ambitious = {
 		          menuOpener: '.filteroption',
 		          menuDrop: '.filter-slide'
 	            });
+	            $('.view-display-id-my_voice_blog').mobileNav({ 
+		          hideOnClickOutside: true,
+		          menuActiveClass: 'filter-active',
+		          menuOpener: '.filteroption',
+		          menuDrop: '.filter-slide'
+	            });
 	            $(".view .bef-checkboxes input[type=checkbox]:checked").parent().addClass('checked');
 	                  // views filter opiton
               $(".view .bef-checkboxes :checkbox").once('check-processed').on('click', function(){
