@@ -76,7 +76,7 @@
         <?php print $offset; ?>
       </div>
     <?php endif; ?>
-     
+    
     <div class="filter-overlay"></div>
     
     <div class="filter-slide">
@@ -84,12 +84,14 @@
 				<div class="nav-filter ">
 					 <?php print $widget->widget; ?> 
 				</div> 
-    
-				
-        </div>
-     <div class="views-exposed-widget views-submit-button element-invisible">
+   
+      <div class="button-holder">
+       <div class="views-exposed-widget views-submit-button">
       <?php print $button; ?>
     </div>
+       </div> 
+				
+        </div>
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button element-invisible">
         <?php print $reset_button; ?>
