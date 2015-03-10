@@ -37,6 +37,7 @@ $last=count($rows) - 1;
 			<?php
 			//D7
 			if($view->query->pager->current_page === 0){
+			  echo "sss";
 			  $block = module_invoke('block', 'block_view', '126');
 			}
 			print render($block['content']);
