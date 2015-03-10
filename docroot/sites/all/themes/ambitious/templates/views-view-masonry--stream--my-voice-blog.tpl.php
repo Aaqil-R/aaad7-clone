@@ -8,7 +8,6 @@
 
 
 <?php foreach ($rows as $id => $row): ?>  
-for testing
   <?php if ($id == 0 && isset($variables['node'])):?> 
     <div class="masonry-item views-row views-row-1 views-row-odd views-row-first text-block text-block-second post masonry-brick desktop-view ">
       <!-- Teaser View of the topic --> 
