@@ -32,7 +32,7 @@
 
 
 <div class="sort-block">
-<div class="search-text forum-page"><input type="text" value="Search the community"></div>
+<div class="search-text forum-page"><input type="text" placeholder="Search the community"><span class="icon-search"></span></div>
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
