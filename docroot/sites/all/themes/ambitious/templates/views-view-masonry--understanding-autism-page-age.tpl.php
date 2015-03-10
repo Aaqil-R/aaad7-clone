@@ -36,8 +36,7 @@ $last=count($rows) - 1;
 		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
 			<?php
 			//D7
-			if($view->query->pager->current_page === 0){
-			  echo "sss";
+			if($view->query->pager->current_page === 0){ 
 			  $block = module_invoke('block', 'block_view', '126');
 			}
 			print render($block['content']);
