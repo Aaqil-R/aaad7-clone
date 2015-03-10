@@ -38,6 +38,7 @@
 
 <div class="sort-block">
 
+
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -75,6 +76,17 @@
         <?php print $offset; ?>
       </div>
     <?php endif; ?>
+     
+    <div class="filter-overlay"></div>
+    
+    <div class="filter-slide">
+				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
+				<div class="nav-filter ">
+					 <?php print $widget->widget; ?> 
+				</div> 
+    
+				
+        </div>
      <div class="views-exposed-widget views-submit-button element-invisible">
       <?php print $button; ?>
     </div>
