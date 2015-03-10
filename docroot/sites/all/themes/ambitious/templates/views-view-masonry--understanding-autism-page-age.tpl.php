@@ -32,7 +32,7 @@ $last=count($rows) - 1;
 			<?php print $row; ?>
 		</div>
 
-	<?php if($id == $last): ?>
+	<?php if($id == $last && $view->query->pager->current_page === 0): ?>
 		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
 			<?php
 			//D7
