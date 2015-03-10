@@ -400,6 +400,12 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
   
+  if($vars['form']['#id'] == 'views-exposed-form-stream-my-voice-blog'){
+    $node = node_load(arg(1));
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+  }
+  
   
   if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
     $node = node_load(arg(1));
