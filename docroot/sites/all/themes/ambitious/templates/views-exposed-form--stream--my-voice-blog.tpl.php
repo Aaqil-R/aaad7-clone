@@ -28,11 +28,16 @@
     print $q;
   ?>
 <?php endif; ?> 
-
+<div class="text-block text-block-second post mobile-view clearfix">
+  <h1><?php print $variables['node']->title;?></h1> 
+      <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
+        <?php print $variables['node']->body['und'][0]['safe_value']; ?>
+      <?php endif; ?>
+</div>
 
 
 <div class="sort-block">
-<div class="search-text forum-page"><input type="text" value="Search the community"></div>
+
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -45,17 +50,6 @@
             <?php print $widget->operator; ?>
           </div>
         <?php endif; ?>
-         <div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
-				<div class="nav-filter ">
-					 <?php print $widget->widget; ?> 
-				</div> 
-   
-      <div class="button-holder"><div class="views-exposed-widget views-submit-button">
-      <?php print $button; ?>
-    </div></div> 
-				
-        </div>
         <?php if (!empty($widget->description)): ?>
           <div class="description">
             <?php print $widget->description; ?>
@@ -85,11 +79,10 @@
       <?php print $button; ?>
     </div>
     <?php if (!empty($reset_button)): ?>
-      <div class="views-exposed-widget views-reset-button">
+      <div class="views-exposed-widget views-reset-button element-invisible">
         <?php print $reset_button; ?>
       </div>
-    <?php endif; ?> 
-    <a href="#" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
+    <?php endif; ?>  
     <?php print render($variables['share_button']); ?>
 </div>
  
