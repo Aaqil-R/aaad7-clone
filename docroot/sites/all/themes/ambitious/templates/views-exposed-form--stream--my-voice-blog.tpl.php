@@ -95,6 +95,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?>  
+     <a href="javascript:void()" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
     <?php print render($variables['share_button']); ?>
 </div>
  
