@@ -72,7 +72,10 @@ function morecomments_theme($existing, $type, $theme, $path) {
  * Theme function that renders the pager.
  */
 function theme_morecomments_pager($variables) {
-  return "<a href = 'javascript:;' class='morecomments-button node-" . $variables['nid'] . " page-" . $variables['next_page'] . "'>" . check_plain(variable_get('morecomments_text_' . $variables['node_type'], t('More comments'))) . "</a>";
+if($variables['next_page']>=2){
+  	return " <div class='item-list'> <a href = 'javascript:;' class='morecomments-button node-" . $variables['nid'] . " page-" . $variables['next_page'] . "'>" . check_plain(variable_get('morecomments_text_' . $variables['node_type'], t('More comments'))) . "</a></div>";
+}
+return " <a href = 'javascript:;' class='morecomments-button node-" . $variables['nid'] . " page-" . $variables['next_page'] . "'>" . check_plain(variable_get('morecomments_text_' . $variables['node_type'], t('More comments'))) . "</a>";
 }
 
 /**

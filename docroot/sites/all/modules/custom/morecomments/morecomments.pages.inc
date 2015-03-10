@@ -9,7 +9,7 @@
  * Custom implementation of comment_render from comment.module.
  */
 function morecomments_comment_render($nid, $page) {
-  $node = node_load($nid); 
+  $node = node_load($nid);
   $page = intval($page);
 
   if (empty($node)) {
@@ -21,7 +21,7 @@ function morecomments_comment_render($nid, $page) {
 
   if (($node->comment_count && user_access('access comments')) || user_access('administer comments')) {
     $mode = variable_get('comment_default_mode_' . $node->type, COMMENT_MODE_THREADED);
-    $comments_per_page = variable_get('comment_default_per_page_' . $node->type, 10);
+    $comments_per_page = variable_get('comment_default_per_page_' . $node->type, 5);
 
     // Code grabbed from comment_get_thread.
     $query = db_select('comment', 'c')
