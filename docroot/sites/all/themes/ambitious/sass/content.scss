@@ -159,6 +159,8 @@ a {
       border-radius: 5px;
       font-size: 13px;
       padding: 20px;
+      bottom: 60px;
+      left: -102px;
       h3 {
         font-size: 14px;
 		margin-bottom: 5px;
@@ -192,8 +194,12 @@ a {
       }
     }
   }
-  &:hover.tooltips span.tooltip-content {
-     
+  &:hover{
+    .tooltips{
+      span.tooltip-content{
+        display: inherit;
+      }
+    }
   }
 }
 
