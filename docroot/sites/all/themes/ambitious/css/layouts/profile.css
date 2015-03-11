@@ -797,10 +797,12 @@ body.sidebar #sidebar:before {
 }
 /* line 352, ../../sass/layouts/profile.scss */
 .profile-main #user-login span.tooltip-content, .profile-main #user-pass span.tooltip-content, .profile-main #user-register-form span.tooltip-content {
-  left: -45px;
-  bottom: 30px;
+  bottom: 0;
+  margin-bottom: 30px;
+  left: 0;
+  margin-left: -102px;
 }
-/* line 356, ../../sass/layouts/profile.scss */
+/* line 358, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"] {
   float: left;
   clear: both;
@@ -814,12 +816,12 @@ body.sidebar #sidebar:before {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 356, ../../sass/layouts/profile.scss */
+  /* line 358, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"] {
     width: 100%;
   }
 }
-/* line 370, ../../sass/layouts/profile.scss */
+/* line 372, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
   float: left;
   clear: both;
@@ -833,51 +835,51 @@ body.sidebar #sidebar:before {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 370, ../../sass/layouts/profile.scss */
+  /* line 372, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 383, ../../sass/layouts/profile.scss */
+/* line 385, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"]:hover, .profile-main #user-pass input[type="submit"]:hover, .profile-main #user-register-form input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 390, ../../sass/layouts/profile.scss */
+/* line 392, ../../sass/layouts/profile.scss */
 .profile-main .hybridauth-widget-wrapper {
   clear: both;
 }
 
-/* line 399, ../../sass/layouts/profile.scss */
+/* line 401, ../../sass/layouts/profile.scss */
 .page-user .quicktabs-tabs a::first-letter {
   font-weight: bold;
 }
-/* line 404, ../../sass/layouts/profile.scss */
+/* line 406, ../../sass/layouts/profile.scss */
 .page-user .easy-breadcrumb {
   padding-top: 0;
 }
-/* line 409, ../../sass/layouts/profile.scss */
+/* line 411, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile img {
   display: none;
 }
-/* line 413, ../../sass/layouts/profile.scss */
+/* line 415, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile .comment-left img {
   width: 60px;
   display: inherit;
   border-radius: 5px;
 }
-/* line 421, ../../sass/layouts/profile.scss */
+/* line 423, ../../sass/layouts/profile.scss */
 .page-user tr fieldset {
   padding: 0;
 }
-/* line 426, ../../sass/layouts/profile.scss */
+/* line 428, ../../sass/layouts/profile.scss */
 .page-user #privatemsg-list-form .form-item-operation {
   padding-top: 0;
   padding-left: 0;
 }
 
-/* line 433, ../../sass/layouts/profile.scss */
+/* line 435, ../../sass/layouts/profile.scss */
 .quicktabs-tabs a {
   padding: 1em 0;
   color: #74777b;
@@ -886,24 +888,24 @@ body.sidebar #sidebar:before {
   transition: color 0.3s, transform 0.3s;
 }
 
-/* line 441, ../../sass/layouts/profile.scss */
+/* line 443, ../../sass/layouts/profile.scss */
 .quicktabs-tabs li.quicktabs-tabs a {
   color: #2CC185;
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
 }
 @media (max-width: 767px) {
-  /* line 441, ../../sass/layouts/profile.scss */
+  /* line 443, ../../sass/layouts/profile.scss */
   .quicktabs-tabs li.quicktabs-tabs a {
     color: #f15500;
   }
 }
 
-/* line 456, ../../sass/layouts/profile.scss */
+/* line 458, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   background: #fff;
 }
-/* line 459, ../../sass/layouts/profile.scss */
+/* line 461, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
   position: absolute;
   bottom: 3px;
@@ -917,42 +919,42 @@ body.sidebar #sidebar:before {
   z-index: 99;
 }
 @media (max-width: 767px) {
-  /* line 459, ../../sass/layouts/profile.scss */
+  /* line 461, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
     display: none;
   }
 }
-/* line 475, ../../sass/layouts/profile.scss */
+/* line 477, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:first-child.active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 479, ../../sass/layouts/profile.scss */
+/* line 481, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(2).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 483, ../../sass/layouts/profile.scss */
+/* line 485, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(3).active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 487, ../../sass/layouts/profile.scss */
+/* line 489, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(4).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 492, ../../sass/layouts/profile.scss */
+/* line 494, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   color: #f15500;
 }
 
 /* Nav */
-/* line 501, ../../sass/layouts/profile.scss */
+/* line 503, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page {
   text-align: center;
 }
-/* line 503, ../../sass/layouts/profile.scss */
+/* line 505, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   position: relative;
   display: -ms-flexbox;
@@ -977,12 +979,12 @@ body.sidebar #sidebar:before {
   margin-bottom: -10px;
 }
 @media (max-width: 767px) {
-  /* line 503, ../../sass/layouts/profile.scss */
+  /* line 505, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs {
     margin-bottom: 15px;
   }
 }
-/* line 528, ../../sass/layouts/profile.scss */
+/* line 530, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li {
   position: relative;
   z-index: 1;
@@ -995,7 +997,7 @@ body.sidebar #sidebar:before {
   flex: 1;
 }
 @media (max-width: 767px) {
-  /* line 528, ../../sass/layouts/profile.scss */
+  /* line 530, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li {
     -webkit-flex: inherit;
     -moz-flex: inherit;
@@ -1005,7 +1007,7 @@ body.sidebar #sidebar:before {
     width: 100%;
   }
 }
-/* line 546, ../../sass/layouts/profile.scss */
+/* line 548, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li a {
   padding-top: 22.4px;
   padding-bottom: 24px;
@@ -1014,12 +1016,12 @@ body.sidebar #sidebar:before {
   -o-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
-/* line 552, ../../sass/layouts/profile.scss */
+/* line 554, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   padding-top: 30.4px;
   padding-bottom: 14px;
 }
-/* line 559, ../../sass/layouts/profile.scss */
+/* line 561, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }
