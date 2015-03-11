@@ -224,14 +224,23 @@ ul a {
       }
     }
   }
-  li.menu {
-    padding:9px 0 0 10px;
-    min-width:119px;
-    @include breakpoint($mobile) {
-      min-width:10px;
-      width:22%;
-      padding:12px 0 14px;
-      text-align:center;
+  li{
+      a{
+        &:hover{
+          span{
+            color: $orange;
+          }
+        }
+      }
+    .menu {
+      padding:9px 0 0 10px;
+      min-width:119px;
+      @include breakpoint($mobile) {
+        min-width:10px;
+        width:22%;
+        padding:12px 0 14px;
+        text-align:center;
+      }
     }
   }
   a.menu-opener{
