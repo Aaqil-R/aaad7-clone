@@ -669,13 +669,13 @@ div.ctools-modal-content .modal-content{
   .webform-component--give-what-you-can{
     margin-left: 18px;
     width: 32%;
-    label{
+    & > label{
       font-size: 21px;
       margin-left: 10px;
       padding-top: 27px;
       display: block;
     }
-  }
+  }  
   .webform-component--other-ways-to-help{
     width: 28%;
     margin-top: 22px;
@@ -687,7 +687,7 @@ div.ctools-modal-content .modal-content{
       padding: 13px 22px;
     }
     label{
-      font-size: 24px;
+        font-size: 24px;
     }
   }
 }
