@@ -18,11 +18,7 @@ Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
      
-        // load more button first loads the content only on click, so removed the waypoint binding.
-        
-		   $(window).load(function () {           
-		     		$('.view-display-id-stream_topic_page').waypoint('destroy');
-		   	});
+      
 		   
 		   //navigate to donate page with the value from give what you can
 		   $("input[name='submitted[give_what_you_can]']").click(function () {
@@ -206,4 +202,9 @@ if ($('.masonry').masonry != undefined) {
     $('.masonry').masonry('reloadItems'); 
       }; 
 });
+  // load more button first loads the content only on click, so removed the waypoint binding.
+        
+		   $(window).load(function () {           
+		     		$('.view-display-id-stream_topic_page').waypoint('destroy');
+		   	});
 })(jQuery, Drupal, this, this.document);
