@@ -1087,8 +1087,8 @@ a {
 				height: 0;
 				position:relative;
 				z-index:5;
-				top:80px;
-				left:-50px;
+				top: 115px;
+                    left: -65px;
 				@include breakpoint($mobile) {
 					display: none;
 				}
@@ -1104,6 +1104,10 @@ a {
 				top: 108px;
 				.skip{
 						a{
+						  font-size: 18px;
+						  margin-left: 9px;
+						  margin-top: -5px;
+						  float: left;
 							@include fontsize(14,16);
 						}
 				}
