@@ -111,6 +111,11 @@
             <!-- /image holder -->
           <?php endif; ?>
       </div>
+      <?php
+      // Photo credit block
+      $block = module_invoke('block', 'block_view', '181');
+      print render($block['content']);
+      ?> 
 </section>
 <?php endif; ?>
   <?php if ($page['navigation']): ?>
