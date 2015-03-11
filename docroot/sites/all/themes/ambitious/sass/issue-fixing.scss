@@ -514,6 +514,27 @@
      top: 17px;
    }
 }
+#modal-content#popups-body{
+  .tooltip-content{
+    bottom: inherit;
+	left: -252px;
+	top: 0;
+	height: auto;
+  }
+  a.tooltips span.tooltip-content{
+    &:before{
+     border-left: 20px solid #F6BF4F;
+	border-right: 20px solid transparent;
+	border-top: 20px solid transparent;  
+    }
+     &:after{
+      border-left: 19px solid #FFF8E7;
+      border-right: 19px solid transparent;  
+      border-top: 18px solid transparent;
+    }
+  }
+  
+}
 #user-register-form{
   
   .form-type-password-confirm{
