@@ -62,7 +62,7 @@
 		 	top:-80px;
 		}
 		@include breakpoint(1345px){
-			top: -60px; 
+			top: -104px; 
 		}
 		@include breakpoint(1265px){
 			top: -45px; 
@@ -594,3 +594,32 @@ div.ctools-modal-content .modal-content{
   display:none;
   visibility: hidden;
 }
+#slider-container form{
+  input[type="text"]{
+    width:90%;
+  }
+  .description{
+    width: 34px;
+    margin-left: 7px;
+    margin-top: 5px;
+  }
+  h2{
+    margin-bottom: 21px;
+  }
+  input[type="email"]{
+  
+  }
+}
+#webform-ajax-wrapper-74666{
+  input[type=submit]{
+     font-size: 20px;
+     padding: 9px 61px 12px 22px;
+     margin-top: 9px;
+     background-repeat: no-repeat;
+     background-position: 106px -252px;
+     background-image: url(../images/sprite.png);
+     &:hover{
+        margin-top:11px;
+     }
+  }
+} 

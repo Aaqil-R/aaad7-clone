@@ -129,6 +129,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		img {
 			display:block;
 			width:100%;
+			min-height: 757px;
+			@include breakpoint(1024px){
+			  height:auto;
+			}
 			@include breakpoint($mobile) {
 				width:130%;
 			}
