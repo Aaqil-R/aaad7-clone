@@ -12,13 +12,24 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
 
-
+var first = true;
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
      
-      
+        // load more button first loads the content only on click, so removed the waypoint binding.
+        
+  		 var settings = Drupal.settings;
+		 $.each(settings.viewsLoadMore, function(i, setting) {
+		   var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
+		   if (view == '.view-id-stream.view-display-id-stream_topic_page' && first == true){
+		    	$(window).load(function () {           
+		     		$(view).waypoint('destroy');
+		   	});
+		   	first = false;
+		   	}
+		 });
 		   
 		   //navigate to donate page with the value from give what you can
 		   $("input[name='submitted[give_what_you_can]']").click(function () {
@@ -202,9 +213,4 @@ if ($('.masonry').masonry != undefined) {
     $('.masonry').masonry('reloadItems'); 
       }; 
 });
-  // load more button first loads the content only on click, so removed the waypoint binding.
-        
-		   $(window).load(function () {           
-		     		$('.view-display-id-stream_topic_page').waypoint('destroy');
-		   	});
 })(jQuery, Drupal, this, this.document);
