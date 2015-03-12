@@ -97,6 +97,9 @@ ul a {
       display:block;
       height:auto;
       @include transition(all);
+      @include breakpoint($mobile) {
+        padding-top: 10px;
+      }
     }
   }
   .school-slide {
