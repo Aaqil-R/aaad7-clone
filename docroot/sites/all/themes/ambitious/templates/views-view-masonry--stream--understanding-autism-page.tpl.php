@@ -4,8 +4,8 @@
  * Default view template to display content in a Masonry layout.
  */
 // Variable
-$last=count($rows) - 1;
-
+$no=(int) ($view->query->pager->total_items/$view->query->pager->options['items_per_page']);
+$noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 ?>
 
 <?php if (!empty($title)): ?>
@@ -30,18 +30,14 @@ $last=count($rows) - 1;
 		<div class="masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?>">
 			<?php print $row; ?>
 		</div> 
-	<?php if($id == $last && $view->query->pager->current_page === 0):?>
-		<div class="masonry-item views-row views-row-even views-row-last <?php if($view->query->pager->current_page === 0){ ?>post-actions <?php } ?> post masonry-brick">
+
+<?php endforeach; ?>
+<?php if($view->query->pager->current_page == $noofpage):?>
+		<div class="masonry-item views-row views-row-even views-row-last post-actions post masonry-brick">
 			<?php
 			//D7
-			
 			  $block = module_invoke('block', 'block_view', '91');
-		
 			print render($block['content']);
 			?>
 		</div>
-	<?php endif; ?>
-
-
-
-<?php endforeach; ?>
+<?php endif; ?>
