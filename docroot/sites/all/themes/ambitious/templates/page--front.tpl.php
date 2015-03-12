@@ -250,7 +250,7 @@
         </div><!-- /footer Right --> 
         <div class="company-info">          
           <?php print render($page['footer_copyright']); ?>
-          <span class="design-by">Designed and built by <a href="#">Blue State Digital</a>.</span>
+          <span class="design-by">Designed and built by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>.</span>
         </div><!-- /footer copyright -->              
       </div>      
     </footer> <!-- /footer -->
