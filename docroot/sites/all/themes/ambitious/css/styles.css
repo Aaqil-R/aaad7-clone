@@ -362,7 +362,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 21, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 14, C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -610,7 +610,6 @@ table {
 /* line 209, ../sass/styles.scss */
 .field-name-field-standfirst
 , .field-name-field-body {
-  font-style: italic;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -628,4 +627,9 @@ table {
   margin: 0px;
   z-index: 9999;
   left: 0;
+}
+
+/* line 233, ../sass/styles.scss */
+#content-header .title {
+  display: none;
 }
