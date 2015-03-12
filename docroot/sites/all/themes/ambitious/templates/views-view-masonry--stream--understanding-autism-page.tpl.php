@@ -30,7 +30,7 @@ $last=count($rows) - 1;
 		<div class="masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?>">
 			<?php print $row; ?>
 		</div>
-        <?php  dpm($view->query->pager); ?>
+        <?php  dpm($view); ?>
 	<?php if($id == $last && $view->query->pager->current_page === 0):?>
 		<div class="masonry-item views-row views-row-even views-row-last <?php if($view->query->pager->current_page === 0){ ?>post-actions <?php } ?> post masonry-brick">
 			<?php
