@@ -2,7 +2,7 @@
 $i = 1;
 $ourfields = array('title', 'body', 'last_comment_timestamp', 'name', 'comment_count', 'counter');
 $counter = strip_tags($fields['counter']->content); 
-dpm($counter);
+ 
 ?>
  
 <ul class="table-row">
