@@ -10,7 +10,7 @@ dpm($counter);
 		<?php if ($fields['comment_count']->raw > 5): ?>
 		   <span class="icon-Hottopic"></span>
 		<?php endif; ?>
-		<?php if (intval($counter) <= 3 && $fields['comment_count']->raw <= 5): ?>
+		<?php if (intval($counter) <= 3): ?>
 		   <span class="icon-Featured"></span>
 		<?php endif; ?>
 		<h6><?php print $fields['body']->content;?></h6>
