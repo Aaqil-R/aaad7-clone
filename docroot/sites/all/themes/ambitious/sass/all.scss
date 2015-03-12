@@ -128,12 +128,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
 		img {
 			display:block;
-			width:100%;
-			min-height: 797px;
-               margin-bottom: -20px;
-			@include breakpoint(1024px){
-			  height:auto;
-			}
+			width:100%; 
 			@include breakpoint($mobile) {
 				width:130%;
 			}
@@ -2152,3 +2147,16 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     to {top: 0px; opacity:1;}
 }
 
+
+
+
+.front .visual .img-holder img {
+min-height: 797px;
+               margin-bottom: -20px;
+			@include breakpoint(1024px){
+			  height:auto;
+			}
+			@include breakpoint($mobile) {
+				width:130%;
+			}
+}

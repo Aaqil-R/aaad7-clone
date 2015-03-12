@@ -18,6 +18,8 @@ function autism_custom_views_post_execute(&$view) {
          array_unshift($view->result, $data);
     } 
  } 
+ if($view->name == "stream" && $view->current_display == 'stream_topic_page') {
  
+ }
     
 }
