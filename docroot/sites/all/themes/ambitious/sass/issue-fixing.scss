@@ -41,7 +41,7 @@
 	}
 	#block-block-26.caption-text .caption-text-titles .caption-text-title{
 		@include breakpoint(1320px){
-		 	line-height: 66px;
+		 	line-height: 55px;
 		}
 		@include breakpoint(1118px){
 		 	line-height: 22px;
@@ -59,10 +59,10 @@
 			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
 		}  
 		@include breakpoint($all-desktop){
-		 	top:-101px;
+		 	top:-80px;
 		}
 		@include breakpoint(1345px){
-			top:-101px; 
+			top: -60px; 
 		}
 		@include breakpoint(1265px){
 			top: -45px; 
@@ -174,7 +174,7 @@
 		}
 	}
 	.visual .img-holder{
-		max-height: 825px;
+		max-height: 765px;
 	}
 	.visual .img-holder .caption-frame .caption{
 		@include breakpoint($mobile){
@@ -593,129 +593,4 @@ div.ctools-modal-content .modal-content{
 #user-pass label{
   display:none;
   visibility: hidden;
-}
-#slider-container form{
-  
-  .description{
-    width: 15px;
-    margin-left: 7px;
-    margin-top: 5px;
-  }
-  h2{
-    margin-bottom: 21px;
-  }   
-}
- 
-#webform-ajax-wrapper-74666{
-  #edit-webform-ajax-not-right-now-74666{
-    background-position: 154px -252px;
-    margin-left: 14px;
-    padding-right: 67px;
-  }
-#slider-container form {
-  input[type="text"], input[type="email"]{
-    width: 94%;
-  }
-  }
-  p.larger{
-    margin-top: 16px;
-    line-height: 34px;
-    margin-bottom: 24px;
-  }
-  input[type=submit]{
-     font-size: 20px;
-     padding: 9px 61px 12px 22px;
-     margin-top: 9px;
-     background-repeat: no-repeat;
-     background-position: 106px -252px;
-     background-image: url(../images/sprite.png);
-     &:hover{
-        margin-top:11px;
-     }
-  }
-} 
-#webform-client-form-74676{
- h3, h2{
-   font-size: 35px;
-	padding-right: 26px;
-	line-height: 45px;
-	margin-top: 11px;
-	margin-bottom: 20px;
- }
- .home_forum_share{
-   .home_forum_share_left{
-      p{
-        margin-right: 0;
-      }
-   }
-   .home_forum_share_right{
-     margin-top: 24px;
-   }
- }
-}
-#slider-container #webform-client-form-74681 h2{
-  font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
-}
-#webform-client-form-74681{
-  &form h2{
-    font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
-  }
-  .webform-component--lend-your-support{
-    h5{
-      font-size: 18px;
-      margin-top: -9px;
-    }
-  }
-  .webform-component--give-what-you-can{
-    margin-left: 18px;
-    width: 32%;
-    & > label{
-      font-size: 22px;
-      margin-left: 10px;
-      padding-top: 22px;
-      display: block;
-      padding-bottom: 6px;
-    }
-    #edit-submitted-give-what-you-can{
-      label{
-        font-size: 22px;
-      }
-    }
-  }  
-  .webform-component--other-ways-to-help{
-    width: 28%;
-    margin-top: 22px;
-    h3{
-      font-size: 22px;
-      margin-top: 3px;
-    }
-    a.btn{
-      padding: 13px 22px;
-    }
-    label{
-        font-size: 24px;
-    }
-  }
-}
-#user-register-form, #user-login{
-  width: 114%;
-  float: left; 
-}
-div.ctools-modal-content .modal-content{
-    overflow-x: hidden;
-  }
-.front #main{
-  margin-top: -50px;
-}
-
-.not-logged-in #user-login{
-  input[type="password"], input[type="text"]{
-    background: none!important;
-  }
 }
