@@ -468,11 +468,7 @@ div.messages.status{
    
  }
 }
-.posts-columns.columns-full{
-      
-	    .row{
-	      width:100%; 
-		  .forum-icon{
+.forum-icon{
 		    position: absolute;
 			right:18px;
 			font-size:40px;
@@ -488,6 +484,11 @@ div.messages.status{
 			  color:$yellow;
 			}
 		  } 
+.posts-columns.columns-full{
+      
+	    .row{
+	      width:100%; 
+		  
 		  .forum-text{
 		    @extend %clearfix;
 			.forum-left{
