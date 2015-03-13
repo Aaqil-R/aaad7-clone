@@ -837,6 +837,19 @@ function ambitious_get_user_comments_count($uid) {
    
   return 0;
 }
+function ambitious_get_node_comments_count($nid) { 
+  $query = db_select('comment', 'c');
+  $query->condition('nid', $nid, '=');
+  $query->condition('status', '1', '=');
+  $query->condition('pid', '0', '=');
+  $query->addExpression('COUNT(1)', 'count');
+  $result = $query->execute();
+ 
+  if ($record = $result->fetchAssoc())
+    return $record['count'];
+   
+  return 0;
+}
 
 function ambitious_get_user_message_count($uid) {
  $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id")->fetchField();
