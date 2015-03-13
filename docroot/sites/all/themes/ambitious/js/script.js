@@ -20,8 +20,8 @@ Drupal.behaviors.ambitious = {
      
         // load more button first loads the content only on click, so removed the waypoint binding.
  
-        
-  		 /*var settings = Drupal.settings;
+        if($('body').hasClass('node-type-topic')){
+  		 var settings = Drupal.settings;
 		 $.each(settings.viewsLoadMore, function(i, setting) {
 		   var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
 		   if (view == '.view-id-stream.view-display-id-stream_topic_page .pager-next a' && first == true){
@@ -30,7 +30,8 @@ Drupal.behaviors.ambitious = {
 		   	});
 		   	first = false;
 		   	}
-		 });*/
+		 });
+		 }
  
         //
   		// var settings = Drupal.settings;
