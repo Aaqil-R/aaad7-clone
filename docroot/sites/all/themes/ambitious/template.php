@@ -657,7 +657,7 @@ function ambitious_field__field_event_date(&$variables){
  
  function ambitious_form_alter(&$form, &$form_state, $form_id)
 {
-/*
+
   if($form_id == 'webform_client_form_74601' || $form_id == 'webform_client_form_74621'){
     $form['submitted']['email_address']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email_address']['#description']."</span></a>";
   } else if ($form_id == 'webform_client_form_74666') {
@@ -672,7 +672,7 @@ function ambitious_field__field_event_date(&$variables){
       $form['account']['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['account']['name']['#description']."</span></a>";
        $form['account']['mail']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['account']['mail']['#description']."</span></a>";
        $form['account']['pass']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['account']['pass']['#description']."</span></a>";
-  } */
+  } 
 }
 
 
@@ -718,7 +718,7 @@ function ambitious_form_element($variables) {
     '#title_display' => 'before',
   );
 
-  // Add element #id for #type 'item'.
+  // Add element #id for #type 'item'. 
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
@@ -765,7 +765,8 @@ function ambitious_form_element($variables) {
   }
 
   if (!empty($element['#description'])) {
-    $output .= '<a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content">' . $element['#description']. "</span></a>\n";
+    //$output .= '<a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content">' . $element['#description']. "</span></a>\n";
+    $output .= '<div class="description">' . $element ['#description'] . "</div>\n";
   }
 
   $output .= "</fieldset>\n";
