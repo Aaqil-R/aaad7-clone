@@ -46,15 +46,12 @@ function theme_ife_settings_form_ids($variables) {
  * Theme the form element, add the error, when one occured.
  */
 function theme_ife_form_element($variables) {
-  $output = '';
   $output = $variables['element']['#children'];
 
-  if (isset($variables['element']['#id'])) {
-    $error = ife_errors('get', $variables['element']['#id']);
-
-    if (!empty($error)) {
-      $output .= '<div class="messages error messages-inline">' . $error . '</div>';
-    }
+  // Add in the error if set.
+  if (isset($variables['element']['#ife_error']) && $variables['element']['#ife_error']) {
+    $output .= '<div class="messages error messages-inline">' . $variables['element']['#ife_error'] . '</div>';
   }
+
   return $output;
 }
