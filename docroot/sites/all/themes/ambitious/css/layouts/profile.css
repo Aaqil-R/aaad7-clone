@@ -814,7 +814,20 @@ body.sidebar #sidebar:before {
     width: 100%;
   }
 }
-/* line 366, ../../sass/layouts/profile.scss */
+/* line 365, ../../sass/layouts/profile.scss */
+.profile-main #user-login input[type="email"]:focus, .profile-main #user-login input[type="text"]:focus, .profile-main #user-login .select:focus, .profile-main #user-login input[type="password"]:focus, .profile-main #user-pass input[type="email"]:focus, .profile-main #user-pass input[type="text"]:focus, .profile-main #user-pass .select:focus, .profile-main #user-pass input[type="password"]:focus, .profile-main #user-register-form input[type="email"]:focus, .profile-main #user-register-form input[type="text"]:focus, .profile-main #user-register-form .select:focus, .profile-main #user-register-form input[type="password"]:focus {
+  border: 2px solid #fbb900;
+  padding: 11px 22px;
+  color: #2a2e31;
+}
+/* line 370, ../../sass/layouts/profile.scss */
+.profile-main #user-login input[type="email"].error, .profile-main #user-login input[type="email"].error:focus, .profile-main #user-login input[type="text"].error, .profile-main #user-login input[type="text"].error:focus, .profile-main #user-login .select.error, .profile-main #user-login .select.error:focus, .profile-main #user-login input[type="password"].error, .profile-main #user-login input[type="password"].error:focus, .profile-main #user-pass input[type="email"].error, .profile-main #user-pass input[type="email"].error:focus, .profile-main #user-pass input[type="text"].error, .profile-main #user-pass input[type="text"].error:focus, .profile-main #user-pass .select.error, .profile-main #user-pass .select.error:focus, .profile-main #user-pass input[type="password"].error, .profile-main #user-pass input[type="password"].error:focus, .profile-main #user-register-form input[type="email"].error, .profile-main #user-register-form input[type="email"].error:focus, .profile-main #user-register-form input[type="text"].error, .profile-main #user-register-form input[type="text"].error:focus, .profile-main #user-register-form .select.error, .profile-main #user-register-form .select.error:focus, .profile-main #user-register-form input[type="password"].error, .profile-main #user-register-form input[type="password"].error:focus {
+  border: 2px solid #ff5458;
+  padding: 11px 22px;
+  color: #ec0833;
+  background: #fef8fa;
+}
+/* line 377, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
   float: left;
   clear: both;
@@ -828,56 +841,56 @@ body.sidebar #sidebar:before {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 366, ../../sass/layouts/profile.scss */
+  /* line 377, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 379, ../../sass/layouts/profile.scss */
+/* line 390, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"]:hover, .profile-main #user-pass input[type="submit"]:hover, .profile-main #user-register-form input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 387, ../../sass/layouts/profile.scss */
+/* line 398, ../../sass/layouts/profile.scss */
 .profile-main .hybridauth-widget-wrapper {
   clear: both;
 }
 
-/* line 393, ../../sass/layouts/profile.scss */
+/* line 404, ../../sass/layouts/profile.scss */
 #user-pass label {
   display: none;
 }
 
-/* line 401, ../../sass/layouts/profile.scss */
+/* line 412, ../../sass/layouts/profile.scss */
 .page-user .quicktabs-tabs a::first-letter {
   font-weight: bold;
 }
-/* line 406, ../../sass/layouts/profile.scss */
+/* line 417, ../../sass/layouts/profile.scss */
 .page-user .easy-breadcrumb {
   padding-top: 0;
 }
-/* line 411, ../../sass/layouts/profile.scss */
+/* line 422, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile img {
   display: none;
 }
-/* line 415, ../../sass/layouts/profile.scss */
+/* line 426, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile .comment-left img {
   width: 60px;
   display: inherit;
   border-radius: 5px;
 }
-/* line 423, ../../sass/layouts/profile.scss */
+/* line 434, ../../sass/layouts/profile.scss */
 .page-user tr fieldset {
   padding: 0;
 }
-/* line 428, ../../sass/layouts/profile.scss */
+/* line 439, ../../sass/layouts/profile.scss */
 .page-user #privatemsg-list-form .form-item-operation {
   padding-top: 0;
   padding-left: 0;
 }
 
-/* line 435, ../../sass/layouts/profile.scss */
+/* line 446, ../../sass/layouts/profile.scss */
 .quicktabs-tabs a {
   padding: 1em 0;
   color: #74777b;
@@ -886,24 +899,24 @@ body.sidebar #sidebar:before {
   transition: color 0.3s, transform 0.3s;
 }
 
-/* line 443, ../../sass/layouts/profile.scss */
+/* line 454, ../../sass/layouts/profile.scss */
 .quicktabs-tabs li.quicktabs-tabs a {
   color: #2CC185;
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
 }
 @media (max-width: 767px) {
-  /* line 443, ../../sass/layouts/profile.scss */
+  /* line 454, ../../sass/layouts/profile.scss */
   .quicktabs-tabs li.quicktabs-tabs a {
     color: #f15500;
   }
 }
 
-/* line 458, ../../sass/layouts/profile.scss */
+/* line 469, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   background: #fff;
 }
-/* line 461, ../../sass/layouts/profile.scss */
+/* line 472, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
   position: absolute;
   bottom: 3px;
@@ -917,42 +930,42 @@ body.sidebar #sidebar:before {
   z-index: 99;
 }
 @media (max-width: 767px) {
-  /* line 461, ../../sass/layouts/profile.scss */
+  /* line 472, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
     display: none;
   }
 }
-/* line 477, ../../sass/layouts/profile.scss */
+/* line 488, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:first-child.active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 481, ../../sass/layouts/profile.scss */
+/* line 492, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(2).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 485, ../../sass/layouts/profile.scss */
+/* line 496, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(3).active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 489, ../../sass/layouts/profile.scss */
+/* line 500, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(4).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 494, ../../sass/layouts/profile.scss */
+/* line 505, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   color: #f15500;
 }
 
 /* Nav */
-/* line 503, ../../sass/layouts/profile.scss */
+/* line 514, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page {
   text-align: center;
 }
-/* line 505, ../../sass/layouts/profile.scss */
+/* line 516, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   position: relative;
   display: -ms-flexbox;
@@ -977,12 +990,12 @@ body.sidebar #sidebar:before {
   margin-bottom: -10px;
 }
 @media (max-width: 767px) {
-  /* line 505, ../../sass/layouts/profile.scss */
+  /* line 516, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs {
     margin-bottom: 15px;
   }
 }
-/* line 530, ../../sass/layouts/profile.scss */
+/* line 541, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li {
   position: relative;
   z-index: 1;
@@ -995,7 +1008,7 @@ body.sidebar #sidebar:before {
   flex: 1;
 }
 @media (max-width: 767px) {
-  /* line 530, ../../sass/layouts/profile.scss */
+  /* line 541, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li {
     -webkit-flex: inherit;
     -moz-flex: inherit;
@@ -1005,7 +1018,7 @@ body.sidebar #sidebar:before {
     width: 100%;
   }
 }
-/* line 548, ../../sass/layouts/profile.scss */
+/* line 559, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li a {
   padding-top: 22.4px;
   padding-bottom: 24px;
@@ -1014,12 +1027,12 @@ body.sidebar #sidebar:before {
   -o-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
-/* line 554, ../../sass/layouts/profile.scss */
+/* line 565, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   padding-top: 30.4px;
   padding-bottom: 14px;
 }
-/* line 561, ../../sass/layouts/profile.scss */
+/* line 572, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }

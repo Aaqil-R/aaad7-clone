@@ -362,6 +362,17 @@ body.profile .top-header{
         width: 100%;
       }
       font-size:18px;
+       &:focus{
+        border: 2px solid #fbb900; 
+        padding: 11px 22px;
+        color:#2a2e31;
+      }
+      &.error, &.error:focus{
+        border: 2px solid #ff5458; 
+        padding: 11px 22px;
+        color:#ec0833;
+        background:#fef8fa;
+      }
     }
     input[type="submit"]{
       float:left;
