@@ -718,7 +718,7 @@ function ambitious_form_element($variables) {
     '#title_display' => 'before',
   );
 
-  // Add element #id for #type 'item'.
+  // Add element #id for #type 'item'. 
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
