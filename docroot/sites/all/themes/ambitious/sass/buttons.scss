@@ -559,3 +559,12 @@
 .btn-wider{
   padding: 12px 34px;
 }
+
+//button on the particular webforms font size fixes
+.webform-client-form-74681{
+  @include breakpoint($not-mobile) {
+  a.btn{
+      font-size: 20px;
+    }
+  }
+}
