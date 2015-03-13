@@ -765,7 +765,8 @@ function ambitious_form_element($variables) {
   }
 
   if (!empty($element['#description'])) {
-    $output .= '<a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content">' . $element['#description']. "</span></a>\n";
+    //$output .= '<a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content">' . $element['#description']. "</span></a>\n";
+    $output .= '<div class="description">' . $element ['#description'] . "</div>\n";
   }
 
   $output .= "</fieldset>\n";
