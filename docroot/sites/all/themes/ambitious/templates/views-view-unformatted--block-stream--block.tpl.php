@@ -40,11 +40,10 @@
 				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
 				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
 				   <?php endif; ?>
-				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']); ?>
-                       
+				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']); ?> 
 				   <?php if( $boxtitlesize > 35): ?>				   
-					<strong class="title" style="font-size: 35px; line-height: normal; max-width: 220px;"> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']; ?></strong> <?php else: ?>
-					<strong class="title"> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value']; ?></strong>
+					<strong class="text" style="font-size: 35px; line-height: normal; max-width: 220px;"> <span><?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']; ?></span></strong> <?php else: ?>
+					<strong class="text"><span> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value']; ?></span></strong>
 					<?php endif; ?>
 					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
 				</div>
