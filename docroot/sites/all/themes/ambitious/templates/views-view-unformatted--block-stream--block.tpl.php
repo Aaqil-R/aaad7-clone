@@ -36,7 +36,7 @@
     
     
      <?php if($myvar['variables']['view']->result[$id]->node_type == 'core_action_block'): ?>
-      <div class="block-image" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
+      <div class="block-symptoms" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
 				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
 				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
 				   <?php endif; ?>
