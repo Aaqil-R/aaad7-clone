@@ -444,6 +444,15 @@
 	.pink-box .btn:hover{
 		background-color: $pink;
 	}
+	.block-image{
+	  float:left;
+	  @include breakpoint($mobile){
+	    width:100%;
+	  }
+	  .title{
+	    min-height: 119px;
+	  }
+	}
 	.btn.btn-transparent{
 	  padding:10px 28px;
 	  &:hover{
