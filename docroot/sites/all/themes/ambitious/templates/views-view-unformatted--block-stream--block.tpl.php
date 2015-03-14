@@ -24,7 +24,7 @@
 				   <?php endif; ?>
 				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']); ?>
                         <?php dpm($boxtitlesize); ?>
-				   <?php if( $boxtitlesize < 23): ?>
+				   <?php if( $boxtitlesize > 25): ?>
 				   
 					<strong class="title" style="font-size: 30px; line-height: normal; max-width: 220px;"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong> <?php else: ?>
 					<strong class="title"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong>
