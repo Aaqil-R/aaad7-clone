@@ -32,6 +32,24 @@
 					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
 				</div>
     <?php endif; ?>
+    
+    
+    
+     <?php if($myvar['variables']['view']->result[$id]->node_type == 'core_action_block'): ?>
+      <div class="block-image" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
+				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
+				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
+				   <?php endif; ?>
+				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']); ?>
+                        <?php dpm($boxtitlesize); ?>
+				   <?php if( $boxtitlesize > 25): ?>
+				   
+					<strong class="title" style="font-size: 30px; line-height: normal; max-width: 220px;"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong> <?php else: ?>
+					<strong class="title"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong>
+					<?php endif; ?>
+					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
+				</div>
+    <?php endif; ?>
      
 <?php endforeach; ?>
 
