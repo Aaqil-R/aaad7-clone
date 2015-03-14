@@ -445,18 +445,24 @@
 		background-color: $pink;
 	}
 	.block-image{
-	  float:left;
+	  float:right;
+	  &:first-child{
+	    float:left;
+	  }
 	  @include breakpoint($mobile){
 	    width:100%;
 	  }
 	  .title{
-	    min-height: 119px;
+	    min-height: 179px;
+         margin-bottom: 0;
 	  }
 	}
 	.btn.btn-transparent{
 	  padding:10px 28px;
+	  display: inline-block;
 	  &:hover{
-	    margin:1px;
+	    margin: 6px 0;
+	    display: inline-block;
 	  }
 	}
 }

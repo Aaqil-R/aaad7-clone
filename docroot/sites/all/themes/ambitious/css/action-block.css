@@ -1017,6 +1017,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 /* line 447, ../sass/action-block.scss */
 .action-block .block-image {
+  float: right;
+}
+/* line 449, ../sass/action-block.scss */
+.action-block .block-image:first-child {
   float: left;
 }
 @media (max-width: 767px) {
@@ -1025,20 +1029,23 @@ body > .jcf-select-drop.jcf-drop-flipped {
     width: 100%;
   }
 }
-/* line 452, ../sass/action-block.scss */
+/* line 455, ../sass/action-block.scss */
 .action-block .block-image .title {
-  min-height: 119px;
+  min-height: 179px;
+  margin-bottom: 0;
 }
-/* line 456, ../sass/action-block.scss */
+/* line 460, ../sass/action-block.scss */
 .action-block .btn.btn-transparent {
   padding: 10px 28px;
+  display: inline-block;
 }
-/* line 458, ../sass/action-block.scss */
+/* line 463, ../sass/action-block.scss */
 .action-block .btn.btn-transparent:hover {
-  margin: 1px;
+  margin: 6px 0;
+  display: inline-block;
 }
 
-/* line 475, ../sass/action-block.scss */
+/* line 481, ../sass/action-block.scss */
 .front .block-share {
   background: url('../images/bg08.jpg?1424101657');
   padding: 50px 10px 37px 39px;
