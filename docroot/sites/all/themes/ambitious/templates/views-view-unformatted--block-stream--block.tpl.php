@@ -15,13 +15,15 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?> 
 <?php foreach ($rows as $id => $row): ?> 
-    <?php print $row; ?>   
+    <?php // print $row; ?>   
     
     <?php if($myvar['variables']['view']->result[$id]->node_type == 'promo_block'): ?>
       <div class="block-image" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
+				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
 				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" />
-					<strong class="title">We’re <br> making an<br> impact.</strong>
-					<a href="#" class="btn btn-transparent" title="See 2013/14 Impact Report">See 2013/14 Impact Report<em class="icon-Rightarrow"></em></a>
+				   <?php endif; ?>
+					<strong class="title"><?php print $myvar['variables']['view']->result[0]->field_field_tout_text[0]['raw']['value']; ?></strong>
+					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[0]->field_field_call_to_action_text[0]['raw']['safe_value']?>><?php print $myvar['variables']['view']->result[0]->field_field_call_to_action_text[0]['raw']['safe_value']?><em class="icon-Rightarrow"></em></a>
 				</div>
     <?php endif; ?>
     
