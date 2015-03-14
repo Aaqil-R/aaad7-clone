@@ -23,7 +23,7 @@
 				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" />
 				   <?php endif; ?>
 					<strong class="title"><?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong>
-					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value']?>"><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value']?><em class="icon-Rightarrow"></em></a>
+					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
 				</div>
     <?php endif; ?>
     
