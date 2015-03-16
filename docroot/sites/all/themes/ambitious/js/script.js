@@ -26,7 +26,7 @@ Drupal.behaviors.ambitious = {
 		 $.each(settings.viewsLoadMore, function(i, setting) {
 		   var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
 		   if (view == '.view-id-stream.view-display-id-stream_topic_page .pager-next a' && first == true){
-		    	$(window).load(function () {           
+		    	$(document).load(function () {           
 		     		$(view).waypoint('destroy');
 		   	});
 		   	first = false;
