@@ -6,9 +6,7 @@
  *
  * @ingroup views_templates
  */ 
- $myvar = get_defined_vars(); 
- dpm($myvar);
- 
+ $myvar = get_defined_vars();  
 ?>
 
 <?php if (!empty($title)): ?>
@@ -41,7 +39,7 @@
 				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
 				   <?php endif; ?>
 				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']); ?> 
-				   <?php if( $boxtitlesize > 23): ?>				   
+				   <?php if( $boxtitlesize > 22): ?>				   
 					<strong class="text" style="background:none;"> <span><?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']; ?></span></strong> <?php else: ?>
 					<strong class="text"><span> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value']; ?></span></strong>
 					<?php endif; ?>
