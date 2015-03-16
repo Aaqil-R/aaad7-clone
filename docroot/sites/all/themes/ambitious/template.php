@@ -704,6 +704,39 @@ function ambitious_preprocess_page(&$vars) {
     }
   }
 
+  //amalan new codes
+  $currentNode = menu_get_object();
+  if($currentNode->type == "page")
+  {
+    //getting Hero Image
+    $node=node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+      //randomly taking a number from array and displaying the image accordingly
+    $random= rand(0,count($getitemsimage)-1);
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images',$getitemsimage[$random]);
+    $vars['image'] = $viewitemsimage;
+    
+    //getting Caption 1
+
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1',$getitemscaption1[0]);
+    $vars['captionone'] = $viewitemscaption1;
+    
+    //getting caption 2
+
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2',$getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;
+    
+    //getting photo credit
+
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit',$getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+  }
+
+  //end of the new codes added
+
 }
 
 function ambitious_form_element($variables) {
