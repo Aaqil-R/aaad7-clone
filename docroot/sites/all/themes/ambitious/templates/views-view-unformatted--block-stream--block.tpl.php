@@ -33,7 +33,7 @@
         <?php $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
               $boxtitlesize = strlen($tout_text); ?>
         <?php if( $boxtitlesize > 30): ?>				   
-          <strong class="title" style="font-size: 30px; min-height:139px; line-height: normal; max-width: 241px;"> <?= $tout_text; ?></strong> <?php else: ?>
+          <strong class="title" style="font-size: 30px; min-height:179px; line-height: normal; max-width: 241px;"> <?= $tout_text; ?></strong> <?php else: ?>
 	     <strong class="title"> <?=$tout_text ?></strong>
         <?php endif; ?>
          <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
