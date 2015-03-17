@@ -16,8 +16,9 @@ drupal_add_library('waypoints', 'waypoints');
 <div class="row">
 <section style="width:100%;" class="post">
    <?php if($comment_count != 0 && $comment_count < 5) : ?>
-     <em class="icon-Featured forum-icon"></em>	
-   <?php elseif($comment_count != 0 && $comment_count > 5): ?>
+     <em class="icon-Featured forum-icon"></em>
+  <?php endif; ?>
+   <?php if( $hot_comment > 5): ?>
     <em class="icon-Hottopic forum-icon"></em>	
    <?php endif; ?>
   

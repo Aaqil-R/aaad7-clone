@@ -20,3 +20,20 @@ function autism_custom_views_post_execute(&$view) {
  }  
     
 }
+
+function getcommentcount_past2week($nid) {
+  if (!is_numeric($nid)){
+    return false;
+  }
+  $time = time();
+  $from = time() - 1209600;
+  
+  // Create an object of type SelectQuery
+  $query = db_select('comment', 'c');
+   
+  // Add extra detail to this query object: a condition, fields and a range
+  $query->condition('c.created', array($from, $time), 'between');
+  $query->condition('c.nid', $nid);
+  $query->fields('c');
+  return $query->countQuery()->execute()->fetchField();
+}

@@ -29,7 +29,14 @@
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
       if($commentcout > 3){
         $class = 'commentcoutmore3';
-      }?> 
+      }
+      if (module_exists('autism_custom')) {
+        $hot_comment = getcommentcount_past2week($fields['nid']->raw);
+        if ($hot_comment > 5) {
+          $class .= ' show_hot';
+        }
+      }
+      ?> 
      
  <div class="<?php print $class;  ?>"> 
 <?php foreach ($fields as $id => $field): ?> 

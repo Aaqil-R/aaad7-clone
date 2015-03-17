@@ -2,12 +2,13 @@
 $i = 1;
 $ourfields = array('title', 'body', 'last_comment_timestamp', 'name', 'comment_count', 'counter');
 $counter = strip_tags($fields['counter']->content); 
- 
+$ccount = getcommentcount_past2week($row->nid);
+dpm($row); 
 ?>
  
 <ul class="table-row">
 		<li class="col01">
-		<?php if ($fields['comment_count']->raw > 5): ?>
+		<?php if ($ccount > 5): ?>
 		   <span class="icon-Hottopic"></span>
 		<?php endif; ?>
 		<?php if (intval($counter) <= 3): ?>
