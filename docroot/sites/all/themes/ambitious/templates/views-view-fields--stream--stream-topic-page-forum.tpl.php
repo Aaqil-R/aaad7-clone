@@ -3,7 +3,6 @@ $i = 1;
 $ourfields = array('title', 'body', 'last_comment_timestamp', 'name', 'comment_count', 'counter');
 $counter = strip_tags($fields['counter']->content); 
 $ccount = getcommentcount_past2week($row->nid);
-dpm($row); 
 ?>
  
 <ul class="table-row">
