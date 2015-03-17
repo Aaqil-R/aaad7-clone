@@ -13,7 +13,7 @@ $counter = strip_tags($fields['counter']->content);
 		<?php if (intval($counter) <= 3): ?>
 		   <span class="icon-Featured"></span>
 		<?php endif; ?>
-		<h6><?php print $fields['body']->content;?></h6>
+		<h6><?php print $fields['title']->content;?></h6>
 		</li>
 		<li class="col02"> 
 			<span class="num"><?php print $fields['comment_count']->content; ?></span>
