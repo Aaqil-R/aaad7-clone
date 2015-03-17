@@ -5,6 +5,7 @@
 	width: 60%;
 }
 
+
 .ambitious-block-system {
 	@include transition ($type:all, $time:0.4s, $ease:ease);
 
@@ -444,7 +445,7 @@
 	.pink-box .btn:hover{
 		background-color: $pink;
 	}
-	.block-image, .block-symptoms{
+	.block-image, .block-symptoms, .block-vacancies, .block-share{
 	  float:right;
 	  &:first-child{
 	    float:left;
@@ -494,8 +495,8 @@
 
 //Fix the block share a tag hover issue
 .front .block-share{
-	background: image-url('bg08.jpg');
-	padding: 50px 10px 37px 39px;
+//	background: image-url('bg08.jpg');
+	//padding: 50px 10px 37px 39px;
  //  .btn-transparent{
 	// &:hover{
 	//   margin: 182px 10px 0 0;

@@ -821,9 +821,9 @@ function ambitious_preprocess_node(&$variables){
       $variables['region'][$region_key] = array();
     }
   }
-  if ($node->type == 'forum_discussion') {
+  if ($variables['node']->type == 'forum_discussion') {
     if (module_exists('autism_custom')) {
-       $variables['hot_comment'] = getcommentcount_past2week($node->nid);
+       $variables['pastcomments'] = getcommentcount_past2week($variables['node']->nid);
     }
   }
 }
@@ -966,3 +966,5 @@ function ago($timestamp){
    $text = "$difference $periods[$j] ago";
    return $text;
   }
+  
+ 

@@ -14,61 +14,73 @@
 <?php endif; ?> 
 <?php foreach ($rows as $id => $row): ?> 
     <?php // print $row; ?>   
-    
-    <?php if($myvar['variables']['view']->result[$id]->node_type == 'promo_block'): ?>
-      <div class="block-image" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
-				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
-				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
-				   <?php endif; ?>
-				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']); ?>
-                 
-				   <?php if( $boxtitlesize > 30): ?>
-				   
-					<strong class="title" style="font-size: 30px; min-height:139px; line-height: normal; max-width: 241px;"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong> <?php else: ?>
-					<strong class="title"> <?php print $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value']; ?></strong>
-					<?php endif; ?>
-					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
-				</div>
-    <?php endif; ?>
-    
-    
-    
-     <?php if($myvar['variables']['view']->result[$id]->node_type == 'core_action_block'): ?>
-      <div class="block-symptoms" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
-				   <?php if ($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename']) :?>
-				   <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" style="max-width:180px;" />
-				   <?php endif; ?>
-				    <?php $boxtitlesize = strlen($myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']); ?> 
-				   <?php if( $boxtitlesize > 22): ?>				   
-					<strong class="text" style="font-size: 38px; max-width: 299px; line-height: normal; color: #fff;"> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['safe_value']; ?></strong> <?php else: ?>
-					<strong class="text" style="margin-left:50px;"><span> <?php print $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value']; ?></span></strong>
-					<?php endif; ?>
-					<a href="#" class="btn btn-transparent" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?>" ><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];?> <em class="icon-Rightarrow"></em></a>
-				</div>
-    <?php endif; ?>
-    <?php if($myvar['variables']['view']->result[$id]->node_type == 'share_graphic_block'): ?>
-    <?php if($myvar['variables']['view']->result[$id]->field_field_share_grapic[0]['raw']['value'] == 'image'):?>
-    <div class="block-share" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
-                    <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" alt="image text">
-					<a href="#" title="<?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value']?>" class="btn btn-transparent"><?php print $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value']?><em class="icon-Rightarrow"></em></a>
-				</div>
-				
-				
+    <?php
+      $node_type = $myvar['variables']['view']->result[$id]->node_type;
+      $background = "style='background-image: url(".file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename']))."); background-size:cover;'";
+      $featured_image = $myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'];
+      $featured_image_url = file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); 
+      $action_text = $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];
+      $share_graphic_type = $myvar['variables']['view']->result[$id]->field_field_type[0]['raw']['value'];
+      $node_title = $myvar['variables']['view']->result[$id]->node_title; 
+      $node_body = strip_tags($myvar['variables']['view']->result[$id]->field_body[0]['raw']['safe_value']); 
+      ?> 
+   <?php // Promo Block ?>
+   <?php if($node_type == 'promo_block'): ?>
+      <div class="block-image" <?=$background?>>
+        <?php if ($featured_image) :?>
+          <img src="<?= $featured_image_url?>" style="max-width:180px;" />
+        <?php endif; ?>
+        <?php $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
+              $boxtitlesize = strlen($tout_text); ?>
+        <?php if( $boxtitlesize > 30): ?>				   
+          <strong class="title" style="font-size: 30px; min-height:139px; line-height: normal; max-width: 241px;"> <?= $tout_text; ?></strong> <?php else: ?>
+	     <strong class="title"> <?=$tout_text ?></strong>
+        <?php endif; ?>
+         <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+       </div>
     <?php endif; ?> 
-    <?php if($myvar['variables']['view']->result[$id]->field_field_share_grapic[0]['raw']['value'] == 'righttext'):?>
-    <div class="block-vacancies" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
-				    <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" alt="image text">
-					<strong class="title">Can you help <br>make the <br>ordinary <br> possible?</strong>
-					<a href="#" title="See current vacancies" class="btn btn-transparent">See current vacancies<em class="icon-Rightarrow"></em></a>
-				</div>
-    <?php endif; ?>
-    <?php if($myvar['variables']['view']->result[$id]->field_field_share_grapic[0]['raw']['value'] == 'lefttext'):?>
-    <div class="block-vacancies" style="background-image: url(<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename'])); ?>);background-size:cover;">
-				    <img src="<?php print file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); ?>" alt="image text">
-					<strong class="title">Can you help <br>make the <br>ordinary <br> possible?</strong>
-					<a href="#" title="See current vacancies" class="btn btn-transparent">See current vacancies<em class="icon-Rightarrow"></em></a>
-				</div>	
-    <?php endif; ?>
+    <?php // Core Action Block ?>
+     <?php if($node_type == 'core_action_block'): ?>
+      <div class="block-symptoms" <?=$background?>>
+        <?php if ($featured_image) :?>
+          <img src="<?= $featured_image_url?>" style="max-width:180px;" />
+        <?php endif; ?>
+        <?php $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
+              $boxtitlesize = strlen($tout_text); ?>
+        <?php if( $boxtitlesize > 22): ?>				   
+          <strong class="text" style="font-size: 38px; max-width: 299px; line-height: normal; color: #fff;"> <?=$tout_text?></strong>
+        <?php else: ?>
+	     <strong class="text" style="margin-left:50px; min-height:201px;"><span><?=$tout_text?></span></strong>
+        <?php endif; ?>
+        <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+      </div>
+    <?php endif;?>
+    <?php if($node_type == 'share_graphic_block'): ?>   
+    <?php if($share_graphic_type == 'statement'):?> 
+     <div class="block-vacancies" <?=$background?>>
+       <?php if ($featured_image) :?>
+         <img src="<?= $featured_image_url?>" style="max-width:180px;" />
+       <?php endif; ?>
+	  <strong class="title" style="font-size: 24px; line-height: normal;"><?=$node_body ?></strong>
+	  <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+     </div> 
+    <?php elseif($share_graphic_type == 'quote'):?>
+    <div class="block-vacancies" <?=$background?>>
+       <?php if ($featured_image) :?>
+         <img src="<?= $featured_image_url?>" style="margin-top: -20px; max-width:230px; margin-bottom: -40px; margin-right: -10px;" />
+       <?php endif; ?>
+       <strong class="title" style="min-height: 120px;">"<?=$node_title?>"</strong>
+       <span style="display: block; min-height: 60px;"><?=$node_body ?></span>
+       <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+     </div>	 
+     <?php else:?>
+     <div class="block-share" <?=$background?>>
+       <?php if ($featured_image) :?>
+         <img src="<?= $featured_image_url?>" style="max-width:180px;" />
+       <?php endif; ?>
+       <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+     </div> 	
+    <?php endif; ?> 
     <?php endif; ?> 
 <?php endforeach; ?>
 

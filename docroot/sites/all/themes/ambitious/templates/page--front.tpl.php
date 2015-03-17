@@ -215,8 +215,8 @@
            
               <?php
               //Watch us youtube block
-              $block = module_invoke('block', 'block_view', '61');
-              print render($block['content']);
+              $data = autism_custom_settings_form();
+              print render($data['autism_custom_member_data']['#value']);
               ?>
 
           <!-- social column mid -->

@@ -11,14 +11,13 @@
 $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 $name = strip_tags($name); 
 drupal_add_library('waypoints', 'waypoints');
+hide($content['comments']['comments']);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
-   <?php if($comment_count != 0 && $comment_count < 5) : ?>
-     <em class="icon-Featured forum-icon"></em>
-  <?php endif; ?>
-   <?php if( $hot_comment > 5): ?>
+  
+   <?php if( $pastcomments > 5): ?>
     <em class="icon-Hottopic forum-icon"></em>	
    <?php endif; ?>
   
@@ -36,9 +35,9 @@ drupal_add_library('waypoints', 'waypoints');
 						  </div>
 						  <div class="info add forum-right">
 						     <?php if(isset($title)): ?>
-						    <h3><a href="<?php print $node_url; ?>" title="<?php print $title; ?>"><?php print $title; ?></a></h3>
+						    <h3><?php print $title; ?></h3>
 						     <?php else :?>
-							<h3><a href="<?php print $node_url; ?>" title="Discussion">Discussion</a></h3>
+							<h3>Discussion</h3>
 							<?php endif;?>
 							<div style="margin-bottom: 20px;">
 							  <?php print flag_create_link('bookmarks', $node->nid); ?>
@@ -60,9 +59,18 @@ drupal_add_library('waypoints', 'waypoints');
 						 <div class="forum_replay"><a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> </div>
 					  </div>  
 					</section>   
- 
- 
-  <?php  print render($content['comments']); ?>
+		<section class="comment-block">			
+ <?php print render($content['comments']['comment_form']);   ?>
+</section>   
+ <h4 style="font-size:16px; margin-bottom:30px;"><?php print $node->comment_count; ?> 
+    <?php if($node->comment_count > 1){
+      print t('Comments');
+      }else{
+        print t('Comment');
+      }
+    ?>
+     <a href="#" title="Read our guidelines">Read our guidelines</a></h4>
+  
   
  </div>
   </div>
