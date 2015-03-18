@@ -48,6 +48,16 @@ function articalmig_migrate_api()
 				'class_name'=>'userupdatemigration3',
 				'group_name'=>'users',
 			),
+
+			'forumcomments'=>array(
+				'class_name'=>'forumcommentmigration',
+				'group_name'=>'users',
+			),
+
+			'forumtopics'=>array(
+				'class_name'=>'forumtopicmigration',
+				'group_name'=>'users',
+			),
 		),
 	);
 }
