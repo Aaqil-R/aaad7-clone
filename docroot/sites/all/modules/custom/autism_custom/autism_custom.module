@@ -104,3 +104,16 @@ function autism_custom_permission() {
     )
   );
 }
+
+/**
+ * Implementation of hook_views_query_alter
+ * @param type $view
+ * @param type $query 
+ */
+function mymodule_views_query_alter(&$view, &$query) {
+  dpm($view);
+  dpm($query);
+  if ($view->name == 'stream' ) {
+
+  }
+}
