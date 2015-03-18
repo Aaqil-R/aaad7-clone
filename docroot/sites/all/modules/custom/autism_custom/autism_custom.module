@@ -111,9 +111,20 @@ function autism_custom_permission() {
  * @param type $query 
  */
 function autism_custom_views_query_alter(&$view, &$query) {
-  //dpm($view);
-  dpm($query);
- /* if ($view->name == 'stream' ) {
+  
+  if ($view->name == 'stream' && $view->current_display == 'stream_topic_page') {
+    if(is_numeric(arg(1)) and arg(0) == 'node'){
+    $node = node_load(arg(1));
+      if (isset($node->field_stream_order_reference['und'][0]['target_id'])) {
+       $name = db_select('entityqueue_subqueue', 'eq')
+                ->fields('eq',array('name'))
+                ->condition('subqueue_id',$node->field_stream_order_reference['und'][0]['target_id'])
+                ->execute()
+                ->fetchField();
+       $query->table_queue['eq_node_node']['join']->extra[0]['value'][0] = $name;
+       $query->table_queue['eq_node_node']['join']->extra[0]['field'] = 'name';
+     }
+    }
 
-  }*/
+  }
 }
