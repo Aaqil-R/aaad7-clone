@@ -1,4 +1,11 @@
 <?php
+function autism_custom_init() {
+  if (drupal_is_front_page()) {
+    drupal_add_js(array('autism_custom' => array('supporter_count' => number_format(variable_get('autism_custom_supporter_count', 0)))), 'setting');
+    drupal_add_js('jQuery(document).ready(function () {  jQuery("span.numbers").html( Drupal.settings.autism_custom.supporter_count); });', 'inline');
+ }
+}
+
 function autism_custom_views_post_execute(&$view) { 	 
  if($view->name == "stream" && $view->current_display == 'stream_topic_page' && $view->query->pager->current_page === 0) {
 	 $nidarg = arg(1);  
@@ -21,12 +28,13 @@ function autism_custom_views_post_execute(&$view) {
     
 }
 
+
 function getcommentcount_past2week($nid) {
   if (!is_numeric($nid)){
     return false;
   }
   $time = time();
-  $from = time() - 1209600;
+  $from = $time - (variable_get('autism_custom_past_week', 0) * 604800);
   
   // Create an object of type SelectQuery
   $query = db_select('comment', 'c');
@@ -34,7 +42,7 @@ function getcommentcount_past2week($nid) {
   // Add extra detail to this query object: a condition, fields and a range
   $query->condition('c.created', array($from, $time), 'between');
   $query->condition('c.nid', $nid);
-  $query->condition('status', '1', '=');
+  $query->condition('status', '1');
   return $query->countQuery()->execute()->fetchField();
 }
 
@@ -61,22 +69,25 @@ function autism_custom_settings_form($form, &$form_state) {
     '#description' => t('The Number of members and supporters for the community.'),
     '#required' => TRUE,
   );
-  $form['autism_custom_member_week'] = array(
+   $form['autism_custom_comment_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number of comments to check in past week'),
+    '#default_value' => variable_get('autism_custom_comment_count', 0),
+    '#size' => 10,
+    '#maxlength' => 10,
+    '#description' => t('Number of comments to check in past week'),
+    '#required' => TRUE,
+  );
+  $form['autism_custom_past_week'] = array(
     '#type' => 'textfield',
     '#title' => t('Past Weeks'),
-    '#default_value' => variable_get('autism_custom_member_week', 0),
+    '#default_value' => variable_get('autism_custom_past_week', 0),
     '#size' => 10,
     '#maxlength' => 2,
     '#description' => t('The week since the members and the supporters.'),
     '#required' => TRUE,
   );
-  $form['autism_custom_member_data'] = array(
-    '#type' => 'hidden',
-    '#title' => t('Data'),
-    '#value' => '<div class="col block-youtube"><h3>Founded by parents in 1997</h3><p><img src="/sites/all/themes/ambitious/images/ambitious.jpg"></p><div class="member-count"><p><span class="numbers">'.$form['autism_custom_supporter_count']['#default_value'].'</span></p><p><a href="#">Community members<br>and supporters</a></p></div><a class="btn btn-green youtube-btn" href="https://www.youtube.com/user/ambitiousaboutautism" target="_bank">Watch us on YouTube </a> <a class="btn twitter-btn" href="http://twitter.com/ambitiousautism" target="_bank">Follow us on Twitter</a><a class="btn facebook-btn" href="http://www.facebook.com/ambitiousaboutautism" target="_bank">Find us on Facebook</a></div>',
-//    '#default_value' => $body = 'Value='.$form['autism_custom_supporter_count']['#default_value'],
-    '#description' => t('The data to be passed.'),
-  );
+ 
   return system_settings_form($form);
 }
 
@@ -88,12 +99,19 @@ function autism_custom_settings_form_validate($form, &$form_state){
   elseif ($max_num <= 0){
     form_set_error('autism_custom_supporter_count', t('Number of members and supporters of community to display must be positive.'));
   }
-  $max_week = $form_state['values']['autism_custom_member_week'];
+  $max_week = $form_state['values']['autism_custom_past_week'];
   if (!is_numeric($max_week)){
-    form_set_error('autism_custom_member_week', t('You must enter a number for the number of weeks.'));
+    form_set_error('autism_custom_past_week', t('You must enter a number for the number of weeks.'));
   }
   elseif (($max_week <= 0)||($max_week>52)){
-    form_set_error('autism_custom_member_week', t('Number of weeks exceeded for the year or enter a value apart from zero.'));
+    form_set_error('autism_custom_past_week', t('Number of weeks exceeded for the year or enter a value apart from zero.'));
+  }
+  $max_num = $form_state['values']['autism_custom_comment_count'];
+  if (!is_numeric($max_num)){
+    form_set_error('autism_custom_comment_count', t('You must enter a number for the number of comments.'));
+  }
+  elseif ($max_num <= 0){
+    form_set_error('autism_custom_comment_count', t('Number of comments to display must be positive.'));
   }
 }
 

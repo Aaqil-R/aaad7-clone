@@ -12,6 +12,8 @@ $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 $name = strip_tags($name); 
 drupal_add_library('waypoints', 'waypoints');
 hide($content['comments']['comments']);
+$weeks = variable_get('autism_custom_past_week', 0);
+dpm($weeks);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">

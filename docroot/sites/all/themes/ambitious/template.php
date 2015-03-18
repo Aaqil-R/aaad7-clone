@@ -654,6 +654,48 @@ function ambitious_field__field_event_date(&$variables){
  
  return $output;	
 }
+
+
+
+
+function ambitious_field__field_closing_date(&$variables){
+ $output = '';
+ $formatdate = array();
+ $dateval = $variables['element']['#items'][0]['value'];
+
+ $dateval2 = $variables['element']['#items'][0]['value2'];
+  $dateclass = array('','day','month','year');
+  
+ if($dateval != $dateval2){
+ $formatdate2[1] = format_date($dateval2, 'custom', 'd');
+ $formatdate2[2] = format_date($dateval2, 'custom', 'M');
+ $formatdate2[3] = format_date($dateval2, 'custom', 'Y');
+ 
+ $output .= '<ul class="date"> <span class="day line">-</span>';
+ foreach ($formatdate2 as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'" >'.$value.'</li>';
+ }
+ $output .= '</ul>';
+ }
+ 
+ if(isset($dateval)){
+ $formatdate[1] = format_date($dateval, 'custom', 'd');
+ $formatdate[2] = format_date($dateval, 'custom', 'M');
+ $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
+
+ $output .= '<ul class="date first_date" >';
+ foreach ($formatdate as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
+ }
+ $output .= '</ul>';
+ } 
+
+ 
+ return $output;	
+}
+
+
+
  
  function ambitious_form_alter(&$form, &$form_state, $form_id)
 {
