@@ -121,10 +121,10 @@ function autism_custom_views_query_alter(&$view, &$query) {
                 ->condition('subqueue_id',$node->field_stream_order_reference['und'][0]['target_id'])
                 ->execute()
                 ->fetchField();
-       $query->table_queue['eq_node_node']['join']->extra[0]['value'][0] = $name;
-       $query->table_queue['eq_node_node']['join']->extra[0]['field'] = 'name';
+       $view->query->table_queue['eq_node_node']['join']->extra[0]['value'][0] = $name;
+       $view->query->table_queue['eq_node_node']['join']->extra[0]['field'] = 'name';
      }
     }
-    dpm($query);
+    dpm($view->query);
   }
 }
