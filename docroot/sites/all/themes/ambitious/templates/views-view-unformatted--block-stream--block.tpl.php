@@ -23,6 +23,9 @@
       $share_graphic_type = $myvar['variables']['view']->result[$id]->field_field_type[0]['raw']['value'];
       $node_title = $myvar['variables']['view']->result[$id]->node_title; 
       $node_body = strip_tags($myvar['variables']['view']->result[$id]->field_body[0]['raw']['safe_value']); 
+      $block_tout_text =  $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value'];
+      $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
+      
       ?> 
    <?php // Promo Block ?>
    <?php if($node_type == 'promo_block'): ?>
@@ -30,10 +33,9 @@
         <?php if ($featured_image) :?>
           <img src="<?= $featured_image_url?>" style="max-width:180px;" />
         <?php endif; ?>
-        <?php $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
-              $boxtitlesize = strlen($tout_text); ?>
+        <?php $boxtitlesize = strlen($tout_text); ?>
         <?php if( $boxtitlesize > 30): ?>				   
-          <strong class="title" style="font-size: 30px; min-height:179px; line-height: normal; max-width: 241px;"> <?= $tout_text; ?></strong> <?php else: ?>
+          <strong class="title" style="font-size: 30px; min-height:139px; line-height: normal; max-width: 241px;"> <?= $tout_text; ?></strong> <?php else: ?>
 	     <strong class="title"> <?=$tout_text ?></strong>
         <?php endif; ?>
          <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
@@ -45,12 +47,12 @@
         <?php if ($featured_image) :?>
           <img src="<?= $featured_image_url?>" style="max-width:180px;" />
         <?php endif; ?>
-        <?php $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
-              $boxtitlesize = strlen($tout_text); ?>
+        <?php 
+              $boxtitlesize = strlen($block_tout_text); ?>
         <?php if( $boxtitlesize > 22): ?>				   
-          <strong class="text" style="font-size: 38px; max-width: 299px; line-height: normal; color: #fff;"> <?=$tout_text?></strong>
+          <strong class="text" style="font-size: 38px; max-width: 299px; min-height:200px; line-height: normal; color: #fff;"> <?=$block_tout_text?></strong>
         <?php else: ?>
-	     <strong class="text" style="margin-left:50px; min-height:201px;"><span><?=$tout_text?></span></strong>
+	     <strong class="text" style="margin-left:50px; min-height:201px;"><span><?=$block_tout_text?></span></strong>
         <?php endif; ?>
         <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
       </div>
@@ -82,10 +84,4 @@
      </div> 	
     <?php endif; ?> 
     <?php endif; ?> 
-<?php endforeach; ?>
-
-
-
-
-
-
+<?php endforeach; ?> 
