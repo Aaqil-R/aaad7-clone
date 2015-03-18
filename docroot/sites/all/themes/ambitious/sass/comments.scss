@@ -3,3 +3,53 @@
 .cke_show_borders{
 	margin-top: 0px;
 }
+
+// Comment Moderation
+
+.comment-wrapper{
+	background: white;
+	margin-top: 10vh;	
+	padding: 20px;
+	float: left;
+	border:1px solid $gray;
+	@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+
+	&.last{
+		margin-bottom: 10vh;
+	}
+
+	.comment-left {
+		@include span(12); 	
+	 	@include breakpoint(768px){
+	 		@include span (3 of 12);
+	 		
+	 	}
+	}
+
+	.comment-right {
+		@include span(12); 	 	
+	 	@include breakpoint(768px){
+	 		@include span (9 of 12 last); 		
+	 	}
+	}
+
+	.comment-area{
+		background: #eee;
+		padding: 20px;
+		margin-bottom: 5vh;
+	}
+
+	a.button{
+		padding: 15px;
+		background: $orange;
+		color: white;
+		margin-right: 10px;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		&:hover{
+			background: $orange-dark;
+		}
+	}
+
+}

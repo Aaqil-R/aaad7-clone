@@ -366,3 +366,68 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .cke_show_borders {
   margin-top: 0px;
 }
+
+/* line 9, ../sass/comments.scss */
+.comment-wrapper {
+  background: white;
+  margin-top: 10vh;
+  padding: 20px;
+  float: left;
+  border: 1px solid #d2d5d6;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+/* line 17, ../sass/comments.scss */
+.comment-wrapper.last {
+  margin-bottom: 10vh;
+}
+/* line 21, ../sass/comments.scss */
+.comment-wrapper .comment-left {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  /* line 21, ../sass/comments.scss */
+  .comment-wrapper .comment-left {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 29, ../sass/comments.scss */
+.comment-wrapper .comment-right {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  /* line 29, ../sass/comments.scss */
+  .comment-wrapper .comment-right {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 36, ../sass/comments.scss */
+.comment-wrapper .comment-area {
+  background: #eee;
+  padding: 20px;
+  margin-bottom: 5vh;
+}
+/* line 42, ../sass/comments.scss */
+.comment-wrapper a.button {
+  padding: 15px;
+  background: #f15500;
+  color: white;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* line 50, ../sass/comments.scss */
+.comment-wrapper a.button:hover {
+  background: #c63502;
+}
