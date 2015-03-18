@@ -110,7 +110,7 @@ function autism_custom_permission() {
  * @param type $view
  * @param type $query 
  */
-function mymodule_views_query_alter(&$view, &$query) {
+function autism_custom_views_query_alter(&$view, &$query) {
   dpm($view);
   dpm($query);
   if ($view->name == 'stream' ) {
