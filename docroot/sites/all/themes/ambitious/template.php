@@ -713,7 +713,7 @@ function ambitious_preprocess_page(&$vars) {
     $getitemsimage = field_get_items('node', $node ,'field_hero_images');
       //randomly taking a number from array and displaying the image accordingly
     $random= rand(0,count($getitemsimage)-1);
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images',$getitemsimage[$random]);
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images',$getitemsimage[$random], array('settings' => array('image_style' => 'basic_page_desktop')));
     $vars['image'] = $viewitemsimage;
     
     //getting Caption 1
