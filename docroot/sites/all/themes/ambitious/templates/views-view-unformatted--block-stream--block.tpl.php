@@ -57,9 +57,9 @@
           <img src="<?= $featured_image_url?>" style="max-width:180px;" />
         <?php endif; ?>
         <?php if( $font_size == 'small'): ?>				   
-          <strong class="text" style="font-size: 40px; max-width: 259px; min-height:200px; line-height: normal; color: #fff;"> <?=$block_tout_text?></strong>
+          <strong class="text" style="font-size: 40px; max-width: 299px; min-height:200px; line-height: normal; color: #fff;"> <?=$block_tout_text?></strong>
         <?php elseif( $font_size == 'large'): ?>	
-	     <strong class="text" style="margin-left:50px; min-height:201px;"><span><?=$block_tout_text?></span><span><?=$title_second ?></span></strong>
+	     <strong class="text" style="margin-left:50px; min-height:201px;"><span><?=$block_tout_text?></span></strong>
         <?php endif; ?>
         <a href="#" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
       </div>
