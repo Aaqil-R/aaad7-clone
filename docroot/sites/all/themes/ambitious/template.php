@@ -967,4 +967,10 @@ function ago($timestamp){
    return $text;
   }
   
+  // Remove Height and Width Inline Styles from Drupal Images
+function ambitious_preprocess_image(&$variables) {
+  foreach (array('width', 'height') as $key) {
+    unset($variables[$key]);
+  }
+}
  
