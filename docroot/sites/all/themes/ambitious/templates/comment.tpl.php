@@ -96,10 +96,10 @@
 					    <?php print render($content['links']) ?>  
 					  </div>
 				      <?php } ?> 			
-				      <?php $node = node_load(arg(1));
-					    $links = sharethis_node_view($node, 'full', 'en');
-					    $share_button = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>'; 
-					    print $share_button;
+				      <?php // $node = node_load(arg(1));
+					   // $links = sharethis_node_view($node, 'full', 'en');
+					   // $share_button = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>'; 
+					   // print $share_button;
 					    ?> 
 			   </div>  
 			 </li> 
