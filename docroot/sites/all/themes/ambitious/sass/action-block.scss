@@ -469,6 +469,9 @@
   	      margin-left:-50px;
   	      margin-right:50px;
   	      white-space: pre-wrap;
+  	      @include breakpoint($tablet){
+  	        line-height: 45px;
+  	      }
   	    }
 	  }
 	}
@@ -477,11 +480,174 @@
 	.btn.btn-transparent{
 	  padding:10px 28px;
 	  display: inline-block;
+	  margin-top:6px;
+	  margin-bottom: 6px;
+	  border-width: 2px;
+	  @include breakpoint($mobile){
+	    width:auto;
+	  }
 	  &:hover{
-	    margin: 6px 0;
+	    border-width: 2px;
 	    display: inline-block;
+	    margin-top:5px;
+	    margin-bottom: 7px;
 	  }
 	}
+	.st_sharethis_button{
+	  .stButton{
+	       background: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 3px solid $white;
+            padding:10px 73px 10px 25px;
+            &:before{
+              content: "\e60b";
+              margin-right: -49px;
+            }
+            &:hover{ 
+              &:before{
+                 margin:0 3px;
+                 margin-right: -49px;
+              }
+            }
+	  }
+	} 
+  .st_sharethis_button .stButton:hover{
+    margin-top:0;
+  }
+  .action_image{
+     max-width:180px;
+  }
+  .action_image2{
+    max-width:180px;
+    margin-top: 10px;
+  }
+  .promo_block{
+    .text1{
+      font-size: 40px;
+      white-space: pre-line;
+      min-height:181px;
+      line-height: normal;
+      @include breakpoint($tablet){
+        font-size:30px;
+      }
+      @include breakpoint($mobile){
+        font-size: 25px;
+        white-space: inherit;
+        min-height:inherit;
+      }
+    }
+    .text2{
+      font-size: 30px;
+      min-height:181px;
+      line-height: normal;
+      @include breakpoint($mobile){
+        font-size: 23px;
+      }
+    }
+  }
+  .core_action_block{
+    .text1{
+      font-size: 44px;
+      white-space: pre-line;
+      min-height: 179px;
+      line-height: 49px;
+      color: #fff;
+      margin-top: 14px;
+      @include breakpoint($tablet){
+        font-size: 34px;
+        line-height: normal;
+      }
+      @include breakpoint($mobile){
+        font-size: 29px;
+        line-height: normal;
+      }
+    }
+    .text2{
+      margin-left: 50px;
+      min-height: 175px;
+      margin-top: 18px;
+      @include breakpoint($mobile){
+         min-height:inherit;
+      }
+    }
+  }
+  .share_graphic_block{
+  
+    .share_image{
+      max-width:180px;
+      float: left;
+      @include breakpoint($tablet){
+        max-width: 100px;
+      }
+      @include breakpoint($mobile){
+        max-width:110px;
+      }
+    }
+    &.statement{
+    .text1{
+      font-size: 24px;
+      min-height: 195px;
+      line-height: normal;
+      max-width: 230px;
+      width:49%;
+      float: right;
+      margin-right: 41px;
+      @include breakpoint($tablet){
+        margin-bottom:10px;
+      }
+      @include breakpoint($mobile){
+        min-height: inherit;
+        font-size:18px;
+        max-width:inherit;
+        margin-bottom:10px;
+      }
+    }
+    .share1{
+      float: right;
+      margin-right: 80px;
+    }
+    }
+    &.quotes{
+      .quote_image{
+        margin-top: -20px;
+        max-width:230px;
+        margin-bottom: -40px;
+        margin-right: -10px;
+        @include breakpoint($tablet){
+          display:none;
+        }
+      }
+      .text2{
+        min-height: 131px;
+        @include breakpoint($tablet){
+          min-height: 121px;
+          max-height: 141px;
+        }
+        @include breakpoint($tablet){
+           min-height: inherit;
+        }
+      }
+      .text3{
+        display: block;
+        min-height: 60px; 
+      }
+      .share2{
+         float:left;
+      }
+    }
+    &.image{
+       .text1{
+         min-height:350px;
+         img{
+           max-width:250px;
+           @include breakpoint($mobile){
+            max-width:170px;
+           }
+         }
+       }       
+    }
+  }
 }
 
 // Home page Block Share //
@@ -506,4 +672,13 @@
 	//   }
 	// }
  //  }
-}
+} 
+
+
+ 
+ 
+ 
+ 
+ .messages{
+   display:none!important;
+ }
