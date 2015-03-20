@@ -130,7 +130,7 @@ function autism_custom_permission() {
  */
 function autism_custom_views_query_alter(&$view, &$query) {
   
-  if ($view->name == 'stream' && $view->current_display == 'stream_topic_page') {
+  if ($view->name == 'stream' && $view->current_display == 'stream_topic_page' && isset($query->table_queue['field_data_eq_node']) && isset($query->table_queue['eq_node_node'])) {
     if(is_numeric(arg(1)) && arg(0) == 'node'){
     $node = node_load(arg(1));
       if (isset($node->field_stream_order_reference['und'][0]['target_id'])) {
