@@ -1051,13 +1051,234 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-right: 50px;
   white-space: pre-wrap;
 }
-/* line 477, ../sass/action-block.scss */
+@media (max-width: 990px) {
+  /* line 466, ../sass/action-block.scss */
+  .action-block .block-symptoms .text span {
+    line-height: 45px;
+  }
+}
+/* line 480, ../sass/action-block.scss */
 .action-block .btn.btn-transparent {
   padding: 10px 28px;
   display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-width: 2px;
 }
-/* line 480, ../sass/action-block.scss */
+@media (max-width: 767px) {
+  /* line 480, ../sass/action-block.scss */
+  .action-block .btn.btn-transparent {
+    width: auto;
+  }
+}
+/* line 489, ../sass/action-block.scss */
 .action-block .btn.btn-transparent:hover {
-  margin: 6px 0;
+  border-width: 2px;
   display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+/* line 497, ../sass/action-block.scss */
+.action-block .st_sharethis_button .stButton {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 3px solid #ffffff;
+  padding: 10px 73px 10px 25px;
+}
+/* line 503, ../sass/action-block.scss */
+.action-block .st_sharethis_button .stButton:before {
+  content: "\e60b";
+  margin-right: -49px;
+}
+/* line 508, ../sass/action-block.scss */
+.action-block .st_sharethis_button .stButton:hover:before {
+  margin: 0 3px;
+  margin-right: -49px;
+}
+/* line 515, ../sass/action-block.scss */
+.action-block .st_sharethis_button .stButton:hover {
+  margin-top: 0;
+}
+/* line 518, ../sass/action-block.scss */
+.action-block .action_image {
+  max-width: 180px;
+}
+/* line 521, ../sass/action-block.scss */
+.action-block .action_image2 {
+  max-width: 180px;
+  margin-top: 10px;
+}
+/* line 526, ../sass/action-block.scss */
+.action-block .promo_block .text1 {
+  font-size: 40px;
+  white-space: pre-line;
+  min-height: 181px;
+  line-height: normal;
+}
+@media (max-width: 990px) {
+  /* line 526, ../sass/action-block.scss */
+  .action-block .promo_block .text1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 526, ../sass/action-block.scss */
+  .action-block .promo_block .text1 {
+    font-size: 25px;
+    white-space: inherit;
+    min-height: inherit;
+  }
+}
+/* line 540, ../sass/action-block.scss */
+.action-block .promo_block .text2 {
+  font-size: 30px;
+  min-height: 181px;
+  line-height: normal;
+}
+@media (max-width: 767px) {
+  /* line 540, ../sass/action-block.scss */
+  .action-block .promo_block .text2 {
+    font-size: 23px;
+  }
+}
+/* line 550, ../sass/action-block.scss */
+.action-block .core_action_block .text1 {
+  font-size: 44px;
+  white-space: pre-line;
+  min-height: 179px;
+  line-height: 49px;
+  color: #fff;
+  margin-top: 14px;
+}
+@media (max-width: 990px) {
+  /* line 550, ../sass/action-block.scss */
+  .action-block .core_action_block .text1 {
+    font-size: 34px;
+    line-height: normal;
+  }
+}
+@media (max-width: 767px) {
+  /* line 550, ../sass/action-block.scss */
+  .action-block .core_action_block .text1 {
+    font-size: 29px;
+    line-height: normal;
+  }
+}
+/* line 566, ../sass/action-block.scss */
+.action-block .core_action_block .text2 {
+  margin-left: 50px;
+  min-height: 175px;
+  margin-top: 18px;
+}
+@media (max-width: 767px) {
+  /* line 566, ../sass/action-block.scss */
+  .action-block .core_action_block .text2 {
+    min-height: inherit;
+  }
+}
+/* line 577, ../sass/action-block.scss */
+.action-block .share_graphic_block .share_image {
+  max-width: 180px;
+  float: left;
+}
+@media (max-width: 990px) {
+  /* line 577, ../sass/action-block.scss */
+  .action-block .share_graphic_block .share_image {
+    max-width: 100px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 577, ../sass/action-block.scss */
+  .action-block .share_graphic_block .share_image {
+    max-width: 110px;
+  }
+}
+/* line 588, ../sass/action-block.scss */
+.action-block .share_graphic_block.statement .text1 {
+  font-size: 24px;
+  min-height: 195px;
+  line-height: normal;
+  max-width: 230px;
+  width: 49%;
+  float: right;
+  margin-right: 41px;
+}
+@media (max-width: 990px) {
+  /* line 588, ../sass/action-block.scss */
+  .action-block .share_graphic_block.statement .text1 {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 588, ../sass/action-block.scss */
+  .action-block .share_graphic_block.statement .text1 {
+    min-height: inherit;
+    font-size: 18px;
+    max-width: inherit;
+    margin-bottom: 10px;
+  }
+}
+/* line 606, ../sass/action-block.scss */
+.action-block .share_graphic_block.statement .share1 {
+  float: right;
+  margin-right: 80px;
+}
+/* line 612, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .quote_image {
+  margin-top: -20px;
+  max-width: 230px;
+  margin-bottom: -40px;
+  margin-right: -10px;
+}
+@media (max-width: 990px) {
+  /* line 612, ../sass/action-block.scss */
+  .action-block .share_graphic_block.quotes .quote_image {
+    display: none;
+  }
+}
+/* line 621, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .text2 {
+  min-height: 131px;
+}
+@media (max-width: 990px) {
+  /* line 621, ../sass/action-block.scss */
+  .action-block .share_graphic_block.quotes .text2 {
+    min-height: 121px;
+    max-height: 141px;
+  }
+}
+@media (max-width: 990px) {
+  /* line 621, ../sass/action-block.scss */
+  .action-block .share_graphic_block.quotes .text2 {
+    min-height: inherit;
+  }
+}
+/* line 631, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .text3 {
+  display: block;
+  min-height: 60px;
+}
+/* line 635, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .share2 {
+  float: left;
+}
+/* line 640, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .text1 {
+  min-height: 350px;
+}
+/* line 642, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .text1 img {
+  max-width: 250px;
+}
+@media (max-width: 767px) {
+  /* line 642, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .text1 img {
+    max-width: 170px;
+  }
+}
+
+/* line 682, ../sass/action-block.scss */
+.messages {
+  display: none !important;
 }
