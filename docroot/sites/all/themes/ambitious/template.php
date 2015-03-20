@@ -317,11 +317,24 @@ function ambitious_menu_link(&$variables) {
 			// because I didn't want any extra html, just the image.
 			
 			if($fid == 0){ 
-			  $title = theme('image', array('path' => variable_get('user_picture_default'), 'width' =>'23px')). $element['#title'];   
-			}
-			else{
-			  $title = theme('image_style', array('style_name' => 'user_picture_thumb', 'path' => $file->uri)) . $element['#title'];
-			} 
+        // $title = theme('image', array('path' => variable_get('user_picture_default'), 'width' =>'23px')). $element['#title'];   
+        $title =  theme(
+                    'image_style'
+                    ,array(
+                      'style_name' => 'user_picture_thumb'
+                      ,'path' => variable_get('user_picture_default')
+                    )
+                  ) . $element['#title'];
+      }
+      else {
+        $title = theme(
+                    'image_style'
+                    ,array(
+                      'style_name' => 'user_picture_thumb'
+                      ,'path' => $file->uri
+                      )
+                    ) . $element['#title'];
+      } 
 			
 		}else {
 			$title = $element['#title'];
