@@ -321,7 +321,7 @@ function ambitious_menu_link(&$variables) {
         $title =  theme(
                     'image_style'
                     ,array(
-                      'style_name' => 'thumbnail'
+                      'style_name' => 'user_picture_thumb'
                       ,'path' => variable_get('user_picture_default')
                     )
                   ) . $element['#title'];
@@ -339,7 +339,7 @@ function ambitious_menu_link(&$variables) {
 		}else {
 			$title = $element['#title'];
 		}
-    
+
 		$output = l($title, $element['#href'], $element['#localized_options']);
 		return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 	}
@@ -768,14 +768,28 @@ function ambitious_preprocess_page(&$vars) {
 
   //amalan new codes
   $currentNode = menu_get_object();
+  
   if($currentNode->type == "page")
   {
     //getting Hero Image
     $node=node_load($currentNode->nid);
+
     $getitemsimage = field_get_items('node', $node ,'field_hero_images');
-      //randomly taking a number from array and displaying the image accordingly
+
+    //randomly taking a number from array and displaying the image accordingly
     $random= rand(0,count($getitemsimage)-1);
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images',$getitemsimage[$random], array('settings' => array('image_style' => 'basic_page_desktop')));
+
+    $viewitemsimage = field_view_value(
+                        'node'
+                        ,$node 
+                        ,'field_hero_images'
+                        ,$getitemsimage[$random]
+                        ,array('settings' => 
+                          array('image_style' => 
+                            'basic_page_desktop')
+                          )
+                        );
+
     $vars['image'] = $viewitemsimage;
     
     //getting Caption 1
