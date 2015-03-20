@@ -718,12 +718,18 @@ function ambitious_field__field_closing_date(&$variables){
 }
 
 
-
 // Naming convention for .tpl.php
 function ambitious_preprocess_page(&$vars) {
 
   if (isset($vars['node']->type)) { // We don't want to apply this on taxonomy or view pages
     // Splice (2) is based on existing default suggestions. Change it if you need to.
+
+    //new code written today
+    //$nodetype = $variables['node']->type;
+    //$variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
+              //$vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+    //end of the new code
+
     array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
     // Get the url_alias and make each item part of an array
     $url_alias = drupal_get_path_alias($_GET['q']);
@@ -779,6 +785,40 @@ function ambitious_preprocess_page(&$vars) {
 
   //end of the new codes added
 
+
+  //amalan new codes
+  //$currentNode = menu_get_object();
+  if($currentNode->type == "basic_page_with_hero")
+  {
+    //getting Hero Image
+    $node=node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images_new');
+      //randomly taking a number from array and displaying the image accordingly
+    $random= rand(0,count($getitemsimage)-1);
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images_new',$getitemsimage[$random], array('settings' => array('image_style' => 'basic_page_desktop')));
+    //$viewitemsimage = field_view_value('node', $node ,'field_hero_images_new',$getitemsimage[$random]);
+    $vars['image'] = $viewitemsimage;
+    
+    //getting Caption 1
+
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1_new');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1_new',$getitemscaption1[0]);
+    $vars['captionone'] = $viewitemscaption1;
+    
+    //getting caption 2
+
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2_new');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2_new',$getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;
+    
+    //getting photo credit
+
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit_new');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit_new',$getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+  }
+
+  //end of the new codes added
 }
 
 function ambitious_form_element($variables) {
