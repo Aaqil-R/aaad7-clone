@@ -334,8 +334,7 @@ function ambitious_menu_link(&$variables) {
                       ,'path' => $file->uri
                       )
                     ) . $element['#title'];
-			} 
-			
+			} 			
 		}else {
 			$title = $element['#title'];
 		}
