@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file ckeditor_custom.module
+ *
+ * Includes tweaks to ckeditor that can't be performed through config.
+ */
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter()
+ */
+function ckeditor_custom_wysiwyg_editor_settings_alter(&$settings, $context) {
+
+  // The $context variable contains information about the wysiwyg profile we're using
+  // In this case we just need to check that the editor being used is ckeditor
+  if ($context['profile']->editor == 'ckeditor') {
+
+    // Specify the custom config file that defines our font styles
+    $settings['customConfig'] = base_path() . drupal_get_path('module', 'ckeditor_custom') .
+                                '/ckeditor_custom_config.js';
+
+    // We are also going to specify a custom body id and class
+    $settings['bodyId'] = 'ckeditor_custom_id';
+    $settings['bodyClass'] = 'ckeditor_custom_class';
+  }
+}

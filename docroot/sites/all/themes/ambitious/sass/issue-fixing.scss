@@ -431,7 +431,7 @@
      margin: 10px 0 30px 0;
   }
 }
-.page-node-74606 .header_image{
+.page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies{
   #block-easy-breadcrumb-easy-breadcrumb--2{
     .easy-breadcrumb{
       display:none;
@@ -747,14 +747,37 @@ body .view-display-id-stream_forum_page{
 	display: block;
 }
 
+
+
+.section-share-your-story .block-webform{
+  padding-bottom: 50px;
+  label{
+    left: 12px;
+    top: 10px;
+  }
+ .form-item{
+    min-height: 70px; 
+ }
+}
+
 // Private Message page
 html.js fieldset.collapsed{
-    height: auto;
+	height: auto;
 }
 .page-messages{
 
-    .description{
-        width: initial;
-    }
+	.description{
+		width: initial;
+	}
+	
 }
-    
+
+
+.section-current-vacancies{
+  .posts-columns{
+    margin-top: 290px;
+    .field_salary{
+      margin-bottom:20px;
+    }
+  }
+}

@@ -60,9 +60,7 @@
  */ 
    hide($content['links']);
    hide($content['privatemsg']);
-    global $user;
-    
-  
+    global $user; 
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -74,17 +72,14 @@
 			      <?php print $permalink; ?>
 			      <?php
 				      if ( $user->uid ) { ?>
-			        <?php if($content['privatemsg']){
+			        <?php /* if($content['privatemsg']){
                           print render($content['privatemsg']); 
-                        } ?> 
+                        } */ ?> 
                          <div style="width:130px; float:left;"><?php  print flag_create_link('flag', $comment->cid); ?></div>
 				      <?php } ?> 
 			   
 			   </div>
-			   <div class="comment-right">
-			       <?php print render($title_prefix); ?>
-			         <h4<?php print $title_attributes; ?>><?php print $title ?></h4>
-   			       <?php print render($title_suffix); ?>
+			   <div class="comment-right"> 
 			     <?php
 					 // We hide the comments and links now so that we can render them later. 
 					 print render($content);
@@ -93,7 +88,7 @@
 				    <?php
 				      if ( $user->uid ) { ?>
 				       <div class="links">
-					    <?php print render($content['links']) ?>  
+					    <?php  print render($content['links']) ?>  
 					  </div>
 				      <?php } ?> 			
 				      <?php // $node = node_load(arg(1));

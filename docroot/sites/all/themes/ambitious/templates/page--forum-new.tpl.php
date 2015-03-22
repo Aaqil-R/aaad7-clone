@@ -127,38 +127,61 @@
 <?php endif; ?>
 <?php */ ?>
 <?php if ($page['image_holder']): ?>
-  <section class="visual">
-    <div class="img-holder">
-      <div class="caption-frame">
+  <section class="header_banner banner-nav">
+    <div class="banner_text_main">
+      <div class="banner_text_inner">
+
         <div class="region region-caption-holder">
-          <div class="easy-breadcrumb">
-            <!-- include breadcrumb here -->
-          </div>
-          <div class="caption">
-            <h1 class="title title-second">
-              <span>  
-                <?php print render($captionone); ?>
-              </span>
-              <br>
-              <span class="title-third">
-                <?php print render($captiontwo); ?> 
-              </span>
-            </h1>
+
+          <div class="contextual-link-wrapper">
+            <h2 class="banner_text">
+
+              <?php print render($captionone); ?>
+
+            </h2>
+            <h3 class="banner_sub_text">
+              <?php print render($captiontwo); ?> 
+            </h3>
+
           </div>  
         </div>
       </div>
-      <div class="region region-image-holder">
-        <p>
-          <?php print render($image); ?>    
-        </p>    
+<!--       <div class="region region-image-holder">
+<p>
+<?php print render($image); ?>    
+</p>    
+</div> -->
+</div>
+<!-- new codes -->
+<div class="header_image">
+  <div class="region region-image-holder">
+    <div class="contextual-links-region">
+      <div class="header_image">  
+        <div class="banner_desktop">
+          <?php print render($image); ?>  
+        </div>
+        <div class="banner_mobile">
+          <?php print render($image); ?>  
+        </div>    
       </div>
     </div>
-    <div class="holder">
-      <span class="pic-by">
-        <?php print render($credit); ?>  
-      </span>
-    </div>        
-  </section>
+  </div>
+</div>
+<!-- end of the new codes -->
+
+
+
+
+
+
+
+
+<div class="holder">
+  <span class="pic-by">
+    <?php print render($credit); ?>  
+  </span>
+</div>        
+</section>
 <?php endif; ?>
 
 
@@ -228,7 +251,7 @@
 
 
 <section id="content-area">
-
+  <?php print render($page['content']) ?>
 </section> <!-- /content -->
 <div>
   <?php
@@ -262,52 +285,52 @@
 
 <!-- including the article blocks -->
 <?php if ($page['services']): ?>
-<section class="articles-block" >
-  <div class="holder">
-    <h2>What We Do</h2>
-    <div class="articles-columns" >
-      <?php print render($page['services']); ?>
-      <!--column one -->
-    </div>
-  </div>      
-</section>
+  <section class="articles-block" >
+    <div class="holder">
+      <h2>What We Do</h2>
+      <div class="articles-columns" >
+        <?php print render($page['services']); ?>
+        <!--column one -->
+      </div>
+    </div>      
+  </section>
 <?php endif; ?>
-
 <!-- including the social blocks -->
-<!-- need an if condition in this section to prevent this from rendering in understanding autism page when merging -->
-<section class="social-block">
-  <div class="holder">
-    <h1>Stay ambitious</h1>
-    <div class="block">
-      <div class="social-columns" >
+<?php if ($page['social']): ?>
+  <section class="social-block">
+    <div class="holder">
+      <h1>Stay ambitious</h1>
+      <div class="block">
+        <div class="social-columns" >
+          <?php print render($page['social']); ?>
 
-
-        <?php
+          <?php
 //Watch us youtube block
-        $block = module_invoke('block', 'block_view', '61');
-        print render($block['content']);
-        ?>
+          $block = module_invoke('block', 'block_view', '61');
+          print render($block['content']);
+          ?>
 
-        <!-- social column mid -->
-        <div class="col block-twitter">
-          <h3>Latest from Twitter</h3>
-          <div class="twitter">
-            <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300" height="500">Tweets by @AmbitiousAutism</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <!-- social column mid -->
+          <div class="col block-twitter">
+            <h3>Latest from Twitter</h3>
+            <div class="twitter">
+              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300" height="500">Tweets by @AmbitiousAutism</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
           </div>
-        </div>
-        <!-- social column right -->
-        <div class="col block-facebook">
-          <h3>Find us on Facebook</h3>  
-          <div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
+          <!-- social column right -->
+          <div class="col block-facebook">
+            <h3>Find us on Facebook</h3>  
+            <div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="bg-stretch home-bg-stretch">
-  </div>
-</section>
+    <div class="bg-stretch home-bg-stretch">
+    </div>
+  </section>
+<?php endif; ?>
 
 
 <footer id="footer">

@@ -317,7 +317,7 @@ function ambitious_menu_link(&$variables) {
 			// because I didn't want any extra html, just the image.
 			
 			if($fid == 0){ 
-        // $title = theme('image', array('path' => variable_get('user_picture_default'), 'width' =>'23px')). $element['#title'];   
+			  // $title = theme('image', array('path' => variable_get('user_picture_default'), 'width' =>'23px')). $element['#title'];   
         $title =  theme(
                     'image_style'
                     ,array(
@@ -325,20 +325,21 @@ function ambitious_menu_link(&$variables) {
                       ,'path' => variable_get('user_picture_default')
                     )
                   ) . $element['#title'];
-      }
-      else {
-        $title = theme(
+			}
+			else {
+			  $title = theme(
                     'image_style'
                     ,array(
                       'style_name' => 'user_picture_thumb'
                       ,'path' => $file->uri
                       )
                     ) . $element['#title'];
-      } 
+			} 
 			
 		}else {
 			$title = $element['#title'];
 		}
+
 		$output = l($title, $element['#href'], $element['#localized_options']);
 		return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 	}
@@ -667,6 +668,48 @@ function ambitious_field__field_event_date(&$variables){
  
  return $output;	
 }
+
+
+
+
+function ambitious_field__field_closing_date(&$variables){
+ $output = '';
+ $formatdate = array();
+ $dateval = $variables['element']['#items'][0]['value'];
+
+ $dateval2 = $variables['element']['#items'][0]['value2'];
+  $dateclass = array('','day','month','year');
+  
+ if($dateval != $dateval2){
+ $formatdate2[1] = format_date($dateval2, 'custom', 'd');
+ $formatdate2[2] = format_date($dateval2, 'custom', 'M');
+ $formatdate2[3] = format_date($dateval2, 'custom', 'Y');
+ 
+ $output .= '<ul class="date"> <span class="day line">-</span>';
+ foreach ($formatdate2 as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'" >'.$value.'</li>';
+ }
+ $output .= '</ul>';
+ }
+ 
+ if(isset($dateval)){
+ $formatdate[1] = format_date($dateval, 'custom', 'd');
+ $formatdate[2] = format_date($dateval, 'custom', 'M');
+ $formatdate[3] = format_date($dateval, 'custom', 'Y'); 
+
+ $output .= '<ul class="date first_date" >';
+ foreach ($formatdate as $key => $value){
+   $output .= '<li class="'.$dateclass[$key].'">'.$value.'</li>'; 
+ }
+ $output .= '</ul>';
+ } 
+
+ 
+ return $output;	
+}
+
+
+
  
  function ambitious_form_alter(&$form, &$form_state, $form_id)
 {
@@ -689,26 +732,37 @@ function ambitious_field__field_event_date(&$variables){
 }
 
 
-
 // Naming convention for .tpl.php
 function ambitious_preprocess_page(&$vars) {
 
   if (isset($vars['node']->type)) { // We don't want to apply this on taxonomy or view pages
     // Splice (2) is based on existing default suggestions. Change it if you need to.
+
+    //new code written today
+    //$nodetype = $variables['node']->type;
+    //$variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
+              //$vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+    //end of the new code
+
     array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
+
     // Get the url_alias and make each item part of an array
     $url_alias = drupal_get_path_alias($_GET['q']);
     $split_url = explode('/', $url_alias);
+
     // Add the full path template pages
     // Insert 2nd to last to allow page--node--[nid] to be last
     $cumulative_path = '';
+
     foreach ($split_url as $path) {
       $cumulative_path .= '__' . $path;
       $path_name = 'page' . $cumulative_path;
       array_splice($vars['theme_hook_suggestions'], -1, 0, str_replace('-','_',$path_name));
     }
+
     // This does just the page name on its own & is considered more specific than the longest path
     // (because sometimes those get too long)
+    
     // Also we don't want to do this if there were no paths on the URL
     // Again, add 2nd to last to preserve page--node--[nid] if we do add it in
     if (count($split_url) > 1) {
@@ -719,14 +773,28 @@ function ambitious_preprocess_page(&$vars) {
 
   //amalan new codes
   $currentNode = menu_get_object();
+  
   if($currentNode->type == "page")
   {
     //getting Hero Image
     $node=node_load($currentNode->nid);
+
     $getitemsimage = field_get_items('node', $node ,'field_hero_images');
-      //randomly taking a number from array and displaying the image accordingly
+
+    //randomly taking a number from array and displaying the image accordingly
     $random= rand(0,count($getitemsimage)-1);
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images',$getitemsimage[$random], array('settings' => array('image_style' => 'basic_page_desktop')));
+
+    $viewitemsimage = field_view_value(
+                        'node'
+                        ,$node 
+                        ,'field_hero_images'
+                        ,$getitemsimage[$random]
+                        ,array('settings' => 
+                          array('image_style' => 
+                            'basic_page_desktop')
+                          )
+                        );
+
     $vars['image'] = $viewitemsimage;
     
     //getting Caption 1
@@ -750,6 +818,42 @@ function ambitious_preprocess_page(&$vars) {
 
   //end of the new codes added
 
+
+  // render image, captions and photo credits for "basic_page_with_hero"
+  if($currentNode->type == "basic_page_with_hero")
+  {
+    // get array of hero images
+    $node = node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+      
+    // create a random number based on the array size
+    $random= rand(0, count($getitemsimage) - 1);
+    
+    // get an random image from the array
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images'
+      , $getitemsimage[$random]
+      , array('settings' => array('image_style' => 'basic_page_desktop')));
+    $vars['image'] = $viewitemsimage;
+
+    // get the corresponding photo credit, the images and credits should have been
+    // entered in the same oder so that we can use the same random number
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+      , $getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+    
+    // get caption 1
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+      , $getitemscaption1[0]);
+    $vars['captionone'] = $viewitemscaption1;
+    
+    // get caption 2
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+      , $getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;    
+  }
 }
 
 function ambitious_form_element($variables) {
@@ -968,7 +1072,7 @@ function ambitious_form_comment_form_alter(&$form, &$form_state) {
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
 } 
 
-function ago($timestamp){
+function ago($timestamp) {
    $difference = time() - $timestamp;
    $periods = array("second", "minute", "hour", "day", "week", "month", "years", "decade");
    $lengths = array("60","60","24","7","4.35","12","10");
@@ -978,12 +1082,11 @@ function ago($timestamp){
    if($difference != 1) $periods[$j].= "s";
    $text = "$difference $periods[$j] ago";
    return $text;
-  }
+}
   
-  // Remove Height and Width Inline Styles from Drupal Images
+// Remove Height and Width Inline Styles from Drupal Images
 function ambitious_preprocess_image(&$variables) {
   foreach (array('width', 'height') as $key) {
     unset($variables[$key]);
   }
 }
- 
