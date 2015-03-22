@@ -334,7 +334,8 @@ function ambitious_menu_link(&$variables) {
                       ,'path' => $file->uri
                       )
                     ) . $element['#title'];
-			} 			
+			} 
+			
 		}else {
 			$title = $element['#title'];
 		}
@@ -816,7 +817,7 @@ function ambitious_preprocess_page(&$vars) {
   }
 
   //end of the new codes added
-  $currentNode = menu_get_object();
+
 
   // render image, captions and photo credits for "basic_page_with_hero"
   if($currentNode->type == "basic_page_with_hero")
