@@ -104,41 +104,62 @@
   print render($page['header']); 
   ?>
   <!-- / header -->
+<?php /* ?>
+<?php if ($page['caption_holder'] || $page['image_holder']): ?>
+<!-- ########### / header -->
+<section class="visual">
+<div class="img-holder">
 
-  <section class="visual header_banner">
-    <div class="img-holder">
-      <div class="caption-frame">
+<?php if ($page['caption_holder']): ?>
+<div class="caption-frame">
+<?php print render($page['caption_holder']); ?>
+</div> <!-- /caption -->
+<?php endif; ?>
 
-        <div class="region region-caption-holder">
-          <div class="easy-breadcrumb">
-            <!-- include breadcrumb here -->
+<?php if ($page['image_holder']): ?>
+<?php print render($page['image_holder']); ?>
+<!-- /image holder -->
+<?php endif; ?>
+</div>
 
-          </div>
+</section>
 
-            <h1 class="banner_text"> 
-              <?php print render($captionone); ?>
-            </h1>
-              <br>
-            <h3 class="banner_sub_text">
-                <?php print render($captiontwo); ?> 
-            </h3>          
-            
+<?php endif; ?>
+<?php */ ?>
+<section class="visual">
+  <div class="img-holder">
+    <div class="caption-frame">
+        
+      <div class="region region-caption-holder">
+        <div class="easy-breadcrumb">
+          <!-- include breadcrumb here -->
+
         </div>
-      </div>
-      <div class="region region-image-holder">
-        <p>
-          <?php print render($image); ?>    
-        </p>    
+        <div class="caption">
+          <h1 class="title title-second">
+            <span>  
+              <?php print render($captionone); ?>
+            </span>
+            <br>
+            <span class="title-third">
+              <?php print render($captiontwo); ?> 
+            </span>
+          </h1>
+        </div>  
       </div>
     </div>
-    <div class="holder">
-      <span class="pic-by">
-        <?php print render($credit); ?>  
-      </span>
-    </div>        
-  </section>
-
-
+    <div class="region region-image-holder">
+      <p>
+        <?php print render($image); ?>    
+      </p>    
+    </div>
+  </div>
+  <div class="holder">
+    <span class="pic-by">
+      <?php print render($credit); ?>  
+    </span>
+  </div>        
+</section>
 
 <?php if ($page['header_form']): ?>    <!-- slider block -->
   <section class=" slider-block">

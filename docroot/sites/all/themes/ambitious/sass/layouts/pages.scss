@@ -1,4 +1,5 @@
 @import "base/base";
+
 .node-type-simple-page {
 	#wrapper{
 		background: $base-background-color;
@@ -23,8 +24,6 @@
 	}
 }
 
-
-
 .node-type-forum{
 	#main
 	{
@@ -32,3 +31,12 @@
 	}
 }
 
+// STYLES - BASIC PAGE WITH HERO
+.node-type-basic-page-with-hero h1.title {
+  display: none;
+}
+
+// STYLES - BASIC PAGE
+.node-type-page #wrapper {
+  background: white;
+}

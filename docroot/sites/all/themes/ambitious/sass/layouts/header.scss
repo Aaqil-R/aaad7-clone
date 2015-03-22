@@ -19,39 +19,50 @@ ul a {
     @extend %clearfix;
     padding:12px 15px 12px;
   }
+
+  a {
+      @include link-color($gray);
+
+      img{
+        vertical-align: middle;
+        margin-right: 10px;
+        @include border-radius(5px);
+      }
+  }
   
   /* login info styles */
   .login-info {
-    float:right;
-    font-size:14px;
-    line-height:19px;
+
+    float:right;  
+
     @include breakpoint($mobile) {
       display:none;
     }
-    .name {
-      float:left;
-      margin:0 14px 0 0;
-      span {
-        padding:4px 0 0 8px;
-        text-transform:capitalize;
-        font-size:16px;
-        display:inline-block;
-        vertical-align:middle;
-        color:$gray;
-      }
-      img {
-        @include border-radius(5px);
-        display:inline-block;
-        vertical-align:middle;
-      }
-      &:hover span {
-        text-decoration:underline;
-      }
-    }
+
+    // .name {
+    //   float:left;
+    //   margin:0 14px 0 0;
+    //   span {
+    //     padding:4px 0 0 8px;
+    //     text-transform:capitalize;
+    //     font-size:16px;
+    //     display:inline-block;
+    //     vertical-align:middle;
+    //   }
+
+    //   img {
+    //     @include border-radius(5px);
+    //     display:inline-block;
+    //     vertical-align:middle;
+    //   }
+    //   &:hover span {
+    //     text-decoration:underline;
+    //   }
+    // }
+
     .logout {
       float:left;
       margin:6px 0 0;
-      color:$gray;
       text-decoration:underline;
     }
   }
@@ -869,10 +880,7 @@ nav {
         &:after {
           display:none;
         }
-      }
-      a {
-        @include link-color($gray);
-      }
+      }      
       &.mob {
         display:none;
         @include breakpoint($mobile) {
@@ -913,18 +921,18 @@ nav {
       padding: 0 6px;
       display: inline;
       a{
-        margin:0;
-        color: $gray;
+        // margin:0;
+        // color: $gray;
         text-transform: capitalize;
-        vertical-align: middle;
-        &:hover{
-          text-decoration: underline;
-        }
-        img{
-          vertical-align: middle;
-          margin-right: 10px;
-          @include border-radius(5px);
-        }
+        // vertical-align: middle;
+        // &:hover{
+        //   text-decoration: underline;
+        // }
+        // img{
+        //   vertical-align: middle;
+        //   margin-right: 10px;
+        //   @include border-radius(5px);
+        // }
 
 
       }
@@ -1149,12 +1157,12 @@ nav {
 }
 
 
-#block-system-user-menu a{
-  &:hover{
-    text-decoration:none;
-    color:$white;
-  }
-}
+// #block-system-user-menu a{
+//   &:hover{
+//     text-decoration:none;
+//     color:$white;
+//   }
+// }
 
 .right-info{
     li{
@@ -1189,8 +1197,3 @@ nav {
   .menu-text {
     color: $menu-grey;
   } 	
-
-  .region-header .header-user-menu ul{
-    margin:5px 0 0 0;
-    font-size: 16px;
-  }

@@ -745,19 +745,24 @@ function ambitious_preprocess_page(&$vars) {
     //end of the new code
 
     array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
+
     // Get the url_alias and make each item part of an array
     $url_alias = drupal_get_path_alias($_GET['q']);
     $split_url = explode('/', $url_alias);
+
     // Add the full path template pages
     // Insert 2nd to last to allow page--node--[nid] to be last
     $cumulative_path = '';
+
     foreach ($split_url as $path) {
       $cumulative_path .= '__' . $path;
       $path_name = 'page' . $cumulative_path;
       array_splice($vars['theme_hook_suggestions'], -1, 0, str_replace('-','_',$path_name));
     }
+
     // This does just the page name on its own & is considered more specific than the longest path
     // (because sometimes those get too long)
+    
     // Also we don't want to do this if there were no paths on the URL
     // Again, add 2nd to last to preserve page--node--[nid] if we do add it in
     if (count($split_url) > 1) {
@@ -814,39 +819,41 @@ function ambitious_preprocess_page(&$vars) {
   //end of the new codes added
 
 
-  //amalan new codes
-  //$currentNode = menu_get_object();
+  // render image, captions and photo credits for "basic_page_with_hero"
   if($currentNode->type == "basic_page_with_hero")
   {
-    //getting Hero Image
-    $node=node_load($currentNode->nid);
-    $getitemsimage = field_get_items('node', $node ,'field_hero_images_new');
-      //randomly taking a number from array and displaying the image accordingly
-    $random= rand(0,count($getitemsimage)-1);
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images_new',$getitemsimage[$random], array('settings' => array('image_style' => 'basic_page_desktop')));
-    //$viewitemsimage = field_view_value('node', $node ,'field_hero_images_new',$getitemsimage[$random]);
-    $vars['image'] = $viewitemsimage;
+    // get array of hero images
+    $node = node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+      
+    // create a random number based on the array size
+    $random= rand(0, count($getitemsimage) - 1);
     
-    //getting Caption 1
+    // get an random image from the array
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images'
+      , $getitemsimage[$random]
+      , array('settings' => array('image_style' => 'basic_page_desktop')));
+    $vars['image'] = $viewitemsimage;
 
-    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1_new');
-    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1_new',$getitemscaption1[0]);
+    // get the corresponding photo credit, the images and credits should have been
+    // entered in the same oder so that we can use the same random number
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+      , $getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+    
+    // get caption 1
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+      , $getitemscaption1[0]);
     $vars['captionone'] = $viewitemscaption1;
     
-    //getting caption 2
-
-    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2_new');
-    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2_new',$getitemscaption2[0]);
-    $vars['captiontwo'] = $viewitemscaption2;
-    
-    //getting photo credit
-
-    $getitemscredit = field_get_items('node', $node ,'field_photo_credit_new');
-    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit_new',$getitemscredit[0]);
-    $vars['credit'] = $viewitemscredit;
+    // get caption 2
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+      , $getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;    
   }
-
-  //end of the new codes added
 }
 
 function ambitious_form_element($variables) {
@@ -1065,7 +1072,7 @@ function ambitious_form_comment_form_alter(&$form, &$form_state) {
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
 } 
 
-function ago($timestamp){
+function ago($timestamp) {
    $difference = time() - $timestamp;
    $periods = array("second", "minute", "hour", "day", "week", "month", "years", "decade");
    $lengths = array("60","60","24","7","4.35","12","10");
@@ -1075,12 +1082,11 @@ function ago($timestamp){
    if($difference != 1) $periods[$j].= "s";
    $text = "$difference $periods[$j] ago";
    return $text;
-  }
+}
   
-  // Remove Height and Width Inline Styles from Drupal Images
+// Remove Height and Width Inline Styles from Drupal Images
 function ambitious_preprocess_image(&$variables) {
   foreach (array('width', 'height') as $key) {
     unset($variables[$key]);
   }
 }
- 
