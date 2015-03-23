@@ -1,6 +1,5 @@
 @import "base/base";
 
-
 #wrapper {
 	background: image-url('wid_bg.jpg') $page-background;
 	width: 100%;
@@ -15,6 +14,7 @@
 		margin-top: 175px;
 	}
 }
+
 .header_fixed{
   #wrapper {
      margin-top:73px;
@@ -23,8 +23,17 @@
 	}
   }
 }
-/*.page-node-74566, .node-type-topic{
-  #wrapper{
-    margin-top:0;
-  }
-}*/
+
+.node-type-page {
+	#wrapper {
+		background: $white;		
+	}
+}
+
+.page-node-74591
+, .page-node-74611
+, .page-node-74596 {
+	#wrapper {
+		background: image-url('wid_bg.jpg') $page-background;
+	}
+}
