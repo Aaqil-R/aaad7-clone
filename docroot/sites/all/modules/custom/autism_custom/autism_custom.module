@@ -163,10 +163,10 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $join->left_table = 'node';
     $join->left_field = 'nid';
     $join->type = 'left';
-    $join->extra = 'past_comment.created <= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
+    $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
     $query->add_relationship('past_comment', $join, 'node');
-    $query->add_field('past_comment', 'cid', 'node_cid', array('function' => 'count'));
-    $query->orderby[0]['field'] = 'node_cid';
+    $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
+    $query->orderby[0]['field'] = 'node_nid';
     $query->distinct = TRUE;
     dpm($query);
   }
