@@ -168,6 +168,5 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
     $query->orderby[0]['field'] = 'node_nid';
     $query->distinct = TRUE;
-    dpm($query);
   }
 }
