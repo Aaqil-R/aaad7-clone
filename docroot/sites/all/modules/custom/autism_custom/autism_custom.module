@@ -167,7 +167,7 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $query->add_relationship('past_comment', $join, 'node');
 
     $query->add_field('past_comment', 'cid', 'node_cid', array('function' => 'count'));
-    $query->add_groupby('past_comment.cid');
+    $query->add_groupby('node_cid');
     $query->orderby[0]['field'] = 'node_cid';
     $query->distinct = TRUE;
     dpm($query);
