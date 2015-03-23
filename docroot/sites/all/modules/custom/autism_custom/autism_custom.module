@@ -155,7 +155,7 @@ function autism_custom_views_query_alter(&$view, &$query) {
   }
   if ($view->name == 'stream' && $view->current_display == 'stream_forum_page' && 
 $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
-
+/*
 
     $join = new views_join();
     $join->table = 'comment';
@@ -168,6 +168,6 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $query->add_field('past_comment', 'cid', 'node_cid', array('function' => 'count'));
     $query->orderby[0]['field'] = 'node_cid';
     $query->distinct = TRUE;
-    dpm($query);
+    dpm($query);*/
   }
 }
