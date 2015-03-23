@@ -216,11 +216,16 @@
 <section id="content-area">
 
 </section> <!-- /content -->
+
+<section id="content-area">
+  <?php print render($page['content']) ?>
+</section> <!-- /content -->
+
 <div>
   <?php
-  print render($output);
+    print render($output);
   ?>
-  <div>
+<div>
 
 
     <?php
