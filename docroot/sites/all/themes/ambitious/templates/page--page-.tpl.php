@@ -110,7 +110,7 @@
 
          </section> <!-- /highlighted -->
          <?php endif; ?>
-         <?php if ($page['content_top']): ?> 
+
          <!-- top header of the page -->
              <section class="top-header">
                <div class="top-header-inner">
@@ -119,19 +119,12 @@
                  </div>
                </div>
              </section>
-             <!-- contain main informative part of the site -->
-         <?php endif; ?>
 
          <section class="header_banner banner-nav">
           <!-- we must include the breadcrumb here and delete the below div -->
          <div class="header_image">
      <div class="region region-image-holder">
-           <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb contextual-links-region first last odd">
-
-             <div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger" href="#">Configure</a><ul class="contextual-links"><li class="block-configure first last"><a href="/admin/structure/block/manage/easy_breadcrumb/easy_breadcrumb/configure?destination=node/1311">Configure block</a></li>
-       </ul></div>
-         <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Test</a><span class="easy-breadcrumb_segment-separator"> / </span><a href="/discussion" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">-</a><span class="easy-breadcrumb_segment-separator"> / </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">Test</span></div>
-       </div>
+           
          </div>
              </div>
 
