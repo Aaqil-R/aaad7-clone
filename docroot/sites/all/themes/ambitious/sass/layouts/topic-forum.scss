@@ -1627,9 +1627,11 @@ fieldset{
 , .page-node-74621
 , .section-current-vacancies
 , .node-type-basic-page-with-hero {
+
   .forum-page, h1.title{
     display: none;
   }
+
   .header_banner{
     .banner_text{
       	font-size: 64px;
@@ -1668,10 +1670,13 @@ fieldset{
 }
 
 
-
-  
-
-
+// Display the filter button and search box
+// in the forum page; hacky I know but don't
+// want to risk doing a total fix right now.
+// TODO: Refactor all filter styles.
+.section-the-ambitious-forum .forum-page {
+  display: block;
+}
 
 .view-display-id-events_page{
    .stButton{
