@@ -165,9 +165,10 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $join->type = 'left';
     $join->extra = 'past_comment.created <= UNIX_TIMESTAMP() -(86400*14)';
     $query->add_relationship('past_comment', $join, 'node');
-        $query->orderby[0]['field'] = 'nid_1';
-    $query->add_field('comment', 'cid', 'node_cid', array('function' => 'count_distinct'));
+
+    $query->add_field('past_comment', 'cid', 'node_cid', array('function' => 'count_distinct'));
     $query->add_groupby('past_comment.cid');
+    $query->orderby[0]['field'] = 'node_cid';
     dpm($query);
   }
 }
