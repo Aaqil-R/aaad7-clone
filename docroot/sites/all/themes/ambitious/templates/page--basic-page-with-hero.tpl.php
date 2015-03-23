@@ -116,24 +116,32 @@
           </div>
 
             <h1 class="banner_text"> 
-              <?php print render($captionone); ?>
+              <?php if($captionone) ?>
+                <?php print render($captionone); ?>
+              <?php endif; ?>
             </h1>
               <br>
             <h3 class="banner_sub_text">
+              <?php if($captiontwo) ?>
                 <?php print render($captiontwo); ?> 
+              <?php endif; ?>
             </h3>          
             
         </div>
       </div>
       <div class="region region-image-holder">
         <p>
-          <?php print render($image); ?>    
+          <?php if($image) ?>
+            <?php print render($image); ?>  
+          <?php endif; ?>  
         </p>    
       </div>
     </div>
     <div class="holder">
       <span class="pic-by">
-        <?php print render($credit); ?>  
+        <?php if($credit) ?>
+          <?php print render($credit); ?> 
+        <?php endif; ?> 
       </span>
     </div>        
   </section>
