@@ -31,12 +31,24 @@
 	}
 }
 
-// STYLES - BASIC PAGE WITH HERO
-.node-type-basic-page-with-hero h1.title {
-  display: none;
+// BASIC PAGE WITH HERO
+.node-type-basic-page-with-hero {
+	
+	// drop the caption toward the middle of the banner
+	.region-caption-holder {
+  		margin-top: 4em;
+	}
+
+	// hide the title
+	h1.title {
+  		display: none;
+	}
+
+	
 }
 
-// STYLES - BASIC PAGE
+// BASIC PAGE
 .node-type-page #wrapper {
-  background: white;
+	// set the background to white
+  	// background: white;
 }

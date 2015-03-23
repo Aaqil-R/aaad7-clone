@@ -116,13 +116,13 @@
           </div>
 
             <h1 class="banner_text"> 
-              <?php if($captionone) ?>
+              <?php if($captionone): ?>
                 <?php print render($captionone); ?>
               <?php endif; ?>
             </h1>
               <br>
             <h3 class="banner_sub_text">
-              <?php if($captiontwo) ?>
+              <?php if($captiontwo): ?>
                 <?php print render($captiontwo); ?> 
               <?php endif; ?>
             </h3>          
@@ -131,7 +131,7 @@
       </div>
       <div class="region region-image-holder">
         <p>
-          <?php if($image) ?>
+          <?php if($image): ?>
             <?php print render($image); ?>  
           <?php endif; ?>  
         </p>    
@@ -139,7 +139,7 @@
     </div>
     <div class="holder">
       <span class="pic-by">
-        <?php if($credit) ?>
+        <?php if($credit): ?>
           <?php print render($credit); ?> 
         <?php endif; ?> 
       </span>
@@ -149,7 +149,7 @@
 
 
 <?php if ($page['header_form']): ?>    <!-- slider block -->
-  <section class=" slider-block">
+  <section class="slider-block">
     <div class="holder">
       <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
       <?php print render($page['header_form']); ?>       
@@ -216,11 +216,16 @@
 <section id="content-area">
 
 </section> <!-- /content -->
+
+<section id="content-area">
+  <?php print render($page['content']) ?>
+</section> <!-- /content -->
+
 <div>
   <?php
-  print render($output);
+    print render($output);
   ?>
-  <div>
+<div>
 
 
     <?php

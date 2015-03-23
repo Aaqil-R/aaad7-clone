@@ -3,7 +3,8 @@
 // Understanding autism page ( node-74591 ) and 16-25 age page ( node-74611 )
 .page-node-74591,
 .page-node-74611,
-.page-node-75336{
+.page-node-75336,
+.node-type-basic-page-with-hero {
 
   // Block for UA Age page
   .post-my-voice-actions{
@@ -243,23 +244,5 @@
 .posts-columns .text-block h1{
   @include breakpoint($mobile){
     line-height: 1.1;
-  }
-}
-
-
-.page-node-75331{
-#main h1.title{
-    display: none;
-  }
-}
-
-//removing the images and the title from the new forum page
-
-.page-node-221486{
-  #main h1.title{
-    display: none;
-  }
-  #content-area .field-name-field-hero-images , .field-name-field-caption-line-1 , .field-name-field-caption-line-2{
-    display: none;
   }
 }
