@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /**
  * @file
@@ -33,11 +33,12 @@
       $nid = $myvar['variables']['view']->result[$id]->nid;
       $nodeid = node_load($myvar['variables']['view']->result[$id]->nid);
       $links = sharethis_node_view($nodeid, 'full', 'en');  
+      $action_link = $myvar['variables']['view']->result[$id]->field_field_link[0]['raw']['display_url'];
    ?> 
    <?php // Promo Block ?>
    <?php if($node_type == 'promo_block'): ?>
-      <div class="block-image promo_block node-<?=$nid?>" <?=$background?>>
-       
+      <div class="block_main" <?=$background?>>
+        <div class="block-image promo_block node-<?=$nid?>" >
         <?php $boxtitlesize = strlen($tout_text); ?>
         <?php if( $font_size == 'large'): ?>				  
          <?php if ($featured_image) :?>
@@ -49,12 +50,14 @@
         <?php endif; ?>
 	     <strong class="title text2"> <?=$block_tout_text?></strong>
         <?php endif; ?>
-         <a href="#" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+         <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+       </div>
        </div>
     <?php endif; ?> 
     <?php // Core Action Block ?> 
      <?php if($node_type == 'core_action_block'): ?>
-      <div class="block-symptoms core_action_block node-<?=$nid?>" <?=$background?>>
+      <div class="block_main" <?=$background?>>
+        <div class="block-symptoms core_action_block node-<?=$nid?>" >
         <?php if ($featured_image) :?>
           <img src="<?= $featured_image_url?>" class="action_image" />
         <?php endif; ?>
@@ -63,7 +66,7 @@
         <?php elseif( $font_size == 'small'): ?>	
 	     <strong class="text text2"><span><?=$block_tout_text?></span></strong>
         <?php endif; ?>
-        <a href="#" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?>
+        <a href="<?=$action_link?>" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?>
            <?php if ($nid==74756):?>
            <em class="icon-Twitter"></em>
            <?php elseif($nid==74751):?>
@@ -72,34 +75,41 @@
            <em class="icon-Rightarrow"></em>
            <?php endif; ?>
         </a>
+        </div>
       </div>
     <?php endif;?>
     <?php if($node_type == 'share_graphic_block'): ?>   
     <?php if($share_graphic_type == 'statement'):?> 
-     <div class="block-vacancies share_graphic_block statement node-<?=$nid?>" <?=$background?>>
+     <div class="block_main" <?=$background?>>
+       <div class="block-vacancies share_graphic_block statement node-<?=$nid?>" >
        <?php if ($featured_image) :?>
          <img src="<?= $featured_image_url?>" class="share_image" />
        <?php endif; ?>
 	  <strong class="title text1"><?=$block_tout_text?></strong>
 	  <div class="share1"><?php print $nodeid->content['sharethis']['#value']; ?></div>
      </div> 
+     </div> 
     <?php elseif($share_graphic_type == 'quote'):?>
-    <div class="block-vacancies share_graphic_block quotes node-<?=$nid?>" <?=$background?>>
+    <div class="block_main" <?=$background?>>
+       <div  class="block-vacancies share_graphic_block quotes node-<?=$nid?>" > 
        <?php if ($featured_image) :?>
          <img src="<?= $featured_image_url?>" class="quote_image" />
        <?php endif; ?>
        <strong class="title text2" >"<?=$block_tout_text?>"</strong>
        <span class="text3"><?=$node_body ?></span>
         <div class="share2"><?php print $nodeid->content['sharethis']['#value']; ?></div>
+       </div>
      </div>	 
      <?php else:?>
-     <div class="block-share share_graphic_block image node-<?=$nid?>" <?=$background?>>
+     <div class="block_main" <?=$background?>>
+     <div class="block-share share_graphic_block image node-<?=$nid?>" >
        <div class="text1">
        <?php if ($featured_image) :?>
          <img src="<?= $featured_image_url?>" />
        <?php endif; ?>       
        <?php print $nodeid->content['sharethis']['#value']; ?>
        </div> 
+     </div> 
      </div> 	
     <?php endif; ?>  
     <?php endif; ?> 

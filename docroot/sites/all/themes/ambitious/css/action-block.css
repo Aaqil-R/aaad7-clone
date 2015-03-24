@@ -498,55 +498,58 @@ body > .jcf-select-drop.jcf-drop-flipped {
   /* Vacancies block styles */
   /* share this block styles */
 }
+/* line 57, ../sass/action-block.scss */
+.action-block .text1, .action-block text2, .action-block .text3 {
+  white-space: pre-line;
+}
 @media (max-width: 767px) {
   /* line 56, ../sass/action-block.scss */
   .action-block {
     background: none;
   }
-  /* line 63, ../sass/action-block.scss */
+  /* line 66, ../sass/action-block.scss */
   .action-block .text, .action-block .title {
     width: 50%;
   }
-  /* line 65, ../sass/action-block.scss */
+  /* line 68, ../sass/action-block.scss */
   .action-block .text br, .action-block .title br {
     display: none;
   }
 }
-/* line 70, ../sass/action-block.scss */
+/* line 73, ../sass/action-block.scss */
 .action-block .holder {
   margin: 0 auto;
   max-width: 1080px;
   padding: 102px 15px 126px;
 }
 @media (max-width: 767px) {
-  /* line 70, ../sass/action-block.scss */
+  /* line 73, ../sass/action-block.scss */
   .action-block .holder {
     padding: 20px 20px 37px;
   }
 }
-/* line 77, ../sass/action-block.scss */
+/* line 80, ../sass/action-block.scss */
 .action-block .holder > div {
   float: right;
 }
-/* line 79, ../sass/action-block.scss */
+/* line 82, ../sass/action-block.scss */
 .action-block .holder > div:first-child {
   float: left;
 }
 @media (max-width: 767px) {
-  /* line 79, ../sass/action-block.scss */
+  /* line 82, ../sass/action-block.scss */
   .action-block .holder > div:first-child {
     margin-bottom: 20px;
   }
 }
-/* line 88, ../sass/action-block.scss */
+/* line 91, ../sass/action-block.scss */
 .action-block .block-symptoms {
-  width: 48.5%;
+  width: auto;
   padding: 50px 10px 37px 39px;
-  background-image: url('../images/bg.jpg?1424101657');
   background-size: cover;
 }
 @media (max-width: 767px) {
-  /* line 88, ../sass/action-block.scss */
+  /* line 91, ../sass/action-block.scss */
   .action-block .block-symptoms {
     width: 100%;
     float: none;
@@ -554,16 +557,16 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin: 0 0 34px;
     background-position: right center;
   }
-  /* line 99, ../sass/action-block.scss */
+  /* line 101, ../sass/action-block.scss */
   .action-block .block-symptoms .text {
     width: 100%;
   }
-  /* line 101, ../sass/action-block.scss */
+  /* line 103, ../sass/action-block.scss */
   .action-block .block-symptoms .text span.add {
     margin-left: 0;
   }
 }
-/* line 106, ../sass/action-block.scss */
+/* line 108, ../sass/action-block.scss */
 .action-block .block-symptoms .text {
   display: block;
   font-size: 45px;
@@ -572,24 +575,24 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   font-weight: normal;
 }
-/* line 113, ../sass/action-block.scss */
+/* line 115, ../sass/action-block.scss */
 #main2 .action-block .block-symptoms .text {
   margin: 0 0 6px;
 }
 @media (max-width: 990px) {
-  /* line 106, ../sass/action-block.scss */
+  /* line 108, ../sass/action-block.scss */
   .action-block .block-symptoms .text {
     font-size: 25px;
     line-height: 28px;
   }
 }
 @media (max-width: 767px) {
-  /* line 106, ../sass/action-block.scss */
+  /* line 108, ../sass/action-block.scss */
   .action-block .block-symptoms .text {
     margin: 0 0 5px;
   }
 }
-/* line 123, ../sass/action-block.scss */
+/* line 125, ../sass/action-block.scss */
 .action-block .block-symptoms .text span {
   color: #081318;
   display: inline-block;
@@ -599,32 +602,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 6px 19px 5px;
 }
 @media (max-width: 767px) {
-  /* line 123, ../sass/action-block.scss */
+  /* line 125, ../sass/action-block.scss */
   .action-block .block-symptoms .text span {
     padding: 3px 10px 6px;
     margin: 0 0 5px;
   }
 }
-/* line 134, ../sass/action-block.scss */
+/* line 136, ../sass/action-block.scss */
 .action-block .block-symptoms .text span.add {
   margin: 0 0 0px 62px;
 }
 @media (max-width: 767px) {
-  /* line 134, ../sass/action-block.scss */
+  /* line 136, ../sass/action-block.scss */
   .action-block .block-symptoms .text span.add {
     margin: 0 0 0px 19px;
   }
 }
-/* line 144, ../sass/action-block.scss */
+/* line 146, ../sass/action-block.scss */
 .action-block .block-inspire {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 39px 39px;
-  background-image: url('../images/bg01.jpg?1424101657');
   background-size: cover;
 }
 @media (max-width: 767px) {
-  /* line 144, ../sass/action-block.scss */
+  /* line 146, ../sass/action-block.scss */
   .action-block .block-inspire {
     width: 100%;
     float: none;
@@ -632,7 +634,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background-position: right center;
   }
 }
-/* line 156, ../sass/action-block.scss */
+/* line 157, ../sass/action-block.scss */
 .action-block .block-inspire .title {
   display: block;
   font-size: 45px;
@@ -642,30 +644,29 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-weight: normal;
 }
 @media (max-width: 990px) {
-  /* line 156, ../sass/action-block.scss */
+  /* line 157, ../sass/action-block.scss */
   .action-block .block-inspire .title {
     font-size: 30px;
     line-height: 33px;
   }
 }
 @media (max-width: 767px) {
-  /* line 156, ../sass/action-block.scss */
+  /* line 157, ../sass/action-block.scss */
   .action-block .block-inspire .title {
     font-size: 25px;
     line-height: 25px;
     margin: 0 0 16px;
   }
 }
-/* line 175, ../sass/action-block.scss */
+/* line 176, ../sass/action-block.scss */
 .action-block .block-report {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 39px 39px;
-  background-image: url('../images/bg02.jpg?1424101657');
   background-size: cover;
 }
 @media (max-width: 990px) {
-  /* line 175, ../sass/action-block.scss */
+  /* line 176, ../sass/action-block.scss */
   .action-block .block-report {
     background-position: top right;
   }
@@ -676,7 +677,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (max-width: 767px) {
-  /* line 175, ../sass/action-block.scss */
+  /* line 176, ../sass/action-block.scss */
   .action-block .block-report {
     width: 100%;
     float: none;
@@ -715,9 +716,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
 /* line 216, ../sass/action-block.scss */
 .action-block .block-blog {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 39px 39px;
-  background-image: url('../images/bg03.jpg?1424101657');
   background-size: cover;
   background-position: top right;
 }
@@ -727,7 +727,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background-position: top right;
     padding: 17px 10px 30px 29px;
   }
-  /* line 226, ../sass/action-block.scss */
+  /* line 225, ../sass/action-block.scss */
   .action-block .block-blog .btn {
     font-size: 16px;
   }
@@ -741,7 +741,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     padding: 24px 10px 20px 21px;
   }
 }
-/* line 237, ../sass/action-block.scss */
+/* line 236, ../sass/action-block.scss */
 .action-block .block-blog .title {
   display: block;
   font-size: 45px;
@@ -751,40 +751,39 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-weight: normal;
 }
 @media (max-width: 990px) {
-  /* line 237, ../sass/action-block.scss */
+  /* line 236, ../sass/action-block.scss */
   .action-block .block-blog .title {
     font-size: 30px;
     line-height: 33px;
   }
 }
 @media (max-width: 767px) {
-  /* line 237, ../sass/action-block.scss */
+  /* line 236, ../sass/action-block.scss */
   .action-block .block-blog .title {
     font-size: 24px;
     line-height: 25px;
     margin: 0 0 16px;
   }
 }
-/* line 256, ../sass/action-block.scss */
+/* line 255, ../sass/action-block.scss */
 .action-block .block-connect {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 39px 39px;
-  background-image: url('../images/bg.jpg?1424101657');
   background-size: cover;
 }
 @media (max-width: 990px) {
-  /* line 256, ../sass/action-block.scss */
+  /* line 255, ../sass/action-block.scss */
   .action-block .block-connect {
     background-position: top right;
   }
-  /* line 264, ../sass/action-block.scss */
+  /* line 262, ../sass/action-block.scss */
   .action-block .block-connect .btn {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  /* line 256, ../sass/action-block.scss */
+  /* line 255, ../sass/action-block.scss */
   .action-block .block-connect {
     width: 100%;
     float: none;
@@ -792,12 +791,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background-position: right top;
     margin: 0 0 34px;
   }
-  /* line 274, ../sass/action-block.scss */
+  /* line 272, ../sass/action-block.scss */
   .action-block .block-connect .btn {
     font-size: 14px;
   }
 }
-/* line 278, ../sass/action-block.scss */
+/* line 276, ../sass/action-block.scss */
 .action-block .block-connect .title {
   display: block;
   font-size: 45px;
@@ -807,35 +806,35 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-weight: normal;
 }
 @media (max-width: 990px) {
-  /* line 278, ../sass/action-block.scss */
+  /* line 276, ../sass/action-block.scss */
   .action-block .block-connect .title {
     font-size: 30px;
     line-height: 33px;
   }
 }
 @media (max-width: 767px) {
-  /* line 278, ../sass/action-block.scss */
+  /* line 276, ../sass/action-block.scss */
   .action-block .block-connect .title {
     font-size: 25px;
     line-height: 25px;
     margin: 0 0 16px;
   }
 }
-/* line 297, ../sass/action-block.scss */
+/* line 295, ../sass/action-block.scss */
 .action-block .block-vacancies {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 34px 39px;
 }
 @media (max-width: 990px) {
-  /* line 297, ../sass/action-block.scss */
+  /* line 295, ../sass/action-block.scss */
   .action-block .block-vacancies {
     background-position: top right;
     padding: 48px 10px 34px 32px;
   }
 }
 @media (max-width: 767px) {
-  /* line 297, ../sass/action-block.scss */
+  /* line 295, ../sass/action-block.scss */
   .action-block .block-vacancies {
     width: 100%;
     float: none;
@@ -843,12 +842,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background-position: right top;
     margin: 0 0 34px;
   }
-  /* line 316, ../sass/action-block.scss */
+  /* line 314, ../sass/action-block.scss */
   .action-block .block-vacancies .btn {
     font-size: 14px;
   }
 }
-/* line 320, ../sass/action-block.scss */
+/* line 318, ../sass/action-block.scss */
 .action-block .block-vacancies .title {
   display: block;
   font-size: 35px;
@@ -858,38 +857,38 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-weight: normal;
 }
 @media (max-width: 990px) {
-  /* line 320, ../sass/action-block.scss */
+  /* line 318, ../sass/action-block.scss */
   .action-block .block-vacancies .title {
     font-size: 28px;
     line-height: 33px;
   }
 }
 @media (max-width: 767px) {
-  /* line 320, ../sass/action-block.scss */
+  /* line 318, ../sass/action-block.scss */
   .action-block .block-vacancies .title {
     font-size: 25px;
     line-height: 25px;
     margin: 0 0 16px;
   }
 }
-/* line 338, ../sass/action-block.scss */
+/* line 336, ../sass/action-block.scss */
 .action-block .block-image {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   padding: 48px 10px 39px 39px;
 }
 @media (max-width: 990px) {
-  /* line 338, ../sass/action-block.scss */
+  /* line 336, ../sass/action-block.scss */
   .action-block .block-image {
     background-position: top right;
   }
-  /* line 346, ../sass/action-block.scss */
+  /* line 344, ../sass/action-block.scss */
   .action-block .block-image .btn {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  /* line 338, ../sass/action-block.scss */
+  /* line 336, ../sass/action-block.scss */
   .action-block .block-image {
     width: 100%;
     float: none;
@@ -897,14 +896,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background-position: right top;
     margin: 0 0 34px;
   }
-  /* line 356, ../sass/action-block.scss */
+  /* line 354, ../sass/action-block.scss */
   .action-block .block-image .btn {
     font-size: 14px;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-/* line 362, ../sass/action-block.scss */
+/* line 360, ../sass/action-block.scss */
 .action-block .block-image .title {
   display: block;
   font-size: 45px;
@@ -914,136 +913,123 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-weight: normal;
 }
 @media (max-width: 990px) {
-  /* line 362, ../sass/action-block.scss */
+  /* line 360, ../sass/action-block.scss */
   .action-block .block-image .title {
     font-size: 30px;
     line-height: 33px;
   }
 }
 @media (max-width: 767px) {
-  /* line 362, ../sass/action-block.scss */
+  /* line 360, ../sass/action-block.scss */
   .action-block .block-image .title {
     font-size: 25px;
     line-height: 25px;
     margin: 0 0 16px;
   }
 }
-/* line 382, ../sass/action-block.scss */
+/* line 380, ../sass/action-block.scss */
 .action-block .block-share {
   color: #ffffff;
-  width: 48.5%;
+  width: auto;
   text-align: right;
-  background-image: url('../images/action-bg4.jpg?1424101657');
   padding: 22px 3% 30px 5%;
   background-position: center left;
   background-size: cover;
 }
-/* line 390, ../sass/action-block.scss */
-.action-block .block-share.share-lavender {
-  background-image: url('../images/action-bg1.jpg?1424101657');
-}
-/* line 393, ../sass/action-block.scss */
+/* line 389, ../sass/action-block.scss */
 .action-block .block-share .btn {
   padding: 10px 18px;
 }
-/* line 396, ../sass/action-block.scss */
+/* line 392, ../sass/action-block.scss */
 .action-block .block-share img {
   display: block;
   max-width: 66%;
   margin-bottom: -70px;
 }
 @media (max-width: 990px) {
-  /* line 382, ../sass/action-block.scss */
+  /* line 380, ../sass/action-block.scss */
   .action-block .block-share {
     background-position: center center;
     padding: 48px 11px 40px 39px;
   }
-  /* line 404, ../sass/action-block.scss */
+  /* line 400, ../sass/action-block.scss */
   .action-block .block-share .btn {
     font-size: 16px;
   }
-  /* line 407, ../sass/action-block.scss */
+  /* line 403, ../sass/action-block.scss */
   .action-block .block-share img {
     max-width: 190px;
   }
 }
 @media (max-width: 767px) {
-  /* line 382, ../sass/action-block.scss */
+  /* line 380, ../sass/action-block.scss */
   .action-block .block-share {
     width: 100%;
     float: none;
     padding: 24px 10px 40px 21pxx;
     background-position: center left;
   }
-  /* line 416, ../sass/action-block.scss */
+  /* line 412, ../sass/action-block.scss */
   .action-block .block-share img {
     max-width: 50%;
     width: 50%;
     margin-bottom: 0px;
   }
-  /* line 421, ../sass/action-block.scss */
+  /* line 417, ../sass/action-block.scss */
   .action-block .block-share .btn {
     font-size: 14px;
     padding: 6px 20px;
   }
-  /* line 424, ../sass/action-block.scss */
+  /* line 420, ../sass/action-block.scss */
   .action-block .block-share .btn em {
     padding-left: 10px;
   }
 }
-/* line 430, ../sass/action-block.scss */
+/* line 426, ../sass/action-block.scss */
 .action-block .lavender-box .btn:hover {
   background-color: #734889;
 }
-/* line 433, ../sass/action-block.scss */
+/* line 429, ../sass/action-block.scss */
 .action-block .blue-box .btn:hover {
   background-color: #006dc1;
 }
-/* line 436, ../sass/action-block.scss */
+/* line 432, ../sass/action-block.scss */
 .action-block .green-box .btn:hover {
   background-color: #00a837;
 }
-/* line 439, ../sass/action-block.scss */
+/* line 435, ../sass/action-block.scss */
 .action-block .magenta-box .btn:hover {
   background-color: #c3104b;
 }
-/* line 442, ../sass/action-block.scss */
+/* line 438, ../sass/action-block.scss */
 .action-block .orange-box .btn:hover {
   background-color: #f15500;
 }
-/* line 445, ../sass/action-block.scss */
+/* line 441, ../sass/action-block.scss */
 .action-block .pink-box .btn:hover {
   background-color: #e30087;
 }
-/* line 448, ../sass/action-block.scss */
-.action-block .block-image, .action-block .block-symptoms, .action-block .block-vacancies, .action-block .block-share {
-  float: right;
-}
-/* line 450, ../sass/action-block.scss */
-.action-block .block-image:first-child, .action-block .block-symptoms:first-child, .action-block .block-vacancies:first-child, .action-block .block-share:first-child {
-  float: left;
-}
 @media (max-width: 767px) {
-  /* line 448, ../sass/action-block.scss */
+  /* line 444, ../sass/action-block.scss */
   .action-block .block-image, .action-block .block-symptoms, .action-block .block-vacancies, .action-block .block-share {
     width: 100%;
   }
 }
-/* line 456, ../sass/action-block.scss */
+/* line 448, ../sass/action-block.scss */
 .action-block .block-image .title, .action-block .block-symptoms .title, .action-block .block-vacancies .title, .action-block .block-share .title {
   min-height: 179px;
   margin-bottom: 0;
 }
-/* line 461, ../sass/action-block.scss */
+/* line 453, ../sass/action-block.scss */
 .action-block .block-symptoms {
   padding: 30px 10px 37px 39px;
 }
-/* line 463, ../sass/action-block.scss */
+/* line 455, ../sass/action-block.scss */
 .action-block .block-symptoms .text {
   min-height: 160px;
   margin-bottom: 0;
 }
-/* line 466, ../sass/action-block.scss */
+/* line 458, ../sass/action-block.scss */
 .action-block .block-symptoms .text span {
   display: inline;
   line-height: 73px;
@@ -1052,12 +1038,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
   white-space: pre-wrap;
 }
 @media (max-width: 990px) {
-  /* line 466, ../sass/action-block.scss */
+  /* line 458, ../sass/action-block.scss */
   .action-block .block-symptoms .text span {
     line-height: 45px;
   }
 }
-/* line 480, ../sass/action-block.scss */
+/* line 472, ../sass/action-block.scss */
 .action-block .btn.btn-transparent {
   padding: 10px 28px;
   display: inline-block;
@@ -1066,50 +1052,50 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border-width: 2px;
 }
 @media (max-width: 767px) {
-  /* line 480, ../sass/action-block.scss */
+  /* line 472, ../sass/action-block.scss */
   .action-block .btn.btn-transparent {
     width: auto;
   }
 }
-/* line 489, ../sass/action-block.scss */
+/* line 481, ../sass/action-block.scss */
 .action-block .btn.btn-transparent:hover {
   border-width: 2px;
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 7px;
 }
-/* line 497, ../sass/action-block.scss */
+/* line 489, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton {
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   padding: 10px 73px 10px 25px;
 }
-/* line 503, ../sass/action-block.scss */
+/* line 495, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:before {
   content: "\e60b";
   margin-right: -49px;
 }
-/* line 508, ../sass/action-block.scss */
+/* line 500, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:hover:before {
   margin: 0 3px;
   margin-right: -49px;
 }
-/* line 515, ../sass/action-block.scss */
+/* line 507, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:hover {
   margin-top: 0;
 }
-/* line 518, ../sass/action-block.scss */
+/* line 510, ../sass/action-block.scss */
 .action-block .action_image {
   max-width: 180px;
 }
-/* line 521, ../sass/action-block.scss */
+/* line 513, ../sass/action-block.scss */
 .action-block .action_image2 {
   max-width: 180px;
   margin-top: 10px;
 }
-/* line 526, ../sass/action-block.scss */
+/* line 518, ../sass/action-block.scss */
 .action-block .promo_block .text1 {
   font-size: 40px;
   white-space: pre-line;
@@ -1117,32 +1103,32 @@ body > .jcf-select-drop.jcf-drop-flipped {
   line-height: normal;
 }
 @media (max-width: 990px) {
-  /* line 526, ../sass/action-block.scss */
+  /* line 518, ../sass/action-block.scss */
   .action-block .promo_block .text1 {
     font-size: 30px;
   }
 }
 @media (max-width: 767px) {
-  /* line 526, ../sass/action-block.scss */
+  /* line 518, ../sass/action-block.scss */
   .action-block .promo_block .text1 {
     font-size: 25px;
     white-space: inherit;
     min-height: inherit;
   }
 }
-/* line 540, ../sass/action-block.scss */
+/* line 532, ../sass/action-block.scss */
 .action-block .promo_block .text2 {
   font-size: 30px;
-  min-height: 181px;
+  min-height: 173px;
   line-height: normal;
 }
 @media (max-width: 767px) {
-  /* line 540, ../sass/action-block.scss */
+  /* line 532, ../sass/action-block.scss */
   .action-block .promo_block .text2 {
     font-size: 23px;
   }
 }
-/* line 550, ../sass/action-block.scss */
+/* line 542, ../sass/action-block.scss */
 .action-block .core_action_block .text1 {
   font-size: 44px;
   white-space: pre-line;
@@ -1152,52 +1138,57 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-top: 14px;
 }
 @media (max-width: 990px) {
-  /* line 550, ../sass/action-block.scss */
+  /* line 542, ../sass/action-block.scss */
   .action-block .core_action_block .text1 {
     font-size: 34px;
     line-height: normal;
   }
 }
 @media (max-width: 767px) {
-  /* line 550, ../sass/action-block.scss */
+  /* line 542, ../sass/action-block.scss */
   .action-block .core_action_block .text1 {
     font-size: 29px;
     line-height: normal;
   }
 }
-/* line 566, ../sass/action-block.scss */
+/* line 558, ../sass/action-block.scss */
 .action-block .core_action_block .text2 {
   margin-left: 50px;
   min-height: 175px;
   margin-top: 18px;
 }
 @media (max-width: 767px) {
-  /* line 566, ../sass/action-block.scss */
+  /* line 558, ../sass/action-block.scss */
   .action-block .core_action_block .text2 {
     min-height: inherit;
   }
 }
-/* line 577, ../sass/action-block.scss */
+/* line 569, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .sharethis-wrapper {
+  margin-left: 240px;
+  margin-top: -43px;
+}
+/* line 574, ../sass/action-block.scss */
 .action-block .share_graphic_block .share_image {
   max-width: 180px;
   float: left;
 }
 @media (max-width: 990px) {
-  /* line 577, ../sass/action-block.scss */
+  /* line 574, ../sass/action-block.scss */
   .action-block .share_graphic_block .share_image {
     max-width: 100px;
   }
 }
 @media (max-width: 767px) {
-  /* line 577, ../sass/action-block.scss */
+  /* line 574, ../sass/action-block.scss */
   .action-block .share_graphic_block .share_image {
     max-width: 110px;
   }
 }
-/* line 588, ../sass/action-block.scss */
+/* line 585, ../sass/action-block.scss */
 .action-block .share_graphic_block.statement .text1 {
-  font-size: 24px;
-  min-height: 195px;
+  font-size: 23px;
+  min-height: 180px;
   line-height: normal;
   max-width: 230px;
   width: 49%;
@@ -1205,13 +1196,13 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-right: 41px;
 }
 @media (max-width: 990px) {
-  /* line 588, ../sass/action-block.scss */
+  /* line 585, ../sass/action-block.scss */
   .action-block .share_graphic_block.statement .text1 {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
-  /* line 588, ../sass/action-block.scss */
+  /* line 585, ../sass/action-block.scss */
   .action-block .share_graphic_block.statement .text1 {
     min-height: inherit;
     font-size: 18px;
@@ -1219,12 +1210,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-bottom: 10px;
   }
 }
-/* line 606, ../sass/action-block.scss */
+/* line 603, ../sass/action-block.scss */
 .action-block .share_graphic_block.statement .share1 {
   float: right;
   margin-right: 80px;
 }
-/* line 612, ../sass/action-block.scss */
+/* line 609, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .quote_image {
   margin-top: -20px;
   max-width: 230px;
@@ -1232,53 +1223,56 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-right: -10px;
 }
 @media (max-width: 990px) {
-  /* line 612, ../sass/action-block.scss */
+  /* line 609, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .quote_image {
     display: none;
   }
 }
-/* line 621, ../sass/action-block.scss */
+/* line 618, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .text2 {
   min-height: 131px;
 }
 @media (max-width: 990px) {
-  /* line 621, ../sass/action-block.scss */
+  /* line 618, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .text2 {
     min-height: 121px;
     max-height: 141px;
   }
 }
 @media (max-width: 990px) {
-  /* line 621, ../sass/action-block.scss */
+  /* line 618, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .text2 {
     min-height: inherit;
   }
 }
-/* line 631, ../sass/action-block.scss */
+/* line 628, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .text3 {
   display: block;
   min-height: 60px;
 }
-/* line 635, ../sass/action-block.scss */
+/* line 632, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .share2 {
   float: left;
 }
-/* line 640, ../sass/action-block.scss */
-.action-block .share_graphic_block.image .text1 {
-  min-height: 350px;
-}
-/* line 642, ../sass/action-block.scss */
+/* line 638, ../sass/action-block.scss */
 .action-block .share_graphic_block.image .text1 img {
-  max-width: 250px;
+  max-width: 230px;
 }
 @media (max-width: 767px) {
-  /* line 642, ../sass/action-block.scss */
+  /* line 638, ../sass/action-block.scss */
   .action-block .share_graphic_block.image .text1 img {
-    max-width: 170px;
+    max-width: 160px;
   }
 }
+/* line 647, ../sass/action-block.scss */
+.action-block .title {
+  white-space: pre-line;
+}
 
-/* line 682, ../sass/action-block.scss */
-.messages {
-  display: none !important;
+/* line 651, ../sass/action-block.scss */
+.block_main {
+  height: 334px;
+  max-height: 334px;
+  float: left;
+  width: 48%;
 }

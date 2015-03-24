@@ -54,6 +54,9 @@
 
 /* action block styles */
 .action-block {
+     .text1, text2, .text3{
+       white-space: pre-line;
+     }
 	background:$white;
 	width:100%;
 
@@ -86,9 +89,8 @@
 	}
 	/* action symptoms block styles */
 	.block-symptoms {
-		width:48.5%;
-		padding: 50px 10px 37px 39px;
-		background-image:image-url('bg.jpg');
+		width:auto;
+		padding: 50px 10px 37px 39px; 
 		background-size:cover;
 		@include breakpoint($mobile) {
 			width:100%;
@@ -143,9 +145,8 @@
 	/* action inspire block styles */
 	.block-inspire {
 		color:$white;
-		width:48.5%;
-		padding: 48px 10px 39px 39px;
-		background-image:image-url('bg01.jpg');
+		width:auto;
+		padding: 48px 10px 39px 39px; 
 		background-size:cover;
 		@include breakpoint($mobile) {
 			width:100%;
@@ -174,9 +175,8 @@
 	/* action report block styles */
 	.block-report{
 		color:$white;
-		width:48.5%;
-		padding: 48px 10px 39px 39px;
-		background-image:image-url('bg02.jpg');
+		width:auto;
+		padding: 48px 10px 39px 39px; 
 		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
@@ -215,9 +215,8 @@
 	/* action blog block styles */
 	.block-blog{
 		color:$white;
-		width:48.5%;
-		padding: 48px 10px 39px 39px;
-		background-image:image-url('bg03.jpg');
+		width:auto;
+		padding: 48px 10px 39px 39px; 
 		background-size:cover;
 		background-position:top right;
         @include breakpoint($tablet) {
@@ -255,9 +254,8 @@
 	/* Connect with others block styles */
 	.block-connect{
 		color:$white;
-		width:48.5%;
-		padding: 48px 10px 39px 39px;
-		background-image:image-url('bg.jpg');
+		width:auto;
+		padding: 48px 10px 39px 39px; 
 		background-size:cover;
         @include breakpoint($tablet) {
 		    background-position:top right;
@@ -296,7 +294,7 @@
 	/* Vacancies block styles */
 	  .block-vacancies{
 		color:$white;
-		width:48.5%;
+		width:auto;
 		@extend %action-background;
 		@extend %action-image-right;
 		padding: 48px 10px 34px 39px;
@@ -337,7 +335,7 @@
 	}
 	.block-image{
 		color:$white;
-		width:48.5%;
+		width:auto;
 		padding: 48px 10px 39px 39px;
 	    @extend %action-background;
         @extend %action-image-right;
@@ -381,14 +379,12 @@
 	/* share this block styles */
 	.block-share{
 		color:$white;
-		width:48.5%;
-		text-align: right;
-		background-image:image-url('action-bg4.jpg');
+		width:auto;
+		text-align: right; 
 		padding:22px 3% 30px 5%;
 		background-position:center left;
 		background-size:cover;
-        &.share-lavender{
-		  background-image:image-url('action-bg1.jpg');
+        &.share-lavender{ 
 		}
 		.btn{
 		  padding:10px 18px;
@@ -445,11 +441,7 @@
 	.pink-box .btn:hover{
 		background-color: $pink;
 	}
-	.block-image, .block-symptoms, .block-vacancies, .block-share{
-	  float:right;
-	  &:first-child{
-	    float:left;
-	  }
+	.block-image, .block-symptoms, .block-vacancies, .block-share{ 
 	  @include breakpoint($mobile){
 	    width:100%;
 	  }
@@ -498,7 +490,7 @@
 	       background: none;
             -webkit-box-shadow: none;
             box-shadow: none;
-            border: 3px solid $white;
+            border: 2px solid $white;
             padding:10px 73px 10px 25px;
             &:before{
               content: "\e60b";
@@ -539,7 +531,7 @@
     }
     .text2{
       font-size: 30px;
-      min-height:181px;
+      min-height:173px;
       line-height: normal;
       @include breakpoint($mobile){
         font-size: 23px;
@@ -573,7 +565,12 @@
     }
   }
   .share_graphic_block{
-  
+    &.image{
+    .sharethis-wrapper{
+      margin-left: 240px;
+      margin-top: -43px;
+    }
+    }
     .share_image{
       max-width:180px;
       float: left;
@@ -586,8 +583,8 @@
     }
     &.statement{
     .text1{
-      font-size: 24px;
-      min-height: 195px;
+      font-size: 23px;
+      min-height: 180px;
       line-height: normal;
       max-width: 230px;
       width:49%;
@@ -637,18 +634,27 @@
       }
     }
     &.image{
-       .text1{
-         min-height:350px;
+       .text1{ 
          img{
-           max-width:250px;
+           max-width:230px;
            @include breakpoint($mobile){
-            max-width:170px;
+            max-width:160px;
            }
          }
        }       
     }
   }
+  .title{
+  white-space: pre-line;
+ }
 }
+.block_main{
+  height:334px;
+  max-height:334px;
+  float:left;
+  width:48%;
+}
+
 
 // Home page Block Share //
 // ===========================
@@ -665,7 +671,7 @@
 //	background: image-url('bg08.jpg');
 	//padding: 50px 10px 37px 39px;
  //  .btn-transparent{
-	// &:hover{
+	// &:hover{ 
 	//   margin: 182px 10px 0 0;
 	//   @include breakpoint(900px){
 	//   	margin: 145px 10px 0 0;
@@ -674,11 +680,4 @@
  //  }
 } 
 
-
  
- 
- 
- 
- .messages{
-   display:none!important;
- }
