@@ -31,10 +31,6 @@
 	                <?php endif; ?> 
 	                 <div class="article-info">
 					   <cite>
-					   <?php if (!empty($first_name)): ?>
-					      <span><?php print t('By') ?> <?php print $first_name; ?></span>
-					    <?php endif; ?>
-					      <a href="<?php print $base_path.'user/'.$uid; ?>" class="first">@<?php print $node->name; ?></a>
 						  <a href="<?php print url('messages/new/'. $node->uid, array ('query' => drupal_get_destination())); ?>" title="email the author">email the author</a>
 						  <?php print flag_create_link('bookmarks', $node->nid); ?>
 					   </cite>
