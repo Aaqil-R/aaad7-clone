@@ -652,8 +652,11 @@
 .block_main{
   height:334px;
   max-height:334px;
-  float:left;
+  float:right;
   width:48%;
+  &:first-child{
+    float:left;
+  }
 }
 
 
