@@ -95,7 +95,7 @@
        <?php if ($featured_image) :?>
          <img src="<?= $featured_image_url?>" class="quote_image" />
        <?php endif; ?>
-       <strong class="title text2" >"<?=$block_tout_text?>"</strong>
+       <strong class="title text2" ><span>"</span><?=$block_tout_text?><span>"</span></strong>
        <span class="text3"><?=$node_body ?></span>
         <div class="share2"><?php print $nodeid->content['sharethis']['#value']; ?></div>
        </div>
