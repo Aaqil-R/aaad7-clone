@@ -86,7 +86,7 @@
          <img src="<?= $featured_image_url?>" class="share_image" />
        <?php endif; ?>
 	  <strong class="title text1"><?=$block_tout_text?></strong>
-	  <div class="share1"><?php print $nodeid->content['sharethis']['#value']; ?></div>
+	  <div class="share1"><div class="btn btn-transparent my_share" style="padding:0;" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'"><?php print $nodeid->content['sharethis']['#value']; ?></div></div>
      </div> 
      </div> 
     <?php elseif($share_graphic_type == 'quote'):?>
@@ -97,7 +97,7 @@
        <?php endif; ?>
        <strong class="title text2" ><span>"</span><?=$block_tout_text?><span>"</span></strong>
        <span class="text3"><?=$node_body ?></span>
-        <div class="share2"><?php print $nodeid->content['sharethis']['#value']; ?></div>
+        <div class="share2"><div class="btn btn-transparent my_share" style="padding:0;" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'"><?php print $nodeid->content['sharethis']['#value']; ?></div></div>
        </div>
      </div>	 
      <?php else:?>
@@ -106,8 +106,10 @@
        <div class="text1">
        <?php if ($featured_image) :?>
          <img src="<?= $featured_image_url?>" />
-       <?php endif; ?>       
+       <?php endif; ?> 
+       <div class="btn btn-transparent my_share" style="padding:0;" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'">      
        <?php print $nodeid->content['sharethis']['#value']; ?>
+       </div>
        </div> 
      </div> 
      </div> 	

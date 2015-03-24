@@ -1067,35 +1067,32 @@ body > .jcf-select-drop.jcf-drop-flipped {
 /* line 489, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton {
   background: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 2px solid #ffffff;
-  padding: 10px 41px 10px 25px;
+  border: none;
 }
-/* line 495, ../sass/action-block.scss */
+/* line 492, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:before {
   content: "\e60b";
   margin-right: -27px;
 }
-/* line 500, ../sass/action-block.scss */
+/* line 497, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:hover:before {
   margin: 0 3px;
   margin-right: -27px;
 }
-/* line 507, ../sass/action-block.scss */
+/* line 504, ../sass/action-block.scss */
 .action-block .st_sharethis_button .stButton:hover {
   margin-top: 0;
 }
-/* line 510, ../sass/action-block.scss */
+/* line 507, ../sass/action-block.scss */
 .action-block .action_image {
   max-width: 180px;
 }
-/* line 513, ../sass/action-block.scss */
+/* line 510, ../sass/action-block.scss */
 .action-block .action_image2 {
   max-width: 180px;
   margin-top: 10px;
 }
-/* line 518, ../sass/action-block.scss */
+/* line 515, ../sass/action-block.scss */
 .action-block .promo_block .text1 {
   font-size: 40px;
   white-space: pre-line;
@@ -1103,32 +1100,40 @@ body > .jcf-select-drop.jcf-drop-flipped {
   line-height: normal;
 }
 @media (max-width: 990px) {
-  /* line 518, ../sass/action-block.scss */
+  /* line 515, ../sass/action-block.scss */
   .action-block .promo_block .text1 {
     font-size: 30px;
   }
 }
 @media (max-width: 767px) {
-  /* line 518, ../sass/action-block.scss */
+  /* line 515, ../sass/action-block.scss */
   .action-block .promo_block .text1 {
     font-size: 25px;
     white-space: inherit;
     min-height: inherit;
   }
 }
-/* line 532, ../sass/action-block.scss */
+/* line 529, ../sass/action-block.scss */
 .action-block .promo_block .text2 {
   font-size: 30px;
   min-height: 173px;
   line-height: normal;
 }
-@media (max-width: 767px) {
-  /* line 532, ../sass/action-block.scss */
+@media (max-width: 990px) {
+  /* line 529, ../sass/action-block.scss */
   .action-block .promo_block .text2 {
-    font-size: 23px;
+    font-size: 25px;
   }
 }
-/* line 542, ../sass/action-block.scss */
+@media (max-width: 767px) {
+  /* line 529, ../sass/action-block.scss */
+  .action-block .promo_block .text2 {
+    font-size: 23px;
+    white-space: inherit;
+    min-height: inherit;
+  }
+}
+/* line 544, ../sass/action-block.scss */
 .action-block .core_action_block .text1 {
   font-size: 44px;
   white-space: pre-line;
@@ -1138,54 +1143,139 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-top: 14px;
 }
 @media (max-width: 990px) {
-  /* line 542, ../sass/action-block.scss */
+  /* line 544, ../sass/action-block.scss */
   .action-block .core_action_block .text1 {
     font-size: 34px;
     line-height: normal;
   }
 }
 @media (max-width: 767px) {
-  /* line 542, ../sass/action-block.scss */
+  /* line 544, ../sass/action-block.scss */
   .action-block .core_action_block .text1 {
     font-size: 29px;
     line-height: normal;
+    min-height: inherit;
   }
 }
-/* line 558, ../sass/action-block.scss */
+/* line 561, ../sass/action-block.scss */
 .action-block .core_action_block .text2 {
   margin-left: 50px;
   min-height: 175px;
   margin-top: 18px;
 }
 @media (max-width: 767px) {
-  /* line 558, ../sass/action-block.scss */
+  /* line 561, ../sass/action-block.scss */
   .action-block .core_action_block .text2 {
     min-height: inherit;
   }
 }
-/* line 569, ../sass/action-block.scss */
-.action-block .share_graphic_block.image .sharethis-wrapper {
+/* line 572, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share {
   margin-left: 240px;
-  margin-top: -43px;
+  margin-top: -43.5px;
+  padding: 0;
 }
-/* line 574, ../sass/action-block.scss */
+@media (max-width: 767px) {
+  /* line 572, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share {
+    margin-top: 0;
+  }
+  /* line 577, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share:hover {
+    margin-top: 0;
+  }
+}
+/* line 582, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share:hover {
+  margin-top: -44px;
+}
+@media (max-width: 767px) {
+  /* line 572, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share {
+    margin-top: 0;
+  }
+  /* line 587, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share:hover {
+    margin-top: 0;
+  }
+  /* line 590, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share .stButton {
+    margin-top: 29px;
+  }
+}
+/* line 594, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share .btn.btn-transparent {
+  padding: 0;
+}
+/* line 597, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share .sharethis-wrapper {
+  margin-top: -26px;
+  margin-left: -26px;
+  width: 161px;
+  padding: 5px 11px;
+}
+@media (max-width: 767px) {
+  /* line 597, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share .sharethis-wrapper {
+    width: 171px;
+  }
+  /* line 604, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share .sharethis-wrapper .stButton {
+    margin-top: 29px;
+    padding-right: 30px;
+  }
+  /* line 607, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share .sharethis-wrapper .stButton:before {
+    margin-right: -7px;
+  }
+  /* line 609, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .my_share .sharethis-wrapper .stButton:before:hover {
+    margin-right: -7px;
+  }
+}
+/* line 615, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share .sharethis-wrapper .stButton {
+  padding: 0;
+}
+/* line 618, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share .sharethis-wrapper .stButton:after {
+  padding-right: 0;
+  width: 129px;
+}
+/* line 623, ../sass/action-block.scss */
+.action-block .share_graphic_block.image .my_share.btn.btn-transparent {
+  padding: 0;
+}
+/* line 628, ../sass/action-block.scss */
 .action-block .share_graphic_block .share_image {
   max-width: 180px;
   float: left;
 }
 @media (max-width: 990px) {
-  /* line 574, ../sass/action-block.scss */
+  /* line 628, ../sass/action-block.scss */
   .action-block .share_graphic_block .share_image {
     max-width: 100px;
   }
 }
 @media (max-width: 767px) {
-  /* line 574, ../sass/action-block.scss */
+  /* line 628, ../sass/action-block.scss */
   .action-block .share_graphic_block .share_image {
     max-width: 110px;
   }
 }
-/* line 585, ../sass/action-block.scss */
+/* line 639, ../sass/action-block.scss */
+.action-block .share_graphic_block.statement .stButton {
+  padding: 9px 31px 9px 18px;
+}
+/* line 641, ../sass/action-block.scss */
+.action-block .share_graphic_block.statement .stButton:before {
+  margin-right: -12px;
+}
+/* line 643, ../sass/action-block.scss */
+.action-block .share_graphic_block.statement .stButton:before:hover {
+  margin-right: -12px;
+}
+/* line 648, ../sass/action-block.scss */
 .action-block .share_graphic_block.statement .text1 {
   font-size: 23px;
   min-height: 180px;
@@ -1196,26 +1286,40 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-right: 41px;
 }
 @media (max-width: 990px) {
-  /* line 585, ../sass/action-block.scss */
+  /* line 648, ../sass/action-block.scss */
   .action-block .share_graphic_block.statement .text1 {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
-  /* line 585, ../sass/action-block.scss */
+  /* line 648, ../sass/action-block.scss */
   .action-block .share_graphic_block.statement .text1 {
     min-height: inherit;
     font-size: 18px;
     max-width: inherit;
-    margin-bottom: 10px;
+    width: inherit;
+    margin: 0;
+    margin-bottom: 40px;
   }
 }
-/* line 603, ../sass/action-block.scss */
+/* line 668, ../sass/action-block.scss */
 .action-block .share_graphic_block.statement .share1 {
   float: right;
   margin-right: 80px;
 }
-/* line 609, ../sass/action-block.scss */
+/* line 674, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .stButton {
+  padding: 9px 31px 9px 18px;
+}
+/* line 676, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .stButton:before {
+  margin-right: -12px;
+}
+/* line 678, ../sass/action-block.scss */
+.action-block .share_graphic_block.quotes .stButton:before:hover {
+  margin-right: -12px;
+}
+/* line 683, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .quote_image {
   margin-top: -11px;
   max-width: 221px;
@@ -1223,61 +1327,99 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-right: -10px;
 }
 @media (max-width: 990px) {
-  /* line 609, ../sass/action-block.scss */
+  /* line 683, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .quote_image {
     display: none;
   }
 }
-/* line 618, ../sass/action-block.scss */
+/* line 692, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .text2 {
   min-height: 91px;
 }
 @media (max-width: 990px) {
-  /* line 618, ../sass/action-block.scss */
+  /* line 692, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .text2 {
     min-height: 121px;
     max-height: 141px;
   }
 }
 @media (max-width: 990px) {
-  /* line 618, ../sass/action-block.scss */
+  /* line 692, ../sass/action-block.scss */
   .action-block .share_graphic_block.quotes .text2 {
     min-height: inherit;
   }
 }
-/* line 628, ../sass/action-block.scss */
+/* line 702, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .text3 {
   display: block;
   min-height: 96px;
 }
-/* line 632, ../sass/action-block.scss */
+/* line 706, ../sass/action-block.scss */
 .action-block .share_graphic_block.quotes .share2 {
   float: left;
 }
-/* line 638, ../sass/action-block.scss */
+/* line 712, ../sass/action-block.scss */
 .action-block .share_graphic_block.image .text1 img {
   max-width: 230px;
   margin-left: 50px;
 }
-@media (max-width: 767px) {
-  /* line 638, ../sass/action-block.scss */
+@media (max-width: 990px) {
+  /* line 712, ../sass/action-block.scss */
   .action-block .share_graphic_block.image .text1 img {
-    max-width: 160px;
+    max-width: 150px;
+    margin-left: 0px;
   }
 }
-/* line 648, ../sass/action-block.scss */
+@media (max-width: 767px) {
+  /* line 712, ../sass/action-block.scss */
+  .action-block .share_graphic_block.image .text1 img {
+    max-width: 160px;
+    display: none;
+  }
+}
+/* line 727, ../sass/action-block.scss */
 .action-block .title {
   white-space: pre-line;
 }
 
-/* line 652, ../sass/action-block.scss */
+/* line 732, ../sass/action-block.scss */
 .block_main {
   height: 334px;
   max-height: 334px;
   float: right;
   width: 48%;
 }
-/* line 657, ../sass/action-block.scss */
+/* line 737, ../sass/action-block.scss */
 .block_main:first-child {
   float: left;
+}
+@media (max-width: 767px) {
+  /* line 732, ../sass/action-block.scss */
+  .block_main {
+    width: 100%;
+    height: 255px;
+    padding-bottom: 15px;
+  }
+  /* line 744, ../sass/action-block.scss */
+  .block_main .title, .block_main .text, .block_main .text1, .block_main .text2, .block_main .text3 {
+    float: left;
+    width: 100%;
+    white-space: inherit;
+    height: auto;
+    min-height: inherit;
+  }
+  /* line 751, ../sass/action-block.scss */
+  .block_main img {
+    display: none;
+  }
+}
+
+/* line 758, ../sass/action-block.scss */
+.my_share {
+  float: left;
+  width: 170px;
+  padding: 0px;
+  background: none;
+  height: 50px;
+  padding-right: 11px;
 }
