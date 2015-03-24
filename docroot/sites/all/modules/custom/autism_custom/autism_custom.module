@@ -155,8 +155,6 @@ function autism_custom_views_query_alter(&$view, &$query) {
   }
   if ($view->name == 'stream' && $view->current_display == 'stream_forum_page' && 
 $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
-
-
     $join = new views_join();
     $join->table = 'comment';
     $join->field = 'nid';
@@ -168,5 +166,24 @@ $query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
     $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
     $query->orderby[0]['field'] = 'node_nid';
     $query->distinct = TRUE;
+  }
+}
+
+function autism_custom_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-stream-forum-page') {
+   $form['search_community'] = array(
+    '#type' => 'textfield',
+    '#attributes' => array(
+      'placeholder' => 'search the community',
+    ),
+   );
+   $form['#info']['search_box'] = array('value' => 'search_community');
+   $form['#validate'][] = 'autism_custom_search_community_submit';
+  }
+}
+
+function autism_custom_search_community_submit($form, &$form_state) {
+  if ($form_state['values']['search_community'] != '') {
+    drupal_goto('search/forum_discussion/' . $form_state['values']['search_community']);
   }
 }

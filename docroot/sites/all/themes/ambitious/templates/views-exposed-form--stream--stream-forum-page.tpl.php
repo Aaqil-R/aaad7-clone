@@ -34,7 +34,7 @@
 
 
 <div class="sort-block">
-<div class="search-text forum-page"><input type="text" value="Search the community" onfocus="javascript: if(this.value == 'Search the community'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Search the community';}" /><span class="icon-search"></span></div>
+<div class="search-text forum-page"><?php print $widgets['search_box']->widget; unset($widgets['search_box']) ?><span class="icon-search"></span></div>
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -53,6 +53,7 @@
             <?php print $widget->description; ?>
           </div>
         <?php endif; ?>
+
       </div>
     <?php endforeach; ?>
     <?php if (!empty($sort_by)): ?>
