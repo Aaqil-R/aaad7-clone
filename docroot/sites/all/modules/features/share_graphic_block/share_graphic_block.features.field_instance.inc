@@ -50,7 +50,7 @@ function share_graphic_block_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -87,7 +87,7 @@ function share_graphic_block_field_default_field_instances() {
       'module' => 'color_field',
       'settings' => array(),
       'type' => 'color_field_default_widget',
-      'weight' => 10,
+      'weight' => 14,
     ),
   );
 
@@ -137,23 +137,27 @@ function share_graphic_block_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-share_graphic_block-field_block_tout_text'
-  $field_instances['node-share_graphic_block-field_block_tout_text'] = array(
+  // Exported field_instance: 'node-share_graphic_block-field_background_style'
+  $field_instances['node-share_graphic_block-field_background_style'] = array(
     'bundle' => 'share_graphic_block',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 12,
+        'type' => 'list_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -163,8 +167,49 @@ function share_graphic_block_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_block_tout_text',
-    'label' => 'Tout text',
+    'field_name' => 'field_background_style',
+    'label' => 'Background style',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-share_graphic_block-field_call_to_action_text'
+  $field_instances['node-share_graphic_block-field_call_to_action_text'] = array(
+    'bundle' => 'share_graphic_block',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Share this',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_call_to_action_text',
+    'label' => 'Call to action text',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -174,10 +219,10 @@ function share_graphic_block_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'size' => 60,
       ),
-      'type' => 'text_textarea',
-      'weight' => 4,
+      'type' => 'text_textfield',
+      'weight' => 7,
     ),
   );
 
@@ -227,7 +272,7 @@ function share_graphic_block_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -292,7 +337,124 @@ function share_graphic_block_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 9,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-share_graphic_block-field_navigation'
+  $field_instances['node-share_graphic_block-field_navigation'] = array(
+    'bundle' => 'share_graphic_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_navigation',
+    'label' => 'Navigation',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-share_graphic_block-field_share_grapic'
+  $field_instances['node-share_graphic_block-field_share_grapic'] = array(
+    'bundle' => 'share_graphic_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_share_grapic',
+    'label' => 'Share Grapic',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-share_graphic_block-field_tout_text'
+  $field_instances['node-share_graphic_block-field_tout_text'] = array(
+    'bundle' => 'share_graphic_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tout_text',
+    'label' => 'Tout text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 17,
     ),
   );
 
@@ -328,7 +490,7 @@ function share_graphic_block_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 6,
     ),
   );
@@ -337,9 +499,13 @@ function share_graphic_block_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Background colour');
   t('Background image');
+  t('Background style');
   t('Body');
+  t('Call to action text');
   t('Featured image');
   t('Mobile background image');
+  t('Navigation');
+  t('Share Grapic');
   t('Tout text');
   t('Type');
 
