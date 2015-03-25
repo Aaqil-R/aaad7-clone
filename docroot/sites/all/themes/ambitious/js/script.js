@@ -21,7 +21,8 @@ Drupal.behaviors.ambitious = {
             $('#edit-search-community').keypress(function (e) {
               var key = e.which;
               if (key == 13) {
-                location.href = '/search/forum_discussion/'+eleval;
+                location.href = '/search/forum_discussion/'+ $(this).val();
+                event.stopPropagation();
               }
             });
             
