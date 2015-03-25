@@ -5,7 +5,12 @@
  */
 
 // Variable
-$last=count($rows) - 1;
+if ($view->query->pager->total_items > $view->query->pager->options['items_per_page']){
+  $no=(int) ($view->query->pager->total_items/$view->query->pager->options['items_per_page']);
+  $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
+} else {
+ $noofpage = 0;
+}
 
 ?>
 
@@ -32,18 +37,14 @@ $last=count($rows) - 1;
 			<?php print $row; ?>
 		</div>
 
-	<?php if($id == $last): ?>
+
+<?php endforeach; ?>
+	<?php if($view->query->pager->current_page == $noofpage): ?>
 		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
 			<?php
 			//D7
-			if($view->query->pager->current_page === 0){ 
 			  $block = module_invoke('block', 'block_view', '126');
-			}
 			print render($block['content']);
 			?>
 		</div>
 	<?php endif; ?>
-
-
-
-<?php endforeach; ?>

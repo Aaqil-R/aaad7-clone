@@ -149,12 +149,13 @@ function ambitious_preprocess_region(&$variables) {
   $variables['myblock'] = drupal_render($block2);
   
   $variables['logo'] = theme_get_setting('logo'); 
+  $variables['link'] = "/";
   $variables['headerlogo'] = null;
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
     if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
-
+      $variables['link'] = "/voices-spectrum";
       $block = block_load('block',151);
       $block1 = _block_render_blocks(array($block));
       $block2 = _block_get_renderable_array($block1);
@@ -244,7 +245,7 @@ function ambitious_menu_link(&$variables) {
 		$sub_menu = drupal_render($element['#below']);
 		}
   
-		$output = l($element['#title'].'<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span>', $element['#href'], $element['#localized_options']);
+		$output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
 	}
 	
