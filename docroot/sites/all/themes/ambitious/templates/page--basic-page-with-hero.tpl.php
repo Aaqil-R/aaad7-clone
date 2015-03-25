@@ -114,19 +114,23 @@
             <!-- include breadcrumb here -->
 
           </div>
-
-            <h1 class="banner_text"> 
-              <?php if($captionone): ?>
-                <?php print render($captionone); ?>
-              <?php endif; ?>
-            </h1>
-              <br>
-            <h4 class="banner_sub_text">
-              <?php if($captiontwo): ?>
-                <?php print render($captiontwo); ?> 
-              <?php endif; ?>
-            </h4>          
-            
+          <?php if($captionone): ?>
+            <?php $captionone_render = render($captionone); ?>
+            <?php if(!empty($captionone)): ?>
+              <h1 class="banner_text">               
+                  <?php print $captionone_render; ?>              
+              </h1>
+            <?php endif; ?>
+          <?php endif; ?>
+          <br>
+          <?php if($captiontwo): ?>
+            <?php $captiontwo_render = render($captiontwo); ?>
+            <?php if(!empty($captiontwo_render)): ?>              
+              <h4 class="banner_sub_text">
+                  <?php print $captiontwo_render; ?>               
+              </h4>  
+            <?php endif; ?>        
+          <?php endif; ?>  
         </div>
       </div>
       <div class="region region-image-holder">
@@ -137,13 +141,16 @@
         </p>    
       </div>
     </div>
-    <div class="holder">
-      <span class="pic-by">
-        <?php if($credit): ?>
-          <?php print render($credit); ?> 
-        <?php endif; ?> 
-      </span>
-    </div>        
+    <?php if($credit): ?>
+      <?php $credit_render = render($credit); ?>
+      <?php if(!empty($credit_render)): ?>
+        <div class="holder">
+          <span class="pic-by">          
+              <?php print t('© Photo by ') . render($credit_render); ?>          
+          </span>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>         
   </section>
 
 
