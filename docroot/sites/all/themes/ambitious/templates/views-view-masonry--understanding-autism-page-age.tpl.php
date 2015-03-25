@@ -43,9 +43,7 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
 		<div class="masonry-item views-row views-row-even views-row-last post-my-voice-actions post masonry-brick">
 			<?php
 			//D7
-			if($view->query->pager->current_page === 0){ 
 			  $block = module_invoke('block', 'block_view', '126');
-			}
 			print render($block['content']);
 			?>
 		</div>
