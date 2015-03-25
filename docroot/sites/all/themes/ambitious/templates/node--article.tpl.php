@@ -25,21 +25,14 @@
 			   <!-- article -->
 	             <article>
 	               <header>
-	                 <h1><?php print $title; ?></h1>
-					<?php if (!empty($content['field_standfirst'])) : ?> 
-	                 	<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
-	                <?php endif; ?> 
-	                 <div class="article-info">
-					   <cite>
-					   <?php if (!empty($first_name)): ?>
-					      <span><?php print t('By') ?> <?php print $first_name; ?></span>
-					    <?php endif; ?>
-					      <a href="<?php print $base_path.'user/'.$uid; ?>" class="first">@<?php print $node->name; ?></a>
-						  <a href="<?php print url('messages/new/'. $node->uid, array ('query' => drupal_get_destination())); ?>" title="email the author">email the author</a>
-						  <?php print flag_create_link('bookmarks', $node->nid); ?>
-					   </cite>
-				       <div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
-	                 </div>
+	                	<h1><?php print $title; ?></h1>
+							<?php if (!empty($content['field_standfirst'])) : ?> 
+	                 			<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
+	                		<?php endif; ?> 
+	                 	<div class="article-info">
+							<?php print flag_create_link('bookmarks', $node->nid); ?>
+				     		<div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
+	                 	</div>
 	               </header>
 	               <?php if (!empty($content['field_featured_image'])): ?>
 	                <section class="visual">

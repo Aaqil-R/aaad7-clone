@@ -1,6 +1,17 @@
 <?php
 $i = 1;
-$ourfields = array('title', 'body', 'field_has_video', 'field_featured_image', 'comment_count', 'type', 'field_background_colour', 'field_featured_author', 'field_source', 'nid');
+$ourfields = array('title'
+	, 'body'
+	, 'field_has_video'
+	, 'field_featured_image'
+	, 'comment_count'
+	, 'type'
+	, 'field_background_colour'
+	, 'field_featured_author'
+	, 'field_source'
+	, 'nid'
+	, 'field_standfirst'
+	, 'comment');
 
 $ourfieldsourse =  strip_tags($fields['field_source']->content);
 ?>
@@ -47,16 +58,18 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						</div>
 						<div class="info add">
 							<h3><?php print $fields['title']->content; ?></h3>
-							<?php print $fields['body']->content; ?>
+							<?php print $fields['field_standfirst']->content; ?>
 						</div>
-						<div class="footer">
-							<div class="num-holder">
-								<a href="node/nid" title="people are talking about this" class="">
-									<span class="num"><?php print strip_tags($fields['comment_count']->raw); ?></span>
-									<span class="text">people are talking about this </span>
-								</a>
+						<?php if($fields['comment']->raw != 1): ?>
+							<div class="footer">
+								<div class="num-holder">
+									<a href="node/nid" title="people are talking about this" class="">
+										<span class="num"><?php print strip_tags($fields['comment_count']->raw); ?></span>
+										<span class="text">people are talking about this </span>
+									</a>
+								</div>
 							</div>
-						</div>
+						<?php endif ?>
 					</section>
 <?php endif; ?>
 <?php foreach ($fields as $id => $field): ?>
