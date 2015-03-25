@@ -18,7 +18,7 @@ Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
             //implementation of apache solr redirect to search result page -  this is for ajax
-            $('#edit-search-community').keyPress(function (e) {
+            $('#edit-search-community').keypress(function (e) {
               var key = e.which;
               if (key == 13) {
                 location.href = '/search/forum_discussion/'+eleval;
