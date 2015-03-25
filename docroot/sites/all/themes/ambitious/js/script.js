@@ -19,10 +19,11 @@ Drupal.behaviors.ambitious = {
      
             //implementation of apache solr redirect to search result page -  this is for ajax
             $('#edit-search-community').keypress(function (e) {
+              e.stopPropagation();
+              e.preventDefault();
               var key = e.which;
               if (key == 13) {
                 location.href = '/search/forum_discussion/'+ $(this).val();
-                event.stopPropagation();
               }
             });
             
