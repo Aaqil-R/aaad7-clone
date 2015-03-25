@@ -23,7 +23,7 @@ Drupal.behaviors.ambitious = {
               if (key == 13) {
                 e.stopPropagation();
                 e.preventDefault();
-                location.href = '/search/forum_discussion/'+ $(this).val();
+                location.href = '/search/community/'+ $(this).val();
               }
             });
             
