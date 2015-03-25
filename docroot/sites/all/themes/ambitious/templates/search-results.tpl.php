@@ -25,7 +25,7 @@
 ?>
 <?php if ($search_results): ?>
   <h2><?php print t('Search results');?></h2>
-  <ol class="search-results posts-columns columns-full <?php print $module; ?>-results">
+  <ol class="search-results posts-columns columns-full <?php print $module; ?>-results" style="padding: 0;">
      <?php print $search_results; ?>
   </ol>
   <?php print $pager; ?>

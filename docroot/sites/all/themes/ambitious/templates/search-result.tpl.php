@@ -91,7 +91,7 @@
     <?php endif; ?>
    </div>
   </div>
-  <div class="footer">
+  <div class="footer" style="margin-top:15px;">
   <?php
     global $user;
 if ( 
