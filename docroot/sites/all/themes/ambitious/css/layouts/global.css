@@ -698,11 +698,11 @@ div#admin-toolbar.vertical div.admin-tab {
 }
 
 /* line 276, ../../sass/layouts/global.scss */
--list {
+.item-list {
   clear: both;
 }
 /* line 278, ../../sass/layouts/global.scss */
--list .pager {
+.item-list .pager {
   text-align: center;
   padding: 30px 10px 60px 10px;
   display: block;
@@ -711,7 +711,7 @@ div#admin-toolbar.vertical div.admin-tab {
   clear: both;
 }
 /* line 285, ../../sass/layouts/global.scss */
--list .pager li {
+.item-list .pager li {
   background: #ffffff;
   display: inline-flex;
   list-style: none;
@@ -721,20 +721,20 @@ div#admin-toolbar.vertical div.admin-tab {
   border-radius: 5px;
 }
 /* line 291, ../../sass/layouts/global.scss */
--list .pager li:hover, -list .pager li.pager-current {
+.item-list .pager li:hover, .item-list .pager li.pager-current {
   color: #ffffff;
   background: #383c40;
 }
 /* line 294, ../../sass/layouts/global.scss */
--list .pager li:hover a, -list .pager li.pager-current a {
+.item-list .pager li:hover a, .item-list .pager li.pager-current a {
   color: #b6bcc1;
 }
 /* line 299, ../../sass/layouts/global.scss */
--list .pager li.pager-ellipsis, -list .pager li.pager-current {
+.item-list .pager li.pager-ellipsis, .item-list .pager li.pager-current {
   padding: 4px 12px;
 }
 /* line 302, ../../sass/layouts/global.scss */
--list .pager li a {
+.item-list .pager li a {
   text-decoration: none;
   line-height: 1.5em;
   padding: 4px 12px;

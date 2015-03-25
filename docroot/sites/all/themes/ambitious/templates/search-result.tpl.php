@@ -79,7 +79,7 @@
         <?php } ?>
      </div>
      
-     <cite>by <br><strong><?php print $info_split['user'];?></strong></cite>
+     <cite>by </br></br><strong><?php print $info_split['user'];?></strong></cite>
     <time pubdate="<?php print format_date($result['node']->created); ?>"><?php print format_date($result['node']->created); ?></time>  
    </div>
    <div class="info add forum-right">
