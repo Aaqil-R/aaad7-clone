@@ -697,12 +697,12 @@ div#admin-toolbar.vertical div.admin-tab {
   opacity: 0.6;
 }
 
-/* line 277, ../../sass/layouts/global.scss */
-.item-list {
+/* line 276, ../../sass/layouts/global.scss */
+-list {
   clear: both;
 }
-/* line 279, ../../sass/layouts/global.scss */
-.item-list .pager {
+/* line 278, ../../sass/layouts/global.scss */
+-list .pager {
   text-align: center;
   padding: 30px 10px 60px 10px;
   display: block;
@@ -710,8 +710,8 @@ div#admin-toolbar.vertical div.admin-tab {
   position: relative;
   clear: both;
 }
-/* line 286, ../../sass/layouts/global.scss */
-.item-list .pager li {
+/* line 285, ../../sass/layouts/global.scss */
+-list .pager li {
   background: #ffffff;
   display: inline-flex;
   list-style: none;
@@ -720,28 +720,28 @@ div#admin-toolbar.vertical div.admin-tab {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 292, ../../sass/layouts/global.scss */
-.item-list .pager li:hover, .item-list .pager li.pager-current {
+/* line 291, ../../sass/layouts/global.scss */
+-list .pager li:hover, -list .pager li.pager-current {
   color: #ffffff;
   background: #2a2e31;
 }
-/* line 295, ../../sass/layouts/global.scss */
-.item-list .pager li:hover a, .item-list .pager li.pager-current a {
+/* line 294, ../../sass/layouts/global.scss */
+-list .pager li:hover a, -list .pager li.pager-current a {
   color: #b6bcc1;
 }
-/* line 300, ../../sass/layouts/global.scss */
-.item-list .pager li.pager-ellipsis, .item-list .pager li.pager-current {
+/* line 299, ../../sass/layouts/global.scss */
+-list .pager li.pager-ellipsis, -list .pager li.pager-current {
   padding: 4px 12px;
 }
-/* line 303, ../../sass/layouts/global.scss */
-.item-list .pager li a {
+/* line 302, ../../sass/layouts/global.scss */
+-list .pager li a {
   text-decoration: none;
   line-height: 1.5em;
   padding: 4px 12px;
 }
 
 /* TABLE STYLE */
-/* line 316, ../../sass/layouts/global.scss */
+/* line 315, ../../sass/layouts/global.scss */
 table {
   color: #333333;
   width: 100%;
@@ -750,7 +750,7 @@ table {
   padding-top: 15px;
   margin-bottom: 15px;
 }
-/* line 323, ../../sass/layouts/global.scss */
+/* line 322, ../../sass/layouts/global.scss */
 table td, table th {
   border: 1px solid transparent;
   min-height: 30px;
@@ -760,34 +760,50 @@ table td, table th {
   transition: all 0.2s ease;
   text-align: left;
 }
-/* line 329, ../../sass/layouts/global.scss */
+/* line 328, ../../sass/layouts/global.scss */
 table th {
   background: #636c73;
   font-weight: bold;
   color: #ffffff;
   padding: 9px;
 }
-/* line 334, ../../sass/layouts/global.scss */
+/* line 333, ../../sass/layouts/global.scss */
 table th a {
   color: #ffffff;
 }
-/* line 339, ../../sass/layouts/global.scss */
+/* line 338, ../../sass/layouts/global.scss */
 table tr td {
   background: #ffffff;
   text-align: left;
   padding: 10px;
 }
-/* line 343, ../../sass/layouts/global.scss */
+/* line 342, ../../sass/layouts/global.scss */
 table tr td:hover {
   background: #636c73;
   color: #ffffff;
 }
-/* line 349, ../../sass/layouts/global.scss */
+/* line 348, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td, table tr.odd td {
   background: #eef2f3;
   color: #636c73;
 }
-/* line 352, ../../sass/layouts/global.scss */
+/* line 351, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td a, table tr.odd td a {
   color: #636c73;
+}
+
+/* LOGIN LOGOUT CLASS */
+/* line 361, ../../sass/layouts/global.scss */
+.show_notlogedin, .show_logedin {
+  display: none;
+}
+
+/* line 364, ../../sass/layouts/global.scss */
+.logged-in .show_notlogedin {
+  display: inherit;
+}
+
+/* line 367, ../../sass/layouts/global.scss */
+.logged-in .show_logedin {
+  display: inherit;
 }
