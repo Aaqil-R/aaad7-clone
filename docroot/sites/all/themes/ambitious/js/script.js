@@ -18,27 +18,13 @@ Drupal.behaviors.ambitious = {
   attach: function(context, settings) {
      
             //implementation of apache solr redirect to search result page -  this is for ajax
-       if ((typeof Drupal.settings.views != 'undefined') && (typeof Drupal.settings.views.ajaxViews != 'undefined')) {
-          $.each(Drupal.settings.views.ajaxViews, function (i, ajaxsetting) {
-            if ((typeof ajaxsetting.view_display_id != 'undefined') && (ajaxsetting.view_display_id == 'stream_forum_page') && typeof Drupal.views.instances[i].exposedFormAjax != 'undefined') {
-            Drupal.views.instances[i].exposedFormAjax.options.beforeSubmit = function (form_values, element, options) {
-            //Check here. If return false AJAX request will not make
-              exit = false;
-              $.each(form_values, function(i, ele) {
-                eleval = $.trim(ele.value);
-                if (ele.name == 'search_community' && eleval != '') {
-                  location.href = '/search/forum_discussion/'+eleval;
-                  exit = true;
-                }
-              });
-              if (exit == true) {
-                return false;
+            $('#edit-search-community').keyPress(function (e) {
+              var key = e.which;
+              if (key == 13) {
+                location.href = '/search/forum_discussion/'+eleval;
               }
-            };
-           }
-        });
-         
-       }
+            });
+            
         // load more button first loads the content only on click, so removed the waypoint binding.
  
         if($('body').hasClass('node-type-topic')){
