@@ -407,8 +407,12 @@ a {
   outline: none;
   color: #081318;
 }
+/* line 44, ../sass/styles.scss */
+a:hover {
+  color: #f07d00;
+}
 
-/* line 45, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
 input,
 textarea,
 select {
@@ -417,21 +421,21 @@ select {
   vertical-align: middle;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 form,
 fieldset {
   margin: 0;
   border-style: none;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 66, ../sass/styles.scss */
+/* line 70, ../sass/styles.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -441,13 +445,13 @@ input[type="submit"] {
   *overflow: visible;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 input[type="submit"]:hover,
 button:hover {
   cursor: pointer;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -459,7 +463,7 @@ textarea {
   padding: 4px 7px;
   border: 1px solid #d2d5d6;
 }
-/* line 90, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
@@ -470,21 +474,21 @@ textarea:focus {
   border-color: #828a8d;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 textarea {
   overflow: auto;
   resize: vertical;
   vertical-align: top;
 }
 
-/* line 102, ../sass/styles.scss */
+/* line 106, ../sass/styles.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 108, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -492,13 +496,13 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 115, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 120, ../sass/styles.scss */
+/* line 124, ../sass/styles.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   line-height: 1.2em;
@@ -506,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* line 127, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 sub,
 sup {
   font-size: 75%;
@@ -515,32 +519,32 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 135, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 139, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 143, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 149, ../sass/styles.scss */
+/* line 153, ../sass/styles.scss */
 .messages {
   position: inherit;
 }
-/* line 151, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 .messages .placeholder {
   text-decoration: underline;
 }
 
-/* line 156, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .status {
   width: 100%;
   float: left;
@@ -552,7 +556,7 @@ table {
   margin-bottom: 10px;
 }
 
-/* line 164, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 .warning {
   width: 100%;
   float: left;
@@ -564,7 +568,7 @@ table {
   margin-bottom: 10px;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 .error {
   width: 100%;
   float: left;
@@ -576,50 +580,50 @@ table {
   margin-bottom: 10px;
 }
 
-/* line 180, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 .easy-breadcrumb {
   text-align: right;
   padding: 45px 12px 0 0;
   color: #ffffff;
 }
-/* line 186, ../sass/styles.scss */
+/* line 190, ../sass/styles.scss */
 .easy-breadcrumb a:visited {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 180, ../sass/styles.scss */
+  /* line 184, ../sass/styles.scss */
   .easy-breadcrumb {
     display: none;
   }
 }
 
-/* line 197, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .main-layout {
   background-color: #ffffff;
   padding: 1em;
   padding-bottom: 4em;
 }
 
-/* line 203, ../sass/styles.scss */
+/* line 207, ../sass/styles.scss */
 .field-name-field-salary
 , .field-name-field-time-commitment
 , .field-name-field-vacancy-location {
   font-weight: bold;
 }
 
-/* line 209, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 .field-name-field-standfirst
 , .field-name-field-body {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 216, ../sass/styles.scss */
+/* line 220, ../sass/styles.scss */
 .field-type-text {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 .messages--error {
   position: fixed;
   bottom: 0px;
@@ -629,13 +633,13 @@ table {
   left: 0;
 }
 
-/* line 233, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 .maintenance-page #main #content-area {
   background: #ffffff;
   padding: 30px;
 }
 
-/* line 238, ../sass/styles.scss */
+/* line 242, ../sass/styles.scss */
 .flag-bookmarks {
   font-weight: bold;
   font-style: normal;
