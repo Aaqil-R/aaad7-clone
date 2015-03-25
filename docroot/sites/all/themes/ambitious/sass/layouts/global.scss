@@ -273,7 +273,6 @@ div#admin-toolbar.vertical div.admin-tab{
 		opacity: 0.6;
 	}
 }
-
 .item-list{
 clear: both;
 .pager{
@@ -357,5 +356,16 @@ table {
     
   }  
 }
-  
+
+/* LOGIN LOGOUT CLASS */ 
+.show_notlogedin, .show_logedin{
+  display: none!important;
+} 
+.logged-in .show_notlogedin{
+   display: inherit!important; 
+}
+.not-logged-in .show_logedin{
+  display: inherit!important; 
+}
+
 

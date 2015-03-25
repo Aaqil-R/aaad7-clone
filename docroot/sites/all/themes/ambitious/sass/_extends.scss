@@ -1,73 +1,7 @@
 @import "base/base";
 
 %my-voice-main {
-	//TODO remove this style and do it properly instead of piggybacking
-	.action-block{
-		float: left;
-		margin-bottom: 30px;
-		background: transparent;
-		.block-symptoms, .block-share, .block-spectrum{
-			background-image: url(../../images/bg06.jpg);
-			color:$white;
-			width:48.5%;
-			padding: 50px 10px 37px 39px;
-			background-size:cover;
-			float:left;
-			@include breakpoint($mobile) {
-				width:100%;
-				float:none;
-				padding:26px 10px 17px 20px;
-				margin:0 0 34px;
-				background-position: right center;
-			}
-			.title {
-				display:block;
-				font-size:45px;
-				line-height:46px;
-				margin:0 0 13px;
-				font-family:$header-font-family;
-				font-weight: normal;
-				@include breakpoint($tablet) {
-					font-size:30px;
-					line-height:33px;
-				}
-				@include breakpoint($mobile) {
-					margin:0 0 19px;
-					font-size: 24px;
-					line-height: 30px;
-				}
-				&.smaller{
-					@include fontsize(18,16);
-					margin:0 0 32px;
-					@include breakpoint($tablet) {
-						@include fontsize(14,16);
-						line-height:33px;
-					}
-					@include breakpoint($mobile) {
-						@include fontsize(12,16);
-						line-height:25px;
-						margin:0 0 16px;
-					}
-
-				}
-			}
-			.block-spectrum{
-				float:left;
-			}
-		}
-
-	}
-	.block-share{
-		background-image: url(../images/bg08.jpg);
-	}
-
-	.block-spectrum{
-		background-image: url(../images/bg07.jpg);
-	}
-	.block-report{
-		background-image: url(../../images/bg05.jpg);
-		float:right;
-	}
+	//TODO remove this style and do it properly instead of piggybacking 
 	.sort-block{
         margin: 0;
         padding: 14px 20px 16px;

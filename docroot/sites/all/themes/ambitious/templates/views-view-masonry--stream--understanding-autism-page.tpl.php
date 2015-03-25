@@ -4,8 +4,12 @@
  * Default view template to display content in a Masonry layout.
  */
 // Variable
+if ($view->query->pager->total_items > $view->query->pager->options['items_per_page']){
 $no=(int) ($view->query->pager->total_items/$view->query->pager->options['items_per_page']);
 $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
+} else {
+ $noofpage = 0;
+}
 ?>
 
 <?php if (!empty($title)): ?>

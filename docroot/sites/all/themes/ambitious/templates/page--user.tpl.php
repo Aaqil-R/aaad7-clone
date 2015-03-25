@@ -145,7 +145,7 @@
 <main id="main" role="main"> 
 			<nav id="sidebar">
 			     <?php if($user->uid){?>
-			     <?php if($user->uid == arg(1) ): ?>
+			     <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
 					<li><a href="/user/<?php print $user->uid; ?>/edit">Edit profile</a></li>

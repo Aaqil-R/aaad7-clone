@@ -31,7 +31,7 @@ $weeks = variable_get('autism_custom_past_week', 0);
 						      <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
 						      <?php endif; ?>						      
 						    </div>
-                            <cite>by <strong title="<?php print $name; ?>"> <?php print truncate_utf8($name,12,TRUE,4);?></strong></cite>
+                            <cite>by <strong title="<?php print $name; ?>"> <?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>
                             <time pubdate="pubdate"><?php print $date; ?></time>   
 						  </div>
 						  <div class="info add forum-right">
@@ -50,12 +50,12 @@ $weeks = variable_get('autism_custom_past_week', 0);
                           <div class="num-holder">
 							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
 							  <span class="num"><?php print render($comment_count); ?></span>
-							  <span class="text">replies</span>
+							  <span class="text" style="display:inherit;">replies</span>
 							</a>
 						  </div>
 						  <div class="times">
 						    <em class="icon-Time"></em> 
-							Last reply by <cite><?php print user_load($variables['last_comment_uid'])->name;  ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
+							Last reply by <cite><?php if($logged_in):?><a href="<?php print url('user/'.$variables['last_comment_uid']); ?>"><?php print user_load($variables['last_comment_uid'])->name;  ?></a><?php else: ?><?php print user_load($variables['last_comment_uid'])->name;  ?><?php endif; ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
 					     </div> 
 						 <div class="forum_replay"><a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> </div>
 					  </div>  

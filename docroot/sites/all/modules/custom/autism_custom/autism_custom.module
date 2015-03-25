@@ -183,7 +183,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function autism_custom_search_community_submit($form, &$form_state) {
-  if ($form_state['values']['search_community'] != '') {
+/*  if ($form_state['values']['search_community'] != '') {
     drupal_goto('search/forum_discussion/' . $form_state['values']['search_community']);
-  }
+  }*/
 }
