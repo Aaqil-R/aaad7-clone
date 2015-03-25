@@ -20,7 +20,7 @@ Drupal.behaviors.ambitious = {
             //implementation of apache solr redirect to search result page -  this is for ajax
        if ((typeof Drupal.settings.views != 'undefined') && (typeof Drupal.settings.views.ajaxViews != 'undefined')) {
           $.each(Drupal.settings.views.ajaxViews, function (i, ajaxsetting) {
-            if ((typeof ajaxsetting.view_display_id != 'undefined') && (ajaxsetting.view_display_id == 'stream_forum_page')) {
+            if ((typeof ajaxsetting.view_display_id != 'undefined') && (ajaxsetting.view_display_id == 'stream_forum_page') && typeof Drupal.views.instances[i].exposedFormAjax.options != 'undefined') {
             Drupal.views.instances[i].exposedFormAjax.options.beforeSubmit = function (form_values, element, options) {
             //Check here. If return false AJAX request will not make
               exit = false;
