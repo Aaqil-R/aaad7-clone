@@ -66,17 +66,16 @@
  $t=node_load($result['node']->entity_id);
  $user=user_load($t->uid);
  $img = file_create_url($user->picture->uri);
+ $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 ?>
-<li class="<?php print $classes; ?> post views-row"<?php print $attributes; ?>>
- <em class="icon-Hottopic forum-icon"></em>
-  <em class="icon-Featured forum-icon"></em>
+<li class="<?php print $classes; ?> post views-row"<?php print $attributes; ?>> 
    <div class="forum-text">						
     <div class="forum-left"> 
      <div class="image-holder">
         <?php if($user->picture != '') { ?>
 	   <img src = "<?php print $img;?>">
         <?php }else {?>
-	   <img src = "<?php print variable_get('user_picture_default'); ?>">
+	   <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
         <?php } ?>
      </div>
      
@@ -93,7 +92,18 @@
    </div>
   </div>
   <div class="footer">
-   <ul class="links inline"><li class="comment-add first last"><a href="<?php print $url; ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li>
+  <?php
+    global $user;
+if ( 
+$user->uid ) { ?>
+<ul class="links inline"><li class="comment-add first last"><a href="<?php print $url; ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li>
+<?php }
+else { ?>
+
+   <ul class="links inline"><li class="comment-add first last"><a href="/user/login?destination=<?php print $url; ?>" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li>
    </ul>
+   <?php 
+}
+  ?>
  </div>  
 </li>
