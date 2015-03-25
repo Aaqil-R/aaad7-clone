@@ -795,15 +795,15 @@ table tr:nth-child(odd) td a, table tr.odd td a {
 /* LOGIN LOGOUT CLASS */
 /* line 361, ../../sass/layouts/global.scss */
 .show_notlogedin, .show_logedin {
-  display: none !important;
+  display: none;
 }
 
 /* line 364, ../../sass/layouts/global.scss */
 .logged-in .show_notlogedin {
-  display: inherit !important;
+  display: inherit;
 }
 
 /* line 367, ../../sass/layouts/global.scss */
-.logged-in .show_logedin {
-  display: inherit !important;
+.not-logged-in .show_logedin {
+  display: inherit;
 }
