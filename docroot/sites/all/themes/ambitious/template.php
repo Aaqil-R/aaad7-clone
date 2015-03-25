@@ -244,7 +244,7 @@ function ambitious_menu_link(&$variables) {
 		$sub_menu = drupal_render($element['#below']);
 		}
   
-		$output = l($element['#title'].'<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span>', $element['#href'], $element['#localized_options']);
+		$output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
 		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
 	}
 	
