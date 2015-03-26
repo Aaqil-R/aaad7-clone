@@ -131,10 +131,11 @@
     <div class="caption-frame">
         
       <div class="region region-caption-holder">
-        <div class="easy-breadcrumb">
-          <!-- include breadcrumb here -->
-
-        </div>
+         <?php if ($page['breadcrumb']): ?> 
+          <div class="easy-breadcrumb"> 
+            <?php print render($page['breadcrumb']); ?>
+          </div>
+          <?php endif; ?>
         <div class="caption">
           <h1 class="title title-second">
             <span>  
