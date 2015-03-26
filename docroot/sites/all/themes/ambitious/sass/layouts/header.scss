@@ -966,16 +966,16 @@ nav {
     overflow:hidden;
   }
   .banner_desktop{
-    display:inherit;
+    // display:inherit;
     @include breakpoint($mobile) {
-      display:none;
+      // display:none;
     }
   }
   .banner_mobile{
-    display:none;
-    @include breakpoint($mobile) {
-      display:inherit;
-    }
+    // display:none;
+    // @include breakpoint($mobile) {
+    //   display:inherit;
+    // }
   }
   .banner_text{
     @extent  .h1;
