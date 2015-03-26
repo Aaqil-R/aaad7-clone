@@ -23,7 +23,7 @@
        </div>
      </div>
      <div class="bg-stretch">
-       <img src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/img09.jpg" alt="image description">
+       <img src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/image123.jpg" alt="image description">
      </div>
    </section>
 </div>
