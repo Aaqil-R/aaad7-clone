@@ -110,9 +110,9 @@
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
-           <?php if ($page['caption_holder']): ?> 
+           <?php if ($page['breadcrumb']): ?> 
           <div class="easy-breadcrumb"> 
-            <?php print render($page['caption_holder']); ?>
+            <?php print render($page['breadcrumb']); ?>
           </div>
           <?php endif; ?>
           <?php if($captionone): ?>
