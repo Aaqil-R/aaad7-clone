@@ -92,17 +92,17 @@
 	}
 
  .webform-component-select {
- 	width: 100%;
- 	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	cursor: default;
-	display: block;
-	font-size: 19px;
-	color: #2a2e31;
-	line-height: 41px;
-	border-radius: 5px;
-	background: #fff;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+    display: block;
+    font-size: 19px;
+    color: #2a2e31;
+    line-height: 41px;
+    border-radius: 5px;
+    background: #fff;
  }
 
 .page-node-74606{
@@ -366,17 +366,52 @@ div.ctools-modal-content .form-item .description{
 
 
 #signup {
-
   .fieldset {
     margin-bottom: 16px;
   }
 
   .label {
     margin-bottom: 16px;
+  }  
+
+  input[type=submit] {
+    border: medium none;    
+    outline: medium none;
+    
+    cursor: pointer;  
+    display:inline-block; 
+
+    font-family: inherit;
+    font-size: inherit;
+    color: $white;
+    text-align:center;
+    text-decoration:none;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: none, repeat, scroll, 0, 0, $orange;
+
+    // drop the shadow
+    @include box-shadow(0px 6px $orange-dark);
+    // round the corners
+    @include border-radius(5px);
+
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+      // displace the button shadow 
+      @include box-shadow(0px 4px $orange-dark);   
+    }
+
+    &:active {
+      top: 6px;
+      @include box-shadow(0px 0px $orange-dark);
+    }
   }
 
-  input[type=submit]
-    , input[type=text]
+  input[type=text]
     , input[type=search]
     , input[type=tel]
     , input[type=password]
@@ -390,8 +425,7 @@ div.ctools-modal-content .form-item .description{
       width:80%;
       @include border-radius(5px);
 
-      border: 2px solid $orange-light;
-      border-color: $border-color;
+      border-color: 2px solid $border-color;     
 
       //@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
 
@@ -404,6 +438,9 @@ div.ctools-modal-content .form-item .description{
 
       &:focus {
         border: 2px solid $orange-light;
+
+        // remove the user agent style.
+        outline: none;
       }
     }
 }

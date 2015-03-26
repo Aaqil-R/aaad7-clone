@@ -786,17 +786,49 @@ div.ctools-modal-content .form-item .description {
   margin-top: -20px;
 }
 
-/* line 370, ../sass/forms.scss */
+/* line 369, ../sass/forms.scss */
 #signup .fieldset {
   margin-bottom: 16px;
 }
-/* line 374, ../sass/forms.scss */
+/* line 373, ../sass/forms.scss */
 #signup .label {
   margin-bottom: 16px;
 }
-/* line 378, ../sass/forms.scss */
-#signup input[type=submit]
-, #signup input[type=text]
+/* line 377, ../sass/forms.scss */
+#signup input[type=submit] {
+  border: medium none;
+  outline: medium none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: none, repeat, scroll, 0, 0, #f15500;
+  -webkit-box-shadow: 0px 6px #c63502;
+  box-shadow: 0px 6px #c63502;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 401, ../sass/forms.scss */
+#signup input[type=submit]:hover {
+  top: 2px;
+  -webkit-box-shadow: 0px 4px #c63502;
+  box-shadow: 0px 4px #c63502;
+}
+/* line 408, ../sass/forms.scss */
+#signup input[type=submit]:active {
+  top: 6px;
+  -webkit-box-shadow: 0px 0px #c63502;
+  box-shadow: 0px 0px #c63502;
+}
+/* line 414, ../sass/forms.scss */
+#signup input[type=text]
 , #signup input[type=search]
 , #signup input[type=tel]
 , #signup input[type=password]
@@ -809,15 +841,13 @@ div.ctools-modal-content .form-item .description {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  border: 2px solid #f07d00;
-  border-color: #d2d5d6;
+  border-color: 2px solid #d2d5d6;
   margin-bottom: 20px;
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 378, ../sass/forms.scss */
-  #signup input[type=submit]
-  , #signup input[type=text]
+  /* line 414, ../sass/forms.scss */
+  #signup input[type=text]
   , #signup input[type=search]
   , #signup input[type=tel]
   , #signup input[type=password]
@@ -827,9 +857,8 @@ div.ctools-modal-content .form-item .description {
     width: 100%;
   }
 }
-/* line 405, ../sass/forms.scss */
-#signup input[type=submit]:focus
-, #signup input[type=text]:focus
+/* line 439, ../sass/forms.scss */
+#signup input[type=text]:focus
 , #signup input[type=search]:focus
 , #signup input[type=tel]:focus
 , #signup input[type=password]:focus
@@ -837,4 +866,5 @@ div.ctools-modal-content .form-item .description {
 , #signup input[type=file]:focus
 , #signup textarea:focus {
   border: 2px solid #f07d00;
+  outline: none;
 }
