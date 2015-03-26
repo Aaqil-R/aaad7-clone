@@ -664,7 +664,9 @@ a {
 //first row
 .visual {
 	&.no-overlay{
-		height: 365px;
+		// closing the form; shrinks the image; 
+		// so removing the height restriction.
+		// height: 365px;
 		overflow: hidden;
 		margin-bottom: 500px;
 		@include breakpoint($mobile) {
