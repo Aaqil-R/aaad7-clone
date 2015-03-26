@@ -363,3 +363,47 @@ div.ctools-modal-content .form-item .description{
 	text-align: right;
 	margin-top: -20px;
    }
+
+
+#signup {
+
+  .fieldset {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    margin-bottom: 16px;
+  }
+
+  input[type=submit]
+    , input[type=text]
+    , input[type=search]
+    , input[type=tel]
+    , input[type=password]
+    , input[type=email]
+    , input[type=file]
+    , textarea {
+
+      float:left;
+      clear:both;
+
+      width:80%;
+      @include border-radius(5px);
+
+      border: 2px solid $orange-light;
+      border-color: $border-color;
+
+      //@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+
+      margin-bottom: 20px;
+      padding: 12px 23px;
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+      &:focus {
+        border: 2px solid $orange-light;
+      }
+    }
+}

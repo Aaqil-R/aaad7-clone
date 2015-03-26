@@ -785,3 +785,56 @@ div.ctools-modal-content .form-item .description {
   text-align: right;
   margin-top: -20px;
 }
+
+/* line 370, ../sass/forms.scss */
+#signup .fieldset {
+  margin-bottom: 16px;
+}
+/* line 374, ../sass/forms.scss */
+#signup .label {
+  margin-bottom: 16px;
+}
+/* line 378, ../sass/forms.scss */
+#signup input[type=submit]
+, #signup input[type=text]
+, #signup input[type=search]
+, #signup input[type=tel]
+, #signup input[type=password]
+, #signup input[type=email]
+, #signup input[type=file]
+, #signup textarea {
+  float: left;
+  clear: both;
+  width: 80%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #f07d00;
+  border-color: #d2d5d6;
+  margin-bottom: 20px;
+  padding: 12px 23px;
+}
+@media (max-width: 767px) {
+  /* line 378, ../sass/forms.scss */
+  #signup input[type=submit]
+  , #signup input[type=text]
+  , #signup input[type=search]
+  , #signup input[type=tel]
+  , #signup input[type=password]
+  , #signup input[type=email]
+  , #signup input[type=file]
+  , #signup textarea {
+    width: 100%;
+  }
+}
+/* line 405, ../sass/forms.scss */
+#signup input[type=submit]:focus
+, #signup input[type=text]:focus
+, #signup input[type=search]:focus
+, #signup input[type=tel]:focus
+, #signup input[type=password]:focus
+, #signup input[type=email]:focus
+, #signup input[type=file]:focus
+, #signup textarea:focus {
+  border: 2px solid #f07d00;
+}
