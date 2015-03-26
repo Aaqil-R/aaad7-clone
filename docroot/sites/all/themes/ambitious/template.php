@@ -891,6 +891,8 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
+
+
 }
 
 function ambitious_form_element($variables) {
@@ -979,6 +981,16 @@ function ambitious_preprocess_node(&$variables){
     if (module_exists('autism_custom')) {
        $variables['pastcomments'] = getcommentcount_past2week($variables['node']->nid);
     }
+  }
+
+  if($variables['node']->type == 'topic')
+  {
+    $node = node_load($variables['node']->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_featured_image');
+    $viewitemsimage = field_view_value('node', $node ,'field_featured_image'
+      , $getitemsimage[0]
+      , array('settings' => array('image_style' => 'basic_page_mobile')));
+    $variables['mobileimage'] = $viewitemsimage;
   }
 }
 
