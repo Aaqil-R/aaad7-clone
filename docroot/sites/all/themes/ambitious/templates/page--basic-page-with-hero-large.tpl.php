@@ -111,8 +111,7 @@
 
         <div class="region region-caption-holder">
           <?php if ($page['caption_holder']): ?> 
-          <div class="easy-breadcrumb">
-            <!-- include breadcrumb here -->
+          <div class="easy-breadcrumb"> 
             <?php print render($page['caption_holder']); ?>
           </div>
           <?php endif; ?>
