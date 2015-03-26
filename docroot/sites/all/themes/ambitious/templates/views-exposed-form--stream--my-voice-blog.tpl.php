@@ -78,7 +78,7 @@
     <?php endif; ?>
     
     <div class="filter-overlay"></div>
-     <div sytle="display:none;"><?php print $button; ?></div>
+     <div style="display:none;"><?php print $button; ?></div>
    
     <?php if (!empty($reset_button)): ?>
       <div class="views-exposed-widget views-reset-button element-invisible">
