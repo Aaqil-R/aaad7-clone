@@ -123,7 +123,7 @@ input[type="search"]::-webkit-search-decoration {
  
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
-    line-height: 1.2em;
+    line-height: 1.2em;//doubles up and over typography?
     margin: 0 0 1.2em;
     font-weight: bold;
 }
@@ -228,6 +228,40 @@ table {
     font-family: $base-font-family;
 }
 
+//basic page styles
+.node-type-page {
+    #content-area {
+        @include breakpoint ($all-desktop) {
+            @include span(10 of 12);
+            @include post (2 of 12);
+            padding-bottom: 5em;
+        }
+    }
+}
+
+// Publication style - simple list from wysiwyg
+
+.simple-list-item {
+    border-bottom: 1px $action-nav-footer solid;
+    margin-bottom: 2.5em;
+    .image {display:none;}
+    @include breakpoint($all-desktop){
+        h5, p {
+            @include span(7 of 10);
+        }
+        .image {
+            @include span(3 of 10 last);
+            display: block;
+        }
+        .clear {
+            clear: both;
+            height: 0;
+        }
+    }
+}
+
+
+
 // Floating the system error messages to the bottom of the viewport.
 .messages--error {
     position: fixed;
@@ -238,6 +272,8 @@ table {
     margin: 0px;
     z-index: 9999;
     left:0;
+    font-size: 0.7em;
+    padding: 1em;
 }
 
 // Maintenance page

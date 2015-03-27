@@ -362,7 +362,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 21, ../../../../../../../../../../usr/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/language/susy/_box-sizing.scss */
+/* line 14, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -628,7 +628,48 @@ table {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 232, ../sass/styles.scss */
+@media (min-width: 1080px) {
+  /* line 233, ../sass/styles.scss */
+  .node-type-page #content-area {
+    width: 83.05085%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-right: 16.94915%;
+    padding-bottom: 5em;
+  }
+}
+
+/* line 244, ../sass/styles.scss */
+.simple-list-item {
+  border-bottom: 1px #d2d5d6 solid;
+  margin-bottom: 2.5em;
+}
+/* line 247, ../sass/styles.scss */
+.simple-list-item .image {
+  display: none;
+}
+@media (min-width: 1080px) {
+  /* line 249, ../sass/styles.scss */
+  .simple-list-item h5, .simple-list-item p {
+    width: 69.38776%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+  /* line 252, ../sass/styles.scss */
+  .simple-list-item .image {
+    width: 28.57143%;
+    float: right;
+    margin-right: 0;
+    display: block;
+  }
+  /* line 256, ../sass/styles.scss */
+  .simple-list-item .clear {
+    clear: both;
+    height: 0;
+  }
+}
+
+/* line 266, ../sass/styles.scss */
 .messages--error {
   position: fixed;
   bottom: 0px;
@@ -636,21 +677,23 @@ table {
   margin: 0px;
   z-index: 9999;
   left: 0;
+  font-size: 0.7em;
+  padding: 1em;
 }
 
-/* line 244, ../sass/styles.scss */
+/* line 280, ../sass/styles.scss */
 .maintenance-page #main #content-area {
   background: #ffffff;
   padding: 30px;
 }
 
-/* line 249, ../sass/styles.scss */
+/* line 285, ../sass/styles.scss */
 .flag-bookmarks {
   font-weight: bold;
   font-style: normal;
 }
 
-/* line 255, ../sass/styles.scss */
+/* line 291, ../sass/styles.scss */
 .article-info .flag-bookmarks {
   float: left;
   padding: 0.5em;
