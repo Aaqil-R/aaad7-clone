@@ -16,7 +16,7 @@
 <?php endif; ?> 
 <?php foreach ($rows as $id => $row): ?> 
     <?php // print $row; ?>   
-    <?php
+    <?php 
       $node_type = $myvar['variables']['view']->result[$id]->node_type;      
       $featured_image = $myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'];
       $featured_image_url = file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); 
@@ -50,6 +50,19 @@
         <?php endif; ?>
 	     <strong class="title text2"> <?=$block_tout_text?></strong>
         <?php endif; ?>
+         <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
+       </div>
+       </div>
+    <?php endif; ?> 
+
+     <?php if($node_type == 'schools_blocks'): ?>
+      <div class="block_main" <?=$background?>>
+        <div class="block-image promo_block node-<?=$nid?>" >
+        <?php $boxtitlesize = strlen($tout_text); ?>  
+           <?php if ($featured_image) :?>
+          <img src="<?= $featured_image_url?>" class="action_image2"/>
+        <?php endif; ?>
+	     <strong class="title text2"> <?=$block_tout_text?></strong> 
          <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
        </div>
        </div>
