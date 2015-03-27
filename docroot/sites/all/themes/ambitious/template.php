@@ -891,12 +891,11 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
-  if (arg(1) == '224011') { 
-    $vars['theme_hook_suggestions'][] = 'header';
-  }
-  dpm(arg(1));
+ if (arg(1) == '224011') { 
+    $vars['theme_hook_suggestions'][] = 'page_header';
+  } 
   if (arg(1) == '224016') { 
-    $vars['theme_hook_suggestions'][] = 'footer';
+    $vars['theme_hook_suggestions'][] = 'page_footer';
   }
 
 }
