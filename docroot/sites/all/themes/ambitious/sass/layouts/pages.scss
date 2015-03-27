@@ -32,7 +32,8 @@
 }
 
 // BASIC PAGE WITH HERO
-.node-type-basic-page-with-hero {
+.node-type-basic-page-with-hero
+, .node-type-basic-page-with-hero-large {
 	
 	// drop the caption toward the middle of the banner
 	.region-caption-holder {
@@ -45,6 +46,14 @@
 	}
 
 	
+}
+
+.node-type-basic-page-with-hero-large {
+	header{
+		p{
+			display: none;
+		}
+	}
 }
 
 // BASIC PAGE
