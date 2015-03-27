@@ -60,11 +60,21 @@
 		}  
 
 		.holder {	
-			@include breakpoint(1230px){	
+			// TODO: The breakpoints variables are a bit of a mess
+			// using a manual breakpoint.
+			// For any resolution less 1230px add 5ems.
+			@include breakpoint(max-width 1230px){	
 				margin-top: 5em;
+			}
+
+			// For anything on mobile, it will float to the 
+			// bottom.
+			@include breakpoint($mobile){
+				margin-top: 0em;
 			}
 		}
 
+		// TODO: these are not needed.
 		// @include breakpoint($all-desktop){
 		//  	top:-101px;
 		// }
