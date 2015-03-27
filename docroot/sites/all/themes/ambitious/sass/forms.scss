@@ -366,12 +366,14 @@ div.ctools-modal-content .form-item .description{
 
 
 #signup {
-  .fieldset {
-    margin-bottom: 16px;
+  @include container();
+
+  .input {
+    margin-bottom: gutter();
   }
 
   .label {
-    margin-bottom: 16px;
+    margin-bottom: gutter();
   }  
 
   input[type=submit] {
@@ -422,7 +424,8 @@ div.ctools-modal-content .form-item .description{
       float:left;
       clear:both;
 
-      width:80%;
+      @include span(6 of 12);
+      padding: gutter() / 2;
       @include border-radius(5px);
 
       border-color: 2px solid $border-color;     
