@@ -52,9 +52,7 @@
 	.slider-block{
 		z-index: 998;
 		position: relative;
-
-		// TODO: [HEADER FORM]
-		// top: -16px;
+		top: -16px;
 
 		.block{
 			// Add box shadow to Home page Form
@@ -66,15 +64,13 @@
 			// using a manual breakpoint.
 			// For any resolution less 1230px add 5ems.
 			@include breakpoint(max-width 1230px){	
-				// TODO: [HEADER FORM]
-				// margin-top: 5em;
+				margin-top: 5em;
 			}
 
 			// For anything on mobile, it will float to the 
 			// bottom.
 			@include breakpoint($mobile){
-				// TODO: [HEADER FORM]
-				// margin-top: 0em;
+				margin-top: 0em;
 			}
 		}
 
