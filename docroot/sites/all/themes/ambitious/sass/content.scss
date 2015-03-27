@@ -1114,6 +1114,10 @@ a {
 		margin-bottom: 130px;
 		@include breakpoint($mobile) {
 			margin-bottom: 20px;
+
+			// without this the close button
+			// for the webform gets cut off.
+			margin-top: 1em;
 		}
 
 	}
