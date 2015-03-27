@@ -58,30 +58,47 @@
 			// Add box shadow to Home page Form
 			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
 		}  
-		@include breakpoint($all-desktop){
-		 	top:-101px;
+
+		.holder {	
+			// TODO: The breakpoints variables are a bit of a mess
+			// using a manual breakpoint.
+			// For any resolution less 1230px add 5ems.
+			@include breakpoint(max-width 1230px){	
+				margin-top: 5em;
+			}
+
+			// For anything on mobile, it will float to the 
+			// bottom.
+			@include breakpoint($mobile){
+				margin-top: 0em;
+			}
 		}
-		@include breakpoint(1345px){
-			top:-101px; 
-		}
-		@include breakpoint(1265px){
-			top: -45px; 
-		}
-		@include breakpoint(1190px){
-			top: 50px; 
-		}
-		@include breakpoint(1100px){
-			top: 35px; 
-		}
-		@include breakpoint(930px){
-			top: 60px; 
-		}
-		@include breakpoint(856px){
-			top: 90px; 
-		}
-		@include breakpoint(780px){
-			top: 95px; 
-		}
+
+		// TODO: these are not needed.
+		// @include breakpoint($all-desktop){
+		//  	top:-101px;
+		// }
+		// @include breakpoint(1345px){
+		// 	top:-101px; 
+		// }
+		// @include breakpoint(1265px){
+		// 	top: -45px; 
+		// }
+		// @include breakpoint(1190px){
+		// 	top: 50px; 
+		// }
+		// @include breakpoint(1100px){
+		// 	top: 35px; 
+		// }
+		// @include breakpoint(930px){
+		// 	top: 60px; 
+		// }
+		// @include breakpoint(856px){
+		// 	top: 90px; 
+		// }
+		// @include breakpoint(780px){
+		// 	top: 95px; 
+		// }
 		.r-s-arrow{
 			a{
 				text-decoration: none;
@@ -181,8 +198,8 @@
 
 	.visual .img-holder img{
 		@include breakpoint($mini-mobile){
-			width: 100%;
-			height: 250px;
+			// width: 100%;
+			// height: 250px;
 		}
 	}
 
