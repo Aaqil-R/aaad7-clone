@@ -894,6 +894,7 @@ function ambitious_preprocess_page(&$vars) {
   if (arg(1) == '224011') { 
     $vars['theme_hook_suggestions'][] = 'header';
   }
+  dpm(arg(1));
   if (arg(1) == '224016') { 
     $vars['theme_hook_suggestions'][] = 'footer';
   }
