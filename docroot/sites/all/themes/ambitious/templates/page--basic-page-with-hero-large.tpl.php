@@ -275,13 +275,7 @@
 <!-- including the social blocks -->
 <?php if ($page['social']): ?>
   <section class="social-block">
-    <div class="holder">
-      <div class="block">
-        <div class="social-columns" >
-          <?php print render($page['social']); ?>
-        </div>
-      </div>
-    </div>
+    <?php print render($page['social']); ?>
   </section>
 <?php endif; ?>
 
