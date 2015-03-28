@@ -32,7 +32,9 @@
 }
 
 // BASIC PAGE WITH HERO
-.node-type-basic-page-with-hero {
+.node-type-basic-page-with-hero 
+, .node-type-basic-page-with-hero-large
+{
 	
 	// drop the caption toward the middle of the banner
 	.region-caption-holder {
@@ -48,14 +50,14 @@
 }
 
 // BASIC PAGE
-.node-type-page #wrapper {
-	// set the background to white
-  	// background: white;
-}
-
 .node-type-basic-page-with-hero .field-name-body {
 	background: white;
 	padding: 1.5em;
 	margin-bottom: 3em;
 	border:1px solid $gray;
+}
+
+// BLOCKS
+.center {
+	text-align: center;
 }
