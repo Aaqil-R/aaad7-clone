@@ -124,7 +124,7 @@
             <?php $captionone_render = trim(render($captionone)); ?>
             <?php if(!empty($captionone)): ?>
               <h1 class="banner_text">               
-                  <?php print 'r' . $captionone_render . 'r'; ?>              
+                  <?php print  strlen($captionone) . $captionone_render; ?>              
               </h1>
             <?php endif; ?>
           <?php endif; ?>
