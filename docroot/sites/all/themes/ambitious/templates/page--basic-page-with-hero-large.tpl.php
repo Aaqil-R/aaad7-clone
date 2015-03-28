@@ -115,9 +115,14 @@
             <?php print render($page['breadcrumb']); ?>
           </div>
           <?php endif; ?>
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
+          <?php endif; ?>
           <?php if($captionone): ?>
-            <?php $captionone_render = render($captionone); ?>
-            <?php if(!empty($captionone)): ?>
+            <?php $captionone_render = trim(render($captionone)); ?>
+            <?php if(!empty($captionone_render)): ?>
               <h1 class="banner_text">               
                   <?php print $captionone_render; ?>              
               </h1>
@@ -271,22 +276,13 @@
     </div>      
   </section>
 <?php endif; ?>
+
 <!-- including the social blocks -->
 <?php if ($page['social']): ?>
   <section class="social-block">
-    <div class="holder">
-      <h1>Stay ambitious</h1>
-      <div class="block">
-        <div class="social-columns" >
-          <?php print render($page['social']); ?>
-        </div>
-      </div>
-    </div>
-    <div class="bg-stretch home-bg-stretch">
-    </div>
+    <?php print render($page['social']); ?>
   </section>
 <?php endif; ?>
-
 
 <footer id="footer">
   <div class="holder">

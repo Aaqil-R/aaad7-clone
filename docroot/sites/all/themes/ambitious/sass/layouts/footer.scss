@@ -14,7 +14,10 @@
 /* footer styles */
 #footer {
 	width:100%;
-	display:table-footer-group;
+	// why is this required? It contracts the footer on 
+	// basic page with hero large and on voices-spectrum
+	// display:table-footer-group;
+	display:block;
 	height: auto!important;
 	background:$base-text-color;
 	position:relative;
@@ -257,6 +260,10 @@
 			}
 		}
 	}
-
 }
 
+// the footer is misbehaving on the my Voice page.
+// TODO: figure this out.
+.page-node-74596 footer#footer {
+  display: flex;
+}
