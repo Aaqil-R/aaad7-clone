@@ -122,9 +122,9 @@
           <?php endif; ?>
           <?php if($captionone): ?>
             <?php $captionone_render = trim(render($captionone)); ?>
-            <?php if(!empty($captionone)): ?>
+            <?php if(!empty($captionone_render)): ?>
               <h1 class="banner_text">               
-                  <?php print  strlen($captionone) . $captionone_render; ?>              
+                  <?php print $captionone_render; ?>              
               </h1>
             <?php endif; ?>
           <?php endif; ?>
