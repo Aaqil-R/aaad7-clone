@@ -115,6 +115,11 @@
             <?php print render($page['breadcrumb']); ?>
           </div>
           <?php endif; ?>
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
+          <?php endif; ?>
           <?php if($captionone): ?>
             <?php $captionone_render = render($captionone); ?>
             <?php if(!empty($captionone)): ?>
