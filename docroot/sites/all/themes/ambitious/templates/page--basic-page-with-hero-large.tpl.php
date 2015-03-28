@@ -271,22 +271,19 @@
     </div>      
   </section>
 <?php endif; ?>
+
 <!-- including the social blocks -->
 <?php if ($page['social']): ?>
   <section class="social-block">
     <div class="holder">
-      <h1>Stay ambitious</h1>
       <div class="block">
         <div class="social-columns" >
           <?php print render($page['social']); ?>
         </div>
       </div>
     </div>
-    <div class="bg-stretch home-bg-stretch">
-    </div>
   </section>
 <?php endif; ?>
-
 
 <footer id="footer">
   <div class="holder">
