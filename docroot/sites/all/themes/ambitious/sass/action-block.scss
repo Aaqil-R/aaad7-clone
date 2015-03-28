@@ -523,7 +523,7 @@
       @include breakpoint($mobile){
         font-size: 25px;
         white-space: inherit;
-        min-height:inherit;
+        min-height:130px;
       }
     }
     .text2{
@@ -536,7 +536,7 @@
       @include breakpoint($mobile){
         font-size: 23px;
         white-space: inherit;
-        min-height:inherit;
+        min-height:130px;
       }
     }
   }
@@ -555,7 +555,7 @@
       @include breakpoint($mobile){
         font-size: 29px;
         line-height: normal;
-        min-height: inherit;
+        min-height: 130px;
       }
     }
     .text2{
@@ -563,7 +563,7 @@
       min-height: 175px;
       margin-top: 18px;
       @include breakpoint($mobile){
-         min-height:inherit;
+         min-height:130px;
       }
     }
   }
@@ -657,7 +657,7 @@
         margin-bottom:10px;
       }
       @include breakpoint($mobile){
-        min-height: inherit;
+        min-height: 130px;
         font-size:18px;
         max-width:inherit; 
         width: inherit;
@@ -740,6 +740,7 @@
   @include breakpoint($mobile){
     width:100%;
     height:255px;
+    margin-bottom:20px;
     padding-bottom:15px;
     .title, .text, .text1, .text2, .text3{
       float:left;
@@ -789,3 +790,4 @@
 } 
 
  
+
