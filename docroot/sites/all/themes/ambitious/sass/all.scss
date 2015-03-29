@@ -129,6 +129,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
             background-size: cover;
             background-position: center;
         }
+        @include breakpoint($mobile) {
+            height: 280px;
+        }
         
 		//background: url(../images/img26.jpg) no-repeat 0 0;
 		.myvoice & {
@@ -348,6 +351,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			font-size:13px;
 			line-height:16px;
 			color:$captions-credit;
+            z-index: 9999;
 			@include breakpoint($mobile) {
 				font-size:12px;
 				line-height:15px;
