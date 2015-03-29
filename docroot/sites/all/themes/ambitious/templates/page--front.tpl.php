@@ -142,12 +142,10 @@
 
         </div>
       </div>
-      <div class="region region-image-holder">
-        <p>
-          <?php if($image): ?>
-            <?php print render($image); ?>  
+      <div class="region region-image-holder" 
+        <?php if($image): ?>
+           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
           <?php endif; ?>  
-        </p>    
       </div>
     </div>
     <?php if($credit): ?>
