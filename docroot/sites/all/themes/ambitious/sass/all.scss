@@ -123,6 +123,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		position:relative;
         height: 770px;
 		overflow: hidden;
+        .region-image-holder{//this dom needs to be refactored wheels within wheels
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
         
 		//background: url(../images/img26.jpg) no-repeat 0 0;
 		.myvoice & {
