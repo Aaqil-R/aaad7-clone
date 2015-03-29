@@ -7,9 +7,8 @@
 	 @include container;
 
   .post{
-	width: span(4 of 12) - gutter();//why are you using a 13 column grid?
-    
-
+	width: span(4 of 12);//why were you using a 13 column grid?
+    &:nth-of-type(1,2) .card-wrapper {margin-right: gutter();}
 	@include breakpoint($mobile){
 	  @include span(12 of 12);
 	}
