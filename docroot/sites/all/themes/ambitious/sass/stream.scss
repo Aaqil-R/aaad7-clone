@@ -7,10 +7,11 @@
 	 @include container;
 
   .post{
-	@include span(4 of 13);
+	width: span(4 of 12) - gutter();//why are you using a 13 column grid?
+    
 
 	@include breakpoint($mobile){
-	  @include span(13 of 13);
+	  @include span(12 of 12);
 	}
 
 	.footer-text{
