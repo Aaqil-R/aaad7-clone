@@ -386,7 +386,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .home-stream .post .footer-text {
   font-size: 12px;
 }
-/* line 21, ../sass/stream.scss */
+/* line 22, ../sass/stream.scss */
 .home-stream .views-row:nth-child(1) {
   background: none;
   padding: 0;
@@ -394,19 +394,48 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px transparent;
 }
-/* line 27, ../sass/stream.scss */
+/* line 28, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
 
+/* line 35, ../sass/stream.scss */
+.card-stream {
+  margin: 0 auto;
+  max-width: 1080px;
+}
 /* line 38, ../sass/stream.scss */
-.understanding-autism .post {
+.card-stream .post {
   width: 29.6875%;
   float: left;
   margin-right: 1.5625%;
 }
 @media (max-width: 767px) {
   /* line 38, ../sass/stream.scss */
+  .card-stream .post {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 45, ../sass/stream.scss */
+.card-stream .post .footer-text {
+  font-size: 12px;
+}
+/* line 50, ../sass/stream.scss */
+.card-stream .btn {
+  padding: 12px 19px;
+}
+
+/* line 58, ../sass/stream.scss */
+.understanding-autism .post {
+  width: 29.6875%;
+  float: left;
+  margin-right: 1.5625%;
+}
+@media (max-width: 767px) {
+  /* line 58, ../sass/stream.scss */
   .understanding-autism .post {
     width: 100%;
     float: left;
@@ -414,23 +443,23 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-right: 0;
   }
 }
-/* line 48, ../sass/stream.scss */
+/* line 68, ../sass/stream.scss */
 .understanding-autism .btn {
   padding: 12px 19px;
 }
 
-/* line 54, ../sass/stream.scss */
+/* line 74, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 59, ../sass/stream.scss */
+/* line 79, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 62, ../sass/stream.scss */
+  /* line 82, ../sass/stream.scss */
   .desktop {
     display: none;
   }

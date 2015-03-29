@@ -3,7 +3,7 @@
 //=== Stream Section ===//
 
 // Home page Stream block
-.home-stream{
+.home-stream {
 	 @include container;
 
   .post{
@@ -18,6 +18,7 @@
 	}
 
   }  
+    //refactor to remove this and make it a home-stream only modifier and then update views
   .views-row:nth-child(1){
 	background:none;
 	padding:0;
@@ -31,6 +32,25 @@
 
 }
 
+.card-stream {
+	 @include container;
+
+  .post{
+	@include span(4 of 13);
+
+	@include breakpoint($mobile){
+	  @include span(13 of 13);
+	}
+
+	.footer-text{
+  		font-size:12px;
+	}
+
+  }  
+  .btn{
+	padding: 12px 19px;
+  }
+}
 
 // understanding autism page Stream block
 .understanding-autism{
