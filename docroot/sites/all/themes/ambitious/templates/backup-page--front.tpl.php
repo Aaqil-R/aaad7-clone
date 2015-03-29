@@ -102,65 +102,27 @@
     print render($page['header']); 
   ?>
 <!-- / header -->
-<?php print $messages; ?> 
-   
-<section class="visual header_banner">
-    <div class="img-holder">
-      <div class="caption-frame">
-
-        <div class="region region-caption-holder">
-
-          <?php if ($page['breadcrumb']): ?> 
-          <div class="easy-breadcrumb"> 
-            <?php print render($page['breadcrumb']); ?>
-          </div>
+<?php print $messages; ?>      
+<section class="visual">
+      <div class="img-holder">
+        
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
           <?php endif; ?>
 
-          <?php if($captionone || $captiontwo ): ?>
-          <div class="caption-text">
-            <h1 class="caption-text-titles">
-            <?php if($captionone): ?>
-              <?php $captionone_render = trim(render($captionone)); ?>
-              <?php if(!empty($captionone_render)): ?>
-                <span class="caption-text-title caption-text-title-1">               
-                    <?php print $captionone_render; ?>              
-                </span>
-              <?php endif; ?>
-            <?php endif; ?>
-
-            <?php if($captiontwo): ?>
-              <?php $captiontwo_render = render($captiontwo); ?>
-              <?php if(!empty($captiontwo_render)): ?>              
-                <span class="caption-text-title caption-text-title-2"> 
-                    <?php print $captiontwo_render; ?>               
-                </span>
-              <?php endif; ?>        
-            <?php endif; ?>
-            </h1>
-        </div>
-        <?php endif; ?>
-
-        </div>
+          <?php if ($page['image_holder']): ?>
+            <?php print render($page['image_holder']); ?>
+            <!-- /image holder -->
+          <?php endif; ?>
       </div>
-      <div class="region region-image-holder">
-        <p>
-          <?php if($image): ?>
-            <?php print render($image); ?>  
-          <?php endif; ?>  
-        </p>    
-      </div>
-    </div>
-    <?php if($credit): ?>
-      <?php $credit_render = render($credit); ?>
-      <?php if(!empty($credit_render)): ?>
-        <div class="holder">
-          <span class="pic-by">          
-              <?php print t('© Photo by ') . render($credit_render); ?>          
-          </span>
-        </div>
-      <?php endif; ?>
-    <?php endif; ?>         
-  </section>
+      <?php
+      // Photo credit block
+      $block = module_invoke('block', 'block_view', '146');
+      print render($block['content']);
+      ?>        
+</section> <!-- /visual -->
 
   <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">

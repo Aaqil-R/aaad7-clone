@@ -105,38 +105,42 @@
   ?>
   <!-- / header -->
 
-  <section class="visual header_banner">
+<section class="visual header_banner">
     <div class="img-holder">
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
+
           <?php if ($page['breadcrumb']): ?> 
           <div class="easy-breadcrumb"> 
             <?php print render($page['breadcrumb']); ?>
           </div>
           <?php endif; ?>
-          <?php if ($page['caption_holder']): ?>
-            <div class="caption-frame">
-              <?php print render($page['caption_holder']); ?>
-            </div> <!-- /caption -->
-          <?php endif; ?>
-          <?php if($captionone): ?>
-            <?php $captionone_render = trim(render($captionone)); ?>
-            <?php if(!empty($captionone_render)): ?>
-              <h1 class="banner_text">               
-                  <?php print $captionone_render; ?>              
-              </h1>
+
+          <?php if($captionone || $captiontwo ): ?>
+          <div class="caption-text">
+            <h1 class="caption-text-titles">
+            <?php if($captionone): ?>
+              <?php $captionone_render = trim(render($captionone)); ?>
+              <?php if(!empty($captionone_render)): ?>
+                <span class="caption-text-title caption-text-title-1">               
+                    <?php print $captionone_render; ?>              
+                </span>
+              <?php endif; ?>
             <?php endif; ?>
-          <?php endif; ?>
-          <br>
-          <?php if($captiontwo): ?>
-            <?php $captiontwo_render = render($captiontwo); ?>
-            <?php if(!empty($captiontwo_render)): ?>              
-              <h4 class="banner_sub_text">
-                  <?php print $captiontwo_render; ?>               
-              </h4>  
-            <?php endif; ?>        
-          <?php endif; ?>  
+
+            <?php if($captiontwo): ?>
+              <?php $captiontwo_render = render($captiontwo); ?>
+              <?php if(!empty($captiontwo_render)): ?>              
+                <span class="caption-text-title caption-text-title-2"> 
+                    <?php print $captiontwo_render; ?>               
+                </span>
+              <?php endif; ?>        
+            <?php endif; ?>
+            </h1>
+        </div>
+        <?php endif; ?>
+
         </div>
       </div>
       <div class="region region-image-holder">
@@ -158,7 +162,6 @@
       <?php endif; ?>
     <?php endif; ?>         
   </section>
-
 
 
 <?php if ($page['header_form']): ?>    <!-- slider block -->

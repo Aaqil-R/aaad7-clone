@@ -869,7 +869,7 @@ function ambitious_preprocess_page(&$vars) {
     // get an random image from the array
     $viewitemsimage = field_view_value('node', $node ,'field_large_hero_images'
       , $getitemsimage[$random]
-      , array('settings' => array('image_style' => 'basic_page_desktop')));
+      , array('settings' => array('image_style' => 'basic_page_desktop_large__1440x770_')));
     $vars['image'] = $viewitemsimage;
 
     // get the corresponding photo credit, the images and credits should have been
