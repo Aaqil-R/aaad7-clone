@@ -4,12 +4,11 @@
 
 // Home page Stream block
 .home-stream {
-	 @include container;
+   @include container;
 
   .post{
 	width: span(4 of 12);//why were you using a 13 column grid?
-    .card-wrapper {margin-right: gutter();}
-    &:nth-of-type(3n) .card-wrapper {margin-right: 0;}
+    &:nth-of-type(3n) {@include last;}
 	@include breakpoint($mobile){
 	  @include span(12 of 12);
 	}
