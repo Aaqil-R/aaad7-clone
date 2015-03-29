@@ -36,7 +36,7 @@
 	// Caption text changing on the AAA front page
 	#block-block-26.caption-text .caption-text-titles{
 		@include breakpoint($all-desktop){
-		 	//margin-top: 70px;
+		 	// margin-top: 70px;
 		}
 	}
 	#block-block-26.caption-text .caption-text-titles .caption-text-title{
@@ -52,7 +52,7 @@
 	.slider-block{
 		z-index: 998;
 		position: relative;
-		top: -16px;
+		//top: -16px;
 
 		.block{
 			// Add box shadow to Home page Form
@@ -64,13 +64,13 @@
 			// using a manual breakpoint.
 			// For any resolution less 1230px add 5ems.
 			@include breakpoint(max-width 1230px){	
-				margin-top: 5em;
+				//margin-top: 5em;
 			}
 
 			// For anything on mobile, it will float to the 
 			// bottom.
 			@include breakpoint($mobile){
-				margin-top: 0em;
+				//margin-top: 0em;
 			}
 		}
 
