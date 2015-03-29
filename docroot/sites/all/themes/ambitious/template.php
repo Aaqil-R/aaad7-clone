@@ -869,7 +869,7 @@ function ambitious_preprocess_page(&$vars) {
     // get an random image from the array
     $viewitemsimage = field_view_value('node', $node ,'field_large_hero_images'
       , $getitemsimage[$random]
-      , array('settings' => array('image_style' => 'basic_page_desktop')));
+      , array('settings' => array('image_style' => 'basic_page_desktop_large__1440x770_')));
     $vars['image'] = $viewitemsimage;
 
     // get the corresponding photo credit, the images and credits should have been
@@ -891,7 +891,12 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
-
+if (arg(1) == '224011') { 
+    $vars['theme_hook_suggestions'][] = 'page__bsd_header';
+  } 
+  if (arg(1) == '224016') { 
+    $vars['theme_hook_suggestions'][] = 'page__bsd_footer';
+  }
 
 }
 
@@ -1139,3 +1144,9 @@ function ambitious_preprocess_image(&$variables) {
     unset($variables[$key]);
   }
 }
+
+
+
+
+
+

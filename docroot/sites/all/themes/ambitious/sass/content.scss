@@ -1034,7 +1034,7 @@ a {
 		}
 		.youtube-btn{
 			@include fontsize(18,16);
-			width: 100%;
+			//width: 100%;
 			@include breakpoint($mobile){
 				width:100%;
 			}
@@ -1110,10 +1110,15 @@ a {
 		}
 	}
 	.holder{
-		padding-top: 7%;
+		padding-top: 5%;
 		margin-bottom: 130px;
+
 		@include breakpoint($mobile) {
 			margin-bottom: 20px;
+
+			// without this the close button
+			// for the webform gets cut off.
+			margin-top: 1em;
 		}
 
 	}

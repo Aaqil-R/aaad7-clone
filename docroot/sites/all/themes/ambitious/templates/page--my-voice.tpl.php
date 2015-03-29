@@ -94,24 +94,62 @@
      print render($page['header']); 
     ?>
     <!-- header of the page -->
-    
-<?php if ($page['caption_holder'] || $page['image_holder']): ?>
-<!-- ########### / header -->
-<section class="visual my-voice-visual">
-  <div class="img-holder">
-      <?php if ($page['image_holder']): ?>
-        <?php print render($page['image_holder']); ?>
-      <?php endif; ?>
-      <?php if ($page['caption_holder']): ?>
+
+  <section class="visual header_banner">
+    <div class="img-holder">
       <div class="caption-frame">
-        <?php print render($page['caption_holder']); ?>
-      </div> <!-- /caption -->
-      <?php endif; ?>  
-  </div>
 
-</section>
+        <div class="region region-caption-holder">
+           <?php if ($page['breadcrumb']): ?> 
+          <div class="easy-breadcrumb"> 
+            <?php print render($page['breadcrumb']); ?>
+          </div>
+          <?php endif; ?>
 
-<?php endif; ?>
+          <?php if ($page['caption_holder']): ?>
+            <?php print render($page['caption_holder']); ?>
+          <?php endif; ?>  
+
+          <?php if($captionone): ?>
+            <?php $captionone_render = trim(render($captionone)); ?>
+            <?php if(!empty($captionone_render)): ?>
+              <h1 class="banner_text">               
+                  <?php print $captionone_render; ?>              
+              </h1>
+            <?php endif; ?>
+          <?php endif; ?>
+          <br>
+          <?php if($captiontwo): ?>
+            <?php $captiontwo_render = trim(render($captiontwo)); ?>
+            <?php if(!empty($captiontwo_render)): ?>              
+              <h4 class="banner_sub_text">
+                  <?php print $captiontwo_render; ?>               
+              </h4>  
+            <?php endif; ?>        
+          <?php endif; ?>  
+        </div>
+      </div>
+      <div class="region region-image-holder">
+        <p>
+          <?php if($image): ?>
+            <?php print render($image); ?>  
+          <?php endif; ?>  
+        </p>    
+      </div>
+    </div>
+    <?php if($credit): ?>
+      <?php $credit_render = render($credit); ?>
+      <?php if(!empty($credit_render)): ?>
+        <div class="holder">
+          <span class="pic-by">          
+              <?php print t('© Photo by ') . render($credit_render); ?>          
+          </span>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>         
+  </section>
+    
+
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
