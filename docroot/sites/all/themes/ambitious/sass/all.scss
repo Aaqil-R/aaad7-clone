@@ -98,7 +98,6 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 .visual {
 	width:100%;
 	position:relative;
-	margin: 0 0 38px;
 	@include transition ($type:all, $time:0.4s, $ease:ease);
 	&.visual-white{
 	  background:$white;
@@ -121,7 +120,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	.img-holder {
 		width:100%;
 		position:relative;
-        height: 770px;
+        height: auto;
 		overflow: hidden;
         .region-image-holder{//this dom needs to be refactored wheels within wheels
             height: 100%;
