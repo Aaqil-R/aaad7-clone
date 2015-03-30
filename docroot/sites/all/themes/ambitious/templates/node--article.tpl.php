@@ -30,6 +30,9 @@
 	                 			<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
 	                		<?php endif; ?> 
 	                 	<div class="article-info">
+	                 		<?php if (!empty($content['field_featured_author'])): ?>
+	                 			<?php print render($content['field_featured_author']); ?>
+	                 		<?php endif; ?>	                 		
 							<?php print flag_create_link('bookmarks', $node->nid); ?>
 				     		<div class="topic-share"><?php print $node->content['sharethis']['#value']; ?></div>
 	                 	</div>
@@ -37,7 +40,7 @@
 	               <?php if (!empty($content['field_featured_image'])): ?>
 	                <section class="visual">
 				     <div class="img-holder">
-				       <?php print render($content['field_featured_image']); ?>				       
+				       <?php print render($content['field_featured_image']); ?>
 				     </div>
 				     <div class="holder">
 				     	<?php if (!empty($content['field_image_caption'])): ?>
