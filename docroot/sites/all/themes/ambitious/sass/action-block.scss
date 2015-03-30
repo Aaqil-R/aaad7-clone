@@ -452,6 +452,9 @@
 	}
 	.block-symptoms{ 
 	  padding:30px 10px 37px 39px;
+	  @include breakpoint($mobile){
+	    padding:20px;
+	  }
 	  .text{
 	    min-height: 160px;
 	    margin-bottom:0; 
@@ -477,6 +480,7 @@
 	  border-width: 2px;
 	  @include breakpoint($mobile){
 	    width:auto;
+	    padding:10px 18px;
 	  }
 	  &:hover{
 	    border-width: 2px;
@@ -513,7 +517,7 @@
   }
   .promo_block{
     .text1{
-      font-size: 40px;
+      font-size: 21px;
       white-space: pre-line;
       min-height:181px;
       line-height: normal;
@@ -572,6 +576,9 @@
     .my_share{
       margin-left: 240px;
       margin-top:-43.5px;
+      @include breakpoint($tablet){
+        margin-left: 160px;
+      }
       @include breakpoint($mobile){
          margin-top:0;
          &:hover{
@@ -622,6 +629,11 @@
       }
       &.btn.btn-transparent{
         padding:0;
+        @include breakpoint($mobile){
+          float: left;
+          margin-top: 60px;
+          margin-left:10px;
+        }
       }  
     }
     } 
@@ -657,7 +669,7 @@
         margin-bottom:10px;
       }
       @include breakpoint($mobile){
-        min-height: 130px;
+        min-height: 100px;
         font-size:18px;
         max-width:inherit; 
         width: inherit;
@@ -668,6 +680,10 @@
     .share1{
       float: right;
       margin-right: 80px;
+      @include breakpoint($mobile){
+        float:left;
+        margin-right:0;
+      }
     }
     }
     &.quotes{
@@ -734,6 +750,9 @@
   max-height:334px;
   float:right;
   width:48%;
+  @include breakpoint($mobile){
+    background-position: right;
+  }
   &:first-child{
     float:left; 
   }
