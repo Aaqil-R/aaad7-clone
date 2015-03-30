@@ -1,4 +1,8 @@
 <?php
+
+/**** Understand Autism *Age* page
+=======================================
+
 /**
  * @file
  * Bartik's theme implementation to display a single Drupal page.
@@ -85,89 +89,39 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513349745593631&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- /facebook -->
 
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
+  
   <!-- including header region into the template -->
-  <?php
-    print render($page['header']); 
-  ?>
-<!-- / header -->
-<?php print $messages; ?> 
-   
-<section class="visual header_banner">
-    <div class="img-holder">
-      <div class="caption-frame">
-
-        <div class="region region-caption-holder">
-
-          <?php if ($page['breadcrumb']): ?> 
-          <div class="easy-breadcrumb"> 
-            <?php print render($page['breadcrumb']); ?>
-          </div>
+    <?php
+     print render($page['header']); 
+    ?>
+    <!-- header of the page -->
+    
+<?php if ($page['caption_holder'] || $page['image_holder']): ?>
+<!-- ########### / header -->
+<section class="visual">
+      <div class="img-holder">
+        
+          <?php if ($page['caption_holder']): ?>
+            <div class="caption-frame">
+              <?php print render($page['caption_holder']); ?>
+            </div> <!-- /caption -->
           <?php endif; ?>
 
-          <?php if($captionone || $captiontwo ): ?>
-          <div class="caption-text">
-            <h1 class="caption-text-titles">
-            <?php if($captionone): ?>
-              <?php $captionone_render = trim(render($captionone)); ?>
-              <?php if(!empty($captionone_render)): ?>
-                <span class="caption-text-title caption-text-title-1">               
-                    <?php print $captionone_render; ?>              
-                </span>
-              <?php endif; ?>
-            <?php endif; ?>
-
-            <?php if($captiontwo): ?>
-              <?php $captiontwo_render = render($captiontwo); ?>
-              <?php if(!empty($captiontwo_render)): ?>              
-                <span class="caption-text-title caption-text-title-2"> 
-                    <?php print $captiontwo_render; ?>               
-                </span>
-              <?php endif; ?>        
-            <?php endif; ?>
-            </h1>
-        </div>
-        <?php endif; ?>
-
-        </div>
+          <?php if ($page['image_holder']): ?>
+            <?php print render($page['image_holder']); ?>
+            <!-- /image holder -->
+          <?php endif; ?>
       </div>
-      <div class="region region-image-holder" 
-        <?php if($image): ?>
-           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
-          <?php endif; ?>  
-      </div>
-    </div>
-    <?php if($credit): ?>
-      <?php $credit_render = render($credit); ?>
-      <?php if(!empty($credit_render)): ?>
-        <div class="holder">
-          <span class="pic-by">          
-              <?php print t('© Photo by ') . render($credit_render); ?>          
-          </span>
-        </div>
-      <?php endif; ?>
-    <?php endif; ?>         
-  </section>
-
-  <?php if ($page['header_form']): ?>    <!-- slider block -->
-    <section class=" slider-block">
-      <div class="holder">
-      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
-      <?php print render($page['header_form']); ?>       
-      </div>
-    </section>
-  <?php endif; ?>
+      <?php
+      // Photo credit block
+      $block = module_invoke('block', 'block_view', '181');
+      print render($block['content']);
+      ?> 
+</section>
+<?php endif; ?>
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
@@ -184,17 +138,31 @@
 
     </section> <!-- /highlighted -->
   <?php endif; ?>
-
-
-
+    <?php if ($page['content_top']): ?>  
+  <section class="my-voice-block" id="content_top">
+			<div class="holder">
+				<div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
+				<div class="block">
+					<div class="my-voice-columns">
+						<?php print render($page['content_top']); ?>
+					</div>
+				</div>
+			</div>
+		</section>
+		<?php endif; ?>
   <main id="main">
+ 
 
-  <?php if ($title|| $messages || $tabs || $action_links): ?>
+    <?php if ($title|| $messages || $tabs || $action_links): ?>
     <div id="content-header">
 
       <?php if ($title): ?>
         <h1 class="title"><?php print $title; ?></h1>
       <?php endif; ?>
+
+
+      <?php print $messages; ?>
+      <?php print render($page['help']); ?>
 
 
       <?php if ($tabs): ?>
@@ -209,12 +177,10 @@
     </div> <!-- /content-header -->
     <?php endif; ?>
 
-  <?php if ($page['content_top']): ?>
-    <section id="content_top">
-      <?php print render($page['content_top']); ?>
-    </section> <!-- /content-top -->
-  <?php endif; ?>   
 
+    <section id="content-area">
+      <?php print render($page['content']) ?>
+    </section> <!-- /content -->
 
   <?php if ($page['content_bottom']): ?>
     <section id="content_bottom">
@@ -223,73 +189,36 @@
   <?php endif; ?>
 
   </main> <!-- /main -->
-
-
-    <!-- action columns -->
-    <section class="action-block">
-      <!-- Render the action block region. -->
-      <?php print render($page['action']); ?>
-    </section>
-    
-    <section class="articles-block" >
-      <div class="holder">
-        <h2>What We Do</h2>
-        <div class="articles-columns" >
-          <?php print render($page['services']); ?>
-          <!--column one -->
-        </div>
-      </div>      
-  </section><!-- /services -->
-
-
-  <section class="social-block">
-    <div class="holder">
-      <h1>Stay ambitious</h1>
-      <div class="block">
-        <div class="social-columns" >
-          <?php print render($page['social']); ?>
-           
-              <?php
-              //Watch us youtube block
-              $block = module_invoke('block', 'block_view', '61');
-              print render($block['content']);
-              ?>
-
-          <!-- social column mid -->
-          <div class="col block-twitter">
-            <h3>Latest from Twitter</h3>
-            <div class="twitter">
-              <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300" height="500">Tweets by @AmbitiousAutism</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-          </div>
-          <!-- social column right -->
-          <div class="col block-facebook">
-            <h3>Find us on Facebook</h3>  
-<div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
- 
-          </div>
-        </div>
-      </div>
-    </div>
-      <div class="bg-stretch home-bg-stretch">
-      </div>
-    </section>
+  <?php if ($page['action']): ?>
+  <!-- action columns -->
+  <section class="action-block">
+    <!-- <div class="holder"> -->
+     <?php print render($page['action']); ?>
+    <!-- </div> -->
+  </section>
+  <!-- fourm block -->
+  <?php endif; ?>
+  <?php if ($page['social']): ?>
+    <section id="social">
+      <?php print render($page['social']); ?>
+    </section> <!-- /social -->
+  <?php endif; ?>
 
   <footer id="footer">
       <div class="holder">
 		<div class="logo">
-<a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>        </div>
+             <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>
+        </div>
 		<div class="right-footer">
           <?php print render($page['footer_right']); ?>
-        </div><!-- /footer Right --> 
+        </div><!-- /footer Right -->
         <div class="company-info">          
           <?php print render($page['footer_copyright']); ?>
           <span class="design-by">Designed and built by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>.</span>
-        </div><!-- /footer copyright -->              
+        </div><!-- /footer copyright -->               
       </div>      
     </footer> <!-- /footer -->
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
-<?php print render($user_picture); ?>
+
 <?php print render($page['bottom']); ?>
