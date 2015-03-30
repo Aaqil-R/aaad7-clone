@@ -891,10 +891,10 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
-if (arg(1) == '224011') { 
+  if (arg(0) == 'header') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_header';
   } 
-  if (arg(1) == '224016') { 
+  if (arg(0) == 'footer') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_footer';
   }
 

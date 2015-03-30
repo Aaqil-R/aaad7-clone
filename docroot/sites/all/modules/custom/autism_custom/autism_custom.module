@@ -49,6 +49,7 @@ function getcommentcount_past2week($nid) {
 
 function autism_custom_menu() {
     $items = array();    
+    
     $items['admin/content/website'] = array(
         'title' => 'Settings Form',
 	'page callback' => 'drupal_get_form',
@@ -56,8 +57,38 @@ function autism_custom_menu() {
 	'access arguments' => array('access_settings_form_website'),
         'type' => MENU_LOCAL_TASK, //Will appear in Navigation menu.
       );
-    return $items;
+      
+      
+  $items['header'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'title' => t('Header'),
+    'description' => 'Header',
+    'page callback' => 'autism_custom_header',
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+  );
+  $items['footer'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'title' => t('Footer'),
+    'description' => 'Footer',
+    'page callback' => 'autism_custom_footer',
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+  );
+  
+  return $items;
 }
+ 
+function autism_custom_header() {
+  $content = 'Header'; 
+  return $content;
+}
+function autism_custom_footer() {
+  $content = 'Footer'; 
+  return $content;
+}
+
+
 
 function autism_custom_settings_form($form, &$form_state) {
   $form['autism_custom_supporter_count'] = array(
@@ -187,3 +218,6 @@ function autism_custom_search_community_submit($form, &$form_state) {
     drupal_goto('search/forum_discussion/' . $form_state['values']['search_community']);
   }*/
 }
+
+ 
+
