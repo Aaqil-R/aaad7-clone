@@ -891,6 +891,43 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
+
+  if($currentNode->type == "basic_page_with_hero_form")
+  {
+    // get array of hero images
+    $node = node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images_form');
+      
+    // create a random number based on the array size
+    $random= rand(0, count($getitemsimage) - 1);
+    
+    // get an random image from the array
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images_form'
+      , $getitemsimage[$random]
+      , array('settings' => array('image_style' => 'basic_page_desktop_form')));
+    $vars['image'] = $viewitemsimage;
+
+    // get the corresponding photo credit, the images and credits should have been
+    // entered in the same oder so that we can use the same random number
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+      , $getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+    
+    // get caption 1
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+      , $getitemscaption1[0]);
+    $vars['captionone'] = $viewitemscaption1;
+    
+    // get caption 2
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+      , $getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;    
+  }
+
+
   if (arg(0) == 'header') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_header';
   } 
