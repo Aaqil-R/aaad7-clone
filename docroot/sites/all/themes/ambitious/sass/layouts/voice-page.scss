@@ -10,6 +10,14 @@
 
 .page-node-74596,
 .section-my-voice{
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		text-decoration: underline;
+		color: $pink;
+	}
+	a{
+		color: $pink;
+	}
 	@extend %my-voice-main;
 	.visual{
 		@extend %my-voice-visual;
