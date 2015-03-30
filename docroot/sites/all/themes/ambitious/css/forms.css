@@ -441,11 +441,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   font-size: 18px;
-  border: none;
+  border-bottom: 2px solid;
   border-color: #e4e4e4;
   -webkit-box-shadow: inset 1px 1px 2px #707070;
   box-shadow: inset 1px 1px 2px #707070;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
@@ -889,12 +889,46 @@ div.ctools-modal-content .form-item .description {
 .webform-client-form .form-actions {
   margin: 1.5em 0;
 }
+/* line 468, ../sass/forms.scss */
+.webform-client-form textarea {
+  padding: 12px 23px;
+  float: left;
+  clear: both;
+  width: 80%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  padding: 12px 23px;
+}
+@media (max-width: 767px) {
+  /* line 468, ../sass/forms.scss */
+  .webform-client-form textarea {
+    width: 100%;
+  }
+}
+/* line 484, ../sass/forms.scss */
+.webform-client-form input::-webkit-input-placeholder,
+.webform-client-form textarea::-webkit-input-placeholder {
+  color: #636c73;
+  font-size: 18px;
+}
+/* line 489, ../sass/forms.scss */
+.webform-client-form input:-moz-placeholder,
+.webform-client-form textarea:-moz-placeholder {
+  color: #636c73;
+  font-size: 18px;
+}
 @media (min-width: 767px) {
-  /* line 469, ../sass/forms.scss */
+  /* line 496, ../sass/forms.scss */
   .webform-client-form textarea {
     width: 80%;
   }
-  /* line 473, ../sass/forms.scss */
+  /* line 500, ../sass/forms.scss */
   .webform-client-form .grippie {
     width: 80%;
   }
