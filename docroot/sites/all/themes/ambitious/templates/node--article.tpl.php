@@ -37,9 +37,7 @@
 	               <?php if (!empty($content['field_featured_image'])): ?>
 	                <section class="visual">
 				     <div class="img-holder">
-				       <?php print render($content['field_featured_image']); ?>
-				       <a href="#" class="btn-gray-perv" title="Leftarrow"><span class="icon-Leftarrow"></span></a>
-				       <a href="#" class="btn-gray-next" title="Rightarrow"><span class="icon-Rightarrow"></span></a>
+				       <?php print render($content['field_featured_image']); ?>				       
 				     </div>
 				     <div class="holder">
 				     	<?php if (!empty($content['field_image_caption'])): ?>
