@@ -878,7 +878,7 @@ div.ctools-modal-content .form-item .description {
 }
 
 /* line 456, ../sass/forms.scss */
-.contact-form .webform-client-form .form-item label {
+.webform-style .webform-client-form .form-item label {
   display: block;
   font-size: 1.3em;
   line-height: 1.5;
@@ -886,19 +886,19 @@ div.ctools-modal-content .form-item .description {
   clear: both;
 }
 /* line 466, ../sass/forms.scss */
-.contact-form .webform-client-form input:focus {
+.webform-style .webform-client-form input:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
 /* line 471, ../sass/forms.scss */
-.contact-form .webform-client-form input.error {
+.webform-style .webform-client-form input.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
 /* line 477, ../sass/forms.scss */
-.contact-form .webform-client-form textarea {
+.webform-style .webform-client-form textarea {
   padding: 12px 23px;
   float: left;
   clear: both;
@@ -915,50 +915,54 @@ div.ctools-modal-content .form-item .description {
 }
 @media (max-width: 767px) {
   /* line 477, ../sass/forms.scss */
-  .contact-form .webform-client-form textarea {
+  .webform-style .webform-client-form textarea {
     width: 100%;
   }
 }
 /* line 491, ../sass/forms.scss */
-.contact-form .webform-client-form textarea:focus {
+.webform-style .webform-client-form textarea:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
 /* line 496, ../sass/forms.scss */
-.contact-form .webform-client-form textarea.error {
+.webform-style .webform-client-form textarea.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
 /* line 503, ../sass/forms.scss */
-.contact-form .webform-client-form input::-webkit-input-placeholder,
-.contact-form .webform-client-form textarea::-webkit-input-placeholder {
+.webform-style .webform-client-form input::-webkit-input-placeholder,
+.webform-style .webform-client-form textarea::-webkit-input-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 /* line 508, ../sass/forms.scss */
-.contact-form .webform-client-form input:-moz-placeholder,
-.contact-form .webform-client-form textarea:-moz-placeholder {
+.webform-style .webform-client-form input:-moz-placeholder,
+.webform-style .webform-client-form textarea:-moz-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 @media (min-width: 767px) {
   /* line 515, ../sass/forms.scss */
-  .contact-form .webform-client-form textarea {
+  .webform-style .webform-client-form textarea {
     width: 80%;
   }
   /* line 519, ../sass/forms.scss */
-  .contact-form .webform-client-form .grippie {
+  .webform-style .webform-client-form .grippie {
     width: 80%;
   }
 }
 /* line 524, ../sass/forms.scss */
-.contact-form .webform-client-form .form-actions {
+.webform-style .webform-client-form .form-actions {
   margin: 1.5em 0;
 }
 /* line 527, ../sass/forms.scss */
-.contact-form .webform-client-form .form-actions .webform-submit:focus {
+.webform-style .webform-client-form .form-actions .webform-submit {
+  clear: both;
+}
+/* line 531, ../sass/forms.scss */
+.webform-style .webform-client-form .form-actions .webform-submit:focus {
   border: inherit;
   box-shadow: inherit;
   color: inherit;
