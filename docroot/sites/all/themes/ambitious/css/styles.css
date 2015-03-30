@@ -362,7 +362,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 21, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.0.rc.2/sass/susy/language/susy/_box-sizing.scss */
+/* line 14, C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -588,12 +588,20 @@ table {
 /* line 191, ../sass/styles.scss */
 .easy-breadcrumb {
   text-align: right;
-  padding: 45px 12px 0 0;
   color: #ffffff;
+  letter-spacing: 0px;
 }
 /* line 197, ../sass/styles.scss */
-.easy-breadcrumb a:visited {
+.easy-breadcrumb a {
   color: #ffffff;
+}
+/* line 200, ../sass/styles.scss */
+.easy-breadcrumb a:hover {
+  text-decoration: none;
+}
+/* line 203, ../sass/styles.scss */
+.easy-breadcrumb a:visited {
+  color: #2a2e31;
 }
 @media (max-width: 767px) {
   /* line 191, ../sass/styles.scss */
@@ -602,34 +610,34 @@ table {
   }
 }
 
-/* line 208, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 .main-layout {
   background-color: #ffffff;
   padding: 1em;
   padding-bottom: 4em;
 }
 
-/* line 214, ../sass/styles.scss */
+/* line 219, ../sass/styles.scss */
 .field-name-field-salary
 , .field-name-field-time-commitment
 , .field-name-field-vacancy-location {
   font-weight: bold;
 }
 
-/* line 220, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 .field-name-field-standfirst
 , .field-name-field-body {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 227, ../sass/styles.scss */
+/* line 232, ../sass/styles.scss */
 .field-type-text {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
 
 @media (min-width: 1080px) {
-  /* line 233, ../sass/styles.scss */
+  /* line 238, ../sass/styles.scss */
   .node-type-page #content-area {
     width: 83.05085%;
     float: left;
@@ -639,37 +647,37 @@ table {
   }
 }
 
-/* line 244, ../sass/styles.scss */
+/* line 249, ../sass/styles.scss */
 .simple-list-item {
   border-bottom: 1px #d2d5d6 solid;
   margin-bottom: 2.5em;
 }
-/* line 247, ../sass/styles.scss */
+/* line 252, ../sass/styles.scss */
 .simple-list-item .image {
   display: none;
 }
 @media (min-width: 1080px) {
-  /* line 249, ../sass/styles.scss */
+  /* line 254, ../sass/styles.scss */
   .simple-list-item h5, .simple-list-item p {
     width: 69.38776%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 252, ../sass/styles.scss */
+  /* line 257, ../sass/styles.scss */
   .simple-list-item .image {
     width: 28.57143%;
     float: right;
     margin-right: 0;
     display: block;
   }
-  /* line 256, ../sass/styles.scss */
+  /* line 261, ../sass/styles.scss */
   .simple-list-item .clear {
     clear: both;
     height: 0;
   }
 }
 
-/* line 266, ../sass/styles.scss */
+/* line 271, ../sass/styles.scss */
 .messages--error {
   position: fixed;
   bottom: 0px;
@@ -681,20 +689,25 @@ table {
   padding: 1em;
 }
 
-/* line 280, ../sass/styles.scss */
+/* line 285, ../sass/styles.scss */
 .maintenance-page #main #content-area {
   background: #ffffff;
   padding: 30px;
 }
 
-/* line 285, ../sass/styles.scss */
+/* line 290, ../sass/styles.scss */
 .flag-bookmarks {
   font-weight: bold;
   font-style: normal;
 }
 
-/* line 291, ../sass/styles.scss */
+/* line 296, ../sass/styles.scss */
 .article-info .flag-bookmarks {
   float: left;
   padding: 0.5em;
+}
+
+/* line 304, ../sass/styles.scss */
+.node-type-basic-page-with-hero .easy-breadcrumb, .node-type-basic-page-with-hero-large .easy-breadcrumb {
+  padding-right: 10px;
 }

@@ -44,6 +44,13 @@
   } 
 ?>
   <section class="header_banner">
+
+    <?php if ($page['breadcrumb']): ?>
+        <div class="easy_breadcrumb">
+          <?php print render($page['breadcrumb']); ?>
+        </div>
+      <?php endif; ?>  
+
      <div class="banner_text_main">
       <div class="banner_nav visual">
           <?php 
