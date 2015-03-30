@@ -555,24 +555,24 @@
 		float: left;		
 	}
 	//breadcrumb
-	.easy-breadcrumb{
-		color: black;
-		padding: 5px 0;
-		.easy-breadcrumb_segment{
-			letter-spacing: 0;
-			padding: 0 8px;
+	// .easy-breadcrumb{
+	// 	color: black;
+	// 	padding: 5px 0;
+	// 	.easy-breadcrumb_segment{
+	// 		letter-spacing: 0;
+	// 		padding: 0 8px;
 
-		}
-		.easy-breadcrumb_segment-title{
-			padding-right: 0;
-		}
-		a{
-			color: black;
-		}
-		@include breakpoint($mobile){
-			display: block;
-		}
-	}
+	// 	}
+	// 	.easy-breadcrumb_segment-title{
+	// 		padding-right: 0;
+	// 	}
+	// 	a{
+	// 		color: black;
+	// 	}
+	// 	@include breakpoint($mobile){
+	// 		display: block;
+	// 	}
+	// }
 
 	// Comment List
 	section .comment-list{
@@ -583,6 +583,7 @@
 	// Image holder
 	.visual .img-holder{
 		min-height: 5em;
+		height: auto;
 	}
 	#wrapper{
 		background: $white;
