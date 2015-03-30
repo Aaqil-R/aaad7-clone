@@ -1119,7 +1119,7 @@ nav {
     .easy-breadcrumb{
       margin: 0 auto;
       max-width: 1080px;
-      padding-right: 20px;
+      padding-right: 16px;
       a{
         font-family:$header-font-family;
         color:$white;
@@ -1171,6 +1171,10 @@ nav {
         @include breakpoint($mobile) {
               text-align: center;
        }
+     }
+
+     &.menu{
+      padding-right: 0;
      } 
    }
  }
