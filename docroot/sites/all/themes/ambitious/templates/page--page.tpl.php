@@ -183,8 +183,7 @@
   <footer id="footer">
    <div class="holder">
      <div class="logo">
-       <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print $base_path; ?>sites/all/themes/ambitious/images/logo-footer.png"></a>
-     </div>
+<a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/logo-footer.png"></a>     </div>
      <div class="right-footer">
        <?php print render($page['footer_right']); ?>
      </div><!-- /footer Right --> 
