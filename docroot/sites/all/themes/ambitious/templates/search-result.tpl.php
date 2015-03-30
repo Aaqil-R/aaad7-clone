@@ -67,8 +67,13 @@
  $user=user_load($t->uid);
  $img = file_create_url($user->picture->uri);
  $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
+ if(isset($user->field_name['und'])):
+    $name=$user->field_name['und'][0]['safe_value'];
+ else:
+    $name=$user->name;
+ endif;
 ?>
-<li class="<?php print $classes; ?> post views-row"<?php print $attributes; ?>> 
+<li class="<?php print $classes; ?> post views-row <?php print $attributes; ?>"> 
    <div class="forum-text">						
     <div class="forum-left"> 
      <div class="image-holder">
@@ -79,7 +84,7 @@
         <?php } ?>
      </div>
      
-     <cite>by </br></br><strong><?php print $info_split['user'];?></strong></cite>
+     <cite>by </br></br><strong><a href="/user<?php print url($user->uid)?>" title="View user profile." class="username"><?php print $name?></a></strong></cite>
     <time pubdate="<?php print format_date($result['node']->created); ?>"><?php print format_date($result['node']->created); ?></time>  
    </div>
    <div class="info add forum-right">
