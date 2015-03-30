@@ -156,21 +156,27 @@ blockquote{
 //new changes with wysiwig editing
 .field-name-body{
   h2{
-    font-size: 42px;
+    font-size: 36px;
     @include breakpoint($tablet) {
-      font-size:39px;    
+      font-size:32px;    
     }
     @include breakpoint($mobile) {
-      font-size:24px; 
+      font-size:27px; 
     }
   }
   h3{
-    font-size: 33px;
-     @include breakpoint($tablet) {
-      font-size:29px;   
-    }
+    font-size: 27px;
     @include breakpoint($mobile) {
       font-size:24px;
+    }
+  }
+  h4{
+    font-size: 22px;
+     @include breakpoint($tablet) {
+      font-size:22px;   
+    }
+    @include breakpoint($mobile) {
+      font-size:20px;
     }
   }
 }
