@@ -468,6 +468,11 @@ div.ctools-modal-content .form-item .description{
         box-shadow: none;
         color: $base-link-color;
       }
+      &.error{
+        border:2px solid $error-border;
+        box-shadow: none;
+        color: $error-text;
+      }
     }
     textarea{
       padding: 12px 23px;
@@ -487,6 +492,11 @@ div.ctools-modal-content .form-item .description{
         border:2px solid $yellow;
         box-shadow: none;
         color: $base-link-color;
+      }
+      &.error{
+        border:2px solid $error-border;
+        box-shadow: none;
+        color: $error-text;
       }
     }
 

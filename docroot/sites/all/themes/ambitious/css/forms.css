@@ -891,7 +891,13 @@ div.ctools-modal-content .form-item .description {
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 472, ../sass/forms.scss */
+/* line 471, ../sass/forms.scss */
+.contact-form .webform-client-form input.error {
+  border: 2px solid #ff5458;
+  box-shadow: none;
+  color: #ec0833;
+}
+/* line 477, ../sass/forms.scss */
 .contact-form .webform-client-form textarea {
   padding: 12px 23px;
   float: left;
@@ -908,44 +914,50 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 472, ../sass/forms.scss */
+  /* line 477, ../sass/forms.scss */
   .contact-form .webform-client-form textarea {
     width: 100%;
   }
 }
-/* line 486, ../sass/forms.scss */
+/* line 491, ../sass/forms.scss */
 .contact-form .webform-client-form textarea:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 493, ../sass/forms.scss */
+/* line 496, ../sass/forms.scss */
+.contact-form .webform-client-form textarea.error {
+  border: 2px solid #ff5458;
+  box-shadow: none;
+  color: #ec0833;
+}
+/* line 503, ../sass/forms.scss */
 .contact-form .webform-client-form input::-webkit-input-placeholder,
 .contact-form .webform-client-form textarea::-webkit-input-placeholder {
   color: #636c73;
   font-size: 18px;
 }
-/* line 498, ../sass/forms.scss */
+/* line 508, ../sass/forms.scss */
 .contact-form .webform-client-form input:-moz-placeholder,
 .contact-form .webform-client-form textarea:-moz-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 @media (min-width: 767px) {
-  /* line 505, ../sass/forms.scss */
+  /* line 515, ../sass/forms.scss */
   .contact-form .webform-client-form textarea {
     width: 80%;
   }
-  /* line 509, ../sass/forms.scss */
+  /* line 519, ../sass/forms.scss */
   .contact-form .webform-client-form .grippie {
     width: 80%;
   }
 }
-/* line 514, ../sass/forms.scss */
+/* line 524, ../sass/forms.scss */
 .contact-form .webform-client-form .form-actions {
   margin: 1.5em 0;
 }
-/* line 517, ../sass/forms.scss */
+/* line 527, ../sass/forms.scss */
 .contact-form .webform-client-form .form-actions .webform-submit:focus {
   border: inherit;
   box-shadow: inherit;
