@@ -781,13 +781,126 @@ body > .jcf-select-drop.jcf-drop-flipped {
   	} */
 }
 /* line 19, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .my-voice-block h1 a, .page-node-74596 .my-voice-block h2 a, .page-node-74596 .my-voice-block h3 a, .page-node-74596 .my-voice-block h4 a, .page-node-74596 .my-voice-block h5 a, .page-node-74596 .my-voice-block h6 a,
-.page-node-74596 .node .field h1 a,
-.page-node-74596 .node .field h2 a,
-.page-node-74596 .node .field h3 a,
-.page-node-74596 .node .field h4 a,
-.page-node-74596 .node .field h5 a,
-.page-node-74596 .node .field h6 a,
+.page-node-74596 #content_top,
+.section-my-voice #content_top {
+  z-index: 99;
+  margin-top: -20%;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  /* line 19, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 #content_top,
+  .section-my-voice #content_top {
+    margin-top: -5%;
+  }
+}
+/* line 28, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top .my-voice-columns .col,
+.section-my-voice #content_top .my-voice-columns .col {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  /* line 28, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 #content_top .my-voice-columns .col,
+  .section-my-voice #content_top .my-voice-columns .col {
+    padding: 10px 30px;
+  }
+}
+/* line 35, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top .my-voice-columns .form-item,
+.section-my-voice #content_top .my-voice-columns .form-item {
+  float: left;
+  width: 96%;
+  margin-bottom: 9px;
+}
+/* line 39, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top .my-voice-columns .form-item label,
+.section-my-voice #content_top .my-voice-columns .form-item label {
+  left: 24px;
+  top: 12px;
+}
+/* line 44, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top .my-voice-columns a.tooltips span.tooltip-content,
+.section-my-voice #content_top .my-voice-columns a.tooltips span.tooltip-content {
+  left: -45px;
+  bottom: 30px;
+}
+/* line 48, ../../sass/layouts/voice-page.scss */
+.page-node-74596 #content_top .my-voice-columns .description,
+.section-my-voice #content_top .my-voice-columns .description {
+  margin-top: 11px;
+}
+/* line 54, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .visual.my-voice-visual,
+.section-my-voice .visual.my-voice-visual {
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  /* line 59, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 fieldset,
+  .section-my-voice fieldset {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 65, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 .btn.btn-left.filteroption,
+  .section-my-voice .btn.btn-left.filteroption {
+    width: 49%;
+    padding-top: 9px;
+    /* &:hover{
+    	border-bottom-width: 3px;
+    } */
+  }
+}
+@media (max-width: 767px) {
+  /* line 74, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 .sort-block .stButton,
+  .section-my-voice .sort-block .stButton {
+    width: 49%;
+  }
+}
+/* line 89, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .top-bar .logo,
+.section-my-voice .top-bar .logo {
+  display: inline;
+  float: left;
+  padding-right: 20px;
+}
+@media (max-width: 767px) {
+  /* line 89, ../../sass/layouts/voice-page.scss */
+  .page-node-74596 .top-bar .logo,
+  .section-my-voice .top-bar .logo {
+    display: none;
+  }
+}
+/* line 100, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .header__region.region.header div,
+.section-my-voice .header__region.region.header div {
+  display: inline;
+}
+/* line 113, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .item-list
+.pager li,
+.section-my-voice .item-list
+.pager li {
+  background: inherit;
+}
+/* line 115, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .item-list
+.pager li a,
+.section-my-voice .item-list
+.pager li a {
+  background: inherit;
+}
+/* line 121, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .easy-breadcrumb a,
+.section-my-voice .easy-breadcrumb a {
+  color: #ffffff;
+}
+/* line 131, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .node .field h1 a, .page-node-74596 .node .field h2 a, .page-node-74596 .node .field h3 a, .page-node-74596 .node .field h4 a, .page-node-74596 .node .field h5 a, .page-node-74596 .node .field h6 a,
 .page-node-74596 .my-voice-post h1 a,
 .page-node-74596 .my-voice-post h2 a,
 .page-node-74596 .my-voice-post h3 a,
@@ -800,12 +913,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .page-node-74596 .acknowledge-block h4 a,
 .page-node-74596 .acknowledge-block h5 a,
 .page-node-74596 .acknowledge-block h6 a,
-.section-my-voice .my-voice-block h1 a,
-.section-my-voice .my-voice-block h2 a,
-.section-my-voice .my-voice-block h3 a,
-.section-my-voice .my-voice-block h4 a,
-.section-my-voice .my-voice-block h5 a,
-.section-my-voice .my-voice-block h6 a,
 .section-my-voice .node .field h1 a,
 .section-my-voice .node .field h2 a,
 .section-my-voice .node .field h3 a,
@@ -827,14 +934,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
   text-decoration: underline;
   color: #e30087;
 }
-/* line 22, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .my-voice-block h1 a:hover, .page-node-74596 .my-voice-block h2 a:hover, .page-node-74596 .my-voice-block h3 a:hover, .page-node-74596 .my-voice-block h4 a:hover, .page-node-74596 .my-voice-block h5 a:hover, .page-node-74596 .my-voice-block h6 a:hover,
-.page-node-74596 .node .field h1 a:hover,
-.page-node-74596 .node .field h2 a:hover,
-.page-node-74596 .node .field h3 a:hover,
-.page-node-74596 .node .field h4 a:hover,
-.page-node-74596 .node .field h5 a:hover,
-.page-node-74596 .node .field h6 a:hover,
+/* line 134, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .node .field h1 a:hover, .page-node-74596 .node .field h2 a:hover, .page-node-74596 .node .field h3 a:hover, .page-node-74596 .node .field h4 a:hover, .page-node-74596 .node .field h5 a:hover, .page-node-74596 .node .field h6 a:hover,
 .page-node-74596 .my-voice-post h1 a:hover,
 .page-node-74596 .my-voice-post h2 a:hover,
 .page-node-74596 .my-voice-post h3 a:hover,
@@ -847,12 +948,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .page-node-74596 .acknowledge-block h4 a:hover,
 .page-node-74596 .acknowledge-block h5 a:hover,
 .page-node-74596 .acknowledge-block h6 a:hover,
-.section-my-voice .my-voice-block h1 a:hover,
-.section-my-voice .my-voice-block h2 a:hover,
-.section-my-voice .my-voice-block h3 a:hover,
-.section-my-voice .my-voice-block h4 a:hover,
-.section-my-voice .my-voice-block h5 a:hover,
-.section-my-voice .my-voice-block h6 a:hover,
 .section-my-voice .node .field h1 a:hover,
 .section-my-voice .node .field h2 a:hover,
 .section-my-voice .node .field h3 a:hover,
@@ -873,238 +968,129 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .section-my-voice .acknowledge-block h6 a:hover {
   color: #2a2e31;
 }
-/* line 27, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .my-voice-block a,
+/* line 139, ../../sass/layouts/voice-page.scss */
 .page-node-74596 .node .field a,
 .page-node-74596 .my-voice-post a,
 .page-node-74596 .acknowledge-block a,
-.section-my-voice .my-voice-block a,
 .section-my-voice .node .field a,
 .section-my-voice .my-voice-post a,
 .section-my-voice .acknowledge-block a {
   color: #e30087;
 }
-/* line 29, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .my-voice-block a:hover,
+/* line 141, ../../sass/layouts/voice-page.scss */
 .page-node-74596 .node .field a:hover,
 .page-node-74596 .my-voice-post a:hover,
 .page-node-74596 .acknowledge-block a:hover,
-.section-my-voice .my-voice-block a:hover,
 .section-my-voice .node .field a:hover,
 .section-my-voice .my-voice-post a:hover,
 .section-my-voice .acknowledge-block a:hover {
   color: #2a2e31;
 }
-/* line 43, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top,
-.section-my-voice #content_top {
-  z-index: 99;
-  margin-top: -20%;
-  margin-bottom: 30px;
+/* line 149, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .my-voice-block a.tooltips,
+.page-node-74596 .my-voice-block .block-close a,
+.section-my-voice .my-voice-block a.tooltips,
+.section-my-voice .my-voice-block .block-close a {
+  color: #2a2e31;
 }
-@media (max-width: 767px) {
-  /* line 43, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 #content_top,
-  .section-my-voice #content_top {
-    margin-top: -5%;
-  }
-}
-/* line 52, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top .my-voice-columns .col,
-.section-my-voice #content_top .my-voice-columns .col {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-@media (max-width: 767px) {
-  /* line 52, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 #content_top .my-voice-columns .col,
-  .section-my-voice #content_top .my-voice-columns .col {
-    padding: 10px 30px;
-  }
-}
-/* line 59, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top .my-voice-columns .form-item,
-.section-my-voice #content_top .my-voice-columns .form-item {
-  float: left;
-  width: 96%;
-  margin-bottom: 9px;
-}
-/* line 63, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top .my-voice-columns .form-item label,
-.section-my-voice #content_top .my-voice-columns .form-item label {
-  left: 24px;
-  top: 12px;
-}
-/* line 68, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top .my-voice-columns a.tooltips span.tooltip-content,
-.section-my-voice #content_top .my-voice-columns a.tooltips span.tooltip-content {
-  left: -45px;
-  bottom: 30px;
-}
-/* line 72, ../../sass/layouts/voice-page.scss */
-.page-node-74596 #content_top .my-voice-columns .description,
-.section-my-voice #content_top .my-voice-columns .description {
-  margin-top: 11px;
-}
-/* line 78, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .visual.my-voice-visual,
-.section-my-voice .visual.my-voice-visual {
-  z-index: 0;
-}
-@media (max-width: 767px) {
-  /* line 83, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 fieldset,
-  .section-my-voice fieldset {
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  /* line 89, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 .btn.btn-left.filteroption,
-  .section-my-voice .btn.btn-left.filteroption {
-    width: 49%;
-    padding-top: 9px;
-    /* &:hover{
-    	border-bottom-width: 3px;
-    } */
-  }
-}
-@media (max-width: 767px) {
-  /* line 98, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 .sort-block .stButton,
-  .section-my-voice .sort-block .stButton {
-    width: 49%;
-  }
-}
-/* line 113, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .top-bar .logo,
-.section-my-voice .top-bar .logo {
-  display: inline;
-  float: left;
-  padding-right: 20px;
-}
-@media (max-width: 767px) {
-  /* line 113, ../../sass/layouts/voice-page.scss */
-  .page-node-74596 .top-bar .logo,
-  .section-my-voice .top-bar .logo {
-    display: none;
-  }
-}
-/* line 124, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .header__region.region.header div,
-.section-my-voice .header__region.region.header div {
-  display: inline;
-}
-/* line 137, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .item-list
-.pager li,
-.section-my-voice .item-list
-.pager li {
-  background: inherit;
-}
-/* line 139, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .item-list
-.pager li a,
-.section-my-voice .item-list
-.pager li a {
-  background: inherit;
-}
-/* line 145, ../../sass/layouts/voice-page.scss */
-.page-node-74596 .easy-breadcrumb a,
-.section-my-voice .easy-breadcrumb a {
-  color: #ffffff;
+/* line 152, ../../sass/layouts/voice-page.scss */
+.page-node-74596 .my-voice-block a.tooltips:hover,
+.page-node-74596 .my-voice-block .block-close a:hover,
+.section-my-voice .my-voice-block a.tooltips:hover,
+.section-my-voice .my-voice-block .block-close a:hover {
+  color: #e30087;
 }
 
 /*new codes for menu stlying*/
-/* line 155, ../../sass/layouts/voice-page.scss */
+/* line 165, ../../sass/layouts/voice-page.scss */
 .menu-main-menu-features-item-1 {
   list-style: none;
   padding: 0;
 }
 
-/* line 166, ../../sass/layouts/voice-page.scss */
+/* line 176, ../../sass/layouts/voice-page.scss */
 nav .main-menu-1 .course a .icon-Downarrow {
   display: none;
 }
-/* line 169, ../../sass/layouts/voice-page.scss */
+/* line 179, ../../sass/layouts/voice-page.scss */
 nav .main-menu-1 .course a .icon-Uparrow {
   display: none;
 }
 
-/* line 178, ../../sass/layouts/voice-page.scss */
+/* line 188, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 {
   padding: 0;
 }
-/* line 179, ../../sass/layouts/voice-page.scss */
+/* line 189, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li {
   list-style: none;
 }
-/* line 180, ../../sass/layouts/voice-page.scss */
+/* line 190, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a {
   padding: 9px 31px 11px 45px;
 }
-/* line 182, ../../sass/layouts/voice-page.scss */
+/* line 192, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a .icon-Downarrow {
   display: none;
 }
-/* line 185, ../../sass/layouts/voice-page.scss */
+/* line 195, ../../sass/layouts/voice-page.scss */
 nav .main-menu-2 li a .icon-Uparrow {
   display: none;
 }
 
 /* end of menu styling */
 /* new styling to get the menu down by 20px */
-/* line 199, ../../sass/layouts/voice-page.scss */
+/* line 209, ../../sass/layouts/voice-page.scss */
 .school-slide {
   top: 20px;
 }
 
-/* line 202, ../../sass/layouts/voice-page.scss */
+/* line 212, ../../sass/layouts/voice-page.scss */
 .my-voice-block .block {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 207, ../../sass/layouts/voice-page.scss */
+/* line 217, ../../sass/layouts/voice-page.scss */
 .my-voice-columns {
   padding-top: 45px;
   padding-bottom: 49px;
 }
 
-/* line 212, ../../sass/layouts/voice-page.scss */
+/* line 222, ../../sass/layouts/voice-page.scss */
 .page-node-74596 #wrapper {
-  background-image: url('../../images/wid_bg.jpg?1424101657');
+  background-image: url('../../images/wid_bg.jpg?1426701505');
 }
-/* line 215, ../../sass/layouts/voice-page.scss */
+/* line 225, ../../sass/layouts/voice-page.scss */
 .page-node-74596 .form-text {
   color: #000000;
 }
-/* line 221, ../../sass/layouts/voice-page.scss */
+/* line 231, ../../sass/layouts/voice-page.scss */
 .page-node-74596 #content-header h1:nth-child(1) {
   display: none;
 }
 
-/* line 229, ../../sass/layouts/voice-page.scss */
+/* line 239, ../../sass/layouts/voice-page.scss */
 .my-voice-intro-menu {
   padding-top: 20px;
 }
 
-/* line 234, ../../sass/layouts/voice-page.scss */
+/* line 244, ../../sass/layouts/voice-page.scss */
 .top-bar .logo {
   display: none;
 }
 
-/* line 241, ../../sass/layouts/voice-page.scss */
+/* line 251, ../../sass/layouts/voice-page.scss */
 .section-voices-spectrum input[type=submit] {
   border-color: #b3066b;
   background: #e30087;
 }
-/* line 246, ../../sass/layouts/voice-page.scss */
+/* line 256, ../../sass/layouts/voice-page.scss */
 .section-voices-spectrum .filter-slide .nav-filter .form-type-bef-checkbox.checked,
 .section-voices-spectrum .filter-slide .nav-filter .form-type-bef-checkbox:hover {
   color: #e30087;
 }
-/* line 251, ../../sass/layouts/voice-page.scss */
+/* line 261, ../../sass/layouts/voice-page.scss */
 .section-voices-spectrum input[type=submit]:focus {
   color: #ffffff;
 }

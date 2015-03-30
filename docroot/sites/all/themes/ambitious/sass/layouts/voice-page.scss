@@ -11,30 +11,6 @@
 .page-node-74596,
 .section-my-voice{
 
-	.my-voice-block,
-	.node .field,
-	.my-voice-post,
-	.acknowledge-block{
-
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			text-decoration: underline;
-			color: $pink;
-			&:hover{
-				color: $base-link-color;
-			}
-
-		}
-		a{
-			color: $pink;
-			&:hover{
-				color: $base-link-color;
-			}
-
-		}
-
-	}
-
-
 	@extend %my-voice-main;
 	.visual{
 		@extend %my-voice-visual;
@@ -147,6 +123,40 @@
 		}
 		
 	}
+
+	.node .field,
+	.my-voice-post,
+	.acknowledge-block{
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			text-decoration: underline;
+			color: $pink;
+			&:hover{
+				color: $base-link-color;
+			}
+
+		}
+		a{
+			color: $pink;
+			&:hover{
+				color: $base-link-color;
+			}
+
+		}
+
+	}
+	.my-voice-block{
+		a.tooltips,
+		.block-close a{
+			color: $base-link-color;
+			&:hover{
+				color: $pink;
+			}
+
+		}
+
+	}
+
 }
 
 
