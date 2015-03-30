@@ -278,7 +278,7 @@
   <footer id="footer">
       <div class="holder">
 		<div class="logo">
-            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="sites/all/themes/ambitious/images/logo-footer.png"></a>
+            <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="/sites/all/themes/ambitious/images/logo-footer.png"></a>
         </div>
 		<div class="right-footer">
           <?php print render($page['footer_right']); ?>
