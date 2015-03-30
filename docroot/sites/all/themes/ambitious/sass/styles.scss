@@ -190,15 +190,15 @@ table {
 
 .easy-breadcrumb {
     text-align: right;
-    padding: 45px 12px 0 0;
     color: $white;
-
     // reseting the letter spacing.
     letter-spacing: 0px;
 
     a {
+        //overiding the colour 
+        color: $white; 
         &:hover {
-            color: $base-link-color;  
+            text-decoration: none; 
         }
         &:visited {
            color: $base-link-color; 
@@ -296,5 +296,12 @@ table {
     .flag-bookmarks {        
       float: left;
       padding: 0.5em;
+    }
+}
+
+//changing the padding for the node type basic page with hero and the basic page with hero large
+.node-type-basic-page-with-hero,.node-type-basic-page-with-hero-large{
+    .easy-breadcrumb{
+        padding-right: 10px;
     }
 }
