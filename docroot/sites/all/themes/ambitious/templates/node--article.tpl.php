@@ -46,9 +46,6 @@
 				     	<?php if (!empty($content['field_image_caption'])): ?>
 				       		<span class="pic-caption"><?php print $content['field_image_caption']['#items'][0]['value']; ?></span>
 				       <?php endif; ?>
-				       <?php if (!empty($content['field_image_credit'])): ?>
-				       	<span class="pic-by"><?php print t('&copy; Photo by');?> <a href="#" title=""><?php print $content['field_image_credit']['#items'][0]['value']; ?></a>.</span>
-				       <?php endif; ?>
 				     </div> 
 				  </section>
 				<?php endif; ?>
