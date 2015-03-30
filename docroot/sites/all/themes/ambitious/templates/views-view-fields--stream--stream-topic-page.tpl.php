@@ -39,12 +39,14 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						<?php endif; ?>
 						<div class="info">
 						     <?php if($fields['title']->content): ?>
-							<h2><?php print strip_tags($fields['title']->content, '<a>'); ?></h2>
+							<!-- removing the links from the social titles -->
+							<!-- <h2><?php print strip_tags($fields['title']->content, '<a>'); ?></h2> -->
+							<h2><?php print $fields['title']->raw; ?></h2>
 							<?php endif; ?>
 							<?php if($fields['body']->content): ?>
 							<p>“<?php print strip_tags($fields['body']->content); ?>”</p> 
 							<?php endif; ?>
-							<span class="cite"><strong>- <?php print strip_tags($fields['field_featured_author']->content); ?></strong>  (via the <?php print $ourfieldsourse; ?>)</span>
+							<span class="cite"><strong>- <?php print strip_tags($fields['field_featured_author']->content); ?></strong>  (<?php print $ourfieldsourse; ?>)</span>
 						</div>
 <?php else:?>
 <section > 
