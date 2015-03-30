@@ -105,26 +105,17 @@
     <section id="highlighted">
       <?php print render($page['highlighted']); ?>
 
-        <?php if ($breadcrumb): ?>
-          <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
-        <?php endif; ?>
-
+      <!-- BEGIN BREADCRUMB -->
+      <!-- rendering out easy breadcrumb on the page -->
+      <?php if ($page['breadcrumb']): ?>
+        <div class="easy_breadcrumb">
+          <?php print render($page['breadcrumb']); ?>
+        </div>
+      <?php endif; ?>  
+      <!-- END BREADCRUMB -->
+      
     </section> <!-- /highlighted -->
-  <?php endif; ?>
-
-  <!-- BEGIN BREADCRUMB -->
-  <!-- rendering out easy breadcrumb on the page -->
-  <?php if ($page['breadcrumb']): ?>
-    <section id="breadcrumb">
-      <?php print render($page['breadcrumb']); ?>
-
-        <?php if ($breadcrumb): ?>
-          <div class="breadcrumb"><?php print render($page['breadcrumb']) ?></div>
-        <?php endif; ?>
-
-    </section>
   <?php endif; ?>  
-  <!-- END BREADCRUMB -->
 
 <!-- top header of the page -->
   <section class="top-header">
