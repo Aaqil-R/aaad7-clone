@@ -111,11 +111,14 @@
 
         <div class="region region-caption-holder">
 
+          <!-- BEGIN BREADCRUMB -->
+          <!-- rendering out easy breadcrumb on the page -->
           <?php if ($page['breadcrumb']): ?> 
-          <div class="easy-breadcrumb"> 
-            <?php print render($page['breadcrumb']); ?>
-          </div>
+            <div class="easy-breadcrumb"> 
+              <?php print render($page['breadcrumb']); ?>
+            </div>
           <?php endif; ?>
+          <!-- END BREADCRUMB -->          
 
           <?php if($captionone || $captiontwo ): ?>
           <div class="caption-text">

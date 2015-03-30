@@ -110,11 +110,16 @@
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
-           <?php if ($page['breadcrumb']): ?> 
-          <div class="easy-breadcrumb"> 
-            <?php print render($page['breadcrumb']); ?>
-          </div>
+
+          <!-- BEGIN BREADCRUMB -->
+          <!-- rendering out easy breadcrumb on the page -->
+          <?php if ($page['breadcrumb']): ?> 
+            <div class="easy-breadcrumb"> 
+              <?php print render($page['breadcrumb']); ?>
+            </div>
           <?php endif; ?>
+          <!-- END BREADCRUMB -->
+
           <?php if($captionone): ?>
             <?php $captionone_render = trim(render($captionone)); ?>
             <?php if(!empty($captionone_render)): ?>

@@ -112,6 +112,20 @@
     </section> <!-- /highlighted -->
   <?php endif; ?>
 
+  <!-- BEGIN BREADCRUMB -->
+  <!-- rendering out easy breadcrumb on the page -->
+  <?php if ($page['breadcrumb']): ?>
+    <section id="breadcrumb">
+      <?php print render($page['breadcrumb']); ?>
+
+        <?php if ($breadcrumb): ?>
+          <div class="breadcrumb"><?php print render($page['breadcrumb']) ?></div>
+        <?php endif; ?>
+
+    </section>
+  <?php endif; ?>  
+  <!-- END BREADCRUMB -->
+
 <!-- top header of the page -->
   <section class="top-header">
     <div class="top-header-inner">
