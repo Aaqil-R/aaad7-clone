@@ -877,20 +877,22 @@ div.ctools-modal-content .form-item .description {
   outline: none;
 }
 
-/* line 454, ../sass/forms.scss */
-.webform-client-form .form-item label {
+/* line 456, ../sass/forms.scss */
+.contact-form .webform-client-form .form-item label {
   display: block;
   font-size: 1.3em;
   line-height: 1.5;
   padding-bottom: 10px;
   clear: both;
 }
-/* line 463, ../sass/forms.scss */
-.webform-client-form .form-actions {
-  margin: 1.5em 0;
+/* line 466, ../sass/forms.scss */
+.contact-form .webform-client-form input:focus {
+  border: 2px solid #fbb900;
+  box-shadow: none;
+  color: #2a2e31;
 }
-/* line 468, ../sass/forms.scss */
-.webform-client-form textarea {
+/* line 472, ../sass/forms.scss */
+.contact-form .webform-client-form textarea {
   padding: 12px 23px;
   float: left;
   clear: both;
@@ -906,30 +908,46 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 468, ../sass/forms.scss */
-  .webform-client-form textarea {
+  /* line 472, ../sass/forms.scss */
+  .contact-form .webform-client-form textarea {
     width: 100%;
   }
 }
-/* line 484, ../sass/forms.scss */
-.webform-client-form input::-webkit-input-placeholder,
-.webform-client-form textarea::-webkit-input-placeholder {
+/* line 486, ../sass/forms.scss */
+.contact-form .webform-client-form textarea:focus {
+  border: 2px solid #fbb900;
+  box-shadow: none;
+  color: #2a2e31;
+}
+/* line 493, ../sass/forms.scss */
+.contact-form .webform-client-form input::-webkit-input-placeholder,
+.contact-form .webform-client-form textarea::-webkit-input-placeholder {
   color: #636c73;
   font-size: 18px;
 }
-/* line 489, ../sass/forms.scss */
-.webform-client-form input:-moz-placeholder,
-.webform-client-form textarea:-moz-placeholder {
+/* line 498, ../sass/forms.scss */
+.contact-form .webform-client-form input:-moz-placeholder,
+.contact-form .webform-client-form textarea:-moz-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 @media (min-width: 767px) {
-  /* line 496, ../sass/forms.scss */
-  .webform-client-form textarea {
+  /* line 505, ../sass/forms.scss */
+  .contact-form .webform-client-form textarea {
     width: 80%;
   }
-  /* line 500, ../sass/forms.scss */
-  .webform-client-form .grippie {
+  /* line 509, ../sass/forms.scss */
+  .contact-form .webform-client-form .grippie {
     width: 80%;
   }
+}
+/* line 514, ../sass/forms.scss */
+.contact-form .webform-client-form .form-actions {
+  margin: 1.5em 0;
+}
+/* line 517, ../sass/forms.scss */
+.contact-form .webform-client-form .form-actions .webform-submit:focus {
+  border: inherit;
+  box-shadow: inherit;
+  color: inherit;
 }
