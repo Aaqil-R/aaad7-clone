@@ -37,7 +37,7 @@
 				</div> <!-- /logo -->
 			<ul class="right-info">
 				<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>
-				<li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li>
+				<?php if(arg(0) != 'header'):?><li><a href="#" class="search-opener"><span class="icon-search"></span><em>search</em></a></li><?php endif; ?>
 				<li class="menu"><a href="#" class="menu-opener"><span class="icon-Close"></span> <span class="menu-text">Menu</span><span class="close">Close</span></a></li>
 			</ul>
 		</div>
