@@ -459,9 +459,19 @@ div.ctools-modal-content .form-item .description{
       clear: both;
     }
   }
-
+  
   .form-actions{
     margin: 1.5em 0;
 
+  }
+
+  @include breakpoint($not-mobile){
+    textarea{
+      width: 80%; 
+    }
+
+    .grippie{
+      width: 80%;
+    }
   }
 }
