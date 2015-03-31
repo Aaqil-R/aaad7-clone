@@ -85,7 +85,6 @@
   * @see https://drupal.org/node/1728148
   */
   ?>
-<body class="bsd-tools">
   <div id="wrapper" class="page">
     <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
     <!-- including header region into the template -->
