@@ -141,8 +141,8 @@
       </div>
       <div class="region region-image-holder"
         <?php if($image): ?>
-           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
-        <?php endif; ?>  >
+           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')"
+        <?php endif; ?>>
           
       </div>
     </div>
