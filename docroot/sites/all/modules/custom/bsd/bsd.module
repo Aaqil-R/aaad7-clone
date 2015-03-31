@@ -73,9 +73,9 @@ function bsd_webform_submission_insert($node, $submission) {
  */
 function bsd_push_data($node, $submission){
      //webform node id, data to insert in bsd
- $webforms = array(74601, 223446);
+ $webforms = array(74601, 223446, 74666);
   //constituent group ids for the webforms
- $eventid = array(74601 => 1, 223446 => 2);
+ $eventid = array(74601 => 1, 223446 => 2, 74666 => 28);
  if (in_array($node->nid, $webforms)){
    $data['firstname'] = $submission->data[1][0];
    $data['email'] = $submission->data[2][0];
@@ -107,7 +107,7 @@ function constituent_save($data = array(), $group = '') {
   } 
   $str .= '<is_banned>0</is_banned>';
   if (isset($data['created'])){
-    $str .= '<create_dt>'.date('Y-m-d H:i:s', $date['created']).'</create_dt>';
+    $str .= '<create_dt>'.date('Y-m-d H:i:s', $data['created']).'</create_dt>';
   }
   $str .= '<cons_email>';
   if (isset($data['email'])) {
@@ -129,7 +129,7 @@ function constituent_save($data = array(), $group = '') {
     ->fields(array(
       'nid' => $node->nid,
       'sid' => $submission->sid,
-      'uid' => $submission->uid, // add serial number for the table
+      'uid' => $submission->uid,
     ))
     ->execute();
    }
