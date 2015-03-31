@@ -20,7 +20,13 @@
         .bsd-contribForm-oneCol form {width: 48%; float: right;}
     }
     form {
-        tr:nth-child(odd) td, table tr.odd td {
+        table {
+            tr td {
+                &:hover {
+                    background: none;
+                }
+            }
+        }tr:nth-child(odd) td, table tr.odd td {
             background: none;
         }
 
