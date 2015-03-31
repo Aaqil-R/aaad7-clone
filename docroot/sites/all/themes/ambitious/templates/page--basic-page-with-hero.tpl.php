@@ -106,7 +106,10 @@
   <!-- / header -->
 
   <section class="visual header_banner">
-    <div class="img-holder">
+    <div class="img-holder" 
+        <?php if($image): ?>
+           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
+        <?php endif; ?>  
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
