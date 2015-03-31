@@ -140,7 +140,10 @@ function ambitious_preprocess_html(&$variables) {
 }
 
 function ambitious_preprocess_region(&$variables) {
-      
+  
+  $block = module_invoke('search', 'block_view', 'search');
+  $variables['search_block']= render($block);
+  
   $currentNode = menu_get_object();
   
   $block = block_load('block',156);
