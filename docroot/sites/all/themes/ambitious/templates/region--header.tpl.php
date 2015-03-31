@@ -43,14 +43,7 @@
 		</div>
 		<!-- search form -->
 		<div class="search-slide">
-			<form action="#" class="search-form">
-				<fieldset>
-					<legend class="hidden">search</legend>
-					<label for="search">search</label>
-					<input type="search" placeholder="Start typing to search the site" id="search">
-					<input type="submit" value="search">
-				</fieldset>
-			</form>
+				<?php print $search_block; ?>
 		</div>
 	</div>
 	<!-- nav of the page -->

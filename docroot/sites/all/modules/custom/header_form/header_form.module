@@ -129,6 +129,10 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         '#id' => drupal_html_id('edit-webform-ajax-not-right-now-' .$form['#node']->nid)
       );
     break;
+    case 'search_block_form':
+      $form['#attributes']['class'][] = 'search-form';
+      $form['search_block_form']['#attributes']['placeholder'] = 'Start typing to search the site';
+    break;
     default:  
   }
 }
