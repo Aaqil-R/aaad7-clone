@@ -95,7 +95,7 @@
   ?>
 <!-- / header -->
  
- <?php if ($page['image_holder']): ?>
+<?php if ($page['image_holder']): ?>
 <section class="header_banner banner-nav">
      <div class="banner_text_main">
         <?php if ($page['caption_holder']): ?>
@@ -117,3 +117,5 @@
   </section> <!-- /navigation -->
 <?php endif; ?>
 </div>
+<div class="article-wrapper"> 
+  <div class="article">
