@@ -151,7 +151,7 @@
       <?php if(!empty($credit_render)): ?>
         <div class="holder">
           <span class="pic-by">          
-              <?php print t('© Photo by ') . render($credit_render); ?>          
+              <?php print t('© Photo bdy ') . render($credit_render); ?>          
           </span>
         </div>
       <?php endif; ?>
