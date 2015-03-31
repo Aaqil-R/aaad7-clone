@@ -80,19 +80,18 @@ function autism_custom_menu() {
 }
  
 function autism_custom_header() {
-  
+
   drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/jcf.css");
   drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/bsd-wrapper.css");
 
-  $content = 'Header'; 
+  $content = 'Header';
   return $content;
 }
+
 function autism_custom_footer() {
   $content = 'Footer'; 
   return $content;
 }
-
-
 
 function autism_custom_settings_form($form, &$form_state) {
   $form['autism_custom_supporter_count'] = array(
