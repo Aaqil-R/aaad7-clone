@@ -80,6 +80,10 @@ function autism_custom_menu() {
 }
  
 function autism_custom_header() {
+  
+  drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/jcf.css");
+  drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/bsd-wrapper.css");
+
   $content = 'Header'; 
   return $content;
 }
