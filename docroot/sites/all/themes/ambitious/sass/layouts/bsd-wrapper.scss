@@ -19,6 +19,17 @@
 
         .bsd-contribForm-oneCol form {width: 48%; float: right;}
     }
+    form {
+        tr:nth-child(odd) td, table tr.odd td {
+            background: none;
+        }
+
+        .bsd-tools #contribution td.contribbutton {
+            text-align: left;
+            background: none;
+        }
+    }
+   
 
     .bsd-contribForm-belowContent {
         clear: both;
@@ -36,10 +47,6 @@
         margin-right: 1em;
     }
 
-    .bsd-tools #contribution td.contribbutton {
-        text-align: left;
-        background: none;
-    }
 
     #wrapper-footer 
     {
