@@ -85,37 +85,15 @@
   * @see https://drupal.org/node/1728148
   */
   ?>
-
-  <div id="wrapper" class="page">
-    <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
-
-    <!-- including header region into the template -->
-  <?php
-    print render($page['header']); 
-  ?>
-<!-- / header -->
- 
-<?php if ($page['image_holder']): ?>
-<section class="header_banner banner-nav">
-     <div class="banner_text_main">
-        <?php if ($page['caption_holder']): ?>
-          <div class="banner_text_inner">
-            <?php print render($page['caption_holder']); ?>   
-          </div> 
-        <?php endif; ?> 
-      </div> 
-    <div class="header_image">
-      <?php if ($page['image_holder']): ?>
-        <?php print render($page['image_holder']); ?>
-      <?php endif; ?>
-  </section>
-<?php endif; ?>
-
-<?php if ($page['navigation']): ?>
-  <section id="navigation">
-    <?php print render($page['navigation']); ?>
-  </section> <!-- /navigation -->
-<?php endif; ?>
-</div>
-<div class="article-wrapper"> 
-  <div class="article">
+  <body class="bsd-tools">
+    <div id="wrapper" class="page">
+      <a class="accessibility" href="#main" accesskey="s">Skip to Content</a
+      <!-- including header region into the template -->
+      <?php
+        print render($page['header']); 
+      ?>
+      <!-- / header -->
+    </div>
+    <div class="article-wrapper"> 
+      <div class="article"> 
+  </body>
