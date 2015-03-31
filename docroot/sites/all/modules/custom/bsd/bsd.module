@@ -1,0 +1,136 @@
+<?php
+function bsd_menu() {
+  $items['bsd/integration/%'] = array(
+    'title' => 'BSD integration',
+    'page callback' => 'bsd_integration',
+    'page arguments' => array(2),
+    'access arguments' => array('administer modules'),
+  );
+  return $items;
+}
+
+function bsd_integration($type = 'result'){
+
+  $api = bsd_api_init();
+ if ($type == 'result') {
+   $res = $api->get('cons_group/list_constituent_groups');
+   dpm($res);
+   return $res->getBody();
+ }
+ if ($type == 'post'){
+   $str = <<<XML
+<api>
+    <cons  send_password="n">
+        <firstname>testapi-kamalakannan</firstname>
+        <lastname>testapi-sivanandam</lastname>
+        <is_banned>0</is_banned>
+        <create_dt>1168146000</create_dt>
+
+        <cons_email>
+            <email>sivkannan77@gmail.com</email>
+            <email_type>work</email_type>
+        </cons_email>
+    </cons>
+</api>
+XML;
+   $xml = new SimpleXMLElement($str);
+   $data = $xml->asXML();
+   $resp = $api->post('cons/set_constituent_data',array(),$data);
+   if ($resp->code == 200) {
+     $result = $resp->getBody();
+     return 'success';
+   }
+ return 'failure';  
+ }
+ 
+}
+
+function bsd_api_init() {
+   $api_id = 'ambitious-charity-site'; // your API ID
+   $api_secret = '5faf692fdb43b100ce501f6a18dcba2a6ee6b5eb'; // your API Secret
+   $api_url = 'https://ambitious.cp.bsd.net'; // your BSD URL - e.g. https://client.cp.bsd.net
+   return new BlueStateDigital_Api($api_id, $api_secret, $api_url);
+}
+
+
+/**
+ * Respond to a Webform submission being inserted.
+ *
+ * Note that this hook is called after a submission has already been saved to
+ * the database. If needing to modify the submission prior to insertion, use
+ * hook_webform_submission_presave().
+ *
+ * @param $node
+ *   The Webform node on which this submission was made.
+ * @param $submission
+ *   The Webform submission that was just inserted into the database.
+ */
+function bsd_webform_submission_insert($node, $submission) {
+  bsd_push_data($node, $submission);
+}
+/*
+ * push data to bsd
+ */
+function bsd_push_data($node, $submission){
+     //webform node id, data to insert in bsd
+ $webforms = array(74601, 223446);
+  //constituent group ids for the webforms
+ $eventid = array(74601 => 1, 223446 => 2);
+ if (in_array($node->nid, $webforms)){
+   $data['firstname'] = $submission->data[1][0];
+   $data['email'] = $submission->data[2][0];
+   $data['postalcode'] = $submission->data[3][0];
+   $data['created'] = $submission->submitted;
+   if (isset($eventid[$node->nid])){
+     constituent_save($data, $eventid[$node->nid]);
+   } else {
+     constituent_save($data);
+   } 
+ }
+}
+
+/*
+ * $data shall have following keys
+ * firstname, lastname, postalcode, created, email
+ */
+function constituent_save($data = array(), $group = '') {
+  //construct the xml here with data
+  $str = '<api><cons  send_password="n">';
+  if (isset($data['firstname'])){
+    $str .= '<firstname>'.$data['firstname'].'</firstname>';
+  }
+  if (isset($data['lastname'])){
+    $str .= '<lastname>'.$data['lastname'].'</lastname>';
+  }
+  if (isset($data['postalcode'])){
+    $str .= '<zip>'.$data['lastname'].'</zip>';
+  } 
+  $str .= '<is_banned>0</is_banned>';
+  if (isset($data['created'])){
+    $str .= '<create_dt>'.$data['created'].'</create_dt>';
+  }
+  $str .= '<cons_email>';
+  if (isset($data['email'])) {
+    $str .= '<email>'.$data['email'].'</email>';
+  }
+  $str .= '</cons_email>';
+  if ($group != '' && is_numeric($group)){
+    $str .= '<cons_group id="'.$group.'" />';
+  }
+  $str .= '</cons></api>';
+   $api = bsd_api_init();
+   $xml = new SimpleXMLElement($str);
+   $data = $xml->asXML();
+   $resp = $api->post('cons/set_constituent_data',array(),$data);
+   //log if any error
+   if ($resp->code != 200) {
+     $result = $resp->getBody();
+    db_insert('bsd')
+    ->fields(array(
+      'nid' => $node->nid,
+      'sid' => $submission->sid,
+      'uid' => $submission->uid,
+    ))
+    ->execute();
+   }
+}
