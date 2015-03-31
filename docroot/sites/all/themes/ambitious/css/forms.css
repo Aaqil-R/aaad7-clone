@@ -787,20 +787,20 @@ div.ctools-modal-content .form-item .description {
 }
 
 /* line 368, ../sass/forms.scss */
-#signup {
+#signup, #contribution {
   margin: 0 auto;
   max-width: 1080px;
 }
 /* line 371, ../sass/forms.scss */
-#signup .input {
+#signup .input, #contribution .input {
   margin-bottom: 1.69492%;
 }
 /* line 375, ../sass/forms.scss */
-#signup .label {
+#signup .label, #contribution .label {
   margin-bottom: 1.69492%;
 }
 /* line 379, ../sass/forms.scss */
-#signup input[type=submit] {
+#signup input[type=submit], #contribution input[type=submit] {
   border: medium none;
   outline: medium none;
   cursor: pointer;
@@ -821,13 +821,13 @@ div.ctools-modal-content .form-item .description {
   border-radius: 5px;
 }
 /* line 403, ../sass/forms.scss */
-#signup input[type=submit]:hover {
+#signup input[type=submit]:hover, #contribution input[type=submit]:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #c63502;
   box-shadow: 0px 4px #c63502;
 }
 /* line 410, ../sass/forms.scss */
-#signup input[type=submit]:active {
+#signup input[type=submit]:active, #contribution input[type=submit]:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #c63502;
   box-shadow: 0px 0px #c63502;
@@ -839,7 +839,13 @@ div.ctools-modal-content .form-item .description {
 , #signup input[type=password]
 , #signup input[type=email]
 , #signup input[type=file]
-, #signup textarea {
+, #signup textarea, #contribution input[type=text]
+, #contribution input[type=search]
+, #contribution input[type=tel]
+, #contribution input[type=password]
+, #contribution input[type=email]
+, #contribution input[type=file]
+, #contribution textarea {
   float: left;
   clear: both;
   width: 49.15254%;
@@ -861,7 +867,13 @@ div.ctools-modal-content .form-item .description {
   , #signup input[type=password]
   , #signup input[type=email]
   , #signup input[type=file]
-  , #signup textarea {
+  , #signup textarea, #contribution input[type=text]
+  , #contribution input[type=search]
+  , #contribution input[type=tel]
+  , #contribution input[type=password]
+  , #contribution input[type=email]
+  , #contribution input[type=file]
+  , #contribution textarea {
     width: 100%;
   }
 }
@@ -872,7 +884,13 @@ div.ctools-modal-content .form-item .description {
 , #signup input[type=password]:focus
 , #signup input[type=email]:focus
 , #signup input[type=file]:focus
-, #signup textarea:focus {
+, #signup textarea:focus, #contribution input[type=text]:focus
+, #contribution input[type=search]:focus
+, #contribution input[type=tel]:focus
+, #contribution input[type=password]:focus
+, #contribution input[type=email]:focus
+, #contribution input[type=file]:focus
+, #contribution textarea:focus {
   border: 2px solid #f07d00;
   outline: none;
 }
