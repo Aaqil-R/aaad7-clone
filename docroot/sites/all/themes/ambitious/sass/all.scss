@@ -95,13 +95,19 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
       }
     }
 
+.front{
+    .visual.header_banner{
+        .img-holder{
+            height:770px;
+        }
+    }
+}
 
-
-@include breakpoint($desktop) {
+@include breakpoint($mobile) {
     .front{
         .visual.header_banner{
             .img-holder{
-                height:770px;
+                height:440px;
             }
         }
     }
