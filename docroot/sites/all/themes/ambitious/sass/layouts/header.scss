@@ -346,7 +346,7 @@ ul a {
     }
     label { display:none; }
     input[type="submit"] { display:none; }
-    input[type="search"] {
+    input[type="search"], input[type="text"]{
 
       @include input-placeholder {
         font-weight: 200;
@@ -1110,7 +1110,7 @@ nav {
   overflow: hidden;
   white-space: pre;
 }
-.node-type-topic, .page-node-74566, .node-type-my-voice-topic{
+.node-type-topic, .page-node-74566{
   .block-easy-breadcrumb{
     position: absolute;
     top: 18px;
@@ -1120,6 +1120,7 @@ nav {
       margin: 0 auto;
       max-width: 1080px;
       padding-right: 16px;
+      padding-top: 45px;
       a{
         font-family:$header-font-family;
         color:$white;
@@ -1127,6 +1128,26 @@ nav {
     }
   }
   
+}
+
+//including the padding top for the my voice topic pages only.
+.node-type-my-voice-topic{
+  .block-easy-breadcrumb{
+    position: absolute;
+    top: 18px;
+    z-index: 999;
+    width: 100%; 
+    .easy-breadcrumb{
+      margin: 0 auto;
+      max-width: 1080px;
+      padding-right: 16px;
+      padding-top: 45px;
+      a{
+        font-family:$header-font-family;
+        color:$white;
+      }
+    }
+  }
 }
 .node-type-topic .header_banner.banner-nav{
     display: none;
