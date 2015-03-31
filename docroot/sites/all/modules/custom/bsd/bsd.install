@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ *   bsd module install/schema hooks.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function bsd_schema() {
+  $schema['bsd'] = array(
+    'description' => 'stores data about the list of webform to be rendered in multistep',
+      'fields' => array(
+        'nid' => array(
+          'description' => 'The node identifier of a webform.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'sid' => array(
+          'description' => 'The submission identifier of a webform.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'uid' => array(
+          'description' => 'The user identifier from drupal.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'primary key' => array('nid', 'sid'),
+  );
+ 
+  return $schema;
+}
+

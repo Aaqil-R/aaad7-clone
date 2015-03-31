@@ -668,7 +668,7 @@ a {
 		// so removing the height restriction.
 		// height: 365px;
 		overflow: hidden;
-		margin-bottom: 500px;
+		//margin-bottom: 500px;
 		@include breakpoint($mobile) {
 			height: auto;
 			margin: 0;
@@ -852,6 +852,13 @@ a {
 	.holder {
 		@include container;
 		padding: 0 15px;
+
+		// myVoice page the form still cuts the caption 
+		// on higher resolutions.
+		@include breakpoint($large-screen){
+			margin-top:	3em;
+		}
+
 		.close, .block-close{ //TODO make block-close not repeat for my voice page
 			width: 37px;
 			background: $white;

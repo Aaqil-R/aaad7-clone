@@ -153,9 +153,9 @@ function ambitious_preprocess_region(&$variables) {
   $variables['headerlogo'] = null;
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
-    if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
+    if( $currentNode->nid == 224746 || $currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
-      $variables['link'] = "/voices-spectrum";
+      $variables['link'] = "/my-voice";
       $block = block_load('block',151);
       $block1 = _block_render_blocks(array($block));
       $block2 = _block_get_renderable_array($block1);
@@ -891,6 +891,43 @@ function ambitious_preprocess_page(&$vars) {
       , $getitemscaption2[0]);
     $vars['captiontwo'] = $viewitemscaption2;    
   }
+
+  if($currentNode->type == "basic_page_with_hero_form")
+  {
+    // get array of hero images
+    $node = node_load($currentNode->nid);
+    $getitemsimage = field_get_items('node', $node ,'field_hero_images_form');
+      
+    // create a random number based on the array size
+    $random= rand(0, count($getitemsimage) - 1);
+    
+    // get an random image from the array
+    $viewitemsimage = field_view_value('node', $node ,'field_hero_images_form'
+      , $getitemsimage[$random]
+      , array('settings' => array('image_style' => 'basic_page_desktop_form')));
+    $vars['image'] = $viewitemsimage;
+
+    // get the corresponding photo credit, the images and credits should have been
+    // entered in the same oder so that we can use the same random number
+    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+      , $getitemscredit[0]);
+    $vars['credit'] = $viewitemscredit;
+    
+    // get caption 1
+    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+      , $getitemscaption1[0]);
+    $vars['captionone'] = $viewitemscaption1;
+    
+    // get caption 2
+    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+      , $getitemscaption2[0]);
+    $vars['captiontwo'] = $viewitemscaption2;    
+  }
+
+
   if (arg(0) == 'header') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_header';
   } 

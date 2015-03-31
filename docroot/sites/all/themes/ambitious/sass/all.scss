@@ -94,6 +94,29 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
       }
     }
+
+.front{
+    .visual.header_banner{
+        .img-holder{
+            height:770px;
+        }
+        &.no-overlay {
+            margin-bottom: 31em;
+            .img-holder {height:530px;}
+        }
+    }
+}
+
+@include breakpoint($mobile) {
+    .front{
+        .visual.header_banner{
+            .img-holder{
+                height:440px;
+            }
+        }
+    }
+}
+
 /* visual block styles */
 .visual {
 	width:100%;
@@ -119,8 +142,8 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 	}
 	.img-holder {
 		width:100%;
+        height: 407px;
 		position:relative;
-        //height: auto;
 		overflow: hidden;
         .region-image-holder{//this dom needs to be refactored wheels within wheels
             height: 100%;
@@ -144,11 +167,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 		.caption-frame {
-			position:absolute;
-			left:50%;
-			height:100%;
-			width:1080px;
-			margin:0 0 0 -540px;
+			//position:absolute;
+			//left:50%;
+			//height:100%;
+			//width:1080px;
+			//margin:0 0 0 -540px;
 			@include breakpoint($desktop) {
 			  &.caption-frame-arrows{
 			    padding:0 0 0 70px;
@@ -159,12 +182,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			    padding:0;
 			  }
 			}
-
+//what was this for?
+            /*
 			@include breakpoint($desktop) {
 				width:100%;
 				margin:0;
 				left:0;
-			}
+			}*/
 			@include breakpoint($mobile) {
 				padding:0 30px;
 				text-align:center;
@@ -1515,13 +1539,23 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			}
 		}
 		.post-actions{
-			background: $pink;
-			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+            text-align: center;
+            vertical-align: middle;
+            background-image: image-url('aged-16-25.jpg');
 			position: relative;
 			max-height: 315px;
-			&:hover{
-				background: #CF005B;
-			}
+            padding: 0;
+            .wrapper {
+                background: $pink;
+                opacity: 0.5;
+                @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                &:hover{
+                    background: #CF005B;
+                }
+            }
 			&:before{
 				content: "";
 				width: 0;
@@ -1543,7 +1577,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				background-position: right top;
 			}
 			.action{
-				padding:60px 30px 30px 30px;
+              position: absolute;
+              width: 100%;
+              padding: 40% 0;
+                
 				color:$white;
 				font-size:39px;
 				line-height: normal;
@@ -2156,15 +2193,4 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 @keyframes title {
    from {top: -30px; opacity:0;}
     to {top: 0px; opacity:1;}
-}
-
-//refer line number 120
-//background image is the one which is holding the img  holder.
-
-.front{
-	.visual.header_banner{
-		.img-holder{
-			height:770px;
-		}
-	}
 }

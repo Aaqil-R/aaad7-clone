@@ -446,7 +446,7 @@
 
 .text-section .text-right-section{
   @include breakpoint($mobile){
-     margin: 10px 0 30px 0;
+     //margin: 10px 0 30px 0; this seems to only make things worse?
   }
 }
 .page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies{
@@ -713,7 +713,7 @@ div.ctools-modal-content .modal-content{
     overflow-x: hidden;
   }
 .front #main{
-  margin-top: -50px;
+  //margin-top: -50px;what is this issue fixing? Everything that gets put on this list should have an explanation with it
 }
 
 .not-logged-in #user-login{
@@ -810,4 +810,35 @@ article.node-223806, article.node-223591{
  .field-name-body{
   padding:40px 80px; 
   }
+}
+
+
+
+#modalContent{
+  #modal-title{
+    font-size: 30px;
+    text-align: center;
+    padding: 14px;
+    display: block;
+  } 
+  .popups-close.close{
+    position: absolute;
+    right: 11px;
+    top: 12px;
+  }
+  h3{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 1px;
+    text-align: left;
+  }
+  .hybridauth-widget li{
+    margin:0;
+  }
+  .item-list{
+    margin-left: 20px;
+  }
+}
+div.ctools-modal-content .modal-content{
+  padding:19px 19px 19px 49px;
 }

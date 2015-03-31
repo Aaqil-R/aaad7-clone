@@ -1,6 +1,21 @@
 @import "base/base";
 @import "extends";
 
+/*
+* Jana adding homepage styles - class set from context.
+*/
+
+.my-voice-home {
+    .banner_text {
+        background-image: image-url('my-voice-large-logo.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 75%;
+		text-indent: -200%;
+		overflow: hidden;
+    }
+}
+
 /*breadcrump for all the pages*/
 .img-holder{
 
@@ -11,30 +26,6 @@
 .page-node-74596,
 .section-my-voice{
 
-	.my-voice-block,
-	.node .field,
-	.my-voice-post,
-	.acknowledge-block{
-
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			text-decoration: underline;
-			color: $pink;
-			&:hover{
-				color: $base-link-color;
-			}
-
-		}
-		a{
-			color: $pink;
-			&:hover{
-				color: $base-link-color;
-			}
-
-		}
-
-	}
-
-
 	@extend %my-voice-main;
 	.visual{
 		@extend %my-voice-visual;
@@ -42,7 +33,7 @@
 
 	#content_top{
 		z-index: 99;
-		margin-top: -20%;
+		margin-top: -12.5%;
 		margin-bottom: 30px;
 		@include breakpoint($mobile) {
 			margin-top: -5%;
@@ -147,6 +138,56 @@
 		}
 		
 	}
+
+	.node .field,
+	.acknowledge-block{
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			text-decoration: underline;
+			color: $pink;
+			&:hover{
+				color: $base-link-color;
+			}
+
+		}
+		a{
+			color: $pink;
+			&:hover{
+				color: $base-link-color;
+			}
+			&:first-child{
+				color: $white;
+			}
+		}
+
+		.text-right-section{
+			a{
+				.btn{
+					margin-top:-30px;
+	 				margin-bottom: 45px;
+				}
+			}
+		}
+	}
+	.my-voice-block{
+		a.tooltips,
+		.block-close a{
+			color: $base-link-color;
+			&:hover{
+				color: $pink;
+			}
+
+		}
+
+	}
+	a.btn-pink,
+	.btn-pink{
+		color: $white;
+		&:hover{
+			color: $white;
+		}
+	}
+
 }
 
 
@@ -230,11 +271,11 @@ nav {
 	padding-top:20px;
 }
 
-.top-bar{
-	.logo{
-		display: none;
-	}
-}
+// .top-bar{
+// 	.logo{
+// 		display: none;
+// 	}
+// }
 
 // My voice filter
 .section-voices-spectrum{

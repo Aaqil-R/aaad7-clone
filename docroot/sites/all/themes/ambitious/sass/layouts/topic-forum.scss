@@ -266,10 +266,11 @@ a.video_bt{
     color: #fff;
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 222px;
     top: 50%;
     font-size: 80px;
-    margin-top:-45px;
+    margin-top:-115px;
+    padding-top: 81px;
   }
 }
 /* POST RESPONSIVE */
@@ -314,8 +315,8 @@ a.video_bt{
 
 /* main information part styles */
 .text-section{
-  margin-bottom:59px;
-  margin-top:28px;
+  //margin-bottom:59px; what were these for?
+  //margin-top:28px;
   .text-right-section{
     float:right;
 	margin-top: 40px;
@@ -327,6 +328,7 @@ a.video_bt{
        display: block;
        margin-bottom: 40px;
        text-align: left;
+        clear: both;
 	}
 	a{
 	  font-weight: bold;
@@ -766,7 +768,7 @@ a.video_bt{
 	 .nav-filter{
 		  padding:0 31px;
 			.form-type-bef-checkbox {
-			      width:100%;
+			     width:100%;
 			     font-size:18px;
 			     line-height:29px;
 			    
@@ -1660,7 +1662,7 @@ fieldset{
 	    font-size:34px; 
 	    margin-top: 20%;
 	margin: 0 auto;
-	margin-left: 10%;
+	//margin-left: 10%;What was this for?
 	max-width: 80%;
 	 }
     }
@@ -1743,7 +1745,7 @@ fieldset{
       }
     }
    z-index: 99;
-   margin-top: -20em;
+  // margin-top: -20em;//for why!!
    margin-bottom:30px;
    margin-left: 15px;
    @include breakpoint($mobile){
