@@ -153,7 +153,7 @@ function ambitious_preprocess_region(&$variables) {
   $variables['headerlogo'] = null;
   // TODO: This should become redundant as soon as we move to a different site.
   if ($currentNode) {
-    if($currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
+    if( $currentNode->nid == 224746 || $currentNode->nid == 74596 || $currentNode->type == "my_voice_blog") { 
       $variables['logo'] = "/sites/all/themes/ambitious/images/my-voice-logo.png"; 
       $variables['link'] = "/voices-spectrum";
       $block = block_load('block',151);
