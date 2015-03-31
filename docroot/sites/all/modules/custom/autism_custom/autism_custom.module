@@ -81,8 +81,24 @@ function autism_custom_menu() {
  
 function autism_custom_header() {
 
-  drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/jcf.css");
-  drupal_add_css(drupal_get_path('theme', 'ambitious') . "/css/bsd-wrapper.css");
+  // http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/bsd-wrapper.css
+  // http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/jcf.css
+  
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/bsd-wrapper.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/jcf.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/all.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/forms.css', array(
+        'type' => 'external'
+      ));
 
   $content = 'Header';
   return $content;

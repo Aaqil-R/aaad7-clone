@@ -58,6 +58,11 @@ function articalmig_migrate_api()
 				'class_name'=>'forumtopicmigration',
 				'group_name'=>'users',
 			),
+
+			'articlenew'=>array(
+				'class_name'=>'articalnewmigration',
+				'group_name'=>'users',
+			),
 		),
 	);
 }

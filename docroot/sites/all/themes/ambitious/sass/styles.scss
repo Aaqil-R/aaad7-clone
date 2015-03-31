@@ -243,6 +243,14 @@ table {
             padding-bottom: 5em;
         }
     }
+    // TODO: Due to All the basic pages is being added the above width. 
+    &.page-node-223451 #content-area{
+        @include breakpoint($all-desktop) {
+            @include span(12 of 12);
+            padding-bottom: 5em;
+        }
+
+    }
 }
 
 // Publication style - simple list from wysiwyg
