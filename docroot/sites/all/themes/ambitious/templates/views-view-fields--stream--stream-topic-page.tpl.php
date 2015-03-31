@@ -34,7 +34,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 <?php elseif ($fields['type']->raw == 'social_mention'):?>
                              <?php if($fields['field_featured_image']): ?>
 						<div class="img-holder">
-							<?php print $fields['field_featured_image']->raw; ?>
+							<?php print strip_tags($fields['field_featured_image']); ?>
 						</div>
 						<?php endif; ?>
 						<div class="info">
