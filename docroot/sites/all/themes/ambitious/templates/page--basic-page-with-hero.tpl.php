@@ -106,10 +106,7 @@
   <!-- / header -->
 
   <section class="visual header_banner">
-    <div class="img-holder" 
-        <?php if($image): ?>
-           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
-        <?php endif; ?>  
+    <div class="img-holder">
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
@@ -142,12 +139,11 @@
           <?php endif; ?>  
         </div>
       </div>
-      <div class="region region-image-holder">
-        <p>
-          <?php if($image): ?>
-            <?php print render($image); ?>  
-          <?php endif; ?>  
-        </p>    
+      <div class="region region-image-holder"
+        <?php if($image): ?>
+           style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')">
+        <?php endif; ?>  >
+          
       </div>
     </div>
     <?php if($credit): ?>
