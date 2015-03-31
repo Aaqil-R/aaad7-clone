@@ -9,7 +9,8 @@
         padding: 50px 65px 48px 7px;
         background: #ffffff;
     }
-    .bsd-contribForm-aboveContent img {height: auto !important;}
+    .bsd-contribForm-aboveContent img {height: auto !important;width: 100% !important;}//using important to override wysiwyg styles
+    
     @media (min-width: 1000px) {
         .bsd-contribForm-aboveContent {
             float: left;
@@ -29,10 +30,22 @@
         }tr:nth-child(odd) td, table tr.odd td {
             background: none;
         }
+        td td td {
+            padding: 0;
+        }
+        label, .fieldlabel  {
+            font-weight: normal;
+        }
+        input {
+            width: 100%;
+        }
 
         .bsd-tools #contribution td.contribbutton {
             text-align: left;
             background: none;
+            table td {
+                text-align: left;
+            }
         }
     }
    
