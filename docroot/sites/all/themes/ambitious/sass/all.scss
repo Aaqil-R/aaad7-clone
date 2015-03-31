@@ -94,6 +94,19 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		}
       }
     }
+
+
+
+@include breakpoint($desktop) {
+    .front{
+        .visual.header_banner{
+            .img-holder{
+                height:770px;
+            }
+        }
+    }
+}
+
 /* visual block styles */
 .visual {
 	width:100%;
@@ -2156,15 +2169,4 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 @keyframes title {
    from {top: -30px; opacity:0;}
     to {top: 0px; opacity:1;}
-}
-
-//refer line number 120
-//background image is the one which is holding the img  holder.
-
-.front{
-	.visual.header_banner{
-		.img-holder{
-			height:770px;
-		}
-	}
 }
