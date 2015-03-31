@@ -24,10 +24,10 @@ function bsd_integration($type = 'result'){
         <firstname>testapi-kamalakannan</firstname>
         <lastname>testapi-sivanandam</lastname>
         <is_banned>0</is_banned>
-        <create_dt>1168146000</create_dt>
+        <create_dt>2008-10-10 11:14:50</create_dt>
 
         <cons_email>
-            <email>sivkannan77@gmail.com</email>
+            <email>sivkannan77@live.com</email>
             <email_type>work</email_type>
         </cons_email>
     </cons>
@@ -107,7 +107,7 @@ function constituent_save($data = array(), $group = '') {
   } 
   $str .= '<is_banned>0</is_banned>';
   if (isset($data['created'])){
-    $str .= '<create_dt>'.$data['created'].'</create_dt>';
+    $str .= '<create_dt>'.date('Y-m-d H:i:s', $date['created']).'</create_dt>';
   }
   $str .= '<cons_email>';
   if (isset($data['email'])) {
@@ -129,7 +129,7 @@ function constituent_save($data = array(), $group = '') {
     ->fields(array(
       'nid' => $node->nid,
       'sid' => $submission->sid,
-      'uid' => $submission->uid,
+      'uid' => $submission->uid, // add serial number for the table
     ))
     ->execute();
    }
