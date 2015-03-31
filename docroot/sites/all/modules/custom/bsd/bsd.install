@@ -11,6 +11,12 @@ function bsd_schema() {
   $schema['bsd'] = array(
     'description' => 'stores data about the list of webform to be rendered in multistep',
       'fields' => array(
+       'bsdeid' => array(
+          'description' => 'The bsd error serial number',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
         'nid' => array(
           'description' => 'The node identifier of a webform.',
           'type' => 'int',
@@ -30,7 +36,7 @@ function bsd_schema() {
           'not null' => TRUE,
         ),
       ),
-      'primary key' => array('nid', 'sid'),
+      'primary key' => array('bsdeid'),
   );
  
   return $schema;

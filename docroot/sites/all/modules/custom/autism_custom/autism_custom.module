@@ -80,15 +80,34 @@ function autism_custom_menu() {
 }
  
 function autism_custom_header() {
-  $content = 'Header'; 
+
+  // http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/bsd-wrapper.css
+  // http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/jcf.css
+  
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/bsd-wrapper.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/layouts/jcf.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/all.css', array(
+        'type' => 'external'
+      ));
+
+  drupal_add_css('//ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/sites/all/themes/ambitious/css/forms.css', array(
+        'type' => 'external'
+      ));
+
+  $content = 'Header';
   return $content;
 }
+
 function autism_custom_footer() {
   $content = 'Footer'; 
   return $content;
 }
-
-
 
 function autism_custom_settings_form($form, &$form_state) {
   $form['autism_custom_supporter_count'] = array(
