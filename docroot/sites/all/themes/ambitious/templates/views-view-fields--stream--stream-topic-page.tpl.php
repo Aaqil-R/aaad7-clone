@@ -62,7 +62,8 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 							<h3><?php print $fields['title']->content; ?></h3>
 							<?php print $fields['field_standfirst']->content; ?>
 						</div>
-						<?php if($fields['comment']->raw != 1): ?>
+						
+						<?php if( $fields['comment']->raw != 1 && strip_tags($fields['comment_count']->raw) != 0): ?>
 							<div class="footer">
 								<div class="num-holder">
 									<a href="node/nid" title="people are talking about this" class="">
@@ -72,6 +73,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 								</div>
 							</div>
 						<?php endif ?>
+
 					</section>
 <?php endif; ?>
 <?php foreach ($fields as $id => $field): ?>
