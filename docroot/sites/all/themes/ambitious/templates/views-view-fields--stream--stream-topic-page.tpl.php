@@ -32,13 +32,13 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						
 					</section>
 <?php elseif ($fields['type']->raw == 'social_mention'):?>
-                             <?php if($fields['field_featured_image']->content): ?>
+                             <?php if($fields['field_featured_image']): ?>
 						<div class="img-holder">
-							<?php print $fields['field_featured_image']->content; ?>
+							<?php print $fields['field_featured_image']->raw; ?>
 						</div>
 						<?php endif; ?>
 						<div class="info">
-						     <?php if($fields['title']->content): ?>
+						     <?php if($fields['title']): ?>
 							<!-- removing the links from the social titles -->
 							<!-- <h2><?php print strip_tags($fields['title']->content, '<a>'); ?></h2> -->
 							<h2><?php print $fields['title']->raw; ?></h2>
