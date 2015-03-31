@@ -2380,18 +2380,23 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   backgroud-image: url('../images/aged-16-25.jpg?1427775012');
   position: relative;
   max-height: 315px;
+  padding: 0;
 }
-/* line 1547, ../sass/all.scss */
+/* line 1548, ../sass/all.scss */
 .posts-columns .post-actions .wrapper {
   background: #e30087;
+  opacity: 0.5;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-/* line 1551, ../sass/all.scss */
+/* line 1555, ../sass/all.scss */
 .posts-columns .post-actions .wrapper:hover {
   background: #CF005B;
 }
-/* line 1555, ../sass/all.scss */
+/* line 1559, ../sass/all.scss */
 .posts-columns .post-actions:before {
   content: "";
   width: 0;
@@ -2403,7 +2408,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   bottom: 0;
   left: 0;
 }
-/* line 1566, ../sass/all.scss */
+/* line 1570, ../sass/all.scss */
 .posts-columns .post-actions:hover:before {
   border-color: transparent transparent transparent #C80042;
 }
@@ -2416,9 +2421,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-position: right top;
   }
 }
-/* line 1575, ../sass/all.scss */
+/* line 1579, ../sass/all.scss */
 .posts-columns .post-actions .action {
-  padding-top: 12%;
+  position: absolute;
+  width: 100%;
+  padding: 40% 0;
   color: #ffffff;
   font-size: 39px;
   line-height: normal;
@@ -2427,18 +2434,18 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   display: block;
 }
 @media (max-width: 990px) {
-  /* line 1575, ../sass/all.scss */
+  /* line 1579, ../sass/all.scss */
   .posts-columns .post-actions .action {
     font-size: 30px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1589, ../sass/all.scss */
+  /* line 1595, ../sass/all.scss */
   .posts-columns .post-actions .action .text br {
     display: none;
   }
 }
-/* line 1593, ../sass/all.scss */
+/* line 1599, ../sass/all.scss */
 .posts-columns .post-actions .action .icon-Rightarrow {
   color: #ffffff;
   text-decoration: none;
@@ -2448,11 +2455,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   font-size: 61px;
   text-align: right;
 }
-/* line 1602, ../sass/all.scss */
+/* line 1608, ../sass/all.scss */
 .posts-columns .post-actions .action:hover, .posts-columns .post-actions .action:active, .posts-columns .post-actions .action:focus {
   text-decoration: none;
 }
-/* line 1607, ../sass/all.scss */
+/* line 1613, ../sass/all.scss */
 .posts-columns .post-my-voice-actions {
   padding: 20px 30px 48px 30px;
   background: url(../images/bg09.jpg) no-repeat #e30087;
@@ -2462,13 +2469,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   max-height: 315px;
 }
 @media (max-width: 990px) {
-  /* line 1607, ../sass/all.scss */
+  /* line 1613, ../sass/all.scss */
   .posts-columns .post-my-voice-actions {
     background-position: left bottom;
   }
 }
 @media (max-width: 767px) {
-  /* line 1607, ../sass/all.scss */
+  /* line 1613, ../sass/all.scss */
   .posts-columns .post-my-voice-actions {
     padding: 14px 15px;
     font-size: 18px;
@@ -2477,7 +2484,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background-size: inherit;
   }
 }
-/* line 1624, ../sass/all.scss */
+/* line 1630, ../sass/all.scss */
 .posts-columns .post-my-voice-actions .action {
   color: #ffffff;
   font-size: 39px;
@@ -2486,18 +2493,18 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   display: block;
 }
 @media (max-width: 990px) {
-  /* line 1624, ../sass/all.scss */
+  /* line 1630, ../sass/all.scss */
   .posts-columns .post-my-voice-actions .action {
     font-size: 30px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1636, ../sass/all.scss */
+  /* line 1642, ../sass/all.scss */
   .posts-columns .post-my-voice-actions .action .text br {
     display: none;
   }
 }
-/* line 1641, ../sass/all.scss */
+/* line 1647, ../sass/all.scss */
 .posts-columns .post-my-voice-actions .action .icon-Rightarrow {
   color: #ffffff;
   text-decoration: none;
@@ -2508,21 +2515,21 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   font-size: 61px;
 }
 @media (max-width: 767px) {
-  /* line 1641, ../sass/all.scss */
+  /* line 1647, ../sass/all.scss */
   .posts-columns .post-my-voice-actions .action .icon-Rightarrow {
     text-align: left;
     margin-left: 160px;
   }
 }
-/* line 1654, ../sass/all.scss */
+/* line 1660, ../sass/all.scss */
 .posts-columns .post-my-voice-actions .action:hover, .posts-columns .post-my-voice-actions .action:active, .posts-columns .post-my-voice-actions .action:focus {
   text-decoration: none;
 }
-/* line 1656, ../sass/all.scss */
+/* line 1662, ../sass/all.scss */
 .posts-columns .post-my-voice-actions .action:hover .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:active .icon-Rightarrow, .posts-columns .post-my-voice-actions .action:focus .icon-Rightarrow {
   color: #b3066b;
 }
-/* line 1662, ../sass/all.scss */
+/* line 1668, ../sass/all.scss */
 .posts-columns .blockquote-block {
   margin: 0 0 31px;
   background: #734889;
@@ -2531,19 +2538,19 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   padding: 62px 28px 30px 42px;
 }
 @media (max-width: 767px) {
-  /* line 1662, ../sass/all.scss */
+  /* line 1668, ../sass/all.scss */
   .posts-columns .blockquote-block {
     padding: 60px 31px 27px 22px;
   }
 }
-/* line 1671, ../sass/all.scss */
+/* line 1677, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote {
   text-align: left;
   padding: 0;
   margin: 0 0 19px;
   position: relative;
 }
-/* line 1676, ../sass/all.scss */
+/* line 1682, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote:after {
   position: absolute;
   content: "";
@@ -2554,12 +2561,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   background: url(../images/sprite.png) no-repeat -45px -23px;
 }
 @media (max-width: 767px) {
-  /* line 1676, ../sass/all.scss */
+  /* line 1682, ../sass/all.scss */
   .posts-columns .blockquote-block blockquote:after {
     left: 1px;
   }
 }
-/* line 1688, ../sass/all.scss */
+/* line 1694, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote q {
   display: block;
   line-height: 1.333em;
@@ -2568,87 +2575,87 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin: 0 0 18px;
 }
 @media (max-width: 767px) {
-  /* line 1688, ../sass/all.scss */
+  /* line 1694, ../sass/all.scss */
   .posts-columns .blockquote-block blockquote q {
     margin: 0 0 10px;
   }
 }
-/* line 1697, ../sass/all.scss */
+/* line 1703, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote cite {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
 }
-/* line 1701, ../sass/all.scss */
+/* line 1707, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote cite strong {
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  /* line 1701, ../sass/all.scss */
+  /* line 1707, ../sass/all.scss */
   .posts-columns .blockquote-block blockquote cite strong {
     font-size: 15px;
   }
 }
-/* line 1707, ../sass/all.scss */
+/* line 1713, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote cite a {
   color: #ffffff;
   text-decoration: underline;
 }
-/* line 1710, ../sass/all.scss */
+/* line 1716, ../sass/all.scss */
 .posts-columns .blockquote-block blockquote cite a:hover {
   text-decoration: none;
 }
-/* line 1714, ../sass/all.scss */
+/* line 1720, ../sass/all.scss */
 .posts-columns .blockquote-block .icon-Speech1 {
   font-size: 27px;
   margin: 0 0 0 -13px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 1720, ../sass/all.scss */
+/* line 1726, ../sass/all.scss */
 .posts-columns .blockquote-block .icon-Twitter {
   font-size: 27px;
   margin: 0 0 0 -13px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 1726, ../sass/all.scss */
+/* line 1732, ../sass/all.scss */
 .posts-columns .blockquote-block.red {
   background: #c3104b;
 }
 
-/* line 1729, ../sass/all.scss */
+/* line 1735, ../sass/all.scss */
 .more-btn {
   display: block;
   padding: 29px 0 61px;
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 1729, ../sass/all.scss */
+  /* line 1735, ../sass/all.scss */
   .more-btn {
     display: none;
   }
 }
-/* line 1736, ../sass/all.scss */
+/* line 1742, ../sass/all.scss */
 .more-btn em {
   display: none;
 }
-/* line 1737, ../sass/all.scss */
+/* line 1743, ../sass/all.scss */
 .more-btn a {
   text-decoration: none;
   color: #d2d5d6;
 }
-/* line 1740, ../sass/all.scss */
+/* line 1746, ../sass/all.scss */
 .more-btn a .icon-Downarrow {
   font-size: 101px;
 }
-/* line 1743, ../sass/all.scss */
+/* line 1749, ../sass/all.scss */
 .more-btn a:hover {
   color: #b6bcc1;
   text-decoration: none;
 }
 
-/* line 1749, ../sass/all.scss */
+/* line 1755, ../sass/all.scss */
 .see-btn {
   width: 100%;
   text-align: center;
@@ -2656,32 +2663,32 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin-bottom: 107px;
 }
 @media (max-width: 990px) {
-  /* line 1749, ../sass/all.scss */
+  /* line 1755, ../sass/all.scss */
   .see-btn {
     margin-bottom: 20px;
   }
 }
 
-/* line 1772, ../sass/all.scss */
+/* line 1778, ../sass/all.scss */
 .brought-btn {
   display: block;
   padding: 29px 0 61px;
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 1772, ../sass/all.scss */
+  /* line 1778, ../sass/all.scss */
   .brought-btn {
     padding: 40px 0;
   }
 }
-/* line 1779, ../sass/all.scss */
+/* line 1785, ../sass/all.scss */
 .brought-btn .my-voice-icon {
   margin-bottom: -6px;
   margin-left: 10px;
 }
 
 /* forum block styles */
-/* line 1786, ../sass/all.scss */
+/* line 1792, ../sass/all.scss */
 .forum-block {
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -2692,12 +2699,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   width: 100%;
 }
 @media (max-width: 767px) {
-  /* line 1786, ../sass/all.scss */
+  /* line 1792, ../sass/all.scss */
   .forum-block {
     background: #ffffff;
   }
 }
-/* line 1794, ../sass/all.scss */
+/* line 1800, ../sass/all.scss */
 .forum-block .holder {
   z-index: 1;
   position: relative;
@@ -2706,12 +2713,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   padding: 72px 15px 78px;
 }
 @media (max-width: 767px) {
-  /* line 1794, ../sass/all.scss */
+  /* line 1800, ../sass/all.scss */
   .forum-block .holder {
     padding: 62px 20px 40px;
   }
 }
-/* line 1812, ../sass/all.scss */
+/* line 1818, ../sass/all.scss */
 .forum-block h1 {
   display: inline-block;
   vertical-align: top;
@@ -2723,26 +2730,26 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   padding: 27px 33px 5px 29px;
 }
 @media (max-width: 767px) {
-  /* line 1812, ../sass/all.scss */
+  /* line 1818, ../sass/all.scss */
   .forum-block h1 {
     font-size: 27px;
     line-height: 32px;
     padding: 0 0 31px;
   }
 }
-/* line 1828, ../sass/all.scss */
+/* line 1834, ../sass/all.scss */
 .forum-block .block {
   text-align: center;
   background: #ffffff;
   padding: 52px 32px 49px;
 }
 @media (max-width: 767px) {
-  /* line 1828, ../sass/all.scss */
+  /* line 1834, ../sass/all.scss */
   .forum-block .block {
     padding: 0 0 49px;
   }
 }
-/* line 1846, ../sass/all.scss */
+/* line 1852, ../sass/all.scss */
 .forum-block .bg-stretch {
   position: absolute;
   left: 0;
@@ -2751,29 +2758,29 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   bottom: 0;
 }
 @media (max-width: 767px) {
-  /* line 1846, ../sass/all.scss */
+  /* line 1852, ../sass/all.scss */
   .forum-block .bg-stretch {
     display: none;
   }
 }
-/* line 1855, ../sass/all.scss */
+/* line 1861, ../sass/all.scss */
 .forum-block .bg-stretch img {
   display: block;
 }
 
 /* forum table styles */
-/* line 1861, ../sass/all.scss */
+/* line 1867, ../sass/all.scss */
 .table-from {
   text-align: left;
   margin: 0 0 41px;
 }
 @media (max-width: 767px) {
-  /* line 1861, ../sass/all.scss */
+  /* line 1867, ../sass/all.scss */
   .table-from {
     margin: 0 0 30px;
   }
 }
-/* line 1868, ../sass/all.scss */
+/* line 1874, ../sass/all.scss */
 .table-from > li {
   background: #eef2f3;
   -moz-border-radius: 5px;
@@ -2783,40 +2790,40 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin: 0 0 10px;
 }
 @media (max-width: 767px) {
-  /* line 1868, ../sass/all.scss */
+  /* line 1874, ../sass/all.scss */
   .table-from > li {
     padding: 8px 15px 15px 18px;
     margin: 0 0 14px;
   }
 }
-/* line 1878, ../sass/all.scss */
+/* line 1884, ../sass/all.scss */
 .table-from > li.hottopic .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 1881, ../sass/all.scss */
+/* line 1887, ../sass/all.scss */
 .table-from > li.hottopic .num:after {
   background-position: -40px 0;
 }
-/* line 1885, ../sass/all.scss */
+/* line 1891, ../sass/all.scss */
 .table-from > li.hottopic li.col02 .text {
   color: #f15500;
 }
-/* line 1890, ../sass/all.scss */
+/* line 1896, ../sass/all.scss */
 .table-from > li.feature .num {
   border-color: #fbb900;
 }
-/* line 1892, ../sass/all.scss */
+/* line 1898, ../sass/all.scss */
 .table-from > li.feature .num:after {
   background-position: -61px 0;
 }
-/* line 1900, ../sass/all.scss */
+/* line 1906, ../sass/all.scss */
 .table-from .table-row li {
   display: inline-block;
   vertical-align: middle;
   position: relative;
 }
-/* line 1904, ../sass/all.scss */
+/* line 1910, ../sass/all.scss */
 .table-from .table-row li.col01 {
   font-size: 18px;
   line-height: 26px;
@@ -2825,51 +2832,51 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   width: 49.6%;
 }
 @media (max-width: 990px) {
-  /* line 1904, ../sass/all.scss */
+  /* line 1910, ../sass/all.scss */
   .table-from .table-row li.col01 {
     width: 38%;
     padding: 0 10px 14px 60px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1904, ../sass/all.scss */
+  /* line 1910, ../sass/all.scss */
   .table-from .table-row li.col01 {
     width: 100%;
     padding: 10px 39px 10px 0;
     line-height: 22px;
   }
 }
-/* line 1919, ../sass/all.scss */
+/* line 1925, ../sass/all.scss */
 .table-from .table-row li.col01 a {
   color: #081318;
   text-decoration: underline;
   font-size: 18px;
 }
-/* line 1923, ../sass/all.scss */
+/* line 1929, ../sass/all.scss */
 .table-from .table-row li.col01 a:hover {
   text-decoration: none;
 }
-/* line 1926, ../sass/all.scss */
+/* line 1932, ../sass/all.scss */
 .table-from .table-row li.col02 {
   width: 18.1%;
   padding: 0 0 14px;
   color: #d2d5d6;
 }
 @media (max-width: 990px) {
-  /* line 1926, ../sass/all.scss */
+  /* line 1932, ../sass/all.scss */
   .table-from .table-row li.col02 {
     width: 21%;
   }
 }
 @media (max-width: 990px) and (max-width: 767px) {
-  /* line 1926, ../sass/all.scss */
+  /* line 1932, ../sass/all.scss */
   .table-from .table-row li.col02 {
     width: 100%;
     padding: 0 0 8px;
   }
 }
 
-/* line 1937, ../sass/all.scss */
+/* line 1943, ../sass/all.scss */
 .table-from .table-row li.col02 .text {
   margin: 0 9px 0 0;
   display: inline-block;
@@ -2879,12 +2886,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   color: #636c73;
 }
 @media (max-width: 767px) {
-  /* line 1937, ../sass/all.scss */
+  /* line 1943, ../sass/all.scss */
   .table-from .table-row li.col02 .text {
     margin: 0 3px 0 0;
   }
 }
-/* line 1949, ../sass/all.scss */
+/* line 1955, ../sass/all.scss */
 .table-from .table-row li.col03 {
   color: #636c73;
   width: 31%;
@@ -2894,31 +2901,31 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   vertical-align: middle;
 }
 @media (max-width: 990px) {
-  /* line 1949, ../sass/all.scss */
+  /* line 1955, ../sass/all.scss */
   .table-from .table-row li.col03 {
     width: 39%;
   }
 }
 @media (max-width: 990px) and (max-width: 767px) {
-  /* line 1949, ../sass/all.scss */
+  /* line 1955, ../sass/all.scss */
   .table-from .table-row li.col03 {
     width: 100%;
     padding: 0;
   }
 }
 
-/* line 1963, ../sass/all.scss */
+/* line 1969, ../sass/all.scss */
 .table-from .table-row li.col03 dl {
   margin: 0;
 }
-/* line 1965, ../sass/all.scss */
+/* line 1971, ../sass/all.scss */
 .table-from .table-row li.col03 dl dt {
   display: inline-block;
   vertical-align: top;
   margin: 0 0 9px;
 }
 @media (max-width: 767px) {
-  /* line 1965, ../sass/all.scss */
+  /* line 1971, ../sass/all.scss */
   .table-from .table-row li.col03 dl dt {
     width: auto;
     float: left;
@@ -2926,7 +2933,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     margin-right: 6px;
   }
 }
-/* line 1978, ../sass/all.scss */
+/* line 1984, ../sass/all.scss */
 .table-from .table-row li.col03 dl dd {
   margin: 0;
   display: inline-block;
@@ -2935,30 +2942,30 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   margin: 0 0 9px;
 }
 @media (max-width: 990px) {
-  /* line 1978, ../sass/all.scss */
+  /* line 1984, ../sass/all.scss */
   .table-from .table-row li.col03 dl dd {
     width: 66%;
   }
 }
 @media (max-width: 767px) {
-  /* line 1978, ../sass/all.scss */
+  /* line 1984, ../sass/all.scss */
   .table-from .table-row li.col03 dl dd {
     width: auto;
     display: block;
     margin: 0 0 10px;
   }
 }
-/* line 1994, ../sass/all.scss */
+/* line 2000, ../sass/all.scss */
 .table-from .table-row li.col03 a {
   font-weight: bold;
   color: #081318;
   text-decoration: none;
 }
-/* line 1998, ../sass/all.scss */
+/* line 2004, ../sass/all.scss */
 .table-from .table-row li.col03 a:hover {
   text-decoration: none;
 }
-/* line 2002, ../sass/all.scss */
+/* line 2008, ../sass/all.scss */
 .table-from .table-row .num {
   min-width: 50px;
   height: 38px;
@@ -2979,7 +2986,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   background: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 2002, ../sass/all.scss */
+  /* line 2008, ../sass/all.scss */
   .table-from .table-row .num {
     font-size: 16px;
     padding: 0;
@@ -2990,7 +2997,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
     background: none;
   }
 }
-/* line 2027, ../sass/all.scss */
+/* line 2033, ../sass/all.scss */
 .table-from .table-row .num:after {
   position: absolute;
   right: 10px;
@@ -3001,12 +3008,12 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   height: 13px;
 }
 @media (max-width: 767px) {
-  /* line 2027, ../sass/all.scss */
+  /* line 2033, ../sass/all.scss */
   .table-from .table-row .num:after {
     display: none;
   }
 }
-/* line 2040, ../sass/all.scss */
+/* line 2046, ../sass/all.scss */
 .table-from .table-row .icon-Hottopic {
   color: #f15500;
   font-size: 34px;
@@ -3016,20 +3023,20 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   top: 50%;
 }
 @media (max-width: 990px) {
-  /* line 2040, ../sass/all.scss */
+  /* line 2046, ../sass/all.scss */
   .table-from .table-row .icon-Hottopic {
     left: 20px;
   }
 }
 @media (max-width: 767px) {
-  /* line 2040, ../sass/all.scss */
+  /* line 2046, ../sass/all.scss */
   .table-from .table-row .icon-Hottopic {
     left: auto;
     right: 2px;
     top: 30px;
   }
 }
-/* line 2056, ../sass/all.scss */
+/* line 2062, ../sass/all.scss */
 .table-from .table-row .icon-Featured {
   color: #fbb900;
   font-size: 31px;
@@ -3039,13 +3046,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   top: 63%;
 }
 @media (max-width: 990px) {
-  /* line 2056, ../sass/all.scss */
+  /* line 2062, ../sass/all.scss */
   .table-from .table-row .icon-Featured {
     left: 20px;
   }
 }
 @media (max-width: 767px) {
-  /* line 2056, ../sass/all.scss */
+  /* line 2062, ../sass/all.scss */
   .table-from .table-row .icon-Featured {
     left: auto;
     right: 1px;
@@ -3054,7 +3061,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 
 /* article styles */
-/* line 2076, ../sass/all.scss */
+/* line 2082, ../sass/all.scss */
 .top-header {
   background: url(../images/top-header-bg.png) no-repeat left #5bc5ed;
   height: 83px;
@@ -3064,19 +3071,19 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 2081, ../sass/all.scss */
+/* line 2087, ../sass/all.scss */
 .top-header .top-header-inner {
   margin: 0 auto;
   max-width: 1080px;
   padding: 10px 20px 10px 20px;
 }
-/* line 2084, ../sass/all.scss */
+/* line 2090, ../sass/all.scss */
 .top-header .top-header-inner .page-links {
   letter-spacing: -4px;
   text-align: right;
   padding: 20px 0px 0 0;
 }
-/* line 2092, ../sass/all.scss */
+/* line 2098, ../sass/all.scss */
 .top-header .top-header-inner .page-links li {
   display: inline-block;
   vertical-align: top;
@@ -3086,11 +3093,11 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   position: relative;
   padding: 0 3px 0 13px;
 }
-/* line 2101, ../sass/all.scss */
+/* line 2107, ../sass/all.scss */
 .top-header .top-header-inner .page-links li:first-child:after {
   display: none;
 }
-/* line 2103, ../sass/all.scss */
+/* line 2109, ../sass/all.scss */
 .top-header .top-header-inner .page-links li:after {
   position: absolute;
   left: 0;
@@ -3100,24 +3107,24 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   height: 16px;
   background: url('../images/sprite.png?1427074079') no-repeat -14px -62px;
 }
-/* line 2112, ../sass/all.scss */
+/* line 2118, ../sass/all.scss */
 .top-header .top-header-inner .page-links li a {
   color: #081318;
   text-decoration: underline;
 }
-/* line 2115, ../sass/all.scss */
+/* line 2121, ../sass/all.scss */
 .top-header .top-header-inner .page-links li a:hover {
   text-decoration: none;
 }
 
-/* line 2121, ../sass/all.scss */
+/* line 2127, ../sass/all.scss */
 .page-main {
   width: 100%;
   background: #ffffff;
   padding-bottom: 1px;
 }
 
-/* line 2130, ../sass/all.scss */
+/* line 2136, ../sass/all.scss */
 .accessibility {
   position: absolute;
   left: -10000px;
@@ -3126,14 +3133,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   height: 0;
   overflow: hidden;
 }
-/* line 2137, ../sass/all.scss */
+/* line 2143, ../sass/all.scss */
 .accessibility:focus {
   position: static;
   width: auto;
   height: auto;
 }
 
-/* line 2143, ../sass/all.scss */
+/* line 2149, ../sass/all.scss */
 .hidden {
   position: absolute;
   left: -9999px;
@@ -3143,14 +3150,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
   overflow: hidden;
 }
 
-/* line 2154, ../sass/all.scss */
+/* line 2160, ../sass/all.scss */
 .img-holder .caption .title {
   -webkit-animation: title 1s;
   /* Chrome, Safari, Opera */
   animation: title 1s;
   position: relative;
 }
-/* line 2159, ../sass/all.scss */
+/* line 2165, ../sass/all.scss */
 .img-holder .caption .text {
   -webkit-animation: subtitle 1s;
   /* Chrome, Safari, Opera */

@@ -1544,10 +1544,14 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
             backgroud-image: image-url('aged-16-25.jpg');
 			position: relative;
 			max-height: 315px;
+            padding: 0;
             .wrapper {
                 background: $pink;
+                opacity: 0.5;
                 @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-                
+                position: absolute;
+                width: 100%;
+                height: 100%;
                 &:hover{
                     background: #CF005B;
                 }
@@ -1573,8 +1577,10 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				background-position: right top;
 			}
 			.action{
-				
-                padding-top: 12%;
+              position: absolute;
+              width: 100%;
+              padding: 40% 0;
+                
 				color:$white;
 				font-size:39px;
 				line-height: normal;
