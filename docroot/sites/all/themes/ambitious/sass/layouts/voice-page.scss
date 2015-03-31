@@ -8,11 +8,11 @@
 .my-voice-home {
     .banner_text {
         background-image: image-url('my-voice-large-logo.png');
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 75%;
-          text-indent: -200%;
-          overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 75%;
+		text-indent: -200%;
+		overflow: hidden;
     }
 }
 
@@ -140,7 +140,6 @@
 	}
 
 	.node .field,
-	.my-voice-post,
 	.acknowledge-block{
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -180,6 +179,13 @@
 
 		}
 
+	}
+	a.btn-pink,
+	.btn-pink{
+		color: $white;
+		&:hover{
+			color: $white;
+		}
 	}
 
 }
