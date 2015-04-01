@@ -2211,19 +2211,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 }
 /* line 1408, ../sass/all.scss */
 .posts-columns .post .info.add {
-  padding: 12px 0 13px 9px;
-}
-@media (max-width: 990px) {
-  /* line 1408, ../sass/all.scss */
-  .posts-columns .post .info.add {
-    padding: 24px 0 13px;
+  /*padding: 12px 0 13px 9px;
+  @include breakpoint($tablet) {
+  	padding:24px 0 13px;
   }
-}
-@media (max-width: 767px) {
-  /* line 1408, ../sass/all.scss */
-  .posts-columns .post .info.add {
-    padding: 28px 4px 0 10px;
-  }
+  @include breakpoint($mobile) {
+  	padding:28px 4px 0 10px;
+  }WHAT IN GODS NAME IS THIS FOR?*/
 }
 /* line 1416, ../sass/all.scss */
 .posts-columns .post .info.add h3 {
