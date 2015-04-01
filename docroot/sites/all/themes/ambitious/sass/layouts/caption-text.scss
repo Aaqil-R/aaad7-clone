@@ -30,7 +30,7 @@
             }
         }
     }
-    @include breakpoint ($large-mobile) {
+    @include breakpoint (min-width $large-mobile) {
         background: black;
     }
 }
