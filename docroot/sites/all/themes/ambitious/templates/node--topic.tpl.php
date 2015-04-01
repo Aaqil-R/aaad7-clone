@@ -82,7 +82,7 @@
             </div>
             <?php endif; ?>
             <?php if(isset($content['field_sub_caption'])):?>
-                <div class="caption-text-title caption-text-title-1">               
+                <div class="caption-text-title caption-text-title-2">               
                     <span>
                         <?php print render($content['field_sub_caption']['#items'][0]['value']); ?>
                     </span>
