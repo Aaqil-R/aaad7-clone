@@ -226,7 +226,7 @@
     
     <section class="articles-block" >
       <div class="holder">
-        <h2>What We Do</h2>
+        <h2>What we do</h2>
         <div class="articles-columns" >
           <?php print render($page['services']); ?>
           <!--column one -->

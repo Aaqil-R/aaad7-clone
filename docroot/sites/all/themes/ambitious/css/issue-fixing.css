@@ -902,8 +902,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
 #webform-client-form-74676 .home_forum_share .home_forum_share_right {
   margin-top: 24px;
 }
+@media (max-width: 767px) {
+  /* line 643, ../sass/issue-fixing.scss */
+  #webform-client-form-74676 .home_forum_share .home_forum_share_right {
+    margin-top: 54px;
+  }
+}
 
-/* line 648, ../sass/issue-fixing.scss */
+/* line 651, ../sass/issue-fixing.scss */
 #slider-container #webform-client-form-74681 h2 {
   font-size: 37px;
   margin-top: 9px;
@@ -911,24 +917,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-bottom: 9px;
 }
 
-/* line 655, ../sass/issue-fixing.scss */
+/* line 658, ../sass/issue-fixing.scss */
 #webform-client-form-74681form h2 {
   font-size: 37px;
   margin-top: 9px;
   line-height: 44px;
   margin-bottom: 9px;
 }
-/* line 662, ../sass/issue-fixing.scss */
+/* line 665, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--lend-your-support h5 {
   font-size: 18px;
   margin-top: -9px;
 }
-/* line 667, ../sass/issue-fixing.scss */
+/* line 670, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--give-what-you-can {
   margin-left: 18px;
   width: 32%;
 }
-/* line 670, ../sass/issue-fixing.scss */
+@media (max-width: 767px) {
+  /* line 670, ../sass/issue-fixing.scss */
+  #webform-client-form-74681 .webform-component--give-what-you-can {
+    margin-left: auto;
+    width: auto;
+  }
+}
+/* line 677, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--give-what-you-can > label {
   font-size: 22px;
   line-height: 30px;
@@ -937,168 +950,187 @@ body > .jcf-select-drop.jcf-drop-flipped {
   display: block;
   padding-bottom: 6px;
 }
-/* line 679, ../sass/issue-fixing.scss */
+@media (max-width: 767px) {
+  /* line 677, ../sass/issue-fixing.scss */
+  #webform-client-form-74681 .webform-component--give-what-you-can > label {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 688, ../sass/issue-fixing.scss */
+  #webform-client-form-74681 .webform-component--give-what-you-can #edit-submitted-give-what-you-can {
+    margin: 0 -30px 0 -11px;
+    margin-bottom: 15px;
+  }
+}
+/* line 693, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--give-what-you-can #edit-submitted-give-what-you-can label {
   font-size: 20px;
 }
-/* line 685, ../sass/issue-fixing.scss */
+/* line 699, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--other-ways-to-help {
   width: 28%;
   margin-top: 22px;
 }
-/* line 688, ../sass/issue-fixing.scss */
+@media (max-width: 767px) {
+  /* line 699, ../sass/issue-fixing.scss */
+  #webform-client-form-74681 .webform-component--other-ways-to-help {
+    width: auto;
+  }
+}
+/* line 705, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--other-ways-to-help h3 {
   font-size: 22px;
   margin-top: 3px;
 }
-/* line 692, ../sass/issue-fixing.scss */
+/* line 709, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--other-ways-to-help a.btn {
   padding: 13px 22px;
 }
-/* line 695, ../sass/issue-fixing.scss */
+/* line 712, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--other-ways-to-help label {
   font-size: 24px;
 }
-/* line 701, ../sass/issue-fixing.scss */
+/* line 718, ../sass/issue-fixing.scss */
 #webform-client-form-74681 .webform-component--lend-your-support p {
   line-height: 27px;
 }
 
-/* line 707, ../sass/issue-fixing.scss */
+/* line 724, ../sass/issue-fixing.scss */
 div.ctools-modal-content #user-register-form, div.ctools-modal-content #user-login {
   width: 114%;
   float: left;
 }
 
-/* line 712, ../sass/issue-fixing.scss */
+/* line 729, ../sass/issue-fixing.scss */
 div.ctools-modal-content .modal-content {
   overflow-x: hidden;
 }
 
-/* line 720, ../sass/issue-fixing.scss */
+/* line 737, ../sass/issue-fixing.scss */
 .not-logged-in #user-login input[type="password"], .not-logged-in #user-login input[type="text"] {
   background: none !important;
 }
 
-/* line 727, ../sass/issue-fixing.scss */
+/* line 744, ../sass/issue-fixing.scss */
 #webform-client-form-74666 label {
   position: absolute;
   left: 21px;
   top: 11px;
 }
-/* line 732, ../sass/issue-fixing.scss */
+/* line 749, ../sass/issue-fixing.scss */
 #webform-client-form-74666 .form-item {
   height: 65px;
 }
 
-/* line 737, ../sass/issue-fixing.scss */
+/* line 754, ../sass/issue-fixing.scss */
 #form input[type="text"]:focus {
   border-color: #fbb900;
 }
 
-/* line 742, ../sass/issue-fixing.scss */
+/* line 759, ../sass/issue-fixing.scss */
 body .view-display-id-stream_forum_page .icon-Featured, body .view-display-id-stream_forum_page .icon-Hottopic {
   display: none;
 }
-/* line 746, ../sass/issue-fixing.scss */
+/* line 763, ../sass/issue-fixing.scss */
 body .view-display-id-stream_forum_page .rowlessthen3 .icon-Featured {
   margin-right: 5px;
   display: inherit;
 }
-/* line 752, ../sass/issue-fixing.scss */
+/* line 769, ../sass/issue-fixing.scss */
 body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
   display: inherit;
   margin-right: 70px;
 }
 
-/* line 761, ../sass/issue-fixing.scss */
+/* line 778, ../sass/issue-fixing.scss */
 .posts-columns .post .footer .num-holder a .text {
   display: none;
 }
 
-/* line 765, ../sass/issue-fixing.scss */
+/* line 782, ../sass/issue-fixing.scss */
 .posts-columns .post .footer .num-holder .hover a .text {
   display: block;
 }
 
-/* line 771, ../sass/issue-fixing.scss */
+/* line 788, ../sass/issue-fixing.scss */
 .section-share-your-story .block-webform {
   padding-bottom: 50px;
 }
-/* line 773, ../sass/issue-fixing.scss */
+/* line 790, ../sass/issue-fixing.scss */
 .section-share-your-story .block-webform label {
   left: 12px;
   top: 10px;
 }
-/* line 777, ../sass/issue-fixing.scss */
+/* line 794, ../sass/issue-fixing.scss */
 .section-share-your-story .block-webform .form-item {
   min-height: 70px;
 }
 
-/* line 783, ../sass/issue-fixing.scss */
+/* line 800, ../sass/issue-fixing.scss */
 html.js fieldset.collapsed {
   height: auto;
 }
 
-/* line 788, ../sass/issue-fixing.scss */
+/* line 805, ../sass/issue-fixing.scss */
 .page-messages .description {
   width: initial;
 }
 
-/* line 796, ../sass/issue-fixing.scss */
+/* line 813, ../sass/issue-fixing.scss */
 .section-current-vacancies .posts-columns {
   margin-top: 290px;
 }
-/* line 798, ../sass/issue-fixing.scss */
+/* line 815, ../sass/issue-fixing.scss */
 .section-current-vacancies .posts-columns .field_salary {
   margin-bottom: 20px;
 }
 
-/* line 805, ../sass/issue-fixing.scss */
+/* line 822, ../sass/issue-fixing.scss */
 .view-display-id-stream_forum_page fieldset {
   margin-right: 0;
 }
 
-/* line 810, ../sass/issue-fixing.scss */
+/* line 827, ../sass/issue-fixing.scss */
 article.node-223806 .field-name-body, article.node-223591 .field-name-body {
   padding: 40px 80px;
 }
 
-/* line 818, ../sass/issue-fixing.scss */
+/* line 835, ../sass/issue-fixing.scss */
 #modalContent #modal-title {
   font-size: 30px;
   text-align: center;
   padding: 14px;
   display: block;
 }
-/* line 824, ../sass/issue-fixing.scss */
+/* line 841, ../sass/issue-fixing.scss */
 #modalContent .popups-close.close {
   position: absolute;
   right: 11px;
   top: 12px;
 }
-/* line 829, ../sass/issue-fixing.scss */
+/* line 846, ../sass/issue-fixing.scss */
 #modalContent h3 {
   font-size: 22px;
   font-weight: bold;
   padding: 5px 1px;
   text-align: left;
 }
-/* line 835, ../sass/issue-fixing.scss */
+/* line 852, ../sass/issue-fixing.scss */
 #modalContent .hybridauth-widget li {
   margin: 0;
 }
-/* line 838, ../sass/issue-fixing.scss */
+/* line 855, ../sass/issue-fixing.scss */
 #modalContent .item-list {
   margin-left: 20px;
 }
 
-/* line 842, ../sass/issue-fixing.scss */
+/* line 859, ../sass/issue-fixing.scss */
 div.ctools-modal-content .modal-content {
   padding: 19px 19px 19px 49px;
 }
 
-/* line 846, ../sass/issue-fixing.scss */
+/* line 863, ../sass/issue-fixing.scss */
 .post-comments-0 {
   display: none;
 }
