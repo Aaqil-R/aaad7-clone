@@ -93,7 +93,9 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteCond %{HTTP_HOST} ^ambitiousaboutautism\.org.uk$ [NC]
   RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  
+
+  RewriteRule ^cnt/(.*) sites/default/files/images/cnt/$1
+ 
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
