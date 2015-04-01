@@ -135,17 +135,33 @@
           <!-- include breadcrumb here -->
 
         </div>
-        <div class="caption">
-          <h1 class="title title-second">
-            <span>  
-              <?php print render($captionone); ?>
-            </span>
-            <br>
-            <span class="title-third">
-              <?php print render($captiontwo); ?> 
-            </span>
-          </h1>
-        </div>  
+        <?php if($captionone || $captiontwo ): ?>
+          <div class="caption-text">
+            <h1 class="caption-text-titles">
+            <?php if($captionone): ?>
+              <?php $captionone_render = trim(render($captionone)); ?>
+              <?php if(!empty($captionone_render)): ?>
+                <div class="caption-text-title caption-text-title-1">               
+                    <span>
+                        <?php print $captionone_render; ?>              
+                    </span>
+                </div>
+              <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if($captiontwo): ?>
+              <?php $captiontwo_render = render($captiontwo); ?>
+              <?php if(!empty($captiontwo_render)): ?>              
+                <div class="caption-text-title caption-text-title-2">
+                    <span> 
+                        <?php print $captiontwo_render; ?>               
+                    </span>
+                </div>
+              <?php endif; ?>        
+            <?php endif; ?>
+            </h1>
+        </div>
+        <?php endif; ?>
       </div>
     </div>
     <div class="region region-image-holder"
