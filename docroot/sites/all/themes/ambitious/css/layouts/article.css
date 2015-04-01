@@ -1209,6 +1209,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 23.72881%;
   float: right;
   margin-right: 0;
+  /*WHY REPEAT YOUR MISTAKE? 
+  		@include breakpoint($tablet){
+  			.views-row{		
+  				@include span(4 of 13);
+  			}
+  
+  		}	
+  */
 }
 /* line 632, ../../sass/layouts/article.scss */
 .node-type-article #content_bottom h3,
@@ -1228,24 +1236,9 @@ body > .jcf-select-drop.jcf-drop-flipped {
     background: url('../../images/wid_bg.png?1423044553') repeat-y center #ffffff;
     background-position: 75%;
     padding: 0 10px;
-  }
-  /* line 642, ../../sass/layouts/article.scss */
-  .node-type-article #content_bottom .views-row,
-  .node-type-my-voice-blog #content_bottom .views-row,
-  .node-type-school-values #content_bottom .views-row {
-    width: 29.6875%;
-    float: left;
-    margin-right: 1.5625%;
-  }
-}
-@media (max-width: 990px) {
-  /* line 648, ../../sass/layouts/article.scss */
-  .node-type-article #content_bottom .views-row,
-  .node-type-my-voice-blog #content_bottom .views-row,
-  .node-type-school-values #content_bottom .views-row {
-    width: 29.6875%;
-    float: left;
-    margin-right: 1.5625%;
+    /*why is this here?.views-row{				
+    		@include span(4 of 13);
+    }*/
   }
 }
 /* line 654, ../../sass/layouts/article.scss */
