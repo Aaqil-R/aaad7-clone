@@ -32,9 +32,16 @@
             }
         }
     }
-    @include breakpoint (min-width $large-mobile) {
-        background: black;
-        
+    @include breakpoint (min-width $tablet) {
+        margin-left: 1em;
+        .caption-text-titles{
+            .caption-text-title-2 {
+                margin-left: 130px;
+            }
+        }
+    }
+    @include breakpoint (min-width $desktop) {
+        margin-left: 0;    
     }
 }
 
