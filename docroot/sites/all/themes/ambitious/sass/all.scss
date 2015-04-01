@@ -102,6 +102,9 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
         }
         &.no-overlay {
             margin-bottom: 31em;
+            @include breakpoint($mobile) {
+                margin-bottom: 90px;
+            }
             .img-holder {height:360px;}
         }
     }
