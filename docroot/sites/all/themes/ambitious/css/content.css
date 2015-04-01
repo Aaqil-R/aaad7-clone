@@ -1653,25 +1653,24 @@ a:hover.tooltips span.tooltip-content {
   top: 115px;
   left: -65px;
 }
-@media (max-width: 767px) {
-  /* line 1087, ../sass/content.scss */
-  .slider-block .block .slider-container .l-s-arrow, .slider-block .block .slider-container .r-s-arrow {
-    display: none;
-    left: 0;
-    font-size: 18px;
-  }
-}
-/* line 1099, ../sass/content.scss */
+/* line 1095, ../sass/content.scss */
 .slider-block .block .slider-container .l-s-arrow a, .slider-block .block .slider-container .r-s-arrow a {
   color: #f15500;
   font-size: 40px;
   font-size: 2.5em;
 }
-/* line 1105, ../sass/content.scss */
+/* line 1101, ../sass/content.scss */
 .slider-block .block .slider-container .r-s-arrow {
   left: 19px;
   font-size: 20px;
   top: 108px;
+}
+@media (max-width: 767px) {
+  /* line 1101, ../sass/content.scss */
+  .slider-block .block .slider-container .r-s-arrow {
+    left: 0;
+    font-size: 18px;
+  }
 }
 /* line 1110, ../sass/content.scss */
 .slider-block .block .slider-container .r-s-arrow .skip a {
