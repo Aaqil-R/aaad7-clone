@@ -120,23 +120,33 @@
           <?php endif; ?>
           <!-- END BREADCRUMB -->
 
-          <?php if($captionone): ?>
-            <?php $captionone_render = trim(render($captionone)); ?>
-            <?php if(!empty($captionone_render)): ?>
-              <h1 class="banner_text">               
-                  <?php print $captionone_render; ?>              
-              </h1>
+          <?php if($captionone || $captiontwo ): ?>
+          <div class="caption-text">
+            <h1 class="caption-text-titles">
+            <?php if($captionone): ?>
+              <?php $captionone_render = trim(render($captionone)); ?>
+              <?php if(!empty($captionone_render)): ?>
+                <div class="caption-text-title caption-text-title-1">               
+                    <span>
+                        <?php print $captionone_render; ?>              
+                    </span>
+                </div>
+              <?php endif; ?>
             <?php endif; ?>
-          <?php endif; ?>
-          <br>
-          <?php if($captiontwo): ?>
-            <?php $captiontwo_render = trim(render($captiontwo)); ?>
-            <?php if(!empty($captiontwo_render)): ?>              
-              <h4 class="banner_sub_text">
-                  <?php print $captiontwo_render; ?>               
-              </h4>  
-            <?php endif; ?>        
-          <?php endif; ?>  
+
+            <?php if($captiontwo): ?>
+              <?php $captiontwo_render = render($captiontwo); ?>
+              <?php if(!empty($captiontwo_render)): ?>              
+                <div class="caption-text-title caption-text-title-2">
+                    <span> 
+                        <?php print $captiontwo_render; ?>               
+                    </span>
+                </div>
+              <?php endif; ?>        
+            <?php endif; ?>
+            </h1>
+        </div>
+        <?php endif; ?>
         </div>
       </div>
       <div class="region region-image-holder"
