@@ -62,7 +62,6 @@
             }
             ?>
                 
-        </div><!--/text-area?-->
         <div class="caption-text">
           <h1 class="caption-text-titles">
           <?php if(isset($content['field_main_caption'])):?>
