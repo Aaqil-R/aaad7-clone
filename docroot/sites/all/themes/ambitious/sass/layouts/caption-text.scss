@@ -26,9 +26,12 @@
             line-height: 1.8em;
             padding: 0.2em 0.3em;
             &.caption-text-title-2 {
-                margin-left: 29%;
+                margin-left: 100px;
             }
         }
+    }
+    @include breakpoint ($large-mobile) {
+        background: black;
     }
 }
 
