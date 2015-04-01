@@ -43,7 +43,10 @@
   $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
   } 
 ?>
-  <section class="header_banner">
+
+  <section class="visual header_banner">
+    <div class="img-holder">
+  
      <div class="banner_text_main">
       <div class="banner_nav visual">
           <?php 
@@ -68,18 +71,20 @@
           <?php endif; ?> 
         </div>  
       </div> 
+        
       <div class="region region-image-holder"
         <?php if($image): ?>
            style="background-image: url('/<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>')"
         <?php endif; ?>>
           
       </div>
+        
     <?php if(isset($content['field_featured_image_by'])):?>
-     <div class="pic-by"><?php print t('© Photo by'); ?> 
-      <a>
-        <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>
-      </a>
-    </div>
+     <div class="holder">
+          <span class="pic-by">            
+              <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>      
+          </span>
+        </div>
    <?php endif; ?> 
   </section>
   
