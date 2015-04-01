@@ -45,6 +45,21 @@
 ?>
   <section class="visual header_banner">
   <div class="img-holder">
+     <div class="banner_text_main">
+      <div class="banner_nav visual">
+          <?php 
+            if (0 < $prev_nid){
+              print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
+       }
+        ?>  
+
+        <?php
+        if (0 < $next_nid){
+         print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
+        }
+        ?>
+        </div>
+    </div>
     <div class="caption-frame">
         <div class="region region-caption-holder">
             
@@ -55,21 +70,7 @@
             </div>
           <?php endif; ?>  
 
-       <div class="banner_text_main">
-          <div class="banner_nav visual">
-              <?php 
-                if (0 < $prev_nid){
-                  print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
-           }
-            ?>  
-
-            <?php
-            if (0 < $next_nid){
-             print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
-            }
-            ?>
-            </div>
-        </div>
+      
            
         <div class="caption-text">
         <h1 class="caption-text-titles">

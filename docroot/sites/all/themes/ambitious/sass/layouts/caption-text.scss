@@ -15,7 +15,12 @@
 .front .caption-text {
     margin-top: 100px;
 }
-
+.front, page-node-221546 {//need to refactor this to be based on a meaningful page title but don't have the energy
+    .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
+        font-size: inherit;
+        font-family: $helvetica-bd;
+    }
+}
 .caption-text{
     //use compass here.
 	//-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera */
@@ -34,6 +39,8 @@
             }
             &.caption-text-title-2 {
                 margin-left: 80px;
+                font-size: 36px;
+                font-family: $helvetica-cn;
             }
         }
     }
