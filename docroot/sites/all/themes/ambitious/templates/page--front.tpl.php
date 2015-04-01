@@ -115,18 +115,22 @@
             <?php if($captionone): ?>
               <?php $captionone_render = trim(render($captionone)); ?>
               <?php if(!empty($captionone_render)): ?>
-                <span class="caption-text-title caption-text-title-1">               
-                    <?php print $captionone_render; ?>              
-                </span>
+                <div class="caption-text-title caption-text-title-1">               
+                    <span>
+                        <?php print $captionone_render; ?>              
+                    </span>
+                </div>
               <?php endif; ?>
             <?php endif; ?>
 
             <?php if($captiontwo): ?>
               <?php $captiontwo_render = render($captiontwo); ?>
               <?php if(!empty($captiontwo_render)): ?>              
-                <span class="caption-text-title caption-text-title-2"> 
-                    <?php print $captiontwo_render; ?>               
-                </span>
+                <div class="caption-text-title caption-text-title-2">
+                    <span> 
+                        <?php print $captiontwo_render; ?>               
+                    </span>
+                </div>
               <?php endif; ?>        
             <?php endif; ?>
             </h1>

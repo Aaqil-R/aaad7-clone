@@ -17,16 +17,18 @@
   	//animation: caption-text-titles 1s;
   	@include animation (caption-text-titles 1s);
     position: relative;
-    margin-top: 27%;
+    margin-top: 100;
     .caption-text-titles{
         text-align: left;
         .caption-text-title {
-            letter-spacing: -1px;
-            background: $white;
-            line-height: 1.8em;
-            padding: 0.2em 0.3em;
+            span{
+                letter-spacing: -1px;
+                background: $white;
+                line-height: 1.8em;
+                padding: 0.2em 0.3em;
+            }
             &.caption-text-title-2 {
-                margin-left: 100px;
+                margin-left: 80px;
             }
         }
     }
