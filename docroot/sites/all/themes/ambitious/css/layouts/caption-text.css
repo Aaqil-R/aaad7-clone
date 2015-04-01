@@ -378,130 +378,136 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -o-animation: caption-text-titles 1s;
   animation: caption-text-titles 1s;
   position: relative;
-  	/*.caption-text-titles{
-          
-          
-  		@include breakpoint($not-all-mobile){
-              // 768px +
-              float: left;
-              //margin-top: 50px;				
-  		}
-  		@include breakpoint($mobile){
-              // 767px -
-              margin-top: 85px;
-  		}
-  		@include breakpoint($all-small-mobile){
-              // 480px -
-              margin-top: 75px;			
-  
-  		}
-  
-  		// All 2 Titles
-  		span{
-  			//display: block;//WHY?
-  			letter-spacing: -1px;
-  			background: $white;			
-  		}
-  
-  		// Titles
-  		.caption-text-title{
-  			display: inline-block;
-  
-  			@include breakpoint($mobile){
-  				// 767px -
-  				font-size: 30px;
-  				line-height: 34px;
-  				padding: 12px 15px;				
-  
-  			}
-  			@include breakpoint($all-small-mobile){
-  				// 480px -
-  				font-size: 22px;
-  				line-height: 28px;
-  				padding: 10px;				
-  
-  			}
-  			@include breakpoint($all-tiny-mobile){
-  				// 320px -
-  				font-size: 22px;
-  				line-height: 28px;
-  				padding: 10px;				
-  
-  			}
-  			@include breakpoint($not-all-mobile){
-  				// 768px +
-  				font-size: 42px;
-  				line-height: 26px;
-  				padding: 20px;	
-  
-  			}
-  			@include breakpoint($all-desktop){
-  				// 1080px +
-  				font-size: 66px;
-  				line-height: 70px;
-  				padding: 20px 25px 25px 25px;
-  
-  			}
-  			
-  
-  		}
-  		// Title 01
-  		.caption-text-title-1{
-  
-  			margin-top: 10px;
-  			margin-right: 20px;
-  
-  			@include breakpoint($mobile){
-  				// 768px -
-  				margin-left: 90px;
-  				margin-right: 90px;
-  
-  			}
-  			@include breakpoint(500px){
-  				// 500px -
-  				margin-left: 10px;
-  				margin-right: 10px;
-  
-  			}
-  
-  
-  		}
-  		// Title 02
-  		.caption-text-title-2{
-  
-  			// prevents the captions from collapsing when the menu slides out.
-  			//display: block;
-  
-  			margin-top: 10px;
-  			
-  			@include breakpoint($not-all-mobile){
-  				// 768px +
-  				margin-left: 186px;
-  				margin-right: -50px;
-  				padding-left: 30px;
-  
-  			}
-  			@include breakpoint($mobile){
-  				// 768px -
-  				margin-left: 100px;
-  				margin-right: 100px;
-  
-  			}
-  			@include breakpoint(500px){
-  				// 500px -
-  				margin-left: 30px;
-  				margin-right: 30px;
-  
-  			}
-  
-  		}
-  
-  	}
-  
-  }
-      */
+}
+/* line 21, ../../sass/layouts/caption-text.scss */
+.caption-text .caption-text-titles {
+  letter-spacing: -1px;
+  background: #ffffff;
+  line-height: 1.2em;
 }
 
+	/*.caption-text-titles{
+        
+        
+		@include breakpoint($not-all-mobile){
+            // 768px +
+            float: left;
+            //margin-top: 50px;				
+		}
+		@include breakpoint($mobile){
+            // 767px -
+            margin-top: 85px;
+		}
+		@include breakpoint($all-small-mobile){
+            // 480px -
+            margin-top: 75px;			
+
+		}
+
+		// All 2 Titles
+		span{
+			//display: block;//WHY?
+			letter-spacing: -1px;
+			background: $white;			
+		}
+
+		// Titles
+		.caption-text-title{
+			display: inline-block;
+
+			@include breakpoint($mobile){
+				// 767px -
+				font-size: 30px;
+				line-height: 34px;
+				padding: 12px 15px;				
+
+			}
+			@include breakpoint($all-small-mobile){
+				// 480px -
+				font-size: 22px;
+				line-height: 28px;
+				padding: 10px;				
+
+			}
+			@include breakpoint($all-tiny-mobile){
+				// 320px -
+				font-size: 22px;
+				line-height: 28px;
+				padding: 10px;				
+
+			}
+			@include breakpoint($not-all-mobile){
+				// 768px +
+				font-size: 42px;
+				line-height: 26px;
+				padding: 20px;	
+
+			}
+			@include breakpoint($all-desktop){
+				// 1080px +
+				font-size: 66px;
+				line-height: 70px;
+				padding: 20px 25px 25px 25px;
+
+			}
+			
+
+		}
+		// Title 01
+		.caption-text-title-1{
+
+			margin-top: 10px;
+			margin-right: 20px;
+
+			@include breakpoint($mobile){
+				// 768px -
+				margin-left: 90px;
+				margin-right: 90px;
+
+			}
+			@include breakpoint(500px){
+				// 500px -
+				margin-left: 10px;
+				margin-right: 10px;
+
+			}
+
+
+		}
+		// Title 02
+		.caption-text-title-2{
+
+			// prevents the captions from collapsing when the menu slides out.
+			//display: block;
+
+			margin-top: 10px;
+			
+			@include breakpoint($not-all-mobile){
+				// 768px +
+				margin-left: 186px;
+				margin-right: -50px;
+				padding-left: 30px;
+
+			}
+			@include breakpoint($mobile){
+				// 768px -
+				margin-left: 100px;
+				margin-right: 100px;
+
+			}
+			@include breakpoint(500px){
+				// 500px -
+				margin-left: 30px;
+				margin-right: 30px;
+
+			}
+
+		}
+
+	}
+
+}
+    */
 /* Chrome, Safari, Opera */
 @-webkit-keyframes caption-text-titles {
   from {
