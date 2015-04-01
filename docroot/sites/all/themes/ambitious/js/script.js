@@ -105,6 +105,7 @@ Drupal.behaviors.ambitious = {
         $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
+        
 		   $("form#views-exposed-form-stream-understanding-autism-page #edit-sort-by").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
@@ -128,7 +129,9 @@ Drupal.behaviors.ambitious = {
 		  $("#main").addClass("no-form");
 		    
 		});
-    
+        $('#not_right_now').on("click", function () {
+		    $('.block-close').trigger( "click" );
+		});
 
 	// ==Masonry block==//
 	var $container = $('.masonry');

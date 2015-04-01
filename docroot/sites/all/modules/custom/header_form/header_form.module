@@ -114,7 +114,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
         ),
         '#id' => drupal_html_id('edit-webform-ajax-yes-i-am-' .$form['#node']->nid)
       );
-      $form['submitted']['not_right_now'] = array(
+      /*$form['submitted']['not_right_now'] = array(
         '#type' => 'submit',
         '#value' => 'Not right now',
         '#submit' => $form['#submit'],
@@ -127,7 +127,11 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
           ),
         ),
         '#id' => drupal_html_id('edit-webform-ajax-not-right-now-' .$form['#node']->nid)
-      );
+      );*/
+      $form['submitted']['not_right_now'] = array(
+	  '#type' => 'markup',
+	  '#markup' => '<a href="#" class="btn" id="not_right_now">Not right now</a>',
+	);
     break;
     case 'search_block_form':
       $form['#attributes']['class'][] = 'search-form';
