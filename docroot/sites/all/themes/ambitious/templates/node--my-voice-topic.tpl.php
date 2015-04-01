@@ -73,7 +73,10 @@
                 </div>
           <?php endif; ?>
           <?php if(isset($content['field_sub_caption'])):?>
-            <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
+            <div class="caption-text-title caption-text-title-2">               
+                    <span><?php print render($content['field_sub_caption']['#items'][0]['value']); ?>
+                </span>
+              </div>
           <?php endif; ?>
         
           </h1>  
