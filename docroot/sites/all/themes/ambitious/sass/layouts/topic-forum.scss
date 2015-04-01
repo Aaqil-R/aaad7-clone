@@ -252,12 +252,18 @@ div.messages.status{
 .video-icon{
   display:none;
 }
-a.video_bt{
+.notvideo{
+  display:inherit;
+}
+a.video_bt, .isvideo{
   display:none;
 }
 .video-1, .video-media{
-  a.video_bt{
+  a.video_bt, .isvideo{
     display:inherit;
+  }
+  .notvideo{
+    display:none;
   }
   .video-icon{
     position: absolute;
