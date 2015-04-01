@@ -32,7 +32,7 @@
             }
         }
     }
-    @include breakpoint (min-width $tablet) {
+    @include breakpoint (min-width $tablet-small) {
         margin-left: 1em;
         .caption-text-titles{
             .caption-text-title-2 {
@@ -41,7 +41,13 @@
         }
     }
     @include breakpoint (min-width $desktop) {
-        margin-left: 0;    
+        margin-left: 0;   
+        margin-top: 55px;
+        .caption-text-titles{
+            .caption-text-title-2 {
+                margin-left: 250px;
+            }
+        }
     }
 }
 
