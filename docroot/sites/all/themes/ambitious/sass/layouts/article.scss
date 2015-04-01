@@ -628,28 +628,31 @@
 	}
 	//Side bar
 	#content_bottom{
-		@include span(3 of 12 last);
+		
 		h3{
 			margin: 0;
 		}
-
-		@include breakpoint($tablet){
-			@include span(12 of 12);
-			background: image-url('wid_bg.png') repeat-y center #ffffff;
-			background-position: 75%;
-			padding: 0 10px;
-	
+        background: image-url('wid_bg.png') repeat-y center #ffffff;
+        background-position: 75%;
+        padding: 0 10px;
+		@include breakpoint(min-height $tablet){
+            
+            @include span(3 of 12 last);// puts the aside on the right.
+            
+			
+        }
+	/*And this bit really takes the biscuit for an award in stupidity.
 			.views-row{				
 					@include span(4 of 13);
-			}
+			}*/
 		}
-
+/* so you're repeating code that is literally one row above you ? 
 		@include breakpoint($tablet){
 			.views-row{		
 				@include span(4 of 13);
 			}
 
-		}	
+		}	*/
 
 		.region-content-bottom{
 			padding-top: 50px;
