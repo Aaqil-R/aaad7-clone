@@ -12,25 +12,32 @@
 
 // Caption Block
 .caption-text{
-	-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera */
-  	animation: caption-text-titles 1s;
-  	position: relative;
+    //use compass here.
+	//-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera */
+  	//animation: caption-text-titles 1s;
+  	@include animation (caption-text-titles 1s);
+    position: relative;
+    
+    .caption-text-titles{
+    }
+    
 
 	// Main wrapper of titles
-	.caption-text-titles{
-
+	/*.caption-text-titles{
+        
+        
 		@include breakpoint($not-all-mobile){
-				// 768px +
-				float: left;
-				//margin-top: 50px;				
+            // 768px +
+            float: left;
+            //margin-top: 50px;				
 		}
 		@include breakpoint($mobile){
-				// 767px -
-				margin-top: 85px;
+            // 767px -
+            margin-top: 85px;
 		}
 		@include breakpoint($all-small-mobile){
-				// 480px -
-				margin-top: 75px;			
+            // 480px -
+            margin-top: 75px;			
 
 		}
 
@@ -108,7 +115,7 @@
 		.caption-text-title-2{
 
 			// prevents the captions from collapsing when the menu slides out.
-			display: block;
+			//display: block;
 
 			margin-top: 10px;
 			
@@ -137,7 +144,10 @@
 	}
 
 }
+    */
+}
 
+//WHAT IS THIS?
 /* Chrome, Safari, Opera */
 @-webkit-keyframes caption-text-titles {
     from {top: -30px; opacity:0;}
