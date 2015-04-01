@@ -1890,6 +1890,12 @@ fieldset{
 #slider-container{
   form{
     float: left;
+    @include breakpoint($mobile) {
+      width: 100%;
+      img{
+        max-width: 100%;
+      }
+    }
     input[type="email"], input[type="text"], .select {
       float:left;
       clear:both;

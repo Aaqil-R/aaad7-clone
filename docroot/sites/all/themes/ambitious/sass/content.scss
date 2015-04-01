@@ -1091,7 +1091,10 @@ a {
 				z-index:5;
 				top: 115px;
                     left: -65px;
-				
+				@include breakpoint($mobile) { 
+					left: 0;
+					font-size: 18px;
+				}
 				a{
 					color: $orange;
 					@include fontsize(40,16);

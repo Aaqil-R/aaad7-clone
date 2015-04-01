@@ -2950,7 +2950,17 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
 #slider-container form {
   float: left;
 }
-/* line 1893, ../../sass/layouts/topic-forum.scss */
+@media (max-width: 767px) {
+  /* line 1891, ../../sass/layouts/topic-forum.scss */
+  #slider-container form {
+    width: 100%;
+  }
+  /* line 1895, ../../sass/layouts/topic-forum.scss */
+  #slider-container form img {
+    max-width: 100%;
+  }
+}
+/* line 1899, ../../sass/layouts/topic-forum.scss */
 #slider-container form input[type="email"], #slider-container form input[type="text"], #slider-container form .select {
   float: left;
   clear: both;
@@ -2966,64 +2976,64 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   color: #000000;
 }
 @media (max-width: 767px) {
-  /* line 1893, ../../sass/layouts/topic-forum.scss */
+  /* line 1899, ../../sass/layouts/topic-forum.scss */
   #slider-container form input[type="email"], #slider-container form input[type="text"], #slider-container form .select {
     width: 100%;
   }
 }
-/* line 1909, ../../sass/layouts/topic-forum.scss */
+/* line 1915, ../../sass/layouts/topic-forum.scss */
 #slider-container form .error {
   border: 2px solid #ff5458;
 }
-/* line 1912, ../../sass/layouts/topic-forum.scss */
+/* line 1918, ../../sass/layouts/topic-forum.scss */
 #slider-container form #edit-submitted-not-right-now {
   clear: none;
 }
-/* line 1916, ../../sass/layouts/topic-forum.scss */
+/* line 1922, ../../sass/layouts/topic-forum.scss */
 #slider-container form .button-primary.form-submit {
   display: none;
 }
 
 @media (max-width: 767px) {
-  /* line 1923, ../../sass/layouts/topic-forum.scss */
+  /* line 1929, ../../sass/layouts/topic-forum.scss */
   .page-node-74606 .first_date, .node-type-events .first_date, .section-current-vacancies .first_date {
     right: 70px;
   }
-  /* line 1926, ../../sass/layouts/topic-forum.scss */
+  /* line 1932, ../../sass/layouts/topic-forum.scss */
   .page-node-74606 img, .node-type-events img, .section-current-vacancies img {
     width: 100%;
     height: auto;
   }
 }
 @media (max-width: 990px) {
-  /* line 1932, ../../sass/layouts/topic-forum.scss */
+  /* line 1938, ../../sass/layouts/topic-forum.scss */
   .page-node-74606 .place.desktop-view, .node-type-events .place.desktop-view, .section-current-vacancies .place.desktop-view {
     display: none;
   }
-  /* line 1935, ../../sass/layouts/topic-forum.scss */
+  /* line 1941, ../../sass/layouts/topic-forum.scss */
   .page-node-74606 .place.mobile-view, .node-type-events .place.mobile-view, .section-current-vacancies .place.mobile-view {
     display: inherit;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 1942, ../../sass/layouts/topic-forum.scss */
+  /* line 1948, ../../sass/layouts/topic-forum.scss */
   .node-type-events .my-voice-post .content {
     width: auto;
   }
 }
 
-/* line 1949, ../../sass/layouts/topic-forum.scss */
+/* line 1955, ../../sass/layouts/topic-forum.scss */
 .page-node-74596 h4.title .icon-Close, .node-type-events h4.title .icon-Close {
   float: right;
 }
 
-/* line 1962, ../../sass/layouts/topic-forum.scss */
+/* line 1968, ../../sass/layouts/topic-forum.scss */
 .page-comment fieldset, .page-messages fieldset {
   float: left;
   width: 100%;
 }
-/* line 1966, ../../sass/layouts/topic-forum.scss */
+/* line 1972, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form, .page-comment #content-area #privatemsg-new, .page-messages #content-area form.comment-form, .page-messages #content-area #privatemsg-new {
   padding: 35px 50px 37px 44px;
   position: relative;
@@ -3033,93 +3043,93 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 1976, ../../sass/layouts/topic-forum.scss */
+/* line 1982, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form #edit-author--2 label, .page-comment #content-area #privatemsg-new #edit-author--2 label, .page-messages #content-area form.comment-form #edit-author--2 label, .page-messages #content-area #privatemsg-new #edit-author--2 label {
   float: left;
   width: auto;
 }
-/* line 1980, ../../sass/layouts/topic-forum.scss */
+/* line 1986, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form #edit-author--2 .form-element, .page-comment #content-area #privatemsg-new #edit-author--2 .form-element, .page-messages #content-area form.comment-form #edit-author--2 .form-element, .page-messages #content-area #privatemsg-new #edit-author--2 .form-element {
   background: none;
   margin-left: 10px;
   margin-top: 0;
 }
 @media (max-width: 767px) {
-  /* line 1966, ../../sass/layouts/topic-forum.scss */
+  /* line 1972, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area form.comment-form, .page-comment #content-area #privatemsg-new, .page-messages #content-area form.comment-form, .page-messages #content-area #privatemsg-new {
     padding: 27px 15px;
   }
 }
-/* line 1989, ../../sass/layouts/topic-forum.scss */
+/* line 1995, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form h4, .page-comment #content-area #privatemsg-new h4, .page-messages #content-area form.comment-form h4, .page-messages #content-area #privatemsg-new h4 {
   margin: 0 0 17px;
 }
-/* line 1992, ../../sass/layouts/topic-forum.scss */
+/* line 1998, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .form-required, .page-comment #content-area #privatemsg-new .form-required, .page-messages #content-area form.comment-form .form-required, .page-messages #content-area #privatemsg-new .form-required {
   color: #f15500;
 }
-/* line 1995, ../../sass/layouts/topic-forum.scss */
+/* line 2001, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form, .page-comment #content-area #privatemsg-new .comment-form, .page-messages #content-area form.comment-form .comment-form, .page-messages #content-area #privatemsg-new .comment-form {
   font-size: 18px;
   color: #636c73;
 }
-/* line 1998, ../../sass/layouts/topic-forum.scss */
+/* line 2004, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form .required, .page-comment #content-area #privatemsg-new .comment-form .required, .page-messages #content-area form.comment-form .comment-form .required, .page-messages #content-area #privatemsg-new .comment-form .required {
   color: #f15500;
 }
-/* line 2001, ../../sass/layouts/topic-forum.scss */
+/* line 2007, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form label, .page-comment #content-area #privatemsg-new .comment-form label, .page-messages #content-area form.comment-form .comment-form label, .page-messages #content-area #privatemsg-new .comment-form label {
   float: left;
   width: 100%;
 }
-/* line 2004, ../../sass/layouts/topic-forum.scss */
+/* line 2010, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form label.label-block, .page-comment #content-area #privatemsg-new .comment-form label.label-block, .page-messages #content-area form.comment-form .comment-form label.label-block, .page-messages #content-area #privatemsg-new .comment-form label.label-block {
   width: 100%;
 }
-/* line 2008, ../../sass/layouts/topic-forum.scss */
+/* line 2014, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form .jcf-select, .page-comment #content-area #privatemsg-new .comment-form .jcf-select, .page-messages #content-area form.comment-form .comment-form .jcf-select, .page-messages #content-area #privatemsg-new .comment-form .jcf-select {
   width: 100%;
   border: none;
 }
-/* line 2012, ../../sass/layouts/topic-forum.scss */
+/* line 2018, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form fieldset, .page-comment #content-area #privatemsg-new .comment-form fieldset, .page-messages #content-area form.comment-form .comment-form fieldset, .page-messages #content-area #privatemsg-new .comment-form fieldset {
   margin: 0 0 20px 0;
   float: none;
 }
 @media (max-width: 767px) {
-  /* line 2012, ../../sass/layouts/topic-forum.scss */
+  /* line 2018, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area form.comment-form .comment-form fieldset, .page-comment #content-area #privatemsg-new .comment-form fieldset, .page-messages #content-area form.comment-form .comment-form fieldset, .page-messages #content-area #privatemsg-new .comment-form fieldset {
     margin: 0 0 10px 0;
   }
 }
-/* line 2018, ../../sass/layouts/topic-forum.scss */
+/* line 2024, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form fieldset fieldset, .page-comment #content-area #privatemsg-new .comment-form fieldset fieldset, .page-messages #content-area form.comment-form .comment-form fieldset fieldset, .page-messages #content-area #privatemsg-new .comment-form fieldset fieldset {
   margin: 0;
   padding: 0;
 }
-/* line 2022, ../../sass/layouts/topic-forum.scss */
+/* line 2028, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form fieldset .filter-help, .page-comment #content-area #privatemsg-new .comment-form fieldset .filter-help, .page-messages #content-area form.comment-form .comment-form fieldset .filter-help, .page-messages #content-area #privatemsg-new .comment-form fieldset .filter-help {
   float: left;
   width: 100%;
   padding: 0;
   margin: 0 0 20px 0;
 }
-/* line 2027, ../../sass/layouts/topic-forum.scss */
+/* line 2033, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form fieldset .filter-help a, .page-comment #content-area #privatemsg-new .comment-form fieldset .filter-help a, .page-messages #content-area form.comment-form .comment-form fieldset .filter-help a, .page-messages #content-area #privatemsg-new .comment-form fieldset .filter-help a {
   padding: 0;
 }
-/* line 2032, ../../sass/layouts/topic-forum.scss */
+/* line 2038, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form strong, .page-comment #content-area #privatemsg-new .comment-form strong, .page-messages #content-area form.comment-form .comment-form strong, .page-messages #content-area #privatemsg-new .comment-form strong {
   color: #081318;
   margin-left: 10px;
 }
 @media (max-width: 990px) {
-  /* line 2032, ../../sass/layouts/topic-forum.scss */
+  /* line 2038, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area form.comment-form .comment-form strong, .page-comment #content-area #privatemsg-new .comment-form strong, .page-messages #content-area form.comment-form .comment-form strong, .page-messages #content-area #privatemsg-new .comment-form strong {
     font-weight: normal;
   }
 }
-/* line 2039, ../../sass/layouts/topic-forum.scss */
+/* line 2045, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form .form-element, .page-comment #content-area #privatemsg-new .comment-form .form-element, .page-messages #content-area form.comment-form .comment-form .form-element, .page-messages #content-area #privatemsg-new .comment-form .form-element {
   background-color: #eef2f3;
   background-image: -webkit-linear-gradient(top, #636c73, #eef2f3);
@@ -3136,7 +3146,7 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   max-width: 506px;
   width: 100%;
 }
-/* line 2047, ../../sass/layouts/topic-forum.scss */
+/* line 2053, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form .form-element input[type=text], .page-comment #content-area form.comment-form .comment-form .form-element input[type=email], .page-comment #content-area form.comment-form .comment-form .form-element textarea, .page-comment #content-area #privatemsg-new .comment-form .form-element input[type=text], .page-comment #content-area #privatemsg-new .comment-form .form-element input[type=email], .page-comment #content-area #privatemsg-new .comment-form .form-element textarea, .page-messages #content-area form.comment-form .comment-form .form-element input[type=text], .page-messages #content-area form.comment-form .comment-form .form-element input[type=email], .page-messages #content-area form.comment-form .comment-form .form-element textarea, .page-messages #content-area #privatemsg-new .comment-form .form-element input[type=text], .page-messages #content-area #privatemsg-new .comment-form .form-element input[type=email], .page-messages #content-area #privatemsg-new .comment-form .form-element textarea {
   float: left;
   -moz-border-radius: 5px;
@@ -3146,71 +3156,71 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   color: #636c73;
   border: none;
 }
-/* line 2054, ../../sass/layouts/topic-forum.scss */
+/* line 2060, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .comment-form .form-element textarea, .page-comment #content-area #privatemsg-new .comment-form .form-element textarea, .page-messages #content-area form.comment-form .comment-form .form-element textarea, .page-messages #content-area #privatemsg-new .comment-form .form-element textarea {
   height: 183px;
 }
-/* line 2059, ../../sass/layouts/topic-forum.scss */
+/* line 2065, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .form-actions, .page-comment #content-area #privatemsg-new .form-actions, .page-messages #content-area form.comment-form .form-actions, .page-messages #content-area #privatemsg-new .form-actions {
   margin: 0;
 }
-/* line 2063, ../../sass/layouts/topic-forum.scss */
+/* line 2069, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area form.comment-form .form-actions #edit-submit:hover, .page-comment #content-area form.comment-form .form-actions #edit-preview:hover, .page-comment #content-area #privatemsg-new .form-actions #edit-submit:hover, .page-comment #content-area #privatemsg-new .form-actions #edit-preview:hover, .page-messages #content-area form.comment-form .form-actions #edit-submit:hover, .page-messages #content-area form.comment-form .form-actions #edit-preview:hover, .page-messages #content-area #privatemsg-new .form-actions #edit-submit:hover, .page-messages #content-area #privatemsg-new .form-actions #edit-preview:hover {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  /* line 2069, ../../sass/layouts/topic-forum.scss */
+  /* line 2075, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area form.comment-form .form-actions .btn.btn-left, .page-comment #content-area form.comment-form .form-actions .btn-left#edit-submit, .page-comment #content-area form.comment-form .form-actions .btn-left#edit-preview, .page-comment #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-submit, .page-comment #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-submit, .page-comment #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-preview, .page-comment #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-preview, .page-comment #content-area #privatemsg-new .form-actions .btn.btn-left, .page-comment #content-area #privatemsg-new .form-actions .btn-left#edit-submit, .page-comment #content-area #privatemsg-new .form-actions .btn-left#edit-preview, .page-messages #content-area form.comment-form .form-actions .btn.btn-left, .page-messages #content-area form.comment-form .form-actions .btn-left#edit-submit, .page-messages #content-area form.comment-form .form-actions .btn-left#edit-preview, .page-messages #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-submit, .page-messages #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-submit, .page-messages #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-preview, .page-messages #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-preview, .page-messages #content-area #privatemsg-new .form-actions .btn.btn-left, .page-messages #content-area #privatemsg-new .form-actions .btn-left#edit-submit, .page-messages #content-area #privatemsg-new .form-actions .btn-left#edit-preview {
     margin-left: 6px;
     padding: 3px 15px;
   }
-  /* line 2072, ../../sass/layouts/topic-forum.scss */
+  /* line 2078, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area form.comment-form .form-actions .btn.btn-left:first-child, .page-comment #content-area form.comment-form .form-actions .btn-left#edit-submit:first-child, .page-comment #content-area form.comment-form .form-actions .btn-left#edit-preview:first-child, .page-comment #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-submit:first-child, .page-comment #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-submit:first-child, .page-comment #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-preview:first-child, .page-comment #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-preview:first-child, .page-comment #content-area #privatemsg-new .form-actions .btn.btn-left:first-child, .page-comment #content-area #privatemsg-new .form-actions .btn-left#edit-submit:first-child, .page-comment #content-area #privatemsg-new .form-actions .btn-left#edit-preview:first-child, .page-messages #content-area form.comment-form .form-actions .btn.btn-left:first-child, .page-messages #content-area form.comment-form .form-actions .btn-left#edit-submit:first-child, .page-messages #content-area form.comment-form .form-actions .btn-left#edit-preview:first-child, .page-messages #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-submit:first-child, .page-messages #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-submit:first-child, .page-messages #content-area form.comment-form #privatemsg-new .form-actions .btn-left#edit-preview:first-child, .page-messages #content-area #privatemsg-new form.comment-form .form-actions .btn-left#edit-preview:first-child, .page-messages #content-area #privatemsg-new .form-actions .btn.btn-left:first-child, .page-messages #content-area #privatemsg-new .form-actions .btn-left#edit-submit:first-child, .page-messages #content-area #privatemsg-new .form-actions .btn-left#edit-preview:first-child {
     margin-left: 0;
   }
 }
-/* line 2080, ../../sass/layouts/topic-forum.scss */
+/* line 2086, ../../sass/layouts/topic-forum.scss */
 .page-comment #edit-author--2 label, .page-messages #edit-author--2 label {
   float: left;
   width: auto;
 }
-/* line 2084, ../../sass/layouts/topic-forum.scss */
+/* line 2090, ../../sass/layouts/topic-forum.scss */
 .page-comment #edit-author--2 .form-element, .page-messages #edit-author--2 .form-element {
   background: none;
   margin-left: 10px;
   margin-top: 0;
 }
-/* line 2091, ../../sass/layouts/topic-forum.scss */
+/* line 2097, ../../sass/layouts/topic-forum.scss */
 .page-comment .form-actions, .page-messages .form-actions {
   clear: both;
 }
-/* line 2094, ../../sass/layouts/topic-forum.scss */
+/* line 2100, ../../sass/layouts/topic-forum.scss */
 .page-comment h4, .page-messages h4 {
   font-size: 23px;
   font-size: 1.4375em;
 }
-/* line 2096, ../../sass/layouts/topic-forum.scss */
+/* line 2102, ../../sass/layouts/topic-forum.scss */
 .page-comment h4 a, .page-messages h4 a {
   font-size: 16px;
   text-decoration: underline;
   margin-left: 0;
 }
-/* line 2102, ../../sass/layouts/topic-forum.scss */
+/* line 2108, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area, .page-messages #content-area {
   position: relative;
   clear: both;
 }
-/* line 2106, ../../sass/layouts/topic-forum.scss */
+/* line 2112, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area.children, .page-messages #content-area.children {
   margin-left: 30px;
 }
-/* line 2110, ../../sass/layouts/topic-forum.scss */
+/* line 2116, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left, .page-messages #content-area li .comment-left {
   float: left;
   width: 100px;
   font-size: 13px;
 }
-/* line 2114, ../../sass/layouts/topic-forum.scss */
+/* line 2120, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left img, .page-messages #content-area li .comment-left img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -3218,27 +3228,27 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   overflow: hidden;
   margin: 0 0 4px 0;
 }
-/* line 2119, ../../sass/layouts/topic-forum.scss */
+/* line 2125, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left a, .page-messages #content-area li .comment-left a {
   text-decoration: underline;
   font-weight: bold;
   color: #2a2e31;
 }
-/* line 2123, ../../sass/layouts/topic-forum.scss */
+/* line 2129, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left a:hover, .page-messages #content-area li .comment-left a:hover {
   text-decoration: none;
 }
-/* line 2127, ../../sass/layouts/topic-forum.scss */
+/* line 2133, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left cite, .page-messages #content-area li .comment-left cite {
   margin: 0 0 7px 0;
   font-style: normal;
   display: block;
 }
-/* line 2132, ../../sass/layouts/topic-forum.scss */
+/* line 2138, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-left time, .page-messages #content-area li .comment-left time {
   margin: 0 0 17px 0;
 }
-/* line 2136, ../../sass/layouts/topic-forum.scss */
+/* line 2142, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right, .page-messages #content-area li .comment-right {
   border: 2px solid #d2d5d6;
   padding: 16px 26px 13px 26px;
@@ -3248,12 +3258,12 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   word-wrap: break-word;
 }
 @media (max-width: 767px) {
-  /* line 2136, ../../sass/layouts/topic-forum.scss */
+  /* line 2142, ../../sass/layouts/topic-forum.scss */
   .page-comment #content-area li .comment-right, .page-messages #content-area li .comment-right {
     padding: 15px;
   }
 }
-/* line 2146, ../../sass/layouts/topic-forum.scss */
+/* line 2152, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right:before, .page-messages #content-area li .comment-right:before {
   content: "";
   position: absolute;
@@ -3263,45 +3273,45 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   top: 15px;
   height: 32px;
 }
-/* line 2155, ../../sass/layouts/topic-forum.scss */
+/* line 2161, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right .links, .page-messages #content-area li .comment-right .links {
   margin-bottom: 17px;
 }
-/* line 2161, ../../sass/layouts/topic-forum.scss */
+/* line 2167, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right ul li, .page-messages #content-area li .comment-right ul li {
   float: left;
   margin: 0 11px 0 0;
 }
-/* line 2164, ../../sass/layouts/topic-forum.scss */
+/* line 2170, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right ul li a, .page-messages #content-area li .comment-right ul li a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 2167, ../../sass/layouts/topic-forum.scss */
+/* line 2173, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right ul li a:hover, .page-messages #content-area li .comment-right ul li a:hover {
   text-decoration: none;
 }
-/* line 2173, ../../sass/layouts/topic-forum.scss */
+/* line 2179, ../../sass/layouts/topic-forum.scss */
 .page-comment #content-area li .comment-right .quote, .page-messages #content-area li .comment-right .quote {
   border: none;
   padding: 0;
 }
 
-/* line 2182, ../../sass/layouts/topic-forum.scss */
+/* line 2188, ../../sass/layouts/topic-forum.scss */
 .item-list .pager li, .item-list .pager li a {
   background: none;
 }
-/* line 2183, ../../sass/layouts/topic-forum.scss */
+/* line 2189, ../../sass/layouts/topic-forum.scss */
 .item-list .pager li:hover, .item-list .pager li a:hover {
   background: none;
 }
 
-/* line 2190, ../../sass/layouts/topic-forum.scss */
+/* line 2196, ../../sass/layouts/topic-forum.scss */
 .logged-in .text-section .text-right-section a.community-login {
   display: none;
 }
 
-/* line 2198, ../../sass/layouts/topic-forum.scss */
+/* line 2204, ../../sass/layouts/topic-forum.scss */
 .take-action .post {
   width: 31.6875%;
   float: left;

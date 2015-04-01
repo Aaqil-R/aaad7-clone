@@ -566,43 +566,55 @@ textarea {
 .home_forum_share .home_forum_share_right .home_forum_share_set:first-child {
   float: left;
 }
-/* line 174, ../sass/forms.scss */
+@media (max-width: 767px) {
+  /* line 167, ../sass/forms.scss */
+  .home_forum_share .home_forum_share_right .home_forum_share_set {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  /* line 178, ../sass/forms.scss */
+  .home_forum_share .home_forum_share_right .home_forum_share_set img {
+    display: none;
+  }
+}
+/* line 182, ../sass/forms.scss */
 .home_forum_share .home_forum_share_right .home_forum_share_set .btn {
   display: block;
 }
 
-/* line 181, ../sass/forms.scss */
+/* line 189, ../sass/forms.scss */
 .webform-client-form-74681 div.form-item {
   float: left;
   width: 33.3%;
 }
 @media (max-width: 767px) {
-  /* line 181, ../sass/forms.scss */
+  /* line 189, ../sass/forms.scss */
   .webform-client-form-74681 div.form-item {
     float: none;
     width: auto;
   }
 }
-/* line 189, ../sass/forms.scss */
+/* line 197, ../sass/forms.scss */
 .webform-client-form-74681 div.form-item.webform-component-radios > label {
   line-height: 1.363em;
   font-size: 1.67em;
   font-weight: normal;
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 197, ../sass/forms.scss */
+/* line 205, ../sass/forms.scss */
 .webform-client-form-74681 div.form-item.webform-component--other-ways-to-help {
   width: 30%;
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 197, ../sass/forms.scss */
+  /* line 205, ../sass/forms.scss */
   .webform-client-form-74681 div.form-item.webform-component--other-ways-to-help {
     float: none;
     width: auto;
   }
 }
-/* line 206, ../sass/forms.scss */
+/* line 214, ../sass/forms.scss */
 .webform-client-form-74681 .form-radios label {
   border: medium none;
   width: 93%;
@@ -626,78 +638,78 @@ textarea {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 228, ../sass/forms.scss */
+/* line 236, ../sass/forms.scss */
 .webform-client-form-74681 .form-radios label:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #c63502;
   box-shadow: 0px 4px #c63502;
 }
-/* line 233, ../sass/forms.scss */
+/* line 241, ../sass/forms.scss */
 .webform-client-form-74681 .form-radios label:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #c63502;
   box-shadow: 0px 0px #c63502;
 }
-/* line 239, ../sass/forms.scss */
+/* line 247, ../sass/forms.scss */
 .webform-client-form-74681 .form-radios fieldset {
   float: left;
   width: 50%;
   margin-right: -6px;
 }
-/* line 243, ../sass/forms.scss */
+/* line 251, ../sass/forms.scss */
 .webform-client-form-74681 .form-radios fieldset input {
   display: none;
 }
 
-/* line 251, ../sass/forms.scss */
+/* line 259, ../sass/forms.scss */
 .front .slider-block .ajax-progress {
   position: absolute;
 }
 
-/* line 260, ../sass/forms.scss */
+/* line 268, ../sass/forms.scss */
 div.ctools-modal-content .form-item .description {
   clear: none;
 }
 
-/* line 264, ../sass/forms.scss */
+/* line 272, ../sass/forms.scss */
 .popups-container .modal-title {
   font-size: 23px;
 }
-/* line 267, ../sass/forms.scss */
+/* line 275, ../sass/forms.scss */
 .popups-container label {
   position: absolute;
   top: 20px;
   left: 24px;
 }
-/* line 273, ../sass/forms.scss */
+/* line 281, ../sass/forms.scss */
 .popups-container .item-list ul {
   margin: 0px 0 9px 0px;
   padding: 0;
 }
-/* line 276, ../sass/forms.scss */
+/* line 284, ../sass/forms.scss */
 .popups-container .item-list ul li {
   margin: 0;
 }
-/* line 281, ../sass/forms.scss */
+/* line 289, ../sass/forms.scss */
 .popups-container h3 {
   font-size: 19px;
 }
-/* line 284, ../sass/forms.scss */
+/* line 292, ../sass/forms.scss */
 .popups-container fieldset {
   float: left;
   width: 100%;
   position: relative;
 }
-/* line 288, ../sass/forms.scss */
+/* line 296, ../sass/forms.scss */
 .popups-container fieldset .description {
   clear: none;
 }
-/* line 292, ../sass/forms.scss */
+/* line 300, ../sass/forms.scss */
 .popups-container span.tooltip-content {
   left: -45px;
   bottom: 30px;
 }
-/* line 297, ../sass/forms.scss */
+/* line 305, ../sass/forms.scss */
 .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
   float: left;
   clear: both;
@@ -711,12 +723,12 @@ div.ctools-modal-content .form-item .description {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 297, ../sass/forms.scss */
+  /* line 305, ../sass/forms.scss */
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     width: 100%;
   }
 }
-/* line 311, ../sass/forms.scss */
+/* line 319, ../sass/forms.scss */
 .popups-container input[type="submit"] {
   float: left;
   clear: both;
@@ -730,52 +742,52 @@ div.ctools-modal-content .form-item .description {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 311, ../sass/forms.scss */
+  /* line 319, ../sass/forms.scss */
   .popups-container input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 324, ../sass/forms.scss */
+/* line 332, ../sass/forms.scss */
 .popups-container input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
 
-/* line 331, ../sass/forms.scss */
+/* line 339, ../sass/forms.scss */
 .hybridauth-widget-wrapper {
   clear: both;
 }
 
-/* line 338, ../sass/forms.scss */
+/* line 346, ../sass/forms.scss */
 ::-webkit-input-placeholder {
   color: #2a2e31;
 }
 
-/* line 342, ../sass/forms.scss */
+/* line 350, ../sass/forms.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #2a2e31;
 }
 
-/* line 346, ../sass/forms.scss */
+/* line 354, ../sass/forms.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #2a2e31;
 }
 
-/* line 350, ../sass/forms.scss */
+/* line 358, ../sass/forms.scss */
 :-ms-input-placeholder {
   color: #2a2e31;
 }
 
-/* line 353, ../sass/forms.scss */
+/* line 361, ../sass/forms.scss */
 .page-user .form-item {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 357, ../sass/forms.scss */
+/* line 365, ../sass/forms.scss */
 .messages.error.messages-inline {
   background: none;
   padding: 0;
@@ -786,20 +798,20 @@ div.ctools-modal-content .form-item .description {
   margin-top: -20px;
 }
 
-/* line 368, ../sass/forms.scss */
+/* line 376, ../sass/forms.scss */
 #signup, #contribution {
   margin: 0 auto;
   max-width: 1080px;
 }
-/* line 371, ../sass/forms.scss */
+/* line 379, ../sass/forms.scss */
 #signup .input, #contribution .input {
   margin-bottom: 1.69492%;
 }
-/* line 375, ../sass/forms.scss */
+/* line 383, ../sass/forms.scss */
 #signup .label, #contribution .label {
   margin-bottom: 1.69492%;
 }
-/* line 379, ../sass/forms.scss */
+/* line 387, ../sass/forms.scss */
 #signup input[type=submit], #contribution input[type=submit] {
   border: medium none;
   outline: medium none;
@@ -820,19 +832,19 @@ div.ctools-modal-content .form-item .description {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 403, ../sass/forms.scss */
+/* line 411, ../sass/forms.scss */
 #signup input[type=submit]:hover, #contribution input[type=submit]:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #c63502;
   box-shadow: 0px 4px #c63502;
 }
-/* line 410, ../sass/forms.scss */
+/* line 418, ../sass/forms.scss */
 #signup input[type=submit]:active, #contribution input[type=submit]:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #c63502;
   box-shadow: 0px 0px #c63502;
 }
-/* line 416, ../sass/forms.scss */
+/* line 424, ../sass/forms.scss */
 #signup input[type=text]
 , #signup input[type=search]
 , #signup input[type=tel]
@@ -860,7 +872,7 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 416, ../sass/forms.scss */
+  /* line 424, ../sass/forms.scss */
   #signup input[type=text]
   , #signup input[type=search]
   , #signup input[type=tel]
@@ -877,7 +889,7 @@ div.ctools-modal-content .form-item .description {
     width: 100%;
   }
 }
-/* line 442, ../sass/forms.scss */
+/* line 450, ../sass/forms.scss */
 #signup input[type=text]:focus
 , #signup input[type=search]:focus
 , #signup input[type=tel]:focus
@@ -895,7 +907,7 @@ div.ctools-modal-content .form-item .description {
   outline: none;
 }
 
-/* line 456, ../sass/forms.scss */
+/* line 464, ../sass/forms.scss */
 .webform-style .webform-client-form .form-item label {
   display: block;
   font-size: 1.3em;
@@ -903,19 +915,19 @@ div.ctools-modal-content .form-item .description {
   padding-bottom: 10px;
   clear: both;
 }
-/* line 466, ../sass/forms.scss */
+/* line 474, ../sass/forms.scss */
 .webform-style .webform-client-form input:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 471, ../sass/forms.scss */
+/* line 479, ../sass/forms.scss */
 .webform-style .webform-client-form input.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
-/* line 477, ../sass/forms.scss */
+/* line 485, ../sass/forms.scss */
 .webform-style .webform-client-form textarea {
   padding: 12px 23px;
   float: left;
@@ -932,55 +944,55 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 477, ../sass/forms.scss */
+  /* line 485, ../sass/forms.scss */
   .webform-style .webform-client-form textarea {
     width: 100%;
   }
 }
-/* line 491, ../sass/forms.scss */
+/* line 499, ../sass/forms.scss */
 .webform-style .webform-client-form textarea:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 496, ../sass/forms.scss */
+/* line 504, ../sass/forms.scss */
 .webform-style .webform-client-form textarea.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
-/* line 503, ../sass/forms.scss */
+/* line 511, ../sass/forms.scss */
 .webform-style .webform-client-form input::-webkit-input-placeholder,
 .webform-style .webform-client-form textarea::-webkit-input-placeholder {
   color: #636c73;
   font-size: 18px;
 }
-/* line 508, ../sass/forms.scss */
+/* line 516, ../sass/forms.scss */
 .webform-style .webform-client-form input:-moz-placeholder,
 .webform-style .webform-client-form textarea:-moz-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 @media (min-width: 767px) {
-  /* line 515, ../sass/forms.scss */
+  /* line 523, ../sass/forms.scss */
   .webform-style .webform-client-form textarea {
     width: 80%;
   }
-  /* line 519, ../sass/forms.scss */
+  /* line 527, ../sass/forms.scss */
   .webform-style .webform-client-form .grippie {
     width: 80%;
   }
 }
-/* line 524, ../sass/forms.scss */
+/* line 532, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions {
   margin: 1.5em 0;
   display: block;
 }
-/* line 528, ../sass/forms.scss */
+/* line 536, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions .webform-submit {
   clear: both;
 }
-/* line 532, ../sass/forms.scss */
+/* line 540, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions .webform-submit:focus {
   border: inherit;
   box-shadow: inherit;

@@ -171,6 +171,14 @@
         float:right;
         width:48%;
         text-align:center;
+        @include breakpoint($mobile){
+          float:left;
+          width:100%;
+          margin-bottom:15px;
+          img{
+            display:none;
+          }
+        }
         .btn{
           display:block;
         }       
