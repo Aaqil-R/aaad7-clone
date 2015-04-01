@@ -287,3 +287,18 @@ nav {
 	}
 
 }
+
+
+//re arranging the menu on my voice content types
+.section-myvoice{
+	.top-bar{
+		.logo{
+			display: inline;
+			float: left;
+			padding-right:20px;
+			@include breakpoint($mobile) {
+    	    	display: none;
+    	    }
+		}
+	}
+}
