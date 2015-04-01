@@ -55,42 +55,42 @@
             </div>
           <?php endif; ?>  
 
-     <div class="banner_text_main">
-      <div class="banner_nav visual">
-          <?php 
-            if (0 < $prev_nid){
-              print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
-       }
-        ?>  
-        
-        <?php
-        if (0 < $next_nid){
-         print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
-        }
-        ?>
+       <div class="banner_text_main">
+          <div class="banner_nav visual">
+              <?php 
+                if (0 < $prev_nid){
+                  print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
+           }
+            ?>  
+
+            <?php
+            if (0 < $next_nid){
+             print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
+            }
+            ?>
+            </div>
         </div>
-        </div>
-         <div class="caption-frame">
-            <div class="region region-caption-holder">
-                <div class="caption-text">
-                <h1 class="caption-text-titles">
-                    <?php if(isset($content['field_main_caption'])):?>
-                    <div class="caption-text-title caption-text-title-1">               
+           
+        <div class="caption-text">
+        <h1 class="caption-text-titles">
+            <?php if(isset($content['field_main_caption'])):?>
+            <div class="caption-text-title caption-text-title-1">               
+            <span>
+                <?php print render($content['field_main_caption']['#items'][0]['value']); ?>
+            </span>
+            </div>
+            <?php endif; ?>
+            <?php if(isset($content['field_sub_caption'])):?>
+                <div class="caption-text-title caption-text-title-1">               
                     <span>
-                        <?php print render($content['field_main_caption']['#items'][0]['value']); ?>
+                        <?php print render($content['field_sub_caption']['#items'][0]['value']); ?>
                     </span>
-                    </div>
-                    <?php endif; ?>
-                    <?php if(isset($content['field_sub_caption'])):?>
-                        <div class="caption-text-title caption-text-title-1">               
-                            <span>
-                                <?php print render($content['field_sub_caption']['#items'][0]['value']); ?>
-                            </span>
-                        </div>
-                    <?php endif; ?> 
-                </h1>
                 </div>
-          </div> 
+            <?php endif; ?> 
+        </h1>
+        </div>
+        </div>
+      </div>
           <div class="region region-image-holder"
                style="background-image: url('<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>')">
           </div>
