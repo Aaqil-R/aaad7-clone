@@ -171,15 +171,17 @@
 		}
 	}
 	.my-voice-block{
-		a.tooltips,
-		.block-close a{
-			color: $base-link-color;
-			&:hover{
+		.block-close {
+			a{
 				color: $pink;
+				&:hover{
+					color: $pink;
+				}
 			}
-
 		}
-
+		a.tooltips{
+			color: $pink;
+		}
 	}
 }
 
@@ -301,4 +303,10 @@ nav {
     	    }
 		}
 	}
+}
+
+
+//entire webforms text color chanages
+.form-text , .form-textarea{
+	color:$base-link-color;
 }
