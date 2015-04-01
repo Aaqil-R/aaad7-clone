@@ -68,12 +68,12 @@
           <?php endif; ?> 
         </div>  
       </div> 
-    <div class="region region-image-holder"
-    <?php if($image): ?>
-       style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files/'); print($image['#item']['filename']); ?>')"
-    <?php endif; ?>>
-
-  </div>
+      <div class="region region-image-holder"
+        <?php if($image): ?>
+           style="background-image: url('/<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>')"
+        <?php endif; ?>>
+          
+      </div>
     <?php if(isset($content['field_featured_image_by'])):?>
      <div class="pic-by"><?php print t('© Photo by'); ?> 
       <a>
