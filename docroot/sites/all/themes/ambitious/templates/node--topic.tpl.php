@@ -69,6 +69,7 @@
         }
         ?>
         </div>
+        </div>
          <div class="caption-frame">
             <div class="region region-caption-holder">
                 <div class="caption-text">
