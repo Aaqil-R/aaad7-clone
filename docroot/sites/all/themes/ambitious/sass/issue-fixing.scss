@@ -526,7 +526,7 @@
   .description{
     width: auto;
     max-width:530px;
-    float: none;
+    float: left;
   }
   fieldset{
     padding-left: 0;
@@ -541,6 +541,12 @@
    .password-strength{
      float: none;
      margin-bottom: 20px;
+     width: 100%;
+     max-width: 530px;
+   }
+   input[type=password]{
+     width: 100%;
+     max-width: 530px
    }
    .form-type-password.form-item-pass-pass2{
      width: 100%;
@@ -548,8 +554,8 @@
    }
    .field-name-field-type-of-user{
      fieldset{
-       float: none;
-       display: block;
+       float: left;
+       width: 100%;
      }
    } 
   }
