@@ -402,13 +402,26 @@ body > .jcf-select-drop.jcf-drop-flipped {
   background: #ffffff;
   line-height: 1.8em;
   padding: 0.2em 0.3em;
+  box-shadow: 10px 0 0 #ffffff, -10px 0 0 #ffffff;
 }
-/* line 41, ../../sass/layouts/caption-text.scss */
+@media (max-width: 480px) {
+  /* line 35, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title span {
+    padding: initial;
+  }
+}
+/* line 45, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   margin-left: 80px;
   font-size: 36px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   display: none;
+}
+@media (max-width: 480px) {
+  /* line 45, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
+    margin-left: 30px;
+  }
 }
 @media (min-width: 767px) {
   /* line 25, ../../sass/layouts/caption-text.scss */
@@ -416,7 +429,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-left: 1em;
     margin-top: 75px;
   }
-  /* line 53, ../../sass/layouts/caption-text.scss */
+  /* line 60, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 130px;
     display: block;
@@ -428,7 +441,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-left: 0;
     margin-top: 55px;
   }
-  /* line 63, ../../sass/layouts/caption-text.scss */
+  /* line 70, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 280px;
   }
