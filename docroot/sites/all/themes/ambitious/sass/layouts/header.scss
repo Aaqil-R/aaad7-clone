@@ -840,6 +840,7 @@ nav {
     max-width:67%;
     @extend %listreset;
     padding:5px 0 0;
+    display: block;
     &.float-right{
       float:right;
       @include breakpoint($mobile) {
@@ -853,6 +854,7 @@ nav {
       max-width:100%;
       float:none;
       text-align:center;
+      padding: initial;
     }
     li {
       position:relative;
