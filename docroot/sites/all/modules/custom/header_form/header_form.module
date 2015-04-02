@@ -40,6 +40,7 @@ function get_header_form($pageno) {
           $output = '<div id="slider-container" class="slider-container">';
           $plink = l('<span class="icon-Leftarrow"></span>', 'header/form/ajax/0', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));          
           $output .= '<div class="l-s-arrow">'.$plink.'</div>';
+          $output .= '<div class="username element-invisible">'.$_SESSION['first_name'].'</div>';
           $block = module_invoke('webform', 'block_view', 'client-block-74671');
           $output .= render($block['content']);
           $nlink = l('<span class="icon-Rightarrow"></span>', 'header/form/ajax/2', array('attributes' => array('class' => array('use-ajax')),'html' => TRUE));

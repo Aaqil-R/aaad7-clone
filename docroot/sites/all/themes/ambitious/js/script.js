@@ -129,9 +129,14 @@ Drupal.behaviors.ambitious = {
 		  $("#main").addClass("no-form");
 		    
 		});
-        $('#not_right_now').on("click", function () {
+         $('#not_right_now').on("click", function () {
 		    $('.block-close').trigger( "click" );
 		});
+		if ($("form").hasClass('webform-client-form-74671')) {  
+		  var username = $(".username").text();
+		  $(".form_firstname").text("");
+		  $(".form_firstname").append(username);
+		 }
 
 	// ==Masonry block==//
 	var $container = $('.masonry');
