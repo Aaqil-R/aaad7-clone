@@ -526,14 +526,32 @@
   .description{
     width: auto;
     max-width:530px;
+    float: none;
   }
   fieldset{
     padding-left: 0;
     padding-right: 0;
   }
   label{
-      position: static;
-    }
+    position: static;
+  }
+  .field-type-text-long{
+    max-width: 520px;
+   } 
+   .password-strength{
+     float: none;
+     margin-bottom: 20px;
+   }
+   .form-type-password.form-item-pass-pass2{
+     width: 100%;
+     max-width: 590px;
+   }
+   .field-name-field-type-of-user{
+     fieldset{
+       float: none;
+       display: block;
+     }
+   } 
   }
 }
 
