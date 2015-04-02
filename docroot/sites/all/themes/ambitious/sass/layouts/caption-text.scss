@@ -11,26 +11,78 @@
 */
 
 // Caption Block
+
+.front .caption-text {
+    margin-top: 100px;
+}
+.front, page-node-221546 {//need to refactor this to be based on a meaningful page title but don't have the energy
+    .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
+        font-size: inherit;
+        font-family: $helvetica-bd;
+        display: block;
+    }
+}
 .caption-text{
-	-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera */
-  	animation: caption-text-titles 1s;
-  	position: relative;
+    //use compass here.
+	//-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera */
+  	//animation: caption-text-titles 1s;
+  	@include animation (caption-text-titles 1s);
+    position: relative;
+    margin-top: 75px;
+    .caption-text-titles{
+        text-align: left;
+        .caption-text-title {
+            span{
+                letter-spacing: -1px;
+                background: $white;
+                line-height: 1.8em;
+                padding: 0.2em 0.3em;
+            }
+            &.caption-text-title-2 {
+                margin-left: 80px;
+                font-size: 36px;
+                font-family: $helvetica-cn;
+                display: none;
+            }
+        }
+    }
+    @include breakpoint (min-width $tablet-small) {
+        margin-left: 1em;
+        margin-top: 75px;
+        .caption-text-titles{
+            .caption-text-title.caption-text-title-2 {
+                margin-left: 130px;
+                display: block;
+            }
+        }
+    }
+    @include breakpoint (min-width $desktop-small) {
+        margin-left: 0;   
+        margin-top: 55px;
+        .caption-text-titles{
+            .caption-text-title.caption-text-title-2 {
+                margin-left: 280px;
+            }
+        }
+    }
+}
 
 	// Main wrapper of titles
-	.caption-text-titles{
-
+	/*.caption-text-titles{
+        
+        
 		@include breakpoint($not-all-mobile){
-				// 768px +
-				float: left;
-				//margin-top: 50px;				
+            // 768px +
+            float: left;
+            //margin-top: 50px;				
 		}
 		@include breakpoint($mobile){
-				// 767px -
-				margin-top: 85px;
+            // 767px -
+            margin-top: 85px;
 		}
 		@include breakpoint($all-small-mobile){
-				// 480px -
-				margin-top: 75px;			
+            // 480px -
+            margin-top: 75px;			
 
 		}
 
@@ -108,7 +160,7 @@
 		.caption-text-title-2{
 
 			// prevents the captions from collapsing when the menu slides out.
-			display: block;
+			//display: block;
 
 			margin-top: 10px;
 			
@@ -137,7 +189,10 @@
 	}
 
 }
+    */
 
+
+//WHAT IS THIS?
 /* Chrome, Safari, Opera */
 @-webkit-keyframes caption-text-titles {
     from {top: -30px; opacity:0;}

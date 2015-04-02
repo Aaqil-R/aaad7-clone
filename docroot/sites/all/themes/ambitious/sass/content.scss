@@ -851,7 +851,7 @@ a {
 	}
 	.holder {
 		@include container;
-		padding: 0 15px;
+		@include breakpoint ($mobile) {padding: 0 15px;}//
 
 		// myVoice page the form still cuts the caption 
 		// on higher resolutions.
@@ -1094,7 +1094,7 @@ a {
 				@include breakpoint($mobile) { 
 					left: -45px;
 					font-size: 18px;
-					// display:none;
+					//display:none;
 				}
 				a{
 					color: $orange;

@@ -43,45 +43,57 @@
   $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
   } 
 ?>
-  <section class="header_banner">
-     <div class="banner_text_main">
-      <div class="banner_nav visual">
+
+  <section class="visual header_banner">
+    <div class="img-holder">
+        <div class="caption-frame">
+            <div class="region region-caption-holder">
+                
+                
           <?php 
             if (0 < $prev_nid){
-              print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
-       }
-        ?>  
+               print l('<span class="icon-Leftarrow"></span><div class="text-area"><span class="title">Previous topic:</span>          <span class="topic">'.$prev_title.'</span></div>','node/'.$prev_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-perv')));
+            }
+         ?>
         
-        <?php
-        if (0 < $next_nid){
-         print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
-        }
-        ?>
-        </div>
-        <div class="banner_text_inner" >
+            <?php
+            if (0 < $next_nid){
+             print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
+            }
+            ?>
+                
+        <div class="caption-text">
+          <h1 class="caption-text-titles">
           <?php if(isset($content['field_main_caption'])):?>
-            <h1 class="banner_text"><?php print render($content['field_main_caption']['#items'][0]['value']); ?></h1>
+            
+                <div class="caption-text-title caption-text-title-1">               
+                    <span>
+                        <?php print render($content['field_main_caption']['#items'][0]['value']); ?>
+                    </span>
+                </div>
           <?php endif; ?>
-          <br>
           <?php if(isset($content['field_sub_caption'])):?>
-            <h3 class="banner_sub_text"><?php print render($content['field_sub_caption']['#items'][0]['value']); ?></h3>
-          <?php endif; ?> 
+            <div class="caption-text-title caption-text-title-2">               
+                    <span><?php print render($content['field_sub_caption']['#items'][0]['value']); ?>
+                </span>
+              </div>
+          <?php endif; ?>
+        
+          </h1>  
         </div>  
       </div> 
-    <div class="header_image">
-      <div class="banner_desktop">
-        <img src="<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>" />
       </div>
-      <div class="banner_mobile">
-        <img src="<?php print image_style_url('banner-mobile',$content['field_featured_image_mobile']['#items'][0]['uri']); ?>" />
-      </div> 
+      <div class="region region-image-holder"
+           style="background-image: url('<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>')">
+      </div>
     </div>
+        
     <?php if(isset($content['field_featured_image_by'])):?>
-     <div class="pic-by"><?php print t('© Photo by'); ?> 
-      <a>
-        <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>
-      </a>
-    </div>
+     <div class="holder">
+          <span class="pic-by">            
+              <?php print render($content['field_featured_image_by']['#items'][0]['value']); ?>      
+          </span>
+        </div>
    <?php endif; ?> 
   </section>
   
