@@ -35,6 +35,7 @@ function get_header_form($pageno) {
         case 0:
           $block = module_invoke('webform', 'block_view', 'client-block-74666');
           $output = render($block['content']);
+          $_SESSION['first_name'] = "";
         break;
         case 1:
           $output = '<div id="slider-container" class="slider-container">';
