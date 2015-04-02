@@ -19,6 +19,13 @@ ul a {
     @include container;
     @extend %clearfix;
     padding:12px 15px 12px;
+    //Adding this to fix on iphone
+    @include breakpoint($mobile){
+      position: absolute;
+      left: 26%;
+      top: 29%;
+      padding: 0;
+    }
   }
 
   a {
