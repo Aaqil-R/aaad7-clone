@@ -199,6 +199,24 @@
     */
 
 
+.caption-text-title-1{
+  &.title2{
+    margin-top: 10px;
+    @include breakpoint($not-all-mobile){
+	  // 768px +
+       margin-left: 186px; 
+      }
+      @include breakpoint($mobile){
+         // 768px -
+         margin-left: 100px;
+       }
+       @include breakpoint(500px){
+         margin-left: 30px; 
+       }
+     }
+}
+
+
 //WHAT IS THIS?
 /* Chrome, Safari, Opera */
 @-webkit-keyframes caption-text-titles {
