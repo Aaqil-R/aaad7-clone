@@ -185,7 +185,7 @@
 
 
   <main id="main">
-
+  <?php print $page['content']; ?>
   <?php if ($title|| $messages || $tabs || $action_links): ?>
     <div id="content-header">
 
