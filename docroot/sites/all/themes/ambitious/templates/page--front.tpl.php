@@ -185,7 +185,7 @@
 
 
   <main id="main">
-  <?php print render($page['content']); ?>
+  <?php print render($page['content']['metatags']); ?>
   <?php if ($title|| $messages || $tabs || $action_links): ?>
     <div id="content-header">
 
