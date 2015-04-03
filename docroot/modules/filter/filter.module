@@ -928,12 +928,6 @@ function filter_process_format($element) {
   $format_exists = isset($all_formats[$element['#format']]);
   $user_has_access = isset($formats[$element['#format']]);
   $user_is_admin = user_access('administer filters');
-  dpm(var_dump($format_exists), 'format_exists');
-    dpm(var_dump($user_is_admin), 'user_is_admin');
-    dpm(var_dump($user_has_access), 'user_has_access');
-    dpm($all_formats);
-    dpm($formats);
-    dpm($element['#format']);
   // If the stored format does not exist, administrators have to assign a new
   // format.
   if (!$format_exists && $user_is_admin) {
