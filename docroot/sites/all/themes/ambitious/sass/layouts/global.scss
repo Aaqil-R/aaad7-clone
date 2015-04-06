@@ -220,16 +220,17 @@ div#admin-toolbar.vertical div.admin-tab{
 			}
 			.comment-right{
 				@include span(6 of 8 last);
-			  border:2px solid $border-color;
-			  //padding:16px 26px 13px 26px;
-			  //margin:0 0 27px 112px;
-			  font-size:16px;
-			  background:$white;
-			  word-wrap: break-word;
-			  @include breakpoint($mobile){
+                border:2px solid $border-color;
+                //padding:16px 26px 13px 26px;
+                //margin:0 0 27px 112px;
+                font-size:16px;
+                background:$white;
+                word-wrap: break-word;
+                @include breakpoint($mobile){
 			    padding:15px;
 			    @include span(8 of 8);
 			  }
+              /* duplicated on topic-forum line 1178.
 			  &:before{
 			    content: "";
 			    position: absolute;
@@ -238,7 +239,7 @@ div#admin-toolbar.vertical div.admin-tab{
 			    width: 24px;
 				top: 15px;
 			    height: 32px;
-			  }
+			  }*/
 			  .links{
 			    margin-bottom: 17px;
 			  }
