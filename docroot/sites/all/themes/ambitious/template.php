@@ -1087,16 +1087,17 @@ function ambitious_get_user_comments_count($uid) {
   return 0;
 }
 function ambitious_get_node_comments_count($nid) { 
+  $node_comment = node_load($nid);
+  $node_comment = $node_comment->comment_count; 
   $query = db_select('comment', 'c');
+  $query->join('flag_counts','flg','flg.entity_id=c.cid');
   $query->condition('nid', $nid, '=');
   $query->condition('status', '1', '=');
   $query->condition('pid', '0', '=');
-  $query->addExpression('COUNT(1)', 'count');
-  $result = $query->execute();
- 
+  $query->addExpression('COUNT(1)', 'count'); 
+  $result = $query->execute();  
   if ($record = $result->fetchAssoc())
-    return $record['count'];
-   
+    return $node_comment - $record['count']; 
   return 0;
 }
 

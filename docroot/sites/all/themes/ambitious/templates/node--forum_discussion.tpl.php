@@ -10,6 +10,7 @@
 /* variables */ 
 $themeurl =  base_path().drupal_get_path('theme', 'ambitious');
 $name = strip_tags($name); 
+$not_flag_comment = ambitious_get_node_comments_count($node->nid);
 drupal_add_library('waypoints', 'waypoints');
 hide($content['comments']['comments']);
 $weeks = variable_get('autism_custom_past_week', 0);
@@ -49,7 +50,7 @@ $weeks = variable_get('autism_custom_past_week', 0);
 						<div class="footer">
                           <div class="num-holder">
 							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
-							  <span class="num"><?php print render($comment_count); ?></span>
+							  <span class="num"><?php print $not_flag_comment; ?></span>
 							  <span class="text" style="display:inherit;">replies</span>
 							</a>
 						  </div>
@@ -63,8 +64,8 @@ $weeks = variable_get('autism_custom_past_week', 0);
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   
- <h4 style="font-size:16px; margin-bottom:30px;"><?php print $node->comment_count; ?> 
-    <?php if($node->comment_count > 1){
+ <h4 style="font-size:16px; margin-bottom:30px;"><?php print $not_flag_comment; ?>
+    <?php if($not_flag_comment > 1){
       print t('Comments');
       }else{
         print t('Comment');
