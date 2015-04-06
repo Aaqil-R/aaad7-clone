@@ -13,11 +13,13 @@
 		<div class="holder">
 			
 			<div class="<?php print $classes; ?>">
+				<?php if(!empty($headerlogo)): ?>
 				<div class= "logo">
-				<a href="/" title="<?php print t('Home'); ?>" rel="home">
-					<img src="<?php print $headerlogo; ?>">
-				</a>
-			</div>
+					<a href="/" title="<?php print t('Home'); ?>" rel="home">
+						<img src="<?php print $headerlogo; ?>">
+					</a>
+				</div>
+			<?php endif; ?>
 				<?php print $content; ?>
 			</div>				  
 		</div>

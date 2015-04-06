@@ -152,7 +152,7 @@
             <?php if($captiontwo): ?>
               <?php $captiontwo_render = render($captiontwo); ?>
               <?php if(!empty($captiontwo_render)): ?>              
-                <div class="caption-text-title caption-text-title-2">
+                <div class="caption-text-title caption-text-title-1 title2">
                     <span> 
                         <?php print $captiontwo_render; ?>               
                     </span>

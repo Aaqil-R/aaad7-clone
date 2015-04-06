@@ -14,7 +14,8 @@ ul a {
   width:100%;
   min-height: 50px;
   top:0;
-  .holder {
+  display: block;
+    .holder {
     @include container;
     @extend %clearfix;
     padding:12px 15px 12px;
@@ -70,7 +71,7 @@ ul a {
 /* header styles */
 #header {
   width:100%;
-  z-index:999;
+  z-index:9999;
   position:relative;
   margin-bottom: 33px;
   .header-top {
@@ -859,8 +860,7 @@ nav {
         padding:0 11px;
       }
       @include breakpoint($mobile) {
-        float:none;
-        padding:0 15px;
+        float:none;        
         display:inline-block;
         vertical-align:top;
       }

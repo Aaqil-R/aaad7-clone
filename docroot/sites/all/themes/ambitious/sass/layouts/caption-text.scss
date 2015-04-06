@@ -37,12 +37,19 @@
                 background: $white;
                 line-height: 1.8em;
                 padding: 0.2em 0.3em;
+                box-shadow: 10px 0 0 $white, -10px 0 0 $white;
+                @include breakpoint($all-small-mobile){
+                	padding: initial;
+                }
             }
             &.caption-text-title-2 {
                 margin-left: 80px;
                 font-size: 36px;
                 font-family: $helvetica-cn;
                 display: none;
+                @include breakpoint($all-small-mobile){
+                	margin-left: 30px;
+                }
             }
         }
     }
@@ -190,6 +197,24 @@
 
 }
     */
+
+
+.caption-text-title-1{
+  &.title2{
+    margin-top: 10px;
+    @include breakpoint($not-all-mobile){
+	  // 768px +
+       margin-left: 186px; 
+      }
+      @include breakpoint($mobile){
+         // 768px -
+         margin-left: 100px;
+       }
+       @include breakpoint(500px){
+         margin-left: 30px; 
+       }
+     }
+}
 
 
 //WHAT IS THIS?

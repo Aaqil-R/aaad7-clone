@@ -521,6 +521,47 @@
     position: relative;
   }
 }
+.profile-main{
+#user-profile-form{
+  .description{
+    width: auto;
+    max-width:530px;
+    float: left;
+  }
+  fieldset{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  label{
+    position: static;
+  }
+  .field-type-text-long{
+    max-width: 520px;
+   } 
+   .password-strength{
+     float: none;
+     margin-bottom: 20px;
+     width: 100%;
+     max-width: 530px;
+   }
+   input[type=password]{
+     width: 100%;
+     max-width: 530px
+   }
+   .form-type-password.form-item-pass-pass2{
+     width: 100%;
+     max-width: 590px;
+   }
+   .field-name-field-type-of-user{
+     fieldset{
+       float: left;
+       width: 100%;
+     }
+   } 
+  }
+}
+
+
 .profile-main #user-register-form{
   label{
      top: 17px;
@@ -765,6 +806,9 @@ body .view-display-id-stream_forum_page{
       display: inherit;
     }
   }   
+  .icon-Hottopic {
+    margin-right: 70px;
+  }
   .show_hot{
     .icon-Hottopic { 
       display: inherit;
