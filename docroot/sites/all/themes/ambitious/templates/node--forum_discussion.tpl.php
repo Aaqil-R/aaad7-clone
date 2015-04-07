@@ -64,14 +64,14 @@ $weeks = variable_get('autism_custom_past_week', 0);
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   
-<h4 style="font-size:16px; margin-bottom:30px;">
+<h4 class="forumpage_title">
      <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $not_flag_comment; ?>
     <?php if($not_flag_comment > 1){
       print t('Comments');
       }else{
         print t('Comment');
       }
-    ?></h4>s
+    ?></h4>
   
   
  </div>
