@@ -63,6 +63,11 @@ function articalmig_migrate_api()
 				'class_name'=>'articalnewmigration',
 				'group_name'=>'users',
 			),
+
+			'newusers'=>array(
+				'class_name'=>'newusermigration',
+				'group_name'=>'users',
+			),
 		),
 	);
 }
