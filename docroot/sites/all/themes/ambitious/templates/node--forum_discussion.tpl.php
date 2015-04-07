@@ -58,7 +58,13 @@ $weeks = variable_get('autism_custom_past_week', 0);
 						    <em class="icon-Time"></em> 
 							Last reply by <cite><?php if($logged_in):?><a href="<?php print url('user/'.$variables['last_comment_uid']); ?>"><?php print user_load($variables['last_comment_uid'])->name;  ?></a><?php else: ?><?php print user_load($variables['last_comment_uid'])->name;  ?><?php endif; ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
 					     </div> 
-						 <div class="forum_replay"><a href="<?php print $node_url ?>#comments" class="btn btn-right" title="Reply">Reply</a> </div>
+						 <div class="forum_replay">
+						  <?php if($user->uid):?>
+						   <a href="<?php print $node_url ?>#comment-form" class="btn btn-right" title="Reply">Reply</a>
+						   <?php else:?>
+						   <a href="/user/login?destination=node/<?php print $node->nid ; ?>#comment-form" class="btn btn-right" title="Reply">Reply</a>
+						   <?php endif; ?>
+						 </div>
 					  </div>  
 					</section>   
 		<section class="comment-block">			
