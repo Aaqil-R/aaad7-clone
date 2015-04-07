@@ -71,7 +71,13 @@
 	                 </div>
 	              </footer>
 	              <!-- comment columns -->		
-	              <?php  print render($content['comments']); ?>
+	              <?php if ($user->uid) :?>
+	                <?php print render($content['comments']); ?>
+	              <?php else: ?>
+	              <section class="comment-block">
+		           <h4><a href="/user/login?destination=node/<?php print $node->nid ; ?>#comment-form" title="<?php print t('Add a new comment'); ?>"><?php print t('Add a new comment'); ?></a></h4>
+                   </section>
+                   <?php endif; ?>
 	          </article>	              
 			</section>		      
 

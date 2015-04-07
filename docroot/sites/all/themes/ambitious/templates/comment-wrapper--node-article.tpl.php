@@ -39,7 +39,7 @@
     <?php if ($content['comment_form']): ?>  
   <section class="comment-block">
 		  <h4><?php print t('Add a new comment'); ?></h4>
-      
+         
         <?php
           
           unset($content['comment_form']['subject']); // Hide subject
