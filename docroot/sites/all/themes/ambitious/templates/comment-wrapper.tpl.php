@@ -54,14 +54,13 @@
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
     
-    <h4><?php print $node->comment_count; ?> 
+    <h4><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $node->comment_count; ?> 
     <?php if($node->comment_count > 1){
       print t('Comments');
       }else{
         print t('Comment');
       }
-    ?>
-     <a href="#" title="Read our guidelines">Read our guidelines</a></h4>
+    ?></h4>
     <?php print render($title_suffix); ?>
   <?php endif; ?> 
   <ul class="comment-listing">
