@@ -1,0 +1,98 @@
+<?php
+
+<?php
+
+function userpicture_mig_menu() {
+  $items['admin/config/content/userpicture-migration'] = array(
+    'title' => 'Image Migration',
+    'description' => 'Migrate image from old site to this server',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('userpicture_move'),
+    'access arguments' => array('execute_user_pic_migration'),
+  );
+  return $items;
+}
+function userpicture_mig_permission() {
+  return array(
+    'execute_user_pic_migration' =>  array(
+      'title' => t('Execute Migration'),
+      'description' => t('user pictures.'),
+    )
+  );
+}
+
+function userpicture_move() {
+  if(variable_get('running_migration', FALSE)) {
+   $form['message'] = array('#markup' => '<p>Migration was in progress..</p>');
+  }else {
+    $form['message_submit'] = array('#type' => 'submit', '#value' => 'Run User Picture Migration');
+  }
+  return $form;
+}
+
+function image_path_move_submit($form, $form_state) {
+  $result = db_query("SELECT fUserId, fUsername, fThumbnail FROM migtbluser where fThumbnail is not null and fThumbnail <> ''");
+  $queue = DrupalQueue::get('user_image_migrate');
+  foreach($result as $record) {
+    $queue->createItem($record);
+  } 
+  variable_set('running_migration', TRUE);
+}
+
+function userpicture_mig_cron_queue_info() {
+  $queues['user_image_migrate'] = array(
+    'worker callback' => 'migrate_userpic',
+    'time' => 3000,
+  );
+
+  return $queues;
+}
+
+function userpicture_mig_cron() {
+  $state = variable_get('running_migration', FALSE);
+  if ($state) {
+     $queue = DrupalQueue::get('user_image_migrate');
+     $items = $queue->numberOfItems();
+     if ($items == 0) {
+       variable_set('running_migration', FALSE);
+     }
+  }
+}
+
+function migrate_userpic($img_info) {
+  $baseurl = 'http://drupaltheme.globalsoftlab.com/profile_image/';
+  $filename = $img_info->fThumbnail;
+  $source = $baseurl . $filename;
+  $dest = img_dest_url();
+  $dest = file_stream_wrapper_uri_normalize($dest . '/' . $filename);
+  $replace = FILE_EXISTS_REPLACE;
+  $user = user_load($img_info->fUserId+100);
+   if ($uri = file_unmanaged_copy($source, $destination, $replace)) {
+    $file = new stdClass();
+    $file->uri = $uri;
+    $file->filename = drupal_basename($uri);
+    $file->status = 0;
+    $file->filemime = file_get_mimetype($file->filename);
+    $file->filesize = filesize($source);
+    $file->uid = $user->uid;
+    // If we are replacing an existing file re-use its database record.
+    if ($replace == FILE_EXISTS_REPLACE) {
+      $existing_files = file_load_multiple(array(), array('uri' => $uri));
+      if (count($existing_files)) {
+        $existing = reset($existing_files);
+        $file->fid = $existing->fid;
+        $file->filename = $existing->filename;
+      }
+    }
+    $file = file_save($file);
+    user_save($user, array('picture' => $file));
+  }
+}
+function img_dest_url(){
+ statis $dest;
+ if (!isset($dest)){  
+  $upload_dir=variable_get('user_picture_path','pictures');
+   $dest = file_default_scheme() . '://' . $upload_dir;
+ }
+ return $dest;
+}
