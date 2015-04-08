@@ -65,7 +65,9 @@ function migrate_userpic($img_info) {
   $dest = file_stream_wrapper_uri_normalize($dest . '/' . $filename);
   $replace = FILE_EXISTS_REPLACE;
   $user = user_load($img_info->fUserId+100);
-   if ($uri = file_unmanaged_copy($source, $destination, $replace)) {
+  $cdest = file_build_uri(drupal_basename($source));
+   copy($source, $cdest);
+   if ($uri = file_unmanaged_move($cdest, $dest, $replace)) {
     $file = new stdClass();
     $file->uri = $uri;
     $file->filename = drupal_basename($uri);
