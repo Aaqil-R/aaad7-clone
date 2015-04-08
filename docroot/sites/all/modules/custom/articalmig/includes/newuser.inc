@@ -97,7 +97,7 @@ class newusermigration extends articalmigMigration {
 	
 	protected function changeuserid($value){
 		
-			$value=$value+1000;
+			$value=$value+10000;
 			return $value;
 	 }
 	 
