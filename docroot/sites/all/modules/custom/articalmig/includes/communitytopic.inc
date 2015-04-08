@@ -74,7 +74,7 @@ class communitytopicmigration extends articalmigMigration {
 	 
 	 protected function changenodeid($value){
 		
-			$value=$value+500000;
+			$value=$value+600000;
 			return $value;
 	 }
 	 

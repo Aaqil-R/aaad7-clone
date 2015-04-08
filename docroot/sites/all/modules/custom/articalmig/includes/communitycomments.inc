@@ -85,7 +85,7 @@ class communitycommentmigration extends articalmigMigration {
 	 
 	 protected function changeparentid($value){
 		
-			$value=$value+500000;
+			$value=$value+600000;
 			return $value;
 	 }
 	 
