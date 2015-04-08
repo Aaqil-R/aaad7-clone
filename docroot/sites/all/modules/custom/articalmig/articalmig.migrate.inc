@@ -68,6 +68,26 @@ function articalmig_migrate_api()
 				'class_name'=>'newusermigration',
 				'group_name'=>'users',
 			),
+
+			'finaltopic'=>array(
+				'class_name'=>'finaltopicmigration',
+				'group_name'=>'users',
+			),
+
+			'finalcomments'=>array(
+				'class_name'=>'finalcommentmigration',
+				'group_name'=>'users',
+			),
+
+			'communitytopic'=>array(
+				'class_name'=>'communitytopicmigration',
+				'group_name'=>'users',
+			),
+
+			'communitycomments'=>array(
+				'class_name'=>'communitycommentmigration',
+				'group_name'=>'users',
+			),
 		),
 	);
 }
