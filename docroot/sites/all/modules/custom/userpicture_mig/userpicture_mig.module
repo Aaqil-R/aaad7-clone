@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 function userpicture_mig_menu() {
   $items['admin/config/content/userpicture-migration'] = array(
     'title' => 'Image Migration',
@@ -30,7 +28,7 @@ function userpicture_move() {
   return $form;
 }
 
-function image_path_move_submit($form, $form_state) {
+function userpicture_move_submit($form, $form_state) {
   $result = db_query("SELECT fUserId, fUsername, fThumbnail FROM migtbluser where fThumbnail is not null and fThumbnail <> ''");
   $queue = DrupalQueue::get('user_image_migrate');
   foreach($result as $record) {
@@ -89,7 +87,7 @@ function migrate_userpic($img_info) {
   }
 }
 function img_dest_url(){
- statis $dest;
+ static $dest;
  if (!isset($dest)){  
   $upload_dir=variable_get('user_picture_path','pictures');
    $dest = file_default_scheme() . '://' . $upload_dir;
