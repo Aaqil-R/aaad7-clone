@@ -43,14 +43,14 @@ $comment_count =  abs($comment - $flaged_comments_count);
 						    <h3><?php print $title; ?></h3>
 						     <?php else :?>
 							<h3>Discussion</h3>
-							<?php endif;?>
-							<div style="margin-bottom: 20px;">
-							  <?php print flag_create_link('bookmarks', $node->nid); ?>
-							</div>
+							<?php endif;?> 
 							<?php print render($content['body']);?>		 
 						  </div>
 						</div>
 						<div class="footer">
+						<div class="flag_node">
+							  <?php print flag_create_link('bookmarks', $node->nid); ?>
+							</div>
                           <div class="num-holder">
 							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
 							  <span class="num"><?php print $comment_count; ?></span>
