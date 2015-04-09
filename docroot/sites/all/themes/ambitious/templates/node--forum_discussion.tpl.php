@@ -43,21 +43,27 @@ $location = $location->name;
 						      <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
 						      <?php endif; ?>						      
 						    </div>
-                            <cite>by <strong title="<?php print $name; ?>"> <?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>
-                            <time pubdate="pubdate"><?php print $date; ?></time>   
+                            <cite>by </br><strong title="<?php print $name; ?>"> <?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>                <time pubdate>Joined: <?php print $user_date; ?></time></br>
+                             <time pubdate>Posts: <?php print $user_count; ?></time></br> 
+                             <?php if(!empty($location)){ ?>
+                            <time>Location: <?php print $location; ?></time>
+                            <?php } ?>                                             
 						  </div>
 						  <div class="info add forum-right">
 						     <?php if(isset($title)): ?>
 						    <h3><?php print $title; ?></h3>
 						     <?php else :?>
 							<h3>Discussion</h3>
-							<?php endif;?> 
-							<?php print render($content['body']);?>
+							<?php endif;?>
+							
+							
+							<?php print render($content['body']);?>		
 							<?php if(isset($content['field_topic'])):?>								
 								<?php print render($content['field_topic']);?>
-							<?php endif; ?>	 
+							<?php endif; ?>
+								 
 						  </div>
-						</div>
+						</div> 
 						<div class="footer">
 						<div class="flag_node">
 							  <?php print flag_create_link('bookmarks', $node->nid); ?>
@@ -104,4 +110,3 @@ $location = $location->name;
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   
 <?php endif; ?>
- 
