@@ -66,6 +66,7 @@
 						  <div class="info add forum-right">
 							<h3><?php print $fields['title']->content; ?></h3>
 							<?php print $fields['body']->content; ?> 
+							<?php print $fields['topic']->content; ?>  
 						  </div>
 						</div>
 						<div class="footer">
