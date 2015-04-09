@@ -70,9 +70,7 @@ $comment_count =  abs($comment - $flaged_comments_count);
 						 </div>
 					  </div>  
 					</section>   
-		<section class="comment-block">			
- <?php print render($content['comments']['comment_form']);   ?>
-</section>   
+					
 <h4 class="forumpage_title">
      <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
     <?php if($comment_count > 1){
@@ -85,4 +83,15 @@ $comment_count =  abs($comment - $flaged_comments_count);
   
  </div>
   </div>
+  
+   <?php
+  $block = module_invoke('views', 'block_view', 'comments-comments');
+		print render($block['content']);
+   ?>
+   
+   <?php if($content['comments']['comment_form']):?>   
+		<section class="comment-block">			
+ <?php print render($content['comments']['comment_form']);   ?>
+</section>   
+<?php endif; ?>
  
