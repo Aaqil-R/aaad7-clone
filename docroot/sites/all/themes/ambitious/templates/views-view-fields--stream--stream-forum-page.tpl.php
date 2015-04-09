@@ -26,6 +26,10 @@
 ?>
 <?php
   $class = '';  
+    $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
+  $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ; 
+  $real_comment_count = abs($node_flag_comment - $node_comment) ;
+  
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
       if($commentcout > 3){
         $class = 'commentcoutmore3';
@@ -38,7 +42,7 @@
       }
       ?> 
      
- <div class="<?php print $class;  ?>"> 
+ <div class="<?php print $class;  ?>"  data-commentcount="<?php print $real_comment_count; ?>" >
 <?php foreach ($fields as $id => $field): ?> 
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>

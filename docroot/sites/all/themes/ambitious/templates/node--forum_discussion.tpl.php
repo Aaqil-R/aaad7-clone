@@ -14,6 +14,9 @@ $not_flag_comment = ambitious_get_node_comments_count($node->nid);
 drupal_add_library('waypoints', 'waypoints');
 hide($content['comments']['comments']);
 $weeks = variable_get('autism_custom_past_week', 0);
+$comment = ambitious_get_node_comments_count($node->nid);
+$flaged_comments_count = ambitious_get_node_flaged_comments_count($node->nid);
+$comment_count =  abs($comment - $flaged_comments_count);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
@@ -50,7 +53,7 @@ $weeks = variable_get('autism_custom_past_week', 0);
 						<div class="footer">
                           <div class="num-holder">
 							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
-							  <span class="num"><?php print $not_flag_comment; ?></span>
+							  <span class="num"><?php print $comment_count; ?></span>
 							  <span class="text" style="display:inherit;">replies</span>
 							</a>
 						  </div>
@@ -71,8 +74,8 @@ $weeks = variable_get('autism_custom_past_week', 0);
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   
 <h4 class="forumpage_title">
-     <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $not_flag_comment; ?>
-    <?php if($not_flag_comment > 1){
+     <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
+    <?php if($comment_count > 1){
       print t('Comments');
       }else{
         print t('Comment');
