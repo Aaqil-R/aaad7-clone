@@ -29,7 +29,7 @@ function userpicture_move() {
 }
 
 function userpicture_move_submit($form, $form_state) {
-  $result = db_query("SELECT fUserId, fUsername, fThumbnail FROM migtbluser where fThumbnail is not null and fThumbnail <> ''");
+  $result = db_query("SELECT m2.fUserId, m2.fUsername, m2.fThumbnail FROM migtbluser2 as m2 left join migtbluser as m on m.fUserId = m2.fUserId where m2.fThumbnail is not null and m2.fThumbnail <> '' and m.fUserId is Null");
   $queue = DrupalQueue::get('user_image_migrate');
   foreach($result as $record) {
     $queue->createItem($record);
@@ -64,7 +64,7 @@ function migrate_userpic($img_info) {
   $dest = img_dest_url();
   $dest = file_stream_wrapper_uri_normalize($dest . '/' . $filename);
   $replace = FILE_EXISTS_REPLACE;
-  $user = user_load($img_info->fUserId+100);
+  $user = user_load($img_info->fUserId+10000);
   $cdest = file_build_uri(drupal_basename($source));
    copy($source, $cdest);
    if ($uri = file_unmanaged_move($cdest, $dest, $replace)) {
