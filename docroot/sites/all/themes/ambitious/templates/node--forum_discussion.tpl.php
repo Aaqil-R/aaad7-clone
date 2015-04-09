@@ -44,7 +44,10 @@ $comment_count =  abs($comment - $flaged_comments_count);
 						     <?php else :?>
 							<h3>Discussion</h3>
 							<?php endif;?> 
-							<?php print render($content['body']);?>		 
+							<?php print render($content['body']);?>
+							<?php if(isset($content['field_topic'])):?>								
+								<?php print render($content['field_topic']);?>
+							<?php endif; ?>	 
 						  </div>
 						</div>
 						<div class="footer">
