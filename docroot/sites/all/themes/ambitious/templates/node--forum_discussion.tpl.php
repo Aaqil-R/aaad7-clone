@@ -17,6 +17,14 @@ $weeks = variable_get('autism_custom_past_week', 0);
 $comment = ambitious_get_node_comments_count($node->nid);
 $flaged_comments_count = ambitious_get_node_flaged_comments_count($node->nid);
 $comment_count =  abs($comment - $flaged_comments_count);
+$uid = $node->uid;
+$userinfo = user_load($uid);
+$location = $userinfo->field_location_reference['und']['0']['tid'];
+$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
+$user_count = ambitious_get_user_post_count($uid);
+
+$location = taxonomy_term_load($location);
+$location = $location->name;
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
@@ -69,8 +77,8 @@ $comment_count =  abs($comment - $flaged_comments_count);
 						   <?php endif; ?>
 						 </div>
 					  </div>  
-					</section>   
-					
+					</section>
+		
 <h4 class="forumpage_title">
      <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
     <?php if($comment_count > 1){
@@ -84,12 +92,11 @@ $comment_count =  abs($comment - $flaged_comments_count);
  </div>
   </div>
   
-   <?php
+  <?php
   $block = module_invoke('views', 'block_view', 'comments-comments');
 		print render($block['content']);
    ?>
-   
-   <?php if($content['comments']['comment_form']):?>   
+ 			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   

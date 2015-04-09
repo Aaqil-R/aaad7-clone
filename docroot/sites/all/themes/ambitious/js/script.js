@@ -58,12 +58,13 @@ Drupal.behaviors.ambitious = {
 		   });
 		
  
-    	     $(document).ready(function(){ 
-    	       $(".view-display-id-stream_forum_page .views-row").each(function(){
+    	     $(document).ready(function(){
+    	    /* $(".view-display-id-stream_forum_page .views-row").each(function(){
 		   var comment = $(this).children().data("commentcount"); 
 		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
 		   
-	    });
+	    });*/
+    	      
     	     initCustomForms(); 
 	            $('.view-display-id-stream_forum_page').mobileNav({ 
 		          hideOnClickOutside: true,
@@ -91,11 +92,11 @@ Drupal.behaviors.ambitious = {
                });  
 	    }); 
          $( document ).ajaxComplete(function() {
-         $(".view-display-id-stream_forum_page .views-row").each(function(){
+          /*$(".view-display-id-stream_forum_page .views-row").each(function(){
 		   var comment = $(this).children().data("commentcount"); 
 		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
 		   
-	    });
+	    });*/
 	      $('.view-display-id-stream_forum_page').mobileNav({
 		         hideOnClickOutside: true,
 		         menuActiveClass: 'filter-active',
@@ -148,6 +149,8 @@ Drupal.behaviors.ambitious = {
 		    $('.block-close').trigger( "click" );
 		});
 		
+
+
 
 	// ==Masonry block==//
 	var $container = $('.masonry');

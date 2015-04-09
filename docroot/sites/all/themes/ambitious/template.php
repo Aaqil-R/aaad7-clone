@@ -1123,7 +1123,7 @@ function ambitious_preprocess_flag(&$variables) {
     }
   }
 } 
-
+ 
 function ambitious_get_user_message_count($uid) {
  $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id")->fetchField();
  return $query['messageCount'];

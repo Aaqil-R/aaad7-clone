@@ -25,11 +25,12 @@
  */
 ?>
 <?php
-  $class = '';  
-    $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
-  $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ; 
-  $real_comment_count = abs($node_flag_comment - $node_comment) ;
+  $vars = get_defined_vars(); 
+  $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
+  $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ;
   
+  $real_comment_count = abs($node_flag_comment - $node_comment) ;
+  $class = '';  
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
       if($commentcout > 3){
         $class = 'commentcoutmore3';
@@ -39,21 +40,47 @@
         if ($hot_comment > 5) {
           $class .= ' show_hot';
         }
-      }
-      ?> 
-     
- <div class="<?php print $class;  ?>"  data-commentcount="<?php print $real_comment_count; ?>" >
-<?php foreach ($fields as $id => $field): ?> 
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
-  
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    
-      <?php print $field->content; ?>
-  
-  <?php print $field->wrapper_suffix; ?> 
-  
-<?php endforeach; ?>
+      }   
+       $usid = strip_tags($fields['uid']->raw);
+       $userpostcount = ambitious_get_user_post_count($usid);
+       
+      ?>  
+ <div class="<?php print $class;  ?>" >
+ 
+ <section style="width:100%;" class="post">  
+						<em class="icon-Hottopic forum-icon"></em>
+						<em class="icon-Featured forum-icon"></em>
+                        <div class="forum-text">						
+						  <div class="forum-left"> 
+						    <div class="image-holder">	
+								<?php print $fields['picture']->content; ?>
+						    </div>
+                            <cite>by </br><strong><?php print $fields['name']->content; ?></strong></cite>
+                            <time pubdate>Joined: <?php print $fields['created_1']->content; ?></time></br>
+                             <time pubdate>Posts: <?php print $userpostcount; ?></time></br>
+                             <?php $fields['field_location_reference']->content = strip_tags($fields['field_location_reference']->content); ?> 
+                             <?php if(!empty($fields['field_location_reference']->content)){ ?>
+                            <time>Location:<?php print $fields['field_location_reference']->content; ?></time>
+                            <?php } ?>                                            
+						  </div>
+						  <div class="info add forum-right">
+							<h3><?php print $fields['title']->content; ?></h3>
+							<?php print $fields['body']->content; ?> 
+						  </div>
+						</div>
+						<div class="footer">
+                          <div class="num-holder">
+							<a href="<?php print $fields['path']->content; ?>" title="replies" class="open">
+							  <span class="num"><?php print $real_comment_count; ?></span>
+							  <span class="text" style="display: inherit;">replies</span>
+							</a>
+						  </div>
+						  <div class="times">
+						    <em class="icon-Time"></em> 
+							Last reply by <cite><?php print $fields['last_comment_name']->content; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $fields['last_comment_timestamp']->content; ?></time> 
+					     </div>  
+						<?php print $fields['comments_link']->content; ?>
+					  </div>  
+					</section> 
+ 
   </div> 
