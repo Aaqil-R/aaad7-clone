@@ -48,7 +48,7 @@
        $usid = strip_tags($fields['uid']->raw);
        $userpostcount = ambitious_get_user_post_count($usid);
        
-      pirnt_r($sticky->sticky);
+      print($sticky->sticky);
       ?>  
       
  <div class="<?php print $class; if($sticky->sticky == 1){ ?> lessthen3 <?php } ?>" >
