@@ -910,7 +910,7 @@ div.ctools-modal-content .modal-content{
 
 //HIDING THE RANDOM WHITEBOX that appears on topic pages on mobile FFS!
 
-#block-views-stream-my-voice-blog .view-filters mobile-view {
+#block-views-stream-my-voice-blog .view-filters .mobile-view {
     display: none;
 }
 .forumpage_title{
@@ -929,4 +929,14 @@ div.ctools-modal-content .modal-content{
   .flag-message{
     visibility: hidden;
   }
+}
+
+// Colorbox login
+#modalContent{
+  z-index: 9999 !important;
+
+}
+
+#modalBackdrop{
+  z-index: 9999 !important;
 }

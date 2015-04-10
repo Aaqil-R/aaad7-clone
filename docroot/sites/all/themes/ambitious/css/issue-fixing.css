@@ -1182,7 +1182,7 @@ div.ctools-modal-content .modal-content {
 }
 
 /* line 913, ../sass/issue-fixing.scss */
-#block-views-stream-my-voice-blog .view-filters mobile-view {
+#block-views-stream-my-voice-blog .view-filters .mobile-view {
   display: none;
 }
 
@@ -1206,4 +1206,14 @@ div.ctools-modal-content .modal-content {
 /* line 929, ../sass/issue-fixing.scss */
 .node-type-forum-discussion .posts-columns.columns-full .row .footer .flag-message {
   visibility: hidden;
+}
+
+/* line 935, ../sass/issue-fixing.scss */
+#modalContent {
+  z-index: 9999 !important;
+}
+
+/* line 940, ../sass/issue-fixing.scss */
+#modalBackdrop {
+  z-index: 9999 !important;
 }
