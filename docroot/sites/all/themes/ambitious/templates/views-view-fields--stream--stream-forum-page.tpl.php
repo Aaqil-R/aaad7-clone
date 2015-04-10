@@ -51,7 +51,7 @@
       print($sticky->sticky);
       ?>  
       
- <div class="<?php print $class; if($sticky->sticky == 1){ ?> lessthen3 <?php } ?>" >
+ <div class="<?php print $class; if($sticky->sticky == 1){ ?> rowlessthen3 <?php } ?>" >
  
  <section style="width:100%;" class="post">  
 						<em class="icon-Hottopic forum-icon"></em>
