@@ -46,9 +46,7 @@
         }
       }   
        $usid = strip_tags($fields['uid']->raw);
-       $userpostcount = ambitious_get_user_post_count($usid);
-       
-      print($sticky->sticky);
+       $userpostcount = ambitious_get_user_post_count($usid); 
       ?>  
       
  <div class="<?php print $class; if($sticky->sticky == 1){ ?> rowlessthen3 <?php } ?>" >
