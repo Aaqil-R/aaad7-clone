@@ -26,6 +26,9 @@
 ?>
 <?php
   $vars = get_defined_vars(); 
+  $sticky = node_load($fields['nid']->raw);
+  $sticky = $stick->sticky;
+  
   $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
   $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ;
   
@@ -47,7 +50,7 @@
       ?>  
  <div class="<?php print $class;  ?>" >
  
- <section style="width:100%;" class="post">  
+ <section style="width:100%;" data-value="<?php print $sticky; ?>" class="post">  
 						<em class="icon-Hottopic forum-icon"></em>
 						<em class="icon-Featured forum-icon"></em>
                         <div class="forum-text">						
@@ -76,10 +79,12 @@
 							  <span class="text" style="display: inherit;">replies</span>
 							</a>
 						  </div>
+						  <?php if($real_comment_count > 0): ?>
 						  <div class="times">
 						    <em class="icon-Time"></em> 
 							Last reply by <cite><?php print $fields['last_comment_name']->content; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $fields['last_comment_timestamp']->content; ?></time> 
-					     </div>  
+					     </div> 
+					     <?php endif; ?> 
 						<?php print $fields['comments_link']->content; ?>
 					  </div>  
 					</section> 

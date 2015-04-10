@@ -76,10 +76,12 @@ $location = $location->name;
 							  <span class="text" style="display:inherit;">replies</span>
 							</a>
 						  </div>
+						  <?php if($comment_count > 0):?>
 						  <div class="times">
 						    <em class="icon-Time"></em> 
 							Last reply by <cite><?php if($logged_in):?><a href="<?php print url('user/'.$variables['last_comment_uid']); ?>"><?php print user_load($variables['last_comment_uid'])->name;  ?></a><?php else: ?><?php print user_load($variables['last_comment_uid'])->name;  ?><?php endif; ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
 					     </div> 
+					     <?php endif; ?>
 						 <div class="forum_replay">
 						  <?php if($user->uid):?>
 						   <a href="<?php print $node_url ?>#comment-form" class="btn btn-right" title="Reply">Reply</a>
