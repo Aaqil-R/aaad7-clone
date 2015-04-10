@@ -60,8 +60,10 @@ $location = $location->name;
 							
 								 
 						  </div>
-						  <?php if(isset($content['field_topic'])):?>								
+						  <?php if(isset($content['field_topic'])):?>	
+						  <div class="topic_section">
 								<?php print render($content['field_topic']);?>
+								</div>
 							<?php endif; ?>
 						</div> 
 						<div class="footer">
