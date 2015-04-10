@@ -217,9 +217,17 @@ Drupal.behaviors.ambitious = {
 		  	window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
             e.preventDefault();	
 		});
+
+		// Placeholders for login box
+		$('.form-item-name input.form-text').attr("placeholder", "Username*");
+		$('.not-logged-in #user-login input[type="password"]').attr("placeholder", "Password*");
 	  });
 }
 };
+
+
+
+
 //share this buttons - this snippet help to build the share button on ajax load
 
  Drupal.behaviors.osShareThis = {
