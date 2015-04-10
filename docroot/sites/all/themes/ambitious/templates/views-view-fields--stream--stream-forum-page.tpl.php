@@ -26,16 +26,14 @@
 ?>
 <?php
   $vars = get_defined_vars(); 
-  $sticky = node_load($fields['nid']->raw);
-  dpm($sticky);
-  
+  $sticky = node_load($fields['nid']->raw); 
   $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
   $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ;
   
   $real_comment_count = abs($node_flag_comment - $node_comment) ;
   $class = '';  
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
-      if($commentcout > 3){
+      if($sticky->sticky == 1){
         $class = 'commentcoutmore3';
       }
       if (module_exists('autism_custom')) {
