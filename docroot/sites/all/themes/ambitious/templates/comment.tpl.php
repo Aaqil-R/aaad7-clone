@@ -63,7 +63,7 @@
     global $user; 
 ?>
 	
-<li class="<?php print $classes; ?>">
+<div class="<?php print $classes; ?>">
 			   <div class="comment-left">
 			     <div class="comment-img-holder">
 				   <?php print $picture ?>
@@ -97,4 +97,4 @@
 					   // print $share_button;
 					    ?> 
 			   </div>  
-			 </li> 
+			 </div> 
