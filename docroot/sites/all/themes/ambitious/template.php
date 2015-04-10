@@ -1110,19 +1110,6 @@ function ambitious_get_node_flaged_comments_count($nid) {
     return $record['count']; 
   return 0;
 }
-
-function ambitious_preprocess_flag(&$variables) {  
-  if($variables['flag_name_css'] == 'bookmarks'){  
-     $variables['flag']->flag_message = '';
-     $variables['flag']->unflag_message = '';
-    if($variables['status'] == 'flagged'){
-       $variables['link_text'] = "Unflag this item";
-    }
-    else{
-      $variables['link_text'] = "Flag discussion as innappropriate";
-    }
-  }
-} 
  
 function ambitious_get_user_message_count($uid) {
  $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id")->fetchField();

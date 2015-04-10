@@ -54,18 +54,20 @@ $location = $location->name;
 						    <h3><?php print $title; ?></h3>
 						     <?php else :?>
 							<h3>Discussion</h3>
-							<?php endif;?>
-							
+							<?php endif;?> 
 							
 							<?php print render($content['body']);?>		
-							<?php if(isset($content['field_topic'])):?>								
-								<?php print render($content['field_topic']);?>
-							<?php endif; ?>
+							
 								 
 						  </div>
+						  <?php if(isset($content['field_topic'])):?>								
+								<?php print render($content['field_topic']);?>
+							<?php endif; ?>
 						</div> 
 						<div class="footer">
 						<div class="flag_node">
+							  <?php print flag_create_link('flags', $node->nid); ?>
+							  </br>
 							  <?php print flag_create_link('bookmarks', $node->nid); ?>
 							</div>
                           <div class="num-holder">
