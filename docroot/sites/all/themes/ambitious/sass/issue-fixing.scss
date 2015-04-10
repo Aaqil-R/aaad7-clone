@@ -964,3 +964,8 @@ div.ctools-modal-content .modal-content{
 #user-register-form .form-item label{
   display: none !important;
 }
+
+//hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
+page-taxonomy.section-topics {
+    .forumpage_title {display: none;}
+}
