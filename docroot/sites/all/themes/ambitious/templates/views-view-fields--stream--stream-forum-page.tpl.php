@@ -33,9 +33,12 @@
   $real_comment_count = abs($node_flag_comment - $node_comment) ;
   $class = '';  
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
-      if($sticky->sticky == 1){
+      if($commentcout > 3){
         $class = 'commentcoutmore3';
       }
+     
+      
+      
       if (module_exists('autism_custom')) {
         $hot_comment = getcommentcount_past2week($fields['nid']->raw);
         if ($hot_comment > 5) {
@@ -45,8 +48,9 @@
        $usid = strip_tags($fields['uid']->raw);
        $userpostcount = ambitious_get_user_post_count($usid);
        
+       
       ?>  
- <div class="<?php print $class;  ?>" >
+ <div class="<?php print $class; if($sticky == 1){ ?> lessthen3 <?php } ?>" >
  
  <section style="width:100%;" class="post">  
 						<em class="icon-Hottopic forum-icon"></em>

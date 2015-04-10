@@ -14,9 +14,9 @@
 <?php foreach ($rows as $id => $row):?>
 <?php
    $styleclass = '';
-   if($id < 3 && $view->query->pager->current_page === 0){
+   /*if($id < 3 && $view->query->pager->current_page === 0){
         $styleclass = 'lessthen3';
-   } 
+   } */
    
 ?> 
 <?php /* if($id == 3 && $view->query->pager->current_page === 0){
