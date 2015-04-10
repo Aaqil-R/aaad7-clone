@@ -80,7 +80,7 @@
 							</a>
 						  </div>
 						 
-						  <div class="times">
+						  <div class="times" sytle="<?php if($real_comment_count > 0){?> display:none; <?php}; ?>">
 						    <em class="icon-Time"></em> 
 							Last reply by <cite><?php print $fields['last_comment_name']->content; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $fields['last_comment_timestamp']->content; ?></time> 
 					     </div>  
