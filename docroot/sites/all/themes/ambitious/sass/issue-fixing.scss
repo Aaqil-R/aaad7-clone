@@ -974,3 +974,22 @@ div.ctools-modal-content .modal-content{
 fieldset.group-hidden {
     display: none;
 }
+.section-node-add {
+    .banner_text_main, .vertical-tabs {
+        display: none;
+    }
+    .node-forum_discussion-form {
+        background: white;
+        padding: 1.5em;
+        margin-bottom: 3em;
+        border: 1px solid $border-color;
+        clear: both;
+        fieldset {
+            float: none;
+        }
+        .description {
+            width: auto;
+            float: none;
+        }
+    }
+}
