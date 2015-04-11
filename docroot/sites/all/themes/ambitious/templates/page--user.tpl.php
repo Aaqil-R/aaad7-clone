@@ -144,18 +144,19 @@
 <?php endif; ?>
 <main id="main" role="main"> 
 			<nav id="sidebar">
-			     <?php if($user->uid){?>
+			     <?php if($user->uid OR $page['content']['system_main']['#account']->uid) {?>
 			     <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
-					<li><a href="/user/<?php print $user->uid; ?>/edit">Edit profile</a></li>
-					<li><a href="/user/<?php print $user->uid; ?>/edit">Reset password</a></li>
+					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Edit profile</a></li>
+					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Reset password</a></li>
 				</ul>
 				<?php else: ?>
 				<ul>
 					<li><a href="/user" class="active">User profile</a></li>
 			     </ul>
 			     <?php endif; ?>
+                
 			     <?php } else {
 			         print render($tabs);
 			       }
@@ -174,7 +175,6 @@
 						    <?php endif; ?>
 						   <?php endif; ?>
 						   <?php if(!empty($page['content']['system_main']['#account']->created)):?>
-						    
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
 		                	</span> 
