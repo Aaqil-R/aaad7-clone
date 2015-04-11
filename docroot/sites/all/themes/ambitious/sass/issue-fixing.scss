@@ -993,7 +993,12 @@ fieldset.group-hidden {
         }
         label {
             font-size: 2em;
+            &.option {font-size: 1em;}
         }
+        .filter-guidelines {
+            padding: 0;
+        }
+        .filter-help {padding: 0;float: none; text-align: center;}
         input {max-width: 100%;}
         .form-action {margin-top:0.5em;}
     }
