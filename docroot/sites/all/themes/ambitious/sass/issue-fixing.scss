@@ -975,7 +975,7 @@ fieldset.group-hidden {
     display: none;
 }
 .section-node-add {
-    .banner_text_main, .vertical-tabs {
+    .block-easy-breadcrumb-easy-breadcrumb, .vertical-tabs {
         display: none;
     }
     .node-forum_discussion-form {
@@ -993,8 +993,11 @@ fieldset.group-hidden {
         }
         label {
             font-size: 2em;
-            &.option {font-size: 1em;}
+            margin-bottom: 0.2em;
+            margin-top: 0.5em;
+            &.option {font-size: 1em;margin:0;}
         }
+        .form-item-title label {margin-top: 0;}
         .filter-guidelines {
             padding: 0;
         }
