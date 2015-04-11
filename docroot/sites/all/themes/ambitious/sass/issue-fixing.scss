@@ -517,7 +517,7 @@
   position: relative;
   a{
     float: left;
-    width: 50px;
+    width: 50px;//WHAT IS THIS FOR?? IT'S MESSING UP THE REQUEST PASSWORD LINK.
     position: relative;
   }
 }
@@ -968,4 +968,9 @@ div.ctools-modal-content .modal-content{
 //hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
 .page-taxonomy.section-topics {
     .forumpage_title {display: none;}
+}
+
+//HACK to hide unwanted form fields - profile and discussion page. 
+fieldset .group-hidden {
+    display: none;
 }
