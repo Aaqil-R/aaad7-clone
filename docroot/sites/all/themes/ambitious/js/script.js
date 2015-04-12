@@ -155,9 +155,9 @@ Drupal.behaviors.ambitious = {
 	// ==Masonry block==//
 	var $container = $('.card-stream');
 	
-	if ($container.masonry != undefined) {
+	if ($container.card-stream != undefined) {
 	  // initialize
-	  $container.masonry({
+	  $container..card-stream({
 	  //columnWidth: 100,
 	    "itemSelector": ".post",
         "columnWidth": ".post",
