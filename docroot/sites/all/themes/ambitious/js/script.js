@@ -153,16 +153,14 @@ Drupal.behaviors.ambitious = {
 
 
 	// ==Masonry block==//
-	/*var $container = $('.masonry');
+	var $container = $('.card-stream');
 	
 	if ($container.masonry != undefined) {
 	  // initialize
 	  $container.masonry({
 	  //columnWidth: 100,
-	    itemSelector: '.masonry-brick'
-          columnWidth: function( containerWidth ) {
-            return containerWidth / 5;
-          }
+	    itemSelector: ".post"
+        columnWidth: ".post"
 	  }); 
 	   
 	}*/
