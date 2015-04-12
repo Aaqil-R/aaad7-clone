@@ -153,15 +153,28 @@ Drupal.behaviors.ambitious = {
 
 
 	// ==Masonry block==//
+      
 	//var $container = $('.masonary');
+	/*
+    // ==Masonry block==//
+	var $container = $('.masonry');
 	
+	if ($container.masonry != undefined) {
+	  // initialize
+	  $container.masonry({
+	  //columnWidth: 100,
+	    itemSelector: '.masonry-brick'
+	  }); 
+	   
+	}
+    
 	$('.card-stream').masonry ({
 	  //columnWidth: 100,
 	    "itemSelector": ".post",
         "columnWidth": ".post",
         "percentPosition": true
 	  }); 
-
+*/
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
 	      var Uautism = $('.understanding-autism');

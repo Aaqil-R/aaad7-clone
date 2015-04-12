@@ -6,8 +6,9 @@
 
 
 .card-stream {
-  @include container;
-
+    @include container;
+    
+    
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper
     background: transparent;
@@ -25,8 +26,16 @@
             padding: 13px 0 0 0;
         }
     }
+    @include breakpoint (min-width $large-mobile) {
+        @include columns(2);
+        @include column-gap (0px);
+        width: 100%;  
+    }
+  }
+    /*
     @include breakpoint(min-width $large-mobile){
-        @include span(6 of 12 no-gutter);
+        
+        //@include span(6 of 12 no-gutter);
         .views-field {
             margin: 0 2% 30px 2%;
         }
@@ -41,6 +50,8 @@
             @include span(4 of 12 no-gutter);
         }
     }
+    */
+    
 	  //width;
       //	padding: 20px 21px;
 		//	position: relative;
