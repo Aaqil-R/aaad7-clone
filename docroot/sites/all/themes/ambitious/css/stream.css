@@ -391,18 +391,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   		font-size:12px;
 	}
 
-  }  /*
-    //refactor to remove this and make it a home-stream only modifier and then update views
-  .views-row:nth-child(1){
-	background:none;
-	padding:0;
-	border:none;
-	@include box-shadow(0px 0px 0px rgba(0,0,0,0));
-  }
-  .btn{
-	padding: 12px 19px;
-  }
-    */
+  }  */
+}
+/* line 46, ../sass/stream.scss */
+.home-stream .views-row:nth-child(1) {
+  background: none;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px transparent;
+}
+/* line 52, ../sass/stream.scss */
+.home-stream .btn {
+  padding: 12px 19px;
 }
 
 /*
