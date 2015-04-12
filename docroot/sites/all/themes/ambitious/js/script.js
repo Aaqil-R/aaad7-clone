@@ -163,7 +163,9 @@ Drupal.behaviors.ambitious = {
         columnWidth: ".post"
 	  }); 
 	   
-	}*/
+	} else {
+        console.log ('masonary fail');
+    }*/
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
