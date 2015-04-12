@@ -153,20 +153,14 @@ Drupal.behaviors.ambitious = {
 
 
 	// ==Masonry block==//
-	var $container = $('.masonary');
+	//var $container = $('.masonary');
 	
-	if ($container.masonary != undefined) {
-	  // initialize
-	  $container.masonary({
+	$('.masonary').masonary({
 	  //columnWidth: 100,
 	    "itemSelector": ".post",
         "columnWidth": ".post",
         "percentPosition": true
 	  }); 
-	   
-	} else {
-        console.log ('masonary fail');
-    }
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
