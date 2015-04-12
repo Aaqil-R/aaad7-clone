@@ -442,20 +442,26 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 34, ../sass/stream.scss */
+@media (min-width: 480px) {
+  /* line 28, ../sass/stream.scss */
+  .card-stream .views-row.post .views-field {
+    margin: 0 2% 30px;
+  }
+}
+/* line 37, ../sass/stream.scss */
 .card-stream .views-row.post .views-field .info {
   padding: 13px 0 0 0;
 }
-/* line 84, ../sass/stream.scss */
+/* line 87, ../sass/stream.scss */
 .card-stream .footer-text {
   font-size: 12px;
 }
-/* line 87, ../sass/stream.scss */
+/* line 90, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 92, ../sass/stream.scss */
+/* line 95, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -481,7 +487,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       }
   }*/
 }
-/* line 118, ../sass/stream.scss */
+/* line 121, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -505,33 +511,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 146, ../sass/stream.scss */
+/* line 149, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 151, ../sass/stream.scss */
+/* line 154, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 154, ../sass/stream.scss */
+  /* line 157, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 162, ../sass/stream.scss */
+/* line 165, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 166, ../sass/stream.scss */
+/* line 169, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 169, ../sass/stream.scss */
+/* line 172, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
