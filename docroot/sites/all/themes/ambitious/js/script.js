@@ -157,7 +157,7 @@ Drupal.behaviors.ambitious = {
 	
 	if ($container.card-stream != undefined) {
 	  // initialize
-	  $container..card-stream({
+	  $container.card-stream({
 	  //columnWidth: 100,
 	    "itemSelector": ".post",
         "columnWidth": ".post",
