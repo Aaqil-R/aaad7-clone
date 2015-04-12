@@ -155,7 +155,7 @@ Drupal.behaviors.ambitious = {
 	// ==Masonry block==//
 	//var $container = $('.masonary');
 	
-	$('.masonary').masonary({
+	$('.card-stream').masonry ({
 	  //columnWidth: 100,
 	    "itemSelector": ".post",
         "columnWidth": ".post",
