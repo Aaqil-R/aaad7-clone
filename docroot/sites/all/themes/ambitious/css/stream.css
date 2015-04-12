@@ -413,6 +413,9 @@ body > .jcf-select-drop.jcf-drop-flipped {
     -moz-column-gap: 0px;
     -webkit-column-gap: 0px;
     column-gap: 0px;
+    -moz-page-break-inside: auto;
+    -webkit-column-break-inside: auto;
+    break-inside: auto;
     width: 100%;
   }
 }
@@ -424,7 +427,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     columns: 3;
   }
 }
-/* line 21, ../sass/stream.scss */
+/* line 22, ../sass/stream.scss */
 .card-stream .views-row.post {
   background: transparent;
   margin: 0;
@@ -433,7 +436,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 28, ../sass/stream.scss */
+/* line 29, ../sass/stream.scss */
 .card-stream .views-row.post .views-field {
   padding: 20px 21px;
   margin: 0 0 30px;
@@ -443,25 +446,25 @@ body > .jcf-select-drop.jcf-drop-flipped {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 480px) {
-  /* line 28, ../sass/stream.scss */
+  /* line 29, ../sass/stream.scss */
   .card-stream .views-row.post .views-field {
     margin: 0 2% 30px;
   }
 }
-/* line 37, ../sass/stream.scss */
+/* line 38, ../sass/stream.scss */
 .card-stream .views-row.post .views-field .info {
   padding: 13px 0 0 0;
 }
-/* line 87, ../sass/stream.scss */
+/* line 88, ../sass/stream.scss */
 .card-stream .footer-text {
   font-size: 12px;
 }
-/* line 90, ../sass/stream.scss */
+/* line 91, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 95, ../sass/stream.scss */
+/* line 96, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -487,7 +490,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       }
   }*/
 }
-/* line 121, ../sass/stream.scss */
+/* line 122, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -511,33 +514,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 149, ../sass/stream.scss */
+/* line 150, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 154, ../sass/stream.scss */
+/* line 155, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 157, ../sass/stream.scss */
+  /* line 158, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 165, ../sass/stream.scss */
+/* line 166, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 169, ../sass/stream.scss */
+/* line 170, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 172, ../sass/stream.scss */
+/* line 173, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
