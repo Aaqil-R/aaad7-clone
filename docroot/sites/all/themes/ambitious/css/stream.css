@@ -366,6 +366,25 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .card-stream {
   margin: 0 auto;
   max-width: 1080px;
+  /*
+  @include breakpoint(min-width $large-mobile){
+      
+      //@include span(6 of 12 no-gutter);
+      .views-field {
+          margin: 0 2% 30px 2%;
+      }
+  }
+  @include breakpoint(min-width $tablet-small){
+      //@include remove last;
+      @include span(4 of 12 no-gutter);
+  }
+}
+  @include breakpoint(min-width $tablet-small){
+      .view-header {
+          @include span(4 of 12 no-gutter);
+      }
+  }
+  */
   	/*@include breakpoint(min-width $tablet-small){
   	  //width;
         &:nth-of-type(1n) {
@@ -385,16 +404,37 @@ body > .jcf-select-drop.jcf-drop-flipped {
         }
   	}*/
 }
-/* line 11, ../sass/stream.scss */
-.card-stream .views-row {
-  /*background: transparent;
+@media (min-width: 480px) {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .view-content {
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-gap: 0px;
+    column-gap: 0px;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .view-content {
+    -moz-columns: 3;
+    -webkit-columns: 3;
+    columns: 3;
+  }
+}
+/* line 21, ../sass/stream.scss */
+.card-stream .views-row.post {
+  background: transparent;
   margin: 0;
   padding: 0;
   border: none;
-  @include box-shadow(none);*/
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
-/* line 18, ../sass/stream.scss */
-.card-stream .views-row .views-field {
+/* line 28, ../sass/stream.scss */
+.card-stream .views-row.post .views-field {
   padding: 20px 21px;
   margin: 0 0 30px;
   background: #ffffff;
@@ -402,37 +442,20 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 767px) {
-  /* line 11, ../sass/stream.scss */
-  .card-stream .views-row {
-    width: 32.20339%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-  /* line 27, ../sass/stream.scss */
-  .card-stream .views-row:nth-of-type(3n+1) {
-    float: right;
-    margin-right: 0;
-  }
+/* line 34, ../sass/stream.scss */
+.card-stream .views-row.post .views-field .info {
+  padding: 13px 0 0 0;
 }
-@media (min-width: 767px) {
-  /* line 33, ../sass/stream.scss */
-  .card-stream .view-header {
-    width: 32.20339%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-}
-/* line 62, ../sass/stream.scss */
+/* line 84, ../sass/stream.scss */
 .card-stream .footer-text {
   font-size: 12px;
 }
-/* line 65, ../sass/stream.scss */
+/* line 87, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 70, ../sass/stream.scss */
+/* line 92, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -458,7 +481,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       }
   }*/
 }
-/* line 96, ../sass/stream.scss */
+/* line 118, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -482,33 +505,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 124, ../sass/stream.scss */
+/* line 146, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 129, ../sass/stream.scss */
+/* line 151, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 132, ../sass/stream.scss */
+  /* line 154, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 140, ../sass/stream.scss */
+/* line 162, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 144, ../sass/stream.scss */
+/* line 166, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 147, ../sass/stream.scss */
+/* line 169, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
