@@ -153,16 +153,19 @@ Drupal.behaviors.ambitious = {
 
 
 	// ==Masonry block==//
-	var $container = $('.masonry');
+	/*var $container = $('.masonry');
 	
 	if ($container.masonry != undefined) {
 	  // initialize
 	  $container.masonry({
 	  //columnWidth: 100,
 	    itemSelector: '.masonry-brick'
+          columnWidth: function( containerWidth ) {
+            return containerWidth / 5;
+          }
 	  }); 
 	   
-	}
+	}*/
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
