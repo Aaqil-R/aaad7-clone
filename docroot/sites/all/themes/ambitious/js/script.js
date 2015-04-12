@@ -159,8 +159,9 @@ Drupal.behaviors.ambitious = {
 	  // initialize
 	  $container.masonry({
 	  //columnWidth: 100,
-	    itemSelector: ".post"
-        columnWidth: ".post"
+	    "itemSelector": ".post",
+        "columnWidth": ".post",
+        "percentPosition": true
 	  }); 
 	   
 	} else {
