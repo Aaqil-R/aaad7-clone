@@ -9,6 +9,11 @@
     @include container;
     
     
+    @include breakpoint (min-width $large-mobile) {
+        @include columns(2);
+        @include column-gap (0px);
+        width: 100%;  
+    }
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper
     background: transparent;
@@ -25,11 +30,6 @@
         .info {
             padding: 13px 0 0 0;
         }
-    }
-    @include breakpoint (min-width $large-mobile) {
-        @include columns(2);
-        @include column-gap (0px);
-        width: 100%;  
     }
   }
     /*
