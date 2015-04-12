@@ -4,6 +4,28 @@
 
 // Home page Stream block
 
+
+.card-stream {
+  @include container;
+
+  .post{
+    //the reason this doesn't work is you're not setting last on the final row. HFC
+	
+
+	@include breakpoint(min-width $tablet){
+	  @include span(4 of 12 inside);
+	}
+
+	.footer-text{
+  		font-size:12px;
+	}
+
+  }  
+  .btn{
+	padding: 12px 19px;
+  }
+}
+
 .home-stream {
    /*@include container;
 
@@ -33,27 +55,8 @@
 
 }
 
-.card-stream {
-	 @include container;
 
-  .post{
-	@include span(4 of 13);
-
-	@include breakpoint($mobile){
-	  @include span(13 of 13);
-	}
-
-	.footer-text{
-  		font-size:12px;
-	}
-
-  }  
-  .btn{
-	padding: 12px 19px;
-  }
-}
-
-// understanding autism page Stream block
+// understanding autism page Stream block WHHHHHY!?
 .understanding-autism{
 
   .post{

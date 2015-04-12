@@ -362,7 +362,30 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 7, ../sass/stream.scss */
+/* line 8, ../sass/stream.scss */
+.card-stream {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+@media (min-width: 990px) {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .post {
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+/* line 19, ../sass/stream.scss */
+.card-stream .post .footer-text {
+  font-size: 12px;
+}
+/* line 24, ../sass/stream.scss */
+.card-stream .btn {
+  padding: 12px 19px;
+}
+
+/* line 29, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -391,43 +414,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
     */
 }
 
-/* line 36, ../sass/stream.scss */
-.card-stream {
-  margin: 0 auto;
-  max-width: 1080px;
-}
-/* line 39, ../sass/stream.scss */
-.card-stream .post {
-  width: 29.6875%;
-  float: left;
-  margin-right: 1.5625%;
-}
-@media (max-width: 767px) {
-  /* line 39, ../sass/stream.scss */
-  .card-stream .post {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-/* line 46, ../sass/stream.scss */
-.card-stream .post .footer-text {
-  font-size: 12px;
-}
-/* line 51, ../sass/stream.scss */
-.card-stream .btn {
-  padding: 12px 19px;
-}
-
-/* line 59, ../sass/stream.scss */
+/* line 62, ../sass/stream.scss */
 .understanding-autism .post {
   width: 29.6875%;
   float: left;
   margin-right: 1.5625%;
 }
 @media (max-width: 767px) {
-  /* line 59, ../sass/stream.scss */
+  /* line 62, ../sass/stream.scss */
   .understanding-autism .post {
     width: 100%;
     float: left;
@@ -435,38 +429,38 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-right: 0;
   }
 }
-/* line 69, ../sass/stream.scss */
+/* line 72, ../sass/stream.scss */
 .understanding-autism .btn {
   padding: 12px 19px;
 }
 
-/* line 75, ../sass/stream.scss */
+/* line 78, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 80, ../sass/stream.scss */
+/* line 83, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 83, ../sass/stream.scss */
+  /* line 86, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 91, ../sass/stream.scss */
+/* line 94, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 95, ../sass/stream.scss */
+/* line 98, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 98, ../sass/stream.scss */
+/* line 101, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
