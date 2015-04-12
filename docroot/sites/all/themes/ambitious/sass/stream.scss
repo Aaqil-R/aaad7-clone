@@ -9,9 +9,9 @@
   @include container;
 
   .post{
-    //the reason this doesn't work is you're not setting last on the final row. HFC
-	
-
+    //the reason this didn't work is you're not setting last on the final row. HFC
+    background: transparent;
+    border: none;
 	@include breakpoint(min-width $tablet){
 	  //@include span(4 of 12 inside);
 	}
