@@ -8,11 +8,15 @@
 .card-stream {
     @include container;
     
-    
-    @include breakpoint (min-width $large-mobile) {
-        @include columns(2);
-        @include column-gap (0px);
-        width: 100%;  
+    .view-content {
+        @include breakpoint (min-width $large-mobile) {
+            @include columns(2);
+            @include column-gap (0px);
+            width: 100%;  
+        }
+        @include breakpoint (min-width $tablet-small) {
+            @include columns(3);
+        }
     }
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper

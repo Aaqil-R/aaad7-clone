@@ -405,8 +405,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
   	}*/
 }
 @media (min-width: 480px) {
-  /* line 8, ../sass/stream.scss */
-  .card-stream {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .view-content {
     -moz-columns: 2;
     -webkit-columns: 2;
     columns: 2;
@@ -416,7 +416,15 @@ body > .jcf-select-drop.jcf-drop-flipped {
     width: 100%;
   }
 }
-/* line 17, ../sass/stream.scss */
+@media (min-width: 767px) {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .view-content {
+    -moz-columns: 3;
+    -webkit-columns: 3;
+    columns: 3;
+  }
+}
+/* line 21, ../sass/stream.scss */
 .card-stream .views-row.post {
   background: transparent;
   margin: 0;
@@ -425,7 +433,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 24, ../sass/stream.scss */
+/* line 28, ../sass/stream.scss */
 .card-stream .views-row.post .views-field {
   padding: 20px 21px;
   margin: 0 0 30px;
@@ -434,20 +442,20 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 30, ../sass/stream.scss */
+/* line 34, ../sass/stream.scss */
 .card-stream .views-row.post .views-field .info {
   padding: 13px 0 0 0;
 }
-/* line 80, ../sass/stream.scss */
+/* line 84, ../sass/stream.scss */
 .card-stream .footer-text {
   font-size: 12px;
 }
-/* line 83, ../sass/stream.scss */
+/* line 87, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 88, ../sass/stream.scss */
+/* line 92, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -473,7 +481,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       }
   }*/
 }
-/* line 114, ../sass/stream.scss */
+/* line 118, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -497,33 +505,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 142, ../sass/stream.scss */
+/* line 146, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 147, ../sass/stream.scss */
+/* line 151, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 150, ../sass/stream.scss */
+  /* line 154, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 158, ../sass/stream.scss */
+/* line 162, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 162, ../sass/stream.scss */
+/* line 166, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 165, ../sass/stream.scss */
+/* line 169, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
