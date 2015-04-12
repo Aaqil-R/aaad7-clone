@@ -28,7 +28,7 @@
 	//		background:$white;
 	//		border:1px solid $gray;
 		//	@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-	@include breakpoint(min-width $tablet){
+	@include breakpoint(min-width $tablet-small){
 	  @include span(4 of 12 inside);
       &:nth-of-type(3n) {
         @include last;
@@ -62,11 +62,14 @@
   }  */
     
   //refactor to remove this and make it a home-stream only modifier and then update views
-  .views-row:nth-child(1){
-	background:none;
-	padding:0;
-	border:none;
-	@include box-shadow(0px 0px 0px rgba(0,0,0,0));
+  @include breakpoint (min-width $tablet-small) {
+      .views-row:nth-child(1){
+        background:none;
+        padding:0;
+        border:none;
+        @include box-shadow(none);
+        min-height: 359px;
+      }
   }
   .btn{
 	padding: 12px 19px;
