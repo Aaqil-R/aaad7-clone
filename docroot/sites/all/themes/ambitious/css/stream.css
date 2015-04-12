@@ -385,16 +385,30 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 35, ../sass/stream.scss */
+@media (min-width: 990px) {
+  /* line 11, ../sass/stream.scss */
+  .card-stream .post {
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+  /* line 33, ../sass/stream.scss */
+  .card-stream .post:nth-of-type(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 38, ../sass/stream.scss */
 .card-stream .post .footer-text {
   font-size: 12px;
 }
-/* line 40, ../sass/stream.scss */
+/* line 43, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 45, ../sass/stream.scss */
+/* line 48, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -411,7 +425,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
   }  */
 }
-/* line 62, ../sass/stream.scss */
+/* line 65, ../sass/stream.scss */
 .home-stream .views-row:nth-child(1) {
   background: none;
   padding: 0;
@@ -419,7 +433,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px transparent;
 }
-/* line 68, ../sass/stream.scss */
+/* line 71, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -443,33 +457,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 96, ../sass/stream.scss */
+/* line 99, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 101, ../sass/stream.scss */
+/* line 104, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 104, ../sass/stream.scss */
+  /* line 107, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 112, ../sass/stream.scss */
+/* line 115, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 116, ../sass/stream.scss */
+/* line 119, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 119, ../sass/stream.scss */
+/* line 122, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
