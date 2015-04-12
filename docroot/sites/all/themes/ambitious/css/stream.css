@@ -374,6 +374,24 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 0;
   border: none;
   @include box-shadow(none);*/
+  	/*@include breakpoint(min-width $tablet-small){
+  	  //width;
+        &:nth-of-type(1n) {
+          .views-field {
+              margin: 0 1% 30px 1%;
+          }
+        }
+        &:nth-of-type(2n) {
+          .views-field {
+              margin: 0 2% 30px 0%;
+          }
+        }
+        &:nth-of-type(3n) {
+          .views-field {
+              margin: 0 0 30px 2%;
+          }
+        }
+  	}*/
 }
 /* line 18, ../sass/stream.scss */
 .card-stream .views-row .views-field {
@@ -383,20 +401,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
   border: 1px solid #d2d5d6;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-}
-@media (min-width: 767px) {
-  /* line 34, ../sass/stream.scss */
-  .card-stream .views-row:nth-of-type(1n) .views-field {
-    margin: 0 1% 30px 1%;
-  }
-  /* line 39, ../sass/stream.scss */
-  .card-stream .views-row:nth-of-type(2n) .views-field {
-    margin: 0 2% 30px 0%;
-  }
-  /* line 44, ../sass/stream.scss */
-  .card-stream .views-row:nth-of-type(3n) .views-field {
-    margin: 0 0 30px 2%;
-  }
 }
 /* line 50, ../sass/stream.scss */
 .card-stream .views-row .footer-text {
@@ -423,17 +427,15 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	}
 
   }  */
-}
-@media (min-width: 767px) {
-  /* line 78, ../sass/stream.scss */
-  .home-stream .views-row:nth-child(1) {
-    background: none;
-    padding: 0;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    min-height: 359px;
-  }
+  /*@include breakpoint (min-width $tablet-small) {
+      .views-row:nth-child(1){
+        background:none;
+        padding:0;
+        border:none;
+        @include box-shadow(none);
+        min-height: 359px;
+      }
+  }*/
 }
 /* line 86, ../sass/stream.scss */
 .home-stream .btn {
