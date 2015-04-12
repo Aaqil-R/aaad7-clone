@@ -50,10 +50,10 @@ $location = $location->name;
                             <?php } ?>                                             
 						  </div>
 						  <div class="info add forum-right">
-						     <?php if(isset($title)): ?>
-						    <h3><?php print $title; ?></h3>
-						     <?php else :?>
-							<h3>Discussion</h3>
+						    <?php if(isset($title)): ?>						     
+						    	<h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+						    <?php else :?>						    
+								<h3>Discussion</h3>
 							<?php endif;?> 
 							
 							<?php print render($content['body']);?>		
