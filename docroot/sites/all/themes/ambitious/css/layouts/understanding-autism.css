@@ -368,6 +368,16 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .page-node-75336,
 .node-type-basic-page-with-hero,
 .node-type-basic-page-with-hero-form {
+  /*.post{
+    min-height: 315px;
+    @include breakpoint($mobile){
+       min-height:inherit; 
+       margin-bottom:10px;
+       p{
+         margin-bottom:20px;
+       }
+    }
+  }*/
   /*   .grid-view{
       a{
         .text{
@@ -549,34 +559,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-right: 0;
   }
 }
-/* line 121, ../../sass/layouts/understanding-autism.scss */
-.page-node-74591 .post,
-.page-node-74611 .post,
-.page-node-75336 .post,
-.node-type-basic-page-with-hero .post,
-.node-type-basic-page-with-hero-form .post {
-  min-height: 315px;
-}
-@media (max-width: 767px) {
-  /* line 121, ../../sass/layouts/understanding-autism.scss */
-  .page-node-74591 .post,
-  .page-node-74611 .post,
-  .page-node-75336 .post,
-  .node-type-basic-page-with-hero .post,
-  .node-type-basic-page-with-hero-form .post {
-    min-height: inherit;
-    margin-bottom: 10px;
-  }
-  /* line 126, ../../sass/layouts/understanding-autism.scss */
-  .page-node-74591 .post p,
-  .page-node-74611 .post p,
-  .page-node-75336 .post p,
-  .node-type-basic-page-with-hero .post p,
-  .node-type-basic-page-with-hero-form .post p {
-    margin-bottom: 20px;
-  }
-}
-/* line 133, ../../sass/layouts/understanding-autism.scss */
+/* line 134, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 fieldset,
 .page-node-74611 fieldset,
 .page-node-75336 fieldset,
@@ -585,7 +568,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   float: left;
   margin-right: 20px;
 }
-/* line 149, ../../sass/layouts/understanding-autism.scss */
+/* line 150, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .img-holder a .text,
 .page-node-74611 .img-holder a .text,
 .page-node-75336 .img-holder a .text,
@@ -593,7 +576,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .node-type-basic-page-with-hero-form .img-holder a .text {
   display: none;
 }
-/* line 157, ../../sass/layouts/understanding-autism.scss */
+/* line 158, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .info.add,
 .page-node-74611 .list-view .info.add,
 .page-node-75336 .list-view .info.add,
@@ -602,7 +585,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-/* line 163, ../../sass/layouts/understanding-autism.scss */
+/* line 164, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .img-holder a img,
 .page-node-74611 .list-view .img-holder a img,
 .page-node-75336 .list-view .img-holder a img,
@@ -610,7 +593,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .node-type-basic-page-with-hero-form .list-view .img-holder a img {
   display: none;
 }
-/* line 166, ../../sass/layouts/understanding-autism.scss */
+/* line 167, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .img-holder a .icon-connection,
 .page-node-74611 .list-view .img-holder a .icon-connection,
 .page-node-75336 .list-view .img-holder a .icon-connection,
@@ -618,7 +601,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .node-type-basic-page-with-hero-form .list-view .img-holder a .icon-connection {
   display: none;
 }
-/* line 169, ../../sass/layouts/understanding-autism.scss */
+/* line 170, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .img-holder a .text,
 .page-node-74611 .list-view .img-holder a .text,
 .page-node-75336 .list-view .img-holder a .text,
@@ -626,7 +609,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .node-type-basic-page-with-hero-form .list-view .img-holder a .text {
   display: inherit;
 }
-/* line 175, ../../sass/layouts/understanding-autism.scss */
+/* line 176, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .img-holder .voice-holder,
 .page-node-74611 .list-view .img-holder .voice-holder,
 .page-node-75336 .list-view .img-holder .voice-holder,
@@ -635,7 +618,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   right: -12px;
   left: initial;
 }
-/* line 183, ../../sass/layouts/understanding-autism.scss */
+/* line 184, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .post,
 .page-node-74611 .list-view .post,
 .page-node-75336 .list-view .post,
@@ -644,7 +627,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   min-height: 1px;
   padding: 0px 21px;
 }
-/* line 188, ../../sass/layouts/understanding-autism.scss */
+/* line 189, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .text-block,
 .page-node-74611 .list-view .text-block,
 .page-node-75336 .list-view .text-block,
@@ -652,7 +635,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .node-type-basic-page-with-hero-form .list-view .text-block {
   padding: 0;
 }
-/* line 191, ../../sass/layouts/understanding-autism.scss */
+/* line 192, ../../sass/layouts/understanding-autism.scss */
 .page-node-74591 .list-view .post-actions,
 .page-node-74611 .list-view .post-actions,
 .page-node-75336 .list-view .post-actions,
@@ -661,7 +644,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 201, ../../sass/layouts/understanding-autism.scss */
+  /* line 202, ../../sass/layouts/understanding-autism.scss */
   .page-node-74591 .visual .img-holder .caption-frame .caption,
   .page-node-74611 .visual .img-holder .caption-frame .caption,
   .page-node-75336 .visual .img-holder .caption-frame .caption,
@@ -671,7 +654,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (max-width: 480px) {
-  /* line 201, ../../sass/layouts/understanding-autism.scss */
+  /* line 202, ../../sass/layouts/understanding-autism.scss */
   .page-node-74591 .visual .img-holder .caption-frame .caption,
   .page-node-74611 .visual .img-holder .caption-frame .caption,
   .page-node-75336 .visual .img-holder .caption-frame .caption,
@@ -681,7 +664,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (max-width: 767px) {
-  /* line 209, ../../sass/layouts/understanding-autism.scss */
+  /* line 210, ../../sass/layouts/understanding-autism.scss */
   .page-node-74591 .visual .img-holder .caption-frame .caption .title .title-third,
   .page-node-74611 .visual .img-holder .caption-frame .caption .title .title-third,
   .page-node-75336 .visual .img-holder .caption-frame .caption .title .title-third,
@@ -692,41 +675,41 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 @media (max-width: 767px) {
-  /* line 219, ../../sass/layouts/understanding-autism.scss */
+  /* line 220, ../../sass/layouts/understanding-autism.scss */
   .sort-block fieldset.grid-view {
     width: 49px;
     float: left;
   }
 
-  /* line 223, ../../sass/layouts/understanding-autism.scss */
+  /* line 224, ../../sass/layouts/understanding-autism.scss */
   .sort-block fieldset.list-view {
     width: 49px;
     float: left;
   }
 
-  /* line 227, ../../sass/layouts/understanding-autism.scss */
+  /* line 228, ../../sass/layouts/understanding-autism.scss */
   .sort-block .stButton {
     margin-right: 0;
   }
 }
-/* line 233, ../../sass/layouts/understanding-autism.scss */
+/* line 234, ../../sass/layouts/understanding-autism.scss */
 .sort-block .form-item-sort-by {
   position: relative;
 }
-/* line 236, ../../sass/layouts/understanding-autism.scss */
+/* line 237, ../../sass/layouts/understanding-autism.scss */
 .sort-block .ajax-progress {
   position: absolute;
 }
 
 @media (max-width: 767px) {
-  /* line 241, ../../sass/layouts/understanding-autism.scss */
+  /* line 242, ../../sass/layouts/understanding-autism.scss */
   .icon-connection:before {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 248, ../../sass/layouts/understanding-autism.scss */
+  /* line 249, ../../sass/layouts/understanding-autism.scss */
   .posts-columns .text-block h1 {
     line-height: 1.1;
   }
