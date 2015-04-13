@@ -68,6 +68,7 @@
                                     <?php print render($content['field_topic']);?>
                                 </div>
                                 <?php endif; ?>
+                                <div class="clear"></div>
                             </div>
                             
                               
