@@ -990,6 +990,7 @@ fieldset.group-hidden {
         .description {
             width: auto;
             float: none;
+            clear: both;
         }
         label {
             font-size: 2em;
@@ -1002,6 +1003,13 @@ fieldset.group-hidden {
         .form-item-title label {margin-top: 0;}
         .filter-guidelines {
             padding: 0;
+        }
+        
+        .filter-wrapper{
+            display: none;
+        }
+        .form-type-checkbox {
+            float: left;
         }
         .filter-help {padding: 0;float: none; text-align: center;}
         input {max-width: 100%;}
