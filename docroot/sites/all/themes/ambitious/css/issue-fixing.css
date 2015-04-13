@@ -1339,33 +1339,27 @@ fieldset.group-hidden {
     clear: both;
   }
 }
-/* line 1046, ../sass/issue-fixing.scss */
-.page-search-gss .search-form input[type=submit] {
-  width: 92%;
-  max-width: inherit;
-  margin: 0 4%;
+@media (max-width: 767px) {
+  /* line 1047, ../sass/issue-fixing.scss */
+  .page-search-gss .search-form input[type=submit] {
+    width: 92%;
+    max-width: inherit;
+    margin: 0 4%;
+  }
 }
- 
-/* line 1044, ../sass/issue-fixing.scss */
-.page-search-gss .item-list .pager li {
-=======
-
 /* line 1054, ../sass/issue-fixing.scss */
-.google-search-results .item-list .pager li { 
+.page-search-gss .item-list .pager li {
   display: inline-block;
 }
 
-@media (max-width: 767px) { 
-  /* line 1055, ../sass/issue-fixing.scss */ 
- 
+@media (max-width: 767px) {
+  /* line 1065, ../sass/issue-fixing.scss */
   .google-search-results.posts-columns.columns-full .views-row .forum-text .forum-left .image-holder {
     width: 100%;
     margin: 0 0 10px 0;
   }
 }
- 
-/* line 1064, ../sass/issue-fixing.scss */
- 
+/* line 1074, ../sass/issue-fixing.scss */
 .google-search-results .gss-search-url {
   word-wrap: break-word;
 }
