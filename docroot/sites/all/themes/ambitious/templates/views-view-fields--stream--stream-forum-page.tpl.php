@@ -70,6 +70,11 @@
 						  <div class="info add forum-right">
 							<h3><?php print $fields['title']->content; ?></h3>
 							<?php print $fields['body']->content; ?>  
+							<?php if(!empty($fields['field_signature']->content)){ ?>
+                            	<div class="user_signature">
+                            		<?php print $fields['field_signature']->content; ?>
+                            	</div>
+                            <?php } ?>  
 						  </div>
 						  <div class="topic_section">
 						    <?php print "<div class='forum_list'>Topics : </div>".$fields['field_topic']->content; ?>
