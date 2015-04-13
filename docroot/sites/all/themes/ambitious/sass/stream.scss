@@ -39,14 +39,18 @@
     }
     @include breakpoint(min-width $large-mobile){
         width: span(6 of 12 no-gutter);
-        
+        &.feature-row {
+            h2, p {
+                margin: 0 15px 30px 15px;
+            }
+        }
         .views-field {
             margin: 0 15px 30px 15px;
         }
     }
     @include breakpoint(min-width $tablet-small){
         //@include remove last;
-        width: span(4 of 12 no-gutter);
+        width: 33.33%;
     }
   }
     
