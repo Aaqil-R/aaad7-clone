@@ -69,7 +69,7 @@
 				   <?php print $picture ?>
 				 </div> 
 			     <time pubdate="pubdate"><?php print $submitted;?></time> 
-			      <?php print $permalink; ?>
+			      <?php //print $permalink; ?>
 			      <?php
 				      if ( $user->uid ) { ?>
 			        <?php /* if($content['privatemsg']){
