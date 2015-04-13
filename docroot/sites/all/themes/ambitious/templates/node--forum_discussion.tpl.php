@@ -65,8 +65,10 @@
 							<?php if(isset($user_signature)): ?>
 								<div class="user_signature">	
 									<?php print $user_signature; ?>
+									Signature should come here
 								</div>
 							<?php endif;?>
+							Signature has not come
 						  </div>
 						  <?php if(isset($content['field_topic'])):?>	
 						  <div class="topic_section">
