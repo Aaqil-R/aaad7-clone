@@ -1117,7 +1117,7 @@ function ambitious_get_last_reply($nid) {
     ':status' => COMMENT_PUBLISHED,
   ))->fetchField();
    if ($count > 0) {
-     $comment = db_query('SELECT comment.cid, comment.name, comment.changed, comment.uid FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = 1 ORDER BY comment.cid DESC limit', 0, 1, array(':nid' => $nid))->fetchObject();
+     $comment = db_query_range('SELECT comment.cid, comment.name, comment.changed, comment.uid FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = 1 ORDER BY comment.cid DESC', 0, 1, array(':nid' => $nid))->fetchObject();
      return $comment;
    }
    return false;
