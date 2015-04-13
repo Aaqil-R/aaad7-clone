@@ -485,10 +485,7 @@ ul a {
   margin-right:-460px;
   z-index:99;
   @include box-shadow(0 2px 7px rgba(24,24,24,.5));
-    .nav-main {
-        -webkit-overflow-scrolling: touch;
-        overflow-y: scroll; 
-    }
+  overflow-y: scroll; 
   @include breakpoint($mobile) {
     margin-right:-310px;
     width:285px;
