@@ -71,9 +71,5 @@
     <?php endif; ?>
        </div>
   </div>
-  <?php if ($info): ?>
-  <div class="footer">
-          <?php print $info; ?>
-    </div>
-<?php endif; ?>
+ 
 </li>
