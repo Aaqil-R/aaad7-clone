@@ -476,7 +476,6 @@ ul a {
 /* main nav styles */
 .nav-holder {
   width:430px;
-  -webkit-overflow-scrolling: touch;
   height:100vh;
   padding:45px 0 50px;
   background:$white;
@@ -486,7 +485,10 @@ ul a {
   margin-right:-460px;
   z-index:99;
   @include box-shadow(0 2px 7px rgba(24,24,24,.5));
-  overflow-y: scroll; 
+    .nav-main {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll; 
+    }
   @include breakpoint($mobile) {
     margin-right:-310px;
     width:285px;
