@@ -19,7 +19,7 @@
 	$comment_count =  abs($comment - $flaged_comments_count);
 	$uid = $node->uid;
 	$userinfo = user_load($uid);
-   $last_reply = ambitious_get_last_reply($fields['nid']->raw);
+   $last_reply = ambitious_get_last_reply($node->nid);
   if ($last_reply){
     $last_reply_user = user_load($last_reply->uid);
     $last_reply_username = theme('username', $last_reply_user);
