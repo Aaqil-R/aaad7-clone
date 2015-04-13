@@ -607,13 +607,18 @@ a.video_bt, .isvideo{
               
 		  }
 		  .footer{
-			  padding-left: 246px;
-			  padding-right: 21px;
+			  //padding-left: 0;
+			  //padding-right: 21px;
 			  margin-bottom:0;
 			   @extend %clearfix;
 			  @include breakpoint($mobile) {
 			    padding-left: 20px;
 			  }
+              @include breakpoint (min-width $desktop) {
+                .flag_node {
+                    @include span(2 of 12);
+                }
+              }
 			  .num-holder{
 			    float:left;
 			    margin-top: 9px;
