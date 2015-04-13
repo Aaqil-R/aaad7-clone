@@ -8,7 +8,7 @@
 .card-stream {
     @include container;
     
-    .view-content {
+   /* .view-content {
         @include breakpoint (min-width $large-mobile) {
             @include columns(2);
             @include column-gap (0px);
@@ -17,11 +17,11 @@
         @include breakpoint (min-width $tablet-small) {
             @include columns(3);
         }
-    }
+    }*/
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper
     background: transparent;
-    @include break-inside(avoid);
+    //@include break-inside(avoid);
     margin: 0;
     padding: 0;
     border: none;
