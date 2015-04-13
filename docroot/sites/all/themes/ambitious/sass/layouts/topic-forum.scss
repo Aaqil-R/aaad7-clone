@@ -819,7 +819,8 @@ a.video_bt, .isvideo{
 				  display:none; 
                       float: right;
                       margin-top: 6px;
-				}			
+				}	
+                /*what in the name of sweet jesus? just below this is there again!?!
 				&:hover, &.active, &.checked, &.highlight{
                  color:$orange;
 			     position: relative;
@@ -831,13 +832,13 @@ a.video_bt, .isvideo{
                      float:none;
                      @extend [class^="icon-"];
 			     } 
-				}
+				}*/
 				&.active{ 
                       span{
                         display: inline-block;
                       }
 			 
-			}
+			     }
 			input[type=checkbox]{
 			  display:none;
 			}
@@ -847,32 +848,34 @@ a.video_bt, .isvideo{
 			  cursor: pointer; 
 			}
 			&.checked, &.highlight{ 
-			     color:$orange;
-			     position: relative;
-			     line-height:29px;
-			     @extend .icon-Tick; 
-			     &:before{
-			      position: absolute;
+                 color:$orange;
+                 position: relative;
+                 line-height:29px;
+                 @extend .icon-Tick; 
+                 &:before{
+                  position: absolute;
                      right:15px; 
                      float:none;
                      @extend [class^="icon-"];
-			     } 
+                 } 
 			}
 		}
 	}
 }
+
+//PUT THE HOVER EVENT ON ONLY WHERE THERE'S NO TOUCH EVENTS
 html.no-touch .form-type-bef-checkbox {
-    &:hover, &.active, &.checked, &.highlight{
-         color:$orange;
-         position: relative;
-         line-height:29px;
-         @extend .icon-Tick; 
-         &:before{
-          position: absolute;
-             right:15px; 
-             float:none;
-             @extend [class^="icon-"];
-         } 
+    &:hover {
+    color:$orange;
+    position: relative;
+    line-height:29px;
+    @extend .icon-Tick; 
+        &:before{
+            position: absolute;
+            right:15px; 
+            float:none;
+            @extend [class^="icon-"];
+        } 
     }
 }
 
