@@ -865,7 +865,7 @@ nav {
         display:inline-block;
         vertical-align:top;
       }
-      &:after {
+      &:after {        
         position:absolute;
         content:"";
         width:1px;
@@ -874,7 +874,7 @@ nav {
         top:2px;
         background:$captions-credit;
         @include breakpoint($mobile) {
-          left:-4px;
+          display: none;
         }
       }
       &:first-child {
