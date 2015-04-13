@@ -238,5 +238,41 @@ function autism_custom_search_community_submit($form, &$form_state) {
   }*/
 }
 
+/**
+ * Act on an object being flagged.
+ *
+ * @param $flag
+ *  The flag object.
+ * @param $entity_id
+ *  The id of the entity the flag is on.
+ * @param $account
+ *  The user account performing the action.
+ * @param $flagging_id
+ *  The flagging entity.
+ */
+function autism_custom_flag_flag($flag, $entity_id, $account, $flagging) {
+  dpm($flag);
+  dpm($entity_id);
+  
+}
+/**
+ * Act on an object being unflagged.
+ *
+ * This is invoked after the flag count has been decreased, but before the
+ * flagging entity has been deleted.
+ *
+ * @param $flag
+ *  The flag object.
+ * @param $entity_id
+ *  The id of the entity the flag is on.
+ * @param $account
+ *  The user account performing the action.
+ * @param $flagging
+ *  The flagging entity.
+ */
+function autism_custom_flag_unflag($flag, $entity_id, $account, $flagging) {
+
+}
+
  
 
