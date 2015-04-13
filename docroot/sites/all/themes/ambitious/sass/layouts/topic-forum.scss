@@ -571,7 +571,9 @@ a.video_bt, .isvideo{
               
 			}
 			.forum-right{
-			  clear: both;
+			  // TODO: Recheck, forum page; when removing the clear both it aligns up the 
+        // right and left sections of the discussion card.
+        // clear: both;
 			  padding-top: 9px;
 			  @include breakpoint(min-width $tablet-small) {
 			    @include span(last 10 of 12);
