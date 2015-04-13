@@ -532,11 +532,15 @@ a.video_bt, .isvideo{
  			    float:none;
  			    width:auto;
  			    margin: 0;
+                  .image-holder {
+                    @include span(2 of 12);
+                  }
  			  }
 			  .image-holder{
 			    overflow:hidden;
 			    @include border-radius(5px);
 			    margin-bottom:11px; 
+                
 				img{
 				  width:100%;
 				} 
@@ -556,6 +560,11 @@ a.video_bt, .isvideo{
 			  time{
 			    font-size: 14px;
  			  }
+              @include breakpoint($mobile) {
+                cite, time {
+                    @include span(last 10 of 12);
+                }
+              }
  			  
 			}
 			.forum-right{
