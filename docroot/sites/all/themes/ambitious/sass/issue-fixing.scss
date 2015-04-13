@@ -1056,7 +1056,6 @@ fieldset.group-hidden {
     }
 }
 .google-search-results{ 
-    
     @include breakpoint($mobile){ 
       &.posts-columns.columns-full{
         .views-row{
@@ -1075,6 +1074,22 @@ fieldset.group-hidden {
       word-wrap: break-word;
     }
 }
+
+
+/* node-type-page  */
+
+.node-type-page{
+  .easy-breadcrumb{
+    display: block;
+  }
+  #main{
+    @include breakpoint($mobile){
+      max-width: 91%;
+      margin-top: 16px;
+    }
+  }
+}
+
 
 
 

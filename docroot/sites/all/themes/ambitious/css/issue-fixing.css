@@ -1353,13 +1353,26 @@ fieldset.group-hidden {
 }
 
 @media (max-width: 767px) {
-  /* line 1065, ../sass/issue-fixing.scss */
+  /* line 1064, ../sass/issue-fixing.scss */
   .google-search-results.posts-columns.columns-full .views-row .forum-text .forum-left .image-holder {
     width: 100%;
     margin: 0 0 10px 0;
   }
 }
-/* line 1074, ../sass/issue-fixing.scss */
+/* line 1073, ../sass/issue-fixing.scss */
 .google-search-results .gss-search-url {
   word-wrap: break-word;
+}
+
+/* node-type-page  */
+/* line 1082, ../sass/issue-fixing.scss */
+.node-type-page .easy-breadcrumb {
+  display: block;
+}
+@media (max-width: 767px) {
+  /* line 1085, ../sass/issue-fixing.scss */
+  .node-type-page #main {
+    max-width: 91%;
+    margin-top: 16px;
+  }
 }
