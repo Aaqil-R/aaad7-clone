@@ -237,3 +237,15 @@ function autism_custom_search_community_submit($form, &$form_state) {
     drupal_goto('search/forum_discussion/' . $form_state['values']['search_community']);
   }*/
 }
+
+function ambitious_get_last_reply($nid) {
+  $count = db_query('SELECT COUNT(comment.cid) FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = :status', array(
+    ':nid' => $nid,
+    ':status' => COMMENT_PUBLISHED,
+  ))->fetchField();
+   if ($count > 0) {
+     $comment = db_query_range('SELECT comment.cid, comment.name, comment.changed, comment.uid FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = 1 ORDER BY comment.cid DESC', 0, 1, array(':nid' => $nid))->fetchObject();
+     return $comment;
+   }
+   return false;
+}
