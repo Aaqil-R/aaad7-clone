@@ -1264,9 +1264,6 @@ fieldset{
   float:left;//what is this for? it's applying to every fieldset on the site!
   //width: 100%;
 }
-.filter-wrapper{
-    display: none;
-}
 .search-form{
   fieldset{
     float:left;
@@ -1490,7 +1487,8 @@ fieldset{
   }
   .posts-columns .post{
     .info.add h3{  
-      .margin-top: 5px;
+      margin-top: 5px;
+      clear: both;
     }
     .num-holder a .num{
       margin-left:-4px;
