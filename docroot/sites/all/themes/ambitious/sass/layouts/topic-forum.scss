@@ -821,7 +821,7 @@ a.video_bt, .isvideo{
                       margin-top: 6px;
 				}			
 				&:hover, &.active, &.checked, &.highlight{
-                       color:$orange;
+                 color:$orange;
 			     position: relative;
 			     line-height:29px;
 			     @extend .icon-Tick; 
@@ -861,6 +861,21 @@ a.video_bt, .isvideo{
 		}
 	}
 }
+html.no-touch .form-type-bef-checkbox {
+    &:hover, &.active, &.checked, &.highlight{
+         color:$orange;
+         position: relative;
+         line-height:29px;
+         @extend .icon-Tick; 
+         &:before{
+          position: absolute;
+             right:15px; 
+             float:none;
+             @extend [class^="icon-"];
+         } 
+    }
+}
+
 .filter-active {
 	.visual {
 		margin:0 0 0 -430px;
