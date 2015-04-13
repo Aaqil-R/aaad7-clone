@@ -2254,3 +2254,13 @@ width: 31.6875%;
 float: left;
 margin-right: 1.5625%;
 }
+
+//Commuinity Champions Forum
+.section-community-champions-forum #comments {
+    .comment-left {
+        @include span(2 of 12);
+    }
+    .comment-right {
+        @include span(last 10 of 12);
+    }
+}
