@@ -448,20 +448,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 /* line 93, ../sass/stream.scss */
 .home-stream {
-   /*@include container;
-
-  .post{
-	width: span(4 of 12);//why were you using a 13 column grid?
-    &:nth-of-type(3n) {@include last;}
-	@include breakpoint($mobile){
-	  @include span(12 of 12);
-	}
-
-	.footer-text{
-  		font-size:12px;
-	}
-
-  }  */
+  margin: 0 auto;
+  max-width: 1080px;
   /*@include breakpoint (min-width $tablet-small) {
       .views-row:nth-child(1){
         background:none;
@@ -471,6 +459,28 @@ body > .jcf-select-drop.jcf-drop-flipped {
         min-height: 359px;
       }
   }*/
+}
+/* line 96, ../sass/stream.scss */
+.home-stream .post {
+  width: 32.20339%;
+}
+/* line 98, ../sass/stream.scss */
+.home-stream .post:nth-of-type(3n) {
+  float: right;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  /* line 96, ../sass/stream.scss */
+  .home-stream .post {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 103, ../sass/stream.scss */
+.home-stream .post .footer-text {
+  font-size: 12px;
 }
 /* line 119, ../sass/stream.scss */
 .home-stream .btn {
