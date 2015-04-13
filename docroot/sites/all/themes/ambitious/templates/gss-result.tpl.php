@@ -47,15 +47,16 @@
 <li class="<?php print $classes; ?> post views-row "<?php print $attributes; ?>>
 
    <div class="forum-text">	
-     <?php if ($thumbnail_url): ?>					
-    <div class="forum-left"> 
-  
+     <div class="forum-left">  
       <div class="image-holder">
-       <img class="gss-thumbnail-image" src="<?php print $thumbnail_url; ?>" height="62"/>
+      <?php if ($thumbnail_url): ?>	
+       <img class="gss-thumbnail-image" src="<?php print $thumbnail_url; ?>" />
+       <?php else: ?>
+       <img class="gss-thumbnail-image" src="<?php print url('sites/all/themes/ambitious/images/profile-picture-1.jpg') ?>" />
+        <?php endif; ?> 
       </div>
        
    </div>
-   <?php endif; ?> 
    <div class="info add forum-right">
      <?php print render($title_prefix); ?>
     <h3 class="title" <?php print $title_attributes; ?>>
@@ -70,9 +71,5 @@
     <?php endif; ?>
        </div>
   </div>
-  <?php if ($info): ?>
-  <div class="footer">
-          <?php print $info; ?>
-    </div>
-<?php endif; ?>
+ 
 </li>

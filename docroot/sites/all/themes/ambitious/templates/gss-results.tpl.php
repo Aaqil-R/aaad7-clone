@@ -18,7 +18,7 @@
  * @see template_preprocess_gss_results()
  */
 ?>
-<span><?php print $head; ?></span>
+<span><?php // print $head; ?></span>
 <ol class="google-search-results posts-columns columns-full">
   <?php print $search_results; ?>
 </ol>
