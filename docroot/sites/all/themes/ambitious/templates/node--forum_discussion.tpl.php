@@ -21,7 +21,7 @@
 	$userinfo = user_load($uid);
 
 	// author signature to be added to the discussion threads.
-	$user_signature = $userinfo->field_signature['und']['0']['tid'];
+	$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
 
 	$location = $userinfo->field_location_reference['und']['0']['tid'];
 	$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
