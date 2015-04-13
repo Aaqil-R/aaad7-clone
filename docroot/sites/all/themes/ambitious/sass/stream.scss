@@ -99,15 +99,13 @@
 	@include breakpoint($mobile){
 	  @include span(12 of 12);
 	}
-
-	.footer-text{
+	.footer-text {
   		font-size:12px;
 	}
-
   }  
     
   //refactor to remove this and make it a home-stream only modifier and then update views
-  /*@include breakpoint (min-width $tablet-small) {
+  @include breakpoint (min-width $tablet-small) {
       .views-row:nth-child(1){
         background:none;
         padding:0;
@@ -115,7 +113,7 @@
         @include box-shadow(none);
         min-height: 359px;
       }
-  }*/
+  }
   .btn{
 	padding: 12px 19px;
   }

@@ -450,15 +450,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .home-stream {
   margin: 0 auto;
   max-width: 1080px;
-  /*@include breakpoint (min-width $tablet-small) {
-      .views-row:nth-child(1){
-        background:none;
-        padding:0;
-        border:none;
-        @include box-shadow(none);
-        min-height: 359px;
-      }
-  }*/
 }
 /* line 96, ../sass/stream.scss */
 .home-stream .post {
@@ -478,11 +469,22 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-right: 0;
   }
 }
-/* line 103, ../sass/stream.scss */
+/* line 102, ../sass/stream.scss */
 .home-stream .post .footer-text {
   font-size: 12px;
 }
-/* line 119, ../sass/stream.scss */
+@media (min-width: 767px) {
+  /* line 109, ../sass/stream.scss */
+  .home-stream .views-row:nth-child(1) {
+    background: none;
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    min-height: 359px;
+  }
+}
+/* line 117, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -506,33 +508,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 147, ../sass/stream.scss */
+/* line 145, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 152, ../sass/stream.scss */
+/* line 150, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 155, ../sass/stream.scss */
+  /* line 153, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 163, ../sass/stream.scss */
+/* line 161, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 167, ../sass/stream.scss */
+/* line 165, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 170, ../sass/stream.scss */
+/* line 168, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
