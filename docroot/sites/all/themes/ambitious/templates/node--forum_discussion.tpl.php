@@ -89,10 +89,10 @@
 						  
 						</div> 
 						<div class="footer">
-						<div class="flag_node">
-							  <?php print flag_create_link('flags', $node->nid); ?>
-							  </br>
+						<div class="flag_node">							  
 							  <?php print flag_create_link('bookmarks', $node->nid); ?>
+							  </br>
+							  <?php print flag_create_link('flags', $node->nid); ?>
 							</div>
                           <div class="num-holder">
 							<a href="<?php print $node_url ?>#comments" title="replies" class="open">
