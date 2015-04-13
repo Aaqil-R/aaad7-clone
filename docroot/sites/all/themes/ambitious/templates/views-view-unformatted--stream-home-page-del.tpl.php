@@ -18,6 +18,6 @@
 		</div>
 	<?php endif; ?>
   	<div class="<?php if ($id < 3){ print 'feature-row '; } ?>masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?>">
-    <?php print $row; ?>
-  </div>
+        <?php print $row; ?>
+    </div>
 <?php endforeach; ?>
