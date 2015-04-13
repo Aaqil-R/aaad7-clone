@@ -25,11 +25,16 @@
  */
 ?>
 <?php
-  $vars = get_defined_vars(); 
+
   $sticky = node_load($fields['nid']->raw); 
   $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
   $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ;
-  
+  $last_reply = ambitious_get_last_reply($fields['nid']->raw);
+  if ($last_reply){
+    $last_reply_user = user_load($last_reply->uid);
+    $last_reply_username = theme('username', $last_reply_user);
+    $last_reply_time = format_date($last_reply->changed);
+  }
   $real_comment_count = abs($node_flag_comment - $node_comment) ;
   $class = '';  
   $commentcout = ambitious_get_node_comments_count($fields['nid']->raw);
@@ -98,7 +103,7 @@
 						 
 						  <div class="times" <?php if($real_comment_count == 0){ ?> style="display:none;" <?php }; ?> >
 						    <em class="icon-Time"></em> 
-							Last reply by <cite><?php print $fields['last_comment_name']->content; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $fields['last_comment_timestamp']->content; ?></time> 
+							Last reply by <cite><?php print $last_reply_username; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $last_reply_time; ?></time> 
 					     </div>  
 						<?php print $fields['comments_link']->content; ?>
 					  </div>  

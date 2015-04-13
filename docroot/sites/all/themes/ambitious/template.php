@@ -1110,7 +1110,18 @@ function ambitious_get_node_flaged_comments_count($nid) {
     return $record['count']; 
   return 0;
 }
- 
+
+function ambitious_get_last_reply($nid) {
+  $count = db_query('SELECT COUNT(comment.cid) FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = :status', array(
+    ':nid' => $nid,
+    ':status' => COMMENT_PUBLISHED,
+  ))->fetchField();
+   if ($count > 0) {
+     $comment = db_query('SELECT comment.cid, comment.name, comment.changed, comment.uid FROM {comment} as comment left join {flagging} as fl on fl.entity_id = comment.cid and fl.entity_id is null WHERE comment.nid = :nid AND comment.status = 1 ORDER BY comment.cid DESC limit', 0, 1, array(':nid' => $nid))->fetchObject();
+     return $comment;
+   }
+   return false;
+}
 function ambitious_get_user_message_count($uid) {
  $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id and m.deleted = 0")->fetchField();
  return $query['messageCount'];

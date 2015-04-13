@@ -19,7 +19,12 @@
 	$comment_count =  abs($comment - $flaged_comments_count);
 	$uid = $node->uid;
 	$userinfo = user_load($uid);
-
+   $last_reply = ambitious_get_last_reply($fields['nid']->raw);
+  if ($last_reply){
+    $last_reply_user = user_load($last_reply->uid);
+    $last_reply_username = theme('username', $last_reply_user);
+    $last_reply_time = format_date($last_reply->changed);
+  }   
 	// author signature to be added to the discussion threads.
 	$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
 
@@ -97,7 +102,7 @@
 						  </div> 
 						  <div class="times" <?php if($comment_count == 0){ ?> style="display:none;" <?php }; ?>>
 						    <em class="icon-Time"></em> 
-							Last reply by <cite><?php if($logged_in):?><a href="<?php print url('user/'.$variables['last_comment_uid']); ?>"><?php print user_load($variables['last_comment_uid'])->name;  ?></a><?php else: ?><?php print user_load($variables['last_comment_uid'])->name;  ?><?php endif; ?></cite>, <time pubdate="pubdate"> <?php print format_date($variables['last_comment_timestamp'], 'mdy'); ?></time> 
+							Last reply by <cite><?php print $last_reply_username;  ?></cite>, <time pubdate="pubdate"> <?php print $last_reply_time;  ?></time> 
 					     </div>  
 						 <div class="forum_replay">
 						  <?php if($user->uid):?>
