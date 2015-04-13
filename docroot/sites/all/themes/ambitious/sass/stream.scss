@@ -8,7 +8,7 @@
 .card-stream {
     @include container;
     
-    .view-content {
+   /* .view-content {
         @include breakpoint (min-width $large-mobile) {
             @include columns(2);
             @include column-gap (0px);
@@ -17,11 +17,11 @@
         @include breakpoint (min-width $tablet-small) {
             @include columns(3);
         }
-    }
+    }*/
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper
     background: transparent;
-    @include break-inside(avoid);
+    //@include break-inside(avoid);
     margin: 0;
     padding: 0;
     border: none;
@@ -39,26 +39,17 @@
             padding: 13px 0 0 0;
         }
     }
-  }
-    /*
     @include breakpoint(min-width $large-mobile){
-        
-        //@include span(6 of 12 no-gutter);
-        .views-field {
-            margin: 0 2% 30px 2%;
-        }
+        width: span(6 of 12 no-gutter);
     }
     @include breakpoint(min-width $tablet-small){
         //@include remove last;
-        @include span(4 of 12 no-gutter);
+        width: span(4 of 12 no-gutter);
     }
   }
-    @include breakpoint(min-width $tablet-small){
-        .view-header {
-            @include span(4 of 12 no-gutter);
-        }
-    }
-    */
+    
+    
+    
     
 	  //width;
       //	padding: 20px 21px;
