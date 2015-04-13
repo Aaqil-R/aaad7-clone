@@ -1112,7 +1112,7 @@ function ambitious_get_node_flaged_comments_count($nid) {
 }
  
 function ambitious_get_user_message_count($uid) {
- $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id")->fetchField();
+ $query=db_query("SELECT count(*) as messageCount FROM `pm_index` m Where recipient='$uid' and m.mid=m.thread_id and m.deleted = 0")->fetchField();
  return $query['messageCount'];
 }
 
