@@ -20,8 +20,8 @@
 	$uid = $node->uid;
 	$userinfo = user_load($uid);
 
-	// author signature to be added to the discussion threads
-	$user_signature = $userinfo->field_signature;
+	// author signature to be added to the discussion threads.
+	$user_signature = $userinfo->field_signature['und']['0']['tid'];
 
 	$location = $userinfo->field_location_reference['und']['0']['tid'];
 	$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
@@ -65,8 +65,10 @@
 							<?php if(isset($user_signature)): ?>
 								<div class="user_signature">	
 									<?php print $user_signature; ?>
+									Signature should come here
 								</div>
 							<?php endif;?>
+							Signature has not come
 						  </div>
 						  <?php if(isset($content['field_topic'])):?>	
 						  <div class="topic_section">
