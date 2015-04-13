@@ -413,13 +413,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 480px) {
-  /* line 29, ../sass/stream.scss */
-  .card-stream .views-row.post .views-field {
-    margin: 0 2% 30px;
-  }
-}
-/* line 38, ../sass/stream.scss */
+/* line 36, ../sass/stream.scss */
 .card-stream .views-row.post .views-field .info {
   padding: 13px 0 0 0;
 }
@@ -428,23 +422,43 @@ body > .jcf-select-drop.jcf-drop-flipped {
   .card-stream .views-row.post {
     width: 49.15254%;
   }
+  /* line 42, ../sass/stream.scss */
+  .card-stream .views-row.post .views-field {
+    margin: 0 15px 30px 0;
+  }
+  /* line 45, ../sass/stream.scss */
+  .card-stream .views-row.post:nth-of-type(2n) .views-field {
+    margin: 0 0 30px 15px;
+  }
 }
 @media (min-width: 767px) {
   /* line 21, ../sass/stream.scss */
   .card-stream .views-row.post {
     width: 32.20339%;
   }
+  /* line 52, ../sass/stream.scss */
+  .card-stream .views-row.post .views-field {
+    margin: 0 15px 30px 0;
+  }
+  /* line 55, ../sass/stream.scss */
+  .card-stream .views-row.post:nth-of-type(2n) .views-field {
+    margin: 0 15px 30px 15px;
+  }
+  /* line 59, ../sass/stream.scss */
+  .card-stream .views-row.post:nth-of-type(3n) .views-field {
+    margin: 0 0 30px 15px;
+  }
 }
-/* line 79, ../sass/stream.scss */
+/* line 93, ../sass/stream.scss */
 .card-stream .footer-text {
   font-size: 12px;
 }
-/* line 82, ../sass/stream.scss */
+/* line 96, ../sass/stream.scss */
 .card-stream .btn {
   padding: 12px 19px;
 }
 
-/* line 87, ../sass/stream.scss */
+/* line 101, ../sass/stream.scss */
 .home-stream {
    /*@include container;
 
@@ -470,7 +484,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       }
   }*/
 }
-/* line 113, ../sass/stream.scss */
+/* line 127, ../sass/stream.scss */
 .home-stream .btn {
   padding: 12px 19px;
 }
@@ -494,33 +508,33 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
 */
-/* line 141, ../sass/stream.scss */
+/* line 155, ../sass/stream.scss */
 .front .posts-columns .post .footer .num-holder a .text {
   font-size: 14px;
 }
 
-/* line 146, ../sass/stream.scss */
+/* line 160, ../sass/stream.scss */
 .signup-columns .signup-form .btn.btn-left {
   margin-right: 100px;
 }
 
 @media (max-width: 767px) {
-  /* line 149, ../sass/stream.scss */
+  /* line 163, ../sass/stream.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 157, ../sass/stream.scss */
+/* line 171, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num {
   border-color: #f15500;
   color: #f15500;
 }
-/* line 161, ../sass/stream.scss */
+/* line 175, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .text {
   color: #f15500;
 }
-/* line 164, ../sass/stream.scss */
+/* line 178, ../sass/stream.scss */
 .orange-bubble .my-voice-post .content .num-holder a .num:after {
   background-position: -40px 0;
 }
