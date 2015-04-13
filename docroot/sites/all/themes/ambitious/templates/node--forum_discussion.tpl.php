@@ -1,30 +1,34 @@
 <?php
-/**
- * @file
- * Returns the HTML for a node.
- *
- * Complete documentation for this file is available online.
- * @see https://drupal.org/node/1728164
- */
+	/**
+	 * @file
+	 * Returns the HTML for a node.
+	 *
+	 * Complete documentation for this file is available online.
+	 * @see https://drupal.org/node/1728164
+	 */
 
-/* variables */ 
-$themeurl =  base_path().drupal_get_path('theme', 'ambitious');
-$name = strip_tags($name); 
-$not_flag_comment = ambitious_get_node_comments_count($node->nid);
-drupal_add_library('waypoints', 'waypoints');
-hide($content['comments']['comments']);
-$weeks = variable_get('autism_custom_past_week', 0);
-$comment = ambitious_get_node_comments_count($node->nid);
-$flaged_comments_count = ambitious_get_node_flaged_comments_count($node->nid);
-$comment_count =  abs($comment - $flaged_comments_count);
-$uid = $node->uid;
-$userinfo = user_load($uid);
-$location = $userinfo->field_location_reference['und']['0']['tid'];
-$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
-$user_count = ambitious_get_user_post_count($uid);
+	/* variables */ 
+	$themeurl =  base_path().drupal_get_path('theme', 'ambitious');
+	$name = strip_tags($name); 
+	$not_flag_comment = ambitious_get_node_comments_count($node->nid);
+	drupal_add_library('waypoints', 'waypoints');
+	hide($content['comments']['comments']);
+	$weeks = variable_get('autism_custom_past_week', 0);
+	$comment = ambitious_get_node_comments_count($node->nid);
+	$flaged_comments_count = ambitious_get_node_flaged_comments_count($node->nid);
+	$comment_count =  abs($comment - $flaged_comments_count);
+	$uid = $node->uid;
+	$userinfo = user_load($uid);
 
-$location = taxonomy_term_load($location);
-$location = $location->name;
+	// author signature to be added to the discussion threads
+	$user_signature = $userinfo->field_signature;
+
+	$location = $userinfo->field_location_reference['und']['0']['tid'];
+	$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
+	$user_count = ambitious_get_user_post_count($uid);
+
+	$location = taxonomy_term_load($location);
+	$location = $location->name;
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
@@ -58,7 +62,11 @@ $location = $location->name;
 							
 							<?php print render($content['body']);?>		
 							
-								 
+							<?php if(isset($user_signature)): ?>
+								<div class="user_signature">	
+									<?php print $user_signature; ?>
+								</div>
+							<?php endif;?>
 						  </div>
 						  <?php if(isset($content['field_topic'])):?>	
 						  <div class="topic_section">
