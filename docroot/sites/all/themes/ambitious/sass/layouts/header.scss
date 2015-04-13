@@ -165,14 +165,14 @@ ul a {
         padding:40px 0 0;
       }
     }
-      //WHHHHHHY! is this separate from the rest of the code?
-    /*.nav-holder {
+    .nav-holder {
+        /*
       position:fixed;
       padding:100px 0 0;
       @include breakpoint($mobile) {
         padding:53px 0 0;
-      }
-    }*/
+      }*/
+    }
     .filter-slide {
       position:fixed;
       padding:100px 0 0;
@@ -476,14 +476,15 @@ ul a {
 }
 /* main nav styles */
 .nav-holder {
-  position:fixed;
+  //position:fixed;
   overflow-y: scroll; 
-  -webkit-overflow-scrolling: touch;
-  padding:100px 0 0;
+  -webkit-overflow-scrolling : touch;
+  padding:45px 0 50px;
+  //padding:100px 0 0;
   width:430px;
   height:100vh;
   background:$white;
-  top:0px;
+  top:0;
   right:0;
   margin-right:-460px;
   z-index:99;
@@ -491,8 +492,8 @@ ul a {
   @include breakpoint($mobile) {
     margin-right:-310px;
     width:285px;
-    padding:53px 0 0;
     padding-top: 35px;
+    padding:53px 0 0;
   }
     .btn{
      margin-left:32px;
