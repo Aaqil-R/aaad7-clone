@@ -1172,10 +1172,19 @@ if($user->uid == arg(1)){
   
 }
  
+
 /*
+ * altered comment form to show only filtered html as defualt and 
+ * only forum_discussion will have wysiwyg
+ */
 function ambitious_form_comment_form_alter(&$form, &$form_state) {
-  $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
-} */
+  if ($form['#node']->type != 'forum_discussion'){
+    $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
+  }
+   if (empty($form['comment_body']['und'][0]['#format'])){
+      $form['comment_body']['und'][0]['#format'] = 'filtered';
+   }
+} 
 
 function ago($timestamp) {
    $difference = time() - $timestamp;
