@@ -1172,10 +1172,10 @@ if($user->uid == arg(1)){
   
 }
  
-
+/*
 function ambitious_form_comment_form_alter(&$form, &$form_state) {
   $form['comment_body']['und'][0]['#wysiwyg'] = FALSE;
-} 
+} */
 
 function ago($timestamp) {
    $difference = time() - $timestamp;

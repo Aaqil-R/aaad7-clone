@@ -166,11 +166,12 @@ ul a {
       }
     }
     .nav-holder {
+        /*
       position:fixed;
       padding:100px 0 0;
       @include breakpoint($mobile) {
         padding:53px 0 0;
-      }
+      }*/
     }
     .filter-slide {
       position:fixed;
@@ -475,21 +476,25 @@ ul a {
 }
 /* main nav styles */
 .nav-holder {
+  //position:fixed;
+  overflow-y: scroll; 
+  -webkit-overflow-scrolling : touch;
+  padding:45px 0 50px;
+  //padding:100px 0 0;
   width:430px;
   height:100vh;
-  padding:45px 0 50px;
   background:$white;
-  position:absolute;
-  top:0px;
+    position: absolute;
+  top:0;
   right:0;
   margin-right:-460px;
   z-index:99;
   @include box-shadow(0 2px 7px rgba(24,24,24,.5));
-  overflow-y: scroll; 
   @include breakpoint($mobile) {
     margin-right:-310px;
     width:285px;
     padding-top: 35px;
+    padding:53px 0 0;
   }
     .btn{
      margin-left:32px;
