@@ -1043,10 +1043,12 @@ fieldset.group-hidden {
     }
   }
   .search-form{
+   @include breakpoint($mobile){ 
      input[type=submit]{
        width: 92%;
 		max-width: inherit;
 		margin: 0 4%;
+     }
      }
   }
   .item-list .pager li{
