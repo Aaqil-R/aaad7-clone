@@ -1023,6 +1023,18 @@ fieldset.group-hidden {
   }
 }
 
+
+.page-search-gss{
+  .tabs{
+    @include breakpoint($mobile){
+      li{
+        margin-bottom: 10px;
+	   display: block;
+	   clear: both;
+	 }
+    }
+  }
+}
 .google-search-results{ 
     .item-list .pager li{
       display: inline-block;
