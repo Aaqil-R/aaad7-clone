@@ -1322,18 +1322,27 @@ fieldset.group-hidden {
   clear: inherit;
 }
 
-/* line 1028, ../sass/issue-fixing.scss */
-.google-search-results.posts-columns .item-list .pager li {
+@media (max-width: 767px) {
+  /* line 1030, ../sass/issue-fixing.scss */
+  .page-search-gss .tabs li {
+    margin-bottom: 10px;
+    display: block;
+    clear: both;
+  }
+}
+
+/* line 1039, ../sass/issue-fixing.scss */
+.google-search-results .item-list .pager li {
   display: inline-block;
 }
 @media (max-width: 767px) {
-  /* line 1033, ../sass/issue-fixing.scss */
-  .google-search-results.posts-columns .forum-left .image-holder {
+  /* line 1047, ../sass/issue-fixing.scss */
+  .google-search-results.posts-columns.columns-full .views-row .forum-text .forum-left .image-holder {
     width: 100%;
     margin: 0;
   }
 }
-/* line 1039, ../sass/issue-fixing.scss */
-.google-search-results.posts-columns .gss-search-url {
+/* line 1056, ../sass/issue-fixing.scss */
+.google-search-results .gss-search-url {
   word-wrap: break-word;
 }
