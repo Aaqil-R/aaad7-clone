@@ -71,11 +71,11 @@
 							<h3><?php print $fields['title']->content; ?></h3>
                             <div class="meta">
                                 <div class="created">
-                                    <?php print format_date($fields['created']->content, 'custom', 'D j M Y');?>
+                                    <?php print $fields['created']->content;?>
                                 </div>
                                 <?php if(isset($fields['field_topic'])):?>	
                                 <div class="topic_section">
-                                    <?php print render($fields['field_topic']->content);?>
+                                    Topics: <?php print render($fields['field_topic']->content);?>
                                 </div>
                                 <?php endif; ?>
                                 <div class="clear"></div>
