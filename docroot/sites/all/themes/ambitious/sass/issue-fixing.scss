@@ -1022,3 +1022,23 @@ fieldset.group-hidden {
     }
   }
 }
+
+.google-search-results{
+  &.posts-columns{
+    .item-list .pager li{
+      display: inline-block;
+    }
+    @include breakpoint($mobile){
+      .forum-left{
+        .image-holder{
+          width: 100%;
+          margin:0;
+        }      
+      }
+    } 
+    .gss-search-url{
+      word-wrap: break-word;
+    }
+  }
+}
+
