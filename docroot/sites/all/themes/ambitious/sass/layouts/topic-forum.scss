@@ -563,6 +563,8 @@ a.video_bt, .isvideo{
               @include breakpoint($mobile) {
                 cite, time {
                     @include span(last 10 of 12);
+                    margin-top:0;
+                    line-height: 1em;
                 }
               }
  			  
@@ -575,6 +577,7 @@ a.video_bt, .isvideo{
 			  @include breakpoint($mobile) {
 			    margin: 0;
 			    padding: 0;
+                clear:both;
 			  }
 			  h3{
 			    margin-bottom: 22px;
