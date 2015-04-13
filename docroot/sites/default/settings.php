@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors',1);
 /**
  * @file
  * Drupal site-specific configuration file.
