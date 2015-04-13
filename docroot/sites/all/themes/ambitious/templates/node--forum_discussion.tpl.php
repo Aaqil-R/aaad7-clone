@@ -59,7 +59,21 @@
 						    <?php else :?>						    
 								<h3>Discussion</h3>
 							<?php endif;?> 
-							
+							<div class="meta">
+                                <?php if(isset($content['field_topic'])):?>	
+                                <div class="topic_section">
+                                    <?php print render($content['field_topic']);?>
+                                </div>
+                                <?php endif; ?>
+                                <?php if(isset($content['field_topic'])):?>	
+                                <div class="created">
+                                    <?php print render($content['created']);?>
+                                </div>
+                                <?php endif; ?>
+                               
+                            </div>
+                            
+                              
 							<?php print render($content['body']);?>		
 							
 							<?php if(isset($user_signature)): ?>
@@ -69,11 +83,7 @@
 							<?php endif;?>
 							
 						  </div>
-						  <?php if(isset($content['field_topic'])):?>	
-						  <div class="topic_section">
-								<?php print render($content['field_topic']);?>
-								</div>
-							<?php endif; ?>
+						  
 						</div> 
 						<div class="footer">
 						<div class="flag_node">
