@@ -168,12 +168,15 @@ Drupal.behaviors.ambitious = {
 	   
 	}
     */
-	$('.card-stream').masonry ({
-	  //columnWidth: 100,
-	    "itemSelector": ".post",
-        "columnWidth": ".post",
-        "percentPosition": true
-	  }); 
+      
+	jQuery(window).on('load', function(){
+        $('.card-stream .view-content').masonry ({
+          //columnWidth: 100,
+            "itemSelector": ".post",
+            "columnWidth": ".post",
+            "percentPosition": true
+        }); 
+    });
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
