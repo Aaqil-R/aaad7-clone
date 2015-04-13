@@ -39,26 +39,14 @@
     }
     @include breakpoint(min-width $large-mobile){
         width: span(6 of 12 no-gutter);
+        
         .views-field {
-            margin: 0 15px 30px 0;
-        }
-        &:nth-of-type(2n) .views-field {
-            margin: 0 0 30px 15px;
+            margin: 0 15px 30px 15px;
         }
     }
     @include breakpoint(min-width $tablet-small){
         //@include remove last;
         width: span(4 of 12 no-gutter);
-         .views-field {
-            margin: 0 15px 30px 0;
-        }
-        &:nth-of-type(2n) .views-field {
-            margin: 0 15px 30px 15px;
-        }
-        
-        &:nth-of-type(3n) .views-field {
-            margin: 0 0 30px 15px;
-        }
     }
   }
     
