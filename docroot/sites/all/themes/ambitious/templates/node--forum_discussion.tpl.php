@@ -22,7 +22,7 @@
    $last_reply = ambitious_get_last_reply($node->nid);
   if ($last_reply){
     $last_reply_user = user_load($last_reply->uid);
-    $last_reply_username = theme('username', $last_reply_user);
+    $last_reply_username = theme('username', array('account' => $last_reply_user));
     $last_reply_time = format_date($last_reply->changed);
   }   
 	// author signature to be added to the discussion threads.
