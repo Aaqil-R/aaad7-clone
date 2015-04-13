@@ -413,9 +413,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
     -moz-column-gap: 0px;
     -webkit-column-gap: 0px;
     column-gap: 0px;
-    -moz-page-break-inside: auto;
-    -webkit-column-break-inside: auto;
-    break-inside: auto;
     width: 100%;
   }
 }
@@ -427,9 +424,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
     columns: 3;
   }
 }
-/* line 22, ../sass/stream.scss */
+/* line 21, ../sass/stream.scss */
 .card-stream .views-row.post {
   background: transparent;
+  -moz-page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
   margin: 0;
   padding: 0;
   border: none;
