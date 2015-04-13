@@ -477,20 +477,14 @@ ul a {
 /* main nav styles */
 .nav-holder {
   position:fixed;
-  -webkit-overflow-scrolling: touch;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  touch-action: none;
   overflow-y: scroll; 
   padding:100px 0 0;
   width:430px;
   height:100vh;
-  padding:45px 0 50px;
   background:$white;
   top:0px;
   right:0;
-  //margin-right:-460px;
+  margin-right:-460px;
   z-index:99;
   @include box-shadow(0 2px 7px rgba(24,24,24,.5));
   @include breakpoint($mobile) {
