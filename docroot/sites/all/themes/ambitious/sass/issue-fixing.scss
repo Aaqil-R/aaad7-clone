@@ -1027,22 +1027,53 @@ fieldset.group-hidden {
   }
 }
 
-.google-search-results{
-  &.posts-columns{
+
+.page-search-gss{
+  .tabs{
+    @include breakpoint($mobile){
+      li{
+        margin-bottom: 10px;
+	   display: block;
+	   clear: both;
+	 }
+    }
+  }
+  .search-form{
+     input[type=submit]{
+       width: 92%;
+		max-width: inherit;
+		margin: 0 4%;
+     }
+  }
+}
+.google-search-results{ 
     .item-list .pager li{
       display: inline-block;
     }
-    @include breakpoint($mobile){
-      .forum-left{
-        .image-holder{
-          width: 100%;
-          margin:0;
-        }      
+    @include breakpoint($mobile){ 
+      &.posts-columns.columns-full{
+        .views-row{
+          .forum-text{
+            .forum-left{
+              .image-holder{ 
+				width: 100%;
+				margin:0 0 10px 0;
+              }
+            }
+          }
+        }
       }
     } 
     .gss-search-url{
       word-wrap: break-word;
     }
-  }
 }
+
+
+
+
+
+
+
+
 
