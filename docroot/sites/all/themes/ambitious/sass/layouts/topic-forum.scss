@@ -571,7 +571,7 @@ a.video_bt, .isvideo{
               
 			}
 			.forum-right{
-			 
+			  clear: both;
 			  padding-top: 9px;
 			  @include breakpoint(min-width $tablet-small) {
 			    @include span(last 10 of 12);
@@ -596,6 +596,9 @@ a.video_bt, .isvideo{
                     width: auto; margin-top: 0;
                 }
                 .clear {clear: both;}
+              }
+              .field-name-body {
+                margin-top: 0.25em;
               }
 			} 
               
