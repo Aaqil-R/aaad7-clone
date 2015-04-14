@@ -64,7 +64,7 @@
     <?php print render($title_suffix); ?>
   <?php endif; ?> 
   <ul class="comment-listing">
-      
+      <li>this one</li>
     <?php 
         $comments = array_reverse ($content['comments']);
         print render($comments); 
