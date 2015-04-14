@@ -64,7 +64,10 @@
     <?php print render($title_suffix); ?>
   <?php endif; ?> 
   <ul class="comment-listing">
-    <?php print render($content['comments']); ?>
+      
+    <?php 
+$comments = array_reverse ($content['comments']);
+print render($comments); ?>
   </ul>
  
 </section>
