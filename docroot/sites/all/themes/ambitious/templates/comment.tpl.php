@@ -81,7 +81,7 @@
 			   </div>
 			   <div class="comment-right"> 
 			     <?php
-					 // We hide the comments and links now so that we can render them later. 
+					 // We hide the comments and links now so that we can render them later. WHAT ARE YOU TALKING ABOUT? THIS DOESN'T RELATE TO THE CODE BELOW. FFS
 					 print render($content);
 				    ?>
 				    

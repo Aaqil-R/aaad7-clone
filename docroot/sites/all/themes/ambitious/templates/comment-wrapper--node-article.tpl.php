@@ -71,8 +71,7 @@
   <?php endif; ?> 
   <ul class="comment-listing">
     <?php 
- $comments = array_reverse ($content['comments']);
-print render($comments); ?>
+print render($content['comments']); ?>
   </ul>
  
 </section>
