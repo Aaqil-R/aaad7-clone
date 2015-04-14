@@ -1383,10 +1383,19 @@ fieldset.group-hidden {
 }
 
 /* line 1098, ../sass/issue-fixing.scss */
-#user-login .item-list .last {
+#user-login--2 .item-list .last {
   background: black;
 }
 /* line 1100, ../sass/issue-fixing.scss */
-#user-login .item-list .last:before {
+#user-login--2 .item-list .last:before {
   content: "Did you have an account on the old Talk about Autism website? Please reset your password here: ";
+}
+
+/* line 1105, ../sass/issue-fixing.scss */
+#user-login .hybridauth-widget-wrapper {
+  background: black;
+}
+/* line 1107, ../sass/issue-fixing.scss */
+#user-login .hybridauth-widget-wrapper:before {
+  content: "Did you have an account on the old Talk about Autism website? Please reset your password by selection the option on your left: ";
 }
