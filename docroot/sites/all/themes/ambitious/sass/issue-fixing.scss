@@ -1010,6 +1010,9 @@ fieldset.group-hidden {
         }
         .form-type-checkbox {
             float: left;
+            .error {
+                outline 1px solid $error-red;
+            }
         }
         .filter-help {padding: 0;float: none; text-align: center;}
         input {max-width: 100%;}
