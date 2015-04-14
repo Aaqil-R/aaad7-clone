@@ -66,8 +66,9 @@
   <ul class="comment-listing">
       
     <?php 
-$comments = array_reverse ($content['comments']);
-print render($comments); ?>
+        $comments = array_reverse ($content['comments']);
+        print render($comments); 
+    ?>
   </ul>
  
 </section>
