@@ -1095,8 +1095,11 @@ fieldset.group-hidden {
 }
 
 //hack to add text to login form
-#user-login .item-list .last:before {
+#user-login .item-list .last {
+    background: black;
+    &:before {
     content: "Did you have an account on the old Talk about Autism website? Please reset your password here: ";
+    }
 }
 
 
