@@ -1094,10 +1094,11 @@ fieldset.group-hidden {
 }
 
 //hack to add text to login form
-#user-login--2 .item-list:nth-of-type(1) .last {
+#user-login--2 .hybridauth-widget-wrapper {
     &:before {
-    content: "Did you have an account on the old Talk about Autism website? Please reset your password here: ";
+    content: "Did you have an account on the old Talk about Autism website? Please reset your password. ";
     }
+    
 }
 
 #user-login .hybridauth-widget-wrapper {
@@ -1105,8 +1106,6 @@ fieldset.group-hidden {
     content: "Did you have an account on the old Talk about Autism website? Please reset your password.";
     }
 }
-
-
 
 #comment-body-add-more-wrapper .filter-wrapper {
     display: none;
