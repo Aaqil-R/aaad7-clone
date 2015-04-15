@@ -107,7 +107,7 @@ $userid = $elements['#account']->uid;
 			               	<section class="about-me">
 			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
-			               		<p><?php print $elements['#account']->field_tell_us_about_yourself; ?></p>
+			               		<p><?php print render($user_profile['field_tell_us_about_yourself']); ?></p>
 			               		<p>
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
