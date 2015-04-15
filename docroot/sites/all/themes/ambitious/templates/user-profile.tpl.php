@@ -51,6 +51,7 @@ $userid = $elements['#account']->uid;
  hide($user_profile['field_avatar_gender']);
  hide($user_profile['field_avatar_ref']);
  hide($user_profile['field_thumbnail_ref']); 
+ hide($user_profile['field_tell_us_about_yourself']); 
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
@@ -106,6 +107,7 @@ $userid = $elements['#account']->uid;
 			               	<section class="about-me">
 			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
+			               		<p><?php print $elements['#account']->field_tell_us_about_yourself['und']['0']['value']; ?></p>
 			               		<p>
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
