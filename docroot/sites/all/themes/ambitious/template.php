@@ -726,8 +726,12 @@ function ambitious_field__field_closing_date(&$variables){
   if ($form_id == 'user_login') {
     $form['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['name']['#description']."</span></a>";
     $form['pass']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>"."Did you have an account on the old Talk about Autism website? Please 'Request new password'."."</span></a>"; 
-  }
-   
+  } 
+   if($form_id == 'user_pass'){
+     $form['name']['#default_value'] = "usermname";
+     dpm($form['name']['default_value'],"defaul");
+     dpm($form,"all");
+   }
    if ($form_id == 'user_register_form') {  
       $form['account']['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['account']['name']['#description']."</span></a>";
        $form['account']['mail']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['account']['mail']['#description']."</span></a>";
