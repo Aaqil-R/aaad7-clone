@@ -128,8 +128,9 @@ $userid = $elements['#account']->uid;
      			               	  
 <div class="profile"<?php print $attributes; ?>>
   <?php  print render($user_profile); ?>
+    <br>
+  <a href="/talk-to-others">Back to Talk to Others</a>
 </div>
 
 <div>
-    <p><a href="/talk-to-others">Back to Talk to Others</a></p>
 </div>
