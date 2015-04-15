@@ -108,7 +108,7 @@ $userid = $elements['#account']->uid;
 			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
 			               		<p>
-			               		  <?php print $elements['#account']->field_tell_us_about_yourself['und'][0]['safe_value']; ?>
+			               		  <?php dpm($elements['#account']->field_tell_us_about_yourself); ?>
 			               		</p>
 			               		<p>
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
