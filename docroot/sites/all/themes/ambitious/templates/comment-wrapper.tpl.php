@@ -38,17 +38,7 @@
   global $user;
   $node = node_load(arg(1));  
  ?>
-    <?php if ($content['comment_form']): ?>  
-  <section class="comment-block">
-		    <h4><?php print t('Add a new comment'); ?></h4>
-			<?php print render($content['comment_form']); ?>
-			<?php  if (!$user->uid ) { ?>
-			   <a href="/user/login?destination=node/<?php print $node->nid; ?>">Log in</a> or <a href="/user/register?destination=node/<?php print $node->nid; ?>">register</a> to post comments 
-			   </br> 
-			<?php } ?>
-			
-		</section>
-  <?php endif; ?>
+
 
 <section id="comments" class="comment-list <?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
@@ -71,3 +61,15 @@
   </ul>
  
 </section>
+
+    <?php if ($content['comment_form']): ?>  
+  <section class="comment-block">
+        <h4><?php print t('Add a new comment'); ?></h4>
+      <?php print render($content['comment_form']); ?>
+      <?php  if (!$user->uid ) { ?>
+         <a href="/user/login?destination=node/<?php print $node->nid; ?>">Log in</a> or <a href="/user/register?destination=node/<?php print $node->nid; ?>">register</a> to post comments 
+         </br> 
+      <?php } ?>
+      
+    </section>
+  <?php endif; ?>
