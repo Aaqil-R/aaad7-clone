@@ -724,6 +724,7 @@ function ambitious_field__field_closing_date(&$variables){
     $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email']['#description']."</span></a>";
   }
   if ($form_id == 'user_login') {
+    $form['name']['#attributes']['placeholder'] = 'Username or email address *'; 
     $form['name']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['name']['#description']."</span></a>";
     $form['pass']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>"."Did you have an account on the old Talk about Autism website? Please 'Request new password'."."</span></a>"; 
   } 
