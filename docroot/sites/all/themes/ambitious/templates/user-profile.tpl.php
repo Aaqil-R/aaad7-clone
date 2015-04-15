@@ -105,8 +105,7 @@ $userid = $elements['#account']->uid;
 				               			</strong>
 				               		</dd>						
 				               	  </dl>
-			               	</section>
-			               	 <?php if(isset($current_user)):?> 
+			               	</section> 
 			               	<section class="about-me">
 			               	<?php if(isset($elements['#account']->field_about_me['und'])) :?>
 			               		<h2>About me</h2>
@@ -115,8 +114,7 @@ $userid = $elements['#account']->uid;
 			               		</p>
 			               		<?php endif; ?>
                                         <?php if ($edit_url) print $edit_url;  ?>
-		               		</section>
-		               		<?php endif; ?>
+		               		</section> 
 		               		<?php if (!empty($hybridauth_user)):?>
 		               		<section class="connect">  
 			               		<h3>Connect for faster login</h3>
