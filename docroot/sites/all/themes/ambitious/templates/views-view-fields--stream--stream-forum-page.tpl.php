@@ -65,7 +65,10 @@
 								<?php print $fields['picture']->content; ?>
 						    </div>
                             <cite>by </br><strong><?php print $fields['name']->content; ?></strong></cite>
-                            <time pubdate>Joined: <?php print $fields['created_1']->content; ?></time></br>
+                            <time pubdate>Joined: <?php print $fields['created_1']->content; ?>
+                              <?php print $fields['created_2']->content; ?>
+                              <?php print $fields['created_3']->content; ?>
+                            </time></br>
                              <time pubdate>Posts: <?php print $userpostcount; ?></time></br>
                              <?php $fields['field_location_reference']->content = strip_tags($fields['field_location_reference']->content); ?> 
                              <?php if(!empty($fields['field_location_reference']->content)){ ?>
