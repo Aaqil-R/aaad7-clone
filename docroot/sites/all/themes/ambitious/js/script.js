@@ -235,6 +235,7 @@ Drupal.behaviors.ambitious = {
 		// Placeholders for login box
 		$('.form-item-name input.form-text').attr("placeholder", "Username or email address*");
 		$('.not-logged-in #user-login input[type="password"]').attr("placeholder", "Password*");
+		$('.not-logged-in #user-login--2 input[type="password"]').attr("placeholder", "Password*");
 		$('.not-logged-in .form-item-mail input').attr("placeholder", "E-mail address*");		
 	  });
 }
