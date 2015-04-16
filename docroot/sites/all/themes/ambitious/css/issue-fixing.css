@@ -1393,32 +1393,30 @@ fieldset.group-hidden {
   display: none;
 }
 
-/* HEADER SECTION in mobile view */
-@media (max-width: 767px) {
-  /* line 1112, ../sass/issue-fixing.scss */
-  #block-menu-menu-header-top-menu {
-    float: left;
+/* 
+#block-menu-menu-header-top-menu{
+  @include breakpoint($mobile){
+    float: left; 
+  }
+  @include breakpoint(520px){
+    li{
+      padding:0 5px;
+    }
   }
 }
-@media (max-width: 520px) {
-  /* line 1117, ../sass/issue-fixing.scss */
-  #block-menu-menu-header-top-menu li {
-    padding: 0 5px;
+#block-system-user-menu{
+  @include breakpoint(520px){
+  ul{
+     padding-left:0;
+     li {
+       a{
+         font-size:0;
+         img{
+           margin-right:0;
+           margin-top: -5px;
+         }
+       }
+     }
+   }    
   }
-}
-
-@media (max-width: 520px) {
-  /* line 1124, ../sass/issue-fixing.scss */
-  #block-system-user-menu ul {
-    padding-left: 0;
-  }
-  /* line 1127, ../sass/issue-fixing.scss */
-  #block-system-user-menu ul li a {
-    font-size: 0;
-  }
-  /* line 1129, ../sass/issue-fixing.scss */
-  #block-system-user-menu ul li a img {
-    margin-right: 0;
-    margin-top: -5px;
-  }
-}
+}*/
