@@ -1117,6 +1117,11 @@ fieldset.group-hidden {
   #block-menu-menu-header-top-menu{
     @include breakpoint($mobile){
       float: left; 
+    }
+     @include breakpoint(520px){
+      li{
+        padding:0 17px;
+      }
     } 
   }
   #block-system-user-menu{
@@ -1126,9 +1131,9 @@ fieldset.group-hidden {
        li {
         a{
           font-size:0;
-          img{
-            margin-right:0;
-            margin-top: -5px;
+          img{ 
+            margin-left: -44px;
+            margin-top: -10px;
           }
         }
       }
