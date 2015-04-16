@@ -150,7 +150,7 @@
 					<li><a href="/user" class="active">My profile</a></li>
 					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Edit profile</a></li>
 					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Reset password</a></li>
-					<li><a href="/user/logout" class="show_mobile">Logout</a></li>
+					<li class="show_mobile"><a href="/user/logout" >Logout</a></li>
 				</ul>
 				<?php else: ?>
 				<ul>
