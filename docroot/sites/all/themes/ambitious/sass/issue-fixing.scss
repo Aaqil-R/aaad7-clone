@@ -1107,3 +1107,30 @@ fieldset.group-hidden {
     display: none;
 }
 
+
+/* HEADER SECTION in mobile view */
+#block-menu-menu-header-top-menu{
+  @include breakpoint($mobile){
+    float: left; 
+  }
+  @include breakpoint(520px){
+    li{
+      padding:0 5px;
+    }
+  }
+}
+#block-system-user-menu{
+  @include breakpoint(520px){
+  ul{
+     padding-left:0;
+     li {
+       a{
+         font-size:0;
+         img{
+           margin-right:0;
+         }
+       }
+     }
+   }    
+  }
+}
