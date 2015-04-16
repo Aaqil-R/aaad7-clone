@@ -1393,29 +1393,40 @@ fieldset.group-hidden {
   display: none;
 }
 
+/* line 1110, ../sass/issue-fixing.scss */
+.show_mobile {
+  display: none;
+}
 @media (max-width: 767px) {
   /* line 1110, ../sass/issue-fixing.scss */
+  .show_mobile {
+    display: inherit;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 1117, ../sass/issue-fixing.scss */
   #block-menu-menu-header-top-menu {
     float: left;
   }
 }
 @media (max-width: 520px) {
-  /* line 1115, ../sass/issue-fixing.scss */
+  /* line 1122, ../sass/issue-fixing.scss */
   #block-menu-menu-header-top-menu li {
     padding: 0 5px;
   }
 }
 
 @media (max-width: 520px) {
-  /* line 1122, ../sass/issue-fixing.scss */
+  /* line 1129, ../sass/issue-fixing.scss */
   #block-system-user-menu ul {
     padding-left: 0;
   }
-  /* line 1125, ../sass/issue-fixing.scss */
+  /* line 1132, ../sass/issue-fixing.scss */
   #block-system-user-menu ul li a {
     font-size: 0;
   }
-  /* line 1127, ../sass/issue-fixing.scss */
+  /* line 1134, ../sass/issue-fixing.scss */
   #block-system-user-menu ul li a img {
     margin-right: 0;
     margin-top: -5px;

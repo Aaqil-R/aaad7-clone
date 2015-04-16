@@ -1107,6 +1107,13 @@ fieldset.group-hidden {
     display: none;
 }
 
+.show_mobile{
+  display:none;
+  @include breakpoint($mobile){
+    display:inherit;
+  }
+}
+
 #block-menu-menu-header-top-menu{
   @include breakpoint($mobile){
     float: left; 
