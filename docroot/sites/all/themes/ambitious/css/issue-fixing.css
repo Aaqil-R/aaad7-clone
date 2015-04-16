@@ -1393,30 +1393,31 @@ fieldset.group-hidden {
   display: none;
 }
 
-/* 
-#block-menu-menu-header-top-menu{
-  @include breakpoint($mobile){
-    float: left; 
-  }
-  @include breakpoint(520px){
-    li{
-      padding:0 5px;
-    }
+@media (max-width: 767px) {
+  /* line 1110, ../sass/issue-fixing.scss */
+  #block-menu-menu-header-top-menu {
+    float: left;
   }
 }
-#block-system-user-menu{
-  @include breakpoint(520px){
-  ul{
-     padding-left:0;
-     li {
-       a{
-         font-size:0;
-         img{
-           margin-right:0;
-           margin-top: -5px;
-         }
-       }
-     }
-   }    
+@media (max-width: 520px) {
+  /* line 1115, ../sass/issue-fixing.scss */
+  #block-menu-menu-header-top-menu li {
+    padding: 0 5px;
   }
-}*/
+}
+
+@media (max-width: 520px) {
+  /* line 1122, ../sass/issue-fixing.scss */
+  #block-system-user-menu ul {
+    padding-left: 0;
+  }
+  /* line 1125, ../sass/issue-fixing.scss */
+  #block-system-user-menu ul li a {
+    font-size: 0;
+  }
+  /* line 1127, ../sass/issue-fixing.scss */
+  #block-system-user-menu ul li a img {
+    margin-right: 0;
+    margin-top: -5px;
+  }
+}
