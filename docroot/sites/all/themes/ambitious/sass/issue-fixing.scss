@@ -1113,16 +1113,11 @@ fieldset.group-hidden {
     display:inherit;
   }
 }
-
+.logged-in{
 #block-menu-menu-header-top-menu{
   @include breakpoint($mobile){
     float: left; 
-  }
-  @include breakpoint(520px){
-    li{
-      padding:0 5px;
-    }
-  }
+  } 
 }
 #block-system-user-menu{
   @include breakpoint(520px){
@@ -1139,4 +1134,5 @@ fieldset.group-hidden {
      }
    }    
   }
+}
 }
