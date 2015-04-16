@@ -1382,17 +1382,18 @@ fieldset.group-hidden {
   }
 }
 
-/* line 1098, ../sass/issue-fixing.scss */
-#user-login--2 .hybridauth-widget-wrapper:before {
-  content: "Did you have an account on the old Talk about Autism website? Please reset your password. ";
-}
-
-/* line 1105, ../sass/issue-fixing.scss */
+/* line 1100, ../sass/issue-fixing.scss */
+#user-login--2 .hybridauth-widget-wrapper:before,
 #user-login .hybridauth-widget-wrapper:before {
   content: "Did you have an account on the old Talk about Autism website? Please reset your password.";
 }
 
-/* line 1110, ../sass/issue-fixing.scss */
+/* line 1106, ../sass/issue-fixing.scss */
 #comment-body-add-more-wrapper .filter-wrapper {
   display: none;
+}
+
+/* line 1110, ../sass/issue-fixing.scss */
+.comment-right img {
+  width: auto;
 }
