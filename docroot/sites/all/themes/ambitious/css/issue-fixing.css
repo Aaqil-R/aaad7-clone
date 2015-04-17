@@ -1458,11 +1458,14 @@ fieldset.group-hidden {
 }
 
 /* line 1176, ../sass/issue-fixing.scss */
-.posts-columns.columns-full .row .forum-text {
-  clear: both;
-}
-
-/* line 1181, ../sass/issue-fixing.scss */
 .visual .img-holder img {
   width: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 1180, ../sass/issue-fixing.scss */
+  .posts-columns h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
