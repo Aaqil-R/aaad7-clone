@@ -60,7 +60,9 @@
  */ 
    hide($content['links']);
    hide($content['privatemsg']);
-    global $user; 
+    global $user;
+   $userid = $content['comment_body']['#object']->uid;
+   $user_info = user_load($userid);  
 ?>
 	
 <li class="<?php print $classes; ?>">
@@ -83,6 +85,7 @@
 			     <?php
 					 // We hide the comments and links now so that we can render them later. WHAT ARE YOU TALKING ABOUT? THIS DOESN'T RELATE TO THE CODE BELOW. FFS
 					 print render($content);
+					 print $user_info->field_signature['und'][0]['safe_value'];
 				    ?>
 				    
 				    <?php
