@@ -23,9 +23,11 @@
  *
  * @ingroup views_templates
  */
+
+
 ?>
 <?php
-
+  
   $sticky = node_load($fields['nid']->raw); 
   $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
   $node_flag_comment = ambitious_get_node_flaged_comments_count($fields['nid']->raw) ;
@@ -51,10 +53,10 @@
         }
       }   
        $usid = strip_tags($fields['uid']->raw);
-       $userpostcount = ambitious_get_user_post_count($usid); 
+       $userpostcount = ambitious_get_user_post_count($usid);       
       ?>  
       
- <div class="<?php print $class; if($sticky->sticky == 1){ ?> rowlessthen3 <?php } ?>" >
+ <div class="<?php print $class; if($sticky->sticky == 1 || strip_tags($fields['position']->content) >= 1 ){ ?> rowlessthen3 <?php } ?>" >
  
  <section style="width:100%;" class="post">  
 						<em class="icon-Hottopic forum-icon"></em>
