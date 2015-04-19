@@ -80,3 +80,23 @@
 	
 
 }
+
+.section-community-champions-forum, .section-forums {
+    header .user-picture {
+        width: 100px; margin-right: 0.5em;display: inline-block;
+    }
+    .comment-wrapper {
+        border: none;
+        @include box-shadow(none);
+        padding: 0;
+
+        .comment {
+            @include pie-clearfix();
+            margin-bottom: 1em;
+            padding: 1em;
+            .comment-right {
+                background: none;
+            }
+        }
+    }
+}
