@@ -110,8 +110,8 @@ Drupal.behaviors.ambitious = {
 		        menuDrop: '.filter-slide'
 	          }); 
         }); 
-        $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
-          $('#edit-submit-stream').trigger( "click" );
+        $("form#views-exposed-form-stream-stream-forum-page select, form#views-exposed-form-stream-stream-forum-page #edit-sort-by").change(function() {
+          $('.button-holder .form-submit').trigger( "click" );
         });
         $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
           $('#edit-submit-stream').trigger( "click" );
