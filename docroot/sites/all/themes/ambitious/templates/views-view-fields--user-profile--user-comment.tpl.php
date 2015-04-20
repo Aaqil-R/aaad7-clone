@@ -43,7 +43,7 @@
         <?php }?>
          <?php if ($field-->handler->field_alias == 'path') { 
               $url = $field->content;
-              print_r($url);
+              dpm($url);
          }?>
         <?php if ($field->handler->field_alias == 'comment_created') {?>
        
