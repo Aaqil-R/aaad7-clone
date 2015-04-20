@@ -112,7 +112,7 @@ Drupal.behaviors.ambitious = {
         }); 
         $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
           console.log("working");
-          //$('.button-holder .form-submit').trigger( "click" );
+          $('.button-holder .form-submit').trigger( "click" );
           
         });
         $("form#views-exposed-form-stream-voices-from-the-spectrum-page select").change(function() {
