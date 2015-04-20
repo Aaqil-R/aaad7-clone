@@ -123,6 +123,10 @@ body.profile .top-header{
 	.holder{
 		max-width: 790px;
 	}
+	@include breakpoint($mobile) {
+	  padding: 2em 20px;
+       margin: auto;
+	}
 	h1{
 		display: inline-block;
 		margin-bottom: 0.6em;
@@ -201,6 +205,7 @@ body.profile .top-header{
 			margin: 0;
 			width: 54%;
 			float: none;
+			word-wrap: break-word;
 		}
 	}
 	.about-me{
