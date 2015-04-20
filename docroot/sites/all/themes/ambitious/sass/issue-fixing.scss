@@ -1193,7 +1193,7 @@ body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
       width:100%;
     }
   }
-  @include breakpoint(380px){
+  @include breakpoint($mobile){
     padding:36px;
     .filterbutton{
       margin-bottom: 30px;
@@ -1201,7 +1201,7 @@ body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
   }
 }
 .forum-right{
-  @include breakpoint(380px){
+  @include breakpoint($mobile){
     h3{
       clear: both
     }
