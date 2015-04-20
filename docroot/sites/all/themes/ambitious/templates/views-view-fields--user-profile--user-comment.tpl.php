@@ -31,7 +31,9 @@
   <?php endif; ?> 
   <?php print $field->wrapper_prefix; ?>
     <?php print $field->label_html; ?> 																																																																							 
-				
+			 <pre>
+           <?php print_r($field); ?>
+           </pre>	
 																																																																																																															    <?php if($field->handler->field_alias == 'users_comment_picture') { ?>
       <div class="comment-left">
       <?php
@@ -42,9 +44,7 @@
            <h4><?php print $field->content; ?></h4>
         <?php }?>
         <?php if ($field->handler->field_alias == 'comment_created') {?>
-        <pre>
-           <?php print_r($field->handler->field_info); ?>
-           </pre>
+       
            <span class="time-ago"> 
              <?php print ago($field->raw) ;?>
            </span>
