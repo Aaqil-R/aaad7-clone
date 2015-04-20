@@ -42,6 +42,7 @@
            <h4><?php print $field->content; ?></h4>
         <?php }?>
         <?php if ($field->handler->field_alias == 'comment_created') {?>
+           <?php dpm($field->handler->field_info); ?>
            <span class="time-ago"> 
              <?php print ago($field->raw) ;?>
            </span>
