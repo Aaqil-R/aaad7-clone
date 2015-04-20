@@ -2271,20 +2271,30 @@ margin-right: 1.5625%;
 .section-community-champions-forum, .section-forums {
     #comments {
         boder: none;
+        white-space: normal;
         .comment.odd {
             background-color: $gray;
         }
+        .img-holder {
+            width: 50px;
+            float: left;
+            margin-right: 10px;
+            img {width: 100%}
+        }
+        
+        .comment-right {
+            border: none;
+        }
         @include breakpoint(min-width $tablet) {
+            .img-holder {
+                float: none;
+            }
             .comment-left {
                 @include span(2 of 12);
             }
             .comment-right {
                 @include span(last 10 of 12);
-            
             }
-        }
-        .comment-right {
-            border: none;
         }
 
     }
