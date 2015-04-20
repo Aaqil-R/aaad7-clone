@@ -31,9 +31,7 @@
   <?php endif; ?> 
   <?php print $field->wrapper_prefix; ?>
     <?php print $field->label_html; ?> 																																																																							 
-			 <pre>
-           <?php print_r($field); ?>
-           </pre>	
+		 
 																																																																																																															    <?php if($field->handler->field_alias == 'users_comment_picture') { ?>
       <div class="comment-left">
       <?php
@@ -43,6 +41,10 @@
          <?php if ($field->handler->field_alias == 'users_comment_name') { ?>  
            <h4><?php print $field->content; ?></h4>
         <?php }?>
+         <?php if ($field-->handler->field_alias == 'path') { 
+              $url = $field->content;
+              print_r($url);
+         }?>
         <?php if ($field->handler->field_alias == 'comment_created') {?>
        
            <span class="time-ago"> 
