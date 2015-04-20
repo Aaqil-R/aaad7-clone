@@ -2272,14 +2272,23 @@ margin-right: 1.5625%;
         .comment.odd {
             background-color: $gray;
         }
-
-        .comment-left {
-            @include span(2 of 12);
+        @include breakpoint(min-width $tablet) {
+            .comment-left {
+                //@include span(2 of 12);
+            }
+            .comment-right {
+                //@include span(last 10 of 12);
+            
+            }
         }
         .comment-right {
-            @include span(last 10 of 12);
             border: none;
         }
 
     }
-} 
+    #forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
+        white-space: normal;
+    }
+}
+
+

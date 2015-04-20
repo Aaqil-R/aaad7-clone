@@ -468,18 +468,28 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 /* line 85, ../sass/comments.scss */
 .section-community-champions-forum header .user-picture, .section-forums header .user-picture {
-  width: 100px;
+  width: 50px;
   margin-right: 0.5em;
   display: inline-block;
 }
-/* line 88, ../sass/comments.scss */
+/* line 87, ../sass/comments.scss */
+.section-community-champions-forum header .user-picture img, .section-forums header .user-picture img {
+  width: 100%;
+}
+@media (min-width: 990px) {
+  /* line 85, ../sass/comments.scss */
+  .section-community-champions-forum header .user-picture, .section-forums header .user-picture {
+    width: 100px;
+  }
+}
+/* line 94, ../sass/comments.scss */
 .section-community-champions-forum .comment-wrapper, .section-forums .comment-wrapper {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   padding: 0;
 }
-/* line 93, ../sass/comments.scss */
+/* line 99, ../sass/comments.scss */
 .section-community-champions-forum .comment-wrapper .comment, .section-forums .comment-wrapper .comment {
   *zoom: 1;
   margin-bottom: 1em;
@@ -491,7 +501,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   display: table;
   clear: both;
 }
-/* line 97, ../sass/comments.scss */
+/* line 103, ../sass/comments.scss */
 .section-community-champions-forum .comment-wrapper .comment .comment-right, .section-forums .comment-wrapper .comment .comment-right {
   background: none;
 }

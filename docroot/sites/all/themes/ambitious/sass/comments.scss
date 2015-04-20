@@ -83,7 +83,13 @@
 
 .section-community-champions-forum, .section-forums {
     header .user-picture {
-        width: 100px; margin-right: 0.5em;display: inline-block;
+        width: 50px; margin-right: 0.5em;display: inline-block;
+        img {
+            width: 100%;
+        }
+        @include breakpoint (min-width $tablet) {
+            width: 100px;
+        }
     }
     .comment-wrapper {
         border: none;
