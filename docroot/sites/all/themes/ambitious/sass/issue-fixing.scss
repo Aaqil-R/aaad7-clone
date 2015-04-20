@@ -1187,3 +1187,27 @@ body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
 
 }
 
+
+
+
+
+.sort-block{
+  .forum-page{
+    .form-item-search-community{
+      width:100%;
+    }
+  }
+  @include breakpoint($mobile){
+    padding:36px;
+    .filterbutton{
+      margin-bottom: 30px;
+    }
+  }
+}
+.forum-right{
+  @include breakpoint(380px){
+    h3{
+      clear: both
+    }
+  }
+}

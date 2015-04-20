@@ -48,6 +48,9 @@
             margin: 0 15px 30px 15px;
         }
     }
+    @include breakpoint($mobile){
+      width: 100%;
+    }
     @include breakpoint(min-width $tablet-small){
         //@include remove last;
         width: 33.33%;
