@@ -944,6 +944,10 @@ html.no-touch .form-type-bef-checkbox {
   .profile-body{
     background:$white; 
     padding-bottom:30px;
+    @include breakpoint($mobile) {
+	  padding: 2em 20px;
+       margin: auto;
+	}
     .tabs{ 
       li{
         &.active{
