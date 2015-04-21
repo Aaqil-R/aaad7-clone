@@ -26,4 +26,4 @@
        <img src="<?php print base_path().drupal_get_path('theme', 'ambitious') ?>/images/top_bg.jpg" alt="image description">
      </div>
    </section>
-</div>
+</div>   
