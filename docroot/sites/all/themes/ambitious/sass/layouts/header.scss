@@ -848,8 +848,7 @@ nav {
     }
     @include breakpoint($mobile) {
       max-width:100%;
-      float:none;
-      text-align:center;
+      text-align:initial;
     }
     li {
       position:relative;
@@ -858,7 +857,7 @@ nav {
       float:left;
       padding:0 24px 0 19px;
       @include breakpoint($tablet) {
-        padding:0 11px;
+        padding:0 8px;
       }
       @include breakpoint($mobile) {
         float:none;        
@@ -918,10 +917,15 @@ nav {
   .header-user-menu{
     ul{
     margin:0;
+    padding: 0;
     li{
       list-style: none;
       padding: 0 6px;
       display: inline;
+
+      @include breakpoint($mini-mobile){
+        padding: 2px 0 0 0;
+      }
       
       a{
         // margin:0;

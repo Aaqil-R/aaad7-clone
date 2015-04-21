@@ -1413,7 +1413,7 @@ fieldset.group-hidden {
 @media (max-width: 520px) {
   /* line 1122, ../sass/issue-fixing.scss */
   .logged-in #block-menu-menu-header-top-menu li {
-    padding: 0 17px;
+    padding: 0 5px;
   }
 }
 @media (max-width: 520px) {
@@ -1431,9 +1431,21 @@ fieldset.group-hidden {
     margin-top: -10px;
   }
 }
+@media (max-width: 767px) {
+  /* line 1146, ../sass/issue-fixing.scss */
+  .logged-in #block-system-user-menu ul li.last a {
+    font-size: initial;
+  }
+}
+@media (max-width: 480px) {
+  /* line 1157, ../sass/issue-fixing.scss */
+  .logged-in #block-system-user-menu ul li.last a {
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 767px) {
-  /* line 1148, ../sass/issue-fixing.scss */
+  /* line 1173, ../sass/issue-fixing.scss */
   .posts-columns.columns-full .row .forum-icon {
     font-size: 30px;
     position: absolute;
@@ -1443,27 +1455,27 @@ fieldset.group-hidden {
 }
 
 @media (max-width: 767px) {
-  /* line 1159, ../sass/issue-fixing.scss */
+  /* line 1184, ../sass/issue-fixing.scss */
   body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
     margin-right: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  /* line 1168, ../sass/issue-fixing.scss */
+  /* line 1193, ../sass/issue-fixing.scss */
   .right-info a.school-opener,
   .top-bar a {
     font-size: 12px;
   }
 }
 
-/* line 1177, ../sass/issue-fixing.scss */
+/* line 1202, ../sass/issue-fixing.scss */
 .visual .img-holder img {
   width: auto;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1181, ../sass/issue-fixing.scss */
+  /* line 1206, ../sass/issue-fixing.scss */
   .posts-columns h2,
   .posts-columns h1 {
     font-size: 32px;
@@ -1471,37 +1483,37 @@ fieldset.group-hidden {
   }
 }
 
-/* line 1196, ../sass/issue-fixing.scss */
+/* line 1221, ../sass/issue-fixing.scss */
 .sort-block .forum-page .form-item-search-community {
   width: 100%;
 }
 @media (max-width: 767px) {
-  /* line 1194, ../sass/issue-fixing.scss */
+  /* line 1219, ../sass/issue-fixing.scss */
   .sort-block {
     padding: 36px;
   }
-  /* line 1202, ../sass/issue-fixing.scss */
+  /* line 1227, ../sass/issue-fixing.scss */
   .sort-block .filterbutton {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 380px) {
-  /* line 1209, ../sass/issue-fixing.scss */
+  /* line 1234, ../sass/issue-fixing.scss */
   .forum-right h3 {
     clear: both;
   }
 }
 
 @media (max-width: 380px) {
-  /* line 1216, ../sass/issue-fixing.scss */
+  /* line 1241, ../sass/issue-fixing.scss */
   article.node-223806 .field-name-body {
     padding: 31px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 1221, ../sass/issue-fixing.scss */
+  /* line 1246, ../sass/issue-fixing.scss */
   .page-user #sidebar ul {
     float: none;
   }

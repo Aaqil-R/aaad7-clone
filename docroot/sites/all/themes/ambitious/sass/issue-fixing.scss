@@ -1120,7 +1120,7 @@ fieldset.group-hidden {
     }
      @include breakpoint(520px){
       li{
-        padding:0 17px;
+        padding:0 5px;
       }
     } 
   }
@@ -1139,6 +1139,31 @@ fieldset.group-hidden {
       }
     }    
    }
+
+    @include breakpoint($mobile){
+      ul{
+        li.last{
+          a{
+            font-size:initial;
+          }
+
+        }
+      }
+    }
+  
+    @include breakpoint($mini-mobile){
+    ul{
+      li.last{
+        a{
+          font-size:12px;
+        }
+
+      }
+      }
+    }
+    
+    
+
  }
 }
  
