@@ -1521,6 +1521,11 @@ fieldset.group-hidden {
 
 /* fixed this one all mobiel view scrolling */
 /* line 1254, ../sass/issue-fixing.scss */
-body {
-  overflow-x: hidden;
+.nav-holder {
+  position: fixed;
+}
+
+/* line 1257, ../sass/issue-fixing.scss */
+.nav-active .nav-holder {
+  position: absolute;
 }

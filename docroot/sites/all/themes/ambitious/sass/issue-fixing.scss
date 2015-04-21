@@ -1251,6 +1251,9 @@ article.node-223806{
 
 
 /* fixed this one all mobiel view scrolling */
-body{
-  overflow-x:hidden;
+.nav-holder{
+  position: fixed;
 }
+.nav-active .nav-holder{
+  position: absolute;
+} 
