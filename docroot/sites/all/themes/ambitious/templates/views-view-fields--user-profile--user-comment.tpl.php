@@ -41,12 +41,14 @@
          <?php if ($field->handler->field_alias == 'users_comment_name') { ?>  
            <h4><?php print $field->content; ?></h4>
         <?php }?>
+          <a href="<?php print $fields['path']->content; ?>">
         <?php if ($field->handler->field_alias == 'comment_created') {?>
            <span class="time-ago"> 
              <?php print ago($field->raw) ;?>
            </span>
              </div> 
         <?php }?>
+        </a>
 
   <?php if ($field->handler->field_info['field_name'] == 'comment_body') {?>
   <div class="comment-body">
