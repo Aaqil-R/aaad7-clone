@@ -1139,6 +1139,31 @@ fieldset.group-hidden {
       }
     }    
    }
+
+    @include breakpoint($mobile){
+      ul{
+        li.last{
+          a{
+            font-size:initial;
+          }
+
+        }
+      }
+    }
+  
+    @include breakpoint($mini-mobile){
+    ul{
+      li.last{
+        a{
+          font-size:12px;
+        }
+
+      }
+      }
+    }
+    
+    
+
  }
 }
  
