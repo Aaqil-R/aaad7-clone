@@ -126,8 +126,7 @@
   
  </div>
   </div>
-  
-  <?php  print views_embed_view('comments','comments'); ?>
+  <?php print views_embed_view('comments','comments', $node->nid); ?>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
