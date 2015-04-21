@@ -204,7 +204,7 @@ function autism_custom_views_query_alter(&$view, &$query) {
     }
   }
   if ($view->name == 'stream' && $view->current_display == 'stream_forum_page') {
-     foreach($query->orderby as $order) {
+     foreach($query->orderby as $okey => $order) {
           $key = array_search('node_comment_statistics_comment_count', $order);
           if ($key){
            break;
@@ -220,7 +220,7 @@ function autism_custom_views_query_alter(&$view, &$query) {
     $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
     $query->add_relationship('past_comment', $join, 'node');
     $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
-    $query->orderby[$key]['field'] = 'node_nid';
+    $query->orderby[$okey]['field'] = 'node_nid';
     $query->distinct = TRUE;
     }
   }
