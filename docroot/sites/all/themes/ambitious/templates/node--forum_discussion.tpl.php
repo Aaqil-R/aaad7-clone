@@ -126,8 +126,12 @@
   
  </div>
   </div>
-  
-  <?php print views_embed_view('comments','comments'); ?> 
+   
+  <?php
+    $args = array(arg(1));
+	$view = views_get_view('comments');
+	print $view->preview('comments', $args);
+  ?> 
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
