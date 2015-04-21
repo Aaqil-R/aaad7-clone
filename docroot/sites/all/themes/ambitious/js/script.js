@@ -241,10 +241,6 @@ Drupal.behaviors.ambitious = {
 		$('.not-logged-in #user-login--2 input[type="password"]').attr("placeholder", "Password*");
 		$('.not-logged-in .form-item-mail input').attr("placeholder", "E-mail address*");
 
-		// Detecting devices and changed the login
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		 	$("#block-system-user-menu li.login a").attr("href","user/login");
-		}	
 	  });
 }
 };
