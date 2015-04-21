@@ -129,7 +129,7 @@
   
   <?php
   $block = module_invoke('views', 'block_view', 'comments-comments');
-  if($block['content']){
+  if($block['content'] !=''){
     print render($block['content']);  
   }
    ?>
