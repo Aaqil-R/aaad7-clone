@@ -128,8 +128,10 @@
   </div>
   
   <?php
-  //$block = module_invoke('views', 'block_view', 'comments-comments');
-		print render($block['content']);
+  $block = module_invoke('views', 'block_view', 'comments-comments');
+  if($block['content']){
+    print render($block['content']);  
+  }
    ?>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
