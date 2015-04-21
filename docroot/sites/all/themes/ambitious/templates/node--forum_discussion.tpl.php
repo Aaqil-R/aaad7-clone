@@ -128,11 +128,11 @@
   </div>
   
   <?php
-  $block = module_invoke('views', 'block_view', 'comments-comments');
+  //$block = module_invoke('views', 'block_view', 'comments-comments');
 		print render($block['content']);
    ?>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
- <?php print render($content['comments']['comment_form']);   ?>
+ <?php // print render($content['comments']['comment_form']);   ?>
 </section>   
 <?php endif; ?>
