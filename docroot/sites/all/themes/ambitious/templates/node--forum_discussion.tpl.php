@@ -133,6 +133,6 @@
    ?>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
- <?php // print render($content['comments']['comment_form']);   ?>
+ <?php  print render($content['comments']['comment_form']);   ?>
 </section>   
 <?php endif; ?>
