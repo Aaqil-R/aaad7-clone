@@ -191,8 +191,9 @@ body.profile .top-header{
 		min-width: 6em;
 		@include breakpoint($mobile) {
 			margin: 0;
-			width:auto;
-			float:none;
+			width: auto;
+			float: left;
+			min-width: inherit;
 		}
 	}
 	dd{
@@ -200,10 +201,11 @@ body.profile .top-header{
 		display: inline-block;
 		float: left;
 		@include breakpoint($mobile) {
-			margin: 0;   
-			width:auto;
-			float:none;
-			margin-bottom: 27px
+			margin: 0;
+			width: auto;
+			float: left;
+			margin-bottom: 27px;
+			margin-left: 12px;
 		}
 	}
 	.about-me{
@@ -441,7 +443,16 @@ body.profile .top-header{
   #privatemsg-list-form{
     .form-item-operation{
       padding-top: 0;
-      padding-left: 0;
+      padding-left: 0;  
+      @include breakpoint($mobile) {
+	   width: 99%;
+	   margin: 25px 0 15px 0;
+      }
+    }
+    #edit-delete{
+       @include breakpoint($mobile) {
+	   width: 99%;
+	 }
     }
   }
 }
