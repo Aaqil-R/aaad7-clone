@@ -190,7 +190,8 @@ body.profile .top-header{
 		min-width: 6em;
 		@include breakpoint($mobile) {
 			margin: 0;
-			width: 45%;
+			width:auto;
+			float:none;
 		}
 	}
 	dd{
@@ -198,10 +199,10 @@ body.profile .top-header{
 		display: inline-block;
 		float: left;
 		@include breakpoint($mobile) {
-			margin: 0;
-			width: 54%;
-			float: none;
-			word-wrap: break-word;
+			margin: 0;   
+			width:auto;
+			float:none;
+			margin-bottom: 27px
 		}
 	}
 	.about-me{
