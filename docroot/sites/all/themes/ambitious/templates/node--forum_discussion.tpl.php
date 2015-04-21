@@ -115,7 +115,7 @@
 					</section>
 		
 <h4 class="forumpage_title">
-     <a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
+     <a href="/talk-to-others" title="Back to Forum">Back to Forum</a></br><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
     <?php if($comment_count > 1){
       print t('Comments');
       }else{
