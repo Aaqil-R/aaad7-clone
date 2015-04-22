@@ -36,14 +36,13 @@
 	$user_count = ambitious_get_user_post_count($uid);
 
 	$location = taxonomy_term_load($location);
-	$location = $location->name;
-        dpm($variables);
-     
+	$location = $location->name; 
+     $user_comment_count = variable_get('autism_custom_comment_count', 5);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
-   	<?php if($pastcomments >= $vars['autism_comment_count']): ?>
+   	<?php if($pastcomments >= $user_comment_count): ?>
     	<em class="icon-Hottopic forum-icon"></em>	
    	<?php endif; ?>  
     <div class="forum-text">						
