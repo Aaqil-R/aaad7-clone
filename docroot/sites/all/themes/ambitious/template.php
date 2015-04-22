@@ -940,7 +940,11 @@ function ambitious_preprocess_page(&$vars) {
   if (arg(0) == 'footer') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_footer';
   }
-
+  
+  // we use custom_comment_count value form user settings form if the value is empty default value 5
+  $vars['autism_comment_count'] = variable_get('autism_custom_comment_count', 5);
+  
+  
 }
 
 function ambitious_form_element($variables) {

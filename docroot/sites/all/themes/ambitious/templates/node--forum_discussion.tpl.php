@@ -37,14 +37,13 @@
 
 	$location = taxonomy_term_load($location);
 	$location = $location->name;
-
-    // we use custom_comment_count value form user settings form if the value is empty default value 5
-	$popular_thread_comment_threshold = variable_get('autism_custom_comment_count', 5);
+        dpm($vars['autism_comment_count']);
+     
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
-   	<?php if($pastcomments >= $popular_thread_comment_threshold): ?>
+   	<?php if($pastcomments >= $vars['autism_comment_count']): ?>
     	<em class="icon-Hottopic forum-icon"></em>	
    	<?php endif; ?>  
     <div class="forum-text">						
