@@ -1293,3 +1293,34 @@ article.node-223806{
 
 }
 
+
+// Talk Aboout autism
+.node-type-forum-discussion{
+  @include breakpoint($mobile){
+
+    .posts-columns {
+      padding-top: 0;
+    }
+
+    .footer .btn{
+      margin-top: 1em;
+    }
+  
+    .forumpage_title {
+      padding: 0 8px;
+    }
+
+    .view-comments{
+      padding: 0 8px;
+    }
+
+    .comment-list ul.comment-listing li .comment-left img{
+      max-width: 58px;
+    }
+
+    .comment-list ul.comment-listing li .comment-left{
+      width: 85px;
+    }
+
+  }
+}
