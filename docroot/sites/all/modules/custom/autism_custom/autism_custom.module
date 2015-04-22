@@ -207,23 +207,27 @@ function autism_custom_views_query_alter(&$view, &$query) {
      foreach($query->orderby as $okey => $order) {
           $key = array_search('node_comment_statistics_comment_count', $order);
           if ($key){
+           $join = new views_join();
+            $join->table = 'comment';
+            $join->field = 'nid';
+            $join->left_table = 'node';
+            $join->left_field = 'nid';
+            $join->type = 'left';
+            $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
+            $query->add_relationship('past_comment', $join, 'node');
+            $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
+            //$query->orderby[$okey]['field'] = 'node_nid';
+            unset($query->orderby);
+            $query->orderby[]['field'] = 'node_nid';
+            $query->orderby[]['direction'] = 'DESC';
+            $query->orderby[]['field'] = 'node_comment_statistics_last_comment_timestamp';
+            $query->orderby[]['direction'] = 'DESC';
+                $query->orderby[]['field'] = 'node_created';
+            $query->orderby[]['direction'] = 'DESC';    
+            $query->distinct = TRUE;
            break;
           }
     }
-    if ($key) {
-    $join = new views_join();
-    $join->table = 'comment';
-    $join->field = 'nid';
-    $join->left_table = 'node';
-    $join->left_field = 'nid';
-    $join->type = 'left';
-    $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
-    $query->add_relationship('past_comment', $join, 'node');
-    $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
-    $query->orderby[$okey]['field'] = 'node_nid';
-    $query->distinct = TRUE;
-    }
-        dpm($query);
   }
 }
 
