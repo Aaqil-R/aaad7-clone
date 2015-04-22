@@ -36,14 +36,21 @@
 	$user_count = ambitious_get_user_post_count($uid);
 
 	$location = taxonomy_term_load($location);
-	$location = $location->name; 
-     $user_comment_count = variable_get('autism_custom_comment_count', 5);
+	$location = $location->name;
+
+    // we use custom_comment_count value form user settings form if the value is empty default value 5
+	$popular_thread_comment_threshold = variable_get('autism_custom_comment_count', 5);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
+<<<<<<< HEAD
    	<?php if($pastcomments >= $user_comment_count): ?>
     	<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>	
+=======
+   	<?php if($pastcomments >= $popular_thread_comment_threshold): ?>
+    	<em class="icon-Hottopic forum-icon"></em>	
+>>>>>>> 957a6133b1e09c4734a876364bae60d6976c979c
    	<?php endif; ?>  
     <div class="forum-text">						
 		<div class="forum-left"> 

@@ -34,7 +34,7 @@ function getcommentcount_past2week($nid) {
     return false;
   }
   $time = time();
-  $from = $time - (variable_get('autism_custom_past_week', 0) * 604800);
+  $from = $time - (variable_get('autism_custom_past_week', 2) * 604800);
   
   // Create an object of type SelectQuery
   $query = db_select('comment', 'c');
@@ -46,6 +46,11 @@ function getcommentcount_past2week($nid) {
   return $query->countQuery()->execute()->fetchField();
 }
 
+// Function to get the comment threshold or popular 
+// forum post marker
+function get_popular_thread_comment_threshold(){
+  // bring all the logic here and make use of this method.
+}
 
 function autism_custom_menu() {
     $items = array();    
@@ -209,6 +214,7 @@ function autism_custom_views_query_alter(&$view, &$query) {
       $key = array_search('node_comment_statistics_comment_count', $order);
 
       if ($key){
+
         $join = new views_join();
         $join->table = 'comment';
         $join->field = 'nid';
@@ -224,13 +230,14 @@ function autism_custom_views_query_alter(&$view, &$query) {
         // "minute" => 60,       // seconds in a minute (60 seconds)
         // "second" => 1         // 1 second
 
-        $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(604800*('.variable_get('autism_custom_past_week', 2).' * 7) )';
+        $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() - (604800*('.variable_get('autism_custom_past_week', 2).'))';
         $query->add_relationship('past_comment', $join, 'node');
         $query->add_field('past_comment', 'nid', 'period_comment_count', array('function' => 'count'));
         $query->orderby[$okey]['field'] = 'period_comment_count';
         $query->distinct = TRUE;
 
         break;
+
       }      
     }
   }
