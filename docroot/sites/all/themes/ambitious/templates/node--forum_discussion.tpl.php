@@ -19,12 +19,15 @@
 	$comment_count =  abs($comment - $flaged_comments_count);
 	$uid = $node->uid;
 	$userinfo = user_load($uid);
-   $last_reply = ambitious_get_last_reply($node->nid);
-  if ($last_reply){
-    $last_reply_user = user_load($last_reply->uid);
-    $last_reply_username = theme('username', array('account' => $last_reply_user));
-    $last_reply_time = format_date($last_reply->changed);
-  }   
+
+   	$last_reply = ambitious_get_last_reply($node->nid);
+  
+  	if ($last_reply){
+	    $last_reply_user = user_load($last_reply->uid);
+	    $last_reply_username = theme('username', array('account' => $last_reply_user));
+	    $last_reply_time = format_date($last_reply->changed);
+  	} 
+
 	// author signature to be added to the discussion threads.
 	$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
 
@@ -35,62 +38,60 @@
 	$location = taxonomy_term_load($location);
 	$location = $location->name;
 
-     // we use custom_comment_count value form user settings form if the value is empty default value 5
-	$user_comment_count = variable_get('autism_custom_comment_count',5);
+    // we use custom_comment_count value form user settings form if the value is empty default value 5
+	$popular_thread_comment_threshold = variable_get('autism_custom_comment_count', 5);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
-  
-   <?php if( $pastcomments > $user_comment_count): ?>
-    <em class="icon-Hottopic forum-icon"></em>	
-   <?php endif; ?>
-  
-                        <div class="forum-text">						
-						  <div class="forum-left"> 
-						    <div class="image-holder">
-						      <?php if(!empty($user_picture)):?>
-  						        <?php print render($user_picture); ?>
-						      <?php else: ?>
-						      <img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
-						      <?php endif; ?>						      
-						    </div>
-                            <cite>by </br><strong title="<?php print $name; ?>"> <?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>                <time pubdate>Joined: <?php print $user_date; ?></time></br>
-                             <time pubdate>Posts: <?php print $user_count; ?></time></br> 
-                             <?php if(!empty($location)){ ?>
-                            <time>Location: <?php print $location; ?></time>
-                            <?php } ?>                                             
-						  </div>
-						  <div class="info add forum-right">
-						    <?php if(isset($title)): ?>						     
-						    	<h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-						    <?php else :?>						    
-								<h3>Discussion</h3>
-							<?php endif;?> 
-							<div class="meta">
-                                <div class="created">
-                                    <?php print format_date($node->created, 'custom', 'D j M Y');?>
-                                </div>
-                                <?php if(isset($content['field_topic'])):?>	
-                                <div class="topic_section">
-                                    <?php print render($content['field_topic']);?>
-                                </div>
-                                <?php endif; ?>
-                                <div class="clear"></div>
-                            </div>
-                            
-                              
-							<?php print render($content['body']);?>		
-							
-							<?php if(isset($user_signature)): ?>
-								<div class="user_signature">	
-									<?php print $user_signature; ?>
-								</div>
-							<?php endif;?>
-							
-						  </div>
-						  
-						</div> 
+   	<?php if($pastcomments >= $popular_thread_comment_threshold): ?>
+    	<em class="icon-Hottopic forum-icon"></em>	
+   	<?php endif; ?>  
+    <div class="forum-text">						
+		<div class="forum-left"> 
+			<div class="image-holder">
+				<?php if(!empty($user_picture)):?>
+				    <?php print render($user_picture); ?>
+				<?php else: ?>
+					<img src="<?php print $themeurl;?>/images/profile-picture-1.jpg" alt="image description" />
+				<?php endif; ?>						      
+			</div>
+			<cite>by </br><strong title="<?php print $name; ?>"> 
+			<?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>                <time pubdate>Joined: <?php print $user_date; ?></time></br>
+				<time pubdate>Posts: <?php print $user_count; ?></time></br>
+			<?php if(!empty($location)){ ?>
+				<time>Location: <?php print $location; ?></time>
+			<?php } ?>                                             
+		</div>
+		  <div class="info add forum-right">
+		    <?php if(isset($title)): ?>						     
+		    	<h3><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+		    <?php else :?>						    
+				<h3>Discussion</h3>
+			<?php endif;?> 
+			<div class="meta">
+		        <div class="created">
+		            <?php print format_date($node->created, 'custom', 'D j M Y');?>
+		        </div>
+		        <?php if(isset($content['field_topic'])):?>	
+		        <div class="topic_section">
+		            <?php print render($content['field_topic']);?>
+		        </div>
+		        <?php endif; ?>
+		        <div class="clear"></div>
+		    </div>
+		    
+		      
+			<?php print render($content['body']);?>		
+			
+			<?php if(isset($user_signature)): ?>
+				<div class="user_signature">	
+					<?php print $user_signature; ?>
+				</div>
+			<?php endif;?>
+			
+		  </div>						  
+	</div> 
 						<div class="footer">
 						<div class="flag_node">							  
 							  <?php print flag_create_link('bookmarks', $node->nid); ?>
