@@ -37,7 +37,7 @@
 
 	$location = taxonomy_term_load($location);
 	$location = $location->name;
-        dpm($vars['autism_comment_count']);
+        dpm($variables);
      
 ?>   
 <div class="posts-columns columns-full">
