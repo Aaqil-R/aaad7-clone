@@ -34,7 +34,9 @@
 
 	$location = taxonomy_term_load($location);
 	$location = $location->name;
-	$user_comment_count = variable_get('autism_custom_comment_count', 0);
+
+     // we use custom_comment_count value form user settings form if the value is empty default value 5
+	$user_comment_count = variable_get('autism_custom_comment_count',5);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
