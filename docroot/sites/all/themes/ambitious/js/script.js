@@ -26,6 +26,12 @@ Drupal.behaviors.ambitious = {
                 location.href = '/search/forum-discussion/'+ $(this).val();
               }
             });
+            $('.node-type-forum-discussion .comment-form').bind('keypress', function(e){
+		   if(e.keyCode == 13)
+		   {
+			 return false;
+		   }
+		});
             
         // load more button first loads the content only on click, so removed the waypoint binding.
  
