@@ -29,6 +29,7 @@ Drupal.behaviors.ambitious = {
             $('.node-type-forum-discussion .comment-form').bind('keypress', function(e){
 		   if(e.keyCode == 13)
 		   {
+		      console.log("working");
 			 return false;
 		   }
 		});
