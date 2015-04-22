@@ -34,7 +34,7 @@ function getcommentcount_past2week($nid) {
     return false;
   }
   $time = time();
-  $from = $time - (variable_get('autism_custom_past_week', 0) * 604800);
+  $from = $time - (variable_get('autism_custom_past_week', 2) * 604800);
   
   // Create an object of type SelectQuery
   $query = db_select('comment', 'c');

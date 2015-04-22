@@ -44,12 +44,12 @@
       if($commentcout > 3){
         $class = 'commentcoutmore3';
       }
-     
-      
-      $user_comment_count = variable_get('autism_custom_comment_count', 0);
+           
+      $popular_thread_comment_threshold = variable_get('autism_custom_comment_count', 5);
+
       if (module_exists('autism_custom')) {
         $hot_comment = getcommentcount_past2week($fields['nid']->raw);
-        if ($hot_comment > $user_comment_count) {
+        if ($hot_comment >= $popular_thread_comment_threshold) {
           $class .= ' show_hot';
         }
       }   
