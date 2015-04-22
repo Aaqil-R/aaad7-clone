@@ -44,13 +44,8 @@
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
-<<<<<<< HEAD
-   	<?php if($pastcomments >= $user_comment_count): ?>
-    	<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>	
-=======
    	<?php if($pastcomments >= $popular_thread_comment_threshold): ?>
-    	<em class="icon-Hottopic forum-icon"></em>	
->>>>>>> 957a6133b1e09c4734a876364bae60d6976c979c
+    	<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>	
    	<?php endif; ?>  
     <div class="forum-text">						
 		<div class="forum-left"> 
