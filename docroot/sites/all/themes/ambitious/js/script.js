@@ -25,16 +25,7 @@ Drupal.behaviors.ambitious = {
                 e.preventDefault();
                 location.href = '/search/forum-discussion/'+ $(this).val();
               }
-            });
-            $(document).ready(function() {
-  $(window).keydown(function(event){
-    if(event.keyCode == 13) {
-      event.preventDefault();
-       console.log("working");
-      return false;
-    }
-  });
-});
+            }); 
             
         // load more button first loads the content only on click, so removed the waypoint binding.
  
