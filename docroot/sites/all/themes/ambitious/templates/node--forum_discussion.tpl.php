@@ -12,7 +12,7 @@
 	$name = strip_tags($name); 
 	$not_flag_comment = ambitious_get_node_comments_count($node->nid);
 	drupal_add_library('waypoints', 'waypoints');
-	//hide($content['comments']['comments']);
+	hide($content['comments']['comments']);
 	$weeks = variable_get('autism_custom_past_week', 0);
 	$comment = ambitious_get_node_comments_count($node->nid);
 	$flaged_comments_count = ambitious_get_node_flaged_comments_count($node->nid);
@@ -129,8 +129,7 @@
   
  </div>
   </div>
-  <?php //print views_embed_view('comments','comments', $node->nid); ?>
-  <?php print render($content['comments']); ?>
+  <?php print views_embed_view('comments','comments', $node->nid); ?>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
