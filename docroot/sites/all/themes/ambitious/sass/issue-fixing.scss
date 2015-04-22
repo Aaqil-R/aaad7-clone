@@ -1257,3 +1257,34 @@ article.node-223806{
 .nav-active .nav-holder{
   position: absolute;
 } 
+
+// Login Modal's issue fixing on the mobiles
+@include breakpoint($mobile){
+  
+  div.ctools-modal-content .modal-content {
+    padding: 19px 19px 13px 25px;
+  }
+
+  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+    width: 100%;
+  }
+
+  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  .hybridauth-widget-wrapper {
+    clear: both;
+    width: 80%;
+    padding-left: 10px;
+  }
+
+  .popups-container input[type="submit"] {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+}
+
