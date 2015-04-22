@@ -43,7 +43,7 @@
 <div class="row">
 <section style="width:100%;" class="post">
    	<?php if($pastcomments >= $user_comment_count): ?>
-    	<em class="icon-Hottopic forum-icon"></em>	
+    	<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>	
    	<?php endif; ?>  
     <div class="forum-text">						
 		<div class="forum-left"> 

@@ -66,8 +66,8 @@
  <div class="<?php print $class; if($sticky->sticky == 1 || $nodepos >= 1 ){ ?> rowlessthen3 <?php } ?>" >
  
  <section style="width:100%;" class="post">  
-						<em class="icon-Hottopic forum-icon"></em>
-						<em class="icon-Featured forum-icon"></em>
+						<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>
+						<em class="icon-Featured forum-icon" title="Featured Discussion" alt="Featured Discussion"></em>
                         <div class="forum-text">						
 						  <div class="forum-left"> 
 						    <div class="image-holder">	
