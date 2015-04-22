@@ -34,12 +34,13 @@
 
 	$location = taxonomy_term_load($location);
 	$location = $location->name;
+	$user_comment_count = variable_get('autism_custom_comment_count', 0);
 ?>   
 <div class="posts-columns columns-full">
 <div class="row">
 <section style="width:100%;" class="post">
   
-   <?php if( $pastcomments > 5): ?>
+   <?php if( $pastcomments > $user_comment_count): ?>
     <em class="icon-Hottopic forum-icon"></em>	
    <?php endif; ?>
   
