@@ -203,31 +203,28 @@ function autism_custom_views_query_alter(&$view, &$query) {
      }
     }
   }
-  if ($view->name == 'stream' && $view->current_display == 'stream_forum_page') {
-     foreach($query->orderby as $okey => $order) {
-          $key = array_search('node_comment_statistics_comment_count', $order);
-          if ($key){
-           $join = new views_join();
-            $join->table = 'comment';
-            $join->field = 'nid';
-            $join->left_table = 'node';
-            $join->left_field = 'nid';
-            $join->type = 'left';
-            $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(86400*('.variable_get('autism_custom_past_week', 2).' * 7) )';
-            $query->add_relationship('past_comment', $join, 'node');
-            $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
-            //$query->orderby[$okey]['field'] = 'node_nid';
-            unset($query->orderby);
-            $query->orderby[0]['field'] = 'node_nid';
-            $query->orderby[0]['direction'] = 'DESC';
-            $query->orderby[1]['field'] = 'node_comment_statistics_last_comment_timestamp';
-            $query->orderby[1]['direction'] = 'DESC';
-                $query->orderby[2]['field'] = 'node_created';
-            $query->orderby[2]['direction'] = 'DESC';    
-            $query->distinct = TRUE;
-           break;
-          }
-    }
+  if ($view->name == 'stream' && $view->current_display == 'stream_forum_page' && 
+$query->orderby[0]['field'] == 'node_comment_statistics_comment_count') {
+    $join = new views_join();
+    $join->table = 'comment';
+    $join->field = 'nid';
+    $join->left_table = 'node';
+    $join->left_field = 'nid';
+    $join->type = 'left';
+
+    // "year"   => 29030400, // seconds in a year   (12 months)
+    // "month"  => 2419200,  // seconds in a month  (4 weeks)
+    // "week"   => 604800,   // seconds in a week   (7 days)
+    // "day"    => 86400,    // seconds in a day    (24 hours)
+    // "hour"   => 3600,     // seconds in an hour  (60 minutes)
+    // "minute" => 60,       // seconds in a minute (60 seconds)
+    // "second" => 1         // 1 second
+
+    $join->extra = 'past_comment.created >= UNIX_TIMESTAMP() -(604800*('.variable_get('autism_custom_past_week', 2).' * 7) )';
+    $query->add_relationship('past_comment', $join, 'node');
+    $query->add_field('past_comment', 'nid', 'node_nid', array('function' => 'count'));
+    $query->orderby[0]['field'] = 'node_nid';
+    $query->distinct = TRUE;
   }
 }
 
