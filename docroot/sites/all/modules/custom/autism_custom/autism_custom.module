@@ -56,7 +56,7 @@ function autism_custom_menu() {
     $items = array();    
     
     $items['admin/content/website'] = array(
-        'title' => 'Settings Form',
+        'title' => 'Site settings',
 	'page callback' => 'drupal_get_form',
         'page arguments' => array('autism_custom_settings_form'),
 	'access arguments' => array('access_settings_form_website'),
@@ -126,20 +126,20 @@ function autism_custom_settings_form($form, &$form_state) {
   );
    $form['autism_custom_comment_count'] = array(
     '#type' => 'textfield',
-    '#title' => t('Number of comments to check in past week'),
+    '#title' => t('Forum: comments threshold for popular discussion'),
     '#default_value' => variable_get('autism_custom_comment_count', 0),
     '#size' => 10,
     '#maxlength' => 10,
-    '#description' => t('Number of comments to check in past week'),
+    '#description' => t('Number of comments the thread needs to have to be considered popular'),
     '#required' => TRUE,
   );
   $form['autism_custom_past_week'] = array(
     '#type' => 'textfield',
-    '#title' => t('Past Weeks'),
+    '#title' => t('Forum: weeks to consider comments for popular thread'),
     '#default_value' => variable_get('autism_custom_past_week', 0),
     '#size' => 10,
     '#maxlength' => 2,
-    '#description' => t('The week since the members and the supporters.'),
+    '#description' => t('Number of weeks back we should look to calculate the number of comments'),
     '#required' => TRUE,
   );
  
