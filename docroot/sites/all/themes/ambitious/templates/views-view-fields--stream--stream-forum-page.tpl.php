@@ -46,10 +46,10 @@
       }
      
       
-      
+      $user_comment_count = variable_get('autism_custom_comment_count', 0);
       if (module_exists('autism_custom')) {
         $hot_comment = getcommentcount_past2week($fields['nid']->raw);
-        if ($hot_comment > 5) {
+        if ($hot_comment > $user_comment_count) {
           $class .= ' show_hot';
         }
       }   
