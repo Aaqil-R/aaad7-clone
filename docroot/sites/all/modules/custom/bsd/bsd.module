@@ -73,8 +73,9 @@ function bsd_webform_submission_insert($node, $submission) {
  * Implements @see hook_user_presave
  */
 function bsd_user_presave(&$edit, $account, $category) {
-  // if ($account->uid // user is not new
-  //     && $account->status === "0" && $edit['status'] == 1) { // user is being activated
+
+  if ($account->uid // user is not new
+      && $account->status == 0 && $edit['status'] == 1) { // user is being activated
 
     $data['firstname'] = $account->name;
     $data['email'] = $account->mail;
@@ -87,7 +88,7 @@ function bsd_user_presave(&$edit, $account, $category) {
       // do nothing; TODO: write this to a log file; if the database call is failing above 
       // chances are the database might not be accepting requests.
     }
-  // }
+  }
 }
 
 /*
