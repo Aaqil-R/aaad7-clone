@@ -5,17 +5,12 @@ html {
 	height:100%;
 	font-size: 62.5%;
 }
-html body {
+html body.html{
 	height: 100%;
 	background: $page-background;
 	&.myvoice{
 		background: image-url('wid_bg.jpg') $page-background;
-	}
-	.cke_editor{
-	  body{
-	    height:inherit;
-	  }
-	}
+	} 
 }
 .messages{
   font-size: 18px;
