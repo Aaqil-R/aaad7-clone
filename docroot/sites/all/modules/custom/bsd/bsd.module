@@ -69,6 +69,26 @@ function bsd_webform_submission_insert($node, $submission) {
   bsd_push_data($node, $submission);
 }
 
+/**
+ * Implements @see hook_user_presave
+ */
+function hook_user_presave(&$edit, $account, $category) {
+  if ($account->uid // user is not new
+      && $account->status === "0" && $edit['status']==1) { // user is being activated
+    $data['firstname'] = $account->name;
+    $data['email'] = $account->mail;
+    $data['created'] = $account->created;
+
+    try {
+      constituent_save($data, 36);
+    }
+    catch(Exception $e) {
+      // do nothing; TODO: write this to a log file; if the database call is failing above 
+      // chances are the database might not be accepting requests.
+    }
+  }
+}
+
 /*
  * push data to bsd
  */
@@ -78,7 +98,7 @@ function bsd_push_data($node, $submission){
   $webforms = array(74601, 223446, 74666, 74621);
   
   //constituent group ids for the webforms
-  $eventid = array(74601 => 1, 223446 => 2, 74666 => 28);
+  $eventid = array(74601 => 1, 223446 => 2, 74666 => 28, 74621 => 35);
   
   if (in_array($node->nid, $webforms)){
 
@@ -109,6 +129,9 @@ function bsd_push_data($node, $submission){
  * firstname, lastname, postalcode, created, email
  */
 function constituent_save($data = array(), $group = '') {
+
+  $error_handler = 0;
+
   //construct the xml here with data
   $str = '<api><cons  send_password="n">';
   if (isset($data['firstname'])){
@@ -138,11 +161,20 @@ function constituent_save($data = array(), $group = '') {
   
   $xml = new SimpleXMLElement($str);
   $data = $xml->asXML();
-  $resp = $api->post('cons/set_constituent_data',array(),$data);
+
+  try {
+    $resp = $api->post('cons/set_constituent_data',array(),$data);
+  }
+  catch(Exception $e) {
+    $error_handler = 1;
+  }
+  
    
   //log if any error
-  if ($resp->code != 200) {
-    $result = $resp->getBody();
+  if ($resp->code != 200 || $error_handler == 1) {
+
+    // TODO: Why do we need this? We are not making use of it.
+    // $result = $resp->getBody();
     db_insert('bsd')
     ->fields(array(
       'nid' => $node->nid,

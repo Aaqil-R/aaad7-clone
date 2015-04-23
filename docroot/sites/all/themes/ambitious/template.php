@@ -780,159 +780,165 @@ function ambitious_preprocess_page(&$vars) {
 
   //amalan new codes
   $currentNode = menu_get_object();
+
+
+  // TODO: We need to remove the redundant code here; some of these content types
+  // we are no longer using. Also abstract out common logic to a method.
+  if($currentNode) {
   
-  if($currentNode->type == "page")
-  {
-    //getting Hero Image
-    $node=node_load($currentNode->nid);
+    if($currentNode->type == "page")
+    {
+      //getting Hero Image
+      $node=node_load($currentNode->nid);
 
-    $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+      $getitemsimage = field_get_items('node', $node ,'field_hero_images');
 
-    //randomly taking a number from array and displaying the image accordingly
-    $random= rand(0,count($getitemsimage)-1);
+      //randomly taking a number from array and displaying the image accordingly
+      $random= rand(0,count($getitemsimage)-1);
 
-    $viewitemsimage = field_view_value(
-                        'node'
-                        ,$node 
-                        ,'field_hero_images'
-                        ,$getitemsimage[$random]
-                        ,array('settings' => 
-                          array('image_style' => 
-                            'basic_page_desktop')
-                          )
-                        );
+      $viewitemsimage = field_view_value(
+                          'node'
+                          ,$node 
+                          ,'field_hero_images'
+                          ,$getitemsimage[$random]
+                          ,array('settings' => 
+                            array('image_style' => 
+                              'basic_page_desktop')
+                            )
+                          );
 
-    $vars['image'] = $viewitemsimage;
-    
-    //getting Caption 1
-
-    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
-    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1',$getitemscaption1[0]);
-    $vars['captionone'] = $viewitemscaption1;
-    
-    //getting caption 2
-
-    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
-    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2',$getitemscaption2[0]);
-    $vars['captiontwo'] = $viewitemscaption2;
-    
-    //getting photo credit
-
-    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit',$getitemscredit[0]);
-    $vars['credit'] = $viewitemscredit;
-  }
-
-  //end of the new codes added
-
-
-  // render image, captions and photo credits for "basic_page_with_hero"
-  if($currentNode->type == "basic_page_with_hero")
-  {
-    // get array of hero images
-    $node = node_load($currentNode->nid);
-    $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+      $vars['image'] = $viewitemsimage;
       
-    // create a random number based on the array size
-    $random= rand(0, count($getitemsimage) - 1);
-    
-    // get an random image from the array
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images'
-      , $getitemsimage[$random]
-      , array('settings' => array('image_style' => 'basic_page_desktop')));
-    $vars['image'] = $viewitemsimage;
+      //getting Caption 1
 
-    // get the corresponding photo credit, the images and credits should have been
-    // entered in the same oder so that we can use the same random number
-    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
-      , $getitemscredit[0]);
-    $vars['credit'] = $viewitemscredit;
-    
-    // get caption 1
-    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
-    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
-      , $getitemscaption1[0]);
-    $vars['captionone'] = $viewitemscaption1;
-    
-    // get caption 2
-    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
-    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
-      , $getitemscaption2[0]);
-    $vars['captiontwo'] = $viewitemscaption2;    
-  }
-
-  //variables assigned for the basic page with hero large content type
-  if($currentNode->type == "basic_page_with_hero_large")
-  {
-    // get array of hero images
-    $node = node_load($currentNode->nid);
-    $getitemsimage = field_get_items('node', $node ,'field_large_hero_images');
+      $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+      $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1',$getitemscaption1[0]);
+      $vars['captionone'] = $viewitemscaption1;
       
-    // create a random number based on the array size
-    $random= rand(0, count($getitemsimage) - 1);
-    
-    // get an random image from the array
-    $viewitemsimage = field_view_value('node', $node ,'field_large_hero_images'
-      , $getitemsimage[$random]
-      , array('settings' => array('image_style' => 'basic_page_desktop_large__1440x770_')));
-    $vars['image'] = $viewitemsimage;
+      //getting caption 2
 
-    // get the corresponding photo credit, the images and credits should have been
-    // entered in the same oder so that we can use the same random number
-    $getitemscredit = field_get_items('node', $node ,'field_large_photo_credit');
-    $viewitemscredit = field_view_value('node', $node ,'field_large_photo_credit'
-      , $getitemscredit[0]);
-    $vars['credit'] = $viewitemscredit;
-    
-    // get caption 1
-    $getitemscaption1 = field_get_items('node', $node ,'field_large_caption_line_1');
-    $viewitemscaption1 = field_view_value('node', $node ,'field_large_caption_line_1'
-      , $getitemscaption1[0]);
-    $vars['captionone'] = $viewitemscaption1;
-    
-    // get caption 2
-    $getitemscaption2 = field_get_items('node', $node ,'field_large_caption_line_2');
-    $viewitemscaption2 = field_view_value('node', $node ,'field_large_caption_line_2'
-      , $getitemscaption2[0]);
-    $vars['captiontwo'] = $viewitemscaption2;    
-  }
-
-  if($currentNode->type == "basic_page_with_hero_form")
-  {
-    // get array of hero images
-    $node = node_load($currentNode->nid);
-    $getitemsimage = field_get_items('node', $node ,'field_hero_images_form');
+      $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+      $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2',$getitemscaption2[0]);
+      $vars['captiontwo'] = $viewitemscaption2;
       
-    // create a random number based on the array size
-    $random= rand(0, count($getitemsimage) - 1);
-    
-    // get an random image from the array
-    $viewitemsimage = field_view_value('node', $node ,'field_hero_images_form'
-      , $getitemsimage[$random]
-      , array('settings' => array('image_style' => 'basic_page_desktop_form')));
-    $vars['image'] = $viewitemsimage;
+      //getting photo credit
 
-    // get the corresponding photo credit, the images and credits should have been
-    // entered in the same oder so that we can use the same random number
-    $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-    $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
-      , $getitemscredit[0]);
-    $vars['credit'] = $viewitemscredit;
-    
-    // get caption 1
-    $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
-    $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
-      , $getitemscaption1[0]);
-    $vars['captionone'] = $viewitemscaption1;
-    
-    // get caption 2
-    $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
-    $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
-      , $getitemscaption2[0]);
-    $vars['captiontwo'] = $viewitemscaption2;    
+      $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+      $viewitemscredit = field_view_value('node', $node ,'field_photo_credit',$getitemscredit[0]);
+      $vars['credit'] = $viewitemscredit;
+    }
+
+    //end of the new codes added
+
+
+    // render image, captions and photo credits for "basic_page_with_hero"
+    if($currentNode->type == "basic_page_with_hero")
+    {
+      // get array of hero images
+      $node = node_load($currentNode->nid);
+      $getitemsimage = field_get_items('node', $node ,'field_hero_images');
+        
+      // create a random number based on the array size
+      $random= rand(0, count($getitemsimage) - 1);
+      
+      // get an random image from the array
+      $viewitemsimage = field_view_value('node', $node ,'field_hero_images'
+        , $getitemsimage[$random]
+        , array('settings' => array('image_style' => 'basic_page_desktop')));
+      $vars['image'] = $viewitemsimage;
+
+      // get the corresponding photo credit, the images and credits should have been
+      // entered in the same oder so that we can use the same random number
+      $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+      $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+        , $getitemscredit[0]);
+      $vars['credit'] = $viewitemscredit;
+      
+      // get caption 1
+      $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+      $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+        , $getitemscaption1[0]);
+      $vars['captionone'] = $viewitemscaption1;
+      
+      // get caption 2
+      $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+      $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+        , $getitemscaption2[0]);
+      $vars['captiontwo'] = $viewitemscaption2;    
+    }
+
+    //variables assigned for the basic page with hero large content type
+    if($currentNode->type == "basic_page_with_hero_large")
+    {
+      // get array of hero images
+      $node = node_load($currentNode->nid);
+      $getitemsimage = field_get_items('node', $node ,'field_large_hero_images');
+        
+      // create a random number based on the array size
+      $random= rand(0, count($getitemsimage) - 1);
+      
+      // get an random image from the array
+      $viewitemsimage = field_view_value('node', $node ,'field_large_hero_images'
+        , $getitemsimage[$random]
+        , array('settings' => array('image_style' => 'basic_page_desktop_large__1440x770_')));
+      $vars['image'] = $viewitemsimage;
+
+      // get the corresponding photo credit, the images and credits should have been
+      // entered in the same oder so that we can use the same random number
+      $getitemscredit = field_get_items('node', $node ,'field_large_photo_credit');
+      $viewitemscredit = field_view_value('node', $node ,'field_large_photo_credit'
+        , $getitemscredit[0]);
+      $vars['credit'] = $viewitemscredit;
+      
+      // get caption 1
+      $getitemscaption1 = field_get_items('node', $node ,'field_large_caption_line_1');
+      $viewitemscaption1 = field_view_value('node', $node ,'field_large_caption_line_1'
+        , $getitemscaption1[0]);
+      $vars['captionone'] = $viewitemscaption1;
+      
+      // get caption 2
+      $getitemscaption2 = field_get_items('node', $node ,'field_large_caption_line_2');
+      $viewitemscaption2 = field_view_value('node', $node ,'field_large_caption_line_2'
+        , $getitemscaption2[0]);
+      $vars['captiontwo'] = $viewitemscaption2;    
+    }
+
+    if($currentNode->type == "basic_page_with_hero_form")
+    {
+      // get array of hero images
+      $node = node_load($currentNode->nid);
+      $getitemsimage = field_get_items('node', $node ,'field_hero_images_form');
+        
+      // create a random number based on the array size
+      $random= rand(0, count($getitemsimage) - 1);
+      
+      // get an random image from the array
+      $viewitemsimage = field_view_value('node', $node ,'field_hero_images_form'
+        , $getitemsimage[$random]
+        , array('settings' => array('image_style' => 'basic_page_desktop_form')));
+      $vars['image'] = $viewitemsimage;
+
+      // get the corresponding photo credit, the images and credits should have been
+      // entered in the same oder so that we can use the same random number
+      $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+      $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
+        , $getitemscredit[0]);
+      $vars['credit'] = $viewitemscredit;
+      
+      // get caption 1
+      $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
+      $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
+        , $getitemscaption1[0]);
+      $vars['captionone'] = $viewitemscaption1;
+      
+      // get caption 2
+      $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
+      $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
+        , $getitemscaption2[0]);
+      $vars['captiontwo'] = $viewitemscaption2;    
+    }
+
   }
-
 
   if (arg(0) == 'header') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_header';
@@ -1207,9 +1213,3 @@ function ambitious_preprocess_image(&$variables) {
     unset($variables[$key]);
   }
 }
-
-
-
-
-
-
