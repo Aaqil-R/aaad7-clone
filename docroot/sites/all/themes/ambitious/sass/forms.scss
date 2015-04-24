@@ -550,12 +550,44 @@ div.ctools-modal-content .form-item .description{
 
 // Forms Node Add - Forum Discussion - All page node adding
 .page-node-add{
+  
+  // Making width 100% for the text inputs on the mobile
+      input[type=submit]
+    , input[type=text]
+    , input[type=search]
+    , input[type=tel]
+    , input[type=password]
+    , input[type=email]
+    , input[type=file]
+    , textarea {
+      float:left;
+      clear:both;
+      width:80%;
+      border-radius:5px;
+      @include border-radius(5px);
+      font-size:18px;
+      border-bottom: 2px solid;
+      border-color:#e4e4e4;
+      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+      margin-bottom: 1em;
+      padding: 12px 23px;
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+    }
 
-  @include breakpoint($mobile){
-    input[type=text]{
-    width: 100%;
-  }
-  }
+  
+  // All check boxes
+  .form-item.form-type-checkboxes{
+    margin-bottom: 1em;
+
+    // Check box
+    .form-item.form-type-checkbox{
+      float: left;
+      display: inline-block;
+      width: 100%;
+    }
+  }  
 
 }
 

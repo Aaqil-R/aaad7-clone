@@ -999,9 +999,50 @@ div.ctools-modal-content .form-item .description {
   color: inherit;
 }
 
+/* line 555, ../sass/forms.scss */
+.page-node-add input[type=submit]
+, .page-node-add input[type=text]
+, .page-node-add input[type=search]
+, .page-node-add input[type=tel]
+, .page-node-add input[type=password]
+, .page-node-add input[type=email]
+, .page-node-add input[type=file]
+, .page-node-add textarea {
+  float: left;
+  clear: both;
+  width: 80%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  border-bottom: 2px solid;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  margin-bottom: 1em;
+  padding: 12px 23px;
+}
 @media (max-width: 767px) {
   /* line 555, ../sass/forms.scss */
-  .page-node-add input[type=text] {
+  .page-node-add input[type=submit]
+  , .page-node-add input[type=text]
+  , .page-node-add input[type=search]
+  , .page-node-add input[type=tel]
+  , .page-node-add input[type=password]
+  , .page-node-add input[type=email]
+  , .page-node-add input[type=file]
+  , .page-node-add textarea {
     width: 100%;
   }
+}
+/* line 581, ../sass/forms.scss */
+.page-node-add .form-item.form-type-checkboxes {
+  margin-bottom: 1em;
+}
+/* line 585, ../sass/forms.scss */
+.page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox {
+  float: left;
+  display: inline-block;
+  width: 100%;
 }
