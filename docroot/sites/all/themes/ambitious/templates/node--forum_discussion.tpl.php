@@ -119,7 +119,7 @@
 					</section>
 		
 <h4 class="forumpage_title">
-     <a href="/talk-to-others" title="Back to Forum">Back to Forum</a></br><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
+     <a href="/talk-to-others" title="Back to discussions">Back to discussions</a></br><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
     <?php if($comment_count > 1){
       print t('Comments');
       }else{
@@ -131,6 +131,7 @@
  </div>
   </div>
   <?php print views_embed_view('comments','comments', $node->nid); ?>
+  <a href="/talk-to-others" title="Back to discussions">Back to discussions</a>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
