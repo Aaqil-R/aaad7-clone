@@ -131,7 +131,7 @@
  </div>
   </div>
   <?php print views_embed_view('comments','comments', $node->nid); ?>
-  <a href="/talk-to-others" title="Back to discussions">Back to discussions</a>
+  <p><a href="/talk-to-others" title="Back to discussions">Back to discussions</a></p>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
