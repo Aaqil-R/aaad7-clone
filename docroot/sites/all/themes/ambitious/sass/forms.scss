@@ -578,6 +578,17 @@ div.ctools-modal-content .form-item .description{
       padding: 12px 23px;
     }
 
+  label {
+    font-size: 2em;
+    @include breakpoint($mobile){
+      font-size: 1.2em;
+    }
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+    display: block;
+    &.filter-help,
+    &.option {font-size: 1em;margin:0;display: inline;}
+  }
   
   // All check boxes
   .form-item.form-type-checkboxes{
@@ -589,7 +600,9 @@ div.ctools-modal-content .form-item .description{
       display: inline-block;
       width: 100%;
     }
-  }  
+  }
+
+
 
 }
 
