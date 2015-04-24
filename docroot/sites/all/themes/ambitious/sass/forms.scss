@@ -548,11 +548,15 @@ div.ctools-modal-content .form-item .description{
 
 }
 
-// Forms Node Add - Forum Discussion
+// Forms Node Add - Forum Discussion - All page node adding
 .page-node-add{
-  input[type=text]{
+
+  @include breakpoint($mobile){
+    input[type=text]{
     width: 100%;
   }
+  }
+
 }
 
 
