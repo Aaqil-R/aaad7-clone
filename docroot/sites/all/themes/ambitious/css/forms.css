@@ -998,3 +998,76 @@ div.ctools-modal-content .form-item .description {
   box-shadow: inherit;
   color: inherit;
 }
+
+@media (max-width: 767px) {
+  /* line 554, ../sass/forms.scss */
+  .page-node-add h1.title {
+    margin: 1em 0 0.5em 1em;
+  }
+}
+/* line 561, ../sass/forms.scss */
+.page-node-add input[type=text]
+, .page-node-add input[type=search]
+, .page-node-add input[type=tel]
+, .page-node-add input[type=password]
+, .page-node-add input[type=email]
+, .page-node-add input[type=file]
+, .page-node-add textarea {
+  float: left;
+  clear: both;
+  width: 100%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  border-bottom: 2px solid;
+  border-color: #e4e4e4;
+  -webkit-box-shadow: inset 1px 1px 2px #707070;
+  box-shadow: inset 1px 1px 2px #707070;
+  margin-bottom: 1em;
+  padding: 12px 23px;
+}
+/* line 581, ../sass/forms.scss */
+.page-node-add label {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+  display: block;
+}
+@media (max-width: 767px) {
+  /* line 581, ../sass/forms.scss */
+  .page-node-add label {
+    font-size: 1.2em;
+  }
+}
+/* line 589, ../sass/forms.scss */
+.page-node-add label.filter-help, .page-node-add label.option {
+  font-size: 1em;
+  margin: 0;
+  display: inline;
+}
+@media (max-width: 767px) {
+  /* line 589, ../sass/forms.scss */
+  .page-node-add label.filter-help, .page-node-add label.option {
+    font-size: 1em;
+  }
+}
+/* line 601, ../sass/forms.scss */
+.page-node-add .form-item.form-type-checkboxes {
+  margin-bottom: 1em;
+}
+/* line 605, ../sass/forms.scss */
+.page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox {
+  float: left;
+  display: inline-block;
+  width: 100%;
+}
+/* line 609, ../sass/forms.scss */
+.page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox.form-checkbox {
+  margin-top: 0;
+}
+/* line 616, ../sass/forms.scss */
+.page-node-add .form-required {
+  color: #c63502;
+}
