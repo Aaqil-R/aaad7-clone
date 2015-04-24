@@ -1047,17 +1047,23 @@ div.ctools-modal-content .form-item .description {
   margin: 0;
   display: inline;
 }
-/* line 594, ../sass/forms.scss */
+@media (max-width: 767px) {
+  /* line 589, ../sass/forms.scss */
+  .page-node-add label.filter-help, .page-node-add label.option {
+    font-size: 1em;
+  }
+}
+/* line 601, ../sass/forms.scss */
 .page-node-add .form-item.form-type-checkboxes {
   margin-bottom: 1em;
 }
-/* line 598, ../sass/forms.scss */
+/* line 605, ../sass/forms.scss */
 .page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox {
   float: left;
   display: inline-block;
   width: 100%;
 }
-/* line 606, ../sass/forms.scss */
+/* line 613, ../sass/forms.scss */
 .page-node-add .form-required {
   color: #c63502;
 }
