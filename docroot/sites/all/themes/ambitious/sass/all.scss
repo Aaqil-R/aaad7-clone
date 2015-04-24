@@ -12,9 +12,13 @@ html body{
 		background: image-url('wid_bg.jpg') $page-background;
 	} 
 }
-html body.node-type-forum-discussion{
-  height:auto;
+html body{
+  &.node-type-forum-discussion, &.node-type-forum{
+    height:auto;
+  }
 }
+
+
 .messages{
   font-size: 18px;
   padding: 20px;
