@@ -88,6 +88,12 @@ function articalmig_migrate_api()
 				'class_name'=>'communitycommentmigration',
 				'group_name'=>'users',
 			),
+
+			'onenewusermigration'=>array(
+				'class_name'=>'onenewusermigration',
+				'group_name'=>'users',
+			),
+			
 		),
 	);
 }
