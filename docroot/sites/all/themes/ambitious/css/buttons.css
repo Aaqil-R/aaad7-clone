@@ -754,8 +754,32 @@ a.btn:hover {
   font-weight: normal;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 471, ../sass/buttons.scss */
-.st_sharethis_button .stButton:after {
+/* line 472, ../sass/buttons.scss */
+.st_sharethis_button .stButton:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 478, ../sass/buttons.scss */
+.st_sharethis_button .stButton:active {
+  border-bottom-width: 0px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 484, ../sass/buttons.scss */
+.st_sharethis_button .stButton:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 488, ../sass/buttons.scss */
+.st_sharethis_button .stButton .st-sharethis-counter {
+  background: none !important;
+  width: 109px;
+}
+/* line 491, ../sass/buttons.scss */
+.st_sharethis_button .stButton .st-sharethis-counter:after {
   font-size: 18px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
   content: "Share this";
@@ -764,8 +788,8 @@ a.btn:hover {
   margin-top: -22px;
   padding-right: 29px;
 }
-/* line 480, ../sass/buttons.scss */
-.st_sharethis_button .stButton:before {
+/* line 500, ../sass/buttons.scss */
+.st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -784,31 +808,8 @@ a.btn:hover {
   position: relative;
   top: 3px;
 }
-/* line 499, ../sass/buttons.scss */
-.st_sharethis_button .stButton:hover {
-  border-bottom-width: 3px;
-  margin-top: 2px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 505, ../sass/buttons.scss */
-.st_sharethis_button .stButton:active {
-  border-bottom-width: 0px;
-  margin-top: 5px;
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 511, ../sass/buttons.scss */
-.st_sharethis_button .stButton:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-/* line 515, ../sass/buttons.scss */
-.st_sharethis_button .stButton .st-sharethis-counter {
-  display: none !important;
-}
 
-/* line 522, ../sass/buttons.scss */
+/* line 524, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -817,7 +818,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 534, ../sass/buttons.scss */
+/* line 536, ../sass/buttons.scss */
 .about-me .btn {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -826,7 +827,7 @@ a.btn:hover {
   margin-top: 1em;
 }
 
-/* line 544, ../sass/buttons.scss */
+/* line 546, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -838,7 +839,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 554, ../sass/buttons.scss */
+/* line 556, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -847,24 +848,24 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 564, ../sass/buttons.scss */
+/* line 566, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
 @media (min-width: 767px) {
-  /* line 571, ../sass/buttons.scss */
+  /* line 573, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 581, ../sass/buttons.scss */
+/* line 583, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 590, ../sass/buttons.scss */
+/* line 592, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';

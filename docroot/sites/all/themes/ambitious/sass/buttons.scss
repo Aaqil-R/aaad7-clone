@@ -468,7 +468,27 @@ a.btn:hover {
   @extend %clearfix;
   font-weight:normal;
   font-family:$base-font-family;
-       &:after{
+         
+      &:hover {
+	    border-bottom-width: 3px;
+	    margin-top:2px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:active{
+	    border-bottom-width:0px;
+	    margin-top:5px;
+		text-decoration:none;
+		color:$white;
+	  }
+	  &:visited{
+	    text-decoration:none;
+		color:$white;
+	  }  
+	  .st-sharethis-counter{
+	    background:none !important;
+	    width:109px;
+	  &:after{
         font-size: 18px;
         font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
         content :"Share this";
@@ -495,25 +515,7 @@ a.btn:hover {
          content: "\e60d";
          position: relative;
         top: 3px;
-      }   
-      &:hover {
-	    border-bottom-width: 3px;
-	    margin-top:2px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:active{
-	    border-bottom-width:0px;
-	    margin-top:5px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:visited{
-	    text-decoration:none;
-		color:$white;
-	  }  
-	  .st-sharethis-counter{
-	    display:none !important;
+      }
 	  }
     }
 
