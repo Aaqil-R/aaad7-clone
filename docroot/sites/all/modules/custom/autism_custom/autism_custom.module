@@ -184,25 +184,24 @@ function autism_custom_permission() {
  * @param type $query 
  */
 function autism_custom_views_query_alter(&$view, &$query) {
-  
+
   if ($view->name == 'stream' && $view->current_display == 'stream_topic_page' && isset($query->table_queue['field_data_eq_node']) && isset($query->table_queue['eq_node_node'])) {
     if(is_numeric(arg(1)) && arg(0) == 'node'){
-    $node = node_load(arg(1));
+      $nid = is_numeric(arg(1)) ? arg(1) : 74481;
+      $node = node_load($nid);
       if (isset($node->field_stream_order_reference['und'][0]['target_id'])) {
        $name = db_select('entityqueue_subqueue', 'eq')
-                ->fields('eq',array('name', 'queue'))
+                ->fields('eq',array('name', 'queue', 'subqueue_id'))
                 ->condition('subqueue_id',$node->field_stream_order_reference['und'][0]['target_id'])
                 ->execute()
                 ->fetchAll();
        $queue = array_shift($name);
-       $query->table_queue['field_data_eq_node']['join']->extra[0]['field'] = 'bundle';
-       $query->table_queue['field_data_eq_node']['join']->extra[0]['value'] = $queue->queue;
-       $query->table_queue['field_data_eq_node']['join']->definition['extra'][0]['field'] = 'bundle';
-       $query->table_queue['field_data_eq_node']['join']->definition['extra'][0]['value'] = $queue->queue;       
+       $query->table_queue['field_data_eq_node']['join']->extra[0]['field'] = 'entity_id';
+       $query->table_queue['field_data_eq_node']['join']->extra[0]['value'] = $queue->subqueue_id;
+       $query->table_queue['field_data_eq_node']['join']->definition['extra'][0]['field'] = 'entity_id';
+       $query->table_queue['field_data_eq_node']['join']->definition['extra'][0]['value'] = $queue->subqueue_id;       
        $query->table_queue['eq_node_node']['join']->extra[0]['field'] = 'name';                
        $query->table_queue['eq_node_node']['join']->extra[0]['value'][0] = $queue->name;
-       
-
        $query->table_queue['eq_node_node']['join']->definition['extra'][0]['field'] = 'name';                
        $query->table_queue['eq_node_node']['join']->definition['extra'][0]['value'][0] = $queue->name;
      }
