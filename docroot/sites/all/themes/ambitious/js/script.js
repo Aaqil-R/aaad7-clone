@@ -29,7 +29,7 @@ Drupal.behaviors.ambitious = {
             
         // load more button first loads the content only on click, so removed the waypoint binding.
  
-        if($('body').hasClass('node-type-topic')){
+       /* if($('body').hasClass('node-type-topic')){
   		 var settings = Drupal.settings;
   		 var first = true;
 		 $.each(settings.viewsLoadMore, function(i, setting) {
@@ -41,7 +41,7 @@ Drupal.behaviors.ambitious = {
 		   	first = false;
 		   	}
 		 });
-		 }
+		 }*/
  
         //
   		// var settings = Drupal.settings;
