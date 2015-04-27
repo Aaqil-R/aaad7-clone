@@ -754,31 +754,38 @@ a.btn:hover {
   font-weight: normal;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 472, ../sass/buttons.scss */
+@media (max-width: 767px) {
+  /* line 455, ../sass/buttons.scss */
+  .st_sharethis_button .stButton {
+    padding-top: 7px;
+    font-size: 16px;
+  }
+}
+/* line 475, ../sass/buttons.scss */
 .st_sharethis_button .stButton:hover {
   border-bottom-width: 3px;
   margin-top: 2px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 478, ../sass/buttons.scss */
+/* line 481, ../sass/buttons.scss */
 .st_sharethis_button .stButton:active {
   border-bottom-width: 0px;
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 484, ../sass/buttons.scss */
+/* line 487, ../sass/buttons.scss */
 .st_sharethis_button .stButton:visited {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 488, ../sass/buttons.scss */
+/* line 491, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter {
   background: none !important;
   width: 109px;
 }
-/* line 491, ../sass/buttons.scss */
+/* line 494, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:after {
   font-size: 18px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
@@ -788,7 +795,7 @@ a.btn:hover {
   margin-top: -22px;
   padding-right: 29px;
 }
-/* line 500, ../sass/buttons.scss */
+/* line 503, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
@@ -806,10 +813,10 @@ a.btn:hover {
   font-family: 'icomoon';
   content: "\e60d";
   position: relative;
-  top: 3px;
+  top: -4px;
 }
 
-/* line 524, ../sass/buttons.scss */
+/* line 527, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -818,7 +825,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 536, ../sass/buttons.scss */
+/* line 539, ../sass/buttons.scss */
 .about-me .btn {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -827,7 +834,7 @@ a.btn:hover {
   margin-top: 1em;
 }
 
-/* line 546, ../sass/buttons.scss */
+/* line 549, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -839,7 +846,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 556, ../sass/buttons.scss */
+/* line 559, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -848,24 +855,24 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 566, ../sass/buttons.scss */
+/* line 569, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
 @media (min-width: 767px) {
-  /* line 573, ../sass/buttons.scss */
+  /* line 576, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 583, ../sass/buttons.scss */
+/* line 586, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 592, ../sass/buttons.scss */
+/* line 595, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';
