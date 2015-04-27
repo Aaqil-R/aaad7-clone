@@ -785,7 +785,13 @@ a.btn:hover {
   background: none !important;
   width: 109px;
 }
-/* line 494, ../sass/buttons.scss */
+@media (max-width: 767px) {
+  /* line 491, ../sass/buttons.scss */
+  .st_sharethis_button .stButton .st-sharethis-counter {
+    width: 124px;
+  }
+}
+/* line 497, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:after {
   font-size: 18px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
@@ -796,13 +802,13 @@ a.btn:hover {
   padding-right: 29px;
 }
 @media (max-width: 767px) {
-  /* line 494, ../sass/buttons.scss */
+  /* line 497, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter:after {
     margin-top: -23px;
     font-size: 17px;
   }
 }
-/* line 507, ../sass/buttons.scss */
+/* line 510, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
@@ -823,7 +829,7 @@ a.btn:hover {
   top: -4px;
 }
 
-/* line 531, ../sass/buttons.scss */
+/* line 534, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -832,7 +838,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 543, ../sass/buttons.scss */
+/* line 546, ../sass/buttons.scss */
 .about-me .btn {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -841,7 +847,7 @@ a.btn:hover {
   margin-top: 1em;
 }
 
-/* line 553, ../sass/buttons.scss */
+/* line 556, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -853,7 +859,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 563, ../sass/buttons.scss */
+/* line 566, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -862,24 +868,24 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 573, ../sass/buttons.scss */
+/* line 576, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
 @media (min-width: 767px) {
-  /* line 580, ../sass/buttons.scss */
+  /* line 583, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 590, ../sass/buttons.scss */
+/* line 593, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 599, ../sass/buttons.scss */
+/* line 602, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';

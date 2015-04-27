@@ -491,6 +491,9 @@ a.btn:hover {
 	  .st-sharethis-counter{
 	    background:none !important;
 	    width:109px;
+	    @include breakpoint($mobile) {
+	      width:124px;
+	    }
 	  &:after{
         font-size: 18px;
         font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
