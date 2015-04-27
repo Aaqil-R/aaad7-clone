@@ -93,8 +93,10 @@ $userid = $elements['#account']->uid;
 				               		<dt>Website:</dt>
 				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
 									<?php endif; ?>
-                                           <?php endif; ?>	 
+                                           <?php endif; ?>	
+                                            <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?> 
 									<dt>Links:</dt>
+									<?php endif; ?>	
 				               		<dd>
 				               			<strong>
 				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
