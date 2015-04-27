@@ -795,7 +795,14 @@ a.btn:hover {
   margin-top: -22px;
   padding-right: 29px;
 }
-/* line 503, ../sass/buttons.scss */
+@media (max-width: 767px) {
+  /* line 494, ../sass/buttons.scss */
+  .st_sharethis_button .stButton .st-sharethis-counter:after {
+    margin-top: -23px;
+    font-size: 17px;
+  }
+}
+/* line 507, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
@@ -816,7 +823,7 @@ a.btn:hover {
   top: -4px;
 }
 
-/* line 527, ../sass/buttons.scss */
+/* line 531, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -825,7 +832,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 539, ../sass/buttons.scss */
+/* line 543, ../sass/buttons.scss */
 .about-me .btn {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -834,7 +841,7 @@ a.btn:hover {
   margin-top: 1em;
 }
 
-/* line 549, ../sass/buttons.scss */
+/* line 553, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -846,7 +853,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 559, ../sass/buttons.scss */
+/* line 563, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -855,24 +862,24 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 569, ../sass/buttons.scss */
+/* line 573, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
 @media (min-width: 767px) {
-  /* line 576, ../sass/buttons.scss */
+  /* line 580, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 586, ../sass/buttons.scss */
+/* line 590, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 595, ../sass/buttons.scss */
+/* line 599, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';

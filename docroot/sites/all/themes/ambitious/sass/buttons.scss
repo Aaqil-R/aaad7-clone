@@ -499,6 +499,10 @@ a.btn:hover {
         float: left;
 		margin-top: -22px;
 		padding-right: 29px;
+		@include breakpoint($mobile) {
+		  margin-top: -23px;
+		  font-size: 17px;
+		}
       }    
       &:before{
           font-family: 'icomoon';
