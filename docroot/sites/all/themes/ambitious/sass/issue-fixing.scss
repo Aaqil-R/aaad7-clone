@@ -1365,6 +1365,18 @@ article.node-223806{
 // New message
 #privatemsg-new{
   overflow: hidden;
+
+  input.form-text{
+    max-width: 100%;
+    @include breakpoint($mobile){
+      width: 100%;
+    }
+  }
+
+  .form-text.required.form-autocomplete {
+    background-image: none;
+  }
+  
 }
 
 //CKE body
