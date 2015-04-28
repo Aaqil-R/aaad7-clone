@@ -15,8 +15,8 @@
   function image_click_handler() {
     $('div.user-avatar-select img').bind("click", function(){
       $("div.user-avatar-select img.avatar-select").each(function(){
-        $(this).parent().parent().children("input").attr("checked", "");
         $(this).removeClass("avatar-select");
+        $(this).parent().parent().children("input").attr("checked", "");
       });
       $(this).addClass("avatar-select");
       $(this).parent().parent().children("input").attr("checked", "checked");
