@@ -19,7 +19,7 @@
         $(this).parent().children("input").attr("checked", "");
       });
       $(this).addClass("avatar-select");
-      $(this).parent().children("input").attr("checked", "checked");
+      $(this).parent().parent().children("input").attr("checked", "checked");
     });
   }
 
