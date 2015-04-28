@@ -1322,10 +1322,13 @@ article.node-223806{
   }
 }
 
+// Private message
+//-----------------
+
+ 
 
 
-
-
+// my voice filter pink
 .section-myvoice{
   .filter-slide{
    .nav-filter{
@@ -1336,8 +1339,25 @@ article.node-223806{
       }
    }
   }
+  .filter-pink{  
+     background:$pink; 
+     border-corlor:$pink-dark;
+  } 
 }
-.filter-pink{  
-   background:$pink; 
-   border-corlor:$pink-dark;
+
+// user avatar
+.privatemsg-author-avatar img{
+  max-width: 100%;
 }
+
+// Messsage body
+.privatemsg-message-body img{
+  max-width: 100%;
+}
+
+// Message links
+.privatemsg-message-actions li {
+    display: inline;
+    padding-right: 1em;
+}
+
