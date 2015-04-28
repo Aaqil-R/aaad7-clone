@@ -337,8 +337,8 @@ function avatar_selection_validate_user_avatar(&$form, &$form_state) {
 
     // Load file.
     $file = file_load($form_state['values']['select_avatar']);
-    $file->status = 0;
-   // $file = file_copy($file, 'temporary://' . $file->filename);
+   // $file->status = 0;
+    $file = file_copy($file, 'temporary://' . $file->filename);
 
     $form_state['values']['picture_upload'] = $file;
 
