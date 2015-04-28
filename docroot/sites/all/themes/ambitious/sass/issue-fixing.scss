@@ -1333,15 +1333,17 @@ article.node-223806{
   .filter-slide{
    .nav-filter{
       .form-type-bef-checkbox{
-         label, &.checked{
+        &.checked label, &.checked{
            color:$pink;
          }
       }
    }
   }
   .filter-pink{  
-     background:$pink; 
-     border-corlor:$pink-dark;
+     .form-submit{
+       background:$pink; 
+       border-corlor:$pink-dark;
+     }
   } 
 }
 
