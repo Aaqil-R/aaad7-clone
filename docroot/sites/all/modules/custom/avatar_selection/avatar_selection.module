@@ -322,7 +322,6 @@ function avatar_selection_form_user_profile_form_alter(&$form, &$form_state, $fo
  *   General reference, used to control the processing of the form.
  */
 function avatar_selection_validate_user_avatar(&$form, &$form_state) {
-  dpm($form_state);
   // If required, validate the uploaded picture.
   $validators = array(
     'file_validate_is_image' => array(),
