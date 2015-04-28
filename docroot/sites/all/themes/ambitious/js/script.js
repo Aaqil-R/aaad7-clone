@@ -182,7 +182,7 @@ Drupal.behaviors.ambitious = {
     });
 
 
-	$(document).ready(function (){
+	$(window).resize(function(){
 		// Get the document offset :
 		var offset = $(document).scrollTop(),
 
