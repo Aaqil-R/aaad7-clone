@@ -1362,6 +1362,29 @@ article.node-223806{
     padding-right: 1em;
 }
 
+// New message
+#privatemsg-new{
+  overflow: hidden;
+
+  input.form-text{
+    max-width: 100%;
+    @include breakpoint($mobile){
+      width: 100%;
+    }
+  }
+
+  .form-text.required.form-autocomplete {
+    background-image: none;
+  }
+  
+}
+
+//CKE body
+.cke_skin_kama.cke_1.cke_editor_edit-body-value,
+#cke_edit-body-value{
+  max-width: 100%;
+}
+
 // Community champion
 //--------------------
 
