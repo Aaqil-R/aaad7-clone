@@ -196,6 +196,19 @@ Drupal.behaviors.ambitious = {
 		$myDialog.css('top',  (offset  + (viewportHeight/2)) - ($myDialog.outerHeight()/2));
     });
 
+	$(document).ready(function (){
+		// Get the document offset :
+		var offset = $(document).scrollTop(),
+
+		// Get the window viewport height
+		viewportHeight = $(window).height(),
+
+		// cache the model element
+		$myDialog = $('#modalContent');
+
+		// now set the model position
+		$myDialog.css('top',  (offset  + (viewportHeight/2)) - ($myDialog.outerHeight()/2));
+    });
 
       $(document).ready(function () {
 	  //Sets default class for understanding-autism grid view and toggles class when changing view.
