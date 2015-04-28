@@ -1322,11 +1322,6 @@ article.node-223806{
   }
 }
 
-// Private message
-//-----------------
-
- 
-
 
 // my voice filter pink
 .section-myvoice{
@@ -1347,9 +1342,13 @@ article.node-223806{
   } 
 }
 
+// Private message
+//-----------------
+
 // user avatar
 .privatemsg-author-avatar img{
   max-width: 100%;
+  @include border-radius(5px);
 }
 
 // Messsage body
@@ -1361,5 +1360,19 @@ article.node-223806{
 .privatemsg-message-actions li {
     display: inline;
     padding-right: 1em;
+}
+
+// Community champion
+//--------------------
+
+.section-community-champions-forum{
+  section#content-area{
+    padding: 6px;
+  }
+}
+
+.section-community-champions-forum header .user-picture img,
+.section-forums header .user-picture img{
+  @include border-radius(5px);
 }
 
