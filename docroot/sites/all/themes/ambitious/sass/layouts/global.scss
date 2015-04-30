@@ -377,3 +377,17 @@ table {
 }
 
 
+//==== Global Display class
+.only-mobile{
+	display: none;
+	@include breakpoint($mobile){
+		display: block;
+	}
+}
+
+.not-mobile{
+	display: none;
+	@include breakpoint($not-mobile){
+		display: block;
+	}
+}

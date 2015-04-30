@@ -808,3 +808,25 @@ table tr:nth-child(odd) td a, table tr.odd td a {
 .not-logged-in .show_logedin {
   display: inherit !important;
 }
+
+/* line 381, ../../sass/layouts/global.scss */
+.only-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 381, ../../sass/layouts/global.scss */
+  .only-mobile {
+    display: block;
+  }
+}
+
+/* line 388, ../../sass/layouts/global.scss */
+.not-mobile {
+  display: none;
+}
+@media (min-width: 767px) {
+  /* line 388, ../../sass/layouts/global.scss */
+  .not-mobile {
+    display: block;
+  }
+}
