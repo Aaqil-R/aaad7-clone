@@ -749,6 +749,7 @@ div.ctools-modal-content .modal-content{
     }
     a.btn{
       padding: 13px 22px;
+      width:100%;
     }
     label{
         font-size: 24px;
@@ -1412,3 +1413,24 @@ article.node-223806{
   @include border-radius(5px);
 }
 
+// Home Page Step form
+#slider-container{
+  .webform-client-form-74676{ 
+    width: 100%;
+    .home_forum_share_left{
+      div{
+        iframe{
+          width: 160px;
+          float: left;
+          height: 20px;
+            &:first-child{
+              width: 130px;
+              float: left;
+              height: 21px;
+              margin-right: 10px;
+           }
+        }
+      }
+    }
+  }
+}
