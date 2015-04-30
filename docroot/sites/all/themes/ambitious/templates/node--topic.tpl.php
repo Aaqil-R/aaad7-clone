@@ -43,6 +43,7 @@
   $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
   } 
 ?>
+<?php if($page):?>
   <section class="visual header_banner">
   <div class="img-holder">
      <div class="banner_text_main">
@@ -104,27 +105,5 @@
     </div>
    <?php endif; ?> 
   </section>  
-<?php endif; ?>  
-  
- 
- 
- 
- 
- 
- 
- 
-
- 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+<?php endif; ?>
+<?php endif; ?>   
