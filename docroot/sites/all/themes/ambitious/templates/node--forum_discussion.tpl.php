@@ -117,7 +117,7 @@
 						 </div>
 					  </div>  
 					</section>
-		
+<?php if ($page): ?>		
 <h4 class="forumpage_title">
      <a href="/talk-to-others" title="Back to discussions">Back to discussions</a></br><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $comment_count; ?>
     <?php if($comment_count > 1){
@@ -126,14 +126,16 @@
         print t('Comment');
       }
     ?></h4>
-  
+<?php endif; ?>
   
  </div>
   </div>
+<?php if ($page): ?>
   <?php print views_embed_view('comments','comments', $node->nid); ?>
   <h4 class="forumpage_title"><a href="/talk-to-others" title="Back to discussions">Back to discussions</a></h4>
  			<?php if($content['comments']['comment_form']):?>   
 		<section class="comment-block">			
  <?php print render($content['comments']['comment_form']);   ?>
 </section>   
+<?php endif; ?>
 <?php endif; ?>

@@ -681,6 +681,7 @@ function avatar_selection_upload_form_submit($form, &$form_state) {
         if (image_get_info($file->uri)) {
           $file->status = FILE_STATUS_PERMANENT;
           $file = file_save($file);
+          
           _avatar_selection_save_avatar_info(0, $file->filename, $name, $access, $og, $weight, $file->fid);
           drupal_set_message(t('New image saved.'));
         }
