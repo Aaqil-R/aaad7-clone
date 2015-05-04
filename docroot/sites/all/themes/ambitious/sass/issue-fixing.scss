@@ -1452,3 +1452,37 @@ article.node-223806{
   left: -103px;
   bottom: 60px;
 }
+
+
+.node-type-article{
+  #comments{
+    width: 100%;
+  }
+  .comment-listing{
+    .flag-wrapper{
+      font-size: 13px;
+    }
+    time{
+      max-width: 130px;
+      float: left;
+      a{
+        display: block;
+      }
+    }
+   
+    .comment-left{
+      img{
+        width: 60px;
+      }
+    }
+    .comment-right{
+      padding: 20px;
+      &:before{
+        margin-left: 63px;
+      }
+      .links{
+        clear: both;
+      }
+    }
+  }
+}

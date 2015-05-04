@@ -55,7 +55,7 @@
 		</section>
   <?php endif; ?>
 
-<section id="comments" class="comment-list <?php print $classes; ?>"<?php print $attributes; ?>>
+<section id="comments" class="comment-list"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
     
