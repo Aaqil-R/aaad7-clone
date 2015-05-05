@@ -60,43 +60,57 @@ $userid = $elements['#account']->uid;
   				               	<?php else: ?>
   				               	  <h3><?php print $elements['#account']->name; ?></h3>
 				               	<?php endif; ?>
+
 				               	<dl> 
 				               	  <?php if(isset($current_user)):?> 
-				               	     <?php if(isset($elements['#account']->field_first_name['und'])):?>
+
+				               	    <?php if(isset($elements['#account']->field_first_name['und'])):?>
 				               		<dt>First name:</dt>
 				               		<dd><?php print $elements['#account']->field_first_name['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
+									<?php endif; ?>
+
 									<?php if(isset($elements['#account']->field_last_name['und'])):?>
 				               		<dt>Last name:</dt>
 				               		<dd><?php print $elements['#account']->field_last_name['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
+									<?php endif; ?>
+
 									<?php if(!empty($elements['#account']->mail)):?>
 				               		<dt>Email:</dt>
 				               		<dd><?php print $elements['#account']->mail;?></dd>
 									<?php endif; ?>
+
 									<?php if(isset($elements['#account']->field_signature['und'])):?>
 				               		<dt>Signature:</dt>
 				               		<dd><?php print $elements['#account']->field_signature['und'][0]['safe_value'];?></dd>
-									<?php endif; ?> 
+									<?php endif; ?>
+
 									<?php if(isset($elements['#account']->field_location['und'])):?>
 				               	    <dt>Location:</dt>
 				               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
-								  <?php endif; ?>
+								  	<?php endif; ?>
+
 				               	  <?php else: ?>
-				               	  <?php if(isset($elements['#account']->field_location['und'])):?>
-				               	    <dt>Location:</dt>
-				               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
-								  <?php endif; ?> 
-				               	    <dt>No. of posts:</dt>
-				               	    <dd><?php print ambitious_get_user_post_count($userid); ?></dd>
-				               	    <?php if(isset($elements['#account']->field_website['und'][0]['safe_value'])):?>
-				               		<dt>Website:</dt>
-				               		<dd><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></dd>
+
+					               	  <?php if(isset($elements['#account']->field_location['und'])):?>
+					               	    <dt>Location:</dt>
+					               	    <dd><?php print $elements['#account']->field_location['und'][0]['safe_value'];?></dd>
+									  <?php endif; ?>
+
+					               	    <dt>No. of posts:</dt>
+					               	    <dd><?php print ambitious_get_user_post_count($userid); ?></dd>
+
+
+                                	<?php endif; ?>
+
+                                    <?php if(isset($elements['#account']->field_website['und'][0]['safe_value'])):?>
+					               		<dt>Website:</dt>
+					               		<dd><a href="<?php print $elements['#account']->field_website['und'][0]['safe_value'];?>" target="_blank"><?php print $elements['#account']->field_website['und'][0]['safe_value'];?></a></dd>
 									<?php endif; ?>
-                                           <?php endif; ?>	
-                                            <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?> 
+
+                                    <?php if(isset($elements['#account']->field_blog['und']) || isset($elements['#account']->field_twitter['und'])): ?> 
 									<dt>Links:</dt>
-									<?php endif; ?>	
+									<?php endif; ?>
+
 				               		<dd>
 				               			<strong>
 				               			 <?php if(isset($elements['#account']->field_blog['und'])): ?>
