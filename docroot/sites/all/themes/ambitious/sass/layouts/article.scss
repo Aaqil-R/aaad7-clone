@@ -264,10 +264,13 @@
 		  }
 		  li{
 		    .comment-left{
-			  // float:left;
-			  // width:79px;
-			  @include span(2 of 8);
+			  float:left;
+			  width:122px;
+			  //@include span(2 of 8);
 			  font-size:13px;
+			  @include breakpoint($mobile){
+			    white-space: normal;
+			  }
 			  img{
 				 @include border-radius(5px);
 				 overflow:hidden;
@@ -291,19 +294,21 @@
 			  }
 			}
 			.comment-right{
-				@include span(6 of 8 last);
+			  //@include span(6 of 8 last);
 			  border:2px solid $border-color;
-			  //padding:16px 26px 13px 26px;
-			  //margin:0 0 27px 112px;
+			  padding:16px 26px 13px 26px;
+			  margin:0 0 27px 142px;
 			  font-size:16px;
 			  word-wrap: break-word;
 			  @include breakpoint($mobile){
 			    padding:15px;
+			    width:auto;
+			    float:none;
 			  }
 			  &:before{
 			    content: "";
 			    position: absolute;
-			    left: 90px;
+			    left: 120px;
 			    background:image-url('sprite.png') no-repeat -1px -162px;
 			    width: 24px;
 				top: 15px;
