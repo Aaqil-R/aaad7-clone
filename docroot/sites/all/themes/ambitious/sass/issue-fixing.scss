@@ -1347,10 +1347,10 @@ article.node-223806{
 //-----------------
 
 // user avatar
-.privatemsg-author-avatar img{
-  max-width: 100px;
+.privatemsg-author-avatar img{  
   @include border-radius(5px);
   width: 100%;
+  max-width: 100px;
 }
 
 // Messsage body
@@ -1364,7 +1364,12 @@ article.node-223806{
     padding-right: 1em;
 }
 
+// User profile
+.user-picture img{
+  width: 100%;
+  max-width: 130px;
 
+}
 
 // New message
 #privatemsg-new{
