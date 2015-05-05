@@ -1194,6 +1194,9 @@ function ambitious_form_comment_form_alter(&$form, &$form_state) {
    if (empty($form['comment_body']['und'][0]['#format'])){
       $form['comment_body']['und'][0]['#format'] = 'filtered';
    }
+   // Change the form's submit button's value as "submit"
+   $form ['actions']['submit']['#value'] = t('Submit');
+
 } 
 
 function ago($timestamp) {
