@@ -447,10 +447,12 @@
 			 }
 		   }
 		   a{
-		  	 color: $orange-dark;
-		     position: relative;
+		  	 position: relative;
 			 padding:0 0 0 14px;
              text-decoration: underline;
+             &:link{
+             	color: $orange-dark;
+             }
 			 &:after {
 			   position:absolute;
 			   left:0;
