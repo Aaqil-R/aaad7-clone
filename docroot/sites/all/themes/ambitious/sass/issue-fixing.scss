@@ -1498,4 +1498,20 @@ article.node-223806{
     }
   }
 }
- 
+
+// Remove / from my voice section
+.node-type-my-voice-blog{
+
+  .article-info .flag-bookmarks:first-child{
+    padding-left: 0;
+  }
+  
+  #main2 .article-left .article-left-holder .article-info cite a{      
+    margin-top: 0.5em;
+    &:after{
+      background-image: none;
+    }
+  }
+
+}
+
