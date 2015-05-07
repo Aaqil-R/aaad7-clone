@@ -93,6 +93,11 @@ function articalmig_migrate_api()
 				'class_name'=>'onenewusermigration',
 				'group_name'=>'users',
 			),
+
+			'articalimagemigraton'=>array(
+				'class_name'=>'articalimagemigration',
+				'group_name'=>'users',
+			),
 			
 		),
 	);
