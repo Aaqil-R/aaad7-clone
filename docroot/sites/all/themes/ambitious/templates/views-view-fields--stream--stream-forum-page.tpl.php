@@ -97,12 +97,12 @@
                                 <div class="clear"></div>
                             </div>
 							<?php print $fields['body']->content; ?>  
-							<?php if(!empty($fields['field_signature']->content)){ ?>
+							<?php if(!empty($fields['field_signature']->content)): ?>
                               <div class="signature-dashes">--</div>
                             	<div class="user_signature signature-bold-text">
                             		<?php print $fields['field_signature']->content; ?>
                             	</div>
-                            <?php } ?>  
+                            <?php endif; ?>  
 						  </div>
 						</div>
 						<div class="footer">
