@@ -28,6 +28,11 @@
 ?>
 <?php
   
+  //Fix issue
+  $last_reply_username = '';
+  $last_reply_time = '';
+  //End
+  
   $nodepos = strip_tags($fields['position']->content);
   $sticky = node_load($fields['nid']->raw); 
   $node_comment = ambitious_get_node_comments_count($fields['nid']->raw) ;
