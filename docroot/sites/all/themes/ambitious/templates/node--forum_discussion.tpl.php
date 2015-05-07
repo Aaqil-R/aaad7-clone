@@ -85,7 +85,8 @@
 			<?php print render($content['body']);?>		
 			
 			<?php if(isset($user_signature)): ?>
-				<div class="user_signature">	
+				<div class="signature-dashes">--</div>
+				<div class="user_signature signature-bold-text">	
 					<?php print $user_signature; ?>
 				</div>
 			<?php endif;?>
