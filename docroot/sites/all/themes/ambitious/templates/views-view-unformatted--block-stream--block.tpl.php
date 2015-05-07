@@ -7,7 +7,6 @@
  * @ingroup views_templates
  */ 
  $myvar = get_defined_vars();  
- 
 ?>
 
 
@@ -18,22 +17,64 @@
     <?php // print $row; ?>   
     <?php 
       $node_type = $myvar['variables']['view']->result[$id]->node_type;      
-      $featured_image = $myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'];
-      $featured_image_url = file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); 
-      $background_color = $myvar['variables']['view']->result[$id]->field_field_background_colour[0]['rendered']['#markup'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_featured_image[0]))
+        $featured_image = $myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'];
+      else
+        $featured_image = FALSE;
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_featured_image[0]))
+        $featured_image_url = file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_featured_image[0]['raw']['filename'])); 
+      
+      if(isset($myvar['variables']['view']->result[$id]->field_field_background_colour[0]))
+        $background_color = $myvar['variables']['view']->result[$id]->field_field_background_colour[0]['rendered']['#markup'];
+      else 
+        $background_color = '';
+      
       $background = "style='background-image: url(".file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_background_image[0]['raw']['filename']))."); background-size:cover; background-color:$background_color;'";    
-      $action_text = $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];
-      $share_graphic_type = $myvar['variables']['view']->result[$id]->field_field_type[0]['raw']['value'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]))
+        $action_text = $myvar['variables']['view']->result[$id]->field_field_call_to_action_text[0]['raw']['safe_value'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_type[0]))
+        $share_graphic_type = $myvar['variables']['view']->result[$id]->field_field_type[0]['raw']['value'];
+      else 
+        $share_graphic_type = '';
+        
       $node_title = $myvar['variables']['view']->result[$id]->node_title; 
-      $node_body = strip_tags($myvar['variables']['view']->result[$id]->field_body[0]['raw']['safe_value']); 
-      $block_tout_text =  $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value'];
-      $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
-      $font_size = $myvar['variables']['view']->result[$id]->field_field_font_size[0]['raw']['value'];
-      $title_second = $myvar['variables']['view']->result[$id]->field_title_second[0]['raw']['value'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_body[0]))
+        $node_body = strip_tags($myvar['variables']['view']->result[$id]->field_body[0]['raw']['safe_value']); 
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]))
+        $block_tout_text =  $myvar['variables']['view']->result[$id]->field_field_block_tout_text[0]['raw']['value'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_tout_text))
+        $tout_text = $myvar['variables']['view']->result[$id]->field_field_tout_text[0]['raw']['value'];
+      else 
+        $tout_text = '';
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_field_font_size[0]))  
+        $font_size = $myvar['variables']['view']->result[$id]->field_field_font_size[0]['raw']['value'];
+      
+      //Issue fix
+      if(isset($myvar['variables']['view']->result[$id]->field_title_second))
+        $title_second = $myvar['variables']['view']->result[$id]->field_title_second[0]['raw']['value'];
+      
       $nid = $myvar['variables']['view']->result[$id]->nid;
       $nodeid = node_load($myvar['variables']['view']->result[$id]->nid);
       $links = sharethis_node_view($nodeid, 'full', 'en');  
-      $action_link = $myvar['variables']['view']->result[$id]->field_field_link[0]['raw']['display_url'];
+      
+      if(isset($myvar['variables']['view']->result[$id]->field_field_link[0]))
+        $action_link = $myvar['variables']['view']->result[$id]->field_field_link[0]['raw']['display_url'];
    ?> 
    <?php // Promo Block ?>
    <?php if($node_type == 'promo_block'): ?>

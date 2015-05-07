@@ -20,6 +20,9 @@
  */
  
  // var  
+ 
+ $t_title = (isset($variables['node']->title)) ? $variables['node']->title : '';
+
 ?>
 <?php if (!empty($q)): ?>
   <?php
@@ -29,7 +32,7 @@
   ?>
 <?php endif; ?> 
 <div class="text-block text-block-second post mobile-view clearfix">
-  <h1><?php print $variables['node']->title;?></h1> 
+  <h1><?php print $t_title; ?></h1> 
       <?php if(isset($variables['node']->body['und'][0]['safe_value'])): ?>
         <?php print $variables['node']->body['und'][0]['safe_value']; ?>
       <?php endif; ?>

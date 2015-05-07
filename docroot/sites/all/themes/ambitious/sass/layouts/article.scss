@@ -595,7 +595,7 @@
 	#wrapper{
 		background: $white;
 		@include breakpoint($not-mobile){
-			background: image-url('wid_bg.png') repeat-y center #ffffff;
+			background: image-url('wid_bg.png') repeat-y center $white;
 			background-position: 42%;
 		}
 		@include breakpoint(1030px){
@@ -642,7 +642,7 @@
 
 		@include breakpoint($tablet){
 			@include span(12 of 12);
-			background: image-url('wid_bg.png') repeat-y center #ffffff;
+			background: image-url('wid_bg.png') repeat-y center $white;
 			background-position: 75%;
 			padding: 0 10px;
 	
@@ -723,7 +723,7 @@
 // }
 #main2 .article-left .article-left-holder .comment-block .comments .form-element textarea{
 	font: 100% "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-	color: #d2d5d6;
+	color: $gray;
 	vertical-align: middle;
 }
 #main2 .comment-title{

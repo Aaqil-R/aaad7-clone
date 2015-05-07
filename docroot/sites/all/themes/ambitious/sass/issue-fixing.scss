@@ -576,7 +576,7 @@
   }
   a.tooltips span.tooltip-content{
     &:before{
-     border-left: 20px solid #F6BF4F;
+     border-left: 20px solid $casablanca;
 	border-right: 20px solid transparent;
 	border-top: 20px solid transparent; 
 	transform:rotate(-136deg) ;
@@ -587,7 +587,7 @@ top: 6px;
 margin-left: -13px;
     }
      &:after{
-      border-left: 19px solid #FFF8E7;
+      border-left: 19px solid $early_dawn;
       border-right: 19px solid transparent;  
       border-top: 18px solid transparent;
       transform:rotate(-136deg) ;
@@ -794,7 +794,7 @@ div.ctools-modal-content .modal-content{
 }
 
 #form input[type="text"]:focus{
-  border-color:#fbb900;
+  border-color: $yellow;
 }
 
 body .view-display-id-stream_forum_page{
@@ -1380,7 +1380,7 @@ article.node-223806{
     @include border-radius(5px);
     font-size:18px;
     border-bottom: 2px solid;
-    border-color:#e4e4e4;
+    border-color: $mercury;
     @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
     margin-bottom: 1em;
     padding: 12px 23px;
