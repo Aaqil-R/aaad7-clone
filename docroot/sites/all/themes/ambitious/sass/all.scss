@@ -960,17 +960,17 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 		min-width: 49px;
 		height: 49px;
 		text-indent: -100px;
-		color: #2a2e31;
+		color: $base-link-color;
 		overflow: hidden;
-		background: #AEAEAE;
+		background: $silver_chalice;
 		&.active{
-			@include linear-gradient(#8E8E8E,#DFDFDF);
+			@include linear-gradient($gray_sec,$alto_sec);
 			&:before{
-				background:#F3F4F6;
+				background:$athens_gray;
 			}
 		}
 		&:hover{
-			background:#58666F;
+			background:$shuttle_gray;
 		}
 		&:before {
 			position:absolute;
@@ -1565,7 +1565,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
                 width: 100%;
                 height: 100%;
                 &:hover{
-                    background: #CF005B;
+                    background: $razzmatazz;
                 }
             }
 			&:before{
@@ -1574,13 +1574,13 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 				height: 0;
 				border-style: solid;
 				border-width: 200px 0 0 200px;
-				border-color: transparent transparent transparent #db0076;
+				border-color: transparent transparent transparent $rose;
 				position: absolute;
 				bottom: 0;
 				left: 0;
 			}
 			&:hover:before{
-				border-color: transparent transparent transparent #C80042;
+				border-color: transparent transparent transparent $monza;
 			}
 			@include breakpoint($mobile) {
 				//padding:14px 15px;
@@ -1759,7 +1759,7 @@ input[type=submit], input[type=text], input[type=search], input[type=tel], input
 			font-size:101px;
 		}
 		&:hover {
-		  color:#b6bcc1;
+		  color:$loadmore-hover;
 		  text-decoration: none;
 		}
 	}

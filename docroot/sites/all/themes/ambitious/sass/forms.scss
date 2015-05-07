@@ -64,7 +64,7 @@
       @include border-radius(5px);
       font-size:18px;
       border-bottom: 2px solid;
-      border-color:#e4e4e4;
+      border-color:$mercury;
       @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
       margin-bottom: 1em;
       padding: 12px 23px;
@@ -99,10 +99,10 @@
     cursor: default;
     display: block;
     font-size: 19px;
-    color: #2a2e31;
+    color: $base-link-color;
     line-height: 41px;
     border-radius: 5px;
-    background: #fff;
+    background: $white;
  }
 
 .page-node-74606{
@@ -218,7 +218,7 @@ cursor: pointer;
 display: inline-block;
 font-family: inherit;
 font-size: inherit;
-color: #ffffff;
+color: $white;
 text-align: center;
 text-decoration: none;
 margin-top: 5px;
@@ -227,21 +227,21 @@ outline: medium none;
 padding: 10px 2px;
 position: relative;
 line-height: 30px;
-background: none, repeat, scroll, 0, 0, #f15500;
--webkit-box-shadow: 0px 6px #c63502;
-box-shadow: 0px 6px #c63502;
+background: none, repeat, scroll, 0, 0, $orange;
+-webkit-box-shadow: 0px 6px $orange-dark;
+box-shadow: 0px 6px $orange-dark;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
 &:hover{
   top: 2px;
--webkit-box-shadow: 0px 4px #c63502;
-box-shadow: 0px 4px #c63502;
+-webkit-box-shadow: 0px 4px $orange-dark;
+box-shadow: 0px 4px $orange-dark;
 }
 &:active{
   top: 6px;
--webkit-box-shadow: 0px 0px #c63502;
-box-shadow: 0px 0px #c63502;
+-webkit-box-shadow: 0px 0px $orange-dark;
+box-shadow: 0px 0px $orange-dark;
 }
         }
         fieldset{
@@ -307,7 +307,7 @@ div.ctools-modal-content .form-item .description{
       clear:both;
       width:80%;
       border-radius:5px;
-      border-color:#e4e4e4;
+      border-color:$mercury;
       @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
       margin-bottom: 20px;
       padding: 12px 23px;
@@ -344,19 +344,19 @@ div.ctools-modal-content .form-item .description{
   
   
   ::-webkit-input-placeholder {
-   color: #2a2e31;
+   color: $base-link-color;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #2a2e31;  
+   color: $base-link-color;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #2a2e31;  
+   color: $base-link-color;  
 }
 
 :-ms-input-placeholder {  
-   color: #2a2e31;  
+   color: $base-link-color;  
 }
 .page-user .form-item{
   padding-left:0;
@@ -490,7 +490,7 @@ div.ctools-modal-content .form-item .description{
       border-radius:5px;
       @include border-radius(5px);
       font-size:18px;    
-      border-color:#e4e4e4;
+      border-color:$mercury;
       @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));    
       padding: 12px 23px;
       @include breakpoint($mobile) {
@@ -571,7 +571,7 @@ div.ctools-modal-content .form-item .description{
       @include border-radius(5px);
       font-size:18px;
       border-bottom: 2px solid;
-      border-color:#e4e4e4;
+      border-color:$mercury;
       @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
       margin-bottom: 1em;
       padding: 12px 23px;

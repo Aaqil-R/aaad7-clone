@@ -332,14 +332,14 @@ a.btn:hover {
     }
   }
   &.btn-google{
-      @include box-shadow(0px 6px #ab1005);
-      background:#f44336;
+      @include box-shadow(0px 6px $milano_red);
+      background:$error-red;
 
       &:hover {
         // replace the displacement of the button from the top
         top: 2px;
         // displace the button shadow 
-        @include box-shadow(0px 4px #ab1005);   
+        @include box-shadow(0px 4px $milano_red);   
       }
   }
 }
