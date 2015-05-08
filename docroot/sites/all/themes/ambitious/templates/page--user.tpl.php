@@ -213,8 +213,7 @@
         </div><!-- /footer Right --> 
         <div class="company-info">          
           <?php print render($page['footer_copyright']); ?>
-          <span class="design-by">Designed and built by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>.</span>
-        </div><!-- /footer copyright -->              
+			<span class="design-by">Designed by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>. Built by <a href="http://weare.thesmallaxe.com" target="_blank">the Small Axe</a>.</span>        </div><!-- /footer copyright -->              
       </div>      
     </footer> <!-- /footer -->
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
