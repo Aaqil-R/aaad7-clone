@@ -1179,7 +1179,9 @@ if($user->uid == arg(1)){
     $variables['hybridauth_user'] = $output;
 		$variables['edit_url'] = l('<span>Edit your profile <em class="icon-Rightarrow"></em></span>','user/' . $user->uid.'/edit',array('attributes' => array('class' => array('btn','btn-default')), 'html' => TRUE));
   }
-  
+
+  $variables['user_profile']['privatemsg_send_new_message']['#options']['attributes']['class'] .=" btn btn-default";
+ 
 }
  
 
