@@ -1228,10 +1228,7 @@ function ambitious_menu_local_tasks_alter(&$data, $router_item, $root_path) {
    if($data['tabs'][0]['output'][0]['#link']['path'] == "search/site/%"){
      unset($data['tabs'][0]['output'][0]);
    }
-   if($data['tabs'][0]['output'][2]['#link']['path']){
-     $data['tabs'][0]['output'][2]['#link']['weight'] = -10;
-   }
-   $data['tabs'][0]['output'] = rsort($data['tabs'][0]['output']);
+  $data['tabs'][0]['output'][2]['#link']['weight'] = -10;
   }   
   
 }
