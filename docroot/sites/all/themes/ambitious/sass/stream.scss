@@ -35,6 +35,16 @@
         
         .info {
             padding: 13px 0 0 0;
+              //below breakpoints are temporary fix for the card alignments
+              @include breakpoint(min-width $large-mobile){
+                min-height: 67px;
+              }
+              @include breakpoint($mobile){
+                min-height: 39px;
+              }
+              @include breakpoint(min-width $tablet-small){
+                min-height: 71px;
+              }
         }
     }
     @include breakpoint(min-width $large-mobile){
