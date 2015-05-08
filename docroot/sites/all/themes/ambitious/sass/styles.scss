@@ -349,4 +349,15 @@ table {
     a{
         color: $pink;
     }
+    .easy-breadcrumb {
+        a {
+            color: $white; 
+            &:hover {
+                text-decoration: none; 
+                }
+            &:visited {
+               color: $base-link-color; 
+            }
+        }
+    }
 }
