@@ -1177,7 +1177,7 @@ if($user->uid == arg(1)){
        $output[$provider_id]= l("<span>".$provider_id."<em class='icon-".$provider_id."'></em></span>", "/hybridauth/window/".$provider_id."?destination=user/".$user->uid."&destination_error=user/".$user->uid, array( 'attributes' => (array('class' => array('btn btn-' . strtolower($provider_id)))),'html' => TRUE,'external' => TRUE) );
     }
     $variables['hybridauth_user'] = $output;
-		$variables['edit_url'] = l('<span>Edit your profile <em class="icon-Rightarrow"></em></span>','user/' . $user->uid.'/edit',array('attributes' => array('class' => array('btn','btn-red')), 'html' => TRUE));
+		$variables['edit_url'] = l('<span>Edit your profile <em class="icon-Rightarrow"></em></span>','user/' . $user->uid.'/edit',array('attributes' => array('class' => array('btn','btn-defualt')), 'html' => TRUE));
   }
   
 }
