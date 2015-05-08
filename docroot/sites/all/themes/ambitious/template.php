@@ -1217,3 +1217,11 @@ function ambitious_preprocess_image(&$variables) {
     unset($variables[$key]);
   }
 }
+
+
+
+function ambitious_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  dpm($data,"data");
+  dpm($router_item,"router_item");
+  dpm($root_pat,"root_pat");
+}
