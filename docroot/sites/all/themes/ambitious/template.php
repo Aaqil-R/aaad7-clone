@@ -1223,7 +1223,7 @@ function ambitious_preprocess_image(&$variables) {
 
 
 function ambitious_menu_local_tasks_alter(&$data, $router_item, $root_path) {
- 
+ dpm($data);
  if(arg(0) == "search"){
    if($data['tabs'][0]['output'][0]['#link']['path'] == "search/site/%"){
      unset($data['tabs'][0]['output'][0]);
