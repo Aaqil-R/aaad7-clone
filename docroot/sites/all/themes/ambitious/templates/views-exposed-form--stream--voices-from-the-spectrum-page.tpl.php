@@ -32,6 +32,7 @@
 
 
 <div class="sort-block advanced-sort-block filter-option">
+ 
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
 		<?php if (!empty($widget->label)): ?>
@@ -43,14 +44,17 @@
           <div class="views-operator">
             <?php print $widget->operator; ?>
           </div>
-        <?php endif; ?>
-        
+        <?php endif; ?> 
+
+
+
+
          <div class="filter-overlay"></div>
     
     <div class="filter-slide">
 				<h4 class="title">Filter by..  <span class="filteroption icon-Close"></span></h4>
 				<div class="nav-filter ">
-					 <?php print $widget->widget; ?> 
+					  <?php print $widget->widget; ?>
 				</div> 
    
       <div class="button-holder">
@@ -111,6 +115,6 @@
 		<div class="short-buttons">
           <?php print render($variables['share_button']); ?>
 		</div>
-		
+	 <div class="myvoice-list clearfix"></div>	
 </div>
  
