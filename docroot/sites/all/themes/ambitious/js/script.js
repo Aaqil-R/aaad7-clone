@@ -84,11 +84,13 @@ Drupal.behaviors.ambitious = {
 		          menuOpener: '.filterbutton',
 		          menuDrop: '.filter-slide'
 	            });
-	            $(".view .bef-checkboxes input[type=checkbox]:checked").parent().addClass('checked');
-	                  // views filter opiton
+	            $(".view .bef-checkboxes input[type=checkbox]:checked").parent().addClass('checked').children('label').addClass('label-checked');
+                    
+	      // views filter opiton
               $(".view .bef-checkboxes :checkbox").once('check-processed').on('click', function(){
                  var crtcheck = $(this).parent();
                  crtcheck.toggleClass("checked").removeClass("highlight"); 
+                 crtcheck.children('label').toggleClass('label-checked'); 
                });  
 	    }); 
          $( document ).ajaxComplete(function() {
@@ -126,6 +128,22 @@ Drupal.behaviors.ambitious = {
 		   $("form#views-exposed-form-stream-understanding-autism-page-age #edit-sort-by").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
+ 
+ 
+	var arr = $(".page-node-224746 .sort-block .filter-slide .bef-checkboxes fieldset label").clone().addClass('icon-Close');
+	 
+         $(".myvoice-list label").remove();
+	 $.each(arr, function(i, field){
+           $(".myvoice-list").append(field); 
+         }); 
+         
+          $(".myvoice-list label").on('click', function(){
+                 
+                 $(".filter-slide #edit-submit-stream").trigger( "click" ); 
+                   $(this).removeClass("label-checked"); 
+           });
+
+
         //Understanding autism added filter to load understanding autism page
     // ==Close button==//
 		$('.block-close').on("click", function () {
@@ -148,7 +166,7 @@ Drupal.behaviors.ambitious = {
 		  $(".form_firstname").text("");
 		  $(".form_firstname").append(username);
 		 }
-         $('#not_right_now').on("click", function () {
+              $('#not_right_now').on("click", function () {
 		    $('.block-close').trigger( "click" );
 		});
 		
