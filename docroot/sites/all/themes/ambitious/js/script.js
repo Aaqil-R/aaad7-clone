@@ -128,22 +128,36 @@ Drupal.behaviors.ambitious = {
 		   $("form#views-exposed-form-stream-understanding-autism-page-age #edit-sort-by").change(function() {
           $('#edit-submit-stream').trigger( "click" );
         });
- 
- 
-	var arr = $(".page-node-224746 .sort-block .filter-slide .bef-checkboxes fieldset label").clone().addClass('icon-Close');
-	 
-         $(".myvoice-list label").remove();
-	 $.each(arr, function(i, field){
-           $(".myvoice-list").append(field); 
+        
+         
+
+     
+	var arr = $(".page-node-224746 .sort-block .filter-slide .bef-checkboxes fieldset"); 
+         $(".myvoice-list span").remove();
+     
+	 $.each(arr, function(i, field){ 
+           var ne = $(field).children("label").clone().html();
+           var select = "";
+           if($(field).hasClass("checked")){
+             select = "selected";
+           }
+           var chval = $(field).children("input").clone().val();         
+           $(".myvoice-list").append("<span class='voice-list icon-Close "+ select +"'" + "data-nid='" +chval+"'>" + ne + "</span>"); 
          }); 
          
-          $(".myvoice-list label").on('click', function(){
-                 
-                 $(".filter-slide #edit-submit-stream").trigger( "click" ); 
-                   $(this).removeClass("label-checked"); 
-           });
-
-
+          $("span.voice-list").on('click', function(){
+            var nid = $(this).data("nid"); 
+            var curval = ""; 
+            $.each(arr, function(i, field){ 
+              curval = $(field).children("input").val();
+              if(curval == nid){
+                 $(field).children("input").attr('checked', false);
+                 curval="";
+              }
+            }); 
+            $('#edit-submit-stream').trigger( "click" );
+          });
+ 
         //Understanding autism added filter to load understanding autism page
     // ==Close button==//
 		$('.block-close').on("click", function () {

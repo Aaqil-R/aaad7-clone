@@ -1789,8 +1789,7 @@ a.masquerade-switch {
   clear: both;
 }
 /* line 1542, ../sass/issue-fixing.scss */
-.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list label.label-checked {
-  display: inherit;
+.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list {
   background: #eef2f3;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1800,8 +1799,14 @@ a.masquerade-switch {
   border: 1px solid #C1C7C8;
   margin-right: 9px;
   margin-top: 10px;
+  display: none;
 }
 /* line 1553, ../sass/issue-fixing.scss */
-.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list label.label-checked:before {
-  margin-right: 9px;
+.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list.selected {
+  display: block;
+}
+/* line 1556, ../sass/issue-fixing.scss */
+.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list:before {
+  margin-left: 9px;
+  float: right;
 }
