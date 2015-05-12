@@ -729,10 +729,14 @@ nav {
       margin-left:0;
     }
   }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .banner_text_inner, .block-easy-breadcrumb{
+  //we need to refactor this below code
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, .top-header, .banner_text_inner, .block-easy-breadcrumb{
     width:100%;
     max-width:none;
     @include transition ($type:all, $time:0.4s, $ease:ease);
+  }
+  &.node-type-article #content_bottom{
+    float:none;
   }
   .visual .img-holder .caption-frame{
     width:100%;
