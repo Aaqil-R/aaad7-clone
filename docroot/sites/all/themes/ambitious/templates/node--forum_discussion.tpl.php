@@ -71,7 +71,7 @@
 			<?php endif;?> 
 			<div class="meta">
 		        <div class="created">
-		            <?php print format_date($node->created, 'custom', 'D j M Y');?>
+		           <?php print format_date($node->created, 'custom', 'D j M Y g:ia');?>
 		        </div>
 		        <?php if(isset($content['field_topic'])):?>	
 		        <div class="topic_section">
