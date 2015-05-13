@@ -80,7 +80,7 @@
                              <time pubdate>Posts: <?php print $userpostcount; ?></time></br>
                              <?php $fields['field_location_reference']->content = strip_tags($fields['field_location_reference']->content); ?> 
                              <?php if(!empty($fields['field_location_reference']->content)){ ?>
-                            <time>Location:<?php print $fields['field_location_reference']->content; ?></time>
+                            <time>Location: <?php print $fields['field_location_reference']->content; ?></time>
                             <?php } ?>                                            
 						  </div>
 						  <div class="info add forum-right">
