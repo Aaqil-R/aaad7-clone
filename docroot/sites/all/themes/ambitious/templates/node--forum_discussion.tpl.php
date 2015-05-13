@@ -57,7 +57,7 @@
 				<?php endif; ?>						      
 			</div>
 			<cite>by </br><strong title="<?php print $name; ?>"> 
-			<?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print truncate_utf8($name,12,TRUE,4);?></a><?php else:?><?php print truncate_utf8($name,12,TRUE,4);?><?php endif; ?></strong></cite>                <time pubdate>Joined: <?php print $user_date; ?></time></br>
+			<?php if($logged_in):?><a href="<?php print url('user/'.$uid); ?>"><?php print $name;?></a><?php else:?><?php print $name;?><?php endif; ?></strong></cite>                <time pubdate>Joined: <?php print $user_date; ?></time></br>
 				<time pubdate>Posts: <?php print $user_count; ?></time></br>
 			<?php if(!empty($location)){ ?>
 				<time>Location: <?php print $location; ?></time>

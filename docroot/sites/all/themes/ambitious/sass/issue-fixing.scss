@@ -1250,6 +1250,11 @@ article.node-223806{
 }
 .nav-active .nav-holder{
   position: absolute;
+  padding-top:15px;
+  margin-top:34px;
+  @include breakpoint($mobile){
+    padding-top:0px;
+  }
 } 
 
 // Login Modal's issue fixing on the mobiles

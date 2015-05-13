@@ -1516,87 +1516,95 @@ fieldset.group-hidden {
 /* line 1251, ../sass/issue-fixing.scss */
 .nav-active .nav-holder {
   position: absolute;
+  padding-top: 15px;
+  margin-top: 34px;
+}
+@media (max-width: 767px) {
+  /* line 1251, ../sass/issue-fixing.scss */
+  .nav-active .nav-holder {
+    padding-top: 0px;
+  }
 }
 
 @media (max-width: 767px) {
-  /* line 1258, ../sass/issue-fixing.scss */
+  /* line 1263, ../sass/issue-fixing.scss */
   div.ctools-modal-content .modal-content {
     padding: 19px 19px 13px 25px;
   }
 
-  /* line 1262, ../sass/issue-fixing.scss */
+  /* line 1267, ../sass/issue-fixing.scss */
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     width: 100%;
   }
 
-  /* line 1266, ../sass/issue-fixing.scss */
+  /* line 1271, ../sass/issue-fixing.scss */
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     padding: 10px 16px;
     font-size: 16px;
   }
 
-  /* line 1271, ../sass/issue-fixing.scss */
+  /* line 1276, ../sass/issue-fixing.scss */
   .hybridauth-widget-wrapper {
     clear: both;
     width: 80%;
     padding-left: 10px;
   }
 
-  /* line 1277, ../sass/issue-fixing.scss */
+  /* line 1282, ../sass/issue-fixing.scss */
   .popups-container input[type="submit"] {
     margin-bottom: 20px;
     width: 100%;
     margin-top: 10px;
   }
 
-  /* line 1283, ../sass/issue-fixing.scss */
+  /* line 1288, ../sass/issue-fixing.scss */
   div.ctools-modal-content #user-register-form, div.ctools-modal-content #user-login {
     width: 100%;
     margin-left: 10px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1295, ../sass/issue-fixing.scss */
+  /* line 1300, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .posts-columns {
     padding-top: 0;
   }
-  /* line 1299, ../sass/issue-fixing.scss */
+  /* line 1304, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .footer .btn {
     margin-top: 1em;
   }
-  /* line 1303, ../sass/issue-fixing.scss */
+  /* line 1308, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .forumpage_title {
     padding: 0 8px;
   }
-  /* line 1307, ../sass/issue-fixing.scss */
+  /* line 1312, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .view-comments {
     padding: 0 8px;
   }
-  /* line 1311, ../sass/issue-fixing.scss */
+  /* line 1316, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left img {
     max-width: 58px;
   }
-  /* line 1315, ../sass/issue-fixing.scss */
+  /* line 1320, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
     margin: 0 0 27px 98px;
   }
-  /* line 1319, ../sass/issue-fixing.scss */
+  /* line 1324, ../sass/issue-fixing.scss */
   .node-type-forum-discussion .comment-list ul.comment-listing li .comment-left {
     width: 85px;
   }
 }
 
-/* line 1332, ../sass/issue-fixing.scss */
+/* line 1337, ../sass/issue-fixing.scss */
 .section-myvoice .filter-slide .nav-filter .form-type-bef-checkbox.checked label, .section-myvoice .filter-slide .nav-filter .form-type-bef-checkbox.checked {
   color: #e30087;
 }
-/* line 1339, ../sass/issue-fixing.scss */
+/* line 1344, ../sass/issue-fixing.scss */
 .section-myvoice .filter-pink .form-submit {
   background: #e30087;
   border-color: #b3066b;
 }
 
-/* line 1350, ../sass/issue-fixing.scss */
+/* line 1355, ../sass/issue-fixing.scss */
 .privatemsg-author-avatar img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1605,28 +1613,28 @@ fieldset.group-hidden {
   max-width: 100px;
 }
 
-/* line 1357, ../sass/issue-fixing.scss */
+/* line 1362, ../sass/issue-fixing.scss */
 .privatemsg-message-body img {
   max-width: 100%;
 }
 
-/* line 1362, ../sass/issue-fixing.scss */
+/* line 1367, ../sass/issue-fixing.scss */
 .privatemsg-message-actions li {
   display: inline;
   padding-right: 1em;
 }
 
-/* line 1368, ../sass/issue-fixing.scss */
+/* line 1373, ../sass/issue-fixing.scss */
 .user-picture img {
   width: 100%;
   max-width: 130px;
 }
 
-/* line 1375, ../sass/issue-fixing.scss */
+/* line 1380, ../sass/issue-fixing.scss */
 #privatemsg-new {
   overflow: hidden;
 }
-/* line 1378, ../sass/issue-fixing.scss */
+/* line 1383, ../sass/issue-fixing.scss */
 #privatemsg-new input.form-text {
   max-width: 100%;
   -moz-border-radius: 5px;
@@ -1641,33 +1649,33 @@ fieldset.group-hidden {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 1378, ../sass/issue-fixing.scss */
+  /* line 1383, ../sass/issue-fixing.scss */
   #privatemsg-new input.form-text {
     width: 100%;
   }
 }
-/* line 1392, ../sass/issue-fixing.scss */
+/* line 1397, ../sass/issue-fixing.scss */
 #privatemsg-new .form-text.required.form-autocomplete {
   background-image: none;
 }
 
-/* line 1399, ../sass/issue-fixing.scss */
+/* line 1404, ../sass/issue-fixing.scss */
 .cke_skin_kama.cke_1.cke_editor_edit-body-value,
 #cke_edit-body-value {
   max-width: 100%;
 }
 
-/* line 1404, ../sass/issue-fixing.scss */
+/* line 1409, ../sass/issue-fixing.scss */
 .cke_button {
   float: left !important;
 }
 
-/* line 1412, ../sass/issue-fixing.scss */
+/* line 1417, ../sass/issue-fixing.scss */
 .section-community-champions-forum section#content-area {
   padding: 6px;
 }
 
-/* line 1417, ../sass/issue-fixing.scss */
+/* line 1422, ../sass/issue-fixing.scss */
 .section-community-champions-forum header .user-picture img,
 .section-forums header .user-picture img {
   -moz-border-radius: 5px;
@@ -1675,74 +1683,74 @@ fieldset.group-hidden {
   border-radius: 5px;
 }
 
-/* line 1424, ../sass/issue-fixing.scss */
+/* line 1429, ../sass/issue-fixing.scss */
 #slider-container .webform-client-form-74676 {
   width: 100%;
 }
-/* line 1428, ../sass/issue-fixing.scss */
+/* line 1433, ../sass/issue-fixing.scss */
 #slider-container .webform-client-form-74676 .home_forum_share_left div iframe {
   width: 160px;
   float: left;
   height: 20px;
 }
-/* line 1432, ../sass/issue-fixing.scss */
+/* line 1437, ../sass/issue-fixing.scss */
 #slider-container .webform-client-form-74676 .home_forum_share_left div iframe:first-child {
   width: 130px;
   float: left;
   height: 21px;
   margin-right: 10px;
 }
-/* line 1442, ../sass/issue-fixing.scss */
+/* line 1447, ../sass/issue-fixing.scss */
 #slider-container .webform-client-form-74676 .home_forum_share_right img {
   max-width: 80%;
   margin-left: 10%;
 }
 
-/* line 1451, ../sass/issue-fixing.scss */
+/* line 1456, ../sass/issue-fixing.scss */
 .section-topics .posts-columns.columns-full .row .footer {
   padding-left: 22px;
 }
 
-/* line 1458, ../sass/issue-fixing.scss */
+/* line 1463, ../sass/issue-fixing.scss */
 .my-voice-home #content_top .my-voice-columns a.tooltips span.tooltip-content, .node-type-basic-page-with-hero #content_top .my-voice-columns a.tooltips span.tooltip-content {
   left: -103px;
   bottom: 60px;
 }
 
-/* line 1466, ../sass/issue-fixing.scss */
+/* line 1471, ../sass/issue-fixing.scss */
 .node-type-article #comments {
   width: 100%;
 }
-/* line 1470, ../sass/issue-fixing.scss */
+/* line 1475, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing .flag-wrapper {
   font-size: 13px;
 }
-/* line 1473, ../sass/issue-fixing.scss */
+/* line 1478, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing time {
   max-width: 130px;
   float: left;
 }
-/* line 1476, ../sass/issue-fixing.scss */
+/* line 1481, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing time time {
   margin-bottom: 0;
 }
-/* line 1479, ../sass/issue-fixing.scss */
+/* line 1484, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing time a {
   display: block;
 }
-/* line 1485, ../sass/issue-fixing.scss */
+/* line 1490, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing .comment-left img {
   width: 60px;
 }
-/* line 1489, ../sass/issue-fixing.scss */
+/* line 1494, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing .comment-right {
   padding: 20px;
 }
-/* line 1491, ../sass/issue-fixing.scss */
+/* line 1496, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing .comment-right .links {
   clear: both;
 }
-/* line 1495, ../sass/issue-fixing.scss */
+/* line 1500, ../sass/issue-fixing.scss */
 .node-type-article .comment-listing > li {
   margin-top: 15px;
   float: left;
@@ -1750,45 +1758,45 @@ fieldset.group-hidden {
   width: 100%;
 }
 
-/* line 1507, ../sass/issue-fixing.scss */
+/* line 1512, ../sass/issue-fixing.scss */
 .node-type-my-voice-blog .article-info .flag-bookmarks:first-child {
   padding-left: 0;
 }
-/* line 1511, ../sass/issue-fixing.scss */
+/* line 1516, ../sass/issue-fixing.scss */
 .node-type-my-voice-blog #main2 .article-left .article-left-holder .article-info cite a {
   margin-top: 0.5em;
 }
-/* line 1513, ../sass/issue-fixing.scss */
+/* line 1518, ../sass/issue-fixing.scss */
 .node-type-my-voice-blog #main2 .article-left .article-left-holder .article-info cite a:after {
   background-image: none;
 }
 
-/* line 1521, ../sass/issue-fixing.scss */
+/* line 1526, ../sass/issue-fixing.scss */
 .calendar-calendar td.has-events a {
   color: #c63502;
 }
 
-/* line 1525, ../sass/issue-fixing.scss */
+/* line 1530, ../sass/issue-fixing.scss */
 .calendar-calendar .month-view .full td .inner div.day {
   width: 100%;
 }
 
-/* line 1530, ../sass/issue-fixing.scss */
+/* line 1535, ../sass/issue-fixing.scss */
 .profile a {
   clear: both;
 }
 
-/* line 1534, ../sass/issue-fixing.scss */
+/* line 1539, ../sass/issue-fixing.scss */
 a.masquerade-switch {
   display: block;
 }
 
-/* line 1538, ../sass/issue-fixing.scss */
+/* line 1543, ../sass/issue-fixing.scss */
 .view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list {
   display: block;
   clear: both;
 }
-/* line 1542, ../sass/issue-fixing.scss */
+/* line 1547, ../sass/issue-fixing.scss */
 .view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list {
   background: #eef2f3;
   -moz-border-radius: 5px;
@@ -1801,11 +1809,11 @@ a.masquerade-switch {
   margin-top: 10px;
   display: none;
 }
-/* line 1553, ../sass/issue-fixing.scss */
+/* line 1558, ../sass/issue-fixing.scss */
 .view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list.selected {
   display: block;
 }
-/* line 1556, ../sass/issue-fixing.scss */
+/* line 1561, ../sass/issue-fixing.scss */
 .view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list span.voice-list:before {
   margin-left: 9px;
   float: right;
