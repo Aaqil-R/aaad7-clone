@@ -61,7 +61,12 @@
 					     <strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 					     <div class="article-tags">
 						 	<span>Related topics: </span>
-							<?php print render($content['field_related_topic']); ?>
+							<?php //print render($content['field_related_topic']); ?>
+								<div class="field-items">
+								<?php foreach($node->field_related_topic['und'] as $tag) { ?>
+									<a href="/node/<?php print $tag['node']->nid;?>"><?php print$tag['node']->title;?></a> 
+  								<?php } ?>
+								</div>
 						 </div>
 					  	 <div class="article-tags">
 							   <span>Tags: </span>
