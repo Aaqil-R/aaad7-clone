@@ -65,10 +65,7 @@
       <?php print render($title_suffix); ?>
            <?php if ($snippet) : ?>
       <p class="gss-search-snippet"<?php print $content_attributes; ?>><?php print $snippet; ?></p>
-    <?php endif; ?>
-     <?php if ($url) : ?>
-      <p class="gss-search-url"><a href="<?php print $url; ?>"><?php print $url; ?></a></p>
-    <?php endif; ?>
+    <?php endif; ?> 
        </div>
   </div>
  
