@@ -142,7 +142,7 @@ Drupal.behaviors.ambitious = {
              select = "selected";
            }
            var chval = $(field).children("input").clone().val();         
-           $(".myvoice-list").append("<span class='voice-list icon-Close "+ select +"'" + "data-nid='" +chval+"'>" + ne + "</span>"); 
+           $(".myvoice-list").append("<span class='voice-list "+ select +"'" + "data-nid='" +chval+"'>" + ne + "<em class='icon-Close'></em></span>"); 
          }); 
          
           $("span.voice-list").on('click', function(){
