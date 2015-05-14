@@ -13,10 +13,14 @@ CKEDITOR.editorConfig = function( config )
         // Each style is an object whose properties define how it is displayed
         // in the dropdown, as well as what it outputs as html into the editor
         // text area.
-        { name : 'Paragraph', element : 'p' },
+        { name : 'Paragraph'   , element : 'p' },
+        { name : 'Heading 2'   , element : 'h2' },
+        { name : 'Heading 3'   , element : 'h3' },
+        { name : 'Heading 4'   , element : 'h4' },
+        { name : 'Float Right', element : 'div', attributes : { 'style' : 'float:right;' } },
+        { name : 'Float Left', element : 'div', attributes : { 'style' : 'float:left;' } },
+        { name : 'Preformatted Text', element : 'pre' },
         { name : 'Quote: red',   element: 'span', attributes: { 'class': 'quote' } },
   ];
 
-  config.extraPlugins = 'codemirror';
-  config.codemirror_theme = 'monokai';
 }
