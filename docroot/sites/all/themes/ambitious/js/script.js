@@ -59,6 +59,25 @@ Drupal.behaviors.ambitious = {
 		
  
     	     $(document).ready(function(){
+    	     $(".fourm-order-date").append("<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>");
+    	     
+    	     var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
+    	 
+    	     
+    	     	$(".fourm-order-date select").change(function (e) { 
+       window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href'); 
+       e.preventDefault();
+       }); 
+       
+       var fourmlist = $(".fourm-order-date select option");
+       $.each(fourmlist, function(i, field){  
+             curselectvalue = $(field).attr("data-order");
+              if(curselectvalue == forum_order){
+                 $(field).attr("selected", "selected")
+                 curval="";
+              }
+        }); 
+    	     
     	    /* $(".view-display-id-stream_forum_page .views-row").each(function(){
 		   var comment = $(this).children().data("commentcount"); 
 		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
@@ -314,6 +333,8 @@ Drupal.behaviors.ambitious = {
 	  });
 }
 };
+
+
 
 
 
