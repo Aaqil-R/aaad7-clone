@@ -61,7 +61,7 @@
     <?php endforeach; ?>
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
-        <?php print $sort_by; ?>
+        <?php //print $sort_by; ?>
       </div>
       <div class="views-exposed-widget views-widget-sort-order">
 		<select id="select2" class="jcf-hidden autism-age"> <option data-href="understanding-autism/are-you-age-16-25-and-on-the-spectrum">For age 16-25</option>  <option data-href="understanding-autism">For everyone</option>  </select>
