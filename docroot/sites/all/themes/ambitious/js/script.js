@@ -131,7 +131,8 @@ Drupal.behaviors.ambitious = {
         
          
 
-     
+              
+/* my voice page filter  */
 	var arr = $(".page-node-224746 .sort-block .filter-slide .bef-checkboxes fieldset"); 
          $(".myvoice-list span").remove();
      
@@ -157,7 +158,15 @@ Drupal.behaviors.ambitious = {
             }); 
             $('#edit-submit-stream').trigger( "click" );
           });
- 
+ /* fourm page filter clear button  */
+     var fourm_list  = $(".page-node-221561 .sort-block .filter-slide .bef-checkboxes fieldset"); 
+     $(".clear-all").on('click', function(){
+       $.each(fourm_list, function(i, field){ 
+         $(field).removeClass('checked');
+         $(field).removeClass('highlight');
+         $(field).children("input").attr('checked', false);
+       });
+     }); 
         //Understanding autism added filter to load understanding autism page
     // ==Close button==//
 		$('.block-close').on("click", function () {

@@ -86,6 +86,7 @@
       <div class="button-holder">
        <div class="views-exposed-widget views-submit-button">
       <?php print $button; ?>
+      <span class="btn clear-all">Clear all</span>
     </div>
        </div> 
 				
