@@ -6,8 +6,6 @@
 ; lines in this file, you MUST refresh Drupal 7's cache by simply visiting the
 ; Appearance page at admin/appearance.
 
-
-
 ; The name, description and screenshot used for this theme on the Appearance
 ; page at admin/appearance.
 
@@ -15,14 +13,10 @@ screenshot  = screenshot.png
 name        = Ambitious
 description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Ambitious.
 
-
-
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
 
 core        = 7.x
 base theme  = zen
-
-
 
 ; This section controls the CSS files for your theme. There are 3 different
 ; things you can do with a "stylesheets" line:
@@ -54,7 +48,6 @@ stylesheets[all][] = system.theme.css
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/typography.css
 stylesheets[all][] = css/filters.css
-stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/content.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/layouts/pages.css
@@ -71,14 +64,12 @@ stylesheets[all][] = css/layouts/footer.css
 stylesheets[all][] = css/layouts/profile.css
 stylesheets[all][] = css/layouts/social.css
 stylesheets[all][] = css/layouts/caption-text.css
-stylesheets[all][] = css/layouts/topic-forum.css
+stylesheets[all][] = css/layouts/topic.css
 stylesheets[all][] = css/layouts/understanding-autism.css
 stylesheets[all][] = css/layouts/voice-page.css
 stylesheets[all][] = css/layouts/article.css
-stylesheets[all][] = css/layouts/tree-house-school.css
-stylesheets[all][] = css/layouts/bsd-wrapper.css
 stylesheets[all][] = css/comments.css
-stylesheets[all][] = css/issue-fixing.css
+stylesheets[all][] = css/general.css
 
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
