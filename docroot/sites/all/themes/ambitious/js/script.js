@@ -59,6 +59,25 @@ Drupal.behaviors.ambitious = {
 		
  
     	     $(document).ready(function(){
+    	     $(".fourm-order-date").append("<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>");
+    	     
+    	     var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
+    	 
+    	     
+    	     	$(".fourm-order-date select").change(function (e) { 
+       window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href'); 
+       e.preventDefault();
+       }); 
+       
+       var fourmlist = $(".fourm-order-date select option");
+       $.each(fourmlist, function(i, field){  
+             curselectvalue = $(field).attr("data-order");
+              if(curselectvalue == forum_order){
+                 $(field).attr("selected", "selected")
+                 curval="";
+              }
+        }); 
+    	     
     	    /* $(".view-display-id-stream_forum_page .views-row").each(function(){
 		   var comment = $(this).children().data("commentcount"); 
 		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
@@ -131,7 +150,8 @@ Drupal.behaviors.ambitious = {
         
          
 
-     
+              
+/* my voice page filter  */
 	var arr = $(".page-node-224746 .sort-block .filter-slide .bef-checkboxes fieldset"); 
          $(".myvoice-list span").remove();
      
@@ -142,7 +162,7 @@ Drupal.behaviors.ambitious = {
              select = "selected";
            }
            var chval = $(field).children("input").clone().val();         
-           $(".myvoice-list").append("<span class='voice-list icon-Close "+ select +"'" + "data-nid='" +chval+"'>" + ne + "</span>"); 
+           $(".myvoice-list").append("<span class='voice-list "+ select +"'" + "data-nid='" +chval+"'>" + ne + "<em class='icon-Close'></em></span>"); 
          }); 
          
           $("span.voice-list").on('click', function(){
@@ -157,7 +177,15 @@ Drupal.behaviors.ambitious = {
             }); 
             $('#edit-submit-stream').trigger( "click" );
           });
- 
+ /* fourm page filter clear button  */
+     var fourm_list  = $(".page-node-221561 .sort-block .filter-slide .bef-checkboxes fieldset"); 
+     $(".clear-all").on('click', function(){
+       $.each(fourm_list, function(i, field){ 
+         $(field).removeClass('checked');
+         $(field).removeClass('highlight');
+         $(field).children("input").attr('checked', false);
+       });
+     }); 
         //Understanding autism added filter to load understanding autism page
     // ==Close button==//
 		$('.block-close').on("click", function () {
@@ -305,6 +333,8 @@ Drupal.behaviors.ambitious = {
 	  });
 }
 };
+
+
 
 
 

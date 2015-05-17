@@ -38,6 +38,7 @@
  */
 ?>
 <?php print $pager; ?>
+<div class="fourm-order-date"> </div>
 <table id="forum-topic-<?php print $topic_id; ?>">
   <thead>
     <tr><?php print $header; ?></tr>
