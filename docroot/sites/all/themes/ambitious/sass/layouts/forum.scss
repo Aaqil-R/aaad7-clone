@@ -1,0 +1,72 @@
+@import "base/base";
+
+.view-display-id-stream_forum_page{
+  @include breakpoint($mobile) {
+    .filterbutton{
+      margin-left:0;
+    }
+  }
+}
+
+.forum-icon{
+    position: absolute;
+    right:18px;
+    font-size:40px;
+    top: 27px;
+    color:$orange;
+    @include breakpoint($mobile) {
+      background: $white;
+      top: 13px;
+      right: 13px; 
+      padding: 10px;
+    }
+    &.icon-Featured{
+      color:$yellow;
+    }
+}
+
+.view-display-id-voices_from_the_spectrum_page{
+  .views-exposed-widget.views-submit-button{
+    float:left;
+  }
+}
+
+// start community champions forum
+// Community Champions Forum
+.section-community-champions-forum, .section-forums {
+    #comments {
+        boder: none;
+        white-space: normal;
+        .comment.odd {
+            background-color: $gray;
+        }
+        .comment-img-holder {
+            width: 50px;
+            float: left;
+            margin-right: 10px;
+            img {width: 100%}
+            
+        }
+        
+        .comment-right {
+            border: none;
+        }
+        @include breakpoint(min-width $tablet) {
+            .comment-img-holder {
+                float: none;
+            }
+            .comment-left {
+                @include span(2 of 12);
+            }
+            .comment-right {
+                @include span(last 10 of 12);
+            }
+        }
+
+    }
+
+    #forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
+        white-space: normal;
+    }
+}
+// end community champions forum
