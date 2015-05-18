@@ -240,14 +240,6 @@ a.video_bt, .isvideo{
   color:$white;
 }
 
-.view-display-id-stream_forum_page{
-  @include breakpoint($mobile) {
-    .filterbutton{
-      margin-left:0;
-    }
-  }
-}
-
 /* main information part styles */
 .text-section{
   .text-right-section{
@@ -389,6 +381,7 @@ a.video_bt, .isvideo{
   }
 }
 
+// start standard topics and myvoice topics
 /* TITLE HIDE*/ 
 .node-type-topic, .node-type-my-voice-topic{
   h1.title{
@@ -436,29 +429,8 @@ a.video_bt, .isvideo{
     font-size: 19px;
   }
  }
- #header .header-top{
- 
- }
- #wrapper{
-   
- }
 }
-.forum-icon{
-    position: absolute;
-    right:18px;
-    font-size:40px;
-    top: 27px;
-    color:$orange;
-    @include breakpoint($mobile) {
-      background: $white;
-      top: 13px;
-      right: 13px; 
-      padding: 10px;
-    }
-    &.icon-Featured{
-      color:$yellow;
-    }
-} 
+// end standard topics and myvoice topics 
 
 // start .post-columns.columns-full
 .posts-columns.columns-full{
@@ -525,9 +497,6 @@ a.video_bt, .isvideo{
       }
 
 			.forum-right{
-			  // TODO: Recheck, forum page; when removing the clear both it aligns up the 
-        // right and left sections of the discussion card.
-        // clear: both;
 			  padding-top: 9px;
 			  @include breakpoint(min-width $tablet-small) {
 			    @include span(last 10 of 12);
@@ -538,7 +507,7 @@ a.video_bt, .isvideo{
 			  }
 			  p{
 			    font-size:18px;
-				margin-bottom:20px;
+				  margin-bottom:20px;
 			  }
               .meta {
                 margin-left: 0;
@@ -963,23 +932,6 @@ html.no-touch .form-type-bef-checkbox {
        float: left;
      } 
    }
-}
-.page-node-74606, .page-node-74621, .section-current-vacancies{
- .visual.no-overlay{
-   margin-bottom:10px;
- }
-}
-
-.view-display-id-voices_from_the_spectrum_page{
-  .views-exposed-widget.views-submit-button{
-    float:left;
-  }
-}
-
- 
-
-.page-node-74596 .visual.no-overlay{
-  margin-bottom:0;
 }
 
 .view-id-stream.view-display-id-stream_forum_page  .post{
@@ -1933,12 +1885,6 @@ fieldset{
   }
 }
 
-
-
-
-
-
-
 .page-comment, .page-messages{
 fieldset{
   float: left;
@@ -2092,6 +2038,7 @@ fieldset{
 			margin-left:0;
 		  }
 		}
+
 		#content-area{
 		  @extend %listreset;
 		  position: relative;
@@ -2126,7 +2073,8 @@ fieldset{
 			    margin:0 0 17px 0;
 			  }
 			}
-			.comment-right{
+
+			.comment-right { 
 			  border:2px solid $border-color;
 			  padding:16px 26px 13px 26px;
 			  margin:0 0 27px 132px;
@@ -2134,44 +2082,51 @@ fieldset{
 			  background:$white;
 			  word-wrap: break-word;
 			  position: relative;
-			  @include breakpoint($mobile){
+			  
+        @include breakpoint($mobile){
 			    padding:15px;
 			  }
+
 			  &:before{
 			    content: "";
 			    position: absolute;
 			    left: -24px;
 			    background:image-url('sprite.png') no-repeat -1px -162px;
 			    width: 24px;
-				top: 15px;
+				  top: 15px;
 			    height: 32px;
 			  }
+
 			  .links{
 			    margin-bottom: 17px;
 			  }
-			  ul{
-			     @extend %clearfix;
-				 @extend %listreset;
-			    li{
-                  float: left;
-                  margin:0 11px 0 0;
-				  a{
-				    text-decoration:underline;
-				    font-weight:bold;
-				    &:hover{
-				      text-decoration:none;
-				    }
-				  }
-				}
-			  }
+
+        ul{
+          @extend %clearfix;
+          @extend %listreset;
+          
+          li{
+            float: left;
+            margin:0 11px 0 0;
+          
+            a{
+              text-decoration:underline;
+              font-weight:bold;
+
+              &:hover{
+                text-decoration:none;
+              }
+            }
+          }
+        }
 			  .quote{
 			    border: none;
 			    padding: 0;
 			  }
 			}
 		  }
-        }
-	  }
+    }
+	}
  
 .item-list .pager li, .item-list .pager li a{
   &:hover{
@@ -2179,56 +2134,15 @@ fieldset{
   }
 
   background:none; 
- }
+}
 
-  // The Forum page
- .logged-in .text-section .text-right-section a.community-login{
- 	display: none;
- }
-.pager{
-
+// The Forum page
+.logged-in .text-section .text-right-section a.community-login{
+  display: none;
 }
 
 .take-action .post {
   width: 31.6875%;
   float: left;
   margin-right: 1.5625%;
-}
-
-// Community Champions Forum
-.section-community-champions-forum, .section-forums {
-    #comments {
-        boder: none;
-        white-space: normal;
-        .comment.odd {
-            background-color: $gray;
-        }
-        .comment-img-holder {
-            width: 50px;
-            float: left;
-            margin-right: 10px;
-            img {width: 100%}
-            
-        }
-        
-        .comment-right {
-            border: none;
-        }
-        @include breakpoint(min-width $tablet) {
-            .comment-img-holder {
-                float: none;
-            }
-            .comment-left {
-                @include span(2 of 12);
-            }
-            .comment-right {
-                @include span(last 10 of 12);
-            }
-        }
-
-    }
-
-    #forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
-        white-space: normal;
-    }
 }
