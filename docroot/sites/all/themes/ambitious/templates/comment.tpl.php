@@ -82,8 +82,7 @@
 			   
 			   </div>
 			   <div class="comment-right"> 
-			     <?php
-					 // We hide the comments and links now so that we can render them later. WHAT ARE YOU TALKING ABOUT? THIS DOESN'T RELATE TO THE CODE BELOW. FFS
+			     <?php			     
 					 print render($content);
 					 // we check the value is empty or not 
 					 if($user_info->field_signature['und'][0]['safe_value'] != ''){

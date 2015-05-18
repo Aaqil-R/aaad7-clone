@@ -8,11 +8,7 @@
 //first row
 .visual {
 	&.no-overlay{
-		// closing the form; shrinks the image; 
-		// so removing the height restriction.
-		// height: 365px;
 		overflow: hidden;
-		//margin-bottom: 500px;
 		@include breakpoint($mobile) {
 			height: auto;
 			margin: 0;
@@ -23,16 +19,16 @@
 			padding: 0;
 			.caption{
 				.title{
-					margin-top: 85px; //earlier it was 10px;
+					margin-top: 85px;
 					padding: 10px;
+
 					.title-third{
 						@include breakpoint($mobile) {
-							//display: block;
-							//margin: 10px 45px;
 							margin-top: 10%;
 						}
 					}
 				}
+
 				.title-row-2{
 					padding: 0 0 0 238px;
 				}
@@ -312,13 +308,17 @@
 			}
 		}
 	}
+
 	.holder {
-		@include container;
+		margin: 0 auto;
+		max-width: 1080px;
 		padding:11px 15px;
+
 		@include breakpoint($mobile) {
 			padding:7px 21px;
 			max-width:90%;
 		}
+
 		.pic-by {
 			display:block;
 			text-align:right;
@@ -341,6 +341,7 @@
 			}
 		}
 	}
+
 	.btn-next {
 		position:absolute;
 		right:0;

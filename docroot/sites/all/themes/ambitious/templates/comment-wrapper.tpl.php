@@ -59,7 +59,6 @@
     <?php print $top_pager; ?>
   </nav>
   <?php endif; ?>
-      <!--<li>this one</li>--><? //what on earth is this - how did it end up on production? ?>
     <?php 
         print render($content['comments']);
     ?>

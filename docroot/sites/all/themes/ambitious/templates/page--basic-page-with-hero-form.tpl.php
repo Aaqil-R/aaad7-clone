@@ -261,16 +261,11 @@
 
 <!-- including the article blocks -->
 <?php if ($page['services']): ?>
-  <section class="articles-block" >
-    <div class="holder">
-      <h2>What We Do</h2>
-      <div class="articles-columns" >
-        <?php print render($page['services']); ?>
-        <!--column one -->
-      </div>
-    </div>      
+  <section class="services" >
+    <?php print render($page['services']); ?>     
   </section>
 <?php endif; ?>
+
 <!-- including the social blocks -->
 <?php if ($page['social']): ?>
   <section class="social-block">

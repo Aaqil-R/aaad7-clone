@@ -1356,11 +1356,6 @@ fieldset{
      display:inherit;
    }
 }
-.desktop-view{
-  @include breakpoint($mobile){
-   //  display:none; WHAT THE FUCK!? 
-   }
-}
 
 .view-display-id-stream_topic_page .view-content .text-block.post{
   @include breakpoint($mobile){
@@ -1368,21 +1363,6 @@ fieldset{
   }
 }
 
- 
-/*  .button-holder{
-	   margin:20px 32px 30px;
-	   input[type=submit]{
-	       width:100%;
-	       border-left:none;
-	       border-top:none;
-	       border-right:none;
-	       @extend .btn;
-	   }
-	   .filter-pink{
-	     @extend .btn;
-	     @extend .btn-pink;
-	   } 
-	} */
 .forum-block{
     
    @include breakpoint($mobile){

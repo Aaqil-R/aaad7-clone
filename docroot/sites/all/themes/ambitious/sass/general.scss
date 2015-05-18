@@ -828,6 +828,7 @@ article.node-223806, article.node-223591{
     margin-left: 20px;
   }
 }
+
 div.ctools-modal-content .modal-content{
   padding:19px 19px 19px 49px;
 }
@@ -836,15 +837,15 @@ div.ctools-modal-content .modal-content{
   display:none;
 }
 
-//HIDING THE RANDOM WHITEBOX that appears on topic pages on mobile FFS!
-
+// TODO: this hides a white container which is being rendered 
+// sporadically on topic pages; need to investigate and fix.
 #block-views-stream-my-voice-blog .view-filters .mobile-view {
-    display: none;
+  display: none;
 }
+
 .forumpage_title{
   font-size:16px; margin-bottom:30px;
 }
-
 
 .node-type-forum-discussion .posts-columns.columns-full .row .footer{
   padding-left: 30px;

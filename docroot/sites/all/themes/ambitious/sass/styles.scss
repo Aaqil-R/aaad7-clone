@@ -121,6 +121,27 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
+input[type=text]
+, input[type=search]
+, input[type=password]
+, input[type=tel]
+, input[type=email]
+, input[type=file]
+, textarea { 
+    -webkit-appearance: none; 
+}
+
+input[type=submit]
+, input[type=text]
+, input[type=search]
+, input[type=tel]
+, input[type=password]
+, input[type=email]
+, input[type=file]
+, textarea {
+    outline: none;
+}
  
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
