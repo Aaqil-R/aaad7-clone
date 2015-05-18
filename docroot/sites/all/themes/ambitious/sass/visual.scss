@@ -2,7 +2,7 @@
 
 //=== Visual Section ===//
 .visual{
-	max-height: 770px;
+	// max-height: 770px;
 	overflow: hidden;
 	.img-holder{
 		.caption-frame{
@@ -12,7 +12,7 @@
             width: 100%;
             .region-caption-holder {
                 max-width: 1080px;
-                margin: auto;
+                margin: 0 auto;
                 margin-top: 1.5em;
             }
 			.caption{ 
@@ -62,7 +62,6 @@
 
 //=== Visual Section - not Front page ===//
 .not-front{
-
 	.visual .img-holder .caption-frame .caption{
 		@include breakpoint($not-mobile){
 			padding: 0;
@@ -72,17 +71,9 @@
 
 }
 
-// Image Holder - Fixing for the mobile devices
-.img-holder img{
-	width: 100%;
-	height: auto;
-}
-
-
 // Signature text bolding
 .signature-bold-text{
 	display: block;
 	font-family: $header-font-family;
 	color: $menu-grey;
-
 }

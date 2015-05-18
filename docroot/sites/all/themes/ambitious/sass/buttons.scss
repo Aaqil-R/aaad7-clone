@@ -1,57 +1,7 @@
 @import "base/base";
 
-// FROM - CONTENT.SCSS
-// .btn{
-  //   @include fontsize(20,16);
-  //   padding: 11px 26px;
-  //   @include breakpoint($mobile) {
-  //     padding: 6px 19px;
-  //  font-size: 18px;
-  //   }
-  // }
-
-// .btn{
-      // margin-left:32px;
-      // margin-right:32px;
-      // margin-bottom:33px;
-     
-//      @include breakpoint($mobile) {
-//        margin: 0 0 -2px;
-//        position: relative;
-//        z-index: 2;
-     
-//        border: none;
-//        padding: 14px 0;
-//        font-size: 18px;
-//        text-align: left;
-//      &:hover{
-//        opacity: .9;
-//      }
-     
-//      }
-//   }
-
-// border: medium none;
-// cursor: pointer;
-// display: inline-block;
-// font-family: inherit;
-// font-size: inherit;
-// font-weight: 700;
-// letter-spacing: 1px;
-// margin: 15px 30px;
-// outline: medium none;
-// padding: 25px 80px;
-// position: relative;
-// text-transform: uppercase;
-
-
 /* button */
 .btn {  
-  // margin-left:32px;
-  // a{
-  //   color: $white;
-  // }
-
   border: medium none;
   cursor: pointer;  
   display:inline-block; 
@@ -68,20 +18,8 @@
   padding: 25px 80px;
   position: relative;
 
-  // margin-right:32px;
-  // margin-bottom:33px;
-  // display:block;
-  // padding:10px 9px;
-  // font-size:20px;
-  
-  // padding
-  // padding:5px 19px;
-  // padding:10px 19px;
-  // font-size:20px;
   line-height:30px;
-  
-  // border-radius:5px;
-  // color:$white;  
+    
   background: none, repeat, scroll, 0, 0, $orange;
 
   // drop the shadow
@@ -110,15 +48,9 @@
     word-spacing:3px;
     top:6px;
     margin-left: 10px;
-    // right:-20px;
   }
 
   span {
-    // padding: 0 0 0 25px;
-    // position: relative;
-    // display: inline-block;
-    // vertical-align: top;
-    // word-spacing: 3px;
 
     .icon-Rightarrow {
       @include breakpoint($tablet){
@@ -127,13 +59,8 @@
   }
 }
 
-  @include breakpoint($tablet){
-    // font-size: 16px;
-  };
-
   @include breakpoint($mobile){
     width: 100%;
-    // font-size: 14px;
   };
 
   &.btn-green{
@@ -261,8 +188,6 @@ a.btn:hover {
   color: $white;  
 }
 
-//=== Buttons ===//
-
 // Views - footer button
 .footer-button{
 	margin-bottom: 130px;
@@ -289,7 +214,8 @@ a.btn:hover {
  }
 }
 
-// [BUTTON-REFACTOR] Review this.
+// TODO: this is part of the button refactoring need to
+// consolidate further.
 .btn {  
   // Facebook button
   &.facebook-btn {
