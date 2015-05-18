@@ -2,18 +2,25 @@
 
 .webform-submit, input[type=submit]{
 	display:inline-block;
-	margin-right:10px;
-  border:none;
+	
+  margin-right:10px;
   padding:5px 19px;
   font-size:18px;
   line-height:30px;
-  border-radius:5px;
   color:$white;
+  
   text-align:center;
+  
   text-decoration:none;
-  border-bottom:5px solid $orange-dark;
-  background:$orange;
+
+  border: none;
+  // round the corners
+  @include border-radius(5px);
+  border-bottom: 5px solid $orange-dark;
+  background: $orange;
+  
   @extend %clearfix;
+  
   font-weight:normal;
   font-family:$base-font-family;
 
@@ -31,15 +38,15 @@
   }
 
   &:hover{
-    color:$white;
+    color: $white;
     border-bottom-width: 3px;
-	margin-top: 2px;
+    margin-top: 2px;
   }
 
   &:active, &:focus{
     border-width: 1px;
-    margin-top:4px;
-    color:$captions-credit;
+    margin-top: 4px;
+    color: $captions-credit;
   }
 
   &:visited{
@@ -71,22 +78,9 @@
       @include breakpoint($mobile) {
         width: 100%;
       }
-    }
-
-	// @include linear-gradient($captions-credit,$page-background);
-	// //padding:2px;
-	// float:left;
-	// margin:6px 0 0 0;
-	
-	
-	// width:100%;
-	// input[type=text],input[type=email], textarea{
-	// 	float:left;
-	// 	@include border-radius(5px);
-	// 	width:100%;
-	// 	color:$captions-credit;
-	// 	
+    } 	
 	}
+
 	textarea{
 		height:183px;
 	}
@@ -107,24 +101,17 @@
 
 .page-node-74606{
 	.form-actions{
-	  float:left; 
+	  float:left;
+
 	  input[type=submit]{
-	    padding:10px;
-	    padding-right: 44px;
-	    background-image:url('../images/sprite.png');
-	    background-position: 106px -251px;
-		background-repeat: no-repeat; 
-		padding-left:19px;	
+	    padding: 10px;
+	    padding-right: 44px;       
+      padding-left: 19px;
+
+	    background-image: url('../images/sprite.png');
+  		background-repeat: no-repeat;	      
+      background-position: 106px -251px;
 	  }
-	 /* &:after{
-	    @extend [class*=" icon-"];
-	    position: relative;
-	    left: -49px;
-	    top: 19px;
-	    color: $white;
-	    font-size: 16px;
-	    content :"\e60b";
-	  } */
 	}
 }
 
@@ -339,9 +326,6 @@ div.ctools-modal-content .form-item .description{
   .hybridauth-widget-wrapper{
     clear: both;
   }
-  
-  
-  
   
   ::-webkit-input-placeholder {
    color: $base-link-color;
@@ -628,4 +612,15 @@ div.ctools-modal-content .form-item .description{
 // Modal forms labels
 div.modal-forms-modal-content .form-item label{
   display: none;
+}
+
+// myvoice page webform button.
+#content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]{
+  
+  border-bottom: 5px solid $pink-dark;
+  background:$pink;
+
+  &:hover{
+    border-bottom-width: 3px;
+  }
 }

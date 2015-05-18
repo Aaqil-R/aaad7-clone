@@ -1,18 +1,21 @@
 @import "base/base"; 
 @import "extends"; 
-//@import "content"; 
 
 .icon-Close{
   cursor: pointer;
 } 
+
+// start body.sidebar
 body.sidebar{
   #main{
     max-width: none;
     padding: 0;
   }
+
   #sidebar, #sidebar:before {
     width: 25%;
   }
+
   #sidebar{
     float:left;
     padding-top: 5em;
@@ -20,6 +23,7 @@ body.sidebar{
     font-size: 1.2em;
     min-height: 16em;
     letter-spacing: -1px;
+
     ul{
       list-style: none;
       float: right;
@@ -49,6 +53,7 @@ body.sidebar{
         content: none;
       }
     }
+
     @include breakpoint($mobile) {
       width: 100%;
       padding: 1em;
@@ -57,6 +62,7 @@ body.sidebar{
     }
   }
 }
+// end body.sidebar
 
 body.profile .top-header{
   @include breakpoint($mobile) {
@@ -64,6 +70,7 @@ body.profile .top-header{
   }
 }
 
+// start #comments
 #comments{
   clear: both;
   .ajax-progress, .ajax-progress-throbber,
@@ -100,6 +107,7 @@ body.profile .top-header{
       font-style: normal;
     }
   }
+
   .comment-body{
     padding: 1.4em 2em;
     border: 2px solid $base-form-text-color;
@@ -107,18 +115,19 @@ body.profile .top-header{
     font-size: 1.2em;
     line-height: 1.4em;
     position: relative;
+
     &:before{
-      background: url("../../images/comment-tip-left.png") 0 0 no-repeat;
+      background: image-url('comment-tip-left.png') 0 0 no-repeat;
       width: 26px;
       height: 31px;
       content: '';
       display: block;
       position: absolute;
       right:100%;
-      //left:-10px;
       top:16px;
     }
   }
+
   @include breakpoint($mobile) {
     padding: 0;
     overflow-x: scroll;
@@ -150,6 +159,7 @@ body.profile .top-header{
     }
   }
 }
+// end #comments
 
 .social-networks {
 			@extend %listreset;
@@ -182,81 +192,19 @@ div.messages.status{
        }
    }
 }
-
-/*SHARE BUTTON*/
- /*
-  .st_sharethis_button .stButton{
-    display:inline-block;
-    float:right;
-  border:none;
-  padding:5px 19px;
-  font-size:18px;
-  line-height:30px;
-  border-radius:5px;
-  color:$white;
-  text-align:center;
-  text-decoration:none;
-  border-bottom:5px solid $green-dark;
-    background:$green;
-  @extend %clearfix;
-  font-weight:normal;
-  font-family:$base-font-family;
-       &:after{
-        font-size: 18px;
-        font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-        content :"Share";
-        color:$white;
-        float: left;
-		margin-top: -22px;
-		padding-right: 29px;
-      }    
-      &:before{
-          font-family: 'icomoon';
-	  speak: none;
-	  font-style: normal;
-	  font-weight: normal;
-	  font-variant: normal;
-	  text-transform: none;
-	  line-height: 1;
-	  -webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-         float: right;
-         font-size: 20px;
-         color:$white;
-         font-family: 'icomoon';
-         content: "\e60d";
-      }   
-      &:hover {
-	    border-bottom-width: 3px;
-	    margin-top:2px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:active{
-	    border-bottom-width:0px;
-	    margin-top:5px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:visited{
-	    text-decoration:none;
-		color:$white;
-	  }  
-	  .st-sharethis-counter{
-	    display:none !important;
-	  }
-    }
-    */
    
 .video-icon{
   display:none;
 }
+
 .notvideo{
   display:inherit;
 }
+
 a.video_bt, .isvideo{
   display:none;
 }
+
 .video-1, .video-media{
   a.video_bt, .isvideo{
     display:inherit;
@@ -278,103 +226,91 @@ a.video_bt, .isvideo{
     padding-top: 81px;
   }
 }
+
 /* POST RESPONSIVE */
 .posts-columns .post{ 
   @include breakpoint($mobile) {
     width:100%; 
   }
-}
- 
- .forum-page{
-    //display:none;
- }
- 
+} 
 
 .node-type-topic .visual{
   position: relative;
   z-index: 99;
   color:$white;
-    a, span{
-     // color:$white;WWWWWWHHHHHHY FFS
-    }
 }
-// .view-display-id-stream_forum_page{
-//   .forum-page{
-//     display:block;
-//   }
-//   .filterbutton{
-//       margin-left: 10px;
-//     }
-// }
 
 .view-display-id-stream_forum_page{
- @include breakpoint($mobile) {
-   .filterbutton{
+  @include breakpoint($mobile) {
+    .filterbutton{
       margin-left:0;
-   }
- }
+    }
+  }
 }
-/*.page-user  #header{
-  margin-bottom: 103px;
-}*/
 
 /* main information part styles */
 .text-section{
-  //margin-bottom:59px; what were these for?
-  //margin-top:28px;
   .text-right-section{
     float:right;
-	margin-top: 40px;
-	br{
-	  display:none;
-	}
-	@include breakpoint($mobile) {
-	  float: none; 
-       display: block;
-       margin-bottom: 40px;
-       text-align: left;
-        clear: both;
-	}
-	a{
-	  font-weight: bold;
-	  font-size: 20px;
-	  display: block;
-	  text-decoration: underline;
-	  text-align: right;
-	  margin-bottom:5px;
-	  @include breakpoint($mobile) {
-	    text-align:left;
-	  }
-	  &:hover{
-	    text-decoration:none;
-	  }
-	}
-	.btn{
-	  padding: 10px 20px;
-	  margin-top: -45px;
-	  font-weight: normal;
-	  text-decoration: none;
-	  margin-bottom: 46px;
-	  @include breakpoint($mobile) {
-	    text-align:center;
-	  }
-	}
+    margin-top: 40px;
+
+    br{
+      display:none;
+    }
+
+  	@include breakpoint($mobile) {
+  	  float: none; 
+         display: block;
+         margin-bottom: 40px;
+         text-align: left;
+          clear: both;
+  	}
+
+  	a{
+  	  font-weight: bold;
+  	  font-size: 20px;
+  	  display: block;
+  	  text-decoration: underline;
+  	  text-align: right;
+  	  margin-bottom:5px;
+
+  	  @include breakpoint($mobile) {
+  	    text-align:left;
+  	  }
+
+  	  &:hover{
+  	    text-decoration:none;
+  	  }
+  	}
+
+  	.btn{
+  	  padding: 10px 20px;
+  	  margin-top: -45px;
+  	  font-weight: normal;
+  	  text-decoration: none;
+  	  margin-bottom: 46px;
+  	  @include breakpoint($mobile) {
+  	    text-align:center;
+  	  }
+  	}
   }
+
   h2{
     max-width:666px;
     margin-bottom:23px;
-	@include breakpoint($tablet) {
-	  max-width:inherit;
-	}
+
+  	@include breakpoint($tablet) {
+  	  max-width:inherit;
+  	}
   }
+
   p{
     max-width:666px;
-	@include breakpoint($tablet) {
-	  max-width:inherit;
-	}
+    @include breakpoint($tablet) {
+  	  max-width:inherit;
+  	}
   }
-}
- 
+} 
 
 .view-display-id-stream_topic_page, .view-display-id-stream_forum_page, .view-display-id-events_page, .view-display-id-voices_from_the_spectrum_page, .node-type-my-voice-topic{
   .sort-block{
@@ -383,11 +319,13 @@ a.video_bt, .isvideo{
     }
   }
 }
+
 .filter-option .sort-block{
-    label{
-      display:none;
-    }
+  label{
+    display:none;
   }
+}
+
 .view-display-id-stream_topic_page{
   &.posts-columns{
     max-width: 1080px;
@@ -403,6 +341,7 @@ a.video_bt, .isvideo{
       }
     }
   }
+
   .text-block.post{
     padding: 0;
     background: none;
@@ -411,61 +350,74 @@ a.video_bt, .isvideo{
     float:left;
     margin: 0 0 31px 0;
   }
+
   .feature-holder{
     display:none; 
   }
+
   .featured-button{
      .feature-holder{
        display:inherit;     
      }  
   }   
 }
+
 /* LOAD MORE*/ 
 .pager-load-more{
-   @extend %listreset;
-   padding: 29px 0 61px;
-   li{
-     text-align:center;
-     a{
-        font-size: 0;
-        color:$gray;
-        background-color: $page-background;
-        &:before{
-           font-size: 101px; 
-           @extend [class*=" icon-"];
-           @extend .icon-Downarrow;          
-        }
-        &:hover {
-	     color:$heading-link;
-	     text-decoration: none;  
-	  }
-     }
-   }
+  @extend %listreset;
+  padding: 29px 0 61px;
+
+  li{
+   text-align:center;
+
+   a{
+      font-size: 0;
+      color:$gray;
+      background-color: $page-background;
+
+      &:before{
+         font-size: 101px; 
+         @extend [class*=" icon-"];
+         @extend .icon-Downarrow;          
+      }
+
+      &:hover {
+         color:$heading-link;
+         text-decoration: none;  
+      }
+    }
   }
+}
 
 /* TITLE HIDE*/ 
 .node-type-topic, .node-type-my-voice-topic{
   h1.title{
     display:none;
   }
+
  .visual .img-holder .caption-frame .caption{
    padding:0;
  }
+
  .visual .img-holder .caption-frame .caption .title{
    right :inherit;
  }
+
  #social{
    float: left;
    width: 100%;
  }
+
  .visual .btn-perv{
    .icon-Leftarrow{
      margin-left:-5px;
    }
+
    .text-area{
      margin-left:-137px;
    }
  }
+
  .visual .btn-next .text-area{
    margin-right: -140px; 
  }
@@ -507,69 +459,71 @@ a.video_bt, .isvideo{
       color:$yellow;
     }
 } 
+
+// start .post-columns.columns-full
 .posts-columns.columns-full{
       
-	    .row, .views-row{
-	      width:100%; 
+  .row, .views-row{
+    width:100%; 
 		  
 		  .forum-text{
 		    @extend %clearfix;
 		    padding-bottom:15px;
+
 			.forum-left{
-              //WHATS WRONG WITH SUSY ?
-            
-			  /*float: left;
-			  width:182px;
-			  margin-left:12px;
-			  margin-top:13px;*/
               
 			  line-height: 15px;
-			  a:hover{
-			  	// on hover we need to follow the default 
-			  	// link hover.
-			    // color:#000;
+			  
+        a:hover{          
 			    text-decoration: none;
 			  }
+
 			  @include breakpoint(min-width $tablet-small) {
  			    @include span(2 of 12);
  			  }
+
 			  .image-holder{
 			    overflow:hidden;
-			    margin-bottom:11px; 
-                @include breakpoint ($mobile) {
-                    @include span(2 of 12);
-                }
-				img{
-				  width:100%;
-          max-width: 100px;
-          @include border-radius(5px);
-				} 
+			    margin-bottom:11px;
+
+          @include breakpoint ($mobile) {
+              @include span(2 of 12);
+          }
+
+    			img{
+    			  width:100%;
+            max-width: 100px;
+            @include border-radius(5px);
+    			} 
 			  }
+
 			  cite{
 			    font-style:normal;
 			    display: block;
 			    margin-top: 20px;
-			    //margin-bottom: 11px; WHHHHHHHY! WHO DID THIS? WHAT IN GOD'S NAME WERE YOU THINKING?
 			    font-size:16px;
 			    line-height:24px; 
-                br {display: none;}
-			    @include breakpoint($mobile) {
+          
+          br {display: none;}
+			    
+          @include breakpoint($mobile) {
 			      text-align: left;
 			    }
 			  }
+
 			  time{
 			    font-size: 14px;
  			  }
               
 			  @include breakpoint($mobile) {    
-                cite, time {
-                    @include span(last 10 of 12);
-                    margin-top:0;
-                    line-height: 1em;
-                }
-              }
-              
-			}
+          cite, time {
+              @include span(last 10 of 12);
+              margin-top:0;
+              line-height: 1em;
+          }
+        }
+      }
+
 			.forum-right{
 			  // TODO: Recheck, forum page; when removing the clear both it aligns up the 
         // right and left sections of the discussion card.
@@ -610,18 +564,19 @@ a.video_bt, .isvideo{
               
 		  }
 		  .footer{
-			  //padding-left: 0;
-			  //padding-right: 21px;
 			  margin-bottom:0;
-			   @extend %clearfix;
-			  @include breakpoint($mobile) {
-			    padding-left: 20px;
-			  }
-              @include breakpoint (min-width $desktop) {
-                .flag_node {
-                    @include span(2 of 12);
-                }
-              }
+
+          @extend %clearfix;
+  			  @include breakpoint($mobile) {
+  			    padding-left: 20px;
+  			  }
+
+          @include breakpoint (min-width $desktop) {
+            .flag_node {
+                @include span(2 of 12);
+            }
+          }
+
 			  .num-holder{
 			    float:left;
 			    margin-top: 9px;
@@ -660,36 +615,43 @@ a.video_bt, .isvideo{
                      }
                    }
 			  }
+
 			  .times{
 			    font-size: 15px;
-				margin-left: 40px;
-				margin-top: 15px;
-				color:$captions-credit; 
-				a{
-				  text-decoration: none;
-				}
-				float:left;
-				 @include breakpoint($tablet) {
-				  width: 52%;
-				}
-				@include breakpoint($mobile) {
-				  margin-top: 30px;
-				  margin-left:0;
-				  display: block;
-				  width: 100%;
-				}
-				em{
-				  font-size: 29px;
-				  margin-right: 10px; 
-				  float:left;
-				}
-				cite{  
-				  font-style:normal;
-				  font-weight:bold;
-				  span, a, a:hover, a:visited{
-				    color:$heading-link;
-				  }
-				}
+				  margin-left: 40px;
+				  margin-top: 15px;
+          float:left;
+				  color:$menu-grey;
+
+  				a{
+  				  text-decoration: none;
+  				}
+				  
+          @include breakpoint($tablet) {
+            width: 52%;
+          }
+
+  				@include breakpoint($mobile) {
+  				  margin-top: 30px;
+  				  margin-left:0;
+  				  display: block;
+  				  width: 100%;
+  				}
+
+  				em{
+  				  font-size: 29px;
+  				  margin-right: 10px; 
+  				  float:left;
+  				}
+
+  				cite{  
+  				  font-style:normal;
+  				  font-weight:bold;
+  				  span, a, a:hover, a:visited{
+  				    color:$heading-link;
+  				  }
+  				}
+
 				.links.inline{
 				  @include breakpoint($mobile) {
 				    float: none!important;
@@ -717,6 +679,7 @@ a.video_bt, .isvideo{
     }
   }
 }
+
 /* SEARCH */
 .search-text{ 
 		   @include linear-gradient($captions-credit,$page-background);
@@ -830,20 +793,7 @@ a.video_bt, .isvideo{
 				  display:none; 
                       float: right;
                       margin-top: 6px;
-				}	
-                /*what in the name of sweet jesus? just below this is there again!?!
-				&:hover, &.active, &.checked, &.highlight{
-                 color:$orange;
-			     position: relative;
-			     line-height:29px;
-			     @extend .icon-Tick; 
-			     &:before{
-			      position: absolute;
-                     right:15px; 
-                     float:none;
-                     @extend [class^="icon-"];
-			     } 
-				}*/
+				}
 				&.active{ 
                       span{
                         display: inline-block;
@@ -874,7 +824,7 @@ a.video_bt, .isvideo{
 	}
 }
 
-//PUT THE HOVER EVENT ON ONLY WHERE THERE'S NO TOUCH EVENTS
+// put the hover event on only where there's no touch events
 html.no-touch .form-type-bef-checkbox {
     &:hover {
     color:$orange;
@@ -952,8 +902,7 @@ html.no-touch .form-type-bef-checkbox {
       li{
         &.active{
           a.active{
-           // border-color:$orange;
-            color:$orange;//amalan changes
+            color:$orange;
             padding-bottom:0px;
             transform:translate(0,8px,0);
             margin-top: -12px;
@@ -1060,10 +1009,6 @@ html.no-touch .form-type-bef-checkbox {
    }
 }
 
-
-
-
-
 .node-type-forum{
   .field-name-comment-body .form-type-textarea{
     max-width:680px;
@@ -1102,14 +1047,17 @@ html.no-touch .form-type-bef-checkbox {
 		  color: $orange;
 		}
 		.comment-form{
-          font-size:18px;
-          color:$captions-credit;//this is why that color name makes no sense
-          .form-item-subject {
-              display: none;
-          }
+      font-size:18px;
+      color:$menu-grey;
+          
+      .form-item-subject {
+        display: none;
+      }
+
 		  .required{
 		    color:$orange;
 		  }
+
 		  label{
 		   float:left;
 		    width:100%;
@@ -1117,6 +1065,7 @@ html.no-touch .form-type-bef-checkbox {
 		     width:100%;
 		   }
 		  }
+
 		.jcf-select{
 		  width: 100%;
 		  border: none;
@@ -1247,11 +1196,12 @@ html.no-touch .form-type-bef-checkbox {
 			    content: "";
 			    position: absolute;
 			    left: -24px;
-			    background:url(../../images/sprite.png) no-repeat -1px -162px;
+			    background: image-url('sprite.png') no-repeat -1px -162px;
 			    width: 24px;
-				top: 15px;
+				  top: 15px;
 			    height: 32px;
 			  }
+
 			  .links{
 			    margin-bottom: 17px;
 			  }
@@ -1295,8 +1245,6 @@ fieldset{
   position: absolute;
   top:32%; 
 }
-
-
 
 .feature-holder{ 
     overflow:hidden;
@@ -1347,15 +1295,6 @@ fieldset{
   }
 }
 
-
-
-/*voice page*/
-/* .filter-pink{
-  input[type=submit]{
-    @extend .btn;
-    @extend .btn-pink;
-  }
-} */
 .visual .btn-perv{
   @include breakpoint($mobile){
     margin:-89px 0 0 11px;
@@ -1637,25 +1576,11 @@ fieldset{
        padding-right:20px;
      }
   }
-  // .btn-left.forum-page{
-  //   padding-left: 0; 
-  //   margin-bottom: 0;
-  //   margin-left: 20px;
-  //   margin-right: 0;
-  //   &:hover{
-  //     margin-bottom:3px;
-  //   }
-  //   span{
-  //     font-size: 17px;
-  //   }
-  //   @include breakpoint($mobile){
-  //     margin-left:0;  
-  //     padding:11px 0;    
-  //   }
-  // }
+
   .sort-block{
     margin: 0 0 35px;
   }
+
   .posts-columns.columns-full{
     .row{
       .footer{
@@ -1670,7 +1595,7 @@ fieldset{
     }
     
     .block-symptoms{
-      background-image:url('../../images/action-bg6.jpg');
+      background-image:image-url('action-bg6.jpg');
       .btn{
          @include breakpoint($mobile){
            width:auto;
@@ -1809,8 +1734,9 @@ fieldset{
 .page-node-74606
 , .section-current-vacancies
 , .node-type-basic-page-with-hero {
+  
   #content_top{
-  .stButton{
+    .stButton{
       @include breakpoint($mobile){
         padding: 10px 33%;
         &:before{
@@ -1819,62 +1745,63 @@ fieldset{
         }
       }
     }
-   z-index: 99;
-  // margin-top: -20em;//for why!!
-   margin-bottom:30px;
-   margin-left: 15px;
-   @include breakpoint($mobile){
-     width:94%;
-     .block-close{
-       margin-left: -37px;
-       width:53px;
-     }
-   }
+
+    z-index: 99;
+  
+    margin-bottom:30px;
+    margin-left: 15px;
    
-  .my-voice-columns{
-    // [TODO] this style is being applied from forms.scss
-    // .webform-client-form{
-    //   @extend %signup-form; 
-    // }
-    .col{
-      padding-top:0;
-      padding-bottom:0;
-      @include breakpoint($mobile) {
-        padding:10px 30px;
+    @include breakpoint($mobile){
+      
+      width:94%;
+      
+      .block-close{
+        margin-left: -37px;
+        width:53px;
       }
     }
-    .form-item{
-      float:left;
-      width:96%;
-      margin-bottom: 9px;
-      label{
-        left: 24px;
-        top: 12px;
+   
+    .my-voice-columns{
+      .col{
+        padding-top:0;
+        padding-bottom:0;
+
+        @include breakpoint($mobile) {
+          padding:10px 30px;
+        }
       }
+
+      .form-item{
+        float:left;
+        width:96%;
+        margin-bottom: 9px;
+
+        label{
+          left: 24px;
+          top: 12px;
+        }
+      }
+
+      a.tooltips span.tooltip-content{
+        left: -45px;
+        bottom: 30px;
+      }
+
+      .description{
+        margin-top:11px;
+      } 	
     }
-    a.tooltips span.tooltip-content{
-      left: -45px;
-      bottom: 30px;
-    }
-   .description{
-      margin-top:11px;
-   } 	
-   }
   }
+
   .pic-by{
     display:none;
+    
     @include breakpoint($mobile) {
       display: block;
     }
   }
 }
- #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]{
-  border-bottom: 5px solid $pink-dark;
-  background:$pink;
-  &:hover{
-     border-bottom-width: 3px;
-  }
- }
+ 
 .views-row-first{
   .my-voice-pos .feature-holder{
     display: inherit;
@@ -2083,52 +2010,64 @@ fieldset{
 		  width: 100%;
 		  border: none;
 		}  
-          fieldset{
-            margin:0 0 20px 0;
-            float:none;
-			@include breakpoint($mobile){
-			  margin:0 0 10px 0;
-			} 
-			fieldset{
-			  margin:0;
-			  padding:0;
-			}
-			.filter-help{
-                 float: left;
-                 width: 100%;
-                 padding: 0;
-                 margin: 0 0 20px 0;
-                   a{
-                     padding: 0;
-                   }
-                 }
-               }
-            strong{
-		    color:$heading-link;
+
+    fieldset{
+      margin:0 0 20px 0;
+      float:none;
+
+      @include breakpoint($mobile){
+        margin:0 0 10px 0;
+      }
+
+      fieldset{
+        margin:0;
+        padding:0;
+      }
+
+      .filter-help{
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 20px 0;
+
+        a{
+          padding: 0;
+        }
+      }
+    }
+
+    strong{
+		  color:$heading-link;
 			margin-left:10px;
-			@include breakpoint($tablet){
+			
+      @include breakpoint($tablet){
 			  font-weight:normal;
 			}
-		  }
-		  .form-element{
-		    @include linear-gradient($captions-credit,$page-background);
-            padding:2px;
-            float:left;
-			margin:6px 0 0 0;
-			@include border-radius(5px);
-            max-width:506px;
-            width:100%;
-		    input[type=text],input[type=email], textarea{
-		      float:left;
-			  @include border-radius(5px);
-			  width:100%;
-			  color:$captions-credit;
-			  border:none;
-			}
-			textarea{
-			  height:183px;
-			}
-          }
+		}
+
+    .form-element{
+      float:left;
+      
+      max-width:506px;
+      width:100%;
+
+      @include linear-gradient($menu-grey, $page-background);
+      @include border-radius(5px);
+      border:none;
+
+      padding:2px;  
+      margin:6px 0 0 0;
+
+      input[type=text],input[type=email], textarea{
+        float:left;
+        color:$menu-grey;  
+      }
+
+      textarea{
+        height:183px;
+      }
+    }
+
 		} 
 		.form-actions{
 		  #edit-submit, #edit-preview{
@@ -2222,7 +2161,7 @@ fieldset{
 			    content: "";
 			    position: absolute;
 			    left: -24px;
-			    background:url(../../images/sprite.png) no-repeat -1px -162px;
+			    background:image-url('sprite.png') no-repeat -1px -162px;
 			    width: 24px;
 				top: 15px;
 			    height: 32px;
@@ -2254,10 +2193,11 @@ fieldset{
         }
 	  }
  
- .item-list .pager li, .item-list .pager li a{
+.item-list .pager li, .item-list .pager li a{
   &:hover{
     background:none; 
   }
+
   background:none; 
  }
 
@@ -2269,14 +2209,13 @@ fieldset{
 
 }
 
-
 .take-action .post {
-width: 31.6875%;
-float: left;
-margin-right: 1.5625%;
+  width: 31.6875%;
+  float: left;
+  margin-right: 1.5625%;
 }
 
-//Commuinity Champions Forum
+// Community Champions Forum
 .section-community-champions-forum, .section-forums {
     #comments {
         boder: none;
@@ -2308,9 +2247,8 @@ margin-right: 1.5625%;
         }
 
     }
+
     #forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
         white-space: normal;
     }
 }
-
-

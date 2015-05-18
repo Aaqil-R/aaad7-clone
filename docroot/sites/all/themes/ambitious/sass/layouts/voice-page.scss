@@ -6,25 +6,17 @@
 */
 
 .my-voice-home {
-    .banner_text {
-        background-image: image-url('my-voice-large-logo.png');
+	.banner_text {
+	    background-image: image-url('my-voice-large-logo.png');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 75%;
 		text-indent: -200%;
 		overflow: hidden;
-    }
+	}
 }
 
-/*breadcrump for all the pages*/
-.img-holder{
-
-}
-
-/*end of breadcrumb codes*/
-
-.page-node-74596,
-.section-my-voice, .my-voice-home{
+.page-node-74596, .section-my-voice, .my-voice-home{
 
 	@extend %my-voice-main;
 	.visual{
@@ -93,13 +85,6 @@
 		}
 	}
 
-	//commented to fix the mobile view issue on voice page
-	/* .st_sharethis_button{
-		@include breakpoint($mobile) {
-        width:49%;
-		}
-	} */
-
 	.top-bar{
 		.logo{
 			display: inline;
@@ -117,12 +102,6 @@
 		}
 	}
 
-	// .block.block-menu.header-top-menu.contextual-links-region.first.odd{
-	// 	ul{
-	// 		padding-left: 15px;
-	// 	}
-	// }
-
 	.item-list
 	.pager{
 		li{
@@ -132,6 +111,7 @@
 			}
 		}	
 	}
+
 	.easy-breadcrumb{
 		a{
 			color: $white;
@@ -139,6 +119,8 @@
 		
 	}
 
+	// TODO: inject a myvoice class using context and have a
+	// single style rule on <a> to colour pink.
 	.node .field,
 	.acknowledge-block{
 
@@ -151,15 +133,18 @@
 
 		}
 		
-			a.btn.btn-pink{
-				color: $white;
+		// hover for myvoice
+		a.btn.btn-pink{
+			color: $white;
+		}
+
+		// link colours for myvoice
+		a.pink{
+			color: $pink;
+			&:hover{
+			color: $base-link-color;
 			}
-			a.pink{
-				color: $pink;
-				&:hover{
-				color: $base-link-color;
-				}
-			}
+		}
 
 		.text-right-section{
 			a{
@@ -170,6 +155,7 @@
 			}
 		}
 	}
+
 	.my-voice-block{
 		.block-close {
 			a{
@@ -185,15 +171,13 @@
 	}
 }
 
-
-/*new codes for menu stlying*/
-
+// start myvoice main menu
 .menu-main-menu-features-item-1{
-		list-style:none;
-		padding:0;
-		.menu__item{ 
-		}
+	list-style:none;
+	padding:0;
+	.menu__item{ 
 	}
+}
 
 nav {
 	.main-menu-1 {
@@ -228,7 +212,7 @@ nav {
 	}
 }
 
-/* end of menu styling */
+// end myvoice main menu
 
 /* new styling to get the menu down by 20px */
 
@@ -244,10 +228,12 @@ nav {
 	padding-top: 45px;
 	padding-bottom: 49px;
 }
+
 .page-node-74596{
 	#wrapper{
 		background-image:image-url('wid_bg.jpg');
 	}
+
 	.form-text{
 		color:$black;
 	}
@@ -266,13 +252,7 @@ nav {
 	padding-top:20px;
 }
 
-// .top-bar{
-// 	.logo{
-// 		display: none;
-// 	}
-// }
-
-// My voice filter
+// my voice filter
 .section-voices-spectrum{
 	input[type=submit]{
 		border-color: $pink-dark;
@@ -287,11 +267,9 @@ nav {
 	input[type=submit]:focus{
 		color: $white;
 	}
-
 }
 
-
-//re arranging the menu on my voice content types
+// re arranging the menu on my voice content types
 .section-myvoice{
 	.top-bar{
 		.logo{
@@ -306,7 +284,7 @@ nav {
 }
 
 
-//entire webforms text color chanages
+// entire webforms text color chanages
 .form-text , .form-textarea{
 	color:$base-link-color;
-}
+} 
