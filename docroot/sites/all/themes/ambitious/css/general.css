@@ -1635,11 +1635,7 @@ fieldset.group-hidden {
   max-width: 130px;
 }
 
-/* line 1309, ../sass/general.scss */
-#privatemsg-new {
-  overflow: hidden;
-}
-/* line 1312, ../sass/general.scss */
+/* line 1311, ../sass/general.scss */
 #privatemsg-new input.form-text {
   max-width: 100%;
   -moz-border-radius: 5px;
@@ -1652,6 +1648,7 @@ fieldset.group-hidden {
   box-shadow: inset 1px 1px 2px #707070;
   margin-bottom: 1em;
   padding: 12px 23px;
+  color: #383c40;
 }
 @media (max-width: 767px) {
   /* line 1312, ../sass/general.scss */
@@ -1663,7 +1660,10 @@ fieldset.group-hidden {
 #privatemsg-new .form-text.required.form-autocomplete {
   background-image: none;
 }
-
+/* line 1329, ../sass/general.scss */
+#privatemsg-new #edit-body-format {
+  display: none;
+}
 /* line 1333, ../sass/general.scss */
 .cke_skin_kama.cke_1.cke_editor_edit-body-value,
 #cke_edit-body-value {
