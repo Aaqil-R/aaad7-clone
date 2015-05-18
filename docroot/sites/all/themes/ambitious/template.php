@@ -379,28 +379,7 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
  
  }
 
-  if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'){
-    $node = node_load(arg(1));
-    $links = sharethis_node_view($node, 'full', 'en');
-    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-  }
-  
-  if($vars['form']['#id'] == 'views-exposed-form-stream-my-voice-blog'){
-    $node = node_load(arg(1));
-    $links = sharethis_node_view($node, 'full', 'en');
-    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-  }
-  
-  
-  if($vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'){
-    $node = node_load(arg(1));
-    $links = sharethis_node_view($node, 'full', 'en');
-    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-  }
-  
-  
-  
- if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page-age'){
+  if($vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page'||$vars['form']['#id'] == 'views-exposed-form-stream-my-voice-blog'||$vars['form']['#id'] == 'views-exposed-form-stream-voices-from-the-spectrum-page'||$vars['form']['#id'] == 'views-exposed-form-stream-understanding-autism-page-age'){
     $node = node_load(arg(1));
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
@@ -409,38 +388,11 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
 
 //this function code can be reduced
 function ambitious_preprocess_views_view_masonry(&$vars) {  
-  if($vars['view']->current_display == 'stream_topic_page' && $vars['view']->query->pager->current_page === 0){
+  if(($vars['view']->current_display == 'stream_topic_page'||$vars['view']->current_display == 'my_voice_blog'||$vars['view']->current_display == 'understanding_autism_page'||$vars['view']->current_display == 'understanding_autism_page_age'||$vars['view']->current_display == 'voices_from_the_spectrum_page') && $vars['view']->query->pager->current_page === 0){
      $node = node_load(arg(1)); 
      $links = sharethis_node_view($node, 'full', 'en');
      $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
      $vars['node'] = $node; 
-  }
-  if($vars['view']->current_display == 'my_voice_blog' && $vars['view']->query->pager->current_page === 0){
-     $node = node_load(arg(1)); 
-     $links = sharethis_node_view($node, 'full', 'en');
-     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-     $vars['node'] = $node; 
-  } 
-
-  if($vars['view']->current_display == 'understanding_autism_page' && $vars['view']->query->pager->current_page === 0){
-    $node = node_load(arg(1));
-    $links = sharethis_node_view($node, 'full', 'en');
-    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-    $vars['node'] = $node;
-  }
-
-  if($vars['view']->current_display == 'understanding_autism_page_age' && $vars['view']->query->pager->current_page === 0){
-    $node = node_load(arg(1));
-    $links = sharethis_node_view($node, 'full', 'en');
-    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-    $vars['node'] = $node;
-  }
-  
- if($vars['view']->current_display == 'voices_from_the_spectrum_page' && $vars['view']->query->pager->current_page === 0){
-   $node = node_load(arg(1));
-   $links = sharethis_node_view($node, 'full', 'en');
-   $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
-   $vars['node'] = $node;
   }
 }
 
@@ -851,7 +803,6 @@ function ambitious_form_element($variables) {
   }
 
   if (!empty($element['#description'])) {
-    //$output .= '<a class="tooltips"><span class="btn-tooltip">?</span><span class="tooltip-content">' . $element['#description']. "</span></a>\n";
     $output .= '<div class="description">' . $element ['#description'] . "</div>\n";
   }
 
