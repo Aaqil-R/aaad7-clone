@@ -34,41 +34,10 @@
  * @see template_preprocess_comment_wrapper()
  *
  * @ingroup themeable
- */ 
-  global $user;
-  $node = node_load(arg(1));  
+ */
  ?>
-
-
-<section id="comments" class="comment-list <?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if ($content['comments'] && $node->type != 'forum'): ?>
-    <?php print render($title_prefix); ?>
-    
-    <h4><a href="#" title="Read our guidelines">Read our guidelines</a></br><?php print $node->comment_count; ?> 
-    <?php if($node->comment_count > 1){
-      print t('Comments');
-      }else{
-        print t('Comment');
-      }
-    ?></h4>
-    <?php print render($title_suffix); ?>
-  <?php endif; ?> 
-  <ul class="comment-listing">
-       <?php if (isset($top_pager)): ?>
-  <nav>
-    <?php print $top_pager; ?>
-  </nav>
-  <?php endif; ?>
-    <?php 
-        print render($content['comments']);
-    ?>
-  </ul>
- 
-</section>
-
-    <?php if ($content['comment_form']): ?>  
-  <section class="comment-block">
-        <h4><?php print t('Add a new comment'); ?></h4>
+<?php if ($content['comment_form']): ?>  
+<section class="comment-block">
       <?php 
       unset($content['comment_form']['subject']); // Hide subject
       $content['comment_form']['comment_body']['und']['#title'] = t('Your comment'); // Change comment body title
@@ -80,6 +49,5 @@
          <a href="/user/login?destination=node/<?php print $node->nid; ?>">Log in</a> or <a href="/user/register?destination=node/<?php print $node->nid; ?>">register</a> to post comments 
          </br> 
       <?php } ?>
-      
-    </section>
-  <?php endif; ?>
+</section>
+<?php endif; ?>
