@@ -26,23 +26,21 @@
 
 //=== Home page-Issue fixing ===//
 .front{
-	// Webform paragraphp
+	// Webform paragraph
 	.form-item p:nth-child(2){
 		@include breakpoint($tablet-range){
 		 	font-size: 15px;
 			line-height: 28px;
 		}
 	}
-	// Caption text changing on the AAA front page
-	#block-block-26.caption-text .caption-text-titles{
-		@include breakpoint($all-desktop){
-		 	// margin-top: 70px;
-		}
-	}
+
 	#block-block-26.caption-text .caption-text-titles .caption-text-title{
+    // TODO: need to make use of defined breakpoints here.
 		@include breakpoint(1320px){
 		 	line-height: 66px;
 		}
+
+    // TODO: need to make use of defined breakpoints here.
 		@include breakpoint(1118px){
 		 	line-height: 22px;
 		}
@@ -52,53 +50,12 @@
 	.slider-block{
 		z-index: 998;
 		position: relative;
-		//top: -16px;
 
 		.block{
 			// Add box shadow to Home page Form
 			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
 		}  
 
-		.holder {	
-			// TODO: The breakpoints variables are a bit of a mess
-			// using a manual breakpoint.
-			// For any resolution less 1230px add 5ems.
-			@include breakpoint(max-width 1230px){	
-				//margin-top: 5em;
-			}
-
-			// For anything on mobile, it will float to the 
-			// bottom.
-			@include breakpoint($mobile){
-				//margin-top: 0em;
-			}
-		}
-
-		// TODO: these are not needed.
-		// @include breakpoint($all-desktop){
-		//  	top:-101px;
-		// }
-		// @include breakpoint(1345px){
-		// 	top:-101px; 
-		// }
-		// @include breakpoint(1265px){
-		// 	top: -45px; 
-		// }
-		// @include breakpoint(1190px){
-		// 	top: 50px; 
-		// }
-		// @include breakpoint(1100px){
-		// 	top: 35px; 
-		// }
-		// @include breakpoint(930px){
-		// 	top: 60px; 
-		// }
-		// @include breakpoint(856px){
-		// 	top: 90px; 
-		// }
-		// @include breakpoint(780px){
-		// 	top: 95px; 
-		// }
 		.r-s-arrow{
 			a{
 				text-decoration: none;
@@ -231,22 +188,6 @@
 			.member-count{
 				margin: -10px 0 40px;
 			}
-
-			// .youtube-btn{
-			// 	padding: 6px 0;
-			// 	margin-bottom: 12px;
-			// }
-
-			// .twitter-btn{
-			// 	padding: 6px 0;
-			// 	top: 60px;
-			// }
-
-			// .facebook-btn{
-			// 	padding: 6px 0;
-			// 	top: 120px;
-			// }
-
 		}
 	}
 
@@ -279,7 +220,6 @@
 	} 
 
 	// Article Block - Remove Images on Mobile View
-
 	.articles-block{
 		h4{
 			a{
@@ -444,11 +384,6 @@
   z-index: 0;
 }
 
-.text-section .text-right-section{
-  @include breakpoint($mobile){
-     //margin: 10px 0 30px 0; this seems to only make things worse?
-  }
-}
 .page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies{
   #block-easy-breadcrumb-easy-breadcrumb--2{
     .easy-breadcrumb{
@@ -501,7 +436,6 @@
 	}
 }
 
-
 .search-text{
   .icon-search{
      position: absolute;
@@ -515,13 +449,13 @@
   float: left;
   width: 50px;
   position: relative;
+
   a{
     float: left;
-    //width: 50px;//WHAT IS THIS FOR?? IT'S MESSING UP THE REQUEST PASSWORD LINK.
-    //removing this
     position: relative;
   }
 }
+
 .profile-main{
 #user-profile-form{
   .description{
@@ -580,9 +514,9 @@
      border-left: 20px solid $casablanca;
 	border-right: 20px solid transparent;
 	border-top: 20px solid transparent; 
-	transform:rotate(-136deg) ;
-	-ms-transform: rotate(-136deg); /* IE 9 */
-    -webkit-transform: rotate(-136deg); /* Chrome, Safari, Opera */
+
+  @include transform(rotate(-136deg));
+
      left: 94%;
 top: 6px;
 margin-left: -13px;
@@ -591,9 +525,9 @@ margin-left: -13px;
       border-left: 19px solid $early_dawn;
       border-right: 19px solid transparent;  
       border-top: 18px solid transparent;
-      transform:rotate(-136deg) ;
-	-ms-transform: rotate(-136deg); /* IE 9 */
-    -webkit-transform: rotate(-136deg); /* Chrome, Safari, Opera */
+      
+      @include transform(rotate(-136deg));
+
     left: 94%;
 	top: 7px;
 	margin-left: -12px;
@@ -733,7 +667,6 @@ div.ctools-modal-content .modal-content{
         margin-bottom:15px;
       }
       label{
-        //font-size: 22px;
         font-size: 20px;
       }
     }
@@ -772,10 +705,7 @@ div.ctools-modal-content{
 div.ctools-modal-content .modal-content{
     overflow-x: hidden;
   }
-.front #main{
-  //margin-top: -50px;what is this issue fixing? Everything that gets put on this list should have an explanation with it
-}
-
+  
 .not-logged-in #user-login{
   input[type="password"], input[type="text"]{
     background: none!important;
