@@ -351,39 +351,6 @@ function ambitious_menu_link(&$variables) {
   
 }
 
-/*
-function ambitious_menu_tree__main_menu_primary(&$variables) 
-{	
-	//$variables['tree'] = str_replace('</a>','<span class="icon-Downarrow"></span><span class="icon-Uparrow"></span></a>',$variables['tree']); 	
-	//commented bacause of error "Code to include the image"	
-	//return '<ul>' .  $variables['tree'] .'</ul>';
-	//return $variables['tree'] ;
-	
-	//$variables['foo'] = $variables['foo'] . "s" . $variables['tree'];
-	
-	return '<ul>' .  $variables['tree'] . '</ul>';
-}
-
-function ambitious_menu_tree__main_menu(&$variables) 
-{
-	return  '<ul class="slide js-slide-hidden">' . $variables['tree'] . '</ul>';
-} */
-/* 
-function ambitious_menu_link(&$variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
-  
-  $element['#attributes']['data-menu-parent'] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
-  $element['#localized_options']['attributes']['class'][] = $element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'];
-  $element['#localized_options']['html'] = TRUE;
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-  
-  $output = l($element['#title'].'</span><span class="icon-Downarrow"></span>', $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . '<div id="menu-'.str_replace(' ','-',strtolower($element['#title'])).'" class="menu-item '.$element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth'].'">'.$output.'</div>'.$sub_menu . "</li>\n";
-}  */
-
 function ambitious_preprocess_menu_tree(&$variables) {
   $tree = new DOMDocument();
   @$tree->loadHTML($variables['tree']);
@@ -744,13 +711,6 @@ function ambitious_field__field_closing_date(&$variables){
 function ambitious_preprocess_page(&$vars) {
 
   if (isset($vars['node']->type)) { // We don't want to apply this on taxonomy or view pages
-    // Splice (2) is based on existing default suggestions. Change it if you need to.
-
-    //new code written today
-    //$nodetype = $variables['node']->type;
-    //$variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
-              //$vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-    //end of the new code
 
     array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.$vars['node']->type);
 
@@ -821,78 +781,6 @@ function ambitious_preprocess_page(&$vars) {
         , $getitemscaption2[0]);
       $vars['captiontwo'] = $viewitemscaption2;    
     }
-
-    //variables assigned for the basic page with hero large content type
-    if($currentNode->type == "basic_page_with_hero_large")
-    {
-      // get array of hero images
-      $node = node_load($currentNode->nid);
-      $getitemsimage = field_get_items('node', $node ,'field_large_hero_images');
-        
-      // create a random number based on the array size
-      $random= rand(0, count($getitemsimage) - 1);
-      
-      // get an random image from the array
-      $viewitemsimage = field_view_value('node', $node ,'field_large_hero_images'
-        , $getitemsimage[$random]
-        , array('settings' => array('image_style' => 'basic_page_desktop_large__1440x770_')));
-      $vars['image'] = $viewitemsimage;
-
-      // get the corresponding photo credit, the images and credits should have been
-      // entered in the same oder so that we can use the same random number
-      $getitemscredit = field_get_items('node', $node ,'field_large_photo_credit');
-      $viewitemscredit = field_view_value('node', $node ,'field_large_photo_credit'
-        , $getitemscredit[0]);
-      $vars['credit'] = $viewitemscredit;
-      
-      // get caption 1
-      $getitemscaption1 = field_get_items('node', $node ,'field_large_caption_line_1');
-      $viewitemscaption1 = field_view_value('node', $node ,'field_large_caption_line_1'
-        , $getitemscaption1[0]);
-      $vars['captionone'] = $viewitemscaption1;
-      
-      // get caption 2
-      $getitemscaption2 = field_get_items('node', $node ,'field_large_caption_line_2');
-      $viewitemscaption2 = field_view_value('node', $node ,'field_large_caption_line_2'
-        , $getitemscaption2[0]);
-      $vars['captiontwo'] = $viewitemscaption2;    
-    }
-
-    if($currentNode->type == "basic_page_with_hero_form")
-    {
-      // get array of hero images
-      $node = node_load($currentNode->nid);
-      $getitemsimage = field_get_items('node', $node ,'field_hero_images_form');
-        
-      // create a random number based on the array size
-      $random= rand(0, count($getitemsimage) - 1);
-      
-      // get an random image from the array
-      $viewitemsimage = field_view_value('node', $node ,'field_hero_images_form'
-        , $getitemsimage[$random]
-        , array('settings' => array('image_style' => 'basic_page_desktop_form')));
-      $vars['image'] = $viewitemsimage;
-
-      // get the corresponding photo credit, the images and credits should have been
-      // entered in the same oder so that we can use the same random number
-      $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-      $viewitemscredit = field_view_value('node', $node ,'field_photo_credit'
-        , $getitemscredit[0]);
-      $vars['credit'] = $viewitemscredit;
-      
-      // get caption 1
-      $getitemscaption1 = field_get_items('node', $node ,'field_caption_line_1');
-      $viewitemscaption1 = field_view_value('node', $node ,'field_caption_line_1'
-        , $getitemscaption1[0]);
-      $vars['captionone'] = $viewitemscaption1;
-      
-      // get caption 2
-      $getitemscaption2 = field_get_items('node', $node ,'field_caption_line_2');
-      $viewitemscaption2 = field_view_value('node', $node ,'field_caption_line_2'
-        , $getitemscaption2[0]);
-      $vars['captiontwo'] = $viewitemscaption2;    
-    }
-
   }
 
   if (arg(0) == 'header') { 
@@ -1174,8 +1062,6 @@ function ambitious_preprocess_image(&$variables) {
     unset($variables[$key]);
   }
 }
-
-
 
 function ambitious_menu_local_tasks_alter(&$data, $router_item, $root_path) {
  if(arg(0) == "search"){
