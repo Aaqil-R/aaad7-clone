@@ -454,7 +454,7 @@ body.sidebar #sidebar:before {
 /* line 76, ../../sass/layouts/profile.scss */
 .responsive-menu:after {
   content: '';
-  background: url("../images/arrow-down.png");
+  background: url('../../images/arrow-down.png?1424420887');
   width: 22px;
   height: 14px;
   right: 15px;
@@ -728,7 +728,7 @@ body.sidebar #sidebar:before {
 }
 /* line 289, ../../sass/layouts/profile.scss */
 #comments .comment-body:before {
-  background: url("../images/comment-tip-left.png") 0 0 no-repeat;
+  background: url('../../images/comment-tip-left.png?1424420887') 0 0 no-repeat;
   width: 26px;
   height: 31px;
   content: '';
@@ -745,25 +745,25 @@ body.sidebar #sidebar:before {
     overflow-x: scroll;
     overflow-y: hidden;
   }
-  /* line 306, ../../sass/layouts/profile.scss */
+  /* line 305, ../../sass/layouts/profile.scss */
   #comments .comment {
     display: inline-block;
     vertical-align: top;
   }
-  /* line 310, ../../sass/layouts/profile.scss */
+  /* line 309, ../../sass/layouts/profile.scss */
   #comments .profile-picture {
     float: left;
     margin: 0 1em 1.5em 0;
     width: 35%;
     height: auto;
   }
-  /* line 316, ../../sass/layouts/profile.scss */
+  /* line 315, ../../sass/layouts/profile.scss */
   #comments .comment-left {
     float: none;
     margin-bottom: 1em;
     width: 100%;
   }
-  /* line 321, ../../sass/layouts/profile.scss */
+  /* line 320, ../../sass/layouts/profile.scss */
   #comments .comment-body {
     border: none;
     margin: 0;
@@ -772,35 +772,35 @@ body.sidebar #sidebar:before {
     height: 100%;
     white-space: normal;
   }
-  /* line 328, ../../sass/layouts/profile.scss */
+  /* line 327, ../../sass/layouts/profile.scss */
   #comments .comment-body:before {
     content: none;
   }
 }
 
 /* LOGIN PAGE */
-/* line 344, ../../sass/layouts/profile.scss */
+/* line 343, ../../sass/layouts/profile.scss */
 .profile-main {
   min-height: 430px;
 }
 @media (max-width: 767px) {
-  /* line 344, ../../sass/layouts/profile.scss */
+  /* line 343, ../../sass/layouts/profile.scss */
   .profile-main {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 350, ../../sass/layouts/profile.scss */
+/* line 349, ../../sass/layouts/profile.scss */
 .profile-main #user-login, .profile-main #user-pass, .profile-main #user-register-form, .profile-main #user-profile-form {
   float: left;
 }
-/* line 352, ../../sass/layouts/profile.scss */
+/* line 351, ../../sass/layouts/profile.scss */
 .profile-main #user-login label, .profile-main #user-pass label, .profile-main #user-register-form label, .profile-main #user-profile-form label {
   position: absolute;
   top: 17px;
   left: 26px;
 }
-/* line 357, ../../sass/layouts/profile.scss */
+/* line 356, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"], .profile-main #user-profile-form input[type="email"], .profile-main #user-profile-form input[type="text"], .profile-main #user-profile-form .select, .profile-main #user-profile-form input[type="password"] {
   float: left;
   clear: both;
@@ -814,25 +814,25 @@ body.sidebar #sidebar:before {
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 357, ../../sass/layouts/profile.scss */
+  /* line 356, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="email"], .profile-main #user-login input[type="text"], .profile-main #user-login .select, .profile-main #user-login input[type="password"], .profile-main #user-pass input[type="email"], .profile-main #user-pass input[type="text"], .profile-main #user-pass .select, .profile-main #user-pass input[type="password"], .profile-main #user-register-form input[type="email"], .profile-main #user-register-form input[type="text"], .profile-main #user-register-form .select, .profile-main #user-register-form input[type="password"], .profile-main #user-profile-form input[type="email"], .profile-main #user-profile-form input[type="text"], .profile-main #user-profile-form .select, .profile-main #user-profile-form input[type="password"] {
     width: 100%;
   }
 }
-/* line 370, ../../sass/layouts/profile.scss */
+/* line 369, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="email"]:focus, .profile-main #user-login input[type="text"]:focus, .profile-main #user-login .select:focus, .profile-main #user-login input[type="password"]:focus, .profile-main #user-pass input[type="email"]:focus, .profile-main #user-pass input[type="text"]:focus, .profile-main #user-pass .select:focus, .profile-main #user-pass input[type="password"]:focus, .profile-main #user-register-form input[type="email"]:focus, .profile-main #user-register-form input[type="text"]:focus, .profile-main #user-register-form .select:focus, .profile-main #user-register-form input[type="password"]:focus, .profile-main #user-profile-form input[type="email"]:focus, .profile-main #user-profile-form input[type="text"]:focus, .profile-main #user-profile-form .select:focus, .profile-main #user-profile-form input[type="password"]:focus {
   border: 2px solid #fbb900;
   padding: 11px 22px;
   color: #2a2e31;
 }
-/* line 375, ../../sass/layouts/profile.scss */
+/* line 374, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="email"].error, .profile-main #user-login input[type="email"].error:focus, .profile-main #user-login input[type="text"].error, .profile-main #user-login input[type="text"].error:focus, .profile-main #user-login .select.error, .profile-main #user-login .select.error:focus, .profile-main #user-login input[type="password"].error, .profile-main #user-login input[type="password"].error:focus, .profile-main #user-pass input[type="email"].error, .profile-main #user-pass input[type="email"].error:focus, .profile-main #user-pass input[type="text"].error, .profile-main #user-pass input[type="text"].error:focus, .profile-main #user-pass .select.error, .profile-main #user-pass .select.error:focus, .profile-main #user-pass input[type="password"].error, .profile-main #user-pass input[type="password"].error:focus, .profile-main #user-register-form input[type="email"].error, .profile-main #user-register-form input[type="email"].error:focus, .profile-main #user-register-form input[type="text"].error, .profile-main #user-register-form input[type="text"].error:focus, .profile-main #user-register-form .select.error, .profile-main #user-register-form .select.error:focus, .profile-main #user-register-form input[type="password"].error, .profile-main #user-register-form input[type="password"].error:focus, .profile-main #user-profile-form input[type="email"].error, .profile-main #user-profile-form input[type="email"].error:focus, .profile-main #user-profile-form input[type="text"].error, .profile-main #user-profile-form input[type="text"].error:focus, .profile-main #user-profile-form .select.error, .profile-main #user-profile-form .select.error:focus, .profile-main #user-profile-form input[type="password"].error, .profile-main #user-profile-form input[type="password"].error:focus {
   border: 2px solid #ff5458;
   padding: 11px 22px;
   color: #ec0833;
   background: #fef8fa;
 }
-/* line 382, ../../sass/layouts/profile.scss */
+/* line 381, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"], .profile-main #user-profile-form input[type="submit"] {
   float: left;
   clear: both;
@@ -846,69 +846,69 @@ body.sidebar #sidebar:before {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 382, ../../sass/layouts/profile.scss */
+  /* line 381, ../../sass/layouts/profile.scss */
   .profile-main #user-login input[type="submit"], .profile-main #user-pass input[type="submit"], .profile-main #user-register-form input[type="submit"], .profile-main #user-profile-form input[type="submit"] {
     margin-bottom: 20px;
   }
 }
-/* line 395, ../../sass/layouts/profile.scss */
+/* line 394, ../../sass/layouts/profile.scss */
 .profile-main #user-login input[type="submit"]:hover, .profile-main #user-pass input[type="submit"]:hover, .profile-main #user-register-form input[type="submit"]:hover, .profile-main #user-profile-form input[type="submit"]:hover {
   border-bottom-width: 3px;
   text-decoration: none;
   color: #ffffff;
 }
-/* line 403, ../../sass/layouts/profile.scss */
+/* line 402, ../../sass/layouts/profile.scss */
 .profile-main .hybridauth-widget-wrapper {
   clear: both;
 }
 
-/* line 409, ../../sass/layouts/profile.scss */
+/* line 408, ../../sass/layouts/profile.scss */
 #user-pass label {
   display: none;
 }
 
-/* line 417, ../../sass/layouts/profile.scss */
+/* line 416, ../../sass/layouts/profile.scss */
 .page-user .quicktabs-tabs a::first-letter {
   font-weight: bold;
 }
-/* line 422, ../../sass/layouts/profile.scss */
+/* line 421, ../../sass/layouts/profile.scss */
 .page-user .easy-breadcrumb {
   padding-top: 0;
 }
-/* line 427, ../../sass/layouts/profile.scss */
+/* line 426, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile img {
   display: none;
 }
-/* line 431, ../../sass/layouts/profile.scss */
+/* line 430, ../../sass/layouts/profile.scss */
 .page-user .view-user-profile .comment-left img {
   width: 60px;
   display: inherit;
   border-radius: 5px;
 }
-/* line 439, ../../sass/layouts/profile.scss */
+/* line 438, ../../sass/layouts/profile.scss */
 .page-user tr fieldset {
   padding: 0;
 }
-/* line 444, ../../sass/layouts/profile.scss */
+/* line 443, ../../sass/layouts/profile.scss */
 .page-user #privatemsg-list-form .form-item-operation {
   padding-top: 0;
   padding-left: 0;
 }
 @media (max-width: 767px) {
-  /* line 444, ../../sass/layouts/profile.scss */
+  /* line 443, ../../sass/layouts/profile.scss */
   .page-user #privatemsg-list-form .form-item-operation {
     width: 99%;
     margin: 25px 0 15px 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 452, ../../sass/layouts/profile.scss */
+  /* line 451, ../../sass/layouts/profile.scss */
   .page-user #privatemsg-list-form #edit-delete {
     width: 99%;
   }
 }
 
-/* line 460, ../../sass/layouts/profile.scss */
+/* line 459, ../../sass/layouts/profile.scss */
 .quicktabs-tabs a {
   padding: 1em 0;
   color: #74777b;
@@ -917,24 +917,24 @@ body.sidebar #sidebar:before {
   transition: color 0.3s, transform 0.3s;
 }
 
-/* line 468, ../../sass/layouts/profile.scss */
+/* line 467, ../../sass/layouts/profile.scss */
 .quicktabs-tabs li.quicktabs-tabs a {
   color: #2CC185;
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
 }
 @media (max-width: 767px) {
-  /* line 468, ../../sass/layouts/profile.scss */
+  /* line 467, ../../sass/layouts/profile.scss */
   .quicktabs-tabs li.quicktabs-tabs a {
     color: #f15500;
   }
 }
 
-/* line 483, ../../sass/layouts/profile.scss */
+/* line 482, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   background: #ffffff;
 }
-/* line 486, ../../sass/layouts/profile.scss */
+/* line 485, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
   position: absolute;
   bottom: 3px;
@@ -948,42 +948,42 @@ body.sidebar #sidebar:before {
   z-index: 99;
 }
 @media (max-width: 767px) {
-  /* line 486, ../../sass/layouts/profile.scss */
+  /* line 485, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li:last-child::before {
     display: none;
   }
 }
-/* line 502, ../../sass/layouts/profile.scss */
+/* line 501, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:first-child.active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 506, ../../sass/layouts/profile.scss */
+/* line 505, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(2).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 510, ../../sass/layouts/profile.scss */
+/* line 509, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(3).active ~ li:last-child::before {
   -webkit-transform: translate3d(-200%, 0, 0);
   transform: translate3d(-200%, 0, 0);
 }
-/* line 514, ../../sass/layouts/profile.scss */
+/* line 513, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li:nth-child(4).active ~ li:last-child::before {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-/* line 519, ../../sass/layouts/profile.scss */
+/* line 518, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   color: #f15500;
 }
 
 /* Nav */
-/* line 528, ../../sass/layouts/profile.scss */
+/* line 527, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page {
   text-align: center;
 }
-/* line 530, ../../sass/layouts/profile.scss */
+/* line 529, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   position: relative;
   display: -ms-flexbox;
@@ -1008,12 +1008,12 @@ body.sidebar #sidebar:before {
   margin-bottom: -10px;
 }
 @media (max-width: 767px) {
-  /* line 530, ../../sass/layouts/profile.scss */
+  /* line 529, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs {
     margin-bottom: 15px;
   }
 }
-/* line 555, ../../sass/layouts/profile.scss */
+/* line 554, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li {
   position: relative;
   z-index: 1;
@@ -1026,7 +1026,7 @@ body.sidebar #sidebar:before {
   flex: 1;
 }
 @media (max-width: 767px) {
-  /* line 555, ../../sass/layouts/profile.scss */
+  /* line 554, ../../sass/layouts/profile.scss */
   #quicktabs-user_profile_page ul.quicktabs-tabs li {
     -webkit-flex: inherit;
     -moz-flex: inherit;
@@ -1036,7 +1036,7 @@ body.sidebar #sidebar:before {
     width: 100%;
   }
 }
-/* line 573, ../../sass/layouts/profile.scss */
+/* line 572, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li a {
   padding-top: 22.4px;
   padding-bottom: 24px;
@@ -1045,12 +1045,12 @@ body.sidebar #sidebar:before {
   -o-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
-/* line 579, ../../sass/layouts/profile.scss */
+/* line 578, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs li.active a {
   padding-top: 30.4px;
   padding-bottom: 14px;
 }
-/* line 586, ../../sass/layouts/profile.scss */
+/* line 585, ../../sass/layouts/profile.scss */
 #quicktabs-user_profile_page ul.quicktabs-tabs a:focus {
   outline: none;
 }

@@ -97,24 +97,27 @@
 	}*/
   .footer-text{
      font-size:12px;
-  }  
+  } 
+
   .btn{
-	padding: 12px 19px;
+  	padding: 12px 19px;
   }
 }
 
 .home-stream {
-@include container;
+  @include container;
 
   .post{
-	width: span(4 of 12);//why were you using a 13 column grid?
+    width: span(4 of 12);
     &:nth-of-type(3n) {@include last;}
-	@include breakpoint($mobile){
-	  @include span(12 of 12);
-	}
-	.footer-text {
-  		font-size:12px;
-	}
+    
+    @include breakpoint($mobile){
+  	  @include span(12 of 12);
+  	}
+
+  	.footer-text {
+    		font-size:12px;
+  	}
   }  
     
   //refactor to remove this and make it a home-stream only modifier and then update views
@@ -124,35 +127,14 @@
         padding:0;
         border:none;
         @include box-shadow(none);
-       // min-height: 359px;
+        // min-height: 333px;
       }
   }
+  
   .btn{
-	padding: 12px 19px;
+  	padding: 12px 19px;
   }
 }
-
-
-// understanding autism page Stream block WHHHHHY!?
-/*
-.understanding-autism{
-
-  .post{
-
-	@include span(4 of 13);
-
-	@include breakpoint($mobile){
-	  @include span(13 of 13);
-	}
-
-  }
-
-  .btn{
-	padding: 12px 19px;
-  }
-
-}
-*/
 
 // View footer text
 .front .posts-columns .post .footer .num-holder a .text{

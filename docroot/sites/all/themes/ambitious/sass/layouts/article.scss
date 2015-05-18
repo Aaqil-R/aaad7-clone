@@ -67,7 +67,7 @@
 	  .holder{
 	    padding:11px 0 0 0;
 	    .pic-caption{
-	      color:$captions-credit;
+	      color:$menu-grey;
 	      float:left;
 		  font-size:13px;
 	    }
@@ -94,20 +94,8 @@
 	  img{
 	  	width:100%;
 		max-width:100%;
-	  }
-	  /*.img-holder{
-	    img{
-		  width:100%;
-		  max-width:100%;
-		}
-	    @include breakpoint($mobile){
-		img{
-			max-width:100%;
-		    width:100%;
-		  }
-	     }
-		}
-		*/
+	  }	  
+
 	  .btn-gray-perv{
 	    position:absolute;
 		left:0;
@@ -196,7 +184,7 @@
 		}
 		.comments{
           font-size:18px;
-          color:$captions-credit;
+          color:$menu-grey;
 		  .required{
 		    color:$orange;
 		  }
@@ -232,12 +220,12 @@
 			}
 		  }
 		  .form-element{
-		    @include linear-gradient($captions-credit,$page-background);
+		    @include linear-gradient($menu-grey,$page-background);
             padding:2px;
             float:left;
 			margin:6px 0 0 0;
 			@include border-radius(5px);
-            //max-width:506px;
+
             width:100%;
 		    input[type=text],input[type=email],textarea{
 		      float:left;
@@ -411,7 +399,7 @@
 		     width:100%;
 			 margin-bottom:13px;
 		   }
-		   color:$captions-credit;
+		   color:$menu-grey;
 		   strong{
 		     font-weight:normal;
 		   }
@@ -565,25 +553,6 @@
 	.field-item{
 		float: left;		
 	}
-	//breadcrumb
-	// .easy-breadcrumb{
-	// 	color: black;
-	// 	padding: 5px 0;
-	// 	.easy-breadcrumb_segment{
-	// 		letter-spacing: 0;
-	// 		padding: 0 8px;
-
-	// 	}
-	// 	.easy-breadcrumb_segment-title{
-	// 		padding-right: 0;
-	// 	}
-	// 	a{
-	// 		color: black;
-	// 	}
-	// 	@include breakpoint($mobile){
-	// 		display: block;
-	// 	}
-	// }
 
 	// Comment List
 	section .comment-list{
@@ -649,19 +618,8 @@
 			background: image-url('wid_bg.png') repeat-y center $white;
 			background-position: 75%;
 			padding: 0 10px;
-	
-			/*why is this here?.views-row{				
-					@include span(4 of 13);
-			}*/
 		}
-/*WHY REPEAT YOUR MISTAKE? 
-		@include breakpoint($tablet){
-			.views-row{		
-				@include span(4 of 13);
-			}
 
-		}	
-*/
 		.region-content-bottom{
 			padding-top: 50px;
 		}
@@ -695,70 +653,41 @@
 	background: none;	
 }
 
-// #main2 input[type=submit]{
-
-//     border:1px solid $captions-credit;
-//     border-bottom-width: 5px;
-//     background:$white;
-//     padding:5px 22px;
-//     color:$captions-credit;
-
-//     &:hover{
-//       color:$captions-credit;
-//       text-decoration: none;    
-//     }
-
-//     &:active{
-//       border-width: 1px;
-//       margin-top:4px;
-//       color:$captions-credit;
-//     }
-
-//     &:focus{
-//       border-width: 1px;
-//       margin-top:4px;
-//       color:$captions-credit;
-//     }
-
-//     &:visited{
-//       text-decoration:none;
-//       color:$captions-credit;
-//     }
-// }
 #main2 .article-left .article-left-holder .comment-block .comments .form-element textarea{
 	font: 100% "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
 	color: $gray;
 	vertical-align: middle;
 }
+
 #main2 .comment-title{
 	display: none;
 }
+
 #main2 input[type=submit]{
 	position: relative;
 	background: $white;
 	padding:5px 22px;
-	color: $captions-credit;
-	box-shadow: 0 6px $captions-credit;
+	color: $menu-grey;
+	box-shadow: 0 6px $menu-grey;
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
 	border-radius: 5px;
 	margin:0 20px 0 0;
-	border: 1px solid $captions-credit;
-
+	border: 1px solid $menu-grey;
 
 	&:hover {
-		box-shadow: 0 4px $captions-credit;
+		box-shadow: 0 4px $menu-grey;
 		top: 2px;
 	}
 	&:active {
-		box-shadow: 0 0 $captions-credit;
+		box-shadow: 0 0 $menu-grey;
 		top: 6px;
 	}
 
 	&:visited{
 	  text-decoration:none;
-	  color:$captions-credit;
+	  color:$menu-grey;
 	}
 
 }
@@ -768,7 +697,7 @@
 	margin-bottom: 15px;
 }
 
-// Blog and Articel page
+// Blog and Article page
 .section-blog-article{
 
 	#content-header .title{

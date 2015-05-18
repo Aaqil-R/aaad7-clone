@@ -61,7 +61,7 @@ body.sidebar{
 		padding: 0.6em 1em;
 		width: 100%;
 		border-radius: 6px;
-		color: $grey;
+		color: $dark-gray;
 		border-top: 2px solid $silver_chalice_dark;
 		border-left: 2px solid $iron;
 		border-right: 2px solid $iron;
@@ -75,7 +75,7 @@ body.sidebar{
 	}
 	&:after {
 	    content:'';
-	    background: url("../images/arrow-down.png");
+	    background: image-url('arrow-down.png');
 	    width: 22px;
 	    height: 14px;
 	    right: 15px;
@@ -281,20 +281,19 @@ body.profile .top-header{
 	}
 	.comment-body{
 		padding: 1.4em 2em;
-		border: 2px solid $action-nav-footer;
+		border: 2px solid $gray;
 		margin-left: 6em;
 		font-size: 1.2em;
 		line-height: 1.4em;
 		position: relative;
 		&:before{
-			background: url("../images/comment-tip-left.png") 0 0 no-repeat;
+			background: image-url('comment-tip-left.png') 0 0 no-repeat;
 			width: 26px;
 			height: 31px;
 			content: '';
 			display: block;
 			position: absolute;
 			right:100%;
-			//left:-10px;
 			top:16px;
 		}
 	}

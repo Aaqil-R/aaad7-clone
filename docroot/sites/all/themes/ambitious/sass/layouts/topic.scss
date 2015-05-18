@@ -597,7 +597,7 @@ a.video_bt, .isvideo{
                      padding-top: 20px;
                    }
                    li{
-                     color:$captions-credit;
+                     color:$menu-grey;
                      a{
                        color:$orange;
                        text-decoration:underline;
@@ -682,7 +682,7 @@ a.video_bt, .isvideo{
 
 /* SEARCH */
 .search-text{ 
-		   @include linear-gradient($captions-credit,$page-background);
+		   @include linear-gradient($menu-grey,$page-background);
 	        @include border-radius(5px);
              position: relative;
 	        padding:2px;
@@ -1098,7 +1098,7 @@ html.no-touch .form-type-bef-checkbox {
 			}
 		  }
 		  .form-element{
-		    @include linear-gradient($captions-credit,$page-background);
+		    @include linear-gradient($menu-grey,$page-background);
             padding:2px;
             float:left;
 			margin:6px 0 0 0;
@@ -1109,7 +1109,7 @@ html.no-touch .form-type-bef-checkbox {
 		      float:left;
 			  @include border-radius(5px);
 			  width:100%;
-			  color:$captions-credit;
+			  color:$menu-grey;
 			  border:none;
 			}
 			textarea{
@@ -1995,7 +1995,7 @@ fieldset{
 		}
 		.comment-form{
           font-size:18px;
-          color:$captions-credit;
+          color:$menu-grey;
 		  .required{
 		    color:$orange;
 		  }

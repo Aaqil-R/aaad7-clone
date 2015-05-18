@@ -1,7 +1,7 @@
 @import "base/base";
 
-// turn off the text decoration for all the <a> tags under nav.
-// [TODO] this ideally needs to be under a <nav>
+// turn off the text decoration for all the <a> links
+// which are in an unordered list.
 ul a {    
   text-decoration: none;   
 }
@@ -35,31 +35,6 @@ ul a {
   .login-info {
 
     float:right;  
-
-    @include breakpoint($mobile) {
-       //display:none;
-    }
-
-    // .name {
-    //   float:left;
-    //   margin:0 14px 0 0;
-    //   span {
-    //     padding:4px 0 0 8px;
-    //     text-transform:capitalize;
-    //     font-size:16px;
-    //     display:inline-block;
-    //     vertical-align:middle;
-    //   }
-
-    //   img {
-    //     @include border-radius(5px);
-    //     display:inline-block;
-    //     vertical-align:middle;
-    //   }
-    //   &:hover span {
-    //     text-decoration:underline;
-    //   }
-    // }
 
     .logout {
       float:left;
@@ -109,9 +84,6 @@ ul a {
       display:block;
       height:auto;
       @include transition(all);
-      @include breakpoint($mobile) {
-      //  padding-top: 10px; what was this for?
-      }
     }
   }
   .school-slide {
@@ -311,7 +283,7 @@ ul a {
   a.search-opener {
     .icon-search {
       font-size:25px;
-      color:$captions-credit;
+      color:$menu-grey;
       @include breakpoint($mobile) {
         font-size:22px;
       }
@@ -815,7 +787,7 @@ nav {
       width:250px;
     }
     .search-text{ 
-        @include linear-gradient($captions-credit,$page-background);
+        @include linear-gradient($menu-grey,$page-background);
           @include border-radius(5px);
             position: relative;
           padding:2px;
@@ -877,7 +849,7 @@ nav {
         height:17px;
         left:0;
         top:2px;
-        background:$captions-credit;
+        background:$menu-grey;
         @include breakpoint($mobile) {
           display: none;
         }
@@ -1059,7 +1031,7 @@ nav {
     text-align: right;
     font-size: 13px;
     line-height: 16px;
-    color:$captions-credit;
+    color:$menu-grey;
     max-width:1080px;
     margin:0 auto;
     padding-top: 10px;
@@ -1069,8 +1041,7 @@ nav {
       padding:10px 20px;
     }
     a{
-      color:$captions-credit;
-      //color:$heading-link;
+      color:$menu-grey;
       font-weight: bold;
       text-decoration: none;
       &:hover{
@@ -1190,14 +1161,6 @@ nav {
   }  
 }
 
-
-// #block-system-user-menu a{
-//   &:hover{
-//     text-decoration:none;
-//     color:$white;
-//   }
-// }
-
 .right-info{
     li{
       &:nth-child(1){
@@ -1234,4 +1197,4 @@ nav {
   /* Menu Text */
   .menu-text {
     color: $menu-grey;
-  } 	
+  } 

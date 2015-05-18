@@ -119,7 +119,7 @@ div#admin-toolbar.vertical div.admin-tab{
 		}
 		.comments{
           font-size:18px;
-          color:$captions-credit;
+          color:$menu-grey;
 		  .required{
 		    color:$orange;
 		  }
@@ -155,7 +155,7 @@ div#admin-toolbar.vertical div.admin-tab{
 			}
 		  }
 		  .form-element{
-		    @include linear-gradient($captions-credit,$page-background);
+		    @include linear-gradient($menu-grey,$page-background);
             padding:2px;
             float:left;
 			margin:6px 0 0 0;
@@ -321,7 +321,7 @@ clear: both;
 /* TABLE STYLE */
 
 table {
-  color:$grey;  
+  color:$dark-gray;  
   width: 100%; 
   border-collapse:collapse;
   border-spacing: 0;  
@@ -334,7 +334,7 @@ table {
     text-align: left;
   }
   th{    
-    background:$captions-credit;
+    background:$menu-grey;
     font-weight: bold;
     color:$white;
     padding: 9px;
@@ -348,16 +348,16 @@ table {
       text-align: left;
       padding: 10px;
       &:hover{
-        background:$captions-credit;
+        background:$menu-grey;
         color:$white;
       }
     }
     &:nth-child(odd), &.odd{
       td{
         background:$page-background;  
-        color:$captions-credit;
+        color:$menu-grey;
         a{
-          color:$captions-credit;
+          color:$menu-grey;
         }
       }
     }
