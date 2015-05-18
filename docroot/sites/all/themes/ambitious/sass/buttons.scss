@@ -121,27 +121,15 @@
 }
 
 &.btn-transparent{
-  // display: inline-block;
-  // vertical-align: top;
   background:none;
   @include box-shadow(none);
 
   border: 3px solid $white;
-  // @include box-shadow(0px 3px $white);
-  // font-size: 20px;
-  // line-height: 30px;
-  // color:$white;
-  // text-decoration: none;
-  // position: relative;
-  // border-radius: 5px;
-  // padding:10px 28px;
-  // margin:0;
 
   &:hover {
-    // // replace the displacement of the button from the top
-    // top: 2px;
-    // // displace the button shadow 
+    // replace the displacement of the button from the top
     top: 1px;
+    // displace the button shadow 
     @include box-shadow(none);
     border: 2px solid $white;
   }
@@ -157,25 +145,14 @@
       padding-left:5px;
     }
   }  
-
-  // &:visited{
-  //   text-decoration:none;
-  //   border: 2px solid $white;
-  //   background:$orange;
-  //   margin:0;
-  //   color:$white;
-  // }
 }
+
 &.btn-left{
   float:left;
 }
 &.btn-right{
   float:right;
 }
-// &:visited{
-//   text-decoration:none;
-//   color:$white;
-// }
 
 .desktop{
   @include breakpoint($mobile){

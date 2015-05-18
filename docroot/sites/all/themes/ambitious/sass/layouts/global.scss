@@ -25,7 +25,7 @@ body{
 
 /* these apply to auto-completing form fields */
 html.js input.form-autocomplete {
-  background-image: url(../../images/ajax-loader.gif);
+  background-image: image-url('ajax-loader.gif');
   background-position: 100% 0px;
   background-repeat: no-repeat;
 }
@@ -97,14 +97,6 @@ div#admin-toolbar.vertical div.admin-tab{
   }
 }
 
-
-
-
-
-
-
-
-
 /* nanda globalsoftlab */
 
 .comment-block{
@@ -174,7 +166,8 @@ div#admin-toolbar.vertical div.admin-tab{
           }
 		}
 	  }
-//WHAT WAS THIS INTENDED FOR? 
+
+// TODO: need to revisit this.  
  .comment-list{
 		h4{
 		   @include fontsize(23,16);
@@ -230,16 +223,7 @@ div#admin-toolbar.vertical div.admin-tab{
 			    padding:15px;
 			    @include span(8 of 8);
 			  }
-              /* duplicated on topic-forum line 1178.
-			  &:before{
-			    content: "";
-			    position: absolute;
-			    left: 90px;
-			    background:url(../images/sprite.png) no-repeat -1px -162px;
-			    width: 24px;
-				top: 15px;
-			    height: 32px;
-			  }*/
+
 			  .links{
 			    margin-bottom: 17px;
 			  }
@@ -391,6 +375,7 @@ table {
 		display: block;
 	}
 }
+
 .margin-bottom-10{
 	margin-bottom: 10px;
 }

@@ -4,7 +4,7 @@
     border-left: 1em $orange-dark solid;
     padding: 1em;
     margin: 0;
-    
+
     color: lighten($dark-gray, 30%);
     p {margin: 0;}
     &.pink {
@@ -628,54 +628,6 @@ a {
 	}
 }
 
-// 3. Homepage
-
-
-
-//header visual
-
-//first row
-.visual {
-	&.no-overlay{
-		// closing the form; shrinks the image; 
-		// so removing the height restriction.
-		// height: 365px;
-		overflow: hidden;
-		//margin-bottom: 500px;
-		@include breakpoint($mobile) {
-			height: auto;
-			margin: 0;
-		}
-	}
-	.img-holder {
-		.caption-frame {
-			padding: 0;
-			.caption{
-				.title{
-					margin-top: 85px; //earlier it was 10px;
-					padding: 10px;
-					.title-third{
-						@include breakpoint($mobile) {
-							//display: block;
-							//margin: 10px 45px;
-							margin-top: 10%;
-						}
-					}
-				}
-				.title-row-2{
-					padding: 0 0 0 238px;
-				}
-			}
-		}
-	}
-}
-// moving second title row TODO add .title-row-2 to the main css where title is and remove the double class name in the html
-.visual .img-holder .caption-frame .caption .title-row-2{
-	padding: 0 0 0 238px;
-}
-
-
-
 // main page columns styles
 
  .articles-block, .my-voice-block {
@@ -961,20 +913,7 @@ a {
 	}
 
 }
-//INDEX PAGE SPECIFIC MOBILE
-//remove filters from mobile view
-.index-page {
-	.advanced-sort-block{
-		@include breakpoint($mobile) {
-			display:none;
-		}
-	}
-	.visual .img-holder .caption-frame .caption .title{
-		@include breakpoint($mobile) {
-			margin-top: 40px;
-		}
-	}
-}
+
 //signup block overrides
 .signup-block{
 	.holder{
