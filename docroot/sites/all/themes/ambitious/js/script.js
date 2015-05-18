@@ -15,122 +15,98 @@
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ambitious = {
-  attach: function(context, settings) {
-     
-            //implementation of apache solr redirect to search result page -  this is for ajax
-            $('#edit-search-community').keypress(function (e) {
-              var key = e.which;
-              if (key == 13) {
-                e.stopPropagation();
-                e.preventDefault();
-                location.href = '/search/forum-discussion/'+ $(this).val();
-              }
-            }); 
-            
-        // load more button first loads the content only on click, so removed the waypoint binding.
- 
-       /* if($('body').hasClass('node-type-topic')){
-  		 var settings = Drupal.settings;
-  		 var first = true;
-		 $.each(settings.viewsLoadMore, function(i, setting) {
-		   var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
-		   if (view == '.view-id-stream.view-display-id-stream_topic_page .pager-next a' && first == true){
-		    	$(document).load(function () {           
-		     		$(view).waypoint('destroy');
-		   	});
-		   	first = false;
-		   	}
-		 });
-		 }*/
- 
-        //
-  		// var settings = Drupal.settings;
-		// $.each(settings.viewsLoadMore, function(i, setting) {
-		// var view = '.view-id-' + setting.view_name + '.view-display-id-' + setting.view_display_id + ' .pager-next a';
-		//  	$(window).load(function () {           
-		//     		$(view).waypoint('destroy');
-		//   	});
-		// }); 
+  attach: function(context, settings) {     
+	//implementation of apache solr redirect to search result page -  this is for ajax
+	$('#edit-search-community').keypress(function (e) {
+	  var key = e.which;
+	  if (key == 13) {
+	    e.stopPropagation();
+	    e.preventDefault();
+	    location.href = '/search/forum-discussion/'+ $(this).val();
+	  }
+	});
 		   
-		   //navigate to donate page with the value from give what you can
-		   $("input[name='submitted[give_what_you_can]']").click(function () {
-               window.location = $("input[name='submitted[donate_page]']").val() + '?amt='+$(this).val();
-		   });
-		
+	//navigate to donate page with the value from give what you can
+	$("input[name='submitted[give_what_you_can]']").click(function () {
+	   window.location = $("input[name='submitted[donate_page]']").val() + '?amt='+$(this).val();
+	});		
  
-    	     $(document).ready(function(){
-    	     $(".fourm-order-date").append("<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>");
+ 	// start document.ready
+	$(document).ready(function(){
+	$(".fourm-order-date").append(
+		"<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>"
+	);
+
+	// in case of a stream set the intro card height to the same height
+	// as of the first card in the stream. 
+	var stream_intro_div = $('div.js-stream-intro:nth-of-type(1)');
+
+	if(stream_intro_div.length){
+		stream_intro_div.height($('div.post:nth-of-type(2)').first().outerHeight());
+	}
     	     
-    	     var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
-    	 
-    	     
-    	     	$(".fourm-order-date select").change(function (e) { 
+	var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
+        	     
+	$(".fourm-order-date select").change(function (e) { 
        window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href'); 
        e.preventDefault();
-       }); 
+	}); 
        
-       var fourmlist = $(".fourm-order-date select option");
-       $.each(fourmlist, function(i, field){  
-             curselectvalue = $(field).attr("data-order");
-              if(curselectvalue == forum_order){
-                 $(field).attr("selected", "selected")
-                 curval="";
-              }
-        }); 
-    	     
-    	    /* $(".view-display-id-stream_forum_page .views-row").each(function(){
-		   var comment = $(this).children().data("commentcount"); 
-		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
-		   
-	    });*/
+	var fourmlist = $(".fourm-order-date select option");
+	$.each(fourmlist, function(i, field){  
+	     curselectvalue = $(field).attr("data-order");
+	      if(curselectvalue == forum_order){
+	         $(field).attr("selected", "selected")
+	         curval="";
+	      }
+	});
     	      
-    	     initCustomForms(); 
-	            $('.view-display-id-stream_forum_page').mobileNav({ 
-		          hideOnClickOutside: true,
-		          menuActiveClass: 'filter-active',
-		          menuOpener: '.filterbutton',
-		          menuDrop: '.filter-slide'
-	            }); 
-	             $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
-		          hideOnClickOutside: true,
-		          menuActiveClass: 'filter-active',
-		          menuOpener: '.filteroption',
-		          menuDrop: '.filter-slide'
-	            });
-	            $('.view-display-id-my_voice_blog').mobileNav({ 
-		          hideOnClickOutside: true,
-		          menuActiveClass: 'filter-active',
-		          menuOpener: '.filterbutton',
-		          menuDrop: '.filter-slide'
-	            });
-	            $(".view .bef-checkboxes input[type=checkbox]:checked").parent().addClass('checked').children('label').addClass('label-checked');
+	initCustomForms(); 
+	$('.view-display-id-stream_forum_page').mobileNav({ 
+	  hideOnClickOutside: true,
+	  menuActiveClass: 'filter-active',
+	  menuOpener: '.filterbutton',
+	  menuDrop: '.filter-slide'
+	}); 
+	 $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
+	  hideOnClickOutside: true,
+	  menuActiveClass: 'filter-active',
+	  menuOpener: '.filteroption',
+	  menuDrop: '.filter-slide'
+	});
+	$('.view-display-id-my_voice_blog').mobileNav({ 
+	  hideOnClickOutside: true,
+	  menuActiveClass: 'filter-active',
+	  menuOpener: '.filterbutton',
+	  menuDrop: '.filter-slide'
+	});
+	$(".view .bef-checkboxes input[type=checkbox]:checked").parent().addClass('checked').children('label').addClass('label-checked');
                     
-	      // views filter opiton
-              $(".view .bef-checkboxes :checkbox").once('check-processed').on('click', function(){
-                 var crtcheck = $(this).parent();
-                 crtcheck.toggleClass("checked").removeClass("highlight"); 
-                 crtcheck.children('label').toggleClass('label-checked'); 
-               });  
-	    }); 
-         $( document ).ajaxComplete(function() {
-          /*$(".view-display-id-stream_forum_page .views-row").each(function(){
-		   var comment = $(this).children().data("commentcount"); 
-		   $(this).find('.num').replaceWith("<span class='num'>" + comment + "</span>");
-		   
-	    });*/
-	      $('.view-display-id-stream_forum_page').mobileNav({
-		         hideOnClickOutside: true,
-		         menuActiveClass: 'filter-active',
-		         menuOpener: '.filterbutton',
-       		   menuDrop: '.filter-slide'
-	            }); 
-	             $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
-		        hideOnClickOutside: true,
-		        menuActiveClass: 'filter-active',
-		        menuOpener: '.filteroption',
-		        menuDrop: '.filter-slide'
-	          }); 
-        }); 
+	// views filter opiton
+	  $(".view .bef-checkboxes :checkbox").once('check-processed').on('click', function(){
+	     var crtcheck = $(this).parent();
+	     crtcheck.toggleClass("checked").removeClass("highlight"); 
+	     crtcheck.children('label').toggleClass('label-checked'); 
+	   });  
+	}); 
+	// end document.ready
+         
+	$( document ).ajaxComplete(function() {
+
+		$('.view-display-id-stream_forum_page').mobileNav({
+		     hideOnClickOutside: true,
+		     menuActiveClass: 'filter-active',
+		     menuOpener: '.filterbutton',
+			   menuDrop: '.filter-slide'
+		    }); 
+		     $('.view-display-id-voices_from_the_spectrum_page').mobileNav({ 
+		    hideOnClickOutside: true,
+		    menuActiveClass: 'filter-active',
+		    menuOpener: '.filteroption',
+		    menuDrop: '.filter-slide'
+		  }); 
+	}); 
+
         $("form#views-exposed-form-stream-stream-forum-page select").change(function() {
           
           //$('.button-holder .form-submit').trigger( "click" ); 
@@ -212,25 +188,6 @@ Drupal.behaviors.ambitious = {
 		    $('.block-close').trigger( "click" );
 		});
 		
-
-
-
-	// ==Masonry block==//
-      
-	//var $container = $('.masonary');
-	/*
-    // ==Masonry block==//
-	var $container = $('.masonry');
-	
-	if ($container.masonry != undefined) {
-	  // initialize
-	  $container.masonry({
-	  //columnWidth: 100,
-	    itemSelector: '.masonry-brick'
-	  }); 
-	   
-	}
-    */
       
 	jQuery(window).on('load', function(){
         $('.card-stream .view-content').masonry ({

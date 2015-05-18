@@ -19,7 +19,7 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 <?php foreach ($rows as $id => $row): ?>
 	<?php render($row); ?>
 	<?php if ($id == 0 && isset($variables['node'])):?>
-		<div class="masonry-item views-row views-row-1 views-row-odd views-row-first text-block post masonry-brick ">
+		<div class="masonry-item views-row views-row-1 views-row-odd views-row-first text-block post masonry-brick js-stream-intro">
 			<!-- Teaser View of the topic -->
 			<?php if(isset($variables['node']->title)): ?>
         		<h1><?php print $variables['node']->title;?></h1>

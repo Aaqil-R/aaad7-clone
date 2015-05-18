@@ -9,11 +9,11 @@
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?> 
 	<?php if ($id == 0): ?>
-		<div class="feature-row masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?>">
+		<div class="feature-row masonry-item<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> js-stream-intro">
 		<?php
-		//D7
-		$block = module_invoke('block', 'block_view', '46');
-		print render($block['content']);
+			//D7
+			$block = module_invoke('block', 'block_view', '46');
+			print render($block['content']);
 		?>
 		</div>
 	<?php endif; ?>
