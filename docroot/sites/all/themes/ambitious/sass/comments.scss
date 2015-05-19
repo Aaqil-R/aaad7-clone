@@ -31,7 +31,6 @@
 		@include span(12); 	
 	 	@include breakpoint($not-mobile){
 	 		@include span (2 of 12);
-	 		
 	 	}
 	}
 
@@ -106,4 +105,8 @@
             }
         }
     }
+}
+//to make sure that the flag wont get into the actual comment region. 
+.flagwidth{
+	min-width: 90px;
 }

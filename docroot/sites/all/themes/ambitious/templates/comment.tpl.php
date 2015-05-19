@@ -77,7 +77,7 @@
 			        <?php /* if($content['privatemsg']){
                           print render($content['privatemsg']); 
                         } */ ?> 
-                         <div style="width:130px; float:left;"><?php  print flag_create_link('flag', $comment->cid); ?></div>
+                         <div class="flagwidth"><?php  print flag_create_link('flag', $comment->cid); ?></div>
 				      <?php } ?> 
 			   
 			   </div>
