@@ -914,7 +914,7 @@ function ambitious_get_node_comments_count($nid) {
   $query = db_select('comment', 'c'); 
   $query->condition('nid', $nid, '=');
   $query->condition('status', '1', '=');
-  $query->condition('pid', '0', '=');
+  //$query->condition('pid', '0', '='); //removed by amalan since the quotes are behaving like threaded comments.
   $query->addExpression('COUNT(1)', 'count'); 
   $result = $query->execute();  
   if ($record = $result->fetchAssoc())
