@@ -55,7 +55,7 @@
     <?php print $page_top; ?>
     <?php print $page; ?>  
     <?php print $page_bottom; ?>
-    <div class="fb-like" data-href="https://www.facebook.com/ambitiousaboutautism" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+    <div class="fb-like" data-href="https://www.facebook.com/ambitiousaboutautism" data-height="21" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 <div class="fb-share-button" data-href="http://www.ambitiousaboutautism.org.uk/" data-layout="button_count"></div>
 
  
