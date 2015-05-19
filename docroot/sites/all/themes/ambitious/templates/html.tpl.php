@@ -56,11 +56,7 @@
     <?php print $page; ?>  
     <?php print $page_bottom; ?>
     <div class="fb-like" data-href="https://www.facebook.com/ambitiousaboutautism" data-height="21" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-<div class="fb-share-button" data-href="http://www.ambitiousaboutautism.org.uk/" data-layout="button_count"></div>
-
- 
-
-<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fambitiousaboutautism&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21"></iframe>
+<div class="fb-share-button" data-href="http://www.ambitiousaboutautism.org.uk/" data-layout="button_count"></div> 
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
