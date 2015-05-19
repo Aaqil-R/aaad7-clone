@@ -54,10 +54,7 @@
 
     <?php print $page_top; ?>
     <?php print $page; ?>  
-    <?php print $page_bottom; ?>
-    <div class="fb-like" data-href="https://www.facebook.com/ambitiousaboutautism" data-height="21" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-<div class="fb-share-button" data-href="http://www.ambitiousaboutautism.org.uk/" data-layout="button_count"></div> 
-
+    <?php print $page_bottom; ?> 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
