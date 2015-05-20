@@ -511,7 +511,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .flagwidth {
   min-width: 90px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-resolution: 1.5dppx), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min--moz-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
   /* line 114, ../sass/comments.scss */
   .flagwidth .flag-wrapper a {
     font-size: 13px;

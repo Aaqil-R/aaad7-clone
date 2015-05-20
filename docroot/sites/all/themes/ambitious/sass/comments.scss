@@ -109,7 +109,7 @@
 //to make sure that the flag wont get into the actual comment region. 
 .flagwidth{
 	min-width: 90px;
-	@include breakpoint($mobile){
+	@include breakpoint($mobile-hi-res){
 		.flag-wrapper{
 			a{
 				font-size:13px;				
@@ -117,4 +117,3 @@
 		} 
 	}
 }
-
