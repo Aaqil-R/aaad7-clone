@@ -64,8 +64,7 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 				<?php //print render($content['field_related_topic']); ?>
 				<div class="field-items">
 					<?php foreach($node->field_related_topic['und'] as $tag) { ?>
-					<a href="/node/<?php print $tag['node']->nid;?>"><?php print$tag['node']->title;?></a> 
-					<?php } ?>
+					<a href="/node/<?php print $tag['node']->nid;?>"><?php print$tag['node']->title;?></a><?php if($tag != end(array_keys($node->field_related_topic['und']))) ?>,<?php }?>
 				</div>
 			</div>
 			<div class="article-tags">
