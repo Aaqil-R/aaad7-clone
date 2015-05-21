@@ -61,17 +61,10 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 			<strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 			<div class="article-tags">
 				<span>Related topics: </span>
-				<?php //print render($content['field_related_topic']); ?>
-				<div class="field-items">
-					<?php foreach($node->field_related_topic['und'] as $tag) { ?>
-					<a href="/node/<?php print $tag['node']->nid;?>"><?php print$tag['node']->title;?></a><?php if($tag != end(array_keys($node->field_related_topic['und']))) ?>,<?php }?>
-				</div>
+				<div class="field-items"><?php print ambitious_gettopics($node); ?></div>
+				<span>Tags:</span>
+				<div class="field-items"><?php print ambitious_gettags($node); ?></div>
 			</div>
-			<div class="article-tags">
-				<span>Tags: </span>
-				<?php print render($content['field_tags']); ?>
-			</div class="article-tags" >
-
 		</div>
 	</footer>
 	<!-- comment columns -->

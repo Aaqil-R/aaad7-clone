@@ -1041,3 +1041,35 @@ function ambitious_menu_local_tasks_alter(&$data, $router_item, $root_path) {
    }
   }   
 }
+
+function ambitious_gettopics($node){
+  $topic = "";
+  $arraylength = count($node->field_related_topic['und']);
+  $i=0;
+  foreach($node->field_related_topic['und'] as $tag) {
+    $alias = drupal_get_path_alias('node/'.$tag['node']->nid);
+    $topic=$topic.'<a href="/'.$alias.'">'.$tag['node']->title.'</a>';
+    if($i!=$arraylength-1){  
+      $topic=$topic.', '; 
+    }
+    $i=$i+1;
+  }
+  return $topic;
+}
+
+function ambitious_gettags($node){
+  $topic = "";
+  $arraylength = count($node->field_tags['und']);
+  $i=0;
+  foreach($node->field_tags['und'] as $tag) {
+    $alias = drupal_get_path_alias('node/'.$tag['taxonomy_term']->tid);
+    $topic=$topic.'<a href="/'.$alias.'">'.$tag['taxonomy_term']->name.'</a>';
+    if($i!=$arraylength-1){  
+      $topic=$topic.', ';
+    }
+    $i=$i+1;
+  }
+  return $topic;
+}
+
+
