@@ -31,19 +31,18 @@ Drupal.behaviors.ambitious = {
 	   window.location = $("input[name='submitted[donate_page]']").val() + '?amt='+$(this).val();
 	});		
  
- 	// start document.ready
-	$(document).ready(function(){
-	$(".fourm-order-date").append(
-		"<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>"
-	);
-
-	// in case of a stream set the intro card height to the same height
-	// as of the first card in the stream. 
-	var stream_intro_div = $('div.js-stream-intro:nth-of-type(1)');
-
-	if(stream_intro_div.length){
-		stream_intro_div.height($('div.post:nth-of-type(2)').first().outerHeight());
-	}
+    	     $(document).ready(function(){ 
+         
+          
+          // == Check Cookie in home page step forms ==//
+          // Start
+    	     $("body.front").ready(function() { 
+              if ($.cookie("homepageform")=="yes") {
+                 $(".slider-block .holder").hide();
+                 $(".header_banner").addClass("no-overlay");
+              } 
+    	     });
+        // End
     	     
 	var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
         	     
@@ -163,7 +162,9 @@ Drupal.behaviors.ambitious = {
        });
      }); 
         //Understanding autism added filter to load understanding autism page
-    // ==Close button==//
+   
+		
+		// ==Close button==//
 		$('.block-close').on("click", function () {
 		    $(this).parent('div').fadeOut();
 		});
@@ -171,7 +172,20 @@ Drupal.behaviors.ambitious = {
 		$(".block-close").click(function(){
 		    $("section.visual").addClass("no-overlay");
 		});
-
+		
+		  // ==Close button with Cookie for home page step form==//
+// Start
+      $('.mylink').on("click", function () { 
+         var date = new Date(); 
+         date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+         $.cookie("homepageform", "yes", { expires: date }); 
+         $(".slider-block .holder").hide();
+         $(".header_banner").addClass("no-overlay");
+		  });
+		  $(".front .block-close").click(function(){
+		     $.cookie("homepageform", "yes");
+		  });
+// End
 	// Change Position when click on close on Home page form
 
 		$(".block-close").click(function(){		  
