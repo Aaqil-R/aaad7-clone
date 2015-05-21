@@ -175,7 +175,7 @@ Drupal.behaviors.ambitious = {
 		
 		  // ==Close button with Cookie for home page step form==//
 // Start
-      $('.mylink').on("click", function () { 
+       $('.ask_me_in_a_week').on("click", function () { 
          var date = new Date(); 
          date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
          $.cookie("homepageform", "yes", { expires: date }); 
