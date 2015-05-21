@@ -19,6 +19,7 @@
 	$comment_count =  abs($comment - $flaged_comments_count);
 	$uid = $node->uid;
 	$userinfo = user_load($uid);
+	
 
    	$last_reply = ambitious_get_last_reply($node->nid);
   
@@ -30,6 +31,7 @@
 
 	// author signature to be added to the discussion threads.
 	$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
+	kpr($user_signature);
 
 	$location = $userinfo->field_location_reference['und']['0']['tid'];
 	$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
@@ -84,7 +86,7 @@
 		      
 			<?php print render($content['body']);?>		
 			
-			<?php if(isset($user_signature)): ?>
+			<?php if(!empty($user_signature)): ?>
 				<div class="signature-dashes">--</div>
 				<div class="user_signature signature-bold-text">	
 					<?php print $user_signature; ?>

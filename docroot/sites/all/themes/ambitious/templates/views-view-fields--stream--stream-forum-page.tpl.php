@@ -26,6 +26,7 @@
 
 
 ?>
+<?php dpm(strip_tags($fields['field_signature']->content)); ?>
 <?php
   
   //Fix issue
@@ -59,7 +60,8 @@
         }
       }   
        $usid = strip_tags($fields['uid']->raw);
-       $userpostcount = ambitious_get_user_post_count($usid);       
+       $userpostcount = ambitious_get_user_post_count($usid);
+       $user_signature = strip_tags($fields['field_signature']->content);      
       ?>  
       
  <div class="<?php print $class; if($sticky->sticky == 1 || $nodepos >= 1 ){ ?> rowlessthen3 <?php } ?>" >
@@ -96,13 +98,13 @@
                                 <?php endif; ?>
                                 <div class="clear"></div>
                             </div>
-							<?php print $fields['body']->content; ?>  
-							<?php if(!empty($fields['field_signature']->content)): ?>
+							<?php print $fields['body']->content; ?>                
+							<?php if(!empty($user_signature)): ?>
                               <div class="signature-dashes">--</div>
                             	<div class="user_signature signature-bold-text">
-                            		<?php print $fields['field_signature']->content; ?>
+                            		<?php print $user_signature; ?>
                             	</div>
-                            <?php endif; ?>  
+              <?php endif; ?>  
 						  </div>
 						</div>
 						<div class="footer">
