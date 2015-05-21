@@ -770,8 +770,9 @@ html.no-touch .form-type-bef-checkbox {
 	      }
 	      .form-element{
 	        background: none;
-	        margin-left: 10px;
-	        margin-top: 0;
+	        //margin-left: 10px;
+          //note
+	        //margin-top: 0;
 	      }
 	    }
 		@include breakpoint($mobile){
@@ -835,24 +836,35 @@ html.no-touch .form-type-bef-checkbox {
 			}
 		  }
 		  .form-element{
+        //float: none;
+        //padding: 0px;
+        .username{
+          margin-left: 5px;
+        }
 		    @include linear-gradient($menu-grey,$page-background);
-            padding:2px;
-            float:left;
-			margin:6px 0 0 0;
+            //padding:0px;
+            //float:left;
+			//margin:6px 0 0 0;
 			@include border-radius(5px);
-            max-width:680px;
-            width:100%;
-		    input[type=text],input[type=email], textarea{
-		      float:left;
-			  @include border-radius(5px);
-			  width:100%;
-			  color:$menu-grey;
-			  border:none;
-			}
-			textarea{
-			  height:183px;
-			}
+            //max-width:680px;
+            //width:100%;
+		    //input[type=text],input[type=email], textarea{
+		      //float:left;
+			  //@include border-radius(5px);
+			  //width:100%;
+			  //color:$menu-grey;
+			  //border:none;
+			//}
+			//textarea{
+			  //height:183px;
+			//}
           }
+          //.form-type-textarea{
+        //.form-element{
+          //margin:0 auto;
+          //float: none;
+        //}
+      //}
 		} 
 		.form-actions{
 		  #edit-submit, #edit-preview{
