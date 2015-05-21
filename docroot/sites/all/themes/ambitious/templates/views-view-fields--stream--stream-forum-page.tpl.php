@@ -26,7 +26,6 @@
 
 
 ?>
-<?php dpm(strip_tags($fields['field_signature']->content)); ?>
 <?php
   
   //Fix issue
