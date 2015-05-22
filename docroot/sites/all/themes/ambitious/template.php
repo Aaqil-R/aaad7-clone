@@ -140,18 +140,22 @@ function ambitious_preprocess_html(&$variables) {
   
   // == Check if the user registered or not in home page step forms ==//
   global $user; 
-  if($user->uid){
-    $webformid = webform_get_submissions('74666');  
-    foreach ($webformid as $myval){
-      if($myval->uid == $user->uid){
-        $userid = 1; 
-        break;
+  if($user->uid){ 
+    $node_id = node_load(74666)->nid; 
+    if(!empty($node_id) && drupal_is_front_page()){
+      $webformid = webform_get_submissions($node_id);  
+      foreach ($webformid as $myval){
+        if($myval->uid == $user->uid){
+          $userid = 1; 
+          break;
+        }
       }
-    }
-    if($userid == 1){ 
-      $variables['classes_array'][] = 'webform-registered-home';
-    }
-  }
+      if($userid == 1){ 
+        $variables['classes_array'][] = 'webform-registered-home';
+      }
+    }    
+  }   
+
 }
 
 function ambitious_preprocess_region(&$variables) {

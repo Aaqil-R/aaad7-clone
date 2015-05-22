@@ -37,7 +37,7 @@ Drupal.behaviors.ambitious = {
 		// == Check Cookie in home page step forms ==//
 		// Start
 		 $("body.front").ready(function() { 
-		  if ($.cookie("homepageform")=="yes") {
+		  if ($.cookie("homepageform")=="yes" || $.cookie("Drupal.visitor.registerduser")=="yes") {
 		     $(".slider-block .holder").hide();
 		     $(".header_banner").addClass("no-overlay");
 		  } 
@@ -46,10 +46,10 @@ Drupal.behaviors.ambitious = {
 		
     // == Check if the user registered or not in home page step forms ==//
     // Start
-    if($("body").hasClass("webform-registered-home")){
-        $(".slider-block .holder").hide();
-        $(".header_banner").addClass("no-overlay");  
-    }
+    $(".webform-registered-home").ready(function() { 
+        $(".webform-registered-home .slider-block .holder").hide();
+        $(".webform-registered-home .header_banner").addClass("no-overlay");  
+    });
     // End
 
 		$(".fourm-order-date").append(
