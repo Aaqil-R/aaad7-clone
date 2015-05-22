@@ -667,15 +667,17 @@ a {
 
 .articles-block{
 	background: $white;
+	padding-top: 50px;
 	.article{
 		h4{
-			padding: 25px 0;
+			padding: 25px 0 20px 0px;
 			margin: 0;
 			@include fontsize(22,16);
 		}
 		p{
 			@include fontsize(16,16);
 			line-height: 25px;
+			//padding-bottom: 3px;
 		}
 	}
 }
