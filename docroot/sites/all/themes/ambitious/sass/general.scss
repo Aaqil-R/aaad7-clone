@@ -457,7 +457,7 @@
 
 /*new set of codes for styling registration page through hybrid auth*/
 .page-hybridauth{
-  .main{
+  #main{
     background: $white;
   }
   fieldset{
@@ -471,19 +471,24 @@
     }
   }
   input{
-    width: 16em;
-    float: left;
-    clear: both;
-    border-radius: 5px;
-    border-color: #e4e4e4;
-    -webkit-box-shadow: inset 1px 1px 2px #707070;
-    box-shadow: inset 1px 1px 2px #707070;
-    margin-bottom: 20px;
-    padding: 12px 23px;
-    font-size: 18px;
+    &.username{
+      width: 16em;
+      float: left;
+      clear: both;
+      border-radius: 5px;
+      border-color: #e4e4e4;
+      -webkit-box-shadow: inset 1px 1px 2px #707070;
+      box-shadow: inset 1px 1px 2px #707070;
+      margin-bottom: 20px;
+      padding: 12px 23px;
+      font-size: 18px;
+    }
   }
   legend{
     font-weight: bold;
+  }
+  .description{
+    float: left;
   }
 }
 /*end of new codes*/
