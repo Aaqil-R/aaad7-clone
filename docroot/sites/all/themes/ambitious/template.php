@@ -137,6 +137,21 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 
 function ambitious_preprocess_html(&$variables) {
   drupal_add_css('http://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
+  
+  // == Check if the user registered or not in home page step forms ==//
+  global $user; 
+  if($user->uid){
+    $webformid = webform_get_submissions('74666');  
+    foreach ($webformid as $myval){
+      if($myval->uid == $user->uid){
+        $userid = 1; 
+        break;
+      }
+    }
+    if($userid == 1){ 
+      $variables['classes_array'][] = 'webform-registered-home';
+    }
+  }
 }
 
 function ambitious_preprocess_region(&$variables) {

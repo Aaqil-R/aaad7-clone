@@ -42,7 +42,15 @@ Drupal.behaviors.ambitious = {
 		     $(".header_banner").addClass("no-overlay");
 		  } 
 		 });
-		// End
+		// End 
+		
+    // == Check if the user registered or not in home page step forms ==//
+    // Start
+    if($("body").hasClass("webform-registered-home")){
+        $(".slider-block .holder").hide();
+        $(".header_banner").addClass("no-overlay");  
+    }
+    // End
 
 		$(".fourm-order-date").append(
 			"<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>"
