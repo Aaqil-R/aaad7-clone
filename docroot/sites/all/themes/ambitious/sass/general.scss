@@ -441,6 +441,8 @@
    }
 }
 
+
+/* removed it because it was causing issues on registration page with hybrid auth
 .description{ 
   float: left;
   width: 50px;
@@ -451,6 +453,24 @@
     position: relative;
   }
 }
+*/
+
+/*new set of codes for styling registration page through hybrid auth*/
+.page-hybridauth{
+  fieldset{
+    float: none;
+    padding-left: 0px;
+    .password-strength{
+      margin-top: 0px;
+    }
+  }
+  input{
+    &.username{
+      width:16em;
+    }
+  }
+}
+/*end of new codes*/
 
 .profile-main{
 #user-profile-form{
