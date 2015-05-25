@@ -174,7 +174,7 @@ a.btn:hover {
 	.view-footer{
 		text-align: center;
     clear: both;
-    padding-top: 28px;
+    padding-top: 25px;
     @include breakpoint($mobile){
        margin-bottom: 10px;
     }
@@ -189,6 +189,14 @@ a.btn:hover {
      }
    }
  }
+}
+//applied only to what we do in front page. 
+.front{
+  .articles-block{
+    .view-footer{
+      padding-top:28px;
+    }
+  }
 }
 
 // TODO: this is part of the button refactoring need to
