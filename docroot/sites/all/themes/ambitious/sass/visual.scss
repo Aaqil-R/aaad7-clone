@@ -358,7 +358,7 @@
         @include transition ($type:all, $time:0.2s, $ease:ease);
 		@include breakpoint($mobile) {
 			background:none;
-			padding:0;
+			padding:20px 0 0 0;
 			margin:-36px 21px 0 0;
 		}
 		&:hover{
@@ -462,6 +462,7 @@
 			width: 25px;
 			@include breakpoint($mobile) {
 				padding:0;
+				padding-top:20px;
 				font-size:32px;
 			}
 		}

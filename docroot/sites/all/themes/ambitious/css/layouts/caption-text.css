@@ -396,7 +396,13 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .caption-text .caption-text-titles {
   text-align: left;
 }
-/* line 35, ../../sass/layouts/caption-text.scss */
+@media (max-width: 767px) {
+  /* line 32, ../../sass/layouts/caption-text.scss */
+  .caption-text .caption-text-titles {
+    text-align: center;
+  }
+}
+/* line 38, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles .caption-text-title span {
   letter-spacing: -1px;
   background: #ffffff;
@@ -405,12 +411,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
   box-shadow: 10px 0 0 #ffffff, -10px 0 0 #ffffff;
 }
 @media (max-width: 480px) {
-  /* line 35, ../../sass/layouts/caption-text.scss */
+  /* line 38, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title span {
     padding: initial;
   }
 }
-/* line 45, ../../sass/layouts/caption-text.scss */
+/* line 53, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   margin-left: 80px;
   font-size: 36px;
@@ -418,7 +424,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   display: none;
 }
 @media (max-width: 480px) {
-  /* line 45, ../../sass/layouts/caption-text.scss */
+  /* line 53, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 30px;
   }
@@ -429,7 +435,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-left: 1em;
     margin-top: 75px;
   }
-  /* line 60, ../../sass/layouts/caption-text.scss */
+  /* line 68, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 130px;
     display: block;
@@ -441,7 +447,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin-left: 0;
     margin-top: 55px;
   }
-  /* line 70, ../../sass/layouts/caption-text.scss */
+  /* line 78, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 280px;
   }
@@ -569,24 +575,24 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
     */
-/* line 203, ../../sass/layouts/caption-text.scss */
+/* line 211, ../../sass/layouts/caption-text.scss */
 .caption-text-title-1.title2 {
   margin-top: 10px;
 }
 @media (min-width: 768px) {
-  /* line 203, ../../sass/layouts/caption-text.scss */
+  /* line 211, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 186px;
   }
 }
 @media (max-width: 767px) {
-  /* line 203, ../../sass/layouts/caption-text.scss */
+  /* line 211, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 100px;
   }
 }
 @media (max-width: 500px) {
-  /* line 203, ../../sass/layouts/caption-text.scss */
+  /* line 211, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 30px;
   }

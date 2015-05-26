@@ -31,6 +31,9 @@
     margin-top: 75px;
     .caption-text-titles{
         text-align: left;
+        @include breakpoint($mobile){
+        	text-align: center;
+        }
         .caption-text-title {
             span{
                 letter-spacing: -1px;
@@ -42,6 +45,11 @@
                 	padding: initial;
                 }
             }
+            //&.caption-text-title-1{
+            //	@include breakpoint($mobile){
+            //		padding-left: 35%;
+            //	}
+            //}
             &.caption-text-title-2 {
                 margin-left: 80px;
                 font-size: 36px;
