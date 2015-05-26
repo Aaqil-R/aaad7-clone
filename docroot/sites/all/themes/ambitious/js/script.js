@@ -33,6 +33,23 @@ Drupal.behaviors.ambitious = {
  
  	// start document.ready
 	$(document).ready(function(){
+	// == Check Cookie in home page step forms ==//
+	// Start
+    $("body.front").ready(function() { 
+        if ($.cookie("homepageform")=="yes" || $.cookie("Drupal.visitor.registerduser")=="yes") {
+            $(".slider-block .holder").hide();
+            $(".header_banner").addClass("no-overlay");
+        } 
+		});
+		// End 		
+    // == Check if the user registered or not in home page step forms ==//
+    // Start
+    $(".webform-registered-home").ready(function() { 
+        $(".webform-registered-home .slider-block .holder").hide();
+        $(".webform-registered-home .header_banner").addClass("no-overlay");  
+    });
+    // End
+	
 	$(".fourm-order-date").append(
 		"<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>"
 	);
@@ -171,7 +188,21 @@ Drupal.behaviors.ambitious = {
 		$(".block-close").click(function(){
 		    $("section.visual").addClass("no-overlay");
 		});
-
+    
+    // ==Close button with Cookie for home page step form==//
+    // Start
+    $('.ask_me_in_a_week').on("click", function () { 
+        var date = new Date();
+        date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));		
+        $.cookie("homepageform", "yes", { expires: date }); 
+        $(".slider-block .holder").hide();
+        $(".header_banner").addClass("no-overlay");
+    });
+    $(".front .block-close").click(function(){
+        $.cookie("homepageform", "yes");
+    });
+    // End
+    
 	// Change Position when click on close on Home page form
 
 		$(".block-close").click(function(){		  
