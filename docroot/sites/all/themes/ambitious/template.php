@@ -693,7 +693,7 @@ function ambitious_field__field_closing_date(&$variables){
   
    if($form_id == 'privatemsg_new'){
     $form['recipient']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['recipient']['#description']."</span></a>";
-    $form['body']['#format'] = FALSE;
+    $form['body']['#format'] = 'plain_text';
    }
 }
 
