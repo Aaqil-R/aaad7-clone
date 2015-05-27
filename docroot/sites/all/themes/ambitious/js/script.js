@@ -31,13 +31,16 @@ Drupal.behaviors.ambitious = {
 	   window.location = $("input[name='submitted[donate_page]']").val() + '?amt='+$(this).val();
 	});		
  
+  // checking page loaded or not
+  $("body.front").addClass('page-loaded');
+   
  	// start document.ready
 	$(document).ready(function(){          
           
 		// == Check Cookie in home page step forms ==//
 		// Start
 		 $("body.front").ready(function() { 
-		  if ($.cookie("homepageform")=="yes" || $.cookie("Drupal.visitor.registerduser")=="yes") {
+		  if ($.cookie("homepageform")=="yes" || $.cookie("Drupal.visitor.registereduser")=="yes") {
 		     $(".slider-block .holder").hide();
 		     $(".header_banner").addClass("no-overlay");
 		  } 

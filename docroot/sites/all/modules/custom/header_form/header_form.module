@@ -147,7 +147,7 @@ function are_you_with_us_submit($form, &$form_state) {
   $form_state['values']['submitted']['button_clicked'] = $form_state['values']['op'];
   $form_state['values']['op'] = $form['actions']['submit']['#value'];
   $_SESSION['first_name'] = $form_state['values']['submitted']['first_name'];
-  user_cookie_save(array('registerduser'=>'yes')); 
+  user_cookie_save(array('registereduser'=>'yes')); 
 }
 function yes_i_am_validate($form, &$form_state) {
   if (empty($form_state['values']['submitted']['first_name'])) {
