@@ -502,13 +502,14 @@
 	       background: none;
             border:none;
             &:before{
-              content: "\e60b";
-              margin-right:-27px;
+            	//content: "";
+              //content: "\e60b";
+              //margin-right:-27px;
             }
             &:hover{ 
               &:before{
                  margin:0 3px;
-                 margin-right:-27px;
+                 //margin-right:-27px;
               }
             }
 	  }
@@ -581,69 +582,86 @@
   }
   .share_graphic_block{
     &.image{
-    .my_share{
-      margin-left: 240px;
-      margin-top:-43.5px;
-      @include breakpoint($tablet){
-        margin-left: 160px;
-      }
-      @include breakpoint($mobile){
-         margin-top:0;
-         &:hover{
-           margin-top:0;
-         } 
-      }
-      padding:0;
-      &:hover{ 
-          margin-top: -44px;  
-      }
-      @include breakpoint($mobile){
-        margin-top:0;
-        &:hover{
-          margin-top:0;
-        }
-        .stButton{
-          margin-top: 29px;
-        }
-      }
-      .btn.btn-transparent{
-        padding:0;
-      }
-      .sharethis-wrapper{
-        margin-top: -26px;
-        margin-left: -26px;
-        width: 161px;
-        padding: 5px 11px;
-        @include breakpoint($mobile){
-          width: 171px;
-          .stButton{
-            margin-top: 29px;
-            padding-right: 30px;
-            &:before{
-              margin-right: -7px;
-              &:hover{
-                margin-right: -7px;
-              }
-            }
-          }
-        }
-        .stButton{
-          padding:0;
-        }
-        .stButton:after{
-          padding-right: 0;
-          width: 129px;
-        }
-      }
-      &.btn.btn-transparent{
-        padding:0;
-        @include breakpoint($mobile){
-          float: left;
-          margin-top: 60px;
-          margin-left:10px;
-        }
-      }  
-    }
+		.my_share{
+	      margin-left: 240px;
+	      margin-top:-53.5px;	
+	      padding:0;
+	      &:hover{
+	      	margin-top: -54px;
+	      }
+	      @include breakpoint($tablet){
+	        margin-left: 135px;
+	        margin-top: 10px;
+	        &:hover{
+	      		margin-top: 9.5px;
+	      	}
+	      }
+	      @include breakpoint($mobile){
+	    	float: left;
+	        margin-top: 60px;
+	        margin-left:-20px;
+	        &:hover{
+	      		margin-top: 58.5px;
+	      	}
+	      }
+	      // @include breakpoint($mobile){
+	      //    margin-top:0;
+	      //    &:hover{
+	      //      margin-top:0;
+	      //    } 
+	      // }
+
+
+	      //&:hover{ 
+	      //    margin-top: -54px;  
+	      //}
+	      // @include breakpoint($mobile){
+	      //   //margin-top:0;
+	      //   // &:hover{
+	      //   //   margin-top:0;
+	      //   // }
+	      //   .stButton{
+	      //     margin-top: 29px;
+	      //   }
+	      // }
+	      .btn.btn-transparent{
+	        padding:0;
+	      }
+	      .sharethis-wrapper{
+	        margin-top: -26px;
+	        //margin-left: -26px;
+	        width: 161px;
+	        padding: 5px 11px;
+	        @include breakpoint($mobile){
+	          width: 171px;
+	          .stButton{
+	            margin-top: 29px;
+	            padding-right: 30px;
+	            &:before{
+	              margin-right: -7px;
+	              &:hover{
+	                margin-right: -7px;
+	              }
+	            }
+	          }
+	        }
+	        .stButton{
+	          padding:0;
+	        }
+	        .stButton:after{
+	          padding-right: 0;
+	          width: 129px;
+	        }
+	      }
+	      // &.btn.btn-transparent{
+	      //   //padding:0;
+	      //   @include breakpoint($mobile){
+	      //     float: left;
+	      //     margin-top: 60px;
+	      //     margin-left:-20px;
+	      //   }
+	      // }  
+	    }
     } 
     .share_image{
       max-width:180px;
