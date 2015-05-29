@@ -87,6 +87,17 @@
   &.btn-pink{
     @include box-shadow(0px 6px $pink-dark);
     background:$pink;
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+      // displace the button shadow 
+      @include box-shadow(0px 4px $pink-dark);   
+    }
+
+    &:active {
+      top: 6px;
+      @include box-shadow(0px 0px $pink-dark);
+    }
   }
 
   &.btn-gray{

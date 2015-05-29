@@ -1,5 +1,5 @@
 /* line 3, ../sass/base/_markup-mixins.scss */
-.webform-submit:after, input[type=submit]:after, .home_forum_share:after {
+.webform-submit:after, input[type=submit]:after, .home_forum_share:after, #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:after {
   content: " ";
   display: block;
   clear: both;
@@ -1076,10 +1076,26 @@ div.modal-forms-modal-content .form-item label {
 
 /* line 618, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
-/* line 623, ../sass/forms.scss */
+/* line 624, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:hover {
+  color: #ffffff;
   border-bottom-width: 3px;
+  margin-top: 2px;
+}
+/* line 630, ../sass/forms.scss */
+#content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:active, #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:focus {
+  border-width: 1px;
+  margin-top: 4px;
+  color: #ffffff;
+}
+/* line 636, ../sass/forms.scss */
+#content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:visited {
+  text-decoration: none;
+  color: #ffffff;
 }

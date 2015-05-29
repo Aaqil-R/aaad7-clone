@@ -616,11 +616,25 @@ div.modal-forms-modal-content .form-item label{
 
 // myvoice page webform button.
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]{
+    @include border-radius(5px);
+    border-bottom: 5px solid $pink-dark;
+    background: $pink;
   
-  border-bottom: 5px solid $pink-dark;
-  background:$pink;
-
-  &:hover{
+    @extend %clearfix;
+    &:hover{
+    color: $white;
     border-bottom-width: 3px;
-  }
+    margin-top: 2px;
+    }
+
+    &:active, &:focus{
+    border-width: 1px;
+    margin-top: 4px;
+    color: $white;
+    }
+
+    &:visited{
+    text-decoration:none;
+    color:$white;
+    }
 }
