@@ -989,6 +989,10 @@ fieldset{
   fieldset{
     float:left;
     width: 100%;
+    margin:5px 0px 36px 0px;
+    @include breakpoint($mobile){
+       margin:0px;
+     }
   }  
 }
 
