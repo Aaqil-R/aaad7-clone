@@ -149,13 +149,17 @@ function are_you_with_us_submit($form, &$form_state) {
   $_SESSION['first_name'] = $form_state['values']['submitted']['first_name'];
   user_cookie_save(array('registereduser'=>'yes')); 
 }
-function yes_i_am_validate($form, &$form_state) {
-  if (empty($form_state['values']['submitted']['first_name'])) {
-    form_set_error('submitted][first_name', 'Fill field first name');
+function yes_i_am_validate($form, &$form_state) {  
+  if (empty($form_state['values']['submitted']['first_name'])) {  
+   $form_state['complete form']['submitted']['first_name']['#suffix'] = "<div class='messages error messages-inline'>Please enter your first name</div>";
+    form_set_error('submitted][first_name');
   }
-  if (empty($form_state['values']['submitted']['email'])) {
-    form_set_error('submitted][email', 'Fill field email');
-  } elseif (!valid_email_address($form_state['values']['submitted']['email'])) {
-    form_set_error('submitted][email', 'Enter valid email');
-  }
+  if (empty($form_state['values']['submitted']['email'])) {  
+     $form_state['complete form']['submitted']['email']['#suffix'] = "<div class='messages error messages-inline'>Please enter your email address</div>";
+    form_set_error('submitted][email');
+  } elseif (!valid_email_address($form_state['values']['submitted']['email'])) {  
+     $form_state['complete form']['submitted']['email']['#suffix'] = "<div class='messages error messages-inline'>Please enter your valid email address</div>";
+     form_set_error('submitted][email');
+  } 
+  
 }
