@@ -634,7 +634,7 @@ div.ctools-modal-content .modal-content{
 #webform-ajax-wrapper-74666{  
   p.larger{
     margin-top: 16px;
-    line-height: 34px;
+    line-height: 36px;
     margin-bottom: 24px;
   }  
 } 
@@ -664,7 +664,7 @@ div.ctools-modal-content .modal-content{
  }
 
 }
-#slider-container #webform-client-form-74681 h2{
+#slider-container #webform-client-form-74681 h3{
   font-size: 37px;
 	margin-top: 9px;
 	line-height: 44px;
@@ -684,19 +684,20 @@ div.ctools-modal-content .modal-content{
     }
   }
   .webform-component--give-what-you-can{
+    float:none;
+    width:auto;
+  }
+  .give_what_you_can{
     margin-left: 18px;
     width: 32%;
+    float:left;
+    margin-top: 13px;
     @include breakpoint($mobile){
       margin-left:auto;
       width:auto;
     }
-    & > label{
-      font-size: 22px;
-      line-height: 30px;
-      margin-left: 10px;
-      padding-top: 22px;
-      display: block;
-      padding-bottom: 6px;
+    & > h5{ 
+      margin-left: 10px; 
       @include breakpoint($mobile){
         margin-left:0px;
       }
@@ -713,7 +714,7 @@ div.ctools-modal-content .modal-content{
   }  
   .webform-component--other-ways-to-help{
     width: 28%;
-    margin-top: 22px;
+    margin-top: 13px;
     @include breakpoint($mobile){
       width:auto;
     }
@@ -722,8 +723,10 @@ div.ctools-modal-content .modal-content{
       margin-top: 3px;
     }
     a.btn{
-      padding: 13px 22px;
-      width:100%;
+      padding: 11px 22px;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: 12px;
     }
     label{
         font-size: 24px;

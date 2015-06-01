@@ -672,6 +672,13 @@ function ambitious_field__field_closing_date(&$variables){
   } else if ($form_id == 'webform_client_form_74666') {
     $form['submitted']['email']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['submitted']['email']['#description']."</span></a>";
   }
+  
+   if($form_id == 'webform_client_form_74681'){
+     $title = $form['submitted']['give_what_you_can']['#title'];
+     $form['submitted']['give_what_you_can']['#prefix'] = "<div class='give_what_you_can'><h5>".$title."</h5>"; 
+     $form['submitted']['give_what_you_can']['#suffix'] = "</div>"; 
+     unset($form['submitted']['give_what_you_can']['#title']);
+   }
   if ($form_id == 'user_login') {
    // $form['name']['#attributes']['placeholder'] = t('enter search terms'); 
     $form['name']['#title'] = FALSE;
