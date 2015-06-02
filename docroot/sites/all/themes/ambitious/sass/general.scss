@@ -1576,3 +1576,34 @@ a.masquerade-switch{
   }
 }
 
+
+// in button right side arrow
+
+#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit{
+  background-image:url(../images/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 102px -254px;
+  padding-left: 24px;
+  padding-right: 58px;
+  @include breakpoint($tablet){
+    padding-left: 14px;
+    padding-right: 38px; 
+    background-position-x:87px;
+  } 
+  @include breakpoint($mobile){
+     background-image:none;
+  }
+}
+#webform-client-form-74666 a.btn#not_right_now{
+  background-position: 143px -254px;
+  @include breakpoint($tablet){
+    background-position-x:129px;
+  }
+}
+#webform-client-form-74621 .webform-submit{
+  background-position: 120px -256px;
+  width:100%;
+  @include breakpoint($tablet){
+    background-position-x:97px;
+  }
+}
