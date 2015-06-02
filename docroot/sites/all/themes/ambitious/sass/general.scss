@@ -1601,9 +1601,11 @@ a.masquerade-switch{
   }
 }
 #webform-client-form-74621 .webform-submit{
-  background-position: 120px -256px;
-  width:100%;
+  background-position: 120px -256px; 
   @include breakpoint($tablet){
     background-position-x:97px;
+  }
+  @include breakpoint($mobile){
+    width:100%;
   }
 }
