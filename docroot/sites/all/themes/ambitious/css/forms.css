@@ -800,21 +800,27 @@ div.ctools-modal-content .form-item .description {
   position: relative;
   width: 86%;
 }
+@media (max-width: 767px) {
+  /* line 360, ../sass/forms.scss */
+  #webform-client-form-74666 .messages.error.messages-inline {
+    width: auto;
+  }
+}
 
-/* line 370, ../sass/forms.scss */
+/* line 373, ../sass/forms.scss */
 #signup, #contribution {
   margin: 0 auto;
   max-width: 1080px;
 }
-/* line 373, ../sass/forms.scss */
+/* line 376, ../sass/forms.scss */
 #signup .input, #contribution .input {
   margin-bottom: 1.69492%;
 }
-/* line 377, ../sass/forms.scss */
+/* line 380, ../sass/forms.scss */
 #signup .label, #contribution .label {
   margin-bottom: 1.69492%;
 }
-/* line 381, ../sass/forms.scss */
+/* line 384, ../sass/forms.scss */
 #signup input[type=submit], #contribution input[type=submit] {
   border: medium none;
   outline: medium none;
@@ -835,19 +841,19 @@ div.ctools-modal-content .form-item .description {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 405, ../sass/forms.scss */
+/* line 408, ../sass/forms.scss */
 #signup input[type=submit]:hover, #contribution input[type=submit]:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #c63502;
   box-shadow: 0px 4px #c63502;
 }
-/* line 412, ../sass/forms.scss */
+/* line 415, ../sass/forms.scss */
 #signup input[type=submit]:active, #contribution input[type=submit]:active {
   top: 6px;
   -webkit-box-shadow: 0px 0px #c63502;
   box-shadow: 0px 0px #c63502;
 }
-/* line 418, ../sass/forms.scss */
+/* line 421, ../sass/forms.scss */
 #signup input[type=text]
 , #signup input[type=search]
 , #signup input[type=tel]
@@ -875,7 +881,7 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 418, ../sass/forms.scss */
+  /* line 421, ../sass/forms.scss */
   #signup input[type=text]
   , #signup input[type=search]
   , #signup input[type=tel]
@@ -892,7 +898,7 @@ div.ctools-modal-content .form-item .description {
     width: 100%;
   }
 }
-/* line 444, ../sass/forms.scss */
+/* line 447, ../sass/forms.scss */
 #signup input[type=text]:focus
 , #signup input[type=search]:focus
 , #signup input[type=tel]:focus
@@ -910,7 +916,7 @@ div.ctools-modal-content .form-item .description {
   outline: none;
 }
 
-/* line 458, ../sass/forms.scss */
+/* line 461, ../sass/forms.scss */
 .webform-style .webform-client-form .form-item label {
   display: block;
   font-size: 1.3em;
@@ -918,19 +924,19 @@ div.ctools-modal-content .form-item .description {
   padding-bottom: 10px;
   clear: both;
 }
-/* line 468, ../sass/forms.scss */
+/* line 471, ../sass/forms.scss */
 .webform-style .webform-client-form input:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 473, ../sass/forms.scss */
+/* line 476, ../sass/forms.scss */
 .webform-style .webform-client-form input.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
-/* line 479, ../sass/forms.scss */
+/* line 482, ../sass/forms.scss */
 .webform-style .webform-client-form textarea {
   padding: 12px 23px;
   float: left;
@@ -947,55 +953,55 @@ div.ctools-modal-content .form-item .description {
   padding: 12px 23px;
 }
 @media (max-width: 767px) {
-  /* line 479, ../sass/forms.scss */
+  /* line 482, ../sass/forms.scss */
   .webform-style .webform-client-form textarea {
     width: 100%;
   }
 }
-/* line 493, ../sass/forms.scss */
+/* line 496, ../sass/forms.scss */
 .webform-style .webform-client-form textarea:focus {
   border: 2px solid #fbb900;
   box-shadow: none;
   color: #2a2e31;
 }
-/* line 498, ../sass/forms.scss */
+/* line 501, ../sass/forms.scss */
 .webform-style .webform-client-form textarea.error {
   border: 2px solid #ff5458;
   box-shadow: none;
   color: #ec0833;
 }
-/* line 505, ../sass/forms.scss */
+/* line 508, ../sass/forms.scss */
 .webform-style .webform-client-form input::-webkit-input-placeholder,
 .webform-style .webform-client-form textarea::-webkit-input-placeholder {
   color: #636c73;
   font-size: 18px;
 }
-/* line 510, ../sass/forms.scss */
+/* line 513, ../sass/forms.scss */
 .webform-style .webform-client-form input:-moz-placeholder,
 .webform-style .webform-client-form textarea:-moz-placeholder {
   color: #636c73;
   font-size: 18px;
 }
 @media (min-width: 767px) {
-  /* line 517, ../sass/forms.scss */
+  /* line 520, ../sass/forms.scss */
   .webform-style .webform-client-form textarea {
     width: 80%;
   }
-  /* line 521, ../sass/forms.scss */
+  /* line 524, ../sass/forms.scss */
   .webform-style .webform-client-form .grippie {
     width: 80%;
   }
 }
-/* line 526, ../sass/forms.scss */
+/* line 529, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions {
   margin: 1.5em 0;
   display: block;
 }
-/* line 530, ../sass/forms.scss */
+/* line 533, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions .webform-submit {
   clear: both;
 }
-/* line 534, ../sass/forms.scss */
+/* line 537, ../sass/forms.scss */
 .webform-style .webform-client-form .form-actions .webform-submit:focus {
   border: inherit;
   box-shadow: inherit;
@@ -1003,12 +1009,12 @@ div.ctools-modal-content .form-item .description {
 }
 
 @media (max-width: 767px) {
-  /* line 548, ../sass/forms.scss */
+  /* line 551, ../sass/forms.scss */
   .page-node-add h1.title {
     margin: 1em 0 0.5em 1em;
   }
 }
-/* line 555, ../sass/forms.scss */
+/* line 558, ../sass/forms.scss */
 .page-node-add input[type=text]
 , .page-node-add input[type=search]
 , .page-node-add input[type=tel]
@@ -1030,7 +1036,7 @@ div.ctools-modal-content .form-item .description {
   margin-bottom: 1em;
   padding: 12px 23px;
 }
-/* line 574, ../sass/forms.scss */
+/* line 577, ../sass/forms.scss */
 .page-node-add label {
   font-size: 2em;
   margin-bottom: 0.2em;
@@ -1038,53 +1044,53 @@ div.ctools-modal-content .form-item .description {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 574, ../sass/forms.scss */
+  /* line 577, ../sass/forms.scss */
   .page-node-add label {
     font-size: 1.2em;
   }
 }
-/* line 582, ../sass/forms.scss */
+/* line 585, ../sass/forms.scss */
 .page-node-add label.filter-help, .page-node-add label.option {
   font-size: 1em;
   margin: 0;
   display: inline;
 }
 @media (max-width: 767px) {
-  /* line 582, ../sass/forms.scss */
+  /* line 585, ../sass/forms.scss */
   .page-node-add label.filter-help, .page-node-add label.option {
     font-size: 1em;
   }
 }
-/* line 594, ../sass/forms.scss */
+/* line 597, ../sass/forms.scss */
 .page-node-add .form-item.form-type-checkboxes {
   margin-bottom: 1em;
 }
-/* line 598, ../sass/forms.scss */
+/* line 601, ../sass/forms.scss */
 .page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox {
   float: left;
   display: inline-block;
   width: 100%;
 }
-/* line 602, ../sass/forms.scss */
+/* line 605, ../sass/forms.scss */
 .page-node-add .form-item.form-type-checkboxes .form-item.form-type-checkbox.form-checkbox {
   margin-top: 0;
 }
-/* line 609, ../sass/forms.scss */
+/* line 612, ../sass/forms.scss */
 .page-node-add .form-required {
   color: #c63502;
 }
 
-/* line 617, ../sass/forms.scss */
+/* line 620, ../sass/forms.scss */
 #user-register-form .form-item-url {
   display: none;
 }
 
-/* line 623, ../sass/forms.scss */
+/* line 626, ../sass/forms.scss */
 div.modal-forms-modal-content .form-item label {
   display: none;
 }
 
-/* line 628, ../sass/forms.scss */
+/* line 631, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1092,19 +1098,19 @@ div.modal-forms-modal-content .form-item label {
   border-bottom: 5px solid #b3066b;
   background: #e30087;
 }
-/* line 634, ../sass/forms.scss */
+/* line 637, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:hover {
   color: #ffffff;
   border-bottom-width: 3px;
   margin-top: 2px;
 }
-/* line 640, ../sass/forms.scss */
+/* line 643, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:active, #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:focus {
   border-width: 1px;
   margin-top: 4px;
   color: #ffffff;
 }
-/* line 646, ../sass/forms.scss */
+/* line 649, ../sass/forms.scss */
 #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:visited {
   text-decoration: none;
   color: #ffffff;

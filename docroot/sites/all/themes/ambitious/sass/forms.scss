@@ -363,6 +363,9 @@ div.ctools-modal-content .form-item .description{
     margin-top: -23px;
     position: relative; 
     width: 86%;
+    @include breakpoint($mobile) {
+      width:auto;
+    }
   }
 }
 
