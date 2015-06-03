@@ -1617,5 +1617,9 @@ a.masquerade-switch{
 .node-type-my-voice-topic{
   .visual .btn-next, .visual .btn-perv{
     background:$pink;
+    margin-top: 30px;
+    @include breakpoint($mobile){
+      background:none;
+    }
   }
 }

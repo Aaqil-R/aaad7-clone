@@ -34,13 +34,13 @@
     // Get the previous node title
     $prev_title = node_load($prev_nid);
     $prev_title = $prev_title->title;
-    $prev_title = truncate_utf8($prev_title,15, FALSE, TRUE, 3);  
+    $prev_title = truncate_utf8($prev_title,12, FALSE, TRUE, 1);  
   }
   if(0 < $next_nid){
     // Get the previous node title
     $next_title = node_load($next_nid);    
     $next_title = $next_title->title;    
-  $next_title = truncate_utf8($next_title,15, FALSE, TRUE, 3);
+  $next_title = truncate_utf8($next_title,12, FALSE, TRUE, 1);
   } 
 ?>
 
