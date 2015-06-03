@@ -68,16 +68,21 @@
 		display:block;
 		width:115px;
 		height:90px;
-		margin:-49px 0 27px;
-		img {
-			width:100%;
-			height:auto;
-			display:block;
+    position: relative;
+    top: -49px; 
+    a{ 
+      display:block;
+		  img {
+			  width:100%;
+			  height:auto;
+			  display:block;
+			}
 		}
 	}
 	.company-info {
 		float:left;
 		width:45%;
+		margin-top: -11px;
 		@include transition ($type:all, $time:0.4s, $ease:ease);
 		p {
 		  margin:0 0 14px;
