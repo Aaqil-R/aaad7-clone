@@ -1068,3 +1068,43 @@ nav .main-menu-2 li a .icon-Uparrow {
 .form-text, .form-textarea {
   color: #2a2e31;
 }
+
+/* line 295, ../../sass/layouts/voice-page.scss */
+.view-content .post, .view-content .test-post {
+  background-repeat: no-repeat;
+  padding: 0px;
+  background-size: cover;
+}
+/* line 299, ../../sass/layouts/voice-page.scss */
+.view-content .post .wrapper, .view-content .test-post .wrapper {
+  background: #e30087;
+  opacity: 0.5;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 308, ../../sass/layouts/voice-page.scss */
+.view-content .post p a, .view-content .test-post p a {
+  width: 100%;
+  padding: 45% 0% 15% 20%;
+  color: #ffffff;
+  font-size: 39px;
+  line-height: normal;
+  outline: none;
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  /* line 308, ../../sass/layouts/voice-page.scss */
+  .view-content .post p a, .view-content .test-post p a {
+    padding: 45% 0% 15% 30%;
+  }
+}
+/* line 324, ../../sass/layouts/voice-page.scss */
+.view-content .test-post {
+  background-image: url('../../images/aged-16-25.jpg?1427777559');
+  padding: 0px;
+}

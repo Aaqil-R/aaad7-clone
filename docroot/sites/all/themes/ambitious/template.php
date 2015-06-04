@@ -419,7 +419,12 @@ function ambitious_preprocess_views_view_masonry(&$vars) {
 }
 
 function ambitious_preprocess_views_view_unformatted(&$vars){
-  if(($vars['view']->current_display == 'stream_topic_page') && $vars['view']->query->pager->current_page === 0){
+  if(($vars['view']->current_display == 'stream_topic_page'
+    ||$vars['view']->current_display == 'my_voice_blog'
+    ||$vars['view']->current_display == 'understanding_autism_page'
+    ||$vars['view']->current_display == 'understanding_autism_page_age'
+    ||$vars['view']->current_display == 'voices_from_the_spectrum_page'
+    ||$vars['view']->current_display == 'stream_home_page') && $vars['view']->query->pager->current_page === 0){
     $node = node_load(arg(1));
     $vars['node'] = $node;
   }
