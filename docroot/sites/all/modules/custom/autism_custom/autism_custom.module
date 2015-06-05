@@ -267,7 +267,22 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
      unset($form['field_related_topic']);
    }
   }
-  
+   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
+    $nodescount = "";  
+    foreach ($form['field_event_tid']['#options'] as $tid => $val){
+     foreach($val->option as $key=>$opt){   
+      $nodes = count(taxonomy_select_nodes($key, FALSE));
+      $form['field_event_tid']['#options'][$tid]->option[$key]= $opt." (".$nodes.")";
+      $nodescount +=$nodes;
+     }
+    }
+    if(0 < $nodescount){
+      $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
+    }else{
+      $form['field_event_tid']['#options']['All'] = "Show all events";
+    }
+    
+  }
 }
 
 function autism_custom_search_community_submit($form, &$form_state) {

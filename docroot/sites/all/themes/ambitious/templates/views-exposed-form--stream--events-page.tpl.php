@@ -44,18 +44,7 @@
           <div class="views-operator">
             <?php print $widget->operator; ?>
           </div>
-        <?php endif; ?>
-         <div class="filter-slide">
-				<h4 class="title">Filter by..  <span class="filterbutton icon-Close"></span></h4>
-				<div class="nav-filter ">
-					 <?php print $widget->widget; ?> 
-				</div> 
-   
-      <div class="button-holder"><div class="views-exposed-widget views-submit-button">
-      <?php print $button; ?>
-    </div></div> 
-				
-        </div>
+        <?php endif; ?>  
         <?php if (!empty($widget->description)): ?>
           <div class="description">
             <?php print $widget->description; ?>
@@ -67,7 +56,8 @@
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
       </div>
-      <div class="views-exposed-widget views-widget-sort-order">
+      <?php print $widget->widget; ?> 
+      <div class="views-exposed-widget views-widget-sort-order element-invisible">
         <?php print $sort_order; ?>
       </div>
     <?php endif; ?>
