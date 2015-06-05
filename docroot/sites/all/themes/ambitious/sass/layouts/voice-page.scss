@@ -6,339 +6,325 @@
 */
 
 .my-voice-home {
-	.banner_text {
-	    background-image: image-url('my-voice-large-logo.png');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 75%;
-		text-indent: -200%;
-		overflow: hidden;
-	}
+  .banner_text {
+    background-image: image-url("my-voice-large-logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 75%;
+    text-indent: -200%;
+    overflow: hidden;
+  }
 }
 
-.page-node-74596, .section-my-voice, .my-voice-home{
+.page-node-74596, .section-my-voice, .my-voice-home {
+  @extend %my-voice-main;
+  .visual {
+    @extend %my-voice-visual;
+  }
+  #content_top {
+    z-index: 99;
+    margin-top: -12.5%;
+    margin-bottom: 30px;
+    @include breakpoint($mobile) {
+      margin-top: -5%;
+    }
 
-	@extend %my-voice-main;
-	.visual{
-		@extend %my-voice-visual;
-	}
-
-	#content_top{
-		z-index: 99;
-		margin-top: -12.5%;
-		margin-bottom: 30px;
-		@include breakpoint($mobile) {
-			margin-top: -5%;
-		}
-
-		.my-voice-columns{
-		    .col{
-    		  padding-top:0;
-    		  padding-bottom:0;
-    		  @include breakpoint($mobile) {
-        		padding:10px 30px;
-      			}
-    		}	
-   			.form-item{
-    			float:left;
-    		  	width:96%;
-      			margin-bottom: 9px;
-      			label{
-        			left: 24px;
-        			top: 12px;
-      			}
-    		}
-    		a.tooltips span.tooltip-content{
-      			left: -45px;
-      			bottom: 30px;
-    		}
-   			.description{
-      			margin-top:11px;
-   			} 	
-   		}
-	}
-
-	.visual.my-voice-visual{
-		z-index: 0;
-	}
-
-
-	fieldset{
-		@include breakpoint($mobile){
-		width:100%;
-		}
-	}
-	
-	.btn.btn-left.filteroption{
-		@include breakpoint($mobile) {
-        width:49%;
-        padding-top: 9px;
-      	/* &:hover{
-      		border-bottom-width: 3px;
-      	} */
+    .my-voice-columns {
+      .col {
+        padding-top: 0;
+        padding-bottom: 0;
+        @include breakpoint($mobile) {
+          padding: 10px 30px;
+        }
       }
-	}
-	.sort-block .stButton{
-		@include breakpoint($mobile) {
-        width:49%;
-
-		}
-	}
-
-	.top-bar{
-		.logo{
-			display: inline;
-			float: left;
-			//padding-right:20px;
-			@include breakpoint($mobile) {
-    	    	display: none;
-			}
-		}
-	}
-
-	.header__region.region.header{
-		div{
-			display: inline;
-		}
-	}
-
-	.item-list
-	.pager{
-		li{
-			background: inherit;
-			a{
-				background: inherit;
-			}
-		}	
-	}
-
-	.easy-breadcrumb{
-		a{
-			color: $white;
-		}
-		
-	}
-
-	// TODO: inject a myvoice class using context and have a
-	// single style rule on <a> to colour pink.
-	.node .field,
-	.acknowledge-block{
-
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			text-decoration: underline;
-			color: $pink;
-			&:hover{
-				color: $base-link-color;
-			}
-
-		}
-		
-		// hover for myvoice
-		a.btn.btn-pink{
-			color: $white;
-		}
-
-		// link colours for myvoice
-		a.pink{
-			color: $pink;
-			&:hover{
-			color: $base-link-color;
-			}
-		}
-
-		.text-right-section{
-			a{
-				.btn{
-					margin-top:-30px;
-	 				margin-bottom: 45px;
-				}
-			}
-		}
-	}
-
-	.my-voice-block{
-		.block-close {
-			a{
-				color: $pink;
-				&:hover{
-					color: $pink;
-				}
-			}
-		}
-		a.tooltips{
-			color: $pink;
-		}
-	}
+      .form-item {
+        float: left;
+        width: 96%;
+        margin-bottom: 9px;
+        label {
+          left: 24px;
+          top: 12px;
+        }
+      }
+      a.tooltips span.tooltip-content {
+        left: -45px;
+        bottom: 30px;
+      }
+      .description {
+        margin-top: 11px;
+      }
+    }
+  }
+  .visual.my-voice-visual {
+    z-index: 0;
+  }
+  fieldset {
+    @include breakpoint($mobile) {
+      width: 100%;
+    }
+  }
+  .btn.btn-left.filteroption {
+    @include breakpoint($mobile) {
+      width: 49%;
+      padding-top: 9px;
+      /* &:hover{
+      	border-bottom-width: 3px;
+      } */
+    }
+  }
+  .sort-block .stButton {
+    @include breakpoint($mobile) {
+      width: 49%;
+    }
+  }
+  .top-bar {
+    .logo {
+      display: inline;
+      float: left;
+      //padding-right:20px;
+      @include breakpoint($mobile) {
+        display: none;
+      }
+    }
+  }
+  .header__region.region.header {
+    div {
+      display: inline;
+    }
+  }
+  .item-list
+  .pager {
+    li {
+      background: inherit;
+      a {
+        background: inherit;
+      }
+    }
+  }
+  .easy-breadcrumb {
+    a {
+      color: $white;
+    }
+  }
+  // TODO: inject a myvoice class using context and have a
+  // single style rule on <a> to colour pink.
+  .node .field,
+  .acknowledge-block {
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+      text-decoration: underline;
+      color: $pink;
+      &:hover {
+        color: $base-link-color;
+      }
+    }
+    // hover for myvoice
+    a.btn.btn-pink {
+      color: $white;
+    }
+    // link colours for myvoice
+    a.pink {
+      color: $pink;
+      &:hover {
+        color: $base-link-color;
+      }
+    }
+    .text-right-section {
+      a {
+        .btn {
+          margin-top: -30px;
+          margin-bottom: 45px;
+        }
+      }
+    }
+  }
+  .my-voice-block {
+    .block-close {
+      a {
+        color: $pink;
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+    a.tooltips {
+      color: $pink;
+    }
+  }
 }
 
 // start myvoice main menu
-.menu-main-menu-features-item-1{
-	list-style:none;
-	padding:0;
-	.menu__item{ 
-	}
+.menu-main-menu-features-item-1 {
+  list-style: none;
+  padding: 0;
+  .menu__item {}
 }
 
 nav {
-	.main-menu-1 {
-		.course{
-			a {
-				.icon-Downarrow{
-				display:none;
-				}
-				.icon-Uparrow{
-					display:none;
-				}
-			}
-		}
-	}
+  .main-menu-1 {
+    .course {
+      a {
+        .icon-Downarrow {
+          display: none;
+        }
+        .icon-Uparrow {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 nav {
-	.main-menu-2 {
-		li {	
-			a {
-				padding: 9px 31px 11px 45px;
-				.icon-Downarrow{
-						display:none;
-					}
-					.icon-Uparrow{
-						display:none;
-					}
-			}
-			list-style:none;
-		}
-		padding:0;
-	}
+  .main-menu-2 {
+    li {
+      a {
+        padding: 9px 31px 11px 45px;
+        .icon-Downarrow {
+          display: none;
+        }
+        .icon-Uparrow {
+          display: none;
+        }
+      }
+      list-style: none;
+    }
+    padding: 0;
+  }
 }
 
 // end myvoice main menu
 
 /* new styling to get the menu down by 20px */
 
-.school-slide{
-	top:20px;
-}
-.my-voice-block .block{
-	padding-top: 0px;
-	padding-bottom: 0px;
+.school-slide {
+  top: 20px;
 }
 
-.my-voice-columns{
-	padding-top: 45px;
-	padding-bottom: 49px;
+.my-voice-block .block {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.page-node-74596{
-	#wrapper{
-		background-image:image-url('wid_bg.jpg');
-	}
-
-	.form-text{
-		color:$black;
-	}
-
-	#content-header{
-		h1{
-			&:nth-child(1)
-			{
-				display: none;
-			}
-		}
-	}
+.my-voice-columns {
+  padding-top: 45px;
+  padding-bottom: 49px;
 }
 
-.my-voice-intro-menu{
-	padding-top:20px;
+.page-node-74596 {
+  #wrapper {
+    background-image: image-url("wid_bg.jpg");
+  }
+  .form-text {
+    color: $black;
+  }
+  #content-header {
+    h1 {
+      &:nth-child(1) {
+        display: none;
+      }
+    }
+  }
+}
+
+.my-voice-intro-menu {
+  padding-top: 20px;
 }
 
 // my voice filter
-.section-voices-spectrum{
-	input[type=submit]{
-		border-color: $pink-dark;
-		background: $pink;
-	}
-
-	.filter-slide .nav-filter .form-type-bef-checkbox.checked,
-	.filter-slide .nav-filter .form-type-bef-checkbox:hover{
-		color:$pink;
-	}
-
-	input[type=submit]:focus{
-		color: $white;
-	}
+.section-voices-spectrum {
+  input[type=submit] {
+    border-color: $pink-dark;
+    background: $pink;
+  }
+  .filter-slide .nav-filter .form-type-bef-checkbox.checked,
+  .filter-slide .nav-filter .form-type-bef-checkbox:hover {
+    color: $pink;
+  }
+  input[type=submit]:focus {
+    color: $white;
+  }
 }
 
 // re arranging the menu on my voice content types
-.section-myvoice{
-	.top-bar{
-		.logo{
-			display: inline;
-			float: left;
-			//padding-right:20px;
-			@include breakpoint($mobile) {
-    	    	display: none;
-    	    }
-		}
-	}
+.section-myvoice {
+  .top-bar {
+    .logo {
+      display: inline;
+      float: left;
+      //padding-right:20px;
+      @include breakpoint($mobile) {
+        display: none;
+      }
+    }
+  }
 }
 
-
 // entire webforms text color chanages
-.form-text , .form-textarea{
-	color:$base-link-color;
-} 
+.form-text, .form-textarea {
+  color: $base-link-color;
+}
 
-//new card refactor issue fixes.
-.view-content{
-	.post,.test-post{
-		//background-repeat: no-repeat;
-  		//padding: 0px;
-  		background-size: cover;
-		.wrapper{
-			background: #e30087;
-  			opacity: 0.5;
-	  		-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-	  		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-	  		position: absolute;
-	  		width: 100%;
-	  		height: 100%;
-	  		display: inline;
-	  		margin-top: -16.016px;
-	  		margin-left: -16.016px;
-		}
-		p a{
-			//width: 100%;
-	  		//padding: 45% 0% 15% 20%;
-	  		@include breakpoint($mobile){
-				//padding: 45% 0% 15% 30%;
-			}
-	  		color: #ffffff;
-			font-size: 39px;
-			@include breakpoint($tablet) {
-				font-size:30px;
-			}
-			line-height: normal;
-			//outline: none;
-			position: relative;
-			display: block;
-			//background-repeat: no-repeat; 
-			margin-top: 50%;
-	  		margin-left: 15%;
-		}
-	}
-	.test-post{
-	    background-image: image-url('aged-16-25.jpg');
-	    //padding: 0px;
-		}
+//my voice pgae age issue fix
+.view-content {
+  // TODO: what is test post could we please make it a meaningful name or remove
+  // it.
+  .post, .test-post {
+    // TODO: can use shorthand for the background here? Why is there a no-repeat
+    // and a cover when we are not using an image. 
+    // padding is always zero why are we specifying that here?
+    background-repeat: no-repeat;
+    padding: 0px;
+    background-size: cover;
+    .wrapper {
+      // TODO: please don't use hex colours here; define it in the _colours.scss
+      // and then make use of the variable here; make sure there is already no
+      // variable available.
+      background: #e30087;
+      opacity: 0.5;
+      // TODO: please make use of compass box-shadow plugin.
+      -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+      // TODO: why are we positioning this absolute?
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    p a {
+      width: 100%;
+      padding: 45% 0% 15% 20%;
+      @include breakpoint($mobile) {
+        padding: 45% 0% 15% 30%;
+      }
 
-	.age-post{
-		background-image: image-url('my-voice.jpg');
-	}
-
-	.transparent-card{
-		background: none;
-		-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-	  	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-	}
+      // TODO: please don't use hex colours here; define it in the _colours.scss
+      // and then make use of the variable here; make sure there is already no
+      // variable available.
+      color: #ffffff;
+      font-size: 39px;
+      line-height: normal;
+      outline: none;
+      position: relative;
+      display: block;
+      background-repeat: no-repeat;
+    }
+  }
+  // TODO: is this a test class? Could we please make use of meaningful names?
+  // if it is a test class please delete it.
+  // why do we need a padding of 0 it is 0 by default.
+  .test-post {
+    background-image: image-url("aged-16-25.jpg");
+    padding: 0px;
+  }
+  .age-post {
+    background-image: image-url("my-voice.jpg");
+  }
+  // rename this as card-transparent; then we are moving toward a more object 
+  // oriented naming convention.
+  .transparent-card {
+    background: none;
+    // TODO: can we make use of the compass mixin for box-shadow. Refer button
+    // implementation.
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  }
 }
