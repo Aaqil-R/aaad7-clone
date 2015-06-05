@@ -261,12 +261,6 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
    $form['#info']['search_box'] = array('value' => 'search_community');
    $form['#validate'][] = 'autism_custom_search_community_submit';
   }
-  if($form['type']['#value'] == 'my_voice_blog'){
-   global $user;
-   if($user->roles[11] != "administrator"){
-     unset($form['field_related_topic']);
-   }
-  }
    if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";  
     foreach ($form['field_event_tid']['#options'] as $tid => $val){
@@ -280,9 +274,14 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
       $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
     }else{
       $form['field_event_tid']['#options']['All'] = "Show all events";
-    }
-    
+    } 
   }
+  if($form['type']['#value'] == 'my_voice_blog'){
+   global $user;
+   if($user->roles[11] != "administrator"){
+     unset($form['field_related_topic']);
+   }
+  } 
 }
 
 function autism_custom_search_community_submit($form, &$form_state) {
