@@ -269,8 +269,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
       $form['field_event_tid']['#options'][$tids]->option[$keysval]= $opt." (".$nodes.")"; 
       $nodescount +=$nodes; 
      }
-    }
-    dpm($nodescount);
+    } 
     if(0 < $nodescount){
       $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
     }else{
