@@ -12,22 +12,18 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 }
 ?>
 
-<!--<?php if (!empty($title)): ?>
-  <h3><?php print $title; ?></h3>
-<?php endif; ?>-->
-
 <?php
-  $additional_classes = "";
+  $additional_classes = "js-stream-intronew transparent-card";
   $node = $variables['node'];
 ?>
 
 <?php foreach ($rows as $id => $row): ?>
   <?php render($row); ?>
   <?php if ($id == 0 && isset($node)):?> 
-    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . $additional_classes .' trasnparent-card"';  } ?>>
+    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .' '. $additional_classes .'"';  } ?>>
       <!-- Teaser View of the topic --> 
       <?php if(isset($node->title)): ?>
-        <h3><?php print $node->title;?></h3>
+        <h4><?php print $node->title;?></h4>
       <?php endif; ?>
       <?php if(isset($node->body['und'][0]['safe_value'])): ?>
         <?php print $node->body['und'][0]['safe_value']; ?>
@@ -42,7 +38,7 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 <?php endforeach; ?>
 
   <?php if($view->query->pager->current_page == $noofpage): ?>
-     <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> test-post">
+     <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> test-post ">
       <?php
       //D7
       $block = module_invoke('block', 'block_view', '91');

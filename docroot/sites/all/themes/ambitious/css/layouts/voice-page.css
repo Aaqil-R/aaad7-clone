@@ -1069,13 +1069,11 @@ nav .main-menu-2 li a .icon-Uparrow {
   color: #2a2e31;
 }
 
-/* line 295, ../../sass/layouts/voice-page.scss */
+/* line 294, ../../sass/layouts/voice-page.scss */
 .view-content .post, .view-content .test-post {
-  background-repeat: no-repeat;
-  padding: 0px;
   background-size: cover;
 }
-/* line 299, ../../sass/layouts/voice-page.scss */
+/* line 298, ../../sass/layouts/voice-page.scss */
 .view-content .post .wrapper, .view-content .test-post .wrapper {
   background: #e30087;
   opacity: 0.5;
@@ -1084,27 +1082,37 @@ nav .main-menu-2 li a .icon-Uparrow {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: inline;
+  margin-top: -16.016px;
+  margin-left: -16.016px;
 }
-/* line 308, ../../sass/layouts/voice-page.scss */
+/* line 310, ../../sass/layouts/voice-page.scss */
 .view-content .post p a, .view-content .test-post p a {
-  width: 100%;
-  padding: 45% 0% 15% 20%;
   color: #ffffff;
   font-size: 39px;
   line-height: normal;
-  outline: none;
   position: relative;
   display: block;
-  background-repeat: no-repeat;
+  margin-top: 50%;
+  margin-left: 15%;
 }
-@media (max-width: 767px) {
-  /* line 308, ../../sass/layouts/voice-page.scss */
+@media (max-width: 990px) {
+  /* line 310, ../../sass/layouts/voice-page.scss */
   .view-content .post p a, .view-content .test-post p a {
-    padding: 45% 0% 15% 30%;
+    font-size: 30px;
   }
 }
-/* line 324, ../../sass/layouts/voice-page.scss */
+/* line 330, ../../sass/layouts/voice-page.scss */
 .view-content .test-post {
   background-image: url('../../images/aged-16-25.jpg?1427777559');
-  padding: 0px;
+}
+/* line 335, ../../sass/layouts/voice-page.scss */
+.view-content .age-post {
+  background-image: url('../../images/my-voice.jpg?1432794262');
+}
+/* line 339, ../../sass/layouts/voice-page.scss */
+.view-content .transparent-card {
+  background: none;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
 }

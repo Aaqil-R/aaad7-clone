@@ -1,5 +1,5 @@
 <?php
-/**created and needed
+/**
  * @file
  * Default view template to display content in a Masonry layout.
  */
@@ -12,12 +12,8 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
  $noofpage = 0;
 }
 
+
 ?>
-
-<!--<?php if (!empty($title)): ?>
-	<h3><?php print $title; ?></h3>
-<?php endif; ?>-->
-
 
 <?php
 	$additional_classes = "js-stream-intronew transparent-card";
@@ -25,12 +21,14 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
 ?>
 
 <?php foreach ($rows as $id => $row): ?>
-  <?php if ($id == 0 && isset($node)):?> 
-    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .' '.$additional_classes .'"';  } ?>>
+  <?php if ($id == 0):// && isset($node)):?> 
+    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . ' ' . $additional_classes .'"';  } ?>>
       <!-- Teaser View of the topic --> 
-      <?php if(isset($node->title)): ?>
-        <h3><?php print $node->title;?></h3>
-      <?php endif; ?>
+      <?php //if(isset($node->title)): 
+      	$block = module_invoke('block', 'block_view', '46');
+		    print render($block['content']);
+      ?>
+      <?php //endif; ?>
       <?php if(isset($node->body['und'][0]['safe_value'])): ?>
         <?php print $node->body['und'][0]['safe_value']; ?>
       <?php endif; ?>         
@@ -43,12 +41,3 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
   
 <?php endforeach; ?>
 
-	<?php //if($view->query->pager->current_page == $noofpage): ?>
-		 <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> test-post age-post">
-			<?php
-			//D7
-			  $block = module_invoke('block', 'block_view', '126');
-			print render($block['content']);
-			?>
-		</div>
-	<?php //endif; ?>

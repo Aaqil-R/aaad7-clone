@@ -64,9 +64,39 @@ Drupal.behaviors.ambitious = {
 		var stream_intro_div = $('div.js-stream-intro:nth-of-type(1)');
 
 		if(stream_intro_div.length){
-			stream_intro_div.height($('div.post:nth-of-type(2)').first().outerHeight());
+			stream_intro_div.height($('div.post:nth-of-type(2)').first().innerHeight());
 		}
-    	     
+
+//amalan new codes
+		var stream_intro_div1 = $('div.js-stream-intronew:nth-of-type(1)');
+		//defining the secondstream variable
+		var stream_div2=$('div.card:nth-of-type(2)');
+		var stream_div3=$('div.card:nth-of-type(3)');
+		var stream_lastdiv=$('div.test-post');
+		if(stream_intro_div1.length){
+			//console.log($('div.card:nth-of-type(2)').first().height());
+			if(stream_intro_div1.width() / window.innerWidth > 0.6667){
+				stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
+				stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
+			}
+			else if(stream_intro_div1.height()>stream_div2.height()){
+				//stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				//if the width is less than 33 the add height of the third as well
+				if((stream_intro_div1.width()/window.innerWidth) < 0.333){
+					//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				}
+			}
+			else{
+				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
+				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+			}
+		}
+		if(stream_lastdiv.length){
+			//console.log('testing123');
+			stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+		}
+//end of amalan new codes
+
 		var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
 	        	     
 		$(".fourm-order-date select").change(function (e) { 
