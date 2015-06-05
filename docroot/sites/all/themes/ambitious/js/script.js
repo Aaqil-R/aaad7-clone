@@ -72,7 +72,7 @@ Drupal.behaviors.ambitious = {
 		//defining the secondstream variable
 		var stream_div2=$('div.card:nth-of-type(2)');
 		var stream_div3=$('div.card:nth-of-type(3)');
-		var stream_lastdiv=$('div.test-post');
+		var stream_lastdiv=$('div.navigation-block');
 		if(stream_intro_div1.length){
 			//console.log($('div.card:nth-of-type(2)').first().height());
 			if(stream_intro_div1.width() / window.innerWidth > 0.6667){

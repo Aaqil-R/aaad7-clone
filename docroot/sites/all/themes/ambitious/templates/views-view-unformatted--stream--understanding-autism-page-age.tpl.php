@@ -20,7 +20,7 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
 
 
 <?php
-	$additional_classes = "js-stream-intronew transparent-card";
+	$additional_classes = "js-stream-intronew card-transparent";
 	$node = $variables['node'];
 ?>
 
@@ -44,7 +44,7 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
 <?php endforeach; ?>
 
 	<?php //if($view->query->pager->current_page == $noofpage): ?>
-		 <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> test-post age-post">
+		 <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> navigation-block age-post">
 			<?php
 			//D7
 			  $block = module_invoke('block', 'block_view', '126');

@@ -13,7 +13,7 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 ?>
 
 <?php
-  $additional_classes = "js-stream-intronew transparent-card";
+  $additional_classes = "js-stream-intronew card-transparent";
   $node = $variables['node'];
 ?>
 
@@ -38,7 +38,7 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 <?php endforeach; ?>
 
   <?php if($view->query->pager->current_page == $noofpage): ?>
-     <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> test-post ">
+     <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> navigation-block ">
       <?php
       //D7
       $block = module_invoke('block', 'block_view', '91');

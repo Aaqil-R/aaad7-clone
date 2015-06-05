@@ -266,65 +266,42 @@ nav {
 
 //my voice pgae age issue fix
 .view-content {
-  // TODO: what is test post could we please make it a meaningful name or remove
-  // it.
-  .post, .test-post {
-    // TODO: can use shorthand for the background here? Why is there a no-repeat
-    // and a cover when we are not using an image. 
-    // padding is always zero why are we specifying that here?
-    background-repeat: no-repeat;
-    padding: 0px;
+  .navigation-block {
+    background-image: image-url("aged-16-25.jpg");
     background-size: cover;
     .wrapper {
-      // TODO: please don't use hex colours here; define it in the _colours.scss
-      // and then make use of the variable here; make sure there is already no
-      // variable available.
-      background: #e30087;
+      background: $pink;
       opacity: 0.5;
-      // TODO: please make use of compass box-shadow plugin.
-      -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+      @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
       // TODO: why are we positioning this absolute?
+      //the absolute gives the enitre block the pink colour. else the colour will be a small block
       position: absolute;
       width: 100%;
       height: 100%;
+      display: inline;
+      margin-top: -1em;
+      margin-left: -1em;
     }
     p a {
-      width: 100%;
-      padding: 45% 0% 15% 20%;
-      @include breakpoint($mobile) {
-        padding: 45% 0% 15% 30%;
-      }
-
-      // TODO: please don't use hex colours here; define it in the _colours.scss
-      // and then make use of the variable here; make sure there is already no
-      // variable available.
-      color: #ffffff;
+      color: $white;
       font-size: 39px;
       line-height: normal;
-      outline: none;
+      //outline: none;
       position: relative;
       display: block;
-      background-repeat: no-repeat;
+      margin-top: 50%;
+      margin-left: 15%;
+      //background-repeat: no-repeat;
+    	@include breakpoint($mobile) {
+        font-size: 30px;
+      }
     }
-  }
-  // TODO: is this a test class? Could we please make use of meaningful names?
-  // if it is a test class please delete it.
-  // why do we need a padding of 0 it is 0 by default.
-  .test-post {
-    background-image: image-url("aged-16-25.jpg");
-    padding: 0px;
   }
   .age-post {
     background-image: image-url("my-voice.jpg");
   }
-  // rename this as card-transparent; then we are moving toward a more object 
-  // oriented naming convention.
-  .transparent-card {
+  .card-transparent {
     background: none;
-    // TODO: can we make use of the compass mixin for box-shadow. Refer button
-    // implementation.
-    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+    @include box-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
   }
 }
