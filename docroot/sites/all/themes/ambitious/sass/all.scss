@@ -1,1555 +1,1654 @@
 @import "base/base";
 
-* { font-size: 100.01%; }
+* {
+  font-size: 100.01%;
+}
+
 html {
-	height:100%;
-	font-size: 62.5%;
+  height: 100%;
+  font-size: 62.5%;
 }
-html body{
-	height: 100%;
-	background: $page-background;
-	&.myvoice{
-		background: image-url('wid_bg.jpg') $page-background;
-	} 
-}
-html body{
-  &.node-type-forum-discussion, &.node-type-forum{
-    height:auto;
+
+html body {
+  height: 100%;
+  background: $page-background;
+  &.myvoice {
+    background: image-url("wid_bg.jpg") $page-background;
   }
 }
 
+html body {
+  &.node-type-forum-discussion, &.node-type-forum {
+    height: auto;
+  }
+}
 
-.messages{
+.messages {
   font-size: 18px;
   padding: 20px;
   z-index: 998;
-  @include breakpoint($tablet){
+  @include breakpoint($tablet) {
     font-size: 13px;
   }
-  .holder{
+
+  .holder {
     @include container;
-	.close{
-	  float:right;
-	  color:$white;
-	  @include breakpoint($mobile){
-	    position: absolute;
-	    top: 21px;
-	    right: 30px;
-	  }
-	}
-  }
-}
-
-.myvoice-filter{
-  fieldset{
-    width:100%;
-    .this-filter{
-      margin-left:0;
-    }
-  }
-}
-.forum{
-
-      fieldset{
-        float:left;
-		@include breakpoint($tablet) { 
-		  width:44%;  
-		}
-        margin-right:22px;
-        .search-text{
-          width: 381px;
-          float:left;  
-		  @include breakpoint($tablet) {
-		  
-		  }
-        }  
-        .search-button{
-          float: left;
-          width: 43px;
-          height: 47px;
-          text-align: center;
-          line-height: 47px;
-          font-size: 28px;
-          margin-left: -52px;
-          position: relative;
-		  &:hover{
-		    color:$orange;
-		  }
-		  input[type="submit"]{
-		    display: inherit;
-		    width: 100%;
-		    position: absolute;
-		    top: 0;
-		    height: 100%;
-		    right: 0;
-		    background: none;
-		    border: none;
-		    text-indent: 50px;
-		    overflow: hidden;
-		    cursor: pointer;
-		  }
-		}
+    .close {
+      float: right;
+      color: $white;
+      @include breakpoint($mobile) {
+        position: absolute;
+        top: 21px;
+        right: 30px;
       }
     }
+  }
+}
+
+.myvoice-filter {
+  fieldset {
+    width: 100%;
+    .this-filter {
+      margin-left: 0;
+    }
+  }
+}
+
+.forum {
+  fieldset {
+    float: left;
+    @include breakpoint($tablet) {
+      width: 44%;
+    }
+
+    margin-right: 22px;
+    .search-text {
+      width: 381px;
+      float: left;
+      @include breakpoint($tablet) {}
+    }
+    .search-button {
+      float: left;
+      width: 43px;
+      height: 47px;
+      text-align: center;
+      line-height: 47px;
+      font-size: 28px;
+      margin-left: -52px;
+      position: relative;
+      &:hover {
+        color: $orange;
+      }
+      input[type="submit"] {
+        display: inherit;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: 0;
+        background: none;
+        border: none;
+        text-indent: 50px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+  }
+}
 
 /* slider pager part styles */
-.slider-pager{
+.slider-pager {
   @extend %listreset;
-  text-align:center;
-  margin:18px 0 0;
+  text-align: center;
+  margin: 18px 0 0;
   @include breakpoint($tablet) {
-     display:none;
+    display: none;
   }
-  li{
-    width:17px;
-	height:17px;
-	margin:0px 2px;
-	border:2px solid $white;
-	display: inline-block;
-	@include border-radius(100px);
-	@extend %texthide;
-    &.active{
-	  background:$white;
-	}
+
+  li {
+    width: 17px;
+    height: 17px;
+    margin: 0px 2px;
+    border: 2px solid $white;
+    display: inline-block;
+    @include border-radius(100px);
+    @extend %texthide;
+    &.active {
+      background: $white;
+    }
   }
 }
+
 /* main informative part styles */
 #main {
-	@include container;
-	padding:20px 15px 20px 15px;
-	//padding-bottom:25px;
-	@include breakpoint($mobile) {
-		padding:0 20px 20px 0;
-	}
+  @include container;
+  padding: 20px 15px 20px 15px;
+  //padding-bottom:25px;
+  @include breakpoint($mobile) {
+    padding: 0 20px 20px 0;
+  }
 }
-.approach-main{
-	@include container;
-	@extend %clearfix;
-	padding:0 15px;
-	.title{
-	   font-size:36px;
-	   margin-bottom:27px;
-	   @include breakpoint($mobile) {
-	     font-size:24px;
-	   }
-	}
-	@include breakpoint($mobile) {
-		padding:0 20px;
-	}
-	.posts-columns{
-	  margin-bottom: 63px;
-	  @include breakpoint($mobile) {
-		  margin-bottom: 0;
-	  }
-	}
-	.approach-section{
-	  @include breakpoint($mobile) {
-	     padding-bottom:50px;
-	  }
-	  img{
-	    width:100%;
-	  }
-	  h5{
-	    margin:14px 0;
-	  }
-	  p{
-	    font-size: 17px; line-height: 1.5em;
-	  }
-	  a.more-bt{
-	     font-size:17px;
-		 text-decoration: underline;
-		 font-family: $font-bold;
-		 &:hover{
-		    text-decoration: none;
-		 }
-	  }
-	  span.formate{
-		    color:$menu-grey;
-			font-size: 12px;
-			margin-left: 14px;
-			text-decoration: none;
-		 }
-	}
+
+.approach-main {
+  @include container;
+  @extend %clearfix;
+  padding: 0 15px;
+  .title {
+    font-size: 36px;
+    margin-bottom: 27px;
+    @include breakpoint($mobile) {
+      font-size: 24px;
+    }
+  }
+  @include breakpoint($mobile) {
+    padding: 0 20px;
+  }
+
+  .posts-columns {
+    margin-bottom: 63px;
+    @include breakpoint($mobile) {
+      margin-bottom: 0;
+    }
+  }
+  .approach-section {
+    @include breakpoint($mobile) {
+      padding-bottom: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+    h5 {
+      margin: 14px 0;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.5em;
+    }
+    a.more-bt {
+      font-size: 17px;
+      text-decoration: underline;
+      font-family: $font-bold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    span.formate {
+      color: $menu-grey;
+      font-size: 12px;
+      margin-left: 14px;
+      text-decoration: none;
+    }
+  }
 }
 
 /* about us block styles */
-.about-us{
+.about-us {
   @include container;
-  padding:14px 15px 85px;
+  padding: 14px 15px 85px;
   @extend %clearfix;
-  .content{
+  .content {
     @extend %clearfix;
   }
+  .find-us {
+    float: left;
+    width: 63.8%;
+    @include breakpoint($tablet) {
+      width: 60%;
+    }
 
-  .find-us{
-    float:left;
-	width:63.8%;
-	@include breakpoint($tablet){
-	  width:60%;
-	}
-	@include breakpoint($mobile){
-	  width:100%;
-	  padding-bottom: 60px;
-	}
-	margin-right:20px;
-	h4{
-	  margin-bottom:20px;
-	  @extend %clearfix;
-	}
+    @include breakpoint($mobile) {
+      width: 100%;
+      padding-bottom: 60px;
+    }
 
-	.content{
-	  margin-bottom:21px;
-	  font-size:17px;
-	  @include breakpoint($tablet){
-	    font-size:15px;
-	  }
-	  a{
-	    text-decoration: underline;
-		font-family: $font-bold;
-		&:hover{
-		  text-decoration: none;
-		}
-	  }
-	  img{
-	    float:right;
-		margin-left:36px;
-		@include breakpoint($desktop){
-		   max-width:50%;
-		}
-		@include breakpoint($mobile){
-		   max-width:inherit;
-		   width:100%;
-		   margin-left:0;
-		}
-	  }
-	  address{
-	    margin-bottom:29px;
-		font-style:normal;
-	  }
-	}
+    margin-right: 20px;
+    h4 {
+      margin-bottom: 20px;
+      @extend %clearfix;
+    }
+    .content {
+      margin-bottom: 21px;
+      font-size: 17px;
+      @include breakpoint($tablet) {
+        font-size: 15px;
+      }
+
+      a {
+        text-decoration: underline;
+        font-family: $font-bold;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      img {
+        float: right;
+        margin-left: 36px;
+        @include breakpoint($desktop) {
+          max-width: 50%;
+        }
+
+        @include breakpoint($mobile) {
+          max-width: inherit;
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      address {
+        margin-bottom: 29px;
+        font-style: normal;
+      }
+    }
   }
-  .coming-up{
+  .coming-up {
     @extend %listreset;
-	float:right;
-    width:31.7%;
-	@include breakpoint($tablet){
-	  width:37%;
-	}
-	@include breakpoint($mobile){
-	  width:auto;
-      float:none;
-	}
-	h4{
-	  margin-bottom: 20px;
-	  @extend %clearfix;
-	}
+    float: right;
+    width: 31.7%;
+    @include breakpoint($tablet) {
+      width: 37%;
+    }
 
-    ul{
-	  @extend %listreset;
-	  border:1px solid $dark-gray-border;
-	  margin-bottom:20px;
-	  li{
-	    border-top:1px solid $dark-gray-border;
-		padding:8px 0;
-		@extend %clearfix;
-		h6{
-		  font-family:$base-font-family;
-		  width:53%;
-		  float:left;
-		  margin:10px 0 0 0;
-		  font-size:18px;
-		}
-		.coming-up-col{
-		  width:22%;
-		  float:left;
-		  text-align:center;
-		  color:$green;
-		  margin-top:4px;
-		  font-size: 25px;
-		}
-		time{
-		  width:25%;
-		  float:left;
-		  text-align:center;
-		  font-family: $font-bold;
-		  font-size:13px;
-		  margin-top:4px;
-		  .date{
-		     display: block;
-			 font-size: 21px;
-		  }
-		  .month{
-		     font-size:17px;
-			 display: block;
-			 margin-bottom: -4px;
-		  }
-		}
-		&:first-child{
-		  border-top:none;
-		}
-	  }
-	}
+    @include breakpoint($mobile) {
+      width: auto;
+      float: none;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+      @extend %clearfix;
+    }
+    ul {
+      @extend %listreset;
+      border: 1px solid $dark-gray-border;
+      margin-bottom: 20px;
+      li {
+        border-top: 1px solid $dark-gray-border;
+        padding: 8px 0;
+        @extend %clearfix;
+        h6 {
+          font-family: $base-font-family;
+          width: 53%;
+          float: left;
+          margin: 10px 0 0 0;
+          font-size: 18px;
+        }
+        .coming-up-col {
+          width: 22%;
+          float: left;
+          text-align: center;
+          color: $green;
+          margin-top: 4px;
+          font-size: 25px;
+        }
+        time {
+          width: 25%;
+          float: left;
+          text-align: center;
+          font-family: $font-bold;
+          font-size: 13px;
+          margin-top: 4px;
+          .date {
+            display: block;
+            font-size: 21px;
+          }
+          .month {
+            font-size: 17px;
+            display: block;
+            margin-bottom: -4px;
+          }
+        }
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
   }
 }
 
 /* sort block styles */
 .sort-block {
-	background:$white;
-	border:1px solid $gray;
-	@extend %clearfix;
-	padding: 15px 18px 15px;
-	margin: 0 0 41px;
-	@include breakpoint($mobile) {
-		display:none;
-	}
-	.sort-by {
-        float:left;
-		input[type="submit"] { display:none; }
-		label { display:none; }
-		select {
-			width:250px;
-		}
-	}
-	&.advanced-sort-block{
-		.sort-by {
-			float:left;
-			input[type="submit"] { display:none; }
-			label { display:none; }
-			@include breakpoint($mobile){
-			  width:100%;
-			}
-			select {
-				width:250px;
+  background: $white;
+  border: 1px solid $gray;
+  @extend %clearfix;
+  padding: 15px 18px 15px;
+  margin: 0 0 41px;
+  @include breakpoint($mobile) {
+    display: none;
+  }
+
+  .sort-by {
+    float: left;
+    input[type="submit"] {
+      display: none;
+    }
+    label {
+      display: none;
+    }
+    select {
+      width: 250px;
+    }
+  }
+  &.advanced-sort-block {
+    .sort-by {
+      float: left;
+      input[type="submit"] {
+        display: none;
+      }
+      label {
+        display: none;
+      }
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+      select {
+        width: 250px;
+      }
+      @include breakpoint($tablet) {
+        .jcf-select {
+          //min-width: 117px;
+          width: 187px;
+        }
+      }
+
+      @include breakpoint($mobile) {
+        .jcf-select {
+          min-width: inherit;
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+
+      fieldset {
+        float: left;
+        margin: 0 20px 0 0;
+      }
+    }
+    &.filter-option {
+      @include breakpoint($mobile) {
+        .short-buttons {
+          .btn {
+            float: right;
+            width: 49%;
+            &:first-child {
+              float: left;
             }
-			@include breakpoint($tablet){
-				.jcf-select{
-					//min-width: 117px;
-					width: 187px;
-				}
-			}
-			@include breakpoint($mobile){
-				.jcf-select{
-					min-width: inherit;
-					width: 100%;
-					margin-bottom:15px;
-				}
-			}
-			fieldset{
-				float:left;
-				margin:0 20px 0 0; 
-			}
-		}
-		&.filter-option{
-		  @include breakpoint($mobile){
-		    .short-buttons{
-		      .btn{
-		        float:right;
-		        width:49%;
-		        &:first-child{
-		          float:left;
-		        }
-		      }
-		    }
-		    .selected-filters{
-		      display:inherit;
-		      margin-top:0;
-		      width: 100%;
-		    }
-		  }
-		}
-	}
-	.view-mode{
-		float: left;
-		position: relative;
-		padding: 2px;
-		@include border-radius(5px);
-		min-width: 49px;
-		height: 49px;
-		text-indent: -100px;
-		color: $base-link-color;
-		overflow: hidden;
-		background: $silver_chalice;
-		&.active{
-			@include linear-gradient($gray_sec,$alto_sec);
-			&:before{
-				background:$athens_gray;
-			}
-		}
-		&:hover{
-			background:$shuttle_gray;
-		}
-		&:before {
-			position:absolute;
-			right:2px;
-			bottom:2px;
-			content:"";
-			background:$white;
-			width:45px;
-			height:45px;
-			@include border-radius(5px);
-		}
-		&:after{
-			position:absolute;
-			right:14px;
-			bottom:14px;
-			content:"";
-			background:url(../images/sprite.png) no-repeat;
-			width:20px;
-			height:20px;
-		}
-		&.grid{
-			&.active:after{
-				background-position:-4px -91px;
-			}
-			&:after{
-				background-position:-4px -137px;
-			}
-			&:hover:after{
-				background-position:-4px -91px;
-			}
-		}
-		&.list{
-			&.active:after{
-				background-position:-26px -91px;
-			}
-			&:after{
-				background-position: -26px -137px;
-			}
-			&:hover:after{
-				background-position:-26px -91px;
-			}
-		}
-	}
+          }
+        }
+        .selected-filters {
+          display: inherit;
+          margin-top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .view-mode {
+    float: left;
+    position: relative;
+    padding: 2px;
+    @include border-radius(5px);
+    min-width: 49px;
+    height: 49px;
+    text-indent: -100px;
+    color: $base-link-color;
+    overflow: hidden;
+    background: $silver_chalice;
+    &.active {
+      @include linear-gradient($gray_sec, $alto_sec);
+      &:before {
+        background: $athens_gray;
+      }
+    }
+    &:hover {
+      background: $shuttle_gray;
+    }
+    &:before {
+      position: absolute;
+      right: 2px;
+      bottom: 2px;
+      content: "";
+      background: $white;
+      width: 45px;
+      height: 45px;
+      @include border-radius(5px);
+    }
+    &:after {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      content: "";
+      background: url(../images/sprite.png) no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+    &.grid {
+      &.active:after {
+        background-position: -4px -91px;
+      }
+      &:after {
+        background-position: -4px -137px;
+      }
+      &:hover:after {
+        background-position: -4px -91px;
+      }
+    }
+    &.list {
+      &.active:after {
+        background-position: -26px -91px;
+      }
+      &:after {
+        background-position: -26px -137px;
+      }
+      &:hover:after {
+        background-position: -26px -91px;
+      }
+    }
+  }
 }
+
 /* main post columns styles */
 .posts-columns {
-	@extend %clearfix;
-	
-	&.columns-full{
-	    .row{
-	      width:100%; 
-		  .forum-icon{
-		    position: absolute;
-			right:18px;
-			font-size:40px;
-			top: 27px;
-			color:$orange;
-			&.icon-Featured{
-			  color:$yellow;
-			}
-		  }
+  @extend %clearfix;
+  &.columns-full {
+    .row {
+      width: 100%;
+      .forum-icon {
+        position: absolute;
+        right: 18px;
+        font-size: 40px;
+        top: 27px;
+        color: $orange;
+        &.icon-Featured {
+          color: $yellow;
+        }
+      }
+      .footer {
+        padding-left: 184px;
+        padding-right: 21px;
+        margin-bottom: -10px;
+        .text {
+          display: inherit;
+        }
+        .times {
+          font-size: 15px;
+          margin-left: 40px;
+          margin-top: 8px;
+          color: $menu-grey;
+          display: inline-block;
+          em {
+            font-size: 29px;
+            margin-right: 10px;
+            float: left;
+          }
+          cite {
+            font-style: normal;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .action-block {
+      background: none;
+      padding: 12px 0 44px 0;
+      .holder {
+        padding: 0;
+      }
+    }
+  }
+  /* post view mode styles */
+  .age {
+    background: $pink;
+    padding: 10px 10px;
+    color: $white;
+    float: right;
+    margin-top: -20px;
+    @include breakpoint($mobile) {
+      margin-top: -14px;
+    }
+  }
+  &.news-post {
+    h2.title {
+      padding: 65px 0 41px 0;
+      margin: 0;
+      @include fontsize(37, 16);
+      @include breakpoint($mobile) {
+        font-size: 24px;
+        padding: 30px 0 30px 0;
+      }
+    }
+  }
+  &#view-mode {
+    h3 {
+      margin: 0;
+    }
+    .list-mode {
+      display: none;
+    }
+    &.list-view {
+      .list-mode {
+        display: block;
+      }
+      .grid-mode {
+        display: none;
+      }
+      .info.add {
+        padding: 0px 0 0px 11px;
+      }
+    }
+  }
+  /* post column styles */
+  .col {
+    float: left;
+    width: 31.4%;
+    margin: 0 0 0 2.9%;
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin: 0;
+    }
 
-		  .footer{
-			  padding-left: 184px;
-			  padding-right: 21px;
-			  margin-bottom:-10px;
-			  .text{
-			    display:inherit; 
-			  }
-			  .times{
-			    font-size: 15px;
-				margin-left: 40px;
-				margin-top: 8px;
-				color:$menu-grey; 
-				display: inline-block;
-				em{
-				  font-size: 29px;
-				  margin-right: 10px; 
-				  float:left;
-				}
-				cite{  
-				  font-style:normal;
-				  font-weight:bold;
-				}
-			  }
-			}
-	    }
-		.action-block{
-		  background:none;
-		  padding:12px 0 44px 0;
-		  .holder{
-		    padding:0;
-		  }
-		}
-	  } 
-	/* post view mode styles */
-	.age{
-	     background: $pink;
-	     padding: 10px 10px;
-	     color: $white;
-		 float: right;
-		 margin-top: -20px;
-         @include breakpoint($mobile) {
-		   margin-top:-14px;
-		 }
-	  }
-	  &.news-post{
-	      h2.title{
-		    padding:65px 0 41px 0;
-			margin:0;
-			@include fontsize(37,16);
+    &:first-child {
+      margin: 0;
+    }
+  }
+  .text-block {
+    @include fontsize(18, 16);
+    line-height: 1.5em;
+    margin: 0 0 24px;
+    color: $heading-link;
+    @include breakpoint($mobile) {
+      margin: 0 0 22px;
+    }
+
+    h1 {
+      line-height: 1.156em;
+      @include fontsize(45, 18);
+      margin: -10px 0 21px;
+      @include breakpoint($tablet) {
+        @include fontsize(36, 18);
+      }
+
+      @include breakpoint($mobile) {
+        font-size: 27px;
+        line-height: 32px;
+        margin: 0 0 16px;
+      }
+    }
+    p {
+      margin: 0 0 10px;
+      @include breakpoint($mobile) {
+        margin: 0 0 38px;
+      }
+    }
+    .btn-holder {
+      @extend %clearfix;
+      display: none;
+      @include breakpoint($mobile) {
+        display: block;
+        .btn.btn-green.btn-left.bt-left {
+          float: right;
+        }
+      }
+    }
+  }
+  .text-block-second {
+    @include fontsize(18, 16);
+    line-height: 1.5em;
+    margin: 0 0 31px;
+    min-height: 322px;
+    @include breakpoint($tablet) {
+      min-height: 338px;
+    }
+
+    @include breakpoint($tablet) {
+      min-height: 0;
+    }
+
+    h1 {
+      line-height: 1.08em;
+      font-size: 2.5em;
+      margin: -10px 0 21px;
+      color: $heading-link;
+      letter-spacing: 0px;
+      @include breakpoint($tablet) {
+        @include fontsize(36, 18);
+        br {
+          display: none;
+        }
+      }
+
+      @include breakpoint($mobile) {
+        font-size: 27px;
+        line-height: 32px;
+        margin: 0 0 16px;
+      }
+    }
+    p {
+      margin: 0 10px 10px 0;
+      font-size: 18px;
+      line-height: 30px;
+      @include breakpoint($mobile) {
+        margin: 0 0 38px;
+      }
+    }
+    .btn-holder {
+      @extend %clearfix;
+      display: none;
+      @include breakpoint($mobile) {
+        display: block;
+      }
+    }
+  }
+  .post {
+    padding: 20px 21px;
+    position: relative;
+    margin: 0 0 30px;
+    background: $white;
+    border: 1px solid $gray;
+    @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+    @include breakpoint($mobile) {
+      padding: 14px 15px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .img-holder {
+      position: relative;
+      time {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 21px;
+        font-weight: bold;
+        text-align: center;
+        padding: 6px 7px;
+        background: $white;
+        span {
+          font-size: 24px;
+        }
+      }
+      .feature-holder {
+        position: absolute;
+        z-index: 2;
+        bottom: 6px;
+        left: 11px;
+        @include breakpoint($mobile) {
+          left: 15px;
+          bottom: 7px;
+        }
+
+        &.hover {
+          .text {
+            display: block;
+          }
+        }
+        background: $orange;
+        .icon-Featured {
+          font-size: 24px;
+          padding: 6px 0 0;
+          float: left;
+          background: $white;
+          line-height: 30px;
+          height: 45px;
+          width: 45px;
+          text-align: center;
+          color: $orange;
+          @include breakpoint($mobile) {
+            height: 33px;
+            width: 34px;
+            padding: 2px 0 0;
+            font-size: 16px;
+          }
+        }
+        &.green-icon {
+          background: $green;
+          .icon-Featured {
+            color: $green;
+          }
+        }
+        .text {
+          display: none;
+          float: left;
+          font-size: 18px;
+          line-height: 25px;
+          padding: 10px 5px;
+          min-width: 109px;
+          text-align: center;
+          color: $white;
+          @include breakpoint($mobile) {
+            padding: 5px 6px;
+            line-height: 24px;
+            font-size: 16px;
+            padding: 4px 5px;
+            min-width: 97px;
+          }
+        }
+      }
+      .voice-holder {
+        position: absolute;
+        z-index: 2;
+        bottom: 6px;
+        left: 11px;
+        @include breakpoint($mobile) {
+          left: 15px;
+          bottom: 7px;
+        }
+
+        &:hover {
+          .text {
+            display: block;
+          }
+        }
+        background: $pink;
+        .icon-Voice {
+          font-size: 29px;
+          padding: 6px 0 0;
+          float: left;
+          background: $white;
+          line-height: 30px;
+          height: 45px;
+          width: 45px;
+          text-align: center;
+          color: $pink;
+          @include breakpoint($mobile) {
+            height: 33px;
+            width: 34px;
+            padding: 2px 0 0;
+            font-size: 16px;
+          }
+        }
+        .text {
+          //display:none;
+          float: left;
+          font-size: 18px;
+          line-height: 25px;
+          padding: 10px 5px;
+          min-width: 109px;
+          text-align: center;
+          color: $white;
+          @include breakpoint($mobile) {
+            padding: 5px 6px;
+            line-height: 24px;
+            font-size: 16px;
+            padding: 4px 5px;
+            min-width: 97px;
+          }
+        }
+      }
+    }
+    .info {
+      padding: 24px 0 4px 11px;
+      @include breakpoint($mobile) {
+        padding: 19px 0 6px 10px;
+      }
+
+      h2 {
+        line-height: 1.125em;
+        @include fontsize(24, 16);
+        color: $heading-link;
+        margin: 0 0 10px;
+        @include breakpoint($mobile) {
+          font-size: 22px;
+          line-height: 28px;
+          margin: 0 0 4px;
+        }
+      }
+      h3 {
+        line-height: 1.363em;
+        @include fontsize(22, 16);
+        margin: -4px 0 8px;
+        @include breakpoint($mobile) {
+          font-size: 22px;
+          line-height: 28px;
+        }
+
+        a {
+          color: $heading-link;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      &.add {
+        h3 {
+          margin: -2px 0 12px;
+        }
+      }
+      &.spacing {
+        p {
+          letter-spacing: -0.1px;
+        }
+      }
+      p {
+        margin: 0 0 10px;
+        line-height: 24px;
+        font-size: 16px;
+      }
+      .cite {
+        display: block;
+        font-size: 14px;
+        line-height: 22px;
+        strong {
+          font-size: 16px;
+          @include breakpoint($mobile) {
+            font-size: 15px;
+          }
+
+          a {
+            color: $heading-link;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      margin: 0 -21px;
+      padding: 14px 30px 2px;
+      border-top: 2px solid $post-footer-border;
+      @include breakpoint($tablet) {
+        //padding:14px 10px 2px;
+      }
+
+      @include breakpoint($mobile) {
+        border: none;
+        margin: 0 -15px;
+        padding: 9px 10px 15px 27px;
+      }
+
+      .num-holder {
+        display: inline-block;
+        vertical-align: top;
+        &.green-num {
+          a {
+            .num {
+              color: $green;
+              border: 3px solid $green;
+              &:after {
+                background-position: -106px 0;
+              }
+            }
+            .text {
+              color: $green;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          .num {
+            min-width: 46px;
+            height: 35px;
+            border: 2px solid $orange;
+            @include border-radius(9px);
+            font-size: 16px;
+            line-height: 24px;
+            padding: 3px;
+            position: relative;
+            color: $orange;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 15px 0 0;
+            @include breakpoint($tablet) {
+              margin: 0 5px 0 0;
+            }
+
             @include breakpoint($mobile) {
-	           font-size:24px;
-			   padding:30px 0 30px 0;
-	         }
-		  }
-	   }
-	&#view-mode{
-      h3{
-         margin:0;
-      }
-	  .list-mode{
-	    display:none;
-	  }
-	  &.list-view{
-	   .list-mode{
-		  display:block;
-       }
-	   .grid-mode{
-		  display:none;
-       }
-	   .info.add{
-	     padding:0px 0 0px 11px;
-	   }
-      }
-	}
-	/* post column styles */
-	.col {
-		float:left;
-		width:31.4%;
-		margin:0 0 0 2.9%;
-		@include breakpoint($mobile) {
-			width:100%;
-			margin:0;
-		}
-		&:first-child {
-			margin:0;
-		}
-		}
-		.text-block {
-			@include fontsize(18,16);
-			line-height:1.5em;
-			margin:0 0 24px;
-			color: $heading-link;
-			@include breakpoint($mobile) {
-				margin:0 0 22px;
-			}
-			h1 {
-				line-height:1.156em;
-				@include fontsize(45,18);
-				margin:-10px 0 21px;
-				@include breakpoint($tablet) {
-					@include fontsize(36,18);
-				}
-				@include breakpoint($mobile) {
-					font-size:27px;
-					line-height:32px;
-					margin:0 0 16px;
-				}
-			}
-			p {
-				margin:0 0 10px;
-				@include breakpoint($mobile) {
-					margin:0 0 38px;
-				}
-			}
-			.btn-holder {
-				@extend %clearfix;
-				display:none;
-				@include breakpoint($mobile) {
-					display:block;
-					.btn.btn-green.btn-left.bt-left{
-					  float:right;
-					}
-				}
-			}
-
-		}
-		.text-block-second{
-			@include fontsize(18,16);
-			line-height:1.5em;
-			margin: 0 0 31px;
-			min-height: 322px;
-			@include breakpoint($tablet) {
-				min-height: 338px;
-			}
-			@include breakpoint($tablet) {
-				min-height: 0;
-			}
-			h1 {
-				line-height: 1.08em;
-				font-size: 2.5em;
-				margin:-10px 0 21px;
-				color:$heading-link;
-				letter-spacing: 0px;
-				@include breakpoint($tablet) {
-					@include fontsize(36,18);
-					br{
-					  display:none;
-					}
-				}
-				@include breakpoint($mobile) {
-					font-size:27px;
-					line-height:32px;
-					margin:0 0 16px;
-				}
-			}
-			p {
-				margin: 0 10px 10px 0;
-				font-size: 18px;
-				line-height: 30px;
-				@include breakpoint($mobile) {
-					margin:0 0 38px;
-				}
-			}
-			.btn-holder {
-				@extend %clearfix;
-				display:none;
-				@include breakpoint($mobile) {
-					display:block;
-				}
-
-			}
-
-		}
-		.post{
-			padding: 20px 21px;
-			position: relative;
-			margin: 0 0 30px;
-			background:$white;
-			border:1px solid $gray;
-			@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-			@include breakpoint($mobile) {
-				padding:14px 15px;
-				font-size:18px;
-				line-height:27px;
-			}
-			.img-holder {
-				position:relative;
-				time{
-				  position: absolute;
-				  right: 0;
-				  top: 0;
-				  font-size: 21px;
-				  font-weight: bold;
-				  text-align: center;
-				  padding: 6px 7px;
-				  background:$white;
-				  span{
-				    font-size:24px;
-				  }
-				}
-				.feature-holder {
-					position:absolute;
-					z-index:2;
-					bottom:6px;
-					left:11px;
-					@include breakpoint($mobile) {
-						left:15px;
-						bottom:7px;
-					}
-					&.hover {
-						.text {
-							display:block;
-						}
-					}
-					background:$orange;
-					.icon-Featured {
-						font-size:24px;
-						padding:6px 0 0;
-						float:left;
-						background:$white;
-						line-height:30px;
-						height:45px;
-						width:45px;
-						text-align:center;
-						color:$orange;
-						@include breakpoint($mobile) {
-							height:33px;
-							width:34px;
-							padding:2px 0 0;
-							font-size:16px;
-						}
-					}
-					&.green-icon{
-					  background:$green;
-					  .icon-Featured{
-					    color:$green;
-					  }
-					}
-					.text {
-						display:none;
-						float:left;
-						font-size:18px;
-						line-height:25px;
-						padding:10px 5px;
-						min-width:109px;
-						text-align:center;
-						color:$white;
-						@include breakpoint($mobile) {
-							padding:5px 6px;
-							line-height:24px;
-							font-size:16px;
-							padding:4px 5px;
-							min-width:97px;
-						}
-					}
-				}
-				.voice-holder {
-					position:absolute;
-					z-index:2;
-					bottom:6px;
-					left:11px;
-					
-					@include breakpoint($mobile) {
-						left:15px;
-						bottom: 7px;
-					}
-					&:hover {
-						.text {
-							display:block;
-						}
-					}
-					background:$pink ;
-					.icon-Voice {
-						font-size:29px;
-						padding:6px 0 0;
-						float:left;
-						background:$white;
-						line-height:30px;
-						height:45px;
-						width:45px;
-						text-align:center;
-						color:$pink ;
-						@include breakpoint($mobile) {
-							height:33px;
-							width:34px;
-							padding:2px 0 0;
-							font-size:16px;
-						}
-					}
-					.text {
-						//display:none;
-						float:left;
-						font-size:18px;
-						line-height:25px;
-						padding:10px 5px;
-						min-width:109px;
-						text-align:center;
-						color:$white;
-						@include breakpoint($mobile) {
-							padding:5px 6px;
-							line-height:24px;
-							font-size:16px;
-							padding:4px 5px;
-							min-width:97px;
-						}
-					}
-				}
-			}
-			.info {
-				padding:24px 0 4px 11px;
-				@include breakpoint($mobile) {
-					padding:19px 0 6px 10px;
-				}
-				h2 {
-					line-height:1.125em;
-					@include fontsize(24,16);
-					color:$heading-link;
-					margin:0 0 10px;
-					@include breakpoint($mobile) {
-						font-size:22px;
-						line-height:28px;
-						margin: 0 0 4px;
-					}
-				}
-				h3 {
-					line-height:1.363em;
-					@include fontsize(22,16);
-					margin:-4px 0 8px;
-					@include breakpoint($mobile) {
-						font-size:22px;
-						line-height:28px;
-					}
-					a {
-						color:$heading-link;
-						text-decoration:underline;
-						&:hover { text-decoration:none; }
-					}
-				}
-				&.add {
-					h3 {
-						margin:-2px 0 12px;
-					}
-				}
-				&.spacing{
-				  p{
-				     letter-spacing: -0.1px;
-				  }
-				}
-				p {
-					margin:0 0 10px;
-					line-height: 24px;
-					font-size: 16px;
-				}
-				.cite {
-					display:block;
-					font-size:14px;
-					line-height:22px;
-					strong {
-						font-size:16px;
-						@include breakpoint($mobile) {
-							font-size:15px;
-						}
-						a {
-						color:$heading-link;
-							text-decoration:underline;
-							&:hover { text-decoration:none; }
-						}
-					}
-				}
-			}
-			.footer {
-				margin:0 -21px;
-				padding:14px 30px 2px;
-				border-top:2px solid $post-footer-border;
-				@include breakpoint($tablet) {
-					//padding:14px 10px 2px;
-				}
-				@include breakpoint($mobile) {
-					border:none;
-					margin:0 -15px;
-					padding:9px 10px 15px 27px;
-				}
-				.num-holder {
-					display:inline-block;
-					vertical-align:top;
-					&.green-num{
-					   a{
-					     .num{
-						    color:$green;
-							border:3px solid $green;
-							&:after{
-							   background-position:-106px 0;
-							}
-						 }
-						 .text{
-						   color:$green;
-						 }
-					   }
-					}
-					a {
-						text-decoration:none;
-						.num {
-							min-width:46px;
-							height:35px;
-							border:2px solid $orange;
-							@include border-radius(9px);
-							font-size:16px;
-							line-height:24px;
-							padding:3px;
-							position:relative;
-							color:$orange;
-							display:inline-block;
-							vertical-align:middle;
-							text-align:center;
-							text-decoration:none;
-							margin:0 15px 0 0;
-							@include breakpoint($tablet) {
-								margin:0 5px 0 0;
-							}
-							@include breakpoint($mobile) {
-								font-size:16px;
-								line-height:18px;
-								@include border-radius(5px);
-								min-width:39px;
-								height:28px;
-							}
-							&:after {
-								position:absolute;
-								right:8px;
-								bottom:-13px;
-								content:"";
-								background:url(../images/sprite.png) no-repeat -40px 0;
-								width:11px;
-								height:13px;
-								@include breakpoint($mobile) {
-									right:6px;
-								}
-							}
-						}
-						.text {
-							display:none;
-							margin:2px 0 0 -5px;
-							vertical-align:middle;
-							font-size:14px;
-							line-height:18px;
-							color:$orange;
-							@include breakpoint($tablet) {
-								font-size:11px;
-							}
-							@include breakpoint($mobile) {
-								font-size:15px;
-								margin:-2px 0 0 ;
-							}
-						}
-					}
-				}
-				&:hover {
-					a {
-						&.hover {
-							.text {
-								display:inline-block;
-							}
-						}
-					}
-				}
-			}
-		}
-		.post-actions{
-            text-align: center;
-            vertical-align: middle;
-            background-image: image-url('aged-16-25.jpg');
-			position: relative;
-			max-height: 315px;
-            padding: 0;
-            .wrapper {
-                background: $pink;
-                opacity: 0.5;
-                @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                &:hover{
-                    background: $razzmatazz;
-                }
+              font-size: 16px;
+              line-height: 18px;
+              @include border-radius(5px);
+              min-width: 39px;
+              height: 28px;
             }
-			&:before{
-				content: "";
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 200px 0 0 200px;
-				border-color: transparent transparent transparent $rose;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-			}
-			&:hover:before{
-				border-color: transparent transparent transparent $monza;
-			}
-			@include breakpoint($mobile) {
-				//padding:14px 15px;
-				font-size:18px;
-				line-height:27px;
-				background-position: right top;
-			}
-			.action{
-              position: absolute;
-              width: 100%;
-              padding: 40% 0;
-                
-				color:$white;
-				font-size:39px;
-				line-height: normal;
-				outline: none;
-				position: relative;
-				@extend %clearfix;
-				display: block;
-				@include breakpoint($tablet) {
-					font-size:30px;
-				}
-				@include breakpoint($mobile) {
-					.text br{
-						display:none;
-					}
-		  		}
-				.icon-Rightarrow{
-					color:$white;
-					text-decoration:none;
-					margin-top:41px;
-					outline: none;
-					display: block;
-					font-size:61px;
-					text-align: right;
-				}
-				&:hover, &:active, &:focus{
-					text-decoration:none;
-				}
-			}
-		}
-		
 
-.post-my-voice-actions{ 
-            text-align: center;
-            vertical-align: middle;
-            background-image: image-url('my-voice.jpg');
-			position: relative;
-			max-height: 315px;
-			 background-repeat: no-repeat;
-  background-size: 100%;
-            padding: 0;
-            .wrapper {
-                background: $pink;
-                opacity: 0.5;
-                @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                &:hover{
-                    background: $razzmatazz;
-                }
-            }
-			&:before{
-				content: "";
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 200px 0 0 200px;
-				border-color: transparent transparent transparent $rose;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-			}
-			&:hover:before{
-				border-color: transparent transparent transparent $monza;
-			}
-			@include breakpoint($mobile) {
-				//padding:14px 15px;
-				font-size:18px;
-				line-height:27px;
-				background-position: right top;
-			}
-			.action{
+            &:after {
               position: absolute;
-              width: 100%;
-              padding:45% 0 30% 0;
-                
-				color:$white;
-				font-size:39px;
-				line-height: normal;
-				outline: none;
-				position: relative;
-				@extend %clearfix;
-				display: block;
-				@include breakpoint($tablet) {
-					font-size:30px;
-				}
-				@include breakpoint($mobile) {
-					.text br{
-						display:none;
-					}
-		  		}
-				.icon-Rightarrow{
-					color:$white;
-					text-decoration:none;
-					margin-top:41px;
-					outline: none;
-					display: block;
-					font-size:61px;
-					text-align: right;
-				}
-				&:hover, &:active, &:focus{
-					text-decoration:none;
-				}
-			}
-		}
-		.blockquote-block {
-			margin:0 0 31px;
-			background:$lavender;
-			color:$white;
-			text-align:center;
-			padding:62px 28px 30px 42px;
-			@include breakpoint($mobile) {
-				padding:60px 31px 27px 22px;
-			}
-			blockquote {
-				text-align:left;
-				padding:0;
-				margin:0 0 19px;
-				position:relative;
-				&:after {
-					position:absolute;
-					content:"";
-					left:-19px;
-					top:-37px;
-					width:36px;
-					height:27px;
-					background:url(../images/sprite.png) no-repeat -45px -23px;
-					@include breakpoint($mobile) {
-						left:1px;
-					}
-				}
-				q {
-					display:block;
-					line-height:1.333em;
-					@include fontsize(24,16);
-					margin:0 0 18px;
-					@include breakpoint($mobile) {
-						margin:0 0 10px;
-					}
-				}
-				cite {
-					font-style:normal;
-					font-size:14px;
-					line-height:20px;
-					strong {
-						font-size:16px;
-						@include breakpoint($mobile) {
-							font-size:15px;
-						}
-					}
-					a {
-						color:$white;
-						text-decoration:underline;
-						&:hover { text-decoration:none; }
-					}
-				}
-			}
-			.icon-Speech1 {
-				font-size:27px;
-				margin:0 0 0 -13px;
-				display:inline-block;
-				vertical-align:top;
-			}
-			.icon-Twitter {
-				font-size:27px;
-				margin:0 0 0 -13px;
-				display:inline-block;
-				vertical-align:top;
-			}
-			&.red { background:$magenta; }
-		}
-	}
-.more-btn {
-	display:block;
-	padding:29px 0 61px;
-	text-align:center;
-	@include breakpoint($mobile) {
-		display:none;
-	}
-	em { display:none; }
-	a {
-		text-decoration:none;
-		color:$gray;
-		.icon-Downarrow {
-			font-size:101px;
-		}
-		&:hover {
-		  color:$loadmore-hover;
-		  text-decoration: none;
-		}
-	}
+              right: 8px;
+              bottom: -13px;
+              content: "";
+              background: url(../images/sprite.png) no-repeat -40px 0;
+              width: 11px;
+              height: 13px;
+              @include breakpoint($mobile) {
+                right: 6px;
+              }
+            }
+          }
+          .text {
+            display: none;
+            margin: 2px 0 0 -5px;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 18px;
+            color: $orange;
+            @include breakpoint($tablet) {
+              font-size: 11px;
+            }
+
+            @include breakpoint($mobile) {
+              font-size: 15px;
+              margin: (-2px) 0 0;
+            }
+          }
+        }
+      }
+      &:hover {
+        a {
+          &.hover {
+            .text {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .post-actions {
+    text-align: center;
+    vertical-align: middle;
+    background-image: image-url("aged-16-25.jpg");
+    position: relative;
+    max-height: 315px;
+    padding: 0;
+    .wrapper {
+      background: $pink;
+      opacity: 0.5;
+      @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        background: $razzmatazz;
+      }
+    }
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 200px 0 0 200px;
+      border-color: transparent transparent transparent $rose;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover:before {
+      border-color: transparent transparent transparent $monza;
+    }
+    @include breakpoint($mobile) {
+      //padding:14px 15px;
+      font-size: 18px;
+      line-height: 27px;
+      background-position: right top;
+    }
+
+    .action {
+      position: absolute;
+      width: 100%;
+      padding: 40% 0;
+      color: $white;
+      font-size: 39px;
+      line-height: normal;
+      outline: none;
+      position: relative;
+      @extend %clearfix;
+      display: block;
+      @include breakpoint($tablet) {
+        font-size: 30px;
+      }
+
+      @include breakpoint($mobile) {
+        .text br {
+          display: none;
+        }
+      }
+
+      .icon-Rightarrow {
+        color: $white;
+        text-decoration: none;
+        margin-top: 41px;
+        outline: none;
+        display: block;
+        font-size: 61px;
+        text-align: right;
+      }
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  .post-my-voice-actions {
+    text-align: center;
+    vertical-align: middle;
+    background-image: image-url("my-voice.jpg");
+    position: relative;
+    max-height: 315px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0;
+    .wrapper {
+      background: $pink;
+      opacity: 0.5;
+      @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        background: $razzmatazz;
+      }
+    }
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 200px 0 0 200px;
+      border-color: transparent transparent transparent $rose;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover:before {
+      border-color: transparent transparent transparent $monza;
+    }
+    @include breakpoint($mobile) {
+      //padding:14px 15px;
+      font-size: 18px;
+      line-height: 27px;
+      background-position: right top;
+    }
+
+    .action {
+      position: absolute;
+      width: 100%;
+      padding: 45% 0 30% 0;
+      color: $white;
+      font-size: 39px;
+      line-height: normal;
+      outline: none;
+      position: relative;
+      @extend %clearfix;
+      display: block;
+      @include breakpoint($tablet) {
+        font-size: 30px;
+      }
+
+      @include breakpoint($mobile) {
+        .text br {
+          display: none;
+        }
+      }
+
+      .icon-Rightarrow {
+        color: $white;
+        text-decoration: none;
+        margin-top: 41px;
+        outline: none;
+        display: block;
+        font-size: 61px;
+        text-align: right;
+      }
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  .blockquote-block {
+    margin: 0 0 31px;
+    background: $lavender;
+    color: $white;
+    text-align: center;
+    padding: 62px 28px 30px 42px;
+    @include breakpoint($mobile) {
+      padding: 60px 31px 27px 22px;
+    }
+
+    blockquote {
+      text-align: left;
+      padding: 0;
+      margin: 0 0 19px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        left: -19px;
+        top: -37px;
+        width: 36px;
+        height: 27px;
+        background: url(../images/sprite.png) no-repeat -45px -23px;
+        @include breakpoint($mobile) {
+          left: 1px;
+        }
+      }
+      q {
+        display: block;
+        line-height: 1.333em;
+        @include fontsize(24, 16);
+        margin: 0 0 18px;
+        @include breakpoint($mobile) {
+          margin: 0 0 10px;
+        }
+      }
+      cite {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        strong {
+          font-size: 16px;
+          @include breakpoint($mobile) {
+            font-size: 15px;
+          }
+        }
+        a {
+          color: $white;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .icon-Speech1 {
+      font-size: 27px;
+      margin: 0 0 0 -13px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .icon-Twitter {
+      font-size: 27px;
+      margin: 0 0 0 -13px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.red {
+      background: $magenta;
+    }
+  }
 }
-.see-btn{
+
+.more-btn {
+  display: block;
+  padding: 29px 0 61px;
+  text-align: center;
+  @include breakpoint($mobile) {
+    display: none;
+  }
+
+  em {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+    color: $gray;
+    .icon-Downarrow {
+      font-size: 101px;
+    }
+    &:hover {
+      color: $loadmore-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.see-btn {
   width: 100%;
   text-align: center;
   display: block;
   margin-bottom: 107px;
   @include breakpoint($tablet) {
-      margin-bottom:20px;
+    margin-bottom: 20px;
+  }
+}
+
+.brought-btn {
+  display: block;
+  padding: 29px 0 61px;
+  text-align: center;
+  @include breakpoint($mobile) {
+    padding: 40px 0;
   }
 
-}
-.brought-btn{
-    display:block;
-	padding:29px 0 61px;
-	text-align:center;
-	@include breakpoint($mobile) {
-	  padding:40px 0;
-	}
-    .my-voice-icon{
-      margin-bottom: -6px;
-      margin-left: 10px;
-	}
+  .my-voice-icon {
+    margin-bottom: -6px;
+    margin-left: 10px;
+  }
 }
 
 /* forum block styles */
 .forum-block {
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-	position:relative;
-	overflow:hidden;
-	width:100%;
-	@include breakpoint($mobile) {
-		background:$white;
-	}
-	.holder {
-		z-index:1;
-		position:relative;
-		@include container;
-		padding:102px 15px 78px;
-		@include breakpoint($mobile) {
-			padding:62px 20px 40px;
-		}
-	}
+  @include transition($type: all, $time: 0.4s, $ease: ease);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @include breakpoint($mobile) {
+    background: $white;
+  }
 
-	h1 {
-		display:inline-block;
-		vertical-align:top;
-		background:$white;
-		font-size:36px;
-		line-height:36px;
-		color:$heading-link;
-		margin:0;
-		padding:27px 33px 5px 29px;
-		@include breakpoint($mobile) {
-			font-size:27px;
-			line-height:32px;
-			padding:0 0 31px;
+  .holder {
+    z-index: 1;
+    position: relative;
+    @include container;
+    padding: 102px 15px 78px;
+    @include breakpoint($mobile) {
+      padding: 62px 20px 40px;
+    }
+  }
+  h1 {
+    display: inline-block;
+    vertical-align: top;
+    background: $white;
+    font-size: 36px;
+    line-height: 36px;
+    color: $heading-link;
+    margin: 0;
+    padding: 27px 33px 5px 29px;
+    @include breakpoint($mobile) {
+      font-size: 27px;
+      line-height: 32px;
+      padding: 0 0 31px;
+    }
+  }
+  .block {
+    text-align: center;
+    background: $white;
+    padding: 52px 32px 49px;
+    @include breakpoint($mobile) {
+      padding: 0 0 49px;
+    }
+  }
+  .bg-stretch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include breakpoint($mobile) {
+      display: none;
+    }
 
-		}
-	}
-	.block {
-		text-align:center;
-		background:$white;
-		padding:52px 32px 49px;
-
-		@include breakpoint($mobile) {
-			padding:0 0 49px;
-		}
-	}
-	.bg-stretch {
-		position:absolute;
-		left:0;
-		top:0;
-		right:0;
-		bottom:0;
-		@include breakpoint($mobile) {
-			display:none;
-		}
-		img {
-			display:block;
-		}
-	}
+    img {
+      display: block;
+    }
+  }
 }
+
 /* forum table styles */
 .table-from {
-	text-align:left;
-	margin:0 0 41px;
-	@extend %listreset;
-	@include breakpoint($mobile) {
-		margin:0 0 30px;
-	}
-	> li {
-		background:$page-background ;
-		@include border-radius(5px);
-		padding:19px 0 7px;
-		margin:0 0 10px;
-		@include breakpoint($mobile) {
-			padding:8px 15px 15px 18px;
-			margin:0 0 14px;
-		}
-		&.hottopic {
-			.num {
-				border-color:$orange;
-				color:$orange;
-				&:after {
-					background-position:-40px 0;
-				}
-			}
-			li.col02 .text{
-			  color:$orange;
-			}
-		}
-		&.feature {
-			.num {
-				border-color:$yellow;
-				&:after {
-					background-position:-61px 0;
-				}
-			}
-		}
-	}
-	.table-row {
-		@extend %listreset;
-		li {
-			display:inline-block;
-			vertical-align:middle;
-			position:relative;
-			&.col01 {
-				font-size:18px;
-				line-height:26px;
-				font-weight:bold;
-				padding: 0 10px 14px 119px;
-				width:49.6%;
-				@include breakpoint($tablet) {
-					width: 38%;
-					padding:0 10px 14px 60px;
-				}
-				@include breakpoint($mobile) {
-					width:100%;
-					padding:10px 39px 10px 0;
-					line-height:22px;
-				}
-				a {
-					color:$heading-link;
-					text-decoration:underline;
-					font-size: 18px;
-					&:hover { text-decoration:none; }
-				}
-			}
-			&.col02 {
-				width:18.1%;
-				padding:0 0 14px;
-				color:$base-form-text-color;
-				@include breakpoint($tablet) {
-					width:21%;
-					@include breakpoint($mobile) {
-						width:100%;
-						padding:0 0 8px;
-					}
-				}
-				.text {
-					margin:0 9px 0 0;
-					display:inline-block;
-					vertical-align:middle;
-					font-size:17px;
-					line-height:18px;
-					color:$menu-grey;
-					@include breakpoint($mobile) {
-						margin:0 3px 0 0;
-					}
-				}
-			}
-			&.col03 {
-				color:$menu-grey;
-				width:31%;
-				font-size:16px;
-				line-height:18px;
-				display:inline-block;
-				vertical-align:middle;
-				@include breakpoint($tablet) {
-					width:39%;
-					@include breakpoint($mobile) {
-						width:100%;
-						padding:0;
-					}
-				}
-				dl {
-					margin:0;
-					dt {
-						display:inline-block;
-						vertical-align:top;
-						margin:0 0 9px;
-						@include breakpoint($tablet) {
-						}
-						@include breakpoint($mobile) {
-							width:auto;
-							float:left;
-							clear:both;
-							margin-right:6px;
-						}
-					}
-					dd {
-						margin:0;
-						display:inline-block;
-						vertical-align:top;
-						width:68%;
-						margin:0 0 9px;
-						@include breakpoint($tablet) {
-							width:66%;
-						}
-						@include breakpoint($mobile) {
-							width:auto;
-							display:block;
-							margin:0 0 10px;
-						}
-					}
-				}
-				a {
-					font-weight:bold;
-					color:$heading-link;
-					text-decoration:none;
-					&:hover { text-decoration:none; }
-				}
-			}
-		}
-		.num {
-			min-width:50px;
-			height:38px;
-			border:2px solid $gray;
-			@include border-radius(9px);
-			font-size:18px;
-			font-weight:bold;
-			line-height:25px;
-			padding:4px;
-			position:relative;
-			color:$gray;
-			display:inline-block;
-			vertical-align:middle;
-			text-align:center;
-			margin:0 15px 0 0;
-			background:$white;
-			@include breakpoint($mobile) {
-				font-size:16px;
-				padding:0;
-				border:none;
-				height:auto;
-				min-width:inherit;
-				margin:0;
-				background:none;
-			}
-			&:after {
-				position:absolute;
-				right:10px;
-				bottom:-13px;
-				content:"";
-				background:url(../images/sprite.png) no-repeat -80px 0;
-				width:11px;
-				height:13px;
-				@include breakpoint($mobile) {
-					display:none;
-				}
-			}
-		}
-		.icon-Hottopic {
-			 color: $orange;
-			font-size: 34px;
-			left: 30px;
-			margin:-23px 0 0;
-			position: absolute;
-			top: 50%;
-			@include breakpoint($tablet) {
-				left:20px;
-			}
-			@include breakpoint($mobile) {
-				left:auto;
-				right:2px;
-				top:30px;
-			}
-		}
-		.icon-Featured {
-			 color: $yellow;
-			font-size: 31px;
-			left: 73px;
-			margin: -25px 0 0;
-			position: absolute;
-			top:63%;
-			@include breakpoint($tablet) {
-				left:20px;
-			}
-			@include breakpoint($mobile) {
-				left:auto;
-				right:1px;
-				top:31px;
-			}
-		}
-	}
+  text-align: left;
+  margin: 0 0 41px;
+  @extend %listreset;
+  @include breakpoint($mobile) {
+    margin: 0 0 30px;
+  }
+
+  > li {
+    background: $page-background;
+    @include border-radius(5px);
+    padding: 19px 0 7px;
+    margin: 0 0 10px;
+    @include breakpoint($mobile) {
+      padding: 8px 15px 15px 18px;
+      margin: 0 0 14px;
+    }
+
+    &.hottopic {
+      .num {
+        border-color: $orange;
+        color: $orange;
+        &:after {
+          background-position: -40px 0;
+        }
+      }
+      li.col02 .text {
+        color: $orange;
+      }
+    }
+    &.feature {
+      .num {
+        border-color: $yellow;
+        &:after {
+          background-position: -61px 0;
+        }
+      }
+    }
+  }
+  .table-row {
+    @extend %listreset;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      &.col01 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+        padding: 0 10px 14px 119px;
+        width: 49.6%;
+        @include breakpoint($tablet) {
+          width: 38%;
+          padding: 0 10px 14px 60px;
+        }
+
+        @include breakpoint($mobile) {
+          width: 100%;
+          padding: 10px 39px 10px 0;
+          line-height: 22px;
+        }
+
+        a {
+          color: $heading-link;
+          text-decoration: underline;
+          font-size: 18px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      &.col02 {
+        width: 18.1%;
+        padding: 0 0 14px;
+        color: $base-form-text-color;
+        @include breakpoint($tablet) {
+          width: 21%;
+          @include breakpoint($mobile) {
+            width: 100%;
+            padding: 0 0 8px;
+          }
+        }
+
+        .text {
+          margin: 0 9px 0 0;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 17px;
+          line-height: 18px;
+          color: $menu-grey;
+          @include breakpoint($mobile) {
+            margin: 0 3px 0 0;
+          }
+        }
+      }
+      &.col03 {
+        color: $menu-grey;
+        width: 31%;
+        font-size: 16px;
+        line-height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        @include breakpoint($tablet) {
+          width: 39%;
+          @include breakpoint($mobile) {
+            width: 100%;
+            padding: 0;
+          }
+        }
+
+        dl {
+          margin: 0;
+          dt {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 9px;
+            @include breakpoint($tablet) {}
+
+            @include breakpoint($mobile) {
+              width: auto;
+              float: left;
+              clear: both;
+              margin-right: 6px;
+            }
+          }
+          dd {
+            margin: 0;
+            display: inline-block;
+            vertical-align: top;
+            width: 68%;
+            margin: 0 0 9px;
+            @include breakpoint($tablet) {
+              width: 66%;
+            }
+
+            @include breakpoint($mobile) {
+              width: auto;
+              display: block;
+              margin: 0 0 10px;
+            }
+          }
+        }
+        a {
+          font-weight: bold;
+          color: $heading-link;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .num {
+      min-width: 50px;
+      height: 38px;
+      border: 2px solid $gray;
+      @include border-radius(9px);
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 25px;
+      padding: 4px;
+      position: relative;
+      color: $gray;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 15px 0 0;
+      background: $white;
+      @include breakpoint($mobile) {
+        font-size: 16px;
+        padding: 0;
+        border: none;
+        height: auto;
+        min-width: inherit;
+        margin: 0;
+        background: none;
+      }
+
+      &:after {
+        position: absolute;
+        right: 10px;
+        bottom: -13px;
+        content: "";
+        background: url(../images/sprite.png) no-repeat -80px 0;
+        width: 11px;
+        height: 13px;
+        @include breakpoint($mobile) {
+          display: none;
+        }
+      }
+    }
+    .icon-Hottopic {
+      color: $orange;
+      font-size: 34px;
+      left: 30px;
+      margin: -23px 0 0;
+      position: absolute;
+      top: 50%;
+      @include breakpoint($tablet) {
+        left: 20px;
+      }
+
+      @include breakpoint($mobile) {
+        left: auto;
+        right: 2px;
+        top: 30px;
+      }
+    }
+    .icon-Featured {
+      color: $yellow;
+      font-size: 31px;
+      left: 73px;
+      margin: -25px 0 0;
+      position: absolute;
+      top: 63%;
+      @include breakpoint($tablet) {
+        left: 20px;
+      }
+
+      @include breakpoint($mobile) {
+        left: auto;
+        right: 1px;
+        top: 31px;
+      }
+    }
+  }
 }
 
 /* article styles */
-.top-header{
-  background:url(../images/top-header-bg.png) no-repeat left $blue-light;
-  height:83px;
-  width:100%;
-  @include transition ($type:all, $time:0.4s, $ease:ease);
-  .top-header-inner{
+.top-header {
+  background: url(../images/top-header-bg.png) no-repeat left $blue-light;
+  height: 83px;
+  width: 100%;
+  @include transition($type: all, $time: 0.4s, $ease: ease);
+  .top-header-inner {
     @include container;
-	padding:10px 20px 10px 20px;
-     .page-links {
-       letter-spacing:-4px;
-       @extend %listreset;
-       text-align:right;
-       padding:20px 0px 0 0;
-       @include breakpoint($mobile) {
+    padding: 10px 20px 10px 20px;
+    .page-links {
+      letter-spacing: -4px;
+      @extend %listreset;
+      text-align: right;
+      padding: 20px 0px 0 0;
+      @include breakpoint($mobile) {}
 
-       }
-       li {
-       display:inline-block;
-       vertical-align:top;
-       letter-spacing:normal;
-       font-size:16px;
-       line-height:20px;
-       position:relative;
-       padding:0 3px 0 13px;
-       &:first-child {
-         &:after { display:none; }
-       }
-       &:after {
-         position:absolute;
-         left:0;
-         top:3px;
-         content:"";
-         width:10px;
-         height:16px;
-         background:image-url('sprite.png') no-repeat -14px -62px;
-       }
-       a{
-         color:$heading-link;
-         text-decoration:underline;
-         &:hover { text-decoration:none; }
-       }
-     }
-   }
+      li {
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: normal;
+        font-size: 16px;
+        line-height: 20px;
+        position: relative;
+        padding: 0 3px 0 13px;
+        &:first-child {
+          &:after {
+            display: none;
+          }
+        }
+        &:after {
+          position: absolute;
+          left: 0;
+          top: 3px;
+          content: "";
+          width: 10px;
+          height: 16px;
+          background: image-url("sprite.png") no-repeat -14px -62px;
+        }
+        a {
+          color: $heading-link;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
-.page-main{
+
+.page-main {
   @extend %clearfix;
-  width:100%;
-  background:$white;
-  padding-bottom:1px;
+  width: 100%;
+  background: $white;
+  padding-bottom: 1px;
 }
 
-
-
-.accessibility{
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:0;
-	overflow:hidden;
-	&:focus{
-		position:static;
-		width:auto;
-		height:auto;
-	}
-}
-.hidden{
-	position:absolute;
-	left:-9999px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
+.accessibility {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 0;
+  overflow: hidden;
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
 }
 
-.img-holder{
-  .caption{
-    .title{
-	  -webkit-animation: title 1s; /* Chrome, Safari, Opera */
+.hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.img-holder {
+  .caption {
+    .title {
+      -webkit-animation: title 1s;
+      /* Chrome, Safari, Opera */
       animation: title 1s;
-	  position: relative;
-	}
-	.text{
-	  -webkit-animation: subtitle 1s; /* Chrome, Safari, Opera */
+      position: relative;
+    }
+    .text {
+      -webkit-animation: subtitle 1s;
+      /* Chrome, Safari, Opera */
       animation: subtitle 1s;
-	  position: relative;
-	}
+      position: relative;
+    }
   }
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes subtitle {
-    from {bottom: -30px; opacity:0;}
-    to {bottom: 0px; opacity:1;}
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
 }
+
 
 /* Standard syntax */
 @keyframes subtitle {
-   from {bottom: -30px; opacity:0;}
-    to {bottom: 0px; opacity:1;}
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
 }
 
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes title {
-    from {top: -30px; opacity:0;}
-    to {top: 0px; opacity:1;}
+  from {
+    top: -30px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
+
 
 /* Standard syntax */
 @keyframes title {
-   from {top: -30px; opacity:0;}
-    to {top: 0px; opacity:1;}
+  from {
+    top: -30px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
