@@ -263,6 +263,8 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
   }
    if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";  
+    dpm($form['field_event_tid']);
+    dpm($form);
     foreach ($form['field_event_tid']['#options'] as $tid => $val){
      foreach($val->option as $key=>$opt){   
       $nodes = count(taxonomy_select_nodes($key, FALSE));
