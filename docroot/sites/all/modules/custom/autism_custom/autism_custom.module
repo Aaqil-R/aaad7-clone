@@ -261,16 +261,13 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
    $form['#info']['search_box'] = array('value' => 'search_community');
    $form['#validate'][] = 'autism_custom_search_community_submit';
   }
-    if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";  
-   
     foreach ($form['field_event_tid']['#options'] as $tid => $val){  
-      $nodes = count(taxonomy_select_nodes($tid, FALSE));
-      dpm($tid,"tid")
-      dpm($nodes, "nodes");
-      dpm($form['field_event_tid']['#options'][$tid], "key");
-      dpm($form['field_event_tid']['#options'][$val], "val");
-      $form['field_event_tid']['#options'][$tid] = $form['field_event_tid']['#options'][$tid]." (".$nodes.")"; 
+      if($tid!= "All"){
+        $nodes = count(taxonomy_select_nodes($tid, FALSE));
+        $form['field_event_tid']['#options'][$tid] = $form['field_event_tid']['#options'][$tid]." (".$nodes.")"; 
+      }  
       $nodescount +=$nodes; 
     }
     if(0 < $nodescount){
