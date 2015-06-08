@@ -260,9 +260,7 @@ Drupal.behaviors.ambitious = {
 	  $(".form_firstname").append(username);
 	}
 
-	$('#not_right_now').on("click", function () {
-	    $('.block-close').trigger( "click" );
-	});
+ 
       
 	jQuery(window).on('load', function(){
         $('.card-stream .view-content').masonry ({
