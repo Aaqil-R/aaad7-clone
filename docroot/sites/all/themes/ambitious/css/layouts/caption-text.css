@@ -375,14 +375,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-top: 100px;
 }
 
-/* line 19, ../../sass/layouts/caption-text.scss */
+/* line 21, ../../sass/layouts/caption-text.scss */
 .front .caption-text .caption-text-titles .caption-text-title.caption-text-title-2, page-node-221546 .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   font-size: inherit;
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   display: block;
 }
 
-/* line 25, ../../sass/layouts/caption-text.scss */
+/* line 28, ../../sass/layouts/caption-text.scss */
 .caption-text {
   -webkit-animation: caption-text-titles 1s;
   -moz-animation: caption-text-titles 1s;
@@ -392,17 +392,18 @@ body > .jcf-select-drop.jcf-drop-flipped {
   position: relative;
   margin-top: 75px;
 }
-/* line 32, ../../sass/layouts/caption-text.scss */
+/* line 35, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles {
   text-align: left;
 }
 @media (max-width: 767px) {
-  /* line 32, ../../sass/layouts/caption-text.scss */
+  /* line 35, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles {
     text-align: center;
+    margin-left: 0em;
   }
 }
-/* line 38, ../../sass/layouts/caption-text.scss */
+/* line 43, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles .caption-text-title span {
   letter-spacing: -1px;
   background: #ffffff;
@@ -411,12 +412,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
   box-shadow: 10px 0 0 #ffffff, -10px 0 0 #ffffff;
 }
 @media (max-width: 480px) {
-  /* line 38, ../../sass/layouts/caption-text.scss */
+  /* line 43, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title span {
     padding: initial;
   }
 }
-/* line 53, ../../sass/layouts/caption-text.scss */
+/* line 58, ../../sass/layouts/caption-text.scss */
 .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   margin-left: 80px;
   font-size: 36px;
@@ -424,30 +425,30 @@ body > .jcf-select-drop.jcf-drop-flipped {
   display: none;
 }
 @media (max-width: 480px) {
-  /* line 53, ../../sass/layouts/caption-text.scss */
+  /* line 58, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 30px;
   }
 }
 @media (min-width: 767px) {
-  /* line 25, ../../sass/layouts/caption-text.scss */
+  /* line 28, ../../sass/layouts/caption-text.scss */
   .caption-text {
     margin-left: 1em;
     margin-top: 75px;
   }
-  /* line 68, ../../sass/layouts/caption-text.scss */
+  /* line 73, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
-    margin-left: 130px;
+    margin-left: 120px;
     display: block;
   }
 }
 @media (min-width: 1080px) {
-  /* line 25, ../../sass/layouts/caption-text.scss */
+  /* line 28, ../../sass/layouts/caption-text.scss */
   .caption-text {
     margin-left: 0;
-    margin-top: 55px;
+    margin-top: 9em;
   }
-  /* line 78, ../../sass/layouts/caption-text.scss */
+  /* line 86, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
     margin-left: 280px;
   }
@@ -575,25 +576,38 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 }
     */
-/* line 211, ../../sass/layouts/caption-text.scss */
+/* line 218, ../../sass/layouts/caption-text.scss */
 .caption-text-title-1.title2 {
   margin-top: 10px;
 }
 @media (min-width: 768px) {
-  /* line 211, ../../sass/layouts/caption-text.scss */
+  /* line 218, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 186px;
   }
 }
 @media (max-width: 767px) {
-  /* line 211, ../../sass/layouts/caption-text.scss */
+  /* line 218, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 100px;
   }
 }
 @media (max-width: 500px) {
-  /* line 211, ../../sass/layouts/caption-text.scss */
+  /* line 218, ../../sass/layouts/caption-text.scss */
   .caption-text-title-1.title2 {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 1180px) {
+  /* line 239, ../../sass/layouts/caption-text.scss */
+  .node-type-topic .caption-text .caption-text-titles {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 767px) {
+  /* line 239, ../../sass/layouts/caption-text.scss */
+  .node-type-topic .caption-text .caption-text-titles {
+    margin-left: 0em;
   }
 }
