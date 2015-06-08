@@ -263,12 +263,10 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
   }
    if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";   
-    foreach ($form['field_event_tid']['#options'] as $tids => $val){
-     foreach($val->option as $keysval=>$opt){   
-      $nodes = count(taxonomy_select_nodes($keysval, FALSE));
-      $form['field_event_tid']['#options'][$tids]->option[$keysval]= $opt." (".$nodes.")"; 
+    foreach ($form['field_event_tid']['#options'] as $tid => $val){  
+      $nodes = count(taxonomy_select_nodes($tid, FALSE));
+      $form['field_event_tid']['#options'][$tid] = $form['field_event_tid']['#options'][$tid]." (".$nodes.")"; 
       $nodescount +=$nodes; 
-     }
     } 
     if(0 < $nodescount){
       $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
