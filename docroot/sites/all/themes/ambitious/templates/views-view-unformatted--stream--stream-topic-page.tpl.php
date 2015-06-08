@@ -12,16 +12,16 @@
 <?php endif; ?>-->
 
 <?php
-	$additional_classes = "";
+	$additional_classes = "js-stream-intronew card-transparent";
 	$node = $variables['node'];
 ?>
 
 <?php foreach ($rows as $id => $row): ?>
   <?php if ($id == 0 && isset($node)):?> 
-    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . $additional_classes .'"';  } ?>>
+    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .' '. $additional_classes .'"';  } ?>>
       <!-- Teaser View of the topic --> 
       <?php if(isset($node->title)): ?>
-        <h1><?php print $node->title;?></h1>
+        <h4><?php print $node->title;?></h4>
       <?php endif; ?>
       <?php if(isset($node->body['und'][0]['safe_value'])): ?>
         <?php print $node->body['und'][0]['safe_value']; ?>
