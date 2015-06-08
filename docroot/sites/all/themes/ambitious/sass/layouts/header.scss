@@ -2,177 +2,176 @@
 
 // turn off the text decoration for all the <a> links
 // which are in an unordered list.
-ul a {    
-  text-decoration: none;   
+ul a {
+  text-decoration: none;
 }
 
 /* top bar style */
 .top-bar {
-  position:fixed;
+  position: fixed;
   z-index: 9998;
-  background:$base-text-color;
-  width:100%;
+  background: $base-text-color;
+  width: 100%;
   min-height: 50px;
-  top:0;
+  top: 0;
   display: block;
-    .holder {
+  .holder {
     @include container;
     @extend %clearfix;
-    padding:12px 15px 12px;
+    padding: 12px 15px 12px;
   }
-
   a {
-      @include link-color($gray);
-
-      img{
-        vertical-align: middle;
-        margin-right: 10px;
-        @include border-radius(5px);
-      }
+    @include link-color($gray);
+    img {
+      vertical-align: middle;
+      margin-right: 10px;
+      @include border-radius(5px);
+    }
   }
-  
   /* login info styles */
   .login-info {
-
-    float:right;  
-
+    float: right;
     .logout {
-      float:left;
-      margin:6px 0 0;
-      text-decoration:underline;
+      float: left;
+      margin: 6px 0 0;
+      text-decoration: underline;
     }
   }
 }
+
 /* header styles */
 #header {
-  width:100%;
-  z-index:9999;
-  position:relative;
+  width: 100%;
+  z-index: 9999;
+  position: relative;
   margin-bottom: 33px;
   .header-top {
-    width:100%;
-    z-index:9999;
-    background:$white;
+    width: 100%;
+    z-index: 9999;
+    background: $white;
     position: fixed;
     left: 0;
     top: 50px;
     border-bottom: 1px solid $border-color;
-    @include box-shadow(0 0 5px rgba(24,24,24,.25));
+    @include box-shadow(0 0 5px rgba(24, 24, 24, 0.25));
     @include transition(all);
     .holder {
       @include container;
       @extend %clearfix;
-      padding:26px 15px;
+      padding: 26px 15px;
       @include breakpoint($mobile) {
-        padding:22px 20px 0;
+        padding: 22px 20px 0;
       }
     }
   }
   /* page logo styles */
   .logo {
-    float:left;
-    width:259px;
-    height:50px;
+    float: left;
+    width: 259px;
+    height: 50px;
     @include transition(all);
     @include breakpoint($mobile) {
-      width:202px;
-      height:39px;
-      float:none;
-      margin:0 0 19px;
+      width: 202px;
+      height: 39px;
+      float: none;
+      margin: 0 0 19px;
     }
+
     img {
-      display:block;
-      height:auto;
+      display: block;
+      height: auto;
       @include transition(all);
     }
   }
   .school-slide {
-      position:fixed;
-      padding:100px 0 0;
-      margin-top: 50px;
-      @include transition(margin-top);
-      @include breakpoint($mobile) {
-        padding:120px 0 0;
-      }
+    position: fixed;
+    padding: 100px 0 0;
+    margin-top: 50px;
+    @include transition(margin-top);
+    @include breakpoint($mobile) {
+      padding: 120px 0 0;
+    }
   }
   &.fixed-position {
     margin-bottom: 49px;
     .header-top {
-      top:0;
+      top: 0;
     }
     .holder {
-      padding:11px 15px;
+      padding: 11px 15px;
       @include breakpoint($mobile) {
-        padding:0 20px;
+        padding: 0 20px;
       }
     }
     .right-info {
       @include breakpoint($mobile) {
-        overflow:hidden;
-        border-top:1px solid $gray;
+        overflow: hidden;
+        border-top: 1px solid $gray;
       }
     }
     .logo {
-      margin:6px 0 0;
-      width:195px;
-      height:38px;
-      .page-school &{
+      margin: 6px 0 0;
+      width: 195px;
+      height: 38px;
+      .page-school & {
         margin: 0;
-        img{
+        img {
           width: 137px;
         }
       }
-      img{
+      img {
         max-width: 186px;
       }
       @include breakpoint($mobile) {
-        display:none;
+        display: none;
       }
     }
     .school-slide {
-      position:fixed;
-      padding:100px 0 0;
-      margin-top:0px;
+      position: fixed;
+      padding: 100px 0 0;
+      margin-top: 0px;
       @include breakpoint($mobile) {
-        padding:40px 0 0;
+        padding: 40px 0 0;
       }
     }
     .nav-holder {
-      position:fixed;
+      position: fixed;
       //padding:100px 0 0;
-      margin-top:70px;
+      margin-top: 70px;
       @include breakpoint($mobile) {
         //padding:53px 0 0;
-        margin-top:50px;
+        margin-top: 50px;
       }
     }
     .filter-slide {
-      position:fixed;
-      padding:100px 0 0;
+      position: fixed;
+      padding: 100px 0 0;
       @include breakpoint($mobile) {
-        padding:53px 0 0;
+        padding: 53px 0 0;
       }
     }
   }
 }
+
 /* headre right info styles */
 .right-info {
   @extend %listreset;
-  padding:4px 0 0;
-  float:right;
+  padding: 4px 0 0;
+  float: right;
   @include breakpoint($mobile) {
-    float:none;
-    margin:0 -20px;
-    padding:0;
-    border-top:2px solid $gray;
+    float: none;
+    margin: 0 -20px;
+    padding: 0;
+    border-top: 2px solid $gray;
   }
+
   li {
-    float:left;
-    font-size:18px;
-    line-height:26px;
-    padding:7px 30px;
-    position:relative;
-    color:$gray;
+    float: left;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 7px 30px;
+    position: relative;
+    color: $gray;
     @include breakpoint($mobile) {
       border-left: 2px solid $gray;
       font-size: 16px;
@@ -180,702 +179,754 @@ ul a {
       text-align: center;
       width: 22.3%;
     }
+
     &:after {
-      position:absolute;
-      left:0;
-      top:0;
-      content:"";
-      width:1px;
-      background:$gray;;
-      height:40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 1px;
+      background: $gray;
+      height: 40px;
       @include breakpoint($mobile) {
-        display:none;
+        display: none;
       }
     }
     &:first-child {
-      padding:9px 24px;
+      padding: 9px 24px;
       @include breakpoint($mobile) {
         padding: 12px 1px 14px 20px;
         width: 55%;
-        border:none;        
+        border: none;
       }
+
       &:after {
-        display:none;
+        display: none;
       }
     }
     a {
       @include link-color($heading-link);
       &:hover {
-        color:$orange;
-        .page-school &{
-          color:$green;
+        color: $orange;
+        .page-school & {
+          color: $green;
         }
       }
     }
-    &.menu {padding-right: 0;}
+    &.menu {
+      padding-right: 0;
+    }
   }
-  li{
-      a{
-        &:hover{
-          span{
-            color: $orange;
-          }
+  li {
+    a {
+      &:hover {
+        span {
+          color: $orange;
         }
       }
+    }
     .menu {
-      padding:9px 0 0 10px;
-      min-width:119px;
+      padding: 9px 0 0 10px;
+      min-width: 119px;
       @include breakpoint($mobile) {
-        min-width:10px;
-        width:22%;
-        padding:12px 0 14px;
-        text-align:center;
+        min-width: 10px;
+        width: 22%;
+        padding: 12px 0 14px;
+        text-align: center;
       }
     }
   }
-  a.menu-opener{
-    float:right;
-    position:relative;
-    padding:0 0 0 44px;
+  a.menu-opener {
+    float: right;
+    position: relative;
+    padding: 0 0 0 44px;
     @include breakpoint($mobile) {
-      padding:0;
-      width:31px;
-      height:23px;
-      float:none;
-      display:inline-block;
-      vertical-align:top;
+      padding: 0;
+      width: 31px;
+      height: 23px;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
     }
+
     &:after {
-      position:absolute;
-      left:0;
-      top:1px;
-      content:"";
-      width:31px;
-      height:23px;
-      background:image-url('sprite.png') no-repeat;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      content: "";
+      width: 31px;
+      height: 23px;
+      background: image-url("sprite.png") no-repeat;
     }
     &:hover {
       &:after {
-        background-position:0 -29px;
-        .page-school &{
+        background-position: 0 -29px;
+        .page-school & {
           background-position: -50px -89px;
         }
       }
     }
     .menu-text {
       @include breakpoint($mobile) {
-        display:none;
+        display: none;
       }
     }
-    .icon-Close { display:none; }
-    .close { display:none; }
+    .icon-Close {
+      display: none;
+    }
+    .close {
+      display: none;
+    }
   }
   a.school-opener {
-    position:relative;
-    display:block;
+    position: relative;
+    display: block;
     @include breakpoint($mobile) {
-      display:inline-block;
-      vertical-align:top;
+      display: inline-block;
+      vertical-align: top;
     }
-    .close { display:none; }
-    .icon-Close { display:none; }
+
+    .close {
+      display: none;
+    }
+    .icon-Close {
+      display: none;
+    }
   }
   a.search-opener {
     .icon-search {
-      font-size:25px;
-      color:$menu-grey;
+      font-size: 25px;
+      color: $menu-grey;
       @include breakpoint($mobile) {
-        font-size:22px;
+        font-size: 22px;
       }
+
       &:hover {
-        color:$orange;
-        .page-school &{
-          color:$green;
+        color: $orange;
+        .page-school & {
+          color: $green;
         }
       }
     }
-    em { display:none; }
-  }
-}
-.search-active{
-  a.search-opener {
-    .icon-search {
-      color:$orange;
+    em {
+      display: none;
     }
   }
-  .search-slide  {
-    max-height:138px;
+}
+
+.search-active {
+  a.search-opener {
+    .icon-search {
+      color: $orange;
+    }
+  }
+  .search-slide {
+    max-height: 138px;
   }
 }
+
 /* search slide styles */
 .search-slide {
-  overflow:hidden;
-  max-height:0;
+  overflow: hidden;
+  max-height: 0;
   @include transition(all, 0.4s, ease-in-out);
   @include container;
   .search-form {
     //padding:20px 15px 41px;
     @include breakpoint($mobile) {
       //padding:20px 20px 25px;
-      border-top:2px solid $gray;
+      border-top: 2px solid $gray;
     }
-    label { display:none; }
-    input[type="submit"] { display:none; }
-    input[type="search"], input[type="text"]{
 
+    label {
+      display: none;
+    }
+    input[type="submit"] {
+      display: none;
+    }
+    input[type="search"], input[type="text"] {
       @include input-placeholder {
         font-weight: 200;
         color: $menu-grey;
       }
 
-      border:none;
-      width:100%;
-      height:76px;
-      font-size:24px;
-      line-height:36px;
-      padding:20px 25px;
-      background:$page-background;
+      border: none;
+      width: 100%;
+      height: 76px;
+      font-size: 24px;
+      line-height: 36px;
+      padding: 20px 25px;
+      background: $page-background;
       @include box-sizing($type: border-box);
       @include breakpoint($mobile) {
-        height:48px;
-        font-size:16px;
-        line-height:20px;
-        padding:14px 15px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 14px 15px;
       }
     }
   }
 }
+
 /* school slide styles */
 .school-slide {
-  width:430px;
-  height:100vh;
-  padding:45px 0 0;
-  background:$white;
-  position:absolute;
-  top:0;
-  right:0;
-  margin-right:-550px;
-  z-index:99;
-  @include box-shadow(0 2px 7px rgba(24,24,24,.5)); 
+  width: 430px;
+  height: 100vh;
+  padding: 45px 0 0;
+  background: $white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -550px;
+  z-index: 99;
+  @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
   @include breakpoint($mobile) {
-    width:285px;
-    left:0;
-    margin-left:-300px;
+    width: 285px;
+    left: 0;
+    margin-left: -300px;
   }
+
   .title {
-    display:block;
-    font-size:27px;
-    line-height:35px;
-    color:$heading-link;
-    padding:7px 31px 29px;
+    display: block;
+    font-size: 27px;
+    line-height: 35px;
+    color: $heading-link;
+    padding: 7px 31px 29px;
     @include breakpoint($mobile) {
-      font-size:22px;
-      line-height:30px;
-      padding:24px 31px 19px;
+      font-size: 22px;
+      line-height: 30px;
+      padding: 24px 31px 19px;
     }
   }
   .nav {
     @extend %listreset;
-    border-top:2px solid $border-color;
+    border-top: 2px solid $border-color;
     li {
-      font-size:18px;
-      line-height:29px;
-      padding:9px 31px 11px;
-      border-bottom:2px solid $border-color;
+      font-size: 18px;
+      line-height: 29px;
+      padding: 9px 31px 11px;
+      border-bottom: 2px solid $border-color;
       a {
-        color:$heading-link;
-        text-decoration:none;
-        &:hover{
-          color:$orange;
+        color: $heading-link;
+        text-decoration: none;
+        &:hover {
+          color: $orange;
           .page-school & {
-            color:$green
+            color: $green;
           }
         }
       }
     }
   }
 }
-.school-active {
-  .visual, .block-easy-breadcrumb{
-    margin:0 0 0 -430px;
-    @include breakpoint($mobile) {
-      margin-left:285px; 
-    }
-  }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb{
-    margin-left:-430px;
-    @include breakpoint($mobile) {
-      margin-left:285px;
-    }
-  }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header,  .block-easy-breadcrumb{
-    width:100%;
-    max-width:none;
-  }
-  
-  .visual .img-holder .caption-frame{
-    width:100%;
-    margin:0;
-    left:0;
-    padding:0 20px;
-  }
 
+.school-active {
+  .visual, .block-easy-breadcrumb {
+    margin: 0 0 0 -430px;
+    @include breakpoint($mobile) {
+      margin-left: 285px;
+    }
+  }
+  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb {
+    margin-left: -430px;
+    @include breakpoint($mobile) {
+      margin-left: 285px;
+    }
+  }
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
+    width: 100%;
+    max-width: none;
+  }
+  .visual .img-holder .caption-frame {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
+  }
   li {
     a.school-opener {
-    padding:0 0 0 39px;
-    .icon-Close {
-      display:block;
-      position:absolute;
-      font-size:22px;
-      left:0;
-      top:1px;
-      color:$orange;
-    }
-    .close {
-      display:block;
-      @include breakpoint($mobile) {
-        display:inline-block;
-        vertical-align:top;
+      padding: 0 0 0 39px;
+      .icon-Close {
+        display: block;
+        position: absolute;
+        font-size: 22px;
+        left: 0;
+        top: 1px;
+        color: $orange;
       }
-    }
-    .menu-text { display:none; }
+      .close {
+        display: block;
+        @include breakpoint($mobile) {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+      .menu-text {
+        display: none;
+      }
     }
   }
   .school-slide {
-    margin-right:0;
+    margin-right: 0;
     @include breakpoint($mobile) {
-      margin-left:0;
+      margin-left: 0;
     }
   }
 }
+
 /* main nav styles */
 .nav-holder {
-  width:430px;
+  width: 430px;
   -webkit-overflow-scrolling: touch;
-  height:100vh;
-  padding:45px 0 50px;
-  background:$white;
-  position:absolute;
-  top:0px;
-  right:0;
-  margin-right:-460px;
-  z-index:99;
-  @include box-shadow(0 2px 7px rgba(24,24,24,.5));
-  overflow-y: scroll; 
+  height: 100vh;
+  padding: 45px 0 50px;
+  background: $white;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  margin-right: -460px;
+  z-index: 99;
+  @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+  overflow-y: scroll;
   @include breakpoint($mobile) {
-    margin-right:-310px;
-    width:285px;
+    margin-right: -310px;
+    width: 285px;
     padding-top: 35px;
   }
-    .btn{
-     margin-left:32px;
-     margin-right:32px;
-     margin-bottom:33px;
-     display:block;
-     padding:10px 9px;
-     font-size:20px;
-     em{
-     right:-20px;
-     top:5px;
-     }
-     @include breakpoint($mobile) {
-       margin: 0 0 -2px;
-       position: relative;
-       z-index: 2;
-     @include border-radius(0);
-       border: none;
-       padding: 14px 0;
-       font-size: 18px;
-       text-align: left;
-     &:hover{
-       opacity: .9;
-     }
-     span{
-       padding: 0 0 0 25px;
-       position: relative;
-       display: inline-block;
-       vertical-align: top;
-       word-spacing: 3px;
-       .icon-Rightarrow{
-          display:none;
-       }
-     }
-     }
+
+  .btn {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 33px;
+    display: block;
+    padding: 10px 9px;
+    font-size: 20px;
+    em {
+      right: -20px;
+      top: 5px;
+    }
+    @include breakpoint($mobile) {
+      margin: 0 0 -2px;
+      position: relative;
+      z-index: 2;
+      @include border-radius(0);
+      border: none;
+      padding: 14px 0;
+      font-size: 18px;
+      text-align: left;
+      &:hover {
+        opacity: .9;
+      }
+      span {
+        padding: 0 0 0 25px;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        word-spacing: 3px;
+        .icon-Rightarrow {
+          display: none;
+        }
+      }
+    }
   }
 }
- 
+
 /* nav styles */
 nav {
-  >ul {
+  > ul {
     @extend %listreset;
-    border-top:2px solid $border-color;
+    border-top: 2px solid $border-color;
     > li {
-      font-size:18px;
-      line-height:29px;
+      font-size: 18px;
+      line-height: 29px;
       a {
-        color:$heading-link;
-        position:relative;
-        text-decoration:none;
-        display:block;
-		font-weight: lighter;
-        padding:9px 31px 11px;
-        border-bottom:2px solid $border-color;
+        color: $heading-link;
+        position: relative;
+        text-decoration: none;
+        display: block;
+        font-weight: lighter;
+        padding: 9px 31px 11px;
+        border-bottom: 2px solid $border-color;
         @include breakpoint($mobile) {
-          padding:9px 31px 11px 25px;
-         }
+          padding: 9px 31px 11px 25px;
+        }
+
         .icon-Downarrow {
-          position:absolute;
-          right:0;
-          top:0;
-          width:50px;
-          height:100%;
-          font-size:13px;
-          padding:18px 0 0;
-          text-align:center;
-          background:$arrow-bg;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50px;
+          height: 100%;
+          font-size: 25px;
+          padding-top: 14px;
+          //font-size:13px;
+          //padding:18px 0 0;
+          text-align: center;
+          background: $arrow-bg;
         }
         .icon-Uparrow {
-          display:none;
-          position:absolute;
-          right:0;
-          top:0;
-          width:50px;
-          height:100%;
-          font-size:13px;
-          padding:16px 0 0;
-          text-align:center;
-          background:$arrow-bg;
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50px;
+          height: 100%;
+          font-size: 25px;
+          padding-top: 14px;
+          //font-size:13px;
+          //padding:16px 0 0;
+          text-align: center;
+          background: $arrow-bg;
         }
       }
     }
     li.active {
-      .icon-Downarrow  { display:none; }
-      .icon-Uparrow { display:block; }
+      .icon-Downarrow {
+        display: none;
+      }
+      .icon-Uparrow {
+        display: block;
+      }
     }
   }
   .slide {
     @extend %listreset;
     > li {
-
-      font-size:18px;
-      line-height:29px;
+      font-size: 18px;
+      line-height: 29px;
       a {
-        display:block;
-        padding:9px 31px 11px 45px;
-        background:$arrow-bg;
-        color:$heading-link;
-        text-decoration:none;
+        display: block;
+        padding: 9px 31px 11px 45px;
+        background: $arrow-bg;
+        color: $heading-link;
+        text-decoration: none;
       }
     }
   }
   ul li a {
     &:hover {
-      color:$orange;
+      color: $orange;
       .page-school & {
-        color:$green
+        color: $green;
       }
     }
   }
 }
 
 /* school slide styles */
-.filter-slide{
-  width:430px;
-  height:100vh;
-  padding:133px 0 0;
-  background:$white;
-  position:absolute;
-  overflow-y:scroll;
-  top:0;
-  right:0;
-  margin-right:-550px;
-  z-index:99;
-  @include box-shadow(0 2px 7px rgba(24,24,24,.5)); 
+.filter-slide {
+  width: 430px;
+  height: 100vh;
+  padding: 133px 0 0;
+  background: $white;
+  position: absolute;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  margin-right: -550px;
+  z-index: 99;
+  @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
   @include breakpoint($mobile) {
-    width:285px;
-    left:0;
-    margin-left:-300px;
+    width: 285px;
+    left: 0;
+    margin-left: -300px;
   }
-  .filterbutton{
+
+  .filterbutton {
     float: right;
-       cursor: pointer;
-    &:hover{
-      color:$orange;
+    cursor: pointer;
+    &:hover {
+      color: $orange;
     }
   }
-  .button-holder{
-     margin:20px 32px 30px;
-     a.btn{
-       width:100%;
-     }
+  .button-holder {
+    margin: 20px 32px 30px;
+    a.btn {
+      width: 100%;
+    }
   }
   .title {
-    display:block;
-    font-size:27px;
-    line-height:35px;
-    color:$heading-link;
-    padding:7px 31px 29px;
-    margin:0;
+    display: block;
+    font-size: 27px;
+    line-height: 35px;
+    color: $heading-link;
+    padding: 7px 31px 29px;
+    margin: 0;
     @include breakpoint($mobile) {
-      font-size:22px;
-      line-height:30px;
-      padding:24px 31px 19px;
+      font-size: 22px;
+      line-height: 30px;
+      padding: 24px 31px 19px;
     }
   }
-  .nav-filter{
+  .nav-filter {
     @extend %listreset;
-     
     li {
-      font-size:18px;
-      line-height:29px;
-      padding:0 31px; 
+      font-size: 18px;
+      line-height: 29px;
+      padding: 0 31px;
       a {
-        color:$heading-link;
-        text-decoration:none;
-        background:$page-background;
-        padding:10px 15px;
+        color: $heading-link;
+        text-decoration: none;
+        background: $page-background;
+        padding: 10px 15px;
         display: block;
         margin-bottom: 10px;
-        @include border-radius(5px);  
-        span{
-          display:none; 
-                      float: right;
-                      margin-top: 6px;
-        }     
-        &:hover, &.active{
-                      color:$orange;
+        @include border-radius(5px);
+        span {
+          display: none;
+          float: right;
+          margin-top: 6px;
         }
-        &.active{ 
-                      span{
-                        display: inline-block;
-                      }
+        &:hover, &.active {
+          color: $orange;
+        }
+        &.active {
+          span {
+            display: inline-block;
+          }
         }
       }
     }
   }
 }
+
 .filter-active {
   .visual {
-    margin:0 0 0 -430px;
+    margin: 0 0 0 -430px;
     @include breakpoint($mobile) {
-      margin-left:285px; 
+      margin-left: 285px;
     }
   }
   #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
-    margin-left:-430px;
+    margin-left: -430px;
     @include breakpoint($mobile) {
-      margin-left:285px;
+      margin-left: 285px;
     }
   }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header{
-    width:100%;
-    max-width:none;
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
+    width: 100%;
+    max-width: none;
   }
-  .visual .img-holder .caption-frame{
-    width:100%;
-    margin:0;
-    left:0;
-    padding:0 20px;
-  } 
+  .visual .img-holder .caption-frame {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
+  }
   .filter-slide {
-    margin-right:0;
+    margin-right: 0;
     @include breakpoint($mobile) {
-      margin-left:0;
+      margin-left: 0;
     }
   }
 }
 
 /* nav active styles */
 .nav-active {
-  .visual, .banner_text_inner, .block-easy-breadcrumb{
-    margin:0 0 0 -430px;
+  .visual, .banner_text_inner, .block-easy-breadcrumb {
+    margin: 0 0 0 -430px;
     @include breakpoint($mobile) {
-      margin-left:-285px;
+      margin-left: -285px;
     }
   }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header{
-    margin-left:-430px;
+  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+    margin-left: -430px;
     @include breakpoint($mobile) {
-      margin-left:-285px;
+      margin-left: -285px;
     }
-    #main2 .action-block{
-      margin-left:0;
+
+    #main2 .action-block {
+      margin-left: 0;
     }
   }
   //we need to refactor this below code
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, .top-header, .banner_text_inner, .block-easy-breadcrumb{
-    width:100%;
-    max-width:none;
-    @include transition ($type:all, $time:0.4s, $ease:ease);
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, .top-header, .banner_text_inner, .block-easy-breadcrumb {
+    width: 100%;
+    max-width: none;
+    @include transition($type: all, $time: 0.4s, $ease: ease);
   }
-  &.node-type-article #content_bottom{
-    float:none;
+  &.node-type-article #content_bottom {
+    float: none;
   }
-  .visual .img-holder .caption-frame{
-    width:100%;
-    margin:0;
-    left:0;
-    padding:0 20px;
+  .visual .img-holder .caption-frame {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
   }
   .nav-holder {
-    margin-right:0;
+    margin-right: 0;
   }
   li a.menu-opener {
-    color:$heading-link;
+    color: $heading-link;
     .icon-Close {
-      display:block;
-      position:absolute;
-      font-size:22px;
-      left:4px;
-      top:1px;
-      color:$orange;
+      display: block;
+      position: absolute;
+      font-size: 22px;
+      left: 4px;
+      top: 1px;
+      color: $orange;
     }
-    &:after { display:none; }
+    &:after {
+      display: none;
+    }
     .close {
-      display:block;
-      &:hover{
-        color:$orange;
+      display: block;
+      &:hover {
+        color: $orange;
       }
       @include breakpoint($mobile) {
-        display:none;
+        display: none;
       }
     }
-    .menu-text { display:none; }
+    .menu-text {
+      display: none;
+    }
   }
 }
+
 /* main information part styles */
-.text-section{
+.text-section {
   //margin-bottom:59px;
   //margin-top:28px; were these needed?
-  .text-right-section{
-    float:right;
-  margin-top: 40px;
-  @include breakpoint($tablet) {
-  
-  }
-  a{
-    font-weight: bold;
-    font-size: 20px;
-    display: block;
-    text-decoration: underline;
-    text-align: right;
-    margin-bottom:5px;
-    &:hover{
-      text-decoration:none;
+  .text-right-section {
+    float: right;
+    margin-top: 40px;
+    @include breakpoint($tablet) {}
+
+    a {
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      text-decoration: underline;
+      text-align: right;
+      margin-bottom: 5px;
+      &:hover {
+        text-decoration: none;
+      }
     }
-  } 
   }
-  h2{
-    max-width:666px;
-    margin-bottom:23px;
-  @include breakpoint($tablet) {
-    max-width:inherit;
+  h2 {
+    max-width: 666px;
+    margin-bottom: 23px;
+    @include breakpoint($tablet) {
+      max-width: inherit;
+    }
   }
-  }
-  p{
-    max-width:666px;
-  @include breakpoint($tablet) {
-    max-width:inherit;
-  }
+  p {
+    max-width: 666px;
+    @include breakpoint($tablet) {
+      max-width: inherit;
+    }
   }
 }
+
 /* filter search block styles */
 .sort-by {
-        float:left;
-    input[type="submit"] { display:none; }
-    label { display:none; }
-    select {
-      width:250px;
-    }
-    .search-text{ 
-        @include linear-gradient($menu-grey,$page-background);
-          @include border-radius(5px);
-            position: relative;
-          padding:2px;
-          min-width: 250px;
-          height: 49px; 
-      input[type="text"]{
-        width: 100%;
-        padding: 12px 21px;
-        @include border-radius(5px);
-        border:none;
-        font-size: 18px;
-              color: $base-text-color;
-      }
+  float: left;
+  input[type="submit"] {
+    display: none;
+  }
+  label {
+    display: none;
+  }
+  select {
+    width: 250px;
+  }
+  .search-text {
+    @include linear-gradient($menu-grey, $page-background);
+    @include border-radius(5px);
+    position: relative;
+    padding: 2px;
+    min-width: 250px;
+    height: 49px;
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 21px;
+      @include border-radius(5px);
+      border: none;
+      font-size: 18px;
+      color: $base-text-color;
     }
   }
-  
-// #header add by nanda globalsoftlab 
-.header_fixed .top-bar {
-   top:-50px;
 }
-#header, .top-bar{
-  @include transition ($type:top, $time:0.4s, $ease:ease);
+
+// #header add by nanda globalsoftlab
+.header_fixed .top-bar {
+  top: -50px;
+}
+
+#header, .top-bar {
+  @include transition($type: top, $time: 0.4s, $ease: ease);
   .links {
-    float:left;
-    max-width:67%;
+    float: left;
+    max-width: 67%;
     @extend %listreset;
-    padding:5px 0 0;
-    &.float-right{
-      float:right;
+    padding: 5px 0 0;
+    &.float-right {
+      float: right;
       @include breakpoint($mobile) {
-        float:none;
+        float: none;
       }
-      .last-child{
-        padding-right:0;
+
+      .last-child {
+        padding-right: 0;
       }
     }
     @include breakpoint($mobile) {
-      max-width:100%;
-      text-align:initial;
+      max-width: 100%;
+      text-align: initial;
     }
+
     li {
-      position:relative;
-      font-size:16px;
-      line-height:18px;
-      float:left;
-      padding:0 24px 0 19px;
+      position: relative;
+      font-size: 16px;
+      line-height: 18px;
+      float: left;
+      padding: 0 24px 0 19px;
       @include breakpoint($tablet) {
-        padding:0 8px;
+        padding: 0 8px;
       }
+
       @include breakpoint($mobile) {
-        float:none;        
-        display:inline-block;
-        vertical-align:top;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
       }
-      &:after {        
-        position:absolute;
-        content:"";
-        width:1px;
-        height:17px;
-        left:0;
-        top:2px;
-        background:$menu-grey;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 17px;
+        left: 0;
+        top: 2px;
+        background: $menu-grey;
         @include breakpoint($mobile) {
           display: none;
         }
       }
       &:first-child {
-        padding-left:0;
+        padding-left: 0;
         &:after {
-          display:none;
+          display: none;
         }
-      }      
+      }
       &.mob {
-        display:none;
+        display: none;
         @include breakpoint($mobile) {
-          display:inline-block;
+          display: inline-block;
         }
       }
       &.desktop {
         @include breakpoint($mobile) {
-          display:none;
+          display: none;
         }
       }
       &.get-up {
         &:after {
           @include breakpoint($mobile) {
-            display:none;
+            display: none;
           }
         }
       }
@@ -885,190 +936,185 @@ nav {
 
 //=== Header Section ===//
 
-.region-header{
+.region-header {
   // Header Top Menu
-  .header-top-menu{
-    ul.menu{
+  .header-top-menu {
+    ul.menu {
       @extend .links;
     }
   }
   // User menu
-  .header-user-menu{
-    ul{
-    margin:0;
-    padding: 2px 0 0 0;
-    li{
-      list-style: none;
-      padding: 0 6px;
-      display: inline;
+  .header-user-menu {
+    ul {
+      margin: 0;
+      padding: 2px 0 0 0;
+      li {
+        list-style: none;
+        padding: 0 6px;
+        display: inline;
+        @include breakpoint($mini-mobile) {
+          padding: 2px 0 0 0;
+        }
 
-      @include breakpoint($mini-mobile){
-        padding: 2px 0 0 0;
+        a {
+          // margin:0;
+          // color: $gray;
+          text-transform: capitalize;
+          // vertical-align: middle;
+          // &:hover{
+          //   text-decoration: underline;
+          // }
+          // img{
+          //   vertical-align: middle;
+          //   margin-right: 10px;
+          //   @include border-radius(5px);
+          // }
+       
+        }
       }
-      
-      a{
-        // margin:0;
-        // color: $gray;
-        text-transform: capitalize;
-        // vertical-align: middle;
-        // &:hover{
-        //   text-decoration: underline;
-        // }
-        // img{
-        //   vertical-align: middle;
-        //   margin-right: 10px;
-        //   @include border-radius(5px);
-        // }
-
-
-      }
-
     }
   }
 }
-}
 
 // Header Margin Issue
-#header.fixed-position{
+#header.fixed-position {
   margin-bottom: -4px;
 }
 
 // User menu
-#block-system-user-menu li.last{
+#block-system-user-menu li.last {
   padding-right: 0;
 }
 
-
-
 /* nanda - globalsoftlab */
- 
-.header_banner{
-  position:relative;  
-  .header_image img{
-    width:100%;
-  } 
-  .header_image{
-    max-height:457px;
-    overflow:hidden;
+
+.header_banner {
+  position: relative;
+  .header_image img {
+    width: 100%;
   }
-  .banner_desktop{
+  .header_image {
+    max-height: 457px;
+    overflow: hidden;
+  }
+  .banner_desktop {
     // display:inherit;
     @include breakpoint($mobile) {
       // display:none;
     }
   }
-  .banner_mobile{
-    display:none;
+  .banner_mobile {
+    display: none;
     // @include breakpoint($mobile) {
     //   display:inherit;
     // }
+ 
   }
-  .banner_text{
-    @extent  .h1;
+  .banner_text {
+    @extent .h1;
     padding: 18px 20px;
     margin: 0 0 12px 16px;
     font-weight: normal;
-    background:$white;
+    background: $white;
     display: inline-block;
-    color:$heading-link; 
-    line-height:100%;
-    clear:both;
+    color: $heading-link;
+    line-height: 100%;
+    clear: both;
     @include breakpoint($tablet) {
-      margin:0 90px 12px;
+      margin: 0 90px 12px;
     }
+
     @include breakpoint($mobile) {
-       margin: 5% 33% 0;
-       padding: 18px 13px;
-       text-align:center;
-       line-height:normal;
+      margin: 5% 33% 0;
+      padding: 18px 13px;
+      text-align: center;
+      line-height: normal;
     }
-      
-  } 
-  .banner_text:after{
-    clear:both;
   }
-  .banner_sub_text{ 
-     @extent .h4;
+  .banner_text:after {
+    clear: both;
+  }
+  .banner_sub_text {
+    @extent .h4;
     vertical-align: top;
-    background:$white;   
+    background: $white;
     display: inline-block;
     margin: 0 0 0 159px;
     padding: 19px 24px;
-    font-weight:normal;
-    line-height:100%;
-    font-family:$helvetica-cn;
+    font-weight: normal;
+    line-height: 100%;
+    font-family: $helvetica-cn;
     @include breakpoint($tablet) {
-      margin:0 0 0 100px;
+      margin: 0 0 0 100px;
     }
+
     @include breakpoint($mobile) {
-       display:none;
-    } 
+      display: none;
+    }
   }
-  .banner_text_main{
+  .banner_text_main {
     position: absolute;
-    width:100%;
+    width: 100%;
     z-index: 999;
-    top:24%;
+    top: 24%;
     height: 76%;
     @include breakpoint($tablet) {
-      top:15%;
+      top: 15%;
     }
-     @include breakpoint($mobile) {
-      top:30%;
+
+    @include breakpoint($mobile) {
+      top: 30%;
     }
   }
-  .banner_text_inner{
-    max-width:1080px;
-    margin:0 auto; 
+  .banner_text_inner {
+    max-width: 1080px;
+    margin: 0 auto;
   }
-  .btn-{
+  .btn- {
     margin: -46px 0 0;
-    padding-right: 23px; 
+    padding-right: 23px;
   }
-  .pic-by{
+  .pic-by {
     z-index: 1000;
     position: relative;
     display: block;
     text-align: right;
     font-size: 13px;
     line-height: 16px;
-    color:$menu-grey;
-    max-width:1080px;
-    margin:0 auto;
+    color: $menu-grey;
+    max-width: 1080px;
+    margin: 0 auto;
     padding-top: 10px;
     padding-bottom: 10px;
     @include breakpoint($mobile) {
-      text-align:left;
-      padding:10px 20px;
+      text-align: left;
+      padding: 10px 20px;
     }
-    a{
-      color:$menu-grey;
+
+    a {
+      color: $menu-grey;
       font-weight: bold;
       text-decoration: none;
-      &:hover{
-        color:$heading-link;
+      &:hover {
+        color: $heading-link;
         text-decoration: underline;
       }
     }
   }
-  .btn-prev{ 
-    background:$orange;
+  .btn-prev {
+    background: $orange;
     -moz-border-radius: 0 5px 5px 0;
     -webkit-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
-    .icon-Leftarrow{
+    .icon-Leftarrow {
       font-size: 27px;
-      color:$white;
+      color: $white;
     }
-  } 
-  .btn-perv{
-     
   }
-  .btn-next{
-    
-  }
-  &.banner-nav{
-    .banner_text{
+  .btn-perv {}
+  .btn-next {}
+  &.banner-nav {
+    .banner_text {
       @include breakpoint($mobile) {
         margin: 5% 10% 0;
         padding: 18px 13px;
@@ -1078,14 +1124,16 @@ nav {
       }
     }
   }
-   
-} 
-.easy-breadcrumb{
-  @include transition ($type:margin-left, $time:0.4s, $ease:ease);
 }
-.node-type-topic .visual{
+
+.easy-breadcrumb {
+  @include transition($type: margin-left, $time: 0.4s, $ease: ease);
+}
+
+.node-type-topic .visual {
   overflow: visible;
 }
+
 .visual .btn-perv .text-area .topic {
   font-size: 22px;
   line-height: 22px;
@@ -1094,108 +1142,110 @@ nav {
   overflow: hidden;
   white-space: pre;
 }
-.node-type-topic, .page-node-74566{
-  .block-easy-breadcrumb{
+
+.node-type-topic, .page-node-74566 {
+  .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
     z-index: 999;
-    width: 100%; 
-    .easy-breadcrumb{
+    width: 100%;
+    .easy-breadcrumb {
       margin: 0 auto;
       max-width: 1080px;
       padding-right: 16px;
       padding-top: 45px;
-      a{
-        font-family:$header-font-family;
-        color:$white;
+      a {
+        font-family: $header-font-family;
+        color: $white;
       }
     }
   }
-  
 }
 
 //including the padding top for the my voice topic pages only.
-.node-type-my-voice-topic{
-  .block-easy-breadcrumb{
+.node-type-my-voice-topic {
+  .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
     z-index: 999;
-    width: 100%; 
-    .easy-breadcrumb{
+    width: 100%;
+    .easy-breadcrumb {
       margin: 0 auto;
       max-width: 1080px;
       padding-right: 16px;
       padding-top: 45px;
-      a{
-        font-family:$header-font-family;
-        color:$white;
+      a {
+        font-family: $header-font-family;
+        color: $white;
       }
     }
   }
 }
-.node-type-topic .header_banner.banner-nav{
-    display: none;
+
+.node-type-topic .header_banner.banner-nav {
+  display: none;
 }
-.page-node-74566{
-  .block-easy-breadcrumb{
-    .easy-breadcrumb{
+
+.page-node-74566 {
+  .block-easy-breadcrumb {
+    .easy-breadcrumb {
       padding-top: 12px;
-    } 
+    }
   }
-  .header_banner{
-    .banner_text{
+  .header_banner {
+    .banner_text {
       font-size: 70px;
       margin-top: -15px;
       @include breakpoint($tablet) {
-          font-size:40px;
+        font-size: 40px;
       }
+
       @include breakpoint($mobile) {
-          font-size:30px;
-          margin-top: 10px;
+        font-size: 30px;
+        margin-top: 10px;
       }
     }
-    .banner_sub_text{
+    .banner_sub_text {
       @include breakpoint($tablet) {
         font-size: 20px;
       }
-    } 
-  }  
+    }
+  }
 }
 
-.right-info{
-    li{
-      &:nth-child(1){
-        @include breakpoint($mobile) {
-              text-align: center;
-       }
-     }
-
-     &.menu{
+.right-info {
+  li {
+    &:nth-child(1) {
+      @include breakpoint($mobile) {
+        text-align: center;
+      }
+    }
+    &.menu {
       padding-right: 0;
-     } 
-   }
- }
- 
- /* BREAD CRUMB */
- .node-type-forum-discussion , .node-type-simple-page,.node-type-forum { 
-   .header_image{
-     background: image-url('top-header-bg.png') no-repeat left $blue-light;
-	height: 83px;
-	width: 100%;
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-     .region-image-holder{
-       margin: 0 auto;
-	  max-width: 1080px;
-	  padding: 10px 20px 10px 20px;
-	  .easy-breadcrumb{
-	    padding-top: 18px;
-	    color:$heading-link;
-	  }
-     }
-   } 
- }
+    }
+  }
+}
 
-  /* Menu Text */
-  .menu-text {
-    color: $menu-grey;
-  } 
+/* BREAD CRUMB */
+.node-type-forum-discussion, .node-type-simple-page, .node-type-forum {
+  .header_image {
+    background: image-url("top-header-bg.png") no-repeat left $blue-light;
+    height: 83px;
+    width: 100%;
+    @include transition($type: all, $time: 0.4s, $ease: ease);
+    .region-image-holder {
+      margin: 0 auto;
+      max-width: 1080px;
+      padding: 10px 20px 10px 20px;
+      .easy-breadcrumb {
+        padding-top: 18px;
+        color: $heading-link;
+      }
+    }
+  }
+}
+
+/* Menu Text */
+.menu-text {
+  color: $menu-grey;
+}
