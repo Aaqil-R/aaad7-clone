@@ -93,6 +93,7 @@
         </div>
         </div>
       </div>
+    </div>
           <div class="region region-image-holder"
                style="background-image: url('<?php print image_style_url('banner_1080',$content['field_featured_image']['#items'][0]['uri']); ?>')">
           </div>
