@@ -132,7 +132,7 @@ function header_form_form_alter(&$form, &$form_state, $form_id) {
       );*/
       $form['submitted']['not_right_now'] = array(
 	  '#type' => 'markup',
-	  '#markup' => '<a href="header/form/ajax/3" class="btn use-ajax" id="not_right_now">Not right now</a>,
+	  '#markup' => '<a href="header/form/ajax/3" class="btn use-ajax " id="not_right_now">Not right now</a>,
 	);
     break;
     case 'search_block_form':
