@@ -157,8 +157,11 @@
           float:left;
         }
         float:right;
-        width:49%;
+        width:48%;
         text-align:center;
+        img{
+          max-width:100%;
+        } 
         @include breakpoint($mobile){
           float:left;
           width:100%;
@@ -169,7 +172,8 @@
         }
         .btn{
           display:block;
-        }       
+        }
+          
      }
    } 
 }

@@ -1170,9 +1170,12 @@ body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
 }
 
 // Image Holder - Fixing for the mobile devices
-.img-holder img{
-  width: 100%;
-  height: auto;
+.img-holder{
+  position: relative;
+  img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 // My voice info image
@@ -1628,6 +1631,7 @@ a.masquerade-switch{
 }
 
 //issue fix for the contact us page only on the specific page 
+
 .page-node-74571{
   #content-area{
     padding-bottom: 0px;
@@ -1638,3 +1642,14 @@ a.masquerade-switch{
     }
   }
 }
+.img-holder .video-icon{
+   &:before{
+     cursor: pointer;
+  }
+  &:hover{
+    &:before{
+      opacity:0.8;
+    }
+  }
+}
+

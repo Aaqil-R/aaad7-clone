@@ -226,8 +226,21 @@ Drupal.behaviors.ambitious = {
 
 	$(".block-close").click(function(){
 	    $("section.visual").addClass("no-overlay");
-	});
-		
+	}); 
+	
+	$(".view-display-id-stream_topic_page .views-row").each(function( index ) { 
+     $('.video-1 .icon-Playbutton').on("click", function () {
+       $(".img-holder.video-1").removeClass("sel");
+       $(this).parent().addClass("sel");
+       if ($('.img-holder.video-1').hasClass('sel')) {
+         $('.img-holder.video-1 a').trigger( "click" ); 
+       }
+     });
+    
+  }); 
+  
+   
+	
 	// ==Close button with Cookie for home page step form==//
 	// Start
 	$('.ask_me_in_a_week').on("click", function () { 
@@ -356,6 +369,7 @@ Drupal.behaviors.ambitious = {
     });
 
 	$(document).ready(function (){
+	
 		// Get the document offset :
 		var offset = $(document).scrollTop(),
 
