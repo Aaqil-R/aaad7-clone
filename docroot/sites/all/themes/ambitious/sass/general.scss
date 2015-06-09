@@ -1626,3 +1626,15 @@ a.masquerade-switch{
 .page-node-edit #content-header .title{
   display:block;
 }
+
+//issue fix for the contact us page only on the specific page 
+.page-node-74571{
+  #content-area{
+    padding-bottom: 0px;
+  }
+  #content_bottom{
+    @include breakpoint($mobile){
+      padding-left: 0px;
+    }
+  }
+}
