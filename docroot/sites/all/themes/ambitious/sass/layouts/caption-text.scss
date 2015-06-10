@@ -32,6 +32,11 @@
   @include animation(caption-text-titles 1s);
   position: relative;
   margin-top: 75px;
+  //new code
+  padding: 0 10px;
+  @include breakpoint($mobile) {
+    	padding:0 0px;
+	}
   .caption-text-titles {
     text-align: left;
     @include breakpoint($mobile) {

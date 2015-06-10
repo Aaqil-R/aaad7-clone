@@ -666,6 +666,10 @@
         max-width: 1080px;
         margin: 0 auto;
         margin-top: 1.5em;
+        padding:0 15px;
+        @include breakpoint($mobile) {
+          padding: 0 0px;
+        }
       }
       .caption {
         padding: 70px 0 0;
