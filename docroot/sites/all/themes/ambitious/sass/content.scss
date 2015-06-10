@@ -903,7 +903,7 @@ a {
 		}
 	}
 	.holder{
-		padding: 0 15px 0 0;
+		//padding: 0 15px 0 0;
 		@include breakpoint($mobile) {
 				padding: 15px 15px;
 			}
@@ -1328,6 +1328,12 @@ a {
 	img{
 		width: 100%;
 	}
+}
+
+.facebook{
+    span iframe, span{
+        width:100% !important;
+    }
 }
 
 .articles-columns{
