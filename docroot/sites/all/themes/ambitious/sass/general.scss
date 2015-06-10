@@ -1669,3 +1669,51 @@ a.masquerade-switch{
     }
   }
 }
+
+@media print {
+
+  .top-header, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .visual, .topic-share, .btn
+  {
+    display:none;
+  }
+  #main2 .article{
+    width:100%;
+  }
+  #header .header-top{
+    background:none;
+    box-shadow:inherit;
+    top:0;
+    position: static !important;
+  }
+  .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs{
+    background:none;
+    margin-top:0;
+  }
+  *{
+    padding:0;
+    margin:0;
+    color:#000;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 32px;
+  }
+  h3{
+    font-size: 32px;
+  }
+  h4{
+    font-size: 32px;
+  }
+  h5{
+    font-size: 32px;
+  }
+  h6{
+    font-size: 32px;
+  }
+  a{
+  
+  }
+  
+}

@@ -232,12 +232,14 @@ Drupal.behaviors.ambitious = {
 	$(".node a[href*='ft']").click(function(event){
           event.preventDefault();  
           var myval = $(this).attr('href');  
+            if(myval.replace('_','') != "undefined"){
               myval = myval.replace('_',''); 
-          $('html, body').animate({scrollTop: $(myval).offset().top - 100}, 'slow'); 
+            }
+          $('html, body').animate({scrollTop: $(myval).offset().top - 120}, 'slow'); 
        });
-       $("a[href*='ft']").each(function(){
-         var name = $(this).attr('name');
-           name = name.replace('_',''); 
+       $("a[href*='ftn']").each(function(){
+         var name =  $(this).attr('name');  
+             name = name.replace('_','');   
          $(this).attr('id', name);
        });
        
