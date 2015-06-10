@@ -1,34 +1,34 @@
 @import "base/base";
 
 .quote {
-    border-left: 1em $orange-dark solid;
-    padding: 1em;
-    margin: 0;
+	border-left: 1em $orange-dark solid;
+	padding: 1em;
+	margin: 0;
 
-    color: lighten($dark-gray, 30%);
-    p {margin: 0;}
-    &.pink {
-      border-left-color: $pink;
-    }
-    &.yellow {
-      border-left-color: yellow;
-    }
-    &.red {
-      border-left-color: red;
-    }
-    &.blue {
-      border-left-color: $tw-blue;
-    }
-    @include breakpoint($tablet) {
-      margin-right: - span(4 of 8) - gutter()/2;
-      width: 75%;
-      float: right;
-      margin-left: 2em;
-      font-size: 1.1em;
-      clear: right;
-      &.small {width: span(4 of 8);}
-    }
-  }
+	color: lighten($dark-gray, 30%);
+	p {margin: 0;}
+	&.pink {
+		border-left-color: $pink;
+	}
+	&.yellow {
+		border-left-color: yellow;
+	}
+	&.red {
+		border-left-color: red;
+	}
+	&.blue {
+		border-left-color: $tw-blue;
+	}
+	@include breakpoint($tablet) {
+		margin-right: - span(4 of 8) - gutter()/2;
+		width: 75%;
+		float: right;
+		margin-left: 2em;
+		font-size: 1.1em;
+		clear: right;
+		&.small {width: span(4 of 8);}
+	}
+}
 
 
 #nav {
@@ -80,107 +80,107 @@
 
 //tooltips
 .btn-tooltip{
-		border-radius: 50%;
-		width: 35px;
-		height: 35px;
-		background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
-		background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
-		background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
+	background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
+	background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
 		//float: left;
 		border: 1px solid $light_silver;
 		font-family: $header-font-family;
 		font-size: 25px;
-        padding: 2px 9px;
+		padding: 2px 9px;
 		//padding-left: 10px;
 		line-height: 32px;
 		margin-left: 5px;
 		margin-top:5px;	//aligning the span class to the position
         display: table-caption; // makes the span act like a caption 
-		&:hover{
-			background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
-			background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
-			background-image: radial-gradient(circle cover at 90px 90px 90deg, $white 0%, $alto 100%, $gallery 95%);
-			border-color: $casablanca;
-		}
-		@include breakpoint($mobile) {
-			float: right;
-		}
+        &:hover{
+        	background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
+        	background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
+        	background-image: radial-gradient(circle cover at 90px 90px 90deg, $white 0%, $alto 100%, $gallery 95%);
+        	border-color: $casablanca;
+        }
+        @include breakpoint($mobile) {
+        	float: right;
+        }
 
-	}
-a {
-  &.tooltips {
-    position: relative;
-    display: inline;
-	@include breakpoint($mobile) {
-		display:none;
-		}
-	&.mobile{
-		display:none;
-			@include breakpoint($mobile) {
-				display: block;
-				top: -3px;
-				float: right;
-				}
-			}
-    span.tooltip-content {
-      position: absolute;
-      width: 245px;
-      z-index:99;
-      color: $black;
-      background: $early_dawn;
-      border: 1px solid $casablanca;
-      height: 130px;
-      line-height: 13px;
-      text-align: left;
-      display: none;
-      border-radius: 5px;
-      font-size: 13px;
-      padding: 20px;
-      bottom: 60px;
-      left: -102px;
-      h3 {
-        font-size: 14px;
-		margin-bottom: 5px;
-		@include breakpoint($mobile) {
-			margin-top: -10px;
-		}
-      }
-      &:before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -12px;
-        width: 0;
-        height: 0;
-        border-top: 20px solid $casablanca;
-        border-right: 20px solid transparent;
-        border-left: 20px solid transparent;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -10px;
-        width: 0;
-        height: 0;
-        border-top: 19px solid $early_dawn;
-        border-right: 19px solid transparent;
-        border-left: 18px solid transparent;
-      }
     }
-  }
-  &:hover.tooltips span.tooltip-content {
-     display: inherit;		
-  }
-}
+    a {
+    	&.tooltips {
+    		position: relative;
+    		display: inline;
+    		@include breakpoint($mobile) {
+    			display:none;
+    		}
+    		&.mobile{
+    			display:none;
+    			@include breakpoint($mobile) {
+    				display: block;
+    				top: -3px;
+    				float: right;
+    			}
+    		}
+    		span.tooltip-content {
+    			position: absolute;
+    			width: 245px;
+    			z-index:99;
+    			color: $black;
+    			background: $early_dawn;
+    			border: 1px solid $casablanca;
+    			height: 130px;
+    			line-height: 13px;
+    			text-align: left;
+    			display: none;
+    			border-radius: 5px;
+    			font-size: 13px;
+    			padding: 20px;
+    			bottom: 60px;
+    			left: -102px;
+    			h3 {
+    				font-size: 14px;
+    				margin-bottom: 5px;
+    				@include breakpoint($mobile) {
+    					margin-top: -10px;
+    				}
+    			}
+    			&:before {
+    				content: '';
+    				position: absolute;
+    				top: 100%;
+    				left: 50%;
+    				margin-left: -12px;
+    				width: 0;
+    				height: 0;
+    				border-top: 20px solid $casablanca;
+    				border-right: 20px solid transparent;
+    				border-left: 20px solid transparent;
+    			}
+    			&:after {
+    				content: '';
+    				position: absolute;
+    				top: 100%;
+    				left: 50%;
+    				margin-left: -10px;
+    				width: 0;
+    				height: 0;
+    				border-top: 19px solid $early_dawn;
+    				border-right: 19px solid transparent;
+    				border-left: 18px solid transparent;
+    			}
+    		}
+    	}
+    	&:hover.tooltips span.tooltip-content {
+    		display: inherit;		
+    	}
+    }
 
 
 
-.larger{
-	@include fontsize(24,16);
-}
+    .larger{
+    	@include fontsize(24,16);
+    }
 
 
 
@@ -201,17 +201,17 @@ a {
 }
 
 .col-3 {
-		float:left;
-		width:31.4%;
-		margin:0 0 0 2.9%;
-		@include breakpoint($mobile) {
-			width:100%;
-			margin:0;
-		}
-		&:first-child {
-			margin:0;
-		}
-		}
+	float:left;
+	width:31.4%;
+	margin:0 0 0 2.9%;
+	@include breakpoint($mobile) {
+		width:100%;
+		margin:0;
+	}
+	&:first-child {
+		margin:0;
+	}
+}
 //4. My voice
 
 //postioning my voice caption text
@@ -220,17 +220,17 @@ a {
 		.caption-frame {
 			.caption{
 				padding: 5px 0 0;
-					.title{
-						span.pink{
+				.title{
+					span.pink{
 						color: $pink;
 						padding: 0;
 
-						}
 					}
 				}
 			}
 		}
 	}
+}
 
 
 //positioning of form box
@@ -306,11 +306,11 @@ a {
 				@include breakpoint($mobile) {
 					float: right;
 					padding-top: 3px;}
-			}
+				}
 
+			}
 		}
 	}
-}
 
 
 //my voice intro block
@@ -339,13 +339,13 @@ a {
 		padding: 0;
 		margin:0;
 	}
-		li{
-			float:left;
-			padding-left: 20px;
-			&:first-child{
-				padding-left:0;
-			}
-			a{	text-decoration: underline;}
+	li{
+		float:left;
+		padding-left: 20px;
+		&:first-child{
+			padding-left:0;
+		}
+		a{	text-decoration: underline;}
 
 	}
 }
@@ -416,207 +416,207 @@ a {
 		float:right;
 	}
 	.sort-block{
-        margin: 0;
-        padding: 14px 20px 16px;
-	    margin-bottom: 20px;
-	    @extend %clearfix;
-	    display: block;
+		margin: 0;
+		padding: 14px 20px 16px;
+		margin-bottom: 20px;
+		@extend %clearfix;
+		display: block;
 	}
 }
 
 //is there a way to merge this?
 .my-voice-post{
-		padding:20px 18px;
+	padding:20px 18px;
+	float: left;
+	position: relative;
+	margin:0 0 30px;
+	background:$white;
+	border:1px solid $gray;
+	width: 100%;
+	@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+	@include breakpoint($mobile) {
+		padding:14px 15px;
+		font-size:18px;
+		line-height:27px;
+	}
+	img{
 		float: left;
-		position: relative;
-		margin:0 0 30px;
-		background:$white;
-		border:1px solid $gray;
-		width: 100%;
-		@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+		@media (max-width: 480px){
+			width: 100%;
+		}
+	}
+
+
+	.content{
+		float: left;
+		width: 56%;
+		padding-left: 50px;
+		@include breakpoint($tablet) {
+			width: 45%;
+		}
 		@include breakpoint($mobile) {
-			padding:14px 15px;
-			font-size:18px;
-			line-height:27px;
+			width: 100%;
+			padding: 0;
 		}
-		img{
-			float: left;
-			@media (max-width: 480px){
-				width: 100%;
+		p{
+			@include fontsize(16,16);
+		}
+		h3{
+			font-weight:bold;
+			@include fontsize(22,16);
+			line-height:32px;
+			text-decoration: underline;
+			@include breakpoint($mobile) {
+				@include fontsize(20,16);
+				margin: 10px 0;
+				line-height:28px;
 			}
 		}
-
-
-		.content{
-				float: left;
-				width: 56%;
-				padding-left: 50px;
-				@include breakpoint($tablet) {
-					width: 45%;
+		.num-holder {
+			display:inline-block;
+			vertical-align:top;
+			&.gray-num{
+				a{
+					.num{
+						color:$gray;
+						border:3px solid $gray;
+						&:after{
+							background-position:-80px 0;
+						}
+					}
+					.text{
+						color:$gray;
+					}
 				}
-				@include breakpoint($mobile) {
-					width: 100%;
-					padding: 0;
-				}
-				p{
-					@include fontsize(16,16);
-				}
-				h3{
-					font-weight:bold;
-					 @include fontsize(22,16);
-					 line-height:32px;
-					 text-decoration: underline;
-					 @include breakpoint($mobile) {
-						 @include fontsize(20,16);
-						 margin: 10px 0;
-						 line-height:28px;
-				 	}
-				}
-				.num-holder {
+			}
+			a {
+				text-decoration:none;
+				.num {
+					min-width:46px;
+					height:35px;
+					border:2px solid $pink;
+					border-radius:9px;
+					font-size:16px;
+					line-height:24px;
+					padding:3px;
+					position:relative;
+					color:$pink;
 					display:inline-block;
-					vertical-align:top;
-					&.gray-num{
-					   a{
-					     .num{
-						    color:$gray;
-							border:3px solid $gray;
-							&:after{
-							   background-position:-80px 0;
-							}
-						 }
-						 .text{
-						   color:$gray;
-						 }
-					   }
+					vertical-align:middle;
+					text-align:center;
+					text-decoration:none;
+					margin:0 15px 0 0;
+					@include breakpoint($tablet) {
+						margin:0 5px 0 0;
 					}
-					a {
-						text-decoration:none;
-						.num {
-							min-width:46px;
-							height:35px;
-							border:2px solid $pink;
-							border-radius:9px;
-							font-size:16px;
-							line-height:24px;
-							padding:3px;
-							position:relative;
-							color:$pink;
-							display:inline-block;
-							vertical-align:middle;
-							text-align:center;
-							text-decoration:none;
-							margin:0 15px 0 0;
-							@include breakpoint($tablet) {
-								margin:0 5px 0 0;
-							}
-							@include breakpoint($mobile) {
-								font-size:16px;
-								line-height:18px;
-								border-radius:5px;
-								min-width:39px;
-								height:28px;
-							}
-							&:after {
-								position:absolute;
-								right:8px;
-								bottom:-13px;
-								content:"";
-								background:image-url('sprite.png') no-repeat -128px 0;
-								width:12px;
-								height:13px;
-								@include breakpoint($mobile) {
-									right:6px;
-								}
-							}
-						}
-						.text {
-							display:none;
-							margin:2px 0 0 -5px;
-							vertical-align:middle;
-							font-size:14px;
-							line-height:18px;
-							color:$pink;
-							@include breakpoint($mobile) {
-								margin:-2px 0 0 ;
-							}
+					@include breakpoint($mobile) {
+						font-size:16px;
+						line-height:18px;
+						border-radius:5px;
+						min-width:39px;
+						height:28px;
+					}
+					&:after {
+						position:absolute;
+						right:8px;
+						bottom:-13px;
+						content:"";
+						background:image-url('sprite.png') no-repeat -128px 0;
+						width:12px;
+						height:13px;
+						@include breakpoint($mobile) {
+							right:6px;
 						}
 					}
 				}
-				&:hover {
-					a {
-						&.hover {
-							.text {
-								display:inline-block;
-							}
-						}
+				.text {
+					display:none;
+					margin:2px 0 0 -5px;
+					vertical-align:middle;
+					font-size:14px;
+					line-height:18px;
+					color:$pink;
+					@include breakpoint($mobile) {
+						margin:-2px 0 0 ;
 					}
-				}
-
-				.comment-count{
-					background: no-repeat image-url('comment-sprite.png');
-					padding: 7px 0px 17px 0;
-					width: 46px;
-					text-align: center;
-					color: $pink;
-					 @include breakpoint($mobile) {float: left;}
-					.count{
-						 @include fontsize(20,16);
-					}
-					&.zero{
-						background: no-repeat image-url('comment-sprite.png')0 -52px;
-						.count{
-							color: $gray;
-						}
-					}
-				}
-				.talkers{
-					display: none;
-					@include fontsize(15,16);
-					float: left;
-					padding-left: 10px;
-					color: $pink;
-					 @include breakpoint($mobile) {
-						 display: block;}
 				}
 			}
-			.date{
-				list-style-type: none;
-				float: right;
-				margin: 0;
-				background: $white;
-				@include breakpoint($mobile) {
-					padding: 5px 5px 5px 9px;
-					position: absolute;
-					right: 14px;
-					top: 14px;
-				}
-			.day{
-					font-weight:bold;
- 					 @include fontsize(24,16);
-  					 line-height:24px;
-  					 @include breakpoint($mobile) {
-   						 @include fontsize(22,16);
-						 line-height:24px;
-  					 }
-				 }
-			.month{
-					 font-weight:bold;
-					@include fontsize(16,16);
-					line-height:25px;
-					@include breakpoint($mobile) {
-						@include fontsize(18,16);
-			  			line-height:24px;
-						}
-					}
-				.year{
-			 	   @include fontsize(12,16);
-					line-height:12px;
-					@include breakpoint($mobile) {
-						display: none;
-					}
-				}
 		}
-}
+		&:hover {
+			a {
+				&.hover {
+					.text {
+						display:inline-block;
+					}
+				}
+			}
+		}
+
+		.comment-count{
+			background: no-repeat image-url('comment-sprite.png');
+			padding: 7px 0px 17px 0;
+			width: 46px;
+			text-align: center;
+			color: $pink;
+			@include breakpoint($mobile) {float: left;}
+			.count{
+				@include fontsize(20,16);
+			}
+			&.zero{
+				background: no-repeat image-url('comment-sprite.png')0 -52px;
+				.count{
+					color: $gray;
+				}
+			}
+		}
+		.talkers{
+			display: none;
+			@include fontsize(15,16);
+			float: left;
+			padding-left: 10px;
+			color: $pink;
+			@include breakpoint($mobile) {
+				display: block;}
+			}
+		}
+		.date{
+			list-style-type: none;
+			float: right;
+			margin: 0;
+			background: $white;
+			@include breakpoint($mobile) {
+				padding: 5px 5px 5px 9px;
+				position: absolute;
+				right: 14px;
+				top: 14px;
+			}
+			.day{
+				font-weight:bold;
+				@include fontsize(24,16);
+				line-height:24px;
+				@include breakpoint($mobile) {
+					@include fontsize(22,16);
+					line-height:24px;
+				}
+			}
+			.month{
+				font-weight:bold;
+				@include fontsize(16,16);
+				line-height:25px;
+				@include breakpoint($mobile) {
+					@include fontsize(18,16);
+					line-height:24px;
+				}
+			}
+			.year{
+				@include fontsize(12,16);
+				line-height:12px;
+				@include breakpoint($mobile) {
+					display: none;
+				}
+			}
+		}
+	}
 
 //My Voice Acknowldegement
 .acknowledge-block{
@@ -634,7 +634,7 @@ a {
 
 // main page columns styles
 
- .articles-block, .my-voice-block {
+.articles-block, .my-voice-block {
 	width: 100%;
 	@include transition ($type:all, $time:0.4s, $ease:ease);
 	position: relative;
@@ -659,9 +659,9 @@ a {
 				width: 0;
 				margin: 0 0 0 -21px;
 				top: -15px;
-				}
 			}
 		}
+	}
 	.img-holder{
 		img { width: 100%;}
 	}
@@ -767,7 +767,7 @@ a {
 		.title{
 			margin-bottom: 44px;
 		}
-	}	}
+		}	}
 
 
 
@@ -816,12 +816,12 @@ a {
 		}
 	}
 	.btn{
-	  @include fontsize(20,16);
-	  padding: 11px 29px;
-	  @include breakpoint($mobile) {
-	    padding: 6px 19px;
-		font-size: 18px;
-	  }
+		@include fontsize(20,16);
+		padding: 11px 29px;
+		@include breakpoint($mobile) {
+			padding: 6px 19px;
+			font-size: 18px;
+		}
 	}
 	.twitter{
 		height: 300px;
@@ -861,12 +861,12 @@ a {
 		background:$white;
 		padding:52px 32px 49px;
 		.btn{
-		  @include breakpoint($mobile) {
-			width:100%;
-			.icon-Rightarrow{
-			  display:none;
+			@include breakpoint($mobile) {
+				width:100%;
+				.icon-Rightarrow{
+					display:none;
+				}
 			}
-		  }
 		}
 		@include breakpoint($mobile) {
 			padding:0 0 49px;
@@ -905,8 +905,8 @@ a {
 	.holder{
 		//padding: 0 15px 0 0;
 		@include breakpoint($mobile) {
-				padding: 15px 15px;
-			}
+			padding: 15px 15px;
+		}
 	}
 	//overwrite jcf settings TODO check this + border is still darker than the others
 	.jcf-select.jcf-unselectable{
@@ -930,21 +930,21 @@ a {
 		}
 	}
 	a {
-	  &.tooltips {
-  		@include breakpoint($mobile) {
-  			display:none;
-  			}
-		&.mobile{
-			display:none;
+		&.tooltips {
+			@include breakpoint($mobile) {
+				display:none;
+			}
+			&.mobile{
+				display:none;
 				@include breakpoint($mobile) {
 					display: block;
 					top: -3px;
 					float: right;
-					}
 				}
+			}
 		}
 
-		}
+	}
 
 }
 
@@ -1010,7 +1010,7 @@ a {
 				position:relative;
 				z-index:5;
 				top: 115px;
-                    left: -65px;
+				left: -65px;
 				@include breakpoint($mobile) { 
 					left: -45px;
 					font-size: 18px;
@@ -1018,12 +1018,12 @@ a {
 				}
 				a{
 					color: $orange;
-					@include fontsize(40,16);
+					@include fontsize(40,0);
 					span{}
 				}
 				.ajax-progress-throbber{
-          left:0;
-          margin-top:-29px;
+					left:0;
+					margin-top:-29px;
 				}
 			}
 			.r-s-arrow{
@@ -1035,18 +1035,18 @@ a {
 					font-size: 18px;
 				}
 				.skip{
-						a{
-						  font-size: 18px;
-						  margin-left: 9px;
-						  margin-top: -5px;
-						  float: left;
-							@include fontsize(14,16);
-						}
+					a{
+						font-size: 18px;
+						margin-left: 9px;
+						margin-top: -5px;
+						float: left;
+						@include fontsize(16,0);
+					}
 				}
 				.ajax-progress-throbber{
-          right:0;
-          left:63px;
-          margin-top:-34px; 
+					right:0;
+					left:63px;
+					margin-top:-34px; 
 				}
 			}
 		}
@@ -1096,8 +1096,8 @@ a {
 			font-size:24px;
 			line-height:28px;
 			margin-top: 10px;
-			}
 		}
+	}
 	.signup-form{
 		padding: 14px 0;
 		input[type="email"], input[type="text"], .select {
@@ -1321,8 +1321,8 @@ a {
 		&:first-child {
 			margin:0;
 		}
-		}
 	}
+}
 
 .social-columns{
 	img{
@@ -1335,5 +1335,5 @@ a {
 		a{font-family:$header-font-family;
 			font-weight: normal;}
 
+		}
 	}
-}
