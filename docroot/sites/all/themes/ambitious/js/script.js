@@ -387,8 +387,8 @@ Drupal.behaviors.ambitious = {
 	
 		// Sets default class for understanding-autism grid view 
 		// and toggles class when changing view.
-		var Uautism = $('.understanding-autism');
-	      
+		//var Uautism = $('.understanding-autism');
+	      var Uautism = $('.js-switch-layout');
 		if (Uautism.length > 0){
 		      var view = Uautism.parent().attr('data-view');
 		     if (view != undefined) {
@@ -429,7 +429,8 @@ Drupal.behaviors.ambitious = {
 
 		//Sets the width of masonry when click on toggle list and grid
 		$("a.list, a.grid").click(function(){
-		  setTimeout(function(){ $('.view-content').masonry() }, 400);
+		  //setTimeout(function(){ $('.view-content').masonry() }, 400);
+
 		});
 
 		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
