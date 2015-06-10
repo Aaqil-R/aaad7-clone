@@ -86,14 +86,16 @@
 		background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
 		background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
 		background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
-		float: left;
+		//float: left;
 		border: 1px solid $light_silver;
 		font-family: $header-font-family;
-		font-size: 23px;
-		padding-left: 10px;
+		font-size: 25px;
+        padding: 2px 9px;
+		//padding-left: 10px;
 		line-height: 32px;
 		margin-left: 5px;
 		margin-top:5px;	//aligning the span class to the position
+        display: table-caption; // makes the span act like a caption 
 		&:hover{
 			background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
 			background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
