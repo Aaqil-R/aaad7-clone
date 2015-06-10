@@ -228,7 +228,21 @@ Drupal.behaviors.ambitious = {
 	    $("section.visual").addClass("no-overlay");
 	}); 
 	
-	$(".view-display-id-stream_topic_page .views-row").each(function( index ) { 
+	//anchor links
+	$(".node a[href*='ft']").click(function(event){
+          event.preventDefault();  
+          var myval = $(this).attr('href');  
+              myval = myval.replace('_',''); 
+          $('html, body').animate({scrollTop: $(myval).offset().top - 100}, 'slow'); 
+       });
+       $("a[href*='ft']").each(function(){
+         var name = $(this).attr('name');
+           name = name.replace('_',''); 
+         $(this).attr('id', name);
+       });
+       
+	// on click video popup
+	$(".node .view-display-id-stream_topic_page .views-row, .view-display-id-voices_from_the_spectrum_page .views-row").each(function( index ) { 
      $('.video-1 .icon-Playbutton').on("click", function () {
        $(".img-holder.video-1").removeClass("sel");
        $(this).parent().addClass("sel");
