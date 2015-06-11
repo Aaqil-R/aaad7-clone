@@ -228,6 +228,16 @@ Drupal.behaviors.ambitious = {
 	    $("section.visual").addClass("no-overlay");
 	}); 
 	
+  // menu height	
+	var windowhei = $(window).height(); 
+   
+    if($(window).width() < 768){
+        $(".nav-holder").css('height',  windowhei + 10);
+    }
+    else{
+        $(".nav-holder").css('height',  windowhei - 25);
+    } 
+	
 	//anchor links
 	$(".node a[href*='ft']").click(function(event){
           event.preventDefault();  
