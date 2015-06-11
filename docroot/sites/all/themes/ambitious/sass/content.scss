@@ -1083,8 +1083,12 @@
 			margin:0;
 			padding: 0 40px;
 			@include breakpoint($mobile) {
-				display:none;
+				//display:none;
+                p:last-child{
+                    display: none;
+                }
 			}
+            
 		}
 	}
 	h2{

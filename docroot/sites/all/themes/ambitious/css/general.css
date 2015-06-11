@@ -2029,3 +2029,66 @@ a.masquerade-switch {
     font-size: 22px;
   }
 }
+
+@media print {
+  /* line 1685, ../sass/general.scss */
+  .top-header, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .visual, .topic-share, .btn {
+    display: none;
+  }
+
+  /* line 1689, ../sass/general.scss */
+  #main2 .article {
+    width: 100%;
+  }
+
+  /* line 1692, ../sass/general.scss */
+  #header .header-top {
+    background: none;
+    box-shadow: inherit;
+    top: 0;
+    position: static !important;
+  }
+
+  /* line 1698, ../sass/general.scss */
+  .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs {
+    background: none;
+    margin-top: 0;
+  }
+
+  /* line 1702, ../sass/general.scss */
+  * {
+    padding: 0;
+    margin: 0;
+    color: #000;
+  }
+
+  /* line 1707, ../sass/general.scss */
+  h1 {
+    font-size: 32px;
+  }
+
+  /* line 1710, ../sass/general.scss */
+  h2 {
+    font-size: 32px;
+  }
+
+  /* line 1713, ../sass/general.scss */
+  h3 {
+    font-size: 32px;
+  }
+
+  /* line 1716, ../sass/general.scss */
+  h4 {
+    font-size: 32px;
+  }
+
+  /* line 1719, ../sass/general.scss */
+  h5 {
+    font-size: 32px;
+  }
+
+  /* line 1722, ../sass/general.scss */
+  h6 {
+    font-size: 32px;
+  }
+}
