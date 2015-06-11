@@ -259,8 +259,14 @@ table {
 .node-type-page {
     #content-area {
         @include breakpoint ($all-desktop) {
-            @include span(10 of 12);
-            @include post (2 of 12);
+            /******************************************* 
+            If you enable below two lines
+            that have commented it will change the 
+            content-area widhth two 80% by adding margin
+            left and right.
+            *******************************************/
+            //@include span(10 of 12);
+            //@include post (2 of 12);            
             padding-bottom: 5em;
         }
     }
@@ -281,6 +287,11 @@ table {
     margin-bottom: 2.5em;
     .image {display:none;}
     @include breakpoint($all-desktop){
+        &.full-width {
+            h5, p {
+                width: 100%;
+            }
+        }
         h5, p {
             @include span(7 of 10);
         }
