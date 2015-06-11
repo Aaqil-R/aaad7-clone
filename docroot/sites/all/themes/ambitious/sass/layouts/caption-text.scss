@@ -13,7 +13,7 @@
 // Caption Block
 
 .front .caption-text {
-  margin-top: 100px;
+  margin-top: 118px;
 }
 
 .front, page-node-221546 {
@@ -35,24 +35,35 @@
   //new code
   padding: 0 10px;
   @include breakpoint($mobile) {
-    	padding:0 0px;
-	}
+    padding:0 0px;
+  }
   .caption-text-titles {
-    text-align: left;
+    text-align: left;    
     @include breakpoint($mobile) {
     	text-align: center;
     	margin-left: 0em;
     }
-
-    .caption-text-title {
+    .caption-text-title {      
+      float: left;
+      width: 100%;
+      line-height: inherit !important;
+      margin-bottom: 0.4em;
+      @include breakpoint($mobile) {
+      	float: none;
+      }
       span {
+      	@include breakpoint($mobile) {
+	      float: none;
+	    }
+      	float: left;
         letter-spacing: -1px;
         background: $white;
-        line-height: 1.8em;
+        //line-height: 1.8em;
         padding: 0.1em 0.2em 0.2em 0.2em;
         box-shadow: 10px 0 0 $white, -10px 0 0 $white;
         @include breakpoint($all-small-mobile) {
           padding: initial;
+          float: none;
         }
       }
       //&.caption-text-title-1{
@@ -73,7 +84,7 @@
   }
   @include breakpoint(min-width $tablet-small) {
     margin-left: 1em;
-    margin-top: 75px;
+    margin-top: 100px;
     .caption-text-titles {
       .caption-text-title.caption-text-title-2 {
         //margin-left: 130px;
@@ -85,7 +96,7 @@
 
   @include breakpoint(min-width $desktop-small) {
     margin-left: 0;
-    margin-top:9em;
+    //margin-top:9em;
     //margin-top: 55px;
     .caption-text-titles {
       .caption-text-title.caption-text-title-2 {
