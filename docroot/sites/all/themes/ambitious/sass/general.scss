@@ -23,6 +23,17 @@
 	font-family: $base-font-family;
 }
 
+//general user login question mark fix
+/***************************************************
+if you make this as float: left then you can type
+on click on the input field otherwise you can type
+on it, the description div comes on top of the input
+field .
+****************************************************/
+.description {
+  float: left;
+}
+
 
 //=== Home page-Issue fixing ===//
 .front{
@@ -129,7 +140,6 @@
 	}
 
 	// .visual .img-holder
-
 	.visual{
 		max-height: none;
 
