@@ -29,7 +29,7 @@ function ckeditor_custom_wysiwyg_editor_settings_alter(&$settings, $context) {
       // These are our desired groupings. Buttons that aren't listed here will be
       // Grouped in one big group at the end
       $preferred_groupings[] = array('Bold', 'Italic', 'Underline', 'Strike');
-      $preferred_groupings[] = array('SpellChecker');
+      $preferred_groupings[] = array('SpellChecker','Scayt');
       $preferred_groupings[] = array('JustifyLeft', 'JustifyCenter',
                                      'JustifyRight', 'JustifyBlock');
       $preferred_groupings[] = array('BulletedList', 'NumberedList', 'Outdent', 'Indent');
@@ -44,7 +44,7 @@ function ckeditor_custom_wysiwyg_editor_settings_alter(&$settings, $context) {
       $preferred_groupings[] = array('Format', 'Font', 'FontSize', 'Styles', 'Table');
       $preferred_groupings[] = array('SelectAll', 'Find', 'Replace');
       $preferred_groupings[] = array('Flash', 'Smiley');
-      $preferred_groupings[] = array('CreateDiv', 'Maximize', 'Scayt');
+      $preferred_groupings[] = array('CreateDiv', 'Maximize');
 
       // An array to hold our newly grouped buttons
       $new_grouped_toolbar = array();
