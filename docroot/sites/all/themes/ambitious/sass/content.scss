@@ -95,7 +95,7 @@
         line-height: 32px;
         margin-left: 5px;
         margin-top:5px; //aligning the span class to the position
-        display: table-caption; // makes the span act like a caption 
+        display: table-caption; // makes the span act like a caption
         &:hover{
             background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
             background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
@@ -172,7 +172,7 @@
             }
         }
         &:hover.tooltips span.tooltip-content {
-            display: inherit;       
+            display: inherit;
         }
     }
 
@@ -329,7 +329,7 @@
     display: none;
     list-style-type: none;
     @include fontsize(12,16);
-    float: left; 
+    float: left;
     text-align: center;
     -webkit-padding-start: 0;
     @include breakpoint($mobile) {
@@ -356,7 +356,7 @@
         float: left;
         margin-bottom: 30px;
         background: transparent;
-        .block-symptoms, .block-share, .block-spectrum{ 
+        .block-symptoms, .block-share, .block-spectrum{
             color:$white;
             width:48.5%;
             padding: 50px 10px 37px 39px;
@@ -406,12 +406,12 @@
         }
 
     }
-    .block-share{ 
+    .block-share{
     }
 
-    .block-spectrum{ 
+    .block-spectrum{
     }
-    .block-report{ 
+    .block-report{
         float:right;
     }
     .sort-block{
@@ -744,7 +744,7 @@
 //TODO is this a repeat?
 .action-block{
     background-color: $white;
-    .block-share{ 
+    .block-share{
         float: left;
         .btn{
             float: right;
@@ -785,12 +785,11 @@
         @include container;
         @include breakpoint ($mobile) {padding: 0 15px;}//
 
-        // myVoice page the form still cuts the caption 
+        // myVoice page the form still cuts the caption
         // on higher resolutions.
         @include breakpoint($large-screen){
             margin-top: 3em;
         }
-
         .close, .block-close{ //TODO make block-close not repeat for my voice page
             width: 37px;
             background: $white;
@@ -1008,10 +1007,10 @@
                 position:relative;
                 z-index:5;
                 left: -65px;
-                @include breakpoint($mobile) { 
+                @include breakpoint($mobile) {
                     left: -45px;
                     font-size: 18px;
-                    top: 114px;
+                    top: 166px !important;
                     //display:none;
                 }
                 a{
@@ -1031,7 +1030,7 @@
                 left: 19px;
                 font-size: 20px;
                 top: 108px;
-                @include breakpoint($mobile) { 
+                @include breakpoint($mobile) {
                     left: 0;
                 }
                 .skip{
@@ -1046,7 +1045,7 @@
                 .ajax-progress-throbber{
                     right:0;
                     left:63px;
-                    margin-top:-34px; 
+                    margin-top:-34px;
                 }
             }
         }
@@ -1089,7 +1088,7 @@
                     display: none;
                 }
             }
-            
+
         }
     }
     h2{

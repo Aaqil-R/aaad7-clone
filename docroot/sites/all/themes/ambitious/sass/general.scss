@@ -96,36 +96,31 @@ field .
 
 	}
 	@include breakpoint($mobile){
-
 		.slider-block{
 			margin-top: -160px;
-		}
-		
+		}		
 		.slider-container .signup-columns .col{
 			width: 100%;
 			margin: 0;
 			padding: 0;
 		}
-
 		.slider-container .signup-columns .col input{
 			width: 100%;
 			margin-bottom: 10px;
-		}
-		
+		}		
 		.slider-block .block{			
 			padding: 10px 15px 85px;
 			margin-bottom: 38px;
 			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));					
 		}
-
 		.slider-block .block .slider-container {
 			width: 90%;
 			margin: 0 auto;
 			@include breakpoint($mobile){
 			  width:auto;
+              margin: 0 45px !important;
 			}
 		}
-
 		.slider-block .holder .block-close{
 			margin-left: -42px;
 		}
@@ -356,8 +351,7 @@ field .
   }
 }
 
-.front{
- 
+.front{ 
   .slider-container{
     @include breakpoint($tablet){
       height:auto;
