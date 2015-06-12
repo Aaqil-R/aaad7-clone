@@ -587,23 +587,26 @@
 	      margin-top:-53.5px;	
 	      padding:0;
 	      &:hover{
-	      	margin-top: -54px;
+	      	//margin-top: -54px;
 	      }
 	      @include breakpoint($tablet){
 	        margin-left: 135px;
 	        margin-top: 10px;
 	        &:hover{
-	      		margin-top: 9.5px;
+	      		//margin-top: 9.5px;
 	      	}
 	      }
 	      @include breakpoint($mobile){
-	    	float: left;
-	        margin-top: 60px;
-	        margin-left:-20px;
+            float: right;
+            margin-top: -60px;
+            margin-left: -20px;
 	        &:hover{
-	      		margin-top: 58.5px;
+	      		//margin-top: 58.5px;
 	      	}
 	      }
+ 	      @include breakpoint($small-mobile){
+            margin-top: -30px;
+	      }           
 	      // @include breakpoint($mobile){
 	      //    margin-top:0;
 	      //    &:hover{
@@ -632,7 +635,7 @@
 	        //margin-left: -26px;
 	        width: 161px;
 	        padding: 5px 11px;
-	        @include breakpoint($mobile){
+            @include breakpoint($mobile){
 	          width: 171px;
 	          .stButton{
 	            margin-top: 29px;
@@ -645,6 +648,10 @@
 	            }
 	          }
 	        }
+	        @include breakpoint($small-mobile){
+              width: 140px;
+              padding: 5px 0px;
+            }
 	        .stButton{
 	          padding:0;
 	        }
@@ -760,7 +767,7 @@
            }
            @include breakpoint($mobile){
             max-width:160px;
-            display:none;
+            //display:none;
            }
          }
        }       
