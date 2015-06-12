@@ -215,4 +215,4 @@
     <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>
 </div>
 <?php print render($user_picture); ?>
-<?php print render($page['bottom']); ?>
+<?php print render($page['bottom']); ?> 
