@@ -1,185 +1,185 @@
 @import "base/base";
 
 .quote {
-	border-left: 1em $orange-dark solid;
-	padding: 1em;
-	margin: 0;
+    border-left: 1em $orange-dark solid;
+    padding: 1em;
+    margin: 0;
 
-	color: lighten($dark-gray, 30%);
-	p {margin: 0;}
-	&.pink {
-		border-left-color: $pink;
-	}
-	&.yellow {
-		border-left-color: yellow;
-	}
-	&.red {
-		border-left-color: red;
-	}
-	&.blue {
-		border-left-color: $tw-blue;
-	}
-	@include breakpoint($tablet) {
-		margin-right: - span(4 of 8) - gutter()/2;
-		width: 75%;
-		float: right;
-		margin-left: 2em;
-		font-size: 1.1em;
-		clear: right;
-		&.small {width: span(4 of 8);}
-	}
+    color: lighten($dark-gray, 30%);
+    p {margin: 0;}
+    &.pink {
+        border-left-color: $pink;
+    }
+    &.yellow {
+        border-left-color: yellow;
+    }
+    &.red {
+        border-left-color: red;
+    }
+    &.blue {
+        border-left-color: $tw-blue;
+    }
+    @include breakpoint($tablet) {
+        margin-right: - span(4 of 8) - gutter()/2;
+        width: 75%;
+        float: right;
+        margin-left: 2em;
+        font-size: 1.1em;
+        clear: right;
+        &.small {width: span(4 of 8);}
+    }
 }
 
 
 #nav {
-	>ul {
-		>li {
-			a {
-				font-weight: lighter;
-			}
-		}
-	}
+    >ul {
+        >li {
+            a {
+                font-weight: lighter;
+            }
+        }
+    }
 }
 //visited etc link text
 // a{
-// 	&:visited{color: #000;}
-// 	&:hover {
-// 		color: #000;
-// 		text-decoration: none;
-// 	}
+//  &:visited{color: #000;}
+//  &:hover {
+//      color: #000;
+//      text-decoration: none;
+//  }
 // }
 // a.btn {
-// 	color: $white;
-// 	&:visited{color: $white;}
-// 	&:hover {
-// 		color: $white;
-// 		text-decoration: none;
-// 		cursor: pointer;
-// 	}
+//  color: $white;
+//  &:visited{color: $white;}
+//  &:hover {
+//      color: $white;
+//      text-decoration: none;
+//      cursor: pointer;
+//  }
 // }
 
 .more-btn {
-	a {
-		.icon-Downarrow{
-			color: $gray;
-		}
-	}
+    a {
+        .icon-Downarrow{
+            color: $gray;
+        }
+    }
 }
 
 //2. general
 
 //header updates
 .top-bar .links li{
-	img{
-		padding-right: 24px;
-	}
-	// a{
-	// 	vertical-align: top;
-	// }
+    img{
+        padding-right: 24px;
+    }
+    // a{
+    //  vertical-align: top;
+    // }
 }
 
 //tooltips
 .btn-tooltip{
-	border-radius: 50%;
-	width: 35px;
-	height: 35px;
-	background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
-	background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
-	background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
-		//float: left;
-		border: 1px solid $light_silver;
-		font-family: $header-font-family;
-		font-size: 25px;
-		padding: 2px 9px;
-		//padding-left: 10px;
-		line-height: 32px;
-		margin-left: 5px;
-		margin-top:5px;	//aligning the span class to the position
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
+    background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
+    background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
+        //float: left;
+        border: 1px solid $light_silver;
+        font-family: $header-font-family;
+        font-size: 25px;
+        padding: 2px 9px;
+        //padding-left: 10px;
+        line-height: 32px;
+        margin-left: 5px;
+        margin-top:5px; //aligning the span class to the position
         display: table-caption; // makes the span act like a caption 
         &:hover{
-        	background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
-        	background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
-        	background-image: radial-gradient(circle cover at 90px 90px 90deg, $white 0%, $alto 100%, $gallery 95%);
-        	border-color: $casablanca;
+            background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $white 0%, $alto 100%, $gallery 95%);
+            background-image: -webkit-radial-gradient(90px 90px, circle cover, $white, $gallery);
+            background-image: radial-gradient(circle cover at 90px 90px 90deg, $white 0%, $alto 100%, $gallery 95%);
+            border-color: $casablanca;
         }
         @include breakpoint($mobile) {
-        	float: right;
+            float: right;
         }
 
     }
     a {
-    	&.tooltips {
-    		position: relative;
-    		display: inline;
-    		@include breakpoint($mobile) {
-    			display:none;
-    		}
-    		&.mobile{
-    			display:none;
-    			@include breakpoint($mobile) {
-    				display: block;
-    				top: -3px;
-    				float: right;
-    			}
-    		}
-    		span.tooltip-content {
-    			position: absolute;
-    			width: 245px;
-    			z-index:99;
-    			color: $black;
-    			background: $early_dawn;
-    			border: 1px solid $casablanca;
-    			height: 130px;
-    			line-height: 13px;
-    			text-align: left;
-    			display: none;
-    			border-radius: 5px;
-    			font-size: 13px;
-    			padding: 20px;
-    			bottom: 60px;
-    			left: -102px;
-    			h3 {
-    				font-size: 14px;
-    				margin-bottom: 5px;
-    				@include breakpoint($mobile) {
-    					margin-top: -10px;
-    				}
-    			}
-    			&:before {
-    				content: '';
-    				position: absolute;
-    				top: 100%;
-    				left: 50%;
-    				margin-left: -12px;
-    				width: 0;
-    				height: 0;
-    				border-top: 20px solid $casablanca;
-    				border-right: 20px solid transparent;
-    				border-left: 20px solid transparent;
-    			}
-    			&:after {
-    				content: '';
-    				position: absolute;
-    				top: 100%;
-    				left: 50%;
-    				margin-left: -10px;
-    				width: 0;
-    				height: 0;
-    				border-top: 19px solid $early_dawn;
-    				border-right: 19px solid transparent;
-    				border-left: 18px solid transparent;
-    			}
-    		}
-    	}
-    	&:hover.tooltips span.tooltip-content {
-    		display: inherit;		
-    	}
+        &.tooltips {
+            position: relative;
+            display: inline;
+            @include breakpoint($mobile) {
+                display:none;
+            }
+            &.mobile{
+                display:none;
+                @include breakpoint($mobile) {
+                    display: block;
+                    top: -3px;
+                    float: right;
+                }
+            }
+            span.tooltip-content {
+                position: absolute;
+                width: 245px;
+                z-index:99;
+                color: $black;
+                background: $early_dawn;
+                border: 1px solid $casablanca;
+                height: 130px;
+                line-height: 13px;
+                text-align: left;
+                display: none;
+                border-radius: 5px;
+                font-size: 13px;
+                padding: 20px;
+                bottom: 60px;
+                left: -102px;
+                h3 {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    @include breakpoint($mobile) {
+                        margin-top: -10px;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -12px;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid $casablanca;
+                    border-right: 20px solid transparent;
+                    border-left: 20px solid transparent;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -10px;
+                    width: 0;
+                    height: 0;
+                    border-top: 19px solid $early_dawn;
+                    border-right: 19px solid transparent;
+                    border-left: 18px solid transparent;
+                }
+            }
+        }
+        &:hover.tooltips span.tooltip-content {
+            display: inherit;       
+        }
     }
 
 
 
     .larger{
-    	@include fontsize(24,16);
+        @include fontsize(24,16);
     }
 
 
@@ -187,586 +187,586 @@
 //columns
 
 .col-2 {
-	float:left;
-	width:48.5%;
-	margin:0 0 0 2.9%;
-	@include breakpoint($mobile) {
-		width:100%;
-		margin:0;
-	}
-	&:first-child {
-		margin:0;
+    float:left;
+    width:48.5%;
+    margin:0 0 0 2.9%;
+    @include breakpoint($mobile) {
+        width:100%;
+        margin:0;
+    }
+    &:first-child {
+        margin:0;
 
-	}
+    }
 }
 
 .col-3 {
-	float:left;
-	width:31.4%;
-	margin:0 0 0 2.9%;
-	@include breakpoint($mobile) {
-		width:100%;
-		margin:0;
-	}
-	&:first-child {
-		margin:0;
-	}
+    float:left;
+    width:31.4%;
+    margin:0 0 0 2.9%;
+    @include breakpoint($mobile) {
+        width:100%;
+        margin:0;
+    }
+    &:first-child {
+        margin:0;
+    }
 }
 //4. My voice
 
 //postioning my voice caption text
 .my-voice-visual {
-	.img-holder {
-		.caption-frame {
-			.caption{
-				padding: 5px 0 0;
-				.title{
-					span.pink{
-						color: $pink;
-						padding: 0;
+    .img-holder {
+        .caption-frame {
+            .caption{
+                padding: 5px 0 0;
+                .title{
+                    span.pink{
+                        color: $pink;
+                        padding: 0;
 
-					}
-				}
-			}
-		}
-	}
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 //positioning of form box
 .my-voice-block{
-	position: relative;
-	z-index: 3;
-	margin-top: -234px;
-	@include breakpoint($mobile) {
-		margin-top: 0;
-	}
+    position: relative;
+    z-index: 3;
+    margin-top: -234px;
+    @include breakpoint($mobile) {
+        margin-top: 0;
+    }
 }
 
 .my-voice-intro{
-	&.no-overlay{
-		margin-top: 20px;
-	}
-	//margin-top: 80px;
-	display: inline-block;
-	@extend %clearfix;
-	@include breakpoint($mobile) {
-		margin-top: 20px;
-		margin-left: 15px;
+    &.no-overlay{
+        margin-top: 20px;
+    }
+    //margin-top: 80px;
+    display: inline-block;
+    @extend %clearfix;
+    @include breakpoint($mobile) {
+        margin-top: 20px;
+        margin-left: 15px;
 
-	}
-	h3{
-		margin: 0 0 0.5em;
-		float: left;
-		clear: both;
-	}
-	.holder{
-		p{
-			width: 64%;
-			margin-bottom: 50px;
-			float: left;
-			@include breakpoint($mobile) {
-				width: 100%;
-				margin-bottom: 10px;
-			}
-		}
-	}
+    }
+    h3{
+        margin: 0 0 0.5em;
+        float: left;
+        clear: both;
+    }
+    .holder{
+        p{
+            width: 64%;
+            margin-bottom: 50px;
+            float: left;
+            @include breakpoint($mobile) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 //my voice filters
 .advanced-sort-block{
-	@include breakpoint($mobile) {
-		display: inline-block;
-		margin-top: 10px;
-		input, select, .btn{
-			width: 100%;
-			margin-bottom: 10px;
-		}
-	}
-	.selected-filters{
-		float: left;
-		clear: both;
-		list-style-type: none;
-		padding: 0;
-		//display none - this is shown in the photoshop version not invision.
-		display:none;
-		.this-filter{
-			float: left;
-			padding: 10px;
-			border: 1px solid $light_silver;
-			border-radius: 5px;
-			margin: 5px;
-			background: $page-background;
-			@include breakpoint($mobile) {
-				width: 100%;
-			}
-			.icon-Close{
-				margin-left: 10px;
-				@include fontsize(14,16);
-				@include breakpoint($mobile) {
-					float: right;
-					padding-top: 3px;
-				}
-			}
-		}
-	}
+    @include breakpoint($mobile) {
+        display: inline-block;
+        margin-top: 10px;
+        input, select, .btn{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .selected-filters{
+        float: left;
+        clear: both;
+        list-style-type: none;
+        padding: 0;
+        //display none - this is shown in the photoshop version not invision.
+        display:none;
+        .this-filter{
+            float: left;
+            padding: 10px;
+            border: 1px solid $light_silver;
+            border-radius: 5px;
+            margin: 5px;
+            background: $page-background;
+            @include breakpoint($mobile) {
+                width: 100%;
+            }
+            .icon-Close{
+                margin-left: 10px;
+                @include fontsize(14,16);
+                @include breakpoint($mobile) {
+                    float: right;
+                    padding-top: 3px;
+                }
+            }
+        }
+    }
 }
 
 //my voice intro block
 .my-voice-intro-menu{
-	list-style-type: none;
-	margin: 10px 0 0 0;
-	@include fontsize(10,16);
-	text-decoration: underline;
-	text-align: right;
-	@include breakpoint($mobile) {
-		display: none;
-	}
-	h4{	margin: 0 0 8px;}
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    @include fontsize(10,16);
+    text-decoration: underline;
+    text-align: right;
+    @include breakpoint($mobile) {
+        display: none;
+    }
+    h4{ margin: 0 0 8px;}
 }
 
 .my-voice-mobile-menu{
-	display: none;
-	list-style-type: none;
-	@include fontsize(12,16);
-	float: left; 
-	text-align: center;
-	-webkit-padding-start: 0;
-	@include breakpoint($mobile) {
-		display: block;
-		float: none;
-		padding: 0;
-		margin:0;
-	}
-	li{
-		float:left;
-		padding-left: 20px;
-		&:first-child{
-			padding-left:0;
-		}
-		a{	text-decoration: underline;}
+    display: none;
+    list-style-type: none;
+    @include fontsize(12,16);
+    float: left; 
+    text-align: center;
+    -webkit-padding-start: 0;
+    @include breakpoint($mobile) {
+        display: block;
+        float: none;
+        padding: 0;
+        margin:0;
+    }
+    li{
+        float:left;
+        padding-left: 20px;
+        &:first-child{
+            padding-left:0;
+        }
+        a{  text-decoration: underline;}
 
-	}
+    }
 }
 
 //my voice specific styles
 .my-voice-main {
-	//TODO remove this style and do it properly instead of piggybacking
-	.action-block{
-		float: left;
-		margin-bottom: 30px;
-		background: transparent;
-		.block-symptoms, .block-share, .block-spectrum{ 
-			color:$white;
-			width:48.5%;
-			padding: 50px 10px 37px 39px;
-			background-size:cover;
-			float:left;
-			@include breakpoint($mobile) {
-				width:100%;
-				float:none;
-				padding:26px 10px 17px 20px;
-				margin:0 0 34px;
-				background-position: right center;
-			}
-			.title {
-				display:block;
-				font-size:45px;
-				line-height:46px;
-				margin:0 0 13px;
-				font-family:$header-font-family;
-				font-weight: normal;
-				@include breakpoint($tablet) {
-					font-size:30px;
-					line-height:33px;
-				}
-				@include breakpoint($mobile) {
-					margin:0 0 19px;
-					font-size: 24px;
-					line-height: 30px;
-				}
-				&.smaller{
-					@include fontsize(18,16);
-					margin:0 0 32px;
-					@include breakpoint($tablet) {
-						@include fontsize(14,16);
-						line-height:33px;
-					}
-					@include breakpoint($mobile) {
-						@include fontsize(12,16);
-						line-height:25px;
-						margin:0 0 16px;
-					}
+    //TODO remove this style and do it properly instead of piggybacking
+    .action-block{
+        float: left;
+        margin-bottom: 30px;
+        background: transparent;
+        .block-symptoms, .block-share, .block-spectrum{ 
+            color:$white;
+            width:48.5%;
+            padding: 50px 10px 37px 39px;
+            background-size:cover;
+            float:left;
+            @include breakpoint($mobile) {
+                width:100%;
+                float:none;
+                padding:26px 10px 17px 20px;
+                margin:0 0 34px;
+                background-position: right center;
+            }
+            .title {
+                display:block;
+                font-size:45px;
+                line-height:46px;
+                margin:0 0 13px;
+                font-family:$header-font-family;
+                font-weight: normal;
+                @include breakpoint($tablet) {
+                    font-size:30px;
+                    line-height:33px;
+                }
+                @include breakpoint($mobile) {
+                    margin:0 0 19px;
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                &.smaller{
+                    @include fontsize(18,16);
+                    margin:0 0 32px;
+                    @include breakpoint($tablet) {
+                        @include fontsize(14,16);
+                        line-height:33px;
+                    }
+                    @include breakpoint($mobile) {
+                        @include fontsize(12,16);
+                        line-height:25px;
+                        margin:0 0 16px;
+                    }
 
-				}
-			}
-			.block-spectrum{
-				float:left;
-			}
-		}
+                }
+            }
+            .block-spectrum{
+                float:left;
+            }
+        }
 
-	}
-	.block-share{ 
-	}
+    }
+    .block-share{ 
+    }
 
-	.block-spectrum{ 
-	}
-	.block-report{ 
-		float:right;
-	}
-	.sort-block{
-		margin: 0;
-		padding: 14px 20px 16px;
-		margin-bottom: 20px;
-		@extend %clearfix;
-		display: block;
-	}
+    .block-spectrum{ 
+    }
+    .block-report{ 
+        float:right;
+    }
+    .sort-block{
+        margin: 0;
+        padding: 14px 20px 16px;
+        margin-bottom: 20px;
+        @extend %clearfix;
+        display: block;
+    }
 }
 
 //is there a way to merge this?
 .my-voice-post{
-	padding:20px 18px;
-	float: left;
-	position: relative;
-	margin:0 0 30px;
-	background:$white;
-	border:1px solid $gray;
-	width: 100%;
-	@include box-shadow(2px 2px 2px rgba(0,0,0,.25));
-	@include breakpoint($mobile) {
-		padding:14px 15px;
-		font-size:18px;
-		line-height:27px;
-	}
-	img{
-		float: left;
-		@media (max-width: 480px){
-			width: 100%;
-		}
-	}
+    padding:20px 18px;
+    float: left;
+    position: relative;
+    margin:0 0 30px;
+    background:$white;
+    border:1px solid $gray;
+    width: 100%;
+    @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+    @include breakpoint($mobile) {
+        padding:14px 15px;
+        font-size:18px;
+        line-height:27px;
+    }
+    img{
+        float: left;
+        @media (max-width: 480px){
+            width: 100%;
+        }
+    }
 
 
-	.content{
-		float: left;
-		width: 56%;
-		padding-left: 50px;
-		@include breakpoint($tablet) {
-			width: 45%;
-		}
-		@include breakpoint($mobile) {
-			width: 100%;
-			padding: 0;
-		}
-		p{
-			@include fontsize(16,16);
-		}
-		h3{
-			font-weight:bold;
-			@include fontsize(22,16);
-			line-height:32px;
-			text-decoration: underline;
-			@include breakpoint($mobile) {
-				@include fontsize(20,16);
-				margin: 10px 0;
-				line-height:28px;
-			}
-		}
-		.num-holder {
-			display:inline-block;
-			vertical-align:top;
-			&.gray-num{
-				a{
-					.num{
-						color:$gray;
-						border:3px solid $gray;
-						&:after{
-							background-position:-80px 0;
-						}
-					}
-					.text{
-						color:$gray;
-					}
-				}
-			}
-			a {
-				text-decoration:none;
-				.num {
-					min-width:46px;
-					height:35px;
-					border:2px solid $pink;
-					border-radius:9px;
-					font-size:16px;
-					line-height:24px;
-					padding:3px;
-					position:relative;
-					color:$pink;
-					display:inline-block;
-					vertical-align:middle;
-					text-align:center;
-					text-decoration:none;
-					margin:0 15px 0 0;
-					@include breakpoint($tablet) {
-						margin:0 5px 0 0;
-					}
-					@include breakpoint($mobile) {
-						font-size:16px;
-						line-height:18px;
-						border-radius:5px;
-						min-width:39px;
-						height:28px;
-					}
-					&:after {
-						position:absolute;
-						right:8px;
-						bottom:-13px;
-						content:"";
-						background:image-url('sprite.png') no-repeat -128px 0;
-						width:12px;
-						height:13px;
-						@include breakpoint($mobile) {
-							right:6px;
-						}
-					}
-				}
-				.text {
-					display:none;
-					margin:2px 0 0 -5px;
-					vertical-align:middle;
-					font-size:14px;
-					line-height:18px;
-					color:$pink;
-					@include breakpoint($mobile) {
-						margin:-2px 0 0 ;
-					}
-				}
-			}
-		}
-		&:hover {
-			a {
-				&.hover {
-					.text {
-						display:inline-block;
-					}
-				}
-			}
-		}
+    .content{
+        float: left;
+        width: 56%;
+        padding-left: 50px;
+        @include breakpoint($tablet) {
+            width: 45%;
+        }
+        @include breakpoint($mobile) {
+            width: 100%;
+            padding: 0;
+        }
+        p{
+            @include fontsize(16,16);
+        }
+        h3{
+            font-weight:bold;
+            @include fontsize(22,16);
+            line-height:32px;
+            text-decoration: underline;
+            @include breakpoint($mobile) {
+                @include fontsize(20,16);
+                margin: 10px 0;
+                line-height:28px;
+            }
+        }
+        .num-holder {
+            display:inline-block;
+            vertical-align:top;
+            &.gray-num{
+                a{
+                    .num{
+                        color:$gray;
+                        border:3px solid $gray;
+                        &:after{
+                            background-position:-80px 0;
+                        }
+                    }
+                    .text{
+                        color:$gray;
+                    }
+                }
+            }
+            a {
+                text-decoration:none;
+                .num {
+                    min-width:46px;
+                    height:35px;
+                    border:2px solid $pink;
+                    border-radius:9px;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:3px;
+                    position:relative;
+                    color:$pink;
+                    display:inline-block;
+                    vertical-align:middle;
+                    text-align:center;
+                    text-decoration:none;
+                    margin:0 15px 0 0;
+                    @include breakpoint($tablet) {
+                        margin:0 5px 0 0;
+                    }
+                    @include breakpoint($mobile) {
+                        font-size:16px;
+                        line-height:18px;
+                        border-radius:5px;
+                        min-width:39px;
+                        height:28px;
+                    }
+                    &:after {
+                        position:absolute;
+                        right:8px;
+                        bottom:-13px;
+                        content:"";
+                        background:image-url('sprite.png') no-repeat -128px 0;
+                        width:12px;
+                        height:13px;
+                        @include breakpoint($mobile) {
+                            right:6px;
+                        }
+                    }
+                }
+                .text {
+                    display:none;
+                    margin:2px 0 0 -5px;
+                    vertical-align:middle;
+                    font-size:14px;
+                    line-height:18px;
+                    color:$pink;
+                    @include breakpoint($mobile) {
+                        margin:-2px 0 0 ;
+                    }
+                }
+            }
+        }
+        &:hover {
+            a {
+                &.hover {
+                    .text {
+                        display:inline-block;
+                    }
+                }
+            }
+        }
 
-		.comment-count{
-			background: no-repeat image-url('comment-sprite.png');
-			padding: 7px 0px 17px 0;
-			width: 46px;
-			text-align: center;
-			color: $pink;
-			@include breakpoint($mobile) {float: left;}
-			.count{
-				@include fontsize(20,16);
-			}
-			&.zero{
-				background: no-repeat image-url('comment-sprite.png')0 -52px;
-				.count{
-					color: $gray;
-				}
-			}
-		}
-		.talkers{
-			display: none;
-			@include fontsize(15,16);
-			float: left;
-			padding-left: 10px;
-			color: $pink;
-			@include breakpoint($mobile) {
-				display: block;}
-			}
-		}
-		.date{
-			list-style-type: none;
-			float: right;
-			margin: 0;
-			background: $white;
-			@include breakpoint($mobile) {
-				padding: 5px 5px 5px 9px;
-				position: absolute;
-				right: 14px;
-				top: 14px;
-			}
-			.day{
-				font-weight:bold;
-				@include fontsize(24,16);
-				line-height:24px;
-				@include breakpoint($mobile) {
-					@include fontsize(22,16);
-					line-height:24px;
-				}
-			}
-			.month{
-				font-weight:bold;
-				@include fontsize(16,16);
-				line-height:25px;
-				@include breakpoint($mobile) {
-					@include fontsize(18,16);
-					line-height:24px;
-				}
-			}
-			.year{
-				@include fontsize(12,16);
-				line-height:12px;
-				@include breakpoint($mobile) {
-					display: none;
-				}
-			}
-		}
-	}
+        .comment-count{
+            background: no-repeat image-url('comment-sprite.png');
+            padding: 7px 0px 17px 0;
+            width: 46px;
+            text-align: center;
+            color: $pink;
+            @include breakpoint($mobile) {float: left;}
+            .count{
+                @include fontsize(20,16);
+            }
+            &.zero{
+                background: no-repeat image-url('comment-sprite.png')0 -52px;
+                .count{
+                    color: $gray;
+                }
+            }
+        }
+        .talkers{
+            display: none;
+            @include fontsize(15,16);
+            float: left;
+            padding-left: 10px;
+            color: $pink;
+            @include breakpoint($mobile) {
+                display: block;}
+            }
+        }
+        .date{
+            list-style-type: none;
+            float: right;
+            margin: 0;
+            background: $white;
+            @include breakpoint($mobile) {
+                padding: 5px 5px 5px 9px;
+                position: absolute;
+                right: 14px;
+                top: 14px;
+            }
+            .day{
+                font-weight:bold;
+                @include fontsize(24,16);
+                line-height:24px;
+                @include breakpoint($mobile) {
+                    @include fontsize(22,16);
+                    line-height:24px;
+                }
+            }
+            .month{
+                font-weight:bold;
+                @include fontsize(16,16);
+                line-height:25px;
+                @include breakpoint($mobile) {
+                    @include fontsize(18,16);
+                    line-height:24px;
+                }
+            }
+            .year{
+                @include fontsize(12,16);
+                line-height:12px;
+                @include breakpoint($mobile) {
+                    display: none;
+                }
+            }
+        }
+    }
 
 //My Voice Acknowldegement
 .acknowledge-block{
-	background:$white;
-	float: left;
-	width: 100%;
-	text-align: center;
-	//padding: 80px 0;
-	padding-bottom: 80px;
-	a{
-		font-family: $header-font-family;
-		color: $black;
-	}
+    background:$white;
+    float: left;
+    width: 100%;
+    text-align: center;
+    //padding: 80px 0;
+    padding-bottom: 80px;
+    a{
+        font-family: $header-font-family;
+        color: $black;
+    }
 }
 
 // main page columns styles
 
 .articles-block, .my-voice-block {
-	width: 100%;
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-	position: relative;
-	overflow: hidden;
-	@include breakpoint($mobile) {
-		background:$white;
-	}
-	.holder {
-		@include container;
-		padding: 0 15px;
-		.close, .block-close{
-			width: 37px;
-			background: $white;
-			padding: 10px;
-			left: 100%;
-			position: relative;
-			margin-left: -37px;
-			@include breakpoint($mobile) {
-				margin-top:-30px;
-				z-index: 7;
-				float: none;
-				width: 0;
-				margin: 0 0 0 -21px;
-				top: -15px;
-			}
-		}
-	}
-	.img-holder{
-		img { width: 100%;}
-	}
+    width: 100%;
+    @include transition ($type:all, $time:0.4s, $ease:ease);
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($mobile) {
+        background:$white;
+    }
+    .holder {
+        @include container;
+        padding: 0 15px;
+        .close, .block-close{
+            width: 37px;
+            background: $white;
+            padding: 10px;
+            left: 100%;
+            position: relative;
+            margin-left: -37px;
+            @include breakpoint($mobile) {
+                margin-top:-30px;
+                z-index: 7;
+                float: none;
+                width: 0;
+                margin: 0 0 0 -21px;
+                top: -15px;
+            }
+        }
+    }
+    .img-holder{
+        img { width: 100%;}
+    }
 }
 
 //articles block
 .articles-block{
-	background: $white;
-	//padding-top: 75px;
-	@include breakpoint($mobile) {
-		padding-top: 50px;
-	}
-	.article{
-		h4{
-			padding: 25px 0 20px 0px;
-			margin: 0;
-			@include fontsize(22,16);
-		}
-		p{
-			@include fontsize(16,16);
-			line-height: 25px;
-			//padding-bottom: 3px;
-		}
-	}
+    background: $white;
+    //padding-top: 75px;
+    @include breakpoint($mobile) {
+        padding-top: 50px;
+    }
+    .article{
+        h4{
+            padding: 25px 0 20px 0px;
+            margin: 0;
+            @include fontsize(22,16);
+        }
+        p{
+            @include fontsize(16,16);
+            line-height: 25px;
+            //padding-bottom: 3px;
+        }
+    }
 }
 
 //main page -- action-blocks
 .action-block{
-	float: left;
-	//padding-bottom: 30px;
-	background-color: $white;
-	.holder{
-		padding: 95px 15px 85px;
-	}
-	.block-share, .block-spectrum{
-		color:$white;
-		width:48.5%;
-		padding: 50px 10px 37px 39px;
-		background-size:cover;
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:26px 10px 17px 20px;
-			margin:0 0 34px;
-			background-position: right center;
-		}
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 13px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-			&.smaller{
-				@include fontsize(18,16);
-				margin:0 0 32px;
-				@include breakpoint($tablet) {
-					@include fontsize(14,16);
-					line-height:33px;
-				}
-				@include breakpoint($mobile) {
-					@include fontsize(12,16);
-					line-height:25px;
-					margin:0 0 16px;
-				}
+    float: left;
+    //padding-bottom: 30px;
+    background-color: $white;
+    .holder{
+        padding: 95px 15px 85px;
+    }
+    .block-share, .block-spectrum{
+        color:$white;
+        width:48.5%;
+        padding: 50px 10px 37px 39px;
+        background-size:cover;
+        @include breakpoint($mobile) {
+            width:100%;
+            float:none;
+            padding:26px 10px 17px 20px;
+            margin:0 0 34px;
+            background-position: right center;
+        }
+        .title {
+            display:block;
+            font-size:45px;
+            line-height:46px;
+            margin:0 0 13px;
+            font-family:$header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size:30px;
+                line-height:33px;
+            }
+            @include breakpoint($mobile) {
+                font-size:25px;
+                line-height:25px;
+                margin:0 0 16px;
+            }
+            &.smaller{
+                @include fontsize(18,16);
+                margin:0 0 32px;
+                @include breakpoint($tablet) {
+                    @include fontsize(14,16);
+                    line-height:33px;
+                }
+                @include breakpoint($mobile) {
+                    @include fontsize(12,16);
+                    line-height:25px;
+                    margin:0 0 16px;
+                }
 
-			}
-		}
-	}
+            }
+        }
+    }
 
 }
 //TODO is this a repeat?
 .action-block{
-	background-color: $white;
-	.block-share{ 
-		float: left;
-		.btn{
-			float: right;
-			margin: 182px 10px 0 0;
-			display: block;
-			@include breakpoint($tablet) {
-				margin: 146px 10px 0 0;
-			}
-		}
-		@include breakpoint($mobile) {
-			height: 324px;
-			.btn{margin: 223px 10px 0 0;}
-		}
-	}
+    background-color: $white;
+    .block-share{ 
+        float: left;
+        .btn{
+            float: right;
+            margin: 182px 10px 0 0;
+            display: block;
+            @include breakpoint($tablet) {
+                margin: 146px 10px 0 0;
+            }
+        }
+        @include breakpoint($mobile) {
+            height: 324px;
+            .btn{margin: 223px 10px 0 0;}
+        }
+    }
 
-	.block-spectrum{
-		background-image: image-url('bg07.jpg');
-		float: right;
-		.title{
-			margin-bottom: 44px;
-		}
-		}	}
+    .block-spectrum{
+        background-image: image-url('bg07.jpg');
+        float: right;
+        .title{
+            margin-bottom: 44px;
+        }
+        }   }
 
 
 
@@ -774,375 +774,375 @@
 
 
 .social-block, .signup-block, .slider-block, .my-voice-block, .social-action-block {
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-	position:relative;
-	overflow:hidden;
-	width:100%;
-	@include breakpoint($mobile) {
-		background:$white;
-	}
-	.holder {
-		@include container;
-		@include breakpoint ($mobile) {padding: 0 15px;}//
+    @include transition ($type:all, $time:0.4s, $ease:ease);
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    @include breakpoint($mobile) {
+        background:$white;
+    }
+    .holder {
+        @include container;
+        @include breakpoint ($mobile) {padding: 0 15px;}//
 
-		// myVoice page the form still cuts the caption 
-		// on higher resolutions.
-		@include breakpoint($large-screen){
-			margin-top:	3em;
-		}
+        // myVoice page the form still cuts the caption 
+        // on higher resolutions.
+        @include breakpoint($large-screen){
+            margin-top: 3em;
+        }
 
-		.close, .block-close{ //TODO make block-close not repeat for my voice page
-			width: 37px;
-			background: $white;
-			padding: 10px;
-			left: 100%;
-			position: relative;
-			margin-left: -37px;
-			@include breakpoint($mobile) {
-				margin: 0 0 0 -21px;
-				top: -15px;
-			}
-		}
-		.block-close{
-			padding: 0;
-			width: 57px;
-			height: 54px;
-			text-align: center;
-			vertical-align: middle;
-			line-height: 57px;
-			margin-left:-57px;
-			font-size: 1.5em;
-		}
-	}
-	.btn{
-		@include fontsize(20,16);
-		padding: 11px 29px;
-		@include breakpoint($mobile) {
-			padding: 6px 19px;
-			font-size: 18px;
-		}
-	}
-	.twitter{
-		height: 300px;
-		display: block;
-		@include breakpoint($mobile) {
-			height: auto;
-		}
-	}
-	h1 {
-		display:inline-block;
-		vertical-align:top;
-		background:$white;
-		font-size:36px;
-		line-height:36px;
-		color:$black;
-		margin:0;
-		padding:27px 33px 5px 29px;
-		@include breakpoint($mobile) {
-			font-size:27px;
-			line-height:32px;
-			padding:0 0 31px;
-			br { display:none; }
-		}
-	}
-	h3 {
-		line-height:1.363em;
-		font-size: 1.67em;
-		margin:-4px 0 8px;
-		@include breakpoint($mobile) {
-			font-size:22px;
-			line-height:28px;
-			margin-top: 15px;
-		}
-	}
-	.block {
-		text-align:left;
-		background:$white;
-		padding:52px 32px 49px;
-		.btn{
-			@include breakpoint($mobile) {
-				width:100%;
-				.icon-Rightarrow{
-					display:none;
-				}
-			}
-		}
-		@include breakpoint($mobile) {
-			padding:0 0 49px;
-		}
-	}
-	.bg-stretch {
-		position:absolute;
-		left:0;
-		top:0;
-		right:0;
-		bottom:0;
-		@include breakpoint($mobile) {
-			display:none;
-		}
-		img {
-			display:block;
-		}
-	}
+        .close, .block-close{ //TODO make block-close not repeat for my voice page
+            width: 37px;
+            background: $white;
+            padding: 10px;
+            left: 100%;
+            position: relative;
+            margin-left: -37px;
+            @include breakpoint($mobile) {
+                margin: 0 0 0 -21px;
+                top: -15px;
+            }
+        }
+        .block-close{
+            padding: 0;
+            width: 57px;
+            height: 54px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 57px;
+            margin-left:-57px;
+            font-size: 1.5em;
+        }
+    }
+    .btn{
+        @include fontsize(20,16);
+        padding: 11px 29px;
+        @include breakpoint($mobile) {
+            padding: 6px 19px;
+            font-size: 18px;
+        }
+    }
+    .twitter{
+        height: 300px;
+        display: block;
+        @include breakpoint($mobile) {
+            height: auto;
+        }
+    }
+    h1 {
+        display:inline-block;
+        vertical-align:top;
+        background:$white;
+        font-size:36px;
+        line-height:36px;
+        color:$black;
+        margin:0;
+        padding:27px 33px 5px 29px;
+        @include breakpoint($mobile) {
+            font-size:27px;
+            line-height:32px;
+            padding:0 0 31px;
+            br { display:none; }
+        }
+    }
+    h3 {
+        line-height:1.363em;
+        font-size: 1.67em;
+        margin:-4px 0 8px;
+        @include breakpoint($mobile) {
+            font-size:22px;
+            line-height:28px;
+            margin-top: 15px;
+        }
+    }
+    .block {
+        text-align:left;
+        background:$white;
+        padding:52px 32px 49px;
+        .btn{
+            @include breakpoint($mobile) {
+                width:100%;
+                .icon-Rightarrow{
+                    display:none;
+                }
+            }
+        }
+        @include breakpoint($mobile) {
+            padding:0 0 49px;
+        }
+    }
+    .bg-stretch {
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        @include breakpoint($mobile) {
+            display:none;
+        }
+        img {
+            display:block;
+        }
+    }
 }
 //myvoice block overrides + specifics
 .my-voice-block{
-	float: left;
-	input[type=submit].btn-pink{
-		border: 0;
-		border-bottom: 5px solid $pink-dark;
-	}
-	@include breakpoint($mobile) {
-		background: transparent;
-		.block{
-			@include breakpoint($mobile) {
-				margin: -15px;
-				padding: 10px 15px 20px;
-			}
-		}
-	}
-	.holder{
-		//padding: 0 15px 0 0;
-		@include breakpoint($mobile) {
-			padding: 15px 15px;
-		}
-	}
-	//overwrite jcf settings TODO check this + border is still darker than the others
-	.jcf-select.jcf-unselectable{
-		float:left;
-		clear:both;
-		width:80%;
-		border-radius:5px;
-		border-color:$mercury;
-		@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
-		margin-bottom: 20px;
+    float: left;
+    input[type=submit].btn-pink{
+        border: 0;
+        border-bottom: 5px solid $pink-dark;
+    }
+    @include breakpoint($mobile) {
+        background: transparent;
+        .block{
+            @include breakpoint($mobile) {
+                margin: -15px;
+                padding: 10px 15px 20px;
+            }
+        }
+    }
+    .holder{
+        //padding: 0 15px 0 0;
+        @include breakpoint($mobile) {
+            padding: 15px 15px;
+        }
+    }
+    //overwrite jcf settings TODO check this + border is still darker than the others
+    .jcf-select.jcf-unselectable{
+        float:left;
+        clear:both;
+        width:80%;
+        border-radius:5px;
+        border-color:$mercury;
+        @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+        margin-bottom: 20px;
 
-	}
+    }
 
 }
 
 //signup block overrides
 .signup-block{
-	.holder{
-		@include breakpoint($mobile) {
-			margin-bottom: 0;
-		}
-	}
-	a {
-		&.tooltips {
-			@include breakpoint($mobile) {
-				display:none;
-			}
-			&.mobile{
-				display:none;
-				@include breakpoint($mobile) {
-					display: block;
-					top: -3px;
-					float: right;
-				}
-			}
-		}
-	}
-
+    .holder{
+        @include breakpoint($mobile) {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        &.tooltips {
+            @include breakpoint($mobile) {
+                display:none;
+            }
+            &.mobile{
+                display:none;
+                @include breakpoint($mobile) {
+                    display: block;
+                    top: -3px;
+                    float: right;
+                }
+            }
+        }
+    }
 }
 
 
 //social block specific
 .social-block{
-	.holder{
-		position: relative;
-		z-index: 4;
-		margin-top: 15px;
-		padding: 60px 15px 80px;
-		@include breakpoint($mobile){
-			padding: 60px 15px 240px;
-		}
-		.youtube-btn{
-			@include fontsize(18,16);
-			//width: 100%;
-			@include breakpoint($mobile){
-				width:100%;
-			}
+    .holder{
+        position: relative;
+        z-index: 4;
+        margin-top: 15px;
+        padding: 60px 15px 80px;
+        @include breakpoint($mobile){
+            padding: 60px 15px 240px;
+        }
+        .youtube-btn{
+            @include fontsize(18,16);
+            //width: 100%;
+            @include breakpoint($mobile){
+                width:100%;
+            }
 
-		}
+        }
 
-	}
-	h3{
-		@include fontsize(20,16);
-		font-weight: bold;
-	}
-	.block{ padding: 40px 32px 52px;}
-	.member-count{
-		text-align: center;
-		//padding: 20px 0 40px;
-		.numbers{
-			font-family:$header-font-family;
-			@include fontsize(66,16);
-			line-height: 66px;
-		}
-		a{
-			font-family:$header-font-family;
-			text-decoration: underline;
-		}
-	}
+    }
+    h3{
+        @include fontsize(20,16);
+        font-weight: bold;
+    }
+    .block{ padding: 40px 32px 52px;}
+    .member-count{
+        text-align: center;
+        //padding: 20px 0 40px;
+        .numbers{
+            font-family:$header-font-family;
+            @include fontsize(66,16);
+            line-height: 66px;
+        }
+        a{
+            font-family:$header-font-family;
+            text-decoration: underline;
+        }
+    }
 }
 
 //slider block overrides
 .slider-block{
-	margin-top: -555px;
-	@include breakpoint($mobile) {
-		margin-top: 0;
-		background: transparent;
-	}
-	.block{
-		padding: 32px 0 0;
-		@include breakpoint($mobile) {
-			margin: -15px;
-			padding: 10px 15px 70px;
-		}
-		.slider-container{
-			margin: 0 90px;
-			.l-s-arrow, .r-s-arrow{
-				width: 0;
-				height: 0;
-				position:relative;
-				z-index:5;
-				top: 115px;
-				left: -65px;
-				@include breakpoint($mobile) { 
-					left: -45px;
-					font-size: 18px;
-					//display:none;
-				}
-				a{
-					color: $orange;
-					@include fontsize(40,0);
-					span{}
-				}
-				.ajax-progress-throbber{
-					left:0;
-					margin-top:-29px;
-				}
-			}
-			.r-s-arrow{
-				left: 19px;
-				font-size: 20px;
-				top: 108px;
-				@include breakpoint($mobile) { 
-					left: 0;
-					font-size: 18px;
-					top: 114px;
-				}
-				.skip{
-					a{
-						font-size: 18px;
-						margin-left: 9px;
-						margin-top: -5px;
-						float: left;
-						@include fontsize(16,0);
-					}
-				}
-				.ajax-progress-throbber{
-					right:0;
-					left:63px;
-					margin-top:-34px; 
-				}
-			}
-		}
-	}
-	.holder{
-		//padding-top: 5%;
-		margin-bottom: 130px;
-		padding: 0 15px;
-		@include breakpoint($mobile) {
-			margin-bottom: 20px;
+    margin-top: -555px;
+    @include breakpoint($mobile) {
+        margin-top: 0;
+        background: transparent;
+    }
+    .block{
+        padding: 32px 0 0;
+        @include breakpoint($mobile) {
+            margin: -15px;
+            padding: 10px 15px 70px;
+        }
+        .slider-container{
+            margin: 0 90px;
+            .l-s-arrow, .r-s-arrow{
+                width: 0;
+                height: 0;
+                position:relative;
+                z-index:5;
+                left: -65px;
+                @include breakpoint($mobile) { 
+                    left: -45px;
+                    font-size: 18px;
+                    top: 114px;
+                    //display:none;
+                }
+                a{
+                    color: $orange;
+                    @include fontsize(40,0);
+                    span{}
+                }
+                .ajax-progress-throbber{
+                    left:0;
+                    margin-top:-29px;
+                }
+            }
+            .l-s-arrow {
+                top: 108px;
+            }
+            .r-s-arrow{
+                left: 19px;
+                font-size: 20px;
+                top: 108px;
+                @include breakpoint($mobile) { 
+                    left: 0;
+                }
+                .skip{
+                    a{
+                        font-size: 18px;
+                        margin-left: 9px;
+                        margin-top: -5px;
+                        float: left;
+                        @include fontsize(16,0);
+                    }
+                }
+                .ajax-progress-throbber{
+                    right:0;
+                    left:63px;
+                    margin-top:-34px; 
+                }
+            }
+        }
+    }
+    .holder{
+        //padding-top: 5%;
+        margin-bottom: 130px;
+        padding: 0 15px;
+        @include breakpoint($mobile) {
+            margin-bottom: 20px;
 
-			// without this the close button
-			// for the webform gets cut off.
-			margin-top: 1em;
-			padding:0 0px;
-		}
+            // without this the close button
+            // for the webform gets cut off.
+            margin-top: 1em;
+            padding:0 0px;
+        }
 
-	}
+    }
 }
 
 //signup overlay columns
 // 2 columns
 .signup-columns, .my-voice-columns, community-columns{
-	@extend %clearfix;
-	/* article column styles */
-	.col {
-		float:left;
-		width:48.5%;
-		margin:0 0 0 2.9%;
-		@include breakpoint($mobile) {
-			width:100%;
-			margin:0;
-		}
-		&:first-child {
-			margin:0;
-			padding: 0 40px;
-			@include breakpoint($mobile) {
-				//display:none;
+    @extend %clearfix;
+    /* article column styles */
+    .col {
+        float:left;
+        width:48.5%;
+        margin:0 0 0 2.9%;
+        @include breakpoint($mobile) {
+            width:100%;
+            margin:0;
+        }
+        &:first-child {
+            margin:0;
+            padding: 0 40px;
+            @include breakpoint($mobile) {
+                //display:none;
                 p:last-child{
                     display: none;
                 }
-			}
+            }
             
-		}
-	}
-	h2{
-		line-height:1.363em;
-		font-size: 1.7em;
-		margin:-4px 0 8px;
-		@include breakpoint($mobile) {
-			font-size:24px;
-			line-height:28px;
-			margin-top: 10px;
-		}
-	}
-	.signup-form{
-		padding: 14px 0;
-		input[type="email"], input[type="text"], .select {
-			float:left;
-			clear:both;
-			width:80%;
-			border-radius:5px;
-			border-color:$mercury;
-			@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
-			margin-bottom: 20px;
-			padding: 12px 23px;
-			@include breakpoint($mobile) {
-				width: 100%;
-			}
-			font-size:18px;
-		}
-	// input[type="submit"]{
-	// 		float:left;
-	// 		clear:both;
-	// 		border: none;
-	// 		// added backgournd, color, border-radius - > nanda Globalsoftlab
-	// 		@include border-radius(5px);
-	// 		background:$orange;
-	// 		color:$white;
-	// 		border-bottom: 5px solid $orange-dark;
-	// 		margin-right: 20px;
-	// 		@include breakpoint($mobile) {
-	// 			margin-bottom: 20px;
-	// 		}
-	// 	    &:hover {
-	// 	      border-bottom-width: 3px;
-	// 	  	text-decoration:none;
-	// 	  	color:$white;
-	// 		}
-	// 	}
-	.btn{
-		float:left;
-		&.btn-left { margin-right:27px ;}
-		span{
-			padding-left: 15px;
-		}
-	}
+        }
+    }
+    h2{
+        line-height:1.363em;
+        font-size: 1.7em;
+        margin:-4px 0 8px;
+        @include breakpoint($mobile) {
+            font-size:24px;
+            line-height:28px;
+            margin-top: 10px;
+        }
+    }
+    .signup-form{
+        padding: 14px 0;
+        input[type="email"], input[type="text"], .select {
+            float:left;
+            clear:both;
+            width:80%;
+            border-radius:5px;
+            border-color:$mercury;
+            @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+            margin-bottom: 20px;
+            padding: 12px 23px;
+            @include breakpoint($mobile) {
+                width: 100%;
+            }
+            font-size:18px;
+        }
+    // input[type="submit"]{
+    //      float:left;
+    //      clear:both;
+    //      border: none;
+    //      // added backgournd, color, border-radius - > nanda Globalsoftlab
+    //      @include border-radius(5px);
+    //      background:$orange;
+    //      color:$white;
+    //      border-bottom: 5px solid $orange-dark;
+    //      margin-right: 20px;
+    //      @include breakpoint($mobile) {
+    //          margin-bottom: 20px;
+    //      }
+    //      &:hover {
+    //        border-bottom-width: 3px;
+    //      text-decoration:none;
+    //      color:$white;
+    //      }
+    //  }
+    .btn{
+        float:left;
+        &.btn-left { margin-right:27px ;}
+        span{
+            padding-left: 15px;
+        }
+    }
 }
 }
 
@@ -1151,186 +1151,186 @@
 //overrides for overlay block margins
 // might be able to make this global
 .my-voice-block .block{
-	padding: 45px 0 49px;
+    padding: 45px 0 49px;
 }
 .my-voice-columns .col{
-	margin:0;
-	&:first-child{
-		padding: 0 90px;
-	}
-	p{
-		font-size: 1.11em;
-	}
-	.larger{
-		font-size: 1.475em;
-		line-height: 1.5em;
-		margin-bottom: 0.7em;
-	}
+    margin:0;
+    &:first-child{
+        padding: 0 90px;
+    }
+    p{
+        font-size: 1.11em;
+    }
+    .larger{
+        font-size: 1.475em;
+        line-height: 1.5em;
+        margin-bottom: 0.7em;
+    }
 }
 
 
 // General Slider Columns
 //TODO can this be moved to the other .slider-container section?
 .slider-container{
-	@extend %clearfix;
-	height: 318px;
-	/* article column styles */
-	&>div{float:left;}
-	.share-columns, .support-columns{
-		img{
-			width: 100%;
-		}
-		.btn{
-			width: 100%;
-			margin-top: 15px;
-		}
-	}
-	.share-columns{
-		.col{
-			&:first-child{
-				margin-right:9.5%;
-			}
-		}
-		.col-left{
-			width: 32%;
-		}
-		.col-mid{
-			width: 27.3%;
-			margin: 0;
-		}
-		.col-right{
-			width:27.3%;
-			margin-left: 3.2%;
-		}
-	}
-	.support-columns{
-		.col-3{
-			&:nth-child(2){
-				.btn {
-					width: 45%;
-					margin-right: 10px;
-					margin-bottom: 0;
-				}
-			}
-			a{
-				text-decoration: underline;
-				font-family: $header-font-family;
-				&.btn{
-					text-decoration: none;
-					font-family:inherit;
-				}
-			}
-		}
-	}
-	.col {
-		float:left;
-		margin:0 0 0 2.9%;
-		@include breakpoint($mobile) {
-			width:100%;
-			margin:0;
-		}
-		&:first-child {
-			margin:0;
-			@include breakpoint($mobile) {
-				display:none;
-			}
-		}
-	}
-	.col-2{
-		padding: 0 40px;
-	}
-	a{
-		&.btn { margin-bottom: 20px;}
-	}
-	//signup column overrides
-	.signup-columns{
-		.col {
-			width: 49.5%;
-			margin-left: 7%;
-			padding: 0;
-			&:first-child {
-				width:41.5%;
-				margin: 0;
-			}
-			input[type="email"],  input[type="text"]{
-				width: 89%;
-			}
-		}
-	}
+    @extend %clearfix;
+    height: 318px;
+    /* article column styles */
+    &>div{float:left;}
+    .share-columns, .support-columns{
+        img{
+            width: 100%;
+        }
+        .btn{
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    .share-columns{
+        .col{
+            &:first-child{
+                margin-right:9.5%;
+            }
+        }
+        .col-left{
+            width: 32%;
+        }
+        .col-mid{
+            width: 27.3%;
+            margin: 0;
+        }
+        .col-right{
+            width:27.3%;
+            margin-left: 3.2%;
+        }
+    }
+    .support-columns{
+        .col-3{
+            &:nth-child(2){
+                .btn {
+                    width: 45%;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+            }
+            a{
+                text-decoration: underline;
+                font-family: $header-font-family;
+                &.btn{
+                    text-decoration: none;
+                    font-family:inherit;
+                }
+            }
+        }
+    }
+    .col {
+        float:left;
+        margin:0 0 0 2.9%;
+        @include breakpoint($mobile) {
+            width:100%;
+            margin:0;
+        }
+        &:first-child {
+            margin:0;
+            @include breakpoint($mobile) {
+                display:none;
+            }
+        }
+    }
+    .col-2{
+        padding: 0 40px;
+    }
+    a{
+        &.btn { margin-bottom: 20px;}
+    }
+    //signup column overrides
+    .signup-columns{
+        .col {
+            width: 49.5%;
+            margin-left: 7%;
+            padding: 0;
+            &:first-child {
+                width:41.5%;
+                margin: 0;
+            }
+            input[type="email"],  input[type="text"]{
+                width: 89%;
+            }
+        }
+    }
 }
 
 //Share
 
 // posts columns
 .posts-columns{
-	@include breakpoint($mobile) {
-		padding-top: 20px;
-	}
-	.more{
-		@include container;
-		clear: both;
-		text-align: center;
-	}
-	.post{
-		.footer{
-			.num-holder{
-				a {
-					.text{
-						@include fontsize(12,16);
-					}
-				}
-			}
-		}
-	}
+    @include breakpoint($mobile) {
+        padding-top: 20px;
+    }
+    .more{
+        @include container;
+        clear: both;
+        text-align: center;
+    }
+    .post{
+        .footer{
+            .num-holder{
+                a {
+                    .text{
+                        @include fontsize(12,16);
+                    }
+                }
+            }
+        }
+    }
 }
 
 //read more spacing
 .read-more{
-	display: block;
-	text-align: center;
-	padding: 25px 0 105px;
-	.btn{
-		padding: 10px 19px;
-		.icon-Rightarrow{
-			padding-left: 15px;
-		}
-	}
+    display: block;
+    text-align: center;
+    padding: 25px 0 105px;
+    .btn{
+        padding: 10px 19px;
+        .icon-Rightarrow{
+            padding-left: 15px;
+        }
+    }
 }
 
 // slider sub column overrides
 .community-columns {
-	.col{
-		width: 58.7%;
-		margin: 0;
-		&:first-child{
-			width: 36.7%;
-			margin-right: 4.6%;
-		};
-	}
+    .col{
+        width: 58.7%;
+        margin: 0;
+        &:first-child{
+            width: 36.7%;
+            margin-right: 4.6%;
+        };
+    }
 
 }
 
 .articles-columns, .social-columns {
-	@extend %clearfix;
-	/* article column styles */
-	.col {
-		float:left;
-		width:31.4%;
-		margin:0 0 0 2.9%;
-		@include breakpoint($mobile) {
-			width:100%;
-			margin:0;
-		}
-		&:first-child {
-			margin:0;
-		}
-	}
+    @extend %clearfix;
+    /* article column styles */
+    .col {
+        float:left;
+        width:31.4%;
+        margin:0 0 0 2.9%;
+        @include breakpoint($mobile) {
+            width:100%;
+            margin:0;
+        }
+        &:first-child {
+            margin:0;
+        }
+    }
 }
 
 .social-columns{
-	img{
-		width: 100%;
-	}
+    img{
+        width: 100%;
+    }
 }
 
 .facebook{
@@ -1340,9 +1340,9 @@
 }
 
 .articles-columns{
-	p {
-		a{font-family:$header-font-family;
-			font-weight: normal;}
+    p {
+        a{font-family:$header-font-family;
+            font-weight: normal;}
 
-		}
-	}
+        }
+    }
