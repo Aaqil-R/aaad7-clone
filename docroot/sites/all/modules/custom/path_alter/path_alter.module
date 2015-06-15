@@ -1,0 +1,76 @@
+<?php 
+function path_alter_menu() {
+  $items['admin/config/content/forumurl-migration'] = array(
+    'title' => 'Image Migration',
+    'description' => 'Migrate image from old site to this server',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('forumurl_move'),
+    'access arguments' => array('execute_forumurl_migration'),
+  );
+  return $items;
+}
+function path_alter_permission() {
+  return array(
+    'execute_forumurl_migration' =>  array(
+      'title' => t('Execute Migration'),
+      'description' => t('forum url.'),
+    )
+  );
+}
+
+function forumurl_move() {
+  if(variable_get('running_url_migration', FALSE)) {
+   $form['message'] = array('#markup' => '<p>Migration was in progress..</p>');
+  }else {
+    $form['message_submit'] = array('#type' => 'submit', '#value' => 'Run Forum URL Migration');
+  }
+  return $form;
+}
+
+function forumurl_move_submit($form, $form_state) {
+  $queue = DrupalQueue::get('forum_url_migrate');
+    $result = db_select('node', 'n')
+     ->fields('n',array('nid'))
+     ->condition('type','forum_discussion')
+     ->execute()
+     ->fetchAll();
+     foreach ($result as $node) {
+       $queue->createItem($node);
+     } 
+    variable_set('running_url_migration', TRUE);
+}
+
+function path_change($node){
+
+      $node = node_load($node->nid);
+       $conditions = array('source' => 'node/' . $node->nid);
+       $path = path_load($conditions);
+       $path['pathauto'] = 0; 
+       $oldalias = $path['alias'];
+       $path['alias'] = str_replace('talk-about-autism', 'talk-to-others', $path['alias']);
+       if ($path['alias'] != $oldalias){
+         $node->path = $path;
+         node_save($node);
+       }
+
+}
+
+function path_alter_cron_queue_info() {
+  $queues['forum_url_migrate'] = array(
+    'worker callback' => 'path_change',
+    'time' => 3000,
+  );
+
+  return $queues;
+}
+
+function path_alter_cron() {
+  $state = variable_get('running_url_migration', FALSE);
+  if ($state) {
+     $queue = DrupalQueue::get('forum_url_migrate');
+     $items = $queue->numberOfItems();
+     if ($items == 0) {
+       variable_set('running_url_migration', FALSE);
+     }
+  }
+}
