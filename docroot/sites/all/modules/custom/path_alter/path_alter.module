@@ -1,8 +1,8 @@
 <?php 
 function path_alter_menu() {
   $items['admin/config/content/forumurl-migration'] = array(
-    'title' => 'Image Migration',
-    'description' => 'Migrate image from old site to this server',
+    'title' => 'Path Migration',
+    'description' => 'Old path redriect to new path',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('forumurl_move'),
     'access arguments' => array('execute_forumurl_migration'),
