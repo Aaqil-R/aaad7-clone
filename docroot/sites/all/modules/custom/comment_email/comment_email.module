@@ -82,8 +82,9 @@ function comment_email_comment_insert($comment) {
     $node = node_load($comment->nid); 
     $comment_count = $node->comment_count + 1;
     $page = comment_new_page_count($comment_count, 1, $node);
+    $comment_url = rtrim(url('node/' . $comment->nid, array('query' => $page, 'absolute'=> TRUE, 'fragment' => 'comment-' . $comment->cid)));
     $params = array(
-      'path' => url('node/' . $comment->nid, array('query' => $page, 'absolute'=> TRUE, 'fragment' => 'comment-' . $comment->cid)), 
+      '@path' => $comment_url, 
     );    
     drupal_mail($module, $key, $to, $language, $params);
   }  
