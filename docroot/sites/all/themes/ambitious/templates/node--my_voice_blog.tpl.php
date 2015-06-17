@@ -30,7 +30,7 @@
 	                 	<h2 class="subheading"><?php print $content['field_standfirst']['#items'][0]['value']; ?></h2>
 	                <?php endif; ?> 
 	                 <div class="article-info">
-                      <span style="font-weight: bold;">  <?php print t('Author:') ?> <?php echo render($content['field_author']);?></span> 
+                      <span class="blog-author">  <?php print t('Author:') ?> <?php echo render($content['field_author']);?></span> 
 					   <cite>
 					   <?php if (!empty($first_name)): ?>
 					      <span><?php print t('By') ?> <?php print $first_name; ?></span>
