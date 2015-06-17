@@ -6,7 +6,7 @@
       'description' => 'Comment email notification for user.',
       'page callback' => 'drupal_get_form', 
       'page arguments' => array('notify_email_settings_form'),
-      'access arguments' => array('access_settings_form_website'), 
+      'access arguments' => array('notify_email_access_settings_website'), 
       'type' => MENU_LOCAL_TASK, 
     );
   return $items;
@@ -14,7 +14,7 @@
 
 function comment_email_permission() {
   return array(
-    'access_settings_form_website' => array(
+    'notify_email_access_settings_website' => array(
       'title' => t('Access comment notify settings form'),
     ) 
   );
