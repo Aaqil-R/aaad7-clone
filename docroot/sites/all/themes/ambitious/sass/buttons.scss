@@ -19,7 +19,7 @@
   position: relative;
 
   line-height:30px;
-    
+
   background: none, repeat, scroll, 0, 0, $orange;
 
   // drop the shadow
@@ -56,8 +56,8 @@
       @include breakpoint($tablet){
         font-size: 16px;
       };
+    }
   }
-}
 
   @include breakpoint($mobile){
     width: 100%;
@@ -124,20 +124,20 @@
     }
   }
 
-&.bt-left{
-  margin:0 0 0 23px;
-  @include breakpoint($mobile) {
-  margin:0 0 0 11px;
- }
-}
+  &.bt-left{
+    margin:0 0 0 23px;
+    @include breakpoint($mobile) {
+      margin:0 0 0 11px;
+    }
+  }
 
-&.btn-transparent{
-  background:none;
-  @include box-shadow(none);
+  &.btn-transparent{
+    background:none;
+    @include box-shadow(none);
 
-  border: 3px solid $white;
+    border: 3px solid $white;
 
-  &:hover {
+    &:hover {
     // replace the displacement of the button from the top
     top: 1px;
     // displace the button shadow 
@@ -180,18 +180,18 @@ a.btn:hover {
 .footer-button{
 	//margin-bottom: 130px;
   margin-bottom: $graphic-padding;
-	@include breakpoint($mobile){
-		margin-bottom: 30px;
-	}
-	.view-footer{
-		text-align: center;
+  @include breakpoint($mobile){
+    margin-bottom: 30px;
+  }
+  .view-footer{
+    text-align: center;
     clear: both;
     padding-top: 25px;
     @include breakpoint($mobile){
-       margin-bottom: 10px;
-    }
+     margin-bottom: 10px;
+   }
 
-		a.btn{
+   a.btn{
 			// font-family: $base-font-family;
 			padding: 10px 34px;
 
@@ -255,34 +255,34 @@ a.btn:hover {
     }
   }
   &.btn-google{
-      @include box-shadow(0px 6px $milano_red);
-      background:$error-red;
+    @include box-shadow(0px 6px $milano_red);
+    background:$error-red;
 
-      &:hover {
+    &:hover {
         // replace the displacement of the button from the top
         top: 2px;
         // displace the button shadow 
         @include box-shadow(0px 4px $milano_red);   
       }
+    }
   }
-}
 
-.icon-connection {
-	font-size:29px;
-	padding:6px 0 0;
-	float:left;
-	background:$white;
-	line-height:30px;
-	height:45px;
-	width:45px;
-	text-align:center;
-	color:$pink ;
-	@include breakpoint($mobile) {
-		height:33px;
-		width:34px;
-		padding:2px 0 0;
-		font-size:16px;
-	}
+  .icon-connection {
+   font-size:29px;
+   padding:6px 0 0;
+   float:left;
+   background:$white;
+   line-height:30px;
+   height:45px;
+   width:45px;
+   text-align:center;
+   color:$pink ;
+   @include breakpoint($mobile) {
+    height:33px;
+    width:34px;
+    padding:2px 0 0;
+    font-size:16px;
+  }
 }
 
 // shadow-button
@@ -292,8 +292,7 @@ a.btn:hover {
   }
 }
 
-.youtube-btn {
-   
+.youtube-btn {   
   @include breakpoint($mobile) {
     margin-bottom:0px;
   }
@@ -305,13 +304,9 @@ a.btn:hover {
 }
 
 
-.sort-block
-{
+.sort-block{
   .btn{
-    padding-top: 5px;
-    padding-left: 19px;
-    padding-right: 19px;
-    padding-bottom: 5px;
+    padding: 4px 19px 5px 19px;
     margin-top: 0px;
   }
 }
@@ -358,7 +353,7 @@ a.btn:hover {
     padding:0px;
     margin-bottom:0px;
   }
-    a.btn{
+  a.btn{
     @include breakpoint($mobile) {
       margin-bottom: 0px;
       margin-left: 0px;
@@ -374,10 +369,10 @@ a.btn:hover {
 
 
 /*SHARE BUTTON*/
- 
-  .st_sharethis_button .stButton{
-    display:inline-block;
-    float:right;
+
+.st_sharethis_button .stButton{
+  display:inline-block;
+  float:right;
   border:none;
   padding:5px 19px;
   font-size:18px;
@@ -387,73 +382,73 @@ a.btn:hover {
   text-align:center;
   text-decoration:none;
   border-bottom:5px solid $green-dark;
-    background:$green;
+  background:$green;
   @extend %clearfix;
   font-weight:normal;
   font-family:$base-font-family;
-         @include breakpoint($mobile) {
-           padding-top: 7px;
-           font-size: 16px
-         }
-      &:hover {
-	    border-bottom-width: 3px;
-	    margin-top:2px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:active{
-	    border-bottom-width:0px;
-	    margin-top:5px;
-		text-decoration:none;
-		color:$white;
-	  }
-	  &:visited{
-	    text-decoration:none;
-		color:$white;
-	  }  
-	  .st-sharethis-counter{
-	    background:none !important;
-	    width:109px;         
-	    @include breakpoint($mobile) {
-	      width:124px;
-	    }
-        @include breakpoint($small-mobile) {
-	      width:110px;
-	    } 
-	  &:after{
-        font-size: 18px;
-        font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-        content :"Share this";
-        color:$white;
-        float: left;
-		margin-top: -22px;
-		padding-right: 29px;
-		@include breakpoint($mobile) {
-		  margin-top: -23px;
-		  font-size: 17px;
-		}
-      }    
-      &:before{
-          font-family: 'icomoon';
-      	  speak: none;
-      	  font-style: normal;
-      	  font-weight: normal;
-      	  font-variant: normal;
-      	  text-transform: none;
-      	  line-height: 1;
-      	  /* Better Font Rendering =========== */
-      	  -webkit-font-smoothing: antialiased;
-      	  -moz-osx-font-smoothing: grayscale;
-         float: right;
-         font-size: 20px;
-         color:$white;
-         font-family: 'icomoon';
-         content: "\e60d";
-         position: relative;
-        top: -4px;
-      }
-	  }
+  @include breakpoint($mobile) {
+   padding-top: 7px;
+   font-size: 16px
+ }
+ &:hover {
+   border-bottom-width: 3px;
+   margin-top:2px;
+   text-decoration:none;
+   color:$white;
+ }
+ &:active{
+   border-bottom-width:0px;
+   margin-top:5px;
+   text-decoration:none;
+   color:$white;
+ }
+ &:visited{
+   text-decoration:none;
+   color:$white;
+ }  
+ .st-sharethis-counter{
+   background:none !important;
+   width:109px;         
+   @include breakpoint($mobile) {
+     width:124px;
+   }
+   @include breakpoint($small-mobile) {
+     width:110px;
+   } 
+   &:after{
+    font-size: 18px;
+    font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+    content :"Share this";
+    color:$white;
+    float: left;
+    margin-top: -22px;
+    padding-right: 29px;
+    @include breakpoint($mobile) {
+      margin-top: -23px;
+      font-size: 17px;
     }
+  }    
+  &:before{
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    font-size: 20px;
+    color:$white;
+    font-family: 'icomoon';
+    content: "\e60d";
+    position: relative;
+    top: -4px;
+  }
+}
+}
 
 //to adjust the button sizes in the social media pages (user profile)
 .connect{
@@ -505,7 +500,7 @@ a.btn:hover {
 //button on the particular webforms font size fixes
 .webform-client-form-74681{
   @include breakpoint($not-mobile) {
-  a.btn{
+    a.btn{
       font-size: 20px;
     }
   }
