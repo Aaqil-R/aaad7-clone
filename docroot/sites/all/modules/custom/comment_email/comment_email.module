@@ -1,0 +1,102 @@
+<?php 
+  function comment_email_menu() {  
+    $items = array();  
+    $items['admin/content/email_notification'] = array(
+      'title' => 'Email notification',
+      'description' => 'Comment email notification for user.',
+      'page callback' => 'drupal_get_form', 
+      'page arguments' => array('notify_email_settings_form'),
+      'access arguments' => array('access_settings_form_website'), 
+      'type' => MENU_LOCAL_TASK, 
+    );
+  return $items;
+}
+
+function comment_email_permission() {
+  return array(
+    'access_settings_form_website' => array(
+      'title' => t('Access comment notify settings form'),
+    ) 
+  );
+}
+
+ 
+function notify_email_settings_form($form, &$form_state) { 
+  $form['comment_notification'] = array(
+    '#type' => 'radios', 
+    '#title' => t('Email notification'), 
+    '#default_value' => variable_get('comment_notification', 0), 
+    '#options' => array(t('Disable'), t('Enable')), 
+  );  
+  $form['comment_notify_email'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('User email'), 
+    '#default_value' => variable_get('comment_notify_email',''), 
+    '#description' => t('Email id is formatted ex: name@domin.com'),
+  );  
+  $form['comment_email_subject'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Email subject'), 
+    '#default_value' => variable_get('comment_email_subject',''),  
+  );   
+  $form['comment_email_body'] = array(
+    '#type' => 'textarea', 
+    '#title' => t('Email message'), 
+    '#default_value' => variable_get('comment_email_body',''),  
+  );  
+  $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
+  return $form;
+  
+}
+
+function notify_email_settings_form_validate($form, &$form_state) { 
+  $valid_email = valid_email_address($form_state['values']['comment_notify_email']);  
+  if($form_state['values']['comment_notification'] == 1) { 
+    if(empty($form_state['values']['comment_notify_email']) || $valid_email != 1 ){ 
+      form_set_error('comment_notify_email', t('Email id is not valid, correct the email.')); 
+    } 
+    if(empty($form_state['values']['comment_email_subject'])){ 
+      form_set_error('comment_email_subject', t('Subject field value is required')); 
+    }
+    if(empty($form_state['values']['comment_email_body'])){ 
+      form_set_error('comment_email_body', t('Message field value is required')); 
+    }
+  }  
+}  
+function notify_email_settings_form_submit($form, &$form_state) {   
+  variable_set('comment_notification', $form_state['values']['comment_notification']);
+  variable_set('comment_notify_email', $form_state['values']['comment_notify_email']); 
+  variable_set('comment_email_subject', $form_state['values']['comment_email_subject']);
+  variable_set('comment_email_body', $form_state['values']['comment_email_body']); 
+  drupal_set_message('The configuration options have been saved.');
+} 
+
+
+function comment_email_comment_insert($comment) { 
+  global $base_url;    
+  if(variable_get('comment_notification', 0) == 1 && $comment->node_type == 'comment_node_forum_discussion'){ 
+    $module = 'comment_email';
+    $key = 'comment';
+    $to = variable_get('comment_notify_email','');
+    $language = language_default();  
+    $node = node_load($comment->nid); 
+    $comment_count = $node->comment_count + 1;
+    $page = comment_new_page_count($comment_count, 1, $node);
+    $comment_url = rtrim(url('node/' . $comment->nid, array('query' => $page, 'absolute'=> TRUE, 'fragment' => 'comment-' . $comment->cid)));
+    $params = array(
+      '@path' => $comment_url, 
+    );    
+    drupal_mail($module, $key, $to, $language, $params);
+  }  
+}
+
+function comment_email_mail($key, &$message, $params) { 
+  switch($key) {
+   case 'comment':
+    $message['subject'] = variable_get('comment_email_subject','[AAA] New Comment posted');
+    $message['body'] = array();
+    $message['body'][] = variable_get('comment_email_body','New Comment posted');
+    $message['body'][] = t('Post URL @path',$params);    
+    break;
+  }
+}   
