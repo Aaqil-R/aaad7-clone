@@ -87,7 +87,7 @@
  global $user; 
 ?>
 
-
+<?php //dpr($user); ?>
 <div id="wrapper" class="page">
   <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
     <!-- including header region into the template -->
@@ -179,7 +179,7 @@
 		                	<span class="member-since">
 		                		Member since <?php print format_date($page['content']['system_main']['#account']->created, 'custom', 'd F Y');?>
 		                	</span> 
-		                	<?php endif; ?>
+		                	<?php endif; ?>		                	
 		                	<?php if ($messages || $action_links): ?>
 						  <div id="content-header">
 						   <?php print $messages; ?>
@@ -190,6 +190,9 @@
 						 </div> <!-- /content-header -->
 					    <?php endif; ?>
 		               </header>
+		               <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
+		                	<a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/messages" class="btn btn-default btn-user">View user messages</a>
+		                	<?php endif; ?>
 		               <div class="profile-main">
 		               <?php print render($page['content']) ?>
 		               <?php if ($page['content_bottom']): ?>   
