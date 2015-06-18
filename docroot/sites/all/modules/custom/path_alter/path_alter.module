@@ -51,6 +51,9 @@ function path_change($node){
          case "article":
             $node_title = str_replace(' ', '-', strtolower($node->title));             
             $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title); 
+            
+            $node->title = str_replace(' ', '-', strtolower($node->title));  
+            $node->title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node->title).'/'; 
             if(!empty($node->field_related_topic['und'][0]['nid'])){
               $topic = node_load($node->field_related_topic['und'][0]['nid']);
               $topic = '/'.str_replace(' ', '-', strtolower($topic->title)); 
@@ -64,8 +67,10 @@ function path_change($node){
             $node_title = "";
             if(!empty($node->field_my_voice_topic['und'][0])){
                $node_title = node_load($node->field_my_voice_topic['und'][0]);
-               $node_title = str_replace(' ', '-', strtolower($node->title));  
+               $node_title = str_replace(' ', '-', strtolower($node_title->title));  
                $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title).'/'; 
+               $node->title = str_replace(' ', '-', strtolower($node->title));  
+               $node->title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node->title).'/'; 
             }
             $path['alias'] = 'understanding-autism/are-you-aged-16-25-and-on-the-spectrum/myvoice/'.$node_title.$node->title;
          break;
