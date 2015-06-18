@@ -28,10 +28,11 @@ function forumurl_move() {
 }
 
 function forumurl_move_submit($form, $form_state) {
-  $queue = DrupalQueue::get('forum_url_migrate');
+    $queue = DrupalQueue::get('forum_url_migrate');
+    $content_type = array('forum_discussion', 'article', 'my_voice_blog');
     $result = db_select('node', 'n')
      ->fields('n',array('nid'))
-     ->condition('type','forum_discussion')
+     ->condition('type', $content_type, 'IN')
      ->execute()
      ->fetchAll();
      foreach ($result as $node) {
@@ -40,14 +41,38 @@ function forumurl_move_submit($form, $form_state) {
     variable_set('running_url_migration', TRUE);
 }
 
-function path_change($node){
-
-      $node = node_load($node->nid);
+function path_change($node){ 
+       $node = node_load($node->nid);
        $conditions = array('source' => 'node/' . $node->nid);
        $path = path_load($conditions);
        $path['pathauto'] = 0; 
        $oldalias = $path['alias'];
-       $path['alias'] = str_replace('talk-about-autism', 'talk-to-others', $path['alias']);
+       switch($node->type){
+         case "article":
+            $node_title = str_replace(' ', '-', strtolower($node->title));             
+            $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title); 
+            if(!empty($node->field_related_topic['und'][0]['nid'])){
+              $topic = node_load($node->field_related_topic['und'][0]['nid']);
+              $topic = '/'.str_replace(' ', '-', strtolower($topic->title)); 
+            }
+            $path['alias'] = 'understanding-autism'.$topic.'/'.$node_title;
+         break;
+         case "my_voice_topic":
+            $path['alias'] = 'understanding-autism/are-you-aged-16-25-and-on-the-spectrum/myvoice/'.$node->title;
+         break;
+          case "my_voice_blog": 
+            $node_title = "";
+            if(!empty($node->field_my_voice_topic['und'][0])){
+               $node_title = node_load($node->field_my_voice_topic['und'][0]);
+               $node_title = str_replace(' ', '-', strtolower($node->title));  
+               $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title).'/'; 
+            }
+            $path['alias'] = 'understanding-autism/are-you-aged-16-25-and-on-the-spectrum/myvoice/'.$node_title.$node->title;
+         break;
+         case "forum_discussion":
+          //  $path['alias'] = str_replace('talk-about-autism', 'talk-to-others', $path['alias']);
+         break; 
+       }
        if ($path['alias'] != $oldalias){
          $node->path = $path;
          node_save($node);
