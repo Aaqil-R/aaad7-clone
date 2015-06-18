@@ -448,7 +448,7 @@ Drupal.behaviors.ambitious = {
 				    $(this).addClass('active');
 				   $(".list").removeClass('active');
 			    });
-    }
+  } ;
     $('.search-opener').click(function (){
       $('.search-form input[type=search]').focus();
     });
@@ -554,4 +554,51 @@ Drupal.behaviors.ambitious = {
 		//     $('.card-layout .view-content').isotope('reloadItems'); 
 		// };
 	});
+
+
+    
+    
+    //Sticky Nav Bar
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 100;
+    var navbarHeight = $('.header-top').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        
+        function hasScrolled() {
+            if($(window).width() < 767) {
+                var st = $(this).scrollTop();
+
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                // If they scrolled down and are past the navbar, add class .nav-up.
+                // This is necessary so you never see what is "behind" the navbar.
+                     if (st > lastScrollTop && st > navbarHeight){
+                    // Scroll Down
+                    $('.header-top').fadeOut();
+                    } else {
+                        // Scroll Up
+                        if(st + $(window).height() < $(document).height()) {
+                            $('.header-top').fadeIn();
+                        }
+                    }
+                lastScrollTop = st;
+            }
+         }
+    
+
+    
 })(jQuery, Drupal, this, this.document);
