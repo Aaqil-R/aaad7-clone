@@ -56,7 +56,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a>
-              <div class="image-section"><?php print $fields['field_featured_image']->content; ?></div>
+              <div class="image-section"><?php print $fields['field_featured_image']->content; if($fields['field_has_video']->content == 1){ print $fields['field_video_author']->content; } ?></div>
               <div class="video-section element-invisible"><?php print $fields['field_video_embed']->content; ?> </div>
 						</div>
 						<div class="info add">
