@@ -742,18 +742,21 @@ nav {
 
 /* nav active styles */
 .nav-active {
-  .visual, .banner_text_inner, .block-easy-breadcrumb {
+ /* #main{
+    max-width: 1080px !important;
+    margin: 0 !important;
+  }*/
+  .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main {
     margin: 0 0 0 -430px;
     @include breakpoint($mobile) {
       margin-left: -285px;
     }
   }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .articles-block, .social-block, .slider-block {
     margin-left: -430px;
     @include breakpoint($mobile) {
       margin-left: -285px;
     }
-
     #main2 .action-block {
       margin-left: 0;
     }
