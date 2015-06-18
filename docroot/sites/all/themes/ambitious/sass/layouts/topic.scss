@@ -1642,7 +1642,10 @@ fieldset{
       }
       font-size:18px;
       color: $black;
-
+      &:focus {
+        border: 2px solid $yellow;
+        outline: none;
+      }
     }
     .error{
       	border: 2px solid $error-border;
