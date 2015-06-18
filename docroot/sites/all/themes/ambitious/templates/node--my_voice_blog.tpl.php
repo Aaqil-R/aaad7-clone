@@ -51,8 +51,10 @@
 			        }else{ 
 			          $url = image_style_url('width-684',$node->field_featured_image['und'][0]['uri']);
 			          print "<img src='".$url."' />";
-			        }?> 
+			        }?>
+                          <?php print render($content['field_voice_image_credit']); ?> 
 				     </div>
+                        <?php print render($content['field_voice_image_caption']); ?> 
 				     <div class="holder">
 				     	<?php if (!empty($content['field_image_caption'])): ?>
 				       		<span class="pic-caption"><?php print $content['field_image_caption']['#items'][0]['value']; ?></span>
