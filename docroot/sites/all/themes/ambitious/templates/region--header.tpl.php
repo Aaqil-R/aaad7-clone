@@ -78,7 +78,8 @@
 			?>
 		</nav>
 	</div>
-
+</div>
+</div>
 	<!-- school nav of the page -->
 	<div class="school-slide" >
 		<h4 class="title"> Schools & College
