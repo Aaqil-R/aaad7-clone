@@ -539,12 +539,16 @@ ul a {
   }
 }
 
-
-.school-active.header_fixed .nav-holder {
+.school-active .nav-holder {
   @include breakpoint($mobile) {
     margin-right:33px;
     width: 305px;
     padding-top: 35px;
+  }
+}
+.school-active .top-bar{
+  @include breakpoint($mobile) {
+     z-index: 99999; 
   }
 }
  
