@@ -421,18 +421,12 @@ ul a {
   } 
 }
 .school-active {
-  .visual, .block-easy-breadcrumb {
-    margin: 0 0 0 -430px;
-    @include breakpoint($mobile) {
-      margin-left: -360px;
-    }
-  }
   #nav-main, #block-block-156{
     @include breakpoint($mobile) {
       display:none;
     }
   }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb {
+  .visual, .block-easy-breadcrumb, #main, .action-block, .articles-block, .social-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb, .slider-block {
     margin-left: -430px;
     @include breakpoint($mobile) {
       margin-left:-360px; 
