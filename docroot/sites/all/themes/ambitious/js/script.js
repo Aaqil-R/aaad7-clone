@@ -555,6 +555,43 @@ Drupal.behaviors.ambitious = {
 		// };
 	});
 
+        
+//The grid view in the Talk to others page
+$(document).ready(function () {
+
+        $('#grid-forum').click(function () {
+            $('.grid-view-forum').toggleClass(function () {
+                if ($(this).is('.view-hidden')) {
+                    $('.forum-left').removeClass('view-visible').addClass('view-hidden');
+                    $('.forum-right').removeClass('view-visible').addClass('view-hidden');
+                    $('.footer').removeClass('view-visible').addClass('view-hidden');
+                    $(this).addClass('view-visible');
+                    return 'view-hidden';
+                }else{ 
+                    $('.grid-view-forum').addClass('view-hidden');
+                     } 
+            });
+        });
+    });
+    
+//The list view in the Talk to others page    
+    $(document).ready(function () {
+
+        $('#list-forum').click(function () {
+            $('.grid-view-forum').toggleClass(function () {
+                if ($(this).is('.view-visible')) {
+                    $('.forum-left').removeClass('view-hidden').addClass('view-visible');
+                    $('.forum-right').removeClass('view-hidden').addClass('view-visible');
+                    $('.footer').removeClass('view-hidden').addClass('view-visible');
+                    $(this).addClass('view-hidden');
+                    return 'view-visible';
+                } else{
+                    alert("whats happening here");
+                    //$('.grid-view-forum').addClass('view-hidden');
+                      }
+            });
+        });
+    });
 
     
     
@@ -575,29 +612,29 @@ Drupal.behaviors.ambitious = {
             }
         }, 250);
 
-        
-        function hasScrolled() {
-            if($(window).width() < 767) {
-                var st = $(this).scrollTop();
 
-                // Make sure they scroll more than delta
-                if(Math.abs(lastScrollTop - st) <= delta)
-                    return;
+	function hasScrolled() {
+		//It checks the width of the window & whether the 'body' does not have a class called 'nav-active'
+		if($(window).width() < 767 && !$("body").hasClass("nav-active") && !$("body").hasClass("search-active") && !$("body").hasClass("school-active") ) {
+			var st = $(this).scrollTop();
+			// Make sure they scroll more than delta
+			if(Math.abs(lastScrollTop - st) <= delta)
+			return;
+			// If they scrolled down and are past the navbar, add class .nav-up.
+			// This is necessary so you never see what is "behind" the navbar.
+				if (st > lastScrollTop && st > navbarHeight){
+				// Scroll Down
+				$('.header-top').fadeOut();
+				} else {
+				// Scroll Up
+				if(st + $(window).height() < $(document).height()) {
+					$('.header-top').fadeIn();
+					}
+				}
+				lastScrollTop = st;
+		}
+	}
 
-                // If they scrolled down and are past the navbar, add class .nav-up.
-                // This is necessary so you never see what is "behind" the navbar.
-                     if (st > lastScrollTop && st > navbarHeight){
-                    // Scroll Down
-                    $('.header-top').fadeOut();
-                    } else {
-                        // Scroll Up
-                        if(st + $(window).height() < $(document).height()) {
-                            $('.header-top').fadeIn();
-                        }
-                    }
-                lastScrollTop = st;
-            }
-         }
     
 
     
