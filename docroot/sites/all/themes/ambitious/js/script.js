@@ -336,6 +336,32 @@ Drupal.behaviors.ambitious = {
 		// });
     });
 
+//amalan new codes
+//jQuery(window).on('load', function(){
+	$(document).ready(function(){
+        $('.card-stream .view-content').masonry ({
+          //columnWidth: 100,
+            "itemSelector": ".card",
+            "columnWidth": ".card",
+            "percentPosition": true
+        }); 
+
+        var $columnWidth = $('.card--width').outerWidth();
+	  	var $gutter = $('.card--gutter').width();
+
+	  	console.log($columnWidth);
+	  	console.log($gutter);
+
+	  	$('.card-layout .view-content').masonry ({
+            "itemSelector": ".card--item",
+            "columnWidth": $columnWidth,
+            "gutter" : $gutter,
+        	"percentPosition" : true
+        });
+    });
+//end of the new codes amalan
+
+
 	// Container for masonry (the view wrapper)
 	$views_container = $('.card-layout .view-content');
 
