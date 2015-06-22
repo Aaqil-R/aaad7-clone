@@ -1335,7 +1335,7 @@ html body {
         width: 49.6%;
         @include breakpoint($tablet) {
           width: 38%;
-          padding: 0 10px 14px 60px;
+          /*padding: 0 10px 14px 60px;*/
         }
 
         @include breakpoint($mobile) {
@@ -1498,7 +1498,9 @@ html body {
       position: absolute;
       top: 63%;
       @include breakpoint($tablet) {
-        left: 20px;
+        /*left: 20px;*/
+        margin: -32px 0 0;
+        font-size: 34px;
       }
 
       @include breakpoint($mobile) {
