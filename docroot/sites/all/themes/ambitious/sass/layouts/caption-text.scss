@@ -33,7 +33,6 @@
   position: relative;
   margin-top: 75px;
   //new code
-  padding: 0 10px;
   @include breakpoint($mobile) {
     padding:0 0px;
   }
@@ -59,8 +58,8 @@
         letter-spacing: -1px;
         background: $white;
         //line-height: 1.8em;
-        padding: 0.1em 0.2em 0.2em 0.2em;
-        box-shadow: 10px 0 0 $white, -10px 0 0 $white;
+        padding: 0.1em 0.35em 0.2em 0.35em;
+        //box-shadow: 10px 0 0 $white, -10px 0 0 $white;
         @include breakpoint($all-small-mobile) {
           padding: initial;
           float: none;
