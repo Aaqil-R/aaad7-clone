@@ -690,7 +690,8 @@
           }
       }
     }
-    .text1{
+
+   .text1{
       font-size: 23px;
       min-height: 180px;
       line-height: normal;
@@ -700,6 +701,8 @@
       margin-right: 41px;
       @include breakpoint($tablet){
         margin-bottom:10px;
+        width: 48%;
+        font-size: 20px;
       }
       @include breakpoint($mobile){
         min-height: 100px;
