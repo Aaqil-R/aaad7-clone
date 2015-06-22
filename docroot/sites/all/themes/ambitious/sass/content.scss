@@ -782,12 +782,15 @@
     }
     .holder {
         @include container;
-        @include breakpoint ($mobile) {padding: 0 15px;}//
-
+        @include breakpoint ($mobile) {padding: 0 15px;}
+        
         // myVoice page the form still cuts the caption
         // on higher resolutions.
         @include breakpoint($large-screen){
             margin-top: 3em;
+        }
+        @include breakpoint($desktop-small) {
+            margin-top: 7.5em
         }
         .close, .block-close{ //TODO make block-close not repeat for my voice page
             width: 37px;
