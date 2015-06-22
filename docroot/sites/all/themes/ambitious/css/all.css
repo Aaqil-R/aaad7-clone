@@ -2027,7 +2027,7 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   /* line 1330, ../sass/all.scss */
   .table-from .table-row li.col01 {
     width: 38%;
-    padding: 0 10px 14px 60px;
+    /*padding: 0 10px 14px 60px;*/
   }
 }
 @media (max-width: 767px) {
@@ -2240,7 +2240,9 @@ html body.node-type-forum-discussion, html body.node-type-forum {
 @media (max-width: 990px) {
   /* line 1493, ../sass/all.scss */
   .table-from .table-row .icon-Featured {
-    left: 20px;
+    /*left: 20px;*/
+    margin: -32px 0 0;
+    font-size: 34px;
   }
 }
 @media (max-width: 767px) {
@@ -2253,7 +2255,7 @@ html body.node-type-forum-discussion, html body.node-type-forum {
 }
 
 /* article styles */
-/* line 1514, ../sass/all.scss */
+/* line 1516, ../sass/all.scss */
 .top-header {
   background: url(../images/top-header-bg.png) no-repeat left #5bc5ed;
   height: 83px;
@@ -2263,19 +2265,19 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 1519, ../sass/all.scss */
+/* line 1521, ../sass/all.scss */
 .top-header .top-header-inner {
   margin: 0 auto;
   max-width: 1080px;
   padding: 10px 20px 10px 20px;
 }
-/* line 1522, ../sass/all.scss */
+/* line 1524, ../sass/all.scss */
 .top-header .top-header-inner .page-links {
   letter-spacing: -4px;
   text-align: right;
   padding: 20px 0px 0 0;
 }
-/* line 1529, ../sass/all.scss */
+/* line 1531, ../sass/all.scss */
 .top-header .top-header-inner .page-links li {
   display: inline-block;
   vertical-align: top;
@@ -2285,11 +2287,11 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   position: relative;
   padding: 0 3px 0 13px;
 }
-/* line 1538, ../sass/all.scss */
+/* line 1540, ../sass/all.scss */
 .top-header .top-header-inner .page-links li:first-child:after {
   display: none;
 }
-/* line 1542, ../sass/all.scss */
+/* line 1544, ../sass/all.scss */
 .top-header .top-header-inner .page-links li:after {
   position: absolute;
   left: 0;
@@ -2299,24 +2301,24 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   height: 16px;
   background: url('../images/sprite.png?1431947182') no-repeat -14px -62px;
 }
-/* line 1551, ../sass/all.scss */
+/* line 1553, ../sass/all.scss */
 .top-header .top-header-inner .page-links li a {
   color: #081318;
   text-decoration: underline;
 }
-/* line 1554, ../sass/all.scss */
+/* line 1556, ../sass/all.scss */
 .top-header .top-header-inner .page-links li a:hover {
   text-decoration: none;
 }
 
-/* line 1563, ../sass/all.scss */
+/* line 1565, ../sass/all.scss */
 .page-main {
   width: 100%;
   background: #ffffff;
   padding-bottom: 1px;
 }
 
-/* line 1570, ../sass/all.scss */
+/* line 1572, ../sass/all.scss */
 .accessibility {
   position: absolute;
   left: -10000px;
@@ -2325,14 +2327,14 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   height: 0;
   overflow: hidden;
 }
-/* line 1577, ../sass/all.scss */
+/* line 1579, ../sass/all.scss */
 .accessibility:focus {
   position: static;
   width: auto;
   height: auto;
 }
 
-/* line 1584, ../sass/all.scss */
+/* line 1586, ../sass/all.scss */
 .hidden {
   position: absolute;
   left: -9999px;
@@ -2342,14 +2344,14 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   overflow: hidden;
 }
 
-/* line 1595, ../sass/all.scss */
+/* line 1597, ../sass/all.scss */
 .img-holder .caption .title {
   -webkit-animation: title 1s;
   /* Chrome, Safari, Opera */
   animation: title 1s;
   position: relative;
 }
-/* line 1601, ../sass/all.scss */
+/* line 1603, ../sass/all.scss */
 .img-holder .caption .text {
   -webkit-animation: subtitle 1s;
   /* Chrome, Safari, Opera */

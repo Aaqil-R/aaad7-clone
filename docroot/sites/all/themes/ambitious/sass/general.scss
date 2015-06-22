@@ -135,15 +135,16 @@ field .
 	.visual .holder{
 		@include breakpoint($mobile){
 			position: relative;
-			top: -10px;
+			top: -100px;
+      .pic-by{
+          padding: 0 0 10px 0;
+      }
 		}
 	}
 	
   .visual .img-holder{
 		max-height: 825px;
 	}
-
-
 
 	.visual .img-holder .caption-frame .caption{
 		@include breakpoint($mobile){
