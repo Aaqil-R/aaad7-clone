@@ -377,16 +377,14 @@ ul a {
   background: $white;
   position: absolute;
   top: 0;
-  right: 0;
-  margin-right: -550px;
+  left: auto;
+  right: -430px;
   z-index: 99;
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
   @include breakpoint($mobile) {
     width: 285px;
-    left: 0;
-    margin-left: -300px;
+    left: -285px;
   }
-
   .title {
     display: block;
     font-size: 27px;
@@ -426,10 +424,12 @@ ul a {
       display:none;
     }
   }
-  .visual, .block-easy-breadcrumb, #main, .action-block, .articles-block, .social-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb, .slider-block {
-    margin-left: -430px;
+  .visual, .block-easy-breadcrumb, #main, .action-block, .my-voice-block, .articles-block, .social-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb, .slider-block {
+    position: relative;
+    left: -430px;
+    @include transition($type: all, $time: 0.4s, $ease: ease);
     @include breakpoint($mobile) {
-      margin-left:-360px; 
+      left: 285px;
     }
   }
   #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
@@ -466,9 +466,9 @@ ul a {
     }
   }
   .school-slide {
-    margin-right: 0;
+    right: 0;
     @include breakpoint($mobile) {
-      margin-left: 0;
+      left: 0;
     }
   }
 }
@@ -482,13 +482,12 @@ ul a {
   background: $white;
   position: absolute;
   top: 0px;
-  right: 0;
-  margin-right: -460px;
+  right: -460px;
   z-index: 99;
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
   overflow-y: scroll;
   @include breakpoint($mobile) {
-    margin-right: -310px;
+    right: -285px;
     width: 285px;
     padding-top: 35px;
   }
@@ -533,20 +532,20 @@ ul a {
   }
 }
 
-.school-active .nav-holder {
+//The code below is unnecessary for mobile min menu
+/*.school-active .nav-holder {
   @include breakpoint($mobile) {
     margin-right:33px;
     width: 305px;
     padding-top: 35px;
   }
-}
+}*/
+
 .school-active .top-bar{
   @include breakpoint($mobile) {
      z-index: 99999; 
   }
 }
- 
-
 
 /* nav styles */
 nav {
@@ -739,21 +738,20 @@ nav {
 }
 
 /* nav active styles */
+.visual, .banner_text_inner, .block-easy-breadcrumb, #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+  @include transition($type: left, $time: 0.2s, $ease: linear);
+  left: 0; 
+}
 .nav-active {
  /* #main{
     max-width: 1080px !important;
     margin: 0 !important;
   }*/
-  .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main {
-    margin: 0 0 0 -430px;
+  .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .articles-block, .social-block, .slider-block, #social {
+    position: relative;
+    left: -430px;
     @include breakpoint($mobile) {
-      margin-left: -285px;
-    }
-  }
-  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .articles-block, .social-block, .slider-block, #social {
-    margin-left: -430px;
-    @include breakpoint($mobile) {
-      margin-left: -285px;
+      left: -285px;
     }
     #main2 .action-block {
       margin-left: 0;
@@ -775,7 +773,7 @@ nav {
     padding: 0 20px;
   }
   .nav-holder {
-    margin-right: 0;
+    right: 0;
   }
   li a.menu-opener {
     color: $heading-link;
