@@ -291,3 +291,60 @@
     }
 }
 // end community champions forum
+
+//--------------------Talk to other grid view-------------------------//
+.new-grid{
+	.forum-left {
+		display: none;
+	}
+	.forum-body{
+		p:nth-child(-n+2){
+		  margin-bottom: 20px;
+		  display: block;
+		  display: -webkit-box;
+		  max-width: 400px;
+			min-height: 20px;
+		  font-size: 18px;
+		  -webkit-line-clamp: 3;
+		  -webkit-box-orient: vertical;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  }
+	}
+	.forum-right{
+		width: 100% !important;
+	}
+}
+
+.new-grids{
+	.footer{
+		.num-holder, .times{
+			display: none !important;
+		}
+	}
+	section.post{
+	  width: 100% !important;
+	  float: left;
+	  margin: 1% !important;
+	  @include breakpoint($not-mini-mobile){
+		width: 48% !important;
+	  }
+	  @include breakpoint($not-mobile){
+		width: 31.3% !important;
+	  }
+	}
+	.forum-body{
+		max-height: 115px;
+		overflow: hidden;
+	}
+	.forum-right{
+		h3{
+			width: 160px;
+			line-height: 34px;
+		}
+	}
+}
+
+#grid-view-forum {
+  display: none;
+}
