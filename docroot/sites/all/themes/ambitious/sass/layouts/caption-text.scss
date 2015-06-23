@@ -13,7 +13,7 @@
 // Caption Block
 
 .front .caption-text {
-  margin-top: 118px;
+  margin-top: 90px;
 }
 
 .front, page-node-221546 {
@@ -52,16 +52,17 @@
       }
       span {
       	@include breakpoint($mobile) {
+        padding: 0px 10px;
 	      float: none;
 	    }
       	float: left;
         letter-spacing: -1px;
         background: $white;
         //line-height: 1.8em;
-        padding: 6px 23px 25px 25px;
+        padding: 20px 25px 25px 25px;
         //box-shadow: 10px 0 0 $white, -10px 0 0 $white;
         @include breakpoint($all-small-mobile) {
-          padding: initial;
+          padding: 0px 10px;
           float: none;
         }
       }
