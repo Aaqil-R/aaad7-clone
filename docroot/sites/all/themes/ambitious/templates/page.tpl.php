@@ -118,13 +118,14 @@
 <?php */ ?>
  <?php if ($page['image_holder']): ?>
 <section class="header_banner banner-nav">
-     <div class="banner_text_main">
+    <!-- commented below code because it's hiding the menu on forum page and its an empty div tag -->
+     <?php /*<div class="banner_text_main">
         <?php if ($page['caption_holder']): ?>
           <div class="banner_text_inner">
             <?php print render($page['caption_holder']); ?>   
           </div> 
         <?php endif; ?> 
-      </div> 
+      </div>*/?>
     <div class="header_image">
       <?php if ($page['image_holder']): ?>
         <?php print render($page['image_holder']); ?>
