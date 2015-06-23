@@ -428,18 +428,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
   letter-spacing: -1px;
   background: #ffffff;
   padding: 20px 25px 25px 25px;
+  box-shadow: 10px 0 0 #ffffff, -10px 0 0 #ffffff;
 }
 @media (max-width: 767px) {
   /* line 53, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title span {
-    padding: 0px 10px;
+    box-shadow: 10px 0px 0px #ffffff, -10px 0px 0px #ffffff;
     float: none;
   }
 }
 @media (max-width: 480px) {
   /* line 53, ../../sass/layouts/caption-text.scss */
   .caption-text .caption-text-titles .caption-text-title span {
-    padding: 0px 10px;
+    padding: initial;
     float: none;
   }
 }
