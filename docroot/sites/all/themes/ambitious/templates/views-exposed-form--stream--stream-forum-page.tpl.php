@@ -34,6 +34,19 @@
 
 
 <div class="sort-block">
+    
+        <fieldset class="grid-view">
+        <legend class="hidden">Grid View</legend>
+        <label class="hidden">Grid View</label>
+        <a href="#main" title="Grid View" id="grid-forum" class="view-mode grid active">Grid View</a>
+        </fieldset>
+        <fieldset class="list-view">
+            <legend class="hidden">List View</legend>
+            <label class="hidden">List View</label>
+            <a href="#main" title="List View" id="list-forum" class="view-mode list">List View</a>
+        </fieldset>
+    
+    
 <div class="search-text forum-page"><?php print $widgets['search_box']->widget; unset($widgets['search_box']) ?><span class="icon-search"></span></div>
 				 <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
