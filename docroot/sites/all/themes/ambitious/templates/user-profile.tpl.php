@@ -52,6 +52,7 @@ $userid = $elements['#account']->uid;
  hide($user_profile['field_avatar_ref']);
  hide($user_profile['field_thumbnail_ref']); 
  hide($user_profile['field_tell_us_about_yourself']); 
+ hide($user_profile['field_user_notes']);
 ?> 
 		               		<section class="profile-info">
 		               			<?php print render($user_profile['user_picture']); ?>
