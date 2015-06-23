@@ -68,7 +68,12 @@
  <section style="width:100%;" class="post">  
 						<em class="icon-Hottopic forum-icon" title="Popular Discussion" alt="Popular Discussion"></em>
 						<em class="icon-Featured forum-icon" title="Featured Discussion" alt="Featured Discussion"></em>
-                        <div class="forum-text">						
+                        <div class="forum-text">
+                        <!-- The js of the grid and list view is dependent on this divs classes -->
+                         <div id="grid-view-forum" class="grid-view-forum view-hidden">
+                             <?php print $fields['title']->content; ?>
+                             <cite>by<strong><?php print $fields['name']->content; ?></strong></cite>
+                         </div>
 						  <div class="forum-left"> 
 						    <div class="image-holder">	
 								<?php print $fields['picture']->content; ?>
@@ -85,7 +90,7 @@
                             <?php } ?>                                            
 						  </div>
 						  <div class="info add forum-right">
-							<h3><?php print $fields['title']->content; ?></h3>
+							<?php print $fields['title']->content; ?>
                             <div class="meta">
                                 <div class="created">
                                     <?php print $fields['created']->content;?>
@@ -97,7 +102,9 @@
                                 <?php endif; ?>
                                 <div class="clear"></div>
                             </div>
-							<?php print $fields['body']->content; ?>                
+                              <div class="forum-body">
+							<?php print $fields['body']->content; ?>  
+                                  </div>
 							<?php if(!empty($user_signature)): ?>
                               <div class="signature-dashes">--</div>
                             	<div class="user_signature signature-bold-text">

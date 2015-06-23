@@ -582,16 +582,15 @@ Drupal.behaviors.ambitious = {
 	});
 
         
+        
 //The grid view in the Talk to others page
 $(document).ready(function () {
 
         $('#grid-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-hidden')) {
-                    $('.forum-left').removeClass('view-visible').addClass('view-hidden');
-                    $('.forum-right').removeClass('view-visible').addClass('view-hidden');
-                    $('.footer').removeClass('view-visible').addClass('view-hidden');
-                    $(this).addClass('view-visible');
+                    $('.forum-text').addClass('new-grid');
+                    $('body').addClass('new-grids');
                     return 'view-hidden';
                 }else{ 
                     $('.grid-view-forum').addClass('view-hidden');
@@ -606,14 +605,11 @@ $(document).ready(function () {
         $('#list-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-visible')) {
-                    $('.forum-left').removeClass('view-hidden').addClass('view-visible');
-                    $('.forum-right').removeClass('view-hidden').addClass('view-visible');
-                    $('.footer').removeClass('view-hidden').addClass('view-visible');
-                    $(this).addClass('view-hidden');
-                    return 'view-visible';
+                    $('.forum-text').removeClass('new-grid');
+                    $('body').removeClass('new-grids');
+                    return 'view-hidden';
                 } else{
-                    alert("whats happening here");
-                    //$('.grid-view-forum').addClass('view-hidden');
+                     $('.grid-view-forum').addClass('view-visible');
                       }
             });
         });
@@ -661,7 +657,6 @@ $(document).ready(function () {
 		}
 	}
 
-    
-
+   
     
 })(jQuery, Drupal, this, this.document);
