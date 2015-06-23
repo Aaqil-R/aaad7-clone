@@ -768,7 +768,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 */
 /* line 9, ../../sass/layouts/voice-page.scss */
 .my-voice-home .banner_text {
-  background-image: url('../../images/my-voice-large-logo.png?1431947182');
+  background-image: url('../../images/my-voice-large-logo.png?1433921678');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75%;
@@ -1022,7 +1022,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 215, ../../sass/layouts/voice-page.scss */
 .page-node-74596 #wrapper {
-  background-image: url('../../images/wid_bg.jpg?1431947182');
+  background-image: url('../../images/wid_bg.jpg?1433921678');
 }
 /* line 218, ../../sass/layouts/voice-page.scss */
 .page-node-74596 .form-text {
@@ -1072,10 +1072,27 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 270, ../../sass/layouts/voice-page.scss */
 .view-content .navigation-block {
-  background-image: url('../../images/aged-16-25.jpg?1431947182');
+  background-image: url('../../images/aged-16-25.jpg?1433921678');
   background-size: cover;
 }
 /* line 273, ../../sass/layouts/voice-page.scss */
+.view-content .navigation-block:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 0 0 200px;
+  border-color: transparent transparent transparent #db0076;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+/* line 286, ../../sass/layouts/voice-page.scss */
+.view-content .navigation-block:hover:before {
+  border-color: transparent transparent transparent #C80042;
+}
+/* line 290, ../../sass/layouts/voice-page.scss */
 .view-content .navigation-block .wrapper {
   background: #e30087;
   opacity: 0.5;
@@ -1088,27 +1105,32 @@ nav .main-menu-2 li a .icon-Uparrow {
   margin-top: -1em;
   margin-left: -1em;
 }
-/* line 286, ../../sass/layouts/voice-page.scss */
+/* line 302, ../../sass/layouts/voice-page.scss */
+.view-content .navigation-block .wrapper:hover {
+  background: #CF005B;
+}
+/* line 306, ../../sass/layouts/voice-page.scss */
 .view-content .navigation-block p a {
   color: #ffffff;
   font-size: 39px;
   line-height: normal;
   position: relative;
+  z-index: 1;
   display: block;
   margin-top: 50%;
   margin-left: 15%;
 }
 @media (max-width: 767px) {
-  /* line 286, ../../sass/layouts/voice-page.scss */
+  /* line 306, ../../sass/layouts/voice-page.scss */
   .view-content .navigation-block p a {
     font-size: 30px;
   }
 }
-/* line 301, ../../sass/layouts/voice-page.scss */
+/* line 322, ../../sass/layouts/voice-page.scss */
 .view-content .age-post {
-  background-image: url('../../images/my-voice.jpg?1431947182');
+  background-image: url('../../images/my-voice.jpg?1433921678');
 }
-/* line 304, ../../sass/layouts/voice-page.scss */
+/* line 325, ../../sass/layouts/voice-page.scss */
 .view-content .card-transparent {
   background: none;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);

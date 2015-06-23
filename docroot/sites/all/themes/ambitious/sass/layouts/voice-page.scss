@@ -270,6 +270,23 @@ nav {
   .navigation-block {
     background-image: image-url("aged-16-25.jpg");
     background-size: cover;
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 200px 0 0 200px;
+      border-color: transparent transparent transparent #db0076;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;      
+    }
+    &:hover {
+      &:before {
+        border-color: transparent transparent transparent #C80042;
+      }
+    }
     .wrapper {
       background: $pink;
       opacity: 0.5;
@@ -282,6 +299,9 @@ nav {
       display: inline;
       margin-top: -1em;
       margin-left: -1em;
+      &:hover {
+        background: #CF005B;
+      }
     }
     p a {
       color: $white;
@@ -289,6 +309,7 @@ nav {
       line-height: normal;
       //outline: none;
       position: relative;
+      z-index: 1;
       display: block;
       margin-top: 50%;
       margin-left: 15%;
