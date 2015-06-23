@@ -52,19 +52,16 @@
       }
       span {
       	@include breakpoint($mobile) {
-        box-shadow: 10px 0px 0px $white, -10px 0px 0px $white;
-	      float: none;
-	    }
+          padding: initial;
+          box-shadow: 10px 0px 0px $white, -10px 0px 0px $white;
+  	      float: none;
+  	    }
       	float: left;
         letter-spacing: -1px;
         background: $white;
         //line-height: 1.8em;
         padding: 20px 25px 25px 25px;
         box-shadow: 10px 0 0 $white, -10px 0 0 $white;
-        @include breakpoint($all-small-mobile) {
-          padding: initial;
-          float: none;
-        }
       }
       //&.caption-text-title-1{
       //	@include breakpoint($mobile){
@@ -76,8 +73,8 @@
         font-size: 36px;
         font-family: $helvetica-cn;
         display: none;
-        @include breakpoint($all-small-mobile) {
-          margin-left: 30px;
+        @include breakpoint($mobile) {
+          margin-left: 0px;
         }
       }
     }
