@@ -1272,3 +1272,28 @@ nav {
 .menu-text {
   color: $menu-grey;
 }
+
+//online user block
+.online-block{
+  font-size: 18px;
+  line-height: 29px;
+  color: $heading-link;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  font-weight: lighter;
+  padding: 9px 31px 11px;
+  border-bottom: 2px solid $gray;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  list-style: none;
+  @include breakpoint($mobile) {
+    padding: 9px 31px 11px 25px;
+  }
+  a{
+    color: inherit;
+    &:hover{
+      color: $orange;
+    }
+  }
+}
