@@ -620,14 +620,16 @@ body.profile .top-header {
     float: left;
   }
   a.username {
-  	border: 3px solid $orange;
+    min-width: 210px;
+    text-align: center;
+  	border: 3px solid $gray;
     padding: 30px 35px;
     float: left;
     margin: 5px;
     font-size: 20px;
     color: $dark-gray;
     &:hover {
-     border: 3px solid $orange-dark;
+     border: 3px solid $orange;
      color: $black;
     }
   }
