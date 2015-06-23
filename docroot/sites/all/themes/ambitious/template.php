@@ -176,7 +176,7 @@ function ambitious_preprocess_region(&$variables) {
 
 
   //new codes to invoke a block to get the online users in the menu
-  $block = block_load('block',197);
+  $block = block_load('block',201);
   $block1 = _block_render_blocks(array($block));
   $block2 = _block_get_renderable_array($block1);
   $variables['onlineusers'] = drupal_render($block2);
