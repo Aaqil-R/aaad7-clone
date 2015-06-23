@@ -1,0 +1,59 @@
+<?php 
+
+function user_notes_menu(){
+  $items['admin/content/user-notes'] = array(
+    'title' => 'User profile notes',
+    'description' => 'User profile notes',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('user_notes_settings_form'),
+    'access arguments' => array('config_settings_user_notes'), 
+     'type' => MENU_LOCAL_TASK, 
+  );
+  return $items;
+}
+
+function user_notes_permission() {
+  return array(
+    'config_settings_user_notes' => array(
+      'title' => t('Access user profile notes settings form'),
+    ) 
+  );
+}
+function user_notes_settings_form($form, &$form_state){
+  $roles = user_roles();  
+ 
+    
+  $form['user_roles'] = array(
+       '#type' => 'checkboxes',
+       '#title' => t('User roles'),
+       '#options' => $roles,
+       '#default_value' => variable_get('selected-user-roles'),
+       '#description' => t('Set this to <em>Yes</em> if you would like this category to be selected by default.'),
+   );  
+   $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
+  return $form; 
+}
+function user_notes_settings_form_submit($form, &$form_state){
+   foreach ($form_state['values']['user_roles'] as $roleid=>$rolename){ 
+    if(!empty($rolename)){
+      $rolelist[$roleid] = $rolename;
+    }
+  }  
+  variable_set('selected-user-roles', $rolelist);
+};
+function user_notes_form_alter(&$form, &$form_state, $form_id) { 
+global $user;
+  if ($form_id == 'user_profile_form') { 
+    
+    if(aviluser_roles($user) == 0){
+      $form['field_user_notes']['#access'] = FALSE;
+    };   
+  }
+}
+function aviluser_roles($roles){
+  $avilroles = variable_get('selected-user-roles');  
+  $roles = array_intersect_key($roles->roles, $avilroles);
+  return count($roles);
+}
+
+ 

@@ -33,7 +33,7 @@
  *
  * @ingroup themeable
  */
-
+global $user;
 $userid = $elements['#account']->uid;
  hide($user_profile['summary']);
  hide($user_profile['hybridauth_identities']);
@@ -132,7 +132,11 @@ $userid = $elements['#account']->uid;
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
 			               		<?php endif; ?>
-                                        <?php if ($edit_url) print $edit_url;  ?>
+			               		<?php if(isset($elements['#account']->field_user_notes['und']) && aviluser_roles($user) != 0):?>
+					                <h4><?php print t('Editor notes'); ?></h4>
+					               	<p><?php print $elements['#account']->field_user_notes['und'][0]['safe_value'];?></p>
+									      <?php endif; ?>
+                         <?php if ($edit_url) print $edit_url;  ?>
 		               		</section> 
 		               		<?php if (!empty($hybridauth_user)):?>
 		               		<section class="connect">  
