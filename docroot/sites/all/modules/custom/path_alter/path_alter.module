@@ -1,35 +1,35 @@
 <?php 
 function path_alter_menu() {
-  $items['admin/config/content/forumurl-migration'] = array(
+  $items['admin/config/content/path-migration'] = array(
     'title' => 'Path Migration',
     'description' => 'Old path redriect to new path',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('forumurl_move'),
-    'access arguments' => array('execute_forumurl_migration'),
+    'page arguments' => array('path_move'),
+    'access arguments' => array('execute_path_migration'),
   );
   return $items;
 }
 function path_alter_permission() {
   return array(
-    'execute_forumurl_migration' =>  array(
+    'execute_path_migration' =>  array(
       'title' => t('Execute Migration'),
-      'description' => t('forum url.'),
+      'description' => t('Url.'),
     )
   );
 }
 
-function forumurl_move() {
-  if(variable_get('running_url_migration', FALSE)) {
+function path_move() {
+  if(variable_get('path_migration', FALSE)) {
    $form['message'] = array('#markup' => '<p>Migration was in progress..</p>');
   }else {
-    $form['message_submit'] = array('#type' => 'submit', '#value' => 'Run Forum URL Migration');
+    $form['message_submit'] = array('#type' => 'submit', '#value' => 'Run URL Migration');
   }
   return $form;
 }
 
-function forumurl_move_submit($form, $form_state) {
-    $queue = DrupalQueue::get('forum_url_migrate');
-    $content_type = array('forum_discussion', 'article', 'my_voice_blog');
+function path_move_submit($form, $form_state) {
+    $queue = DrupalQueue::get('path_migrate');
+    $content_type = array('article', 'my_voice_blog', 'my_voice_topic');
     $result = db_select('node', 'n')
      ->fields('n',array('nid'))
      ->condition('type', $content_type, 'IN')
@@ -37,8 +37,8 @@ function forumurl_move_submit($form, $form_state) {
      ->fetchAll();
      foreach ($result as $node) {
        $queue->createItem($node);
-     } 
-    variable_set('running_url_migration', TRUE);
+     }     
+    variable_set('path_migration', TRUE);
 }
 
 function path_change($node){ 
@@ -47,35 +47,32 @@ function path_change($node){
        $path = path_load($conditions);
        $path['pathauto'] = 0; 
        $oldalias = $path['alias'];
+       dpm($node);
        switch($node->type){
-         case "article":
-            $node_title = str_replace(' ', '-', strtolower($node->title));             
-            $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title); 
-            
-            $node->title = str_replace(' ', '-', strtolower($node->title));  
-            $node->title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node->title).'/'; 
+         case "article":                
+            $article_title = str_replace(' ', '-', strtolower($node->title));  
+            $article_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $article_title); 
             if(!empty($node->field_related_topic['und'][0]['nid'])){
-              $topic = node_load($node->field_related_topic['und'][0]['nid']);
-              $topic = '/'.str_replace(' ', '-', strtolower($topic->title)); 
+              $article_topic_title = node_load($node->field_related_topic['und'][0]['nid']);
+              $article_topic_title = str_replace(' ', '-', strtolower($article_topic_title->title));  
+              $article_topic_title = '/'.str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $article_topic_title);  
             }
-            $path['alias'] = 'understanding-autism'.$topic.'/'.$node_title;
+            $path['alias'] = 'understanding-autism'.$article_topic_title.'/'.$article_title;
          break;
-         case "my_voice_topic":
-            $path['alias'] = 'understanding-autism/are-you-aged-16-25-and-on-the-spectrum/myvoice/'.$node->title;
+         case "my_voice_topic": 
+            $my_voice_topic_title = str_replace(' ', '-', strtolower($node->title));  
+            $my_voice_topic_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_topic_title);
+            $path['alias'] = 'understanding-autism/are-you-age-16-25-and-on-the-spectrum/myvoice/'.$my_voice_topic_title;
          break;
           case "my_voice_blog": 
-            $node_title = "";
-            if(!empty($node->field_my_voice_topic['und'][0])){
-               $node_title = node_load($node->field_my_voice_topic['und'][0]);
-               $node_title = str_replace(' ', '-', strtolower($node_title->title));  
-               $node_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node_title).'/'; 
-               $node->title = str_replace(' ', '-', strtolower($node->title));  
-               $node->title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $node->title).'/'; 
+            $my_voice_title = str_replace(' ', '-', strtolower($node->title));  
+            $my_voice_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_title);            
+            if(!empty($node->field_my_voice_topic['und'][0]['nid'])){
+              $my_voice_blog_title = node_load($node->field_related_topic['und'][0]['nid']);
+              $my_voice_blog_title = str_replace(' ', '-', strtolower($my_voice_blog_title->title));  
+              $my_voice_blog_title = '/'.str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_blog_title);  
             }
-            $path['alias'] = 'understanding-autism/are-you-aged-16-25-and-on-the-spectrum/myvoice/'.$node_title.$node->title;
-         break;
-         case "forum_discussion":
-          //  $path['alias'] = str_replace('talk-about-autism', 'talk-to-others', $path['alias']);
+            $path['alias'] = 'understanding-autism/are-you-age-16-25-and-on-the-spectrum/myvoice'.$my_voice_blog_title.'/'.$my_voice_title;
          break; 
        }
        if ($path['alias'] != $oldalias){
@@ -86,7 +83,7 @@ function path_change($node){
 }
 
 function path_alter_cron_queue_info() {
-  $queues['forum_url_migrate'] = array(
+  $queues['path_migrate'] = array(
     'worker callback' => 'path_change',
     'time' => 3000,
   );
@@ -94,13 +91,15 @@ function path_alter_cron_queue_info() {
   return $queues;
 }
 
+ 
+
 function path_alter_cron() {
-  $state = variable_get('running_url_migration', FALSE);
+  $state = variable_get('path_migration', FALSE);
   if ($state) {
-     $queue = DrupalQueue::get('forum_url_migrate');
+     $queue = DrupalQueue::get('path_migrate');
      $items = $queue->numberOfItems();
      if ($items == 0) {
-       variable_set('running_url_migration', FALSE);
+       variable_set('path_migration', FALSE);
      }
   }
 }
