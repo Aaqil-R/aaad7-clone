@@ -67,7 +67,7 @@ Drupal.behaviors.ambitious = {
 			stream_intro_div.height($('div.post:nth-of-type(2)').first().innerHeight());
 		}
 
-//amalan new codes
+		//amalan new codes
 		var stream_intro_div1 = $('div.js-stream-intronew:nth-of-type(1)');
 		//defining the secondstream variable
 		var stream_div2=$('div.card:nth-of-type(2)');
@@ -481,8 +481,7 @@ Drupal.behaviors.ambitious = {
 
 		//Sets the width of masonry when click on toggle list and grid
 		$("a.list, a.grid").click(function(){
-		  //setTimeout(function(){ $('.view-content').masonry() }, 400);
-
+		  setTimeout(function(){ $('.view-content').masonry() }, 400);
 		});
 
 		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
