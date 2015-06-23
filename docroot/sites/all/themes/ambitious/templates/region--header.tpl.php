@@ -6,6 +6,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728112
  */
+global $user; 
 ?>
 
 <?php if ($content): ?>
@@ -75,6 +76,12 @@
 				$menu_name = variable_get('menu_main_links_source', 'main-menu');
 				$tree = menu_tree($menu_name);
 				print drupal_render($tree); 
+			?>
+			<?php 
+				//printing the online users.
+				if($user->uid):
+				print $onlineusers;
+				endif; 
 			?>
 		</nav>
 	</div>
