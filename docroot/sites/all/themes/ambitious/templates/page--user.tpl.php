@@ -190,7 +190,7 @@
 						 </div> <!-- /content-header -->
 					    <?php endif; ?>
 		               </header>
-		               <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
+		               <?php if(user_access('administer users') ): ?>
 		                	<a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/messages" class="btn btn-default btn-user">View user messages</a>
 		                	<?php endif; ?>
 		               <div class="profile-main">
