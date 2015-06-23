@@ -481,7 +481,7 @@ Drupal.behaviors.ambitious = {
 
 		//Sets the width of masonry when click on toggle list and grid
 		$("a.list, a.grid").click(function(){
-		  setTimeout(function(){ $('.view-content').masonry() }, 400);
+		  setTimeout(function(){ $('.card-layout .view-content').masonry() }, 400);
 		});
 
 		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
@@ -588,7 +588,7 @@ $(document).ready(function () {
         $('#grid-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-hidden')) {
-                    $('.forum-text').addClass('new-grid');
+                    $('.posts-columns').addClass('new-grid');
                     $('body').addClass('new-grids');
                     return 'view-hidden';
                 }else{ 
@@ -604,7 +604,7 @@ $(document).ready(function () {
         $('#list-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-visible')) {
-                    $('.forum-text').removeClass('new-grid');
+                    $('.posts-columns').removeClass('new-grid');
                     $('body').removeClass('new-grids');
                     return 'view-hidden';
                 } else{
