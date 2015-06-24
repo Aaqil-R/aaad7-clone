@@ -233,4 +233,14 @@
   margin-bottom: gutter();
 }
 
+// understanding_autism_page & understanding_autism_page_age
+// making card width 100% percent in small mobiles.
+.list-view {
+  .card {
+    @include breakpoint($small-mobile) {
+      width: 100%;
+    }
+  }
+}
+
 // end [CARD REFACTOR]
