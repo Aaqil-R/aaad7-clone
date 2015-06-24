@@ -656,6 +656,25 @@ $(document).ready(function () {
 		}
 	}
 
+	//Understandin Autism Page Url change on select
+	//var urlmenu = document.getElementById('select2');
+	//urlmenu.onchange = function() {
+	//  	window.location.href = $("#select2 option:selected").val();
+	//};
+
+	
+	//var el = document.getElementById('select2');
+	//var datahref = el.getAttribute("data-href");
+	//alert(href);
+	$(function() { 
+	    $("#select2").change(function(){ 
+	        var element = $(this).find('option:selected'); 
+	        var dataLink = element.attr("data-href");
+	        //alert(dataLink);
+	        window.location.href = $("#select2".element).val();
+	        //$('#setMyTag').val(myTag); 
+	    }); 
+	}); 
    
     
 })(jQuery, Drupal, this, this.document);
