@@ -91,10 +91,11 @@ Drupal.behaviors.ambitious = {
 				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
 			}
 		}
-		if(stream_lastdiv.length){
-			//console.log('testing123');
-			stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
-		}
+		// console.log("i am here");
+		// if(stream_lastdiv.length){
+		// 	console.log($('div.card:nth-of-type(2)').last().height());
+		// 	stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+		// }
 //end of amalan new codes
 
 		var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
