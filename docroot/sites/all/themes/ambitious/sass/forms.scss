@@ -46,7 +46,7 @@
   &:active, &:focus{
     border-width: 1px;
     margin-top: 4px;
-    color: $menu-grey;
+    color: $white;
   }
 
   &:visited{
@@ -55,7 +55,8 @@
   }
 }
 
-.webform-component-textfield, .webform-component-email {
+.webform-component-textfield,
+.webform-component-email {
   input[type=submit]
   , input[type=text]
   , input[type=search]
@@ -78,7 +79,15 @@
     @include breakpoint($mobile) {
       width: 100%;
     }
-  } 	
+    &:focus {
+      outline: none;
+      color: #2A2E31;
+      border: 2px solid #FBB900 !important;
+    }
+    &.error{
+      border: 2px solid $error-border;
+    }
+  }  
 }
 
 textarea{
