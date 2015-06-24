@@ -654,8 +654,19 @@ $(document).ready(function () {
 				}
 				lastScrollTop = st;
 		}
+   	
 	}
 
-   
-    
+
+	$(document).ready(
+        function() {
+            setInterval(function() {
+                if($(window).width() > 767){
+                    $('.header-top').show();
+                }
+            }, 1);
+    	});
+
+
+      
 })(jQuery, Drupal, this, this.document);
