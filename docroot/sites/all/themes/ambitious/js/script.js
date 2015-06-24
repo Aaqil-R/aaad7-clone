@@ -76,8 +76,9 @@ Drupal.behaviors.ambitious = {
 		if(stream_intro_div1.length){
 			//console.log($('div.card:nth-of-type(2)').first().height());
 			if(stream_intro_div1.width() / window.innerWidth > 0.6667){
-				stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
-				stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
+				//console.log("I am here");
+				//stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
+				//stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
 			}
 			else if(stream_intro_div1.height()>stream_div2.height()){
 				//stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
@@ -87,6 +88,7 @@ Drupal.behaviors.ambitious = {
 				}
 			}
 			else{
+				//console.log("I am not here");
 				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
 				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
 			}

@@ -763,14 +763,14 @@ a.btn:hover {
   padding: 5px 19px;
   font-size: 18px;
   line-height: 28px;
-  margin-top: 2px;
   border-radius: 5px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  border-bottom: 5px solid #007e2a;
   background: #00a837;
   font-weight: normal;
+  -webkit-box-shadow: 0px 5px #007e2a;
+  box-shadow: 0px 5px #007e2a;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 767px) {
@@ -778,46 +778,44 @@ a.btn:hover {
   .st_sharethis_button .stButton {
     padding-top: 7px;
     font-size: 16px;
-    margin-top: 0px;
   }
 }
-/* line 390, ../sass/buttons.scss */
+/* line 391, ../sass/buttons.scss */
 .st_sharethis_button .stButton:hover {
-  border-bottom-width: 3px;
-  margin-top: 2px;
-  text-decoration: none;
-  color: #ffffff;
+  top: 2px;
+  -webkit-box-shadow: 0px 4px #007e2a;
+  box-shadow: 0px 4px #007e2a;
 }
-/* line 396, ../sass/buttons.scss */
+/* line 399, ../sass/buttons.scss */
 .st_sharethis_button .stButton:active {
-  border-bottom-width: 0px;
-  margin-top: 5px;
-  text-decoration: none;
+  top: 6px;
   color: #ffffff;
+  -webkit-box-shadow: 0px 0px #007e2a;
+  box-shadow: 0px 0px #007e2a;
 }
-/* line 402, ../sass/buttons.scss */
+/* line 406, ../sass/buttons.scss */
 .st_sharethis_button .stButton:visited {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 406, ../sass/buttons.scss */
+/* line 410, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter {
   background: none !important;
   width: 109px;
 }
 @media (max-width: 767px) {
-  /* line 406, ../sass/buttons.scss */
+  /* line 410, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter {
     width: 124px;
   }
 }
 @media (max-width: 400px) {
-  /* line 406, ../sass/buttons.scss */
+  /* line 410, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter {
     width: 110px;
   }
 }
-/* line 415, ../sass/buttons.scss */
+/* line 419, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:after {
   font-size: 18px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
@@ -828,13 +826,13 @@ a.btn:hover {
   padding-right: 29px;
 }
 @media (max-width: 767px) {
-  /* line 415, ../sass/buttons.scss */
+  /* line 419, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter:after {
     margin-top: -23px;
     font-size: 17px;
   }
 }
-/* line 428, ../sass/buttons.scss */
+/* line 432, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
@@ -855,7 +853,7 @@ a.btn:hover {
   top: -4px;
 }
 
-/* line 452, ../sass/buttons.scss */
+/* line 456, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -864,7 +862,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 462, ../sass/buttons.scss */
+/* line 466, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -876,7 +874,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 472, ../sass/buttons.scss */
+/* line 476, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -885,12 +883,12 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 482, ../sass/buttons.scss */
+/* line 486, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
-/* line 487, ../sass/buttons.scss */
+/* line 491, ../sass/buttons.scss */
 .btn-default {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -902,18 +900,18 @@ a.btn:hover {
 }
 
 @media (min-width: 767px) {
-  /* line 500, ../sass/buttons.scss */
+  /* line 504, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 510, ../sass/buttons.scss */
+/* line 514, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 519, ../sass/buttons.scss */
+/* line 523, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';
