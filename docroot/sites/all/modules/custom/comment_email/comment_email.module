@@ -98,15 +98,15 @@ function comment_email_comment_insert($comment) {
     $node = node_load($comment->nid); 
     $module = 'comment_email';
     $key = 'comment';  
-    $to = variable_get('comment_notify_email',''); 
+    $to = array(variable_get('comment_notify_email','')); 
     if(variable_get('comment_notify_author', 0) == 1){
        $comment_notify = user_load($node->uid);
-       $to = $to.', '.$comment_notify->mail; 
+       $to[] = $comment_notify->mail; 
     }
     if(variable_get('comment_notify_commentors', 0) == 1){
        $commentors = comment_load($node->cid);
        $commentors_notify = user_load($commentors->uid);
-       $to = $to.', '.$commentors_notify->mail; 
+       $to[] = $commentors_notify->mail; 
     }
     $language = language_default();  
      
@@ -116,7 +116,9 @@ function comment_email_comment_insert($comment) {
     $params = array(
       '@path' => $comment_url, 
     );    
-    drupal_mail($module, $key, $to, $language, $params);
+    foreach ($to as $email) {
+      drupal_mail($module, $key, $email, $language, $params);
+    }
   }  
 }
  

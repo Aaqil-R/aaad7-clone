@@ -133,9 +133,9 @@ $userid = $elements['#account']->uid;
 			               		   <?php print $elements['#account']->field_about_me['und'][0]['safe_value']; ?>
 			               		</p>
 			               		<?php endif; ?>
-			               		<?php if(isset($elements['#account']->field_user_notes['und']) && aviluser_roles($user) != 0):?>
-					                <h4><?php print t('Editor notes'); ?></h4>
-					               	<p><?php print $elements['#account']->field_user_notes['und'][0]['safe_value'];?></p>
+			               		<?php if(!empty($user_profile['field_user_notes']) && aviluser_roles($user) != 0):?>
+					                <h4><?php print t('Editor notes:');?></h4>
+					               	<?php print render($user_profile['field_user_notes']) ;?>
 									      <?php endif; ?>
                          <?php if ($edit_url) print $edit_url;  ?>
 		               		</section> 

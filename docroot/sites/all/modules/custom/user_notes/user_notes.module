@@ -57,3 +57,10 @@ function aviluser_roles($roles){
 }
 
  
+function user_notes_user_view_alter(&$build) {
+global $user;
+  if(aviluser_roles($user) == 0){
+    $build['field_user_notes']['#access'] = FALSE;
+  }
+}
+ 
