@@ -428,13 +428,18 @@ ul a {
     position: relative;
     left: -430px;
     @include transition($type: all, $time: 0.4s, $ease: ease);
-    @include breakpoint($mobile) {
+    @include breakpoint($mobile) {      
       left: 285px;
+    }
+  }
+  #footer,
+  #footer .holder {
+    @include breakpoint($mobile) {
+      left: 142px !important;
     }
   }
   #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
     width: 100%;
-    max-width: none;
   }
   .visual .img-holder .caption-frame {
     width: 100%;
