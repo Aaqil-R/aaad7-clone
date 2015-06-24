@@ -198,7 +198,7 @@
 .card {
   // mobile first being used here.
   width:100%;
-  margin-bottom: gutter()*2;
+  margin-bottom: gutter();
 
   @include breakpoint(min-width $large-mobile) {
     // setting the size of the card layout with susy.
@@ -209,7 +209,6 @@
     // margins which throw layout off when the absolute 
     // positioning is applied from masonry.
     @include span(6 of 12 no-gutters);
-    margin-bottom: gutter();
   }
 
   @include breakpoint(min-width $tablet-small) {
