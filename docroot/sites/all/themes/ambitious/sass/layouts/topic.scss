@@ -130,8 +130,11 @@ body.profile .top-header{
 
   @include breakpoint($mobile) {
     padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    //overflow-x: scroll;
+    //overflow-y: hidden;
+    //Above two codes were commented
+    //because it show a horizontal scrollbar
+    //on mobile view.
     .comment{ 
       vertical-align: top;
     }
