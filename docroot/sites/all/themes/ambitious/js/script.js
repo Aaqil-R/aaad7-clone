@@ -654,6 +654,7 @@ $(document).ready(function () {
 				}
 				lastScrollTop = st;
 		}
+   	
 	}
 
 	//Understandin Autism Page Url change on select
@@ -674,7 +675,14 @@ $(document).ready(function () {
 	        window.location.href = $("#select2".element).val();
 	        //$('#setMyTag').val(myTag); 
 	    }); 
-	}); 
-   
-    
+	});
+
+	$(document).ready(function() {
+        setInterval(function() {
+            if($(window).width() > 767){
+                $('.header-top').show();
+            }
+        }, 1);
+	});
+
 })(jQuery, Drupal, this, this.document);
