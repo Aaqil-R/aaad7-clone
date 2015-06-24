@@ -144,6 +144,7 @@
 <?php endif; ?>
 <?php if($user->uid): ?>
 	<div class="top-header">
+		<h1 class="no-display"><?php print($user->name);?></h1>
 	</div>
 <?php endif; ?>	
 <main id="main" role="main"> 
