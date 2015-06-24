@@ -28,7 +28,7 @@ function user_notes_settings_form($form, &$form_state){
        '#title' => t('User roles'),
        '#options' => $roles,
        '#default_value' => variable_get('selected-user-roles'),
-       '#description' => t('Set this to <em>Yes</em> if you would like this category to be selected by default.'),
+       '#description' => t('Set this to user role if you would like to show user notes'),
    );  
    $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
   return $form; 
@@ -40,6 +40,7 @@ function user_notes_settings_form_submit($form, &$form_state){
     }
   }  
   variable_set('selected-user-roles', $rolelist);
+  drupal_set_message('The configuration options have been saved.');
 };
 function user_notes_form_alter(&$form, &$form_state, $form_id) { 
 global $user;
