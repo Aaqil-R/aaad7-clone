@@ -1161,7 +1161,8 @@ nav {
   white-space: pre;
 }
 
-.node-type-topic, .page-node-74566 {
+// .node-type-topic, .page-node-74566 {
+  .node-type-topic, .page-node-74566 , .node-type-my-voice-topic , .node-type-basic-page-with-hero{
   .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
@@ -1179,26 +1180,33 @@ nav {
     }
   }
 }
-
+//overiding the padding on my voice page
+.node-type-basic-page-with-hero{
+  .block-easy-breadcrumb {
+    .easy-breadcrumb {
+      padding-top: 12px;
+    }
+  }
+}
 //including the padding top for the my voice topic pages only.
-.node-type-my-voice-topic {
-  .block-easy-breadcrumb {
-    position: absolute;
-    top: 18px;
-    z-index: 999;
-    width: 100%;
-    .easy-breadcrumb {
-      margin: 0 auto;
-      max-width: 1080px;
-      padding-right: 16px;
-      padding-top: 45px;
-      a {
-        font-family: $header-font-family;
-        color: $white;
-      }
-    }
-  }
-}
+// .node-type-my-voice-topic {
+//   .block-easy-breadcrumb {
+//     position: absolute;
+//     top: 18px;
+//     z-index: 999;
+//     width: 100%;
+//     .easy-breadcrumb {
+//       margin: 0 auto;
+//       max-width: 1080px;
+//       padding-right: 16px;
+//       padding-top: 45px;
+//       a {
+//         font-family: $header-font-family;
+//         color: $white;
+//       }
+//     }
+//   }
+// }
 
 .node-type-topic .header_banner.banner-nav {
   display: none;
