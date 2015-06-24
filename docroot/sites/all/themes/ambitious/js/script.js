@@ -663,7 +663,7 @@ $(document).ready(function () {
 	        var element = $(this).find('option:selected'); 
 	        var dataLink = element.attr("data-href");
 	        //alert(dataLink);
-	        window.location.href = $("#select2".element).val();
+	        document.location.href = $("#select2".element).val();
 	        //alert(window.location.href);
 	        //$('#setMyTag').val(myTag); 
 	    }); 
