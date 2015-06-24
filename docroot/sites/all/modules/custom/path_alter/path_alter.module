@@ -66,9 +66,10 @@ function path_change($node){
          break;
           case "my_voice_blog": 
             $my_voice_title = str_replace(' ', '-', strtolower($node->title));  
-            $my_voice_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_title);            
+            $my_voice_title = str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_title);   
+                     
             if(!empty($node->field_my_voice_topic['und'][0]['nid'])){
-              $my_voice_blog_title = node_load($node->field_related_topic['und'][0]['nid']);
+              $my_voice_blog_title = node_load($node->field_my_voice_topic['und'][0]['nid']);
               $my_voice_blog_title = str_replace(' ', '-', strtolower($my_voice_blog_title->title));  
               $my_voice_blog_title = '/'.str_replace(str_split('"`,._:;|{[}]+=*&%^$#@!~()?<>\\/\''), '', $my_voice_blog_title);  
             }

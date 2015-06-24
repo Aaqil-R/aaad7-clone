@@ -142,6 +142,10 @@
 		</section>
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
+<?php if($user->uid): ?>
+	<div class="top-header">
+	</div>
+<?php endif; ?>	
 <main id="main" role="main"> 
 			<nav id="sidebar">
 			     <?php if($user->uid OR $page['content']['system_main']['#account']->uid) {?>
