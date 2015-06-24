@@ -372,7 +372,7 @@ a.btn:hover {
   padding:5px 19px;
   font-size:18px;
   line-height:28px;
-  margin-top:2px;
+  //margin-top:5px;
   border-radius:5px;
   color:$white;
   text-align:center;
@@ -386,20 +386,20 @@ a.btn:hover {
   @include breakpoint($mobile) {
     padding-top: 7px;
     font-size: 16px;
-    margin-top:0px;
+    //margin-top:0px;
   }
   &:hover {
     // border-bottom-width: 3px;
-    // margin-top:2px;
+    top:2px;
     // text-decoration:none;
     // color:$white;
-    top: 2px;
+    //top: 2px;
     @include box-shadow(0px 4px $green-dark);   
   }
   &:active{
-    border-bottom-width:0px;
-    margin-top:5px;
-    text-decoration:none;
+    //border-bottom-width:0px;
+    top:6px;
+    //text-decoration:none;
     color:$white;
     @include box-shadow(0px 0px $green-dark);  
   }
