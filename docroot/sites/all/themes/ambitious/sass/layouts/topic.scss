@@ -1085,6 +1085,11 @@ fieldset{
 		  padding-top:12px;
 		}
 	   }
+ @include breakpoint($tablet) {
+     fieldset{
+        margin-bottom: 15px;
+        }
+    }
 }
 .jcf-select{
   @include breakpoint($mobile){
