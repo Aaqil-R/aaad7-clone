@@ -668,12 +668,14 @@ $(document).ready(function () {
 	    }); 
 	});
 
-	$(document).ready(function() {
-        setInterval(function() {
-            if($(window).width() > 767){
+//Sticky Nav back on window resize 
+    setInterval(function() {
+        var mobile = 767;
+            if($(window).width() > mobile){
                 $('.header-top').show();
             }
-        }, 1);
-	});
+    }, 1);
+
+
 
 })(jQuery, Drupal, this, this.document);
