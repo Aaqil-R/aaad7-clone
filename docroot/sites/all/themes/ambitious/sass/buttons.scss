@@ -377,10 +377,11 @@ a.btn:hover {
   color:$white;
   text-align:center;
   text-decoration:none;
-  border-bottom:5px solid $green-dark;
+  //border-bottom:5px solid $green-dark;
   background:$green;
   @extend %clearfix;
   font-weight:normal;
+  @include box-shadow(0px 5px $green-dark);  
   font-family:$base-font-family;
   @include breakpoint($mobile) {
     padding-top: 7px;
@@ -388,16 +389,19 @@ a.btn:hover {
     margin-top:0px;
   }
   &:hover {
-    border-bottom-width: 3px;
-    margin-top:2px;
-    text-decoration:none;
-    color:$white;
+    // border-bottom-width: 3px;
+    // margin-top:2px;
+    // text-decoration:none;
+    // color:$white;
+    top: 2px;
+    @include box-shadow(0px 4px $green-dark);   
   }
   &:active{
     border-bottom-width:0px;
     margin-top:5px;
     text-decoration:none;
     color:$white;
+    @include box-shadow(0px 0px $green-dark);  
   }
   &:visited{
     text-decoration:none;
