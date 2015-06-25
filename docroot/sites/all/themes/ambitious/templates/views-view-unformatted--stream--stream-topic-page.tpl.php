@@ -33,7 +33,7 @@
     // Indicates a featured image.
     $feature_indicator = "";
     // Set the first three items as featured items.
-    if ($id < 3) {
+    if ($id < 3 && isset($node) ) {
       $feature_indicator = "feature-row";
     } 
   ?>
