@@ -308,25 +308,26 @@ Drupal.behaviors.ambitious = {
  
       
 	jQuery(window).on('load', function(){
-        $('.card-stream .view-content').masonry ({
-          //columnWidth: 100,
-            "itemSelector": ".post",
-            "columnWidth": ".post",
-            "percentPosition": true
-        }); 
+		// console.log("ZEUS");
+  //       $('.card-stream .view-content').masonry ({
+  //         //columnWidth: 100,
+  //           "itemSelector": ".post",
+  //           "columnWidth": ".post",
+  //           "percentPosition": true
+  //       }); 
 
-        var $columnWidth = $('.card--width').outerWidth();
-	  	var $gutter = $('.card--gutter').width();
+  //       var $columnWidth = $('.card--width').outerWidth();
+	 //  	var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	 //  	console.log($columnWidth);
+	 //  	console.log($gutter);
 
-	  	$('.card-layout .view-content').masonry ({
-            "itemSelector": ".card--item",
-            "columnWidth": $columnWidth,
-            "gutter" : $gutter,
-        	"percentPosition" : true
-        });
+	 //  	$('.card-layout .view-content').masonry ({
+  //           "itemSelector": ".card--item",
+  //           "columnWidth": $columnWidth,
+  //           "gutter" : $gutter,
+  //       	"percentPosition" : true
+  //       });
 
 	  	// implementation for isotope, commenting out till we move to the isotope 
 	  	// implementation.
@@ -345,6 +346,7 @@ Drupal.behaviors.ambitious = {
 //amalan new codes
 //jQuery(window).on('load', function(){
 	$(document).ready(function(){
+		console.log("HADES");
         $('.card-stream .view-content').masonry ({
           //columnWidth: 100,
             "itemSelector": ".card",
@@ -355,8 +357,8 @@ Drupal.behaviors.ambitious = {
         var $columnWidth = $('.card--width').outerWidth();
 	  	var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	  	// console.log($columnWidth);
+	  	// console.log($gutter);
 
 	  	$('.card-layout .view-content').masonry ({
             "itemSelector": ".card--item",
@@ -370,7 +372,7 @@ Drupal.behaviors.ambitious = {
 
 	// Container for masonry (the view wrapper)
 	$views_container = $('.card-layout .view-content');
-
+	console.log("POSEIDON");
 	// debug statements for the column width.
 	var $columnWidth = $('.card--width').outerWidth();
 	var $gutter = $('.card--gutter').width();
@@ -546,17 +548,18 @@ Drupal.behaviors.ambitious = {
 	// 	};		
 	// });
 
-	$(window).bind('views_load_more.new_content', function(){
-	    if ($('.card-layout .view-content').masonry != undefined) {
+	// $(window).bind('views_load_more.new_content', function(){
+	//     if ($('.card-layout .view-content').masonry != undefined) {
 
-	    	// console.log('Loading more masonry reset.');
+	//     	// console.log('Loading more masonry reset.');
 
-		    $('.card-layout .view-content').masonry('reloadItems'); 
-		    $('.card-layout .view-content').masonry('layout');
-		};		
-	});
+	// 	    $('.card-layout .view-content').masonry('reloadItems'); 
+	// 	    $('.card-layout .view-content').masonry('layout');
+	// 	};		
+	// });
 
 	$(window).resize(function () {
+		console.log("ATHENA");
 		if ($('.masonry').masonry != undefined) {
 		    $('.masonry').masonry('reloadItems'); 
 		}; 
