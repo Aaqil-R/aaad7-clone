@@ -126,10 +126,10 @@ function comment_email_comment_insert($comment) {
 function comment_email_mail($key, &$message, $params) { 
   switch($key) {
    case 'comment':
-    $message['subject'] = variable_get('comment_email_subject','[AAA] New Comment posted');
+    $message['subject'] = variable_get('comment_email_subject','Comment posted');
     $message['body'] = array();
-    $message['body'][] = variable_get('comment_email_body','New Comment posted');
-    $message['body'][] = t('Post URL @path',$params);    
+    $message['body'][] = variable_get('comment_email_body','A new comment has been posted in the following post. If you wish to read or reply, please go through this URL,');
+    $message['body'][] = t('@path',$params);    
     break;
   }
 }   
