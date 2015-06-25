@@ -28,10 +28,6 @@
       <?php endif; ?>         
       <!-- Teaser ends here -->	
     </div>
-  <?php else: ?>
-    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
-      <?php print $row; ?>
-    </div>
   <?php endif; ?>
   <?php  
     // Indicates a featured image.
