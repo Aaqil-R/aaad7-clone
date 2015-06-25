@@ -54,11 +54,17 @@ function swear_email_settings_form($form, &$form_state) {
   return $form; 
 }
 
-function swear_email_settings_form_validate($form, &$form_state) { 
-  $valid_email = valid_email_address($form_state['values']['swear_notify_email']);  
-  if($form_state['values']['swear_notification'] == 1) { 
-    if(empty($form_state['values']['swear_notify_email']) || $valid_email != 1 ){ 
-      form_set_error('swear_notify_email', t('Email id is not valid, correct the email.')); 
+function swear_email_settings_form_validate($form, &$form_state) {  
+  if($form_state['values']['swear_notification'] == 1) {  
+    $emails = explode(',',$form_state['values']['swear_notify_email']);
+    foreach($emails as $list){
+     $list = str_replace(' ', '', $list);
+     $valid_email = valid_email_address($list); 
+      
+     if(empty($list) || $valid_email != 1 ){ 
+       form_set_error('swear_notify_email', t('Email id is not valid, correct the email.')); 
+       break;
+     }  
     } 
     if(empty($form_state['values']['swear_email_subject'])){ 
       form_set_error('swear_email_subject', t('Subject field value is required')); 
