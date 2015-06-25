@@ -782,7 +782,9 @@
     }
     .holder {
         @include container;
-        @include breakpoint ($mobile) {padding: 0 15px;}
+        @include breakpoint ($mobile) {
+            padding: 0 15px;
+        }
         
         // myVoice page the form still cuts the caption
         // on higher resolutions.
@@ -906,6 +908,7 @@
         //padding: 0 15px 0 0;
         @include breakpoint($mobile) {
             padding: 15px 15px;
+            margin-top: 0;
         }
     }
     //overwrite jcf settings TODO check this + border is still darker than the others
