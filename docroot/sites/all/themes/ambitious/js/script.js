@@ -81,14 +81,14 @@ Drupal.behaviors.ambitious = {
 				//stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
 			//}
 			if(stream_intro_div1.height()>stream_div2.height()){
-				stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				if((stream_intro_div1.width()/window.innerWidth) < 0.4){
-					stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				}
-				//if the width is less than 33 the add height of the third as well
-				//if((stream_intro_div1.width()/window.innerWidth) < 0.333){
-					//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				//}
+				// stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// if((stream_intro_div1.width()/window.innerWidth) < 0.4){
+				// 	stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// }
+				// //if the width is less than 33 the add height of the third as well
+				// //if((stream_intro_div1.width()/window.innerWidth) < 0.333){
+				// 	//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// //}
 			}
 			else{
 				//console.log("I am not here");

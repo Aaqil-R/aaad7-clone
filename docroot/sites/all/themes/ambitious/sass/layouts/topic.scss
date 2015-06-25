@@ -703,7 +703,47 @@ html.no-touch .form-type-bef-checkbox {
     }
   }
 }
-
+//These are the set of codes to get the featured star in the homepage
+.card {
+	.img-holder{
+		.feature-holder{
+			  position: absolute;
+			  z-index: 2;
+			  bottom: 6px;
+			  left: 11px;
+			  background: #f15500;
+			  .icon-Featured{
+				font-size: 24px;
+				padding: 6px 0 0;
+				float: left;
+				background: #ffffff;
+				line-height: 30px;
+				height: 45px;
+				width: 45px;
+				text-align: center;
+				color: #f15500;
+			  }
+			  .text{
+			    display: none;
+				float: left;
+				font-size: 18px;
+				line-height: 25px;
+				padding: 10px 5px;
+				min-width: 109px;
+				text-align: center;
+				color: #ffffff;
+			  }
+		}
+	}
+}
+#block-views-stream-stream-home-page{
+	.feature-row {
+		.feature-holder {
+			display: inherit;
+			z-index: 999;
+		}
+	}
+}
 
 
  
