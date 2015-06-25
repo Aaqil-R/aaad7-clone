@@ -33,4 +33,15 @@
       <?php print $row; ?>
     </div>
   <?php endif; ?>
+  <?php  
+    // Indicates a featured image.
+    $feature_indicator = "";
+    // Set the first three items as featured items.
+    if ($id < 3) {
+      $feature_indicator = "feature-row";
+    } 
+  ?>
+  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . " " . $feature_indicator .'"';  } ?>>
+    <?php print $row; ?>
+  </div>  
 <?php endforeach; ?>
