@@ -308,26 +308,27 @@ Drupal.behaviors.ambitious = {
  
       
 	jQuery(window).on('load', function(){
-		console.log("ZEUS");
-        $('.card-stream .view-content').masonry ({
-          //columnWidth: 100,
-            "itemSelector": ".post",
-            "columnWidth": ".post",
-            "percentPosition": true
-        }); 
+		// console.log("ZEUS");
+  //       $('.card-stream .view-content').masonry ({
+  //         //columnWidth: 100,
+  //           "itemSelector": ".post",
+  //           "columnWidth": ".post",
+  //           "percentPosition": true
+  //       }); 
 
-        var $columnWidth = $('.card--width').outerWidth();
-	  	var $gutter = $('.card--gutter').width();
+  //       var $columnWidth = $('.card--width').outerWidth();
+	 //  	var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	 //  	console.log($columnWidth);
+	 //  	console.log($gutter);
 
-	  	$('.card-layout .view-content').masonry ({
-            "itemSelector": ".card--item",
-            "columnWidth": $columnWidth,
-            "gutter" : $gutter,
-        	"percentPosition" : true
-        });
+	 //  	$('.card-layout .view-content').masonry ({
+  //           "itemSelector": ".card--item",
+  //           "columnWidth": $columnWidth,
+  //           "gutter" : $gutter,
+  //       	"percentPosition" : true
+  //       });
+	// END ZEUS;
 
 	  	// implementation for isotope, commenting out till we move to the isotope 
 	  	// implementation.
@@ -346,26 +347,26 @@ Drupal.behaviors.ambitious = {
 //amalan new codes
 //jQuery(window).on('load', function(){
 	$(document).ready(function(){
-		console.log("HADES");
-        $('.card-stream .view-content').masonry ({
-          //columnWidth: 100,
-            "itemSelector": ".card",
-            "columnWidth": ".card",
-            "percentPosition": true
-        }); 
+		// console.log("HADES");
+  //       $('.card-stream .view-content').masonry ({
+  //         //columnWidth: 100,
+  //           "itemSelector": ".card",
+  //           "columnWidth": ".card",
+  //           "percentPosition": true
+  //       }); 
 
-        var $columnWidth = $('.card--width').outerWidth();
-	  	var $gutter = $('.card--gutter').width();
+  //       var $columnWidth = $('.card--width').outerWidth();
+	 //  	var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	 //  	console.log($columnWidth);
+	 //  	console.log($gutter);
 
-	  	$('.card-layout .view-content').masonry ({
-            "itemSelector": ".card--item",
-            "columnWidth": $columnWidth,
-            "gutter" : $gutter,
-        	"percentPosition" : true
-        });
+	 //  	$('.card-layout .view-content').masonry ({
+  //           "itemSelector": ".card--item",
+  //           "columnWidth": $columnWidth,
+  //           "gutter" : $gutter,
+  //       	"percentPosition" : true
+  //       });
     });
 //end of the new codes amalan
 
