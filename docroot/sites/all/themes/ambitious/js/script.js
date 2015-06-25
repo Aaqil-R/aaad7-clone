@@ -385,7 +385,8 @@ Drupal.behaviors.ambitious = {
 				// //}
 			}
 			else{
-				//console.log("I am not here");
+				console.log("applying the height " + $('div.card:nth-of-type(2)').first().height() + " to 
+					the intro card.");
 				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
 				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
 			}
