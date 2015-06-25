@@ -1,6 +1,6 @@
 <?php
 /**
- * @file
+ * @  file
  * Default view template to display content in a Masonry layout.
  */
 
@@ -37,12 +37,18 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
     </div>
   <?php endif; ?>
 
-  <?php if ($id < 3) {
-    $additional_classes = "feature-row";
-  } 
+  <?php  
+    
+    // Indicates a featured image.
+    $feature_indicator = "";
+
+    // Set the first three items as featured items.
+    if ($id < 3) {
+      $feature_indicator = "feature-row";
+    } 
   ?>
   
-  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . " " . $additional_classes .'"';  } ?>>
+  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . " " . $feature_indicator .'"';  } ?>>
     <?php print $row; ?>
   </div>  
 <?php endforeach; ?>
