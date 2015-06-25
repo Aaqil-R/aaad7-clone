@@ -57,51 +57,7 @@ Drupal.behaviors.ambitious = {
 
 		$(".fourm-order-date").append(
 			"<select><option data-href='forums/community-champions?sort=desc&order=created' data-order='desc'>Show Latest</option><option data-href='forums/community-champions?sort=asc&order=created' data-order='asc'>Show Oldest</option></select>"
-		);
-
-		// in case of a stream set the intro card height to the same height
-		// as of the first card in the stream. 
-		var stream_intro_div = $('div.js-stream-intro:nth-of-type(1)');
-
-		if(stream_intro_div.length){
-			stream_intro_div.height($('div.post:nth-of-type(2)').first().innerHeight());
-		}
-
-		//amalan new codes
-		var stream_intro_div1 = $('div.js-stream-intronew:nth-of-type(1)');
-		//defining the secondstream variable
-		var stream_div2=$('div.card:nth-of-type(2)');
-		var stream_div3=$('div.card:nth-of-type(3)');
-		var stream_lastdiv=$('div.navigation-block');
-		if(stream_intro_div1.length){
-			//console.log($('div.card:nth-of-type(2)').first().height());
-			//if(stream_intro_div1.width() / window.innerWidth > 0.6667){
-				//console.log("I am here");
-				//stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
-				//stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
-			//}
-			if(stream_intro_div1.height()>stream_div2.height()){
-				// stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				// if((stream_intro_div1.width()/window.innerWidth) < 0.4){
-				// 	stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				// }
-				// //if the width is less than 33 the add height of the third as well
-				// //if((stream_intro_div1.width()/window.innerWidth) < 0.333){
-				// 	//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				// //}
-			}
-			else{
-				//console.log("I am not here");
-				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
-				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
-			}
-		}
-		// console.log("i am here");
-		// if(stream_lastdiv.length){
-		// 	console.log($('div.card:nth-of-type(2)').last().height());
-		// 	stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
-		// }
-//end of amalan new codes
+		);		
 
 		var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
 	        	     
@@ -396,6 +352,50 @@ Drupal.behaviors.ambitious = {
 		  // $('.card--item').addClass('js-masonry-processed');
 		}
 	});
+
+	// in case of a stream set the intro card height to the same height
+		// as of the first card in the stream. 
+		var stream_intro_div = $('div.js-stream-intro:nth-of-type(1)');
+
+		if(stream_intro_div.length){
+			stream_intro_div.height($('div.post:nth-of-type(2)').first().innerHeight());
+		}
+
+		//amalan new codes
+		var stream_intro_div1 = $('div.js-stream-intronew:nth-of-type(1)');
+		//defining the secondstream variable
+		var stream_div2=$('div.card:nth-of-type(2)');
+		var stream_div3=$('div.card:nth-of-type(3)');
+		var stream_lastdiv=$('div.navigation-block');
+		if(stream_intro_div1.length){
+			//console.log($('div.card:nth-of-type(2)').first().height());
+			//if(stream_intro_div1.width() / window.innerWidth > 0.6667){
+				//console.log("I am here");
+				//stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
+				//stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
+			//}
+			if(stream_intro_div1.height()>stream_div2.height()){
+				// stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// if((stream_intro_div1.width()/window.innerWidth) < 0.4){
+				// 	stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// }
+				// //if the width is less than 33 the add height of the third as well
+				// //if((stream_intro_div1.width()/window.innerWidth) < 0.333){
+				// 	//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// //}
+			}
+			else{
+				//console.log("I am not here");
+				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
+				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+			}
+		}
+		// console.log("i am here");
+		// if(stream_lastdiv.length){
+		// 	console.log($('div.card:nth-of-type(2)').last().height());
+		// 	stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+		// }
+//end of amalan new codes
 
 	// When new content has been loaded, find it and add them to masonry
 	$(window).bind('views_load_more.new_content', function(){
