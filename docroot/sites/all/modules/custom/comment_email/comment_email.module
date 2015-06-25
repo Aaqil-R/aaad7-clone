@@ -97,8 +97,9 @@ function comment_email_comment_insert($comment) {
   if(variable_get('comment_notification', 0) == 1){ 
     $node = node_load($comment->nid); 
     $module = 'comment_email';
-    $key = 'comment';  
-    $to = array(variable_get('comment_notify_email','')); 
+    $key = 'comment';
+    $to = variable_get('comment_notify_email',''); 
+    $to = explode( ',', $to);
     if(variable_get('comment_notify_author', 0) == 1){
        $comment_notify = user_load($node->uid);
        $to[] = $comment_notify->mail; 
