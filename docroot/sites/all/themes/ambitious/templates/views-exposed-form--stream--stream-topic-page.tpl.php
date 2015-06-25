@@ -55,7 +55,7 @@
           </div>
         <?php endif; ?>
       </div>
-    <?php endforeach; ?> -->
+    <?php endforeach; ?>
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
@@ -82,6 +82,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?>  
+
     <?php print render($variables['share_button']); ?>
 </div>
  
