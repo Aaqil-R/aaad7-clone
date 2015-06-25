@@ -418,29 +418,37 @@ ul a {
     }
   } 
 }
+.node-type-my-voice-blog {
+  &.school-active,
+  &.nav-active {
+    .visual {
+      left: 0;
+    }
+  }
+}
 .school-active {
   #nav-main, #block-block-156{
     @include breakpoint($mobile) {
       display:none;
     }
   }
-  .visual, .block-easy-breadcrumb, #main, .action-block, .my-voice-block, .articles-block, .social-block, .forum-block, #footer .holder, #main2, .top-header, .block-easy-breadcrumb, .slider-block {
+  .visual, .block-easy-breadcrumb, #main, .action-block, .my-voice-block, .articles-block, .social-block, #footer .holder, #main2, .block-easy-breadcrumb, .slider-block, #social {
     position: relative;
     left: -430px;
     @include transition($type: all, $time: 0.4s, $ease: ease);
     @include breakpoint($mobile) {      
       left: 285px;
     }
-  }
+  }  
   #footer,
   #footer .holder {
     @include breakpoint($mobile) {
       left: 142px !important;
     }
   }
-  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
-    width: 100%;
-  }
+  // #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
+  //   width: 100%;
+  // }
   .visual .img-holder .caption-frame {
     width: 100%;
     margin: 0;
@@ -713,15 +721,15 @@ nav {
 
 .filter-active {
   .visual {
-    margin: 0 0 0 -430px;
+    left: -430px;
     @include breakpoint($mobile) {
-      margin-left: 285px;
+      left: 285px;
     }
   }
   #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
-    margin-left: -430px;
+    left: -430px;
     @include breakpoint($mobile) {
-      margin-left: 285px;
+      left: 285px;
     }
   }
   #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
@@ -752,7 +760,8 @@ nav {
     max-width: 1080px !important;
     margin: 0 !important;
   }*/
-  .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main, .action-block, .forum-block, #footer .holder, #main2, .top-header, .articles-block, .social-block, .slider-block, #social {
+  .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main, .action-block, #footer .holder, #main2,
+  .articles-block, .social-block, .slider-block, #social {
     position: relative;
     left: -430px;
     @include breakpoint($mobile) {
