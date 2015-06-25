@@ -60,8 +60,10 @@
             .voice-holder {
                 position: absolute;
                 z-index: 2;
-                top: -16px;
+                //top: -16px;
                 background: #e30087;
+                bottom: 6px;
+                left: 11px;
                 .text {
                     float: left;
                     font-size: 18px;
@@ -71,6 +73,16 @@
                     text-align: center;
                     color: #ffffff;
                 }
+            }
+        }
+    }
+}
+
+.card{
+    .img-holder {
+        .voice-holder:hover {
+            .text {
+                display: block;
             }
         }
     }
