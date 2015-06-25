@@ -1175,7 +1175,7 @@ nav {
 }
 
 // .node-type-topic, .page-node-74566 {
-  .node-type-topic, .page-node-74566 , .node-type-my-voice-topic , .node-type-basic-page-with-hero ,.node-type-article,.node-type-my-voice-blog{
+  .node-type-topic, .page-node-74566 , .node-type-my-voice-topic , .node-type-basic-page-with-hero ,.node-type-article,.node-type-my-voice-blog ,.node-type-forum-discussion{
   .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
@@ -1194,7 +1194,7 @@ nav {
   }
 }
 //overiding the padding on my voice page
-.node-type-basic-page-with-hero{
+.node-type-basic-page-with-hero ,.node-type-forum-discussion{
   .block-easy-breadcrumb {
     .easy-breadcrumb {
       padding-top: 12px;
@@ -1282,8 +1282,7 @@ nav {
       max-width: 1080px;
       padding: 10px 20px 10px 20px;
       .easy-breadcrumb {
-        padding-top: 18px;
-        color: $heading-link;
+        //padding-top: 18px;
       }
     }
   }
