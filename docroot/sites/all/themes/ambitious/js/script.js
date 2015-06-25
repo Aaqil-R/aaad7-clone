@@ -308,6 +308,7 @@ Drupal.behaviors.ambitious = {
  
       
 	jQuery(window).on('load', function(){
+		console.log("ZEUS");
         $('.card-stream .view-content').masonry ({
           //columnWidth: 100,
             "itemSelector": ".post",
@@ -345,6 +346,7 @@ Drupal.behaviors.ambitious = {
 //amalan new codes
 //jQuery(window).on('load', function(){
 	$(document).ready(function(){
+		console.log("HADES");
         $('.card-stream .view-content').masonry ({
           //columnWidth: 100,
             "itemSelector": ".card",
@@ -370,7 +372,7 @@ Drupal.behaviors.ambitious = {
 
 	// Container for masonry (the view wrapper)
 	$views_container = $('.card-layout .view-content');
-
+	console.log("POSEIDON");
 	// debug statements for the column width.
 	var $columnWidth = $('.card--width').outerWidth();
 	var $gutter = $('.card--gutter').width();
@@ -557,6 +559,7 @@ Drupal.behaviors.ambitious = {
 	});
 
 	$(window).resize(function () {
+		console.log("ATHENA");
 		if ($('.masonry').masonry != undefined) {
 		    $('.masonry').masonry('reloadItems'); 
 		}; 
