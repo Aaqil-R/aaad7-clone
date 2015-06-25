@@ -21,6 +21,7 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
 ?>
 
 <?php foreach ($rows as $id => $row): ?>
+  <!-- Setup the intro section at the 0th index. --> 
   <?php if ($id == 0):// && isset($node)):?> 
     <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . ' ' . $additional_classes .'"';  } ?>>
       <!-- Teaser View of the topic --> 
@@ -34,10 +35,14 @@ if ($view->query->pager->total_items > $view->query->pager->options['items_per_p
       <?php endif; ?>         
       <!-- Teaser ends here -->	
     </div>
-<?php endif; ?>
-    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
-      <?php print $row; ?>
-    </div>
-  
-<?php endforeach; ?>
+  <?php endif; ?>
 
+  <?php if ($id < 3) {
+    $additional_classes = "feature-row";
+  } 
+  ?>
+  
+  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . " " . $additional_classes .'"';  } ?>>
+    <?php print $row; ?>
+  </div>  
+<?php endforeach; ?>
