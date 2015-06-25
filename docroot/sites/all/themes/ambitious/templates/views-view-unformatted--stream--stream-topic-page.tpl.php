@@ -28,16 +28,17 @@
       <?php endif; ?>         
       <!-- Teaser ends here -->	
     </div>
-  <?php endif; ?>
+  <?php else: ?>
   <?php  
     // Indicates a featured image.
     $feature_indicator = "";
     // Set the first three items as featured items.
-    if ($id < 3 && isset($node) ) {
+    if ($id < 4 && isset($node) ) {
       $feature_indicator = "feature-row";
     } 
   ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . " " . $feature_indicator .'"';  } ?>>
     <?php print $row; ?>
-  </div>  
+  </div>
+  <?php endif; ?>  
 <?php endforeach; ?>
