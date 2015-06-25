@@ -75,26 +75,32 @@ Drupal.behaviors.ambitious = {
 		var stream_lastdiv=$('div.navigation-block');
 		if(stream_intro_div1.length){
 			//console.log($('div.card:nth-of-type(2)').first().height());
-			if(stream_intro_div1.width() / window.innerWidth > 0.6667){
-				stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
-				stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
-			}
-			else if(stream_intro_div1.height()>stream_div2.height()){
-				//stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				//if the width is less than 33 the add height of the third as well
-				if((stream_intro_div1.width()/window.innerWidth) < 0.333){
-					//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
-				}
+			//if(stream_intro_div1.width() / window.innerWidth > 0.6667){
+				//console.log("I am here");
+				//stream_intro_div1.width($('div.card:nth-of-type(2)').first().width());
+				//stream_lastdiv.width($('div.card:nth-of-type(2)').last().width());
+			//}
+			if(stream_intro_div1.height()>stream_div2.height()){
+				// stream_div2.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// if((stream_intro_div1.width()/window.innerWidth) < 0.4){
+				// 	stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// }
+				// //if the width is less than 33 the add height of the third as well
+				// //if((stream_intro_div1.width()/window.innerWidth) < 0.333){
+				// 	//stream_div3.height($('div.js-stream-intronew:nth-of-type(1)').height());
+				// //}
 			}
 			else{
+				//console.log("I am not here");
 				stream_intro_div1.height($('div.card:nth-of-type(2)').first().height());
 				stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
 			}
 		}
-		if(stream_lastdiv.length){
-			//console.log('testing123');
-			stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
-		}
+		// console.log("i am here");
+		// if(stream_lastdiv.length){
+		// 	console.log($('div.card:nth-of-type(2)').last().height());
+		// 	stream_lastdiv.height($('div.card:nth-of-type(2)').last().height());
+		// }
 //end of amalan new codes
 
 		var forum_order = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')[0].split('=')[1];
@@ -654,8 +660,28 @@ $(document).ready(function () {
 				}
 				lastScrollTop = st;
 		}
+   	
 	}
+	
+	$(function() { 
+	    $("#select2").change(function(){ 
+	        var element = $(this).find('option:selected'); 
+	        var dataLink = element.attr("data-href");
+	        //alert(dataLink);
+	        document.location.href = $("#select2".element).val();
+	        //alert(window.location.href);
+	        //$('#setMyTag').val(myTag); 
+	    }); 
+	});
 
-   
-    
+//Sticky Nav back on window resize 
+    setInterval(function() {
+        var mobile = 767;
+            if($(window).width() > mobile){
+                $('.header-top').show();
+            }
+    }, 1);
+
+
+
 })(jQuery, Drupal, this, this.document);
