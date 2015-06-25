@@ -308,27 +308,26 @@ Drupal.behaviors.ambitious = {
  
       
 	jQuery(window).on('load', function(){
-		// console.log("ZEUS");
-  //       $('.card-stream .view-content').masonry ({
-  //         //columnWidth: 100,
-  //           "itemSelector": ".post",
-  //           "columnWidth": ".post",
-  //           "percentPosition": true
-  //       }); 
+		console.log("ZEUS");
+        $('.card-stream .view-content').masonry ({
+          //columnWidth: 100,
+            "itemSelector": ".post",
+            "columnWidth": ".post",
+            "percentPosition": true
+        }); 
 
-  //       var $columnWidth = $('.card--width').outerWidth();
-	 //  	var $gutter = $('.card--gutter').width();
+        var $columnWidth = $('.card--width').outerWidth();
+	  	var $gutter = $('.card--gutter').width();
 
-	 //  	console.log($columnWidth);
-	 //  	console.log($gutter);
+	  	console.log($columnWidth);
+	  	console.log($gutter);
 
-	 //  	$('.card-layout .view-content').masonry ({
-  //           "itemSelector": ".card--item",
-  //           "columnWidth": $columnWidth,
-  //           "gutter" : $gutter,
-  //       	"percentPosition" : true
-  //       });
-	// END ZEUS;
+	  	$('.card-layout .view-content').masonry ({
+            "itemSelector": ".card--item",
+            "columnWidth": $columnWidth,
+            "gutter" : $gutter,
+        	"percentPosition" : true
+        });
 
 	  	// implementation for isotope, commenting out till we move to the isotope 
 	  	// implementation.
