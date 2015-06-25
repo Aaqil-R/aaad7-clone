@@ -29,10 +29,10 @@ function swear_email_settings_form($form, &$form_state) {
     '#options' => array(t('Disable'), t('Enable')), 
   );     
   $form['swear_notify_email'] = array(
-    '#type' => 'textfield', 
+    '#type' => 'textarea', 
     '#title' => t('User email'), 
     '#default_value' => variable_get('swear_notify_email',''), 
-    '#description' => t('Email id is formatted ex: name@domin.com'),
+    '#description' => t('Seperate email addresses by using ","'),
   );  
   $form['swear_email_subject'] = array(
     '#type' => 'textfield', 
@@ -48,7 +48,7 @@ function swear_email_settings_form($form, &$form_state) {
     '#type' => 'textarea', 
     '#title' => t('Swear words list'), 
     '#default_value' => variable_get('swear_words',''),  
-    '#description' => "Use , ( Comma ) separator Ex: list1, list2",
+    '#description' => 'Seperate Swear words by using ","',
   ); 
   $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
   return $form; 
@@ -96,6 +96,7 @@ function search_swear_words($comment) {
       $module = 'swear_email';
       $key = 'swear';
       $to = variable_get('swear_notify_email','');
+      $to = explode( ',', $to);
       $language = language_default();
       
       $node = node_load($comment->nid); 
@@ -119,7 +120,9 @@ function search_swear_words($comment) {
           '@path' => $comment_url, 
           '@words' => $swear_word, 
         );   
-        drupal_mail($module, $key, $to, $language, $params);
+        foreach ($to as $email) {
+          drupal_mail($module, $key, $email, $language, $params);
+        }
       }
       break;
     }

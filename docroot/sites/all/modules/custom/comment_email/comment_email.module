@@ -42,7 +42,7 @@ function notify_email_settings_form($form, &$form_state) {
     '#type' => 'textarea', 
     '#title' => t('User email'), 
     '#default_value' => variable_get('comment_notify_email',''), 
-    '#description' => t('Email id is formatted ex: name@domin.com'),
+    '#description' => t('Seperate email addresses by using ","'),
   );  
   $form['comment_email_subject'] = array(
     '#type' => 'textfield', 
