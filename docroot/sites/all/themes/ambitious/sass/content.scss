@@ -1355,6 +1355,9 @@
 .fb_iframe_widget span iframe[style] {
     width: 100% !important;
     min-width: 200px;
+    @include breakpoint($tablet) {
+        min-width: 100px;
+    }
 }
 
 .articles-columns{
