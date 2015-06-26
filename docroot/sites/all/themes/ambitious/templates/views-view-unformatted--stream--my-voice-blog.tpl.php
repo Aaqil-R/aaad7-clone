@@ -16,7 +16,7 @@
      <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] . $additional_classes .'"';  } ?>>
       <!-- Teaser View of the topic --> 
       <?php if(isset($node->title)): ?>
-        <h1><?php print $node->title;?></h1>
+        <h4><?php print $node->title;?></h4>
       <?php endif; ?>
        <p>
       <?php $node1 = node_load(arg(1));
