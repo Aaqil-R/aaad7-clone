@@ -1677,13 +1677,17 @@ a.masquerade-switch{
 
 @media print {
 
-  .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .visual, .topic-share, .btn
-  {
-    display:none;
+  img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header{
+    display: none !important;
+ }
+
+ .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
+    display: none;
   }
-  img, #header, .top-bar, #admin-toolbar, .comment-block, #comments, .messages, #skip-link, .top-header{
-    display:none!important;
-  } 
+   .img-holder, .visual, .visual img{ 
+   display: block !important;
+ }
+
   #main2 .article{
     width:100%;
   }
