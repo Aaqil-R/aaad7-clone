@@ -37,7 +37,9 @@
 
   //new code amalan
   //$link = strip_tags($fields['title']->content);
-  $link = strip_tags($fields['nid']->content);
+  //$link = strip_tags($fields['nid']->content);
+  //$link = strip_tags();
+  $link = strip_tags($fields['nid']->raw);
   //
   
   $nodepos = strip_tags($fields['position']->content);
@@ -134,7 +136,11 @@
               Last reply by <cite><?php print $last_reply_username; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $last_reply_time; ?></time> 
                </div>
              <?php endif; ?>
-             <ul class="links inline"><li class="comment-add first last"><a href="/node/<?php print $link; ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
+             <?php if($user->uid): ?> 
+             <ul class="links inline"><li class="comment-add first last"><a href="<?php print url('node/'.$link); ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
+            <?php else: ?>
+            <ul class="links inline"><li class="comment-add first last"><a href="/user/login?destination=<?php print $url; ?>" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
+            <?php endif; ?>
             </div>  
           </section> 
   </div> 
