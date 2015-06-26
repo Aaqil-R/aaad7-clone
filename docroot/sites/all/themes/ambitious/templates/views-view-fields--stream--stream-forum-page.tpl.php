@@ -26,12 +26,19 @@
 
 
 ?>
+<?php //dpr($fields['comments_link']); ?>
+
 <?php
   
   //Fix issue
   $last_reply_username = '';
   $last_reply_time = '';
   //End
+
+  //new code amalan
+  //$link = strip_tags($fields['title']->content);
+  $link = strip_tags($fields['nid']->content);
+  //
   
   $nodepos = strip_tags($fields['position']->content);
   $sticky = node_load($fields['nid']->raw); 
@@ -114,19 +121,20 @@
 						  </div>
 						</div>
 						<div class="footer">
-                          <div class="num-holder">
+              <div class="num-holder">
 							<a href="<?php print $fields['path']->content; ?>" title="replies" class="open">
 							  <span class="num"><?php print $real_comment_count; ?></span>
 							  <span class="text" style="display: inherit;">replies</span>
 							</a>
 						  </div>
-						 
-						  <div class="times" <?php if($real_comment_count == 0){ ?> style="display:none;" <?php }; ?> >
-						    <em class="icon-Time"></em> 
-							Last reply by <cite><?php print $last_reply_username; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $last_reply_time; ?></time> 
-					     </div>  
-						<?php print $fields['comments_link']->content; ?>
-					  </div>  
-					</section> 
- 
+
+              <?php if($real_comment_count != 0): ?>			 
+              <div class="times">
+                <em class="icon-Time"></em> 
+              Last reply by <cite><?php print $last_reply_username; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $last_reply_time; ?></time> 
+               </div>
+             <?php endif; ?>
+             <ul class="links inline"><li class="comment-add first last"><a href="/node/<?php print $link; ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
+            </div>  
+          </section> 
   </div> 
