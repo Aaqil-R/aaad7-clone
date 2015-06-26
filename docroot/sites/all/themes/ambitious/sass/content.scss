@@ -1360,14 +1360,12 @@
 //     }
 // }
 
-#fb-root {
-    display: none;
-}
-
-/* To fill the container and nothing else */
-
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-    width: 100% !important;
+    min-width: 100%;
+    @media (min-width: 768px) and (max-width: 1199px) {
+        width: 200px !important;
+        max-width: 100% !important;
+    }
 }
 
 .articles-columns{

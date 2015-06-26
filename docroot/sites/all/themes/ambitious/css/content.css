@@ -1948,17 +1948,18 @@ a:hover.tooltips span.tooltip-content {
 }
 
 /* line 1363, ../sass/content.scss */
-#fb-root {
-  display: none;
-}
-
-/* To fill the container and nothing else */
-/* line 1369, ../sass/content.scss */
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  width: 100% !important;
+  min-width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 1363, ../sass/content.scss */
+  .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 200px !important;
+    max-width: 100% !important;
+  }
 }
 
-/* line 1375, ../sass/content.scss */
+/* line 1373, ../sass/content.scss */
 .articles-columns p a {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
