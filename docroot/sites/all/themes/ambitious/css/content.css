@@ -1947,17 +1947,15 @@ a:hover.tooltips span.tooltip-content {
   width: 100%;
 }
 
-/* line 1342, ../sass/content.scss */
-.facebook span iframe, .facebook span {
+/* line 1353, ../sass/content.scss */
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
   width: 100% !important;
+  min-width: 200px;
 }
 
-/* line 1348, ../sass/content.scss */
-.fb_iframe_widget iframe {
-  position: relative !important;
-}
-
-/* line 1355, ../sass/content.scss */
+/* line 1362, ../sass/content.scss */
 .articles-columns p a {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
