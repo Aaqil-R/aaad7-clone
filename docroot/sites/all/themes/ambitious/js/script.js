@@ -260,12 +260,12 @@ Drupal.behaviors.ambitious = {
        });
        
 	// on click video popup
-	$(".node .view-display-id-stream_topic_page .views-row, .view-display-id-voices_from_the_spectrum_page .views-row").each(function( index ) { 
+	$(".node .view-display-id-stream_topic_page .views-row, .view-display-id-my_voice_blog .views-row, .view-display-id-voices_from_the_spectrum_page .views-row").each(function( index ) { 
      $('.video-1 .icon-Playbutton').on("click", function () {
        $(".img-holder.video-1").removeClass("sel");
        $(this).parent().addClass("sel");
        if ($('.img-holder.video-1').hasClass('sel')) {
-         $('.img-holder.video-1 a').trigger( "click" ); 
+         $('.img-holder.video-1.sel a').trigger( "click" ); 
        }
      });
     
