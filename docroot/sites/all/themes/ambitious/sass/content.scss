@@ -1350,14 +1350,24 @@
 //     }
 // }
 
-.fb_iframe_widget,
-.fb_iframe_widget span,
-.fb_iframe_widget span iframe[style] {
-    width: 100%;
-    min-width: 200px;
-    @include breakpoint($tablet) {
-        width: 90% !important;
-    }
+// .fb_iframe_widget,
+// .fb_iframe_widget span,
+// .fb_iframe_widget span iframe[style] {
+//     width: 100%;
+//     min-width: 200px;
+//     @include breakpoint($tablet) {
+//         width: 90% !important;
+//     }
+// }
+
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
 }
 
 .articles-columns{
