@@ -1338,22 +1338,30 @@
     }
 }
 
-.facebook{
-    span iframe, span{
-        width:100% !important;
-    }
-}
+// .facebook{
+//     span iframe, span{
+//         width:100% !important;
+//     }
+// }
 
-.fb_iframe_widget{
-    iframe {
-    position: relative !important;
-    }
+// .fb_iframe_widget{
+//     iframe {
+//     position: relative !important;
+//     }
+// }
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+    min-width: 200px;
 }
 
 .articles-columns{
     p {
-        a{font-family:$header-font-family;
-            font-weight: normal;}
-
+        a{
+            font-family:$header-font-family;
+            font-weight: normal;
         }
     }
+}
