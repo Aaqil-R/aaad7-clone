@@ -491,11 +491,11 @@ Drupal.behaviors.ambitious = {
 		});
 
 		$("form#views-exposed-form-stream-understanding-autism-page .autism-age").change(function (e) {
-		window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
+		window.location.href = Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
 		e.preventDefault();
 		});
 		$("form#views-exposed-form-stream-understanding-autism-page-age .autism-age").change(function (e) {
-		  	window.location.href = window.location.origin +  Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
+		  	window.location.href = Drupal.settings.basePath + $(this).find('option:selected').attr('data-href');;
 		    e.preventDefault();	
 		});
 
@@ -662,17 +662,6 @@ $(document).ready(function () {
 		}
    	
 	}
-	
-	$(function() { 
-	    $("#select2").change(function(){ 
-	        var element = $(this).find('option:selected'); 
-	        var dataLink = element.attr("data-href");
-	        //alert(dataLink);
-	        document.location.href = $("#select2".element).val();
-	        //alert(window.location.href);
-	        //$('#setMyTag').val(myTag); 
-	    }); 
-	});
 
 //Sticky Nav back on window resize 
     setInterval(function() {
