@@ -1675,6 +1675,57 @@ a.masquerade-switch{
   }
 }
 
+// social icons
+
+.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook{
+  border-radius: 5px;
+  color:$white;
+  opacity:1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; 
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  margin-bottom:5px;
+}
+.hybridauth-google{
+  background: $google-bg;  
+  border-bottom:5px solid $google-border;
+  &:before{
+    content :"\e606"; 
+  }
+}
+.hybridauth-twitter{
+  background:$twitter-bg;  
+  border-bottom:5px solid $facebook-border;
+  &:before{
+    content :"\e611"; 
+  }
+}
+.hybridauth-facebook{
+  background:$facebook-bg;  
+  border-bottom:5px solid $facebook-border;
+  &:before{
+    content :"\e604"; 
+  }
+}
+#modalContent {
+ .hybridauth-widget-wrapper{
+   .item-list{
+     margn-left:0;
+   }
+ }
+} 
+ 
+// print view 
 @media print {
 
   img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header{

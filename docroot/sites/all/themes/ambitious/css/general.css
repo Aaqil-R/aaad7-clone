@@ -2038,28 +2038,84 @@ a.masquerade-switch {
   }
 }
 
+/* line 1680, ../sass/general.scss */
+.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook {
+  border-radius: 5px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+/* line 1699, ../sass/general.scss */
+.hybridauth-google {
+  background: #EA3032;
+  border-bottom: 5px solid #81090B;
+}
+/* line 1702, ../sass/general.scss */
+.hybridauth-google:before {
+  content: "\e606";
+}
+
+/* line 1706, ../sass/general.scss */
+.hybridauth-twitter {
+  background: #2289ff;
+  border-bottom: 5px solid #1a427e;
+}
+/* line 1709, ../sass/general.scss */
+.hybridauth-twitter:before {
+  content: "\e611";
+}
+
+/* line 1713, ../sass/general.scss */
+.hybridauth-facebook {
+  background: #4b69aa;
+  border-bottom: 5px solid #1a427e;
+}
+/* line 1716, ../sass/general.scss */
+.hybridauth-facebook:before {
+  content: "\e604";
+}
+
+/* line 1722, ../sass/general.scss */
+#modalContent .hybridauth-widget-wrapper .item-list {
+  margn-left: 0;
+}
+
 @media print {
-  /* line 1680, ../sass/general.scss */
+  /* line 1731, ../sass/general.scss */
   img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header {
     display: none !important;
   }
 
-  /* line 1684, ../sass/general.scss */
+  /* line 1735, ../sass/general.scss */
   .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
     display: none;
   }
 
-  /* line 1687, ../sass/general.scss */
+  /* line 1738, ../sass/general.scss */
   .img-holder, .visual, .visual img {
     display: block !important;
   }
 
-  /* line 1691, ../sass/general.scss */
+  /* line 1742, ../sass/general.scss */
   #main2 .article {
     width: 100%;
   }
 
-  /* line 1694, ../sass/general.scss */
+  /* line 1745, ../sass/general.scss */
   #header .header-top {
     background: none;
     box-shadow: inherit;
@@ -2067,64 +2123,64 @@ a.masquerade-switch {
     position: static !important;
   }
 
-  /* line 1700, ../sass/general.scss */
+  /* line 1751, ../sass/general.scss */
   .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs {
     background: none;
     margin-top: 0;
   }
 
-  /* line 1704, ../sass/general.scss */
+  /* line 1755, ../sass/general.scss */
   * {
     padding: 0;
     margin: 0;
     color: #000;
   }
 
-  /* line 1709, ../sass/general.scss */
+  /* line 1760, ../sass/general.scss */
   h1 {
     font-size: 32px;
   }
 
-  /* line 1712, ../sass/general.scss */
+  /* line 1763, ../sass/general.scss */
   h2 {
     font-size: 32px;
   }
 
-  /* line 1715, ../sass/general.scss */
+  /* line 1766, ../sass/general.scss */
   h3 {
     font-size: 32px;
   }
 
-  /* line 1718, ../sass/general.scss */
+  /* line 1769, ../sass/general.scss */
   h4 {
     font-size: 32px;
   }
 
-  /* line 1721, ../sass/general.scss */
+  /* line 1772, ../sass/general.scss */
   h5 {
     font-size: 32px;
   }
 
-  /* line 1724, ../sass/general.scss */
+  /* line 1775, ../sass/general.scss */
   h6 {
     font-size: 32px;
   }
 }
-/* line 1736, ../sass/general.scss */
+/* line 1787, ../sass/general.scss */
 .view-display-id-voices_from_the_spectrum_page .my-voice-post .img-holder {
   float: left;
 }
 
-/* line 1745, ../sass/general.scss */
+/* line 1796, ../sass/general.scss */
 .view-display-id-stream_topic_page .views-row .views-field-field-video-author {
   display: none;
 }
-/* line 1749, ../sass/general.scss */
+/* line 1800, ../sass/general.scss */
 .view-display-id-stream_topic_page .views-row .img-holder .field-content {
   float: right;
 }
 
-/* line 1756, ../sass/general.scss */
+/* line 1807, ../sass/general.scss */
 iframe {
   position: relative;
 }
