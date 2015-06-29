@@ -136,11 +136,13 @@
               Last reply by <cite><?php print $last_reply_username; ?> </cite>, <time pubdate="[last_comment_timestamp]"><?php print $last_reply_time; ?></time> 
                </div>
              <?php endif; ?>
-             <?php if($user->uid): ?> 
-             <ul class="links inline"><li class="comment-add first last"><a href="<?php print url('node/'.$link); ?>#comment-form" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
-            <?php else: ?>
-            <ul class="links inline"><li class="comment-add first last"><a href="/user/login?destination=<?php print $url; ?>" title="Share your thoughts and opinions related to this posting." class="btn btn-right">Reply</a></li></ul>
-            <?php endif; ?>
+             <?php 
+                if($user->uid):
+                  print l(t('Reply'), 'node/'.$fields['nid']->raw, array('attributes' => array('class' => 'btn btn-right', 'title' => 'Share your thoughts and opinions related to this posting.'), 'fragment' => 'comment-form'));
+                else: 
+                  print l(t('Reply'), 'user/login', array('query' => array('destination' => 'node/'.$fields['nid']->raw), 'attributes' => array('class' => 'btn btn-right', 'title' => 'Share your thoughts and opinions related to this posting.'), 'fragment' => 'comment-form'));
+                endif;
+               ?>
             </div>  
           </section> 
   </div> 
