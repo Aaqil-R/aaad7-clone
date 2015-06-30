@@ -78,12 +78,12 @@
                         font-size: 16px;
                         padding: 4px 5px;
                         min-width: 97px;
-                        }
                     }
                 }
             }
         }
     }
+}
 
 .card{
     .img-holder {
@@ -344,6 +344,7 @@
 // end community champions forum
 
 //--------------------Talk to others grid & list view-------------------------//
+/******* I think you can move the below class '.new-grid' inside '.section-talk-to-others' class. *******/
 .new-grid {
     .forum-left {
         display: none;
@@ -441,50 +442,47 @@
             border-radius: 5px;
         }
     }
-
-        .forum-right{
-            clear: inherit;
-            width: 100%;
-            float: left;
-            padding: 0 !important;
-            margin-bottom:20px;
-            @include breakpoint($not-mobile){
-                  width: 83.05085%;
-                  float: right;
-                  margin-right: 0;
-            }
-            h3{
-                //width: 100%;
-                @include breakpoint($mobile) {
-                      font-size: 25px;
-                      line-height: 28px;
-                }
-                margin-bottom: 0px;
-                max-width: 82%;
-            }
-            .meta{
-                margin-left: 0;
-                font-size: 0.7em;
-                padding-top: 0.5em;
-                border-bottom: 1px #d2d5d6 solid;
-                .created{
-                    float: left;
-                    margin-right: 0.5em;
-                }
-                .topic_section{
-                    width: auto;
-                    margin-top: 0;
-                    .field-content{
-                        display:inline;
-                    }
-                }
-                .clear{
-                    clear:both;
-                }
-            }
-
+    .forum-right{
+        clear: inherit;
+        width: 100%;
+        float: left;
+        padding: 0 !important;
+        margin-bottom:20px;
+        @include breakpoint($not-mobile){
+              width: 83.05085%;
+              float: right;
+              margin-right: 0;
         }
-
+        h3{
+            //width: 100%;
+            @include breakpoint($mobile) {
+                  font-size: 25px;
+                  line-height: 28px;
+            }
+            margin-bottom: 0px;
+            max-width: 82%;
+        }
+        .meta{
+            margin-left: 0;
+            font-size: 0.7em;
+            padding-top: 0.5em;
+            border-bottom: 1px #d2d5d6 solid;
+            .created{
+                float: left;
+                margin-right: 0.5em;
+            }
+            .topic_section{
+                width: auto;
+                margin-top: 0;
+                .field-content{
+                    display:inline;
+                }
+            }
+            .clear{
+                clear:both;
+            }
+        }
+    }
     .forum-body{
         p{
             font-size: 18px;
@@ -624,6 +622,7 @@
         }
     }
 }
+/******* This .new-grids class is repeating [line no: 376] ********/
 .new-grids {
 	.forum-left {
 		display: none;
