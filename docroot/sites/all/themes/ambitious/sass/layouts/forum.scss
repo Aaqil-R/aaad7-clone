@@ -398,6 +398,9 @@
         h3 {
             //width: 160px;
             line-height: 34px;
+            @include breakpoint($not-mobile){
+                width: 53%;
+            }
         }
     }
 }
@@ -407,6 +410,7 @@
 }
 
 //New
+.section-talk-to-others{
 .card--item {
 	width: 100%;
 }
@@ -580,6 +584,10 @@
 				font-weight: bold;
 			}
 		}
+        .btn {
+          padding: 4px 19px;
+          margin-top: 10px;
+        }
 		ul.links.inline {
 			  display: inline-block;
               height: 48px;
@@ -614,6 +622,7 @@
 			font-size: 14px;
 		}
 	}
+}
 }
 .new-grids {
 	.forum-left {
