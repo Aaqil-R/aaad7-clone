@@ -1158,7 +1158,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-bottom: 20px;
   display: block;
   display: -webkit-box;
-  max-width: 400px;
   min-height: 20px;
   font-size: 18px;
   -webkit-line-clamp: 3;
@@ -1166,45 +1165,307 @@ body > .jcf-select-drop.jcf-drop-flipped {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 365, ../../sass/layouts/forum.scss */
+@media (max-width: 767px) {
+  /* line 364, ../../sass/layouts/forum.scss */
+  .new-grid .forum-body p {
+    display: none !important;
+  }
+}
+/* line 370, ../../sass/layouts/forum.scss */
 .new-grid .forum-right {
   width: 100% !important;
 }
 
-/* line 372, ../../sass/layouts/forum.scss */
+/* line 377, ../../sass/layouts/forum.scss */
 .new-grids .footer .num-holder, .new-grids .footer .times {
   display: none !important;
 }
-/* line 376, ../../sass/layouts/forum.scss */
+/* line 381, ../../sass/layouts/forum.scss */
 .new-grids section.post {
   width: 100% !important;
   float: left;
   margin: 1% !important;
 }
-@media (min-width: 480) {
-  /* line 376, ../../sass/layouts/forum.scss */
-  .new-grids section.post {
-    width: 48% !important;
-  }
-}
-@media (min-width: 767px) {
-  /* line 376, ../../sass/layouts/forum.scss */
-  .new-grids section.post {
-    width: 31.3% !important;
-  }
-}
-/* line 388, ../../sass/layouts/forum.scss */
+/* line 393, ../../sass/layouts/forum.scss */
 .new-grids .forum-body {
   max-height: 115px;
   overflow: hidden;
 }
-/* line 393, ../../sass/layouts/forum.scss */
+/* line 398, ../../sass/layouts/forum.scss */
 .new-grids .forum-right h3 {
-  width: 160px;
   line-height: 34px;
 }
 
-/* line 400, ../../sass/layouts/forum.scss */
+/* line 405, ../../sass/layouts/forum.scss */
 #grid-view-forum {
   display: none;
+}
+
+/* line 410, ../../sass/layouts/forum.scss */
+.card--item {
+  width: 100%;
+}
+
+/* line 413, ../../sass/layouts/forum.scss */
+.forum-left {
+  /*width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;*/
+  line-height: 0.8;
+}
+@media (min-width: 767px) {
+  /* line 413, ../../sass/layouts/forum.scss */
+  .forum-left {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+
+/* line 424, ../../sass/layouts/forum.scss */
+.image-holder {
+  overflow: hidden;
+  margin-bottom: 11px;
+}
+@media (max-width: 767px) {
+  /* line 424, ../../sass/layouts/forum.scss */
+  .image-holder {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 432, ../../sass/layouts/forum.scss */
+.image-holder img {
+  width: 100%;
+  max-width: 100px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 441, ../../sass/layouts/forum.scss */
+.forum-right {
+  clear: inherit;
+  width: 100%;
+  float: left;
+  padding: 0 !important;
+  margin-bottom: 20px;
+}
+@media (min-width: 767px) {
+  /* line 441, ../../sass/layouts/forum.scss */
+  .forum-right {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 452, ../../sass/layouts/forum.scss */
+.forum-right h3 {
+  width: 100%;
+  margin-bottom: 0px;
+  max-width: 82%;
+}
+@media (max-width: 767px) {
+  /* line 452, ../../sass/layouts/forum.scss */
+  .forum-right h3 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
+/* line 461, ../../sass/layouts/forum.scss */
+.forum-right .meta {
+  margin-left: 0;
+  font-size: 0.7em;
+  padding-top: 0.5em;
+  border-bottom: 1px #d2d5d6 solid;
+}
+/* line 466, ../../sass/layouts/forum.scss */
+.forum-right .meta .created {
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 470, ../../sass/layouts/forum.scss */
+.forum-right .meta .topic_section {
+  width: auto;
+  margin-top: 0;
+}
+/* line 473, ../../sass/layouts/forum.scss */
+.forum-right .meta .topic_section .field-content {
+  display: inline;
+}
+/* line 477, ../../sass/layouts/forum.scss */
+.forum-right .meta .clear {
+  clear: both;
+}
+
+/* line 485, ../../sass/layouts/forum.scss */
+.forum-body p {
+  font-size: 18px;
+  margin: 0 0 10px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 494, ../../sass/layouts/forum.scss */
+.card-layout .js-switch-layout .row .forum-text:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 499, ../../sass/layouts/forum.scss */
+.card-layout .js-switch-layout .row .footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 506, ../../sass/layouts/forum.scss */
+.card-layout .js-switch-layout .views-row .forum-text:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 511, ../../sass/layouts/forum.scss */
+.card-layout .js-switch-layout .views-row .footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 519, ../../sass/layouts/forum.scss */
+.card.card--item .footer {
+  margin-bottom: 0;
+  border-top: 2px solid #e0e3e4;
+  float: right;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  /* line 519, ../../sass/layouts/forum.scss */
+  .card.card--item .footer {
+    padding-left: 184px;
+  }
+}
+/* line 528, ../../sass/layouts/forum.scss */
+.card.card--item .footer .num-holder {
+  float: left;
+  margin-top: 9px;
+  height: 45px;
+  margin-right: 30px;
+}
+/* line 533, ../../sass/layouts/forum.scss */
+.card.card--item .footer .num-holder .num {
+  min-width: 46px;
+  height: 35px;
+  border: 2px solid #f15500;
+  border-radius: 9px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 3px;
+  position: relative;
+  color: #f15500;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 15px 0 0;
+}
+/* line 548, ../../sass/layouts/forum.scss */
+.card.card--item .footer .num-holder .num:after {
+  position: absolute;
+  right: 8px;
+  bottom: -13px;
+  content: "";
+  background: url(/sites/all/themes/ambitious/images/sprite.png) no-repeat -40px 0;
+  width: 11px;
+  height: 13px;
+}
+/* line 557, ../../sass/layouts/forum.scss */
+.card.card--item .footer .num-holder a.open {
+  text-decoration: none;
+}
+/* line 561, ../../sass/layouts/forum.scss */
+.card.card--item .footer .times {
+  font-size: 15px;
+  margin-top: 15px;
+  float: left;
+  color: #636c73;
+}
+@media (min-width: 767px) {
+  /* line 561, ../../sass/layouts/forum.scss */
+  .card.card--item .footer .times {
+    width: 52%;
+    margin-right: 20px;
+  }
+}
+/* line 571, ../../sass/layouts/forum.scss */
+.card.card--item .footer .times .icon-Time {
+  font-size: 29px;
+  margin-right: 10px;
+  float: left;
+}
+/* line 576, ../../sass/layouts/forum.scss */
+.card.card--item .footer .times cite a.username {
+  text-decoration: none;
+  font-style: initial;
+  color: black;
+  font-weight: bold;
+}
+/* line 583, ../../sass/layouts/forum.scss */
+.card.card--item .footer ul.links.inline {
+  display: inline-block;
+  height: 48px;
+  margin-top: 16px;
+  float: right;
+  padding-bottom: 40px;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  /* line 583, ../../sass/layouts/forum.scss */
+  .card.card--item .footer ul.links.inline {
+    width: 100%;
+  }
+}
+/* line 593, ../../sass/layouts/forum.scss */
+.card.card--item .footer ul.links.inline li.comment-add.first.last {
+  color: rgba(99, 108, 115, 0);
+}
+/* line 595, ../../sass/layouts/forum.scss */
+.card.card--item .footer ul.links.inline li.comment-add.first.last a.btn.btn-right {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 603, ../../sass/layouts/forum.scss */
+.card.card--item .forum-left cite {
+  font-style: normal;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 609, ../../sass/layouts/forum.scss */
+.card.card--item .forum-left cite br {
+  display: none;
+}
+/* line 613, ../../sass/layouts/forum.scss */
+.card.card--item .forum-left time {
+  font-size: 14px;
+}
+
+/* line 619, ../../sass/layouts/forum.scss */
+.new-grids .forum-left {
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 622, ../../sass/layouts/forum.scss */
+  .new-grids .card.card--item {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 767px) {
+  /* line 622, ../../sass/layouts/forum.scss */
+  .new-grids .card.card--item {
+    width: 32.20339% !important;
+    float: left;
+  }
 }

@@ -594,7 +594,7 @@ $(document).ready(function () {
         $('#grid-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-hidden')) {
-                    $('.posts-columns').addClass('new-grid');
+                    $('.card-layout').addClass('new-grid');
                     $('body').addClass('new-grids');
                     return 'view-hidden';
                 }else{ 
@@ -610,7 +610,7 @@ $(document).ready(function () {
         $('#list-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-visible')) {
-                    $('.posts-columns').removeClass('new-grid');
+                    $('.card-layout').removeClass('new-grid');
                     $('body').removeClass('new-grids');
                     return 'view-hidden';
                 } else{
