@@ -175,9 +175,6 @@
             display: inherit;
         }
     }
-
-
-
     .larger{
         @include fontsize(24,16);
     }
@@ -757,14 +754,14 @@
             .btn{margin: 223px 10px 0 0;}
         }
     }
-
     .block-spectrum{
         background-image: image-url('bg07.jpg');
         float: right;
         .title{
             margin-bottom: 44px;
         }
-        }   }
+    }
+}
 
 
 
@@ -888,6 +885,7 @@
     }
 }
 //myvoice block overrides + specifics
+//TODO: This is a repeat.
 .my-voice-block{
     float: left;
     input[type=submit].btn-pink{
