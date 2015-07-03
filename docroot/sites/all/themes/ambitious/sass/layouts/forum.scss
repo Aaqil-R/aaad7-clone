@@ -409,7 +409,7 @@
     display: none;
 }
 
-//New
+//--**New set of code, which are dependant on the old set**--//
 .section-talk-to-others{
     .card--item {
         width: 100%;
@@ -449,7 +449,7 @@
         margin-bottom:20px;
         @include breakpoint($not-mobile){
               width: 83.05085%;
-              float: right;
+              //float: right;
               margin-right: 0;
         }
         h3{
@@ -460,6 +460,7 @@
             }
             margin-bottom: 0px;
             max-width: 82%;
+            font-size:25px;
         }
         .meta{
             margin-left: 0;
@@ -550,7 +551,8 @@
                         position: absolute;
                         right: 8px;
                         bottom: -13px;
-                        content: "";	background:url(/sites/all/themes/ambitious/images/sprite.png) no-repeat -40px 0;
+                        content: "";
+                        background:url(/sites/all/themes/ambitious/images/sprite.png) no-repeat -40px 0;
                         width: 11px;
                         height: 13px;
                     }
