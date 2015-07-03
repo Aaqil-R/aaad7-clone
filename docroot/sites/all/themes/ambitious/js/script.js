@@ -622,8 +622,6 @@ Drupal.behaviors.ambitious = {
 	$(document).ajaxComplete(function () {
     initialise();
 	});
-
-    
     
     //Sticky Nav Bar
     var didScroll;
