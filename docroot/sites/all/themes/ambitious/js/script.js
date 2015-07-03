@@ -589,8 +589,12 @@ Drupal.behaviors.ambitious = {
         
         
 //The grid view in the Talk to others page
-$(document).ready(function () {
+//$(document).ready(function () {
+$(document).ready(function(){ 
+	MakeClaim(); 
+});
 
+	function MakeClaim(){
         $('#grid-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-hidden')) {
@@ -600,13 +604,9 @@ $(document).ready(function () {
                 }else{ 
                     $('.grid-view-forum').addClass('view-hidden');
                      } 
-            });
+            });		
         });
-    });
-    
 //The list view in the Talk to others page    
-    $(document).ready(function () {
-
         $('#list-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-visible')) {
@@ -618,7 +618,7 @@ $(document).ready(function () {
                       }
             });
         });
-    });
+    }
 
     
     
