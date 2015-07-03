@@ -589,12 +589,7 @@ Drupal.behaviors.ambitious = {
         
         
 //The grid view in the Talk to others page
-//$(document).ready(function () {
-$(document).ready(function(){ 
-	MakeClaim(); 
-});
-
-	function MakeClaim(){
+$(document).ready(function () {
         $('#grid-forum').click(function () {
             $('.grid-view-forum').toggleClass(function () {
                 if ($(this).is('.view-hidden')) {
@@ -618,7 +613,7 @@ $(document).ready(function(){
                       }
             });
         });
-    }
+    });
 
     
     
