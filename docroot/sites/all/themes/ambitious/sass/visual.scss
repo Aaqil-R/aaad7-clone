@@ -363,7 +363,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    margin: -56px 0 0;
+    margin: -43.5px 0 0;
     z-index: 99;
     background: $orange;
     color: $white;
@@ -431,7 +431,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    margin: -56px 0 0;
+    margin: -43.5px 0 0;
     z-index: 99;
     background: $orange;
     color: $white;
@@ -659,6 +659,12 @@
       position: absolute;
       top: 0;
       width: 100%;
+      @include breakpoint($mobile) {        
+        top: 45%;        
+        .caption-text {
+          margin-top: 0;
+        }
+      }
       .region-caption-holder {
         max-width: 1080px;
         margin: 0 auto;
@@ -666,6 +672,7 @@
         padding:0 15px;
         @include breakpoint($mobile) {
           padding: 0 0px;
+          margin-top: 0;
         }
       }
       .caption {
