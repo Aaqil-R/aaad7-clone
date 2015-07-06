@@ -4,17 +4,17 @@
 .action-block{
 	.holder{
 		.region{
-		   .block-main{
-		    & > div{
-		       float:right;
-		       &:first-child{
-		         float:left;
-		         margin-right:30px;
-		       }
-		     }
-		   }
-		}
-	}
+     .block-main{
+      & > div{
+       float:right;
+       &:first-child{
+         float:left;
+         margin-right:30px;
+       }
+     }
+   }
+ }
+}
 
 }
 
@@ -40,22 +40,22 @@ field .
 	// Webform paragraph
 	.form-item p:nth-child(2){
 		@include breakpoint($tablet-range){
-		 	font-size: 15px;
-			line-height: 28px;
-		}
-	}
+      font-size: 15px;
+      line-height: 28px;
+    }
+  }
 
-	#block-block-26.caption-text .caption-text-titles .caption-text-title{
+  #block-block-26.caption-text .caption-text-titles .caption-text-title{
     // TODO: need to make use of defined breakpoints here.
-		@include breakpoint(1320px){
-		 	line-height: 66px;
-		}
+    @include breakpoint(1320px){
+      line-height: 66px;
+    }
 
     // TODO: need to make use of defined breakpoints here.
-		@include breakpoint(1118px){
-		 	line-height: 22px;
-		}
-	}
+    @include breakpoint(1118px){
+      line-height: 22px;
+    }
+  }
 
 	// Form on Home page
 	.slider-block{
@@ -113,11 +113,11 @@ field .
 			width: 90%;
 			margin: 0 auto;
 			@include breakpoint($mobile){
-			  width:auto;
-              margin: 0 45px !important;
-			}
-		}
-	}
+       width:auto;
+       margin: 0 45px !important;
+     }
+   }
+ }
 
 	// Main without webform in the slider area
 	#main.no-form{
@@ -137,29 +137,29 @@ field .
 			position: relative;
 			top: -100px;
       .pic-by{
-          padding: 0 0 10px 0;
+        padding: 0 0 10px 0;
       }
-		}
-	}
-	
+    }
+  }
+
   .visual .img-holder{
-		max-height: 825px;
-	}
+    max-height: 825px;
+  }
 
-	.visual .img-holder .caption-frame .caption{
-		@include breakpoint($mobile){
-			padding: 60px 0 0;
-		}
-		@include breakpoint($not-mobile){
-			padding: 80px 0 0;
-		}
-	}
+  .visual .img-holder .caption-frame .caption{
+    @include breakpoint($mobile){
+     padding: 60px 0 0;
+   }
+   @include breakpoint($not-mobile){
+     padding: 80px 0 0;
+   }
+ }
 
-	.visual .img-holder .caption-frame .caption .title{
-		@include breakpoint($mobile){
-			right: 0;
-		}
-	}
+ .visual .img-holder .caption-frame .caption .title{
+  @include breakpoint($mobile){
+   right: 0;
+ }
+}
 
 	// Social Holder
 	.social-block{
@@ -225,18 +225,18 @@ field .
 		.views-row-3{
 			.img-holder{
 				@include breakpoint($mobile){
-				display: none
-				}
-			}
-		}
+          display: none
+        }
+      }
+    }
 
-		.views-row-last{
-			@include breakpoint($mobile){
-				margin-bottom: 10px;
-			}
-		}
+    .views-row-last{
+     @include breakpoint($mobile){
+      margin-bottom: 10px;
+    }
+  }
 
-	}
+}
 
 
 	// FB Box on Home page
@@ -253,21 +253,21 @@ field .
   .social-holder{
     margin:-13px 0 30px;  
     @include breakpoint($mobile){
-		margin:-210px 0 0 0 ;
-	}  
+      margin:-210px 0 0 0 ;
+    }  
   }
   .block.last.even{
   	@include breakpoint($mobile){
-		margin-top:210px;
-	}	
+      margin-top:210px;
+    }	
   }
   .region.region-footer-right{
   	@include breakpoint($mobile){
-		margin-top:45px;
-	}
+      margin-top:45px;
+    }
   }
 }
-  
+
 
 // edited nanda globalsoft
 
@@ -338,11 +338,11 @@ field .
  .btn{
    padding: 6px 19px;
  }
-  .views-submit-button{
-    #edit-submit-stream{
-      display:inherit;
-    }
+ .views-submit-button{
+  #edit-submit-stream{
+    display:inherit;
   }
+}
 }
 
 .front{ 
@@ -361,18 +361,18 @@ field .
   .slider-block .block .slider-container{
    @include breakpoint($tablet){
     margin: 0 90px;
-   }
-  } 
-  .slider-block .block{
-    @include breakpoint($tablet){
-      padding-bottom: 40px;   
-    }
   }
+} 
+.slider-block .block{
+  @include breakpoint($tablet){
+    padding-bottom: 40px;   
+  }
+}
 }
 
 .page-node-74566 .header_banner .banner_sub_text{
-    margin:0 0 0 203px;
-  }
+  margin:0 0 0 203px;
+}
 
 .header_banner{
   z-index: 0;
@@ -400,10 +400,10 @@ field .
 	.sort-block .btn{
 		@include breakpoint($all-desktop){
 			padding-left: 38px;
-	  		padding-right: 38px;
-		}
+     padding-right: 38px;
+   }
 
-	}
+ }
 
 } 
 
@@ -432,11 +432,11 @@ field .
 
 .search-text{
   .icon-search{
-     position: absolute;
-     right: 10px;
-     font-size: 24px;
-     top: 10px;
-   }
+   position: absolute;
+   right: 10px;
+   font-size: 24px;
+   top: 10px;
+ }
 }
 
 
@@ -492,23 +492,23 @@ field .
 /*end of new codes*/
 
 .profile-main{
-#user-profile-form{
-  .description{
-    width: auto;
-    max-width:530px;
-    float: left;
-  }
-  fieldset{
-    padding-left: 0;
-    padding-right: 0;
-  }
-  label{
-    position: static;
-  }
-  .field-type-text-long{
-    max-width: 520px;
-   } 
-   .password-strength{
+  #user-profile-form{
+    .description{
+      width: auto;
+      max-width:530px;
+      float: left;
+    }
+    fieldset{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    label{
+      position: static;
+    }
+    .field-type-text-long{
+      max-width: 520px;
+    } 
+    .password-strength{
      float: none;
      margin-bottom: 20px;
      width: 100%;
@@ -528,97 +528,97 @@ field .
        width: 100%;
      }
    } 
-  }
+ }
 }
 
 
 .profile-main #user-register-form{
   label{
-     top: 17px;
-   }
+   top: 17px;
+ }
 }
 #modal-content{
   .tooltip-content{
     bottom: inherit;
-	left: -252px;
-	top: 0;
-	height: auto;
+    left: -252px;
+    top: 0;
+    height: auto;
   }
   a.tooltips span.tooltip-content{
     &:before{
      border-left: 20px solid $casablanca;
-	border-right: 20px solid transparent;
-	border-top: 20px solid transparent; 
+     border-right: 20px solid transparent;
+     border-top: 20px solid transparent; 
 
-  @include transform(rotate(-136deg));
+     @include transform(rotate(-136deg));
 
      left: 94%;
-top: 6px;
-margin-left: -13px;
-    }
-     &:after{
-      border-left: 19px solid $early_dawn;
-      border-right: 19px solid transparent;  
-      border-top: 18px solid transparent;
-      
-      @include transform(rotate(-136deg));
+     top: 6px;
+     margin-left: -13px;
+   }
+   &:after{
+    border-left: 19px solid $early_dawn;
+    border-right: 19px solid transparent;  
+    border-top: 18px solid transparent;
+
+    @include transform(rotate(-136deg));
 
     left: 94%;
-	top: 7px;
-	margin-left: -12px;
-    }
+    top: 7px;
+    margin-left: -12px;
   }
-  
+}
+
 }
 #user-register-form{
-div.ctools-modal-content .modal-content{
-  min-width: 100%;
-}
-.popups-container input[type="password"]{
-  width: 88%;
-}
+  div.ctools-modal-content .modal-content{
+    min-width: 100%;
+  }
+  .popups-container input[type="password"]{
+    width: 88%;
+  }
 
   
   .form-type-password-confirm{
     margin-top: 40px;
     .password-strength{
       width: 92%;
-	float: left;
-	margin-top: -55px;
+      float: left;
+      margin-top: -55px;
     }
   }
-   
-   .password-strength{
-      width: 92%;
-	float: left;
-	margin-top: -36px;
-   }
-   .form-type-password.form-item-pass-pass2{
-     width: 67%;
-     input[type=password]{
-        width:100%;
-     }
-  }
-   input[type=password]{
-     width: 91%;
-   }
-  .form-type-password-confirm form-item-pass{
-    margin-top: 20px;
-  }
-  .form-item{
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #edit-pass-pass1{
+
+  .password-strength{
     width: 92%;
+    float: left;
+    margin-top: -36px;
   }
+  .form-type-password.form-item-pass-pass2{
+   width: 67%;
+   input[type=password]{
+    width:100%;
+  }
+}
+input[type=password]{
+ width: 91%;
+}
+.form-type-password-confirm form-item-pass{
+  margin-top: 20px;
+}
+.form-item{
+  padding-left: 0;
+  padding-right: 0;
+}
+#edit-pass-pass1{
+  width: 92%;
+}
 }
 #user-pass label{
   display:none;
   visibility: hidden;
 }
 #slider-container form{
-  
+
   .description{
     //width: 15px;
     //margin-left: 7px;
@@ -628,7 +628,7 @@ div.ctools-modal-content .modal-content{
     margin-bottom: 21px;
   }   
 }
- 
+
 #webform-ajax-wrapper-74666{  
   p.larger{
     margin-top: 16px;
@@ -640,20 +640,20 @@ div.ctools-modal-content .modal-content{
 #webform-client-form-74676{
  h3, h2{
    font-size: 35px;
-	padding-right: 26px;
-	line-height: 45px;
-	margin-top: 11px;
-	margin-bottom: 20px;
+   padding-right: 26px;
+   line-height: 45px;
+   margin-top: 11px;
+   margin-bottom: 20px;
  }
  .home_forum_share{
     //padding-top: 14px;
-   .home_forum_share_left{
+    .home_forum_share_left{
       p{
         margin-right: 0;
         line-height: 27px;
       }
-   }
-   .home_forum_share_right{
+    }
+    .home_forum_share_right{
      margin-top: 24px;
      @include breakpoint($mobile){
        margin-top: 54px;
@@ -664,16 +664,16 @@ div.ctools-modal-content .modal-content{
 }
 #slider-container #webform-client-form-74681 h3{
   font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
+  margin-top: 9px;
+  line-height: 44px;
+  margin-bottom: 9px;
 }
 #webform-client-form-74681{
   &form h2{
     font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
+    margin-top: 9px;
+    line-height: 44px;
+    margin-bottom: 9px;
   }
   .webform-component--lend-your-support{
     h5{
@@ -727,7 +727,7 @@ div.ctools-modal-content .modal-content{
       margin-top: 11px;
     }
     label{
-        font-size: 24px;
+      font-size: 24px;
     }
   }
 
@@ -738,14 +738,14 @@ div.ctools-modal-content .modal-content{
   }
 }
 div.ctools-modal-content{
-#user-register-form, #user-login{
-  width: 114%;
-  float: left; 
-}
+  #user-register-form, #user-login{
+    width: 114%;
+    float: left; 
+  }
 }
 div.ctools-modal-content .modal-content{
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
+}
 
 .not-logged-in #user-login{
   input[type="password"], input[type="text"]{
@@ -755,15 +755,15 @@ div.ctools-modal-content .modal-content{
 
 
 #webform-client-form-74666{
-    label {
-	position: absolute;
-	left: 21px;
-	top: 11px;
-	color:$black;
-	}
+  label {
+   position: absolute;
+   left: 21px;
+   top: 11px;
+   color:$black;
+ }
  .form-item{
   height: 65px;
-  }
+}
 }
 
 #form input[type="text"]:focus{
@@ -771,24 +771,24 @@ div.ctools-modal-content .modal-content{
 }
 
 body .view-display-id-stream_forum_page{
-   .icon-Featured, .icon-Hottopic {
-     display: none; 
-   }
-  .rowlessthen3{
-    .icon-Featured {
-      margin-right:5px;
-      display: inherit;
-    }
-  }   
-  .icon-Hottopic {
+ .icon-Featured, .icon-Hottopic {
+   display: none; 
+ }
+ .rowlessthen3{
+  .icon-Featured {
+    margin-right:5px;
+    display: inherit;
+  }
+}   
+.icon-Hottopic {
+  margin-right: 70px;
+}
+.show_hot{
+  .icon-Hottopic { 
+    display: inherit;
     margin-right: 70px;
   }
-  .show_hot{
-    .icon-Hottopic { 
-      display: inherit;
-      margin-right: 70px;
-    }
-  } 
+} 
 }
 
 // Post footer
@@ -809,9 +809,9 @@ body .view-display-id-stream_forum_page{
     left: 12px;
     top: 10px;
   }
- .form-item{
+  .form-item{
     min-height: 70px; 
- }
+  }
 }
 
 // Private Message page
@@ -844,7 +844,7 @@ html.js fieldset.collapsed{
 article.node-223806, article.node-223591{
  .field-name-body{
   padding:40px 80px; 
-  }
+}
 }
 
 
@@ -910,7 +910,7 @@ div.ctools-modal-content .modal-content{
   float: left;
   width: 100%;
  // margin-left: 9px;
-  margin-top: 15px;
+ margin-top: 15px;
 }
 // Colorbox login
 #modalContent{
@@ -927,8 +927,8 @@ div.ctools-modal-content .modal-content{
 }
 //seems to be duplicated on all?
 .flag-wrapper{
-    font-size: 15px;
-    font-weight: normal;
+  font-size: 15px;
+  font-weight: normal;
 }
 #modalBackdrop{
   z-index: 9999 !important;
@@ -942,51 +942,51 @@ div.ctools-modal-content .modal-content{
 
 //hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
 .page-taxonomy.section-topics {
-    .forumpage_title {display: none;}
+  .forumpage_title {display: none;}
 }
 
 //HACK to hide unwanted form fields - profile and discussion page. 
 fieldset.group-hidden {
-    display: none;
+  display: none;
 }
 .section-node-add {
-    #block-easy-breadcrumb-easy-breadcrumb, .vertical-tabs {
-        display: none;
+  #block-easy-breadcrumb-easy-breadcrumb, .vertical-tabs {
+    display: none;
+  }
+  .node-forum_discussion-form {
+    background: white;
+    padding: 1.5em;
+    margin-bottom: 3em;
+    border: 1px solid $border-color;
+    clear: both;
+    fieldset {
+      float: none;
     }
-    .node-forum_discussion-form {
-        background: white;
-        padding: 1.5em;
-        margin-bottom: 3em;
-        border: 1px solid $border-color;
-        clear: both;
-        fieldset {
-            float: none;
-        }
-        .description {
-            width: auto;
-            float: none;
-            clear: both;
-        }
-        
-        .form-item-title label {margin-top: 0;}
-        .filter-guidelines {
-            padding: 0;
-        }
-        
-        .filter-wrapper{
-            display: none;
-        }
-        .form-type-checkbox {
-            float: left;
-            .error {
-                outline: 1px solid $error-red;
-                width: auto;
-            }
-        }
-        .filter-help {padding: 0;float: none; text-align: center;}
-        input {max-width: 100%;}
-        .form-action {margin-top:0.5em;}
+    .description {
+      width: auto;
+      float: none;
+      clear: both;
     }
+
+    .form-item-title label {margin-top: 0;}
+    .filter-guidelines {
+      padding: 0;
+    }
+
+    .filter-wrapper{
+      display: none;
+    }
+    .form-type-checkbox {
+      float: left;
+      .error {
+        outline: 1px solid $error-red;
+        width: auto;
+      }
+    }
+    .filter-help {padding: 0;float: none; text-align: center;}
+    input {max-width: 100%;}
+    .form-action {margin-top:0.5em;}
+  }
 }
 
 
@@ -1009,42 +1009,42 @@ fieldset.group-hidden {
     @include breakpoint($mobile){
       li{
         margin-bottom: 10px;
-	   display: block;
-	   clear: both;
-	 }
+        display: block;
+        clear: both;
+      }
     }
   }
   .search-form{
    @include breakpoint($mobile){ 
      input[type=submit]{
        width: 92%;
-		max-width: inherit;
-		margin: 0 4%;
+       max-width: inherit;
+       margin: 0 4%;
      }
-     }
-  }
-  .item-list .pager li{
-      display: inline-block;
-    }
+   }
+ }
+ .item-list .pager li{
+  display: inline-block;
+}
 }
 .google-search-results{ 
-    @include breakpoint($mobile){ 
-      &.posts-columns.columns-full{
-        .views-row{
-          .forum-text{
-            .forum-left{
-              .image-holder{ 
-				width: 100%;
-				margin:0 0 10px 0;
-              }
+  @include breakpoint($mobile){ 
+    &.posts-columns.columns-full{
+      .views-row{
+        .forum-text{
+          .forum-left{
+            .image-holder{ 
+              width: 100%;
+              margin:0 0 10px 0;
             }
           }
         }
       }
-    } 
-    .gss-search-url{
-      word-wrap: break-word;
     }
+  } 
+  .gss-search-url{
+    word-wrap: break-word;
+  }
 }
 
 
@@ -1065,15 +1065,15 @@ fieldset.group-hidden {
 //hack to add text to login form
 #user-login--2,
 #user-login {
-    .hybridauth-widget-wrapper {
-        &:before {
-        content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
-        }
+  .hybridauth-widget-wrapper {
+    &:before {
+      content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
     }
+  }
 }
 
 #comment-body-add-more-wrapper .filter-wrapper {
-    display: none;
+  display: none;
 }
 
 .show_mobile{
@@ -1087,7 +1087,7 @@ fieldset.group-hidden {
     @include breakpoint($mobile){
       float: left; 
     }
-     @include breakpoint(520px){
+    @include breakpoint(520px){
       li{
         padding:0 5px;
       }
@@ -1095,7 +1095,7 @@ fieldset.group-hidden {
   }
   #block-system-user-menu{
     @include breakpoint(520px){
-    ul{
+      ul{
        padding-left:0;
        li {
         a{
@@ -1107,20 +1107,20 @@ fieldset.group-hidden {
         }
       }
     }    
-   }
+  }
 
-    @include breakpoint($mobile){
-      ul{
-        li.last{
-          a{
-            font-size:initial;
-          }
-
+  @include breakpoint($mobile){
+    ul{
+      li.last{
+        a{
+          font-size:initial;
         }
+
       }
     }
+  }
   
-    @include breakpoint($mini-mobile){
+  @include breakpoint($mini-mobile){
     ul{
       li.last{
         a{
@@ -1128,14 +1128,14 @@ fieldset.group-hidden {
         }
 
       }
-      }
     }
-    
-    
+  }
 
- }
+
+
 }
- 
+}
+
 
 
 // Forum page issue fixing for mobiles
@@ -1212,10 +1212,10 @@ body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
 }
 article.node-223806{
  @include breakpoint(380px){
- .field-name-body{
+   .field-name-body{
     padding:31px; 
   }
-  }
+}
 }
 .page-user #sidebar ul {
   @include breakpoint($mobile){
@@ -1231,9 +1231,9 @@ article.node-223806{
 .nav-active {
   overflow-x: hidden;
   .nav-holder{
-  position: absolute;
-  padding-top:15px;
-  margin-top:34px;
+    position: absolute;
+    padding-top:15px;
+    margin-top:34px;
     @include breakpoint($mobile){
       padding-top:0px;
     }
@@ -1242,7 +1242,7 @@ article.node-223806{
 
 // Login Modal's issue fixing on the mobiles
 @include breakpoint($mobile){
-  
+
   div.ctools-modal-content .modal-content {
     padding: 19px 19px 13px 25px;
   }
@@ -1287,7 +1287,7 @@ article.node-223806{
     .footer .btn{
       margin-top: 1em;
     }
-  
+
     .forumpage_title {
       padding: 0 8px;
     }
@@ -1316,19 +1316,19 @@ article.node-223806{
 .section-myvoice{
   .filter-slide{
    .nav-filter{
-      .form-type-bef-checkbox{
-        &.checked label, &.checked{
-           color:$pink;
-         }
-      }
-   }
-  }
-  .filter-pink{  
-     .form-submit{
-       background:$pink; 
-       border-color:$pink-dark;
+    .form-type-bef-checkbox{
+      &.checked label, &.checked{
+       color:$pink;
      }
-  } 
+   }
+ }
+}
+.filter-pink{  
+ .form-submit{
+   background:$pink; 
+   border-color:$pink-dark;
+ }
+} 
 }
 
 // Private message
@@ -1348,8 +1348,8 @@ article.node-223806{
 
 // Message links
 .privatemsg-message-actions li {
-    display: inline;
-    padding-right: 1em;
+  display: inline;
+  padding-right: 1em;
 }
 
 // User profile
@@ -1427,22 +1427,22 @@ article.node-223806{
           width: 98px;
           float: left;
           height: 20px;
-            &:first-child{
-              width: 51px; 
-              float: left;
-              height: 21px;
-              margin-right: 10px;
-           }
+          &:first-child{
+            width: 51px; 
+            float: left;
+            height: 21px;
+            margin-right: 10px;
+          }
         }
       }
     }
     .home_forum_share_right{
-       img{
-         max-width:80%;
-         margin-left:10%;
-       }
-    }
-  }
+     img{
+       max-width:80%;
+       margin-left:10%;
+     }
+   }
+ }
 }
 .section-topics .posts-columns.columns-full{
  .row{
@@ -1478,7 +1478,7 @@ article.node-223806{
         display: block;
       }
     }
-   
+
     .comment-left{
       img{
         width: 60px;
@@ -1491,12 +1491,12 @@ article.node-223806{
       }
     }
     & > li{
-       margin-top:15px;
-       float: left;
-       position: relative;
-       width: 100%;
-    }
-  }
+     margin-top:15px;
+     float: left;
+     position: relative;
+     width: 100%;
+   }
+ }
 }
 
 // Remove / from my voice section
@@ -1516,7 +1516,7 @@ article.node-223806{
 }
 
 .blog-author{
-    font-weight: bold;
+  font-weight: bold;
 }
 
 // Fixing calanedar
@@ -1587,7 +1587,7 @@ a.masquerade-switch{
 
 // in button right side arrow
 
-#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit{
+#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit, #webform-client-form-74601 .webform-submit{
   background-image:url(../images/sprite.png);
   background-repeat: no-repeat;
   background-position: 102px -254px;
@@ -1599,9 +1599,9 @@ a.masquerade-switch{
     background-position-x:87px;
   } 
   @include breakpoint($mobile){
-     background-image:none;
-     padding:8px 16px;
-  }
+   background-image:none;
+   padding:8px 16px;
+ }
 }
 #webform-client-form-74666 a.btn#not_right_now{
   background-position: 143px -254px;
@@ -1609,7 +1609,8 @@ a.masquerade-switch{
     background-position-x:129px;
   }
 }
-#webform-client-form-74621 .webform-submit{
+#webform-client-form-74621 .webform-submit,
+#webform-client-form-74601 .webform-submit {
   background-position: 120px -256px; 
   @include breakpoint($tablet){
     background-position-x:97px;
@@ -1648,14 +1649,14 @@ a.masquerade-switch{
   }
 }
 .img-holder .video-icon{
-   &:before{
-     cursor: pointer;
+ &:before{
+   cursor: pointer;
+ }
+ &:hover{
+  &:before{
+    opacity:0.8;
   }
-  &:hover{
-    &:before{
-      opacity:0.8;
-    }
-  }
+}
 }
 
 //designing the thakyou submission page on myvoice
@@ -1669,7 +1670,7 @@ a.masquerade-switch{
     p{
       font-size: 32px;
       @include breakpoint($mobile){
-      font-size: 22px;
+        font-size: 22px;
       }
     }
   }
@@ -1724,61 +1725,61 @@ a.masquerade-switch{
    }
  }
 } 
- 
+
 // print view 
 @media print {
 
   img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header{
     display: none !important;
- }
+  }
 
- .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
+  .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
     display: none;
   }
-   .img-holder, .visual, .visual img{ 
+  .img-holder, .visual, .visual img{ 
    display: block !important;
  }
 
-  #main2 .article{
-    width:100%;
-  }
-  #header .header-top{
-    background:none;
-    box-shadow:inherit;
-    top:0;
-    position: static !important;
-  }
-  .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs{
-    background:none;
-    margin-top:0;
-  }
-  *{
-    padding:0;
-    margin:0;
-    color:#000;
-  }
-  h1{
-    font-size: 32px;
-  }
-  h2{
-    font-size: 32px;
-  }
-  h3{
-    font-size: 32px;
-  }
-  h4{
-    font-size: 32px;
-  }
-  h5{
-    font-size: 32px;
-  }
-  h6{
-    font-size: 32px;
-  }
-  a{
-    
-  }
-  
+ #main2 .article{
+  width:100%;
+}
+#header .header-top{
+  background:none;
+  box-shadow:inherit;
+  top:0;
+  position: static !important;
+}
+.node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs{
+  background:none;
+  margin-top:0;
+}
+*{
+  padding:0;
+  margin:0;
+  color:#000;
+}
+h1{
+  font-size: 32px;
+}
+h2{
+  font-size: 32px;
+}
+h3{
+  font-size: 32px;
+}
+h4{
+  font-size: 32px;
+}
+h5{
+  font-size: 32px;
+}
+h6{
+  font-size: 32px;
+}
+a{
+
+}
+
 }
 
 // my voice page image style
