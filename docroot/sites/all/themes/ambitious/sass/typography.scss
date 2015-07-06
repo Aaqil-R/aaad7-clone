@@ -1,119 +1,129 @@
-@import "base/base"; 
+@import "base/base";
 
 // Headings 
 // ============
-#{headings()}{
-  font-weight:normal;
-  font-family: $header-font-family;   
-  margin:0;
-  padding:0;
-  margin-bottom: 0.5em;
-  color: $heading-link;
-  a{
-	text-decoration:underline;
-  color: $heading-link;
-  	&:hover{
-  	  text-decoration:none;
-  	}
-  }
+#{headings()} {
+    font-weight: normal;
+    font-family: $header-font-family;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5em;
+    color: $heading-link;
+    a {
+        text-decoration: underline;
+        color: $heading-link;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
-h1, .h1{
-  line-height:70px;
-  font-size:66px;
-  letter-spacing:-1px;
-  @include breakpoint($tablet) {
-    font-size:54px;
-    line-height:58px; 
-  }
-  @include breakpoint($mobile) {
-    font-size:32px;
-    line-height:36px; 
-  }
+h1, .h1 {
+    line-height: 70px;
+    font-size: 66px;
+    letter-spacing: -1px;
+    @include breakpoint($tablet) {
+        font-size: 54px;
+        line-height: 58px;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
-h2, .h2{
-  font-size:45px;
-  line-height:50px; 
-  @include breakpoint($tablet) {
-    font-size:42px;
-    line-height:47px;     
-  }
-  @include breakpoint($mobile) {
-    font-size:27px;
-    line-height:32px;   
-  }
+
+h2, .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    @include breakpoint($tablet) {
+        font-size: 42px;
+        line-height: 47px;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 27px;
+        line-height: 32px;
+    }
 }
-h3, .h3{
-  font-size:36px;
-  line-height:40px; 
-  @include breakpoint($tablet) {
-    font-size:32px;
-    line-height:38px;     
-  }
-  @include breakpoint($mobile) {
-    font-size:27px;
-    line-height:32px;   
-  }
+
+h3, .h3 {
+    font-size: 36px;
+    line-height: 40px;
+    @include breakpoint($tablet) {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 27px;
+        line-height: 32px;
+    }
 }
-h4, .h4{
-  font-size:27px;
-  line-height:30px; 
-  &.sub_title{
-    font-family: $helvetica-cn;
-  }
-  @include breakpoint($mobile) {
-    font-size:24px;
-    line-height:30px;   
-  }
+
+h4, .h4 {
+    font-size: 27px;
+    line-height: 30px;
+    &.sub_title {
+        font-family: $helvetica-cn;
+    }
+    @include breakpoint($mobile) {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
-h5, .h5{
-  font-size:22px;
-  line-height:30px; 
-  @include breakpoint($tablet) {
-    font-size:22px;
-    line-height:47px;     
-  }
-  @include breakpoint($mobile) {
-    font-size:20px;
-    line-height:26px;   
-  }
+
+h5, .h5 {
+    font-size: 22px;
+    line-height: 30px;
+    @include breakpoint($tablet) {
+        font-size: 22px;
+        line-height: 47px;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
-h6, .h6{
-  font-size:18px;
-  line-height:24px; 
-  @include breakpoint($tablet) {
-    font-size:18px;
-    line-height:24px;     
-  }
+
+h6, .h6 {
+    font-size: 18px;
+    line-height: 24px;
+    @include breakpoint($tablet) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
-.subheading{
-  font-size:24px;
-  line-height:36px;
-  font-weight:normal;
-  margin:0 0 20px;
-  font-family:$base-font-family;
-  color: $base-text-color;
+
+.subheading {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    margin: 0 0 20px;
+    font-family: $base-font-family;
+    color: $base-text-color;
 }
 
 p {
-  font-size:18px;
-  line-height:30px;
-  margin-bottom:20px;
-  margin-top:0;
-  color:$base-text-color;
-  @include breakpoint($mobile){
-    font-size:16px;
-    line-height:25px;
-  }
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: $base-text-color;
+    @include breakpoint($mobile) {
+        font-size: 16px;
+        line-height: 25px;
+    }
 
-  // [TODO] We shouldn't need this we already have a global style assigned in styles.scss
-  // a{
-  //     text-decoration:underline;
-	 //   font-weight:bold;
-  //   &:hover{
-  //     text-decoration:none;
-  //   }
-  // }
+    // [TODO] We shouldn't need this we already have a global style assigned in styles.scss
+    // a{
+    //     text-decoration:underline;
+    //   font-weight:bold;
+    //   &:hover{
+    //     text-decoration:none;
+    //   }
+    // }
 }
 
 // a{
@@ -123,88 +133,88 @@ p {
 //   }
 // }
 
-.p2{
-  font-size:13px;
-  line-height:18px;
-   color:$gray;
-  @include breakpoint($mobile){
-    font-size:12px;
-    line-height:17px;
-  }
+.p2 {
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray;
+    @include breakpoint($mobile) {
+        font-size: 12px;
+        line-height: 17px;
+    }
 }
 
-blockquote{
- quotes: none;
-  margin-bottom:30px;
-  margin-left:36px;
-  q{
-      font-size:24px;
-      line-height:36px;
-      @include breakpoint($tablet){
-      font-size:22px;
-      line-height:34px;
-    }
-    @include breakpoint($mobile){
-      font-size:16px;
-      line-height:25px;
-      margin-left:25px;
-    }
-  }
-}
+blockquote {
+    quotes: none;
+    margin-bottom: 30px;
+    margin-left: 36px;
+    q {
+        font-size: 24px;
+        line-height: 36px;
+        @include breakpoint($tablet) {
+            font-size: 22px;
+            line-height: 34px;
+        }
 
+        @include breakpoint($mobile) {
+            font-size: 16px;
+            line-height: 25px;
+            margin-left: 25px;
+        }
+    }
+}
 
 //new changes with wysiwig editing
-.field-name-body{
-  h2{
-    font-size: 33px;
-    //font-size: 36px;
-    @include breakpoint($tablet) {
-      font-size:32px;    
+.field-name-body {
+    h2 {
+        font-size: 33px;
+        //font-size: 36px;
+        @include breakpoint($tablet) {
+            font-size: 32px;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 27px;
+        }
     }
-    @include breakpoint($mobile) {
-      font-size:27px; 
+    h3 {
+        font-size: 24px;
+        //font-size: 27px;
+        @include breakpoint($mobile) {
+            font-size: 24px;
+        }
     }
-  }
-  h3{
-    font-size: 24px;
-    //font-size: 27px;
-    @include breakpoint($mobile) {
-      font-size:24px;
+    h4 {
+        font-size: 22px;
+        @include breakpoint($tablet) {
+            font-size: 22px;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 20px;
+        }
     }
-  }
-  h4{
-    font-size: 22px;
-     @include breakpoint($tablet) {
-      font-size:22px;   
-    }
-    @include breakpoint($mobile) {
-      font-size:20px;
-    }
-  }
 }
 
 //Color Change of H4
 .articles-block h2,
 .card h4, .card h3,
 .social-block h1, .social-block h3,
-/*.myvoice-caption-logo*/ .text-section h2,
+.text-section h2,
 .my-voice-post .content h3 a,
-/*.node-224851*/ .field-item h2 ,
+.field-item h2,
 h1.title,
-/*node-224406 .field-item h2,*/
 .field-item h2 a,
-h2.block__title{
+h2.block__title {
     color: #2a2e31 !important;
 }
 
 .card-transparent {
-    h4{
+    h4 {
         font-size: 43px;
         line-height: 43px;
         @include breakpoint($mobile) {
-            font-size:40px;
-            line-height:40px;   
-          }
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
-    
 }
