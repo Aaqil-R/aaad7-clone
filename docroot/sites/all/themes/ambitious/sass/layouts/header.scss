@@ -1087,7 +1087,15 @@ nav {
     position: absolute;
     width: 100%;
     z-index: 999;
-    top: 50%;
+    top: 24%;
+    height: 76%;
+    @include breakpoint($tablet) {
+      top: 15%;
+    }
+
+    @include breakpoint($mobile) {
+      top: 30%;
+    }
   }
   .banner_text_inner {
     max-width: 1080px;
@@ -1263,7 +1271,7 @@ nav {
     color: $menu-grey;
   } 
 /* BREAD CRUMB */
-.node-type-forum-discussion, .node-type-simple-page, .node-type-forum {
+.node-type-forum-discussion, .node-type-simple-page, .node-type-forum, .page-forum-stats{
   .header_image {
     background: image-url("top-header-bg.png") no-repeat left $blue-light;
     height: 83px;
