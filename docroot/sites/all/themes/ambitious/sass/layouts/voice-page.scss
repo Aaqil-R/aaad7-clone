@@ -6,191 +6,191 @@
 */
 
 .my-voice-home {
-  .banner_text {
-    background-image: image-url("my-voice-large-logo.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 75%;
-    text-indent: 0;
-    overflow: hidden;
-      color: rgba(154, 205, 50, 0);
-  }
+    .banner_text {
+        background-image: image-url("my-voice-large-logo.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 75%;
+        text-indent: 0;
+        overflow: hidden;
+        color: rgba(154, 205, 50, 0);
+    }
 }
 
 .page-node-74596, .section-my-voice, .my-voice-home {
-  @extend %my-voice-main;
-  .visual {
-    @extend %my-voice-visual;
-  }
-  #content_top {
-    z-index: 99;
-    margin-top: -12.5%;
-    margin-bottom: 30px;
-    @include breakpoint($mobile) {
-      margin-top: -5%;
+    @extend %my-voice-main;
+    .visual {
+        @extend %my-voice-visual;
     }
-
-    .my-voice-columns {
-      .col {
-        padding-top: 0;
-        padding-bottom: 0;
+    #content_top {
+        z-index: 99;
+        margin-top: -12.5%;
+        margin-bottom: 30px;
         @include breakpoint($mobile) {
-          padding: 10px 30px;
+            margin-top: -15.5%;
         }
-      }
-      .form-item {
-        float: left;
-        width: 96%;
-        margin-bottom: 9px;
-        label {
-          left: 24px;
-          top: 12px;
+
+        .my-voice-columns {
+            .col {
+                padding-top: 0;
+                padding-bottom: 0;
+                @include breakpoint($mobile) {
+                    padding: 10px 30px;
+                }
+            }
+            .form-item {
+                float: left;
+                width: 96%;
+                margin-bottom: 9px;
+                label {
+                    left: 24px;
+                    top: 12px;
+                }
+            }
+            a.tooltips span.tooltip-content {
+                left: -45px;
+                bottom: 30px;
+            }
+            .description {
+                margin-top: 11px;
+            }
         }
-      }
-      a.tooltips span.tooltip-content {
-        left: -45px;
-        bottom: 30px;
-      }
-      .description {
-        margin-top: 11px;
-      }
     }
-  }
-  .visual.my-voice-visual {
-    z-index: 0;
-  }
-  fieldset {
-    @include breakpoint($mobile) {
-      width: 100%;
+    .visual.my-voice-visual {
+        z-index: 0;
     }
-  }
-  .btn.btn-left.filteroption {
-    @include breakpoint($mobile) {
-      width: 49%;
-      padding-top: 9px;
-      /* &:hover{
-      	border-bottom-width: 3px;
-      } */
-    }
-  }
-  .sort-block .stButton {
-    @include breakpoint($mobile) {
-      width: 49%;
-    }
-  }
-  .top-bar {
-    .logo {
-      display: inline;
-      float: left;
-      //padding-right:20px;
-      @include breakpoint($mobile) {
-        display: none;
-      }
-    }
-  }
-  .header__region.region.header {
-    div {
-      display: inline;
-    }
-  }
-  .item-list
-  .pager {
-    li {
-      background: inherit;
-      a {
-        background: inherit;
-      }
-    }
-  }
-  .easy-breadcrumb {
-    a {
-      color: $white;
-    }
-  }
-  // TODO: inject a myvoice class using context and have a
-  // single style rule on <a> to colour pink.
-  .node .field,
-  .acknowledge-block {
-    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-      text-decoration: underline;
-      color: $pink;
-      &:hover {
-        color: $base-link-color;
-      }
-    }
-    // hover for myvoice
-    a.btn.btn-pink {
-      color: $white;
-    }
-    // link colours for myvoice
-    a.pink {
-      color: $pink;
-      &:hover {
-        color: $base-link-color;
-      }
-    }
-    .text-right-section {
-      a {
-        .btn {
-          margin-top: -30px;
-          margin-bottom: 45px;
+    fieldset {
+        @include breakpoint($mobile) {
+            width: 100%;
         }
-      }
     }
-  }
-  .my-voice-block {
-    .block-close {
-      a {
-        color: $pink;
-        &:hover {
-          color: $pink;
+    .btn.btn-left.filteroption {
+        @include breakpoint($mobile) {
+            width: 49%;
+            padding-top: 9px;
+            /* &:hover{
+              border-bottom-width: 3px;
+            } */
         }
-      }
     }
-    a.tooltips {
-      color: $pink;
+    .sort-block .stButton {
+        @include breakpoint($mobile) {
+            width: 49%;
+        }
     }
-  }
+    .top-bar {
+        .logo {
+            display: inline;
+            float: left;
+            //padding-right:20px;
+            @include breakpoint($mobile) {
+                display: none;
+            }
+        }
+    }
+    .header__region.region.header {
+        div {
+            display: inline;
+        }
+    }
+    .item-list
+    .pager {
+        li {
+            background: inherit;
+            a {
+                background: inherit;
+            }
+        }
+    }
+    .easy-breadcrumb {
+        a {
+            color: $white;
+        }
+    }
+    // TODO: inject a myvoice class using context and have a
+    // single style rule on <a> to colour pink.
+    .node .field,
+    .acknowledge-block {
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            text-decoration: underline;
+            color: $pink;
+            &:hover {
+                color: $base-link-color;
+            }
+        }
+        // hover for myvoice
+        a.btn.btn-pink {
+            color: $white;
+        }
+        // link colours for myvoice
+        a.pink {
+            color: $pink;
+            &:hover {
+                color: $base-link-color;
+            }
+        }
+        .text-right-section {
+            a {
+                .btn {
+                    margin-top: -30px;
+                    margin-bottom: 45px;
+                }
+            }
+        }
+    }
+    .my-voice-block {
+        .block-close {
+            a {
+                color: $pink;
+                &:hover {
+                    color: $pink;
+                }
+            }
+        }
+        a.tooltips {
+            color: $pink;
+        }
+    }
 }
 
 // start myvoice main menu
 .menu-main-menu-features-item-1 {
-  list-style: none;
-  padding: 0;
-  .menu__item {}
-}
-
-nav {
-  .main-menu-1 {
-    .course {
-      a {
-        .icon-Downarrow {
-          display: none;
-        }
-        .icon-Uparrow {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-nav {
-  .main-menu-2 {
-    li {
-      a {
-        padding: 9px 31px 11px 45px;
-        .icon-Downarrow {
-          display: none;
-        }
-        .icon-Uparrow {
-          display: none;
-        }
-      }
-      list-style: none;
-    }
+    list-style: none;
     padding: 0;
-  }
+    .menu__item {}
+}
+
+nav {
+    .main-menu-1 {
+        .course {
+            a {
+                .icon-Downarrow {
+                    display: none;
+                }
+                .icon-Uparrow {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    .main-menu-2 {
+        li {
+            a {
+                padding: 9px 31px 11px 45px;
+                .icon-Downarrow {
+                    display: none;
+                }
+                .icon-Uparrow {
+                    display: none;
+                }
+            }
+            list-style: none;
+        }
+        padding: 0;
+    }
 }
 
 // end myvoice main menu
@@ -198,135 +198,138 @@ nav {
 /* new styling to get the menu down by 20px */
 
 .school-slide {
-  top: 20px;
+    top: 20px;
 }
 
 .my-voice-block .block {
-  padding-top: 0px;
-  padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .my-voice-columns {
-  padding-top: 45px;
-  padding-bottom: 49px;
+    padding-top: 45px;
+    padding-bottom: 49px;
+    @include breakpoint($mobile) {
+        padding-top: 0;
+    }
 }
 
 .page-node-74596 {
-  #wrapper {
-    background-image: image-url("wid_bg.jpg");
-  }
-  .form-text {
-    color: $black;
-  }
-  #content-header {
-    h1 {
-      &:nth-child(1) {
-        display: none;
-      }
+    #wrapper {
+        background-image: image-url("wid_bg.jpg");
     }
-  }
+    .form-text {
+        color: $black;
+    }
+    #content-header {
+        h1 {
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
 }
 
 .my-voice-intro-menu {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 // my voice filter
 .section-voices-spectrum {
-  input[type=submit] {
-    border-color: $pink-dark;
-    background: $pink;
-  }
-  .filter-slide .nav-filter .form-type-bef-checkbox.checked,
-  .filter-slide .nav-filter .form-type-bef-checkbox:hover {
-    color: $pink;
-  }
-  input[type=submit]:focus {
-    color: $white;
-  }
+    input[type=submit] {
+        border-color: $pink-dark;
+        background: $pink;
+    }
+    .filter-slide .nav-filter .form-type-bef-checkbox.checked,
+    .filter-slide .nav-filter .form-type-bef-checkbox:hover {
+        color: $pink;
+    }
+    input[type=submit]:focus {
+        color: $white;
+    }
 }
 
 // re arranging the menu on my voice content types
-.section-myvoice, .node-type-my-voice-blog{
-  .top-bar {
-    .logo {
-      display: inline;
-      float: left;
-      //padding-right:20px;
-      @include breakpoint($mobile) {
-        display: none;
-      }
+.section-myvoice, .node-type-my-voice-blog {
+    .top-bar {
+        .logo {
+            display: inline;
+            float: left;
+            //padding-right:20px;
+            @include breakpoint($mobile) {
+                display: none;
+            }
+        }
     }
-  }
 }
 
 // entire webforms text color chanages
 .form-text, .form-textarea {
-  color: $base-link-color;
+    color: $base-link-color;
 }
 
 //my voice pgae age issue fix
 .view-content {
-  .navigation-block {
-    background-image: image-url("aged-16-25.jpg");
-    background-size: cover;
-    &:before {
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 200px 0 0 200px;
-      border-color: transparent transparent transparent #db0076;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;      
+    .navigation-block {
+        background-image: image-url("aged-16-25.jpg");
+        background-size: cover;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 200px 0 0 200px;
+            border-color: transparent transparent transparent #db0076;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &:hover {
+            &:before {
+                border-color: transparent transparent transparent #C80042;
+            }
+        }
+        .wrapper {
+            background: $pink;
+            opacity: 0.5;
+            @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+            // TODO: why are we positioning this absolute?
+            //the absolute gives the enitre block the pink colour. else the colour will be a small block
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: inline;
+            margin-top: -1em;
+            margin-left: -1em;
+            &:hover {
+                background: #CF005B;
+            }
+        }
+        p a {
+            color: $white;
+            font-size: 37px;
+            line-height: normal;
+            //outline: none;
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin-top: 50%;
+            margin-left: 15%;
+            //background-repeat: no-repeat;
+            @include breakpoint($mobile) {
+                font-size: 30px;
+            }
+        }
     }
-    &:hover {
-      &:before {
-        border-color: transparent transparent transparent #C80042;
-      }
+    .age-post {
+        background-image: image-url("my-voice.jpg");
     }
-    .wrapper {
-      background: $pink;
-      opacity: 0.5;
-      @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
-      // TODO: why are we positioning this absolute?
-      //the absolute gives the enitre block the pink colour. else the colour will be a small block
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: inline;
-      margin-top: -1em;
-      margin-left: -1em;
-      &:hover {
-        background: #CF005B;
-      }
+    .card-transparent {
+        background: none;
+        @include box-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
+        @include breakpoint($mobile) {
+            background: $white;
+        }
     }
-    p a {
-      color: $white;
-      font-size: 37px;
-      line-height: normal;
-      //outline: none;
-      position: relative;
-      z-index: 1;
-      display: block;
-      margin-top: 50%;
-      margin-left: 15%;
-      //background-repeat: no-repeat;
-    	@include breakpoint($mobile) {
-        font-size: 30px;
-      }
-    }
-  }
-  .age-post {
-    background-image: image-url("my-voice.jpg");
-  }
-  .card-transparent {
-    background: none;
-    @include box-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
-    @include breakpoint($mobile) {
-      background: $white;
-    }
-  }
 }

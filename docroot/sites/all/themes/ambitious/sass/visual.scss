@@ -69,7 +69,6 @@
       @include breakpoint($mobile) {
         margin-bottom: 90px;
       }
-
       .img-holder {
         height: 420px;
       }
@@ -94,7 +93,6 @@
         }
       }
     }
-
     @include breakpoint($mobile) {
       .img-holder .caption-frame .caption .title {
         font-size: 27px;
@@ -336,9 +334,9 @@
     padding: 11px 15px;
     @include breakpoint($mobile) {
       padding: 7px 21px;
-      max-width: 90%;
+      max-width: 92.5%;
+      background: $white;
     }
-
     .pic-by {
       display: block;
       text-align: right;
@@ -351,7 +349,6 @@
         line-height: 15px;
         text-align: left;
       }
-
       a {
         color: $heading-link;
         font-weight: bold;
