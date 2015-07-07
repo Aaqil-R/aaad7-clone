@@ -1,828 +1,856 @@
 @import "base/base";
 
 .tout-text {
-	color: $white;
-	width: 60%;
+    color: $white;
+    width: 60%;
 }
 
-
 .ambitious-block-system {
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-
-	@include container;
-	//padding: 1em;
-	padding-top: $graphic-padding;
-	padding-bottom : $graphic-padding;
-	padding-left:1em;
-	padding-right:1em;
-	@include breakpoint($mobile){
-		padding-top:0px;
-		padding-bottom: 35px;
-	}
-	//background: $white;
-	background: inherit;
-	.view-content {
-      @include clearfix();
+    @include transition($type: all, $time: 0.4s, $ease: ease);
+    @include container;
+    //padding: 1em;
+    padding-top: $graphic-padding;
+    padding-bottom: $graphic-padding;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include breakpoint($mobile) {
+        padding-top: 0px;
+        padding-bottom: 35px;
     }
 
+    //background: $white;
+    background: inherit;
+    .view-content {
+        @include clearfix;
+    }
     .field-content {
-		float:left;
-		margin: 0.15em;
-		min-height: 3.5em;
-		@include clearfix();		
-	}  
+        float: left;
+        margin: 0.15em;
+        min-height: 3.5em;
+        @include clearfix;
+    }
+    .ambitious-block-element {
+        height: 320px;
+        padding: 2em;
+        padding-bottom: gutter();
+        margin-bottom: gutter();
+        @include span(6 of 12);
+        &:last-child {
+            @include last;
+        }
+        @include breakpoint($mobile) {
+            @include span(12 of 12);
+        }
 
-    .ambitious-block-element {  
-    	height: 320px;
-	    padding: 2em;
-
-	    padding-bottom:gutter();
-      	margin-bottom:gutter();
-
-		@include span(6 of 12);	
-
-		&:last-child {
-	      @include last;
-	    }
-
-	    @include breakpoint($mobile) {
-			@include span(12 of 12);
-		}
-
-		@include breakpoint($mobile) {
-			.views-field-field-featured-image {
-				display: none;
-			}
-
-			height:	auto;
-			width: 100%;
-		}
-	}	
+        @include breakpoint($mobile) {
+            .views-field-field-featured-image {
+                display: none;
+            }
+            height: auto;
+            width: 100%;
+        }
+    }
 }
 
 /* action block styles */
 .action-block {
-     .text1, text2, .text3{
-       white-space: pre-line;
-     }
-	background:$white;
-	width:100%;
+    .text1, text2, .text3 {
+        white-space: pre-line;
+    }
+    background: $white;
+    width: 100%;
+    @include transition($type: all, $time: 0.4s, $ease: ease);
+    @include breakpoint($mobile) {
+        background: none;
+        .text, .title {
+            width: 50%;
+            br {
+                display: none;
+            }
+        }
+    }
 
-	@include transition ($type:all, $time:0.4s, $ease:ease);
-	@include breakpoint($mobile) {
-		background:none;
-		.text, .title{
-		  width:50%;
-		  br{
-		    display:none;
-		  }
-		}
-	}
-	.holder {
-		@include container;
-		padding:102px 15px 126px;
-		@extend %clearfix;
-		@include breakpoint($mobile) {
-			padding:20px 20px 37px;
-		}
-        & > div{
-		  float:right;
-		  &:first-child{
-		    float:left;
-			@include breakpoint($mobile) {
-			  margin-bottom:20px;
-			}
-		  }
-		}
-	}
-	/* action symptoms block styles */
-	.block-symptoms {
-		width:auto;
-		padding: 50px 10px 37px 39px; 
-		background-size:cover;
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:26px 10px 17px 20px;
-			margin:0 0 34px;
-			background-position: right center;
-			.text{
-			  width: 100%;
-			  span.add{
-			    margin-left:0;
-			  }
-			}
-		}
-		.text {
-			display:block;
-			font-size:45px;
-			line-height:48px;
-			margin:0 0 55px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			#main2 &{
-			  margin:0 0 6px;
-			}
-			@include breakpoint($tablet) {
-				font-size:25px;
-				line-height:28px;
-			}
-			@include breakpoint($mobile) {
-				margin:0 0 5px;
-			}
-			span {
-				color:$heading-link;
-				display:inline-block;
-				vertical-align:top;
-				margin:0 0 11px;
-				background:$white;
-				padding:6px 19px 5px;
-				@include breakpoint($mobile) {
-					padding:3px 10px 6px;
-					margin:0 0 5px;
-				}
-				&.add {
-					margin:0 0 0px 62px;
-					@include breakpoint($mobile) {
-						margin:0 0 0px 19px;
-					}
-				}
-			}
-		}
-	}
-	/* action inspire block styles */
-	.block-inspire {
-		color:$white;
-		width:auto;
-		padding: 48px 10px 39px 39px; 
-		background-size:cover;
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 20px 21px;
-			background-position: right center;
-		}
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 45px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
-	/* action report block styles */
-	.block-report{
-		color:$white;
-		width:auto;
-		padding: 48px 10px 39px 39px; 
-		background-size:cover;
-        @include breakpoint($tablet) {
-		    background-position:top right;
-			.btn{
-				font-size:16px;
-				padding:10px 14px;
-			}
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 20px 21px;
-			background-position: right top;
-			.btn{
-				font-size:14px;
-			}
-		}
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 45px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
-	/* action blog block styles */
-	.block-blog{
-		color:$white;
-		width:auto;
-		padding: 48px 10px 39px 39px; 
-		background-size:cover;
-		background-position:top right;
-        @include breakpoint($tablet) {
-		    background-position:top right;
-			padding:17px 10px 30px 29px;
-			.btn{
-				font-size:16px;
-			}
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			background-position: right center;
-			float:none;
-			padding:24px 10px 20px 21px;
-		}
+    .holder {
+        @include container;
+        padding: 102px 15px 126px;
+        @extend %clearfix;
+        @include breakpoint($mobile) {
+            padding: 20px 20px 37px;
+        }
 
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 45px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:24px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
-	/* Connect with others block styles */
-	.block-connect{
-		color:$white;
-		width:auto;
-		padding: 48px 10px 39px 39px; 
-		background-size:cover;
+        & > div {
+            float: right;
+            &:first-child {
+                float: left;
+                @include breakpoint($mobile) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    /* action symptoms block styles */
+    .block-symptoms {
+        width: auto;
+        padding: 50px 10px 37px 39px;
+        background-size: cover;
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 26px 10px 17px 20px;
+            margin: 0 0 34px;
+            background-position: right center;
+            .text {
+                width: 100%;
+                span.add {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .text {
+            display: block;
+            font-size: 45px;
+            line-height: 48px;
+            margin: 0 0 55px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            #main2 & {
+                margin: 0 0 6px;
+            }
+            @include breakpoint($tablet) {
+                font-size: 25px;
+                line-height: 28px;
+            }
+
+            @include breakpoint($mobile) {
+                margin: 0 0 5px;
+            }
+
+            span {
+                color: $heading-link;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 0 11px;
+                background: $white;
+                padding: 6px 19px 5px;
+                @include breakpoint($mobile) {
+                    padding: 3px 10px 6px;
+                    margin: 0 0 5px;
+                }
+
+                &.add {
+                    margin: 0 0 0px 62px;
+                    @include breakpoint($mobile) {
+                        margin: 0 0 0px 19px;
+                    }
+                }
+            }
+        }
+    }
+    /* action inspire block styles */
+    .block-inspire {
+        color: $white;
+        width: auto;
+        padding: 48px 10px 39px 39px;
+        background-size: cover;
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 20px 21px;
+            background-position: right center;
+        }
+
+        .title {
+            display: block;
+            font-size: 45px;
+            line-height: 46px;
+            margin: 0 0 45px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    /* action report block styles */
+    .block-report {
+        color: $white;
+        width: auto;
+        padding: 48px 10px 39px 39px;
+        background-size: cover;
         @include breakpoint($tablet) {
-		    background-position:top right;
-			.btn{
-				font-size:16px;
-			}
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 20px 21px;
-			background-position: right top;
-			margin: 0 0 34px;
-			.btn{
-				font-size:14px;
-			}
-		}
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 45px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
-	/* Vacancies block styles */
-	  .block-vacancies{
-		color:$white;
-		width:auto;
-		@extend %action-background;
-		@extend %action-image-right;
-		padding: 48px 10px 34px 39px;
+            background-position: top right;
+            .btn {
+                font-size: 16px;
+                padding: 10px 14px;
+            }
+        }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 20px 21px;
+            background-position: right top;
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+        .title {
+            display: block;
+            font-size: 45px;
+            line-height: 46px;
+            margin: 0 0 45px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    /* action blog block styles */
+    .block-blog {
+        color: $white;
+        width: auto;
+        padding: 48px 10px 39px 39px;
+        background-size: cover;
+        background-position: top right;
         @include breakpoint($tablet) {
-		    background-position:top right;
-			// .btn{
-			// 	font-size:16px;
-			// }
-			padding:48px 10px 34px 32px;
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 20px 21px;
-			background-position: right top;
-			margin: 0 0 34px;
-			.btn{
-				font-size:14px;
-			}
-		}
-		.title {
-			display:block;
-			font-size: 35px;
+            background-position: top right;
+            padding: 17px 10px 30px 29px;
+            .btn {
+                font-size: 16px;
+            }
+        }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            background-position: right center;
+            float: none;
+            padding: 24px 10px 20px 21px;
+        }
+
+        .title {
+            display: block;
+            font-size: 45px;
+            line-height: 46px;
+            margin: 0 0 45px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 24px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    /* Connect with others block styles */
+    .block-connect {
+        color: $white;
+        width: auto;
+        padding: 48px 10px 39px 39px;
+        background-size: cover;
+        @include breakpoint($tablet) {
+            background-position: top right;
+            .btn {
+                font-size: 16px;
+            }
+        }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 20px 21px;
+            background-position: right top;
+            margin: 0 0 34px;
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+        .title {
+            display: block;
+            font-size: 45px;
+            line-height: 46px;
+            margin: 0 0 45px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    /* Vacancies block styles */
+    .block-vacancies {
+        color: $white;
+        width: auto;
+        @extend %action-background;
+        @extend %action-image-right;
+        padding: 48px 10px 34px 39px;
+        @include breakpoint($tablet) {
+            background-position: top right;
+            // .btn{
+            // 	font-size:16px;
+            // }
+            padding: 48px 10px 34px 32px;
+        }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 20px 21px;
+            background-position: right top;
+            margin: 0 0 34px;
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+        .title {
+            display: block;
+            font-size: 35px;
             line-height: 41px;
-			margin:0 0 23px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:28px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
-	.block-image{
-		color:$white;
-		width:auto;
-		padding: 48px 10px 39px 39px;
-	    @extend %action-background;
+            margin: 0 0 23px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 28px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    .block-image {
+        color: $white;
+        width: auto;
+        padding: 48px 10px 39px 39px;
+        @extend %action-background;
         @extend %action-image-right;
         @include breakpoint($tablet) {
-		    background-position:top right;
-			.btn{
-				font-size:16px;
-			}
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 20px 21px;
-			background-position: right top;
-			margin: 0 0 34px;
-			.btn{
-				font-size:14px;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-		}
-		.title {
-			display:block;
-			font-size:45px;
-			line-height:46px;
-			margin:0 0 45px;
-			font-family:$header-font-family;
-			font-weight: normal;
-			@include breakpoint($tablet) {
-				font-size:30px;
-				line-height:33px;
-			}
-			@include breakpoint($mobile) {
-				font-size:25px;
-				line-height:25px;
-				margin:0 0 16px;
-			}
-		}
-	}
+            background-position: top right;
+            .btn {
+                font-size: 16px;
+            }
+        }
 
-	/* share this block styles */
-	.block-share{
-		color:$white;
-		width:auto;
-		text-align: right; 
-		padding:22px 3% 30px 5%;
-		background-position:center left;
-		background-size:cover;
-        &.share-lavender{ 
-		}
-		.btn{
-		  padding:10px 18px;
-		}
-        img{
-		  display:block;
-		  max-width:66%;
-		  margin-bottom: -70px;
-		}
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 20px 21px;
+            background-position: right top;
+            margin: 0 0 34px;
+            .btn {
+                font-size: 14px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .title {
+            display: block;
+            font-size: 45px;
+            line-height: 46px;
+            margin: 0 0 45px;
+            font-family: $header-font-family;
+            font-weight: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+                line-height: 33px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                line-height: 25px;
+                margin: 0 0 16px;
+            }
+        }
+    }
+    /* share this block styles */
+    .block-share {
+        color: $white;
+        width: auto;
+        text-align: right;
+        padding: 22px 3% 30px 5%;
+        background-position: center left;
+        background-size: cover;
+        &.share-lavender {}
+        .btn {
+            padding: 10px 18px;
+        }
+        img {
+            display: block;
+            max-width: 66%;
+            margin-bottom: -70px;
+        }
         @include breakpoint($tablet) {
-		    background-position:center center;
-			padding:48px 11px 40px 39px;
-			.btn{
-				font-size:16px;
-			}
-			img{
-			  max-width:190px;
-			}
-		}
-		@include breakpoint($mobile) {
-			width:100%;
-			float:none;
-			padding:24px 10px 40px 21pxx;
-			background-position: center left;
-			img{
-			  max-width:50%;
-			  width:50%;
-			  margin-bottom:0px;
-			}
-			.btn{
-				font-size:14px;
-				padding:6px 20px;
-				em{
-				  padding-left: 10px;
-				}
-			}
-		}
-	}
-	.lavender-box .btn:hover{
-		background-color: $lavender;
-	}
-	.blue-box .btn:hover{
-		background-color: $blue;
-	}
-	.green-box .btn:hover{
-		background-color: $green;
-	}
-	.magenta-box .btn:hover{
-		background-color: $magenta;
-	}
-	.orange-box .btn:hover{
-		background-color: $orange;
-	}
-	.pink-box .btn:hover{
-		background-color: $pink;
-	}
-	.block-image, .block-symptoms, .block-vacancies, .block-share{ 
-	  @include breakpoint($mobile){
-	    width:100%;
-	  }
-	  .title{
-	    min-height: 179px;
-         margin-bottom: 0;
-	  }
-	}
-	.block-symptoms{ 
-	  padding:30px 10px 37px 39px;
-	  @include breakpoint($mobile){
-	    padding:20px;
-	  }
-	  .text{
-	    min-height: 160px;
-	    margin-bottom:0; 
-	    span{
-	      display: inline;
-  	      line-height: 73px; 
-  	      margin-left:-50px;
-  	      margin-right:50px;
-  	      white-space: pre-wrap;
-  	      @include breakpoint($tablet){
-  	        line-height: 45px;
-  	      }
-  	    }
-	  }
-	}
-	
-	
-	.btn.btn-transparent{
-	  padding:10px 20px;
-	  display: inline-block;
-	  margin-top:6px;
-	  margin-bottom: 6px;
-	  border-width: 2px;
-	  @include breakpoint($mobile){
-	    width:auto;
-	    padding:10px 18px;
-	  }
-	  &:hover{
-	    border-width: 2px;
-	    display: inline-block;
-	    margin-top:5px;
-	    margin-bottom: 7px;
-	  }
-	}
-	.st_sharethis_button{
-	  .stButton{
-	       background: none;
-            border:none;
-            @include box-shadow(0px 0px $white);  
-            &:before{
-            	//content: "";
-              //content: "\e60b";
-              //margin-right:-27px;
+            background-position: center center;
+            padding: 48px 11px 40px 39px;
+            .btn {
+                font-size: 16px;
             }
-            &:hover{
-            	top:0px;
-            	//@include box-shadow(0px 0px $white); 
-              &:before{
-                 //margin:0 3px;
-                 //margin-right:-27px;
-              }
+            img {
+                max-width: 190px;
             }
-	  }
-	} 
-  // .st_sharethis_button .stButton:hover{
-  //   top:0px;
-  // }
-  .action_image{
-     max-width:180px;
-  }
-  .action_image2{
-    max-width:180px;
-    margin-top: 10px;
-  }
-  .promo_block{
-    .text1{
-      font-size: 41px;
-      white-space: pre-line;
-      min-height:181px;
-      line-height: normal;
-      @include breakpoint($tablet){
-        font-size:30px;
-      }
-      @include breakpoint($mobile){
-        font-size: 25px;
-        white-space: inherit;
-        min-height:130px;
-      }
-    }
-    .text2{
-      font-size: 30px;
-      min-height:173px;
-      line-height: normal;
-      @include breakpoint($tablet){
-        font-size: 25px;
-      }
-      @include breakpoint($mobile){
-        font-size: 23px;
-        white-space: inherit;
-        min-height:130px;
-      }
-    }
-  }
-  .core_action_block{
-    .text1{
-      font-size: 44px;
-      white-space: pre-line;
-      min-height: 179px;
-      line-height: 49px;
-      color: $white;
-      margin-top: 14px;
-      @include breakpoint($tablet){
-        font-size: 34px;
-        line-height: normal;
-      }
-      @include breakpoint($mobile){
-        font-size: 29px;
-        line-height: normal;
-        min-height: 130px;
-      }
-    }
-    .text2{
-      margin-left: 50px;
-      min-height: 175px;
-      margin-top: 18px;
-      @include breakpoint($mobile){
-         min-height:130px;
-      }
-    }
-  }
-  .share_graphic_block{
-    &.image{
-		.my_share{
-	      margin-left: 240px;
-	      margin-top:-53.5px;	
-	      padding:0;
-	      &:hover{
-	      	//margin-top: -54px;
-	      }
-	      @include breakpoint($tablet){
-	        margin-left: 135px;
-	        margin-top: 10px;
-	        &:hover{
-	      		//margin-top: 9.5px;
-	      	}
-	      }
-	      @include breakpoint($mobile){
-            float: right;
-            margin-top: -60px;
-            margin-left: -20px;
-	        &:hover{
-	      		//margin-top: 58.5px;
-	      	}
-	      }
- 	      @include breakpoint($small-mobile){
-            margin-top: -30px;
-	      }           
-	      // @include breakpoint($mobile){
-	      //    margin-top:0;
-	      //    &:hover{
-	      //      margin-top:0;
-	      //    } 
-	      // }
+        }
 
-
-	      //&:hover{ 
-	      //    margin-top: -54px;  
-	      //}
-	      // @include breakpoint($mobile){
-	      //   //margin-top:0;
-	      //   // &:hover{
-	      //   //   margin-top:0;
-	      //   // }
-	      //   .stButton{
-	      //     margin-top: 29px;
-	      //   }
-	      // }
-	      .btn.btn-transparent{
-	        padding:0;
-	      }
-	      .sharethis-wrapper{
-	        margin-top: -26px;
-	        //margin-left: -26px;
-	        width: 161px;
-	        padding: 5px 11px;
-            @include breakpoint($mobile){
-	          width: 171px;
-	          .stButton{
-	            margin-top: 29px;
-	            padding-right: 30px;
-	            &:before{
-	              margin-right: -7px;
-	              &:hover{
-	                margin-right: -7px;
-	              }
-	            }
-	          }
-	        }
-	        @include breakpoint($small-mobile){
-              width: 140px;
-              padding: 5px 0px;
+        @include breakpoint($mobile) {
+            width: 100%;
+            float: none;
+            padding: 24px 10px 40px 21pxx;
+            background-position: center left;
+            img {
+                max-width: 50%;
+                width: 50%;
+                margin-bottom: 0px;
             }
-	        .stButton{
-	          padding:0;
-	        }
-	        .stButton:after{
-	          padding-right: 0;
-	          width: 129px;
-	        }
-	      }
-	      // &.btn.btn-transparent{
-	      //   //padding:0;
-	      //   @include breakpoint($mobile){
-	      //     float: left;
-	      //     margin-top: 60px;
-	      //     margin-left:-20px;
-	      //   }
-	      // }  
-	    }
-    } 
-    .share_image{
-      max-width:180px;
-      float: left;
-      @include breakpoint($tablet){
-        max-width: 100px;
-      }
-      @include breakpoint($mobile){
-        max-width:110px;
-      }
+            .btn {
+                font-size: 14px;
+                padding: 6px 20px;
+                em {
+                    padding-left: 10px;
+                }
+            }
+        }
     }
-    &.statement{
-    .stButton{
-      padding:9px 31px 9px 18px;
-      &:before{
-          margin-right: -12px;
-          &:hover{
-            margin-right: -12px;
-          }
-      }
+    .lavender-box .btn:hover {
+        background-color: $lavender;
     }
+    .blue-box .btn:hover {
+        background-color: $blue;
+    }
+    .green-box .btn:hover {
+        background-color: $green;
+    }
+    .magenta-box .btn:hover {
+        background-color: $magenta;
+    }
+    .orange-box .btn:hover {
+        background-color: $orange;
+    }
+    .pink-box .btn:hover {
+        background-color: $pink;
+    }
+    .block-image, .block-symptoms, .block-vacancies, .block-share {
+        @include breakpoint($mobile) {
+            width: 100%;
+        }
 
-   .text1{
-      font-size: 23px;
-      min-height: 180px;
-      line-height: normal;
-      max-width: 230px;
-      width:49%;
-      float: right;
-      margin-right: 41px;
-      @include breakpoint($tablet){
-        margin-bottom:10px;
-        width: 48%;
-        font-size: 20px;
-      }
-      @include breakpoint($mobile){
-        min-height: 100px;
-        font-size:18px;
-        max-width:inherit; 
-        width: inherit;
-        margin: 0;
-        margin-bottom: 40px;
-      }
-    }
-    .share1{
-      float: right;
-      margin-right: 80px;
-      @include breakpoint($mobile){
-        float:left;
-        margin-right:0;
-      }
-    }
-    }
-    &.quotes{
-      .stButton{
-        padding:9px 31px 9px 18px;
-        &:before{
-          margin-right: -12px;
-          &:hover{
-            margin-right: -12px;
-          }
+        .title {
+            min-height: 179px;
+            margin-bottom: 0;
         }
-      }
-      .quote_image{
-        margin-top: -11px;
-        max-width:221px;
-        margin-bottom: -40px;
-        margin-right: -10px;
-        @include breakpoint($tablet){
-          display:none;
-        }
-      }
-      .text2{
-        min-height: 91px;
-        @include breakpoint($tablet){
-          min-height: 121px;
-          max-height: 141px;
-        }
-        @include breakpoint($tablet){
-           min-height: inherit;
-        }
-      }
-      .text3{
-        display: block;
-        min-height: 96px; 
-      } 
-      .share2{
-         float:left;
-      }
     }
-    &.image{
-       .text1{ 
-         img{
-           max-width:230px;
-           margin-left:50px; 
-           @include breakpoint($tablet){
-            max-width:150px;
-            margin-left:0px;
-           }
-           @include breakpoint($mobile){
-            max-width:160px;
-            //display:none;
-           }
-         }
-       }       
-    }
-  }
-  .title{
-  white-space: pre-line;
- }
+    .block-symptoms {
+        padding: 30px 10px 37px 39px;
+        @include breakpoint($mobile) {
+            padding: 20px;
+        }
 
+        .text {
+            min-height: 160px;
+            margin-bottom: 0;
+            span {
+                display: inline;
+                line-height: 73px;
+                margin-left: -50px;
+                margin-right: 50px;
+                white-space: pre-wrap;
+                @include breakpoint($tablet) {
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+    .btn.btn-transparent {
+        padding: 10px 20px;
+        display: inline-block;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        border-width: 2px;
+        min-width: 206px;
+        @include breakpoint($mobile) {
+            width: auto;
+            padding: 10px 18px;
+        }
+
+        &:hover {
+            border-width: 2px;
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 7px;
+        }
+    }
+    .st_sharethis_button {
+        .stButton {
+            background: none;
+            border: none;
+            @include box-shadow(0px 0px $white);
+            &:before {
+                //content: "";
+                //content: "\e60b";
+                //margin-right:-27px;
+           
+            }
+            &:hover {
+                top: 0px;
+                //@include box-shadow(0px 0px $white);
+                &:before {
+                    //margin:0 3px;
+                    //margin-right:-27px;
+               
+                }
+            }
+        }
+    }
+    // .st_sharethis_button .stButton:hover{
+    //   top:0px;
+    // }
+    .action_image {
+        max-width: 180px;
+    }
+    .action_image2 {
+        max-width: 180px;
+        margin-top: 10px;
+    }
+    .promo_block {
+        .text1 {
+            font-size: 41px;
+            white-space: pre-line;
+            min-height: 181px;
+            line-height: normal;
+            @include breakpoint($tablet) {
+                font-size: 30px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 25px;
+                white-space: inherit;
+                min-height: 130px;
+            }
+        }
+        .text2 {
+            font-size: 30px;
+            min-height: 173px;
+            line-height: normal;
+            @include breakpoint($tablet) {
+                font-size: 25px;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 23px;
+                white-space: inherit;
+                min-height: 130px;
+            }
+        }
+    }
+    .core_action_block {
+        .text1 {
+            font-size: 44px;
+            white-space: pre-line;
+            min-height: 179px;
+            line-height: 49px;
+            color: $white;
+            margin-top: 14px;
+            @include breakpoint($tablet) {
+                font-size: 34px;
+                line-height: normal;
+            }
+
+            @include breakpoint($mobile) {
+                font-size: 29px;
+                line-height: normal;
+                min-height: 130px;
+            }
+        }
+        .text2 {
+            margin-left: 50px;
+            min-height: 175px;
+            margin-top: 18px;
+            @include breakpoint($mobile) {
+                min-height: 130px;
+            }
+        }
+    }
+    .share_graphic_block {
+        &.image {
+            .my_share {
+                margin-left: 240px;
+                margin-top: -53.5px;
+                padding: 0;
+                &:hover {
+                    //margin-top: -54px;
+               
+                }
+                @include breakpoint($tablet) {
+                    margin-left: 135px;
+                    margin-top: 10px;
+                    &:hover {
+                        //margin-top: 9.5px;
+                   
+                    }
+                }
+
+                @include breakpoint($mobile) {
+                    float: right;
+                    margin-top: -60px;
+                    margin-left: -20px;
+                    &:hover {
+                        //margin-top: 58.5px;
+                   
+                    }
+                }
+
+                @include breakpoint($small-mobile) {
+                    margin-top: -30px;
+                }
+
+                // @include breakpoint($mobile){
+                //    margin-top:0;
+                //    &:hover{
+                //      margin-top:0;
+                //    } 
+                // }
+                //&:hover{ 
+                //    margin-top: -54px;  
+                //}
+                // @include breakpoint($mobile){
+                //   //margin-top:0;
+                //   // &:hover{
+                //   //   margin-top:0;
+                //   // }
+                //   .stButton{
+                //     margin-top: 29px;
+                //   }
+                // }
+                .btn.btn-transparent {
+                    padding: 0;
+                }
+                .sharethis-wrapper {
+                    margin-top: -26px;
+                    //margin-left: -26px;
+                    width: 161px;
+                    padding: 5px 11px;
+                    @include breakpoint($mobile) {
+                        width: 171px;
+                        .stButton {
+                            margin-top: 29px;
+                            padding-right: 30px;
+                            &:before {
+                                margin-right: -7px;
+                                &:hover {
+                                    margin-right: -7px;
+                                }
+                            }
+                        }
+                    }
+
+                    @include breakpoint($small-mobile) {
+                        width: 140px;
+                        padding: 5px 0px;
+                    }
+
+                    .stButton {
+                        padding: 0;
+                    }
+                    .stButton:after {
+                        padding-right: 0;
+                        width: 129px;
+                    }
+                }
+                // &.btn.btn-transparent{
+                //   //padding:0;
+                //   @include breakpoint($mobile){
+                //     float: left;
+                //     margin-top: 60px;
+                //     margin-left:-20px;
+                //   }
+                // }
+           
+            }
+        }
+        .share_image {
+            max-width: 180px;
+            float: left;
+            @include breakpoint($tablet) {
+                max-width: 100px;
+            }
+
+            @include breakpoint($mobile) {
+                max-width: 110px;
+            }
+        }
+        &.statement {
+            .stButton {
+                padding: 9px 31px 9px 18px;
+                &:before {
+                    margin-right: -12px;
+                    &:hover {
+                        margin-right: -12px;
+                    }
+                }
+            }
+            .text1 {
+                font-size: 23px;
+                min-height: 180px;
+                line-height: normal;
+                max-width: 230px;
+                width: 49%;
+                float: right;
+                margin-right: 41px;
+                @include breakpoint($tablet) {
+                    margin-bottom: 10px;
+                    width: 48%;
+                    font-size: 20px;
+                }
+
+                @include breakpoint($mobile) {
+                    min-height: 100px;
+                    font-size: 18px;
+                    max-width: inherit;
+                    width: inherit;
+                    margin: 0;
+                    margin-bottom: 40px;
+                }
+            }
+            .share1 {
+                float: right;
+                margin-right: 80px;
+                @include breakpoint($mobile) {
+                    float: left;
+                    margin-right: 0;
+                }
+            }
+        }
+        &.quotes {
+            .stButton {
+                padding: 9px 31px 9px 18px;
+                &:before {
+                    margin-right: -12px;
+                    &:hover {
+                        margin-right: -12px;
+                    }
+                }
+            }
+            .quote_image {
+                margin-top: -11px;
+                max-width: 221px;
+                margin-bottom: -40px;
+                margin-right: -10px;
+                @include breakpoint($tablet) {
+                    display: none;
+                }
+            }
+            .text2 {
+                min-height: 91px;
+                @include breakpoint($tablet) {
+                    min-height: 121px;
+                    max-height: 141px;
+                }
+
+                @include breakpoint($tablet) {
+                    min-height: inherit;
+                }
+            }
+            .text3 {
+                display: block;
+                min-height: 96px;
+            }
+            .share2 {
+                float: left;
+            }
+        }
+        &.image {
+            .text1 {
+                img {
+                    max-width: 230px;
+                    margin-left: 50px;
+                    @include breakpoint($tablet) {
+                        max-width: 150px;
+                        margin-left: 0px;
+                    }
+
+                    @include breakpoint($mobile) {
+                        max-width: 160px;
+                        //display:none;
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        white-space: pre-line;
+    }
 }
-.block_main{
-  height:334px;
-  max-height:334px;
-  float:right;
-  //width:48%;
-  width:48.7%;
-  background-position: center top;
-  //@include breakpoint($mobile){
+
+.block_main {
+    height: 334px;
+    max-height: 334px;
+    float: right;
+    //width:48%;
+    width: 48.7%;
+    background-position: center top;
+    //@include breakpoint($mobile){
     //background-position: right;
-  //}
-  &:first-child{
-    float:left; 
-  }
-  @include breakpoint($mobile){
-    width:100%;
-    height:255px;
-    margin-bottom:20px;
-    padding-bottom:15px;
-    .title, .text, .text1, .text2, .text3{
-      float:left;
-      width:100%;
-      white-space: inherit;
-      height:auto;
-      min-height: inherit;
+    //}
+    &:first-child {
+        float: left;
     }
-    img{
-      display:none;
+    @include breakpoint($mobile) {
+        width: 100%;
+        height: 255px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        .title, .text, .text1, .text2, .text3 {
+            float: left;
+            width: 100%;
+            white-space: inherit;
+            height: auto;
+            min-height: inherit;
+        }
+        img {
+            display: none;
+        }
     }
-  }
-  
 }
 
-.my_share{
-  float: left;
-  width: 170px;
-  padding: 0px;
-  background: none;
-  height: 50px;
-  padding-right: 11px;
+.my_share {
+    float: left;
+    width: 170px;
+    padding: 0px;
+    background: none;
+    height: 50px;
+    padding-right: 11px;
 }
 
 // Home page Block Share //
@@ -836,37 +864,38 @@
 // }
 
 //Fix the block share a tag hover issue
-.front .block-share{
-//	background: image-url('bg08.jpg');
-	//padding: 50px 10px 37px 39px;
- //  .btn-transparent{
-	// &:hover{ 
-	//   margin: 182px 10px 0 0;
-	//   @include breakpoint(900px){
-	//   	margin: 145px 10px 0 0;
-	//   }
-	// }
- //  }
-} 
+.front .block-share {
+    //	background: image-url('bg08.jpg');
+    //padding: 50px 10px 37px 39px;
+    //  .btn-transparent{
+    // &:hover{ 
+    //   margin: 182px 10px 0 0;
+    //   @include breakpoint(900px){
+    //   	margin: 145px 10px 0 0;
+    //   }
+    // }
+    //  }
+}
 
 #edit-webform-ajax-yes-i-am-74666,
-a.btn#not_right_now{
-	padding:10px 16px;  
+a.btn#not_right_now {
+    padding: 10px 16px;
 }
 
-#edit-webform-ajax-yes-i-am-74666{
-  float:left;
-  margin-top:5px;
-  font-size:20px;
-  line-height:29px;
-  &:hover{ 
-    margin-top: 8px;
-  }
+#edit-webform-ajax-yes-i-am-74666 {
+    float: left;
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 29px;
+    &:hover {
+        margin-top: 8px;
+    }
 }
-a.btn#not_right_now{
-  float:left;
-  font-size:20px;
-  display: inline-block;
-  float: left;
-  line-height:28px;
+
+a.btn#not_right_now {
+    float: left;
+    font-size: 20px;
+    display: inline-block;
+    float: left;
+    line-height: 28px;
 }
