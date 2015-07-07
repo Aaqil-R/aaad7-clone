@@ -1383,9 +1383,11 @@ article.node-223806 {
                     height: 20px;
                     &:first-child {
                         width: 51px;
-                        float: left;
                         height: 21px;
                         margin-right: 10px;
+                    }
+                    @include breakpoint($mobile) {
+                        float: none;
                     }
                 }
             }
@@ -1395,8 +1397,8 @@ article.node-223806 {
                 width: 80%;
                 margin-left: 10%;
                 @include breakpoint($mobile) {
-                  width:100% !important;
-                  margin-left:0 !important;
+                    width: 100%;
+                    margin-left: 0;
                 }
             }
         }
