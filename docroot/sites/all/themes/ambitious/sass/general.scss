@@ -1,26 +1,25 @@
 @import "base/base";
 
 //=== Action Block ===//
-.action-block{
-	.holder{
-		.region{
-		   .block-main{
-		    & > div{
-		       float:right;
-		       &:first-child{
-		         float:left;
-		         margin-right:30px;
-		       }
-		     }
-		   }
-		}
-	}
-
+.action-block {
+    .holder {
+        .region {
+            .block-main {
+                & > div {
+                    float: right;
+                    &:first-child {
+                        float: left;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Overriding the effects of a stray bold style.
 .region-services .btn {
-	font-family: $base-font-family;
+    font-family: $base-font-family;
 }
 
 //general user login question mark fix
@@ -31,414 +30,382 @@ on it, the description div comes on top of the input
 field .
 ****************************************************/
 .description {
-  float: left;
+    float: left;
 }
 
-
 //=== Home page-Issue fixing ===//
-.front{
-	// Webform paragraph
-	.form-item p:nth-child(2){
-		@include breakpoint($tablet-range){
-		 	font-size: 15px;
-			line-height: 28px;
-		}
-	}
+.front {
+    // Webform paragraph
+    .form-item p:nth-child(2) {
+        @include breakpoint($tablet-range) {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+    #block-block-26.caption-text .caption-text-titles .caption-text-title {
+        // TODO: need to make use of defined breakpoints here.
+        @include breakpoint(1320px) {
+            line-height: 66px;
+        }
 
-	#block-block-26.caption-text .caption-text-titles .caption-text-title{
-    // TODO: need to make use of defined breakpoints here.
-		@include breakpoint(1320px){
-		 	line-height: 66px;
-		}
+        // TODO: need to make use of defined breakpoints here.
+        @include breakpoint(1118px) {
+            line-height: 22px;
+        }
+    }
+    // Form on Home page
+    .slider-block {
+        z-index: 998;
+        position: relative;
+        .block {
+            // Add box shadow to Home page Form
+            @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+        }
+        .r-s-arrow {
+            a {
+                text-decoration: none;
+            }
+        }
+        .l-s-arrow {
+            a {
+                text-decoration: none;
+            }
+        }
+        a {
+            &.btn-left {
+                margin-right: 10px;
+            }
+            &.btn {
+                padding: 11px 25px;
+            }
+            &.btn-right {
+                position: relative;
+                right: 9px;
+                @include breakpoint($mobile) {
+                    right: 0;
+                }
+            }
+        }
+    }
+    @include breakpoint($mobile) {
+        .slider-block {
+            margin-top: -160px;
+        }
+        .slider-container .signup-columns .col {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .slider-container .signup-columns .col input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .slider-block .block {
+            padding: 10px 15px 85px;
+            margin-bottom: 38px;
+            @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+        }
+        .slider-block .block .slider-container {
+            width: 90%;
+            margin: 0 auto;
+            @include breakpoint($mobile) {
+                width: auto;
+                margin: 0 45px !important;
+            }
+        }
+    }
 
-    // TODO: need to make use of defined breakpoints here.
-		@include breakpoint(1118px){
-		 	line-height: 22px;
-		}
-	}
+    // Main without webform in the slider area
+    #main.no-form {
+        margin-top: 50px;
+        @include breakpoint($mobile) {
+            margin-top: 0;
+        }
+    }
+    // .visual .img-holder
+    .visual {
+        max-height: none;
+    }
+    .visual .holder {
+        @include breakpoint($mobile) {
+            position: relative;
+            top: -100px;
+            .pic-by {
+                padding: 0 0 10px 0;
+            }
+        }
+    }
+    .visual .img-holder {
+        max-height: 825px;
+    }
+    .visual .img-holder .caption-frame .caption {
+        @include breakpoint($mobile) {
+            padding: 60px 0 0;
+        }
 
-	// Form on Home page
-	.slider-block{
-		z-index: 998;
-		position: relative;
-		.block{
-			// Add box shadow to Home page Form
-			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));
-		}
-		.r-s-arrow{
-			a{
-				text-decoration: none;
-			}
-		}
-		.l-s-arrow{
-			a{
-				text-decoration: none;
-			}
-		}
-		a{
-			&.btn-left{
-				margin-right: 10px;	
-			}
-			&.btn{
-				padding: 11px 25px;
-			}
-			&.btn-right{
-				position: relative;
-				right: 9px;
-				@include breakpoint($mobile){
-					right: 0;
-				}
-			}					
-		}
-	}
-	@include breakpoint($mobile){
-		.slider-block{
-			margin-top: -160px;
-		}		
-		.slider-container .signup-columns .col{
-			width: 100%;
-			margin: 0;
-			padding: 0;
-		}
-		.slider-container .signup-columns .col input{
-			width: 100%;
-			margin-bottom: 10px;
-		}		
-		.slider-block .block{			
-			padding: 10px 15px 85px;
-			margin-bottom: 38px;
-			@include box-shadow(0 2px 2px rgba(0,0,0,0.3));					
-		}
-		.slider-block .block .slider-container {
-			width: 90%;
-			margin: 0 auto;
-			@include breakpoint($mobile){
-			  width:auto;
-              margin: 0 45px !important;
-			}
-		}
-	}
+        @include breakpoint($not-mobile) {
+            padding: 80px 0 0;
+        }
+    }
+    .visual .img-holder .caption-frame .caption .title {
+        @include breakpoint($mobile) {
+            right: 0;
+        }
+    }
+    // Social Holder
+    .social-block {
+        @include breakpoint($mobile) {
+            background: transparent;
+        }
+    }
+    .social-block .holder {
+        @include breakpoint($mobile) {
+            padding-top: 18px;
+            padding-bottom: 20px;
+        }
+    }
+    .social-block .block {
+        @include breakpoint($mobile) {
+            padding: 0px 0 45px;
+            background: transparent;
+            .member-count {
+                margin: -10px 0 40px;
+            }
+        }
+    }
+    .social-block h1 {
+        @include breakpoint($mobile) {
+            background: transparent;
+            padding: 0 0 6px;
+            margin-left: 0;
+        }
+    }
+    .social-block h3 {
+        @include breakpoint($mobile) {
+            margin-bottom: 15px;
+        }
+    }
+    // Action Block
+    .action-block {
+        @include breakpoint($not-mobile) {
+            margin-top: 66px;
+        }
 
-	// Main without webform in the slider area
-	#main.no-form{
-		margin-top: 50px;
-		@include breakpoint($mobile){
-			margin-top: 0;  
-		}
-	}
-
-	// .visual .img-holder
-	.visual{
-		max-height: none;
-
-	}
-	.visual .holder{
-		@include breakpoint($mobile){
-			position: relative;
-			top: -100px;
-      .pic-by{
-          padding: 0 0 10px 0;
-      }
-		}
-	}
-	
-  .visual .img-holder{
-		max-height: 825px;
-	}
-
-	.visual .img-holder .caption-frame .caption{
-		@include breakpoint($mobile){
-			padding: 60px 0 0;
-		}
-		@include breakpoint($not-mobile){
-			padding: 80px 0 0;
-		}
-	}
-
-	.visual .img-holder .caption-frame .caption .title{
-		@include breakpoint($mobile){
-			right: 0;
-		}
-	}
-
-	// Social Holder
-	.social-block{
-		@include breakpoint($mobile){
-			background: transparent;
-		}
-	}
-	
-	.social-block .holder{
-		@include breakpoint($mobile){
-			padding-top: 18px;
-			padding-bottom: 20px;
-		}
-	}
-
-	.social-block .block {
-		@include breakpoint($mobile){
-			padding: 0px 0 45px;
-			background: transparent;
-
-			.member-count{
-				margin: -10px 0 40px;
-			}
-		}
-	}
-
-	.social-block h1{
-		@include breakpoint($mobile){
-			background: transparent;
-			padding: 0 0 6px;
-			margin-left: 0;
-		}
-	}
-
-	.social-block h3{
-		@include breakpoint($mobile){
-			margin-bottom: 15px;
-		}
-	}
-
-	// Action Block
-	.action-block{
-		@include breakpoint($not-mobile){
-			margin-top: 66px;
-		}
-		
-		.holder {
-			@include breakpoint($mobile){
-				padding: 50px 15px 0;
-			}		
-		}
-
-	} 
-
-	// Article Block - Remove Images on Mobile View
-	.articles-block{
-		h4{
-			a{
-				text-decoration: none;
-			}
-		}
-		.views-row-2,
-		.views-row-3{
-			.img-holder{
-				@include breakpoint($mobile){
-				display: none
-				}
-			}
-		}
-
-		.views-row-last{
-			@include breakpoint($mobile){
-				margin-bottom: 10px;
-			}
-		}
-
-	}
-
-
-	// FB Box on Home page
-	._4s7c{
-		@include breakpoint(1024px){
-			
-		}
-	}
-}  
+        .holder {
+            @include breakpoint($mobile) {
+                padding: 50px 15px 0;
+            }
+        }
+    }
+    // Article Block - Remove Images on Mobile View
+    .articles-block {
+        h4 {
+            a {
+                text-decoration: none;
+            }
+        }
+        .views-row-2,
+        .views-row-3 {
+            .img-holder {
+                @include breakpoint($mobile) {
+                    display: none;
+                }
+            }
+        }
+        .views-row-last {
+            @include breakpoint($mobile) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    // FB Box on Home page
+    ._4s7c {
+        @include breakpoint(1024px) {}
+    }
+}
 
 // footer logo space fixed
 
-#footer{
-  .social-holder{
-    margin:-13px 0 30px;  
-    @include breakpoint($mobile){
-		margin:-210px 0 0 0 ;
-	}  
-  }
-  .block.last.even{
-  	@include breakpoint($mobile){
-		margin-top:185px;
-	}	
-  }
-  .region.region-footer-right{
-  	@include breakpoint($mobile){
-		margin-top:45px;
-	}
-  }
+#footer {
+    .social-holder {
+        margin: -13px 0 30px;
+        @include breakpoint($mobile) {
+            margin: (-210px) 0 0 0;
+        }
+    }
+    .block.last.even {
+        @include breakpoint($mobile) {
+            margin-top: 185px;
+        }
+    }
+    .region.region-footer-right {
+        @include breakpoint($mobile) {
+            margin-top: 45px;
+        }
+    }
 }
-  
 
 // edited nanda globalsoft
 
-.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right{
-  width:auto;
-  float:none;
-  .topic-share{
+.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
+    width: auto;
     float: none;
-    display: block;
-    padding-bottom: 60px;
-    .stButton{
-      float:left;
+    .topic-share {
+        float: none;
+        display: block;
+        padding-bottom: 60px;
+        .stButton {
+            float: left;
+        }
     }
-  }
 }
 
-.comment-block{
-  .topic-share{
-    float: none;
-    display: block;
-    padding-bottom: 60px;
-    .stButton{
-      float:left;
+.comment-block {
+    .topic-share {
+        float: none;
+        display: block;
+        padding-bottom: 60px;
+        .stButton {
+            float: left;
+        }
     }
-  }
 }
 
 // my voice page logo max height set 50px
 .page-node-74596 {
- .header-top{
-   .logo{
-     img{
-       max-height:50px;
-       width:auto;
-     }
-   }
- }
+    .header-top {
+        .logo {
+            img {
+                max-height: 50px;
+                width: auto;
+            }
+        }
+    }
 }
 
 //breadcrump zindex changed
-.block-easy-breadcrumb{
-	z-index: 998;
-	outline: none;
-	position: relative;
+.block-easy-breadcrumb {
+    z-index: 998;
+    outline: none;
+    position: relative;
 }
+
 .icon-Google:before {
-  content: "\e606";
+    content: "\e606";
 }
 
-
-// Fixing the padding issue on content bottom 
-#content_bottom{
-
-	@include breakpoint($mobile){
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-}
-.understanding-autism{
-  .views-submit-button{
-    #edit-submit-stream{
-      display:none;
+// Fixing the padding issue on content bottom
+#content_bottom {
+    @include breakpoint($mobile) {
+        padding-right: 15px;
+        padding-left: 15px;
     }
-  }
 }
 
-.node-type-my-voice-topic .understanding-autism{
- .btn{
-   padding: 6px 19px;
- }
-  .views-submit-button{
-    #edit-submit-stream{
-      display:inherit;
+.understanding-autism {
+    .views-submit-button {
+        #edit-submit-stream {
+            display: none;
+        }
     }
-  }
 }
 
-.front{ 
-  .slider-container{
-    @include breakpoint($tablet){
-      height:auto;
+.node-type-my-voice-topic .understanding-autism {
+    .btn {
+        padding: 6px 19px;
     }
-  }
-  .slider-block{
-    @include breakpoint($mobile){
-      margin-top:0;
-      top: -30px;
-      margin-top: -130px;
+    .views-submit-button {
+        #edit-submit-stream {
+            display: inherit;
+        }
     }
-  }
-  .slider-block .block .slider-container{
-   @include breakpoint($tablet){
-    margin: 0 90px;
-   }
-  } 
-  .slider-block .block{
-    @include breakpoint($tablet){
-      padding-bottom: 40px;   
-    }
-  }
 }
 
-.page-node-74566 .header_banner .banner_sub_text{
-    margin:0 0 0 203px;
-  }
-
-.header_banner{
-  z-index: 0;
+.front {
+    .slider-container {
+        @include breakpoint($tablet) {
+            height: auto;
+        }
+    }
+    .slider-block {
+        @include breakpoint($mobile) {
+            margin-top: 0;
+            top: -30px;
+            margin-top: -130px;
+        }
+    }
+    .slider-block .block .slider-container {
+        @include breakpoint($tablet) {
+            margin: 0 90px;
+        }
+    }
+    .slider-block .block {
+        @include breakpoint($tablet) {
+            padding-bottom: 40px;
+        }
+    }
 }
 
-.page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies{
-  #block-easy-breadcrumb-easy-breadcrumb--2{
-    .easy-breadcrumb{
-      display:none;
-    }
-  }
+.page-node-74566 .header_banner .banner_sub_text {
+    margin: 0 0 0 203px;
+}
 
+.header_banner {
+    z-index: 0;
+}
+
+.page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies {
+    #block-easy-breadcrumb-easy-breadcrumb--2 {
+        .easy-breadcrumb {
+            display: none;
+        }
+    }
 }
 
 // Forum Page
-.page-node-74566{
-
-	.st_sharethis_button .stButton{
-		@include breakpoint($all-desktop){
-			padding: 6px 28px;
-		}
-		
-	}
-
-	.sort-block .btn{
-		@include breakpoint($all-desktop){
-			padding-left: 38px;
-	  		padding-right: 38px;
-		}
-
-	}
-
-} 
+.page-node-74566 {
+    .st_sharethis_button .stButton {
+        @include breakpoint($all-desktop) {
+            padding: 6px 28px;
+        }
+    }
+    .sort-block .btn {
+        @include breakpoint($all-desktop) {
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+    }
+}
 
 // Understand Autism - List view
-.posts-columns.list-view .post .info.add h3{
-	margin: -10px 0 42px;
-} 
+.posts-columns.list-view .post .info.add h3 {
+    margin: -10px 0 42px;
+}
 
-.voice-holder{
-  display:none;
-  &.voice-my_voice_topic{
-    display: inherit;
-  }
+.voice-holder {
+    display: none;
+    &.voice-my_voice_topic {
+        display: inherit;
+    }
 }
 
 // Voice page
-.section-voices-spectrum{
-
-	.region-image-holder{
-
-		.block-easy-breadcrumb{
-			display: none;
-		}		
-	}
+.section-voices-spectrum {
+    .region-image-holder {
+        .block-easy-breadcrumb {
+            display: none;
+        }
+    }
 }
 
-.search-text{
-  .icon-search{
-     position: absolute;
-     right: 10px;
-     font-size: 24px;
-     top: 10px;
-   }
+.search-text {
+    .icon-search {
+        position: absolute;
+        right: 10px;
+        font-size: 24px;
+        top: 10px;
+    }
 }
-
 
 /* removed it because it was causing issues on registration page with hybrid auth
 .description{ 
@@ -454,501 +421,505 @@ field .
 */
 
 /*new set of codes for styling registration page through hybrid auth*/
-.page-hybridauth{
-  #main{
-    background: $white;
-  }
-  fieldset{
-    float: none;
-    padding-left: 0px;
-    &.form-wrapper{
-      min-height:550px;
+.page-hybridauth {
+    #main {
+        background: $white;
     }
-    .password-strength{
-      margin-top: 0px;
+    fieldset {
+        float: none;
+        padding-left: 0px;
+        &.form-wrapper {
+            min-height: 550px;
+        }
+        .password-strength {
+            margin-top: 0px;
+        }
     }
-  }
-  input{
-    &.username{
-      width: 16em;
-      float: left;
-      clear: both;
-      border-radius: 5px;
-      border-color: #e4e4e4;
-      -webkit-box-shadow: inset 1px 1px 2px #707070;
-      box-shadow: inset 1px 1px 2px #707070;
-      margin-bottom: 20px;
-      padding: 12px 23px;
-      font-size: 18px;
+    input {
+        &.username {
+            width: 16em;
+            float: left;
+            clear: both;
+            border-radius: 5px;
+            border-color: #e4e4e4;
+            -webkit-box-shadow: inset 1px 1px 2px #707070;
+            box-shadow: inset 1px 1px 2px #707070;
+            margin-bottom: 20px;
+            padding: 12px 23px;
+            font-size: 18px;
+        }
     }
-  }
-  legend{
-    font-weight: bold;
-  }
-  .description{
-    float: left;
-  }
+    legend {
+        font-weight: bold;
+    }
+    .description {
+        float: left;
+    }
 }
+
 /*end of new codes*/
 
-.profile-main{
-#user-profile-form{
-  .description{
-    width: auto;
-    max-width:530px;
-    float: left;
-  }
-  fieldset{
-    padding-left: 0;
-    padding-right: 0;
-  }
-  label{
-    position: static;
-  }
-  .field-type-text-long{
-    max-width: 520px;
-   } 
-   .password-strength{
-     float: none;
-     margin-bottom: 20px;
-     width: 100%;
-     max-width: 530px;
-   }
-   input[type=password]{
-     width: 100%;
-     max-width: 530px
-   }
-   .form-type-password.form-item-pass-pass2{
-     width: 100%;
-     max-width: 590px;
-   }
-   .field-name-field-type-of-user{
-     fieldset{
-       float: left;
-       width: 100%;
-     }
-   } 
-  }
-}
-
-
-.profile-main #user-register-form{
-  label{
-     top: 17px;
-   }
-}
-#modal-content{
-  .tooltip-content{
-    bottom: inherit;
-	left: -252px;
-	top: 0;
-	height: auto;
-  }
-  a.tooltips span.tooltip-content{
-    &:before{
-     border-left: 20px solid $casablanca;
-	border-right: 20px solid transparent;
-	border-top: 20px solid transparent; 
-
-  @include transform(rotate(-136deg));
-
-     left: 94%;
-top: 6px;
-margin-left: -13px;
+.profile-main {
+    #user-profile-form {
+        .description {
+            width: auto;
+            max-width: 530px;
+            float: left;
+        }
+        fieldset {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        label {
+            position: static;
+        }
+        .field-type-text-long {
+            max-width: 520px;
+        }
+        .password-strength {
+            float: none;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 530px;
+        }
+        input[type=password] {
+            width: 100%;
+            max-width: 530px;
+        }
+        .form-type-password.form-item-pass-pass2 {
+            width: 100%;
+            max-width: 590px;
+        }
+        .field-name-field-type-of-user {
+            fieldset {
+                float: left;
+                width: 100%;
+            }
+        }
     }
-     &:after{
-      border-left: 19px solid $early_dawn;
-      border-right: 19px solid transparent;  
-      border-top: 18px solid transparent;
-      
-      @include transform(rotate(-136deg));
-
-    left: 94%;
-	top: 7px;
-	margin-left: -12px;
-    }
-  }
-  
-}
-#user-register-form{
-div.ctools-modal-content .modal-content{
-  min-width: 100%;
-}
-.popups-container input[type="password"]{
-  width: 88%;
 }
 
-  
-  .form-type-password-confirm{
-    margin-top: 40px;
-    .password-strength{
-      width: 92%;
-	float: left;
-	margin-top: -55px;
-    }
-  }
-   
-   .password-strength{
-      width: 92%;
-	float: left;
-	margin-top: -36px;
-   }
-   .form-type-password.form-item-pass-pass2{
-     width: 67%;
-     input[type=password]{
-        width:100%;
-     }
-  }
-   input[type=password]{
-     width: 91%;
-   }
-  .form-type-password-confirm form-item-pass{
-    margin-top: 20px;
-  }
-  .form-item{
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #edit-pass-pass1{
-    width: 92%;
-  }
-}
-#user-pass label{
-  display:none;
-  visibility: hidden;
-}
-#slider-container form{
-  
-  .description{
-    //width: 15px;
-    //margin-left: 7px;
-    margin-top: 5px;
-  }
-  h2{
-    margin-bottom: 21px;
-  }   
-}
- 
-#webform-ajax-wrapper-74666{  
-  p.larger{
-    margin-top: 16px;
-    line-height: 36px;
-    margin-bottom: 24px;
-  }  
-} 
-
-#webform-client-form-74676{
- h3, h2{
-   font-size: 35px;
-	padding-right: 26px;
-	line-height: 45px;
-	margin-top: 11px;
-	margin-bottom: 20px;
- }
- .home_forum_share{
-    //padding-top: 14px;
-   .home_forum_share_left{
-      p{
-        margin-right: 0;
-        line-height: 27px;
-      }
-   }
-   .home_forum_share_right{
-     margin-top: 24px;
-     @include breakpoint($mobile){
-       margin-top: 54px;
-     }
-   }
- }
-
-}
-#slider-container #webform-client-form-74681 h3{
-  font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
-}
-#webform-client-form-74681{
-  &form h2{
-    font-size: 37px;
-	margin-top: 9px;
-	line-height: 44px;
-	margin-bottom: 9px;
-  }
-  .webform-component--lend-your-support{
-    h5{
-      font-size: 18px;
-      margin-top: -9px;
-    }
-  }
-  .webform-component--give-what-you-can{
-    float:none;
-    width:auto;
-  }
-  .give_what_you_can{
-    margin-left: 18px;
-    width: 32%;
-    float:left;
-    margin-top: 13px;
-    @include breakpoint($mobile){
-      margin-left:auto;
-      width:auto;
-    }
-    & > h5{ 
-      margin-left: 10px; 
-      @include breakpoint($mobile){
-        margin-left:0px;
-      }
-    }
-    #edit-submitted-give-what-you-can{
-      @include breakpoint($mobile){
-        margin: 0 -30px 0 -11px;
-        margin-bottom:15px;
-      }
-      label{
-        font-size: 20px;
-      }
-    }
-  }  
-  .webform-component--other-ways-to-help{
-    width: 28%;
-    margin-top: 13px;
-    @include breakpoint($mobile){
-      width:auto;
-    }
-    h3{
-      font-size: 22px;
-      margin-top: 3px;
-    }
-    a.btn{
-      padding: 9.5px 22px;
-      width: 100%;
-      margin-bottom: 14px;
-      margin-top: 11px;
-    }
-    label{
-        font-size: 24px;
-    }
-  }
-
-  .webform-component--lend-your-support{
-  	p{
-  		line-height: 27px;
-  	}
-  }
-}
-div.ctools-modal-content{
-#user-register-form, #user-login{
-  width: 114%;
-  float: left; 
-}
-}
-div.ctools-modal-content .modal-content{
-    overflow-x: hidden;
-  }
-
-.not-logged-in #user-login{
-  input[type="password"], input[type="text"]{
-    background: none!important;
-  }
-}
-
-
-#webform-client-form-74666{
+.profile-main #user-register-form {
     label {
-	position: absolute;
-	left: 21px;
-	top: 11px;
-	color:$black;
-	}
- .form-item{
-  height: 65px;
-  }
+        top: 17px;
+    }
 }
 
-#form input[type="text"]:focus{
-  border-color: $yellow;
+#modal-content {
+    .tooltip-content {
+        bottom: inherit;
+        left: -252px;
+        top: 0;
+        height: auto;
+    }
+    a.tooltips span.tooltip-content {
+        &:before {
+            border-left: 20px solid $casablanca;
+            border-right: 20px solid transparent;
+            border-top: 20px solid transparent;
+            @include transform(rotate(-136deg));
+            left: 94%;
+            top: 6px;
+            margin-left: -13px;
+        }
+        &:after {
+            border-left: 19px solid $early_dawn;
+            border-right: 19px solid transparent;
+            border-top: 18px solid transparent;
+            @include transform(rotate(-136deg));
+            left: 94%;
+            top: 7px;
+            margin-left: -12px;
+        }
+    }
 }
 
-body .view-display-id-stream_forum_page{
-   .icon-Featured, .icon-Hottopic {
-     display: none; 
-   }
-  .rowlessthen3{
-    .icon-Featured {
-      margin-right:5px;
-      display: inherit;
+#user-register-form {
+    div.ctools-modal-content .modal-content {
+        min-width: 100%;
     }
-  }   
-  .icon-Hottopic {
-    margin-right: 70px;
-  }
-  .show_hot{
-    .icon-Hottopic { 
-      display: inherit;
-      margin-right: 70px;
+    .popups-container input[type="password"] {
+        width: 88%;
     }
-  } 
+    .form-type-password-confirm {
+        margin-top: 40px;
+        .password-strength {
+            width: 92%;
+            float: left;
+            margin-top: -55px;
+        }
+    }
+    .password-strength {
+        width: 92%;
+        float: left;
+        margin-top: -36px;
+    }
+    .form-type-password.form-item-pass-pass2 {
+        width: 67%;
+        input[type=password] {
+            width: 100%;
+        }
+    }
+    input[type=password] {
+        width: 91%;
+    }
+    .form-type-password-confirm form-item-pass {
+        margin-top: 20px;
+    }
+    .form-item {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #edit-pass-pass1 {
+        width: 92%;
+    }
+}
+
+#user-pass label {
+    display: none;
+    visibility: hidden;
+}
+
+#slider-container form {
+    .description {
+        //width: 15px;
+        //margin-left: 7px;
+        margin-top: 5px;
+    }
+    h2 {
+        margin-bottom: 21px;
+        @include breakpoint($desktop) {
+            margin-top: 20px;
+        }
+    }
+}
+
+#webform-ajax-wrapper-74666 {
+    p.larger {
+        margin-top: 16px;
+        line-height: 36px;
+        margin-bottom: 24px;
+    }
+}
+
+#webform-client-form-74676 {
+    h3, h2 {
+        font-size: 35px;
+        padding-right: 26px;
+        line-height: 45px;
+        margin-top: 11px;
+        margin-bottom: 20px;
+    }
+    .home_forum_share {
+        //padding-top: 14px;
+        .home_forum_share_left {
+            p {
+                margin-right: 0;
+                line-height: 27px;
+            }
+        }
+        .home_forum_share_right {
+            margin-top: 24px;
+            @include breakpoint($mobile) {
+                margin-top: 54px;
+            }
+        }
+    }
+}
+
+#slider-container #webform-client-form-74681 h3 {
+    font-size: 37px;
+    margin-top: 9px;
+    line-height: 44px;
+    margin-bottom: 9px;
+}
+
+#webform-client-form-74681 {
+    &form h2 {
+        font-size: 37px;
+        margin-top: 9px;
+        line-height: 44px;
+        margin-bottom: 9px;
+    }
+    .webform-component--lend-your-support {
+        h5 {
+            font-size: 18px;
+            margin-top: -9px;
+        }
+    }
+    .webform-component--give-what-you-can {
+        float: none;
+        width: auto;
+    }
+    .give_what_you_can {
+        margin-left: 18px;
+        width: 32%;
+        float: left;
+        margin-top: 13px;
+        @include breakpoint($mobile) {
+            margin-left: auto;
+            width: auto;
+        }
+
+        & > h5 {
+            margin-left: 10px;
+            @include breakpoint($mobile) {
+                margin-left: 0px;
+            }
+        }
+        #edit-submitted-give-what-you-can {
+            @include breakpoint($mobile) {
+                margin: 0 -30px 0 -11px;
+                margin-bottom: 15px;
+            }
+
+            label {
+                font-size: 20px;
+            }
+        }
+    }
+    .webform-component--other-ways-to-help {
+        width: 28%;
+        margin-top: 13px;
+        @include breakpoint($mobile) {
+            width: auto;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 3px;
+        }
+        a.btn {
+            padding: 9.5px 22px;
+            width: 100%;
+            margin-bottom: 14px;
+            margin-top: 11px;
+        }
+        label {
+            font-size: 24px;
+        }
+    }
+    .webform-component--lend-your-support {
+        p {
+            line-height: 27px;
+        }
+    }
+}
+
+div.ctools-modal-content {
+    #user-register-form, #user-login {
+        width: 114%;
+        float: left;
+    }
+}
+
+div.ctools-modal-content .modal-content {
+    overflow-x: hidden;
+}
+
+.not-logged-in #user-login {
+    input[type="password"], input[type="text"] {
+        background: none !important;
+    }
+}
+
+#webform-client-form-74666 {
+    label {
+        position: absolute;
+        left: 21px;
+        top: 11px;
+        color: $black;
+    }
+    .form-item {
+        height: 65px;
+    }
+}
+
+#form input[type="text"]:focus {
+    border-color: $yellow;
+}
+
+body .view-display-id-stream_forum_page {
+    .icon-Featured, .icon-Hottopic {
+        display: none;
+    }
+    .rowlessthen3 {
+        .icon-Featured {
+            margin-right: 5px;
+            display: inherit;
+        }
+    }
+    .icon-Hottopic {
+        margin-right: 70px;
+    }
+    .show_hot {
+        .icon-Hottopic {
+            display: inherit;
+            margin-right: 70px;
+        }
+    }
 }
 
 // Post footer
 
-.posts-columns .post .footer .num-holder a .text{
-	display: none;
+.posts-columns .post .footer .num-holder a .text {
+    display: none;
 }
 
-.posts-columns .post .footer .num-holder .hover a .text{
-	display: block;
+.posts-columns .post .footer .num-holder .hover a .text {
+    display: block;
 }
 
-
-
-.section-share-your-story .block-webform{
-  padding-bottom: 50px;
-  label{
-    left: 12px;
-    top: 10px;
-  }
- .form-item{
-    min-height: 70px; 
- }
+.section-share-your-story .block-webform {
+    padding-bottom: 50px;
+    label {
+        left: 12px;
+        top: 10px;
+    }
+    .form-item {
+        min-height: 70px;
+    }
 }
 
 // Private Message page
-html.js fieldset.collapsed{
-	height: auto;
-}
-.page-messages{
-
-	.description{
-		width: initial;
-	}
-	
+html.js fieldset.collapsed {
+    height: auto;
 }
 
-
-.section-current-vacancies{
-  .posts-columns{
-    margin-top: 290px;
-    .field_salary{
-      margin-bottom:20px;
+.page-messages {
+    .description {
+        width: initial;
     }
-  }
 }
 
-.view-display-id-stream_forum_page{
-  fieldset{
-    margin-right:0;
-  }
-}
-article.node-223806, article.node-223591{
- .field-name-body{
-  padding:40px 80px; 
-  }
+.section-current-vacancies {
+    .posts-columns {
+        margin-top: 290px;
+        .field_salary {
+            margin-bottom: 20px;
+        }
+    }
 }
 
-
-
-#modalContent{
-  #modal-title{
-    font-size: 30px;
-    text-align: center;
-    padding: 14px;
-    display: block;
-  } 
-  .popups-close.close{
-    position: absolute;
-    right: 11px;
-    top: 12px;
-  }
-  h3{
-    font-size: 22px;
-    font-weight: bold;
-    padding: 5px 1px;
-    text-align: left;
-  }
-  .hybridauth-widget li{
-    margin:0;
-  }
-  .item-list{
-    margin-left: 20px;
-  }
+.view-display-id-stream_forum_page {
+    fieldset {
+        margin-right: 0;
+    }
 }
 
-div.ctools-modal-content .modal-content{
-  padding:19px 19px 19px 49px;
+article.node-223806, article.node-223591 {
+    .field-name-body {
+        padding: 40px 80px;
+    }
 }
 
-.post-comments-0{
-  display:none;
+#modalContent {
+    #modal-title {
+        font-size: 30px;
+        text-align: center;
+        padding: 14px;
+        display: block;
+    }
+    .popups-close.close {
+        position: absolute;
+        right: 11px;
+        top: 12px;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 5px 1px;
+        text-align: left;
+    }
+    .hybridauth-widget li {
+        margin: 0;
+    }
+    .item-list {
+        margin-left: 20px;
+    }
+}
+
+div.ctools-modal-content .modal-content {
+    padding: 19px 19px 19px 49px;
+}
+
+.post-comments-0 {
+    display: none;
 }
 
 // TODO: this hides a white container which is being rendered 
 // sporadically on topic pages; need to investigate and fix.
 #block-views-stream-my-voice-blog .view-filters .mobile-view {
-  display: none;
+    display: none;
 }
 
-.forumpage_title{
-  font-size:16px; margin-bottom:30px;
+.forumpage_title {
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
+.node-type-forum-discussion .posts-columns.columns-full .row .footer {
+    padding-left: 30px;
+    .flag_node {
+        margin-right: 20px;
+        float: left;
+        width: 170px;
+        margin-top: 6px;
+    }
+    .flag-message {
+        visibility: hidden;
+    }
+}
 
-.node-type-forum-discussion .posts-columns.columns-full .row .footer{
-  padding-left: 30px;
-  .flag_node{
-    margin-right: 20px;
+.topic_section {
     float: left;
-    width: 170px;
-    margin-top: 6px;
-  }
-  .flag-message{
-    visibility: hidden;
-  }
+    width: 100%;
+    // margin-left: 9px;
+    margin-top: 15px;
 }
-.topic_section{
-  float: left;
-  width: 100%;
- // margin-left: 9px;
-  margin-top: 15px;
-}
-// Colorbox login
-#modalContent{
-  z-index: 9999 !important;
 
+// Colorbox login
+#modalContent {
+    z-index: 9999 !important;
 }
-.forum_list{
-  float:left;
-  margin-right:5px;
-  a, span.flag-bookmarks, .flag-bookmarks{
-    font-size: 15px;
-    font-weight: normal;
-  }
+
+.forum_list {
+    float: left;
+    margin-right: 5px;
+    a, span.flag-bookmarks, .flag-bookmarks {
+        font-size: 15px;
+        font-weight: normal;
+    }
 }
+
 //seems to be duplicated on all?
-.flag-wrapper{
+.flag-wrapper {
     font-size: 15px;
     font-weight: normal;
 }
-#modalBackdrop{
-  z-index: 9999 !important;
+
+#modalBackdrop {
+    z-index: 9999 !important;
 }
 
 .not-logged-in #user-login--2 .form-item label,
 .not-logged-in #user-login .form-item label,
-#user-register-form .form-item label{
-  display: none !important;
+#user-register-form .form-item label {
+    display: none !important;
 }
 
 //hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
 .page-taxonomy.section-topics {
-    .forumpage_title {display: none;}
+    .forumpage_title {
+        display: none;
+    }
 }
 
-//HACK to hide unwanted form fields - profile and discussion page. 
+//HACK to hide unwanted form fields - profile and discussion page.
 fieldset.group-hidden {
     display: none;
 }
+
 .section-node-add {
     #block-easy-breadcrumb-easy-breadcrumb, .vertical-tabs {
         display: none;
@@ -967,13 +938,13 @@ fieldset.group-hidden {
             float: none;
             clear: both;
         }
-        
-        .form-item-title label {margin-top: 0;}
+        .form-item-title label {
+            margin-top: 0;
+        }
         .filter-guidelines {
             padding: 0;
         }
-        
-        .filter-wrapper{
+        .filter-wrapper {
             display: none;
         }
         .form-type-checkbox {
@@ -983,83 +954,90 @@ fieldset.group-hidden {
                 width: auto;
             }
         }
-        .filter-help {padding: 0;float: none; text-align: center;}
-        input {max-width: 100%;}
-        .form-action {margin-top:0.5em;}
+        .filter-help {
+            padding: 0;
+            float: none;
+            text-align: center;
+        }
+        input {
+            max-width: 100%;
+        }
+        .form-action {
+            margin-top: 0.5em;
+        }
     }
 }
-
 
 /*fourm page text*/
-.page-node-221561, .node-type-forum-discussion{
-  .posts-columns.columns-full{
-    .row{
-      .forum-text{
-        .forum-right{
-          clear: inherit;
-        }
-      }
-    }
-  }
-}
-
-
-.page-search-gss{
-  .tabs{
-    @include breakpoint($mobile){
-      li{
-        margin-bottom: 10px;
-	   display: block;
-	   clear: both;
-	 }
-    }
-  }
-  .search-form{
-   @include breakpoint($mobile){ 
-     input[type=submit]{
-       width: 92%;
-		max-width: inherit;
-		margin: 0 4%;
-     }
-     }
-  }
-  .item-list .pager li{
-      display: inline-block;
-    }
-}
-.google-search-results{ 
-    @include breakpoint($mobile){ 
-      &.posts-columns.columns-full{
-        .views-row{
-          .forum-text{
-            .forum-left{
-              .image-holder{ 
-				width: 100%;
-				margin:0 0 10px 0;
-              }
+.page-node-221561, .node-type-forum-discussion {
+    .posts-columns.columns-full {
+        .row {
+            .forum-text {
+                .forum-right {
+                    clear: inherit;
+                }
             }
-          }
         }
-      }
-    } 
-    .gss-search-url{
-      word-wrap: break-word;
     }
 }
 
+.page-search-gss {
+    .tabs {
+        @include breakpoint($mobile) {
+            li {
+                margin-bottom: 10px;
+                display: block;
+                clear: both;
+            }
+        }
+    }
+    .search-form {
+        @include breakpoint($mobile) {
+            input[type=submit] {
+                width: 92%;
+                max-width: inherit;
+                margin: 0 4%;
+            }
+        }
+    }
+    .item-list .pager li {
+        display: inline-block;
+    }
+}
+
+.google-search-results {
+    @include breakpoint($mobile) {
+        &.posts-columns.columns-full {
+            .views-row {
+                .forum-text {
+                    .forum-left {
+                        .image-holder {
+                            width: 100%;
+                            margin: 0 0 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gss-search-url {
+        word-wrap: break-word;
+    }
+}
 
 /* node-type-page  */
 
-.node-type-page{
-  .easy-breadcrumb{
-    display: block;
-  }
-  #main{
-    @include breakpoint($mobile){
-      max-width: 91%;
-      margin-top: 16px;
+.node-type-page {
+    .easy-breadcrumb {
+        display: block;
     }
-  }
+    #main {
+        @include breakpoint($mobile) {
+            max-width: 91%;
+            margin-top: 16px;
+        }
+    }
 }
 
 //hack to add text to login form
@@ -1067,7 +1045,7 @@ fieldset.group-hidden {
 #user-login {
     .hybridauth-widget-wrapper {
         &:before {
-        content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
+            content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
         }
     }
 }
@@ -1076,274 +1054,251 @@ fieldset.group-hidden {
     display: none;
 }
 
-.show_mobile{
-  display:none;
-  @include breakpoint($mobile){
-    display:inherit;
-  }
+.show_mobile {
+    display: none;
+    @include breakpoint($mobile) {
+        display: inherit;
+    }
 }
-.logged-in{
-  #block-menu-menu-header-top-menu{
-    @include breakpoint($mobile){
-      float: left; 
-    }
-     @include breakpoint(520px){
-      li{
-        padding:0 5px;
-      }
-    } 
-  }
-  #block-system-user-menu{
-    @include breakpoint(520px){
-    ul{
-       padding-left:0;
-       li {
-        a{
-          font-size:0;
-          img{ 
-            margin-left: -44px;
-            margin-top: -10px;
-          }
-        }
-      }
-    }    
-   }
 
-    @include breakpoint($mobile){
-      ul{
-        li.last{
-          a{
-            font-size:initial;
-          }
-
-        }
-      }
-    }
-  
-    @include breakpoint($mini-mobile){
-    ul{
-      li.last{
-        a{
-          font-size:12px;
+.logged-in {
+    #block-menu-menu-header-top-menu {
+        @include breakpoint($mobile) {
+            float: left;
         }
 
-      }
-      }
+        @include breakpoint(520px) {
+            li {
+                padding: 0 5px;
+            }
+        }
     }
-    
-    
+    #block-system-user-menu {
+        @include breakpoint(520px) {
+            ul {
+                padding-left: 0;
+                li {
+                    a {
+                        font-size: 0;
+                        img {
+                            margin-left: -44px;
+                            margin-top: -10px;
+                        }
+                    }
+                }
+            }
+        }
 
- }
+        @include breakpoint($mobile) {
+            ul {
+                li.last {
+                    a {
+                        font-size: initial;
+                    }
+                }
+            }
+        }
+
+        @include breakpoint($mini-mobile) {
+            ul {
+                li.last {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
 }
- 
-
 
 // Forum page issue fixing for mobiles
 .posts-columns.columns-full .row .forum-icon {
-
-  @include breakpoint($mobile){
-    font-size: 30px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
+    @include breakpoint($mobile) {
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 
 body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
-
-  @include breakpoint($mobile){
-    margin-right: 50px;
-  }
-
+    @include breakpoint($mobile) {
+        margin-right: 50px;
+    }
 }
 
 // Action Nav
 .right-info a.school-opener,
-.top-bar a{
-
-  @include breakpoint($mini-mobile){
-    font-size: 12px;
-  }
+.top-bar a {
+    @include breakpoint($mini-mobile) {
+        font-size: 12px;
+    }
 }
 
 // Image Holder - Fixing for the mobile devices
-.img-holder{
-  position: relative;
-  img{
-    width: 100%;
-    height: auto;
-  }
+.img-holder {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 // My voice info image
-.visual .img-holder img{
-  width: auto;
+.visual .img-holder img {
+    width: auto;
 }
 
 // Home page UA block
 .posts-columns h2,
-.posts-columns h1{
-  @include breakpoint($tablet-range){
-    font-size: 32px;
-    line-height: 36px
-  }
+.posts-columns h1 {
+    @include breakpoint($tablet-range) {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
 
-.sort-block{
-  .forum-page{
-    .form-item-search-community{
-      width:100%;
+.sort-block {
+    .forum-page {
+        .form-item-search-community {
+            width: 100%;
+        }
     }
-  }
-  @include breakpoint($mobile){
-    padding:36px;
-    .filterbutton{
-      margin-bottom: 30px;
+    @include breakpoint($mobile) {
+        padding: 36px;
+        .filterbutton {
+            margin-bottom: 30px;
+        }
     }
-  }
 }
-.forum-right{
-  @include breakpoint(380px){
-    h3{
-      clear: both
+
+.forum-right {
+    @include breakpoint(380px) {
+        h3 {
+            clear: both;
+        }
     }
-  }
 }
-article.node-223806{
- @include breakpoint(380px){
- .field-name-body{
-    padding:31px; 
-  }
-  }
+
+article.node-223806 {
+    @include breakpoint(380px) {
+        .field-name-body {
+            padding: 31px;
+        }
+    }
 }
+
 .page-user #sidebar ul {
-  @include breakpoint($mobile){
-    float:none;
-  }
+    @include breakpoint($mobile) {
+        float: none;
+    }
 }
-
 
 /* fixed this one all mobiel view scrolling */
-.nav-holder{
-  position: fixed;
+.nav-holder {
+    position: fixed;
 }
+
 .nav-active {
-  overflow-x: hidden;
-  .nav-holder{
-  position: absolute;
-  padding-top:15px;
-  margin-top:34px;
-    @include breakpoint($mobile){
-      padding-top:0px;
+    overflow-x: hidden;
+    .nav-holder {
+        position: absolute;
+        padding-top: 15px;
+        margin-top: 34px;
+        @include breakpoint($mobile) {
+            padding-top: 0px;
+        }
     }
-  }
 }
 
 // Login Modal's issue fixing on the mobiles
-@include breakpoint($mobile){
-  
-  div.ctools-modal-content .modal-content {
-    padding: 19px 19px 13px 25px;
-  }
-
-  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
-    width: 100%;
-  }
-
-  .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
-    padding: 10px 16px;
-    font-size: 16px;
-  }
-
-  .hybridauth-widget-wrapper {
-    clear: both;
-    width: 80%;
-    padding-left: 10px;
-  }
-
-  .popups-container input[type="submit"] {
-    margin-bottom: 20px;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  div.ctools-modal-content #user-register-form, div.ctools-modal-content #user-login {
-    width: 100%;
-    margin-left: 10px;
-  }
-
+@include breakpoint($mobile) {
+    div.ctools-modal-content .modal-content {
+        padding: 19px 19px 13px 25px;
+    }
+    .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+        width: 100%;
+    }
+    .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+    .hybridauth-widget-wrapper {
+        clear: both;
+        width: 80%;
+        padding-left: 10px;
+    }
+    .popups-container input[type="submit"] {
+        margin-bottom: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    div.ctools-modal-content #user-register-form, div.ctools-modal-content #user-login {
+        width: 100%;
+        margin-left: 10px;
+    }
 }
 
 
 // Talk Aboout autism
-.node-type-forum-discussion{
-  @include breakpoint($mobile){
-
-    .posts-columns {
-      padding-top: 0;
+.node-type-forum-discussion {
+    @include breakpoint($mobile) {
+        .posts-columns {
+            padding-top: 0;
+        }
+        .footer .btn {
+            margin-top: 1em;
+        }
+        .forumpage_title {
+            padding: 0 8px;
+        }
+        .view-comments {
+            padding: 0 8px;
+        }
+        .comment-list ul.comment-listing li .comment-left img {
+            max-width: 58px;
+        }
+        .comment-list ul.comment-listing li .comment-right {
+            margin: 0 0 27px 98px;
+        }
+        .comment-list ul.comment-listing li .comment-left {
+            width: 85px;
+        }
     }
-
-    .footer .btn{
-      margin-top: 1em;
-    }
-  
-    .forumpage_title {
-      padding: 0 8px;
-    }
-
-    .view-comments{
-      padding: 0 8px;
-    }
-
-    .comment-list ul.comment-listing li .comment-left img{
-      max-width: 58px;
-    }
-
-    .comment-list ul.comment-listing li .comment-right{
-      margin: 0 0 27px 98px;
-    }
-
-    .comment-list ul.comment-listing li .comment-left{
-      width: 85px;
-    }
-
-  }
 }
 
-
 // my voice filter pink
-.section-myvoice{
-  .filter-slide{
-   .nav-filter{
-      .form-type-bef-checkbox{
-        &.checked label, &.checked{
-           color:$pink;
-         }
-      }
-   }
-  }
-  .filter-pink{  
-     .form-submit{
-       background:$pink; 
-       border-color:$pink-dark;
-     }
-  } 
+.section-myvoice {
+    .filter-slide {
+        .nav-filter {
+            .form-type-bef-checkbox {
+                &.checked label, &.checked {
+                    color: $pink;
+                }
+            }
+        }
+    }
+    .filter-pink {
+        .form-submit {
+            background: $pink;
+            border-color: $pink-dark;
+        }
+    }
 }
 
 // Private message
 //-----------------
 
 // user avatar
-.privatemsg-author-avatar img{  
-  @include border-radius(5px);
-  width: 100%;
-  max-width: 100px;
+.privatemsg-author-avatar img {
+    @include border-radius(5px);
+    width: 100%;
+    max-width: 100px;
 }
 
 // Messsage body
-.privatemsg-message-body img{
-  max-width: 100%;
+.privatemsg-message-body img {
+    max-width: 100%;
 }
 
 // Message links
@@ -1353,482 +1308,478 @@ article.node-223806{
 }
 
 // User profile
-.user-picture img{
-  width: 100%;
-  max-width: 130px;
-
+.user-picture img {
+    width: 100%;
+    max-width: 130px;
 }
 
 // New message
-#privatemsg-new{
-  //overflow: hidden; - for tooltip hide. 
-  input.form-text{
-    max-width: 100%;
-    @include border-radius(5px);
-    font-size:18px;
-    border-bottom: 2px solid;
-    border-color: $mercury;
-    @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
-    margin-bottom: 1em;
-    padding: 12px 23px;
-    color:$base-text-color;
-    @include breakpoint($mobile){
-      width: 100%;
+#privatemsg-new {
+    //overflow: hidden; - for tooltip hide.
+    input.form-text {
+        max-width: 100%;
+        @include border-radius(5px);
+        font-size: 18px;
+        border-bottom: 2px solid;
+        border-color: $mercury;
+        @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+        margin-bottom: 1em;
+        padding: 12px 23px;
+        color: $base-text-color;
+        @include breakpoint($mobile) {
+            width: 100%;
+        }
     }
-  }
-
-  .form-text.required.form-autocomplete {
-    background-image: none;
-  }
-  #edit-body-format{
-    display:none;
-  }
-  .form-item-recipient{
-    label{
-      display: block;
+    .form-text.required.form-autocomplete {
+        background-image: none;
     }
-    .form-element{
-      float:left;
+    #edit-body-format {
+        display: none;
     }
-  }
+    .form-item-recipient {
+        label {
+            display: block;
+        }
+        .form-element {
+            float: left;
+        }
+    }
 }
 
 //CKE body
 .cke_skin_kama.cke_1.cke_editor_edit-body-value,
-#cke_edit-body-value{
-  max-width: 100%;
+#cke_edit-body-value {
+    max-width: 100%;
 }
 
-.cke_button{
-  float: left !important;
+.cke_button {
+    float: left !important;
 }
 
 // Community champion
 //--------------------
 
-.section-community-champions-forum{
-  section#content-area{
-    padding: 6px;
-  }
+.section-community-champions-forum {
+    section#content-area {
+        padding: 6px;
+    }
 }
 
 .section-community-champions-forum header .user-picture img,
-.section-forums header .user-picture img{
-  @include border-radius(5px);
+.section-forums header .user-picture img {
+    @include border-radius(5px);
 }
 
 // Home Page Step form
-#slider-container{
-  .webform-client-form-74676{ 
-    width: 100%;
-    .home_forum_share_left{
-      div{
-        iframe{
-          width: 98px;
-          float: left;
-          height: 20px;
-            &:first-child{
-              width: 51px; 
-              float: left;
-              height: 21px;
-              margin-right: 10px;
-           }
+#slider-container {
+    .webform-client-form-74676 {
+        width: 100%;
+        .home_forum_share_left {
+            div {
+                iframe {
+                    width: 98px;
+                    float: left;
+                    height: 20px;
+                    &:first-child {
+                        width: 51px;
+                        float: left;
+                        height: 21px;
+                        margin-right: 10px;
+                    }
+                }
+            }
         }
-      }
+        .home_forum_share_right {
+            img {
+                max-width: 80%;
+                margin-left: 10%;
+            }
+        }
     }
-    .home_forum_share_right{
-       img{
-         max-width:80%;
-         margin-left:10%;
-       }
-    }
-  }
-}
-.section-topics .posts-columns.columns-full{
- .row{
-   .footer{
-     padding-left:22px;
-   }
- }
-}
-// voice page & events ? message 
-.my-voice-home, .node-type-basic-page-with-hero{
-  #content_top .my-voice-columns a.tooltips span.tooltip-content{
-    left: -103px;
-    bottom: 60px;
-  }
 }
 
+.section-topics .posts-columns.columns-full {
+    .row {
+        .footer {
+            padding-left: 22px;
+        }
+    }
+}
 
-.node-type-article{
-  #comments{
-    width: 100%;
-  }
-  .comment-listing{
-    .flag-wrapper{
-      font-size: 13px;
+// voice page & events ? message
+.my-voice-home, .node-type-basic-page-with-hero {
+    #content_top .my-voice-columns a.tooltips span.tooltip-content {
+        left: -103px;
+        bottom: 60px;
     }
-    time{
-      max-width: 130px;
-      float: left;
-      time{
-        margin-bottom:0;
-      }
-      a{
-        display: block;
-      }
+}
+
+.node-type-article {
+    #comments {
+        width: 100%;
     }
-   
-    .comment-left{
-      img{
-        width: 60px;
-      }
+    .comment-listing {
+        .flag-wrapper {
+            font-size: 13px;
+        }
+        time {
+            max-width: 130px;
+            float: left;
+            time {
+                margin-bottom: 0;
+            }
+            a {
+                display: block;
+            }
+        }
+        .comment-left {
+            img {
+                width: 60px;
+            }
+        }
+        .comment-right {
+            padding: 20px;
+            .links {
+                clear: both;
+            }
+        }
+        & > li {
+            margin-top: 15px;
+            float: left;
+            position: relative;
+            width: 100%;
+        }
     }
-    .comment-right{
-      padding: 20px; 
-      .links{
-        clear: both; 
-      }
-    }
-    & > li{
-       margin-top:15px;
-       float: left;
-       position: relative;
-       width: 100%;
-    }
-  }
 }
 
 // Remove / from my voice section
-.node-type-my-voice-blog{
-
-  .article-info .flag-bookmarks:first-child{
-    padding-left: 0;
-  }
-
-  #main2 .article-left .article-left-holder .article-info cite a{      
-    margin-top: 0.5em;
-    &:after{
-      background-image: none;
+.node-type-my-voice-blog {
+    .article-info .flag-bookmarks:first-child {
+        padding-left: 0;
     }
-  }
-
+    #main2 .article-left .article-left-holder .article-info cite a {
+        margin-top: 0.5em;
+        &:after {
+            background-image: none;
+        }
+    }
 }
 
-.blog-author{
+.blog-author {
     font-weight: bold;
 }
 
 // Fixing calanedar
-.calendar-calendar td.has-events a{
-  color: $orange-dark;
+.calendar-calendar td.has-events a {
+    color: $orange-dark;
 }
 
-.calendar-calendar .month-view .full td .inner div.day{
-  width: 100%;
+.calendar-calendar .month-view .full td .inner div.day {
+    width: 100%;
 }
 
 // Fixing profiles a
-.profile a{ 
-  clear: both;
+.profile a {
+    clear: both;
 }
+
 // Fixig masquerade
-a.masquerade-switch{
-  display: block;
+a.masquerade-switch {
+    display: block;
 }
 
-.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list{
-  display: block; 
-  clear:both;
+.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list {
+    display: block;
+    clear: both;
+    span.voice-list {
+        background: #eef2f3;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        float: left;
+        padding: 7px 13px;
+        cursor: pointer;
+        border: 1px solid #C1C7C8;
+        margin-right: 9px;
+        margin-top: 10px;
+        display: none;
+        &.selected {
+            display: block;
+        }
+        .icon-Close {
+            margin-left: 9px;
+            float: right;
+            margin-top: 5px;
+        }
+    }
+}
 
-  span.voice-list{ 
-    background: #eef2f3;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+.btn.clear-all {
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    float: right;
+    max-width: 110px;
+}
+
+.fourm-order-date {
     float: left;
-    padding: 7px 13px;
-    cursor: pointer;
-    border:1px solid #C1C7C8;
-    margin-right: 9px;
-    margin-top:10px;
-    display:none;
-    &.selected{
-      display:block;
-    }
-    .icon-Close{
-      margin-left: 9px;
-      float: right;
-      margin-top:5px;
-    }
-  }
-}
-.btn.clear-all{
-  font-size: 18px;
-  padding-top: 6px;
-  padding-bottom: 2px;
-  float: right;
-  max-width: 110px;
-}
-.fourm-order-date{
-  float:left;
-  margin-bottom:15px;
-  width:100%;
-}
-.front{
-  &.page-loaded .slider-block{
-    visibility:visible;
-  }
-  .slider-block{
-    visibility: hidden;
-  }
+    margin-bottom: 15px;
+    width: 100%;
 }
 
+.front {
+    &.page-loaded .slider-block {
+        visibility: visible;
+    }
+    .slider-block {
+        visibility: hidden;
+    }
+}
 
 // in button right side arrow
 
-#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit{
-  background-image:url(../images/sprite.png);
-  background-repeat: no-repeat;
-  background-position: 102px -254px;
-  padding-left: 24px;
-  padding-right: 58px;
-  @include breakpoint($tablet){
-    padding-left: 14px;
-    padding-right: 38px; 
-    background-position-x:87px;
-  } 
-  @include breakpoint($mobile){
-     background-image:none;
-     padding:8px 16px;
-  }
+#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 102px -254px;
+    padding-left: 24px;
+    padding-right: 58px;
+    @include breakpoint($tablet) {
+        padding-left: 14px;
+        padding-right: 38px;
+        background-position-x: 87px;
+    }
+
+    @include breakpoint($mobile) {
+        background-image: none;
+        padding: 8px 16px;
+    }
 }
-#webform-client-form-74666 a.btn#not_right_now{
-  background-position: 143px -254px;
-  @include breakpoint($tablet){
-    background-position-x:129px;
-  }
+
+#webform-client-form-74666 a.btn#not_right_now {
+    background-position: 143px -254px;
+    @include breakpoint($tablet) {
+        background-position-x: 129px;
+    }
 }
-#webform-client-form-74621 .webform-submit{
-  background-position: 120px -256px; 
-  @include breakpoint($tablet){
-    background-position-x:97px;
-  }
-  @include breakpoint($mobile){
-    width:100%;
-  }
+
+#webform-client-form-74621 .webform-submit {
+    background-position: 120px -256px;
+    @include breakpoint($tablet) {
+        background-position-x: 97px;
+    }
+
+    @include breakpoint($mobile) {
+        width: 100%;
+    }
 }
 
 // node-type-my-voice-topic pink next / prev button
 
-
-.node-type-my-voice-topic{
-  .visual .btn-next, .visual .btn-perv{
-    background:$pink;
-    margin-top: 30px;
-    @include breakpoint($mobile){
-      background:none;
+.node-type-my-voice-topic {
+    .visual .btn-next, .visual .btn-perv {
+        background: $pink;
+        margin-top: 30px;
+        @include breakpoint($mobile) {
+            background: none;
+        }
     }
-  }
-}
-.page-node-edit #content-header .title{
-  display:block;
 }
 
-//issue fix for the contact us page only on the specific page 
-
-.page-node-74571{
-  #content-area{
-    padding-bottom: 0px;
-  }
-  #content_bottom{
-    @include breakpoint($mobile){
-      padding-left: 0px;
-    }
-  }
+.page-node-edit #content-header .title {
+    display: block;
 }
-.img-holder .video-icon{
-   &:before{
-     cursor: pointer;
-  }
-  &:hover{
-    &:before{
-      opacity:0.8;
+
+//issue fix for the contact us page only on the specific page
+
+.page-node-74571 {
+    #content-area {
+        padding-bottom: 0px;
     }
-  }
+    #content_bottom {
+        @include breakpoint($mobile) {
+            padding-left: 0px;
+        }
+    }
+}
+
+.img-holder .video-icon {
+    &:before {
+        cursor: pointer;
+    }
+    &:hover {
+        &:before {
+            opacity: 0.8;
+        }
+    }
 }
 
 //designing the thakyou submission page on myvoice
-.page-node-74621{
-  #wrapper{
-    background: $white;
-    background-image: none;
-  }
-  .align-center{
-    text-align: center;
-    p{
-      font-size: 32px;
-      @include breakpoint($mobile){
-      font-size: 22px;
-      }
+.page-node-74621 {
+    #wrapper {
+        background: $white;
+        background-image: none;
     }
-  }
+    .align-center {
+        text-align: center;
+        p {
+            font-size: 32px;
+            @include breakpoint($mobile) {
+                font-size: 22px;
+            }
+        }
+    }
 }
 
 @media print {
-
-  img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header{
-    display: none !important;
- }
-
- .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
-    display: none;
-  }
-   .img-holder, .visual, .visual img{ 
-   display: block !important;
- }
-
-  #main2 .article{
-    width:100%;
-  }
-  #header .header-top{
-    background:none;
-    box-shadow:inherit;
-    top:0;
-    position: static !important;
-  }
-  .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs{
-    background:none;
-    margin-top:0;
-  }
-  *{
-    padding:0;
-    margin:0;
-    color:#000;
-  }
-  h1{
-    font-size: 32px;
-  }
-  h2{
-    font-size: 32px;
-  }
-  h3{
-    font-size: 32px;
-  }
-  h4{
-    font-size: 32px;
-  }
-  h5{
-    font-size: 32px;
-  }
-  h6{
-    font-size: 32px;
-  }
-  a{
-    
-  }
-  
+    img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header {
+        display: none !important;
+    }
+    .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
+        display: none;
+    }
+    .img-holder, .visual, .visual img {
+        display: block !important;
+    }
+    #main2 .article {
+        width: 100%;
+    }
+    #header .header-top {
+        background: none;
+        box-shadow: inherit;
+        top: 0;
+        position: static !important;
+    }
+    .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs {
+        background: none;
+        margin-top: 0;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        color: #000;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 32px;
+    }
+    h5 {
+        font-size: 32px;
+    }
+    h6 {
+        font-size: 32px;
+    }
+    a {}
 }
 
 // my voice page image style
-.view-display-id-voices_from_the_spectrum_page{
- .my-voice-post{
-   .img-holder{
-     float:left;
-   }
- }
+.view-display-id-voices_from_the_spectrum_page {
+    .my-voice-post {
+        .img-holder {
+            float: left;
+        }
+    }
 }
 
-
 // understanding-autism video author style
-.view-display-id-stream_topic_page .views-row{
-  .views-field-field-video-author{
-    display:none;
-  }
-  .img-holder{
-    .field-content{
-      float:right;
+.view-display-id-stream_topic_page .views-row {
+    .views-field-field-video-author {
+        display: none;
     }
-  }
+    .img-holder {
+        .field-content {
+            float: right;
+        }
+    }
 }
 
 //issue fix for the menu getting ash background
-iframe{
-  position:relative;
+iframe {
+    position: relative;
 }
 
+.page-forum-stats {
+    h3 {
+        margin-top: 79px;
+        float: left;
+        margin-bottom: 32px;
+        width: 100%;
+    }
+    .header_image {
+        @include breakpoint($mobile) {
+            display: none;
+        }
 
-.page-forum-stats{  
-    h3{ 
-      margin-top: 79px;
-      float: left;
-      margin-bottom:32px;
-      width: 100%;
-    } 
-  .header_image{
-    @include breakpoint($mobile){
-      display:none;
+        a {
+            color: $white;
+        }
+        .region-image-holder {
+            padding-top: 28px;
+        }
     }
-    a{
-      color:$white;
+    .forum_stats {
+        padding: 0;
+        margin: 0;
+        font-family: $header-font-family;
+        li {
+            padding: 0;
+            margin: 0;
+            float: left;
+            width: 20%;
+            list-style: none;
+            text-align: center;
+            span {
+                border: 2px solid $yellow;
+                border-radius: 5px;
+                height: 128px;
+                width: 128px;
+                display: block;
+                background: $white;
+                margin-left: 32px;
+                color: $blue-light;
+                font-size: 30px;
+                line-height: 120px;
+                margin-right: 32px;
+            }
+            p {
+                margin-left: 32px;
+                margin-right: 32px;
+                width: 128px;
+                line-height: normal;
+                margin-top: 20px;
+                font-size: 20px;
+            }
+        }
     }
-    .region-image-holder{
-      padding-top:28px;
-    }
-  }
-  .forum_stats{
-     padding:0;
-     margin:0;
-    font-family: $header-font-family;   
-    li{
-      padding:0;
-      margin:0;
-      float:left;
-      width:20%;
-      list-style:none;
-      text-align: center;
-      span{
-        border:2px solid $yellow; 
-        border-radius: 5px;
-        height:128px;
-        width:128px; 
-        display:block;
-        background:$white;
-        margin-left:32px;
-        color:$blue-light;
-        font-size: 30px;
-        line-height: 120px;
-        margin-right:32px;
-      }
-      p{
-        margin-left:32px;
-        margin-right:32px;
-        width:128px; 
-        line-height: normal;
-        margin-top: 20px;
-        font-size: 20px;
-      }
-    }
-  } 
 }
-.images-list{
-  float:left;
-  width:100%;
-  li{
-    float:left;
-    width:33%;
-    list-style:none;
-    text-align: center;
-    img{
-      width:176px;
-      height:176px;
-      border-radius: 100%;
-      border:2px solid $yellow; 
+
+.images-list {
+    float: left;
+    width: 100%;
+    li {
+        float: left;
+        width: 33%;
+        list-style: none;
+        text-align: center;
+        img {
+            width: 176px;
+            height: 176px;
+            border-radius: 100%;
+            border: 2px solid $yellow;
+        }
+        .name {
+            float: left;
+            width: 100%;
+            text-aign: center;
+        }
     }
-    .name{
-      float:left;
-      width:100%; 
-      text-aign:center;
-    }
-  }
 }
