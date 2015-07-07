@@ -891,9 +891,15 @@ a.btn#not_right_now {
     float: left;
     margin-top: 5px;
     font-size: 20px;
-    line-height: 29px;
+    line-height: 28px;
+    border-bottom: 6px solid $orange-dark;
     &:hover {
-        margin-top: 8px;
+        margin-top: 7px;
+        border-bottom: 4px solid $orange-dark;
+    }
+    &:active {
+    	margin-top: 11px;
+        border-bottom: 0px solid $orange-dark;
     }
 }
 
