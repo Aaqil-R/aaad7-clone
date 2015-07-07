@@ -1109,6 +1109,9 @@ function ambitious_gettags($node){
     }
     $i=$i+1;
   }
+    if($topic==""){
+        $topic=null;
+    }
   return $topic;
 }
 

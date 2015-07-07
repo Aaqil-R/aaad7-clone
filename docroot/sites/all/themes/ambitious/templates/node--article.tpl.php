@@ -68,7 +68,7 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 			<div class="article-tags">
 				<span>Related topics:&nbsp</span>
 				<div class="field-items"><?php print ambitious_gettopics($node); ?></div>
-                <?php if(!empty(ambitious_gettags($node))): ?>
+                <?php if(!empty($content['field_tags'])): ?>
                 <span>Tags:&nbsp</span>
 				<div class="field-items"><?php print ambitious_gettags($node); ?></div>
                 <?php endif; ?>
