@@ -1387,6 +1387,9 @@ article.node-223806 {
                         height: 21px;
                         margin-right: 10px;
                     }
+                    @include breakpoint($mobile) {
+                        float: none;
+                    }
                 }
             }
         }
