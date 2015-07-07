@@ -66,10 +66,12 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 
 			<strong><?php print t('Last updated:') ?> <time pubdate="pubdate"><?php print date('j F Y', $node->changed);?></time></strong>
 			<div class="article-tags">
-				<span>Related topics: </span>
+				<span>Related topics:&nbsp</span>
 				<div class="field-items"><?php print ambitious_gettopics($node); ?></div>
-				<span>Tags:</span>
-				<div class="field-items"><?php print ambitious_gettags($node); ?></div>
+                <?php if (empty($node)) { ?>
+                <span>Tags:&nbsp</span>
+				<div class="field-items ho"><?php print ambitious_gettags($node); ?></div>
+                <?php } ?>
 			</div>
 		</div>
 	</footer>

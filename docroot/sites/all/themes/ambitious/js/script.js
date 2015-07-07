@@ -618,7 +618,7 @@ Drupal.behaviors.ambitious = {
 		initialise();
 	}); 
     
-	$.ajaxComplete(function () {
+	$(document).ajaxComplete(function () {
         initialise();
 	});
     
