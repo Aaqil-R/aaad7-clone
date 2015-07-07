@@ -492,13 +492,18 @@
             }
         }
     }
+    .view-display-id-block_stream_homepage {
+		.btn.btn-transparent {
+    		min-width: 206px;
+        	text-align: left;
+        }
+    }
     .btn.btn-transparent {
         padding: 10px 20px;
         display: inline-block;
         margin-top: 6px;
         margin-bottom: 6px;
-        border-width: 2px;
-        min-width: 206px;
+        border-width: 2px;        
         @include breakpoint($mobile) {
             width: auto;
             padding: 10px 18px;
