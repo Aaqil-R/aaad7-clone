@@ -618,7 +618,7 @@ Drupal.behaviors.ambitious = {
         });
 	}
 	
-	$(document).ajaxStart(function () {
+	$(document).ajaxSend(function () {
     initialise();
 	});
 /*----- Grid List View End -----*/ 
