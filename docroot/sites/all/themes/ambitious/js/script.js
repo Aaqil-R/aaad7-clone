@@ -585,8 +585,11 @@ Drupal.behaviors.ambitious = {
 		//     $('.card-layout .view-content').isotope('reloadItems'); 
 		// };
 	});
-
-        
+    
+/*----- Grid List View -----*/
+	$(document).ready(function () {
+		initialise();
+	});        
         
 //The grid view in the Talk to others page
 	function initialise(){
@@ -614,16 +617,13 @@ Drupal.behaviors.ambitious = {
             });
         });
 	}
-
-	$(document).ready(function () {
-		initialise();
-	});
 	
-	//$(document).ajaxComplete(function () {
-    //initialise();
-	//});
+	$(document).ajaxComplete(function () {
+    initialise();
+	});
+/*----- Grid List View End -----*/ 
     
-    //Sticky Nav Bar
+/*----- Sticky Nav Bar -----*/
     var didScroll;
     var lastScrollTop = 0;
     var delta = 100;
@@ -672,6 +672,6 @@ Drupal.behaviors.ambitious = {
             }
     }, 1);
 
-
+/*----- Sticky Nav Bar End -----*/
 
 })(jQuery, Drupal, this, this.document);
