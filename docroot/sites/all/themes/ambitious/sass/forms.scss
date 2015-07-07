@@ -84,6 +84,7 @@
       color: #2A2E31;
       //border: 2px solid #FBB900 !important;
       border-color: #FBB900 !important;
+      box-shadow: inset 1px 1px 2px #FBB900 !important;
     }
     &.error{
       border: 2px solid $error-border;
@@ -208,7 +209,7 @@ textarea{
     width: 30%;
     float: right; 
     @include breakpoint($mobile){
-      //float:none;
+      float:none;
       width:auto; 
     }
   }
