@@ -586,11 +586,7 @@ Drupal.behaviors.ambitious = {
 		// };
 	});
     
-/*----- Grid List View -----*/
-	$(document).ready(function () {
-		initialise();
-	});        
-        
+/*----- Grid List View -----*/      
 //The grid view in the Talk to others page
 	function initialise(){
         $('#grid-forum').click(function () {
@@ -617,10 +613,15 @@ Drupal.behaviors.ambitious = {
             });
         });
 	}
-	
-	$(document).ajaxSend(function () {
-    initialise();
+    
+	$(document).ready(function () {
+		initialise();
+	}); 
+    
+	$.ajaxComplete(function () {
+        initialise();
 	});
+    
 /*----- Grid List View End -----*/ 
     
 /*----- Sticky Nav Bar -----*/
