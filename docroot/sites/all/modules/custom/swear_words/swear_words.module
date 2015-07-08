@@ -134,6 +134,43 @@ function search_swear_words($comment) {
     }
   }
 }
+
+function swear_words_node_insert($node){
+  search_node_words($node);
+}
+function swear_words_node_update($node){
+  search_node_words($node);
+} 
+function search_node_words($node){
+  if(variable_get('swear_notification', 0) == 1){
+    $swear_word = array();
+    $module = 'swear_email';
+    $key = 'swear';
+    $to = variable_get('swear_notify_email','');
+    $to = explode( ',', $to);
+    $language = language_default();
+    $list = explode("," ,variable_get('swear_words','')); 
+      $node_body = strip_tags($node->body['und'][0]['value']);
+      $node_body = str_replace("&nbsp;", " ",$node_body);  
+      $node_url  = url('node/'.$node->nid);
+      foreach ($list as $data){
+        $pos = stripos($node_body, $data); 
+        if ($pos !== false) {
+          $swear_word[] = $data;
+        }
+      }  
+      if(count($swear_word)){
+        $swear_word = implode(", ", $swear_word);
+        $params = array(
+          '@path' => $node_url, 
+          '@words' => $swear_word, 
+        );   
+        foreach ($to as $email) {
+          drupal_mail($module, $key, $email, $language, $params); 
+        }
+      }
+  }
+}
 function swear_email_mail($key, &$message, $params) { 
   switch($key) {
    case 'swear':
@@ -144,6 +181,4 @@ function swear_email_mail($key, &$message, $params) {
     break;
   }
 }   
-
-
 
