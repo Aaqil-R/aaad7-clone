@@ -596,15 +596,13 @@ $(window).resize(function () {
 //The grid view in the Talk to others page
 	function initialise(){
         $('#grid-forum').click(function () {
-            $('.grid-view-forum').toggleClass(function () {
-                if ($(this).is('.view-hidden')) {
+                if ($('.grid-view-forum').hasClass('view-hidden')) {
                     $('.card-layout').addClass('new-grid');
                     $('body').addClass('new-grids');
                     return 'view-hidden';
                 }else{ 
                     $('.grid-view-forum').addClass('view-hidden');
                      } 
-            });		
         });
 //The list view in the Talk to others page    
         $('#list-forum').click(function () {
