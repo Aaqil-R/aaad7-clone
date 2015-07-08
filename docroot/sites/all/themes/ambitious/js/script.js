@@ -308,25 +308,26 @@ Drupal.behaviors.ambitious = {
  
       
 	jQuery(window).on('load', function(){
-        $('.card-stream .view-content').masonry ({
-          //columnWidth: 100,
-            "itemSelector": ".post",
-            "columnWidth": ".post",
-            "percentPosition": true
-        }); 
+//start of the commented code
+    //     $('.card-stream .view-content').masonry ({
+    //       //columnWidth: 100,
+    //         "itemSelector": ".post",
+    //         "columnWidth": ".post",
+    //         "percentPosition": true
+    //     }); 
 
-        var $columnWidth = $('.card--width').outerWidth();
-	  	var $gutter = $('.card--gutter').width();
+    //     var $columnWidth = $('.card--width').outerWidth();
+	  	// var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	  	// console.log($columnWidth);
+	  	// console.log($gutter);
 
-	  	$('.card-layout .view-content').masonry ({
-            "itemSelector": ".card--item",
-            "columnWidth": $columnWidth,
-            "gutter" : $gutter,
-        	"percentPosition" : true
-        });
+	  	// $('.card-layout .view-content').masonry ({
+    //         "itemSelector": ".card--item",
+    //         "columnWidth": $columnWidth,
+    //         "gutter" : $gutter,
+    //     	"percentPosition" : true
+    //     });
 
 	  	// implementation for isotope, commenting out till we move to the isotope 
 	  	// implementation.
@@ -340,6 +341,7 @@ Drupal.behaviors.ambitious = {
 		// 	    }
 		// 	});
 		// });
+//end of the commented codes
     });
 
 //amalan new codes
@@ -355,8 +357,8 @@ Drupal.behaviors.ambitious = {
         var $columnWidth = $('.card--width').outerWidth();
 	  	var $gutter = $('.card--gutter').width();
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	  	//console.log($columnWidth);
+	  	//console.log($gutter);
 
 	  	$('.card-layout .view-content').masonry ({
             "itemSelector": ".card--item",
