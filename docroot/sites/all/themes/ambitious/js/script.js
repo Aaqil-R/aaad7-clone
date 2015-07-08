@@ -347,18 +347,18 @@ Drupal.behaviors.ambitious = {
 //amalan new codes
 //jQuery(window).on('load', function(){
 	$(document).ready(function(){
+		var $columnWidth = $('.card--width').outerWidth();
+	  	var $gutter = $('.card--gutter').width();
+
         $('.card-stream .view-content').masonry ({
-          //columnWidth: 100,
+          	"columnWidth": $columnWidth,
             "itemSelector": ".card",
             "columnWidth": ".card",
             "percentPosition": true
-        }); 
+        });
 
-        var $columnWidth = $('.card--width').outerWidth();
-	  	var $gutter = $('.card--gutter').width();
-
-	  	//console.log($columnWidth);
-	  	//console.log($gutter);
+	  	console.log($columnWidth);
+	  	console.log($gutter);
 
 	  	$('.card-layout .view-content').masonry ({
             "itemSelector": ".card--item",
@@ -368,7 +368,11 @@ Drupal.behaviors.ambitious = {
         });
     });
 //end of the new codes amalan
-
+$(window).resize(function () {
+	$('.card-stream .view-content').masonry('reloadItems');
+	$('.card-layout .view-content').masonry('reloadItems');
+});
+//testing code end
 
 	// Container for masonry (the view wrapper)
 	$views_container = $('.card-layout .view-content');
