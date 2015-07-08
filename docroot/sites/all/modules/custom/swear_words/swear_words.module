@@ -127,7 +127,7 @@ function search_swear_words($comment) {
           '@words' => $swear_word, 
         );   
         foreach ($to as $email) {
-          //drupal_mail($module, $key, $email, $language, $params);
+          drupal_mail($module, $key, $email, $language, $params);
         }
       }
       break;
@@ -166,7 +166,7 @@ function search_node_words($node){
           '@words' => $swear_word, 
         );   
         foreach ($to as $email) {
-          //drupal_mail($module, $key, $email, $language, $params); 
+          drupal_mail($module, $key, $email, $language, $params); 
         }
       }
   }
