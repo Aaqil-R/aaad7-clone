@@ -39,13 +39,23 @@ $forms = array('num_resent_users','num_active_users','num_started_forum','num_co
     '#type' => 'fieldset', 
     '#title' => t(str_replace("_"," ",$list)), 
   ); 
-  
+ $form[$list][$list.'_type'] = array(
+    '#type' => 'radios',
+    '#title' => t('Poll status'),
+    '#default_value' => variable_get($list.'_types', 0),
+    '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days'), 4 => t('Custom')), 
+  );
  $form[$list][$list.'_date_from'] = array(
     '#title' => t('Date from'),
     '#type' => 'textfield', 
     '#name' => $list.'_date_from',
     '#size' => '20',
     '#default_value' => codetodate(variable_get($list.'_date_from', $before15days)), 
+    '#states' => array( 
+      'visible' => array( 
+        ':input[name="'.$list.'_type"]' => array('value' => '4'),
+      ),
+    )
   );   
   $form[$list][$list.'_date_to'] = array(
     '#title' => t('Date to'),
@@ -53,21 +63,48 @@ $forms = array('num_resent_users','num_active_users','num_started_forum','num_co
     '#name' => $list.'_date_to',
     '#size' => '20', 
     '#default_value' => codetodate(variable_get($list.'_date_to', time())), 
-  ); 
-  
+    '#states' => array( 
+      'visible' => array( 
+        ':input[name="'.$list.'_type"]' => array('value' => '4'),
+      ),
+    )
+  );  
   } 
   $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
   
   return $form; 
 } 
 function forum_stats_settings_form_submit($form, &$form_state){   
-
   $forms = array('num_resent_users','num_active_users','num_started_forum','num_comment_posted','num_top_comment','num_top_forum');  
-  
-  foreach ($forms as $list){   
+  foreach ($forms as $list){    
+   variable_set($list.'_types', $form_state['values'][$list.'_type']); 
+   
    if(!empty($form_state['values'][$list.'_date_from'])){
-    variable_set($list.'_date_from', strtotime($form_state['values'][$list.'_date_from']));
-    variable_set($list.'_date_to', strtotime($form_state['values'][$list.'_date_to'])); 
+   $types = $form_state['values'][$list.'_type'];
+    switch ($types) {
+    case "0":
+         variable_set($list.'_date_from', strtotime(format_date(strtotime(date('d M Y 00:00:00')))));
+         variable_set($list.'_date_to', strtotime(format_date(time())));
+        break;
+    case "1":
+         variable_set($list.'_date_from', strtotime('-7 days',time()));
+         variable_set($list.'_date_to', strtotime(format_date(time())));
+        break;
+    case "2":
+         variable_set($list.'_date_from', strtotime('-14 days',time()));
+         variable_set($list.'_date_to', strtotime(format_date(time())));
+        break;
+    case "3":
+         variable_set($list.'_date_from', strtotime('-90 days',time()));
+         variable_set($list.'_date_to', strtotime(format_date(time())));
+        break;
+    case "4":
+          variable_set($list.'_date_from', strtotime($form_state['values'][$list.'_date_from']));
+          variable_set($list.'_date_to', strtotime($form_state['values'][$list.'_date_to']));
+        break;
+    }
+     
+    
    }
   }   
   drupal_set_message('The configuration options have been saved.');
@@ -82,7 +119,7 @@ function custom_callback () {
   ->condition('status', 1) 
   ->countQuery()
   ->execute()
-  ->fetchField(); 
+  ->fetchField();  
   
   
   $num_resent_users = db_select('users', 'u')
@@ -133,7 +170,8 @@ function custom_callback () {
   ->groupBy('c.uid') 
   ->condition('created', array(variable_get('num_top_comment_date_from'),variable_get('num_top_comment_date_to')), 'BETWEEN')
   ->orderBy('cuser', 'DESC') 
-  ->range(0,25);  
+  ->extend('PagerDefault')
+  ->limit(9);
   $num_top_comment->addExpression('COUNT(c.uid)', 'cuser');  
   $num_top_comment_posted = $num_top_comment->execute(); 
   $num_top_comment_posted = $num_top_comment_posted->fetchAllAssoc('uid');   
@@ -158,8 +196,9 @@ function custom_callback () {
   ->range(0,10);
   $num_top_forum->addExpression('COUNT(c.uid)', 'nuser');  
   $num_top_forum_posted = $num_top_forum->execute(); 
-  $num_top_forum_posted = $num_top_forum_posted->fetchAllAssoc('uid');
+  $num_top_forum_posted = $num_top_forum_posted->fetchAllAssoc('uid'); 
   
+ 
   
   $forum_posted = '<ul class="images-list">';
     foreach($num_top_forum_posted as $forum_posteds){
@@ -168,29 +207,10 @@ function custom_callback () {
     };
     $forum_posted .= '</ul>'; 
     
-  //SELECT count(comment.nid), node.nid, node.title FROM node INNER JOIN comment ON node.nid=comment.nid  WHERE node.created BETWEEN '1416526838' AND '1421495610' AND node.type='forum_discussion' GROUP BY comment.nid ORDER BY COUNT(comment.nid) DESC LIMIT 10
-   
-   
-  /*
- // $list is the list of items you are paging through
-  $list = array('Cat', 'Dog', 'Mouse', 'Horse', 'Pony', 'Winged mongoose');
-  $per_page = 2; 
-  // Initialise the pager
-  $current_page = pager_default_initialize(count($list), $per_page);
-
-  // Split your list into page sized chunks
-  $chunks = array_chunk($list, $per_page, TRUE);
-
-  // Show the pager
-  //return theme('pager', array('quantity', count($list)));;
-  // Show the appropriate items from the list
-  print theme('item_list', array(
-      'items' => $chunks[$current_page],
-  ));
-  */
+    $result =  '<h3>Top 25 active members</h3>'.$profile.theme('pager', array('quantity', 25)).'<h3>Top 10 people starting discussions</h3>'.$forum_posted;
     
-               
-               
+  //SELECT count(comment.nid), node.nid, node.title FROM node INNER JOIN comment ON node.nid=comment.nid  WHERE node.created BETWEEN '1416526838' AND '1421495610' AND node.type='forum_discussion' GROUP BY comment.nid ORDER BY COUNT(comment.nid) DESC LIMIT 10
+    
    return '<div clas="from_count_list"><ul class="forum_stats">
              <li><span>'.$num_users.'</span><p>Total no. of members signed up for the Forum access</p></li>
              <li><span>'.$num_resent_users.'</span><p>No. of new forum members</p></li>
@@ -198,10 +218,7 @@ function custom_callback () {
              <li><span>'.$num_started_forum.'</span><p>No. of discussions started</p></li>
              <li><span>'.$num_comment_posted.'</span><p>No. of posts (comments)</p></li>
            </ul>
-           <h3>Top 25 active members</h3>
-           '.$profile.'
-            <h3>Top 10 people starting discussions</h3>
-           '.$forum_posted.'
+            '.$result.'
            </div>';
              
 }
