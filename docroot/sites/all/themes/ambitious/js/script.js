@@ -408,7 +408,9 @@ $(window).resize(function () {
 
 		imagesLoaded($views_container, function() {
 		  // $views_container.masonry('appended', newItems);
-		  $views_container.masonry('reloadItems');
+		  //$views_container.masonry('reloadItems');
+		  	$('.card-stream .view-content').masonry('reloadItems');
+			$('.card-layout .view-content').masonry('reloadItems');
 		});
 
 		// Add a class to each item to prevent them from being
