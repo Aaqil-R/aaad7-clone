@@ -133,13 +133,7 @@
   <?php endif; ?>
 <?php if ($page['content_top']): ?> 
 <!-- top header of the page -->
-		<section class="top-header">
-			<div class="top-header-inner">
-				<div class="page-links">
-				   <?php print render($page['content_top']); ?> 
-				</div>
-			</div>
-		</section>
+<!-- removing the breadcrumb getting applied. -->
 		<!-- contain main informative part of the site -->
 <?php endif; ?>
 <?php if($user->uid): ?>
