@@ -1,19 +1,12 @@
 <?php 
-
+ 
 function forum_stats_menu() {
-  $items = array();
-  $items['forum-stats'] = array( 
-    'title' => 'Forum stats',
-    'type' => MENU_CALLBACK,
-    'page callback' => 'custom_callback',
-    'access arguments' => array('access content'),
-  );
-   $items['admin/content/forum-stats'] = array( 
+  $items = array(); 
+   $items['forum-stats'] = array( 
     'title' => 'Forum stats',   
     'page callback' => 'drupal_get_form',
     'page arguments' => array('forum_stats_settings_form'),
-    'access arguments' => array('config_settings_forum_stats'), 
-    'type' => MENU_LOCAL_TASK, 
+    'access arguments' => array('access content'),  
   );
   return $items;
 }
@@ -25,106 +18,54 @@ function forum_stats_permission() {
     ) 
   );
 }
- function forum_stats_settings_form($form, &$form_state){  
- $before15days = strtotime('-15 days',time());
- drupal_add_js(drupal_get_path('module', 'forum_stats').'/jquery-ui.js');
- drupal_add_js(drupal_get_path('module', 'forum_stats').'/datePickers.js');
- drupal_add_css(drupal_get_path('module', 'forum_stats').'/forum.css');
-  
-$forms = array('num_resent_users','num_active_users','num_started_forum','num_comment_posted','num_top_comment','num_top_forum');  
-  
- foreach ($forms as $list){ 
+ function forum_stats_settings_form($form, &$form_state){ 
  
- $form[$list] = array( 
-    '#type' => 'fieldset', 
-    '#title' => t(str_replace("_"," ",$list)), 
-  ); 
- $form[$list][$list.'_type'] = array(
-    '#type' => 'radios',
-    '#title' => t('Poll status'),
-    '#default_value' => variable_get($list.'_types', 0),
-    '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days'), 4 => t('Custom')), 
-  );
- $form[$list][$list.'_date_from'] = array(
-    '#title' => t('Date from'),
-    '#type' => 'textfield', 
-    '#name' => $list.'_date_from',
-    '#size' => '20',
-    '#default_value' => codetodate(variable_get($list.'_date_from', $before15days)), 
-    '#states' => array( 
-      'visible' => array( 
-        ':input[name="'.$list.'_type"]' => array('value' => '4'),
-      ),
-    )
-  );   
-  $form[$list][$list.'_date_to'] = array(
-    '#title' => t('Date to'),
-    '#type' => 'textfield', 
-    '#name' => $list.'_date_to',
-    '#size' => '20', 
-    '#default_value' => codetodate(variable_get($list.'_date_to', time())), 
-    '#states' => array( 
-      'visible' => array( 
-        ':input[name="'.$list.'_type"]' => array('value' => '4'),
-      ),
-    )
-  );  
-  } 
-  $form['submit'] = array('#type' => 'submit', '#value' => t('Save configuration'));
-  
-  return $form; 
-} 
-function forum_stats_settings_form_submit($form, &$form_state){   
-  $forms = array('num_resent_users','num_active_users','num_started_forum','num_comment_posted','num_top_comment','num_top_forum');  
-  foreach ($forms as $list){    
-   variable_set($list.'_types', $form_state['values'][$list.'_type']); 
-   
-   if(!empty($form_state['values'][$list.'_date_from'])){
-   $types = $form_state['values'][$list.'_type'];
-    switch ($types) {
+ 
+ if (isset($_GET['selected'])) {
+   $filtervalue = $_GET['selected'];
+ } else {
+   $filtervalue = 2;
+ }
+ $from_date = '';
+ $to_date = ''; 
+ 
+ switch ($filtervalue) {
     case "0":
-         variable_set($list.'_date_from', strtotime(format_date(strtotime(date('d M Y 00:00:00')))));
-         variable_set($list.'_date_to', strtotime(format_date(time())));
+         $from_date = strtotime(format_date(strtotime(date('d M Y 00:00:00'))));
+         $to_date = strtotime(format_date(time()));
         break;
     case "1":
-         variable_set($list.'_date_from', strtotime('-7 days',time()));
-         variable_set($list.'_date_to', strtotime(format_date(time())));
+        $from_date = strtotime('-7 days',time());
+        $to_date = strtotime(format_date(time()));
         break;
     case "2":
-         variable_set($list.'_date_from', strtotime('-14 days',time()));
-         variable_set($list.'_date_to', strtotime(format_date(time())));
+        $from_date = strtotime('-14 days',time());
+        $to_date = strtotime(format_date(time()));
         break;
     case "3":
-         variable_set($list.'_date_from', strtotime('-90 days',time()));
-         variable_set($list.'_date_to', strtotime(format_date(time())));
+        $from_date = strtotime('-90 days',time());
+        $to_date = strtotime(format_date(time()));
         break;
     case "4":
-          variable_set($list.'_date_from', strtotime($form_state['values'][$list.'_date_from']));
-          variable_set($list.'_date_to', strtotime($form_state['values'][$list.'_date_to']));
+         $from_date = strtotime($_GET['from']);
+         $to_date = strtotime($_GET['to']);  
         break;
     }
-     
     
-   }
-  }   
-  drupal_set_message('The configuration options have been saved.');
-}
-
-function custom_callback () { 
-
-   
-
-   $num_users = db_select('users', 'u')
+drupal_add_library('system', 'ui.datepicker');
+ drupal_add_js(drupal_get_path('module', 'forum_stats').'/forum_stats.js');
+ drupal_add_css(drupal_get_path('module', 'forum_stats').'/forum_stats.css');
+ 
+ $num_users = db_select('users', 'u')
   ->fields('u')
   ->condition('status', 1) 
   ->countQuery()
   ->execute()
   ->fetchField();  
-  
-  
+   
   $num_resent_users = db_select('users', 'u')
   ->fields('u')
-  ->condition('created', array(variable_get('num_resent_users_date_from'),variable_get('num_resent_users_date_to')), 'BETWEEN')
+  ->condition('created', array($from_date,$to_date), 'BETWEEN')
   ->condition('status', 1)  
   ->countQuery()
   ->execute()
@@ -135,7 +76,7 @@ function custom_callback () {
   
    $num_active_users = db_select('comment' , 'c') 
   ->fields('c', array('uid'))
-  ->condition('c.created', array(variable_get('num_active_users_date_from'),variable_get('num_active_users_date_to')), 'BETWEEN')
+  ->condition('c.created', array($from_date,$to_date), 'BETWEEN')
   ->distinct()
   ->countQuery()
   ->execute()
@@ -146,7 +87,7 @@ function custom_callback () {
   $num_started_forum = db_select('node' , 'n') 
   ->condition('type', 'forum_discussion')
   ->fields('n') 
-  ->condition('created', array(variable_get('num_started_forum_date_from'),variable_get('num_started_forum_date_to')), 'BETWEEN')
+  ->condition('created', array($from_date,$to_date), 'BETWEEN')
   ->condition('status', 1) 
   ->distinct()
   ->countQuery()
@@ -157,31 +98,40 @@ function custom_callback () {
   
   $num_comment_posted = db_select('comment', 'c')
   ->fields('c')
-  ->condition('created', array(variable_get('num_comment_posted_date_from'),variable_get('num_comment_posted_date_to')), 'BETWEEN')
+  ->condition('created', array($from_date,$to_date), 'BETWEEN')
   ->countQuery() 
   ->execute()
   ->fetchField();    
   //SELECT count(uid) FROM comment WHERE created BETWEEN '1236598715' AND '1236677072'
   
-  
-  
+
+  $page = pager_find_page();
+  $offset = 9 * $page;
+  $num_per_page =  9;
+  $total = db_select('comment', 'c')
+                ->fields('c', array('uid'))
+                ->groupBy('c.uid') 
+  ->condition('created', array($from_date,$to_date), 'BETWEEN')
+  ->orderBy('cuser', 'DESC')->orderBy('c.uid', 'DESC')->range(0, 25)->countQuery()->execute()->fetchField();
   $num_top_comment = db_select('comment', 'c')
-  ->fields('c', array('uid'))
-  ->groupBy('c.uid') 
-  ->condition('created', array(variable_get('num_top_comment_date_from'),variable_get('num_top_comment_date_to')), 'BETWEEN')
-  ->orderBy('cuser', 'DESC') 
-  ->extend('PagerDefault')
-  ->limit(9);
+  ->fields('c', array('uid'));
   $num_top_comment->addExpression('COUNT(c.uid)', 'cuser');  
+  $num_top_comment->groupBy('c.uid') 
+  ->condition('created', array($from_date,$to_date), 'BETWEEN')
+  ->orderBy('cuser', 'DESC')->orderBy('c.uid', 'DESC')->range($offset, $num_per_page);
+
   $num_top_comment_posted = $num_top_comment->execute(); 
+  pager_default_initialize($total, $num_per_page);
   $num_top_comment_posted = $num_top_comment_posted->fetchAllAssoc('uid');   
   //SELECT count(uid), uid, name FROM comment WHERE created GROUP BY uid ORDER BY count(uid) DESC LIMIT 25   
   
   $profile = '<ul class="images-list">';
+  $index = 1;
     foreach($num_top_comment_posted as $newvalus){
        $usid = user_load($newvalus->uid); 
-       $profile .= '<li>'.theme_image_style(array('style_name' => 'medium','path' => $usid->picture->uri, 'attributes' => array( 'class' => 'avatar'))).'<h5 class ="name">'.$usid->name.'</h5></li>';
-    };
+       $profile .= '<li id="item'. $page . '-' . $index .'">'.theme_image_style(array('style_name' => 'medium','path' => $usid->picture->uri, 'attributes' => array( 'class' => 'avatar'))).'<h5 class ="name">'.$usid->name.'</h5></li>';
+       $index++;
+    }
     $profile .= '</ul>'; 
   
   
@@ -190,7 +140,7 @@ function custom_callback () {
   $num_top_forum = $num_top_forum->condition('n.type', 'forum_discussion')
   ->fields('c', array('uid','name'))  
   ->groupBy('c.uid') 
-  ->condition('n.created', array(variable_get('num_top_forum_date_from'),variable_get('num_top_forum_date_to')), 'BETWEEN')
+  ->condition('n.created', array($from_date,$to_date), 'BETWEEN')
   ->condition('n.status', 1) 
   ->orderBy('nuser', 'DESC')
   ->range(0,10);
@@ -204,24 +154,68 @@ function custom_callback () {
     foreach($num_top_forum_posted as $forum_posteds){
        $usids = user_load($forum_posteds->uid); 
        $forum_posted .= '<li>'.theme_image_style(array('style_name' => 'medium','path' => $usids->picture->uri, 'attributes' => array( 'class' => 'avatar'))).'<h5 class ="name">'.$usids->name.'</h5></li>';
-    };
+    }
     $forum_posted .= '</ul>'; 
     
-    $result =  '<h3>Top 25 active members</h3>'.$profile.theme('pager', array('quantity', 25)).'<h3>Top 10 people starting discussions</h3>'.$forum_posted;
+    $result =  '<h3>Top 25 active members</h3>'.$profile.theme('pager').'<h3>Top 10 people starting discussions</h3>'.$forum_posted;
     
   //SELECT count(comment.nid), node.nid, node.title FROM node INNER JOIN comment ON node.nid=comment.nid  WHERE node.created BETWEEN '1416526838' AND '1421495610' AND node.type='forum_discussion' GROUP BY comment.nid ORDER BY COUNT(comment.nid) DESC LIMIT 10
-    
-   return '<div clas="from_count_list"><ul class="forum_stats">
-             <li><span>'.$num_users.'</span><p>Total no. of members signed up for the Forum access</p></li>
-             <li><span>'.$num_resent_users.'</span><p>No. of new forum members</p></li>
-             <li><span>'.$num_active_users.'</span><p>No. of active members</p></li>
-             <li><span>'.$num_started_forum.'</span><p>No. of discussions started</p></li>
-             <li><span>'.$num_comment_posted.'</span><p>No. of posts (comments)</p></li>
+ 
+   $form['selected'] = array(
+       '#type' => 'select', 
+       '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days'), 4 => t('Custom')),
+       '#default_value' => $filtervalue, 
+       '#prefix' => '<div class="formright">',
+   );
+   
+  
+  $form['selected_dates'] = array( 
+    '#markup' => '<div class="clearfix calendars"><div class="calendar_set"><div id="selected_date_form" class="pull-left"></div><div id="selected_date_to" class="pull-left"></div></div></div>'
+  );
+  
+  $form['submit'] = array('#type' => 'submit', '#value' => t('Submit'),'#prefix' => '<div class="clearfix button">','#suffix' => '</div></div>');  
+   if ($filtervalue != 4) {
+     $cid = 'forumstats_' . $filtervalue;
+   } else {
+     $cide = 'forumstats_' . $filtervalue . $from_date .'-'.$to_date;
+   }
+   if (!cache_get($cid)) {
+
+    $resoutput = "<div class='from_count_list clearfix'><ul class='forum_stats'>
+             <li><span>$num_users</span><p>Total no. of members signed up for the Forum access</p></li>
+             <li><span>$num_resent_users</span><p>No. of new forum members</p></li>
+             <li><span>$num_active_users</span><p>No. of active members</p></li>
+             <li><span>$num_started_forum</span><p>No. of discussions started</p></li>
+             <li><span>$num_comment_posted</span><p>No. of posts (comments)</p></li>
            </ul>
-            '.$result.'
-           </div>';
-             
+            $result
+           </div>";
+    cache_set($cid, $resoutput, 'cache',  date('tomorrow')); //stores in cache table and expires after 6 months
+  } else {
+    $return = cache_get($cid);
+    $resoutput = ($return->data);
+  }
+  /* $resoutput = "<div style='clear:both' class='from_count_list'><ul class='forum_stats'>
+             <li><span>$num_users</span><p>Total no. of members signed up for the Forum access</p></li>
+             <li><span>$num_resent_users</span><p>No. of new forum members</p></li>
+             <li><span>$num_active_users</span><p>No. of active members</p></li>
+             <li><span>$num_started_forum</span><p>No. of discussions started</p></li>
+             <li><span>$num_comment_posted</span><p>No. of posts (comments)</p></li>
+           </ul>
+            $result
+           </div>";*/
+ 
+ $form['contact_information'] = array( 
+  '#markup' => $resoutput, 
+);  
+   
+  return $form; 
+} 
+
+function forum_stats_settings_form_submit($form, &$form_state){   
+   $form_state['rebuild'] = true;
 }
+ 
 function codetodate($value){
   return format_date($value ,'custom','d M, Y');
 } 
