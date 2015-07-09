@@ -1,0 +1,68 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.calendars .hasDatepicker {
+  float:left;
+  width:163px;
+}
+#edit-submit {
+  float:right;
+  margin-bottom:30px; 
+}
+.pull-left {
+  float:left;
+  width:50%;
+}
+#forum-stats-settings-form #edit-submit {
+  display:none;
+ }
+ .ui-datepicker {
+  width: 12em;
+  font-size: .8em;
+}
+.ui-datepicker th,  .ui-datepicker td{
+  padding:0;
+  min-height:inherit;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  padding:0;
+  text-align:center;
+}
+
+.form-item-selected #edit-selected, .form-item-selected .jcf-select-form-select{
+  
+}
+ 
+#item2-8, #item2-9 {
+  display:none;
+}
+.from_count_list{
+  clear: both;
+  padding-top:40px;  
+}
+
+.formright{
+  float: right;
+  width: 681px;
+  margin-top: -90px;
+}
+.formright > *{
+  float:left;
+}
+.formright > .form-item-selected{
+  float:right; 
+}
+.custom_option .formright > .form-item-selected{
+  float:left; 
+}
