@@ -254,9 +254,12 @@
           <!-- social column right -->
           <div class="col block-facebook">
             <h3>Find us on Facebook</h3>
-              <div class="facebook">
-                  <div class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
-                </div>
+              <div id="desktopFB" class="facebook">
+                  <div id="fb-like-box" class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
+              </div>
+              <div id="ipadFB" class="facebook">
+                <div id="fb-like-box" class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="200" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
+              </div>
           </div>
         </div>
       </div>

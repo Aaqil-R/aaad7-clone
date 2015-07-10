@@ -1969,7 +1969,40 @@ a:hover.tooltips span.tooltip-content {
   }
 }
 
-/* line 1356, ../sass/content.scss */
+@media (min-width: 1200px) {
+  /* line 1354, ../sass/content.scss */
+  #desktopFB {
+    display: block;
+  }
+
+  /* line 1357, ../sass/content.scss */
+  #ipadFB {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1362, ../sass/content.scss */
+  #desktopFB {
+    display: block;
+  }
+
+  /* line 1365, ../sass/content.scss */
+  #ipadFB {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1370, ../sass/content.scss */
+  #desktopFB {
+    display: none;
+  }
+
+  /* line 1373, ../sass/content.scss */
+  #ipadFB {
+    display: block;
+  }
+}
+/* line 1380, ../sass/content.scss */
 .articles-columns p a {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;

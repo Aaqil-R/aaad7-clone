@@ -1350,6 +1350,30 @@
         }
     }    
 }
+@media (min-width:1200px) {
+    #desktopFB {
+        display:block;
+    }
+    #ipadFB {
+        display:none;
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    #desktopFB {
+        display:block;
+    }
+    #ipadFB {
+        display:none;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    #desktopFB {
+        display:none;
+    }
+    #ipadFB {
+        display:block;
+    }
+}
 
 .articles-columns{
     p {
