@@ -426,15 +426,18 @@ a.video_bt, .isvideo {
     //size of the search form when the grid & list view is added
     width: 250px;
     float: left;
-    margin-right: 24px;
+    margin-right: 7px;
     height: 49px;
     @include breakpoint($desktop) {
-        width: 300px;
+        width: 250px;
     }
 
     @include breakpoint($tablet) {
         width: 100%;
         margin-bottom: 20px;
+    }
+    @include breakpoint($all-desktop) {
+        margin-right: 25px;
     }
 
     input[type="text"] {
@@ -445,6 +448,7 @@ a.video_bt, .isvideo {
         font-size: 18px;
         color: $base-text-color;
     }
+    
 }
 
 .search-button {

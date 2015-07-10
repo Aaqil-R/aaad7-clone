@@ -451,6 +451,31 @@ a.btn:hover {
 }
 }
 
+// Share Button on Talk to others
+.section-talk-to-others {
+    .forum-page.topic.filterbutton {
+            padding: 4px 10px;
+            float: left;
+            margin-right: 1px;
+            @include breakpoint($not-desktop) {
+                padding: 4px 20px;
+            }
+        }
+    .topic-share {
+        @include breakpoint($not-mobile) {
+            float: left;
+            margin-top: 2px;
+        }
+        @include breakpoint($all-desktop) {
+            float: right;
+        }
+    }
+        .st_sharethis_button .stButton {
+            padding: 5px 14px;
+        } 
+}	
+
+
 //to adjust the button sizes in the social media pages (user profile)
 .connect{
   .btn{
