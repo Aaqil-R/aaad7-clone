@@ -556,9 +556,6 @@ $(window).resize(function () {
 
 	$(window).bind('views_load_more.new_content', function(){
 	    if ($('.card-layout .view-content').masonry != undefined) {
-
-	    	// console.log('Loading more masonry reset.');
-
 		    $('.card-layout .view-content').masonry('reloadItems'); 
 		    $('.card-layout .view-content').masonry('layout');
 		};		
@@ -583,7 +580,6 @@ $(window).resize(function () {
     //     });
 
 		if ($('.card-layout .view-content').masonry != undefined) {
-
 			// console.log('Resizing masonry reset.');
 
 		    $('.card-layout .view-content').masonry('reloadItems'); 
