@@ -663,7 +663,7 @@
             top: 0;
             width: 100%;
             @include breakpoint($mobile) {
-                top: 33%;
+                top: 45%;
                 .caption-text {
                     margin-top: 0;
                 }
@@ -684,6 +684,17 @@
                 color: $heading-link;
                 .title {
                     position: relative;
+                }
+            }
+        }
+    }
+}
+.front {
+    .visual {
+        .img-holder {
+            .caption-frame {
+                @include breakpoint($mobile) {
+                    top: 33%;
                 }
             }
         }
