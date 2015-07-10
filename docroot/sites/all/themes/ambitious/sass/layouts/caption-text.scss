@@ -51,13 +51,13 @@
             @include breakpoint($mobile) {
                 float: none;
             }
-            @include breakpoint($tablet-range) {
+            @media (min-width: 768px) and (max-width: 1199px) {
                 float: none;
                 display: inline-block;
                 text-align: center;
             }
             span {
-                @include breakpoint($tablet-range) {
+                @media (min-width: 768px) and (max-width: 1199px) {
                     float: none;
                     display: inline-block;
                     text-align: center;
