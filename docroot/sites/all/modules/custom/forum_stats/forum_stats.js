@@ -2,8 +2,12 @@
   Drupal.behaviors.forumstats = {
 	    attach: function(context) { 
 	    $( document ).ready(function() {
-	    	$('#forum-stats-settings-form #edit-submit').hide();
-	      $('#forum-stats-settings-form .calendars').hide();
+	    	$('.formright').hide();
+	    	$('.formright .button').prepend('<button id="edit-close" class="webform-submit">Cancel</button>');
+	    	$('#edit-close').click(function (e) {
+	    	   e.preventDefault();
+	    		    	$('.formright').hide();
+	    	});
 	      $( "#selected_date_form" ).datepicker({
           numberOfMonths:1, 
           dateFormat : "d-M-yy",
@@ -47,14 +51,12 @@
 
          $('#forum-stats-settings-form #edit-selected').change(function () {
          if($(this).val() != 4){
-           $('#forum-stats-settings-form #edit-submit').hide();
-	         $('#forum-stats-settings-form .calendars').hide();           
+	    	$('.formright').hide();          
            location.href = location.origin + location.pathname + '?selected=' + $(this).val();
             $('#forum-stats-settings-form').removeClass('custom_option');
          } else {
 	        $('#forum-stats-settings-form').addClass('custom_option');
-          $('#forum-stats-settings-form #edit-submit').show();
-	        $('#forum-stats-settings-form .calendars').show();           
+	    	$('.formright').show();          
          }
        });
     

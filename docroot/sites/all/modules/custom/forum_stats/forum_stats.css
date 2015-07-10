@@ -12,6 +12,10 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+#forum-stats-settings-form fieldset {
+  float:right;
+  margin-top:-83px;
+}
 .calendars .hasDatepicker {
   float:left;
   width:163px;
@@ -24,9 +28,9 @@
   float:left;
   width:50%;
 }
-#forum-stats-settings-form #edit-submit {
-  display:none;
- }
+#forum-stats-settings-form .webform-submit:after{
+ content:"";
+}
  .ui-datepicker {
   width: 12em;
   font-size: .8em;
@@ -52,17 +56,12 @@
   padding-top:40px;  
 }
 
-.formright{
-  float: right;
-  width: 681px;
-  margin-top: -90px;
-}
-.formright > *{
-  float:left;
-}
-.formright > .form-item-selected{
-  float:right; 
-}
-.custom_option .formright > .form-item-selected{
-  float:left; 
-}
+.formright {
+  width:52%;
+  position:absolute;
+  right: 0;
+  background: white;
+  padding: 10px;
+  top: 35px;
+  display:none;
+}  

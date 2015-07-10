@@ -47,9 +47,9 @@ function forum_stats_permission() {
         $to_date = strtotime(format_date(time()));
         break;
     case "4":
-        $from_date = strtotime($_GET['from']);
-        $to_date = strtotime($_GET['to']);  
-       break;
+         $from_date = strtotime($_GET['from']);
+         $to_date = strtotime($_GET['to']);  
+        break;
     }
     
 drupal_add_library('system', 'ui.datepicker');
@@ -160,26 +160,16 @@ drupal_add_library('system', 'ui.datepicker');
     $result =  '<h3>Top 25 active members</h3>'.$profile.theme('pager').'<h3>Top 10 people starting discussions</h3>'.$forum_posted;
     
   //SELECT count(comment.nid), node.nid, node.title FROM node INNER JOIN comment ON node.nid=comment.nid  WHERE node.created BETWEEN '1416526838' AND '1421495610' AND node.type='forum_discussion' GROUP BY comment.nid ORDER BY COUNT(comment.nid) DESC LIMIT 10
-
-  //commenting this to remove the calender getting printed.
-   // $form['selected'] = array(
-   //     '#type' => 'select', 
-   //     '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days'), 4 => t('Custom')),
-   //     '#default_value' => $filtervalue, 
-   //     '#prefix' => '<div class="formright">',
-   // );
-
-  //reapplying the codes without the calender getting printed.   
-    $form['selected'] = array(
+ 
+   $form['selected'] = array(
        '#type' => 'select', 
-       '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days')),
+       '#options' => array(0 => t('Today'), 1 => t('Past week'), 2 => t('Past 2 weeks'), 3 => t('Past 90 Days'), 4 => t('Custom')),
        '#default_value' => $filtervalue, 
-       '#prefix' => '<div class="formright">',
    );
-  //end of the code. 
-    
+   
+  
   $form['selected_dates'] = array( 
-    '#markup' => '<div class="clearfix calendars"><div class="calendar_set"><div id="selected_date_form" class="pull-left"></div><div id="selected_date_to" class="pull-left"></div></div></div>'
+    '#markup' => '<div class="formright"><div class="calendars"><div class="calendar_set"><div id="selected_date_form" class="pull-left"></div><div id="selected_date_to" class="pull-left"></div></div></div>'
   );
   
   $form['submit'] = array('#type' => 'submit', '#value' => t('Submit'),'#prefix' => '<div class="clearfix button">','#suffix' => '</div></div>');  
