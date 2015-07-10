@@ -186,7 +186,7 @@ function search_node_words($node){
     $list = explode("," ,variable_get('swear_words','')); 
       $node_body = strip_tags($node->body['und'][0]['value']);
       $node_body = str_replace("&nbsp;", " ",$node_body);  
-      $node_url  =  $GLOBALS['base_url'].'/'.drupal_get_path_alias('node/'.$node->nid); 
+      $node_url  =  rtrim(url('node/' . $node->nid, array('absolute'=> TRUE)));
       foreach ($list as $data){
         $pos = stripos($node_body, $data); 
         if ($pos !== false) {
