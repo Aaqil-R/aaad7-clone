@@ -6,7 +6,7 @@ function forum_stats_menu() {
     'title' => 'Forum stats',   
     'page callback' => 'drupal_get_form',
     'page arguments' => array('forum_stats_settings_form'),
-    'access arguments' => array('access content'),  
+    'access arguments' => array('config_settings_forum_stats'),  
   );
   return $items;
 }
