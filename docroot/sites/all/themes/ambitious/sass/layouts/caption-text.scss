@@ -51,13 +51,13 @@
             @include breakpoint($mobile) {
                 float: none;
             }
-            @media (min-width: 768px) and (max-width: 1199px) {
+            @media (min-width: 768px) and (max-width: 1080px) {
                 float: none;
                 display: inline-block;
                 text-align: center;
             }
             span {
-                @media (min-width: 768px) and (max-width: 1199px) {
+                @media (min-width: 768px) and (max-width: 1080px) {
                     float: none;
                     display: inline-block;
                     text-align: center;
@@ -98,7 +98,8 @@
         .caption-text-titles {
             .caption-text-title.caption-text-title-2 {
                 //margin-left: 130px;
-                margin-left: 40px;
+                //margin-left: 40px;
+                margin-left: 0;
                 display: block;
             }
         }
@@ -107,7 +108,7 @@
     @include breakpoint(min-width $desktop-small) {
         margin-left: 0;
         //margin-top:9em;
-        //margin-top: 55px;
+        //margin-top: 55px;        
         .caption-text-titles {
             .caption-text-title.caption-text-title-2 {
                 margin-left: 190px;
@@ -116,6 +117,15 @@
     }
 }
 
+.front {   
+    .caption-text-titles {
+        .caption-text-title.caption-text-title-2 {
+            @include breakpoint(min-width $desktop-small) {
+                margin-left: 280px;
+            }
+        }
+    }
+}
 // Main wrapper of titles
   /*.caption-text-titles{
         
