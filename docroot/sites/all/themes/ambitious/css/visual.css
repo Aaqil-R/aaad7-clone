@@ -1196,7 +1196,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 @media (max-width: 767px) {
   /* line 660, ../sass/visual.scss */
   .visual .img-holder .caption-frame {
-    top: 33%;
+    top: 45%;
   }
   /* line 667, ../sass/visual.scss */
   .visual .img-holder .caption-frame .caption-text {
@@ -1227,56 +1227,63 @@ body > .jcf-select-drop.jcf-drop-flipped {
   position: relative;
 }
 
-/* line 694, ../sass/visual.scss */
+@media (max-width: 767px) {
+  /* line 695, ../sass/visual.scss */
+  .front .visual .img-holder .caption-frame {
+    top: 33%;
+  }
+}
+
+/* line 705, ../sass/visual.scss */
 .slider-block {
   z-index: 1100;
   position: relative;
   top: 24px;
 }
-/* line 699, ../sass/visual.scss */
+/* line 710, ../sass/visual.scss */
 .slider-block .r-s-arrow a {
   text-decoration: none;
 }
-/* line 704, ../sass/visual.scss */
+/* line 715, ../sass/visual.scss */
 .slider-block .l-s-arrow a {
   text-decoration: none;
 }
-/* line 709, ../sass/visual.scss */
+/* line 720, ../sass/visual.scss */
 .slider-block a.btn-left {
   margin-right: 10px;
 }
-/* line 712, ../sass/visual.scss */
+/* line 723, ../sass/visual.scss */
 .slider-block a.btn {
   padding: 11px 16px;
 }
-/* line 715, ../sass/visual.scss */
+/* line 726, ../sass/visual.scss */
 .slider-block a.btn-right {
   position: relative;
   right: 85px;
 }
 @media (max-width: 767px) {
-  /* line 715, ../sass/visual.scss */
+  /* line 726, ../sass/visual.scss */
   .slider-block a.btn-right {
     right: 0;
   }
 }
 
 @media (min-width: 767px) {
-  /* line 727, ../sass/visual.scss */
+  /* line 738, ../sass/visual.scss */
   .not-front .visual .img-holder .caption-frame .caption {
     padding: 0;
     margin-top: -1.5em;
   }
 }
 
-/* line 736, ../sass/visual.scss */
+/* line 747, ../sass/visual.scss */
 .signature-bold-text {
   display: block;
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   color: #636c73;
 }
 
-/* line 744, ../sass/visual.scss */
+/* line 755, ../sass/visual.scss */
 .page-node-74606 .visual.no-overlay, .page-node-74621 .visual.no-overlay, .section-current-vacancies .visual.no-overlay {
   margin-bottom: 10px;
 }
