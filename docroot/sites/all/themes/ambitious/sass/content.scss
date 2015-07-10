@@ -886,6 +886,15 @@
 }
 //myvoice block overrides + specifics
 //TODO: This is a repeat.
+.page-node-221566 {
+    .my-voice-block {
+        .holder {
+            @include breakpoint($mobile) {
+                margin-top: 0;
+            }
+        }
+    }
+}
 .my-voice-block{
     float: left;
     input[type=submit].btn-pink{
