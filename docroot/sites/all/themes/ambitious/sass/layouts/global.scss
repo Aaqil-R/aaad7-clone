@@ -302,6 +302,17 @@ clear: both;
 }  
 }
 
+/* Forum Stats Page pager style */
+.page-forum-stats .item-list .pager li {
+	&.pager-current {
+		background: #FBB900;
+	}
+	a:hover {
+		color: $white;
+		background:  #FBB900;
+		border-radius: 5px;
+	}
+}
 
 
 /* TABLE STYLE */

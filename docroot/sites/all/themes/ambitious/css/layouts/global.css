@@ -197,7 +197,7 @@
   overflow: hidden;
   cursor: default;
   display: block;
-  font-size: 19px;
+  font-size: 17px;
   color: #2a2e31;
   line-height: 41px;
   padding: 2px 44px 2px 24px;
@@ -722,8 +722,20 @@ div#admin-toolbar.vertical div.admin-tab {
   padding: 4px 12px;
 }
 
+/* Forum Stats Page pager style */
+/* line 307, ../../sass/layouts/global.scss */
+.page-forum-stats .item-list .pager li.pager-current {
+  background: #FBB900;
+}
+/* line 310, ../../sass/layouts/global.scss */
+.page-forum-stats .item-list .pager li a:hover {
+  color: #ffffff;
+  background: #FBB900;
+  border-radius: 5px;
+}
+
 /* TABLE STYLE */
-/* line 309, ../../sass/layouts/global.scss */
+/* line 320, ../../sass/layouts/global.scss */
 table {
   color: #333333;
   width: 100%;
@@ -732,7 +744,7 @@ table {
   padding-top: 15px;
   margin-bottom: 15px;
 }
-/* line 316, ../../sass/layouts/global.scss */
+/* line 327, ../../sass/layouts/global.scss */
 table td, table th {
   border: 1px solid transparent;
   min-height: 30px;
@@ -742,82 +754,82 @@ table td, table th {
   transition: all 0.2s ease;
   text-align: left;
 }
-/* line 322, ../../sass/layouts/global.scss */
+/* line 333, ../../sass/layouts/global.scss */
 table th {
   background: #636c73;
   font-weight: bold;
   color: #ffffff;
   padding: 9px;
 }
-/* line 327, ../../sass/layouts/global.scss */
+/* line 338, ../../sass/layouts/global.scss */
 table th a {
   color: #ffffff;
 }
-/* line 332, ../../sass/layouts/global.scss */
+/* line 343, ../../sass/layouts/global.scss */
 table tr td {
   background: #ffffff;
   text-align: left;
   padding: 10px;
 }
-/* line 336, ../../sass/layouts/global.scss */
+/* line 347, ../../sass/layouts/global.scss */
 table tr td:hover {
   background: #636c73;
   color: #ffffff;
 }
-/* line 342, ../../sass/layouts/global.scss */
+/* line 353, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td, table tr.odd td {
   background: #eef2f3;
   color: #636c73;
 }
-/* line 345, ../../sass/layouts/global.scss */
+/* line 356, ../../sass/layouts/global.scss */
 table tr:nth-child(odd) td a, table tr.odd td a {
   color: #636c73;
 }
 
 /* LOGIN LOGOUT CLASS */
-/* line 355, ../../sass/layouts/global.scss */
+/* line 366, ../../sass/layouts/global.scss */
 .show_notlogedin, .show_logedin {
   display: none !important;
 }
 
-/* line 358, ../../sass/layouts/global.scss */
+/* line 369, ../../sass/layouts/global.scss */
 .logged-in .show_notlogedin {
   display: inherit !important;
 }
 
-/* line 361, ../../sass/layouts/global.scss */
+/* line 372, ../../sass/layouts/global.scss */
 .not-logged-in .show_logedin {
   display: inherit !important;
 }
 
-/* line 367, ../../sass/layouts/global.scss */
+/* line 378, ../../sass/layouts/global.scss */
 .only-mobile {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 367, ../../sass/layouts/global.scss */
+  /* line 378, ../../sass/layouts/global.scss */
   .only-mobile {
     display: block;
   }
 }
 
-/* line 374, ../../sass/layouts/global.scss */
+/* line 385, ../../sass/layouts/global.scss */
 .not-mobile {
   display: none;
 }
 @media (min-width: 767px) {
-  /* line 374, ../../sass/layouts/global.scss */
+  /* line 385, ../../sass/layouts/global.scss */
   .not-mobile {
     display: block;
   }
 }
 
-/* line 381, ../../sass/layouts/global.scss */
+/* line 392, ../../sass/layouts/global.scss */
 .margin-bottom-10 {
   margin-bottom: 10px;
 }
 
-/* line 384, ../../sass/layouts/global.scss */
+/* line 395, ../../sass/layouts/global.scss */
 .ask_me_in_a_week {
   cursor: pointer;
   text-decoration: underline;
