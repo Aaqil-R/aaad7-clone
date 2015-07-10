@@ -43,7 +43,26 @@ function swear_email_settings_form($form, &$form_state) {
     '#type' => 'textarea', 
     '#title' => t('Email message'), 
     '#default_value' => variable_get('swear_email_body',''),  
+  );
+  
+   $form['forum_notification'] = array(
+    '#type' => 'radios', 
+    '#title' => t('Forum discussion email notification'), 
+    '#default_value' => variable_get('forum_notification', 0), 
+    '#options' => array(t('Disable'), t('Enable')), 
+  );   
+  
+  $form['forum_email_subject'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Email subject'), 
+    '#default_value' => variable_get('forum_email_subject',''),  
   );  
+   $form['forum_email_body'] = array(
+    '#type' => 'textarea', 
+    '#title' => t('Email message'), 
+    '#default_value' => variable_get('forum_email_body',''),  
+  );
+    
   $form['swear_words'] = array(
     '#type' => 'textarea', 
     '#title' => t('Swear words list'), 
@@ -66,15 +85,24 @@ function swear_email_settings_form_validate($form, &$form_state) {
        break;
      }  
     } 
-    if(empty($form_state['values']['swear_email_subject'])){ 
-      form_set_error('swear_email_subject', t('Subject field value is required')); 
-    }
     if(empty($form_state['values']['swear_words'])){ 
       form_set_error('swear_words', t('Swear words field value is required')); 
     }
-     if(empty($form_state['values']['swear_email_body'])){ 
-      form_set_error('swear_words', t('Message field value is required')); 
+    if(empty($form_state['values']['swear_email_subject'])){ 
+      form_set_error('swear_email_subject', t('Subject field value is required')); 
     }
+     if(empty($form_state['values']['swear_email_body'])){ 
+      form_set_error('swear_email_body', t('Message field value is required')); 
+    }
+    if($form_state['values']['forum_notification'] == 1) {
+      if(empty($form_state['values']['forum_email_subject'])){ 
+        form_set_error('forum_email_subject', t('Subject field value is required')); 
+      }
+       if(empty($form_state['values']['forum_email_body'])){ 
+        form_set_error('forum_email_body', t('Message field value is required')); 
+      }
+    }
+     
   }  
 }  
 function swear_email_settings_form_submit($form, &$form_state) {   
@@ -83,6 +111,11 @@ function swear_email_settings_form_submit($form, &$form_state) {
   variable_set('swear_email_subject', $form_state['values']['swear_email_subject']);
   variable_set('swear_email_body', $form_state['values']['swear_email_body']); 
   variable_set('swear_words', $form_state['values']['swear_words']);  
+  
+  variable_set('forum_notification', $form_state['values']['forum_notification']);
+  variable_set('forum_email_subject', $form_state['values']['forum_email_subject']);
+  variable_set('forum_email_body', $form_state['values']['forum_email_body']);
+  
   drupal_set_message('The configuration options have been saved.');
 } 
 function swear_words_comment_insert($comment) {
@@ -143,9 +176,10 @@ function swear_words_node_update($node){
 } 
 function search_node_words($node){
   if(variable_get('swear_notification', 0) == 1){
+  if(variable_get('forum_notification', 0) == 1){
     $swear_word = array();
     $module = 'swear_email';
-    $key = 'swear';
+    $key = 'forum_swear';
     $to = variable_get('swear_notify_email','');
     $to = explode( ',', $to);
     $language = language_default();
@@ -166,8 +200,9 @@ function search_node_words($node){
           '@words' => $swear_word, 
         );   
         foreach ($to as $email) {
-          drupal_mail($module, $key, $email, $language, $params); 
+         drupal_mail($module, $key, $email, $language, $params); 
         }
+      }
       }
   }
 }
@@ -179,6 +214,13 @@ function swear_email_mail($key, &$message, $params) {
     $message['body'][] = t('The following swear word/s are used: @words ',$params);
     $message['body'][] = t('@path',$params);    
     break;
+    
+    case 'forum_swear':
+    $message['subject'] = variable_get('forum_email_subject','Questionable language detected');
+    $message['body'][] = variable_get('forum_email_body','There were usage of questionable language detected in the comment. To review please follow this URL,');
+    $message['body'][] = t('The following swear word/s are used: @words ',$params);
+    $message['body'][] = t('@path',$params);    
+    break; 
   }
 }   
 
