@@ -398,8 +398,14 @@
         h3 {
             //width: 160px;
             line-height: 34px;
-            @include breakpoint($not-mobile){
-                width: 53%;
+            width: 53%;
+        }
+        .meta{
+            .created {
+                float: none !important;
+            }
+            .topic_section{
+                margin-top: -7px !important;
             }
         }
     }
@@ -623,7 +629,6 @@
         }
     }
 }
-/******* This .new-grids class is repeating [line no: 376] ********/
 .new-grids {
 	.forum-left {
 		display: none;
