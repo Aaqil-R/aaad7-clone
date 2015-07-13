@@ -731,6 +731,10 @@ div.modal-forms-modal-content .form-item label{
                 font-size: 30px;
                 line-height: 120px;
                 margin-right: 32px;
+                @include breakpoint($tablet) {
+                  margin-left:0;
+                  margin-right:0;
+                }
                 @include breakpoint($mobile) {
                   width: 80%;
                   margin-right:10%;
