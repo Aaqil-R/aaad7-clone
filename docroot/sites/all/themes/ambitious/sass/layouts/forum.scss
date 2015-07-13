@@ -650,3 +650,43 @@
 .ui-datepicker-year{
     display: inline-block;
 }
+
+
+//new calender stylings reponsive calendar codes
+.formright{
+    #edit-submit{
+        @include breakpoint($desktop-small){
+            float:none;
+            margin-top: 5px;
+        }
+        @include breakpoint($tablet){
+            float:left;
+        }   
+        @include breakpoint(682px) {
+            float: right;
+            min-width: 154px;
+        }      
+    }
+    #edit-close{
+        @include breakpoint($tablet){
+            margin-top: 5px;
+        } 
+        @include breakpoint(682px) {
+            float: right;
+            min-width: 154px;
+        }   
+    }
+}
+
+.calendars .calendar_set .hasDatepicker{
+    @include breakpoint(682px) {
+        float: right;
+    }
+}
+
+.calendars, .clearfix.button{
+   @include breakpoint(882px) {
+        float: right;
+    } 
+}
+//end of the codes for the calendar responsive.

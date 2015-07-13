@@ -1482,3 +1482,51 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .ui-datepicker-year {
   display: inline-block;
 }
+
+@media (max-width: 1080px) {
+  /* line 657, ../../sass/layouts/forum.scss */
+  .formright #edit-submit {
+    float: none;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 990px) {
+  /* line 657, ../../sass/layouts/forum.scss */
+  .formright #edit-submit {
+    float: left;
+  }
+}
+@media (max-width: 682px) {
+  /* line 657, ../../sass/layouts/forum.scss */
+  .formright #edit-submit {
+    float: right;
+    min-width: 154px;
+  }
+}
+@media (max-width: 990px) {
+  /* line 670, ../../sass/layouts/forum.scss */
+  .formright #edit-close {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 682px) {
+  /* line 670, ../../sass/layouts/forum.scss */
+  .formright #edit-close {
+    float: right;
+    min-width: 154px;
+  }
+}
+
+@media (max-width: 682px) {
+  /* line 681, ../../sass/layouts/forum.scss */
+  .calendars .calendar_set .hasDatepicker {
+    float: right;
+  }
+}
+
+@media (max-width: 882px) {
+  /* line 687, ../../sass/layouts/forum.scss */
+  .calendars, .clearfix.button {
+    float: right;
+  }
+}
