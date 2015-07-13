@@ -666,3 +666,125 @@ div.modal-forms-modal-content .form-item label{
     color:$white;
   }
 }
+
+
+
+
+
+/*==== Stats Page ====*/
+
+.page-forum-stats {
+    .title{
+      @include breakpoint($mobile) {
+        margin:15px 10%;
+      }
+    }
+    #wrapper {
+        background: white;
+    }
+    h3 {
+        margin-top: 79px;
+        float: left;
+        margin-bottom: 32px;
+        width: 100%;
+        @include breakpoint($mobile) {
+          text-align: center;
+          width:80%;
+          margin:0 10%;
+        }
+    }
+    .header_image {
+        @include breakpoint($mobile) {
+            display: none;
+        }
+
+        a {
+            color: $white;
+        }
+        .region-image-holder {
+            padding-top: 28px;
+        }
+    }
+    .forum_stats {
+        padding: 0;
+        margin: 0;
+        font-family: $header-font-family;
+        li {
+            padding: 0;
+            margin: 0;
+            float: left; 
+            width: 20%;
+            list-style: none;
+            text-align: center;
+            @include breakpoint($mobile) {
+              width: 100%;
+            }
+            span {
+                border: 2px solid $yellow;
+                border-radius: 5px;
+                height: 128px;
+                width: 128px;
+                display: block;
+                background: $white;
+                margin-left: 32px;
+                color: $blue-light;
+                font-size: 30px;
+                line-height: 120px;
+                margin-right: 32px;
+                @include breakpoint($mobile) {
+                  width: 80%;
+                  margin-right:10%;
+                  margin-left:10%;
+                }
+            }
+            p {
+                margin-left: 32px;
+                margin-right: 32px;
+                width: 128px;
+                line-height: normal;
+                margin-top: 20px;
+                font-size: 20px;
+                @include breakpoint($mobile) {
+                  width:auto; 
+                  max-width:80%;
+                  margin:10px 10% 75px; 
+                }
+            }
+        }
+    }
+}
+#forum-stats-settings-form{
+  fieldset{
+    @include breakpoint($mobile) {
+      float: none;
+      max-width: 85%;
+      margin: 0px 8%;
+    }
+  }
+}
+.images-list {
+    float: left;
+    width: 100%;
+    padding:0;
+    li {
+        float: left;
+        width: 33%; 
+        list-style: none;
+        text-align: center;
+        @include breakpoint($mobile) {
+          width:100%;
+          margin-bottom:15px;
+        }
+        img {
+            width: 176px;
+            height: 176px;
+            border-radius: 100%;
+            //border: 2px solid $yellow;
+        }
+        .name {
+            float: left;
+            width: 100%;
+            text-aign: center;
+        }
+    }
+}
