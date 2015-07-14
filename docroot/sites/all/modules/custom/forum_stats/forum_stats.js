@@ -10,6 +10,7 @@
 	    	});
 	      $( "#selected_date_form" ).datepicker({
           numberOfMonths:1, 
+          defaultDate : "-1m",
           dateFormat : "d-M-yy",
           onSelect: function( selectedDate ) {
             console.log(selectedDate);
