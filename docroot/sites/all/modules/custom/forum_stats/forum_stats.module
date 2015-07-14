@@ -127,9 +127,15 @@ drupal_add_library('system', 'ui.datepicker');
   
   $profile = '<ul class="images-list">';
   $index = 1;
-    foreach($num_top_comment_posted as $newvalus){
+   foreach($num_top_comment_posted as $newvalus){
        $usid = user_load($newvalus->uid); 
-       $profile .= '<li id="item'. $page . '-' . $index .'">'.theme_image_style(array('style_name' => 'medium','path' => $usid->picture->uri, 'attributes' => array( 'class' => 'avatar'))).'<h5 class ="name">'.$usid->name.'</h5></li>';
+       $usimg = '';
+       if($usid->picture){
+         $usimg = theme_image_style(array('style_name' => 'medium','path' => $usid->picture->uri, 'attributes' => array( 'class' => 'avatar'))); 
+       }else{
+         $usimg = '<img src="'.path_to_theme().'/images/profile-picture.jpg" alt="'.$usid->name.'"/>';  
+       }
+       $profile .= '<li id="item'. $page . '-' . $index .'">'.$usimg.'<h5 class ="name">'.$usid->name.'</h5></li>';
        $index++;
     }
     $profile .= '</ul>'; 
@@ -152,8 +158,15 @@ drupal_add_library('system', 'ui.datepicker');
   
   $forum_posted = '<ul class="images-list">';
     foreach($num_top_forum_posted as $forum_posteds){
-       $usids = user_load($forum_posteds->uid); 
-       $forum_posted .= '<li>'.theme_image_style(array('style_name' => 'medium','path' => $usids->picture->uri, 'attributes' => array( 'class' => 'avatar'))).'<h5 class ="name">'.$usids->name.'</h5></li>';
+       $usids = user_load($forum_posteds->uid);  
+       $usimgs = '';
+       if($usids->picture){
+         $usimgs = theme_image_style(array('style_name' => 'medium','path' => $usids->picture->uri, 'attributes' => array( 'class' => 'avatar')));
+       }else{
+         $usimgs = '<img src="'.path_to_theme().'/images/profile-picture.jpg" alt="'.$usids->name.'"/>';  
+       }
+       
+       $forum_posted .= '<li>'.$usimgs.'<h5 class ="name">'.$usids->name.'</h5></li>';
     }
     $forum_posted .= '</ul>'; 
     
