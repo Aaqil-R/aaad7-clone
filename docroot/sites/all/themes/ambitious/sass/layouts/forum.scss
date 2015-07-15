@@ -690,3 +690,40 @@
     } 
 }
 //end of the codes for the calendar responsive.
+
+//calendar top header testing codes
+.page-forum-stats{
+    #content-header {
+        h1.title{
+            display: inline-block;
+            float:left;
+            @include breakpoint($tablet) {
+                float: none;
+            }
+        }
+        .calendar_text{
+            display: inline-block;
+            margin-top: 30px;
+            padding-left: 50px;
+            @include breakpoint($tablet) {
+                margin-top:0px;
+                padding-left: 0px;
+            }
+            @include breakpoint($mobile) {
+                margin-left: 10%;
+                margin-right: 10%;
+
+            }
+        }
+    }
+}
+//end of the testing codes.
+
+#forum-stats-settings-form fieldset{
+    &.customclass{
+        margin-top:-65px;
+        @include breakpoint($mobile) {
+            margin-top: 0px;
+        }
+    }
+}

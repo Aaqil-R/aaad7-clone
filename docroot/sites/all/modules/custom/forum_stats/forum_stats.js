@@ -67,8 +67,45 @@
         to = $.datepicker.formatDate( "d-M-yy", $( "#selected_date_to" ).datepicker('getDate') );
         location.href = location.origin + location.pathname + '?selected=4&from=' + from + '&to='+ to ;
         
+
+		// var div = document.getElementById('content-header');
+		// div.innerHTML = div.innerHTML + 'selected from '+from + 'to ' +to;
+
         });
         
+        var from = GetParameterValues('from');
+        console.log(from)  ;
+        var to = GetParameterValues('to'); 
+        if(typeof from != 'undefined' && typeof to != 'undefined'){ 
+			var p = document.createElement("p");   // Create with DOM
+			p.className = "calendar_text";
+    		p.innerHTML = 'selected from '+from + ' to ' +to;
+
+   			var parent = document.getElementById("content-header");
+			parent.appendChild(p);
+
+    		//dojo.query(".form-item.form-type-select.form-item-selected").addClass("testing");
+    		var x = document.getElementsByClassName("form-item form-type-select form-item-selected");
+    		for(var i = 0; i < x.length; i++)
+			{
+    			x[i].className += " customclass";
+			}
+    		console.log("element found");
+		}
+
+		//get the data from the url passed.
+        function GetParameterValues(param) {  
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+            for (var i = 0; i < url.length; i++) {  
+                var urlparam = url[i].split('=');  
+                if (urlparam[0] == param) {  
+                    return urlparam[1];  
+                }  
+            }  
+        }
+
+
+
 	    });
 	    }
 	  };
