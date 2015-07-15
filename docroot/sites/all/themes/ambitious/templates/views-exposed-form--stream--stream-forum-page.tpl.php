@@ -39,12 +39,12 @@
         <fieldset class="grid-view">
         <legend class="hidden">Grid View</legend>
         <label class="hidden">Grid View</label>
-        <a href="#main" title="Grid View" id="grid-forum" class="view-mode grid ">Grid View</a>
+        <a href="" title="Grid View" id="grid-forum" class="view-mode grid ">Grid View</a>
         </fieldset>
         <fieldset class="list-view">
             <legend class="hidden">List View</legend>
             <label class="hidden">List View</label>
-            <a href="#main" title="List View" id="list-forum" class="view-mode list active">List View</a>
+            <a href="" title="List View" id="list-forum" class="view-mode list active">List View</a>
         </fieldset>
     
     
