@@ -79,7 +79,7 @@
         if(typeof from != 'undefined' && typeof to != 'undefined'){ 
 			var p = document.createElement("p");   // Create with DOM
 			p.className = "calendar_text";
-    		p.innerHTML = 'selected from '+from + ' to ' +to;
+    		p.innerHTML = 'From '+from + ' to ' +to;
 
    			var parent = document.getElementById("content-header");
 			parent.appendChild(p);
