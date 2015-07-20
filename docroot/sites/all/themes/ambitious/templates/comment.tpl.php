@@ -85,8 +85,10 @@
 			     <?php			     
 					 print render($content);
 					 // we check the value is empty or not 
-					 if($user_info->field_signature['und'][0]['safe_value'] != ''){
-					   print $user_info->field_signature['und'][0]['safe_value'];
+					 if(isset($user_info->field_signature['und'][0]['safe_value'])){
+					 	if($user_info->field_signature['und'][0]['safe_value'] != ''){
+					   		print $user_info->field_signature['und'][0]['safe_value'];
+					 	}
 					 }
 				    ?>
 				    

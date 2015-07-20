@@ -30,15 +30,23 @@
   	} 
 
 	// author signature to be added to the discussion threads.
-	$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
-	
-	$location = $userinfo->field_location_reference['und']['0']['tid'];
+	if(isset($userinfo->field_signature['und']['0']['safe_value'])){
+		$user_signature = $userinfo->field_signature['und']['0']['safe_value'];
+	}
+	if(isset($userinfo->field_location_reference['und']['0']['tid'])){
+		$location = $userinfo->field_location_reference['und']['0']['tid'];
+		$location = taxonomy_term_load($location);
+		$location = $location->name;
+	}
+
 	$user_date = format_date($userinfo->created, 'custom', t('d F Y', array(), array('context' => 'php date format')));
 	$user_count = ambitious_get_user_post_count($uid);
-
-	$location = taxonomy_term_load($location);
-	$location = $location->name;
-
+	// if(isset(taxonomy_term_load($location))){
+	// 	$location = taxonomy_term_load($location);
+	// }
+	// if(isset($location->name)){
+	// 	$location = $location->name;
+	// }
     // we use custom_comment_count value form user settings form if the value is empty default value 5
 	$popular_thread_comment_threshold = variable_get('autism_custom_comment_count', 5);
 ?>   

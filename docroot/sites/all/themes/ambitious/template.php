@@ -140,6 +140,7 @@ function ambitious_preprocess_html(&$variables) {
   
   // == Check if the user registered or not in home page step forms ==//
   global $user; 
+  $userid = 0; //initializing the variable 
   if($user->uid){ 
     $node_id = node_load(74666)->nid; 
     if(!empty($node_id) && drupal_is_front_page()){
@@ -155,7 +156,6 @@ function ambitious_preprocess_html(&$variables) {
       }
     }    
   }   
-
 }
 
 function ambitious_preprocess_region(&$variables) {
