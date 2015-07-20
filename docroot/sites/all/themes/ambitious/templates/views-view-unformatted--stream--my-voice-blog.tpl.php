@@ -8,7 +8,9 @@
 
 <?php
   $additional_classes = "";
-  $node = $variables['node'];
+  if(isset($variables['node'])):
+   $node = $variables['node'];
+  endif;
 ?>
 
 <?php foreach ($rows as $id => $row): ?>  

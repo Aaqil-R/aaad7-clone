@@ -13,7 +13,9 @@
 
 <?php
 	$additional_classes = "js-stream-intronew card-transparent";
-	$node = $variables['node'];
+	if(isset($variables['node'])):
+   $node = $variables['node'];
+  endif;
 ?>
 
 <?php foreach ($rows as $id => $row): ?>

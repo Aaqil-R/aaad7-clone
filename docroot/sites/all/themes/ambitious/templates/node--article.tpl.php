@@ -40,13 +40,16 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 		<?php if (!empty($content['field_featured_image'])): ?>
 		<section class="visual">
 			<div class="img-holder">
-				 <?php if($node->field_infographic_as_lightbox['und'][0]['value'] == 1){
-			          print render($content['field_featured_image']); 
-			        }else{ 
+				 <?php 
+				 	if(isset( $node->field_infographic_as_lightbox['und'][0]['value'])){
+				 		if($node->field_infographic_as_lightbox['und'][0]['value'] == 1){
+			        	  print render($content['field_featured_image']); 
+			        	}
+			    	}else{ 
 			          $url = image_style_url('width-684',$node->field_featured_image['und'][0]['uri']);
 			          print "<img src='".$url."' />";
 			        }
-			  ?>
+			  	?>
 			</div>
 			<div class="holder">
 				<?php if (!empty($content['field_image_caption'])): ?>
