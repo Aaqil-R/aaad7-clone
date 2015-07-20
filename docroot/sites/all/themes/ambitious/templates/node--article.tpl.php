@@ -41,15 +41,14 @@ $first_name = field_get_items('user', user_load($node->uid), 'field_first_name')
 		<section class="visual">
 			<div class="img-holder">
 				 <?php 
-				 	if(isset($node->field_infographic_as_lightbox['und'][0]['value'])){
+				 	//gives a php error on the log when visiting the node articles need a revisit. 
 				 		if($node->field_infographic_as_lightbox['und'][0]['value'] == 1){
 			        	  print render($content['field_featured_image']); 
 				    	}
-				    }else{ 
+				    else{ 
 				          $url = image_style_url('width-684',$node->field_featured_image['und'][0]['uri']);
 				          print "<img src='".$url."' />";
 				        }
-			        //}
 			  	?>
 			</div>
 			<div class="holder">
