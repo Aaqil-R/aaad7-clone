@@ -808,11 +808,15 @@ html.js fieldset.collapsed {
     }
 }
 
+// TODO: [CODESMELL] This style seems specific to specific nodes?
+// If this is to do with a WYSIWYG can we look at creating a class
+// and instructing to use it when they need this kind of padding.
 article.node-223806, article.node-223591 {
     .field-name-body {
         padding: 40px 80px;
     }
 }
+
 
 #modalContent {
     #modal-title {
@@ -844,6 +848,7 @@ div.ctools-modal-content .modal-content {
     padding: 19px 19px 19px 49px;
 }
 
+// TODO: Can we put some comments as to what this is hiding?
 .post-comments-0 {
     display: none;
 }
@@ -879,6 +884,9 @@ div.ctools-modal-content .modal-content {
     margin-top: 15px;
 }
 
+// TODO: Please fix the underlying issues and get rid of the 
+// !important keyword. If we absolutely can't fix please put in
+// the reason as to why we can't as a comment.
 // Colorbox login
 #modalContent {
     z-index: 9999 !important;
@@ -909,14 +917,14 @@ div.ctools-modal-content .modal-content {
     display: none !important;
 }
 
-//hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
+// TODO: hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
 .page-taxonomy.section-topics {
     .forumpage_title {
         display: none;
     }
 }
 
-//HACK to hide unwanted form fields - profile and discussion page.
+// TODO: HACK to hide unwanted form fields - profile and discussion page.
 fieldset.group-hidden {
     display: none;
 }
@@ -1006,6 +1014,7 @@ fieldset.group-hidden {
     }
 }
 
+// TODO: [CODESMELL] This structure seems to be very deep, is this required?
 .google-search-results {
     @include breakpoint($mobile) {
         &.posts-columns.columns-full {
@@ -1030,9 +1039,11 @@ fieldset.group-hidden {
 /* node-type-page  */
 
 .node-type-page {
+    // TODO: [CODESMELL] Why do we need to have this style? Why was it hidden to begin with?
     .easy-breadcrumb {
         display: block;
     }
+
     #main {
         @include breakpoint($mobile) {
             max-width: 91%;
@@ -1041,7 +1052,7 @@ fieldset.group-hidden {
     }
 }
 
-//hack to add text to login form
+//TODO: hack to add text to login form; we can remove this now. This was added at the very inception.
 #user-login--2,
 #user-login {
     .hybridauth-widget-wrapper {
@@ -1062,12 +1073,14 @@ fieldset.group-hidden {
     }
 }
 
+// TODO: Since this looks like some isolated code, can we look at making this mobile first?
 .logged-in {
     #block-menu-menu-header-top-menu {
         @include breakpoint($mobile) {
             float: left;
         }
 
+        // TODO: Can we make use of the breakpoints here?
         @include breakpoint(520px) {
             li {
                 padding: 0 5px;
@@ -1075,6 +1088,7 @@ fieldset.group-hidden {
         }
     }
     #block-system-user-menu {
+        // TODO: Can we make use of the breakpoints here?
         @include breakpoint(520px) {
             ul {
                 padding-left: 0;
@@ -1112,6 +1126,7 @@ fieldset.group-hidden {
     }
 }
 
+// TODO: Can we move this code over to the forums.scss file?
 // Forum page issue fixing for mobiles
 .posts-columns.columns-full .row .forum-icon {
     @include breakpoint($mobile) {
@@ -1268,6 +1283,7 @@ article.node-223806 {
     }
 }
 
+// TODO: Could we group all the myvoice code we have into once section?
 // my voice filter pink
 .section-myvoice {
     .filter-slide {
