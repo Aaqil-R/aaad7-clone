@@ -3,22 +3,24 @@
 //=== Action Block ===//
 //Check the class nesting.
 .action-block {
-        .region {
-            .block-main {
-                & > div {
-                    float: right;
-                    &:first-child {
-                        float: left;
-                        margin-right: 30px;
-                    }
+    .region {
+        .block-main {
+            & > div {
+                float: right;
+                &:first-child {
+                    float: left;
+                    margin-right: 30px;
                 }
             }
         }
     }
+}
+
 // Overriding the effects of a stray bold style.
 .region-services .btn {
     font-family: $base-font-family;
 }
+
 //general user login question mark fix
 /***************************************************
 if you make this as float: left then you can type
@@ -29,6 +31,7 @@ field .
 .description {
     float: left;
 }
+
 //=== Home page-Issue fixing ===//
 .front {
     // Webform paragraph
@@ -112,6 +115,7 @@ field .
             }
         }
     }
+
     // Main without webform in the slider area
     #main.no-form {
         margin-top: 50px;
@@ -139,6 +143,7 @@ field .
         @include breakpoint($mobile) {
             padding: 60px 0 0;
         }
+
         @include breakpoint($not-mobile) {
             padding: 80px 0 0;
         }
@@ -186,6 +191,7 @@ field .
         @include breakpoint($not-mobile) {
             margin-top: 66px;
         }
+
         .holder {
             @include breakpoint($mobile) {
                 padding: 50px 15px 0;
@@ -217,6 +223,7 @@ field .
         @include breakpoint(1024px) {}
     }
 }
+
 // footer logo space fixed
 #footer {
     .social-holder {
@@ -236,6 +243,7 @@ field .
         }
     }
 }
+
 // edited nanda globalsoft
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
     width: auto;
@@ -249,6 +257,7 @@ field .
         }
     }
 }
+
 .comment-block {
     .topic-share {
         float: none;
@@ -259,6 +268,7 @@ field .
         }
     }
 }
+
 // my voice page logo max height set 50px
 .page-node-74596 {
     .header-top {
@@ -270,15 +280,18 @@ field .
         }
     }
 }
+
 //breadcrump zindex changed
 .block-easy-breadcrumb {
     z-index: 998;
     outline: none;
     position: relative;
 }
+
 .icon-Google:before {
     content: "\e606";
 }
+
 // Fixing the padding issue on content bottom
 #content_bottom {
     @include breakpoint($mobile) {
@@ -286,6 +299,7 @@ field .
         padding-left: 15px;
     }
 }
+
 .understanding-autism {
     .views-submit-button {
         #edit-submit-stream {
@@ -293,6 +307,7 @@ field .
         }
     }
 }
+
 .node-type-my-voice-topic .understanding-autism {
     .btn {
         padding: 6px 19px;
@@ -303,6 +318,7 @@ field .
         }
     }
 }
+
 .front {
     .slider-container {
         @include breakpoint($tablet) {
@@ -327,12 +343,15 @@ field .
         }
     }
 }
+
 .page-node-74566 .header_banner .banner_sub_text {
     margin: 0 0 0 203px;
 }
+
 .header_banner {
     z-index: 0;
 }
+
 .page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies {
     #block-easy-breadcrumb-easy-breadcrumb--2 {
         .easy-breadcrumb {
@@ -340,6 +359,7 @@ field .
         }
     }
 }
+
 // Forum Page
 .page-node-74566 {
     .st_sharethis_button .stButton {
@@ -354,16 +374,19 @@ field .
         }
     }
 }
+
 // Understand Autism - List view
 .posts-columns.list-view .post .info.add h3 {
     margin: -10px 0 42px;
 }
+
 .voice-holder {
     display: none;
     &.voice-my_voice_topic {
         display: inherit;
     }
 }
+
 // Voice page
 .section-voices-spectrum {
     .region-image-holder {
@@ -372,6 +395,7 @@ field .
         }
     }
 }
+
 //-------------------------------------
 .search-text {
     .icon-search {
@@ -416,9 +440,12 @@ field .
             float: left;
             clear: both;
             border-radius: 5px;
-            border-color: #e4e4e4; //TODO : assigning a variable colour and using it would be preferable
-            -webkit-box-shadow: inset 1px 1px 2px #707070; //TODO : assigning a variable colour and using it would be preferable
-            box-shadow: inset 1px 1px 2px #707070; //TODO : assigning a variable colour and using it would be preferable
+            border-color: #e4e4e4;
+            //TODO : assigning a variable colour and using it would be preferable
+            -webkit-box-shadow: inset 1px 1px 2px #707070;
+            //TODO : assigning a variable colour and using it would be preferable
+            box-shadow: inset 1px 1px 2px #707070;
+            //TODO : assigning a variable colour and using it would be preferable
             margin-bottom: 20px;
             padding: 12px 23px;
             font-size: 18px;
@@ -488,8 +515,6 @@ field .
         height: auto;
     }
     a.tooltips span.tooltip-content {
-
-
         &:before {
             border-left: 20px solid $casablanca;
             border-right: 20px solid transparent;
@@ -636,7 +661,7 @@ field .
         @include breakpoint($mobile) {
             margin-left: auto;
             width: auto;
-            float:none;
+            float: none;
         }
 
         & > h5 {
@@ -692,12 +717,15 @@ div.ctools-modal-content {
 }
 
 div.ctools-modal-content .modal-content {
-    overflow-x: hidden;    //why are we using the overflow -x? it normally removes the responsiveness
+    overflow-x: hidden;
+    //why are we using the overflow -x? it normally removes the responsiveness
 }
 
 .not-logged-in #user-login {
     input[type="password"], input[type="text"] {
-        background: none !important; //doesnt including imporatant overides the hierarchy of the stylesheet. 
+        background: none !important;
+        //doesnt including imporatant overides the hierarchy of the stylesheet.
+   
     }
 }
 
@@ -734,7 +762,7 @@ body .view-display-id-stream_forum_page {
         .icon-Hottopic {
             display: inherit;
             margin-right: 45px;
-        } 
+        }
     }
 }
 
@@ -1409,7 +1437,7 @@ article.node-223806 {
         time {
             max-width: 130px;
             float: left;
-            //TODO : Why again a 'time' tag. 
+            //TODO : Why again a 'time' tag.
             time {
                 margin-bottom: 0;
             }
@@ -1439,6 +1467,7 @@ article.node-223806 {
         }
     }
 }
+
 //TODO: What this below comment means ?
 // Remove / from my voice section
 .node-type-my-voice-blog {
@@ -1528,7 +1557,7 @@ a.masquerade-switch {
 
 // in button right side arrow
 
-#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit, #webform-client-form-74601 .webform-submit{
+#edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit, #webform-client-form-74601 .webform-submit {
     background-image: url(../images/sprite.png);
     background-repeat: no-repeat;
     background-position: 102px -254px;
@@ -1692,53 +1721,57 @@ a.masquerade-switch {
 //issue fix for the menu getting ash background
 iframe {
     position: relative;
-} 
+}
 
 // social icons
-.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook{
-  border-radius: 5px;
-  color:$white;
-  opacity:1;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased; 
-  text-align: center;
-  line-height: 36px;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  margin-bottom:5px;
+.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook {
+    border-radius: 5px;
+    color: $white;
+    opacity: 1;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 36px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
 }
-.hybridauth-google{
-  background: $google-bg;  
-  border-bottom:5px solid $google-border;
-  &:before{
-    content :"\e606"; 
-  }
+
+.hybridauth-google {
+    background: $google-bg;
+    border-bottom: 5px solid $google-border;
+    &:before {
+        content: "\e606";
+    }
 }
-.hybridauth-twitter{
-  background:$twitter-bg;  
-  border-bottom:5px solid $facebook-border;
-  &:before{
-    content :"\e611"; 
-  }
+
+.hybridauth-twitter {
+    background: $twitter-bg;
+    border-bottom: 5px solid $facebook-border;
+    &:before {
+        content: "\e611";
+    }
 }
-.hybridauth-facebook{
-  background:$facebook-bg;  
-  border-bottom:5px solid $facebook-border;
-  &:before{
-    content :"\e604"; 
-  }
+
+.hybridauth-facebook {
+    background: $facebook-bg;
+    border-bottom: 5px solid $facebook-border;
+    &:before {
+        content: "\e604";
+    }
 }
+
 #modalContent {
- .hybridauth-widget-wrapper{
-   .item-list{
-     margn-left:0;
-   }
- }
+    .hybridauth-widget-wrapper {
+        .item-list {
+            margn-left: 0;
+        }
+    }
 }
