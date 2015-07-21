@@ -1407,6 +1407,7 @@ article.node-223806 {
         time {
             max-width: 130px;
             float: left;
+            //TODO : Why again a 'time' tag. 
             time {
                 margin-bottom: 0;
             }
@@ -1425,6 +1426,9 @@ article.node-223806 {
                 clear: both;
             }
         }
+        //TODO: [CODESMELL]
+        //Do we need to add the '>' selector here
+        //This selects all <li> elements where the parent is a <div class="comment-listing"> element
         & > li {
             margin-top: 15px;
             float: left;
@@ -1433,7 +1437,7 @@ article.node-223806 {
         }
     }
 }
-
+//TODO: What this below comment means ?
 // Remove / from my voice section
 .node-type-my-voice-blog {
     .article-info .flag-bookmarks:first-child {
@@ -1452,12 +1456,13 @@ article.node-223806 {
 }
 
 // Fixing calanedar
-.calendar-calendar td.has-events a {
-    color: $orange-dark;
-}
-
-.calendar-calendar .month-view .full td .inner div.day {
-    width: 100%;
+.calendar-calendar {
+    td.has-events a {
+        color: $orange-dark;
+    }
+    .month-view .full td .inner div.day {
+        width: 100%;
+    }
 }
 
 // Fixing profiles a
@@ -1558,7 +1563,6 @@ a.masquerade-switch {
 }
 
 // node-type-my-voice-topic pink next / prev button
-
 .node-type-my-voice-topic {
     .visual .btn-next, .visual .btn-perv {
         background: $pink;
@@ -1574,7 +1578,6 @@ a.masquerade-switch {
 }
 
 //issue fix for the contact us page only on the specific page
-
 .page-node-74571 {
     #content-area {
         padding-bottom: 0px;
@@ -1687,11 +1690,9 @@ a.masquerade-switch {
 //issue fix for the menu getting ash background
 iframe {
     position: relative;
-}
- 
+} 
 
 // social icons
-
 .hybridauth-google, .hybridauth-twitter, .hybridauth-facebook{
   border-radius: 5px;
   color:$white;
@@ -1738,5 +1739,4 @@ iframe {
      margn-left:0;
    }
  }
-} 
- 
+}
