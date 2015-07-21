@@ -664,7 +664,7 @@ field .
             float: none;
         }
 
-        & > h5 {
+        & > h5 { //TODO : we can remove the > 
             margin-left: 10px;
             @include breakpoint($mobile) {
                 margin-left: 0px;
