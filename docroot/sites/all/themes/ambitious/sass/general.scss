@@ -441,9 +441,9 @@ field .
             float: left;
             clear: both;
             border-radius: 5px;
-            border-color: #e4e4e4;
-            -webkit-box-shadow: inset 1px 1px 2px #707070;
-            box-shadow: inset 1px 1px 2px #707070;
+            border-color: #e4e4e4; //TODO : assigning a variable colour and using it would be preferable
+            -webkit-box-shadow: inset 1px 1px 2px #707070; //TODO : assigning a variable colour and using it would be preferable
+            box-shadow: inset 1px 1px 2px #707070; //TODO : assigning a variable colour and using it would be preferable
             margin-bottom: 20px;
             padding: 12px 23px;
             font-size: 18px;
@@ -513,6 +513,8 @@ field .
         height: auto;
     }
     a.tooltips span.tooltip-content {
+
+
         &:before {
             border-left: 20px solid $casablanca;
             border-right: 20px solid transparent;
@@ -715,12 +717,12 @@ div.ctools-modal-content {
 }
 
 div.ctools-modal-content .modal-content {
-    overflow-x: hidden;
+    overflow-x: hidden;    //why are we using the overflow -x? it normally removes the responsiveness
 }
 
 .not-logged-in #user-login {
     input[type="password"], input[type="text"] {
-        background: none !important;
+        background: none !important; //doesnt including imporatant overides the hierarchy of the stylesheet. 
     }
 }
 
