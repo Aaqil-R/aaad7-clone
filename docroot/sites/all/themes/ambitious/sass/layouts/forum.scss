@@ -727,3 +727,19 @@
         }
     }
 }
+
+//added the codes from the general.scss file
+.posts-columns.columns-full .row .forum-icon {
+    @include breakpoint($mobile) {
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
+    @include breakpoint($mobile) {
+        margin-right: 50px;
+    }
+}

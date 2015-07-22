@@ -366,19 +366,19 @@ field .
 
 // Forum Page
 //TODO: remove the page styles of 74566 and remove the page from the site. Amalan
-.page-node-74566 {
-    .st_sharethis_button .stButton {
-        @include breakpoint($all-desktop) {
-            padding: 6px 28px;
-        }
-    }
-    .sort-block .btn {
-        @include breakpoint($all-desktop) {
-            padding-left: 38px;
-            padding-right: 38px;
-        }
-    }
-}
+// .page-node-74566 {
+//     .st_sharethis_button .stButton {
+//         @include breakpoint($all-desktop) {
+//             padding: 6px 28px;
+//         }
+//     }
+//     .sort-block .btn {
+//         @include breakpoint($all-desktop) {
+//             padding-left: 38px;
+//             padding-right: 38px;
+//         }
+//     }
+// }
 
 // Understand Autism - List view
 //TODO: check and remove with ua page. Anees
@@ -429,44 +429,44 @@ field .
 
 //TODO: create a new file for hybridauth and change to that page. Amalan
 /*new set of codes for styling registration page through hybrid auth*/
-.page-hybridauth {
-    #main {
-        background: $white;
-    }
-    fieldset {
-        float: none;
-        padding-left: 0px;
-        &.form-wrapper {
-            min-height: 550px;
-        }
-        .password-strength {
-            margin-top: 0px;
-        }
-    }
-    input {
-        &.username {
-            width: 16em;
-            float: left;
-            clear: both;
-            border-radius: 5px;
-            border-color: #e4e4e4;
-            //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
-            -webkit-box-shadow: inset 1px 1px 2px #707070;
-            //TODO : assigning a variable colour and using it would be preferable
-            box-shadow: inset 1px 1px 2px #707070;
-            //TODO : assigning a variable colour and using it would be preferable
-            margin-bottom: 20px;
-            padding: 12px 23px;
-            font-size: 18px;
-        }
-    }
-    legend {
-        font-weight: bold;
-    }
-    .description {
-        float: left;
-    }
-}
+// .page-hybridauth {
+//     #main {
+//         background: $white;
+//     }
+//     fieldset {
+//         float: none;
+//         padding-left: 0px;
+//         &.form-wrapper {
+//             min-height: 550px;
+//         }
+//         .password-strength {
+//             margin-top: 0px;
+//         }
+//     }
+//     input {
+//         &.username {
+//             width: 16em;
+//             float: left;
+//             clear: both;
+//             border-radius: 5px;
+//             border-color: #e4e4e4;
+//             //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
+//             -webkit-box-shadow: inset 1px 1px 2px #707070;
+//             //TODO : assigning a variable colour and using it would be preferable
+//             box-shadow: inset 1px 1px 2px #707070;
+//             //TODO : assigning a variable colour and using it would be preferable
+//             margin-bottom: 20px;
+//             padding: 12px 23px;
+//             font-size: 18px;
+//         }
+//     }
+//     legend {
+//         font-weight: bold;
+//     }
+//     .description {
+//         float: left;
+//     }
+// }
 
 /*end of new codes*/
 //TODO: move to profile.scss Anees
@@ -672,8 +672,7 @@ field .
             width: auto;
             float: none;
         }
-
-        & > h5 { //TODO : we can remove the > Amalan
+        h5 { //TODO : we can remove the > Amalan
             margin-left: 10px;
             @include breakpoint($mobile) {
                 margin-left: 0px;
@@ -1145,20 +1144,20 @@ fieldset.group-hidden {
 
 // TODO: Can we move this code over to the forums.scss file?
 // Forum page issue fixing for mobiles Amalan.
-.posts-columns.columns-full .row .forum-icon {
-    @include breakpoint($mobile) {
-        font-size: 30px;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
+// .posts-columns.columns-full .row .forum-icon {
+//     @include breakpoint($mobile) {
+//         font-size: 30px;
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//     }
+// }
 
-body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
-    @include breakpoint($mobile) {
-        margin-right: 50px;
-    }
-}
+// body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
+//     @include breakpoint($mobile) {
+//         margin-right: 50px;
+//     }
+// }
 
 // Action Nav
 .right-info a.school-opener,
