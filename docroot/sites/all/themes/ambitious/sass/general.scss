@@ -1,7 +1,8 @@
 @import "base/base";
 
 //=== Action Block ===//
-//Check the class nesting.
+// TODO: must move to action-block.scss
+// TODO: Check the class nesting. Amalan
 .action-block {
     .region {
         .block-main {
@@ -47,7 +48,7 @@ field .
         @include breakpoint(1320px) {
             line-height: 66px;
         }
-
+        // TODO: must move to caption-text.scss Anees
         // TODO: need to make use of defined breakpoints here.
         // Check the change here and apply a media query variable
         @include breakpoint(1118px) {
@@ -123,7 +124,6 @@ field .
             margin-top: 0;
         }
     }
-    //.visual .img-holder
     .visual {
         max-height: none;
     }
@@ -187,6 +187,7 @@ field .
         }
     }
     // Action Block
+    //TODO: move to action-block.scss amalan
     .action-block {
         @include breakpoint($not-mobile) {
             margin-top: 66px;
@@ -218,12 +219,9 @@ field .
             }
         }
     }
-    // FB Box on Home page
-    ._4s7c {
-        @include breakpoint(1024px) {}
-    }
 }
 
+//TODO: move to footer.scss Anees
 // footer logo space fixed
 #footer {
     .social-holder {
@@ -243,7 +241,7 @@ field .
         }
     }
 }
-
+//TODO: check for the validity of the code. and remove. amalan.
 // edited nanda globalsoft
 .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
     width: auto;
@@ -268,19 +266,20 @@ field .
         }
     }
 }
-
+//TODO:chek the validity and remove the code : Amalan
 // my voice page logo max height set 50px
-.page-node-74596 {
-    .header-top {
-        .logo {
-            img {
-                max-height: 50px;
-                width: auto;
-            }
-        }
-    }
-}
+// .page-node-74596 {
+//     .header-top {
+//         .logo {
+//             img {
+//                 max-height: 50px;
+//                 width: auto;
+//             }
+//         }
+//     }
+// }
 
+//TODO: move to the breadcrumb section : Amalan
 //breadcrump zindex changed
 .block-easy-breadcrumb {
     z-index: 998;
@@ -288,6 +287,7 @@ field .
     position: relative;
 }
 
+//TODO: create a scss file for hybridauth and move it there. Amalan
 .icon-Google:before {
     content: "\e606";
 }
@@ -300,6 +300,7 @@ field .
     }
 }
 
+//TODO: check and remove. Aaqil.
 .understanding-autism {
     .views-submit-button {
         #edit-submit-stream {
@@ -307,7 +308,7 @@ field .
         }
     }
 }
-
+//TODO: check and remove. Aaqil.
 .node-type-my-voice-topic .understanding-autism {
     .btn {
         padding: 6px 19px;
@@ -318,7 +319,7 @@ field .
         }
     }
 }
-
+//TODO: check against content scss and remove. Anees
 .front {
     .slider-container {
         @include breakpoint($tablet) {
@@ -343,15 +344,15 @@ field .
         }
     }
 }
-
-.page-node-74566 .header_banner .banner_sub_text {
-    margin: 0 0 0 203px;
-}
+//TODO: remove the page styles of 74566 and remove the page from the site. Amalan
+// .page-node-74566 .header_banner .banner_sub_text {
+//     margin: 0 0 0 203px;
+// }
 
 .header_banner {
     z-index: 0;
 }
-
+//TODO: remove the breadcrumbs. Aaqil
 .page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies {
     #block-easy-breadcrumb-easy-breadcrumb--2 {
         .easy-breadcrumb {
@@ -361,6 +362,7 @@ field .
 }
 
 // Forum Page
+//TODO: remove the page styles of 74566 and remove the page from the site. Amalan
 .page-node-74566 {
     .st_sharethis_button .stButton {
         @include breakpoint($all-desktop) {
@@ -376,10 +378,12 @@ field .
 }
 
 // Understand Autism - List view
+//TODO: check and remove with ua page. Anees
 .posts-columns.list-view .post .info.add h3 {
     margin: -10px 0 42px;
 }
 
+//TODO: check and remove with myvoice page. Anees
 .voice-holder {
     display: none;
     &.voice-my_voice_topic {
@@ -388,6 +392,7 @@ field .
 }
 
 // Voice page
+//TODO: remove the breadcrumbs. Aaqil
 .section-voices-spectrum {
     .region-image-holder {
         .block-easy-breadcrumb {
@@ -419,6 +424,7 @@ field .
 }
 */
 
+//TODO: create a new file for hybridauth and change to that page. Amalan
 /*new set of codes for styling registration page through hybrid auth*/
 .page-hybridauth {
     #main {
@@ -441,7 +447,7 @@ field .
             clear: both;
             border-radius: 5px;
             border-color: #e4e4e4;
-            //TODO : assigning a variable colour and using it would be preferable
+            //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
             -webkit-box-shadow: inset 1px 1px 2px #707070;
             //TODO : assigning a variable colour and using it would be preferable
             box-shadow: inset 1px 1px 2px #707070;
@@ -460,7 +466,7 @@ field .
 }
 
 /*end of new codes*/
-
+//TODO: move to profile.scss Anees
 .profile-main {
     #user-profile-form {
         .description {
@@ -664,7 +670,7 @@ field .
             float: none;
         }
 
-        & > h5 { //TODO : we can remove the > 
+        & > h5 { //TODO : we can remove the > Amalan
             margin-left: 10px;
             @include breakpoint($mobile) {
                 margin-left: 0px;
@@ -718,13 +724,13 @@ div.ctools-modal-content {
 
 div.ctools-modal-content .modal-content {
     overflow-x: hidden;
-    //why are we using the overflow -x? it normally removes the responsiveness
+    //why are we using the overflow -x? it normally removes the responsiveness. Aaqil
 }
 
 .not-logged-in #user-login {
     input[type="password"], input[type="text"] {
         background: none !important;
-        //doesnt including imporatant overides the hierarchy of the stylesheet.
+        //doesnt including imporatant overides the hierarchy of the stylesheet. Anees
    
     }
 }
@@ -815,7 +821,7 @@ html.js fieldset.collapsed {
 
 // TODO: [CODESMELL] This style seems specific to specific nodes?
 // If this is to do with a WYSIWYG can we look at creating a class
-// and instructing to use it when they need this kind of padding.
+// and instructing to use it when they need this kind of padding. Nishan
 article.node-223806, article.node-223591 {
     .field-name-body {
         padding: 40px 80px;
@@ -849,17 +855,18 @@ article.node-223806, article.node-223591 {
     }
 }
 
+//TODO: check where the style gets applied. Aaqil 
 div.ctools-modal-content .modal-content {
     padding: 19px 19px 19px 49px;
 }
 
-// TODO: Can we put some comments as to what this is hiding?
+// TODO: Can we put some comments as to what this is hiding?. Nishan
 .post-comments-0 {
     display: none;
 }
 
 // TODO: this hides a white container which is being rendered 
-// sporadically on topic pages; need to investigate and fix.
+// sporadically on topic pages; need to investigate and fix. Nishan
 #block-views-stream-my-voice-blog .view-filters .mobile-view {
     display: none;
 }
@@ -893,6 +900,7 @@ div.ctools-modal-content .modal-content {
 // !important keyword. If we absolutely can't fix please put in
 // the reason as to why we can't as a comment.
 // Colorbox login
+//TODO: check whether the style gets applied. Aaqil.
 #modalContent {
     z-index: 9999 !important;
 }
@@ -922,7 +930,7 @@ div.ctools-modal-content .modal-content {
     display: none !important;
 }
 
-// TODO: hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15
+// TODO: hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15. Aaqil
 .page-taxonomy.section-topics {
     .forumpage_title {
         display: none;
@@ -983,6 +991,7 @@ fieldset.group-hidden {
 }
 
 /*fourm page text*/
+//TODO: check if needed and remove. Nishan
 .page-node-221561, .node-type-forum-discussion {
     .posts-columns.columns-full {
         .row {
@@ -1019,7 +1028,7 @@ fieldset.group-hidden {
     }
 }
 
-// TODO: [CODESMELL] This structure seems to be very deep, is this required?
+// TODO: [CODESMELL] This structure seems to be very deep, is this required?. Nishan
 .google-search-results {
     @include breakpoint($mobile) {
         &.posts-columns.columns-full {
@@ -1043,8 +1052,9 @@ fieldset.group-hidden {
 
 /* node-type-page  */
 
+//TODO : check contact us page and remove the code. Aaqil
 .node-type-page {
-    // TODO: [CODESMELL] Why do we need to have this style? Why was it hidden to begin with?
+    // TODO: [CODESMELL] Why do we need to have this style? Why was it hidden to begin with?. Aaqil
     .easy-breadcrumb {
         display: block;
     }
@@ -1057,15 +1067,15 @@ fieldset.group-hidden {
     }
 }
 
-//TODO: hack to add text to login form; we can remove this now. This was added at the very inception.
-#user-login--2,
-#user-login {
-    .hybridauth-widget-wrapper {
-        &:before {
-            content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
-        }
-    }
-}
+//TODO: hack to add text to login form; we can remove this now. This was added at the very inception. Aaqil. Remove this
+// #user-login--2,
+// #user-login {
+//     .hybridauth-widget-wrapper {
+//         &:before {
+//             content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
+//         }
+//     }
+// }
 
 #comment-body-add-more-wrapper .filter-wrapper {
     display: none;
@@ -1078,14 +1088,13 @@ fieldset.group-hidden {
     }
 }
 
-// TODO: Since this looks like some isolated code, can we look at making this mobile first?
 .logged-in {
     #block-menu-menu-header-top-menu {
         @include breakpoint($mobile) {
             float: left;
         }
 
-        // TODO: Can we make use of the breakpoints here?
+        // TODO: Can we make use of the breakpoints here? Aaqil.
         @include breakpoint(520px) {
             li {
                 padding: 0 5px;
@@ -1093,7 +1102,7 @@ fieldset.group-hidden {
         }
     }
     #block-system-user-menu {
-        // TODO: Can we make use of the breakpoints here?
+        // TODO: Can we make use of the breakpoints here? Aaqil.
         @include breakpoint(520px) {
             ul {
                 padding-left: 0;
@@ -1132,7 +1141,7 @@ fieldset.group-hidden {
 }
 
 // TODO: Can we move this code over to the forums.scss file?
-// Forum page issue fixing for mobiles
+// Forum page issue fixing for mobiles Amalan.
 .posts-columns.columns-full .row .forum-icon {
     @include breakpoint($mobile) {
         font-size: 30px;
@@ -1221,6 +1230,7 @@ article.node-223806 {
 }
 
 .nav-active {
+    //TODO : Check the overflow. 
     overflow-x: hidden;
     .nav-holder {
         position: absolute;
@@ -1288,25 +1298,25 @@ article.node-223806 {
     }
 }
 
-// TODO: Could we group all the myvoice code we have into once section?
+// TODO: Could we group all the myvoice code we have into once section? remove the code. Amalan
 // my voice filter pink
-.section-myvoice {
-    .filter-slide {
-        .nav-filter {
-            .form-type-bef-checkbox {
-                &.checked label, &.checked {
-                    color: $pink;
-                }
-            }
-        }
-    }
-    .filter-pink {
-        .form-submit {
-            background: $pink;
-            border-color: $pink-dark;
-        }
-    }
-}
+// .section-myvoice {
+//     .filter-slide {
+//         .nav-filter {
+//             .form-type-bef-checkbox {
+//                 &.checked label, &.checked {
+//                     color: $pink;
+//                 }
+//             }
+//         }
+//     }
+//     .filter-pink {
+//         .form-submit {
+//             background: $pink;
+//             border-color: $pink-dark;
+//         }
+//     }
+// }
 
 // Private message
 //-----------------
@@ -1377,7 +1387,7 @@ article.node-223806 {
 .cke_button {
     float: left !important;
 }
-
+//to be continued..........
 // Community champion
 //--------------------
 
