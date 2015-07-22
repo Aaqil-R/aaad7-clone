@@ -817,6 +817,15 @@
         white-space: pre-line;
     }
 }
+//front page action block styles taken from general.scss
+.front{
+    .action-block {
+        @include breakpoint($not-mobile) {
+            margin-top: 66px;
+        }
+    }
+}
+
 
 .block_main {
     height: 334px;

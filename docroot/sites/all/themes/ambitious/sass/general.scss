@@ -3,19 +3,19 @@
 //=== Action Block ===//
 // TODO: must move to action-block.scss
 // TODO: Check the class nesting. Amalan
-.action-block {
-    .region {
-        .block-main {
-            & > div {
-                float: right;
-                &:first-child {
-                    float: left;
-                    margin-right: 30px;
-                }
-            }
-        }
-    }
-}
+// .action-block {
+//     .region {
+//         .block-main {
+//             & > div {
+//                 float: right;
+//                 &:first-child {
+//                     float: left;
+//                     margin-right: 30px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // Overriding the effects of a stray bold style.
 .region-services .btn {
@@ -188,17 +188,19 @@ field .
     }
     // Action Block
     //TODO: move to action-block.scss amalan
-    .action-block {
-        @include breakpoint($not-mobile) {
-            margin-top: 66px;
-        }
+    // .action-block {
+    //     @include breakpoint($not-mobile) {
+    //         margin-top: 66px;
+    //     }
 
-        .holder {
-            @include breakpoint($mobile) {
-                padding: 50px 15px 0;
-            }
-        }
-    }
+    //     // .holder {
+    //     //     @include breakpoint($mobile) {
+    //     //         padding: 50px 15px 0;
+    //     //     }
+    //     // }
+    // }
+
+
     // Article Block - Remove Images on Mobile View
     .articles-block {
         h4 {
@@ -243,29 +245,32 @@ field .
 }
 //TODO: check for the validity of the code. and remove. amalan.
 // edited nanda globalsoft
-.node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
-    width: auto;
-    float: none;
-    .topic-share {
-        float: none;
-        display: block;
-        padding-bottom: 60px;
-        .stButton {
-            float: left;
-        }
-    }
-}
 
-.comment-block {
-    .topic-share {
-        float: none;
-        display: block;
-        padding-bottom: 60px;
-        .stButton {
-            float: left;
-        }
-    }
-}
+//sample page where the code exsist
+//http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/talk-to-others/2015-04-14/welcome-to-the-new-forums
+// .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
+//     width: auto;
+//     float: none;
+//     .topic-share {
+//         float: none;
+//         display: block;
+//         padding-bottom: 60px;
+//         .stButton {
+//             float: left;
+//         }
+//     }
+// }
+
+// .comment-block {
+//     .topic-share {
+//         float: none;
+//         display: block;
+//         padding-bottom: 60px;
+//         .stButton {
+//             float: left;
+//         }
+//     }
+// }
 //TODO:chek the validity and remove the code : Amalan
 // my voice page logo max height set 50px
 // .page-node-74596 {
@@ -281,11 +286,11 @@ field .
 
 //TODO: move to the breadcrumb section : Amalan
 //breadcrump zindex changed
-.block-easy-breadcrumb {
-    z-index: 998;
-    outline: none;
-    position: relative;
-}
+// .block-easy-breadcrumb {
+//     z-index: 998;
+//     outline: none;
+//     position: relative;
+// }
 
 //TODO: create a scss file for hybridauth and move it there. Amalan
 .icon-Google:before {
