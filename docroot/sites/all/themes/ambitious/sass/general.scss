@@ -268,27 +268,6 @@ field .
   }
 }
 
-//TODO: check and remove. Aaqil.
-.understanding-autism {
-  .views-submit-button {
-    #edit-submit-stream {
-      display: none;
-    }
-  }
-}
-
-//TODO: check and remove. Aaqil.
-.node-type-my-voice-topic .understanding-autism {
-  .btn {
-    padding: 6px 19px;
-  }
-  .views-submit-button {
-    #edit-submit-stream {
-      display: inherit;
-    }
-  }
-}
-
 //TODO: remove the page styles of 74566 and remove the page from the site. Amalan
 // .page-node-74566 .header_banner .banner_sub_text {
 //     margin: 0 0 0 203px;
@@ -296,15 +275,6 @@ field .
 
 .header_banner {
   z-index: 0;
-}
-
-//TODO: remove the breadcrumbs. Aaqil
-.page-node-74606 .header_image, .section-current-vacancies .header_image, .section-current-vacancies {
-  #block-easy-breadcrumb-easy-breadcrumb--2 {
-    .easy-breadcrumb {
-      display: none;
-    }
-  }
 }
 
 // Forum Page
@@ -338,16 +308,6 @@ field .
 //     display: inherit;
 //   }
 // }
-
-// Voice page
-//TODO: remove the breadcrumbs. Aaqil
-.section-voices-spectrum {
-  .region-image-holder {
-    .block-easy-breadcrumb {
-      display: none;
-    }
-  }
-}
 
 //-------------------------------------
 .search-text {
@@ -618,18 +578,6 @@ field .
   }
 }
 
-div.ctools-modal-content {
-  #user-register-form, #user-login {
-    width: 114%;
-    float: left;
-  }
-}
-
-div.ctools-modal-content .modal-content {
-  overflow-x: hidden;
-  //why are we using the overflow -x? it normally removes the responsiveness. Aaqil
-}
-
 //Below code was commented, because it's not necessary to use.
 // .not-logged-in #user-login {
 //   input[type="password"], input[type="text"] {
@@ -758,11 +706,6 @@ article.node-223806, article.node-223591 {
   }
 }
 
-//TODO: check where the style gets applied. Aaqil
-div.ctools-modal-content .modal-content {
-  padding: 19px 19px 19px 49px;
-}
-
 // TODO: Can we put some comments as to what this is hiding?. Nishan
 .post-comments-0 {
   display: none;
@@ -804,7 +747,7 @@ div.ctools-modal-content .modal-content {
 // the reason as to why we can't as a comment.
 // Colorbox login
 //TODO: check whether the style gets applied. Aaqil.
-#modalContent {
+#modalContent, #modalBackdrop {
   z-index: 9999 !important;
 }
 
@@ -823,26 +766,10 @@ div.ctools-modal-content .modal-content {
   font-weight: normal;
 }
 
-#modalBackdrop {
-  z-index: 9999 !important;
-}
-
 .not-logged-in #user-login--2 .form-item label,
 .not-logged-in #user-login .form-item label,
 #user-register-form .form-item label {
   display: none !important;
-}
-
-// TODO: hack fix to hide guidelines repeating after every post on topic page THIS MUST BE FIXED BY END OF NEXT WEEK 17.4.15. Aaqil
-.page-taxonomy.section-topics {
-  .forumpage_title {
-    display: none;
-  }
-}
-
-// TODO: HACK to hide unwanted form fields - profile and discussion page.
-fieldset.group-hidden {
-  display: none;
 }
 
 .section-node-add {
@@ -957,27 +884,13 @@ fieldset.group-hidden {
 
 //TODO : check contact us page and remove the code. Aaqil
 .node-type-page {
-  // TODO: [CODESMELL] Why do we need to have this style? Why was it hidden to begin with?. Aaqil
-  .easy-breadcrumb {
-    display: block;
-  }
   #main {
     @include breakpoint($mobile) {
-      max-width: 91%;
+      max-width: 90%;
       margin-top: 16px;
     }
   }
 }
-
-//TODO: hack to add text to login form; we can remove this now. This was added at the very inception. Aaqil. Remove this
-// #user-login--2,
-// #user-login {
-//     .hybridauth-widget-wrapper {
-//         &:before {
-//             content: "Did you have an account on the old Talk about Autism website? Please request for a new password..";
-//         }
-//     }
-// }
 
 #comment-body-add-more-wrapper .filter-wrapper {
   display: none;
@@ -991,23 +904,10 @@ fieldset.group-hidden {
 }
 
 .logged-in {
-  #block-menu-menu-header-top-menu {
-    @include breakpoint($mobile) {
-      float: left;
-    }
-
-    // TODO: Can we make use of the breakpoints here? Aaqil.
-    @include breakpoint(520px) {
-      li {
-        padding: 0 5px;
-      }
-    }
-  }
   #block-system-user-menu {
     // TODO: Can we make use of the breakpoints here? Aaqil.
-    @include breakpoint(520px) {
+    @include breakpoint($mobile) {
       ul {
-        padding-left: 0;
         li {
           a {
             font-size: 0;

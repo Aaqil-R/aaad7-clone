@@ -1,57 +1,46 @@
-@import "base/base";
+//@import "base/base";
 
-.webform-submit, input[type=submit]{
-	display:inline-block;
-	
-  margin-right:10px;
-  padding:5px 19px;
-  font-size:18px;
-  line-height:28px;
-  color:$white;
-  
-  text-align:center;
-  
-  text-decoration:none;
-
+.webform-submit, input[type=submit] {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 28px;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
   border: none;
   // round the corners
   @include border-radius(5px);
   border-bottom: 5px solid $orange-dark;
   background: $orange;
-  
   @extend %clearfix;
-  
-  font-weight:normal;
-  font-family:$base-font-family;
-
+  font-weight: normal;
+  font-family: $base-font-family;
   &:after {
-  	content: "\e60b";
+    content: "\e60b";
   }
-
   em {
-    position:relative;
-    display:inline-block;
-    vertical-align:top;
-    word-spacing:3px;
-    top:6px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: 3px;
+    top: 6px;
     margin-left: 10px;
   }
-
-  &:hover{
+  &:hover {
     color: $white;
     border-bottom-width: 3px;
     margin-top: 2px;
   }
-
-  &:active, &:focus{
+  &:active, &:focus {
     border-width: 1px;
     margin-top: 4px;
     color: $white;
   }
-
-  &:visited{
-    text-decoration:none;
-    color:$menu-grey;
+  &:visited {
+    text-decoration: none;
+    color: $menu-grey;
   }
 }
 
@@ -65,20 +54,21 @@
   , input[type=email]
   , input[type=file]
   , textarea {
-    float:left;
-    clear:both;
-    width:80%;
-    border-radius:5px;
+    float: left;
+    clear: both;
+    width: 80%;
+    border-radius: 5px;
     @include border-radius(5px);
-    font-size:18px;
+    font-size: 18px;
     border-bottom: 2px solid;
-    border-color:$mercury;
+    border-color: $mercury;
     @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
     margin-bottom: 1em;
     padding: 12px 23px;
     @include breakpoint($mobile) {
       width: 100%;
     }
+
     &:focus {
       outline: none;
       color: #2A2E31;
@@ -86,14 +76,14 @@
       border-color: #FBB900 !important;
       box-shadow: inset 1px 1px 2px #FBB900 !important;
     }
-    &.error{
+    &.error {
       border: 2px solid $error-border;
     }
-  }  
+  }
 }
 
-textarea{
-  height:183px;
+textarea {
+  height: 183px;
 }
 
 .webform-component-select {
@@ -110,113 +100,115 @@ textarea{
   background: $white;
 }
 
-.page-node-74606{
-	.form-actions{
-   float:left;
-
-   input[type=submit]{
-     padding: 10px;
-     padding-right: 44px;       
-     padding-left: 19px;
-
-     background-image: url('../images/sprite.png');
-     background-repeat: no-repeat;	      
-     background-position: 106px -251px;
-   }
- }
+.page-node-74606 {
+  .form-actions {
+    float: left;
+    input[type=submit] {
+      padding: 10px;
+      padding-right: 44px;
+      padding-left: 19px;
+      background-image: url("../images/sprite.png");
+      background-repeat: no-repeat;
+      background-position: 106px -251px;
+    }
+  }
 }
 
 .block-close {
   a {
-    text-decoration: none;    
-  }   
+    text-decoration: none;
+  }
 }
 
-.home_forum_share{
- @extend %clearfix;
- .home_forum_share_left{
-   float:left;
-   width:41%;
-   padding-right: 30px;
-   @include breakpoint($mobile){
-     float:none;
-     width:auto;
-     padding-right:0;      
-   }
-   h3{
-     font-size: 36px;
-     padding-right: 26px;
-     line-height: 40px;
-     margin-top: 17px;
-     margin-bottom: 21px;
-   }
-   p{ 
-     line-height: 27px;
-     margin-top: -7px;
-   }
- }
- .home_forum_share_right{
-   float:left;
-   width:59%;
-   margin-top:30px;
-   @include breakpoint($mobile){
-     float:none;
-     width:auto;
-   }
-   .home_forum_share_set{
-    &:first-child{
-      float:left;
+.home_forum_share {
+  @extend %clearfix;
+  .home_forum_share_left {
+    float: left;
+    width: 41%;
+    padding-right: 30px;
+    @include breakpoint($mobile) {
+      float: none;
+      width: auto;
+      padding-right: 0;
     }
-    float:right;
-    width:47%;
-    text-align:center;
-    img{
-      max-width:100%;
-    } 
-    @include breakpoint($mobile){
-      float:left;
-      width:100%;
-      //margin-bottom:15px;
-      img{
-        display:none;
+
+    h3 {
+      font-size: 36px;
+      padding-right: 26px;
+      line-height: 40px;
+      margin-top: 17px;
+      margin-bottom: 21px;
+    }
+    p {
+      line-height: 27px;
+      margin-top: -7px;
+    }
+  }
+  .home_forum_share_right {
+    float: left;
+    width: 59%;
+    margin-top: 30px;
+    @include breakpoint($mobile) {
+      float: none;
+      width: auto;
+    }
+
+    .home_forum_share_set {
+      &:first-child {
+        float: left;
+      }
+      float: right;
+      width: 47%;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+      @include breakpoint($mobile) {
+        float: left;
+        width: 100%;
+        //margin-bottom:15px;
+        img {
+          display: none;
+        }
+      }
+
+      .btn {
+        display: block;
       }
     }
-    .btn{
-      display:block;
+  }
+}
+
+.webform-client-form-74681 {
+  div.form-item {
+    float: left;
+    width: 33.3%;
+    @include breakpoint($mobile) {
+      float: none;
+      width: auto;
     }
 
-  }
-} 
-}
-.webform-client-form-74681{
-  div.form-item{
-    float:left;
-    width:33.3%;
-    @include breakpoint($mobile){
-      float:none;
-      width:auto; 
-    }
-    &.webform-component-radios{
-      & > label{
+    &.webform-component-radios {
+      & > label {
         line-height: 1.363em;
         font-size: 1.67em;
         font-weight: normal;
         font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-      } 
+      }
     }
   }
-  div.form-item.webform-component--other-ways-to-help{
+  div.form-item.webform-component--other-ways-to-help {
     width: 30%;
-    float: right; 
-    @include breakpoint($mobile){
-      float:none;
-      width:auto; 
+    float: right;
+    @include breakpoint($mobile) {
+      float: none;
+      width: auto;
     }
   }
-  .form-radios{
-    label{
+  .form-radios {
+    label {
       border: medium none;
-      width:93%;
+      width: 93%;
       cursor: pointer;
       display: inline-block;
       font-family: inherit;
@@ -236,133 +228,138 @@ textarea{
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       border-radius: 5px;
-     &:hover{
-      top: 2px;
-      -webkit-box-shadow: 0px 4px $orange-dark;
-      box-shadow: 0px 4px $orange-dark;
+      &:hover {
+        top: 2px;
+        -webkit-box-shadow: 0px 4px $orange-dark;
+        box-shadow: 0px 4px $orange-dark;
+      }
+      &:active {
+        top: 6px;
+        -webkit-box-shadow: 0px 0px $orange-dark;
+        box-shadow: 0px 0px $orange-dark;
+      }
     }
-    &:active{
-      top: 6px;
-      -webkit-box-shadow: 0px 0px $orange-dark;
-      box-shadow: 0px 0px $orange-dark;
-    }
-  }
-  fieldset{
-    float:left;
-    width:50%;
-    margin-right:-6px;
-    input{
-      display:none;
+    fieldset {
+      float: left;
+      width: 50%;
+      margin-right: -6px;
+      input {
+        display: none;
+      }
     }
   }
 }
-}
+
 .front {
-  .slider-block{
-    .ajax-progress{
+  .slider-block {
+    .ajax-progress {
       position: absolute;
-    } 
+    }
   }
 }
 
-
-
-
-div.ctools-modal-content .form-item .description{
- clear: none;
+div.ctools-modal-content .form-item .description {
+  clear: none;
 }
-.popups-container{ 
-  .modal-title{
-    font-size:23px;
-  } 
-  label{
+
+.popups-container {
+  .modal-title {
+    font-size: 23px;
+  }
+  label {
     position: absolute;
     top: 20px;
     left: 24px;
   }
-  .item-list{
-    ul{
-      margin:0px 0 9px 0px;
-      padding:0;
-      li{
-        margin:0;
+  .item-list {
+    ul {
+      margin: 0px 0 9px 0px;
+      padding: 0;
+      li {
+        margin: 0;
       }
     }
   }
-  h3{
-    font-size:19px;
+  h3 {
+    font-size: 19px;
   }
-  fieldset{
-    float:left;
-    width:100%;
+  fieldset {
+    float: left;
+    width: 100%;
     position: relative;
-    .description{
+    .description {
       clear: none;
     }
   }
-  span.tooltip-content{
+  span.tooltip-content {
     left: -45px;
     bottom: 30px;
   }
-
   input[type="email"], input[type="text"], .select, input[type="password"] {
-    float:left;
-    clear:both;
-    width:80%;
-    border-radius:5px;
-    border-color:$mercury;
+    float: left;
+    clear: both;
+    width: 80%;
+    border-radius: 5px;
+    border-color: $mercury;
     @include box-shadow(inset 1px 1px 2px $border-grey);
     margin-bottom: 20px;
     padding: 12px 23px;
     @include breakpoint($mobile) {
       width: 100%;
     }
-    font-size:18px;
+
+    font-size: 18px;
   }
-  input[type="submit"]{
-    float:left;
-    clear:both;
-    border: none;
-      // added backgournd, color, border-radius - > nanda Globalsoftlab
-      @include border-radius(5px);
-      background:$orange;
-      color:$white;
-      border-bottom: 5px solid $orange-dark;
-      margin-right: 20px;
-      @include breakpoint($mobile) {
-        margin-bottom: 20px;
-      }
-      &:hover {
-        border-bottom-width: 3px;
-        text-decoration:none;
-        color:$white;
-      }
-    }   
-  }
-  .hybridauth-widget-wrapper{
+  input[type="submit"] {
+    float: left;
     clear: both;
+    border: none;
+    // added backgournd, color, border-radius - > nanda Globalsoftlab
+    @include border-radius(5px);
+    background: $orange;
+    color: $white;
+    border-bottom: 5px solid $orange-dark;
+    margin-right: 20px;
+    @include breakpoint($mobile) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      border-bottom-width: 3px;
+      text-decoration: none;
+      color: $white;
+    }
   }
-  
-  ::-webkit-input-placeholder {
-   color: $base-link-color;
- }
-
- :-moz-placeholder { /* Firefox 18- */
-   color: $base-link-color;  
- }
-
- ::-moz-placeholder {  /* Firefox 19+ */
-   color: $base-link-color;  
- }
-
- :-ms-input-placeholder {  
-   color: $base-link-color;  
- }
- .page-user .form-item{
-  padding-left:0;
-  padding-right:0;
 }
-.messages.error.messages-inline{
+
+.hybridauth-widget-wrapper {
+  clear: both;
+}
+
+::-webkit-input-placeholder {
+  color: $base-link-color;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $base-link-color;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $base-link-color;
+}
+
+:-ms-input-placeholder {
+  color: $base-link-color;
+}
+
+.page-user .form-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.messages.error.messages-inline {
   background: none;
   padding: 0;
   font-size: 12px;
@@ -371,68 +368,57 @@ div.ctools-modal-content .form-item .description{
   text-align: right;
   margin-top: -20px;
 }
-#webform-client-form-74666{
-  .messages.error.messages-inline{
+
+#webform-client-form-74666 {
+  .messages.error.messages-inline {
     margin-bottom: 0;
     border: 0;
     margin-top: -23px;
-    position: relative; 
+    position: relative;
     width: 86%;
     @include breakpoint($mobile) {
-      width:auto;
+      width: auto;
     }
   }
 }
 
-
 #signup, #contribution {
-  @include container();
-
+  @include container;
   .input {
     margin-bottom: gutter();
   }
-
   .label {
     margin-bottom: gutter();
-  }  
-
+  }
   input[type=submit] {
-    border: medium none;    
+    border: medium none;
     outline: medium none;
-    
-    cursor: pointer;  
-    display:inline-block; 
-
+    cursor: pointer;
+    display: inline-block;
     font-family: inherit;
     font-size: inherit;
     color: $white;
-    text-align:center;
-    text-decoration:none;
-
+    text-align: center;
+    text-decoration: none;
     margin-top: 5px;
     margin-bottom: 5px;
     position: relative;
-
     background: none, repeat, scroll, 0, 0, $orange;
-
     // drop the shadow
     @include box-shadow(0px 6px $orange-dark);
     // round the corners
     @include border-radius(5px);
-
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
-      // displace the button shadow 
-      @include box-shadow(0px 4px $orange-dark);   
+      // displace the button shadow
+      @include box-shadow(0px 4px $orange-dark);
     }
-
     &:active {
       top: 6px;
       @include box-shadow(0px 0px $orange-dark);
     }
   }
-
   input[type=text]
   , input[type=search]
   , input[type=tel]
@@ -440,40 +426,32 @@ div.ctools-modal-content .form-item .description{
   , input[type=email]
   , input[type=file]
   , textarea {
-
-    float:left;
-    clear:both;
-
+    float: left;
+    clear: both;
     @include span(6 of 12);
     padding: gutter() / 2;
     @include border-radius(5px);
+    border-color: 2px solid $border-color;
+    //@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+    margin-bottom: 20px;
+    padding: 12px 23px;
+    @include breakpoint($mobile) {
+      width: 100%;
+    }
 
-    border-color: 2px solid $border-color;     
-
-      //@include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
-
-      margin-bottom: 20px;
-      padding: 12px 23px;
-
-      @include breakpoint($mobile) {
-        width: 100%;
-      }
-
-      &:focus {
-        border: 2px solid $orange-light;
-
-        // remove the user agent style.
-        outline: none;
-      }
+    &:focus {
+      border: 2px solid $orange-light;
+      // remove the user agent style.
+      outline: none;
     }
   }
+}
 
 // Webform Clienet form
-.webform-style{
-
-  .webform-client-form{
-    .form-item{
-      label{
+.webform-style {
+  .webform-client-form {
+    .form-item {
+      label {
         display: block;
         font-size: 1.3em;
         line-height: 1.5;
@@ -481,47 +459,46 @@ div.ctools-modal-content .form-item .description{
         clear: both;
       }
     }
-    
-    input{
-      &:focus{
-        border:2px solid $yellow;
+    input {
+      &:focus {
+        border: 2px solid $yellow;
         box-shadow: none;
         color: $base-link-color;
       }
-      &.error{
-        border:2px solid $error-border;
+      &.error {
+        border: 2px solid $error-border;
         box-shadow: none;
         color: $error-text;
       }
     }
-    textarea{
+    textarea {
       padding: 12px 23px;
-      float:left;
-      clear:both;
-      width:80%;
-      border-radius:5px;
+      float: left;
+      clear: both;
+      width: 80%;
+      border-radius: 5px;
       @include border-radius(5px);
-      font-size:18px;    
-      border-color:$mercury;
-      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));    
+      font-size: 18px;
+      border-color: $mercury;
+      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
       padding: 12px 23px;
       @include breakpoint($mobile) {
         width: 100%;
       }
-      &:focus{
-        border:2px solid $yellow;
+
+      &:focus {
+        border: 2px solid $yellow;
         box-shadow: none;
         color: $base-link-color;
       }
-      &.error{
-        border:2px solid $error-border;
+      &.error {
+        border: 2px solid $error-border;
         box-shadow: none;
         color: $error-text;
       }
     }
-
     input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder{
+    textarea::-webkit-input-placeholder {
       color: $menu-grey;
       font-size: 18px;
     }
@@ -530,45 +507,37 @@ div.ctools-modal-content .form-item .description{
       color: $menu-grey;
       font-size: 18px;
     }
-
-    @include breakpoint($not-mobile){
-      textarea{
-        width: 80%; 
+    @include breakpoint($not-mobile) {
+      textarea {
+        width: 80%;
       }
-
-      .grippie{
+      .grippie {
         width: 80%;
       }
     }
 
-    .form-actions{
+    .form-actions {
       margin: 1.5em 0;
       display: block;
-
-      .webform-submit{
-        clear: both;        
+      .webform-submit {
+        clear: both;
       }
-
-      .webform-submit:focus{
+      .webform-submit:focus {
         border: inherit;
         box-shadow: inherit;
         color: inherit;
       }
-
     }
   }
-
 }
 
 // Forms Node Add - Forum Discussion - All page node adding
-.page-node-add{
-
-  h1.title{
-    @include breakpoint($mobile){
+.page-node-add {
+  h1.title {
+    @include breakpoint($mobile) {
       margin: 1em 0 0.5em 1em;
     }
   }
-  
   // Styling fields
   input[type=text]
   , input[type=search]
@@ -577,192 +546,197 @@ div.ctools-modal-content .form-item .description{
   , input[type=email]
   , input[type=file]
   , textarea {
-    float:left;
-    clear:both;
-    width:100%;
+    float: left;
+    clear: both;
+    width: 100%;
     @include border-radius(5px);
-    font-size:18px;
+    font-size: 18px;
     border-bottom: 2px solid;
-    border-color:$mercury;
+    border-color: $mercury;
     @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
     margin-bottom: 1em;
     padding: 12px 23px;
   }
-
   label {
     font-size: 2em;
-    @include breakpoint($mobile){
+    @include breakpoint($mobile) {
       font-size: 1.2em;
     }
+
     margin-bottom: 0.2em;
     margin-top: 0.5em;
     display: block;
     &.filter-help,
     &.option {
       font-size: 1em;
-      margin:0;
+      margin: 0;
       display: inline;
-      @include breakpoint($mobile){
+      @include breakpoint($mobile) {
         font-size: 1em;
       }
     }
   }
-  
   // All check boxes
-  .form-item.form-type-checkboxes{
+  .form-item.form-type-checkboxes {
     margin-bottom: 1em;
-
     // Check box
-    .form-item.form-type-checkbox{
+    .form-item.form-type-checkbox {
       float: left;
       display: inline-block;
       width: 100%;
-      &.form-checkbox{
+      &.form-checkbox {
         margin-top: 0;
       }
     }
   }
-
   // Added dark-orange to the form required
-  .form-required{
+  .form-required {
     color: $orange-dark;
   }
-
 }
 
 // Register form
-#user-register-form{
-  .form-item-url{
+#user-register-form {
+  .form-item-url {
     display: none;
   }
 }
 
+div.ctools-modal-content {
+  #user-register-form, #user-login {
+    width: 114%;
+    float: left;
+  }
+}
+
+//Adds the padding around the forms in register/login/request-password
+div.ctools-modal-content .modal-content {
+  padding: 19px 19px 19px 49px;
+}
+
 // Modal forms labels
-div.modal-forms-modal-content .form-item label{
+div.modal-forms-modal-content .form-item label {
   display: none;
 }
 
 // myvoice page webform button.
-#content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]{
+#content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"] {
   @include border-radius(5px);
   border-bottom: 5px solid $pink-dark;
   background-color: $pink;
-  
   @extend %clearfix;
-  &:hover{
+  &:hover {
     color: $white;
     border-bottom-width: 3px;
     margin-top: 2px;
   }
-
-  &:active, &:focus{
+  &:active, &:focus {
     border-width: 1px;
     margin-top: 4px;
     color: $white;
   }
-
-  &:visited{
-    text-decoration:none;
-    color:$white;
+  &:visited {
+    text-decoration: none;
+    color: $white;
   }
 }
-
-
-
-
 
 /*==== Stats Page ====*/
 
 .page-forum-stats {
-    .title{
+  .title {
+    @include breakpoint($mobile) {
+      margin: 15px 10%;
+    }
+  }
+  #wrapper {
+    background: white;
+  }
+  h3 {
+    margin-top: 79px;
+    float: left;
+    margin-bottom: 32px;
+    width: 100%;
+    @include breakpoint($mobile) {
+      text-align: center;
+      width: 80%;
+      margin: 0 10%;
+    }
+  }
+  .header_image {
+    @include breakpoint($mobile) {
+      display: none;
+    }
+
+    a {
+      color: $white;
+    }
+    .region-image-holder {
+      padding-top: 28px;
+    }
+  }
+  .forum_stats {
+    padding: 0;
+    margin: 0;
+    font-family: $header-font-family;
+    li {
+      padding: 0;
+      margin: 0;
+      float: left;
+      width: 20%;
+      list-style: none;
+      text-align: center;
       @include breakpoint($mobile) {
-        margin:15px 10%;
-      }
-    }
-    #wrapper {
-        background: white;
-    }
-    h3 {
-        margin-top: 79px;
-        float: left;
-        margin-bottom: 32px;
         width: 100%;
-        @include breakpoint($mobile) {
-          text-align: center;
-          width:80%;
-          margin:0 10%;
-        }
-    }
-    .header_image {
-        @include breakpoint($mobile) {
-            display: none;
+      }
+
+      span {
+        border: 2px solid $yellow;
+        border-radius: 5px;
+        height: 128px;
+        width: 128px;
+        display: block;
+        background: $white;
+        margin-left: 32px;
+        color: $blue-light;
+        font-size: 30px;
+        line-height: 120px;
+        margin-right: 32px;
+        @include breakpoint($tablet) {
+          margin-left: 0;
+          margin-right: 0;
         }
 
-        a {
-            color: $white;
+        @include breakpoint($mobile) {
+          width: 80%;
+          margin-right: 10%;
+          margin-left: 10%;
         }
-        .region-image-holder {
-            padding-top: 28px;
+      }
+      p {
+        margin-left: 32px;
+        margin-right: 32px;
+        width: 128px;
+        line-height: normal;
+        margin-top: 20px;
+        font-size: 20px;
+        @include breakpoint($tablet) {
+          margin-left: 0;
+          margin-right: 0;
         }
+
+        @include breakpoint($mobile) {
+          width: auto;
+          max-width: 80%;
+          margin: 10px 10% 75px;
+        }
+      }
     }
-    .forum_stats {
-        padding: 0;
-        margin: 0;
-        font-family: $header-font-family;
-        li {
-            padding: 0;
-            margin: 0;
-            float: left; 
-            width: 20%;
-            list-style: none;
-            text-align: center;
-            @include breakpoint($mobile) {
-              width: 100%;
-            }
-            span {
-                border: 2px solid $yellow;
-                border-radius: 5px;
-                height: 128px;
-                width: 128px;
-                display: block;
-                background: $white;
-                margin-left: 32px;
-                color: $blue-light;
-                font-size: 30px;
-                line-height: 120px;
-                margin-right: 32px;
-                @include breakpoint($tablet) {
-                  margin-left:0;
-                  margin-right:0;
-                }
-                @include breakpoint($mobile) {
-                  width: 80%;
-                  margin-right:10%;
-                  margin-left:10%;
-                }
-            }
-            p {
-                margin-left: 32px;
-                margin-right: 32px;
-                width: 128px;
-                line-height: normal;
-                margin-top: 20px;
-                font-size: 20px;
-                @include breakpoint($tablet) {
-                  margin-left:0;
-                  margin-right:0;
-                }
-                @include breakpoint($mobile) {
-                  width:auto; 
-                  max-width:80%;
-                  margin:10px 10% 75px; 
-                }
-            }
-        }
-    }
+  }
 }
-#forum-stats-settings-form{
-  fieldset{
+
+#forum-stats-settings-form {
+  fieldset {
     @include breakpoint($mobile) {
       float: none;
       max-width: 85%;
@@ -770,29 +744,32 @@ div.modal-forms-modal-content .form-item label{
     }
   }
 }
+
 .images-list {
+  float: left;
+  width: 100%;
+  padding: 0;
+  li {
     float: left;
-    width: 100%;
-    padding:0;
-    li {
-        float: left;
-        width: 33%; 
-        list-style: none;
-        text-align: center;
-        @include breakpoint($mobile) {
-          width:100%;
-          margin-bottom:15px;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-            border-radius: 100%;
-            //border: 2px solid $yellow;
-        }
-        .name {
-            float: left;
-            width: 100%;
-            text-aign: center;
-        }
+    width: 33%;
+    list-style: none;
+    text-align: center;
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-bottom: 15px;
     }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      //border: 2px solid $yellow;
+   
+    }
+    .name {
+      float: left;
+      width: 100%;
+      text-aign: center;
+    }
+  }
 }
