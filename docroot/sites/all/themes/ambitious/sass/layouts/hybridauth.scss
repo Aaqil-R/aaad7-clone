@@ -25,11 +25,12 @@
             clear: both;
             border-radius: 5px;
             border-color: $mercury;
-            //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
-            -webkit-box-shadow: inset 1px 1px 2px $border-grey;
-            //TODO : assigning a variable colour and using it would be preferable
-            box-shadow: inset 1px 1px 2px $border-grey;
-            //TODO : assigning a variable colour and using it would be preferable
+            // //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
+            // -webkit-box-shadow: inset 1px 1px 2px $border-grey;
+            // //TODO : assigning a variable colour and using it would be preferable
+            // box-shadow: inset 1px 1px 2px $border-grey;
+            // //TODO : assigning a variable colour and using it would be preferable
+            @include box-shadow(inset 1px 1px 2px $border-grey);
             margin-bottom: 20px;
             padding: 12px 23px;
             font-size: 18px;
