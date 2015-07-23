@@ -331,10 +331,10 @@ body.profile .top-header {
 }
 
 // @include breakpoint($mobile) {
-// 	body.profile .btn{
-// 		width: 100%;
-// 		margin: 0.6em 0;
-// 	}
+//  body.profile .btn{
+//    width: 100%;
+//    margin: 0.6em 0;
+//  }
 // }
 
 /* LOGIN PAGE */
@@ -345,6 +345,50 @@ body.profile .top-header {
     padding-right: 15px;
   }
 
+  //Moved from general.scss : Anees
+  #user-profile-form {
+    .description {
+      width: auto;
+      max-width: 530px;
+      float: left;
+    }
+    fieldset {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    label {
+      position: static;
+    }
+    .field-type-text-long {
+      max-width: 520px;
+    }
+    .password-strength {
+      float: none;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 530px;
+    }
+    input[type=password] {
+      width: 100%;
+      max-width: 530px;
+    }
+    .form-type-password.form-item-pass-pass2 {
+      width: 100%;
+      max-width: 590px;
+    }
+    .field-name-field-type-of-user {
+      fieldset {
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+  //Moved from general.scss : Anees
+  #user-register-form {
+    label {
+      top: 17px;
+    }
+  }
   #user-login, #user-pass, #user-register-form, #user-profile-form {
     float: left;
     label {
@@ -589,23 +633,23 @@ body.profile .top-header {
 }
 
 // .online-user{
-// 	ul{
-// 		display: inline-block;
-// 	}
+//  ul{
+//    display: inline-block;
+//  }
 //   li{
 //     border: 3px solid $green-lighter;
 //     padding: 30px 35px;
 //     float: left;
 //     margin: 5px;
 //     &:hover{
-//     	border: 3px solid $green-dark;
+//      border: 3px solid $green-dark;
 //     }
 //   }
 //   a.username{
-//   	font-size: 20px;
-//   	color: $black; 
+//    font-size: 20px;
+//    color: $black; 
 //     &:hover{
-//     	color: $dark-gray;
+//      color: $dark-gray;
 //     }
 //   }
 // }
@@ -622,20 +666,20 @@ body.profile .top-header {
     border-radius: 10px;
     min-width: 210px;
     text-align: center;
-  	border: 3px solid $gray;
+    border: 3px solid $gray;
     padding: 30px 35px;
     float: left;
     margin: 5px;
     font-size: 20px;
     color: $dark-gray;
     &:hover {
-     border: 3px solid $orange;
-     color: $black;
+      border: 3px solid $orange;
+      color: $black;
     }
   }
 }
 
 //removing the name from the user page
-.no-display{
+.no-display {
   font-size: 0;
 }

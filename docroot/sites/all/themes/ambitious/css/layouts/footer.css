@@ -197,7 +197,7 @@
   overflow: hidden;
   cursor: default;
   display: block;
-  font-size: 19px;
+  font-size: 17px;
   color: #2a2e31;
   line-height: 41px;
   padding: 2px 44px 2px 24px;
@@ -384,8 +384,9 @@ body > .jcf-select-drop.jcf-drop-flipped {
    
 */
 /* footer styles */
-/* line 15, ../../sass/layouts/footer.scss */
+/* line 14, ../../sass/layouts/footer.scss */
 #footer {
+  clear: both;
   width: 100%;
   display: block;
   height: auto !important;
@@ -449,7 +450,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 #footer .nav ul li a:hover {
   text-decoration: none;
 }
-/* line 67, ../../sass/layouts/footer.scss */
+/* line 69, ../../sass/layouts/footer.scss */
 #footer .logo {
   display: block;
   width: 115px;
@@ -457,17 +458,17 @@ body > .jcf-select-drop.jcf-drop-flipped {
   position: relative;
   top: -49px;
 }
-/* line 73, ../../sass/layouts/footer.scss */
+/* line 75, ../../sass/layouts/footer.scss */
 #footer .logo a {
   display: block;
 }
-/* line 75, ../../sass/layouts/footer.scss */
+/* line 77, ../../sass/layouts/footer.scss */
 #footer .logo a img {
   width: 100%;
   height: auto;
   display: block;
 }
-/* line 82, ../../sass/layouts/footer.scss */
+/* line 84, ../../sass/layouts/footer.scss */
 #footer .company-info {
   float: left;
   width: 45%;
@@ -477,7 +478,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 87, ../../sass/layouts/footer.scss */
+/* line 89, ../../sass/layouts/footer.scss */
 #footer .company-info p {
   margin: 0;
   color: #d2d5d6;
@@ -485,35 +486,41 @@ body > .jcf-select-drop.jcf-drop-flipped {
   line-height: 22px;
 }
 @media (max-width: 767px) {
-  /* line 82, ../../sass/layouts/footer.scss */
+  /* line 84, ../../sass/layouts/footer.scss */
   #footer .company-info {
     width: 100%;
     float: none;
     margin: 0 0 30px;
   }
 }
-/* line 98, ../../sass/layouts/footer.scss */
+/* line 101, ../../sass/layouts/footer.scss */
 #footer .company-info a {
   color: #96a0a7;
   font-weight: normal;
   text-decoration: none;
 }
-/* line 102, ../../sass/layouts/footer.scss */
+/* line 105, ../../sass/layouts/footer.scss */
 #footer .company-info a:hover {
   color: #ffffff;
 }
-/* line 107, ../../sass/layouts/footer.scss */
+/* line 109, ../../sass/layouts/footer.scss */
 #footer .company-info .design-by {
   display: block;
   margin-top: 20px;
   color: #96a0a7;
 }
-/* line 113, ../../sass/layouts/footer.scss */
+/* line 115, ../../sass/layouts/footer.scss */
 #footer .social-holder {
-  margin: 26px 0 30px;
+  margin: -13px 0 25px;
   /* social networks styles */
 }
-/* line 116, ../../sass/layouts/footer.scss */
+@media (max-width: 767px) {
+  /* line 115, ../../sass/layouts/footer.scss */
+  #footer .social-holder {
+    margin: -210px 0 0 0;
+  }
+}
+/* line 124, ../../sass/layouts/footer.scss */
 #footer .social-holder .title, #footer .region-footer-copyright .social-holder h2 {
   float: left;
   font-size: 16px;
@@ -522,42 +529,42 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin: 0 19px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 116, ../../sass/layouts/footer.scss */
+  /* line 124, ../../sass/layouts/footer.scss */
   #footer .social-holder .title, #footer .region-footer-copyright .social-holder h2 {
     font-weight: bold;
   }
 }
-/* line 127, ../../sass/layouts/footer.scss */
+/* line 135, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul {
   float: left;
 }
-/* line 130, ../../sass/layouts/footer.scss */
+/* line 138, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li, #footer .region-footer-copyright .social-holder ul li {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin: 0 11px 0 0;
 }
-/* line 135, ../../sass/layouts/footer.scss */
+/* line 143, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li a, #footer .region-footer-copyright .social-holder ul li a {
   color: #d2d5d6;
   text-decoration: none;
 }
-/* line 138, ../../sass/layouts/footer.scss */
+/* line 146, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li a:hover, #footer .region-footer-copyright .social-holder ul li a:hover {
   color: #ffffff;
 }
-/* line 140, ../../sass/layouts/footer.scss */
+/* line 150, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li em, #footer .region-footer-copyright .social-holder ul li em {
   display: none;
 }
-/* line 141, ../../sass/layouts/footer.scss */
+/* line 153, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li .icon-YouTube, #footer .region-footer-copyright .social-holder ul li .icon-YouTube {
   font-size: 23px;
   display: block;
   margin: -4px 0 0 -2px;
 }
-/* line 149, ../../sass/layouts/footer.scss */
+/* line 161, ../../sass/layouts/footer.scss */
 #footer .right-footer {
   float: right;
   width: 48.6%;
@@ -567,14 +574,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
   transition: all 0.4s ease;
 }
 @media (max-width: 990px) {
-  /* line 149, ../../sass/layouts/footer.scss */
+  /* line 161, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 55%;
     position: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 149, ../../sass/layouts/footer.scss */
+  /* line 161, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 100%;
     position: none;
@@ -583,66 +590,66 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (min-width: 767px) {
-  /* line 149, ../../sass/layouts/footer.scss */
+  /* line 161, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     margin-top: -88px;
   }
 }
-/* line 168, ../../sass/layouts/footer.scss */
+/* line 181, ../../sass/layouts/footer.scss */
 #footer .left-footer {
   float: left;
   width: 45%;
 }
 @media (max-width: 990px) {
-  /* line 168, ../../sass/layouts/footer.scss */
+  /* line 181, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 55%;
   }
 }
 @media (max-width: 767px) {
-  /* line 168, ../../sass/layouts/footer.scss */
+  /* line 181, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 100%;
     float: none;
     overflow: hidden;
   }
 }
-/* line 180, ../../sass/layouts/footer.scss */
+/* line 194, ../../sass/layouts/footer.scss */
 #footer .contact-info {
   float: left;
   width: 31.7%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 180, ../../sass/layouts/footer.scss */
+  /* line 194, ../../sass/layouts/footer.scss */
   #footer .contact-info {
     width: 50%;
   }
 }
-/* line 188, ../../sass/layouts/footer.scss */
+/* line 202, ../../sass/layouts/footer.scss */
 #footer .school-info {
   float: left;
   width: 39%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 188, ../../sass/layouts/footer.scss */
+  /* line 202, ../../sass/layouts/footer.scss */
   #footer .school-info {
     display: none;
   }
 }
-/* line 196, ../../sass/layouts/footer.scss */
+/* line 210, ../../sass/layouts/footer.scss */
 #footer .web-info {
   float: left;
   width: 29%;
 }
 @media (max-width: 767px) {
-  /* line 196, ../../sass/layouts/footer.scss */
+  /* line 210, ../../sass/layouts/footer.scss */
   #footer .web-info {
     width: 50%;
   }
 }
-/* line 204, ../../sass/layouts/footer.scss */
+/* line 217, ../../sass/layouts/footer.scss */
 #footer .title, #footer .region-footer-copyright .social-holder h2 {
   display: block;
   font-size: 27px;
@@ -650,65 +657,72 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #081318;
 }
 @media (max-width: 767px) {
-  /* line 204, ../../sass/layouts/footer.scss */
+  /* line 217, ../../sass/layouts/footer.scss */
   #footer .title, #footer .region-footer-copyright .social-holder h2 {
     font-size: 22px;
     line-height: 30px;
   }
 }
-/* line 217, ../../sass/layouts/footer.scss */
+/* line 228, ../../sass/layouts/footer.scss */
 #footer .social-networks, #footer .region-footer-copyright .social-holder ul {
   float: left;
 }
-/* line 220, ../../sass/layouts/footer.scss */
+/* line 231, ../../sass/layouts/footer.scss */
 #footer .social-networks li, #footer .region-footer-copyright .social-holder ul li {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin: 0 11px 0 0;
 }
-/* line 225, ../../sass/layouts/footer.scss */
+/* line 236, ../../sass/layouts/footer.scss */
 #footer .social-networks li a, #footer .region-footer-copyright .social-holder ul li a {
   color: #d2d5d6;
   text-decoration: none;
 }
-/* line 228, ../../sass/layouts/footer.scss */
+/* line 239, ../../sass/layouts/footer.scss */
 #footer .social-networks li a:hover, #footer .region-footer-copyright .social-holder ul li a:hover {
   color: #ffffff;
 }
-/* line 230, ../../sass/layouts/footer.scss */
+/* line 243, ../../sass/layouts/footer.scss */
 #footer .social-networks li em, #footer .region-footer-copyright .social-holder ul li em {
   display: none;
 }
-/* line 231, ../../sass/layouts/footer.scss */
+/* line 246, ../../sass/layouts/footer.scss */
 #footer .social-networks li .icon-YouTube, #footer .region-footer-copyright .social-holder ul li .icon-YouTube {
   font-size: 23px;
   display: block;
   margin: -4px 0 0 -2px;
 }
-/* line 252, ../../sass/layouts/footer.scss */
+@media (max-width: 767px) {
+  /* line 264, ../../sass/layouts/footer.scss */
+  #footer .region-footer-copyright .block.last.even {
+    margin-top: 210px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 270, ../../sass/layouts/footer.scss */
+  #footer .region-footer-right {
+    margin-top: 45px;
+  }
+}
+/* line 275, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul {
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-/* line 257, ../../sass/layouts/footer.scss */
+/* line 279, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li {
   font-size: 16px;
   line-height: 20px;
   margin: 0 0 16px;
 }
-/* line 261, ../../sass/layouts/footer.scss */
+/* line 283, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a {
   color: #d2d5d6;
   text-decoration: underline;
 }
-/* line 264, ../../sass/layouts/footer.scss */
+/* line 286, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a:hover {
   text-decoration: none;
-}
-
-/* line 273, ../../sass/layouts/footer.scss */
-footer#footer {
-  clear: both;
 }
