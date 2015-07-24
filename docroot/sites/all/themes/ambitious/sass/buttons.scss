@@ -1,354 +1,325 @@
 @import "base/base";
 
 /* button */
-.btn {  
+.btn {
   border: medium none;
-  cursor: pointer;  
-  display:inline-block;
+  cursor: pointer;
+  display: inline-block;
   font-family: inherit;
   font-size: inherit;
   color: $white;
-  text-align:center;
-  text-decoration:none;
+  text-align: center;
+  text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
   outline: medium none;
   padding: 25px 80px;
   position: relative;
-  line-height:29px;
+  line-height: 29px;
   background: none, repeat, scroll, 0, 0, $orange;
-
   // drop the shadow
   @include box-shadow(0px 6px $orange-dark);
   // round the corners
   @include border-radius(5px);
-
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
-    // displace the button shadow 
-    @include box-shadow(0px 4px $orange-dark);   
+    // displace the button shadow
+    @include box-shadow(0px 4px $orange-dark);
   }
-
   &:active {
     top: 6px;
     @include box-shadow(0px 0px $orange-dark);
   }
-  
   @extend %clearfix;
-
   em {
-    position:relative;
-    display:inline-block;
-    vertical-align:top;
-    word-spacing:3px;
-    top:6px;
-    margin-left:11px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: 3px;
+    top: 6px;
+    margin-left: 11px;
   }
-
   span {
-
     .icon-Rightarrow {
-      @include breakpoint($tablet){
+      @include breakpoint($tablet) {
         font-size: 16px;
-      };
+      }
     }
   }
-
-  @include breakpoint($mobile){
+  @include breakpoint($mobile) {
     width: 100%;
-  };
+  }
 
-  &.btn-green{
+  &.btn-green {
     @include box-shadow(0px 6px $green-dark);
-    background:$green;
-
+    background: $green;
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
-      // displace the button shadow 
-      @include box-shadow(0px 4px $green-dark);   
+      // displace the button shadow
+      @include box-shadow(0px 4px $green-dark);
     }
-
     &:active {
       top: 6px;
       @include box-shadow(0px 0px $green-dark);
     }
   }
-
-  &input[type=submit]{
-    border-radius:5px;
+  &input[type=submit] {
+    border-radius: 5px;
   }
-
-  &.btn-pink{
+  &.btn-pink {
     @include box-shadow(0px 6px $pink-dark);
-    background:$pink;
+    background: $pink;
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
-      // displace the button shadow 
-      @include box-shadow(0px 4px $pink-dark);   
+      // displace the button shadow
+      @include box-shadow(0px 4px $pink-dark);
     }
-
     &:active {
       top: 6px;
       @include box-shadow(0px 0px $pink-dark);
     }
   }
-
-  &.btn-gray{
-    border:1px solid $menu-grey;
+  &.btn-gray {
+    border: 1px solid $menu-grey;
     border-bottom-width: 5px;
-    background:$white;
-    padding:5px 22px;
-    color:$menu-grey;
-
-    &:hover{
-      color:$menu-grey;
-      text-decoration: none;    
-    }
-
-    &:active, &:focus{
-      border-width: 1px;
-      margin-top:4px;
-      color:$menu-grey;
-    }
-
-    &:visited{
-      text-decoration:none;
-      color:$menu-grey;
-    }
-  }
-
-  &.bt-left{
-    margin:0 0 0 23px;
-    @include breakpoint($mobile) {
-      margin:0 0 0 11px;
-    }
-  }
-
-  &.btn-transparent{
-    background:none;
-    @include box-shadow(none);
-
-    border: 3px solid $white;
-
+    background: $white;
+    padding: 5px 22px;
+    color: $menu-grey;
     &:hover {
-    // replace the displacement of the button from the top
-    top: 1px;
-    // displace the button shadow 
-    @include box-shadow(none);
-    border: 2px solid $white;
-  }
-
-  em{
-    padding-left:25px;
-  }
-
-  @include breakpoint($mobile) {
-    font-size:14px;
-    padding:7px 18px;
-    em{
-      padding-left:5px;
+      color: $menu-grey;
+      text-decoration: none;
     }
-  }  
-}
-
-&.btn-left{
-  float:left;
-}
-&.btn-right{
-  float:right;
-}
-
-.desktop{
-  @include breakpoint($mobile){
-    display: none;
+    &:active, &:focus {
+      border-width: 1px;
+      margin-top: 4px;
+      color: $menu-grey;
+    }
+    &:visited {
+      text-decoration: none;
+      color: $menu-grey;
+    }
+  }
+  &.bt-left {
+    margin: 0 0 0 23px;
+    @include breakpoint($mobile) {
+      margin: 0 0 0 11px;
+    }
+  }
+  &.btn-transparent {
+    background: none;
+    @include box-shadow(none);
+    border: 3px solid $white;
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 1px;
+      // displace the button shadow
+      @include box-shadow(none);
+      border: 2px solid $white;
+    }
+    em {
+      padding-left: 25px;
+    }
+    @include breakpoint($mobile) {
+      font-size: 14px;
+      padding: 7px 18px;
+      em {
+        padding-left: 5px;
+      }
+    }
+  }
+  &.btn-left {
+    float: left;
+  }
+  &.btn-right {
+    float: right;
+  }
+  .desktop {
+    @include breakpoint($mobile) {
+      display: none;
+    }
   }
 }
-} // end .btn 
+
+// end .btn
 
 a.btn:hover {
-  color: $white;  
+  color: $white;
 }
 
 // Views - footer button
-.footer-button{
-	//margin-bottom: 130px;
+.footer-button {
+  //margin-bottom: 130px;
   margin-bottom: $graphic-padding;
-  @include breakpoint($mobile){
+  @include breakpoint($mobile) {
     margin-bottom: 30px;
   }
-  .view-footer{
+
+  .view-footer {
     text-align: center;
     clear: both;
     padding-top: 25px;
-    @include breakpoint($mobile){
-     margin-bottom: 10px;
-   }
+    @include breakpoint($mobile) {
+      margin-bottom: 10px;
+    }
 
-   a.btn{
-		// font-family: $base-font-family;
-		padding: 9px 30px;
-    line-height: 30px;
-    @include breakpoint($mobile){
-      width: 100%;
-      margin-bottom: 25px;
-     }
-   }
- }
+    a.btn {
+      // font-family: $base-font-family;
+      padding: 9px 30px;
+      line-height: 30px;
+      @include breakpoint($mobile) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+  }
 }
-//applied only to what we do in front page. 
-.front{
-  .articles-block{
-    .view-footer{
-      padding-top:28px;
+
+//applied only to what we do in front page.
+.front {
+  .articles-block {
+    .view-footer {
+      padding-top: 28px;
     }
   }
 }
 
 // TODO: this is part of the button refactoring need to
 // consolidate further.
-.btn {  
+.btn {
   // Facebook button
   &.facebook-btn {
     display: none;
-    @include breakpoint($mobile){
+    @include breakpoint($mobile) {
       display: block;
       margin-top: 20px;
       margin-bottom: 20px;
-
       @include box-shadow(0px 6px $fb-blue-dark);
-      background:$fb-blue;
-
+      background: $fb-blue;
       &:hover {
         // replace the displacement of the button from the top
         top: 2px;
-        // displace the button shadow 
-        @include box-shadow(0px 4px $fb-blue-dark);   
+        // displace the button shadow
+        @include box-shadow(0px 4px $fb-blue-dark);
       }
     }
   }
-
   // Twitter button
-  &.twitter-btn{
+  &.twitter-btn {
     display: none;
-
-    @include breakpoint($mobile){
-      display: block; 
+    @include breakpoint($mobile) {
+      display: block;
       margin-top: 20px;
       margin-bottom: 20px;
-
       @include box-shadow(0px 6px $tw-blue-dark);
-      background:$tw-blue;
-
+      background: $tw-blue;
       &:hover {
         // replace the displacement of the button from the top
         top: 2px;
-        // displace the button shadow 
-        @include box-shadow(0px 4px $tw-blue-dark);   
+        // displace the button shadow
+        @include box-shadow(0px 4px $tw-blue-dark);
       }
     }
   }
-  &.btn-google{
+  &.btn-google {
     @include box-shadow(0px 6px $milano_red);
-    background:$error-red;
-
+    background: $error-red;
     &:hover {
-        // replace the displacement of the button from the top
-        top: 2px;
-        // displace the button shadow 
-        @include box-shadow(0px 4px $milano_red);   
-      }
+      // replace the displacement of the button from the top
+      top: 2px;
+      // displace the button shadow
+      @include box-shadow(0px 4px $milano_red);
     }
   }
+}
 
-  .icon-connection {
-   font-size:29px;
-   padding:6px 0 0;
-   float:left;
-   background:$white;
-   line-height:30px;
-   height:45px;
-   width:45px;
-   text-align:center;
-   color:$pink ;
-   @include breakpoint($mobile) {
-    height:33px;
-    width:34px;
-    padding:2px 0 0;
-    font-size:16px;
+.icon-connection {
+  font-size: 29px;
+  padding: 6px 0 0;
+  float: left;
+  background: $white;
+  line-height: 30px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  color: $pink;
+  @include breakpoint($mobile) {
+    height: 33px;
+    width: 34px;
+    padding: 2px 0 0;
+    font-size: 16px;
   }
 }
 
 // shadow-button
-.shadow-btn{
-  &:hover{
-    box-shadow: 0 1px $white; 
+.shadow-btn {
+  &:hover {
+    box-shadow: 0 1px $white;
   }
 }
 
-.youtube-btn {   
+.youtube-btn {
   @include breakpoint($mobile) {
-    margin-bottom:0px;
+    margin-bottom: 0px;
   }
-  span.icon-YouTube{
-    @include breakpoint(999px){
+
+  span.icon-YouTube {
+    @include breakpoint(999px) {
       display: none;
     }
   }
 }
 
-
-.sort-block{
-  .btn{
+.sort-block {
+  .btn {
     padding: 4px 19px;
     margin-top: 2px;
     @include breakpoint($mobile) {
-      margin-top:0px;
+      margin-top: 0px;
     }
   }
 }
 
-.footer{
-  .btn{
+.footer {
+  .btn {
     padding: 4px 19px;
-    margin-top: 0px;    
+    margin-top: 0px;
   }
 }
 
-.btn-facebook{
+.btn-facebook {
   @include box-shadow(0px 6px $fb-blue-dark);
-  background:$fb-blue;
-
+  background: $fb-blue;
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
-    // displace the button shadow 
-    @include box-shadow(0px 4px $fb-blue-dark);   
+    // displace the button shadow
+    @include box-shadow(0px 4px $fb-blue-dark);
   }
 }
 
 // Twitter button
-.btn-twitter{
+.btn-twitter {
   @include box-shadow(0px 6px $tw-blue-dark);
-  background:$tw-blue;
-
+  background: $tw-blue;
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
-    // displace the button shadow 
-    @include box-shadow(0px 4px $tw-blue-dark);   
+    // displace the button shadow
+    @include box-shadow(0px 4px $tw-blue-dark);
   }
 }
 
-.featured-mobile-btn{
+.featured-mobile-btn {
   margin-bottom: 0px;
   @include breakpoint($mobile) {
-    padding:0px;
-    margin-bottom:0px;
+    padding: 0px;
+    margin-bottom: 0px;
   }
-  a.btn{
+
+  a.btn {
     @include breakpoint($mobile) {
       margin-bottom: 0px;
       margin-left: 0px;
@@ -358,127 +329,129 @@ a.btn:hover {
   }
 }
 
-.nav-holder{
-  top:0px;
+.nav-holder {
+  top: 0px;
 }
-
 
 /*SHARE BUTTON*/
 
-.st_sharethis_button .stButton{
-  display:inline-block;
-  float:right;
-  border:none;
-  padding:5px 19px;
-  font-size:18px;
-  line-height:28px;
+.st_sharethis_button .stButton {
+  display: inline-block;
+  float: right;
+  border: none;
+  padding: 5px 19px;
+  font-size: 18px;
+  line-height: 28px;
   //margin-top:5px;
-  border-radius:5px;
-  color:$white;
-  text-align:center;
-  text-decoration:none;
+  border-radius: 5px;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
   //border-bottom:5px solid $green-dark;
-  background:$green;
+  background: $green;
   @extend %clearfix;
-  font-weight:normal;
-  @include box-shadow(0px 5px $green-dark);  
-  font-family:$base-font-family;
+  font-weight: normal;
+  @include box-shadow(0px 5px $green-dark);
+  font-family: $base-font-family;
   @include breakpoint($mobile) {
     padding-top: 7px;
     font-size: 16px;
     //margin-top:0px;
   }
+
   &:hover {
     // border-bottom-width: 3px;
-    top:2px;
+    top: 2px;
     // text-decoration:none;
     // color:$white;
     //top: 2px;
-    @include box-shadow(0px 4px $green-dark);   
+    @include box-shadow(0px 4px $green-dark);
   }
-  &:active{
+  &:active {
     //border-bottom-width:0px;
-    top:6px;
+    top: 6px;
     //text-decoration:none;
-    color:$white;
-    @include box-shadow(0px 0px $green-dark);  
+    color: $white;
+    @include box-shadow(0px 0px $green-dark);
   }
-  &:visited{
-    text-decoration:none;
-    color:$white;
-  }  
- .st-sharethis-counter{
-   background:none !important;
-   width:109px;         
-   @include breakpoint($mobile) {
-     width:124px;
-   }
-   @include breakpoint($small-mobile) {
-     width:110px;
-   } 
-   &:after{
-    font-size: 18px;
-    font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-    content :"Share this";
-    color:$white;
-    float: left;
-    margin-top: -22px;
-    padding-right: 29px;
+  &:visited {
+    text-decoration: none;
+    color: $white;
+  }
+  .st-sharethis-counter {
+    background: none !important;
+    width: 109px;
     @include breakpoint($mobile) {
-      margin-top: -23px;
-      font-size: 17px;
+      width: 124px;
     }
-  }    
-  &:before{
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    float: right;
-    font-size: 20px;
-    color:$white;
-    font-family: 'icomoon';
-    content: "\e60d";
-    position: relative;
-    top: -4px;
+
+    @include breakpoint($small-mobile) {
+      width: 110px;
+    }
+
+    &:after {
+      font-size: 18px;
+      font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+      content: "Share this";
+      color: $white;
+      float: left;
+      margin-top: -22px;
+      padding-right: 29px;
+      @include breakpoint($mobile) {
+        margin-top: -23px;
+        font-size: 17px;
+      }
+    }
+    &:before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      float: right;
+      font-size: 20px;
+      color: $white;
+      font-family: 'icomoon';
+      content: "\e60d";
+      position: relative;
+      top: -4px;
+    }
   }
-}
 }
 
 // Share Button on Talk to others
 .section-talk-to-others {
-    .forum-page.topic.filterbutton {
-            padding: 4px 10px;
-            float: left;
-            margin-right: 1px;
-            @include breakpoint($not-desktop) {
-                padding: 4px 20px;
-            }
-        }
-    .topic-share {
-        @include breakpoint($not-mobile) {
-            float: left;
-            margin-top: 2px;
-        }
-        @include breakpoint($all-desktop) {
-            float: right;
-        }
+  .forum-page.topic.filterbutton {
+    padding: 4px 10px;
+    float: left;
+    margin-right: 1px;
+    @include breakpoint($not-desktop) {
+      padding: 4px 20px;
     }
-        .st_sharethis_button .stButton {
-            padding: 5px 14px;
-        } 
-}	
+  }
+  .topic-share {
+    @include breakpoint($not-mobile) {
+      float: left;
+      margin-top: 2px;
+    }
 
+    @include breakpoint($all-desktop) {
+      float: right;
+    }
+  }
+  .st_sharethis_button .stButton {
+    padding: 5px 14px;
+  }
+}
 
 //to adjust the button sizes in the social media pages (user profile)
-.connect{
-  .btn{
+.connect {
+  .btn {
     padding-left: 19px;
     padding-right: 19px;
     padding-top: 5px;
@@ -488,7 +461,7 @@ a.btn:hover {
 }
 
 // Button Classes for After
-.right-arrow{
+.right-arrow {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -498,7 +471,7 @@ a.btn:hover {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &:after{
+  &:after {
     content: "\e60b";
     display: inline-block;
     margin-left: 20px;
@@ -508,44 +481,42 @@ a.btn:hover {
 }
 
 // Adding more padding to the button
-.btn-wider{
+.btn-wider {
   padding: 12px 34px;
 }
 
 // Adding a default button
-.btn-default{
+.btn-default {
   padding-top: 0.4em;
   padding-right: 1.4em;
   padding-bottom: 0.4em;
   padding-left: 1.4em;
-  margin-top:1em;
+  margin-top: 1em;
   margin-bottom: 1em;
   clear: both;
 }
 
 //button on the particular webforms font size fixes
-.webform-client-form-74681{
+.webform-client-form-74681 {
   @include breakpoint($not-mobile) {
-    a.btn{
+    a.btn {
       font-size: 20px;
     }
   }
 }
 
-
-.page-node-74596{
-  .my-voice-intro-menu{
-    h6{
-      a.btn{
-        padding:2px 20px;
+.page-node-74596 {
+  .my-voice-intro-menu {
+    h6 {
+      a.btn {
+        padding: 2px 20px;
       }
     }
   }
 }
 
-
 // Buttons with icon-Right arrow
-.btn-rightarrow:after{
+.btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';
   speak: none;
@@ -558,4 +529,12 @@ a.btn:hover {
   display: inline-block;
   vertical-align: middle;
   padding-left: 16px;
+}
+
+.btn.clear-all {
+  font-size: 18px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+  float: right;
+  max-width: 110px;
 }

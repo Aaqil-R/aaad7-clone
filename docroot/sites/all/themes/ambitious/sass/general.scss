@@ -1,22 +1,5 @@
 @import "base/base";
 
-//=== Action Block ===//
-// TODO: must move to action-block.scss
-// TODO: Check the class nesting. Amalan
-// .action-block {
-//     .region {
-//         .block-main {
-//             & > div {
-//                 float: right;
-//                 &:first-child {
-//                     float: left;
-//                     margin-right: 30px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 // Overriding the effects of a stray bold style.
 .region-services .btn {
   font-family: $base-font-family;
@@ -35,6 +18,9 @@ field .
 
 //=== Home page-Issue fixing ===//
 .front {
+  &.page-loaded .slider-block {
+    visibility: visible;
+  }
   // Webform paragraph
   .form-item p:nth-child(2) {
     @include breakpoint($tablet-range) {
@@ -46,6 +32,7 @@ field .
   }
   // Form on Home page
   .slider-block {
+    visibility: hidden;
     z-index: 998;
     position: relative;
     .block {
@@ -175,18 +162,6 @@ field .
       margin-bottom: 15px;
     }
   }
-  // Action Block
-  //TODO: move to action-block.scss amalan
-  // .action-block {
-  //     @include breakpoint($not-mobile) {
-  //         margin-top: 66px;
-  //     }
-  //     // .holder {
-  //     //     @include breakpoint($mobile) {
-  //     //         padding: 50px 15px 0;
-  //     //     }
-  //     // }
-  // }
   // Article Block - Remove Images on Mobile View
   .articles-block {
     h4 {
@@ -209,57 +184,6 @@ field .
   }
 }
 
-//TODO: check for the validity of the code. and remove. amalan.
-// edited nanda globalsoft
-
-//sample page where the code exsist
-//http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/talk-to-others/2015-04-14/welcome-to-the-new-forums
-// .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right {
-//     width: auto;
-//     float: none;
-//     .topic-share {
-//         float: none;
-//         display: block;
-//         padding-bottom: 60px;
-//         .stButton {
-//             float: left;
-//         }
-//     }
-// }
-
-// .comment-block {
-//     .topic-share {
-//         float: none;
-//         display: block;
-//         padding-bottom: 60px;
-//         .stButton {
-//             float: left;
-//         }
-//     }
-// }
-//TODO:chek the validity and remove the code : Amalan
-// my voice page logo max height set 50px
-// .page-node-74596 {
-//     .header-top {
-//         .logo {
-//             img {
-//                 max-height: 50px;
-//                 width: auto;
-//             }
-//         }
-//     }
-// }
-
-//TODO: move to the breadcrumb section : Amalan
-//breadcrump zindex changed
-// .block-easy-breadcrumb {
-//     z-index: 998;
-//     outline: none;
-//     position: relative;
-// }
-
-//TODO: create a scss file for hybridauth and move it there. Amalan
-
 // Fixing the padding issue on content bottom
 #content_bottom {
   @include breakpoint($mobile) {
@@ -268,46 +192,9 @@ field .
   }
 }
 
-//TODO: remove the page styles of 74566 and remove the page from the site. Amalan
-// .page-node-74566 .header_banner .banner_sub_text {
-//     margin: 0 0 0 203px;
-// }
-
 .header_banner {
   z-index: 0;
 }
-
-// Forum Page
-//TODO: remove the page styles of 74566 and remove the page from the site. Amalan
-// .page-node-74566 {
-//     .st_sharethis_button .stButton {
-//         @include breakpoint($all-desktop) {
-//             padding: 6px 28px;
-//         }
-//     }
-//     .sort-block .btn {
-//         @include breakpoint($all-desktop) {
-//             padding-left: 38px;
-//             padding-right: 38px;
-//         }
-//     }
-// }
-
-// Understand Autism - List view
-//TODO: check and remove with ua page. Anees
-// The below code, there is no any h3 in UA page. So we don't need this code.
-// .posts-columns.list-view .post .info.add h3 {
-//   margin: -10px 0 42px;
-// }
-
-//TODO: check and remove with myvoice page. Anees
-// There is no any class call ".voice-holder". So we can remove this.
-// .voice-holder {
-//   display: none;
-//   &.voice-my_voice_topic {
-//     display: inherit;
-//   }
-// }
 
 //-------------------------------------
 .search-text {
@@ -318,62 +205,6 @@ field .
     top: 10px;
   }
 }
-
-/* removed it because it was causing issues on registration page with hybrid auth
-.description{ 
-  float: left;
-  width: 50px;
-  position: relative;
-
-  a{
-    float: left;
-    position: relative;
-  }
-}
-*/
-
-//TODO: create a new file for hybridauth and change to that page. Amalan
-/*new set of codes for styling registration page through hybrid auth*/
-// .page-hybridauth {
-//     #main {
-//         background: $white;
-//     }
-//     fieldset {
-//         float: none;
-//         padding-left: 0px;
-//         &.form-wrapper {
-//             min-height: 550px;
-//         }
-//         .password-strength {
-//             margin-top: 0px;
-//         }
-//     }
-//     input {
-//         &.username {
-//             width: 16em;
-//             float: left;
-//             clear: both;
-//             border-radius: 5px;
-//             border-color: #e4e4e4;
-//             //TODO : include compass boxshadow and assigning a variable colour and using it would be preferable
-//             -webkit-box-shadow: inset 1px 1px 2px #707070;
-//             //TODO : assigning a variable colour and using it would be preferable
-//             box-shadow: inset 1px 1px 2px #707070;
-//             //TODO : assigning a variable colour and using it would be preferable
-//             margin-bottom: 20px;
-//             padding: 12px 23px;
-//             font-size: 18px;
-//         }
-//     }
-//     legend {
-//         font-weight: bold;
-//     }
-//     .description {
-//         float: left;
-//     }
-// }
-
-/*end of new codes*/
 
 #modal-content {
   .tooltip-content {
@@ -452,8 +283,6 @@ field .
 
 #slider-container form {
   .description {
-    //width: 15px;
-    //margin-left: 7px;
     margin-top: 5px;
   }
   h2 {
@@ -481,7 +310,6 @@ field .
     margin-bottom: 20px;
   }
   .home_forum_share {
-    //padding-top: 14px;
     .home_forum_share_left {
       p {
         margin-right: 0;
@@ -533,7 +361,6 @@ field .
     }
 
     h5 {
-      //TODO : we can remove the > Amalan
       margin-left: 10px;
       @include breakpoint($mobile) {
         margin-left: 0px;
@@ -578,15 +405,6 @@ field .
   }
 }
 
-//Below code was commented, because it's not necessary to use.
-// .not-logged-in #user-login {
-//   input[type="password"], input[type="text"] {
-//     background: none !important;
-//     //doesnt including imporatant overides the hierarchy of the stylesheet. Anees
-
-//   }
-// }
-
 #webform-client-form-74666 {
   label {
     position: absolute;
@@ -625,7 +443,6 @@ body .view-display-id-stream_forum_page {
 }
 
 // Post footer
-
 .posts-columns .post .footer .num-holder a .text {
   display: none;
 }
@@ -738,15 +555,10 @@ article.node-223806, article.node-223591 {
 .topic_section {
   float: left;
   width: 100%;
-  // margin-left: 9px;
   margin-top: 15px;
 }
 
-// TODO: Please fix the underlying issues and get rid of the 
-// !important keyword. If we absolutely can't fix please put in
-// the reason as to why we can't as a comment.
-// Colorbox login
-//TODO: check whether the style gets applied. Aaqil.
+//To override the inline z-index css in login forms.
 #modalContent, #modalBackdrop {
   z-index: 9999 !important;
 }
@@ -882,7 +694,6 @@ article.node-223806, article.node-223591 {
 
 /* node-type-page  */
 
-//TODO : check contact us page and remove the code. Aaqil
 .node-type-page {
   #main {
     @include breakpoint($mobile) {
@@ -905,7 +716,6 @@ article.node-223806, article.node-223591 {
 
 .logged-in {
   #block-system-user-menu {
-    // TODO: Can we make use of the breakpoints here? Aaqil.
     @include breakpoint($mobile) {
       ul {
         li {
@@ -941,23 +751,6 @@ article.node-223806, article.node-223591 {
     }
   }
 }
-
-// TODO: Can we move this code over to the forums.scss file?
-// Forum page issue fixing for mobiles Amalan.
-// .posts-columns.columns-full .row .forum-icon {
-//     @include breakpoint($mobile) {
-//         font-size: 30px;
-//         position: absolute;
-//         right: 0;
-//         top: 0;
-//     }
-// }
-
-// body .view-display-id-stream_forum_page .show_hot .icon-Hottopic {
-//     @include breakpoint($mobile) {
-//         margin-right: 50px;
-//     }
-// }
 
 // Action Nav
 .right-info a.school-opener,
@@ -1100,26 +893,6 @@ article.node-223806 {
   }
 }
 
-// TODO: Could we group all the myvoice code we have into once section? remove the code. Amalan
-// my voice filter pink
-// .section-myvoice {
-//     .filter-slide {
-//         .nav-filter {
-//             .form-type-bef-checkbox {
-//                 &.checked label, &.checked {
-//                     color: $pink;
-//                 }
-//             }
-//         }
-//     }
-//     .filter-pink {
-//         .form-submit {
-//             background: $pink;
-//             border-color: $pink-dark;
-//         }
-//     }
-// }
-
 // Private message
 //-----------------
 
@@ -1149,7 +922,6 @@ article.node-223806 {
 
 // New message
 #privatemsg-new {
-  //overflow: hidden; - for tooltip hide.
   input.form-text {
     max-width: 100%;
     @include border-radius(5px);
@@ -1190,10 +962,8 @@ article.node-223806 {
   float: left !important;
 }
 
-//to be continued..........
 // Community champion
 //--------------------
-
 .section-community-champions-forum {
   section#content-area {
     padding: 6px;
@@ -1285,10 +1055,7 @@ article.node-223806 {
         clear: both;
       }
     }
-    //TODO: [CODESMELL]
-    //Do we need to add the '>' selector here
-    //This selects all <li> elements where the parent is a <div class="comment-listing"> element
-    & > li {
+    > li {
       margin-top: 15px;
       float: left;
       position: relative;
@@ -1297,8 +1064,6 @@ article.node-223806 {
   }
 }
 
-//TODO: What this below comment means ?
-// Remove / from my voice section
 .node-type-my-voice-blog {
   .article-info .flag-bookmarks:first-child {
     padding-left: 0;
@@ -1335,57 +1100,7 @@ a.masquerade-switch {
   display: block;
 }
 
-.view-display-id-voices_from_the_spectrum_page .sort-block .myvoice-list {
-  display: block;
-  clear: both;
-  span.voice-list {
-    background: #eef2f3;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    float: left;
-    padding: 7px 13px;
-    cursor: pointer;
-    border: 1px solid #C1C7C8;
-    margin-right: 9px;
-    margin-top: 10px;
-    display: none;
-    &.selected {
-      display: block;
-    }
-    .icon-Close {
-      margin-left: 9px;
-      float: right;
-      margin-top: 5px;
-    }
-  }
-}
-
-.btn.clear-all {
-  font-size: 18px;
-  padding-top: 6px;
-  padding-bottom: 2px;
-  float: right;
-  max-width: 110px;
-}
-
-.fourm-order-date {
-  float: left;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.front {
-  &.page-loaded .slider-block {
-    visibility: visible;
-  }
-  .slider-block {
-    visibility: hidden;
-  }
-}
-
 // in button right side arrow
-
 #edit-webform-ajax-yes-i-am-74666, #webform-client-form-74666 a.btn#not_right_now, #webform-client-form-74621 .webform-submit, #webform-client-form-74601 .webform-submit {
   background-image: url(../images/sprite.png);
   background-repeat: no-repeat;
@@ -1411,7 +1126,8 @@ a.masquerade-switch {
   }
 }
 
-#webform-client-form-74621 .webform-submit, #webform-client-form-74601 .webform-submit {
+#webform-client-form-74621 .webform-submit,
+#webform-client-form-74601 .webform-submit {
   background-position: 120px -256px;
   @include breakpoint($tablet) {
     background-position-x: 97px;
@@ -1419,17 +1135,6 @@ a.masquerade-switch {
 
   @include breakpoint($mobile) {
     width: 100%;
-  }
-}
-
-// node-type-my-voice-topic pink next / prev button
-.node-type-my-voice-topic {
-  .visual .btn-next, .visual .btn-perv {
-    background: $pink;
-    margin-top: 30px;
-    @include breakpoint($mobile) {
-      background: none;
-    }
   }
 }
 
@@ -1456,23 +1161,6 @@ a.masquerade-switch {
   &:hover {
     &:before {
       opacity: 0.8;
-    }
-  }
-}
-
-//designing the thakyou submission page on myvoice
-.page-node-74621 {
-  #wrapper {
-    background: $white;
-    background-image: none;
-  }
-  .align-center {
-    text-align: center;
-    p {
-      font-size: 32px;
-      @include breakpoint($mobile) {
-        font-size: 22px;
-      }
     }
   }
 }
@@ -1505,25 +1193,9 @@ a.masquerade-switch {
     margin: 0;
     color: #000;
   }
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 32px;
-  }
-  h4 {
-    font-size: 32px;
-  }
-  h5 {
-    font-size: 32px;
-  }
-  h6 {
-    font-size: 32px;
-  }
-  a {}
 }
 
 // my voice page image style
@@ -1550,57 +1222,4 @@ a.masquerade-switch {
 //issue fix for the menu getting ash background
 iframe {
   position: relative;
-}
-
-// social icons
-.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook {
-  border-radius: 5px;
-  color: $white;
-  opacity: 1;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  line-height: 36px;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-.hybridauth-google {
-  background: $google-bg;
-  border-bottom: 5px solid $google-border;
-  &:before {
-    content: "\e606";
-  }
-}
-
-.hybridauth-twitter {
-  background: $twitter-bg;
-  border-bottom: 5px solid $facebook-border;
-  &:before {
-    content: "\e611";
-  }
-}
-
-.hybridauth-facebook {
-  background: $facebook-bg;
-  border-bottom: 5px solid $facebook-border;
-  &:before {
-    content: "\e604";
-  }
-}
-
-#modalContent {
-  .hybridauth-widget-wrapper {
-    .item-list {
-      margn-left: 0;
-    }
-  }
 }
