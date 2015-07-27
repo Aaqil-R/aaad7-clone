@@ -6,7 +6,7 @@
      } 
     Drupal.behaviors.autism_custom = {
     attach: function (context, settings) {  
-     urlval = false;
+     var urlval = false;
        if (Drupal.settings.autism_custom.supporters_url != 0) {
         $.get(Drupal.settings.autism_custom.supporters_url, function( data ) {
           if (isNaN(data) == false){ 
