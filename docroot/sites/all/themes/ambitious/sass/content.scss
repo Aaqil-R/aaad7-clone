@@ -947,6 +947,10 @@ a {
     }
   }
 
+  //overrides for overlay block margins
+  .block {
+    padding: 45px 0 49px;
+  }
   .holder {
     //padding: 0 15px 0 0;
     @include breakpoint($mobile) {
@@ -1192,6 +1196,7 @@ a {
 
       font-size: 18px;
     }
+    //TODO : Do we need the commented code below ?
     // input[type="submit"]{
     //      float:left;
     //      clear:both;
@@ -1221,13 +1226,6 @@ a {
       }
     }
   }
-}
-
-//overrides for overlay block margins
-// might be able to make this global
-//TODO: This is a repeat.
-.my-voice-block .block {
-  padding: 45px 0 49px;
 }
 
 .my-voice-columns .col {
@@ -1427,6 +1425,9 @@ a {
   }
 }
 
+//!important code to fix the FB widget on home page on Ipad view and dektop
+//Added custome media queries because there is no proper media queries for
+//Ipad horizontal and vertical.
 @media (min-width: 1200px) {
   #desktopFB {
     display: block;
