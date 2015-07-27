@@ -174,12 +174,14 @@ function swear_words_node_insert($node){
 function swear_words_node_update($node){
   search_node_words($node);
 } 
-function search_node_words($node){
+function search_node_words($node){ 
+  if($node->type == 'forum_discussion'){
   if(variable_get('swear_notification', 0) == 1){
   if(variable_get('forum_notification', 0) == 1){
     $swear_word = array();
     $module = 'swear_email';
     $key = 'forum_swear';
+    
     $to = variable_get('swear_notify_email','');
     $to = explode( ',', $to);
     $language = language_default();
@@ -204,6 +206,7 @@ function search_node_words($node){
         }
       }
       }
+    }
   }
 }
 function swear_email_mail($key, &$message, $params) { 
