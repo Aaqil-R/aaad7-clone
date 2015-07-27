@@ -399,6 +399,7 @@ a {
         }
 
         &.smaller {
+          //what does the include fontsize do?
           @include fontsize(18, 16);
           margin: 0 0 32px;
           @include breakpoint($tablet) {
@@ -418,6 +419,7 @@ a {
       }
     }
   }
+  //TODO: why are the empty blocks added for block share and block spectrum. can be removed.
   .block-share {}
   .block-spectrum {}
   .block-report {
@@ -441,6 +443,7 @@ a {
   background: $white;
   border: 1px solid $gray;
   width: 100%;
+  //TODO: add a colour variable and call it in the below line
   @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
   @include breakpoint($mobile) {
     padding: 14px 15px;
@@ -450,6 +453,7 @@ a {
 
   img {
     float: left;
+    //TODO: inlcude the breakpoints and write the query.
     @media (max-width: 480px) {
       width: 100%;
     }
@@ -520,6 +524,7 @@ a {
           }
 
           @include breakpoint($mobile) {
+            //TODO: why are we again specifying the font size
             font-size: 16px;
             line-height: 18px;
             border-radius: 5px;
@@ -541,6 +546,7 @@ a {
           }
         }
         .text {
+          //TODO: if its a display none why are we adding the rest of the stylings?
           display: none;
           margin: 2px 0 0 -5px;
           vertical-align: middle;
@@ -611,6 +617,7 @@ a {
       line-height: 24px;
       @include breakpoint($mobile) {
         @include fontsize(22, 16);
+        //TODO: why are we againg specifying the same line height? can remove the below line
         line-height: 24px;
       }
     }
