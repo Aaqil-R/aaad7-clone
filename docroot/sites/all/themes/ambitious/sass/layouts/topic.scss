@@ -2,874 +2,874 @@
 @import "extends";
 
 .icon-Close {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 // start body.sidebar
 body.sidebar {
-    #main {
-        max-width: none;
-        padding: 0;
-    }
-    #sidebar, #sidebar:before {
-        width: 25%;
-    }
-    #sidebar {
-        float: left;
-        padding-top: 5em;
-        text-align: right;
-        font-size: 1.2em;
-        min-height: 16em;
-        letter-spacing: -1px;
-        ul {
-            list-style: none;
-            float: right;
-            a {
-                padding: 0.8em 1.5em 0.8em 2.5em;
-                display: block;
-                color: $shuttle_gray_dark;
-                text-align: left;
-                &.active {
-                    background: $white;
-                    color: inherit;
-                }
-                &:hover {
-                    color: inherit;
-                }
-            }
+  #main {
+    max-width: none;
+    padding: 0;
+  }
+  #sidebar, #sidebar:before {
+    width: 25%;
+  }
+  #sidebar {
+    float: left;
+    padding-top: 5em;
+    text-align: right;
+    font-size: 1.2em;
+    min-height: 16em;
+    letter-spacing: -1px;
+    ul {
+      list-style: none;
+      float: right;
+      a {
+        padding: 0.8em 1.5em 0.8em 2.5em;
+        display: block;
+        color: $shuttle_gray_dark;
+        text-align: left;
+        &.active {
+          background: $white;
+          color: inherit;
         }
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-            left: 0;
-            background: $porcelain;
-            @include breakpoint($mobile) {
-                content: none;
-            }
+        &:hover {
+          color: inherit;
         }
-        @include breakpoint($mobile) {
-            width: 100%;
-            padding: 1em;
-            background: $porcelain;
-            min-height: 0;
-        }
+      }
     }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      left: 0;
+      background: $porcelain;
+      @include breakpoint($mobile) {
+        content: none;
+      }
+    }
+    @include breakpoint($mobile) {
+      width: 100%;
+      padding: 1em;
+      background: $porcelain;
+      min-height: 0;
+    }
+  }
 }
 
 // end body.sidebar
 
 body.profile .top-header {
-    @include breakpoint($mobile) {
-        display: none;
-    }
+  @include breakpoint($mobile) {
+    display: none;
+  }
 }
 
 // start #comments
 #comments {
+  clear: both;
+  .ajax-progress, .ajax-progress-throbber,
+  .throbber {
+    position: absolute;
+  }
+  padding-top: 2em;
+  .comment {
+    margin: 2em 0;
     clear: both;
-    .ajax-progress, .ajax-progress-throbber,
-    .throbber {
-        position: absolute;
+    text-align: left;
+  }
+  .profile-picture {
+    float: none;
+  }
+  h4 {
+    font-size: 1.1em;
+    margin: 0.3em 0;
+    a {
+      text-decoration: none;
     }
-    padding-top: 2em;
+  }
+  .comment-left {
+    float: left;
+    ul {
+      @extend %listreset;
+    }
+    .quote {
+      display: none;
+    }
+  }
+  .time-ago {
+    em {
+      font-style: normal;
+    }
+  }
+  .comment-body {
+    padding: 1.4em 2em;
+    border: 2px solid $base-form-text-color;
+    margin-left: 6em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    position: relative;
+    &:before {
+      background: image-url("comment-tip-left.png") 0 0 no-repeat;
+      width: 26px;
+      height: 31px;
+      content: '';
+      display: block;
+      position: absolute;
+      right: 100%;
+      top: 16px;
+    }
+  }
+  @include breakpoint($mobile) {
+    padding: 0;
+    //overflow-x: scroll;
+    //overflow-y: hidden;
+    //Above two codes were commented
+    //because it show a horizontal scrollbar
+    //on mobile view.
     .comment {
-        margin: 2em 0;
-        clear: both;
-        text-align: left;
+      vertical-align: top;
     }
     .profile-picture {
-        float: none;
-    }
-    h4 {
-        font-size: 1.1em;
-        margin: 0.3em 0;
-        a {
-            text-decoration: none;
-        }
+      float: left;
+      margin: 0 1em 1.5em 0;
+      width: 35%;
+      height: auto;
     }
     .comment-left {
-        float: left;
-        ul {
-            @extend %listreset;
-        }
-        .quote {
-            display: none;
-        }
-    }
-    .time-ago {
-        em {
-            font-style: normal;
-        }
+      float: none;
+      margin-bottom: 1em;
+      width: 100%;
     }
     .comment-body {
-        padding: 1.4em 2em;
-        border: 2px solid $base-form-text-color;
-        margin-left: 6em;
-        font-size: 1.2em;
-        line-height: 1.4em;
-        position: relative;
-        &:before {
-            background: image-url("comment-tip-left.png") 0 0 no-repeat;
-            width: 26px;
-            height: 31px;
-            content: '';
-            display: block;
-            position: absolute;
-            right: 100%;
-            top: 16px;
-        }
+      border: none;
+      margin: 0;
+      padding: 0;
+      clear: both;
+      height: 100%;
+      white-space: normal;
+      &:before {
+        content: none;
+      }
     }
-    @include breakpoint($mobile) {
-        padding: 0;
-        //overflow-x: scroll;
-        //overflow-y: hidden;
-        //Above two codes were commented
-        //because it show a horizontal scrollbar
-        //on mobile view.
-        .comment {
-            vertical-align: top;
-        }
-        .profile-picture {
-            float: left;
-            margin: 0 1em 1.5em 0;
-            width: 35%;
-            height: auto;
-        }
-        .comment-left {
-            float: none;
-            margin-bottom: 1em;
-            width: 100%;
-        }
-        .comment-body {
-            border: none;
-            margin: 0;
-            padding: 0;
-            clear: both;
-            height: 100%;
-            white-space: normal;
-            &:before {
-                content: none;
-            }
-        }
-    }
+  }
 }
 
 // end #comments
 
 .social-networks {
-    @extend %listreset;
-    float: left;
-    li {
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 20px;
-        margin: 0 11px 0 0;
-        a {
-            color: $gray;
-            text-decoration: none;
-            &:hover {
-                color: $white;
-            }
-        }
-        em {
-            display: none;
-        }
-        .icon-YouTube {
-            font-size: 23px;
-            display: block;
-            margin: -4px 0 0 -2px;
-        }
+  @extend %listreset;
+  float: left;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 11px 0 0;
+    a {
+      color: $gray;
+      text-decoration: none;
+      &:hover {
+        color: $white;
+      }
     }
+    em {
+      display: none;
+    }
+    .icon-YouTube {
+      font-size: 23px;
+      display: block;
+      margin: -4px 0 0 -2px;
+    }
+  }
 }
 
 /*Message*/
 div.messages.status {
-    .krumo-root {
-        color: $heading-link;
-        a {
-            color: $heading-link;
-        }
+  .krumo-root {
+    color: $heading-link;
+    a {
+      color: $heading-link;
     }
+  }
 }
 
 .video-icon {
-    display: none;
+  display: none;
 }
 
 .notvideo {
-    display: inherit;
+  display: inherit;
 }
 
 a.video_bt, .isvideo {
-    display: none;
+  display: none;
 }
 
 .video-1, .video-media {
-    a.video_bt, .isvideo {
-        display: inherit;
-    }
-    .notvideo {
-        display: none;
-    }
-    .video-icon {
-        position: absolute;
-        display: inherit;
-        z-index: 997;
-        color: $white;
-        text-align: center;
-        width: 100%;
-        height: 222px;
-        top: 50%;
-        font-size: 80px;
-        margin-top: -115px;
-        padding-top: 81px;
-    }
+  a.video_bt, .isvideo {
+    display: inherit;
+  }
+  .notvideo {
+    display: none;
+  }
+  .video-icon {
+    position: absolute;
+    display: inherit;
+    z-index: 997;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    height: 222px;
+    top: 50%;
+    font-size: 80px;
+    margin-top: -115px;
+    padding-top: 81px;
+  }
 }
 
 /* POST RESPONSIVE */
 .posts-columns .post {
-    @include breakpoint($mobile) {
-        width: 100%;
-    }
+  @include breakpoint($mobile) {
+    width: 100%;
+  }
 }
 
 .node-type-topic .visual {
-    position: relative;
-    z-index: 99;
-    color: $white;
+  position: relative;
+  z-index: 99;
+  color: $white;
 }
 
 /* main information part styles */
 .text-section {
-    .text-right-section {
-        float: right;
-        margin-top: 40px;
-        br {
-            display: none;
-        }
-        @include breakpoint($mobile) {
-            float: none;
-            display: block;
-            margin-bottom: 40px;
-            text-align: left;
-            clear: both;
-        }
+  .text-right-section {
+    float: right;
+    margin-top: 40px;
+    br {
+      display: none;
+    }
+    @include breakpoint($mobile) {
+      float: none;
+      display: block;
+      margin-bottom: 40px;
+      text-align: left;
+      clear: both;
+    }
 
-        a {
-            font-weight: bold;
-            font-size: 20px;
-            display: block;
-            text-decoration: underline;
-            text-align: right;
-            margin-bottom: 5px;
-            @include breakpoint($mobile) {
-                text-align: left;
-            }
+    a {
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      text-decoration: underline;
+      text-align: right;
+      margin-bottom: 5px;
+      @include breakpoint($mobile) {
+        text-align: left;
+      }
 
-            &:hover {
-                text-decoration: none;
-            }
-        }
-        .btn {
-            padding: 10px 20px;
-            margin-top: -45px;
-            font-weight: normal;
-            text-decoration: none;
-            margin-bottom: 46px;
-            @include breakpoint($mobile) {
-                text-align: center;
-            }
-        }
+      &:hover {
+        text-decoration: none;
+      }
     }
-    h2 {
-        max-width: 666px;
-        margin-bottom: 23px;
-        @include breakpoint($tablet) {
-            max-width: inherit;
-        }
+    .btn {
+      padding: 10px 20px;
+      margin-top: -45px;
+      font-weight: normal;
+      text-decoration: none;
+      margin-bottom: 46px;
+      @include breakpoint($mobile) {
+        text-align: center;
+      }
     }
-    p {
-        max-width: 666px;
-        @include breakpoint($tablet) {
-            max-width: inherit;
-        }
+  }
+  h2 {
+    max-width: 666px;
+    margin-bottom: 23px;
+    @include breakpoint($tablet) {
+      max-width: inherit;
     }
+  }
+  p {
+    max-width: 666px;
+    @include breakpoint($tablet) {
+      max-width: inherit;
+    }
+  }
 }
 
 .view-display-id-stream_topic_page, .view-display-id-stream_forum_page, .view-display-id-events_page, .view-display-id-voices_from_the_spectrum_page, .node-type-my-voice-topic {
-    .sort-block {
-        label {
-            display: none;
-        }
+  .sort-block {
+    label {
+      display: none;
     }
+  }
 }
 
 .filter-option .sort-block {
-    label {
-        display: none;
-    }
+  label {
+    display: none;
+  }
 }
 
 .view-display-id-stream_topic_page {
-    &.posts-columns {
-        max-width: 1080px;
-        width: 100%;
-        .post {
-            width: 31%;
-            margin: 0 1% 30px 1%;
-            @include breakpoint($tablet) {
-                width: 40%;
-            }
+  &.posts-columns {
+    max-width: 1080px;
+    width: 100%;
+    .post {
+      width: 31%;
+      margin: 0 1% 30px 1%;
+      @include breakpoint($tablet) {
+        width: 40%;
+      }
 
-            @include breakpoint($mobile) {
-                width: 100%;
-            }
-        }
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
     }
-    .text-block.post {
-        padding: 0;
-        background: none;
-        border: none;
-        box-shadow: inherit;
-        float: left;
-        margin: 0 0 31px 0;
-    }
+  }
+  .text-block.post {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: inherit;
+    float: left;
+    margin: 0 0 31px 0;
+  }
+  .feature-holder {
+    display: none;
+  }
+  .featured-button {
     .feature-holder {
-        display: none;
+      display: inherit;
     }
-    .featured-button {
-        .feature-holder {
-            display: inherit;
-        }
-    }
+  }
 }
 
 /* LOAD MORE*/
 .pager-load-more {
-    @extend %listreset;
-    padding: 29px 0 61px;
-    li {
-        text-align: center;
-        a {
-            font-size: 0;
-            color: $gray;
-            background-color: $page-background;
-            &:before {
-                font-size: 101px;
-                @extend [class*=" icon-"];
-                @extend .icon-Downarrow;
-            }
-            &:hover {
-                color: $heading-link;
-                text-decoration: none;
-            }
-        }
+  @extend %listreset;
+  padding: 29px 0 61px;
+  li {
+    text-align: center;
+    a {
+      font-size: 0;
+      color: $gray;
+      background-color: $page-background;
+      &:before {
+        font-size: 101px;
+        @extend [class*=" icon-"];
+        @extend .icon-Downarrow;
+      }
+      &:hover {
+        color: $heading-link;
+        text-decoration: none;
+      }
     }
+  }
 }
 
 // start standard topics and myvoice topics
 /* TITLE HIDE*/
 .node-type-topic, .node-type-my-voice-topic {
-    h1.title {
-        display: none;
+  h1.title {
+    display: none;
+  }
+  .visual .img-holder .caption-frame .caption {
+    padding: 0;
+  }
+  .visual .img-holder .caption-frame .caption .title {
+    right: inherit;
+  }
+  #social {
+    float: left;
+    width: 100%;
+  }
+  .visual .btn-perv {
+    .icon-Leftarrow {
+      margin-left: -5px;
     }
-    .visual .img-holder .caption-frame .caption {
-        padding: 0;
+    .text-area {
+      margin-left: -137px;
+    }
+  }
+  .visual .btn-next .text-area {
+    margin-right: -140px;
+  }
+  .visual .btn-perv:hover .text-area {
+    margin-left: 0;
+  }
+  .visual .btn-next:hover .text-area {
+    margin-right: 0;
+  }
+  @include breakpoint($mobile) {
+    .visual .btn-next .icon-Rightarrow {
+      padding-right: 30px;
     }
     .visual .img-holder .caption-frame .caption .title {
-        right: inherit;
+      font-size: 19px;
     }
-    #social {
-        float: left;
-        width: 100%;
-    }
-    .visual .btn-perv {
-        .icon-Leftarrow {
-            margin-left: -5px;
-        }
-        .text-area {
-            margin-left: -137px;
-        }
-    }
-    .visual .btn-next .text-area {
-        margin-right: -140px;
-    }
-    .visual .btn-perv:hover .text-area {
-        margin-left: 0;
-    }
-    .visual .btn-next:hover .text-area {
-        margin-right: 0;
-    }
-    @include breakpoint($mobile) {
-        .visual .btn-next .icon-Rightarrow {
-            padding-right: 30px;
-        }
-        .visual .img-holder .caption-frame .caption .title {
-            font-size: 19px;
-        }
-    }
+  }
 }
 
 // end standard topics and myvoice topics
 
 /* SEARCH */
 .search-text {
-    @include linear-gradient($menu-grey, $page-background);
-    @include border-radius(5px);
-    position: relative;
-    padding: 2px;
-    min-width: 250px;
-    //width: 379px;
-    //size of the search form when the grid & list view is added
+  @include linear-gradient($menu-grey, $page-background);
+  @include border-radius(5px);
+  position: relative;
+  padding: 2px;
+  min-width: 250px;
+  //width: 379px;
+  //size of the search form when the grid & list view is added
+  width: 250px;
+  float: left;
+  margin-right: 7px;
+  height: 49px;
+  @include breakpoint($desktop) {
     width: 250px;
-    float: left;
-    margin-right: 7px;
-    height: 49px;
-    @include breakpoint($desktop) {
-        width: 250px;
-    }
+  }
 
-    @include breakpoint($tablet) {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    @include breakpoint($all-desktop) {
-        margin-right: 25px;
-    }
+  @include breakpoint($tablet) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    input[type="text"] {
-        width: 100%;
-        padding: 12px 21px;
-        @include border-radius(5px);
-        border: none;
-        font-size: 18px;
-        color: $base-text-color;
-    }
-    
+  @include breakpoint($all-desktop) {
+    margin-right: 25px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 21px;
+    @include border-radius(5px);
+    border: none;
+    font-size: 18px;
+    color: $base-text-color;
+  }
 }
 
 .search-button {
-    float: left;
-    width: 43px;
-    height: 47px;
-    text-align: center;
-    line-height: 47px;
-    font-size: 28px;
-    margin-left: -52px;
-    position: relative;
-    &:hover {
-        color: $orange;
-    }
-    input[type="submit"] {
-        display: inherit;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        height: 100%;
-        right: 0;
-        background: none;
-        border: none;
-        text-indent: 50px;
-        overflow: hidden;
-        cursor: pointer;
-    }
+  float: left;
+  width: 43px;
+  height: 47px;
+  text-align: center;
+  line-height: 47px;
+  font-size: 28px;
+  margin-left: -52px;
+  position: relative;
+  &:hover {
+    color: $orange;
+  }
+  input[type="submit"] {
+    display: inherit;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    background: none;
+    border: none;
+    text-indent: 50px;
+    overflow: hidden;
+    cursor: pointer;
+  }
 }
 
 /* school slide styles */
 .filter-slide {
-    width: 430px;
-    height: 100vh;
-    padding: 30px 0 0;
-    background: $white;
-    position: fixed;
-    overflow-y: scroll;
-    top: 0;
-    right: 0;
-    margin-right: -550px;
-    z-index: 9999;
-    @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
-    @include breakpoint($mobile) {
-        width: 285px;
-        left: 0;
-        margin-left: -300px;
-    }
+  width: 430px;
+  height: 100vh;
+  padding: 30px 0 0;
+  background: $white;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  margin-right: -550px;
+  z-index: 9999;
+  @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+  @include breakpoint($mobile) {
+    width: 285px;
+    left: 0;
+    margin-left: -300px;
+  }
 
-    .filterbutton {
-        float: right;
-        cursor: pointer;
-        &:hover {
-            color: $orange;
-        }
-    }
-    .title {
-        display: block;
-        font-size: 27px;
-        line-height: 35px;
-        color: $heading-link;
-        padding: 7px 31px 29px;
-        margin: 0;
-        @include breakpoint($mobile) {
-            font-size: 22px;
-            line-height: 30px;
-            padding: 24px 31px 19px;
-        }
-    }
-    .nav-filter {
-        padding: 0 31px;
-        .form-type-bef-checkbox {
-            width: 100%;
-            font-size: 18px;
-            line-height: 29px;
-            color: $heading-link;
-            text-decoration: none;
-            background: $page-background;
-            padding: 10px 15px;
-            display: block;
-            margin-bottom: 10px;
-            @include border-radius(5px);
-            span {
-                display: none;
-                float: right;
-                margin-top: 6px;
-            }
-            &.active {
-                span {
-                    display: inline-block;
-                }
-            }
-            input[type=checkbox] {
-                display: none;
-            }
-            label {
-                display: block;
-                padding-right: 10px;
-                cursor: pointer;
-            }
-            &.checked, &.highlight {
-                color: $orange;
-                position: relative;
-                line-height: 29px;
-                @extend .icon-Tick;
-                &:before {
-                    position: absolute;
-                    right: 15px;
-                    float: none;
-                    @extend [class^="icon-"];
-                }
-            }
-        }
-    }
-}
-
-// put the hover event on only where there's no touch events
-html.no-touch .form-type-bef-checkbox {
+  .filterbutton {
+    float: right;
+    cursor: pointer;
     &:hover {
+      color: $orange;
+    }
+  }
+  .title {
+    display: block;
+    font-size: 27px;
+    line-height: 35px;
+    color: $heading-link;
+    padding: 7px 31px 29px;
+    margin: 0;
+    @include breakpoint($mobile) {
+      font-size: 22px;
+      line-height: 30px;
+      padding: 24px 31px 19px;
+    }
+  }
+  .nav-filter {
+    padding: 0 31px;
+    .form-type-bef-checkbox {
+      width: 100%;
+      font-size: 18px;
+      line-height: 29px;
+      color: $heading-link;
+      text-decoration: none;
+      background: $page-background;
+      padding: 10px 15px;
+      display: block;
+      margin-bottom: 10px;
+      @include border-radius(5px);
+      span {
+        display: none;
+        float: right;
+        margin-top: 6px;
+      }
+      &.active {
+        span {
+          display: inline-block;
+        }
+      }
+      input[type=checkbox] {
+        display: none;
+      }
+      label {
+        display: block;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+      &.checked, &.highlight {
         color: $orange;
         position: relative;
         line-height: 29px;
         @extend .icon-Tick;
         &:before {
-            position: absolute;
-            right: 15px;
-            float: none;
-            @extend [class^="icon-"];
+          position: absolute;
+          right: 15px;
+          float: none;
+          @extend [class^="icon-"];
         }
+      }
     }
+  }
+}
+
+// put the hover event on only where there's no touch events
+html.no-touch .form-type-bef-checkbox {
+  &:hover {
+    color: $orange;
+    position: relative;
+    line-height: 29px;
+    @extend .icon-Tick;
+    &:before {
+      position: absolute;
+      right: 15px;
+      float: none;
+      @extend [class^="icon-"];
+    }
+  }
 }
 
 .filter-active {
-    .visual {
-        margin: 0 0 0 -430px;
-        @include breakpoint($mobile) {
-            margin-left: 285px;
-        }
+  .visual {
+    margin: 0 0 0 -430px;
+    @include breakpoint($mobile) {
+      margin-left: 285px;
     }
-    #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
-        margin-left: -430px;
-        @include breakpoint($mobile) {
-            margin-left: 285px;
-        }
+  }
+  #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
+    margin-left: -430px;
+    @include breakpoint($mobile) {
+      margin-left: 285px;
     }
-    #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
-        width: 100%;
-        max-width: none;
+  }
+  #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
+    width: 100%;
+    max-width: none;
+  }
+  .visual .img-holder .caption-frame {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    padding: 0 20px;
+  }
+  .filter-slide {
+    margin-right: 0;
+    @include breakpoint($mobile) {
+      margin-left: 0;
     }
-    .visual .img-holder .caption-frame {
-        width: 100%;
-        margin: 0;
-        left: 0;
-        padding: 0 20px;
-    }
-    .filter-slide {
-        margin-right: 0;
-        @include breakpoint($mobile) {
-            margin-left: 0;
-        }
-    }
+  }
 }
 
 #block-views-stream-stream-forum-page {
-    position: inherit;
+  position: inherit;
 }
 
 .posts-columns .post .footer .num-holder a .text {
-    display: inherit;
-    font-size: 14px;
-    margin-top: 0px;
+  display: inherit;
+  font-size: 14px;
+  margin-top: 0px;
 }
 
 .view-display-id-stream .action-block .block-share .btn, .view-display-id-stream .action-block .block-share .btn:hover {
-    margin: 182px 10px 0 0;
+  margin: 182px 10px 0 0;
 }
 
 /* user profile page cutom*/
 
 .page-user {
-    .ajax-progress, .ajax-progress-throbber,
-    .throbber {
-        position: absolute;
+  .ajax-progress, .ajax-progress-throbber,
+  .throbber {
+    position: absolute;
+  }
+  @extend body.sidebar;
+  @extend body.profile;
+  .profile-body {
+    background: $white;
+    padding-bottom: 30px;
+    @include breakpoint($mobile) {
+      padding: 2em 20px;
+      margin: auto;
     }
-    @extend body.sidebar;
-    @extend body.profile;
-    .profile-body {
-        background: $white;
-        padding-bottom: 30px;
-        @include breakpoint($mobile) {
-            padding: 2em 20px;
-            margin: auto;
-        }
 
-        .tabs {
-            li {
-                &.active {
-                    a.active {
-                        color: $orange;
-                        padding-bottom: 0px;
-                        transform: translate(0, 8px, 0);
-                        margin-top: -12px;
-                        padding-bottom: 24px;
-                    }
-                    padding-top: 14px;
-                }
-                a.active {
-                    border-color: $page-background;
-                }
-            }
+    .tabs {
+      li {
+        &.active {
+          a.active {
+            color: $orange;
+            padding-bottom: 0px;
+            transform: translate(0, 8px, 0);
+            margin-top: -12px;
+            padding-bottom: 24px;
+          }
+          padding-top: 14px;
         }
-    }
-    .profile-info {
-        .user-picture {
-            float: left;
-            clear: right;
-            margin-right: 4em;
+        a.active {
+          border-color: $page-background;
         }
+      }
     }
-    .quicktabs_main {
-        @extend #comments;
-        min-height: 350px;
-        @include breakpoint($mobile) {
-            margin-top: 30px;
-        }
+  }
+  .profile-info {
+    .user-picture {
+      float: left;
+      clear: right;
+      margin-right: 4em;
     }
+  }
+  .quicktabs_main {
+    @extend #comments;
+    min-height: 350px;
+    @include breakpoint($mobile) {
+      margin-top: 30px;
+    }
+  }
 }
 
 #block-views-stream-stream-home-page {
+  .feature-holder {
+    display: none;
+  }
+  .feature-row {
     .feature-holder {
-        display: none;
+      display: inherit;
+      z-index: 999;
     }
-    .feature-row {
-        .feature-holder {
-            display: inherit;
-            z-index: 999;
-        }
-    }
+  }
 }
 
 //These are the set of codes to get the featured star in the homepage
 .card {
-    .img-holder {
-        .feature-holder {
-            position: absolute;
-            z-index: 2;
-            bottom: 6px;
-            left: 11px;
-            background: #f15500;
-            .icon-Featured {
-                font-size: 24px;
-                padding: 6px 0 0;
-                float: left;
-                background: #ffffff;
-                line-height: 30px;
-                height: 45px;
-                width: 45px;
-                text-align: center;
-                color: #f15500;
-            }
-            .text {
-                display: none;
-                float: left;
-                font-size: 18px;
-                line-height: 25px;
-                padding: 10px 5px;
-                min-width: 109px;
-                text-align: center;
-                color: #ffffff;
-            }
-        }
+  .img-holder {
+    .feature-holder {
+      position: absolute;
+      z-index: 2;
+      bottom: 6px;
+      left: 11px;
+      background: #f15500;
+      .icon-Featured {
+        font-size: 24px;
+        padding: 6px 0 0;
+        float: left;
+        background: #ffffff;
+        line-height: 30px;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        color: #f15500;
+      }
+      .text {
+        display: none;
+        float: left;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 10px 5px;
+        min-width: 109px;
+        text-align: center;
+        color: #ffffff;
+      }
     }
+  }
 }
 
 #block-views-stream-stream-home-page, #block-views-stream-stream-topic-page {
-    .feature-row {
-        .feature-holder {
-            display: inherit;
-            z-index: 999;
-        }
+  .feature-row {
+    .feature-holder {
+      display: inherit;
+      z-index: 999;
     }
+  }
 }
 
 .view-display-id-stream_forum_page.posts-columns.columns-full .row .footer .links.inline {
-    float: right;
-    display: inline-block;
-    height: 48px;
-    margin-top: 6px;
-    @include breakpoint($mobile) {
-        float: none;
-        width: 100%;
-        padding-bottom: 40px;
-        li {
-            padding-right: 0;
-            width: 100%;
-            float: left;
-        }
+  float: right;
+  display: inline-block;
+  height: 48px;
+  margin-top: 6px;
+  @include breakpoint($mobile) {
+    float: none;
+    width: 100%;
+    padding-bottom: 40px;
+    li {
+      padding-right: 0;
+      width: 100%;
+      float: left;
     }
+  }
 }
 
 .view-id-stream.view-display-id-stream_forum_page .post {
-    @extend %clearfix;
-    @include breakpoint($mobile) {
-        float: left;
-    }
+  @extend %clearfix;
+  @include breakpoint($mobile) {
+    float: left;
+  }
 }
 
 .page-user .top-header .top-header-inner .page-links {
-    letter-spacing: inherit;
-    a {
-        text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-        }
+  letter-spacing: inherit;
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
     }
+  }
 }
 
 .node-type-forum-discussion {
-    .title {
-        display: none;
-    }
-    .forum_replay {
-        margin-top: 10px;
-    }
+  .title {
+    display: none;
+  }
+  .forum_replay {
+    margin-top: 10px;
+  }
 }
 
 .node-type-forum {
-    .field-name-comment-body .form-type-textarea {
-        max-width: 680px;
-        width: 100%;
-    }
+  .field-name-comment-body .form-type-textarea {
+    max-width: 680px;
+    width: 100%;
+  }
 }
 
 .node-type-forum-discussion, .page-comment-reply, .page-comment {
-    .comment-block {
-        @extend %clearfix;
-        padding: 35px 50px 37px 44px;
-        position: relative;
-        margin: 0 0 30px;
-        background: $white;
-        border: 1px solid $gray;
-        -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        #edit-author--2 {
-            label {
-                float: left;
-                width: auto;
-            }
-            .form-element {
-                background: none;
-          /* comment code set removed by amalan
-          margin-left: 10px;
-          margin-top: 0; */
-            }
+  .comment-block {
+    @extend %clearfix;
+    padding: 35px 50px 37px 44px;
+    position: relative;
+    margin: 0 0 30px;
+    background: $white;
+    border: 1px solid $gray;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    #edit-author--2 {
+      label {
+        float: left;
+        width: auto;
+      }
+      .form-element {
+        background: none;
+        /* comment code set removed by amalan
+        margin-left: 10px;
+        margin-top: 0; */
+      }
+    }
+    @include breakpoint($mobile) {
+      padding: 27px 15px;
+    }
+
+    h4 {
+      margin: 0 0 17px;
+    }
+    .form-required {
+      color: $orange;
+    }
+    .comment-form {
+      font-size: 18px;
+      color: $menu-grey;
+      .form-item-subject {
+        display: none;
+      }
+      .required {
+        color: $orange;
+      }
+      label {
+        float: left;
+        width: 100%;
+        &.label-block {
+          width: 100%;
         }
+      }
+      .jcf-select {
+        width: 100%;
+        border: none;
+      }
+      fieldset {
+        margin: 0 0 20px 0;
+        float: none;
         @include breakpoint($mobile) {
-            padding: 27px 15px;
+          margin: 0 0 10px 0;
         }
 
-        h4 {
-            margin: 0 0 17px;
+        fieldset {
+          margin: 0;
+          padding: 0;
         }
-        .form-required {
-            color: $orange;
+        .filter-help {
+          float: left;
+          width: 100%;
+          padding: 0;
+          margin: 0 0 20px 0;
+          a {
+            padding: 0;
+          }
         }
-        .comment-form {
-            font-size: 18px;
-            color: $menu-grey;
-            .form-item-subject {
-                display: none;
-            }
-            .required {
-                color: $orange;
-            }
-            label {
-                float: left;
-                width: 100%;
-                &.label-block {
-                    width: 100%;
-                }
-            }
-            .jcf-select {
-                width: 100%;
-                border: none;
-            }
-            fieldset {
-                margin: 0 0 20px 0;
-                float: none;
-                @include breakpoint($mobile) {
-                    margin: 0 0 10px 0;
-                }
-
-                fieldset {
-                    margin: 0;
-                    padding: 0;
-                }
-                .filter-help {
-                    float: left;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0 0 20px 0;
-                    a {
-                        padding: 0;
-                    }
-                }
-            }
-            strong {
-                color: $heading-link;
-                margin-left: 10px;
-                @include breakpoint($tablet) {
-                    font-weight: normal;
-                }
-            }
-            /* new code set to style the comment box*/
-            .form-element {
-                .username {
-                    margin-left: 5px;
-                }
-                @include linear-gradient($menu-grey, $page-background);
-                @include border-radius(5px);
-            }
-            /*Comment end of new code set*/
+      }
+      strong {
+        color: $heading-link;
+        margin-left: 10px;
+        @include breakpoint($tablet) {
+          font-weight: normal;
+        }
+      }
+      /* new code set to style the comment box*/
+      .form-element {
+        .username {
+          margin-left: 5px;
+        }
+        @include linear-gradient($menu-grey, $page-background);
+        @include border-radius(5px);
+      }
+      /*Comment end of new code set*/
       /* commented to check whether this code set actualy have any effect on the comment box.
       .form-element{
         @include linear-gradient($menu-grey,$page-background);
@@ -892,188 +892,188 @@ html.no-touch .form-type-bef-checkbox {
           }
 
       */
-        }
-        .form-actions {
-            #edit-submit, #edit-preview {
-                @extend .btn;
-                @extend .btn-gray !optional;
-                &:hover {
-                    color: $white;
-                }
-            }
-            margin: 0;
-            @include breakpoint($mobile) {
-                .btn.btn-left {
-                    margin-left: 6px;
-                    padding: 3px 15px;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                }
-            }
-        }
     }
-    .comment-list {
-        h4 {
-            @include fontsize(23, 16);
-            a {
-                font-size: 16px;
-                text-decoration: underline;
-                margin-left: 0;
-            }
+    .form-actions {
+      #edit-submit, #edit-preview {
+        @extend .btn;
+        @extend .btn-gray !optional;
+        &:hover {
+          color: $white;
         }
-        ul.comment-listing {
-            @extend %listreset;
-            position: relative;
-            &.children {
-                margin-left: 30px;
+      }
+      margin: 0;
+      @include breakpoint($mobile) {
+        .btn.btn-left {
+          margin-left: 6px;
+          padding: 3px 15px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .comment-list {
+    h4 {
+      @include fontsize(23, 16);
+      a {
+        font-size: 16px;
+        text-decoration: underline;
+        margin-left: 0;
+      }
+    }
+    ul.comment-listing {
+      @extend %listreset;
+      position: relative;
+      &.children {
+        margin-left: 30px;
+      }
+      li {
+        .comment-left {
+          float: left;
+          width: 109px;
+          font-size: 13px;
+          img {
+            @include border-radius(5px);
+            overflow: hidden;
+            margin: 0 0 4px 0;
+            max-width: 100px;
+          }
+          a {
+            text-decoration: underline;
+            font-weight: bold;
+            color: $base-link-color;
+            &:hover {
+              text-decoration: none;
             }
-            li {
-                .comment-left {
-                    float: left;
-                    width: 109px;
-                    font-size: 13px;
-                    img {
-                        @include border-radius(5px);
-                        overflow: hidden;
-                        margin: 0 0 4px 0;
-                        max-width: 100px;
-                    }
-                    a {
-                        text-decoration: underline;
-                        font-weight: bold;
-                        color: $base-link-color;
-                        &:hover {
-                            text-decoration: none;
-                        }
-                    }
-                    cite {
-                        margin: 0 0 7px 0;
-                        font-style: normal;
-                        display: block;
-                    }
-                    time {
-                        margin: 0 0 17px 0;
-                    }
-                }
-                .comment-right {
-                    position: relative;
-                    border: 2px solid $border-color;
-                    padding: 16px 26px 13px 26px;
-                    margin: 0 0 27px 142px;
-                    font-size: 16px;
-                    background: $white;
-                    word-wrap: break-word;
-                    @include breakpoint($mobile) {
-                        padding: 15px;
-                    }
+          }
+          cite {
+            margin: 0 0 7px 0;
+            font-style: normal;
+            display: block;
+          }
+          time {
+            margin: 0 0 17px 0;
+          }
+        }
+        .comment-right {
+          position: relative;
+          border: 2px solid $border-color;
+          padding: 16px 26px 13px 26px;
+          margin: 0 0 27px 142px;
+          font-size: 16px;
+          background: $white;
+          word-wrap: break-word;
+          @include breakpoint($mobile) {
+            padding: 15px;
+          }
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: -24px;
-                        background: image-url("sprite.png") no-repeat -1px -162px;
-                        width: 24px;
-                        top: 15px;
-                        height: 32px;
-                    }
-                    .links {
-                        margin-bottom: 17px;
-                    }
-                    ul {
-                        @extend %clearfix;
-                        @extend %listreset;
-                        li {
-                            float: left;
-                            margin: 0 11px 0 0;
-                            a {
-                                text-decoration: underline;
-                                font-weight: bold;
-                                &:hover {
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                    .quote {
-                        border: none;
-                        padding: 0;
-                    }
+          &:before {
+            content: "";
+            position: absolute;
+            left: -24px;
+            background: image-url("sprite.png") no-repeat -1px -162px;
+            width: 24px;
+            top: 15px;
+            height: 32px;
+          }
+          .links {
+            margin-bottom: 17px;
+          }
+          ul {
+            @extend %clearfix;
+            @extend %listreset;
+            li {
+              float: left;
+              margin: 0 11px 0 0;
+              a {
+                text-decoration: underline;
+                font-weight: bold;
+                &:hover {
+                  text-decoration: none;
                 }
+              }
             }
+          }
+          .quote {
+            border: none;
+            padding: 0;
+          }
         }
+      }
     }
+  }
 }
 
 fieldset {
-    float: left;
-    //what is this for? it's applying to every fieldset on the site!
-    //width: 100%;
+  float: left;
+  //what is this for? it's applying to every fieldset on the site!
+  //width: 100%;
 }
 
 .search-form {
-    fieldset {
-        float: left;
-        width: 100%;
-        margin: 5px 0px 36px 0px;
-        @include breakpoint($mobile) {
-            margin: 0px;
-        }
+  fieldset {
+    float: left;
+    width: 100%;
+    margin: 5px 0px 36px 0px;
+    @include breakpoint($mobile) {
+      margin: 0px;
     }
+  }
 }
 
 .node-type-topic .banner_nav.visual {
-    z-index: 99;
-    position: absolute;
-    top: 32%;
+  z-index: 99;
+  position: absolute;
+  top: 32%;
 }
 
 .feature-holder {
-    overflow: hidden;
-    .icon-Featured {
-        position: relative;
-        z-index: 999;
-    }
+  overflow: hidden;
+  .icon-Featured {
+    position: relative;
+    z-index: 999;
+  }
+  .text {
+    display: block !important;
+    margin-left: -134px;
+    @include transition($type: all, $time: 0.4s, $ease: ease);
+  }
+  &:hover {
     .text {
-        display: block !important;
-        margin-left: -134px;
-        @include transition($type: all, $time: 0.4s, $ease: ease);
+      margin-left: 0px;
     }
-    &:hover {
-        .text {
-            margin-left: 0px;
-        }
-    }
+  }
 }
 
 .posts-columns .post .img-holder {
-    min-height: 50px;
+  min-height: 50px;
 }
 
 .node-type-topic {
-    .block-inspire.orange-box {
-        @include breakpoint($mobile) {
-            background-image: image-url("action-bg2.jpg");
-        }
+  .block-inspire.orange-box {
+    @include breakpoint($mobile) {
+      background-image: image-url("action-bg2.jpg");
     }
+  }
 }
 
 .view-display-id-stream_topic_page_forum, .view-display-id-articles_forum_page {
-    .view-footer {
-        margin: 0;
-        height: 108px;
-        padding-top: 6px;
-        p {
-            padding-top: 22px;
-            @include breakpoint($mobile) {
-                padding-top: 5px;
-            }
-        }
-        a {
-            margin-right: 0;
-            padding: 10px 38px;
-        }
+  .view-footer {
+    margin: 0;
+    height: 108px;
+    padding-top: 6px;
+    p {
+      padding-top: 22px;
+      @include breakpoint($mobile) {
+        padding-top: 5px;
+      }
     }
+    a {
+      margin-right: 0;
+      padding: 10px 38px;
+    }
+  }
 }
 
 // .visual .btn-perv{
@@ -1089,323 +1089,325 @@ fieldset {
 // }
 
 .sort-block {
-    @include breakpoint($mobile) {
-        display: inherit;
-        margin-left: -20px;
-        margin-right: -21px;
-        fieldset {
-            width: 100%;
-            .form-element, .jcf-select-text, .jcf-select {
-                width: 100%;
-            }
-            margin-bottom: 15px;
-            .stButton {
-                float: right;
-            }
-        }
-        .stButton {
-            width: 100%;
-            padding-top: 12px;
-        }
+  @include breakpoint($mobile) {
+    display: inherit;
+    //TODO:why are these margins added to the sort block
+    margin-left: -20px;
+    margin-right: -15px;
+    //margin-right: -21px;
+    fieldset {
+      width: 100%;
+      .form-element, .jcf-select-text, .jcf-select {
+        width: 100%;
+      }
+      margin-bottom: 15px;
+      .stButton {
+        float: right;
+      }
     }
+    .stButton {
+      width: 100%;
+      padding-top: 12px;
+    }
+  }
 
-    @include breakpoint($tablet) {
-        fieldset {
-            margin-bottom: 15px;
-        }
+  @include breakpoint($tablet) {
+    fieldset {
+      margin-bottom: 15px;
     }
+  }
 }
 
 .jcf-select {
-    @include breakpoint($mobile) {
-        width: 100%;
-    }
+  @include breakpoint($mobile) {
+    width: 100%;
+  }
 }
 
 .mobile-view {
-    display: none;
+  display: none;
 }
 
 .desktop-view {
-    display: inherit;
-    float: left;
+  display: inherit;
+  float: left;
 }
 
 .view-display-id-stream_topic_page .text-block.post {
-    margin-left: 1%;
+  margin-left: 1%;
 }
 
 .text-block.text-block-second.post.mobile-view.clearfix {
-    display: none;
+  display: none;
 }
 
 .mobile-view {
-    @include breakpoint($mobile) {
-        display: inherit;
-        .sort-block {
-            display: inherit;
-        }
-    }
-
+  @include breakpoint($mobile) {
+    display: inherit;
     .sort-block {
-        display: inherit;
+      display: inherit;
     }
+  }
+
+  .sort-block {
+    display: inherit;
+  }
 }
 
 .view-display-id-stream_topic_page .view-content .text-block.post {
-    @include breakpoint($mobile) {
-        height: 0px;
-    }
+  @include breakpoint($mobile) {
+    height: 0px;
+  }
 }
 
 .forum-block {
-    @include breakpoint($mobile) {
-        .table-from {
-            > li {
-                display: none;
-                &.views-row-1, &.views-row-2 {
-                    display: block;
-                }
-            }
-        }
-    }
-
-    .holder {
-        @include breakpoint($mobile) {
-            padding: 12px 20px 40px;
-            h1 {
-                padding-bottom: 0;
-            }
-        }
-    }
-    .block {
-        padding: 40px 0px 0;
-    }
+  @include breakpoint($mobile) {
     .table-from {
-        h6 {
-            margin: 0;
+      > li {
+        display: none;
+        &.views-row-1, &.views-row-2 {
+          display: block;
         }
-        .num, li.col03 a {
-            font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
-            font-weight: normal;
-        }
+      }
     }
-    .view-footer {
-        a {
-            font-size: 20px;
-            @include breakpoint($mobile) {
-                font-size: 18px;
-                em {
-                    display: none;
-                }
-            }
-        }
+  }
+
+  .holder {
+    @include breakpoint($mobile) {
+      padding: 12px 20px 40px;
+      h1 {
+        padding-bottom: 0;
+      }
     }
+  }
+  .block {
+    padding: 40px 0px 0;
+  }
+  .table-from {
+    h6 {
+      margin: 0;
+    }
+    .num, li.col03 a {
+      font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+      font-weight: normal;
+    }
+  }
+  .view-footer {
+    a {
+      font-size: 20px;
+      @include breakpoint($mobile) {
+        font-size: 18px;
+        em {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .text-block-second {
-    margin-left: 1%;
+  margin-left: 1%;
 }
 
 .node-type-topic, .node-type-my-voice-topic, .node-type-article {
-    #content_bottom {
-        margin-top: 21px;
+  #content_bottom {
+    margin-top: 21px;
+  }
+  .sort-block {
+    margin-bottom: 56px;
+    display: block;
+    clear: both;
+  }
+  .posts-columns .post {
+    .info.add h3 {
+      margin-top: 5px;
+      clear: both;
     }
-    .sort-block {
-        margin-bottom: 56px;
-        display: block;
-        clear: both;
+    .num-holder a .num {
+      margin-left: -4px;
     }
-    .posts-columns .post {
-        .info.add h3 {
-            margin-top: 5px;
-            clear: both;
-        }
-        .num-holder a .num {
-            margin-left: -4px;
-        }
-    }
-    .pager-load-more {
-        padding: 0px 0 61px;
-        margin-top: -21px;
-        margin-bottom: -30px;
-    }
-    .action-block {
-        .holder {
-            padding: 139px 15px 97px;
-            @include breakpoint($mobile) {
-                padding: 49px 15px 0;
-            }
+  }
+  .pager-load-more {
+    padding: 0px 0 61px;
+    margin-top: -21px;
+    margin-bottom: -30px;
+  }
+  .action-block {
+    .holder {
+      padding: 139px 15px 97px;
+      @include breakpoint($mobile) {
+        padding: 49px 15px 0;
+      }
 
-            .block-symptoms {
-                padding: 50px 10px 37px 39px;
-            }
-            .btn.btn-transparent {
-                padding-right: 20px;
-                em {
-                    padding-left: 2px;
-                }
-            }
+      .block-symptoms {
+        padding: 50px 10px 37px 39px;
+      }
+      .btn.btn-transparent {
+        padding-right: 20px;
+        em {
+          padding-left: 2px;
         }
+      }
     }
-    .table-from {
-        margin: 0 0 29px;
-        & > li {
-            padding-top: 6px;
-        }
-        .table-row {
-            padding-bottom: 2px;
-            .icon-Hottopic {
-                margin: -22px 0 0;
-                left: 20px;
-                @include breakpoint($mobile) {
-                    margin: 0;
-                    left: auto;
-                    right: 0;
-                }
-            }
-            .num {
-                margin-top: 12px;
-                @include breakpoint($mobile) {
-                    margin-top: 5px;
-                    margin-right: 5px;
-                }
-            }
-        }
+  }
+  .table-from {
+    margin: 0 0 29px;
+    & > li {
+      padding-top: 6px;
     }
-    .forum-block .block {
-        padding: 52px 32px 0;
+    .table-row {
+      padding-bottom: 2px;
+      .icon-Hottopic {
+        margin: -22px 0 0;
+        left: 20px;
         @include breakpoint($mobile) {
-            padding: 15px 0;
+          margin: 0;
+          left: auto;
+          right: 0;
         }
-    }
-    .action-block .holder {
-        .btn.btn-transparent {
-            @include breakpoint($mobile) {
-                width: auto;
-                margin-left: 20px;
-                margin-top: 20px;
-                font-size: 18px;
-            }
-        }
-        .region .block-main {
-            @include breakpoint($mobile) {
-                & > div {
-                    padding: 40px 0 24px;
-                    strong {
-                        padding-left: 22px;
-                        line-height: normal;
-                        font-size: 24px;
-                        padding-right: 0;
-                        width: 74%;
-                    }
-                }
-                & > div:first-child {
-                    padding: 20px 0 30px 0px;
-                }
-            }
-        }
-    }
-    .topic-share {
+      }
+      .num {
+        margin-top: 12px;
         @include breakpoint($mobile) {
-            height: 60px;
-            float: left;
-            width: 100%;
+          margin-top: 5px;
+          margin-right: 5px;
         }
+      }
+    }
+  }
+  .forum-block .block {
+    padding: 52px 32px 0;
+    @include breakpoint($mobile) {
+      padding: 15px 0;
+    }
+  }
+  .action-block .holder {
+    .btn.btn-transparent {
+      @include breakpoint($mobile) {
+        width: auto;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+    .region .block-main {
+      @include breakpoint($mobile) {
+        & > div {
+          padding: 40px 0 24px;
+          strong {
+            padding-left: 22px;
+            line-height: normal;
+            font-size: 24px;
+            padding-right: 0;
+            width: 74%;
+          }
+        }
+        & > div:first-child {
+          padding: 20px 0 30px 0px;
+        }
+      }
+    }
+  }
+  .topic-share {
+    @include breakpoint($mobile) {
+      height: 60px;
+      float: left;
+      width: 100%;
+    }
 
-        .stButton {
-            @include breakpoint($mobile) {
-                padding: 10px 33%;
-                &:before {
-                    font-size: 30px;
-                    margin-bottom: -7px;
-                }
-            }
+    .stButton {
+      @include breakpoint($mobile) {
+        padding: 10px 33%;
+        &:before {
+          font-size: 30px;
+          margin-bottom: -7px;
         }
+      }
     }
-    .banner_text {
-        @include breakpoint($mobile) {
-            width: 70%;
-            margin: 3% 15%;
-        }
+  }
+  .banner_text {
+    @include breakpoint($mobile) {
+      width: 70%;
+      margin: 3% 15%;
     }
+  }
 }
 
 .page-node-74566 {
-    #content-header {
-        .title {
-            display: none;
-        }
+  #content-header {
+    .title {
+      display: none;
     }
-    .sort-block {
+  }
+  .sort-block {
+    @include breakpoint($mobile) {
+      height: 291px;
+    }
+  }
+  .text-section {
+    margin-top: 17px;
+    @include breakpoint($mobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .sort-block {
+    margin: 0 0 35px;
+  }
+  .posts-columns.columns-full {
+    .row {
+      .footer {
+        .links.inline {
+          li {
+            a.btn {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .block-symptoms {
+      background-image: image-url("action-bg6.jpg");
+      .btn {
         @include breakpoint($mobile) {
-            height: 291px;
+          width: auto;
         }
+      }
     }
-    .text-section {
-        margin-top: 17px;
-        @include breakpoint($mobile) {
-            padding-left: 20px;
-            padding-right: 20px;
+    .block-share {
+      @include breakpoint($mobile) {
+        background-size: 123%;
+        .btn {
+          margin: 163px 10px 0 0;
+          float: right;
+          width: auto;
         }
-    }
-    .sort-block {
-        margin: 0 0 35px;
-    }
-    .posts-columns.columns-full {
-        .row {
-            .footer {
-                .links.inline {
-                    li {
-                        a.btn {
-                            margin-right: 0;
-                        }
-                    }
-                }
-            }
-        }
-        .block-symptoms {
-            background-image: image-url("action-bg6.jpg");
-            .btn {
-                @include breakpoint($mobile) {
-                    width: auto;
-                }
-            }
-        }
-        .block-share {
-            @include breakpoint($mobile) {
-                background-size: 123%;
-                .btn {
-                    margin: 163px 10px 0 0;
-                    float: right;
-                    width: auto;
-                }
-                height: 244px;
-            }
+        height: 244px;
+      }
 
-            .btn {
-                width: auto;
-            }
-        }
+      .btn {
+        width: auto;
+      }
     }
-    .topic-share {
-        @include breakpoint($mobile) {
-            height: 90px;
-            padding-top: 12px;
-            float: left;
-            width: 100%;
-        }
+  }
+  .topic-share {
+    @include breakpoint($mobile) {
+      height: 90px;
+      padding-top: 12px;
+      float: left;
+      width: 100%;
+    }
 
-        .stButton {
-            @include breakpoint($mobile) {
-                padding: 10px 33%;
-                &:before {
-                    font-size: 30px;
-                    margin-bottom: -7px;
-                }
-            }
+    .stButton {
+      @include breakpoint($mobile) {
+        padding: 10px 33%;
+        &:before {
+          font-size: 30px;
+          margin-bottom: -7px;
         }
+      }
     }
+  }
 }
 
 .page-node-74606
@@ -1413,45 +1415,45 @@ fieldset {
 , .section-current-vacancies
 , .node-type-basic-page-with-hero
 , .node-type-basic-page-with-hero-large {
-    .forum-page, h1.title {
-        display: none;
-    }
-    .header_banner {
-        .banner_text {
-            font-size: 64px;
-            margin-left: 2px;
-            margin-top: 30px;
-            @include breakpoint($tablet) {
-                font-size: 44px;
-                margin-left: 22px;
-                margin-top: 0px;
-                margin-bottom: 0.25em;
-            }
+  .forum-page, h1.title {
+    display: none;
+  }
+  .header_banner {
+    .banner_text {
+      font-size: 64px;
+      margin-left: 2px;
+      margin-top: 30px;
+      @include breakpoint($tablet) {
+        font-size: 44px;
+        margin-left: 22px;
+        margin-top: 0px;
+        margin-bottom: 0.25em;
+      }
 
-            @include breakpoint($mobile) {
-                font-size: 34px;
-                margin-top: 20%;
-                margin: 0 auto;
-                //margin-left: 10%;What was this for?
-                max-width: 80%;
-            }
-        }
-        .banner_text_main {
-            top: 0;
-            .easy-breadcrumb {
-                padding: 28px 12px 0 0;
-            }
-            .banner_sub_text {
-                font-size: 26px;
-                margin-top: 8px;
-                margin-left: 143px;
-                @include breakpoint($tablet) {
-                    font-size: 17px;
-                    margin-left: 103px;
-                }
-            }
-        }
+      @include breakpoint($mobile) {
+        font-size: 34px;
+        margin-top: 20%;
+        margin: 0 auto;
+        //margin-left: 10%;What was this for?
+        max-width: 80%;
+      }
     }
+    .banner_text_main {
+      top: 0;
+      .easy-breadcrumb {
+        padding: 28px 12px 0 0;
+      }
+      .banner_sub_text {
+        font-size: 26px;
+        margin-top: 8px;
+        margin-left: 143px;
+        @include breakpoint($tablet) {
+          font-size: 17px;
+          margin-left: 103px;
+        }
+      }
+    }
+  }
 }
 
 // Display the filter button and search box
@@ -1459,502 +1461,501 @@ fieldset {
 // want to risk doing a total fix right now.
 // TODO: Refactor all filter styles.
 .page-node-221561 .forum-page {
-    display: block;
+  display: block;
 }
 
 .view-display-id-events_page {
-    .stButton {
-        @include breakpoint($mobile) {
-            padding: 10px 33%;
-            &:before {
-                font-size: 30px;
-                margin-bottom: -7px;
-            }
-        }
+  .stButton {
+    @include breakpoint($mobile) {
+      padding: 10px 33%;
+      &:before {
+        font-size: 30px;
+        margin-bottom: -7px;
+      }
     }
-    .my-voice-post {
-        .content {
-            width: 45%;
-            @include breakpoint($mobile) {
-                float: none;
-                width: auto;
-            }
-        }
-        img {
-            @include breakpoint($mobile) {
-                float: left;
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
-        .place {
-            width: 12%;
-            float: left;
-            @include breakpoint($mobile) {
-                float: none;
-                width: auto;
-                margin-bottom: 15px;
-            }
-        }
+  }
+  .my-voice-post {
+    .content {
+      width: 45%;
+      @include breakpoint($mobile) {
+        float: none;
+        width: auto;
+      }
     }
+    img {
+      @include breakpoint($mobile) {
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    .place {
+      width: 12%;
+      float: left;
+      @include breakpoint($mobile) {
+        float: none;
+        width: auto;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 .page-node-74606
 , .section-current-vacancies
 , .node-type-basic-page-with-hero {
-    #content_top {
-        .stButton {
-            @include breakpoint($mobile) {
-                padding: 10px 33%;
-                &:before {
-                    font-size: 30px;
-                    margin-bottom: -7px;
-                }
-            }
+  #content_top {
+    .stButton {
+      @include breakpoint($mobile) {
+        padding: 10px 33%;
+        &:before {
+          font-size: 30px;
+          margin-bottom: -7px;
         }
-        z-index: 99;
-        margin-bottom: 30px;
-        //margin-left: 15px;
-        @include breakpoint($mobile) {
-            padding: 0 15px;
-            //margin-left: 15px;
-            //width:94%;
-            .block-close {
-                margin-left: -38px;
-                width: 53px;
-            }
-        }
+      }
+    }
+    z-index: 99;
+    margin-bottom: 30px;
+    //margin-left: 15px;
+    @include breakpoint($mobile) {
+      padding: 0 15px;
+      //margin-left: 15px;
+      //width:94%;
+      .block-close {
+        margin-left: -38px;
+        width: 53px;
+      }
+    }
 
-        .my-voice-columns {
-            .col {
-                padding-top: 0;
-                padding-bottom: 0;
-                @include breakpoint($mobile) {
-                    padding: 10px 30px;
-                }
-            }
-            .form-item {
-                float: left;
-                width: 96%;
-                label {
-                    left: 24px;
-                    top: 12px;
-                }
-            }
-            a.tooltips span.tooltip-content {
-                left: -45px;
-                bottom: 30px;
-            }
-            .description {
-                margin-top: 5px;
-            }
-        }
-    }
-    .pic-by {
-        display: none;
+    .my-voice-columns {
+      .col {
+        padding-top: 0;
+        padding-bottom: 0;
         @include breakpoint($mobile) {
-            display: block;
+          padding: 10px 30px;
         }
+      }
+      .form-item {
+        float: left;
+        width: 96%;
+        label {
+          left: 24px;
+          top: 12px;
+        }
+      }
+      a.tooltips span.tooltip-content {
+        left: -45px;
+        bottom: 30px;
+      }
+      .description {
+        margin-top: 5px;
+      }
     }
+  }
+  .pic-by {
+    display: none;
+    @include breakpoint($mobile) {
+      display: block;
+    }
+  }
 }
 
 .views-row-first {
-    .my-voice-pos .feature-holder {
-        display: inherit;
-    }
+  .my-voice-pos .feature-holder {
+    display: inherit;
+  }
 }
 
 .my-voice-post {
-    .line {
-        position: absolute;
-        margin-left: -24px;
+  .line {
+    position: absolute;
+    margin-left: -24px;
+  }
+  .feature-holder {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 11px;
+    @include breakpoint($mobile) {
+      left: 15px;
     }
-    .feature-holder {
-        display: none;
-        position: absolute;
-        z-index: 2;
-        bottom: 0;
-        left: 11px;
-        @include breakpoint($mobile) {
-            left: 15px;
-        }
 
-        &.hover {
-            .text {
-                display: block;
-            }
-        }
-        background: $orange;
-        .icon-Featured {
-            font-size: 24px;
-            padding: 6px 0 0;
-            float: left;
-            background: $white;
-            line-height: 30px;
-            height: 45px;
-            width: 45px;
-            text-align: center;
-            color: $orange;
-            @include breakpoint($mobile) {
-                height: 33px;
-                width: 34px;
-                padding: 2px 0 0;
-                font-size: 16px;
-            }
-        }
-        &.green-icon {
-            background: $green;
-            .icon-Featured {
-                color: $green;
-            }
-        }
-        div {
-            img {
-                @include breakpoint($mobile) {
-                    float: left;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-        .text {
-            display: none;
-            float: left;
-            font-size: 18px;
-            line-height: 25px;
-            padding: 10px 5px;
-            min-width: 109px;
-            text-align: center;
-            color: $white;
-            @include breakpoint($mobile) {
-                padding: 5px 6px;
-                line-height: 24px;
-                font-size: 16px;
-                padding: 4px 5px;
-                min-width: 97px;
-            }
-        }
+    &.hover {
+      .text {
+        display: block;
+      }
     }
+    background: $orange;
+    .icon-Featured {
+      font-size: 24px;
+      padding: 6px 0 0;
+      float: left;
+      background: $white;
+      line-height: 30px;
+      height: 45px;
+      width: 45px;
+      text-align: center;
+      color: $orange;
+      @include breakpoint($mobile) {
+        height: 33px;
+        width: 34px;
+        padding: 2px 0 0;
+        font-size: 16px;
+      }
+    }
+    &.green-icon {
+      background: $green;
+      .icon-Featured {
+        color: $green;
+      }
+    }
+    div {
+      img {
+        @include breakpoint($mobile) {
+          float: left;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .text {
+      display: none;
+      float: left;
+      font-size: 18px;
+      line-height: 25px;
+      padding: 10px 5px;
+      min-width: 109px;
+      text-align: center;
+      color: $white;
+      @include breakpoint($mobile) {
+        padding: 5px 6px;
+        line-height: 24px;
+        font-size: 16px;
+        padding: 4px 5px;
+        min-width: 97px;
+      }
+    }
+  }
 }
 
 /*HOME PAGE WEBFORM*/
 
 #slider-container {
-    form {
-        float: left;
-        @include breakpoint($mobile) {
-            width: 100%;
-            img {
-                max-width: 100%;
-            }
-        }
-
-        input[type="email"], input[type="text"], .select {
-            float: left;
-            clear: both;
-            width: 86%;
-            @include border-radius(5px);
-            //border-color:#e4e4e4;
-            @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
-            margin-bottom: 20px;
-            padding: 12px 23px;
-            @include breakpoint($mobile) {
-                width: 100%;
-            }
-
-            font-size: 18px;
-            color: $black;
-        }
-        #edit-submitted-not-right-now {
-            // float: right;
-            clear: none;
-        }
-        .button-primary.form-submit {
-            display: none;
-        }
+  form {
+    float: left;
+    @include breakpoint($mobile) {
+      width: 100%;
+      img {
+        max-width: 100%;
+      }
     }
+
+    input[type="email"], input[type="text"], .select {
+      float: left;
+      clear: both;
+      width: 86%;
+      @include border-radius(5px);
+      //border-color:#e4e4e4;
+      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+      margin-bottom: 20px;
+      padding: 12px 23px;
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+      font-size: 18px;
+      color: $black;
+    }
+    #edit-submitted-not-right-now {
+      // float: right;
+      clear: none;
+    }
+    .button-primary.form-submit {
+      display: none;
+    }
+  }
 }
 
 .page-node-74606, .node-type-events, .section-current-vacancies {
-    @include breakpoint($mobile) {
-        .first_date {
-            right: 70px;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
+  @include breakpoint($mobile) {
+    .first_date {
+      right: 70px;
     }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
-    @include breakpoint($tablet) {
-        .place.desktop-view {
-            display: none;
-        }
-        .place.mobile-view {
-            display: inherit;
-        }
+  @include breakpoint($tablet) {
+    .place.desktop-view {
+      display: none;
     }
+    .place.mobile-view {
+      display: inherit;
+    }
+  }
 }
 
 .node-type-events .my-voice-post .content {
-    @include breakpoint($mobile) {
-        width: auto;
-    }
+  @include breakpoint($mobile) {
+    width: auto;
+  }
 }
 
 .page-node-74596, .node-type-events {
-    h4.title {
-        .icon-Close {
-            float: right;
-        }
+  h4.title {
+    .icon-Close {
+      float: right;
     }
+  }
 }
 
 .page-comment, .page-messages {
-    fieldset {
+  fieldset {
+    float: left;
+    width: 100%;
+  }
+  #content-area form.comment-form, #content-area #privatemsg-new {
+    @extend %clearfix;
+    padding: 35px 50px 37px 44px;
+    position: relative;
+    margin: 0 0 30px;
+    background: $white;
+    border: 1px solid $gray;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    #edit-author--2 {
+      label {
+        float: left;
+        width: auto;
+      }
+      .form-element {
+        background: none;
+        margin-left: 10px;
+        margin-top: 0;
+      }
+    }
+    @include breakpoint($mobile) {
+      padding: 27px 15px;
+    }
+
+    h4 {
+      margin: 0 0 17px;
+    }
+    .form-required {
+      color: $orange;
+    }
+    .comment-form {
+      font-size: 18px;
+      color: $menu-grey;
+      .required {
+        color: $orange;
+      }
+      label {
         float: left;
         width: 100%;
-    }
-    #content-area form.comment-form, #content-area #privatemsg-new {
-        @extend %clearfix;
-        padding: 35px 50px 37px 44px;
-        position: relative;
-        margin: 0 0 30px;
-        background: $white;
-        border: 1px solid $gray;
-        -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        #edit-author--2 {
-            label {
-                float: left;
-                width: auto;
-            }
-            .form-element {
-                background: none;
-                margin-left: 10px;
-                margin-top: 0;
-            }
+        &.label-block {
+          width: 100%;
         }
+      }
+      .jcf-select {
+        width: 100%;
+        border: none;
+      }
+      fieldset {
+        margin: 0 0 20px 0;
+        float: none;
         @include breakpoint($mobile) {
-            padding: 27px 15px;
+          margin: 0 0 10px 0;
         }
 
-        h4 {
-            margin: 0 0 17px;
+        fieldset {
+          margin: 0;
+          padding: 0;
         }
-        .form-required {
-            color: $orange;
+        .filter-help {
+          float: left;
+          width: 100%;
+          padding: 0;
+          margin: 0 0 20px 0;
+          a {
+            padding: 0;
+          }
         }
-        .comment-form {
-            font-size: 18px;
-            color: $menu-grey;
-            .required {
-                color: $orange;
-            }
-            label {
-                float: left;
-                width: 100%;
-                &.label-block {
-                    width: 100%;
-                }
-            }
-            .jcf-select {
-                width: 100%;
-                border: none;
-            }
-            fieldset {
-                margin: 0 0 20px 0;
-                float: none;
-                @include breakpoint($mobile) {
-                    margin: 0 0 10px 0;
-                }
-
-                fieldset {
-                    margin: 0;
-                    padding: 0;
-                }
-                .filter-help {
-                    float: left;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0 0 20px 0;
-                    a {
-                        padding: 0;
-                    }
-                }
-            }
-            strong {
-                color: $heading-link;
-                margin-left: 10px;
-                @include breakpoint($tablet) {
-                    font-weight: normal;
-                }
-            }
-            .form-element {
-                float: left;
-                max-width: 506px;
-                width: 100%;
-                @include linear-gradient($menu-grey, $page-background);
-                @include border-radius(5px);
-                border: none;
-                padding: 2px;
-                margin: 6px 0 0 0;
-                input[type=text], input[type=email], textarea {
-                    float: left;
-                    color: $menu-grey;
-                }
-                textarea {
-                    height: 183px;
-                }
-            }
+      }
+      strong {
+        color: $heading-link;
+        margin-left: 10px;
+        @include breakpoint($tablet) {
+          font-weight: normal;
         }
-        .form-actions {
-            #edit-submit, #edit-preview {
-                @extend .btn;
-                @extend .btn-gray !optional;
-                &:hover {
-                    color: $white;
-                }
-            }
-            margin: 0;
-            @include breakpoint($mobile) {
-                .btn.btn-left {
-                    margin-left: 6px;
-                    padding: 3px 15px;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                }
-            }
+      }
+      .form-element {
+        float: left;
+        max-width: 506px;
+        width: 100%;
+        @include linear-gradient($menu-grey, $page-background);
+        @include border-radius(5px);
+        border: none;
+        padding: 2px;
+        margin: 6px 0 0 0;
+        input[type=text], input[type=email], textarea {
+          float: left;
+          color: $menu-grey;
         }
-    }
-    #edit-author--2 {
-        label {
-            float: left;
-            width: auto;
+        textarea {
+          height: 183px;
         }
-        .form-element {
-            background: none;
-            margin-left: 10px;
-            margin-top: 0;
-        }
+      }
     }
     .form-actions {
-        clear: both;
-    }
-    h4 {
-        @include fontsize(23, 16);
-        a {
-            font-size: 16px;
-            text-decoration: underline;
+      #edit-submit, #edit-preview {
+        @extend .btn;
+        @extend .btn-gray !optional;
+        &:hover {
+          color: $white;
+        }
+      }
+      margin: 0;
+      @include breakpoint($mobile) {
+        .btn.btn-left {
+          margin-left: 6px;
+          padding: 3px 15px;
+          &:first-child {
             margin-left: 0;
+          }
         }
+      }
     }
-    #content-area {
-        @extend %listreset;
+  }
+  #edit-author--2 {
+    label {
+      float: left;
+      width: auto;
+    }
+    .form-element {
+      background: none;
+      margin-left: 10px;
+      margin-top: 0;
+    }
+  }
+  .form-actions {
+    clear: both;
+  }
+  h4 {
+    @include fontsize(23, 16);
+    a {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-left: 0;
+    }
+  }
+  #content-area {
+    @extend %listreset;
+    position: relative;
+    clear: both;
+    &.children {
+      margin-left: 30px;
+    }
+    li {
+      .comment-left {
+        float: left;
+        width: 100px;
+        font-size: 13px;
+        img {
+          @include border-radius(5px);
+          overflow: hidden;
+          margin: 0 0 4px 0;
+        }
+        a {
+          text-decoration: underline;
+          font-weight: bold;
+          color: $base-link-color;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        cite {
+          margin: 0 0 7px 0;
+          font-style: normal;
+          display: block;
+        }
+        time {
+          margin: 0 0 17px 0;
+        }
+      }
+      .comment-right {
+        border: 2px solid $border-color;
+        padding: 16px 26px 13px 26px;
+        margin: 0 0 27px 132px;
+        font-size: 16px;
+        background: $white;
+        word-wrap: break-word;
         position: relative;
-        clear: both;
-        &.children {
-            margin-left: 30px;
+        @include breakpoint($mobile) {
+          padding: 15px;
         }
-        li {
-            .comment-left {
-                float: left;
-                width: 100px;
-                font-size: 13px;
-                img {
-                    @include border-radius(5px);
-                    overflow: hidden;
-                    margin: 0 0 4px 0;
-                }
-                a {
-                    text-decoration: underline;
-                    font-weight: bold;
-                    color: $base-link-color;
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-                cite {
-                    margin: 0 0 7px 0;
-                    font-style: normal;
-                    display: block;
-                }
-                time {
-                    margin: 0 0 17px 0;
-                }
-            }
-            .comment-right {
-                border: 2px solid $border-color;
-                padding: 16px 26px 13px 26px;
-                margin: 0 0 27px 132px;
-                font-size: 16px;
-                background: $white;
-                word-wrap: break-word;
-                position: relative;
-                @include breakpoint($mobile) {
-                    padding: 15px;
-                }
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: -24px;
-                    background: image-url("sprite.png") no-repeat -1px -162px;
-                    width: 24px;
-                    top: 15px;
-                    height: 32px;
-                }
-                .links {
-                    margin-bottom: 17px;
-                }
-                ul {
-                    @extend %clearfix;
-                    @extend %listreset;
-                    li {
-                        float: left;
-                        margin: 0 11px 0 0;
-                        a {
-                            text-decoration: underline;
-                            font-weight: bold;
-                            &:hover {
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-                .quote {
-                    border: none;
-                    padding: 0;
-                }
-            }
+        &:before {
+          content: "";
+          position: absolute;
+          left: -24px;
+          background: image-url("sprite.png") no-repeat -1px -162px;
+          width: 24px;
+          top: 15px;
+          height: 32px;
         }
+        .links {
+          margin-bottom: 17px;
+        }
+        ul {
+          @extend %clearfix;
+          @extend %listreset;
+          li {
+            float: left;
+            margin: 0 11px 0 0;
+            a {
+              text-decoration: underline;
+              font-weight: bold;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        .quote {
+          border: none;
+          padding: 0;
+        }
+      }
     }
+  }
 }
 
 .item-list .pager li, .item-list .pager li a {
-    &:hover {
-        background: none;
-    }
+  &:hover {
     background: none;
+  }
+  background: none;
 }
-
 
 // The Forum page
 .logged-in .text-section .text-right-section a.community-login {
-    display: none;
+  display: none;
 }
 
 .take-action .post {
-    width: 31.6875%;
-    float: left;
-    margin-right: 1.5625%;
+  width: 31.6875%;
+  float: left;
+  margin-right: 1.5625%;
 }
 
 .node-type-topic {
-    .view-filters {
-        .form-item-sort-by {
-            display: none;
-        }
+  .view-filters {
+    .form-item-sort-by {
+      display: none;
     }
+  }
 }
