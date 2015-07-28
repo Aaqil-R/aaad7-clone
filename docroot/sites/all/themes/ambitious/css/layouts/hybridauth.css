@@ -397,11 +397,67 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 12px 23px;
   font-size: 18px;
 }
-/* line 38, ../../sass/layouts/hybridauth.scss */
+/* line 34, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth legend {
   font-weight: bold;
 }
-/* line 41, ../../sass/layouts/hybridauth.scss */
+/* line 37, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth .description {
   float: left;
+}
+
+/* line 43, ../../sass/layouts/hybridauth.scss */
+.hybridauth-google, .hybridauth-twitter, .hybridauth-facebook {
+  border-radius: 5px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+/* line 63, ../../sass/layouts/hybridauth.scss */
+.hybridauth-google {
+  background: #EA3032;
+  border-bottom: 5px solid #81090B;
+}
+/* line 66, ../../sass/layouts/hybridauth.scss */
+.hybridauth-google:before {
+  content: "\e606";
+}
+
+/* line 71, ../../sass/layouts/hybridauth.scss */
+.hybridauth-twitter {
+  background: #2289ff;
+  border-bottom: 5px solid #1a427e;
+}
+/* line 74, ../../sass/layouts/hybridauth.scss */
+.hybridauth-twitter:before {
+  content: "\e611";
+}
+
+/* line 79, ../../sass/layouts/hybridauth.scss */
+.hybridauth-facebook {
+  background: #4b69aa;
+  border-bottom: 5px solid #1a427e;
+}
+/* line 82, ../../sass/layouts/hybridauth.scss */
+.hybridauth-facebook:before {
+  content: "\e604";
+}
+
+/* line 90, ../../sass/layouts/hybridauth.scss */
+#modalContent .hybridauth-widget-wrapper .item-list {
+  margin-left: 0;
 }
