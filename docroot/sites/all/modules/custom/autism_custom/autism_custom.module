@@ -1,8 +1,13 @@
 <?php
 function autism_custom_init() { 
 
-    drupal_add_js(array('autism_custom' => array('supporter_count' => variable_get('autism_custom_supporter_count', 0))), 'setting');
+    // drupal_add_js(array('autism_custom' => array('supporter_count' => variable_get('autism_custom_supporter_count', 0))), 'setting');
     
+    //this variable will get the user count 
+    $countuser = ambitious_get_usercount();
+    //passing the variable to the javascript.
+    drupal_add_js(array('autism_custom' => array('supporter_count' => $countuser)), 'setting');
+
     drupal_add_js(array('autism_custom' => array('supporters_url' => variable_get('supporters_url', '0'))), 'setting');
     
     drupal_add_js(array('autism_custom' => array('supporters_value_type' => variable_get('supporters_value_type', '0'))), 'setting');  
@@ -361,4 +366,87 @@ function ambitious_get_last_reply($nid) {
      return $comment;
    }
    return false;
+}
+
+//new codes by amalan to get the number of the users
+function ambitious_get_usercount(){
+//new code set
+
+
+//endofnew
+//code to update the database 
+  // $valuetest = 300 ; 
+  //   $num_updated = db_update('user_count') // Table name no longer needs {}
+  //   ->fields(array(
+  //     'count' => $valuetest,
+  //   ))
+  //   ->condition('id', 1, '=')
+  //   ->execute();
+//end of the update code
+// $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+// dpm($numberfrombsd);
+
+//code to get the count from the database
+  $sql = 'SELECT totalcount as totalcount
+    FROM user_count
+    WHERE id=1';
+  $result = db_query($sql);
+  foreach ($result as $record) {
+    //dpr($record->count);
+    dpm($record->totalcount);
+    $test = $record->totalcount;
+  }
+  return $test;
+//end of the code
+
+  // $test1 = new data;
+  // $result1 = $test1->getx();
+  // //dpm($result1);
+  // return $result1;
+
+
+  //get the value from the database and return to the user
+}
+
+function autism_custom_cron(){
+
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', true);
+// ini_set('max_execution_time', 0);
+
+//    $api_id = 'ambitious-charity-site'; // your API ID
+//    $api_secret = '5faf692fdb43b100ce501f6a18dcba2a6ee6b5eb'; // your API Secret
+//    $api_url = 'http://ambitious.cp.bsd.net'; // your BSD URL - e.g. https://client.cp.bsd.net
+//    $results = '';
+//     require 'autoload.php';
+
+//   $results = "error: ";
+
+//   try 
+//   {
+
+//     $api = new BlueStateDigital_Api($api_id, $api_secret, $api_url);
+//     $query_params_1 = array('format' => 'csv'
+//                 , 'fields' => 'firstname');
+//     $res = $api->get('/utils/cons_counter/cons_counter.ajax.php', $query_params_1);
+//     $numberfrombsd = $res->getBody();
+//     $api = null;
+//     //return $movies;
+    
+//   }
+//   catch(Exception $e) {
+//       $results .= $e->getMessage();
+//       print_r($results);
+//   }
+
+  $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+  //echo $numberfrombsd;
+
+  $num_updated = db_update('user_count') // Table name no longer needs {}
+  ->fields(array(
+    'totalcount' => $numberfrombsd,
+  ))
+  ->condition('id', 1, '=')
+  ->execute();
 }

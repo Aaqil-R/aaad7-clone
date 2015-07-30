@@ -45,6 +45,7 @@ function ckeditor_custom_wysiwyg_editor_settings_alter(&$settings, $context) {
       $preferred_groupings[] = array('SelectAll', 'Find', 'Replace');
       $preferred_groupings[] = array('Flash', 'Smiley');
       $preferred_groupings[] = array('CreateDiv', 'Maximize');
+      $preferred_groupings[] = array('Iframe');
 
       // An array to hold our newly grouped buttons
       $new_grouped_toolbar = array();
