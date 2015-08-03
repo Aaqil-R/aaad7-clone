@@ -33,53 +33,14 @@
   }
 }
 
-//TODO: DO we need the '>'
-#nav {
-  > ul {
-    > li {
-      a {
-        font-weight: lighter;
-      }
-    }
-  }
-}
-
-//visited etc link text
-// a{
-//  &:visited{color: #000;}
-//  &:hover {
-//      color: #000;
-//      text-decoration: none;
-//  }
-// }
-// a.btn {
-//  color: $white;
-//  &:visited{color: $white;}
-//  &:hover {
-//      color: $white;
-//      text-decoration: none;
-//      cursor: pointer;
-//  }
-// }
-
-.more-btn {
-  a {
-    .icon-Downarrow {
-      color: $gray;
-    }
-  }
-}
-
 //2. general
 
 //header updates
+//TODO: check whether this is needed
 .top-bar .links li {
   img {
     padding-right: 24px;
   }
-  // a{
-  //  vertical-align: top;
-  // }
 }
 
 //tooltips
@@ -90,12 +51,10 @@
   background-image: -moz-radial-gradient(90px 90px 90deg, circle cover, $silver 0%, $alto 100%, $white 95%);
   background-image: -webkit-radial-gradient(90px 90px, circle cover, $silver, $white);
   background-image: radial-gradient(circle cover at 45px 45px 45deg, $silver 0%, $alto 100%, $white 95%);
-  //float: left;
   border: 1px solid $light_silver;
   font-family: $header-font-family;
   font-size: 25px;
   padding: 1px 10px;
-  //padding-left: 10px;
   line-height: 32px;
   margin-left: 7px;
   margin-top: 2px;
@@ -217,445 +176,7 @@ a {
   }
 }
 
-//4. My voice
-//TODO: Line 221-709 can go into the voice.scss
-//postioning my voice caption text
-.my-voice-visual {
-  .img-holder {
-    .caption-frame {
-      .caption {
-        padding: 5px 0 0;
-        .title {
-          span.pink {
-            color: $pink;
-            padding: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-//positioning of form box
-.my-voice-block {
-  position: relative;
-  z-index: 3;
-  margin-top: -234px;
-  @include breakpoint($mobile) {
-    margin-top: 0;
-  }
-}
-
-.my-voice-intro {
-  &.no-overlay {
-    margin-top: 20px;
-  }
-  //margin-top: 80px;
-  display: inline-block;
-  @extend %clearfix;
-  @include breakpoint($mobile) {
-    margin-top: 20px;
-    margin-left: 15px;
-  }
-
-  h3 {
-    margin: 0 0 0.5em;
-    float: left;
-    clear: both;
-  }
-  .holder {
-    p {
-      width: 64%;
-      margin-bottom: 50px;
-      float: left;
-      @include breakpoint($mobile) {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-    }
-  }
-}
-
-//my voice filters
-.advanced-sort-block {
-  @include breakpoint($mobile) {
-    display: inline-block;
-    margin-top: 10px;
-    input, select, .btn {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-
-  .selected-filters {
-    float: left;
-    clear: both;
-    list-style-type: none;
-    padding: 0;
-    //display none - this is shown in the photoshop version not invision.
-    display: none;
-    .this-filter {
-      float: left;
-      padding: 10px;
-      border: 1px solid $light_silver;
-      border-radius: 5px;
-      margin: 5px;
-      background: $page-background;
-      @include breakpoint($mobile) {
-        width: 100%;
-      }
-
-      .icon-Close {
-        margin-left: 10px;
-        @include fontsize(14, 16);
-        @include breakpoint($mobile) {
-          float: right;
-          padding-top: 3px;
-        }
-      }
-    }
-  }
-}
-
-//my voice intro block
-.my-voice-intro-menu {
-  list-style-type: none;
-  margin: 10px 0 0 0;
-  @include fontsize(10, 16);
-  text-decoration: underline;
-  text-align: right;
-  @include breakpoint($mobile) {
-    display: none;
-  }
-
-  h4 {
-    margin: 0 0 8px;
-  }
-}
-
-.my-voice-mobile-menu {
-  display: none;
-  list-style-type: none;
-  @include fontsize(12, 16);
-  float: left;
-  text-align: center;
-  -webkit-padding-start: 0;
-  @include breakpoint($mobile) {
-    display: block;
-    float: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    float: left;
-    padding-left: 20px;
-    &:first-child {
-      padding-left: 0;
-    }
-    a {
-      text-decoration: underline;
-    }
-  }
-}
-
-//my voice specific styles
-.my-voice-main {
-  //TODO remove this style and do it properly instead of piggybacking
-  .action-block {
-    float: left;
-    margin-bottom: 30px;
-    background: transparent;
-    .block-symptoms, .block-share, .block-spectrum {
-      color: $white;
-      width: 48.5%;
-      padding: 50px 10px 37px 39px;
-      background-size: cover;
-      float: left;
-      @include breakpoint($mobile) {
-        width: 100%;
-        float: none;
-        padding: 26px 10px 17px 20px;
-        margin: 0 0 34px;
-        background-position: right center;
-      }
-
-      .title {
-        display: block;
-        font-size: 45px;
-        line-height: 46px;
-        margin: 0 0 13px;
-        font-family: $header-font-family;
-        font-weight: normal;
-        @include breakpoint($tablet) {
-          font-size: 30px;
-          line-height: 33px;
-        }
-
-        @include breakpoint($mobile) {
-          margin: 0 0 19px;
-          font-size: 24px;
-          line-height: 30px;
-        }
-
-        &.smaller {
-          //what does the include fontsize do?
-          @include fontsize(18, 16);
-          margin: 0 0 32px;
-          @include breakpoint($tablet) {
-            @include fontsize(14, 16);
-            line-height: 33px;
-          }
-
-          @include breakpoint($mobile) {
-            @include fontsize(12, 16);
-            line-height: 25px;
-            margin: 0 0 16px;
-          }
-        }
-      }
-      .block-spectrum {
-        float: left;
-      }
-    }
-  }
-  //TODO: why are the empty blocks added for block share and block spectrum. can be removed.
-  .block-share {}
-  .block-spectrum {}
-  .block-report {
-    float: right;
-  }
-  .sort-block {
-    margin: 0;
-    padding: 14px 20px 16px;
-    margin-bottom: 20px;
-    @extend %clearfix;
-    display: block;
-  }
-}
-
-//is there a way to merge this?
-.my-voice-post {
-  padding: 20px 18px;
-  float: left;
-  position: relative;
-  margin: 0 0 30px;
-  background: $white;
-  border: 1px solid $gray;
-  width: 100%;
-  //TODO: add a colour variable and call it in the below line
-  @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
-  @include breakpoint($mobile) {
-    padding: 14px 15px;
-    font-size: 18px;
-    line-height: 27px;
-  }
-
-  img {
-    float: left;
-    //TODO: inlcude the breakpoints and write the query.
-    @media (max-width: 480px) {
-      width: 100%;
-    }
-  }
-  .content {
-    float: left;
-    width: 56%;
-    padding-left: 50px;
-    @include breakpoint($tablet) {
-      width: 45%;
-    }
-
-    @include breakpoint($mobile) {
-      width: 100%;
-      padding: 0;
-    }
-
-    p {
-      @include fontsize(16, 16);
-    }
-    h3 {
-      font-weight: bold;
-      @include fontsize(22, 16);
-      line-height: 32px;
-      text-decoration: underline;
-      @include breakpoint($mobile) {
-        @include fontsize(20, 16);
-        margin: 10px 0;
-        line-height: 28px;
-      }
-    }
-    .num-holder {
-      display: inline-block;
-      vertical-align: top;
-      &.gray-num {
-        a {
-          .num {
-            color: $gray;
-            border: 3px solid $gray;
-            &:after {
-              background-position: -80px 0;
-            }
-          }
-          .text {
-            color: $gray;
-          }
-        }
-      }
-      a {
-        text-decoration: none;
-        .num {
-          min-width: 46px;
-          height: 35px;
-          border: 2px solid $pink;
-          border-radius: 9px;
-          font-size: 16px;
-          line-height: 24px;
-          padding: 3px;
-          position: relative;
-          color: $pink;
-          display: inline-block;
-          vertical-align: middle;
-          text-align: center;
-          text-decoration: none;
-          margin: 0 15px 0 0;
-          @include breakpoint($tablet) {
-            margin: 0 5px 0 0;
-          }
-
-          @include breakpoint($mobile) {
-            //TODO: why are we again specifying the font size
-            font-size: 16px;
-            line-height: 18px;
-            border-radius: 5px;
-            min-width: 39px;
-            height: 28px;
-          }
-
-          &:after {
-            position: absolute;
-            right: 8px;
-            bottom: -13px;
-            content: "";
-            background: image-url("sprite.png") no-repeat -128px 0;
-            width: 12px;
-            height: 13px;
-            @include breakpoint($mobile) {
-              right: 6px;
-            }
-          }
-        }
-        .text {
-          //TODO: if its a display none why are we adding the rest of the stylings?
-          display: none;
-          margin: 2px 0 0 -5px;
-          vertical-align: middle;
-          font-size: 14px;
-          line-height: 18px;
-          color: $pink;
-          @include breakpoint($mobile) {
-            margin: (-2px) 0 0;
-          }
-        }
-      }
-    }
-    &:hover {
-      a {
-        &.hover {
-          .text {
-            display: inline-block;
-          }
-        }
-      }
-    }
-    .comment-count {
-      background: no-repeat image-url("comment-sprite.png");
-      padding: 7px 0px 17px 0;
-      width: 46px;
-      text-align: center;
-      color: $pink;
-      @include breakpoint($mobile) {
-        float: left;
-      }
-
-      .count {
-        @include fontsize(20, 16);
-      }
-      &.zero {
-        background: no-repeat image-url("comment-sprite.png") 0 -52px;
-        .count {
-          color: $gray;
-        }
-      }
-    }
-    .talkers {
-      display: none;
-      @include fontsize(15, 16);
-      float: left;
-      padding-left: 10px;
-      color: $pink;
-      @include breakpoint($mobile) {
-        display: block;
-      }
-    }
-  }
-  .date {
-    list-style-type: none;
-    float: right;
-    margin: 0;
-    background: $white;
-    @include breakpoint($mobile) {
-      padding: 5px 5px 5px 9px;
-      position: absolute;
-      right: 14px;
-      top: 14px;
-    }
-
-    .day {
-      font-weight: bold;
-      @include fontsize(24, 16);
-      line-height: 24px;
-      @include breakpoint($mobile) {
-        @include fontsize(22, 16);
-        //TODO: why are we againg specifying the same line height? can remove the below line
-        line-height: 24px;
-      }
-    }
-    .month {
-      font-weight: bold;
-      @include fontsize(16, 16);
-      line-height: 25px;
-      @include breakpoint($mobile) {
-        @include fontsize(18, 16);
-        line-height: 24px;
-      }
-    }
-    .year {
-      @include fontsize(12, 16);
-      line-height: 12px;
-      @include breakpoint($mobile) {
-        display: none;
-      }
-    }
-  }
-}
-
-//My Voice Acknowldegement
-.acknowledge-block {
-  background: $white;
-  float: left;
-  width: 100%;
-  text-align: center;
-  //padding: 80px 0;
-  padding-bottom: 80px;
-  a {
-    font-family: $header-font-family;
-    color: $black;
-  }
-}
-
 // main page columns styles
-
 .articles-block, .my-voice-block {
   width: 100%;
   @include transition($type: all, $time: 0.4s, $ease: ease);
@@ -692,33 +213,9 @@ a {
   }
 }
 
-//articles block
-.articles-block {
-  background: $white;
-  //padding-top: 75px;
-  @include breakpoint($mobile) {
-    padding-top: 50px;
-  }
-
-  .article {
-    h4 {
-      padding: 25px 0 20px 0px;
-      margin: 0;
-      @include fontsize(22, 16);
-    }
-    p {
-      @include fontsize(16, 16);
-      line-height: 25px;
-      //padding-bottom: 3px;
-   
-    }
-  }
-}
-
 //main page -- action-blocks
 .action-block {
   float: left;
-  //padding-bottom: 30px;
   background-color: $white;
   .holder {
     padding: 95px 15px 85px;
@@ -770,11 +267,6 @@ a {
       }
     }
   }
-}
-
-//TODO is this a repeat?
-.action-block {
-  background-color: $white;
   .block-share {
     float: left;
     .btn {
@@ -802,7 +294,6 @@ a {
 }
 
 // social block styles - TODO merge with forum block styles
-
 .social-block, .signup-block, .slider-block, .my-voice-block, .social-action-block {
   @include transition($type: all, $time: 0.4s, $ease: ease);
   position: relative;
@@ -928,7 +419,7 @@ a {
 }
 
 //myvoice block overrides + specifics
-//TODO: This is a repeat.
+//this is the our events page
 .page-node-221566 {
   .my-voice-block {
     .holder {
@@ -960,7 +451,6 @@ a {
     padding: 45px 0 49px;
   }
   .holder {
-    //padding: 0 15px 0 0;
     @include breakpoint($mobile) {
       padding: 15px 15px;
       margin-top: 3.5em;
@@ -1021,7 +511,6 @@ a {
     .youtube-btn {
       @include fontsize(18, 16);
       padding: 11px 17px;
-      //width: 100%;
       @include breakpoint($mobile) {
         width: 100%;
       }
@@ -1036,10 +525,8 @@ a {
   }
   .member-count {
     text-align: center;
-    //padding: 20px 0 40px;
     .numbers {
       font-family: $header-font-family;
-      //@include fontsize(66,16);
       font-size: 66px;
       line-height: 66px;
     }
@@ -1052,6 +539,7 @@ a {
 
 //slider block overrides
 //Moved from general.scss : Anees
+//Consider moving to a new scss file for the slider blocks.
 .front {
   .slider-container {
     @include breakpoint($tablet) {
@@ -1097,7 +585,6 @@ a {
           left: -45px;
           font-size: 18px;
           top: 166px !important;
-          //display:none;
         }
 
         a {
@@ -1139,7 +626,6 @@ a {
     }
   }
   .holder {
-    //padding-top: 5%;
     margin-bottom: 130px;
     padding: 0 15px;
     @include breakpoint($mobile) {
@@ -1152,6 +638,7 @@ a {
   }
 }
 
+//to be continued. 
 //signup overlay columns
 // 2 columns
 .signup-columns, .my-voice-columns, .community-columns {

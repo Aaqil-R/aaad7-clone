@@ -1,535 +1,555 @@
 @import "base/base";
 
-#main2{
-  color:$heading-link;
-  background:image-url('wid_bg.png') repeat-y center $white;
+#main2 {
+  color: $heading-link;
+  background: image-url("wid_bg.png") repeat-y center $white;
   @extend %clearfix;
-  &.page-main{
-    background:$white;
-	padding-bottom:3px;
+  &.page-main {
+    background: $white;
+    padding-bottom: 3px;
   }
-  width:100%;
-  @include transition ($type:all, $time:0.4s, $ease:ease);
-  @include breakpoint($desktop){
+  width: 100%;
+  @include transition($type: all, $time: 0.4s, $ease: ease);
+  @include breakpoint($desktop) {
     background-position: right;
-	padding: 0 20px;
+    padding: 0 20px;
   }
-  @include breakpoint($tablet){
+
+  @include breakpoint($tablet) {
     background-position: right;
-	padding: 0 10px;
+    padding: 0 10px;
   }
-   @include breakpoint($mobile){
-   }
-  .article{
+
+  @include breakpoint($mobile) {}
+
+  .article {
     @include span(8 of 12);
   }
-  .info{
-   &.add{
-     padding:19px 0 13px 0;
-   }
+  .info {
+    &.add {
+      padding: 19px 0 13px 0;
+    }
   }
-  h1{
-	margin:44px  0 28px 0;
-	color:$heading-link;
+  h1 {
+    margin: 44px  0 28px 0;
+    color: $heading-link;
   }
-  h3{
+  h3 {
     margin-top: 40px;
     margin-bottom: 13px;
-    @include breakpoint($tablet){
-	  @include fontsize(30,16);
+    @include breakpoint($tablet) {
+      @include fontsize(30, 16);
     }
-	@include breakpoint($mobile){
-	  @include fontsize(20,16);
+
+    @include breakpoint($mobile) {
+      @include fontsize(20, 16);
     }
   }
-.article-tags{
-	  @extend %clearfix;
-	}
-  .article-left{
-	float:left;
-	//width:71%;
-	padding:0 65px 48px 7px;
-	@include breakpoint($desktop){
-	  padding:0 20px 48px 20px;
-	}
-	background:$white;
-	@include breakpoint($tablet){
-	  float:left;
-	  width:auto;
-	  padding:0 20px;
-	}
-   @include breakpoint($mobile){
-	  padding:0 20px;
-	  width:100%;
-	}
-	.visual{
-	  margin:0 0 39px 0;
-	  .holder{
-	    padding:11px 0 0 0;
-	    .pic-caption{
-	      color:$menu-grey;
-	      float:left;
-		  font-size:13px;
-	    }
-		@include breakpoint($mobile){
-		  max-width:inherit;  
-		  .pic-by{
-              float:none;
-              margin-bottom:10px;
-            }
-            .pic-caption{
-		    float:none;	
-              margin-bottom:20px;
-              display:block;
-		  }
-		}
-	  }
-	}
-	.article-left-holder{
-	  float:right;
-	  @include breakpoint($mobile){
-	    float:none;
-		width:auto;
-	  }
-	  img{
-	  	//width:100%;
-		max-width:100%;
-	  }	  
+  .article-tags {
+    @extend %clearfix;
+  }
+  .article-left {
+    float: left;
+    //width:71%;
+    padding: 0 65px 48px 7px;
+    @include breakpoint($desktop) {
+      padding: 0 20px 48px 20px;
+    }
 
-	  .btn-gray-perv{
-	    position:absolute;
-		left:0;
-		top:50%;
-		margin:-41px 0 0;
-		z-index:99;
-		background:$base-text-color;
-		color:$white;
-		text-decoration:none;
-		@include opacity(0.85);
-		@include border-radius(0 5px 5px 0);
-		padding:19px 18px;
-		font-size:30px;
-		[class*=" icon-"]{
-			@include opacity(1);
-		}
-		&:hover{
-		  color:$white;
-		  background:$orange;
-		}
-		@include breakpoint($mobile) {
-			background:none;
-			padding:0;
-			margin:-16px 0 0 11px;
-			&:hover{
-		     color:$orange;
-		     background:none;
-		    }
-		}
-	  }
-	  .btn-gray-next{
-	    position:absolute;
-		right:0;
-		top:50%;
-		margin:-41px 0 0;
-		z-index:99;
-		background:$base-text-color;
-		color:$white;
-		text-decoration:none;
-		@include opacity(0.85);
-		@include border-radius(5px 0 0 5px);
-		padding:19px 18px;
-		font-size:30px;
-		[class*=" icon-"]{
-			@include opacity(1);
-		}
-		&:hover{
-		  color:$white;
-		  background:$orange;
-		  @include breakpoint($mobile) {
-		    background:none;
-			color:$orange;
-		  }
-		}
-		@include breakpoint($mobile) {
-			background:none;
-			padding:0;
-			margin:-16px 11px 0 0;
-		}
-	  }
+    background: $white;
+    @include breakpoint($tablet) {
+      float: left;
+      width: auto;
+      padding: 0 20px;
+    }
+
+    @include breakpoint($mobile) {
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .visual {
+      margin: 0 0 39px 0;
+      .holder {
+        padding: 11px 0 0 0;
+        .pic-caption {
+          color: $menu-grey;
+          float: left;
+          font-size: 13px;
+        }
+        @include breakpoint($mobile) {
+          max-width: inherit;
+          .pic-by {
+            float: none;
+            margin-bottom: 10px;
+          }
+          .pic-caption {
+            float: none;
+            margin-bottom: 20px;
+            display: block;
+          }
+        }
+      }
+    }
+    .article-left-holder {
+      float: right;
+      @include breakpoint($mobile) {
+        float: none;
+        width: auto;
+      }
+
+      img {
+        //width:100%;
+        max-width: 100%;
+      }
+      .btn-gray-perv {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin: -41px 0 0;
+        z-index: 99;
+        background: $base-text-color;
+        color: $white;
+        text-decoration: none;
+        @include opacity(0.85);
+        @include border-radius(0 5px 5px 0);
+        padding: 19px 18px;
+        font-size: 30px;
+        [class*=" icon-"] {
+          @include opacity(1);
+        }
+        &:hover {
+          color: $white;
+          background: $orange;
+        }
+        @include breakpoint($mobile) {
+          background: none;
+          padding: 0;
+          margin: -16px 0 0 11px;
+          &:hover {
+            color: $orange;
+            background: none;
+          }
+        }
+      }
+      .btn-gray-next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: -41px 0 0;
+        z-index: 99;
+        background: $base-text-color;
+        color: $white;
+        text-decoration: none;
+        @include opacity(0.85);
+        @include border-radius(5px 0 0 5px);
+        padding: 19px 18px;
+        font-size: 30px;
+        [class*=" icon-"] {
+          @include opacity(1);
+        }
+        &:hover {
+          color: $white;
+          background: $orange;
+          @include breakpoint($mobile) {
+            background: none;
+            color: $orange;
+          }
+        }
+        @include breakpoint($mobile) {
+          background: none;
+          padding: 0;
+          margin: -16px 11px 0 0;
+        }
+      }
       blockquote {
         border-left: 6px solid $blue-light;
-        margin:22px 88px 36px;
-        padding:0 0 0 33px;
-		font-size:24px;
-		line-height:1.5em;
-		float: left;
-		@include breakpoint($mobile){
-		   margin:6px 20px 15px;
-		   line-height:2em;
-		   font-size: 17px;
-		}
-		p{
-		  display: inline;
+        margin: 22px 88px 36px;
+        padding: 0 0 0 33px;
+        font-size: 24px;
+        line-height: 1.5em;
+        float: left;
+        @include breakpoint($mobile) {
+          margin: 6px 20px 15px;
+          line-height: 2em;
+          font-size: 17px;
         }
-	  }
-	  .comment-block{
-	    background:$page-background;
-		padding:35px 50px 37px 44px;
-		margin:70px 0 50px 0;
-		@include breakpoint($mobile){
-		  padding: 27px 15px;
-		}
-		h4{
-		  margin: 0 0 17px;
-		}
-		.comments{
-          font-size:18px;
-          color:$menu-grey;
-		  .required{
-		    color:$orange;
-		  }
-		  label{
-		   float:left;
-		   &.label-block{
-		     width:100%;
-		   }
-		  }
-          fieldset{
-            margin:0 0 20px 0;
-			@include breakpoint($mobile){
-			  margin:0 0 10px 0;
-			}
-			&.submit-actions{
-			  margin:0;
-			  @include breakpoint($mobile) {
-			    .btn.btn-left{
-	              margin-left: 6px;
-	              padding: 3px 15px;
-				  &:first-child{
-				    margin-left:0
-				  }
-				}
-	           }
-			}
-          }
-          strong{
-		    color:$heading-link;
-			margin-left:10px;
-			@include breakpoint($tablet){
-			  font-weight:normal;
-			}
-		  }
-		  .form-element{
-		    @include linear-gradient($menu-grey,$page-background);
-            padding:2px;
-            float:left;
-			margin:6px 0 0 0;
-			@include border-radius(5px);
 
-            width:100%;
-		    input[type=text],input[type=email],textarea{
-		      float:left;
-			  @include border-radius(5px);
-			  width:100%;
-			  border:none;
-			}
-			textarea{
-			  height:183px;
-			}
+        p {
+          display: inline;
+        }
+      }
+      .comment-block {
+        background: $page-background;
+        padding: 35px 50px 37px 44px;
+        margin: 70px 0 50px 0;
+        @include breakpoint($mobile) {
+          padding: 27px 15px;
+        }
+
+        h4 {
+          margin: 0 0 17px;
+        }
+        .comments {
+          font-size: 18px;
+          color: $menu-grey;
+          .required {
+            color: $orange;
           }
-		}
-	  }
-	  .comment-list{
-		h4{
-		   @include fontsize(23,16);
-		  a{
-		    font-size:16px;
-			text-decoration: underline;
-			margin-left:10px;
-		  }
-		}
-		ul.comment-listing{
-		  @extend %listreset;
-		  position: relative;
-		  &.children{
-		    margin-left:30px;
-		  }
-		  li{
-		    .comment-left{
-			  float:left;
-			  width:122px;
-			  //@include span(2 of 8);
-			  font-size:13px;
-			  @include breakpoint($mobile){
-			    white-space: normal;
-			  }
-			  img{
-				 @include border-radius(5px);
-				 overflow:hidden;
-				 margin:0 0 4px 0;
-			  }
-			  a{
-				    text-decoration:underline;
-				    font-weight:bold;
-					color:$base-link-color;
-				    &:hover{
-				      text-decoration:none;
-				    }
-					}
-			  cite{
-			     margin:0 0 7px 0;
-				 font-style:normal;
-				 display:block;
-			  }
-			  time{
-			    margin:0 0 17px 0;
-			  }
-			}
-			.comment-right{
-			  //@include span(6 of 8 last);
-			  border:2px solid $border-color;
-			  padding:16px 26px 13px 26px;
-			  margin:0 0 27px 142px;
-			  font-size:16px;
-			  word-wrap: break-word;
-			  @include breakpoint($mobile){
-			    padding:15px;
-			    width:auto;
-			    float:none;
-			  }
-			  &:before{
-			    content: "";
-			    position: absolute;
-			    left: 120px;
-			    background:image-url('sprite.png') no-repeat -1px -162px;
-			    width: 24px;
-				top: 15px;
-			    height: 32px;
-			  }
-			  .links{
-			    margin-bottom: 17px;
-			  }
-			  ul{
-			     @extend %clearfix;
-				 @extend %listreset;
-			    li{
+          label {
+            float: left;
+            &.label-block {
+              width: 100%;
+            }
+          }
+          fieldset {
+            margin: 0 0 20px 0;
+            @include breakpoint($mobile) {
+              margin: 0 0 10px 0;
+            }
+
+            &.submit-actions {
+              margin: 0;
+              @include breakpoint($mobile) {
+                .btn.btn-left {
+                  margin-left: 6px;
+                  padding: 3px 15px;
+                  &:first-child {
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+          }
+          strong {
+            color: $heading-link;
+            margin-left: 10px;
+            @include breakpoint($tablet) {
+              font-weight: normal;
+            }
+          }
+          .form-element {
+            @include linear-gradient($menu-grey, $page-background);
+            padding: 2px;
+            float: left;
+            margin: 6px 0 0 0;
+            @include border-radius(5px);
+            width: 100%;
+            input[type=text], input[type=email], textarea {
+              float: left;
+              @include border-radius(5px);
+              width: 100%;
+              border: none;
+            }
+            textarea {
+              height: 183px;
+            }
+          }
+        }
+      }
+      .comment-list {
+        h4 {
+          @include fontsize(23, 16);
+          a {
+            font-size: 16px;
+            text-decoration: underline;
+            margin-left: 10px;
+          }
+        }
+        ul.comment-listing {
+          @extend %listreset;
+          position: relative;
+          &.children {
+            margin-left: 30px;
+          }
+          li {
+            .comment-left {
+              float: left;
+              width: 122px;
+              //@include span(2 of 8);
+              font-size: 13px;
+              @include breakpoint($mobile) {
+                white-space: normal;
+              }
+
+              img {
+                @include border-radius(5px);
+                overflow: hidden;
+                margin: 0 0 4px 0;
+              }
+              a {
+                text-decoration: underline;
+                font-weight: bold;
+                color: $base-link-color;
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+              cite {
+                margin: 0 0 7px 0;
+                font-style: normal;
+                display: block;
+              }
+              time {
+                margin: 0 0 17px 0;
+              }
+            }
+            .comment-right {
+              //@include span(6 of 8 last);
+              border: 2px solid $border-color;
+              padding: 16px 26px 13px 26px;
+              margin: 0 0 27px 142px;
+              font-size: 16px;
+              word-wrap: break-word;
+              @include breakpoint($mobile) {
+                padding: 15px;
+                width: auto;
+                float: none;
+              }
+
+              &:before {
+                content: "";
+                position: absolute;
+                left: 120px;
+                background: image-url("sprite.png") no-repeat -1px -162px;
+                width: 24px;
+                top: 15px;
+                height: 32px;
+              }
+              .links {
+                margin-bottom: 17px;
+              }
+              ul {
+                @extend %clearfix;
+                @extend %listreset;
+                li {
                   float: left;
-                  margin:0 11px 0 0;
-				  a{
-				    text-decoration:underline;
-				    font-weight:bold;
-				    &:hover{
-				      text-decoration:none;
-				    }
-				  }
-				}
-			  }
-			}
-		  }
+                  margin: 0 11px 0 0;
+                  a {
+                    text-decoration: underline;
+                    font-weight: bold;
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-	  }
-	  .action-block{
-	     .holder{
-		   padding:75px 0px 107px;
-		   @include breakpoint($mobile){
-		     padding:75px 0px 50px;
-		   }
-		   & > div{
-			 a{
-			   color:$white;
-			   text-decoration:none;
-			   font-weight:normal;
-			   @include breakpoint($mobile){
-			     margin:0;
-			   }
-			   &:hover{
-			     color:$white;
-			     text-decoration:none;
-			   }
-			 }
-			 &.block-symptoms{
-			   padding: 43px 10px 37px 39px;
-               .text{
-			      font-size:31px;
-				  @include breakpoint($tablet){
-				    font-size:30px;
-				  }
-			    }
-			   span.add{
-			     margin: 0 0 10px 30px;
-				 @include breakpoint($mobile){
-				   margin: 0 0 10px 20px;
-				 }
-			   }
-			 }
-			 &.block-blog{
-               .title{
-			      font-size:36px;
-				  margin:0 0 27px;
-				  line-height: 37px;
-				  @include breakpoint($tablet){
-				      font-size:25px;
-					  line-height: 33px;
-				  }
-			    }
-			 }
-		   }
-		 }
-	  }
-	  .article-info{
-	     border:1px solid $gray;
-		 border-left:none;
-		 border-right:none;
-		 padding:21px 0 21px 0;
-		 margin:33px 0 45px 0;
-		 @include breakpoint($tablet){
-		   margin:0 0 38px 0;
-		 }
-		 @include breakpoint($mobile){
-		   margin:0 0 20px 0;
-		   .btn{
-		      float:left;
-		   }
-		 }
-		 @extend %clearfix;
-		 .article-updated{
-		   float:left;
-		   width:70%;
-		   @include breakpoint($mobile){
-		     width:100%;
-			 margin-bottom:13px;
-		   }
-		   color:$menu-grey;
-		   strong{
-		     font-weight:normal;
-		   }
-		   span{
-		     float:left;
-		   }
-		   ul{
-		     @extend %listreset;
-			 li{
-			   float:left;
-			   margin-left:10px;
-			   font-weight:bold;
-			   a{
-			     text-decoration:underline;
-				 &:hover{
-				   text-decoration:none;
-				 }
-			   }
-			 }
-		   }
-		 }
-		 cite{
-           float:left;
-		   font-style: normal;
-		   font-size:18px;		   
-		   @include breakpoint($mobile){
-		    width:100%;
-			padding-bottom:15px;
-		   }
-		   span{
-		     @extend %clearfix;
-             margin-bottom:10px;
-             font-weight:bold;
-             em{
-			    font-style:normal;
-				font-weight:normal;
-			 }
-		   }
-		   a{
-		  	 position: relative;
-			 padding:0 0 0 14px;
-             text-decoration: underline;
-             &:link{
-             	//color: $orange-dark;
-             	font-size: 15px;
-  				font-weight: normal;
-             }
-			 &:after {
-			   position:absolute;
-			   left:0;
-			   top:3px;
-			   content:"";
-			   width:10px;
-			   height:16px;
-			   background:image-url('sprite.png') no-repeat -14px -62px;
-			 }
-			 &.first{
-			   padding:0;
-			   &:after{
-			     background:none;
-			   }
-			 }
-			 &:hover{
-			 	color: inherit;
-			   text-decoration:underline;
-			 }
-		   }
-		 }
-	  }
-	}
-  }
-  .article-right{
-    float:left;
-	width:29%;
-	padding:0 0 0 54px;
-	@include breakpoint($desktop){
-	padding:0 20px;
-	}
-	@include breakpoint($tablet){
-	  padding:0 45px 100px 45px;
-	  width:100%;
-	}
-	@include breakpoint($mobile){
-	  padding:0 15px 100px 15px;
-	}
-	.posts-columns{
-	  @include breakpoint($tablet){
-	    width:100%;
+      }
+      .action-block {
+        .holder {
+          padding: 75px 0px 107px;
+          @include breakpoint($mobile) {
+            padding: 75px 0px 50px;
+          }
 
-	  }
-	}
-	.col{
-	  width:242px;
-	  max-width:100%;
-	  @include breakpoint($tablet){
-	    width:auto;
-		.post{
-		  width: 31%;
+          & > div {
+            a {
+              color: $white;
+              text-decoration: none;
+              font-weight: normal;
+              @include breakpoint($mobile) {
+                margin: 0;
+              }
+
+              &:hover {
+                color: $white;
+                text-decoration: none;
+              }
+            }
+            &.block-symptoms {
+              padding: 43px 10px 37px 39px;
+              .text {
+                font-size: 31px;
+                @include breakpoint($tablet) {
+                  font-size: 30px;
+                }
+              }
+              span.add {
+                margin: 0 0 10px 30px;
+                @include breakpoint($mobile) {
+                  margin: 0 0 10px 20px;
+                }
+              }
+            }
+            &.block-blog {
+              .title {
+                font-size: 36px;
+                margin: 0 0 27px;
+                line-height: 37px;
+                @include breakpoint($tablet) {
+                  font-size: 25px;
+                  line-height: 33px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .article-info {
+        border: 1px solid $gray;
+        border-left: none;
+        border-right: none;
+        padding: 21px 0 21px 0;
+        margin: 33px 0 45px 0;
+        @include breakpoint($tablet) {
+          margin: 0 0 38px 0;
+        }
+
+        @include breakpoint($mobile) {
+          margin: 0 0 20px 0;
+          .btn {
+            float: left;
+          }
+        }
+
+        @extend %clearfix;
+        .article-updated {
+          float: left;
+          width: 70%;
+          @include breakpoint($mobile) {
+            width: 100%;
+            margin-bottom: 13px;
+          }
+
+          color: $menu-grey;
+          strong {
+            font-weight: normal;
+          }
+          span {
+            float: left;
+          }
+          ul {
+            @extend %listreset;
+            li {
+              float: left;
+              margin-left: 10px;
+              font-weight: bold;
+              a {
+                text-decoration: underline;
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+        cite {
+          float: left;
+          font-style: normal;
+          font-size: 18px;
+          @include breakpoint($mobile) {
+            width: 100%;
+            padding-bottom: 15px;
+          }
+
+          span {
+            @extend %clearfix;
+            margin-bottom: 10px;
+            font-weight: bold;
+            em {
+              font-style: normal;
+              font-weight: normal;
+            }
+          }
+          a {
+            position: relative;
+            padding: 0 0 0 14px;
+            text-decoration: underline;
+            &:link {
+              //color: $orange-dark;
+              font-size: 15px;
+              font-weight: normal;
+            }
+            &:after {
+              position: absolute;
+              left: 0;
+              top: 3px;
+              content: "";
+              width: 10px;
+              height: 16px;
+              background: image-url("sprite.png") no-repeat -14px -62px;
+            }
+            &.first {
+              padding: 0;
+              &:after {
+                background: none;
+              }
+            }
+            &:hover {
+              color: inherit;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .article-right {
+    float: left;
+    width: 29%;
+    padding: 0 0 0 54px;
+    @include breakpoint($desktop) {
+      padding: 0 20px;
+    }
+
+    @include breakpoint($tablet) {
+      padding: 0 45px 100px 45px;
+      width: 100%;
+    }
+
+    @include breakpoint($mobile) {
+      padding: 0 15px 100px 15px;
+    }
+
+    .posts-columns {
+      @include breakpoint($tablet) {
+        width: 100%;
+      }
+    }
+    .col {
+      width: 242px;
+      max-width: 100%;
+      @include breakpoint($tablet) {
+        width: auto;
+        .post {
+          width: 31%;
           float: left;
           margin-right: 2.3%;
-		}
-	  }
-	  @include breakpoint($mobile){
-	    .post{
-	      width:100%;
-		}
-     }
-	}
-	h2{
-	  @include fontsize(38,16);
-	  font-weight:normal;
-	  width:242px;
-	  margin:52px 0 6px 0;
-	  @include breakpoint($tablet){
-	    width:auto;
-		margin:52px 0 15px 0;
-	  }
-	  @include breakpoint($mobile){
-	    @include fontsize(25,14);
-		 margin:30px 0 15px 0;
-         width:100%;
-	  }
-	}
-	h3{
-	  font-size:18px;
-	  margin:0;
-	}
-	.cite{
-	   margin-top:10px;
-	}
+        }
+      }
+
+      @include breakpoint($mobile) {
+        .post {
+          width: 100%;
+        }
+      }
+    }
+    h2 {
+      @include fontsize(38, 16);
+      font-weight: normal;
+      width: 242px;
+      margin: 52px 0 6px 0;
+      @include breakpoint($tablet) {
+        width: auto;
+        margin: 52px 0 15px 0;
+      }
+
+      @include breakpoint($mobile) {
+        @include fontsize(25, 14);
+        margin: 30px 0 15px 0;
+        width: 100%;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+    .cite {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -537,174 +557,181 @@
 
 .node-type-article,
 .node-type-my-voice-blog,
-.node-type-school-values{
+.node-type-school-values {
+  //Comment wrapper
+  .comment-wrapper {
+    .topic-share {
+      display: none;
+    }
+  }
+  // Field Tags
+  .field-label {
+    float: left;
+  }
+  .field-item {
+    float: left;
+  }
+  // Comment List
+  section .comment-list {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  // Image holder
+  .visual .img-holder {
+    min-height: 5em;
+    height: auto;
+  }
+  #wrapper {
+    background: $white;
+    @include breakpoint($not-mobile) {
+      background: image-url("wid_bg.png") repeat-y center $white;
+      background-position: 42%;
+    }
 
-	//Comment wrapper
-	.comment-wrapper{
-		.topic-share{
-			display: none;
-		}
-	}
+    @include breakpoint(1030px) {
+      background-position: 43.3%;
+    }
 
-	// Field Tags
-	.field-label{
-		float: left;
-	}
-	.field-item{
-		float: left;		
-	}
+    @include breakpoint($tablet) {
+      background: $white;
+    }
+  }
+  #main2 {
+    background: transparent;
+    @include container;
+    @include breakpoint($tablet) {
+      padding: 0;
+    }
+  }
+  #main2 footer {
+    clear: both;
+  }
+  #main2 .article {
+    @include breakpoint($tablet) {
+      @include span(12 of 12);
+    }
+  }
+  #main2 .article-left .visual .holder .pic-caption {
+    line-height: 16px;
+  }
+  #main2 .article-left {
+    @include breakpoint($not-mobile) {
+      padding: 0 15px;
+    }
+  }
+  //Side bar
+  #content_bottom {
+    @include span(3 of 12 last);
+    h3 {
+      margin: 0;
+    }
+    @include breakpoint($tablet) {
+      @include span(12 of 12);
+      background: image-url("wid_bg.png") repeat-y center $white;
+      background-position: 75%;
+      padding: 0 10px;
+    }
 
-	// Comment List
-	section .comment-list{
-		clear: both;
-  		content: "";
-  		display: table;
-	}
-	// Image holder
-	.visual .img-holder{
-		min-height: 5em;
-		height: auto;
-	}
-	#wrapper{
-		background: $white;
-		@include breakpoint($not-mobile){
-			background: image-url('wid_bg.png') repeat-y center $white;
-			background-position: 42%;
-		}
-		@include breakpoint(1030px){
-			background-position: 43.3%;
-		}
-		@include breakpoint($tablet){
-			background: $white;
-		}	
-
-	}
-	#main2{
-		background: transparent;
-		@include container;
-		@include breakpoint($tablet){
-			padding: 0;
-		}	
-
-	}
-	#main2 footer{
-		clear: both;
-	}
-	#main2 .article{
-		@include breakpoint($tablet){
-			@include span(12 of 12);
-		}	
-
-	}
-
-	#main2 .article-left .visual .holder .pic-caption{
-		line-height: 16px;
-	}
-
-	#main2 .article-left{
-		@include breakpoint($not-mobile){
-			padding: 0 15px;
-		}		
-	}
-	//Side bar
-	#content_bottom{
-		@include span(3 of 12 last);
-		h3{
-			margin: 0;
-		}
-
-		@include breakpoint($tablet){
-			@include span(12 of 12);
-			background: image-url('wid_bg.png') repeat-y center $white;
-			background-position: 75%;
-			padding: 0 10px;
-		}
-
-		.region-content-bottom{
-			padding-top: 50px;
-		}
-
-	}
-
-	// Tab Region
-	ul.tabs-primary{
-		@include container;
-	}
-
-
+    .region-content-bottom {
+      padding-top: 50px;
+    }
+  }
+  // Tab Region
+  ul.tabs-primary {
+    @include container;
+  }
 }
+
 // Comments blcok
-.comment-block{
-	.form-type-textarea{
-		clear: both;
-		.form-element{
-			clear: both;
-		}
-	}
-	.form-actions{
-		clear: both;
-	}
-}
-#main2 .article-left .article-left-holder .comment-block .comments .form-type-item .form-element{
-	width: auto;
-	padding: 0;
-	margin: 0;
-	padding-left: 1em;
-	background: none;	
+.comment-block {
+  .form-type-textarea {
+    clear: both;
+    .form-element {
+      clear: both;
+    }
+  }
+  .form-actions {
+    clear: both;
+  }
 }
 
-#main2 .article-left .article-left-holder .comment-block .comments .form-element textarea{
-	font: 100% "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
-	color: $gray;
-	vertical-align: middle;
+#main2 .article-left .article-left-holder .comment-block .comments .form-type-item .form-element {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  padding-left: 1em;
+  background: none;
 }
 
-#main2 .comment-title{
-	display: none;
+#main2 .article-left .article-left-holder .comment-block .comments .form-element textarea {
+  font: 100% "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
+  color: $gray;
+  vertical-align: middle;
 }
 
-#main2 input[type=submit]{
-	position: relative;
-	background: $white;
-	padding:5px 22px;
-	color: $menu-grey;
-	box-shadow: 0 6px $menu-grey;
-	-webkit-transition: none;
-	-moz-transition: none;
-	transition: none;
-	border-radius: 5px;
-	margin:0 20px 0 0;
-	border: 1px solid $menu-grey;
-
-	&:hover {
-		box-shadow: 0 4px $menu-grey;
-		top: 2px;
-	}
-	&:active {
-		box-shadow: 0 0 $menu-grey;
-		top: 6px;
-	}
-
-	&:visited{
-	  text-decoration:none;
-	  color:$menu-grey;
-	}
-
+#main2 .comment-title {
+  display: none;
 }
 
-#main2 .field-name-comment-body .field-item{
-	padding:0;
-	margin-bottom: 15px;
+#main2 input[type=submit] {
+  position: relative;
+  background: $white;
+  padding: 5px 22px;
+  color: $menu-grey;
+  box-shadow: 0 6px $menu-grey;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+  border: 1px solid $menu-grey;
+  &:hover {
+    box-shadow: 0 4px $menu-grey;
+    top: 2px;
+  }
+  &:active {
+    box-shadow: 0 0 $menu-grey;
+    top: 6px;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $menu-grey;
+  }
+}
+
+#main2 .field-name-comment-body .field-item {
+  padding: 0;
+  margin-bottom: 15px;
 }
 
 // Blog and Article page
-.section-blog-article{
+.section-blog-article {
+  #content-header .title {
+    display: block;
+  }
+  .block-easy-breadcrumb {
+    display: none;
+  }
+}
 
-	#content-header .title{
-		display: block;
-	}
+//Moved from contents.scss upto 730.
+//articles block
+.articles-block {
+  background: $white;
+  @include breakpoint($mobile) {
+    padding-top: 50px;
+  }
 
-	.block-easy-breadcrumb{
-		display: none;
-	}
+  .article {
+    h4 {
+      padding: 25px 0 20px 0px;
+      margin: 0;
+      @include fontsize(22, 16);
+    }
+    p {
+      @include fontsize(16, 16);
+      line-height: 25px;
+    }
+  }
 }
