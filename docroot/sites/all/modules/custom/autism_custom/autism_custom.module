@@ -369,9 +369,38 @@ function ambitious_get_last_reply($nid) {
 }
 
 //new codes by amalan to get the number of the users
+
+function facebook_count($url){
+ 
+    // Query in FQL
+    $fql  = "SELECT like_count";
+    $fql .= " FROM link_stat WHERE url = '$url'";
+ 
+    $fqlURL = "https://api.facebook.com/method/fql.query?format=json&query=" . urlencode($fql);
+ 
+    // Facebook Response is in JSON
+    $response = file_get_contents($fqlURL);
+    return json_decode($response);
+ 
+  }
+
 function ambitious_get_usercount(){
 //new code set
+$fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+$fb_count = $fb[0]->like_count;
+dpm('facebook count : '.$fb_count); 
 
+//twitter codes
+// $twurl = 'https://twitter.com/users/show/htpcBeginner';
+// $response = file_get_contents($twurl);
+// $t_profile = new SimpleXMLElement($response);
+// $tcount = $t_profile->followers_count;
+// dpm('twitter count : '.$tcount);
+// echo'total count of twitter';
+// echo $tcount;
+//end of twitter codes
+// echo $fb_count;
+// echo'Testing count'; 
 
 //endofnew
 //code to update the database 
@@ -393,9 +422,12 @@ function ambitious_get_usercount(){
   $result = db_query($sql);
   foreach ($result as $record) {
     //dpr($record->count);
-    dpm($record->totalcount);
+    dpm('BSD count : '.$record->totalcount);
     $test = $record->totalcount;
   }
+
+  $finalcount = $fb_count + $test ; 
+  dpm('final count : '.$finalcount);
   return $test;
 //end of the code
 
@@ -410,43 +442,13 @@ function ambitious_get_usercount(){
 
 function autism_custom_cron(){
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', true);
-// ini_set('max_execution_time', 0);
-
-//    $api_id = 'ambitious-charity-site'; // your API ID
-//    $api_secret = '5faf692fdb43b100ce501f6a18dcba2a6ee6b5eb'; // your API Secret
-//    $api_url = 'http://ambitious.cp.bsd.net'; // your BSD URL - e.g. https://client.cp.bsd.net
-//    $results = '';
-//     require 'autoload.php';
-
-//   $results = "error: ";
-
-//   try 
-//   {
-
-//     $api = new BlueStateDigital_Api($api_id, $api_secret, $api_url);
-//     $query_params_1 = array('format' => 'csv'
-//                 , 'fields' => 'firstname');
-//     $res = $api->get('/utils/cons_counter/cons_counter.ajax.php', $query_params_1);
-//     $numberfrombsd = $res->getBody();
-//     $api = null;
-//     //return $movies;
-    
-//   }
-//   catch(Exception $e) {
-//       $results .= $e->getMessage();
-//       print_r($results);
-//   }
-
   $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
-  //echo $numberfrombsd;
-
   $num_updated = db_update('user_count') // Table name no longer needs {}
   ->fields(array(
     'totalcount' => $numberfrombsd,
   ))
   ->condition('id', 1, '=')
   ->execute();
+
+
 }
