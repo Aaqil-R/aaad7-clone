@@ -437,6 +437,7 @@ function ambitious_get_usercount(){
   // dpm('bsdcount : '.variable_get('bsdcount'));
   // dpm('fbcount : '.variable_get('fbcount'));
   // dpm('twittercount : '.variable_get('twittercount'));
+
   $finalcount = variable_get('bsdcount')+variable_get('fbcount')+variable_get('twittercount');
   //dpm('total amount : '.$finalcount);
   return $finalcount;
@@ -447,15 +448,31 @@ function ambitious_get_usercount(){
 
 function autism_custom_cron(){
   //updating the bsd count
-  $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+  // $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
 
-  //updating fb count
-  $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
-  $fb_count = $fb[0]->like_count;
+  // //updating fb count
+  // $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+  // $fb_count = $fb[0]->like_count;
 
-  //update twitter account
-  $twittercount = twitter_user_info("ambitiousautism");
+  // //update twitter account
+  // $twittercount = twitter_user_info("ambitiousautism");
 
+  require('helper.php');
+  $test = new helper;
+  $fb_count = $test->getfbcount();
+  //dpm('Facebook '.$fb_count);
+  // echo 'Facebook '.$count;
+  // echo '<br>';
+
+  $twittercount = $test->gettwittercount(); 
+  //dpm('Twitter '.$twittercount); 
+  // echo 'Twitter '.$count;
+  // echo '<br>';
+
+  $numberfrombsd = $test->getbsdcount();  
+  //dpm('BSD '.$numberfrombsd);
+  // echo 'BSD '.$count;
+  // echo '<br>';
 
   variable_set('bsdcount', $numberfrombsd);
   variable_set('fbcount', $fb_count);
