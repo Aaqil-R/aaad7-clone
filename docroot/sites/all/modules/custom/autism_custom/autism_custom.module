@@ -1,7 +1,7 @@
 <?php
 function autism_custom_init() { 
-
-    drupal_add_js(array('autism_custom' => array('supporter_count' => variable_get('autism_custom_supporter_count', 0))), 'setting');
+    $countuser = ambitious_get_usercount();
+    drupal_add_js(array('autism_custom' => array('supporter_count' => $countuser)), 'setting');
     
     drupal_add_js(array('autism_custom' => array('supporters_url' => variable_get('supporters_url', '0'))), 'setting');
     
@@ -367,4 +367,96 @@ function ambitious_get_last_reply($nid) {
      return $comment;
    }
    return false;
+}
+
+//new codes by amalan to get the number of the users
+
+function facebook_count($url){
+ 
+    // Query in FQL
+    $fql  = "SELECT like_count";
+    $fql .= " FROM link_stat WHERE url = '$url'";
+ 
+    $fqlURL = "https://api.facebook.com/method/fql.query?format=json&query=" . urlencode($fql);
+ 
+    // Facebook Response is in JSON
+    $response = file_get_contents($fqlURL);
+    return json_decode($response);
+ 
+  }
+
+function twitter_user_info($screen_name)
+{ 
+    $data = file_get_contents("https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=" . $screen_name);
+    $data = json_decode($data, true); 
+    //print_r($data);
+    return $data[0]['followers_count'];
+    //echo $data; return $data[0]; 
+}
+
+function ambitious_get_usercount(){
+// //facebook code
+// $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+// $fb_count = $fb[0]->like_count;
+// //dpm('facebook count : '.$fb_count); 
+// //end of the facebook code
+
+// //twitter codes
+// $twittercount1 = twitter_user_info("ambitiousautism"); 
+// //dpm('twitter followers : '.$twittercount1);
+// //end of twitter codes
+
+
+// //endofnew
+// //code to update the database 
+//   // $valuetest = 300 ; 
+//   //   $num_updated = db_update('user_count') // Table name no longer needs {}
+//   //   ->fields(array(
+//   //     'count' => $valuetest,
+//   //   ))
+//   //   ->condition('id', 1, '=')
+//   //   ->execute();
+// //end of the update code
+// // $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+// // dpm($numberfrombsd);
+
+// //code to get the count from the database
+//   $sql = 'SELECT totalcount as totalcount
+//     FROM user_count
+//     WHERE id=1';
+//   $result = db_query($sql);
+//   foreach ($result as $record) {
+//     //dpr($record->count);
+//     //dpm('BSD count : '.$record->totalcount);
+//     $test = $record->totalcount;
+//   }
+// 
+// $finalcount = $fb_count + $test + $twittercount; 
+  dpm('final count : '.$finalcount);
+  dpm('bsdcount : '.variable_get('bsdcount'));
+  dpm('fbcount : '.variable_get('fbcount'));
+  dpm('twittercount : '.variable_get('twittercount'));
+  $finalcount = variable_get('bsdcount')+variable_get('fbcount')+variable_get('twittercount');
+  dpm('total amount : '.$finalcount);
+  return $finalcount;
+//end of the code
+
+//get the value from the database and return to the user
+}
+
+function autism_custom_cron(){
+  //updating the bsd count
+  $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+
+  //updating fb count
+  $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+  $fb_count = $fb[0]->like_count;
+
+  //update twitter account
+  $twittercount = twitter_user_info("ambitiousautism");
+
+
+  variable_set('bsdcount', $numberfrombsd);
+  variable_set('fbcount', $fb_count);
+  variable_set('twittercount', $twittercount);
 }
