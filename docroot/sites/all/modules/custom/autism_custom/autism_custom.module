@@ -384,71 +384,78 @@ function facebook_count($url){
  
   }
 
+function twitter_user_info($screen_name)
+{ 
+    $data = file_get_contents("https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=" . $screen_name);
+    $data = json_decode($data, true); 
+    //print_r($data);
+    return $data[0]['followers_count'];
+    //echo $data; return $data[0]; 
+}
+
 function ambitious_get_usercount(){
-//new code set
-$fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
-$fb_count = $fb[0]->like_count;
-dpm('facebook count : '.$fb_count); 
+// //facebook code
+// $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+// $fb_count = $fb[0]->like_count;
+// //dpm('facebook count : '.$fb_count); 
+// //end of the facebook code
 
-//twitter codes
-// $twurl = 'https://twitter.com/users/show/htpcBeginner';
-// $response = file_get_contents($twurl);
-// $t_profile = new SimpleXMLElement($response);
-// $tcount = $t_profile->followers_count;
-// dpm('twitter count : '.$tcount);
-// echo'total count of twitter';
-// echo $tcount;
-//end of twitter codes
-// echo $fb_count;
-// echo'Testing count'; 
+// //twitter codes
+// $twittercount1 = twitter_user_info("ambitiousautism"); 
+// //dpm('twitter followers : '.$twittercount1);
+// //end of twitter codes
 
-//endofnew
-//code to update the database 
-  // $valuetest = 300 ; 
-  //   $num_updated = db_update('user_count') // Table name no longer needs {}
-  //   ->fields(array(
-  //     'count' => $valuetest,
-  //   ))
-  //   ->condition('id', 1, '=')
-  //   ->execute();
-//end of the update code
-// $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
-// dpm($numberfrombsd);
 
-//code to get the count from the database
-  $sql = 'SELECT totalcount as totalcount
-    FROM user_count
-    WHERE id=1';
-  $result = db_query($sql);
-  foreach ($result as $record) {
-    //dpr($record->count);
-    dpm('BSD count : '.$record->totalcount);
-    $test = $record->totalcount;
-  }
+// //endofnew
+// //code to update the database 
+//   // $valuetest = 300 ; 
+//   //   $num_updated = db_update('user_count') // Table name no longer needs {}
+//   //   ->fields(array(
+//   //     'count' => $valuetest,
+//   //   ))
+//   //   ->condition('id', 1, '=')
+//   //   ->execute();
+// //end of the update code
+// // $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
+// // dpm($numberfrombsd);
 
-  $finalcount = $fb_count + $test ; 
+// //code to get the count from the database
+//   $sql = 'SELECT totalcount as totalcount
+//     FROM user_count
+//     WHERE id=1';
+//   $result = db_query($sql);
+//   foreach ($result as $record) {
+//     //dpr($record->count);
+//     //dpm('BSD count : '.$record->totalcount);
+//     $test = $record->totalcount;
+//   }
+// 
+// $finalcount = $fb_count + $test + $twittercount; 
   dpm('final count : '.$finalcount);
-  return $test;
+  dpm('bsdcount : '.variable_get('bsdcount'));
+  dpm('fbcount : '.variable_get('fbcount'));
+  dpm('twittercount : '.variable_get('twittercount'));
+  $finalcount = variable_get('bsdcount')+variable_get('fbcount')+variable_get('twittercount');
+  dpm('total amount : '.$finalcount);
+  return $finalcount;
 //end of the code
 
-  // $test1 = new data;
-  // $result1 = $test1->getx();
-  // //dpm($result1);
-  // return $result1;
-
-
-  //get the value from the database and return to the user
+//get the value from the database and return to the user
 }
 
 function autism_custom_cron(){
-
+  //updating the bsd count
   $numberfrombsd = file_get_contents("http://ambitious.cp.bsd.net/utils/cons_counter/cons_counter.ajax.php");
-  $num_updated = db_update('user_count') // Table name no longer needs {}
-  ->fields(array(
-    'totalcount' => $numberfrombsd,
-  ))
-  ->condition('id', 1, '=')
-  ->execute();
+
+  //updating fb count
+  $fb = facebook_count('https://www.facebook.com/ambitiousaboutautism');
+  $fb_count = $fb[0]->like_count;
+
+  //update twitter account
+  $twittercount = twitter_user_info("ambitiousautism");
 
 
+  variable_set('bsdcount', $numberfrombsd);
+  variable_set('fbcount', $fb_count);
+  variable_set('twittercount', $twittercount);
 }
