@@ -471,7 +471,7 @@ function autism_custom_cron(){
   //dpm('Twitter '.$twittercount); 
   // echo 'Twitter '.$count;
   // echo '<br>';
-  $bsdobject = new bsdobject;
+  $bsdobject = new bsdhelper;
   $numberfrombsd = $bsdobject->set_supporter_count();  
   //dpm('BSD '.$numberfrombsd);
   // echo 'BSD '.$count;
