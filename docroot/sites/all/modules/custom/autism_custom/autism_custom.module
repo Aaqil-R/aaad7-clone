@@ -457,19 +457,22 @@ function autism_custom_cron(){
   // //update twitter account
   // $twittercount = twitter_user_info("ambitiousautism");
 
-  require('helper.php');
-  $test = new helper;
-  $fb_count = $test->getfbcount();
+  //require('helper.php');
+  require('facebookhelper.php');
+  require('twitterhelper.php');
+  require('bsdhelper.php');
+  $fbobject = new facebookhelper;
+  $fb_count = $fbobject->set_supporter_count();
   //dpm('Facebook '.$fb_count);
   // echo 'Facebook '.$count;
   // echo '<br>';
-
-  $twittercount = $test->gettwittercount(); 
+  $twitterobject = new twitterhelper;
+  $twittercount = $twitterobject->set_supporter_count(); 
   //dpm('Twitter '.$twittercount); 
   // echo 'Twitter '.$count;
   // echo '<br>';
-
-  $numberfrombsd = $test->getbsdcount();  
+  $bsdobject = new bsdobject;
+  $numberfrombsd = $bsdobject->set_supporter_count();  
   //dpm('BSD '.$numberfrombsd);
   // echo 'BSD '.$count;
   // echo '<br>';

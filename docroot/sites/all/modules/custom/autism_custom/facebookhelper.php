@@ -1,5 +1,5 @@
 <?php
-	class facebook{
+	class facebookhelper{
 		private $count = 0;
 		private $fql;
 		private $fqlURL;
@@ -7,7 +7,7 @@
 		private $fb;
 		public $url = 'https://www.facebook.com/ambitiousaboutautism';
 
-		public function getcount(){
+		public function set_supporter_count(){
 			 $this->fql  = "SELECT like_count";
     		$this->fql .= " FROM link_stat WHERE url = '$this->url'";
  
