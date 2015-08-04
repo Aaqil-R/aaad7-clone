@@ -432,12 +432,13 @@ function ambitious_get_usercount(){
 //   }
 // 
 // $finalcount = $fb_count + $test + $twittercount; 
-  dpm('final count : '.$finalcount);
-  dpm('bsdcount : '.variable_get('bsdcount'));
-  dpm('fbcount : '.variable_get('fbcount'));
-  dpm('twittercount : '.variable_get('twittercount'));
+
+  // dpm('final count : '.$finalcount);
+  // dpm('bsdcount : '.variable_get('bsdcount'));
+  // dpm('fbcount : '.variable_get('fbcount'));
+  // dpm('twittercount : '.variable_get('twittercount'));
   $finalcount = variable_get('bsdcount')+variable_get('fbcount')+variable_get('twittercount');
-  dpm('total amount : '.$finalcount);
+  //dpm('total amount : '.$finalcount);
   return $finalcount;
 //end of the code
 
