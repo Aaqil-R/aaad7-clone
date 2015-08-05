@@ -638,7 +638,6 @@ a {
   }
 }
 
-//to be continued. 
 //signup overlay columns
 // 2 columns
 .signup-columns, .my-voice-columns, .community-columns {
@@ -657,7 +656,6 @@ a {
       margin: 0;
       padding: 0 40px;
       @include breakpoint($mobile) {
-        //display:none;
         p:last-child {
           display: none;
         }
@@ -682,7 +680,7 @@ a {
       width: 80%;
       border-radius: 5px;
       border-color: $mercury;
-      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+      @include box-shadow(inset 1px 1px 2px $border-grey);
       margin-bottom: 20px;
       padding: 12px 23px;
       @include breakpoint($mobile) {
@@ -691,26 +689,6 @@ a {
 
       font-size: 18px;
     }
-    //TODO : Do we need the commented code below ?
-    // input[type="submit"]{
-    //      float:left;
-    //      clear:both;
-    //      border: none;
-    //      // added backgournd, color, border-radius - > nanda Globalsoftlab
-    //      @include border-radius(5px);
-    //      background:$orange;
-    //      color:$white;
-    //      border-bottom: 5px solid $orange-dark;
-    //      margin-right: 20px;
-    //      @include breakpoint($mobile) {
-    //          margin-bottom: 20px;
-    //      }
-    //      &:hover {
-    //        border-bottom-width: 3px;
-    //      text-decoration:none;
-    //      color:$white;
-    //      }
-    //  }
     .btn {
       float: left;
       &.btn-left {
@@ -720,21 +698,6 @@ a {
         padding-left: 15px;
       }
     }
-  }
-}
-
-.my-voice-columns .col {
-  margin: 0;
-  &:first-child {
-    padding: 0 60px;
-  }
-  p {
-    font-size: 1.11em;
-  }
-  .larger {
-    font-size: 1.475em;
-    line-height: 1.5em;
-    margin-bottom: 0.7em;
   }
 }
 
@@ -923,16 +886,7 @@ a {
 //!important code to fix the FB widget on home page on Ipad view and dektop
 //Added custome media queries because there is no proper media queries for
 //Ipad horizontal and vertical.
-@media (min-width: 1200px) {
-  #desktopFB {
-    display: block;
-  }
-  #ipadFB {
-    display: none;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
   #desktopFB {
     display: block;
   }
