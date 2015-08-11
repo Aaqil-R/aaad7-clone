@@ -1,9 +1,36 @@
 <?php
 function autism_custom_init() { 
+    //to get the count from the web.
     $countuser = ambitious_get_usercount();
-    drupal_add_js(array('autism_custom' => array('supporter_count' => $countuser)), 'setting');
+    $totalcount = 0;
+    //new codes to fix the issue ; 
+    $supportercount = variable_get('autism_custom_supporter_count');
+    $supportertype= variable_get('supporters_value_type');
+    //dpm('count '.$supportercount); 
+    //dpm('type '.$supportertype); 
+    // no need to check whether the value is set as prompts the user to enter a value.
+    // if (isset($test)) {
+    //   dpm('i am set');
+    // }
+    if($supportertype == "web"){
+      $totalcount = $countuser;
+      //dpm('web '.$totalcount);
+    }
+    elseif ($supportertype == "both") {
+      $totalcount = $countuser + $supportercount ; 
+      //dpm('both '.$totalcount);
+    }
+    else{
+      //for the offset
+      $totalcount = $supportercount;
+      //dpm('offset '.$totalcount);
+    }
+
+
+    //end of the codes
+    drupal_add_js(array('autism_custom' => array('supporter_count' => $totalcount)), 'setting');
     
-    drupal_add_js(array('autism_custom' => array('supporters_url' => variable_get('supporters_url', '0'))), 'setting');
+    // drupal_add_js(array('autism_custom' => array('supporters_url' => variable_get('supporters_url', '0'))), 'setting');
     
     drupal_add_js(array('autism_custom' => array('supporters_value_type' => variable_get('supporters_value_type', '0'))), 'setting');  
     
@@ -145,17 +172,17 @@ function autism_custom_settings_form($form, &$form_state) {
       'offset' => t('Offset value'), 
     ),
   ); 
-  $form['supporters_value']['url'] = array(
-    '#type' => 'textfield',
-    '#title' => 'URL <span class="form-required" title="This field is required.">*</span>',
-    '#default_value' => variable_get('supporters_url', '0'),    
-    '#description' => t("ex: www.domin.com"), 
-    '#states' => array( 
-      'invisible' => array( 
-        ':input[name="value_type"]' => array('value' => 'offset'),
-      ),
-    ),  
-  );    
+  // $form['supporters_value']['url'] = array(
+  //   '#type' => 'textfield',
+  //   '#title' => 'URL <span class="form-required" title="This field is required.">*</span>',
+  //   '#default_value' => variable_get('supporters_url', '0'),    
+  //   '#description' => t("ex: www.domin.com"), 
+  //   '#states' => array( 
+  //     'invisible' => array( 
+  //       ':input[name="value_type"]' => array('value' => 'offset'),
+  //     ),
+  //   ),  
+  // );    
   $form['autism_custom_supporter_count'] = array(
     '#type' => 'textfield',
     '#title' => t('Number of members and supporters <span class="form-required" title="This field is required.">*</span>'),
@@ -215,16 +242,16 @@ function autism_custom_settings_form_validate($form, &$form_state){
   elseif ($max_num <= 0){
     form_set_error('autism_custom_comment_count', t('Number of comments to display must be positive.'));
   }
-  if($form_state['values']['value_type'] != 'offset' && $form_state['values']['url'] ==''){
-    form_set_error('url', t('Please fill the url to get the data.'));
-  }  
+  // if($form_state['values']['value_type'] != 'offset' && $form_state['values']['url'] ==''){
+  //   form_set_error('url', t('Please fill the url to get the data.'));
+  // }  
    
   
 }
 
 function autism_custom_settings_form_submit($form, &$form_state){ 
   variable_set('supporters_value_type', $form_state['values']['value_type']);  
-  variable_set('supporters_url', $form_state['values']['url']);
+  //variable_set('supporters_url', $form_state['values']['url']);
    
   variable_set('autism_custom_supporter_count', $form_state['values']['autism_custom_supporter_count']); 
   variable_set('autism_custom_comment_count', $form_state['values']['autism_custom_comment_count']); 

@@ -16,22 +16,24 @@
         }); 
       }  
       $(window).load(function () {
-        if(urlval == true){
-          var spdata = parseInt($('.member-count').data('sp'));
-        }  
+        // if(urlval == true){
+        //   var spdata = parseInt($('.member-count').data('sp'));
+        // }  
         var spcount = parseInt(Drupal.settings.autism_custom.supporter_count);
         var valuetype = Drupal.settings.autism_custom.supporters_value_type;
-        
-        if(valuetype == 'web' && urlval == true){
-          $("span.numbers").html(ReplaceNumberWithCommas(spdata));
-        }
-        if(valuetype == 'both' && urlval == true){
-          var nval = spdata + spcount;
-          $("span.numbers").html(ReplaceNumberWithCommas(nval));
-        }
-        if(valuetype == 'offset'){
-          $("span.numbers").html(ReplaceNumberWithCommas(spcount));
-        } 
+        $("span.numbers").html(ReplaceNumberWithCommas(spcount));
+        // if(valuetype == 'web'){
+        //   //$("span.numbers").html(ReplaceNumberWithCommas(spdata));
+        //   $("span.numbers").html(ReplaceNumberWithCommas(spcount));
+        // }
+        // if(valuetype == 'both'){
+        //   //var nval = spdata + spcount;
+        //   //$("span.numbers").html(ReplaceNumberWithCommas(nval));
+        //   $("span.numbers").html(ReplaceNumberWithCommas(spcount));
+        // }
+        // if(valuetype == 'offset'){
+        //   $("span.numbers").html(ReplaceNumberWithCommas(spcount));
+        // } 
         
       });
       
