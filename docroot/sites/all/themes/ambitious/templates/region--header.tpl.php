@@ -63,7 +63,9 @@ global $user;
 			
 			//print render_block_content('block', 151);
 			//print render_my_block_content('block', 151);
-			print $myblock;
+
+			//below line newly commented.
+			//print $myblock;
 
 			//$tree = menu_tree($menu_name);
 			//print drupal_render($tree); 
@@ -79,9 +81,9 @@ global $user;
 			?>
 			<?php 
 				//printing the online users.
-				if($user->uid):
-				print $onlineusers;
-				endif; 
+				// if($user->uid):
+				// print $onlineusers;
+				// endif; 
 			?>
 		</nav>
 	</div>
