@@ -22,6 +22,7 @@ ul a {
   }
   a {
     @include link-color($gray);
+    font-weight: bold;
     img {
       vertical-align: middle;
       margin-right: 10px;
@@ -385,6 +386,7 @@ ul a {
     width: 285px;
     left: -285px;
   }
+
   .title {
     display: block;
     font-size: 27px;
@@ -416,8 +418,9 @@ ul a {
         }
       }
     }
-  } 
+  }
 }
+
 .node-type-my-voice-blog {
   &.school-active,
   &.nav-active {
@@ -426,20 +429,21 @@ ul a {
     }
   }
 }
+
 .school-active {
-  #nav-main, #block-block-156{
+  #nav-main, #block-block-156 {
     @include breakpoint($mobile) {
-      display:none;
+      display: none;
     }
   }
   .visual, .block-easy-breadcrumb, #main, .action-block, .my-voice-block, .articles-block, .social-block, #footer .holder, #main2, .block-easy-breadcrumb, .slider-block, #social {
     position: relative;
     left: -430px;
     @include transition($type: all, $time: 0.4s, $ease: ease);
-    @include breakpoint($mobile) {      
+    @include breakpoint($mobile) {
       left: 285px;
     }
-  }  
+  }
   #footer,
   #footer .holder {
     @include breakpoint($mobile) {
@@ -540,7 +544,7 @@ ul a {
       }
     }
   }
-  .header_fixed &{
+  .header_fixed & {
     padding: 45px 0 50px;
   }
 }
@@ -554,9 +558,9 @@ ul a {
   }
 }*/
 
-.school-active .top-bar{
+.school-active .top-bar {
   @include breakpoint($mobile) {
-     z-index: 99999; 
+    z-index: 99999;
   }
 }
 
@@ -753,13 +757,14 @@ nav {
 /* nav active styles */
 .visual, .banner_text_inner, .block-easy-breadcrumb, #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
   @include transition($type: left, $time: 0.2s, $ease: linear);
-  left: 0; 
+  left: 0;
 }
+
 .nav-active {
- /* #main{
-    max-width: 1080px !important;
-    margin: 0 !important;
-  }*/
+  /* #main{
+     max-width: 1080px !important;
+     margin: 0 !important;
+   }*/
   .visual, .banner_text_inner, .block-easy-breadcrumb, .my-voice-block, #main, .action-block, #footer .holder, #main2,
   .articles-block, .social-block, .slider-block, #social {
     position: relative;
@@ -767,6 +772,7 @@ nav {
     @include breakpoint($mobile) {
       left: -285px;
     }
+
     #main2 .action-block {
       margin-left: 0;
     }
@@ -1175,7 +1181,7 @@ nav {
 }
 
 // .node-type-topic, .page-node-74566 {
-  .node-type-topic, .page-node-74566 , .node-type-my-voice-topic , .node-type-basic-page-with-hero ,.node-type-article,.node-type-my-voice-blog ,.node-type-forum-discussion{
+.node-type-topic, .page-node-74566, .node-type-my-voice-topic, .node-type-basic-page-with-hero, .node-type-article, .node-type-my-voice-blog, .node-type-forum-discussion {
   .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
@@ -1193,14 +1199,16 @@ nav {
     }
   }
 }
+
 //overiding the padding on my voice page
-.node-type-basic-page-with-hero ,.node-type-forum-discussion{
+.node-type-basic-page-with-hero, .node-type-forum-discussion {
   .block-easy-breadcrumb {
     .easy-breadcrumb {
       padding-top: 12px;
     }
   }
 }
+
 //including the padding top for the my voice topic pages only.
 // .node-type-my-voice-topic {
 //   .block-easy-breadcrumb {
@@ -1265,13 +1273,13 @@ nav {
   }
 }
 
-
 /* Menu Text */
-  .menu-text {
-    color: $menu-grey;
-  } 
+.menu-text {
+  color: $menu-grey;
+}
+
 /* BREAD CRUMB */
-.node-type-forum-discussion, .node-type-simple-page, .node-type-forum, .page-forum-stats{
+.node-type-forum-discussion, .node-type-simple-page, .node-type-forum, .page-forum-stats {
   .header_image {
     background: image-url("top-header-bg.png") no-repeat left $blue-light;
     height: 83px;
@@ -1283,6 +1291,7 @@ nav {
       padding: 10px 20px 10px 20px;
       .easy-breadcrumb {
         //padding-top: 18px;
+     
       }
     }
   }
@@ -1294,7 +1303,7 @@ nav {
 }
 
 //online user block
-.online-block{
+.online-block {
   font-size: 18px;
   line-height: 29px;
   color: $heading-link;
@@ -1310,9 +1319,10 @@ nav {
   @include breakpoint($mobile) {
     padding: 9px 31px 11px 25px;
   }
-  a{
+
+  a {
     color: inherit;
-    &:hover{
+    &:hover {
       color: $orange;
     }
   }
