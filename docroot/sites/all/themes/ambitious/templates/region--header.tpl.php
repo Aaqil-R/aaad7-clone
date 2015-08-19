@@ -81,9 +81,9 @@ global $user;
 			?>
 			<?php 
 				//printing the online users.
-				// if($user->uid):
-				// print $onlineusers;
-				// endif; 
+				if($user->uid):
+					print $onlineusers;
+				endif; 
 			?>
 		</nav>
 	</div>
