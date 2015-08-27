@@ -16,7 +16,7 @@ function alert_email_init(){
 	// $sent = drupal_mail('alert_email', 'key', $to, language_default(), $params, $email_from, TRUE);
 
 	// create_newmail1();
-	create_newmail();
+	create_newmail('job_vacancy');
 	dpm('http://'.$_SERVER['HTTP_HOST']);
 }
 
@@ -45,7 +45,7 @@ function get_unpublished_items($contenttype){
 //returns the content types as an array which have more than 0 unpublished items
 function get_content_types(){
 	//define content types to which we need to find the unpublished items
-	$contenttypes = array("events","job_vacancy","take_action");
+	$contenttypes = array("job_vacancy","events","courses","take_action","topic","my_voice_blog");
 	$arrlength = count($contenttypes);
 
 	//array which will store the content name and unpublished items
@@ -102,15 +102,26 @@ function get_user_roles($contenttype){
 	$userrolearray = array();
 	switch ($contenttype) {
 		//add the new contents and the roles to which we need to send mails here
-		case 'events':
+		case 'job_vacancy':
 			array_push($userrolearray, 'administrator');
 			break;
 		
-		case 'job_vacancy':
+		case 'events':
 			array_push($userrolearray, 'Events approver');
 			break;
 
+		case 'courses':
+			array_push($userrolearray, 'The Fundraising Team Approver');
+			break;
 		case 'take_action':
+			array_push($userrolearray, 'administrator');
+			break;
+		
+		case 'topic':
+			array_push($userrolearray, 'Events approver');
+			break;
+
+		case 'my_voice_blog':
 			array_push($userrolearray, 'The Fundraising Team Approver');
 			break;
 
@@ -141,22 +152,132 @@ function getusers(){
 	//dpr($emails);
 }
 
+//new function
+function create_mails($email,$id){
+//swtich case and changing the link
+	$link = '';
+	$content = '';
+	switch ($id) {
+		//add the new contents and the roles to which we need to send mails here
+		case 'job_vacancy':
+			$link = '/vacancy-approval';
+			$content = 'vacancies';
+			break;
+		
+		case 'events':
+			$link = '/event-approval';
+			$content = 'events';
+			break;
+
+		case 'courses':
+			$link = '/courses-approval';
+			$content = 'courses';
+			break;
+
+		case 'take_action':
+			$link = '/takeaction-approval';
+			$content = 'take action';
+			break;
+		
+		case 'topic':
+			$link = '/topic-approval';
+			$content = 'topic';
+			break;
+
+		case 'my_voice_blog':
+			$link = '/myvoice-approval';
+			$content = 'my voice blogs';
+			break;
+		default:
+			# code...
+			break;
+	}
+
+	$var = 'http://'.$_SERVER['HTTP_HOST'];
+	$mailbody = 'There are some contents waiting for the approval. Please visit them by clicking the following URL.'.$var.$link;
+	
+	$my_module = 'alert_email';
+	$my_mail_token = 'bar';
+	$from = variable_get('system_mail', 'ambitiousaboutautism.org.uk');	
+	$message = array(
+	  'id' => $my_module . '_' . $my_mail_token,
+	  'to' => $email,
+	  'subject' => 'Pending Approvals for'.$content,
+	  'body' => $mailbody,
+	  'headers' => array(
+	    'From' => $from,
+	    'Sender' => $from,
+	    'Return-Path' => $from,
+	  ),
+	);
+	$system = drupal_mail_system($my_module, $my_mail_token);
+
+	// The format function must be called before calling the mail function. 
+	//$message = $system->format($message);
+	dpm($message);
+	if ($system->mail($message)) {
+	  // Success.
+		dpm('Sucess');
+	}
+	else {
+	  // Failure.
+		dpm('Fail');
+	}
+}
 
 //Function to create the mails
 //test function
-function create_newmail(){
+function create_newmail($contenttype){
+
+	$link = '';
+	$content = '';
+	switch ($contenttype) {
+		//add the new contents and the roles to which we need to send mails here
+		case 'job_vacancy':
+			$link = '/vacancy-approval';
+			$content = 'vacancies';
+			break;
+		
+		case 'events':
+			$link = '/event-approval';
+			$content = 'events';
+			break;
+
+		case 'courses':
+			$link = '/courses-approval';
+			$content = 'courses';
+			break;
+
+		case 'take_action':
+			$link = '/takeaction-approval';
+			$content = 'take action';
+			break;
+		
+		case 'topic':
+			$link = '/topic-approval';
+			$content = 'topic';
+			break;
+
+		case 'my_voice_blog':
+			$link = '/myvoice-approval';
+			$content = 'my voice blogs';
+			break;
+		default:
+			# code...
+			break;
+	}
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	// $my_module = 'foo';
-	// $my_mail_token = 'bar';
+	$mailbody = 'There are some contents waiting for the approval. Please visit them by clicking the following URL.'.$var.$link;
+	
 	$my_module = 'alert_email';
 	$my_mail_token = 'bar';
-	$from = variable_get('system_mail', 'organization@example.com');	
+	$from = variable_get('system_mail', 'ambitiousaboutautism.org.uk');	
 	$message = array(
 	  'id' => $my_module . '_' . $my_mail_token,
 	  'to' => 'pnamalan@gmail.com',
-	  'subject' => 'test',
-	  'body' => $var,
+	  'subject' => 'Pending Approvals for'.$content,
+	  'body' => $mailbody,
 	  'headers' => array(
 	    'From' => $from,
 	    'Sender' => $from,
