@@ -188,7 +188,7 @@ function create_newmail(){
 
 	// The format function must be called before calling the mail function. 
 	$message = $system->format($message);
-
+	dpm($message);
 	if ($system->mail($message)) {
 	  // Success.
 		dpm('Sucess');
