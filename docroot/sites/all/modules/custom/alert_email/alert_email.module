@@ -177,7 +177,7 @@ function create_newmail(){
 	  'id' => $my_module . '_' . $my_mail_token,
 	  'to' => 'pnamalan@gmail.com',
 	  'subject' => 'test',
-	  'body' => 'test',
+	  'body' => 'testing the body content',
 	  'headers' => array(
 	    'From' => $from,
 	    'Sender' => $from,
@@ -187,7 +187,7 @@ function create_newmail(){
 	$system = drupal_mail_system($my_module, $my_mail_token);
 
 	// The format function must be called before calling the mail function. 
-	$message = $system->format($message);
+	//$message = $system->format($message);
 	dpm($message);
 	if ($system->mail($message)) {
 	  // Success.
