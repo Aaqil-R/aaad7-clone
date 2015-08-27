@@ -271,7 +271,7 @@ function create_newmail($contenttype){
 	}
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'There are some contents waiting for the approval. Please visit them by clicking the following URL.'.$var.$link;
+	$mailbody = 'There are some contents waiting for the approval.\nPlease visit them by clicking the following URL.\n'.$var.$link;
 	
 	$my_module = 'alert_email';
 	$my_mail_token = 'bar';
@@ -279,7 +279,7 @@ function create_newmail($contenttype){
 	$message = array(
 	  'id' => $my_module . '_' . $my_mail_token,
 	  'to' => 'pnamalan@gmail.com',
-	  'subject' => 'Pending Approvals for'.$content,
+	  'subject' => 'Pending Approvals for '.$content,
 	  'body' => $mailbody,
 	  'headers' => array(
 	    'From' => $from,
