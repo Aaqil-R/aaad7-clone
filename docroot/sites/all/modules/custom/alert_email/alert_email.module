@@ -16,8 +16,7 @@ function alert_email_init(){
 	// $sent = drupal_mail('alert_email', 'key', $to, language_default(), $params, $email_from, TRUE);
 
 	// create_newmail1();
-	// create_newmail();
-
+	create_newmail();
 	dpm('http://'.$_SERVER['HTTP_HOST']);
 }
 
@@ -144,31 +143,7 @@ function getusers(){
 
 
 //Function to create the mails
-
 //test function
-function create_mails($receiver , $receivertype){
-	//$to = "somebody@example.com";
-	$to = $receiver;
-	$subject = "My subject";	
-	$txt = "Hello world!";
-	$headers = "From: webmaster@example.com" . "\r\n" .
-	"CC: somebodyelse@example.com";
-	mail($to,$subject,$txt,$headers);
-}
-
-//test function
-function alert_email_mail($key, &$message, $params) {
-	$language = $message['language'];
-	switch($key) {
-		//switching on $key lets you create variations of the email based on the $key parameter
-		case 'key':
-		$message['subject'] = t('Subject', $vars, $language->language); //$vars required even if not used to get $language in there
-		//the email body is here, inside the $message array
-		$message['body'][] = 'This is the body of the email, and might contain vars from.\n';
-		break;
-	}
-}
-
 function create_newmail(){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
@@ -203,15 +178,6 @@ function create_newmail(){
 	}
 }
 
-// function create_newmail1(){
-// 	$to = "pnamalan@gmail.com";
-// 	$email_from = "email@host.com";
-// 	$params['var'] = 'whatevs';
-// 	$params['more'] = 'secrets';
-// 	$sent = drupal_mail('alertemail', 'key', $to, language_default(), $params, $email_from, TRUE);
-// }
-
-//send the mail in the cron//
 function alert_email_cron(){
 	//call the getusers to send the emais in the cron run
 	//getusers();
