@@ -44,6 +44,12 @@ ul a {
     float: right;
     padding: 0 22px;
     margin: -4px 0 0 15px;
+    @include breakpoint($mobile) {
+      width: auto;
+      position: absolute;
+      top: 78px;
+      right: 15px;
+    }
   }
 }
 
@@ -53,6 +59,10 @@ ul a {
   z-index: 9999;
   position: relative;
   margin-bottom: 33px;
+  @include breakpoint($mobile) {
+    z-index: 9997;
+  }
+
   .header-top {
     width: 100%;
     z-index: 9999;
