@@ -34,7 +34,6 @@ global $user;
 	<!-- top header of the page -->
 	<div class="header-top">
 		<div class="holder">
-
 				<div class="logo">
 					<a href="<?php print $link; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
 					<a class="btn donate-btn show-mobile" href="https://secure.ambitiousaboutautism.org.uk/page/contribute/donate-now">Donate</a>
