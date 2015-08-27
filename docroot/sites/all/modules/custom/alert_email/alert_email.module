@@ -238,32 +238,32 @@ function create_newmail($contenttype){
 		//add the new contents and the roles to which we need to send mails here
 		case 'job_vacancy':
 			$link = '/vacancy-approval';
-			$content = 'vacancies';
+			$content = ' vacancies';
 			break;
 		
 		case 'events':
 			$link = '/event-approval';
-			$content = 'events';
+			$content = ' events';
 			break;
 
 		case 'courses':
 			$link = '/courses-approval';
-			$content = 'courses';
+			$content = ' courses';
 			break;
 
 		case 'take_action':
 			$link = '/takeaction-approval';
-			$content = 'take action';
+			$content = ' take action';
 			break;
 		
 		case 'topic':
 			$link = '/topic-approval';
-			$content = 'topic';
+			$content = ' topic';
 			break;
 
 		case 'my_voice_blog':
 			$link = '/myvoice-approval';
-			$content = 'my voice blogs';
+			$content = ' my voice blogs';
 			break;
 		default:
 			# code...
@@ -271,7 +271,7 @@ function create_newmail($contenttype){
 	}
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'There are some contents waiting for the approval.\nPlease visit them by clicking the following URL.\n'.$var.$link;
+	$mailbody = 'There are some contents waiting for the approval./nPlease visit them by clicking the following URL./n'.$var.$link;
 	
 	$my_module = 'alert_email';
 	$my_mail_token = 'bar';
