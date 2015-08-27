@@ -38,17 +38,28 @@ ul a {
       text-decoration: underline;
     }
   }
-  /* Donate Button */
-  .donate-btn {
-    color: $white;
-    float: right;
-    padding: 0 22px;
-    margin: -4px 0 0 15px;
-    @include breakpoint($mobile) {
-      width: auto;
-      position: absolute;
-      top: 78px;
-      right: 15px;
+}
+
+/* Donate Button */
+.donate-btn {
+  color: $white;
+  float: right;
+  padding: 0 22px;
+  margin: -4px 0 0 15px;
+  &.show-mobile {
+    display: none;
+  }
+  @include breakpoint($mobile) {
+    width: auto;
+    margin-top: 0;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    &.show-desktop {
+      display: none;
+    }
+    &.show-mobile {
+      display: block;
     }
   }
 }
@@ -59,10 +70,6 @@ ul a {
   z-index: 9999;
   position: relative;
   margin-bottom: 33px;
-  @include breakpoint($mobile) {
-    z-index: 9997;
-  }
-
   .header-top {
     width: 100%;
     z-index: 9999;
