@@ -15,8 +15,10 @@ function alert_email_init(){
 	// $params['more'] = 'secrets';
 	// $sent = drupal_mail('alert_email', 'key', $to, language_default(), $params, $email_from, TRUE);
 
-	create_newmail1();
-	create_newmail();
+	// create_newmail1();
+	// create_newmail();
+
+	dpm('http://'.$_SERVER['HTTP_HOST']);
 }
 
 //returns the count of unpublished items for the given type
@@ -168,6 +170,8 @@ function alert_email_mail($key, &$message, $params) {
 }
 
 function create_newmail(){
+
+	$var = 'http://'.$_SERVER['HTTP_HOST'];
 	// $my_module = 'foo';
 	// $my_mail_token = 'bar';
 	$my_module = 'alert_email';
@@ -177,7 +181,7 @@ function create_newmail(){
 	  'id' => $my_module . '_' . $my_mail_token,
 	  'to' => 'pnamalan@gmail.com',
 	  'subject' => 'test',
-	  'body' => 'testing the body content',
+	  'body' => $var,
 	  'headers' => array(
 	    'From' => $from,
 	    'Sender' => $from,
@@ -199,13 +203,13 @@ function create_newmail(){
 	}
 }
 
-function create_newmail1(){
-	$to = "pnamalan@gmail.com";
-	$email_from = "email@host.com";
-	$params['var'] = 'whatevs';
-	$params['more'] = 'secrets';
-	$sent = drupal_mail('alertemail', 'key', $to, language_default(), $params, $email_from, TRUE);
-}
+// function create_newmail1(){
+// 	$to = "pnamalan@gmail.com";
+// 	$email_from = "email@host.com";
+// 	$params['var'] = 'whatevs';
+// 	$params['more'] = 'secrets';
+// 	$sent = drupal_mail('alertemail', 'key', $to, language_default(), $params, $email_from, TRUE);
+// }
 
 //send the mail in the cron//
 function alert_email_cron(){
