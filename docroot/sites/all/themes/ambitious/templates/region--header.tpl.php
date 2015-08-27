@@ -11,17 +11,17 @@ global $user;
 
 <?php if ($content): ?>
 	<section class="top-bar">
-		<div class="holder">
-			
+		<div class="holder">			
 			<div class="<?php print $classes; ?>">
 				<?php if(!empty($headerlogo)): ?>
-				<div class= "logo">
-					<a href="/" title="<?php print t('Home'); ?>" rel="home">
-						<img src="<?php print $headerlogo; ?>">
-					</a>
-				</div>
-			<?php endif; ?>
-				<?php print $content; ?>
+					<div class= "logo">
+						<a href="/" title="<?php print t('Home'); ?>" rel="home">
+							<img src="<?php print $headerlogo; ?>">
+						</a>
+					</div>
+				<?php endif; ?>
+				<a class="btn donate-btn show-desktop" href="https://secure.ambitiousaboutautism.org.uk/page/contribute/donate-now">Donate</a>
+				<?php print $content; ?>					
 			</div>				  
 		</div>
 	</section> <!-- /header -->
@@ -34,9 +34,9 @@ global $user;
 	<!-- top header of the page -->
 	<div class="header-top">
 		<div class="holder">
-
 				<div class="logo">
-						<a href="<?php print $link; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
+					<a href="<?php print $link; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
+					<a class="btn donate-btn show-mobile" href="https://secure.ambitiousaboutautism.org.uk/page/contribute/donate-now">Donate</a>
 				</div> <!-- /logo -->
 			<ul class="right-info">
 				<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Schools &amp; College</span><span class="close">Close</span></a></li>

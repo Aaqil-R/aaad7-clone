@@ -40,6 +40,34 @@ ul a {
   }
 }
 
+/* Donate Button */
+.donate-btn {
+  font-family: $helvetica-cn !important;
+  color: $white !important;
+  float: right;
+  padding: 0 22px;
+  margin: -4px 0 0 15px;
+  &.show-mobile {
+    display: none;
+  }
+  @include breakpoint($mobile) {
+    width: auto;
+    margin-top: 0;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    &:hover {
+      top: 25px;
+    }
+    &.show-desktop {
+      display: none;
+    }
+    &.show-mobile {
+      display: block;
+    }
+  }
+}
+
 /* header styles */
 #header {
   width: 100%;
