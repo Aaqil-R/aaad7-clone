@@ -1,0 +1,216 @@
+<?php
+
+function alert_email_init(){
+	//$contents = get_content_types();
+	//dpr($contents);
+
+	//$test234 = 'administrator';
+	//$test123 = get_email_address($test234);
+	//dpr($test123);
+	//getusers();
+	
+	// $to = "pnamalan@gmail.com";
+	// $email_from = "email@host.com";
+	// $params['var'] = 'whatevs';
+	// $params['more'] = 'secrets';
+	// $sent = drupal_mail('alert_email', 'key', $to, language_default(), $params, $email_from, TRUE);
+
+	create_newmail1();
+	create_newmail();
+}
+
+//returns the count of unpublished items for the given type
+function get_unpublished_items($contenttype){
+	$sql = "SELECT count(*) as totalcount
+    		FROM node
+    		WHERE type='".$contenttype."' and status=0";
+	$result = db_query($sql);
+	foreach ($result as $record) {
+    	$counts = $record->totalcount;
+    	return $counts;
+  	}
+
+	// $query = db_select('node', 'n');
+	// $query->condition('type', $contenttype, '=');
+	// $query->condition('status', '0', '=');
+	// $query->fields('u',array('nid'));
+	// $result = $query->execute();
+ //  	if ($record = $result->fetchAssoc())
+ //    {	
+ //    	dpm($record['count']);
+ //    }
+}
+
+//returns the content types as an array which have more than 0 unpublished items
+function get_content_types(){
+	//define content types to which we need to find the unpublished items
+	$contenttypes = array("events","job_vacancy","take_action");
+	$arrlength = count($contenttypes);
+
+	//array which will store the content name and unpublished items
+	$myarray = array();
+
+	//array which will return the content names which needs the emails to be sent.
+	$contentarray = array();
+
+	//getting each content type and gathering the unpublished items for each content type. 
+	//myarray returns an array with the content and unpublished items
+	for($x = 0; $x < $arrlength; $x++) {
+    	$unpublished = get_unpublished_items($contenttypes[$x]);
+    	$myarray[$contenttypes[$x]] = $unpublished ;
+	}
+
+	//checking the contents which have unpublished items.
+	foreach ($myarray as $contenttype => $number) {
+		if($number > 0){
+			//dpm($contenttype.' : '.$number);
+
+			$contentarray[$contenttype] = $contenttype ; 
+			//getting the roles assigned for the particular content type.
+			//$userroles = get_user_roles($contenttype);
+			//dpr($userroles);
+		}
+	}
+	return $contentarray;
+	//dpr($myarray);
+}
+
+//returns the email address of the users in an array who are in the given role
+function get_email_address($role){
+	//creating an array which will store the email addresses of the user
+	$emailaddresses = array();
+
+	//selecting the users for a given role and getting their emails
+	$sql = "SELECT users.name as name , users.mail as emails
+			FROM role , users_roles , users 
+			WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and role.name = '".$role."'";
+	//dpm($sql);
+	$result = db_query($sql);
+	foreach ($result as $record) {
+		$name = $record->name;
+    	$email = $record->emails;
+ 		//dpm($emails.' : '.$email);
+ 		$emailaddresses[$name] = $email ;
+ 		//write the code to send the mails to the users	
+	}
+	return $emailaddresses;
+}
+
+//returns the user roles as an array of the given content type
+function get_user_roles($contenttype){
+	$userrolearray = array();
+	switch ($contenttype) {
+		//add the new contents and the roles to which we need to send mails here
+		case 'events':
+			array_push($userrolearray, 'administrator');
+			break;
+		
+		case 'job_vacancy':
+			array_push($userrolearray, 'Events approver');
+			break;
+
+		case 'take_action':
+			array_push($userrolearray, 'The Fundraising Team Approver');
+			break;
+
+		default:
+			# code...
+			break;
+	}
+	return $userrolearray;
+}
+
+function getusers(){
+	$emails = array();
+
+	$contents = get_content_types();
+	foreach ($contents as $type => $contentname) 
+	{
+		$userroles = get_user_roles($contentname);
+		foreach ($userroles as $id) 
+		{
+			$emails = get_email_address($id);
+			foreach ($emails as $email) {
+				//call the function to create mail here
+				create_mails($email,$id);
+			}
+
+		}
+	}
+	//dpr($emails);
+}
+
+
+//Function to create the mails
+
+//test function
+function create_mails($receiver , $receivertype){
+	//$to = "somebody@example.com";
+	$to = $receiver;
+	$subject = "My subject";	
+	$txt = "Hello world!";
+	$headers = "From: webmaster@example.com" . "\r\n" .
+	"CC: somebodyelse@example.com";
+	mail($to,$subject,$txt,$headers);
+}
+
+//test function
+function alert_email_mail($key, &$message, $params) {
+	$language = $message['language'];
+	switch($key) {
+		//switching on $key lets you create variations of the email based on the $key parameter
+		case 'key':
+		$message['subject'] = t('Subject', $vars, $language->language); //$vars required even if not used to get $language in there
+		//the email body is here, inside the $message array
+		$message['body'][] = 'This is the body of the email, and might contain vars from.\n';
+		break;
+	}
+}
+
+function create_newmail(){
+	// $my_module = 'foo';
+	// $my_mail_token = 'bar';
+	$my_module = 'alert_email';
+	$my_mail_token = 'bar';
+	$from = variable_get('system_mail', 'organization@example.com');	
+	$message = array(
+	  'id' => $my_module . '_' . $my_mail_token,
+	  'to' => 'pnamalan@gmail.com',
+	  'subject' => 'test',
+	  'body' => 'test',
+	  'headers' => array(
+	    'From' => $from,
+	    'Sender' => $from,
+	    'Return-Path' => $from,
+	  ),
+	);
+	$system = drupal_mail_system($my_module, $my_mail_token);
+
+	// The format function must be called before calling the mail function. 
+	$message = $system->format($message);
+
+	if ($system->mail($message)) {
+	  // Success.
+		dpm('Sucess');
+	}
+	else {
+	  // Failure.
+		dpm('Fail');
+	}
+}
+
+function create_newmail1(){
+	$to = "pnamalan@gmail.com";
+	$email_from = "email@host.com";
+	$params['var'] = 'whatevs';
+	$params['more'] = 'secrets';
+	$sent = drupal_mail('alertemail', 'key', $to, language_default(), $params, $email_from, TRUE);
+}
+
+//send the mail in the cron//
+function alert_email_cron(){
+	//call the getusers to send the emais in the cron run
+	//getusers();
+}
+
+?>
