@@ -11,17 +11,17 @@ global $user;
 
 <?php if ($content): ?>
 	<section class="top-bar">
-		<div class="holder">
-			
+		<div class="holder">			
 			<div class="<?php print $classes; ?>">
 				<?php if(!empty($headerlogo)): ?>
-				<div class= "logo">
-					<a href="/" title="<?php print t('Home'); ?>" rel="home">
-						<img src="<?php print $headerlogo; ?>">
-					</a>
-				</div>
-			<?php endif; ?>
-				<?php print $content; ?>
+					<div class= "logo">
+						<a href="/" title="<?php print t('Home'); ?>" rel="home">
+							<img src="<?php print $headerlogo; ?>">
+						</a>
+					</div>
+				<?php endif; ?>
+				<a class="btn donate-btn" href="javascript:void(0);">Donate</a>
+				<?php print $content; ?>					
 			</div>				  
 		</div>
 	</section> <!-- /header -->
