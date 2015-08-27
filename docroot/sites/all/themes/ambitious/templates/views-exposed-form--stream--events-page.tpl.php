@@ -33,7 +33,8 @@
 
 <div class="sort-block">
 <div class="search-text forum-page"><input type="text" value="Search the community"></div>
-				 <?php foreach ($widgets as $id => $widget): ?>
+<?php //dpr($widgets); ?>
+	<?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
           <label for="<?php print $widget->id; ?>">
@@ -44,19 +45,24 @@
           <div class="views-operator">
             <?php print $widget->operator; ?>
           </div>
-        <?php endif; ?>  
+        <?php endif; ?> 
+        <?php if (!empty($widget->widget)): ?>
+        <div class="views-widget">
+         <?php print $widget->widget; ?>
+        </div> 
+        <?php endif; ?> 
         <?php if (!empty($widget->description)): ?>
           <div class="description">
             <?php print $widget->description; ?>
           </div>
         <?php endif; ?>
       </div>
-    <?php endforeach; ?>
+    <?php //endforeach; ?>
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
       </div>
-      <?php print $widget->widget; ?> 
+      <?php //print $widget->widget; ?> 
       <div class="views-exposed-widget views-widget-sort-order element-invisible">
         <?php print $sort_order; ?>
       </div>
@@ -79,6 +85,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
+  <?php endforeach; ?>
     <a href="#" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
     <?php print render($variables['share_button']); ?>
 </div>
