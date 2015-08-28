@@ -19,7 +19,7 @@ function alert_email_init(){
 	//create_newmail('job_vacancy');
 	//dpm('http://'.$_SERVER['HTTP_HOST']);
 
-	getusers();
+	//getusers();
 }
 
 //returns the count of unpublished items for the given type
@@ -271,7 +271,7 @@ function create_newmail($contenttype){
 	}
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'There are some contents waiting for the approval./nPlease visit them by clicking the following URL./n'.$var.$link;
+	$mailbody = 'There are some contents waiting for the approval. Please visit them by clicking the following URL.'." ".$var.$link;
 	
 	$my_module = 'alert_email';
 	$my_mail_token = 'bar';
@@ -305,6 +305,7 @@ function create_newmail($contenttype){
 function alert_email_cron(){
 	//call the getusers to send the emais in the cron run
 	//getusers();
+	getusers();
 }
 
 ?>
