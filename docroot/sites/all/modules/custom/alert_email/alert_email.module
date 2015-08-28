@@ -1,24 +1,6 @@
 <?php
 
 function alert_email_init(){
-	//$contents = get_content_types();
-	//dpr($contents);
-
-	//$test234 = 'administrator';
-	//$test123 = get_email_address($test234);
-	//dpr($test123);
-	//getusers();
-	
-	// $to = "pnamalan@gmail.com";
-	// $email_from = "email@host.com";
-	// $params['var'] = 'whatevs';
-	// $params['more'] = 'secrets';
-	// $sent = drupal_mail('alert_email', 'key', $to, language_default(), $params, $email_from, TRUE);
-
-	// create_newmail1();
-	//create_newmail('job_vacancy');
-	//dpm('http://'.$_SERVER['HTTP_HOST']);
-
 	//getusers();
 }
 
@@ -66,16 +48,10 @@ function get_content_types(){
 	//checking the contents which have unpublished items.
 	foreach ($myarray as $contenttype => $number) {
 		if($number > 0){
-			//dpm($contenttype.' : '.$number);
-
 			$contentarray[$contenttype] = $contenttype ; 
-			//getting the roles assigned for the particular content type.
-			//$userroles = get_user_roles($contenttype);
-			//dpr($userroles);
 		}
 	}
 	return $contentarray;
-	//dpr($myarray);
 }
 
 //returns the email address of the users in an array who are in the given role
@@ -87,14 +63,11 @@ function get_email_address($role){
 	$sql = "SELECT users.name as name , users.mail as emails
 			FROM role , users_roles , users 
 			WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and role.name = '".$role."'";
-	//dpm($sql);
 	$result = db_query($sql);
 	foreach ($result as $record) {
 		$name = $record->name;
     	$email = $record->emails;
- 		//dpm($emails.' : '.$email);
  		$emailaddresses[$name] = $email ;
- 		//write the code to send the mails to the users	
 	}
 	return $emailaddresses;
 }
@@ -105,7 +78,7 @@ function get_user_roles($contenttype){
 	switch ($contenttype) {
 		//add the new contents and the roles to which we need to send mails here
 		case 'job_vacancy':
-			array_push($userrolearray, 'administrator');
+			array_push($userrolearray, 'HR approver');
 			break;
 		
 		case 'events':
@@ -113,46 +86,42 @@ function get_user_roles($contenttype){
 			break;
 
 		case 'courses':
-			array_push($userrolearray, 'The Fundraising Team Approver');
+			array_push($userrolearray, 'Training Approver');
 			break;
+
 		case 'take_action':
-			array_push($userrolearray, 'administrator');
+			array_push($userrolearray, 'The Fundraising Team Approver');
 			break;
 		
 		case 'topic':
-			array_push($userrolearray, 'Events approver');
+			array_push($userrolearray, 'Digital and Comms Approver');
 			break;
 
 		case 'my_voice_blog':
-			array_push($userrolearray, 'The Fundraising Team Approver');
+			array_push($userrolearray, 'my Voice team Approver');
 			break;
 
 		default:
-			# code...
 			break;
 	}
 	return $userrolearray;
 }
 
 function getusers(){
-	//$emails = array();
-
 	$contents = get_content_types();
 	foreach ($contents as $type => $contentname) 
 	{
-		// $userroles = get_user_roles($contentname);
-		// foreach ($userroles as $id) 
-		// {
-		// 	$emails = get_email_address($id);
-		// 	foreach ($emails as $email) {
-		// 		//call the function to create mail here
-		// 		create_mails($email,$id);
-		// 	}
-
-		// }
-		create_newmail($contentname);
+		$userroles = get_user_roles($contentname);
+		foreach ($userroles as $id) 
+		{
+			$emails = get_email_address($id);
+			foreach ($emails as $email) {
+				//call the function to create mail here
+				create_mails($email,$id);
+			}
+		}
+		//create_newmail($contentname);
 	}
-	//dpr($emails);
 }
 
 //new function
@@ -192,12 +161,11 @@ function create_mails($email,$id){
 			$content = 'my voice blogs';
 			break;
 		default:
-			# code...
 			break;
 	}
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'There are some contents waiting for the approval. \nPlease visit them by clicking the following URL.\n'.$var.$link;
+	$mailbody = 'There are some contents waiting for the approval. Please visit them by clicking the following URL. '.$var.$link;
 	
 	$my_module = 'alert_email';
 	$my_mail_token = 'bar';
@@ -217,14 +185,14 @@ function create_mails($email,$id){
 
 	// The format function must be called before calling the mail function. 
 	//$message = $system->format($message);
-	dpm($message);
+	//dpm($message);
 	if ($system->mail($message)) {
 	  // Success.
-		dpm('Sucess');
+		//dpm('Sucess');
 	}
 	else {
 	  // Failure.
-		dpm('Fail');
+		//dpm('Fail');
 	}
 }
 
