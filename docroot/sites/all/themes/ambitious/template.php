@@ -759,7 +759,7 @@ function ambitious_preprocess_page(&$vars) {
   // we are no longer using. Also abstract out common logic to a method.
   if($currentNode) {
     // render image, captions and photo credits for "basic_page_with_hero"
-    if($currentNode->type == "basic_page_with_hero")
+    if($currentNode->type == "basic_page_with_hero" || $currentNode->type == "take_action")
     {
       // get array of hero images
       $node = node_load($currentNode->nid);
