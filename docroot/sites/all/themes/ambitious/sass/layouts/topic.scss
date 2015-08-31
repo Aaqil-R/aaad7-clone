@@ -1559,6 +1559,22 @@ fieldset {
   }
 }
 
+//new codes are for the age 16-25 page
+.section-age-16-25 {
+  #content_top {
+    .holder {
+      margin-top: 5.5%;
+      @include breakpoint($tablet) {
+        margin-top: 20%;
+      }
+
+      @include breakpoint($mobile) {
+        margin-top: 0%;
+      }
+    }
+  }
+}
+
 .views-row-first {
   .my-voice-pos .feature-holder {
     display: inherit;
