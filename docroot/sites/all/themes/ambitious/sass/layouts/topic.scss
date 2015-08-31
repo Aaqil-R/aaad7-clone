@@ -1565,11 +1565,17 @@ fieldset {
     .holder {
       margin-top: 5.5%;
       @include breakpoint($tablet) {
-        margin-top: 20%;
+        margin-top: 18%;
       }
 
       @include breakpoint($mobile) {
         margin-top: 0%;
+      }
+
+      input[type="submit"] {
+        @include border-radius(5px);
+        border-bottom: 5px solid $orange-dark;
+        background: $orange;
       }
     }
   }
