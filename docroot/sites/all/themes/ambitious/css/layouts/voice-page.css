@@ -1,5 +1,5 @@
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.page-node-74596 .sort-block:after, .section-my-voice .sort-block:after, .my-voice-home .sort-block:after {
+.page-node-74596 .sort-block:after, .section-my-voice .sort-block:after, .my-voice-home .sort-block:after, .my-voice-intro:after, .my-voice-main .sort-block:after {
   content: " ";
   display: block;
   clear: both;
@@ -370,7 +370,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* line 3, ../../sass/base/_markup-mixins.scss */
-.page-node-74596 .sort-block:after, .section-my-voice .sort-block:after, .my-voice-home .sort-block:after {
+.page-node-74596 .sort-block:after, .section-my-voice .sort-block:after, .my-voice-home .sort-block:after, .my-voice-intro:after, .my-voice-main .sort-block:after {
   content: " ";
   display: block;
   clear: both;
@@ -768,7 +768,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 */
 /* line 9, ../../sass/layouts/voice-page.scss */
 .my-voice-home .banner_text {
-  background-image: url('../../images/my-voice-large-logo.png?1427797419');
+  background-image: url('../../images/my-voice-large-logo.png?1440403412');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75%;
@@ -1028,7 +1028,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 218, ../../sass/layouts/voice-page.scss */
 .page-node-74596 #wrapper {
-  background-image: url('../../images/wid_bg.jpg?1423459680');
+  background-image: url('../../images/wid_bg.jpg?1440403412');
 }
 /* line 221, ../../sass/layouts/voice-page.scss */
 .page-node-74596 .form-text {
@@ -1078,7 +1078,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 273, ../../sass/layouts/voice-page.scss */
 .view-content .navigation-block {
-  background-image: url('../../images/aged-16-25.jpg?1427777559');
+  background-image: url('../../images/aged-16-25.jpg?1440403411');
   background-size: cover;
 }
 /* line 276, ../../sass/layouts/voice-page.scss */
@@ -1134,7 +1134,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 }
 /* line 325, ../../sass/layouts/voice-page.scss */
 .view-content .age-post {
-  background-image: url('../../images/my-voice.jpg?1432794262');
+  background-image: url('../../images/my-voice.jpg?1440403412');
 }
 /* line 328, ../../sass/layouts/voice-page.scss */
 .view-content .card-transparent {
@@ -1219,4 +1219,546 @@ nav .main-menu-2 li a .icon-Uparrow {
   margin-left: 9px;
   float: right;
   margin-top: 5px;
+}
+
+/* line 410, ../../sass/layouts/voice-page.scss */
+.my-voice-visual .img-holder .caption-frame .caption {
+  padding: 5px 0 0;
+}
+/* line 413, ../../sass/layouts/voice-page.scss */
+.my-voice-visual .img-holder .caption-frame .caption .title span.pink {
+  color: #e30087;
+  padding: 0;
+}
+
+/* line 424, ../../sass/layouts/voice-page.scss */
+.my-voice-block {
+  position: relative;
+  z-index: 3;
+  margin-top: -234px;
+}
+@media (max-width: 767px) {
+  /* line 424, ../../sass/layouts/voice-page.scss */
+  .my-voice-block {
+    margin-top: 0;
+  }
+}
+
+/* line 433, ../../sass/layouts/voice-page.scss */
+.my-voice-intro {
+  display: inline-block;
+}
+/* line 434, ../../sass/layouts/voice-page.scss */
+.my-voice-intro.no-overlay {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  /* line 433, ../../sass/layouts/voice-page.scss */
+  .my-voice-intro {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+}
+/* line 445, ../../sass/layouts/voice-page.scss */
+.my-voice-intro h3 {
+  margin: 0 0 0.5em;
+  float: left;
+  clear: both;
+}
+/* line 451, ../../sass/layouts/voice-page.scss */
+.my-voice-intro .holder p {
+  width: 64%;
+  margin-bottom: 50px;
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 451, ../../sass/layouts/voice-page.scss */
+  .my-voice-intro .holder p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 464, ../../sass/layouts/voice-page.scss */
+  .advanced-sort-block {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  /* line 468, ../../sass/layouts/voice-page.scss */
+  .advanced-sort-block input, .advanced-sort-block select, .advanced-sort-block .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* line 474, ../../sass/layouts/voice-page.scss */
+.advanced-sort-block .selected-filters {
+  float: left;
+  clear: both;
+  list-style-type: none;
+  padding: 0;
+  display: none;
+}
+/* line 481, ../../sass/layouts/voice-page.scss */
+.advanced-sort-block .selected-filters .this-filter {
+  float: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  background: #eef2f3;
+}
+@media (max-width: 767px) {
+  /* line 481, ../../sass/layouts/voice-page.scss */
+  .advanced-sort-block .selected-filters .this-filter {
+    width: 100%;
+  }
+}
+/* line 492, ../../sass/layouts/voice-page.scss */
+.advanced-sort-block .selected-filters .this-filter .icon-Close {
+  margin-left: 10px;
+  font-size: 14px;
+  font-size: 0.875em;
+}
+@media (max-width: 767px) {
+  /* line 492, ../../sass/layouts/voice-page.scss */
+  .advanced-sort-block .selected-filters .this-filter .icon-Close {
+    float: right;
+    padding-top: 3px;
+  }
+}
+
+/* line 505, ../../sass/layouts/voice-page.scss */
+.my-voice-intro-menu {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  font-size: 10px;
+  font-size: 0.625em;
+  text-decoration: underline;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  /* line 505, ../../sass/layouts/voice-page.scss */
+  .my-voice-intro-menu {
+    display: none;
+  }
+}
+/* line 515, ../../sass/layouts/voice-page.scss */
+.my-voice-intro-menu h4 {
+  margin: 0 0 8px;
+}
+
+/* line 520, ../../sass/layouts/voice-page.scss */
+.my-voice-mobile-menu {
+  display: none;
+  list-style-type: none;
+  font-size: 12px;
+  font-size: 0.75em;
+  float: left;
+  text-align: center;
+  -webkit-padding-start: 0;
+}
+@media (max-width: 767px) {
+  /* line 520, ../../sass/layouts/voice-page.scss */
+  .my-voice-mobile-menu {
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* line 534, ../../sass/layouts/voice-page.scss */
+.my-voice-mobile-menu li {
+  float: left;
+  padding-left: 20px;
+}
+/* line 537, ../../sass/layouts/voice-page.scss */
+.my-voice-mobile-menu li:first-child {
+  padding-left: 0;
+}
+/* line 540, ../../sass/layouts/voice-page.scss */
+.my-voice-mobile-menu li a {
+  text-decoration: underline;
+}
+
+/* line 549, ../../sass/layouts/voice-page.scss */
+.my-voice-main .action-block {
+  float: left;
+  margin-bottom: 30px;
+  background: transparent;
+}
+/* line 553, ../../sass/layouts/voice-page.scss */
+.my-voice-main .action-block .block-symptoms, .my-voice-main .action-block .block-share, .my-voice-main .action-block .block-spectrum {
+  color: #ffffff;
+  width: 48.5%;
+  padding: 50px 10px 37px 39px;
+  background-size: cover;
+  float: left;
+}
+@media (max-width: 767px) {
+  /* line 553, ../../sass/layouts/voice-page.scss */
+  .my-voice-main .action-block .block-symptoms, .my-voice-main .action-block .block-share, .my-voice-main .action-block .block-spectrum {
+    width: 100%;
+    float: none;
+    padding: 26px 10px 17px 20px;
+    margin: 0 0 34px;
+    background-position: right center;
+  }
+}
+/* line 567, ../../sass/layouts/voice-page.scss */
+.my-voice-main .action-block .block-symptoms .title, .my-voice-main .action-block .block-share .title, .my-voice-main .action-block .block-spectrum .title {
+  display: block;
+  font-size: 45px;
+  line-height: 46px;
+  margin: 0 0 13px;
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+@media (max-width: 990px) {
+  /* line 567, ../../sass/layouts/voice-page.scss */
+  .my-voice-main .action-block .block-symptoms .title, .my-voice-main .action-block .block-share .title, .my-voice-main .action-block .block-spectrum .title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 567, ../../sass/layouts/voice-page.scss */
+  .my-voice-main .action-block .block-symptoms .title, .my-voice-main .action-block .block-share .title, .my-voice-main .action-block .block-spectrum .title {
+    margin: 0 0 19px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+/* line 585, ../../sass/layouts/voice-page.scss */
+.my-voice-main .action-block .block-symptoms .title.smaller, .my-voice-main .action-block .block-share .title.smaller, .my-voice-main .action-block .block-spectrum .title.smaller {
+  font-size: 18px;
+  font-size: 1.125em;
+  margin: 0 0 32px;
+}
+@media (max-width: 990px) {
+  /* line 585, ../../sass/layouts/voice-page.scss */
+  .my-voice-main .action-block .block-symptoms .title.smaller, .my-voice-main .action-block .block-share .title.smaller, .my-voice-main .action-block .block-spectrum .title.smaller {
+    font-size: 14px;
+    font-size: 0.875em;
+    line-height: 33px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 585, ../../sass/layouts/voice-page.scss */
+  .my-voice-main .action-block .block-symptoms .title.smaller, .my-voice-main .action-block .block-share .title.smaller, .my-voice-main .action-block .block-spectrum .title.smaller {
+    font-size: 12px;
+    font-size: 0.75em;
+    line-height: 25px;
+    margin: 0 0 16px;
+  }
+}
+/* line 601, ../../sass/layouts/voice-page.scss */
+.my-voice-main .action-block .block-symptoms .block-spectrum, .my-voice-main .action-block .block-share .block-spectrum, .my-voice-main .action-block .block-spectrum .block-spectrum {
+  float: left;
+}
+/* line 609, ../../sass/layouts/voice-page.scss */
+.my-voice-main .block-report {
+  float: right;
+}
+/* line 612, ../../sass/layouts/voice-page.scss */
+.my-voice-main .sort-block {
+  margin: 0;
+  padding: 14px 20px 16px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* line 622, ../../sass/layouts/voice-page.scss */
+.my-voice-post {
+  padding: 20px 18px;
+  float: left;
+  position: relative;
+  margin: 0 0 30px;
+  background: #ffffff;
+  border: 1px solid #d2d5d6;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 767px) {
+  /* line 622, ../../sass/layouts/voice-page.scss */
+  .my-voice-post {
+    padding: 14px 15px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+/* line 638, ../../sass/layouts/voice-page.scss */
+.my-voice-post img {
+  float: left;
+}
+@media (max-width: 480px) {
+  /* line 638, ../../sass/layouts/voice-page.scss */
+  .my-voice-post img {
+    width: 100%;
+  }
+}
+/* line 645, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content {
+  float: left;
+  width: 56%;
+  padding-left: 50px;
+}
+@media (max-width: 990px) {
+  /* line 645, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 645, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 658, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content p {
+  font-size: 16px;
+  font-size: 1em;
+}
+/* line 661, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content h3 {
+  font-weight: bold;
+  font-size: 22px;
+  font-size: 1.375em;
+  line-height: 32px;
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  /* line 661, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content h3 {
+    font-size: 20px;
+    font-size: 1.25em;
+    margin: 10px 0;
+    line-height: 28px;
+  }
+}
+/* line 672, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 677, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder.gray-num a .num {
+  color: #d2d5d6;
+  border: 3px solid #d2d5d6;
+}
+/* line 680, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder.gray-num a .num:after {
+  background-position: -80px 0;
+}
+/* line 684, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder.gray-num a .text {
+  color: #d2d5d6;
+}
+/* line 689, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder a {
+  text-decoration: none;
+}
+/* line 691, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder a .num {
+  min-width: 46px;
+  height: 35px;
+  border: 2px solid #e30087;
+  border-radius: 9px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 3px;
+  position: relative;
+  color: #e30087;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 15px 0 0;
+}
+@media (max-width: 990px) {
+  /* line 691, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .num-holder a .num {
+    margin: 0 5px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  /* line 691, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .num-holder a .num {
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 5px;
+    min-width: 39px;
+    height: 28px;
+  }
+}
+/* line 719, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder a .num:after {
+  position: absolute;
+  right: 8px;
+  bottom: -13px;
+  content: "";
+  background: url('../../images/sprite.png?1440403412') no-repeat -128px 0;
+  width: 12px;
+  height: 13px;
+}
+@media (max-width: 767px) {
+  /* line 719, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .num-holder a .num:after {
+    right: 6px;
+  }
+}
+/* line 732, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .num-holder a .text {
+  display: none;
+  margin: 2px 0 0 -5px;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 18px;
+  color: #e30087;
+}
+@media (max-width: 767px) {
+  /* line 732, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .num-holder a .text {
+    margin: -2px 0 0;
+  }
+}
+/* line 749, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content:hover a.hover .text {
+  display: inline-block;
+}
+/* line 755, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .comment-count {
+  background: no-repeat url('../../images/comment-sprite.png?1440403411');
+  padding: 7px 0px 17px 0;
+  width: 46px;
+  text-align: center;
+  color: #e30087;
+}
+@media (max-width: 767px) {
+  /* line 755, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .comment-count {
+    float: left;
+  }
+}
+/* line 765, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .comment-count .count {
+  font-size: 20px;
+  font-size: 1.25em;
+}
+/* line 768, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .comment-count.zero {
+  background: no-repeat url('../../images/comment-sprite.png?1440403411') 0 -52px;
+}
+/* line 770, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .comment-count.zero .count {
+  color: #d2d5d6;
+}
+/* line 775, ../../sass/layouts/voice-page.scss */
+.my-voice-post .content .talkers {
+  display: none;
+  font-size: 15px;
+  font-size: 0.9375em;
+  float: left;
+  padding-left: 10px;
+  color: #e30087;
+}
+@media (max-width: 767px) {
+  /* line 775, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .content .talkers {
+    display: block;
+  }
+}
+/* line 786, ../../sass/layouts/voice-page.scss */
+.my-voice-post .date {
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  background: #ffffff;
+}
+@media (max-width: 767px) {
+  /* line 786, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .date {
+    padding: 5px 5px 5px 9px;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+}
+/* line 798, ../../sass/layouts/voice-page.scss */
+.my-voice-post .date .day {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.5em;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  /* line 798, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .date .day {
+    font-size: 22px;
+    font-size: 1.375em;
+    line-height: 24px;
+  }
+}
+/* line 808, ../../sass/layouts/voice-page.scss */
+.my-voice-post .date .month {
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1em;
+  line-height: 25px;
+}
+@media (max-width: 767px) {
+  /* line 808, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .date .month {
+    font-size: 18px;
+    font-size: 1.125em;
+    line-height: 24px;
+  }
+}
+/* line 817, ../../sass/layouts/voice-page.scss */
+.my-voice-post .date .year {
+  font-size: 12px;
+  font-size: 0.75em;
+  line-height: 12px;
+}
+@media (max-width: 767px) {
+  /* line 817, ../../sass/layouts/voice-page.scss */
+  .my-voice-post .date .year {
+    display: none;
+  }
+}
+
+/* line 828, ../../sass/layouts/voice-page.scss */
+.acknowledge-block {
+  background: #ffffff;
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 80px;
+}
+/* line 835, ../../sass/layouts/voice-page.scss */
+.acknowledge-block a {
+  font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
+  color: #000000;
+}
+
+/* line 842, ../../sass/layouts/voice-page.scss */
+.my-voice-columns .col {
+  margin: 0;
+}
+/* line 844, ../../sass/layouts/voice-page.scss */
+.my-voice-columns .col:first-child {
+  padding: 0 60px;
+}
+/* line 847, ../../sass/layouts/voice-page.scss */
+.my-voice-columns .col p {
+  font-size: 1.11em;
+}
+/* line 850, ../../sass/layouts/voice-page.scss */
+.my-voice-columns .col .larger {
+  font-size: 1.475em;
+  line-height: 1.5em;
+  margin-bottom: 0.7em;
 }

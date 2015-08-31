@@ -122,7 +122,7 @@ html body {
 /* main informative part styles */
 #main {
   @include container;
-  padding: 20px 15px 20px 15px;
+  padding: 65px 15px 20px 15px;
   //padding-bottom:25px;
   @include breakpoint($mobile) {
     padding: 0 20px 20px 0;
@@ -445,9 +445,9 @@ html body {
       }
     }
   }
-  .page-node-221566 &{
-    fieldset{
-        margin-right: 20px;
+  .page-node-221566 & {
+    fieldset {
+      margin-right: 20px;
     }
   }
 }
@@ -674,7 +674,7 @@ html body {
       }
       .feature-holder {
         position: absolute;
-        z-index:999;
+        z-index: 999;
         bottom: 6px;
         left: 11px;
         @include breakpoint($mobile) {

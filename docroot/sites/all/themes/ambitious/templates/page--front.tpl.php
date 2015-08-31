@@ -245,7 +245,7 @@
 
           <!-- social column mid -->
           <div class="col block-twitter">
-            <h3>Latest from Twitter</h3>
+            <h6>Latest from Twitter</h6>
             <div class="twitter">
               <a class="twitter-timeline" href="https://twitter.com/AmbitiousAutism" data-widget-id="557083103072489472" width="300" height="500">Tweets by @AmbitiousAutism</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -253,7 +253,7 @@
           </div>
           <!-- social column right -->
           <div class="col block-facebook">
-            <h3>Find us on Facebook</h3>
+            <h6>Find us on Facebook</h6>
               <div id="desktopFB" class="facebook">
                   <div id="fb-like-box" class="fb-like-box" data-href="https://www.facebook.com/ambitiousaboutautism" data-width="300" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
               </div>

@@ -76,6 +76,7 @@ a {
   &.tooltips {
     position: relative;
     display: inline;
+    color: $heading-link;
     @include breakpoint($mobile) {
       display: none;
     }
@@ -335,12 +336,12 @@ a {
     .block-close {
       padding: 0;
       width: 57px;
-      height: 54px;
+      height: 42px;
       text-align: center;
       vertical-align: middle;
-      line-height: 57px;
+      line-height: 47px;
       margin-left: -57px;
-      font-size: 1.5em;
+      font-size: 22px;
     }
   }
   .btn {
@@ -509,16 +510,22 @@ a {
     }
 
     .youtube-btn {
-      @include fontsize(18, 16);
-      padding: 11px 17px;
+      //@include fontsize(18, 16);
+      font-size: 18px;
+      padding: 4px 20px;
       @include breakpoint($mobile) {
         width: 100%;
       }
     }
   }
-  h3 {
+  /*h3 {
     @include fontsize(20, 16);
     font-weight: bold;
+  }*/
+  h6 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 1em;
   }
   .block {
     padding: 40px 32px 52px;
@@ -567,7 +574,7 @@ a {
   }
 
   .block {
-    padding: 32px 0 0;
+    padding: 26px 0 0;
     @include breakpoint($mobile) {
       margin: -15px;
       padding: 10px 15px 70px;
