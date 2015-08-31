@@ -1559,6 +1559,28 @@ fieldset {
   }
 }
 
+//new codes from amalan
+.section-age-16-25 {
+  #content_top {
+    .holder {
+      margin-top: 5.5%;
+      @include breakpoint($tablet) {
+        margin-top: 18%;
+      }
+
+      @include breakpoint($mobile) {
+        margin-top: 0%;
+      }
+
+      input[type="submit"][id="edit-webform-ajax-submit-74621"] {
+        @include border-radius(5px);
+        border-bottom: 5px solid $orange-dark;
+        background-color: $orange;
+      }
+    }
+  }
+}
+
 .views-row-first {
   .my-voice-pos .feature-holder {
     display: inherit;

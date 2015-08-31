@@ -1,83 +1,108 @@
 @import "base/base";
 
 .node-type-simple-page {
-	#wrapper{
-		background: $base-background-color;
-	}
-
-
-	#content-header {
-		.title {
-			display: block;
-		}
-	}
-
-	#content-area{
-		header{
-			.submitted{
-				display: none;
-			}
-		}
-		.field-items{
-			padding-bottom: 20px;
-		}
-	}
+  #wrapper {
+    background: $base-background-color;
+  }
+  #content-header {
+    .title {
+      display: block;
+    }
+  }
+  #content-area {
+    header {
+      .submitted {
+        display: none;
+      }
+    }
+    .field-items {
+      padding-bottom: 20px;
+    }
+  }
 }
 
-.node-type-forum{
-	#main
-	{
-		background: $white;
-	}
+.node-type-forum {
+  #main {
+    background: $white;
+  }
 }
 
 // BASIC PAGE WITH HERO
-.node-type-basic-page-with-hero 
-, .node-type-basic-page-with-hero-large
-{
-	
-	// drop the caption toward the middle of the banner
-	.region-caption-holder {
-  		//margin-top: 1.5em; this is done in visual now line 16
-	}
-
-	// hide the title
-	h1.title {
-  		display: none;
-	}
-
-	
+.node-type-basic-page-with-hero
+, .node-type-basic-page-with-hero-large {
+  // drop the caption toward the middle of the banner
+  .region-caption-holder {
+    //margin-top: 1.5em; this is done in visual now line 16
+ 
+  }
+  // hide the title
+  h1.title {
+    display: none;
+  }
 }
 
 // BASIC PAGE
 .node-type-basic-page-with-hero .field-name-body {
-	background: white;
-	padding: 1.5em;
-	margin-bottom: 3em;
-	border:1px solid $gray;
-	clear: both;
+  background: white;
+  padding: 1.5em;
+  margin-bottom: 3em;
+  border: 1px solid $gray;
+  clear: both;
 }
 
 .section-my-voice .field-name-body {
-	background: transparent;
-	border:none;
-	padding: 0;
-	margin-bottom: 1em;	
-    clear: both;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 1em;
+  clear: both;
 }
 
 // BLOCKS
 .center {
-	text-align: center;
+  text-align: center;
 }
 
-
 //styling the who is online page
-#block-user-online{
-	.item-list{
-		ul{
-			list-style: none;
-			padding-left: 0px;//to remove the default padding that gets applied.
-		}
-	}
+#block-user-online {
+  .item-list {
+    ul {
+      list-style: none;
+      padding-left: 0px;
+      //to remove the default padding that gets applied.
+   
+    }
+  }
+}
+
+//events page
+.page-node-221566 {
+  .views-exposed-widget, .views-widget {
+    float: left;
+    display: inline-block;
+  }
+  .views-exposed-widget {
+    input {
+      border-radius: 5px;
+      font-size: 18px;
+      border-bottom: 2px solid;
+      border-color: #e4e4e4;
+      -webkit-box-shadow: inset 1px 1px 2px #707070;
+      box-shadow: inset 1px 1px 2px #707070;
+      padding: 12px 23px;
+    }
+    .description {
+      display: none;
+    }
+    .container-inline-date {
+      fieldset {
+        margin-right: 10px;
+      }
+    }
+  }
+  .date-padding {
+    padding: 0px;
+    //padding-left: 10px;
+ 
+  }
 }

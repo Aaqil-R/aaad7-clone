@@ -47,9 +47,9 @@
           </div>
         <?php endif; ?> 
         <?php if (!empty($widget->widget)): ?>
-        <div class="views-widget">
-         <?php print $widget->widget; ?>
-        </div> 
+          <div class="views-widget">
+            <?php print $widget->widget; ?>
+          </div> 
         <?php endif; ?> 
         <?php if (!empty($widget->description)): ?>
           <div class="description">
@@ -57,7 +57,7 @@
           </div>
         <?php endif; ?>
       </div>
-    <?php //endforeach; ?>
+    <?php endforeach; ?>
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
@@ -85,7 +85,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
-  <?php endforeach; ?>
+  <?php //endforeach; ?>
     <a href="#" class="btn btn-left forum-page topic filterbutton" title="Filter by topic"><span>Filter by topic <em class="icon-Plus"></em></span></a>
     <?php print render($variables['share_button']); ?>
 </div>
