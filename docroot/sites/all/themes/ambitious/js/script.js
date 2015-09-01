@@ -272,6 +272,16 @@ Drupal.behaviors.ambitious = {
   }); 
   
     //new codes on sorting testing
+
+    // $(document).ready(function(){  
+    // console.log(document.getElementById('edit-created-min').value) 
+    // 	// if(document.getElementById('edit-created-min').value){
+    // 	// 	document.getElementById('edit-created-min').value = 'Select the date';
+    // 	// }
+    	
+    // });
+
+
 	$('#edit-created-min').on("change", function () { 
     	//console.log(document.getElementById('edit-created-min').value);
     	var date = new Date(document.getElementById('edit-created-min').value);
