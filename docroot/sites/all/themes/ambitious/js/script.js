@@ -268,10 +268,29 @@ Drupal.behaviors.ambitious = {
          $('.img-holder.video-1.sel a').trigger( "click" ); 
        }
      });
-    
+   
   }); 
   
-   
+    //new codes on sorting testing
+	$('#edit-created-min').on("change", function () { 
+    	//console.log(document.getElementById('edit-created-min').value);
+    	var date = new Date(document.getElementById('edit-created-min').value);
+    	var tomdate = new Date(date)
+    	tomdate.setDate(date.getDate()+1);
+    	// console.log(date);
+    	// console.log(tomdate);
+
+    	//formating the date
+    	var dd = tomdate.getDate();
+		var mm = tomdate.getMonth() + 1;
+		var y = tomdate.getFullYear();
+
+		var someFormattedDate = mm + '/'+ dd + '/'+ y;
+		// console.log(someFormattedDate);
+    	document.getElementById('edit-created-max').value = someFormattedDate;
+	});
+
+    //end of the new codes
 	
 	// ==Close button with Cookie for home page step form==//
 	// Start
