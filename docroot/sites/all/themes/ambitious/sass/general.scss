@@ -88,8 +88,7 @@ field .
       margin: 0 auto;
       @include breakpoint($mobile) {
         width: auto;
-        margin: 0 45px !important;
-        //Why is this important used?
+        margin: 0 45px;
       }
     }
   }
@@ -288,11 +287,6 @@ field .
   }
   h4 {
     margin-bottom: 21px;
-    // @include breakpoint($all-desktop) {
-    //   margin-top: 20px;
-    // }
-    // Is this commented code needed?
- 
   }
 }
 
@@ -418,7 +412,7 @@ field .
   }
   .form-item {
     //height: 65px;
-    // Is this commented code needed?
+    // Above code is commented an kept if needed to revert back in case
     display: inline-block;
   }
 }
