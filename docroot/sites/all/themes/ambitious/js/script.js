@@ -272,15 +272,19 @@ Drupal.behaviors.ambitious = {
   }); 
   
     //new codes on sorting testing
-
-    // $(document).ready(function(){  
-    // console.log(document.getElementById('edit-created-min').value) 
-    // 	// if(document.getElementById('edit-created-min').value){
-    // 	// 	document.getElementById('edit-created-min').value = 'Select the date';
-    // 	// }
-    	
-    // });
-
+    $(document).ready(function(){  
+    	if($("#edit-created-min").length){
+    		if(document.getElementById('edit-created-min').value.length == 0){
+    		 	document.getElementById('edit-created-min').value = 'Select the date';
+    	 	}
+    	}
+    	 
+    	if($("#edit-field-event-date-value-1-value-datepicker-popup-0").length){
+    		if(document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').value.length == 0){
+    		 	document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').value = 'Select the date';
+    	 	}
+    	}
+    });
 
 	$('#edit-created-min').on("change", function () { 
     	//console.log(document.getElementById('edit-created-min').value);
