@@ -14,7 +14,9 @@
 
 .front {
   .caption-text {
-    margin-top: 66px;
+    @include breakpoint(min-width $desktop) {
+      margin-top: 66px;
+    }
   }
   //TODO: Commented the code to check whether it's need or not
   // #block-block-26.caption-text .caption-text-titles .caption-text-title {
@@ -66,17 +68,19 @@
         float: none;
       }
 
-      @media (min-width: 768px) and (max-width: 1080px) {
+      @include breakpoint($tablet-small $desktop-small) {
         float: none;
         display: inline-block;
         text-align: center;
       }
+
       span {
-        @media (min-width: 768px) and (max-width: 1080px) {
+        @include breakpoint($tablet-small $desktop-small) {
           float: none;
           display: inline-block;
           text-align: center;
         }
+
         @include breakpoint($mobile) {
           //padding: initial;
           padding: 0 0 0 0;
@@ -108,7 +112,7 @@
       }
     }
   }
-  @include breakpoint(min-width $tablet-small) {
+  @include breakpoint($tablet-small $desktop) {
     margin-left: 0;
     margin-top: 100px;
     .caption-text-titles {
