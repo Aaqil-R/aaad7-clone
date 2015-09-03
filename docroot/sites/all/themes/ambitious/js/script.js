@@ -275,13 +275,16 @@ Drupal.behaviors.ambitious = {
     $(document).ready(function(){  
     	if($("#edit-created-min").length){
     		if(document.getElementById('edit-created-min').value.length == 0){
-    		 	document.getElementById('edit-created-min').value = 'Select the date';
+    		 	//document.getElementById('edit-created-min').value = 'Select the date';
+    		 	document.getElementById('edit-created-min').setAttribute("placeholder", "Select the date");
+
     	 	}
     	}
     	 
     	if($("#edit-field-event-date-value-1-value-datepicker-popup-0").length){
     		if(document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').value.length == 0){
-    		 	document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').value = 'Select the date';
+    		 	//document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').value = 'Select the date';
+    		 	document.getElementById('edit-field-event-date-value-1-value-datepicker-popup-0').setAttribute("placeholder", "Select the date");
     	 	}
     	}
     });
