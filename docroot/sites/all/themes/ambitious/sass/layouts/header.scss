@@ -68,8 +68,10 @@ ul a {
     }
   }
 
-  @include breakpoint($all-small-mobile) {
+  @include breakpoint($mini-mobile) {
     right: 5px;
+    font-size: 13px;
+    padding: 0 15px;
   }
 }
 
@@ -956,6 +958,12 @@ nav {
       padding: 0 24px 0 19px;
       @include breakpoint($tablet) {
         padding: 0 8px;
+      }
+
+      @include breakpoint($mini-mobile) {
+        &:nth-child(3) {
+          display: none;
+        }
       }
 
       @include breakpoint($mobile) {
