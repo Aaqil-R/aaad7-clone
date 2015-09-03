@@ -422,7 +422,20 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .page-node-223451 .views-exposed-form .views-exposed-widget {
   padding: 0.5em 1.75em 0 0;
 }
-/* line 55, ../sass/filters.scss */
+@media (max-width: 767px) {
+  /* line 51, ../sass/filters.scss */
+  .page-node-223451 .views-exposed-form .views-exposed-widget {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+  /* line 57, ../sass/filters.scss */
+  .page-node-223451 .views-exposed-form .views-exposed-widget .form-item,
+  .page-node-223451 .views-exposed-form .views-exposed-widget input {
+    width: 100%;
+  }
+}
+/* line 64, ../sass/filters.scss */
 .page-node-223451 input {
   border-radius: 5px;
   font-size: 18px;
