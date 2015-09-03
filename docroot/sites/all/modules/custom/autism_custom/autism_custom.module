@@ -352,21 +352,38 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
   }
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";  
+    //check the current time
+    $nowtime = time();
     foreach ($form['field_event_tid']['#options'] as $tid => $val){  
       if($tid!= "All"){
-        $nodes = count(taxonomy_select_nodes($tid, FALSE));
-        $form['field_event_tid']['#options'][$tid] = $form['field_event_tid']['#options'][$tid]." (".$nodes.")"; 
-      }  
-      $nodescount +=$nodes; 
+        $count = 0;
+        //check the values of the event start date 
+        $testarray = (taxonomy_select_nodes($tid, FALSE));
+        //getting the array count
+        $arraycount = count($testarray);
+        for($i = 0 ; $i < $arraycount ; $i = $i+1){
+          //loading each node
+          $node = node_load($testarray[$i]);
+          //checking if the node is published
+          if($node->status == '1'){
+            $enddate = field_get_items('node', $node, 'field_event_date');
+            $enddatetime = $enddate[0]['value2'];
+            //if endtime is greater than current time increase the count
+            if($nowtime < $enddatetime){
+              $count = $count + 1;
+            }
+          }   
+        } 
+        $form['field_event_tid']['#options'][$tid] = $form['field_event_tid']['#options'][$tid]." (".$count.")";
+      }   
+      $nodescount +=$count; 
     }
     if(0 < $nodescount){
       $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
     }else{
       $form['field_event_tid']['#options']['All'] = "Show all events";
     }
-    
   }
-
   if (isset($form['type']['#value'])) {
   if($form['type']['#value'] == 'my_voice_blog'){
    global $user;
