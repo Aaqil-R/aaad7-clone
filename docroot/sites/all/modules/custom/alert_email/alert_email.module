@@ -62,7 +62,7 @@ function get_email_address($role){
 	//selecting the users for a given role and getting their emails
 	$sql = "SELECT users.name as name , users.mail as emails
 			FROM role , users_roles , users 
-			WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and role.name = '".$role."'";
+			WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and users.status = 1 and role.name = '".$role."'";
 	$result = db_query($sql);
 	foreach ($result as $record) {
 		$name = $record->name;
