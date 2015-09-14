@@ -2,6 +2,33 @@
 
 function alert_email_init(){
 	//getusers();
+	// $currenttime = time();
+	// $currentdate = date('d',$currenttime);
+
+	// //call the getusers to send the emais in the cron run
+	// //getusers();
+
+	// //get the croun count
+	// $query = db_select('email_counter', 'n');
+	// $query->condition('ID', 1, '=');
+	// $query->fields('n',array('number'));
+	// $result = $query->execute();
+ //  	if ($record = $result->fetchAssoc())
+ //    {	
+ //    	dpm($record['number']);
+ //    }
+	// //if the cron count is divisible by 4 then send the mail
+ //    //if($record['number'] % 4 == 0)
+ //    if(date('d',$record['number']) == $currentdate)
+ //    {
+ //    	dpm("on the current date");
+ //    	//getusers();
+ //    }
+	// // //else skip sending the mail.
+ // 	else{
+ //   	 dpm("not same date");	
+ // 	}
+
 }
 
 //returns the count of unpublished items for the given type
@@ -272,9 +299,48 @@ function create_newmail($contenttype){
 }
 
 function alert_email_cron(){
+	//defining the current date
+	$currenttime = time();
+	$currentdate = date('d',$currenttime);
+
 	//call the getusers to send the emais in the cron run
 	//getusers();
-	getusers();
+
+	//get the croun count
+	$query = db_select('email_counter', 'n');
+	$query->condition('ID', 1, '=');
+	$query->fields('n',array('number'));
+	$result = $query->execute();
+  	if ($record = $result->fetchAssoc())
+    {	
+    	dpm($record['number']);
+    }
+	//if the cron count is divisible by 4 then send the mail
+    //if($record['number'] % 4 == 0)
+    if(date('d',$record['number']) != $currentdate)
+    {
+    	//dpm("on the current date");
+    	getusers();
+    }
+	// //else skip sending the mail.
+ //    else{
+ //    	//dpm("not divisible by 4");	
+ //    }
+	
+    //code to increase the counter and updating the database with the new count 
+  	//$valuetest = $record['number'] + 1 ; 
+  	$valuetest = time() ; 
+    $num_updated = db_update('email_counter') 
+    ->fields(array(
+      'number' => $valuetest,
+    ))
+    ->condition('ID',1, '=')
+    ->execute();
+	//end of the update code
+
+	// dpm($valuetest);
+
+
 }
 
 ?>
