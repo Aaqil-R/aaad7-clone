@@ -13,10 +13,12 @@ function alert_email_init(){
 	// $query->condition('ID', 1, '=');
 	// $query->fields('n',array('number'));
 	// $result = $query->execute();
- //  	if ($record = $result->fetchAssoc())
- //    {	
- //    	dpm($record['number']);
- //    }
+ //  	// if ($record = $result->fetchAssoc())
+ //   //  {	
+ //   //  	dpm($record['number']);
+ //   //  }
+ //    $record = $result->fetchAssoc();
+ //    dpm($record['number']);
 	// //if the cron count is divisible by 4 then send the mail
  //    //if($record['number'] % 4 == 0)
  //    if(date('d',$record['number']) == $currentdate)
@@ -303,32 +305,22 @@ function alert_email_cron(){
 	$currenttime = time();
 	$currentdate = date('d',$currenttime);
 
-	//call the getusers to send the emais in the cron run
-	//getusers();
-
 	//get the croun count
 	$query = db_select('email_counter', 'n');
 	$query->condition('ID', 1, '=');
 	$query->fields('n',array('number'));
 	$result = $query->execute();
-  	if ($record = $result->fetchAssoc())
-    {	
-    	dpm($record['number']);
-    }
-	//if the cron count is divisible by 4 then send the mail
-    //if($record['number'] % 4 == 0)
-    if(date('d',$record['number']) != $currentdate)
+    $record = $result->fetchAssoc();
+
+    //dpm($record['number']);
+	//checking the result date and whether the current date are the same
+	if(date('d',$record['number']) != $currentdate)
     {
-    	//dpm("on the current date");
+    	//sending the mails to the users
     	getusers();
     }
-	// //else skip sending the mail.
- //    else{
- //    	//dpm("not divisible by 4");	
- //    }
 	
     //code to increase the counter and updating the database with the new count 
-  	//$valuetest = $record['number'] + 1 ; 
   	$valuetest = time() ; 
     $num_updated = db_update('email_counter') 
     ->fields(array(
@@ -337,10 +329,6 @@ function alert_email_cron(){
     ->condition('ID',1, '=')
     ->execute();
 	//end of the update code
-
-	// dpm($valuetest);
-
-
 }
 
 ?>
