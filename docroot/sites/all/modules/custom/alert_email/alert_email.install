@@ -1,0 +1,24 @@
+<?php
+
+function alert_email_schema() {
+  $schema['test123'] = array(
+    'description' => t('The base table for nodes.'),
+    'fields' => array(
+      'ID' => array(
+        'description' => 'The primary identifier for table.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 1),
+      'number' => array(
+        'description' => 'The current {node_revisions}.vid version identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 1),
+      ),
+    'primary key' => array('ID'),
+  );
+  return $schema;
+}
+?>
