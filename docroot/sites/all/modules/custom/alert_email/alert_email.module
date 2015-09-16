@@ -1,39 +1,10 @@
 <?php
 
 function alert_email_init(){
-	// if (!db_table_exists('email_counter')){
-	// 	dpm('table not exsist');
-	// }
-	// else{
-	// 	dpm('table exsists');
-	// 	$insertquery = db_insert('email_counter') // Table name no longer needs {}
-	// 	->fields(array(
-	//   		'ID' => 1,
-	//   		'number' => 1,
-	// 	))
-	// 	->execute();
-	// }
-	// $query = db_select('email_counter', 'n');
-	// $query->condition('ID', 1, '=');
-	// $query->fields('n',array('number'));
-	// $result = $query->execute();
- //    $record = $result->fetchAssoc();
- //    if(empty($record))
- //    {
- //    	dpm('Hello');
- //    	$insertquery = db_insert('email_counter') // Table name no longer needs {}
-	// 	->fields(array(
-	//   		'ID' => 1,
-	//   		'number' => 1,
-	// 	))
-	// 	->execute();
-	// 	dpm('Inserted date');
- //    }
- //    else{
- //    	dpm('Test failes');
- //    }
-    //dpm($record);
+
 }
+
+//initialising the database
 
 //returns the count of unpublished items for the given type
 function get_unpublished_items($contenttype){
@@ -223,44 +194,28 @@ function alert_email_cron(){
 	$currenttime = time();
 	$currentdate = date('d',$currenttime);
 
-	//get the croun count
+	//get the cron count
 	$query = db_select('email_counter', 'n');
 	$query->condition('ID', 1, '=');
 	$query->fields('n',array('number'));
 	$result = $query->execute();
     $record = $result->fetchAssoc();
 
-    //check whether the database contains the row 
-    if(empty($record))
-    {
-    	//if the row is empty insert the value to the table
-    	$insertquery = db_insert('email_counter') 
-		->fields(array(
-	  		'ID' => 1,
-	  		'number' => 1,
-		))
-		->execute();
-		dpm('Inserted data');
-    }
-    else{
-    	dpm('Record exsist');
-    	//dpm($record['number']);
-		//checking the result date and whether the current date are the same
-		if(date('d',$record['number']) != $currentdate)
-    	{
-    		//sending the mails to the users
-    		getusers();
-    	}
-		
-    	//code to increase the counter and updating the database with the new count 
-  		$valuetest = time() ; 
-    	$num_updated = db_update('email_counter') 
-    	->fields(array(
-    	  'number' => $valuetest,
-   		))
-    	->condition('ID',1, '=')
-    	->execute();
-    }
+	//checking the result date and whether the current date are the same
+	if(date('d',$record['number']) != $currentdate)
+   	{
+   		//sending the mails to the users
+   		getusers();
+   	}
+	
+   	//code to increase the counter and updating the database with the new count 
+	$valuetest = time() ; 
+   	$num_updated = db_update('email_counter') 
+   	->fields(array(
+   	  'number' => $valuetest,
+  		))
+   	->condition('ID',1, '=')
+   	->execute();
 	//end of the update code
 }
 
