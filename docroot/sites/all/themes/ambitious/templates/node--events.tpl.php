@@ -101,12 +101,58 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
+      //print render($content);
+
     ?>
   </div>
 
-  <?php print render($content['links']); ?>
+  <?php //print render($content['links']); ?>
 
-  <?php print render($content['comments']); ?>
+  <?php //print render($content['comments']); ?>
 
 </div>
+
+<?php 
+//to print the entire content
+//dpr($content); 
+?>
+
+<!-- My codes to display the events -->
+
+<p><strong>Date : </strong>
+<?php 
+  //since date1 and date 2 are always mandatory we dont need to check whether they are null
+
+  //to print the first date
+  $date1 = new DateTime();
+  $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
+  
+
+  //to print the second date
+  $date2 = new DateTime();
+  $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
+  
+
+  //to check whether both are the same else print both.
+  echo $date1->format('l, d F Y') . "\n";
+  if($date1 != $date2):
+    echo $date2->format('l, d F Y') . "\n";
+  endif;
+?>
+</p>
+
+
+<p><strong>Location : </strong>
+<?php 
+  //to print the location
+  echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
+?>
+<p>
+
+<?php
+  print render($content['body']);
+?>
+
+<?php
+  print render($content['webform']);
+?>
