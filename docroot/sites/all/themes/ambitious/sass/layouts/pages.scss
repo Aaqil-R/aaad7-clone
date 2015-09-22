@@ -106,3 +106,33 @@
  
   }
 }
+
+//node events new styles
+.node-type-events {
+  #wrapper {
+    background: $white;
+  }
+}
+
+.node-events {
+  background: $white;
+  form {
+    label[for="edit-submitted-country"] {
+      display: block;
+      //float: left;
+   
+    }
+    .form-item {
+      input {
+        float: none;
+        display: block;
+      }
+      input[type="radio"], input[type="checkbox"] {
+        display: inline;
+      }
+      fieldset {
+        float: none;
+      }
+    }
+  }
+}
