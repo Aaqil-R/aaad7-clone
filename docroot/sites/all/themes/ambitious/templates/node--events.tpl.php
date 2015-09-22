@@ -110,7 +110,7 @@
 
   <?php //print render($content['comments']); ?>
 
-</div>
+
 
 <?php 
 //to print the entire content
@@ -156,3 +156,5 @@
 <?php
   print render($content['webform']);
 ?>
+
+</div>
