@@ -141,20 +141,25 @@
 ?>
 </p>
 
-
+<?php if(isset($content['field_location'])): ?>
 <p><strong>Location : </strong>
 <?php 
   //to print the location
   echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
 ?>
-<p>
+</p>
+<?php endif;?>
 
 <?php
+  if(isset($content['body'])):
   print render($content['body']);
+  endif;
 ?>
 
 <?php
+  if(isset($content['webform'])):
   print render($content['webform']);
+  endif; 
 ?>
 
 </div>
