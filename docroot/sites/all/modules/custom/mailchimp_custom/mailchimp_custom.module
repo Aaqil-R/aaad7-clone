@@ -11,140 +11,159 @@ function mailchimp_custom_init(){
 
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
-	//replace api with the clients api
-	$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
-
-	//defining the variables
-	//in drupal pass the variables from this place to submit to the mailchimp or to update.
-	$email ='';
-	$firstname = '';
-	$lastname = '';
-	$newevent = 'Event 1';
-	$neweventarray = array('Event 1');
-		//$nid = $node->nid;
-	dpm($node);
 	//check the node type
 	$contenttype = $node->type;
+	//we must check whether the content type is event or the courses
+	dpm($submission);
 
-	//must check whether these are isset.
-	if(isset($submission->data[1][0])){
-		$email = $submission->data[1][0];
-		dpm($email);
-	}
-	if(isset($submission->data[2][0])){
-		$firstname = $submission->data[2][0];
-		dpm($firstname);
-	}
-	if(isset($submission->data[3][0])){
-		$lastname = $submission->data[3][0];
-		dpm($lastname);
-	}
-	//we have to get the event type and the event name to which user has subscribed
-	//assign the new event to relevent webform value
+	//must check whether the user enabled the api
+	if(isset($submission->data[4][0])){
+		dpm('enabled');
+		//replace api with the clients api
+		$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
 
-	//new codes
-	//to see the lists on the view
-	// $result1 = $MailChimp->call('/lists/interest-groupings' , array(
-	//                 		'id' => '1430d8d688'));
+		//defining the variables
+		$email ='';
+		$firstname = '';
+		$lastname = '';
+		$newevent = '';
+		$neweventarray = array();
+		//$nid = $node->nid;
+		dpm($node);
 
-	//check whether the subscriber is from the list
-	$result3 = $MailChimp->call('/lists/member-info', array(
-		'id' => '1430d8d688',
-	    'emails' => array(
-	    	0 => array('email'=>$email))
-	    )
-	);
-
-	//get the earlier values of the events
-	//print_r(print_event_list($result3));
-
-
-	//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
-	if($result3['success_count'] == 1)
-	{
-		//if the user exsist then we must get the earlier subscribed events
-		$eventlist = print_event_list($result3);
-		$events = $eventlist['events'];
-		$courses = $eventlist['courses'];
-		$news = $eventlist['news'];
-
-		dpm($eventlist);
-		//check for the event type and add the event to the correct array
-		if($contenttype == 'events'){
-			// dpm("i am a event");
-			array_push($events, $newevent);
+		//must check whether these are isset.
+		if(isset($submission->data[1][0])){
+			$email = $submission->data[1][0];
+			dpm($email);
 		}
-		elseif($contenttype == 'courses')
-		{
-			// dpm("i am a course");
-			array_push($courses, $newevent);
+		if(isset($submission->data[2][0])){
+			$firstname = $submission->data[2][0];
+			dpm($firstname);
 		}
-		//update the current user
-		$result = $MailChimp->call('/lists/update-member', array(
+		if(isset($submission->data[3][0])){
+			$lastname = $submission->data[3][0];
+			dpm($lastname);
+		}
+		if(isset($submission->data[5][0])){
+			$newevent = $submission->data[5][0];
+			$neweventarray = array($submission->data[5][0]);
+			dpm($newevent);
+			dpm($neweventarray);
+		}
+
+		//we have to get the event type and the event name to which user has subscribed
+		//assign the new event to relevent webform value
+
+		//new codes
+		//to see the lists on the view
+		// $result1 = $MailChimp->call('/lists/interest-groupings' , array(
+		//                 		'id' => '1430d8d688'));
+
+		//check whether the subscriber is from the list
+		$result3 = $MailChimp->call('/lists/member-info', array(
 			'id' => '1430d8d688',
-		    'email' => array('email'=>$email),
-			'merge_vars' => array(
-				'fname'=>$firstname, 
-		        'lname'=>$lastname,
-		        'groupings' => array(
-		            0 => array(
-		                'name' => 'Events',
-		                'groups' => $events
-		                ),
-
-		            1 => array(
-		                'name' => 'Courses',
-		                'groups' => $courses
-		                ),
-
-		            2 => array(
-		                'name' => 'News Letters',
-		                'groups' => $news
-		                ),
-		            )
-		        ),
-		   	'double_optin' => false,
-		    'update_existing' => true,
-		    'replace_interests' => true,
-		    'send_welcome' => false,
+		    'emails' => array(
+		    	0 => array('email'=>$email))
 		    )
 		);
+
+		//get the earlier values of the events
+		//print_r(print_event_list($result3));
+
+
+		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
+		if($result3['success_count'] == 1)
+		{
+			//if the user exsist then we must get the earlier subscribed events
+			$eventlist = print_event_list($result3);
+			$events = $eventlist['events'];
+			$courses = $eventlist['courses'];
+			$news = $eventlist['news'];
+
+			dpm($eventlist);
+			//check for the event type and add the event to the correct array
+			if($contenttype == 'events'){
+				// dpm("i am a event");
+				array_push($events, $newevent);
+			}
+			elseif($contenttype == 'courses')
+			{
+				// dpm("i am a course");
+				array_push($courses, $newevent);
+			}
+			//update the current user
+			$result = $MailChimp->call('/lists/update-member', array(
+				'id' => '1430d8d688',
+			    'email' => array('email'=>$email),
+				'merge_vars' => array(
+					'fname'=>$firstname, 
+			        'lname'=>$lastname,
+			        'groupings' => array(
+			            0 => array(
+			                'name' => 'Events',
+			                'groups' => $events
+			                ),
+
+			            1 => array(
+			                'name' => 'Courses',
+			                'groups' => $courses
+			                ),
+
+			            2 => array(
+			                'name' => 'News Letters',
+			                'groups' => $news
+			                ),
+			            )
+			        ),
+			   	'double_optin' => false,
+			    'update_existing' => true,
+			    'replace_interests' => true,
+			    'send_welcome' => false,
+			    )
+			);
+		}
+		else{
+			echo "user not found";
+			//bit of modification done from the normal way. in order to add the new user
+			$name = '';
+			if($contenttype == 'events'){
+				// dpm("i am a event");
+				$name = 'Events';
+			}
+			elseif($contenttype == 'courses')
+			{
+				// dpm("i am a course");
+				$name = 'Courses';
+			}
+			//create a new user
+			$result = $MailChimp->call('lists/subscribe', array(
+			    'id' => '1430d8d688',
+			    'email' => array('email'=>$email),
+			    'merge_vars' => array(
+			    	'fname'=>$firstname, 
+			        'lname'=>$lastname,
+			        'groupings' => array(
+			            0 => array(
+			                'name' => $name,
+			                'groups' => $neweventarray
+			                )
+			            )
+			        ),
+			    'double_optin'      => false,
+			    'update_existing'   => true,
+			    'replace_interests' => true,
+			    'send_welcome'      => false,
+			    )
+			);
+		}
+		//end of the new codes
 	}
 	else{
-		echo "user not found";
-		//bit of modification done from the normal way. in order to add the new user
-		$name = '';
-		if($contenttype == 'events'){
-			// dpm("i am a event");
-			$name = 'Events';
-		}
-		elseif($contenttype == 'courses')
-		{
-			// dpm("i am a course");
-			$name = 'Courses';
-		}
-		//create a new user
-		$result = $MailChimp->call('lists/subscribe', array(
-		    'id' => '1430d8d688',
-		    'email' => array('email'=>$email),
-		    'merge_vars' => array(
-		    	'fname'=>$firstname, 
-		        'lname'=>$lastname,
-		        'groupings' => array(
-		            0 => array(
-		                'name' => $name,
-		                'groups' => $neweventarray
-		                )
-		            )
-		        ),
-		    'double_optin'      => false,
-		    'update_existing'   => true,
-		    'replace_interests' => true,
-		    'send_welcome'      => false,
-		    )
-		);
+		dpm('disabled');
 	}
-	//end of the new codes
+
+
+	
 }
 
 function print_event_list($result3){
