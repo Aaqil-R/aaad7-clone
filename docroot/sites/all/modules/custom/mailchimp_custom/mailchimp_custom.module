@@ -4,6 +4,10 @@ require("vendor/autoload.php");
 
 
 function mailchimp_custom_init(){
+	//to see the list id.
+	// $MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
+	// $result1 = $MailChimp->call('/lists/list');
+	// dpm($result1);
 
 }
 
@@ -17,8 +21,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	if(isset($submission->data[4][0])){
 		dpm('enabled');
 		//replace api with the clients api
-		$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
-
+		//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
+		$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
 		//defining the variables
 		$email ='';
 		$firstname = '';
@@ -62,7 +66,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 		//check whether the subscriber is from the list
 		$result3 = $MailChimp->call('/lists/member-info', array(
-			'id' => '1430d8d688',
+			'id' => '20af80b11d',
 		    'emails' => array(
 		    	0 => array('email'=>$email))
 		    )
@@ -84,7 +88,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			dpm($eventlist);
 			//check for the event type and add the event to the correct array
 			if($contenttype == 'events'){
-				// dpm("i am a event");
+				dpm("i am a event");
 				array_push($events, $newevent);
 			}
 			elseif($contenttype == 'courses')
@@ -94,7 +98,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			}
 			//update the current user
 			$result = $MailChimp->call('/lists/update-member', array(
-				'id' => '1430d8d688',
+				'id' => '20af80b11d',
 			    'email' => array('email'=>$email),
 				'merge_vars' => array(
 			        'groupings' => array(
@@ -136,7 +140,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			}
 			//create a new user
 			$result = $MailChimp->call('lists/subscribe', array(
-			    'id' => '1430d8d688',
+			    'id' => '20af80b11d',
 			    'email' => array('email'=>$email),
 			    'merge_vars' => array(
 			    	'fname'=>$firstname, 
