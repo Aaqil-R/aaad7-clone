@@ -7,16 +7,13 @@ function mailchimp_custom_init(){
 
 }
 
-
-
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
-	//check the node type
-	$contenttype = $node->type;
-	//we must check whether the content type is event or the courses
+	//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
 	dpm($submission);
 
-	//must check whether the user enabled the api
+
+	//must check whether the user ticked the mailchimp option and the send the request
 	if(isset($submission->data[4][0])){
 		dpm('enabled');
 		//replace api with the clients api
@@ -29,8 +26,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$newevent = '';
 		$neweventarray = array();
 		//$nid = $node->nid;
-		dpm($node);
-
+		//dpm($node);
+		$contenttype = '';
+		//similarly we can add the new variables below
 		//must check whether these are isset.
 		if(isset($submission->data[1][0])){
 			$email = $submission->data[1][0];
@@ -50,7 +48,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			dpm($newevent);
 			dpm($neweventarray);
 		}
-
+		if(isset($submission->data[6][0])){
+			$contenttype = $submission->data[6][0];
+			dpm($contenttype);
+		}
 		//we have to get the event type and the event name to which user has subscribed
 		//assign the new event to relevent webform value
 
@@ -96,8 +97,6 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				'id' => '1430d8d688',
 			    'email' => array('email'=>$email),
 				'merge_vars' => array(
-					'fname'=>$firstname, 
-			        'lname'=>$lastname,
 			        'groupings' => array(
 			            0 => array(
 			                'name' => 'Events',
@@ -161,8 +160,6 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	else{
 		dpm('disabled');
 	}
-
-
 	
 }
 
@@ -202,6 +199,14 @@ function get_subscribed_events($array){
 	}
 	return $subscribed_events;
 };
+
+//get the first name , lastname , phone number , post code , address , city , country
+// function print_event_list($result3){
+// 	//gather the subscribed list from the result
+// 	$subscribed_groups_list = $result3['data']['0']['merges']['GROUPINGS'];
+// 	//print_r($total_events);
+// 	return $total_events;
+// };
 
 
 ?>
