@@ -31,7 +31,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$neweventarray = array();
 		//$nid = $node->nid;
 		//dpm($node);
-		$contenttype = '';
+		$contenttype = $node->type;
 		//similarly we can add the new variables below
 		//must check whether these are isset.
 		if(isset($submission->data[1][0])){
@@ -52,10 +52,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			dpm($newevent);
 			dpm($neweventarray);
 		}
-		if(isset($submission->data[6][0])){
-			$contenttype = $submission->data[6][0];
-			dpm($contenttype);
-		}
+		// if(isset($submission->data[6][0])){
+		// 	$contenttype = $submission->data[6][0];
+		// 	dpm($contenttype);
+		// }
 		//we have to get the event type and the event name to which user has subscribed
 		//assign the new event to relevent webform value
 
