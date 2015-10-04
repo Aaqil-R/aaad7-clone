@@ -109,7 +109,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			$courses = $eventlist['courses'];
 			$news = $eventlist['news'];
 
-			dpm($eventlist);
+			//dpm($eventlist);
 			//check for the event type and add the event to the correct array
 			if($contenttype == 'events'){
 				//dpm("i am a event");
