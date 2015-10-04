@@ -14,12 +14,12 @@ function mailchimp_custom_init(){
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
 	//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
-	dpm($submission);
+	//dpm($submission);
 
 
 	//must check whether the user ticked the mailchimp option and the send the request
 	if(isset($submission->data[4][0])){
-		dpm('enabled');
+		//dpm('enabled');
 		//replace api with the clients api
 		//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
 		$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
@@ -29,6 +29,14 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$lastname = '';
 		$newevent = '';
 		$neweventarray = array();
+		//new code set
+		$phonenumber = '';
+		$postcode = '';
+		$address = '';
+		$city = '';
+		$country = '';
+		//end of the new code set
+
 		//$nid = $node->nid;
 		//dpm($node);
 		$contenttype = $node->type;
@@ -36,26 +44,42 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//must check whether these are isset.
 		if(isset($submission->data[1][0])){
 			$email = $submission->data[1][0];
-			dpm($email);
+			//dpm($email);
 		}
 		if(isset($submission->data[2][0])){
 			$firstname = $submission->data[2][0];
-			dpm($firstname);
+			//dpm($firstname);
 		}
 		if(isset($submission->data[3][0])){
 			$lastname = $submission->data[3][0];
-			dpm($lastname);
+			//dpm($lastname);
 		}
 		if(isset($submission->data[5][0])){
 			$newevent = $submission->data[5][0];
 			$neweventarray = array($submission->data[5][0]);
-			dpm($newevent);
-			dpm($neweventarray);
+			//dpm($newevent);
+			//dpm($neweventarray);
 		}
-		// if(isset($submission->data[6][0])){
-		// 	$contenttype = $submission->data[6][0];
-		// 	dpm($contenttype);
-		// }
+		if(isset($submission->data[6][0])){
+			$phonenumber = $submission->data[6][0];
+			//dpm($phonenumber);
+		}
+		if(isset($submission->data[7][0])){
+			$postcode = $submission->data[7][0];
+			//dpm($postcode);
+		}
+		if(isset($submission->data[8][0])){
+			$address = $submission->data[8][0];
+			//dpm($address);
+		}
+		if(isset($submission->data[9][0])){
+			$city = $submission->data[9][0];
+			//dpm($city);
+		}
+		if(isset($submission->data[10][0])){
+			$country = $submission->data[10][0];
+			//dpm($country);
+		}
 		//we have to get the event type and the event name to which user has subscribed
 		//assign the new event to relevent webform value
 
@@ -88,7 +112,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			dpm($eventlist);
 			//check for the event type and add the event to the correct array
 			if($contenttype == 'events'){
-				dpm("i am a event");
+				//dpm("i am a event");
 				array_push($events, $newevent);
 			}
 			elseif($contenttype == 'courses')
@@ -116,7 +140,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			                'name' => 'News Letters',
 			                'groups' => $news
 			                ),
-			            )
+			            ),
+			        'phone'=>$phonenumber,
+			        'postcode'=>$postcode,
+			        'address'=>$address,
+			        'city'=>$city,
+			        'country'=>$country
 			        ),
 			   	'double_optin' => false,
 			    'update_existing' => true,
@@ -150,7 +179,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			                'name' => $name,
 			                'groups' => $neweventarray
 			                )
-			            )
+			            ),
+			        'phone'=>$phonenumber,
+			        'postcode'=>$postcode,
+			        'address'=>$address,
+			        'city'=>$city,
+			        'country'=>$country
 			        ),
 			    'double_optin'      => false,
 			    'update_existing'   => true,
@@ -162,7 +196,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//end of the new codes
 	}
 	else{
-		dpm('disabled');
+		//dpm('disabled');
 	}
 	
 }
