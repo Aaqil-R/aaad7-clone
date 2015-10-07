@@ -80,21 +80,15 @@
  * @ingroup themeable
  */
 ?>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php //print $user_picture; ?>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php //print $submitted; ?>
-    </div>
-  <?php endif; ?>
+  <?php //if ($display_submitted): ?>
+   <!--  <div class="submitted"> -->
+      <?php// print $submitted; ?>
+    <!-- </div> -->
+  <?php //endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
@@ -104,13 +98,13 @@
       //print render($content);
 
     ?>
-  </div>
-
-  <?php //print render($content['links']); ?>
-
-  <?php //print render($content['comments']); ?>
 
 
+  <?php print render($title_prefix); ?>
+  <?php if (!$page): ?>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php //print $title; ?></a></h2>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
 
 <?php 
 //to print the entire content
@@ -118,23 +112,25 @@
 ?>
 
 <!-- My codes to display the events -->
-
-<p><strong>Date : </strong>
+<div class"event-form">
+<p><strong>Start Date : </strong>
 <?php 
   //since date1 and date 2 are always mandatory we dont need to check whether they are null
 
   //to print the first date
   $date1 = new DateTime();
   $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
-  
 
+  echo $date1->format('l, d F Y') . "\n";
+?>
+</p>  
+<p><strong>End Date : </strong>
+<?php
   //to print the second date
   $date2 = new DateTime();
   $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
   
-
   //to check whether both are the same else print both.
-  echo $date1->format('l, d F Y') . "\n";
   if($date1 != $date2):
     echo $date2->format('l, d F Y') . "\n";
   endif;
@@ -162,4 +158,5 @@
   endif; 
 ?>
 
+</div>
 </div>
