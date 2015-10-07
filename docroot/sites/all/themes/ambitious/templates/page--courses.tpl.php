@@ -112,7 +112,7 @@
       </div>
     </div>
     <div class="region region-image-holder"
-      style="background-image: url('<?php print file_create_url($node->field_hero_images[LANGUAGE_NONE][0]['uri']);?>')">
+      style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
     </div>
     </div>
     <div class="holder">
