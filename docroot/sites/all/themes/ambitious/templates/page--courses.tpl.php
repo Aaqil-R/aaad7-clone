@@ -119,8 +119,10 @@
       <span class="pic-by">  
           <?php 
             $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-            $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]);     
+            $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]); 
+            if(render($viewitemscredit)){ 
             print t('© Photo by ') . render($viewitemscredit);
+            }
           ?>          
       </span>
     </div>
