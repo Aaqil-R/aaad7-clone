@@ -1,0 +1,72 @@
+<?php
+
+function share_your_story_init(){
+
+}
+
+//check for the new webform and get the id and create a new content
+
+function share_your_story_webform_submission_insert($node, $submission){
+  //if its the webform node type then its a share your story 
+  if($node->type == 'webform'){
+    dpm($submission);
+    //get the form values
+    $email = $submission->data[1][0];
+    $firstname = $submission->data[2][0];
+    $lastname = $submission->data[3][0];
+    $postcode = $submission->data[7][0];
+    $title = $submission->data[11][0];
+    $share_your_story = $submission->data[12][0];;
+    $share_your_story_option = $submission->data[13][0];
+    //$mailchimp_option = $submission->data[4][0];
+
+    $published = 1;
+
+    // if($mailchimp_option == 1){
+    //   //subscribe to mailchimp
+    // }
+
+    if($share_your_story_option == 2){
+      //user wants the data to be stored as anonymus
+      $firstname = 'anonymous';
+      $lastname = 'anonymous';
+    }
+    if($share_your_story_option == 3){
+      //keep the node as unpublished if the user selects the 3rd option
+      $published = 0;
+    }
+    
+    //creating the node to save the share your stories    
+    //global $user;
+    $newnode = new stdClass();
+    $newnode->title = $title;
+    $newnode->type = 'share_your_story';
+    node_object_prepare($newnode); // Sets some defaults. Invokes hook_prepare() and hook_node_prepare().
+    $newnode->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
+    //$newnode->uid = $user->uid; 
+    //saving the user as anonymous
+    $newnode->uid = 0; 
+    $newnode->status = $published; //(1 or 0): published or not
+    $newnode->promote = 0; //(1 or 0): promoted to front page
+    $newnode->comment = 0; // 0 = comments disabled, 1 = read only, 2 = read/write
+
+
+    //$body_text == 'THis is the body text sample of the content uafbifbafia oinfonf aof a';
+    //adding the body content
+    $newnode->body[$node->language][0]['value']   = $share_your_story;
+    $newnode->body[$node->language][0]['summary'] = text_summary($share_your_story);
+    $newnode->body[$node->language][0]['format']  = 'filtered_html';
+
+
+    //adding the custom fields
+    $newnode->field_first_name[$newnode->language][0]['value'] = $firstname;
+    $newnode->field_last_name[$newnode->language][0]['value'] = $lastname;
+
+    $newnode = node_submit($newnode); // Prepare node for saving
+    node_save($newnode);
+    //dpm($newnode);
+  }
+}
+
+
+?>
