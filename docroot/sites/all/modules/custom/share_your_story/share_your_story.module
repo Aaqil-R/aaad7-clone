@@ -9,7 +9,7 @@ function share_your_story_init(){
 function share_your_story_webform_submission_insert($node, $submission){
   //if its the webform node type then its a share your story 
   if($node->type == 'webform'){
-    dpm($submission);
+    //dpm($submission);
     //get the form values
     $email = $submission->data[1][0];
     $firstname = $submission->data[2][0];
