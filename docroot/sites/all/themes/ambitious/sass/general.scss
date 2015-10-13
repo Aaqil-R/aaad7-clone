@@ -21,6 +21,7 @@ field .
   &.page-loaded .slider-block {
     visibility: visible;
   }
+
   // Webform paragraph
   .form-item p:nth-child(2) {
     @include breakpoint($tablet-range) {
@@ -30,62 +31,77 @@ field .
       margin-bottom: 0;
     }
   }
+
   // Form on Home page
   .slider-block {
     visibility: hidden;
     z-index: 998;
     position: relative;
+
     .block {
       // Add box shadow to Home page Form
       @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
     }
+
     .r-s-arrow {
       a {
         text-decoration: none;
       }
     }
+
     .l-s-arrow {
       a {
         text-decoration: none;
       }
     }
+
     a {
       &.btn-left {
         margin-right: 10px;
       }
+
       &.btn {
         padding: 11px 25px;
       }
+
       &.btn-right {
         position: relative;
         right: 9px;
+
         @include breakpoint($mobile) {
           right: 0;
         }
       }
     }
   }
+
   @include breakpoint($mobile) {
     .slider-block {
       margin-top: -160px;
     }
+
     .slider-container .signup-columns .col {
       width: 100%;
       margin: 0;
       padding: 0;
     }
+
     .slider-container .signup-columns .col input {
       width: 100%;
       margin-bottom: 10px;
     }
+
     .slider-block .block {
       padding: 10px 15px 85px;
       margin-bottom: 38px;
+
       @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
     }
+
     .slider-block .block .slider-container {
       width: 90%;
       margin: 0 auto;
+
       @include breakpoint($mobile) {
         width: auto;
         margin: 0 45px;
@@ -93,63 +109,77 @@ field .
     }
   }
 
+
   // Main without webform in the slider area
   #main.no-form {
     margin-top: 50px;
+
     @include breakpoint($mobile) {
       margin-top: 0;
     }
   }
+
   .visual {
     max-height: none;
   }
+
   .visual .holder {
     @include breakpoint($mobile) {
       position: relative;
       top: -100px;
+
       .pic-by {
         padding: 0 0 10px 0;
       }
     }
   }
+
   .visual .img-holder {
     max-height: 825px;
   }
+
   .visual .img-holder .caption-frame .caption {
     @include breakpoint($mobile) {
       padding: 60px 0 0;
     }
 
+
     @include breakpoint($not-mobile) {
       padding: 80px 0 0;
     }
   }
+
   .visual .img-holder .caption-frame .caption .title {
     @include breakpoint($mobile) {
       right: 0;
     }
   }
+
   // Social Holder
   .social-block {
     @include breakpoint($mobile) {
       background: transparent;
     }
   }
+
   .social-block .holder {
     @include breakpoint($mobile) {
       padding-top: 18px;
       padding-bottom: 20px;
     }
   }
+
   .social-block .block {
     @include breakpoint($mobile) {
       padding: 0px 0 45px;
       background: transparent;
+
       .member-count {
         margin: -10px 0 40px;
       }
     }
   }
+
   .social-block h1 {
     @include breakpoint($mobile) {
       background: transparent;
@@ -157,11 +187,13 @@ field .
       margin-left: 0;
     }
   }
+
   .social-block h3 {
     @include breakpoint($mobile) {
       margin-bottom: 15px;
     }
   }
+
   // Article Block - Remove Images on Mobile View
   .articles-block {
     h4 {
@@ -169,6 +201,7 @@ field .
         text-decoration: none;
       }
     }
+
     .views-row-2, .views-row-3 {
       .img-holder {
         @include breakpoint($mobile) {
@@ -176,6 +209,7 @@ field .
         }
       }
     }
+
     .views-row-last {
       @include breakpoint($mobile) {
         margin-bottom: 10px;
@@ -213,21 +247,27 @@ field .
     top: 0;
     height: auto;
   }
+
   a.tooltips span.tooltip-content {
     &:before {
       border-left: 20px solid $casablanca;
       border-right: 20px solid transparent;
       border-top: 20px solid transparent;
+
       @include transform(rotate(-136deg));
+
       left: 94%;
       top: 6px;
       margin-left: -13px;
     }
+
     &:after {
-      border-left: 19px solid $early_dawn;
+      border-left: 19px solid $early-dawn;
       border-right: 19px solid transparent;
       border-top: 18px solid transparent;
+
       @include transform(rotate(-136deg));
+
       left: 94%;
       top: 7px;
       margin-left: -12px;
@@ -239,38 +279,48 @@ field .
   div.ctools-modal-content .modal-content {
     min-width: 100%;
   }
+
   .popups-container input[type="password"] {
     width: 88%;
   }
+
   .form-type-password-confirm {
     margin-top: 40px;
+
     .password-strength {
       width: 92%;
       float: left;
       margin-top: -55px;
     }
   }
+
   .password-strength {
     width: 92%;
     float: left;
     margin-top: -36px;
   }
+
   .form-type-password.form-item-pass-pass2 {
     width: 67%;
+
     input[type=password] {
       width: 100%;
     }
   }
+
   input[type=password] {
     width: 91%;
   }
+
   .form-type-password-confirm form-item-pass {
     margin-top: 20px;
   }
+
   .form-item {
     padding-left: 0;
     padding-right: 0;
   }
+
   #edit-pass-pass1 {
     width: 92%;
   }
@@ -285,6 +335,7 @@ field .
   .description {
     margin-top: 5px;
   }
+
   h4 {
     margin-bottom: 21px;
   }
@@ -307,6 +358,7 @@ field .
     margin-top: 11px;
     margin-bottom: 20px;
   }
+
   .home_forum_share {
     .home_forum_share_left {
       p {
@@ -314,8 +366,10 @@ field .
         line-height: 27px;
       }
     }
+
     .home_forum_share_right {
       margin-top: 24px;
+
       @include breakpoint($mobile) {
         margin-top: 54px;
       }
@@ -337,65 +391,79 @@ field .
     line-height: 44px;
     margin-bottom: 9px;
   }
+
   .webform-component--lend-your-support {
     h5 {
       font-size: 18px;
       margin-top: -9px;
     }
   }
+
   .webform-component--give-what-you-can {
     float: none;
     width: auto;
   }
+
   .give_what_you_can {
     margin-left: 18px;
     width: 32%;
     float: left;
     margin-top: 13px;
+
     @include breakpoint($mobile) {
       margin-left: auto;
       width: auto;
       float: none;
     }
 
+
     h5 {
       margin-left: 10px;
+
       @include breakpoint($mobile) {
         margin-left: 0px;
       }
     }
+
     #edit-submitted-give-what-you-can {
       @include breakpoint($mobile) {
         margin: 0 -30px 0 -11px;
         margin-bottom: 15px;
       }
 
+
       label {
         font-size: 20px;
       }
     }
   }
+
   .webform-component--other-ways-to-help {
     width: 28%;
     margin-top: 13px;
+
     @include breakpoint($mobile) {
       width: auto;
     }
+
 
     h3 {
       font-size: 22px;
       margin-top: 3px;
     }
+
     a.btn {
       padding: 9.5px 22px;
       width: 100%;
       margin-bottom: 14px;
       margin-top: 11px;
     }
+
     label {
       font-size: 24px;
     }
   }
+
   .webform-component--lend-your-support {
     p {
       line-height: 27px;
@@ -410,6 +478,7 @@ field .
     top: 11px;
     color: $black;
   }
+
   .form-item {
     //height: 65px;
     // Above code is commented an kept if needed to revert back in case
@@ -425,15 +494,18 @@ body .view-display-id-stream_forum_page {
   .icon-Featured, .icon-Hottopic {
     display: none;
   }
+
   .rowlessthen3 {
     .icon-Featured {
       margin-right: 5px;
       display: inherit;
     }
   }
+
   .icon-Hottopic {
     margin-right: 45px;
   }
+
   .show_hot {
     .icon-Hottopic {
       display: inherit;
@@ -453,10 +525,12 @@ body .view-display-id-stream_forum_page {
 
 .section-share-your-story .block-webform {
   padding-bottom: 50px;
+
   label {
     left: 12px;
     top: 10px;
   }
+
   .form-item {
     min-height: 70px;
   }
@@ -476,6 +550,7 @@ html.js fieldset.collapsed {
 .section-current-vacancies {
   .posts-columns {
     margin-top: 290px;
+
     .field_salary {
       margin-bottom: 20px;
     }
@@ -504,20 +579,24 @@ article.node-223806, article.node-223591 {
     padding: 14px;
     display: block;
   }
+
   .popups-close.close {
     position: absolute;
     right: 11px;
     top: 12px;
   }
+
   h3 {
     font-size: 22px;
     font-weight: bold;
     padding: 5px 1px;
     text-align: left;
   }
+
   .hybridauth-widget li {
     margin: 0;
   }
+
   .item-list {
     margin-left: 20px;
   }
@@ -532,6 +611,7 @@ article.node-223806, article.node-223591 {
 
 // TODO: this hides a white container which is being rendered 
 // sporadically on topic pages; need to investigate and fix. Nishan
+
 #block-views-stream-my-voice-blog .view-filters .mobile-view {
   display: none;
 }
@@ -543,12 +623,14 @@ article.node-223806, article.node-223591 {
 
 .node-type-forum-discussion .posts-columns.columns-full .row .footer {
   padding-left: 30px;
+
   .flag_node {
     margin-right: 20px;
     float: left;
     width: 170px;
     margin-top: 6px;
   }
+
   .flag-message {
     visibility: hidden;
   }
@@ -568,6 +650,7 @@ article.node-223806, article.node-223591 {
 .forum_list {
   float: left;
   margin-right: 5px;
+
   a, span.flag-bookmarks, .flag-bookmarks {
     font-size: 15px;
     font-weight: normal;
@@ -590,44 +673,55 @@ article.node-223806, article.node-223591 {
   #block-easy-breadcrumb-easy-breadcrumb, .vertical-tabs {
     display: none;
   }
+
   .node-forum_discussion-form {
     background: white;
     padding: 1.5em;
     margin-bottom: 3em;
     border: 1px solid $border-color;
     clear: both;
+
     fieldset {
       float: none;
     }
+
     .description {
       width: auto;
       float: none;
       clear: both;
     }
+
     .form-item-title label {
       margin-top: 0;
     }
+
     .filter-guidelines {
       padding: 0;
     }
+
     .filter-wrapper {
       display: none;
     }
+
     .form-type-checkbox {
       float: left;
+
       .error {
         outline: 1px solid $error-red;
         width: auto;
       }
     }
+
     .filter-help {
       padding: 0;
       float: none;
       text-align: center;
     }
+
     input {
       max-width: 100%;
     }
+
     .form-action {
       margin-top: 0.5em;
     }
@@ -658,6 +752,7 @@ article.node-223806, article.node-223591 {
       }
     }
   }
+
   .search-form {
     @include breakpoint($mobile) {
       input[type=submit] {
@@ -667,6 +762,7 @@ article.node-223806, article.node-223591 {
       }
     }
   }
+
   .item-list .pager li {
     display: inline-block;
   }
@@ -689,6 +785,7 @@ article.node-223806, article.node-223591 {
     }
   }
 
+
   .gss-search-url {
     word-wrap: break-word;
   }
@@ -710,6 +807,7 @@ article.node-223806, article.node-223591 {
 
 .show_mobile {
   display: none;
+
   @include breakpoint($mobile) {
     display: inherit;
   }
@@ -722,6 +820,7 @@ article.node-223806, article.node-223591 {
         li {
           a {
             font-size: 0;
+
             img {
               margin-left: -44px;
               margin-top: -10px;
@@ -730,6 +829,7 @@ article.node-223806, article.node-223591 {
         }
       }
     }
+
 
     @include breakpoint($mobile) {
       ul {
@@ -740,6 +840,7 @@ article.node-223806, article.node-223591 {
         }
       }
     }
+
 
     @include breakpoint($mini-mobile) {
       ul {
@@ -764,6 +865,7 @@ article.node-223806, article.node-223591 {
 // Image Holder - Fixing for the mobile devices
 .img-holder {
   position: relative;
+
   img {
     width: 100%;
     height: auto;
@@ -790,8 +892,10 @@ article.node-223806, article.node-223591 {
       width: 100%;
     }
   }
+
   @include breakpoint($mobile) {
     padding: 36px;
+
     .filterbutton {
       margin-bottom: 30px;
     }
@@ -828,12 +932,15 @@ article.node-223806 {
 .nav-active {
   //TODO : Check the overflow.
   overflow-x: hidden;
+
   .nav-holder {
     position: absolute;
+
     //padding-top: 15px;
     // Is this commented code needed?
     padding-top: 0px;
     margin-top: 34px;
+
     @include breakpoint($mobile) {
       padding-top: 0px;
     }
@@ -845,23 +952,28 @@ article.node-223806 {
   div.ctools-modal-content .modal-content {
     padding: 19px 19px 13px 25px;
   }
+
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     width: 100%;
   }
+
   .popups-container input[type="email"], .popups-container input[type="text"], .popups-container .select, .popups-container input[type="password"] {
     padding: 10px 16px;
     font-size: 16px;
   }
+
   .hybridauth-widget-wrapper {
     clear: both;
     width: 80%;
     padding-left: 10px;
   }
+
   .popups-container input[type="submit"] {
     margin-bottom: 20px;
     width: 100%;
     margin-top: 10px;
   }
+
   div.ctools-modal-content #user-register-form, div.ctools-modal-content #user-login {
     width: 100%;
     margin-left: 10px;
@@ -875,21 +987,27 @@ article.node-223806 {
     .posts-columns {
       padding-top: 0;
     }
+
     .footer .btn {
       margin-top: 1em;
     }
+
     .forumpage_title {
       padding: 0 8px;
     }
+
     .view-comments {
       padding: 0 8px;
     }
+
     .comment-list ul.comment-listing li .comment-left img {
       max-width: 58px;
     }
+
     .comment-list ul.comment-listing li .comment-right {
       margin: 0 0 27px 98px;
     }
+
     .comment-list ul.comment-listing li .comment-left {
       width: 85px;
     }
@@ -902,6 +1020,7 @@ article.node-223806 {
 // user avatar
 .privatemsg-author-avatar img {
   @include border-radius(5px);
+
   width: 100%;
   max-width: 100px;
 }
@@ -927,28 +1046,37 @@ article.node-223806 {
 #privatemsg-new {
   input.form-text {
     max-width: 100%;
+
     @include border-radius(5px);
+
     font-size: 18px;
     border-bottom: 2px solid;
     border-color: $mercury;
+
     @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+
     margin-bottom: 1em;
     padding: 12px 23px;
     color: $base-text-color;
+
     @include breakpoint($mobile) {
       width: 100%;
     }
   }
+
   .form-text.required.form-autocomplete {
     background-image: none;
   }
+
   #edit-body-format {
     display: none;
   }
+
   .form-item-recipient {
     label {
       display: block;
     }
+
     .form-element {
       float: left;
     }
@@ -982,27 +1110,32 @@ article.node-223806 {
 #slider-container {
   .webform-client-form-74676 {
     width: 100%;
+
     .home_forum_share_left {
       div {
         iframe {
           width: 98px;
           float: left;
           height: 20px;
+
           &:first-child {
             width: 51px;
             height: 21px;
             margin-right: 10px;
           }
+
           @include breakpoint($mobile) {
             float: none;
           }
         }
       }
     }
+
     .home_forum_share_right {
       img {
         width: 80%;
         margin-left: 10%;
+
         @include breakpoint($mobile) {
           width: 100%;
           margin-left: 0;
@@ -1032,32 +1165,40 @@ article.node-223806 {
   #comments {
     width: 100%;
   }
+
   .comment-listing {
     .flag-wrapper {
       font-size: 13px;
     }
+
     time {
       max-width: 130px;
       float: left;
+
       //TODO : Why again a 'time' tag.
       time {
         margin-bottom: 0;
       }
+
       a {
         display: block;
       }
     }
+
     .comment-left {
       img {
         width: 60px;
       }
     }
+
     .comment-right {
       padding: 20px;
+
       .links {
         clear: both;
       }
     }
+
     > li {
       margin-top: 15px;
       float: left;
@@ -1071,8 +1212,10 @@ article.node-223806 {
   .article-info .flag-bookmarks:first-child {
     padding-left: 0;
   }
+
   #main2 .article-left .article-left-holder .article-info cite a {
     margin-top: 0.5em;
+
     &:after {
       background-image: none;
     }
@@ -1088,6 +1231,7 @@ article.node-223806 {
   td.has-events a {
     color: $orange-dark;
   }
+
   .month-view .full td .inner div.day {
     width: 100%;
   }
@@ -1110,11 +1254,13 @@ a.masquerade-switch {
   background-position: 102px -254px;
   padding-left: 24px;
   padding-right: 58px;
+
   @include breakpoint($tablet) {
     padding-left: 14px;
     padding-right: 38px;
     background-position-x: 87px;
   }
+
 
   @include breakpoint($mobile) {
     background-image: none;
@@ -1124,6 +1270,7 @@ a.masquerade-switch {
 
 #webform-client-form-74666 a.btn#not_right_now {
   background-position: 143px -254px;
+
   @include breakpoint($tablet) {
     background-position-x: 129px;
   }
@@ -1132,9 +1279,11 @@ a.masquerade-switch {
 #webform-client-form-74621 .webform-submit,
 #webform-client-form-74601 .webform-submit {
   background-position: 120px -256px;
+
   @include breakpoint($tablet) {
     background-position-x: 97px;
   }
+
 
   @include breakpoint($mobile) {
     width: 100%;
@@ -1150,6 +1299,7 @@ a.masquerade-switch {
   #content-area {
     padding-bottom: 0px;
   }
+
   #content_bottom {
     @include breakpoint($mobile) {
       padding-left: 0px;
@@ -1161,6 +1311,7 @@ a.masquerade-switch {
   &:before {
     cursor: pointer;
   }
+
   &:hover {
     &:before {
       opacity: 0.8;
@@ -1172,30 +1323,37 @@ a.masquerade-switch {
   img, #header, .top-bar, #admin-toolbar, .media-youtube-video, .comment-block, #comments, .messages, #skip-link, .top-header {
     display: none !important;
   }
+
   .top-header, .nav-holder, #content_bottom, #social, .action-block, #footer, .top-bar, .right-info, .tabs, .topic-share, .btn {
     display: none;
   }
+
   .img-holder, .visual, .visual img {
     display: block !important;
   }
+
   #main2 .article {
     width: 100%;
   }
+
   #header .header-top {
     background: none;
     box-shadow: inherit;
     top: 0;
     position: static !important;
   }
+
   .node-type-article #wrapper, .node-type-my-voice-blog #wrapper, .node-type-school-values #wrapper, .tabs {
     background: none;
     margin-top: 0;
   }
+
   * {
     padding: 0;
     margin: 0;
     color: #000;
   }
+
   h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
@@ -1215,6 +1373,7 @@ a.masquerade-switch {
   .views-field-field-video-author {
     display: none;
   }
+
   .img-holder {
     .field-content {
       float: right;
@@ -1230,13 +1389,16 @@ iframe {
 //Event page webform styling
 .node-type-events, .node-type-courses {
   background: white;
+
   #wrapper {
     height: auto;
+
     .header_banner {
       .img-holder {
         .caption-text-titles {
           span {
             display: inline-block;
+
             h1.title {
               margin-bottom: 0;
             }
@@ -1245,10 +1407,21 @@ iframe {
       }
     }
   }
+
   #main {
     padding-top: 0;
+
     #content-area {
       padding: 0 20px 20px 20px;
     }
+  }
+}
+
+//Share Your Story Webform styling
+.share-your-story-webform {
+  padding-bottom: 40px;
+
+  .form-textarea-wrapper {
+    width: 80%;
   }
 }
