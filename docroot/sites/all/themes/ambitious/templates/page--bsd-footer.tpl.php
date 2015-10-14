@@ -8,7 +8,7 @@
       <footer id="footer">
           <div class="holder">
     		<div class="logo">
-          <a href="www.ambitiousaboutautism.org.uk" title="Ambitious About Autism"><img src="http://thesmallaxe.github.io/aaa-frontend/images/logo-footer.png" alt="Ambitious About Autism"></a>
+          <a href="www.ambitiousaboutautism.org.uk" title="Ambitious About Autism"><img src="https://thesmallaxe.github.io/aaa-frontend/images/logo-footer.png" alt="Ambitious About Autism"></a>
         </div>
     		<div class="right-footer">
               <?php print render($page['footer_right']); ?>
