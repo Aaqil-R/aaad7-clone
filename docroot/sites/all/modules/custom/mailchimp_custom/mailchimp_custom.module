@@ -14,7 +14,7 @@ function mailchimp_custom_init(){
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
 	//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
-	//dpm($submission);
+	dpm($submission);
 
 
 	//must check whether the user ticked the mailchimp option and the send the request
@@ -32,7 +32,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//new code set
 		$phonenumber = '';
 		$postcode = '';
-		$address = '';
+		$address1 = '';
+		$address2 = '';
 		$city = '';
 		$country = '';
 		//end of the new code set
@@ -70,15 +71,19 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			//dpm($postcode);
 		}
 		if(isset($submission->data[8][0])){
-			$address = $submission->data[8][0];
+			$address1 = $submission->data[8][0];
 			//dpm($address);
 		}
 		if(isset($submission->data[9][0])){
-			$city = $submission->data[9][0];
-			//dpm($city);
+			$address2 = $submission->data[9][0];
+			//dpm($address);
 		}
 		if(isset($submission->data[10][0])){
-			$country = $submission->data[10][0];
+			$city = $submission->data[10][0];
+			//dpm($city);
+		}
+		if(isset($submission->data[11][0])){
+			$country = $submission->data[11][0];
 			//dpm($country);
 		}
 		//we have to get the event type and the event name to which user has subscribed
@@ -149,7 +154,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			            ),
 			        'phone'=>$phonenumber,
 			        'postcode'=>$postcode,
-			        'address'=>$address,
+			        'address1'=>$address1,
+			        'address2'=>$address2,
 			        'city'=>$city,
 			        'country'=>$country
 			        ),
@@ -194,7 +200,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			            ),
 			        'phone'=>$phonenumber,
 			        'postcode'=>$postcode,
-			        'address'=>$address,
+			        'address1'=>$address1,
+			        'address2'=>$address2,
 			        'city'=>$city,
 			        'country'=>$country
 			        ),

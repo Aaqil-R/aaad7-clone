@@ -15,9 +15,11 @@ function share_your_story_webform_submission_insert($node, $submission){
     $firstname = $submission->data[2][0];
     $lastname = $submission->data[3][0];
     $postcode = $submission->data[7][0];
-    $title = $submission->data[11][0];
-    $share_your_story = $submission->data[12][0];;
-    $share_your_story_option = $submission->data[13][0];
+
+    //change the values here
+    $title = $submission->data[12][0];
+    $share_your_story = $submission->data[13][0];;
+    $share_your_story_option = $submission->data[14][0];
     //$mailchimp_option = $submission->data[4][0];
 
     $published = 1;
