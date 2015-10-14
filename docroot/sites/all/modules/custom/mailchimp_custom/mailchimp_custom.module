@@ -14,7 +14,7 @@ function mailchimp_custom_init(){
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
 	//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
-	dpm($submission);
+	//dpm($submission);
 
 
 	//must check whether the user ticked the mailchimp option and the send the request
