@@ -40,6 +40,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//$nid = $node->nid;
 		//dpm($node);
 		$contenttype = $node->type;
+		//dpm($contenttype);
 		//similarly we can add the new variables below
 		//must check whether these are isset.
 		if(isset($submission->data[1][0])){
@@ -120,6 +121,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				// dpm("i am a course");
 				array_push($courses, $newevent);
 			}
+			elseif($contenttype == 'webform')
+			{
+				// dpm("i am a course");
+				array_push($news, $newevent);
+			}
 			//update the current user
 			$result = $MailChimp->call('/lists/update-member', array(
 				'id' => '20af80b11d',
@@ -166,6 +172,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			{
 				// dpm("i am a course");
 				$name = 'Courses';
+			}
+
+			elseif($contenttype == 'webform')
+			{
+				// dpm("i am a course");
+				$name = 'News Letters';
 			}
 			//create a new user
 			$result = $MailChimp->call('lists/subscribe', array(
