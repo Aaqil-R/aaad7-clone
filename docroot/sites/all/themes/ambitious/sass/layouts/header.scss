@@ -15,24 +15,33 @@ ul a {
   min-height: 50px;
   top: 0;
   display: block;
+
   .holder {
     @include container;
+
     @extend %clearfix;
+
     padding: 12px 15px 12px;
   }
+
   a {
     @include link-color($gray);
+
     font-size: 17px;
     font-family: $header-font-family;
+
     img {
       vertical-align: middle;
       margin-right: 10px;
+
       @include border-radius(5px);
     }
   }
+
   /* login info styles */
   .login-info {
     float: right;
+
     .logout {
       float: left;
       margin: 6px 0 0;
@@ -48,25 +57,31 @@ ul a {
   float: right;
   padding: 0 20px;
   margin: -4px 0 0 15px;
+
   &.show-mobile {
     display: none;
   }
+
   @include breakpoint($mobile) {
     width: auto;
     margin-top: 0;
     position: absolute;
     top: 23px;
     right: 14px;
+
     &:hover {
       top: 25px;
     }
+
     &.show-desktop {
       display: none;
     }
+
     &.show-mobile {
       display: block;
     }
   }
+
 
   @include breakpoint($mini-mobile) {
     right: 5px;
@@ -81,6 +96,7 @@ ul a {
   z-index: 9999;
   position: relative;
   margin-bottom: 33px;
+
   .header-top {
     width: 100%;
     z-index: 9999;
@@ -89,23 +105,32 @@ ul a {
     left: 0;
     top: 50px;
     border-bottom: 1px solid $border-color;
+
     @include box-shadow(0 0 5px rgba(24, 24, 24, 0.25));
+
     @include transition(all);
+
     .holder {
       @include container;
+
       @extend %clearfix;
+
       padding: 26px 15px;
+
       @include breakpoint($mobile) {
         padding: 22px 20px 0;
       }
     }
   }
+
   /* page logo styles */
   .logo {
     float: left;
     width: 259px;
     height: 50px;
+
     @include transition(all);
+
     @include breakpoint($mobile) {
       width: 202px;
       height: 39px;
@@ -113,75 +138,97 @@ ul a {
       margin: 0 0 19px;
     }
 
+
     img {
       display: block;
       height: auto;
+
       @include transition(all);
     }
   }
+
   .school-slide {
     position: fixed;
     padding: 100px 0 0;
     margin-top: 50px;
+
     @include transition(margin-top);
+
     @include breakpoint($mobile) {
       padding: 120px 0 0;
     }
   }
+
   &.fixed-position {
     margin-bottom: 49px;
+
     .header-top {
       top: 0;
     }
+
     .holder {
       padding: 11px 15px;
+
       @include breakpoint($mobile) {
         padding: 0 20px;
       }
     }
+
     .right-info {
       @include breakpoint($mobile) {
         overflow: hidden;
         border-top: 1px solid $gray;
       }
     }
+
     .logo {
       margin: 6px 0 0;
       width: 195px;
       height: 38px;
+
       .page-school & {
         margin: 0;
+
         img {
           width: 137px;
         }
       }
+
       img {
         max-width: 186px;
       }
+
       @include breakpoint($mobile) {
         display: none;
       }
     }
+
     .school-slide {
       position: fixed;
       padding: 100px 0 0;
       margin-top: 0px;
+
       @include breakpoint($mobile) {
         padding: 40px 0 0;
       }
     }
+
     .nav-holder {
       position: fixed;
+
       //padding:100px 0 0;
       margin-top: 70px;
+
       @include breakpoint($mobile) {
         //padding:53px 0 0;
         margin-top: 50px;
       }
     }
+
     .filter-slide {
       position: fixed;
       padding: 100px 0 0;
+
       @include breakpoint($mobile) {
         padding: 53px 0 0;
       }
@@ -192,14 +239,17 @@ ul a {
 /* headre right info styles */
 .right-info {
   @extend %listreset;
+
   padding: 4px 0 0;
   float: right;
+
   @include breakpoint($mobile) {
     float: none;
     margin: 0 -20px;
     padding: 0;
     border-top: 2px solid $gray;
   }
+
 
   li {
     float: left;
@@ -208,6 +258,7 @@ ul a {
     padding: 7px 30px;
     position: relative;
     color: $gray;
+
     @include breakpoint($mobile) {
       border-left: 2px solid $gray;
       font-size: 16px;
@@ -215,6 +266,7 @@ ul a {
       text-align: center;
       width: 22.3%;
     }
+
 
     &:after {
       position: absolute;
@@ -224,35 +276,44 @@ ul a {
       width: 1px;
       background: $gray;
       height: 40px;
+
       @include breakpoint($mobile) {
         display: none;
       }
     }
+
     &:first-child {
       padding: 9px 24px;
+
       @include breakpoint($mobile) {
         padding: 12px 1px 14px 20px;
         width: 55%;
         border: none;
       }
 
+
       &:after {
         display: none;
       }
     }
+
     a {
       @include link-color($heading-link);
+
       &:hover {
         color: $orange;
+
         .page-school & {
           color: $green;
         }
       }
     }
+
     &.menu {
       padding-right: 0;
     }
   }
+
   li {
     a {
       &:hover {
@@ -261,9 +322,11 @@ ul a {
         }
       }
     }
+
     .menu {
       padding: 9px 0 0 10px;
       min-width: 119px;
+
       @include breakpoint($mobile) {
         min-width: 10px;
         width: 22%;
@@ -272,10 +335,12 @@ ul a {
       }
     }
   }
+
   a.menu-opener {
     float: right;
     position: relative;
     padding: 0 0 0 44px;
+
     @include breakpoint($mobile) {
       padding: 0;
       width: 31px;
@@ -284,6 +349,7 @@ ul a {
       display: inline-block;
       vertical-align: top;
     }
+
 
     &:after {
       position: absolute;
@@ -294,56 +360,70 @@ ul a {
       height: 23px;
       background: image-url("sprite.png") no-repeat;
     }
+
     &:hover {
       &:after {
         background-position: 0 -29px;
+
         .page-school & {
           background-position: -50px -89px;
         }
       }
     }
+
     .menu-text {
       @include breakpoint($mobile) {
         display: none;
       }
     }
+
     .icon-Close {
       display: none;
     }
+
     .close {
       display: none;
     }
   }
+
   a.school-opener {
     position: relative;
     display: block;
+
     @include breakpoint($mobile) {
       display: inline-block;
       vertical-align: top;
     }
 
+
     .close {
       display: none;
     }
+
     .icon-Close {
       display: none;
     }
   }
+
   a.search-opener {
     .icon-search {
       font-size: 25px;
       color: $menu-grey;
+
       @include breakpoint($mobile) {
         font-size: 22px;
       }
 
+
       &:hover {
         color: $orange;
+
         .page-school & {
           color: $green;
         }
       }
     }
+
     em {
       display: none;
     }
@@ -356,6 +436,7 @@ ul a {
       color: $orange;
     }
   }
+
   .search-slide {
     max-height: 138px;
   }
@@ -365,8 +446,11 @@ ul a {
 .search-slide {
   overflow: hidden;
   max-height: 0;
+
   @include transition(all, 0.4s, ease-in-out);
+
   @include container;
+
   .search-form {
     //padding:20px 15px 41px;
     @include breakpoint($mobile) {
@@ -374,17 +458,21 @@ ul a {
       border-top: 2px solid $gray;
     }
 
+
     label {
       display: none;
     }
+
     input[type="submit"] {
       display: none;
     }
+
     input[type="search"], input[type="text"] {
       @include input-placeholder {
         font-weight: 200;
         color: $menu-grey;
       }
+
 
       border: none;
       width: 100%;
@@ -394,7 +482,9 @@ ul a {
       font-weight: 200;
       padding: 20px 25px;
       background: $page-background;
+
       @include box-sizing($type: border-box);
+
       @include breakpoint($mobile) {
         height: 48px;
         font-size: 16px;
@@ -416,11 +506,14 @@ ul a {
   left: auto;
   right: -430px;
   z-index: 99;
+
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+
   @include breakpoint($mobile) {
     width: 285px;
     left: -285px;
   }
+
 
   .title {
     display: block;
@@ -428,25 +521,32 @@ ul a {
     line-height: 35px;
     color: $heading-link;
     padding: 7px 31px 29px;
+
     @include breakpoint($mobile) {
       font-size: 22px;
       line-height: 30px;
       padding: 24px 31px 19px;
     }
   }
+
   .nav {
     @extend %listreset;
+
     border-top: 2px solid $border-color;
+
     li {
       font-size: 18px;
       line-height: 29px;
       padding: 9px 31px 11px;
       border-bottom: 2px solid $border-color;
+
       a {
         color: $heading-link;
         text-decoration: none;
+
         &:hover {
           color: $orange;
+
           .page-school & {
             color: $green;
           }
@@ -471,20 +571,25 @@ ul a {
       display: none;
     }
   }
+
   .visual, .block-easy-breadcrumb, #main, .action-block, .my-voice-block, .articles-block, .social-block, #footer .holder, #main2, .block-easy-breadcrumb, .slider-block, #social {
     position: relative;
     left: -430px;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
+
     @include breakpoint($mobile) {
       left: 285px;
     }
   }
+
   #footer,
   #footer .holder {
     @include breakpoint($mobile) {
       left: 142px !important;
     }
   }
+
   // #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header, .block-easy-breadcrumb {
   //   width: 100%;
   // }
@@ -494,9 +599,11 @@ ul a {
     left: 0;
     padding: 0 20px;
   }
+
   li {
     a.school-opener {
       padding: 0 0 0 39px;
+
       .icon-Close {
         display: block;
         position: absolute;
@@ -505,20 +612,25 @@ ul a {
         top: 1px;
         color: $orange;
       }
+
       .close {
         display: block;
+
         @include breakpoint($mobile) {
           display: inline-block;
           vertical-align: top;
         }
       }
+
       .menu-text {
         display: none;
       }
     }
   }
+
   .school-slide {
     right: 0;
+
     @include breakpoint($mobile) {
       left: 0;
     }
@@ -536,13 +648,17 @@ ul a {
   top: 0px;
   right: -460px;
   z-index: 99;
+
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+
   overflow-y: scroll;
+
   @include breakpoint($mobile) {
     right: -285px;
     width: 285px;
     padding-top: 35px;
   }
+
 
   .btn {
     margin-left: 32px;
@@ -551,34 +667,42 @@ ul a {
     display: block;
     padding: 10px 9px;
     font-size: 20px;
+
     em {
       right: -20px;
       top: 5px;
     }
+
     @include breakpoint($mobile) {
       margin: 0 0 -2px;
       position: relative;
       z-index: 2;
+
       @include border-radius(0);
+
       border: none;
       padding: 14px 0;
       font-size: 18px;
       text-align: left;
+
       &:hover {
         opacity: .9;
       }
+
       span {
         padding: 0 0 0 25px;
         position: relative;
         display: inline-block;
         vertical-align: top;
         word-spacing: 3px;
+
         .icon-Rightarrow {
           display: none;
         }
       }
     }
   }
+
   .header_fixed & {
     padding: 45px 0 50px;
   }
@@ -603,10 +727,13 @@ ul a {
 nav {
   > ul {
     @extend %listreset;
+
     border-top: 2px solid $border-color;
+
     > li {
       font-size: 18px;
       line-height: 29px;
+
       a {
         color: $heading-link;
         position: relative;
@@ -615,9 +742,11 @@ nav {
         font-weight: lighter;
         padding: 9px 31px 11px;
         border-bottom: 2px solid $border-color;
+
         @include breakpoint($mobile) {
           padding: 9px 31px 11px 25px;
         }
+
 
         .icon-Downarrow {
           position: absolute;
@@ -627,11 +756,13 @@ nav {
           height: 100%;
           font-size: 25px;
           padding-top: 14px;
+
           //font-size:13px;
           //padding:18px 0 0;
           text-align: center;
           background: $arrow-bg;
         }
+
         .icon-Uparrow {
           display: none;
           position: absolute;
@@ -641,6 +772,7 @@ nav {
           height: 100%;
           font-size: 25px;
           padding-top: 14px;
+
           //font-size:13px;
           //padding:16px 0 0;
           text-align: center;
@@ -648,20 +780,25 @@ nav {
         }
       }
     }
+
     li.active {
       .icon-Downarrow {
         display: none;
       }
+
       .icon-Uparrow {
         display: block;
       }
     }
   }
+
   .slide {
     @extend %listreset;
+
     > li {
       font-size: 18px;
       line-height: 29px;
+
       a {
         display: block;
         padding: 9px 31px 11px 45px;
@@ -671,9 +808,11 @@ nav {
       }
     }
   }
+
   ul li a {
     &:hover {
       color: $orange;
+
       .page-school & {
         color: $green;
       }
@@ -693,26 +832,33 @@ nav {
   right: 0;
   margin-right: -550px;
   z-index: 99;
+
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+
   @include breakpoint($mobile) {
     width: 285px;
     left: 0;
     margin-left: -300px;
   }
 
+
   .filterbutton {
     float: right;
     cursor: pointer;
+
     &:hover {
       color: $orange;
     }
   }
+
   .button-holder {
     margin: 20px 32px 30px;
+
     a.btn {
       width: 100%;
     }
   }
+
   .title {
     display: block;
     font-size: 27px;
@@ -720,18 +866,22 @@ nav {
     color: $heading-link;
     padding: 7px 31px 29px;
     margin: 0;
+
     @include breakpoint($mobile) {
       font-size: 22px;
       line-height: 30px;
       padding: 24px 31px 19px;
     }
   }
+
   .nav-filter {
     @extend %listreset;
+
     li {
       font-size: 18px;
       line-height: 29px;
       padding: 0 31px;
+
       a {
         color: $heading-link;
         text-decoration: none;
@@ -739,15 +889,19 @@ nav {
         padding: 10px 15px;
         display: block;
         margin-bottom: 10px;
+
         @include border-radius(5px);
+
         span {
           display: none;
           float: right;
           margin-top: 6px;
         }
+
         &:hover, &.active {
           color: $orange;
         }
+
         &.active {
           span {
             display: inline-block;
@@ -761,28 +915,35 @@ nav {
 .filter-active {
   .visual {
     left: -430px;
+
     @include breakpoint($mobile) {
       left: 285px;
     }
   }
+
   #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
     left: -430px;
+
     @include breakpoint($mobile) {
       left: 285px;
     }
   }
+
   #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
     width: 100%;
     max-width: none;
   }
+
   .visual .img-holder .caption-frame {
     width: 100%;
     margin: 0;
     left: 0;
     padding: 0 20px;
   }
+
   .filter-slide {
     margin-right: 0;
+
     @include breakpoint($mobile) {
       margin-left: 0;
     }
@@ -792,6 +953,7 @@ nav {
 /* nav active styles */
 .visual, .banner_text_inner, .block-easy-breadcrumb, #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
   @include transition($type: left, $time: 0.2s, $ease: linear);
+
   left: 0;
 }
 
@@ -804,33 +966,42 @@ nav {
   .articles-block, .social-block, .slider-block, #social {
     position: relative;
     left: -430px;
+
     @include breakpoint($mobile) {
       left: -285px;
     }
+
 
     #main2 .action-block {
       margin-left: 0;
     }
   }
+
   //we need to refactor this below code
   #main, .action-block .holder, .forum-block .holder, #footer .holder, .top-header, .banner_text_inner, .block-easy-breadcrumb {
     width: 100%;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
   }
+
   &.node-type-article #content_bottom {
     float: none;
   }
+
   .visual .img-holder .caption-frame {
     width: 100%;
     margin: 0;
     left: 0;
     padding: 0 20px;
   }
+
   .nav-holder {
     right: 0;
   }
+
   li a.menu-opener {
     color: $heading-link;
+
     .icon-Close {
       display: block;
       position: absolute;
@@ -839,18 +1010,23 @@ nav {
       top: 1px;
       color: $orange;
     }
+
     &:after {
       display: none;
     }
+
     .close {
       display: block;
+
       &:hover {
         color: $orange;
       }
+
       @include breakpoint($mobile) {
         display: none;
       }
     }
+
     .menu-text {
       display: none;
     }
@@ -864,7 +1040,9 @@ nav {
   .text-right-section {
     float: right;
     margin-top: 40px;
+
     @include breakpoint($tablet) {}
+
 
     a {
       font-weight: bold;
@@ -873,20 +1051,25 @@ nav {
       text-decoration: underline;
       text-align: right;
       margin-bottom: 5px;
+
       &:hover {
         text-decoration: none;
       }
     }
   }
+
   h2 {
     max-width: 666px;
     margin-bottom: 23px;
+
     @include breakpoint($tablet) {
       max-width: inherit;
     }
   }
+
   p {
     max-width: 666px;
+
     @include breakpoint($tablet) {
       max-width: inherit;
     }
@@ -896,26 +1079,35 @@ nav {
 /* filter search block styles */
 .sort-by {
   float: left;
+
   input[type="submit"] {
     display: none;
   }
+
   label {
     display: none;
   }
+
   select {
     width: 250px;
   }
+
   .search-text {
     @include linear-gradient($menu-grey, $page-background);
+
     @include border-radius(5px);
+
     position: relative;
     padding: 2px;
     min-width: 250px;
     height: 49px;
+
     input[type="text"] {
       width: 100%;
       padding: 12px 21px;
+
       @include border-radius(5px);
+
       border: none;
       font-size: 18px;
       color: $base-text-color;
@@ -930,25 +1122,33 @@ nav {
 
 #header, .top-bar {
   @include transition($type: top, $time: 0.4s, $ease: ease);
+
   .links {
     float: left;
     max-width: 67%;
+
     @extend %listreset;
+
     padding: 5px 0 0;
+
     &.float-right {
       float: right;
+
       @include breakpoint($mobile) {
         float: none;
       }
+
 
       .last-child {
         padding-right: 0;
       }
     }
+
     @include breakpoint($mobile) {
       max-width: 100%;
       text-align: initial;
     }
+
 
     li {
       position: relative;
@@ -956,9 +1156,11 @@ nav {
       line-height: 18px;
       float: left;
       padding: 0 24px 0 19px;
+
       @include breakpoint($tablet) {
         padding: 0 8px;
       }
+
 
       @include breakpoint($mini-mobile) {
         &:nth-child(3) {
@@ -966,11 +1168,13 @@ nav {
         }
       }
 
+
       @include breakpoint($mobile) {
         float: none;
         display: inline-block;
         vertical-align: top;
       }
+
 
       &:after {
         position: absolute;
@@ -980,27 +1184,34 @@ nav {
         left: 0;
         top: 2px;
         background: $menu-grey;
+
         @include breakpoint($mobile) {
           display: none;
         }
       }
+
       &:first-child {
         padding-left: 0;
+
         &:after {
           display: none;
         }
       }
+
       &.mob {
         display: none;
+
         @include breakpoint($mobile) {
           display: inline-block;
         }
       }
+
       &.desktop {
         @include breakpoint($mobile) {
           display: none;
         }
       }
+
       &.get-up {
         &:after {
           @include breakpoint($mobile) {
@@ -1021,23 +1232,28 @@ nav {
       @extend .links;
     }
   }
+
   // User menu
   .header-user-menu {
     ul {
       margin: 0;
       padding: 2px 0 0 0;
+
       li {
         list-style: none;
         padding: 0 6px;
         display: inline;
+
         @include breakpoint($mini-mobile) {
           padding: 2px 0 0 0;
         }
+
 
         a {
           // margin:0;
           // color: $gray;
           text-transform: capitalize;
+
           // vertical-align: middle;
           // &:hover{
           //   text-decoration: underline;
@@ -1068,28 +1284,35 @@ nav {
 
 .header_banner {
   position: relative;
+
   .header_image img {
     width: 100%;
   }
+
   .header_image {
     max-height: 457px;
     overflow: hidden;
   }
+
   .banner_desktop {
     // display:inherit;
     @include breakpoint($mobile) {
       // display:none;
     }
   }
+
   .banner_mobile {
     display: none;
+
     // @include breakpoint($mobile) {
     //   display:inherit;
     // }
  
   }
+
   .banner_text {
     @extent .h1;
+
     padding: 18px 20px;
     margin: 0 0 12px 16px;
     font-weight: normal;
@@ -1098,9 +1321,11 @@ nav {
     color: $heading-link;
     line-height: 100%;
     clear: both;
+
     @include breakpoint($tablet) {
       margin: 0 90px 12px;
     }
+
 
     @include breakpoint($mobile) {
       margin: 5% 33% 0;
@@ -1109,11 +1334,14 @@ nav {
       line-height: normal;
     }
   }
+
   .banner_text:after {
     clear: both;
   }
+
   .banner_sub_text {
     @extent .h4;
+
     vertical-align: top;
     background: $white;
     display: inline-block;
@@ -1122,36 +1350,44 @@ nav {
     font-weight: normal;
     line-height: 100%;
     font-family: $helvetica-cn;
+
     @include breakpoint($tablet) {
       margin: 0 0 0 100px;
     }
+
 
     @include breakpoint($mobile) {
       display: none;
     }
   }
+
   .banner_text_main {
     position: absolute;
     width: 100%;
     z-index: 999;
     top: 24%;
     height: 76%;
+
     @include breakpoint($tablet) {
       top: 15%;
     }
+
 
     @include breakpoint($mobile) {
       top: 30%;
     }
   }
+
   .banner_text_inner {
     max-width: 1080px;
     margin: 0 auto;
   }
+
   .btn- {
     margin: -46px 0 0;
     padding-right: 23px;
   }
+
   .pic-by {
     z-index: 1000;
     position: relative;
@@ -1164,33 +1400,41 @@ nav {
     margin: 0 auto;
     padding-top: 10px;
     padding-bottom: 10px;
+
     @include breakpoint($mobile) {
       text-align: left;
       padding: 10px 20px;
     }
 
+
     a {
       color: $menu-grey;
       font-weight: bold;
       text-decoration: none;
+
       &:hover {
         color: $heading-link;
         text-decoration: underline;
       }
     }
   }
+
   .btn-prev {
     background: $orange;
     -moz-border-radius: 0 5px 5px 0;
     -webkit-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
+
     .icon-Leftarrow {
       font-size: 27px;
       color: $white;
     }
   }
+
   .btn-perv {}
+
   .btn-next {}
+
   &.banner-nav {
     .banner_text {
       @include breakpoint($mobile) {
@@ -1222,17 +1466,19 @@ nav {
 }
 
 // .node-type-topic, .page-node-74566 {
-.node-type-topic, .page-node-74566, .node-type-my-voice-topic, .node-type-basic-page-with-hero, .node-type-article, .node-type-my-voice-blog, .node-type-forum-discussion {
+.node-type-topic, .page-node-74566, .node-type-my-voice-topic, .node-type-basic-page-with-hero, .node-type-article, .node-type-my-voice-blog, .node-type-forum-discussion, .node-type-share-your-story {
   .block-easy-breadcrumb {
     position: absolute;
     top: 18px;
     z-index: 999;
     width: 100%;
+
     .easy-breadcrumb {
       margin: 0 auto;
       max-width: 1080px;
       padding-right: 16px;
       padding-top: 45px;
+
       a {
         font-family: $header-font-family;
         color: $white;
@@ -1242,7 +1488,7 @@ nav {
 }
 
 //overiding the padding on my voice page
-.node-type-basic-page-with-hero, .node-type-forum-discussion {
+.node-type-basic-page-with-hero, .node-type-forum-discussion, .node-type-share-your-story {
   .block-easy-breadcrumb {
     .easy-breadcrumb {
       padding-top: 12px;
@@ -1280,19 +1526,23 @@ nav {
       padding-top: 12px;
     }
   }
+
   .header_banner {
     .banner_text {
       font-size: 70px;
       margin-top: -15px;
+
       @include breakpoint($tablet) {
         font-size: 40px;
       }
+
 
       @include breakpoint($mobile) {
         font-size: 30px;
         margin-top: 10px;
       }
     }
+
     .banner_sub_text {
       @include breakpoint($tablet) {
         font-size: 20px;
@@ -1308,6 +1558,7 @@ nav {
         text-align: center;
       }
     }
+
     &.menu {
       padding-right: 0;
     }
@@ -1325,11 +1576,14 @@ nav {
     background: image-url("top-header-bg.png") no-repeat left $blue-light;
     height: 83px;
     width: 100%;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
+
     .region-image-holder {
       margin: 0 auto;
       max-width: 1080px;
       padding: 10px 20px 10px 20px;
+
       .easy-breadcrumb {
         //padding-top: 18px;
      
@@ -1357,12 +1611,15 @@ nav {
   margin-top: 2px;
   margin-bottom: 2px;
   list-style: none;
+
   @include breakpoint($mobile) {
     padding: 9px 31px 11px 25px;
   }
 
+
   a {
     color: inherit;
+
     &:hover {
       color: $orange;
     }

@@ -14,52 +14,71 @@
 #footer {
   clear: both;
   width: 100%;
+
   // why is this required? It contracts the footer on 
   // basic page with hero large and on voices-spectrum
   // display:table-footer-group;
   display: block;
   height: auto !important;
   background: $base-text-color;
-  position: relative;
+
+  // position: relative;
+  position: absolute;
+  bottom: 0;
+
   //including this to get rid of "Unable to select the calender effect"
   z-index: 0;
+
   .holder {
     position: relative;
     z-index: 9;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
+
     @include container;
+
     @extend %clearfix;
+
     color: $gray;
     padding: 30px 15px;
     font-size: 15px;
     line-height: 1.467em;
+
     @include fontsize(15, 16);
+
     @include breakpoint($mobile) {
       padding: 30px 20px;
     }
   }
+
   h2 {
     font-size: 18px;
     line-height: 22px;
     margin: 0 0 16px;
     color: $gray !important;
+
     @include breakpoint($tablet) {
       font-size: 17px;
     }
   }
+
   .block-title {
     font-family: $helvetica-cn;
   }
+
   .nav {
     ul {
       @extend %listreset;
+
       li {
         font-size: 16px;
         line-height: 20px;
         margin: 0 0 16px;
+
         a {
           color: $gray;
           text-decoration: underline;
+
           &:hover {
             text-decoration: none;
           }
@@ -67,6 +86,7 @@
       }
     }
   }
+
   /* footer logo styles */
   .logo {
     display: block;
@@ -74,8 +94,10 @@
     height: 90px;
     position: relative;
     top: -49px;
+
     a {
       display: block;
+
       img {
         width: 100%;
         height: auto;
@@ -83,47 +105,58 @@
       }
     }
   }
+
   .company-info {
     float: left;
     width: 45%;
     margin-top: -11px;
     font-size: 14px;
     line-height: 24px;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
+
     p {
       margin: 0;
       color: $footer-copyright-new;
       font-size: 15px;
       line-height: 22px;
     }
+
     @include breakpoint($mobile) {
       width: 100%;
       float: none;
       margin: 0 0 30px;
     }
 
+
     a {
       color: $footer-copyright;
       font-weight: normal;
       text-decoration: none;
+
       &:hover {
         color: $white;
       }
     }
+
     .design-by {
       display: block;
       margin-top: 20px;
       color: $footer-copyright;
     }
   }
+
   .social-holder {
     @extend %clearfix;
+
     //margin:26px 0 30px;
     // Moved from general.scss : Anees
     margin: -13px 0 25px;
+
     @include breakpoint($mobile) {
       margin: (-210px) 0 0 0;
     }
+
 
     .title {
       float: left;
@@ -131,29 +164,37 @@
       line-height: 25px;
       color: $footer-copyright;
       margin: 0 19px 0 0;
+
       @include breakpoint($mobile) {
         font-weight: bold;
       }
     }
+
     /* social networks styles */
     .social-networks {
       @extend %listreset;
+
       float: left;
+
       li {
         display: inline-block;
         vertical-align: middle;
         font-size: 20px;
         margin: 0 11px 0 0;
+
         a {
           color: $gray;
           text-decoration: none;
+
           &:hover {
             color: $white;
           }
         }
+
         em {
           display: none;
         }
+
         .icon-YouTube {
           font-size: 23px;
           display: block;
@@ -162,14 +203,18 @@
       }
     }
   }
+
   .right-footer {
     float: right;
     width: 48.6%;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
+
     @include breakpoint($tablet) {
       width: 55%;
       position: none;
     }
+
 
     @include breakpoint($mobile) {
       width: 100%;
@@ -177,17 +222,21 @@
       float: none;
       overflow: hidden;
     }
+
 
     @include breakpoint($not-mobile) {
       margin-top: -88px;
     }
   }
+
   .left-footer {
     float: left;
     width: 45%;
+
     @include breakpoint($tablet) {
       width: 55%;
     }
+
 
     @include breakpoint($mobile) {
       width: 100%;
@@ -195,58 +244,73 @@
       overflow: hidden;
     }
   }
+
   .contact-info {
     float: left;
     width: 31.7%;
     padding: 0 5px 0 0;
+
     @include breakpoint($mobile) {
       width: 50%;
     }
   }
+
   .school-info {
     float: left;
     width: 39%;
     padding: 0 5px 0 0;
+
     @include breakpoint($mobile) {
       display: none;
     }
   }
+
   .web-info {
     float: left;
     width: 29%;
+
     @include breakpoint($mobile) {
       width: 50%;
     }
   }
+
   .title {
     display: block;
     font-size: 27px;
     line-height: 35px;
     color: $heading-link;
+
     @include breakpoint($mobile) {
       font-size: 22px;
       line-height: 30px;
     }
   }
+
   /* social networks styles */
   .social-networks {
     @extend %listreset;
+
     float: left;
+
     li {
       display: inline-block;
       vertical-align: middle;
       font-size: 20px;
       margin: 0 11px 0 0;
+
       a {
         color: $gray;
         text-decoration: none;
+
         &:hover {
           color: $white;
         }
       }
+
       em {
         display: none;
       }
+
       .icon-YouTube {
         font-size: 23px;
         display: block;
@@ -254,16 +318,19 @@
       }
     }
   }
+
   .region-footer-copyright {
     // Social menu
     .social-holder {
       h2 {
         @extend .title;
       }
+
       ul {
         @extend .social-networks;
       }
     }
+
     //Moved from general.scss : Anees
     .block.last.even {
       @include breakpoint($mobile) {
@@ -271,22 +338,27 @@
       }
     }
   }
+
   .region-footer-right {
     @include breakpoint($mobile) {
       margin-top: 45px;
     }
 
+
     ul {
       list-style: outside none none;
       margin: 0;
       padding: 0;
+
       li {
         font-size: 16px;
         line-height: 20px;
         margin: 0 0 16px;
+
         a {
           color: $gray;
           text-decoration: underline;
+
           &:hover {
             text-decoration: none;
           }

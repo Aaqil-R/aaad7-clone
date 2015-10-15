@@ -117,8 +117,7 @@
 <?php endif; ?>
 <?php */ ?>
 
-<div class="top-header">
-  </div>
+
  <?php if ($page['image_holder']): ?>
 <section class="header_banner banner-nav">
     <!-- commented below code because it's hiding the menu on forum page and its an empty div tag -->
@@ -152,6 +151,10 @@
 
 </section> <!-- /highlighted -->
 <?php endif; ?>
+
+<div class="top-header">
+  </div>
+
 <?php if ($page['content_top']): ?>  
   <section class="my-voice-block" id="content_top">
    <div class="holder">
