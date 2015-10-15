@@ -21,10 +21,7 @@
   display: block;
   height: auto !important;
   background: $base-text-color;
-
-  // position: relative;
-  position: absolute;
-  bottom: 0;
+  position: relative;
 
   //including this to get rid of "Unable to select the calender effect"
   z-index: 0;
@@ -365,5 +362,12 @@
         }
       }
     }
+  }
+}
+
+.node-type-share-your-story {
+  #footer {
+    position: absolute;
+    bottom: 0;
   }
 }
