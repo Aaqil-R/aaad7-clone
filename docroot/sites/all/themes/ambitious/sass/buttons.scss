@@ -17,21 +17,29 @@
   position: relative;
   line-height: 29px;
   background: none, repeat, scroll, 0, 0, $orange;
+
   // drop the shadow
   @include box-shadow(0px 6px $orange-dark);
+
   // round the corners
   @include border-radius(5px);
+
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
+
     // displace the button shadow
     @include box-shadow(0px 4px $orange-dark);
   }
+
   &:active {
     top: 6px;
+
     @include box-shadow(0px 0px $orange-dark);
   }
+
   @extend %clearfix;
+
   em {
     position: relative;
     display: inline-block;
@@ -40,6 +48,7 @@
     top: 6px;
     margin-left: 11px;
   }
+
   span {
     .icon-Rightarrow {
       @include breakpoint($tablet) {
@@ -47,95 +56,127 @@
       }
     }
   }
+
   @include breakpoint($mobile) {
     width: 100%;
   }
 
+
   &.btn-green {
     @include box-shadow(0px 6px $green-dark);
+
     background: $green;
+
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
+
       // displace the button shadow
       @include box-shadow(0px 4px $green-dark);
     }
+
     &:active {
       top: 6px;
+
       @include box-shadow(0px 0px $green-dark);
     }
   }
+
   &input[type=submit] {
     border-radius: 5px;
   }
+
   &.btn-pink {
     @include box-shadow(0px 6px $pink-dark);
+
     background: $pink;
+
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
+
       // displace the button shadow
       @include box-shadow(0px 4px $pink-dark);
     }
+
     &:active {
       top: 6px;
+
       @include box-shadow(0px 0px $pink-dark);
     }
   }
+
   &.btn-gray {
     border: 1px solid $menu-grey;
     border-bottom-width: 5px;
     background: $white;
     padding: 5px 22px;
     color: $menu-grey;
+
     &:hover {
       color: $menu-grey;
       text-decoration: none;
     }
+
     &:active, &:focus {
       border-width: 1px;
       margin-top: 4px;
       color: $menu-grey;
     }
+
     &:visited {
       text-decoration: none;
       color: $menu-grey;
     }
   }
+
   &.bt-left {
     margin: 0 0 0 23px;
+
     @include breakpoint($mobile) {
       margin: 0 0 0 11px;
     }
   }
+
   &.btn-transparent {
     background: none;
+
     @include box-shadow(none);
+
     border: 3px solid $white;
+
     &:hover {
       // replace the displacement of the button from the top
       top: 1px;
+
       // displace the button shadow
       @include box-shadow(none);
+
       border: 2px solid $white;
     }
+
     em {
       padding-left: 25px;
     }
+
     @include breakpoint($mobile) {
       font-size: 14px;
       padding: 7px 18px;
+
       em {
         padding-left: 5px;
       }
     }
   }
+
   &.btn-left {
     float: left;
   }
+
   &.btn-right {
     float: right;
   }
+
   .desktop {
     @include breakpoint($mobile) {
       display: none;
@@ -153,22 +194,27 @@ a.btn:hover {
 .footer-button {
   //margin-bottom: 130px;
   margin-bottom: $graphic-padding;
+
   @include breakpoint($mobile) {
     margin-bottom: 30px;
   }
+
 
   .view-footer {
     text-align: center;
     clear: both;
     padding-top: 25px;
+
     @include breakpoint($mobile) {
       margin-bottom: 10px;
     }
+
 
     a.btn {
       // font-family: $base-font-family;
       padding: 9px 30px;
       line-height: 30px;
+
       @include breakpoint($mobile) {
         width: 100%;
         margin-bottom: 25px;
@@ -192,43 +238,58 @@ a.btn:hover {
   // Facebook button
   &.facebook-btn {
     display: none;
+
     @include breakpoint($mobile) {
       display: block;
       margin-top: 20px;
       margin-bottom: 20px;
+
       @include box-shadow(0px 6px $fb-blue-dark);
+
       background: $fb-blue;
+
       &:hover {
         // replace the displacement of the button from the top
         top: 2px;
+
         // displace the button shadow
         @include box-shadow(0px 4px $fb-blue-dark);
       }
     }
   }
+
   // Twitter button
   &.twitter-btn {
     display: none;
+
     @include breakpoint($mobile) {
       display: block;
       margin-top: 20px;
       margin-bottom: 20px;
+
       @include box-shadow(0px 6px $tw-blue-dark);
+
       background: $tw-blue;
+
       &:hover {
         // replace the displacement of the button from the top
         top: 2px;
+
         // displace the button shadow
         @include box-shadow(0px 4px $tw-blue-dark);
       }
     }
   }
+
   &.btn-google {
     @include box-shadow(0px 6px $milano_red);
+
     background: $error-red;
+
     &:hover {
       // replace the displacement of the button from the top
       top: 2px;
+
       // displace the button shadow
       @include box-shadow(0px 4px $milano_red);
     }
@@ -245,6 +306,7 @@ a.btn:hover {
   width: 45px;
   text-align: center;
   color: $pink;
+
   @include breakpoint($mobile) {
     height: 33px;
     width: 34px;
@@ -265,6 +327,7 @@ a.btn:hover {
     margin-bottom: 0px;
   }
 
+
   span.icon-YouTube {
     @include breakpoint(999px) {
       display: none;
@@ -276,6 +339,7 @@ a.btn:hover {
   .btn {
     padding: 4px 19px;
     margin-top: 2px;
+
     @include breakpoint($mobile) {
       margin-top: 0px;
     }
@@ -291,10 +355,13 @@ a.btn:hover {
 
 .btn-facebook {
   @include box-shadow(0px 6px $fb-blue-dark);
+
   background: $fb-blue;
+
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
+
     // displace the button shadow
     @include box-shadow(0px 4px $fb-blue-dark);
   }
@@ -303,10 +370,13 @@ a.btn:hover {
 // Twitter button
 .btn-twitter {
   @include box-shadow(0px 6px $tw-blue-dark);
+
   background: $tw-blue;
+
   &:hover {
     // replace the displacement of the button from the top
     top: 2px;
+
     // displace the button shadow
     @include box-shadow(0px 4px $tw-blue-dark);
   }
@@ -314,10 +384,12 @@ a.btn:hover {
 
 .featured-mobile-btn {
   margin-bottom: 0px;
+
   @include breakpoint($mobile) {
     padding: 0px;
     margin-bottom: 0px;
   }
+
 
   a.btn {
     @include breakpoint($mobile) {
@@ -342,52 +414,70 @@ a.btn:hover {
   padding: 5px 19px;
   font-size: 18px;
   line-height: 28px;
+
   //margin-top:5px;
   border-radius: 5px;
   color: $white;
   text-align: center;
   text-decoration: none;
+
   //border-bottom:5px solid $green-dark;
   background: $green;
+
   @extend %clearfix;
+
   font-weight: normal;
+
   @include box-shadow(0px 5px $green-dark);
+
   font-family: $base-font-family;
+
   @include breakpoint($mobile) {
     padding-top: 7px;
     font-size: 16px;
+
     //margin-top:0px;
   }
+
 
   &:hover {
     // border-bottom-width: 3px;
     top: 2px;
+
     // text-decoration:none;
     // color:$white;
     //top: 2px;
     @include box-shadow(0px 4px $green-dark);
   }
+
   &:active {
     //border-bottom-width:0px;
     top: 6px;
+
     //text-decoration:none;
     color: $white;
+
     @include box-shadow(0px 0px $green-dark);
   }
+
   &:visited {
     text-decoration: none;
     color: $white;
   }
+
   .st-sharethis-counter {
     background: none !important;
     width: 109px;
+
     @include breakpoint($mobile) {
       width: 124px;
     }
 
+
     @include breakpoint($small-mobile) {
       width: 110px;
     }
+
 
     &:after {
       font-size: 18px;
@@ -397,11 +487,13 @@ a.btn:hover {
       float: left;
       margin-top: -22px;
       padding-right: 29px;
+
       @include breakpoint($mobile) {
         margin-top: -23px;
         font-size: 17px;
       }
     }
+
     &:before {
       font-family: 'icomoon';
       speak: none;
@@ -410,6 +502,7 @@ a.btn:hover {
       font-variant: normal;
       text-transform: none;
       line-height: 1;
+
       /* Better Font Rendering =========== */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -430,20 +523,24 @@ a.btn:hover {
     padding: 4px 10px;
     float: left;
     margin-right: 1px;
+
     @include breakpoint($not-desktop) {
       padding: 4px 20px;
     }
   }
+
   .topic-share {
     @include breakpoint($not-mobile) {
       float: left;
       margin-top: 2px;
     }
 
+
     @include breakpoint($all-desktop) {
       float: right;
     }
   }
+
   .st_sharethis_button .stButton {
     padding: 5px 14px;
   }
@@ -471,6 +568,7 @@ a.btn:hover {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   &:after {
     content: "\e60b";
     display: inline-block;
@@ -546,4 +644,11 @@ a.btn:hover {
       color: $gray;
     }
   }
+}
+
+//Courses & Events External Link Button
+.btn-external-link {
+  padding: 9px 30px;
+  line-height: 30px;
+  margin-bottom: 30px;
 }
