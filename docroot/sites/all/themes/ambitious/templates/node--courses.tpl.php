@@ -84,11 +84,11 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
+  <?php //if ($display_submitted): ?>
+   <!--  <div class="submitted"> -->
+      <?php// print $submitted; ?>
+    <!-- </div> -->
+  <?php //endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
@@ -149,6 +149,20 @@
 <?php
   if(isset($content['body'])):
   print render($content['body']);
+  endif;
+?>
+
+<?php
+  $getexternal_link = field_get_items('node', $node ,'field_bsd_tools_integration');
+  $viewexternal_link = field_view_value('node', $node ,'field_bsd_tools_integration'
+  , $getexternal_link[0]);
+
+  if(isset($content['field_bsd_tools_integration'])):
+  //$external_link = $content['field_bsd_tools_integration']['#object']->field_bsd_tools_integration['und'][0]['safe_value'];
+  //print render($viewexternal_link);
+?>
+  <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> External Link </a>
+<?php
   endif;
 ?>
 
