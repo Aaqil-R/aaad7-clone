@@ -117,7 +117,7 @@
   }
 }
 
-//node events new styles
+//node events & courses new styles
 .node-type-event, .node-type-course, .node-type-webform {
   #wrapper {
     background: $white;
@@ -148,6 +148,16 @@
       fieldset {
         float: none;
       }
+    }
+  }
+}
+
+// events & courses webform
+.node-event, .node-course {
+  #edit-submitted-agree-condition {
+    input#edit-submitted-agree-condition-1 {
+      float: left;
+      margin: 8px;
     }
   }
 }
