@@ -117,14 +117,14 @@
   }
 }
 
-//node events & courses new styles
-.node-type-event, .node-type-course, .node-type-webform {
+//node events / courses / volunteer / newsletter new styles
+.node-type-event, .node-type-course, .node-type-volunteer, .node-type-newsletter, .node-type-webform {
   #wrapper {
     background: $white;
   }
 }
 
-.node-event, .node-course, .node-type-webform {
+.node-event, .node-course, .node-type-volunteer, .node-type-newsletter, .node-type-webform {
   background: $white;
 
   form {
@@ -152,21 +152,33 @@
   }
 }
 
-// events & courses webform
-.node-event, .node-course {
+// events / courses / volunteer / newsletter webform
+.node-event, .node-course, .node-type-volunteer, .node-type-newsletter {
   #edit-submitted-agree-condition {
     input#edit-submitted-agree-condition-1 {
       float: left;
       margin: 8px;
     }
   }
+
+  .form-actions {
+    input.webform-submit {
+      margin-top: 20px;
+    }
+  }
+
+  .form-textarea-wrapper {
+    width: 80%;
+  }
 }
 
-// SHARE YOUR STORY PAGE
-.node-type-share-your-story #content-area {
-  background: white;
-  padding: 1.5em;
-  margin-bottom: 3em;
-  border: 1px solid $gray;
-  clear: both;
+// SHARE YOUR STORY / VOLUNTEER / NEWSLETTER PAGE
+.node-type-share-your-story, .node-type-volunteer, .node-type-newsletter {
+  #content-area {
+    background: white;
+    padding: 1.5em;
+    margin-bottom: 3em;
+    border: 1px solid $gray;
+    clear: both;
+  }
 }
