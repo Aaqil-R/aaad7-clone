@@ -161,7 +161,7 @@
   //$external_link = $content['field_bsd_tools_integration']['#object']->field_bsd_tools_integration['und'][0]['safe_value'];
   //print render($viewexternal_link);
 ?>
-  <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> External Link </a>
+  <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
 <?php
   endif;
 ?>
