@@ -105,7 +105,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//get the earlier values of the events
 		//print_r(print_event_list($result3));
 
-
+		//dpm($contenttype);
 		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
 		if($result3['success_count'] == 1)
 		{
@@ -186,20 +186,21 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			    'send_welcome' => false,
 			    )
 			);
+			//dpm("I came here also");
 		}
 		else{
 			echo "user not found";
 			//bit of modification done from the normal way. in order to add the new user
 			$name = '';
-			if($contenttype == 'events'){
+			if($contenttype == 'event'){
 				$name = 'Events';
 			}
-			elseif($contenttype == 'courses')
+			elseif($contenttype == 'course')
 			{
 				$name = 'Courses';
 			}
 
-			elseif($contenttype == 'webform')
+			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
 			{
 				$name = 'News Letters';
 			}
@@ -237,6 +238,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			    'send_welcome'      => false,
 			    )
 			);
+			//dpm("I am here");
 		}
 		//end of the new codes
 	}
