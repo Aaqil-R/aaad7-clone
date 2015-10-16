@@ -180,7 +180,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'city'=>$city,
 			        'country'=>$country
 			        ),
-			   	'double_optin' => false,
+			   	'double_optin' => true,
 			    'update_existing' => true,
 			    'replace_interests' => true,
 			    'send_welcome' => false,
@@ -231,7 +231,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'city'=>$city,
 			        'country'=>$country
 			        ),
-			    'double_optin'      => false,
+			    'double_optin'      => true,
 			    'update_existing'   => true,
 			    'replace_interests' => true,
 			    'send_welcome'      => false,
