@@ -21,7 +21,7 @@ function get_unpublished_items($contenttype){
 //returns the content types as an array which have more than 0 unpublished items
 function get_content_types(){
 	//define content types to which we need to find the unpublished items
-	$contenttypes = array("job_vacancy","events","courses","take_action","topic","my_voice_blog");
+	$contenttypes = array("job_vacancy","event","course","take_action","topic","my_voice_blog");
 	$arrlength = count($contenttypes);
 
 	//array which will store the content name and unpublished items
@@ -73,11 +73,11 @@ function get_user_roles($contenttype){
 			array_push($userrolearray, 'HR approver');
 			break;
 		
-		case 'events':
+		case 'event':
 			array_push($userrolearray, 'Events approver');
 			break;
 
-		case 'courses':
+		case 'course':
 			array_push($userrolearray, 'Training Approver','Project Development Approver');
 			break;
 
@@ -128,12 +128,12 @@ function create_mails($email,$contentname){
 			$content = 'vacancies';
 			break;
 		
-		case 'events':
+		case 'event':
 			$link = '/event-approval';
 			$content = 'events';
 			break;
 
-		case 'courses':
+		case 'course':
 			$link = '/courses-approval';
 			$content = 'courses';
 			break;

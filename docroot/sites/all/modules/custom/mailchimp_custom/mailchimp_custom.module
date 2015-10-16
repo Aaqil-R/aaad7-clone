@@ -119,16 +119,16 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 			//dpm($eventlist);
 			//check for the event type and add the event to the correct array
-			if($contenttype == 'events'){
+			if($contenttype == 'event'){
 				//dpm("i am a event");
 				array_push($events, $newevent);
 			}
-			elseif($contenttype == 'courses')
+			elseif($contenttype == 'course')
 			{
 				// dpm("i am a course");
 				array_push($courses, $newevent);
 			}
-			elseif($contenttype == 'webform')
+			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
 			{
 				// dpm("i am a course");
 				array_push($news, $newevent);
