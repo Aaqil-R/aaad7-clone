@@ -916,3 +916,74 @@ div.modal-forms-modal-content .form-item label {
 .field-hide {
   display: none;
 }
+
+//Course, Events, Volunteer, Newsletter & Share Your Story Webforms
+.node-event, .node-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform {
+  .webform-component-number,
+  .webform-component-textfield,
+  .webform-component-email,
+  .webform-component-textarea {
+    input[type=submit]
+    , input[type=text]
+    , input[type=search]
+    , input[type=tel]
+    , input[type=password]
+    , input[type=email]
+    , input[type=file]
+    , textarea {
+      clear: both;
+      width: 66.6%;
+      border-radius: 5px;
+
+      @include border-radius(5px);
+
+      font-size: 18px;
+      border-bottom: 2px solid;
+      border-color: $mercury;
+
+      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+
+      margin-bottom: 1em;
+      padding: 12px 23px;
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+
+      &:focus {
+        outline: none;
+        color: #2A2E31;
+
+        //border: 2px solid #FBB900 !important;
+        border-color: #FBB900 !important;
+        box-shadow: inset 1px 1px 2px #FBB900 !important;
+      }
+
+      &.error {
+        border: 2px solid $error-border;
+      }
+    }
+  }
+
+  .webform-component-textarea {
+    textarea {
+      margin-bottom: 0;
+    }
+
+    .grippie {
+      width: 66.6%;
+    }
+  }
+
+  .form-actions {
+    margin: 20px 0;
+  }
+
+  #edit-submitted-agree-condition {
+    input#edit-submitted-agree-condition-1 {
+      float: left;
+      margin: 8px;
+    }
+  }
+}
