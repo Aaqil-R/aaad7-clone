@@ -4,17 +4,20 @@
   #wrapper {
     background: $base-background-color;
   }
+
   #content-header {
     .title {
       display: block;
     }
   }
+
   #content-area {
     header {
       .submitted {
         display: none;
       }
     }
+
     .field-items {
       padding-bottom: 20px;
     }
@@ -35,6 +38,7 @@
     //margin-top: 1.5em; this is done in visual now line 16
  
   }
+
   // hide the title
   h1.title {
     display: none;
@@ -69,6 +73,7 @@
     ul {
       list-style: none;
       padding-left: 0px;
+
       //to remove the default padding that gets applied.
    
     }
@@ -81,6 +86,7 @@
     float: left;
     display: inline-block;
   }
+
   .views-exposed-widget {
     input {
       border-radius: 5px;
@@ -91,48 +97,68 @@
       box-shadow: inset 1px 1px 2px #707070;
       padding: 12px 23px;
     }
+
     .description {
       display: none;
     }
+
     .container-inline-date {
       fieldset {
         margin-right: 10px;
       }
     }
   }
+
   .date-padding {
     padding: 0px;
+
     //padding-left: 10px;
  
   }
 }
 
-//node events new styles
-.node-type-events, .node-type-courses ,.node-type-webform {
+//node events / courses / volunteer / newsletter new styles
+.node-type-event, .node-type-course, .node-type-volunteer, .node-type-newsletter, .node-type-webform {
   #wrapper {
     background: $white;
   }
 }
 
-.node-events, .node-courses ,.node-type-webform {
+.node-event, .node-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .node-type-webform {
   background: $white;
+
   form {
     label[for="edit-submitted-country"] {
       display: block;
+
       //float: left;
    
     }
+
     .form-item {
       input {
         float: none;
         display: block;
       }
+
       input[type="radio"], input[type="checkbox"] {
         display: inline;
       }
+
       fieldset {
         float: none;
       }
     }
   }
 }
+
+// SHARE YOUR STORY / VOLUNTEER / NEWSLETTER PAGE
+// .node-type-share-your-story, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns {
+//   #content-area {
+//     background: white;
+//     padding: 1.5em;
+//     margin-bottom: 3em;
+//     border: 1px solid $gray;
+//     clear: both;
+//   }
+// }

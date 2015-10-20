@@ -794,6 +794,25 @@ function ambitious_preprocess_page(&$vars) {
       $vars['captiontwo'] = $viewitemscaption2;    
     }
   }
+// rendering fields of "share-your-story"
+  if($currentNode) {
+    if($currentNode->type == "share_your_story")
+      {
+        $node = node_load($currentNode->nid);
+          // first name
+          $getfirstname = field_get_items('node', $node ,'field_first_name');
+          $viewfirstname = field_view_value('node', $node ,'field_first_name'
+            , $getfirstname[0]);
+          $vars['first_name'] = $viewfirstname;
+
+          // last name
+          $getlastname = field_get_items('node', $node ,'field_last_name');
+          $viewlastname = field_view_value('node', $node ,'field_last_name'
+            , $getlastname[0]);
+          $vars['last_name'] = $viewlastname;
+
+      }
+  }
 
   if (arg(0) == 'header') { 
     $vars['theme_hook_suggestions'][] = 'page__bsd_header';
@@ -803,6 +822,9 @@ function ambitious_preprocess_page(&$vars) {
   }
 
 }
+
+
+
 
 function ambitious_form_element($variables) {
   

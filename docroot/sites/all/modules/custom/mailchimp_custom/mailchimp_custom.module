@@ -105,7 +105,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//get the earlier values of the events
 		//print_r(print_event_list($result3));
 
-
+		//dpm($contenttype);
 		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
 		if($result3['success_count'] == 1)
 		{
@@ -114,22 +114,35 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			$events = $eventlist['events'];
 			$courses = $eventlist['courses'];
 			$news = $eventlist['news'];
+			$volunteer = $eventlist['volunteer'];
+			$campaigns = $eventlist['campaigns'];
 
 			//dpm($eventlist);
 			//check for the event type and add the event to the correct array
-			if($contenttype == 'events'){
+			if($contenttype == 'event'){
 				//dpm("i am a event");
 				array_push($events, $newevent);
 			}
-			elseif($contenttype == 'courses')
+			elseif($contenttype == 'course')
 			{
 				// dpm("i am a course");
 				array_push($courses, $newevent);
 			}
-			elseif($contenttype == 'webform')
+			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
 			{
 				// dpm("i am a course");
 				array_push($news, $newevent);
+			}
+			//newset of codes
+			elseif($contenttype == 'volunteer')
+			{
+				// dpm("i am a volunteer");
+				array_push($volunteer, $newevent);
+			}
+			elseif($contenttype == 'campaigns')
+			{
+				// dpm("i am a course");
+				array_push($campaigns, $newevent);
 			}
 			//update the current user
 			$result = $MailChimp->call('/lists/update-member', array(
@@ -151,6 +164,14 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			                'name' => 'News Letters',
 			                'groups' => $news
 			                ),
+			            3 => array(
+			                'name' => 'Volunteer',
+			                'groups' => $volunteer
+			                ),
+			            4 => array(
+			                'name' => 'Campaign',
+			                'groups' => $campaigns
+			                ),
 			            ),
 			        'phone'=>$phonenumber,
 			        'postcode'=>$postcode,
@@ -159,31 +180,37 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'city'=>$city,
 			        'country'=>$country
 			        ),
-			   	'double_optin' => false,
+			   	'double_optin' => true,
 			    'update_existing' => true,
 			    'replace_interests' => true,
 			    'send_welcome' => false,
 			    )
 			);
+			//dpm("I came here also");
 		}
 		else{
 			echo "user not found";
 			//bit of modification done from the normal way. in order to add the new user
 			$name = '';
-			if($contenttype == 'events'){
-				// dpm("i am a event");
+			if($contenttype == 'event'){
 				$name = 'Events';
 			}
-			elseif($contenttype == 'courses')
+			elseif($contenttype == 'course')
 			{
-				// dpm("i am a course");
 				$name = 'Courses';
 			}
 
-			elseif($contenttype == 'webform')
+			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
 			{
-				// dpm("i am a course");
 				$name = 'News Letters';
+			}
+			elseif($contenttype == 'volunteers')
+			{
+				$name = 'Volunteer';
+			}
+			elseif($contenttype == 'campaigns')
+			{
+				$name = 'Campaign';
 			}
 			//create a new user
 			$result = $MailChimp->call('lists/subscribe', array(
@@ -205,12 +232,13 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'city'=>$city,
 			        'country'=>$country
 			        ),
-			    'double_optin'      => false,
+			    'double_optin'      => true,
 			    'update_existing'   => true,
 			    'replace_interests' => true,
 			    'send_welcome'      => false,
 			    )
 			);
+			//dpm("I am here");
 		}
 		//end of the new codes
 	}
@@ -236,10 +264,18 @@ function print_event_list($result3){
 		elseif($group['name'] == 'News Letters'){
 			$subscribed_news = get_subscribed_events($subscribed_list);
 		}
+		elseif($group['name'] == 'Volunteer'){
+			$subscribed_volunteers = get_subscribed_events($subscribed_list);
+		}
+		elseif($group['name'] == 'Campaign'){
+			$subscribed_campaign = get_subscribed_events($subscribed_list);
+		}
 	}
 	$total_events['events']=$subscribed_events;
 	$total_events['courses']=$subscribed_courses;
 	$total_events['news']=$subscribed_news;
+	$total_events['volunteer']=$subscribed_volunteers;
+	$total_events['campaigns']=$subscribed_campaign;
 	//print_r($total_events);
 	return $total_events;
 };
@@ -265,5 +301,6 @@ function get_subscribed_events($array){
 // 	return $total_events;
 // };
 
+//TEST COMMIT
 
 ?>
