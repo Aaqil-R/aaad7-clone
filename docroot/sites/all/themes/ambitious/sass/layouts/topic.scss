@@ -11,9 +11,11 @@ body.sidebar {
     max-width: none;
     padding: 0;
   }
+
   #sidebar, #sidebar:before {
     width: 25%;
   }
+
   #sidebar {
     float: left;
     padding-top: 5em;
@@ -21,23 +23,28 @@ body.sidebar {
     font-size: 1.2em;
     min-height: 16em;
     letter-spacing: -1px;
+
     ul {
       list-style: none;
       float: right;
+
       a {
         padding: 0.8em 1.5em 0.8em 2.5em;
         display: block;
         color: $shuttle_gray_dark;
         text-align: left;
+
         &.active {
           background: $white;
           color: inherit;
         }
+
         &:hover {
           color: inherit;
         }
       }
     }
+
     &:before {
       content: '';
       position: absolute;
@@ -46,10 +53,12 @@ body.sidebar {
       z-index: -1;
       left: 0;
       background: $porcelain;
+
       @include breakpoint($mobile) {
         content: none;
       }
     }
+
     @include breakpoint($mobile) {
       width: 100%;
       padding: 1em;
@@ -70,40 +79,51 @@ body.profile .top-header {
 // start #comments
 #comments {
   clear: both;
+
   .ajax-progress, .ajax-progress-throbber,
   .throbber {
     position: absolute;
   }
+
   padding-top: 2em;
+
   .comment {
     margin: 2em 0;
     clear: both;
     text-align: left;
   }
+
   .profile-picture {
     float: none;
   }
+
   h4 {
     font-size: 1.1em;
     margin: 0.3em 0;
+
     a {
       text-decoration: none;
     }
   }
+
   .comment-left {
     float: left;
+
     ul {
       @extend %listreset;
     }
+
     .quote {
       display: none;
     }
   }
+
   .time-ago {
     em {
       font-style: normal;
     }
   }
+
   .comment-body {
     padding: 1.4em 2em;
     border: 2px solid $base-form-text-color;
@@ -111,6 +131,7 @@ body.profile .top-header {
     font-size: 1.2em;
     line-height: 1.4em;
     position: relative;
+
     &:before {
       background: image-url("comment-tip-left.png") 0 0 no-repeat;
       width: 26px;
@@ -122,8 +143,10 @@ body.profile .top-header {
       top: 16px;
     }
   }
+
   @include breakpoint($mobile) {
     padding: 0;
+
     //overflow-x: scroll;
     //overflow-y: hidden;
     //Above two codes were commented
@@ -132,17 +155,20 @@ body.profile .top-header {
     .comment {
       vertical-align: top;
     }
+
     .profile-picture {
       float: left;
       margin: 0 1em 1.5em 0;
       width: 35%;
       height: auto;
     }
+
     .comment-left {
       float: none;
       margin-bottom: 1em;
       width: 100%;
     }
+
     .comment-body {
       border: none;
       margin: 0;
@@ -150,6 +176,7 @@ body.profile .top-header {
       clear: both;
       height: 100%;
       white-space: normal;
+
       &:before {
         content: none;
       }
@@ -161,22 +188,28 @@ body.profile .top-header {
 
 .social-networks {
   @extend %listreset;
+
   float: left;
+
   li {
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
     margin: 0 11px 0 0;
+
     a {
       color: $gray;
       text-decoration: none;
+
       &:hover {
         color: $white;
       }
     }
+
     em {
       display: none;
     }
+
     .icon-YouTube {
       font-size: 23px;
       display: block;
@@ -189,6 +222,7 @@ body.profile .top-header {
 div.messages.status {
   .krumo-root {
     color: $heading-link;
+
     a {
       color: $heading-link;
     }
@@ -211,9 +245,11 @@ a.video_bt, .isvideo {
   a.video_bt, .isvideo {
     display: inherit;
   }
+
   .notvideo {
     display: none;
   }
+
   .video-icon {
     position: absolute;
     display: inherit;
@@ -247,9 +283,11 @@ a.video_bt, .isvideo {
   .text-right-section {
     float: right;
     margin-top: 40px;
+
     br {
       display: none;
     }
+
     @include breakpoint($mobile) {
       float: none;
       display: block;
@@ -258,6 +296,7 @@ a.video_bt, .isvideo {
       clear: both;
     }
 
+
     a {
       font-weight: bold;
       font-size: 20px;
@@ -265,34 +304,42 @@ a.video_bt, .isvideo {
       text-decoration: underline;
       text-align: right;
       margin-bottom: 5px;
+
       @include breakpoint($mobile) {
         text-align: left;
       }
+
 
       &:hover {
         text-decoration: none;
       }
     }
+
     .btn {
       padding: 10px 20px;
       margin-top: -45px;
       font-weight: normal;
       text-decoration: none;
       margin-bottom: 46px;
+
       @include breakpoint($mobile) {
         text-align: center;
       }
     }
   }
+
   h2 {
     max-width: 666px;
     margin-bottom: 23px;
+
     @include breakpoint($tablet) {
       max-width: inherit;
     }
   }
+
   p {
     max-width: 666px;
+
     @include breakpoint($tablet) {
       max-width: inherit;
     }
@@ -317,18 +364,22 @@ a.video_bt, .isvideo {
   &.posts-columns {
     max-width: 1080px;
     width: 100%;
+
     .post {
       width: 31%;
       margin: 0 1% 30px 1%;
+
       @include breakpoint($tablet) {
         width: 40%;
       }
+
 
       @include breakpoint($mobile) {
         width: 100%;
       }
     }
   }
+
   .text-block.post {
     padding: 0;
     background: none;
@@ -337,9 +388,11 @@ a.video_bt, .isvideo {
     float: left;
     margin: 0 0 31px 0;
   }
+
   .feature-holder {
     display: none;
   }
+
   .featured-button {
     .feature-holder {
       display: inherit;
@@ -350,18 +403,25 @@ a.video_bt, .isvideo {
 /* LOAD MORE*/
 .pager-load-more {
   @extend %listreset;
+
   padding: 29px 0 61px;
+
   li {
     text-align: center;
+
     a {
       font-size: 0;
       color: $gray;
       background-color: $page-background;
+
       &:before {
         font-size: 101px;
+
         @extend [class*=" icon-"];
+
         @extend .icon-Downarrow;
       }
+
       &:hover {
         color: $heading-link;
         text-decoration: none;
@@ -376,37 +436,47 @@ a.video_bt, .isvideo {
   h1.title {
     display: none;
   }
+
   .visual .img-holder .caption-frame .caption {
     padding: 0;
   }
+
   .visual .img-holder .caption-frame .caption .title {
     right: inherit;
   }
+
   #social {
     float: left;
     width: 100%;
   }
+
   .visual .btn-perv {
     .icon-Leftarrow {
       margin-left: -5px;
     }
+
     .text-area {
       margin-left: -137px;
     }
   }
+
   .visual .btn-next .text-area {
     margin-right: -140px;
   }
+
   .visual .btn-perv:hover .text-area {
     margin-left: 0;
   }
+
   .visual .btn-next:hover .text-area {
     margin-right: 0;
   }
+
   @include breakpoint($mobile) {
     .visual .btn-next .icon-Rightarrow {
       padding-right: 30px;
     }
+
     .visual .img-holder .caption-frame .caption .title {
       font-size: 19px;
     }
@@ -418,33 +488,42 @@ a.video_bt, .isvideo {
 /* SEARCH */
 .search-text {
   @include linear-gradient($menu-grey, $page-background);
+
   @include border-radius(5px);
+
   position: relative;
   padding: 2px;
   min-width: 250px;
+
   //width: 379px;
   //size of the search form when the grid & list view is added
   width: 250px;
   float: left;
   margin-right: 7px;
   height: 49px;
+
   @include breakpoint($desktop) {
     width: 250px;
   }
+
 
   @include breakpoint($tablet) {
     width: 100%;
     margin-bottom: 20px;
   }
 
+
   @include breakpoint($all-desktop) {
     margin-right: 25px;
   }
 
+
   input[type="text"] {
     width: 100%;
     padding: 12px 21px;
+
     @include border-radius(5px);
+
     border: none;
     font-size: 18px;
     color: $base-text-color;
@@ -460,9 +539,11 @@ a.video_bt, .isvideo {
   font-size: 28px;
   margin-left: -52px;
   position: relative;
+
   &:hover {
     color: $orange;
   }
+
   input[type="submit"] {
     display: inherit;
     width: 100%;
@@ -490,20 +571,25 @@ a.video_bt, .isvideo {
   right: 0;
   margin-right: -550px;
   z-index: 9999;
+
   @include box-shadow(0 2px 7px rgba(24, 24, 24, 0.5));
+
   @include breakpoint($mobile) {
     width: 285px;
     left: 0;
     margin-left: -300px;
   }
 
+
   .filterbutton {
     float: right;
     cursor: pointer;
+
     &:hover {
       color: $orange;
     }
   }
+
   .title {
     display: block;
     font-size: 27px;
@@ -511,14 +597,17 @@ a.video_bt, .isvideo {
     color: $heading-link;
     padding: 7px 31px 29px;
     margin: 0;
+
     @include breakpoint($mobile) {
       font-size: 22px;
       line-height: 30px;
       padding: 24px 31px 19px;
     }
   }
+
   .nav-filter {
     padding: 0 31px;
+
     .form-type-bef-checkbox {
       width: 100%;
       font-size: 18px;
@@ -529,34 +618,43 @@ a.video_bt, .isvideo {
       padding: 10px 15px;
       display: block;
       margin-bottom: 10px;
+
       @include border-radius(5px);
+
       span {
         display: none;
         float: right;
         margin-top: 6px;
       }
+
       &.active {
         span {
           display: inline-block;
         }
       }
+
       input[type=checkbox] {
         display: none;
       }
+
       label {
         display: block;
         padding-right: 10px;
         cursor: pointer;
       }
+
       &.checked, &.highlight {
         color: $orange;
         position: relative;
         line-height: 29px;
+
         @extend .icon-Tick;
+
         &:before {
           position: absolute;
           right: 15px;
           float: none;
+
           @extend [class^="icon-"];
         }
       }
@@ -570,11 +668,14 @@ html.no-touch .form-type-bef-checkbox {
     color: $orange;
     position: relative;
     line-height: 29px;
+
     @extend .icon-Tick;
+
     &:before {
       position: absolute;
       right: 15px;
       float: none;
+
       @extend [class^="icon-"];
     }
   }
@@ -583,28 +684,35 @@ html.no-touch .form-type-bef-checkbox {
 .filter-active {
   .visual {
     margin: 0 0 0 -430px;
+
     @include breakpoint($mobile) {
       margin-left: 285px;
     }
   }
+
   #main, .action-block, .forum-block, #footer .holder, #main2, .top-header {
     margin-left: -430px;
+
     @include breakpoint($mobile) {
       margin-left: 285px;
     }
   }
+
   #main, .action-block .holder, .forum-block .holder, #footer .holder, #main2 section.article, .top-header {
     width: 100%;
     max-width: none;
   }
+
   .visual .img-holder .caption-frame {
     width: 100%;
     margin: 0;
     left: 0;
     padding: 0 20px;
   }
+
   .filter-slide {
     margin-right: 0;
+
     @include breakpoint($mobile) {
       margin-left: 0;
     }
@@ -632,15 +740,20 @@ html.no-touch .form-type-bef-checkbox {
   .throbber {
     position: absolute;
   }
+
   @extend body.sidebar;
+
   @extend body.profile;
+
   .profile-body {
     background: $white;
     padding-bottom: 30px;
+
     @include breakpoint($mobile) {
       padding: 2em 20px;
       margin: auto;
     }
+
 
     .tabs {
       li {
@@ -652,14 +765,17 @@ html.no-touch .form-type-bef-checkbox {
             margin-top: -12px;
             padding-bottom: 24px;
           }
+
           padding-top: 14px;
         }
+
         a.active {
           border-color: $page-background;
         }
       }
     }
   }
+
   .profile-info {
     .user-picture {
       float: left;
@@ -667,9 +783,12 @@ html.no-touch .form-type-bef-checkbox {
       margin-right: 4em;
     }
   }
+
   .quicktabs_main {
     @extend #comments;
+
     min-height: 350px;
+
     @include breakpoint($mobile) {
       margin-top: 30px;
     }
@@ -680,6 +799,7 @@ html.no-touch .form-type-bef-checkbox {
   .feature-holder {
     display: none;
   }
+
   .feature-row {
     .feature-holder {
       display: inherit;
@@ -698,6 +818,7 @@ html.no-touch .form-type-bef-checkbox {
       bottom: 8px;
       left: 11px;
       background: #f15500;
+
       .icon-Featured {
         font-size: 24px;
         padding: 6px 0 0;
@@ -709,6 +830,7 @@ html.no-touch .form-type-bef-checkbox {
         text-align: center;
         color: #f15500;
       }
+
       .text {
         display: none;
         float: left;
@@ -737,10 +859,12 @@ html.no-touch .form-type-bef-checkbox {
   display: inline-block;
   height: 48px;
   margin-top: 6px;
+
   @include breakpoint($mobile) {
     float: none;
     width: 100%;
     padding-bottom: 40px;
+
     li {
       padding-right: 0;
       width: 100%;
@@ -751,6 +875,7 @@ html.no-touch .form-type-bef-checkbox {
 
 .view-id-stream.view-display-id-stream_forum_page .post {
   @extend %clearfix;
+
   @include breakpoint($mobile) {
     float: left;
   }
@@ -758,8 +883,10 @@ html.no-touch .form-type-bef-checkbox {
 
 .page-user .top-header .top-header-inner .page-links {
   letter-spacing: inherit;
+
   a {
     text-decoration: underline;
+
     &:hover {
       text-decoration: none;
     }
@@ -770,6 +897,7 @@ html.no-touch .form-type-bef-checkbox {
   .title {
     display: none;
   }
+
   .forum_replay {
     margin-top: 10px;
   }
@@ -785,6 +913,7 @@ html.no-touch .form-type-bef-checkbox {
 .node-type-forum-discussion, .page-comment-reply, .page-comment {
   .comment-block {
     @extend %clearfix;
+
     padding: 35px 50px 37px 44px;
     position: relative;
     margin: 0 0 30px;
@@ -792,84 +921,107 @@ html.no-touch .form-type-bef-checkbox {
     border: 1px solid $gray;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
     #edit-author--2 {
       label {
         float: left;
         width: auto;
       }
+
       .form-element {
         background: none;
+
         /* comment code set removed by amalan
         margin-left: 10px;
         margin-top: 0; */
       }
     }
+
     @include breakpoint($mobile) {
       padding: 27px 15px;
     }
 
+
     h4 {
       margin: 0 0 17px;
     }
+
     .form-required {
       color: $orange;
     }
+
     .comment-form {
       font-size: 18px;
       color: $menu-grey;
+
       .form-item-subject {
         display: none;
       }
+
       .required {
         color: $orange;
       }
+
       label {
         float: left;
         width: 100%;
+
         &.label-block {
           width: 100%;
         }
       }
+
       .jcf-select {
         width: 100%;
         border: none;
       }
+
       fieldset {
         margin: 0 0 20px 0;
         float: none;
+
         @include breakpoint($mobile) {
           margin: 0 0 10px 0;
         }
+
 
         fieldset {
           margin: 0;
           padding: 0;
         }
+
         .filter-help {
           float: left;
           width: 100%;
           padding: 0;
           margin: 0 0 20px 0;
+
           a {
             padding: 0;
           }
         }
       }
+
       strong {
         color: $heading-link;
         margin-left: 10px;
+
         @include breakpoint($tablet) {
           font-weight: normal;
         }
       }
+
       /* new code set to style the comment box*/
       .form-element {
         .username {
           margin-left: 5px;
         }
+
         @include linear-gradient($menu-grey, $page-background);
+
         @include border-radius(5px);
       }
+
       /*Comment end of new code set*/
       /* commented to check whether this code set actualy have any effect on the comment box.
       .form-element{
@@ -894,19 +1046,25 @@ html.no-touch .form-type-bef-checkbox {
 
       */
     }
+
     .form-actions {
       #edit-submit, #edit-preview {
         @extend .btn;
+
         @extend .btn-gray !optional;
+
         &:hover {
           color: $white;
         }
       }
+
       margin: 0;
+
       @include breakpoint($mobile) {
         .btn.btn-left {
           margin-left: 6px;
           padding: 3px 15px;
+
           &:first-child {
             margin-left: 0;
           }
@@ -914,49 +1072,62 @@ html.no-touch .form-type-bef-checkbox {
       }
     }
   }
+
   .comment-list {
     h4 {
       @include fontsize(23, 16);
+
       a {
         font-size: 16px;
         text-decoration: underline;
         margin-left: 0;
       }
     }
+
     ul.comment-listing {
       @extend %listreset;
+
       position: relative;
+
       &.children {
         margin-left: 30px;
       }
+
       li {
         .comment-left {
           float: left;
           width: 109px;
           font-size: 13px;
+
           img {
             @include border-radius(5px);
+
             overflow: hidden;
             margin: 0 0 4px 0;
             max-width: 100px;
           }
+
           a {
             text-decoration: underline;
             font-weight: bold;
             color: $base-link-color;
+
             &:hover {
               text-decoration: none;
             }
           }
+
           cite {
             margin: 0 0 7px 0;
             font-style: normal;
             display: block;
           }
+
           time {
             margin: 0 0 17px 0;
           }
         }
+
         .comment-right {
           position: relative;
           border: 2px solid $border-color;
@@ -965,9 +1136,11 @@ html.no-touch .form-type-bef-checkbox {
           font-size: 16px;
           background: $white;
           word-wrap: break-word;
+
           @include breakpoint($mobile) {
             padding: 15px;
           }
+
 
           &:before {
             content: "";
@@ -978,24 +1151,31 @@ html.no-touch .form-type-bef-checkbox {
             top: 15px;
             height: 32px;
           }
+
           .links {
             margin-bottom: 17px;
           }
+
           ul {
             @extend %clearfix;
+
             @extend %listreset;
+
             li {
               float: left;
               margin: 0 11px 0 0;
+
               a {
                 text-decoration: underline;
                 font-weight: bold;
+
                 &:hover {
                   text-decoration: none;
                 }
               }
             }
           }
+
           .quote {
             border: none;
             padding: 0;
@@ -1008,6 +1188,7 @@ html.no-touch .form-type-bef-checkbox {
 
 fieldset {
   float: left;
+
   //what is this for? it's applying to every fieldset on the site!
   //width: 100%;
 }
@@ -1017,6 +1198,7 @@ fieldset {
     float: left;
     width: 100%;
     margin: 5px 0px 36px 0px;
+
     @include breakpoint($mobile) {
       margin: 0px;
     }
@@ -1031,15 +1213,19 @@ fieldset {
 
 .feature-holder {
   overflow: hidden;
+
   .icon-Featured {
     position: relative;
     z-index: 999;
   }
+
   .text {
     display: block !important;
     margin-left: -134px;
+
     @include transition($type: all, $time: 0.4s, $ease: ease);
   }
+
   &:hover {
     .text {
       margin-left: 0px;
@@ -1064,12 +1250,15 @@ fieldset {
     margin: 0;
     height: 108px;
     padding-top: 6px;
+
     p {
       padding-top: 22px;
+
       @include breakpoint($mobile) {
         padding-top: 5px;
       }
     }
+
     a {
       margin-right: 0;
       padding: 10px 38px;
@@ -1094,21 +1283,27 @@ fieldset {
     display: inherit;
     margin-left: -20px;
     margin-right: -21px;
+
     fieldset {
       width: 100%;
+
       .form-element, .jcf-select-text, .jcf-select {
         width: 100%;
       }
+
       margin-bottom: 15px;
+
       .stButton {
         float: right;
       }
     }
+
     .stButton {
       width: 100%;
       padding-top: 12px;
     }
   }
+
 
   @include breakpoint($tablet) {
     fieldset {
@@ -1143,10 +1338,12 @@ fieldset {
 .mobile-view {
   @include breakpoint($mobile) {
     display: inherit;
+
     .sort-block {
       display: inherit;
     }
   }
+
 
   .sort-block {
     display: inherit;
@@ -1164,6 +1361,7 @@ fieldset {
     .table-from {
       > li {
         display: none;
+
         &.views-row-1, &.views-row-2 {
           display: block;
         }
@@ -1171,31 +1369,39 @@ fieldset {
     }
   }
 
+
   .holder {
     @include breakpoint($mobile) {
       padding: 12px 20px 40px;
+
       h1 {
         padding-bottom: 0;
       }
     }
   }
+
   .block {
     padding: 40px 0px 0;
   }
+
   .table-from {
     h6 {
       margin: 0;
     }
+
     .num, li.col03 a {
       font-family: "HelveticaNeueW01-75Bold", Helvetica, Tahoma, Verdana, Arial, sans-serif;
       font-weight: normal;
     }
   }
+
   .view-footer {
     a {
       font-size: 20px;
+
       @include breakpoint($mobile) {
         font-size: 18px;
+
         em {
           display: none;
         }
@@ -1212,61 +1418,77 @@ fieldset {
   #content_bottom {
     margin-top: 21px;
   }
+
   .sort-block {
     margin-bottom: 56px;
     display: block;
     clear: both;
   }
+
   .posts-columns .post {
     .info.add h3 {
       margin-top: 5px;
       clear: both;
     }
+
     .num-holder a .num {
       margin-left: -4px;
     }
   }
+
   .pager-load-more {
     padding: 0px 0 61px;
     margin-top: -21px;
     margin-bottom: -30px;
   }
+
   .action-block {
     .holder {
       padding: 139px 15px 97px;
+
       @include breakpoint($mobile) {
         padding: 49px 15px 0;
       }
 
+
       .block-symptoms {
         padding: 50px 10px 37px 39px;
       }
+
       .btn.btn-transparent {
         padding-right: 20px;
+
         em {
           padding-left: 2px;
         }
       }
     }
   }
+
   .table-from {
     margin: 0 0 29px;
+
     & > li {
       padding-top: 6px;
     }
+
     .table-row {
       padding-bottom: 2px;
+
       .icon-Hottopic {
         margin: -22px 0 0;
         left: 20px;
+
         @include breakpoint($mobile) {
           margin: 0;
           left: auto;
           right: 0;
         }
       }
+
       .num {
         margin-top: 12px;
+
         @include breakpoint($mobile) {
           margin-top: 5px;
           margin-right: 5px;
@@ -1274,12 +1496,15 @@ fieldset {
       }
     }
   }
+
   .forum-block .block {
     padding: 52px 32px 0;
+
     @include breakpoint($mobile) {
       padding: 15px 0;
     }
   }
+
   .action-block .holder {
     .btn.btn-transparent {
       @include breakpoint($mobile) {
@@ -1289,10 +1514,12 @@ fieldset {
         font-size: 18px;
       }
     }
+
     .region .block-main {
       @include breakpoint($mobile) {
         & > div {
           padding: 40px 0 24px;
+
           strong {
             padding-left: 22px;
             line-height: normal;
@@ -1301,12 +1528,14 @@ fieldset {
             width: 74%;
           }
         }
+
         & > div:first-child {
           padding: 20px 0 30px 0px;
         }
       }
     }
   }
+
   .topic-share {
     @include breakpoint($mobile) {
       height: 60px;
@@ -1314,9 +1543,11 @@ fieldset {
       width: 100%;
     }
 
+
     .stButton {
       @include breakpoint($mobile) {
         padding: 10px 33%;
+
         &:before {
           font-size: 30px;
           margin-bottom: -7px;
@@ -1324,6 +1555,7 @@ fieldset {
       }
     }
   }
+
   .banner_text {
     @include breakpoint($mobile) {
       width: 70%;
@@ -1338,21 +1570,26 @@ fieldset {
       display: none;
     }
   }
+
   .sort-block {
     @include breakpoint($mobile) {
       height: 291px;
     }
   }
+
   .text-section {
     margin-top: 17px;
+
     @include breakpoint($mobile) {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
+
   .sort-block {
     margin: 0 0 35px;
   }
+
   .posts-columns.columns-full {
     .row {
       .footer {
@@ -1365,30 +1602,37 @@ fieldset {
         }
       }
     }
+
     .block-symptoms {
       background-image: image-url("action-bg6.jpg");
+
       .btn {
         @include breakpoint($mobile) {
           width: auto;
         }
       }
     }
+
     .block-share {
       @include breakpoint($mobile) {
         background-size: 123%;
+
         .btn {
           margin: 163px 10px 0 0;
           float: right;
           width: auto;
         }
+
         height: 244px;
       }
+
 
       .btn {
         width: auto;
       }
     }
   }
+
   .topic-share {
     @include breakpoint($mobile) {
       height: 90px;
@@ -1397,9 +1641,11 @@ fieldset {
       width: 100%;
     }
 
+
     .stButton {
       @include breakpoint($mobile) {
         padding: 10px 33%;
+
         &:before {
           font-size: 30px;
           margin-bottom: -7px;
@@ -1417,11 +1663,13 @@ fieldset {
   .forum-page, h1.title {
     display: none;
   }
+
   .header_banner {
     .banner_text {
       font-size: 64px;
       margin-left: 2px;
       margin-top: 30px;
+
       @include breakpoint($tablet) {
         font-size: 44px;
         margin-left: 22px;
@@ -1429,23 +1677,29 @@ fieldset {
         margin-bottom: 0.25em;
       }
 
+
       @include breakpoint($mobile) {
         font-size: 34px;
         margin-top: 20%;
         margin: 0 auto;
+
         //margin-left: 10%;What was this for?
         max-width: 80%;
       }
     }
+
     .banner_text_main {
       top: 0;
+
       .easy-breadcrumb {
         padding: 28px 12px 0 0;
       }
+
       .banner_sub_text {
         font-size: 26px;
         margin-top: 8px;
         margin-left: 143px;
+
         @include breakpoint($tablet) {
           font-size: 17px;
           margin-left: 103px;
@@ -1467,20 +1721,24 @@ fieldset {
   .stButton {
     @include breakpoint($mobile) {
       padding: 10px 33%;
+
       &:before {
         font-size: 30px;
         margin-bottom: -7px;
       }
     }
   }
+
   .my-voice-post {
     .content {
       width: 45%;
+
       @include breakpoint($mobile) {
         float: none;
         width: auto;
       }
     }
+
     img {
       @include breakpoint($mobile) {
         float: left;
@@ -1488,9 +1746,11 @@ fieldset {
         margin-bottom: 15px;
       }
     }
+
     .place {
       width: 12%;
       float: left;
+
       @include breakpoint($mobile) {
         float: none;
         width: auto;
@@ -1507,17 +1767,24 @@ fieldset {
     .stButton {
       @include breakpoint($mobile) {
         padding: 10px 33%;
+
         &:before {
           font-size: 30px;
           margin-bottom: -7px;
         }
       }
     }
-    z-index: 99;
+
+    //z-index: 99;
+    //Above code hid the calender popup on take-action/events page
+    //to fix that issue we have changed it to z-index: 1 below.
+    z-index: 1;
     margin-bottom: 30px;
+
     //margin-left: 15px;
     @include breakpoint($mobile) {
       padding: 0 15px;
+
       //margin-left: 15px;
       //width:94%;
       .block-close {
@@ -1526,33 +1793,41 @@ fieldset {
       }
     }
 
+
     .my-voice-columns {
       .col {
         padding-top: 0;
         padding-bottom: 0;
+
         @include breakpoint($mobile) {
           padding: 10px 30px;
         }
       }
+
       .form-item {
         float: left;
         width: 96%;
+
         label {
           left: 24px;
           top: 12px;
         }
       }
+
       a.tooltips span.tooltip-content {
         left: -45px;
         bottom: 30px;
       }
+
       .description {
         margin-top: 5px;
       }
     }
   }
+
   .pic-by {
     display: none;
+
     @include breakpoint($mobile) {
       display: block;
     }
@@ -1564,16 +1839,20 @@ fieldset {
   #content_top {
     .holder {
       margin-top: 5.5%;
+
       @include breakpoint($tablet) {
         margin-top: 18%;
       }
+
 
       @include breakpoint($mobile) {
         margin-top: 0%;
       }
 
+
       input[type="submit"][id="edit-webform-ajax-submit-74621"] {
         @include border-radius(5px);
+
         border-bottom: 5px solid $orange-dark;
         background-color: $orange;
       }
@@ -1592,22 +1871,27 @@ fieldset {
     position: absolute;
     margin-left: -24px;
   }
+
   .feature-holder {
     display: none;
     position: absolute;
     z-index: 2;
     bottom: 0;
     left: 11px;
+
     @include breakpoint($mobile) {
       left: 15px;
     }
+
 
     &.hover {
       .text {
         display: block;
       }
     }
+
     background: $orange;
+
     .icon-Featured {
       font-size: 24px;
       padding: 6px 0 0;
@@ -1618,6 +1902,7 @@ fieldset {
       width: 45px;
       text-align: center;
       color: $orange;
+
       @include breakpoint($mobile) {
         height: 33px;
         width: 34px;
@@ -1625,12 +1910,15 @@ fieldset {
         font-size: 16px;
       }
     }
+
     &.green-icon {
       background: $green;
+
       .icon-Featured {
         color: $green;
       }
     }
+
     div {
       img {
         @include breakpoint($mobile) {
@@ -1640,6 +1928,7 @@ fieldset {
         }
       }
     }
+
     .text {
       display: none;
       float: left;
@@ -1649,6 +1938,7 @@ fieldset {
       min-width: 109px;
       text-align: center;
       color: $white;
+
       @include breakpoint($mobile) {
         padding: 5px 6px;
         line-height: 24px;
@@ -1665,33 +1955,43 @@ fieldset {
 #slider-container {
   form {
     float: left;
+
     @include breakpoint($mobile) {
       width: 100%;
+
       img {
         max-width: 100%;
       }
     }
 
+
     input[type="email"], input[type="text"], .select {
       float: left;
       clear: both;
       width: 86%;
+
       @include border-radius(5px);
+
       //border-color:#e4e4e4;
       @include box-shadow(inset 1px 1px 2px $border-grey);
+
       margin-bottom: 20px;
       padding: 12px 23px;
+
       @include breakpoint($mobile) {
         width: 100%;
       }
 
+
       font-size: 18px;
       color: $form-input-colour;
     }
+
     #edit-submitted-not-right-now {
       // float: right;
       clear: none;
     }
+
     .button-primary.form-submit {
       display: none;
     }
@@ -1703,16 +2003,19 @@ fieldset {
     .first_date {
       right: 70px;
     }
+
     img {
       width: 100%;
       height: auto;
     }
   }
 
+
   @include breakpoint($tablet) {
     .place.desktop-view {
       display: none;
     }
+
     .place.mobile-view {
       display: inherit;
     }
@@ -1738,8 +2041,10 @@ fieldset {
     float: left;
     width: 100%;
   }
+
   #content-area form.comment-form, #content-area #privatemsg-new {
     @extend %clearfix;
+
     padding: 35px 50px 37px 44px;
     position: relative;
     margin: 0 0 30px;
@@ -1747,103 +2052,132 @@ fieldset {
     border: 1px solid $gray;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
     #edit-author--2 {
       label {
         float: left;
         width: auto;
       }
+
       .form-element {
         background: none;
         margin-left: 10px;
         margin-top: 0;
       }
     }
+
     @include breakpoint($mobile) {
       padding: 27px 15px;
     }
 
+
     h4 {
       margin: 0 0 17px;
     }
+
     .form-required {
       color: $orange;
     }
+
     .comment-form {
       font-size: 18px;
       color: $menu-grey;
+
       .required {
         color: $orange;
       }
+
       label {
         float: left;
         width: 100%;
+
         &.label-block {
           width: 100%;
         }
       }
+
       .jcf-select {
         width: 100%;
         border: none;
       }
+
       fieldset {
         margin: 0 0 20px 0;
         float: none;
+
         @include breakpoint($mobile) {
           margin: 0 0 10px 0;
         }
+
 
         fieldset {
           margin: 0;
           padding: 0;
         }
+
         .filter-help {
           float: left;
           width: 100%;
           padding: 0;
           margin: 0 0 20px 0;
+
           a {
             padding: 0;
           }
         }
       }
+
       strong {
         color: $heading-link;
         margin-left: 10px;
+
         @include breakpoint($tablet) {
           font-weight: normal;
         }
       }
+
       .form-element {
         float: left;
         max-width: 506px;
         width: 100%;
+
         @include linear-gradient($menu-grey, $page-background);
+
         @include border-radius(5px);
+
         border: none;
         padding: 2px;
         margin: 6px 0 0 0;
+
         input[type=text], input[type=email], textarea {
           float: left;
           color: $menu-grey;
         }
+
         textarea {
           height: 183px;
         }
       }
     }
+
     .form-actions {
       #edit-submit, #edit-preview {
         @extend .btn;
+
         @extend .btn-gray !optional;
+
         &:hover {
           color: $white;
         }
       }
+
       margin: 0;
+
       @include breakpoint($mobile) {
         .btn.btn-left {
           margin-left: 6px;
           padding: 3px 15px;
+
           &:first-child {
             margin-left: 0;
           }
@@ -1851,62 +2185,78 @@ fieldset {
       }
     }
   }
+
   #edit-author--2 {
     label {
       float: left;
       width: auto;
     }
+
     .form-element {
       background: none;
       margin-left: 10px;
       margin-top: 0;
     }
   }
+
   .form-actions {
     clear: both;
   }
+
   h4 {
     @include fontsize(23, 16);
+
     a {
       font-size: 16px;
       text-decoration: underline;
       margin-left: 0;
     }
   }
+
   #content-area {
     @extend %listreset;
+
     position: relative;
     clear: both;
+
     &.children {
       margin-left: 30px;
     }
+
     li {
       .comment-left {
         float: left;
         width: 100px;
         font-size: 13px;
+
         img {
           @include border-radius(5px);
+
           overflow: hidden;
           margin: 0 0 4px 0;
         }
+
         a {
           text-decoration: underline;
           font-weight: bold;
           color: $base-link-color;
+
           &:hover {
             text-decoration: none;
           }
         }
+
         cite {
           margin: 0 0 7px 0;
           font-style: normal;
           display: block;
         }
+
         time {
           margin: 0 0 17px 0;
         }
       }
+
       .comment-right {
         border: 2px solid $border-color;
         padding: 16px 26px 13px 26px;
@@ -1915,9 +2265,11 @@ fieldset {
         background: $white;
         word-wrap: break-word;
         position: relative;
+
         @include breakpoint($mobile) {
           padding: 15px;
         }
+
 
         &:before {
           content: "";
@@ -1928,24 +2280,31 @@ fieldset {
           top: 15px;
           height: 32px;
         }
+
         .links {
           margin-bottom: 17px;
         }
+
         ul {
           @extend %clearfix;
+
           @extend %listreset;
+
           li {
             float: left;
             margin: 0 11px 0 0;
+
             a {
               text-decoration: underline;
               font-weight: bold;
+
               &:hover {
                 text-decoration: none;
               }
             }
           }
         }
+
         .quote {
           border: none;
           padding: 0;
@@ -1959,6 +2318,7 @@ fieldset {
   &:hover {
     background: none;
   }
+
   background: none;
 }
 
