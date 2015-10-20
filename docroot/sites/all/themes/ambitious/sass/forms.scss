@@ -971,8 +971,10 @@ div.modal-forms-modal-content .form-item label {
       margin-bottom: 0;
     }
 
-    .grippie {
-      width: 66.6%;
+    @include breakpoint($not-mobile) {
+      .grippie {
+        width: 66.6%;
+      }
     }
   }
 

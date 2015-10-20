@@ -2752,15 +2752,17 @@ div.modal-forms-modal-content .form-item label {
 .node-event .webform-component-textarea textarea, .node-course .webform-component-textarea textarea, .node-type-volunteer .webform-component-textarea textarea, .node-type-newsletter .webform-component-textarea textarea, .node-type-campaigns .webform-component-textarea textarea, .share-your-story-webform .webform-component-textarea textarea {
   margin-bottom: 0;
 }
-/* line 974, ../sass/forms.scss */
-.node-event .webform-component-textarea .grippie, .node-course .webform-component-textarea .grippie, .node-type-volunteer .webform-component-textarea .grippie, .node-type-newsletter .webform-component-textarea .grippie, .node-type-campaigns .webform-component-textarea .grippie, .share-your-story-webform .webform-component-textarea .grippie {
-  width: 66.6%;
+@media (min-width: 767px) {
+  /* line 975, ../sass/forms.scss */
+  .node-event .webform-component-textarea .grippie, .node-course .webform-component-textarea .grippie, .node-type-volunteer .webform-component-textarea .grippie, .node-type-newsletter .webform-component-textarea .grippie, .node-type-campaigns .webform-component-textarea .grippie, .share-your-story-webform .webform-component-textarea .grippie {
+    width: 66.6%;
+  }
 }
-/* line 979, ../sass/forms.scss */
+/* line 981, ../sass/forms.scss */
 .node-event .form-actions, .node-course .form-actions, .node-type-volunteer .form-actions, .node-type-newsletter .form-actions, .node-type-campaigns .form-actions, .share-your-story-webform .form-actions {
   margin: 20px 0;
 }
-/* line 984, ../sass/forms.scss */
+/* line 986, ../sass/forms.scss */
 .node-event #edit-submitted-agree-condition input#edit-submitted-agree-condition-1, .node-course #edit-submitted-agree-condition input#edit-submitted-agree-condition-1, .node-type-volunteer #edit-submitted-agree-condition input#edit-submitted-agree-condition-1, .node-type-newsletter #edit-submitted-agree-condition input#edit-submitted-agree-condition-1, .node-type-campaigns #edit-submitted-agree-condition input#edit-submitted-agree-condition-1, .share-your-story-webform #edit-submitted-agree-condition input#edit-submitted-agree-condition-1 {
   float: left;
   margin: 8px;
