@@ -94,66 +94,33 @@
     print render($page['header']); 
   ?>
 <!-- / header -->
-<?php /* ?>
-<?php if ($page['caption_holder'] || $page['image_holder']): ?>
-  <!-- ########### / header -->
-  <section class="visual">
-    <div class="img-holder">
 
-      <?php if ($page['caption_holder']): ?>
-      <div class="caption-frame">
-        <?php print render($page['caption_holder']); ?>
-      </div> <!-- /caption -->
-    <?php endif; ?>
-
-    <?php if ($page['image_holder']): ?>
-    <?php print render($page['image_holder']); ?>
-    <!-- /image holder -->
-  <?php endif; ?>
-</div>
-
-</section>
-
-<?php endif; ?>
-<?php */ ?>
-
-
- <?php if ($page['image_holder']): ?>
-<section class="header_banner banner-nav">
-    <!-- commented below code because it's hiding the menu on forum page and its an empty div tag -->
-     <?php /*<div class="banner_text_main">
-        <?php if ($page['caption_holder']): ?>
-          <div class="banner_text_inner">
-            <?php print render($page['caption_holder']); ?>   
-          </div> 
-        <?php endif; ?> 
-      </div>*/?>
-    <div class="header_image">
-      <?php if ($page['image_holder']): ?>
-        <?php print render($page['image_holder']); ?>
-      <?php endif; ?>
+<?php if (!empty($node->field_featured_image)): ?>
+<section class="visual header_banner">
+  <div class="img-holder">
+    <div class="caption-frame">
+      <div class="region region-caption-holder">
+          <div class="caption-text">
+            <div class="caption-text-titles">
+                <div class="caption-text-title caption-text-title-1">               
+                  <span>
+                      <?php if ($title): ?>
+                        <h1 class="title"><?php print $title; ?></h1>
+                      <?php endif; ?>              
+                  </span>
+                </div>                    
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="region region-image-holder"
+      style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
+    </div>
+    </div>
   </section>
+<?php else: ?>
+  <div class="top-header"></div>
 <?php endif; ?>
-
-<?php if ($page['navigation']): ?>
-  <section id="navigation">
-    <?php print render($page['navigation']); ?>
-  </section> <!-- /navigation -->
-<?php endif; ?>
-
-<?php if ($page['highlighted']): ?>
-  <section id="highlighted">
-    <?php print render($page['highlighted']); ?>
-
-    <?php if ($breadcrumb): ?>
-    <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
-  <?php endif; ?>
-
-</section> <!-- /highlighted -->
-<?php endif; ?>
-
-<div class="top-header">
-  </div>
 
 <?php if ($page['content_top']): ?>  
   <section class="my-voice-block" id="content_top">
@@ -194,8 +161,7 @@
 
 <section id="content-area">
 
-
-    <?php if ($title): ?>
+  <?php if (empty($node->field_featured_image)): ?>
     <h1 class="title"><?php print $title; ?></h1>
   <?php endif; ?>
 
