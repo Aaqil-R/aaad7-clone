@@ -196,7 +196,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'country'=>$country,
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
-			        'date_of_birth'=>$date_of_birth
+			        'birthday'=>$date_of_birth
 			        ),
 			   	'double_optin' => true,
 			    'update_existing' => true,
@@ -251,7 +251,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'country'=>$country,
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
-			        'date_of_birth'=>$date_of_birth
+			        'birthday'=>$date_of_birth
 			        ),
 			    'double_optin'      => true,
 			    'update_existing'   => true,
