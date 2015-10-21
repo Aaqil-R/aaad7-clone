@@ -37,6 +37,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$city = '';
 		$country = '';
 		//end of the new code set
+		$occupation = '';
+		$employer = '';
+		$date_of_birth = '';
 
 		//$nid = $node->nid;
 		//dpm($node);
@@ -85,6 +88,18 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		if(isset($submission->data[11][0])){
 			$country = $submission->data[11][0];
 			//dpm($country);
+		}
+		if(isset($submission->data[12][0])){
+			$occupation = $submission->data[12][0];
+			//dpm($occupation);
+		}
+		if(isset($submission->data[13][0])){
+			$employer = $employer->data[13][0];
+			//dpm($employer);
+		}
+		if(isset($submission->data[14][0])){
+			$date_of_birth = $date_of_birth->data[14][0];
+			//dpm($date_of_birth);
 		}
 		//we have to get the event type and the event name to which user has subscribed
 		//assign the new event to relevent webform value
@@ -178,7 +193,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'address1'=>$address1,
 			        'address2'=>$address2,
 			        'city'=>$city,
-			        'country'=>$country
+			        'country'=>$country,
+			        'occupation'=>$occupation,
+			        'employer'=>$employer,
+			        'date_of_birth'=>$date_of_birth
 			        ),
 			   	'double_optin' => true,
 			    'update_existing' => true,
@@ -230,7 +248,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'address1'=>$address1,
 			        'address2'=>$address2,
 			        'city'=>$city,
-			        'country'=>$country
+			        'country'=>$country,
+			        'occupation'=>$occupation,
+			        'employer'=>$employer,
+			        'date_of_birth'=>$date_of_birth
 			        ),
 			    'double_optin'      => true,
 			    'update_existing'   => true,
