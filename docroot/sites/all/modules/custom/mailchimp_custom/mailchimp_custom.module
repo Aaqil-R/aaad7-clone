@@ -85,22 +85,29 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			case 'date_of_birth':
 				$date_of_birth = $submission->data[$key][0];	
 			break;
-			case 'condition':
-				$condition = $submission->data[$key][0];	
+			case 'condition1':
+				$condition1 = $submission->data[$key][0];	
 			break;
-			case 'i_am_a':
-				$i_am_a = $submission->data[$key][0];	
+			case 'condition2':
+				$condition2 = $submission->data[$key][0];	
+			break;
+			case 'describe_you':
+				$describe_you = $submission->data[$key][0];	
 			break;
 			case 'age':
 				$age = $submission->data[$key][0];	
 			break;
-			case 'volunteer':
-				$volunteer = $submission->data[$key][0];	
+			case 'volunteers':
+				$volunteers = $submission->data[$key][0];
 			break;
-			case 'support_and_update':
-				$support_and_update = $submission->data[$key][0];	
+			case 'support':
+				$support = $submission->data[$key][0];	
+			break;
+			case 'update':
+				$update = $submission->data[$key][0];	
 			break;
 		}
+
 
 		// email
 		// firstname
@@ -116,6 +123,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	}
 	//end of the new code set
 
+		//dpm($volunteers);
+
 		//$nid = $node->nid;
 		//dpm($node);
 		$contenttype = $node->type;
@@ -127,7 +136,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//dpm('enabled');
 		//replace api with the clients api
 		//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
-			$MailChimp = new \Drewm\MailChimp($api_key);
+		$MailChimp = new \Drewm\MailChimp($api_key);
 		//we have to get the event type and the event name to which user has subscribed
 		//assign the new event to relevent webform value
 
@@ -146,6 +155,32 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 		//get the earlier values of the events
 		//print_r(print_event_list($result3));
+
+		//dpm($condition);
+
+		if($condition1 == 1):
+			$condition1 = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
+		endif;
+
+		if($condition2 == 1):
+			$condition2 = 'My employer offer a matched giving scheme';
+		endif;
+
+		if($describe_you == 1):
+			$describe_you = 'Parent / Carer';
+		elseif($describe_you == 2):
+			$describe_you = 'Professional';
+		elseif($describe_you == 3):
+			$describe_you = 'Aged 16-25';
+		endif;
+
+		if($support == 1):
+			$support = 'I support this campaign.';
+		endif;
+
+		if($update == 1):
+			$update = 'I would like to receive updates about this campaign.';
+		endif;
 
 		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
 		if($result3['success_count'] == 1)
@@ -223,11 +258,13 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
 			        'birth_day'=>$date_of_birth,
-			        'conditions'=>$condition,
-			        'descripton'=>$i_am_a,
+			        'condition1'=>$condition1,
+			        'condition2'=>$condition2,
+			        'descripton'=>$describe_you,
 			        'age'=>$age,
-			        'volunteer'=>$volunteer,
-			        'support_up'=>$support_and_update
+			        'volunteers'=>$volunteers,
+			        'support'=>$support,
+			        'update'=>$update
 			        ),
 			   	'double_optin' => true,
 			    'update_existing' => true,
@@ -286,11 +323,13 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
 			        'birth_day'=>$date_of_birth,
-			        'conditions'=>$condition,
-			        'descripton'=>$i_am_a,
+			        'condition1'=>$condition1,
+			        'condition2'=>$condition2,
+			        'descripton'=>$describe_you,
 			        'age'=>$age,
-			        'volunteer'=>$volunteer,
-			        'support_up'=>$support_and_update
+			        'volunteers'=>$volunteers,
+			        'support'=>$support,
+			        'update'=>$update
 			        ),
 			    'double_optin'      => true,
 			    'update_existing'   => true,
