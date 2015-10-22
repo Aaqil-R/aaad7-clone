@@ -13,145 +13,178 @@ function mailchimp_custom_init(){
 
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
+	// define the mail chimp api key and the list id.
 	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
 	$list_id = '20af80b11d';
 
-	//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
-	//dpm($submission);
+	// extract the parent content type.
+	$contenttype = $node->type;
+
+	// initialize and array with the content types we want this to fire for.
+	$enabled_content_types = array(
+		'event'
+		,'course'
+		,'newsletter'
+		,'volunteer'
+		,'campaigns'
+	);
+
+	// check if we need to fire integrate this webform submission to mail chimp.
+	if (in_array($contenttype, $enabled_content_types)) {
+
+		//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
+		//dpm($submission);
 	
-
-	//must check whether the user ticked the mailchimp option and the send the request
+		//must check whether the user ticked the mailchimp option and the send the request
 	
-	//defining the variables
-	$email ='';
-	$firstname = '';
-	$lastname = '';
-	$newevent = '';
-	$neweventarray = array();
-	//new code set
-	$phonenumber = '';
-	$postcode = '';
-	$address = '';
-	$city = '';
-	$country = '';
-	$did_subscribe = false;
+		//defining the variables
+		$email ='';
+		$firstname = '';
+		$lastname = '';
+		$newevent = '';
+		$neweventarray = array();
+		//new code set
+		$phonenumber = '';
+		$postcode = '';
+		$address = '';
+		$city = '';
+		$country = '';
+		$did_subscribe = false;
+		$occupation = '';
+		$employer = '';
+		$date_of_birth = '';
+		$condition1 = '';
+		$condition2 = '';
+		$describe_you = '';
+		$age = '';
+		$volunteers = '';
+		$support = '';
+		$update = '';
 
-	foreach ($node->webform['components'] as $key => $field) {
 
-		//dpm($field['form_key']);
-		//dpm($submission->data[$key][0]);
+		// mapping out the webform components by form_key rather than index as this would make the 
+		// order in which the elements are added in the webform irrelavant.
+		// TODO: need to clean up this code; maybe have a webform wrapper object which would initialize
+		// a hashmap.
+		foreach ($node->webform['components'] as $key => $field) {
 
-		switch ($field['form_key']) {
-			case 'email':
-				$email = $submission->data[$key][0];
-			break;
-			case 'firstname':
-				$firstname = $submission->data[$key][0];
-			break;
-			case 'lastname':
-				$lastname = $submission->data[$key][0];
-			break;
-			case 'agree_condition':
-				$did_subscribe = $submission->data[$key][0];
-			break;
-			case 'event_name':
-				$newevent = $submission->data[$key][0];
-				$neweventarray = array($submission->data[$key][0]);
-			break;
-			case 'node_type':
-				$phonenumber = $submission->data[$key][0];
-			break;
-			case 'post_code':
-				$postcode = $submission->data[$key][0];
-			break;
-			case 'address1':
-				$address1 = $submission->data[$key][0];
-			break;
-			case 'address2':
-				$address2 = $submission->data[$key][0];
-			break;
-			case 'city':
-				$city = $submission->data[$key][0];
-			break;
-			case 'country':
-				$country = $submission->data[$key][0];	
-			break;
-			case 'occupation':
-				$occupation = $submission->data[$key][0];	
-			break;
-			case 'employer':
-				$employer = $submission->data[$key][0];	
-			break;
-			case 'date_of_birth':
-				$date_of_birth = $submission->data[$key][0];	
-			break;
-			case 'condition1':
-				$condition1 = $submission->data[$key][0];	
-			break;
-			case 'condition2':
-				$condition2 = $submission->data[$key][0];	
-			break;
-			case 'describe_you':
-				$describe_you = $submission->data[$key][0];	
-			break;
-			case 'age':
-				$age = $submission->data[$key][0];	
-			break;
-			case 'volunteers':
-				$volunteers = $submission->data[$key][0];
-			break;
-			case 'support':
-				$support = $submission->data[$key][0];	
-			break;
-			case 'update':
-				$update = $submission->data[$key][0];	
-			break;
+			// debug statements
+			// dpm($field['form_key']);
+			// dpm($submission->data[$key][0]);
+
+			switch ($field['form_key']) {
+				case 'email':
+					$email = $submission->data[$key][0];
+				break;
+				case 'firstname':
+					$firstname = $submission->data[$key][0];
+				break;
+				case 'lastname':
+					$lastname = $submission->data[$key][0];
+				break;
+				case 'agree_condition':
+					$did_subscribe = $submission->data[$key][0];
+				break;
+				case 'event_name':
+					$newevent = $submission->data[$key][0];
+					$neweventarray = array($submission->data[$key][0]);
+				break;
+				case 'node_type':
+					$phonenumber = $submission->data[$key][0];
+				break;
+				case 'post_code':
+					$postcode = $submission->data[$key][0];
+				break;
+				case 'address1':
+					$address1 = $submission->data[$key][0];
+				break;
+				case 'address2':
+					$address2 = $submission->data[$key][0];
+				break;
+				case 'city':
+					$city = $submission->data[$key][0];
+				break;
+				case 'country':
+					$country = $submission->data[$key][0];	
+				break;
+				case 'occupation':
+					$occupation = $submission->data[$key][0];	
+				break;
+				case 'employer':
+					$employer = $submission->data[$key][0];	
+				break;
+				case 'date_of_birth':
+					$date_of_birth = $submission->data[$key][0];	
+				break;
+				case 'condition1':
+					$condition1 = $submission->data[$key][0];	
+				break;
+				case 'condition2':
+					$condition2 = $submission->data[$key][0];	
+				break;
+				case 'describe_you':
+					$describe_you = $submission->data[$key][0];	
+				break;
+				case 'age':
+					$age = $submission->data[$key][0];	
+				break;
+				case 'volunteers':
+					$volunteers = $submission->data[$key][0];
+				break;
+				case 'support':
+					$support = $submission->data[$key][0];	
+				break;
+				case 'update':
+					$update = $submission->data[$key][0];	
+				break;
+			}
+
+			// email
+			// firstname
+			// lastname
+			// agree_condition
+			// event_name
+			// node_type
+			// post_code
+			// address1
+			// address2
+			// city
+			// country
 		}
+		//end of the new code set
 
-
-		// email
-		// firstname
-		// lastname
-		// agree_condition
-		// event_name
-		// node_type
-		// post_code
-		// address1
-		// address2
-		// city
-		// country
-	}
-	//end of the new code set
-
-		//dpm($volunteers);
-
-		//$nid = $node->nid;
+		//$nid = $node->nid;		
 		//dpm($node);
-		$contenttype = $node->type;
+		// $contenttype = $node->type;
 		//$contenttype = 'courses';
 
 		//dpm($contenttype);
 
+		// check if the user has chosen to subscribe to our mailing subscription.
 		if($did_subscribe){
-		//dpm('enabled');
-		//replace api with the clients api
-		//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
-		$MailChimp = new \Drewm\MailChimp($api_key);
-		//we have to get the event type and the event name to which user has subscribed
-		//assign the new event to relevent webform value
+			//dpm('enabled');
+			//replace api with the clients api
+			//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
 
-		//new codes
-		//to see the lists on the view
-		// $result1 = $MailChimp->call('/lists/interest-groupings' , array(
-		//                 		'id' => '1430d8d688'));
+			// initialize the mail chimp API.
+			// TODO: this is using API version 2 which is deprecated.
+			$MailChimp = new \Drewm\MailChimp($api_key);
+			
+			//we have to get the event type and the event name to which user has subscribed
+			//assign the new event to relevent webform value
 
-		//check whether the subscriber is from the list
-		$result3 = $MailChimp->call('/lists/member-info', array(
-			'id' => $list_id,
-		    'emails' => array(
-		    	0 => array('email'=>$email))
-		    )
-		);
+			//new codes
+			//to see the lists on the view
+			// $result1 = $MailChimp->call('/lists/interest-groupings' , array(
+			//                 		'id' => '1430d8d688'));
+
+			//check whether the subscriber is from the list
+			$result3 = $MailChimp->call('/lists/member-info', array(
+				'id' => $list_id,
+			    'emails' => array(
+			    	0 => array('email'=>$email))
+			    )
+			);
 
 		//get the earlier values of the events
 		//print_r(print_event_list($result3));
@@ -181,6 +214,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		if($update == 1):
 			$update = 'I would like to receive updates about this campaign.';
 		endif;
+
 
 		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
 		if($result3['success_count'] == 1)
@@ -323,13 +357,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
 			        'birth_day'=>$date_of_birth,
-			        'condition1'=>$condition1,
-			        'condition2'=>$condition2,
-			        'descripton'=>$describe_you,
+			        'conditions'=>$condition,
+			        'descripton'=>$i_am_a,
 			        'age'=>$age,
-			        'volunteers'=>$volunteers,
-			        'support'=>$support,
-			        'update'=>$update
+			        'volunteer'=>$volunteer,
+			        'support_up'=>$support_and_update
 			        ),
 			    'double_optin'      => true,
 			    'update_existing'   => true,
@@ -344,6 +376,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	}
 	else{
 		//dpm('disabled');
+	}
 	}	
 }
 
