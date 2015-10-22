@@ -38,8 +38,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 	foreach ($node->webform['components'] as $key => $field) {
 
-		dpm($field['form_key']);
-		dpm($submission->data[$key][0]);
+		//dpm($field['form_key']);
+		//dpm($submission->data[$key][0]);
 
 		switch ($field['form_key']) {
 			case 'email':
@@ -85,6 +85,21 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			case 'date_of_birth':
 				$date_of_birth = $submission->data[$key][0];	
 			break;
+			case 'condition':
+				$condition = $submission->data[$key][0];	
+			break;
+			case 'i_am_a':
+				$i_am_a = $submission->data[$key][0];	
+			break;
+			case 'age':
+				$age = $submission->data[$key][0];	
+			break;
+			case 'volunteer':
+				$volunteer = $submission->data[$key][0];	
+			break;
+			case 'support_and_update':
+				$support_and_update = $submission->data[$key][0];	
+			break;
 		}
 
 		// email
@@ -106,7 +121,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$contenttype = $node->type;
 		//$contenttype = 'courses';
 
-		dpm($contenttype);
+		//dpm($contenttype);
 
 		if($did_subscribe){
 		//dpm('enabled');
@@ -131,9 +146,6 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 		//get the earlier values of the events
 		//print_r(print_event_list($result3));
-
-			dpm($address1);
-			dpm($address2);
 
 		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
 		if($result3['success_count'] == 1)
@@ -210,7 +222,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'country'=>$country,
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
-			        'birth_day'=>$date_of_birth
+			        'birth_day'=>$date_of_birth,
+			        'conditions'=>$condition,
+			        'descripton'=>$i_am_a,
+			        'age'=>$age,
+			        'volunteer'=>$volunteer,
+			        'support_up'=>$support_and_update
 			        ),
 			   	'double_optin' => true,
 			    'update_existing' => true,
@@ -218,7 +235,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			    'send_welcome' => false,
 			    )
 			);
-				dpm($result);
+				//dpm($result);
 
 			//dpm("I came here also");
 		}
@@ -268,7 +285,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'country'=>$country,
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
-			        'birth_day'=>$date_of_birth
+			        'birth_day'=>$date_of_birth,
+			        'conditions'=>$condition,
+			        'descripton'=>$i_am_a,
+			        'age'=>$age,
+			        'volunteer'=>$volunteer,
+			        'support_up'=>$support_and_update
 			        ),
 			    'double_optin'      => true,
 			    'update_existing'   => true,
@@ -277,7 +299,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			    )
 			);
 
-			dpm($result);
+			//dpm($result);
 		}
 		//end of the new codes
 	}
