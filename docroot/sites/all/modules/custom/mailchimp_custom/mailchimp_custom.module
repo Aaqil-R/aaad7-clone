@@ -13,13 +13,14 @@ function mailchimp_custom_init(){
 
 function mailchimp_custom_webform_submission_insert($node, $submission){
 
+	//dpm($submission->nid);
 	// define the mail chimp api key and the list id.
 	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
 	$list_id = '20af80b11d';
 
 	// extract the parent content type.
 	$contenttype = $node->type;
-
+	//dpm($contenttype);
 	// initialize and array with the content types we want this to fire for.
 	$enabled_content_types = array(
 		'event'
@@ -27,10 +28,18 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		,'newsletter'
 		,'volunteer'
 		,'campaigns'
+		,'testwebform'
 	);
 
+	//if the webform is one of the 6 the add the test webform content type
+	// $webform_array = array(74621);
+	// $webformid = $submission->nid;
+	// if(in_array($webformid ,$webform_array )){
+	// 	$contenttype = 'testwebform';
+	// }
 	// check if we need to fire integrate this webform submission to mail chimp.
-	if (in_array($contenttype, $enabled_content_types)) {
+	if (in_array($contenttype, $enabled_content_types)) 
+	{
 
 		//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
 		//dpm($submission);
@@ -66,13 +75,14 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		// order in which the elements are added in the webform irrelavant.
 		// TODO: need to clean up this code; maybe have a webform wrapper object which would initialize
 		// a hashmap.
-		foreach ($node->webform['components'] as $key => $field) {
-
+		foreach ($node->webform['components'] as $key => $field) 
+		{
 			// debug statements
 			// dpm($field['form_key']);
 			// dpm($submission->data[$key][0]);
 
-			switch ($field['form_key']) {
+			switch ($field['form_key']) 
+			{
 				case 'email':
 					$email = $submission->data[$key][0];
 				break;
@@ -161,7 +171,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		//dpm($contenttype);
 
 		// check if the user has chosen to subscribe to our mailing subscription.
-		if($did_subscribe){
+		if($did_subscribe)
+		{
 			//dpm('enabled');
 			//replace api with the clients api
 			//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
@@ -191,193 +202,196 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 		//dpm($condition);
 
-		if($pledge == 1):
-			$pledge = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
-		endif;
+			if($pledge == 1):
+				$pledge = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
+			endif;
 
-		if($offer == 1):
-			$offer = 'My employer offer a matched giving scheme';
-		endif;
+			if($offer == 1):
+				$offer = 'My employer offer a matched giving scheme';
+			endif;
 
-		if($describe_you == 1):
-			$describe_you = 'Parent / Carer';
-		elseif($describe_you == 2):
-			$describe_you = 'Professional';
-		elseif($describe_you == 3):
-			$describe_you = 'Aged 16-25';
-		endif;
+			if($describe_you == 1):
+				$describe_you = 'Parent / Carer';
+			elseif($describe_you == 2):
+				$describe_you = 'Professional';
+			elseif($describe_you == 3):
+				$describe_you = 'Aged 16-25';
+			endif;
 
-		if($support == 1):
-			$support = 'I support this campaign.';
-		endif;
+			if($support == 1):
+				$support = 'I support this campaign.';
+			endif;
 
-		if($update == 1):
-			$update = 'I would like to receive updates about this campaign.';
-		endif;
+			if($update == 1):
+				$update = 'I would like to receive updates about this campaign.';
+			endif;
 
 
-		//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
-		if($result3['success_count'] == 1)
-		{
-			//if the user exsist then we must get the earlier subscribed events
-			$eventlist = print_event_list($result3);
-			$events = $eventlist['events'];
-			$courses = $eventlist['courses'];
-			$news = $eventlist['news'];
-			$volunteer = $eventlist['volunteer'];
-			$campaigns = $eventlist['campaigns'];
-
-			//dpm($eventlist);
-			//check for the event type and add the event to the correct array
-			if($contenttype == 'event'){
-				//dpm("i am a event");
-				array_push($events, $newevent);
-			}
-			elseif($contenttype == 'course')
+			//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
+			if($result3['success_count'] == 1)
 			{
-				// dpm("i am a course");
-				array_push($courses, $newevent);
-			}
-			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
-			{
-				// dpm("i am a course");
-				array_push($news, $newevent);
-			}
-			//newset of codes
-			elseif($contenttype == 'volunteer')
-			{
-				// dpm("i am a volunteer");
-				array_push($volunteer, $newevent);
-			}
-			elseif($contenttype == 'campaigns')
-			{
-				// dpm("i am a course");
-				array_push($campaigns, $newevent);
-			}
-			//update the current user
-			$result = $MailChimp->call('/lists/update-member', array(
-				'id' => $list_id,
-			    'email' => array('email'=>$email),
-				'merge_vars' => array(
-			        'groupings' => array(
-			            0 => array(
-			                'name' => 'Events',
-			                'groups' => $events
-			                ),
+				//if the user exsist then we must get the earlier subscribed events
+				$eventlist = print_event_list($result3);
+				$events = $eventlist['events'];
+				$courses = $eventlist['courses'];
+				$news = $eventlist['news'];
+				$volunteer = $eventlist['volunteer'];
+				$campaigns = $eventlist['campaigns'];
 
-			            1 => array(
-			                'name' => 'Courses',
-			                'groups' => $courses
-			                ),
+				//dpm($eventlist);
+				//check for the event type and add the event to the correct array
+				if($contenttype == 'event'){
+					//dpm("i am a event");
+					array_push($events, $newevent);
+				}
+				elseif($contenttype == 'course')
+				{
+					// dpm("i am a course");
+					array_push($courses, $newevent);
+				}
+				elseif($contenttype == 'webform' || $contenttype == 'newsletter')
+				{
+					// dpm("i am a course");
+					array_push($news, $newevent);
+				}
+				//newset of codes
+				elseif($contenttype == 'volunteer')
+				{
+					// dpm("i am a volunteer");
+					array_push($volunteer, $newevent);
+				}
+				elseif($contenttype == 'campaigns')
+				{
+					// dpm("i am a course");
+					array_push($campaigns, $newevent);
+				}
+				//update the current user
+				$result = $MailChimp->call('/lists/update-member', array(
+					'id' => $list_id,
+				    'email' => array('email'=>$email),
+					'merge_vars' => array(
+				        'groupings' => array(
+				            0 => array(
+				                'name' => 'Events',
+				                'groups' => $events
+				                ),
 
-			            2 => array(
-			                'name' => 'News Letters',
-			                'groups' => $news
-			                ),
-			            3 => array(
-			                'name' => 'Volunteer',
-			                'groups' => $volunteer
-			                ),
-			            4 => array(
-			                'name' => 'Campaign',
-			                'groups' => $campaigns
-			                ),
-			            ),
-			        'phone'=>$phonenumber,
-			        'postcode'=>$postcode,
-			        'address1'=>$address1,
-			        'address2'=>$address2,
-			        'city'=>$city,
-			        'country'=>$country,
-			        'occupation'=>$occupation,
-			        'employer'=>$employer,
-			        'birth_day'=>$date_of_birth,
-			        'pledge'=>$pledge,
-			        'offer'=>$offer,
-			        'descripton'=>$describe_you,
-			        'age'=>$age,
-			        'volunteers'=>$volunteers,
-			        'support'=>$support,
-			        'update'=>$update
-			        ),
-			   	'double_optin' => true,
-			    'update_existing' => true,
-			    'replace_interests' => true,
-			    'send_welcome' => false,
-			    )
-			);
+				            1 => array(
+				                'name' => 'Courses',
+				                'groups' => $courses
+				                ),
+
+				            2 => array(
+				                'name' => 'News Letters',
+				                'groups' => $news
+				                ),
+				            3 => array(
+				                'name' => 'Volunteer',
+				                'groups' => $volunteer
+				                ),
+				            4 => array(
+				                'name' => 'Campaign',
+				                'groups' => $campaigns
+				                ),
+				            ),
+				        'phone'=>$phonenumber,
+				        'postcode'=>$postcode,
+				        'address1'=>$address1,
+				        'address2'=>$address2,
+				        'city'=>$city,
+				        'country'=>$country,
+				        'occupation'=>$occupation,
+				        'employer'=>$employer,
+				        'birth_day'=>$date_of_birth,
+				        'pledge'=>$pledge,
+				        'offer'=>$offer,
+				        'descripton'=>$describe_you,
+				        'age'=>$age,
+				        'volunteers'=>$volunteers,
+				        'support'=>$support,
+				        'update'=>$update
+				        ),
+				   	'double_optin' => true,
+				    'update_existing' => true,
+				    'replace_interests' => true,
+				    'send_welcome' => false,
+				    )
+				);
+					//dpm($result);
+
+				//dpm("I came here also");
+			}
+			else
+			{
+				echo "user not found";
+				//bit of modification done from the normal way. in order to add the new user
+				$name = '';
+				if($contenttype == 'event'){
+					$name = 'Events';
+				}
+				elseif($contenttype == 'course')
+				{
+					// dpm("i am a course");
+					$name = 'Courses';
+				}
+
+				elseif($contenttype == 'webform' || $contenttype == 'newsletter')
+				{
+					$name = 'News Letters';
+				}
+				elseif($contenttype == 'volunteers')
+				{
+					$name = 'Volunteer';
+				}
+				elseif($contenttype == 'campaigns')
+				{
+					$name = 'Campaign';
+				}
+				//create a new user
+				$result = $MailChimp->call('lists/subscribe', array(
+				    'id' => $list_id,
+				    'email' => array('email'=>$email),
+				    'merge_vars' => array(
+				    	'fname'=>$firstname, 
+				        'lname'=>$lastname,
+				        'groupings' => array(
+				            0 => array(
+				                'name' => $name,
+				                'groups' => $neweventarray
+				                )
+				            ),
+				        'phone'=>$phonenumber,
+				        'postcode'=>$postcode,
+				        'address1'=>$address1,
+				        'address2'=>$address2,
+				        'city'=>$city,
+				        'country'=>$country,
+				        'occupation'=>$occupation,
+				        'employer'=>$employer,
+				        'birth_day'=>$date_of_birth,
+				        'pledge'=>$pledge,
+				        'offer'=>$offer,
+				        'descripton'=>$describe_you,
+				        'age'=>$age,
+				        'volunteers'=>$volunteers,
+				        'support'=>$support,
+				        'update'=>$update
+				        ),
+				    'double_optin'      => true,
+				    'update_existing'   => true,
+				    'replace_interests' => true,
+				    'send_welcome'      => false,
+				    )
+				);
+
 				//dpm($result);
-
-			//dpm("I came here also");
-		}
-		else{
-			echo "user not found";
-			//bit of modification done from the normal way. in order to add the new user
-			$name = '';
-			if($contenttype == 'event'){
-				$name = 'Events';
 			}
-			elseif($contenttype == 'course')
-			{
-				// dpm("i am a course");
-				$name = 'Courses';
-			}
-
-			elseif($contenttype == 'webform' || $contenttype == 'newsletter')
-			{
-				$name = 'News Letters';
-			}
-			elseif($contenttype == 'volunteers')
-			{
-				$name = 'Volunteer';
-			}
-			elseif($contenttype == 'campaigns')
-			{
-				$name = 'Campaign';
-			}
-			//create a new user
-			$result = $MailChimp->call('lists/subscribe', array(
-			    'id' => $list_id,
-			    'email' => array('email'=>$email),
-			    'merge_vars' => array(
-			    	'fname'=>$firstname, 
-			        'lname'=>$lastname,
-			        'groupings' => array(
-			            0 => array(
-			                'name' => $name,
-			                'groups' => $neweventarray
-			                )
-			            ),
-			        'phone'=>$phonenumber,
-			        'postcode'=>$postcode,
-			        'address1'=>$address1,
-			        'address2'=>$address2,
-			        'city'=>$city,
-			        'country'=>$country,
-			        'occupation'=>$occupation,
-			        'employer'=>$employer,
-			        'birth_day'=>$date_of_birth,
-			        'pledge'=>$pledge,
-			        'offer'=>$offer,
-			        'descripton'=>$i_am_a,
-			        'age'=>$age,
-			        'volunteer'=>$volunteer,
-			        'support_up'=>$support_and_update
-			        ),
-			    'double_optin'      => true,
-			    'update_existing'   => true,
-			    'replace_interests' => true,
-			    'send_welcome'      => false,
-			    )
-			);
-
-			//dpm($result);
-		}
 		//end of the new codes
-	}
-	else{
+		}
+		else
+		{
 		//dpm('disabled');
-	}
+		}
 	}	
 }
 
