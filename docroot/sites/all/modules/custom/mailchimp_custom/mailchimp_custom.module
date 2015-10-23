@@ -53,8 +53,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$occupation = '';
 		$employer = '';
 		$date_of_birth = '';
-		$condition1 = '';
-		$condition2 = '';
+		$pledge = '';
+		$offer = '';
 		$describe_you = '';
 		$age = '';
 		$volunteers = '';
@@ -116,11 +116,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				case 'date_of_birth':
 					$date_of_birth = $submission->data[$key][0];	
 				break;
-				case 'condition1':
-					$condition1 = $submission->data[$key][0];	
+				case 'pledge':
+					$pledge = $submission->data[$key][0];	
 				break;
-				case 'condition2':
-					$condition2 = $submission->data[$key][0];	
+				case 'offer':
+					$offer = $submission->data[$key][0];	
 				break;
 				case 'describe_you':
 					$describe_you = $submission->data[$key][0];	
@@ -191,12 +191,12 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 		//dpm($condition);
 
-		if($condition1 == 1):
-			$condition1 = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
+		if($pledge == 1):
+			$pledge = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
 		endif;
 
-		if($condition2 == 1):
-			$condition2 = 'My employer offer a matched giving scheme';
+		if($offer == 1):
+			$offer = 'My employer offer a matched giving scheme';
 		endif;
 
 		if($describe_you == 1):
@@ -292,8 +292,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
 			        'birth_day'=>$date_of_birth,
-			        'condition1'=>$condition1,
-			        'condition2'=>$condition2,
+			        'pledge'=>$pledge,
+			        'offer'=>$offer,
 			        'descripton'=>$describe_you,
 			        'age'=>$age,
 			        'volunteers'=>$volunteers,
@@ -357,7 +357,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			        'occupation'=>$occupation,
 			        'employer'=>$employer,
 			        'birth_day'=>$date_of_birth,
-			        'conditions'=>$condition,
+			        'pledge'=>$pledge,
+			        'offer'=>$offer,
 			        'descripton'=>$i_am_a,
 			        'age'=>$age,
 			        'volunteer'=>$volunteer,
