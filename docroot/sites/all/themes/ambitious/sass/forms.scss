@@ -552,7 +552,11 @@ div.ctools-modal-content .form-item .description {
       &.error {
         border: 2px solid $error-border;
         box-shadow: none;
-        color: $error-text;
+
+        //color: $error-text;
+        //Above style is commented because when you type
+        //it's getting typed in red.
+     
       }
     }
 
