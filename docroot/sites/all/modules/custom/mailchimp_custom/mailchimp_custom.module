@@ -8,6 +8,14 @@ function mailchimp_custom_init(){
 	// $MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
 	// $result1 = $MailChimp->call('/lists/list');
 	// dpm($result1);
+	// $result3 = $MailChimp->call('/lists/member-info', array(
+	// 			'id' => '20af80b11d',
+	// 		    'emails' => array(
+	// 		    	0 => array('email'=>'nishan@thesmallaxe.com'))
+	// 		    )
+	// 		);
+
+	// dpr($result3);
 
 }
 
@@ -265,6 +273,60 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					// dpm("i am a course");
 					array_push($campaigns, $newevent);
 				}
+				//Gathering exsisting details.
+				if ($lastname == NULL || $lastname == ''){
+					$lastname = print_data($result3, 'LNAME');
+				}
+				if ($phonenumber == NULL || $phonenumber == ''){
+					$phonenumber = print_data($result3, 'PHONE');
+				}
+				if ($postcode == NULL || $postcode == ''){
+					$postcode = print_data($result3, 'POSTCODE');
+				}
+				if ($address1 == NULL || $address1 == ''){
+					$address1 = print_data($result3, 'ADDRESS1');
+				}
+				if ($address2 == NULL || $address2 == ''){
+					$address2 = print_data($result3, 'ADDRESS2');
+				}
+				if ($city == NULL || $city == ''){
+					$city = print_data($result3, 'CITY');
+				}
+				if ($country == NULL || $country == ''){
+					$country = print_data($result3, 'COUNTRY');
+				}
+				if ($occupation == NULL || $occupation == ''){
+					$occupation = print_data($result3, 'OCCUPATION');
+				}
+				if ($employer == NULL || $employer == ''){
+					$employer = print_data($result3, 'EMPLOYER');
+				}
+				if ($date_of_birth == NULL || $date_of_birth == ''){
+					$date_of_birth = print_data($result3, 'BIRTH_DAY');
+				}
+				if ($pledge == NULL || $pledge == ''){
+					$pledge = print_data($result3, 'PLEDGE');
+				}
+				if ($offer == NULL || $offer == ''){
+					$offer = print_data($result3, 'OFFER');
+				}
+				if ($describe_you == NULL || $describe_you == ''){
+					$describe_you = print_data($result3, 'DESCRIPTON');
+				}
+				if ($age == NULL || $age == ''){
+					$age = print_data($result3, 'AGE');
+				}
+				if ($volunteers == NULL || $volunteers == ''){
+					$volunteers = print_data($result3, 'VOLUNTEERS');
+				}
+				if ($support == NULL || $support == ''){
+					$support = print_data($result3, 'SUPPORT');
+				}
+				if ($update == NULL || $update == ''){
+					$update = print_data($result3, 'UPDATE');
+				}
+
+
 				//update the current user
 				$result = $MailChimp->call('/lists/update-member', array(
 					'id' => $list_id,
@@ -282,7 +344,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				                ),
 
 				            2 => array(
-				                'name' => 'News Letters',
+				                'name' => 'Newsletters',
 				                'groups' => $news
 				                ),
 				            3 => array(
@@ -337,7 +399,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 				elseif($contenttype == 'webform' || $contenttype == 'newsletter')
 				{
-					$name = 'News Letters';
+					$name = 'Newsletters';
 				}
 				elseif($contenttype == 'volunteers')
 				{
@@ -408,7 +470,7 @@ function print_event_list($result3){
 		elseif($group['name'] == 'Courses'){
 			$subscribed_courses = get_subscribed_events($subscribed_list);
 		}
-		elseif($group['name'] == 'News Letters'){
+		elseif($group['name'] == 'Newsletters'){
 			$subscribed_news = get_subscribed_events($subscribed_list);
 		}
 		elseif($group['name'] == 'Volunteer'){
@@ -426,6 +488,11 @@ function print_event_list($result3){
 	//print_r($total_events);
 	return $total_events;
 };
+
+function print_data($result3, $var){
+	$data = $result3['data']['0']['merges'][$var];
+	return $data;
+}
 
 //by sending the event type we can get the actual events with that to which user has subscribed.
 function get_subscribed_events($array){
