@@ -101,6 +101,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					$email = $submission->data[$key][0];
 				break;
 				case 'firstname':
+				case 'first_name':
 					$firstname = $submission->data[$key][0];
 				break;
 				case 'lastname':
