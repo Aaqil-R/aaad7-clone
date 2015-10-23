@@ -95,7 +95,11 @@
   ?>
 <!-- / header -->
 
-<?php if (!empty($node->field_featured_image)): ?>
+
+<?php 
+$default_image = $node->field_featured_image[LANGUAGE_NONE][0]['is_default'];
+//if (!empty($node->field_featured_image)): 
+if (!$default_image == 1): ?>
 <section class="visual header_banner">
   <div class="img-holder">
     <div class="caption-frame">
@@ -161,7 +165,8 @@
 
 <section id="content-area">
 
-  <?php if (empty($node->field_featured_image)): ?>
+  <?php //if (empty($node->field_featured_image)):
+  if ($default_image == 1): ?>
     <h1 class="title"><?php print $title; ?></h1>
   <?php endif; ?>
 

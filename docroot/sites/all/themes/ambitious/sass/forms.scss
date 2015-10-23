@@ -971,12 +971,16 @@ div.modal-forms-modal-content .form-item label {
   }
 
   .webform-component-textarea {
+    margin-bottom: 20px;
+
     textarea {
       margin-bottom: 0;
     }
 
-    .grippie {
-      width: 66.6%;
+    @include breakpoint($not-mobile) {
+      .grippie {
+        width: 66.6%;
+      }
     }
   }
 
@@ -984,8 +988,9 @@ div.modal-forms-modal-content .form-item label {
     margin: 20px 0;
   }
 
-  #edit-submitted-agree-condition {
-    input#edit-submitted-agree-condition-1 {
+  //#edit-submitted-agree-condition, #edit-submitted-condition {
+  .form-checkboxes {
+    input.form-checkbox {
       float: left;
       margin: 8px;
     }
