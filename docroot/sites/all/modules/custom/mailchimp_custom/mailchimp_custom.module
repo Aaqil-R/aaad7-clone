@@ -32,11 +32,17 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	);
 
 	//if the webform is one of the 6 the add the test webform content type
-	// $webform_array = array(74621);
-	// $webformid = $submission->nid;
-	// if(in_array($webformid ,$webform_array )){
-	// 	$contenttype = 'testwebform';
-	// }
+	//homepage - are you with us 74666
+	//get in touch - 224896
+	//join ustoday - 74621
+	//events - 74601
+	//work for us - 223446
+	//share you story 677426
+	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677426);
+	$webformid = $submission->nid;
+	if(in_array($webformid ,$webform_array )){
+		$contenttype = 'testwebform';
+	}
 	// check if we need to fire integrate this webform submission to mail chimp.
 	if (in_array($contenttype, $enabled_content_types)) 
 	{
@@ -249,7 +255,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					// dpm("i am a course");
 					array_push($courses, $newevent);
 				}
-				elseif($contenttype == 'webform' || $contenttype == 'newsletter')
+				elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
 				{
 					// dpm("i am a course");
 					array_push($news, $newevent);
@@ -335,7 +341,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					$name = 'Courses';
 				}
 
-				elseif($contenttype == 'webform' || $contenttype == 'newsletter')
+				elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
 				{
 					$name = 'News Letters';
 				}
