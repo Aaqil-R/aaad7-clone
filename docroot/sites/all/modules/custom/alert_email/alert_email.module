@@ -21,7 +21,7 @@ function get_unpublished_items($contenttype){
 //returns the content types as an array which have more than 0 unpublished items
 function get_content_types(){
 	//define content types to which we need to find the unpublished items
-	$contenttypes = array("job_vacancy","event","course","take_action","topic","my_voice_blog");
+	$contenttypes = array("job_vacancy","event","course","take_action","topic","my_voice_blog","share_your_story");
 	$arrlength = count($contenttypes);
 
 	//array which will store the content name and unpublished items
@@ -93,6 +93,12 @@ function get_user_roles($contenttype){
 			array_push($userrolearray, 'my Voice team Approver');
 			break;
 
+		case 'share_your_story':
+			array_push($userrolearray, 'share your story Approver');
+			break;	
+
+
+
 		default:
 			break;
 	}
@@ -151,6 +157,11 @@ function create_mails($email,$contentname){
 		case 'my_voice_blog':
 			$link = '/myvoice-approval';
 			$content = 'my voice blogs';
+			break;
+
+		case 'share_your_story':
+			$link = '/shareyourstory-approval';
+			$content = 'Share your story';
 			break;
 
 		default:
