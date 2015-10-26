@@ -113,38 +113,44 @@
 
 <!-- My codes to display the events -->
 <div class"event-form">
-<p><strong>Start Date : </strong>
+
 <?php 
   //since date1 and date 2 are always mandatory we dont need to check whether they are null
 
-  //to print the first date
+  //to print the Start date
   $date1 = new DateTime();
   $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
 
-  echo $date1->format('l, d F Y') . "\n";
-?>
-</p>  
-<p><strong>End Date : </strong>
-<?php
-  //to print the second date
+  //to print the End date
   $date2 = new DateTime();
   $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
-  
-  //to check whether both are the same else print both.
-  if($date1 != $date2):
-    echo $date2->format('l, d F Y') . "\n";
-  endif;
 ?>
-</p>
 
-<?php if(isset($content['field_location'])): ?>
-<p><strong>Location : </strong>
-<?php 
-  //to print the location
-  echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
-?>
-</p>
-<?php endif;?>
+<div class="details-box">
+  <!-- <div class="details-title">
+    <p><strong>Details</strong></p>
+  </div> -->
+  <div class="details-time">
+    <p><strong>Date</strong></p>
+    <p><?php 
+    echo $date1->format('l, d F Y');
+      //to check whether both are the same else print both.
+      if($date1 != $date2):
+        echo  " - " . $date2->format('l, d F Y') . "\n";
+      endif;
+    ?></p>
+  </div>
+  <div class="details-location">
+    <?php if(isset($content['field_location'])): ?>
+      <p><strong>Location</strong></p>
+      <p><?php 
+        //to print the location
+        echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
+      ?>
+      </p>
+    <?php endif;?> 
+  </div>
+</div>
 
 <?php
   if(isset($content['body'])):

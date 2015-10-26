@@ -113,7 +113,7 @@
 
 <!-- My codes to display the events -->
 <div class"event-form">
-<p><strong>Start Date : </strong>
+<!-- <p><strong>Start Date : </strong>
 <?php 
   //since date1 and date 2 are always mandatory we dont need to check whether they are null
 
@@ -135,7 +135,8 @@
     echo $date2->format('l, d F Y') . "\n";
   endif;
 ?>
-</p>
+</p> 
+
 
 <?php if(isset($content['field_location'])): ?>
 <p><strong>Location : </strong>
@@ -144,7 +145,33 @@
   echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
 ?>
 </p>
-<?php endif;?>
+<?php endif;?>-->
+
+<div class="details-box">
+  <!-- <div class="details-title">
+    <p><strong>Details</strong></p>
+  </div> -->
+  <div class="details-time">
+    <p><strong>Date</strong></p>
+    <p><?php 
+    echo $date1->format('l, d F Y');
+      //to check whether both are the same else print both.
+      if($date1 != $date2):
+        echo  " - " . $date2->format('l, d F Y') . "\n";
+      endif;
+    ?></p>
+  </div>
+  <div class="details-location">
+    <?php if(isset($content['field_location'])): ?>
+      <p><strong>Location</strong></p>
+      <p><?php 
+        //to print the location
+        echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
+      ?>
+      </p>
+    <?php endif;?> 
+  </div>
+</div>
 
 <?php
   if(isset($content['body'])):
