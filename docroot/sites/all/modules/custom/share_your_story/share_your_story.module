@@ -39,22 +39,63 @@ function share_your_story_webform_submission_insert($node, $submission){
 
     // Now lets check whether we have defined this form as a share your story webform.
     if ($form_key === $WEBFORM_FORM_KEY) {
+
+        foreach ($node->webform['components'] as $key => $field) 
+        {
+            // debug statements
+            // dpm($field['form_key']);
+            // dpm($submission->data[$key][0]);
+
+            switch ($field['form_key']) 
+            {
+                case 'email':
+                case 'email_address':
+                    $email = $submission->data[$key][0];
+                break;
+                case 'firstname':
+                case 'first_name':
+                    $firstname = $submission->data[$key][0];
+                break;
+                case 'lastname':
+                    $lastname = $submission->data[$key][0];
+                break;
+                case 'agree_condition':
+                    $did_subscribe = $submission->data[$key][0];
+                break;
+                case 'event_name':
+                    $newevent = $submission->data[$key][0];
+                    $neweventarray = array($submission->data[$key][0]);
+                break;
+                case 'share_your_story_title':
+                    $title = $submission->data[$key][0];
+                break;
+                case 'share_your_story':
+                    $share_your_story = $submission->data[$key][0];
+                break;
+                case 'share_your_story_options':
+                    $share_your_story_option = $submission->data[$key][0];
+                break;
+            }
+        }
+
         // dpm('This is a share your story webform.');
         // if($node->type == 'webform'){
         //dpm($submission);
         //get the form values
-        $email = $submission->data[1][0];
-        $firstname = $submission->data[2][0];
-        $lastname = $submission->data[3][0];
-        $postcode = $submission->data[7][0];
+        // $email = $submission->data['email'][0];
+        // $firstname = $submission->data['firstname'][0];
+        // $lastname = $submission->data['lastname'][0];
 
         //change the values here
-        $title = $submission->data[12][0];
-        $share_your_story = $submission->data[13][0];;
-        $share_your_story_option = $submission->data[14][0];
+        // $title = $submission->data['share_your_story_title'][0];
+        // $share_your_story = $submission->data['share_your_story'][0];;
+        // $share_your_story_option = $submission->data['share_your_story_options'][0];
         //$mailchimp_option = $submission->data[4][0];
 
-        $published = 1;
+        dpm($email);
+
+
+        $published = 0;
 
         // if($mailchimp_option == 1){
         //   //subscribe to mailchimp
@@ -67,7 +108,7 @@ function share_your_story_webform_submission_insert($node, $submission){
         }
         if($share_your_story_option == 3){
           //keep the node as unpublished if the user selects the 3rd option
-          $published = 0;
+          //$published = 0;
         }
         
         //creating the node to save the share your stories    
