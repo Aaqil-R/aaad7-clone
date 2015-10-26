@@ -747,7 +747,20 @@ function ambitious_preprocess_page(&$vars) {
     // Again, add 2nd to last to preserve page--node--[nid] if we do add it in
     if (count($split_url) > 1) {
       $page_name = end($split_url);
-      array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+      //dpm($page_name);
+      // if($page_name != 'campaigns'){
+      //   //skipping it for the three content types pages
+      //   array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+      // }
+      //array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+      if(!($page_name == 'campaigns' || $page_name == 'events' ||$page_name == 'courses')){
+        //skipping it for the three content types pages
+        array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+      }
+      // //array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
+      // else{
+      //   array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));    
+      // }
     }
   }
 
