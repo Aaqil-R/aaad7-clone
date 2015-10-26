@@ -455,10 +455,22 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'send_welcome'      => false,
 				    )
 				);
-
-				//dpm($result);
 			}
 		//end of the new codes
+			//dpm($result);
+
+			if(isset($result['error'])){
+				//dpm('I have an error');
+				//log the result for the error
+				watchdog('Mailchimp_custom', 
+						'Failed to update to mailcimp the user %firstname to %lastname', 
+         			array('%firstname' => $firstname, 
+         				'%lastname' => $lastname, 
+         				WATCHDOG_ERROR));
+			}
+			else{
+				//dpm('Successfull');
+			}
 		}
 		else
 		{
