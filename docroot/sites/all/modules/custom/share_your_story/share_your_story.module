@@ -92,11 +92,9 @@ function share_your_story_webform_submission_insert($node, $submission){
         // $share_your_story_option = $submission->data['share_your_story_options'][0];
         //$mailchimp_option = $submission->data[4][0];
 
-        dpm($email);
-
-
         $published = 0;
-
+        //this is to make sure that this post will not be shared
+        $share = 1;
         // if($mailchimp_option == 1){
         //   //subscribe to mailchimp
         // }
@@ -109,6 +107,7 @@ function share_your_story_webform_submission_insert($node, $submission){
         if($share_your_story_option == 3){
           //keep the node as unpublished if the user selects the 3rd option
           //$published = 0;
+          $share = 0;
         }
         
         //creating the node to save the share your stories    
@@ -136,6 +135,10 @@ function share_your_story_webform_submission_insert($node, $submission){
         //adding the custom fields
         $newnode->field_first_name[$newnode->language][0]['value'] = $firstname;
         $newnode->field_last_name[$newnode->language][0]['value'] = $lastname;
+
+
+        $newnode->field_publish_my_story[$newnode->language][0]['value'] = $share;
+
 
         $newnode = node_submit($newnode); // Prepare node for saving
         node_save($newnode);
