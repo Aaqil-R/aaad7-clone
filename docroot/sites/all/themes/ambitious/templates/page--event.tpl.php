@@ -194,11 +194,6 @@
 </div> <!-- /content-header -->
 <?php endif; ?>
 
-
-<section id="content-area">
-
-</section> <!-- /content -->
-
 <section id="content-area">
   <?php print render($page['content']) ?>
 </section> <!-- /content -->
