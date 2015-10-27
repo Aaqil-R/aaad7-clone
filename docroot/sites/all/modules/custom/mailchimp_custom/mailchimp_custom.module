@@ -36,8 +36,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	//dpm($contenttype);
 	// initialize and array with the content types we want this to fire for.
 	$enabled_content_types = array(
-		'event'
-		,'course'
+		'events'
+		,'courses'
 		,'newsletter'
 		,'volunteer'
 		,'campaigns'
@@ -268,11 +268,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 				//dpm($eventlist);
 				//check for the event type and add the event to the correct array
-				if($contenttype == 'event'){
+				if($contenttype == 'events'){
 					//dpm("i am a event");
 					array_push($events, $newevent);
 				}
-				elseif($contenttype == 'course')
+				elseif($contenttype == 'courses')
 				{
 					// dpm("i am a course");
 					array_push($courses, $newevent);
@@ -411,10 +411,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				echo "user not found";
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
-				if($contenttype == 'event'){
+				if($contenttype == 'events'){
 					$name = 'Events';
 				}
-				elseif($contenttype == 'course')
+				elseif($contenttype == 'courses')
 				{
 					// dpm("i am a course");
 					$name = 'Courses';
@@ -424,7 +424,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				{
 					$name = 'Newsletters';
 				}
-				elseif($contenttype == 'volunteers')
+				elseif($contenttype == 'volunteer')
 				{
 					$name = 'Volunteer';
 				}
