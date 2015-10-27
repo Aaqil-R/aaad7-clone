@@ -50,8 +50,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	//join ustoday - 74621 - done
 	//events - 74601
 	//work for us - 223446 
-	//share you story 677426 - done
-	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677426);
+	//share you story 677426 - in dev
+	//share you story 677451 - in staging done
+	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677451);
 	$webformid = $submission->nid;
 	if(in_array($webformid ,$webform_array )){
 		$contenttype = 'testwebform';
