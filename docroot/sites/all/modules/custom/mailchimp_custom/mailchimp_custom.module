@@ -492,16 +492,16 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
     //      				'%lastname' => $lastname, 
     //      				WATCHDOG_ERROR));
 				//dpm('I am an error');
-				dpm($result);
+				//dpm($result);
 				//adding it to the database
 
-				// $test = serialize($submittingdata);
-				// $record = array(
-    // 				"resultset" => $test,
-    // 			);
-  		// 		drupal_write_record('mailchimp_error_log', $record);
+				$test = serialize($submittingdata);
+				$record = array(
+    				"resultset" => $test,
+    			);
+  				drupal_write_record('mailchimp_error_log', $record);
 
-				
+
   				//dpm($record);
 			}
 			else{
