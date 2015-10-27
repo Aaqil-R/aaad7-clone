@@ -15,7 +15,12 @@ function mailchimp_custom_init(){
 	// 		    )
 	// 		);
 
-	// dpr($result3);
+	//dpr($result3);
+	 // $record = array(
+  //   "resultset" => 'this is a test to see',
+  //   );
+  // drupal_write_record('mailchimp_error_log', $record);
+  // dpm($record);
 
 }
 
@@ -114,6 +119,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				case 'event_name':
 					$newevent = $submission->data[$key][0];
 					$neweventarray = array($submission->data[$key][0]);
+					// dpm('Event array is');
+					// dpm($neweventarray);
+					//dpm($newevent);
+
 				break;
 				case 'node_type':
 					$phonenumber = $submission->data[$key][0];
@@ -165,6 +174,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				break;
 			}
 
+			// dpm('Event array here is');
+			// dpm($neweventarray);
 			// email
 			// firstname
 			// lastname
@@ -338,7 +349,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 
 				//update the current user
-				$result = $MailChimp->call('/lists/update-member', array(
+
+				//prepare the submitting data
+				$submittingdata = array(
 					'id' => $list_id,
 				    'email' => array('email'=>$email),
 					'merge_vars' => array(
@@ -387,10 +400,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'update_existing' => true,
 				    'replace_interests' => true,
 				    'send_welcome' => false,
-				    )
-				);
-					//dpm($result);
+				    );
 
+				$result = $MailChimp->call('/lists/update-member', $submittingdata);
+				//dpm($result);
 				//dpm("I came here also");
 			}
 			else
@@ -420,7 +433,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					$name = 'Campaign';
 				}
 				//create a new user
-				$result = $MailChimp->call('lists/subscribe', array(
+
+				//creating the date to be sent
+
+				$submittingdata = array(
 				    'id' => $list_id,
 				    'email' => array('email'=>$email),
 				    'merge_vars' => array(
@@ -453,8 +469,16 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'update_existing'   => true,
 				    'replace_interests' => true,
 				    'send_welcome'      => false,
-				    )
-				);
+				    );
+
+				$result = $MailChimp->call('lists/subscribe', $submittingdata);
+
+
+				// $record = array(
+    // 				"resultset" => 'this is the test',
+    // 			);
+  		// 		drupal_write_record('mailchimp_error_log', $submittingdata);
+  		// 		dpm($record);
 			}
 		//end of the new codes
 			//dpm($result);
@@ -462,11 +486,21 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			if(isset($result['error'])){
 				//dpm('I have an error');
 				//log the result for the error
-				watchdog('Mailchimp_custom', 
-						'Failed to update to mailcimp the user %firstname to %lastname', 
-         			array('%firstname' => $firstname, 
-         				'%lastname' => $lastname, 
-         				WATCHDOG_ERROR));
+				// watchdog('Mailchimp_custom', 
+				// 		'Failed to update to mailcimp the user %firstname to %lastname', 
+    //      			array('%firstname' => $firstname, 
+    //      				'%lastname' => $lastname, 
+    //      				WATCHDOG_ERROR));
+				//dpm('I am an error');
+				//dpm($result);
+				//adding it to the database
+
+				$test = serialize($submittingdata);
+				$record = array(
+    				"resultset" => $test,
+    			);
+  				drupal_write_record('mailchimp_error_log', $record);
+  				//dpm($record);
 			}
 			else{
 				//dpm('Successfull');
