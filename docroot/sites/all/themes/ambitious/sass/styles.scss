@@ -10,6 +10,7 @@ body {
   color: $base-text-color;
   background: $base-background-color;
   font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+
   //min-width: $base-min-width;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
@@ -37,8 +38,10 @@ img {
 
 a {
   outline: none;
+
   // text-decoration: none;
   color: $orange-dark;
+
   // &:hover {
   //     text-decoration: underline;
   // }
@@ -58,6 +61,7 @@ select {
 form,
 fieldset {
   margin: 0;
+
   //padding: 0;
   border-style: none;
 }
@@ -92,6 +96,7 @@ textarea {
   margin: 0;
   padding: 4px 7px;
   border: 1px solid $base-input-border-color;
+
   &:focus {
     /*Border colour before*/
     //border-color: darken($base-input-border-color, 30%);        
@@ -148,6 +153,7 @@ input[type=submit]
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
   line-height: 1.2em;
+
   //doubles up and over typography?
   margin: 0 0 1.2em;
   font-weight: bold;
@@ -184,6 +190,7 @@ table {
 // system Messages
 .messages {
   position: inherit;
+
   .placeholder {
     text-decoration: underline;
   }
@@ -191,14 +198,22 @@ table {
 
 .status {
   @include span(12 of 12);
+
   z-index: 1000;
   background: $status-bg;
   color: $status-text;
   margin-bottom: 10px;
+
+  p {
+    color: $status-text;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .warning {
   @include span(12 of 12);
+
   z-index: 1000;
   background: $warning-bg;
   color: $warning-text;
@@ -207,6 +222,7 @@ table {
 
 .error {
   @include span(12 of 12);
+
   z-index: 1000;
   background: $error-bg;
   color: $error-text;
@@ -216,18 +232,23 @@ table {
 .easy-breadcrumb {
   text-align: right;
   color: $white;
+
   // reseting the letter spacing.
   letter-spacing: 0px;
+
   a {
     //overiding the colour
     color: $white;
+
     &:hover {
       text-decoration: none;
     }
+
     &:visited {
       color: $base-link-color;
     }
   }
+
   @include breakpoint($mobile) {
     display: none;
   }
@@ -271,10 +292,12 @@ table {
       padding-bottom: 5em;
     }
   }
+
   // TODO: Due to All the basic pages is being added the above width.
   &.page-node-223451 #content-area {
     @include breakpoint($all-desktop) {
       @include span(12 of 12);
+
       padding-bottom: 5em;
     }
   }
@@ -285,22 +308,28 @@ table {
 .simple-list-item {
   border-bottom: 1px $gray solid;
   margin-bottom: 2.5em;
+
   .image {
     display: none;
   }
+
   @include breakpoint($all-desktop) {
     &.full-width {
       h5, p {
         width: 100%;
       }
     }
+
     h5, p {
       @include span(7 of 10);
     }
+
     .image {
       @include span(3 of 10 last);
+
       display: block;
     }
+
     .clear {
       clear: both;
       height: 0;
@@ -312,6 +341,7 @@ table {
 .messages--error {
   position: fixed;
   bottom: 0px;
+
   // TODO: Ideally would have wanted this to be 100% but this is inside the 
   // main wrapper which is constrained. Needs to be looked into.
   width: 100%;
@@ -322,9 +352,11 @@ table {
   padding: 1em;
   background: $error-red;
   color: $white;
+
   a {
     color: $white;
   }
+
   h2, ul, p {
     max-width: 1080px;
     margin: 0 auto;
@@ -354,6 +386,7 @@ table {
     float: left;
     padding: 0 2em;
   }
+
   .field-name-field-featured-author {
     float: left;
   }
@@ -382,12 +415,15 @@ table {
   a {
     color: $pink;
   }
+
   .easy-breadcrumb {
     a {
       color: $white;
+
       &:hover {
         text-decoration: none;
       }
+
       &:visited {
         color: $base-link-color;
       }
@@ -399,13 +435,16 @@ table {
   .nav-holder {
     a {
       color: $black;
+
       &:hover {
         color: $pink;
       }
     }
+
     p {
       a {
         color: $white;
+
         &:hover {
           color: $white;
         }

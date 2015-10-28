@@ -1817,7 +1817,7 @@ iframe {
 }
 
 /* line 1483, ../sass/general.scss */
-.share-your-story-webform {
+.share-your-story-webform, .section-share-your-story-new {
   padding-bottom: 40px;
 }
 
@@ -1829,4 +1829,18 @@ iframe {
 /* line 1498, ../sass/general.scss */
 .share-your-story-card .content {
   width: 80%;
+}
+
+/* line 1506, ../sass/general.scss */
+.node-type-event .content-header .status, .node-type-course .content-header .status, .node-type-volunteer .content-header .status, .node-type-newsletter .content-header .status, .node-type-campaigns .content-header .status, .node-type-share-your-story .content-header .status {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #2CAA55;
+  text-align: center;
+}
+/* line 1512, ../sass/general.scss */
+.node-type-event .content-header .status p, .node-type-course .content-header .status p, .node-type-volunteer .content-header .status p, .node-type-newsletter .content-header .status p, .node-type-campaigns .content-header .status p, .node-type-share-your-story .content-header .status p {
+  color: white;
 }

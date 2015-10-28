@@ -1480,7 +1480,7 @@ iframe {
 }
 
 //Share Your Story Webform styling
-.share-your-story-webform {
+.share-your-story-webform, .section-share-your-story-new {
   padding-bottom: 40px;
 
   // .form-textarea-wrapper {
@@ -1497,5 +1497,21 @@ iframe {
 
   .content {
     width: 80%;
+  }
+}
+
+//Signup Form - Thank You box
+.node-type-event, .node-type-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .node-type-share-your-story {
+  .content-header {
+    .status {
+      @include span(12 of 12);
+
+      background: #2CAA55;
+      text-align: center;
+
+      p {
+        color: white;
+      }
+    }
   }
 }

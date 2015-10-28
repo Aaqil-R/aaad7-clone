@@ -15,7 +15,12 @@ function mailchimp_custom_init(){
 	// 		    )
 	// 		);
 
-	// dpr($result3);
+	//dpr($result3);
+	 // $record = array(
+  //   "resultset" => 'this is a test to see',
+  //   );
+  // drupal_write_record('mailchimp_error_log', $record);
+  // dpm($record);
 
 }
 
@@ -31,8 +36,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	//dpm($contenttype);
 	// initialize and array with the content types we want this to fire for.
 	$enabled_content_types = array(
-		'event'
-		,'course'
+		'events'
+		,'courses'
 		,'newsletter'
 		,'volunteer'
 		,'campaigns'
@@ -45,8 +50,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	//join ustoday - 74621 - done
 	//events - 74601
 	//work for us - 223446 
-	//share you story 677426 - done
-	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677426);
+	//share you story 677426 - in dev
+	//share you story 677451 - in staging done
+	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677451);
 	$webformid = $submission->nid;
 	if(in_array($webformid ,$webform_array )){
 		$contenttype = 'testwebform';
@@ -114,6 +120,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				case 'event_name':
 					$newevent = $submission->data[$key][0];
 					$neweventarray = array($submission->data[$key][0]);
+					// dpm('Event array is');
+					// dpm($neweventarray);
+					//dpm($newevent);
+
 				break;
 				case 'node_type':
 					$phonenumber = $submission->data[$key][0];
@@ -165,6 +175,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				break;
 			}
 
+			// dpm('Event array here is');
+			// dpm($neweventarray);
 			// email
 			// firstname
 			// lastname
@@ -257,11 +269,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 				//dpm($eventlist);
 				//check for the event type and add the event to the correct array
-				if($contenttype == 'event'){
+				if($contenttype == 'events'){
 					//dpm("i am a event");
 					array_push($events, $newevent);
 				}
-				elseif($contenttype == 'course')
+				elseif($contenttype == 'courses')
 				{
 					// dpm("i am a course");
 					array_push($courses, $newevent);
@@ -338,7 +350,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 
 				//update the current user
-				$result = $MailChimp->call('/lists/update-member', array(
+
+				//prepare the submitting data
+				$submittingdata = array(
 					'id' => $list_id,
 				    'email' => array('email'=>$email),
 					'merge_vars' => array(
@@ -387,10 +401,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'update_existing' => true,
 				    'replace_interests' => true,
 				    'send_welcome' => false,
-				    )
-				);
-					//dpm($result);
+				    );
 
+				$result = $MailChimp->call('/lists/update-member', $submittingdata);
+				//dpm($result);
 				//dpm("I came here also");
 			}
 			else
@@ -398,10 +412,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				echo "user not found";
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
-				if($contenttype == 'event'){
+				if($contenttype == 'events'){
 					$name = 'Events';
 				}
-				elseif($contenttype == 'course')
+				elseif($contenttype == 'courses')
 				{
 					// dpm("i am a course");
 					$name = 'Courses';
@@ -411,7 +425,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				{
 					$name = 'Newsletters';
 				}
-				elseif($contenttype == 'volunteers')
+				elseif($contenttype == 'volunteer')
 				{
 					$name = 'Volunteer';
 				}
@@ -420,7 +434,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					$name = 'Campaign';
 				}
 				//create a new user
-				$result = $MailChimp->call('lists/subscribe', array(
+
+				//creating the date to be sent
+
+				$submittingdata = array(
 				    'id' => $list_id,
 				    'email' => array('email'=>$email),
 				    'merge_vars' => array(
@@ -453,8 +470,16 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'update_existing'   => true,
 				    'replace_interests' => true,
 				    'send_welcome'      => false,
-				    )
-				);
+				    );
+
+				$result = $MailChimp->call('lists/subscribe', $submittingdata);
+
+
+				// $record = array(
+    // 				"resultset" => 'this is the test',
+    // 			);
+  		// 		drupal_write_record('mailchimp_error_log', $submittingdata);
+  		// 		dpm($record);
 			}
 		//end of the new codes
 			//dpm($result);
@@ -462,11 +487,23 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			if(isset($result['error'])){
 				//dpm('I have an error');
 				//log the result for the error
-				watchdog('Mailchimp_custom', 
-						'Failed to update to mailcimp the user %firstname to %lastname', 
-         			array('%firstname' => $firstname, 
-         				'%lastname' => $lastname, 
-         				WATCHDOG_ERROR));
+				// watchdog('Mailchimp_custom', 
+				// 		'Failed to update to mailcimp the user %firstname to %lastname', 
+    //      			array('%firstname' => $firstname, 
+    //      				'%lastname' => $lastname, 
+    //      				WATCHDOG_ERROR));
+				//dpm('I am an error');
+				//dpm($result);
+				//adding it to the database
+
+				$test = serialize($submittingdata);
+				$record = array(
+    				"resultset" => $test,
+    			);
+  				drupal_write_record('mailchimp_error_log', $record);
+
+
+  				//dpm($record);
 			}
 			else{
 				//dpm('Successfull');

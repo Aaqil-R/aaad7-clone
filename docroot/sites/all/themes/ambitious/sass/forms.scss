@@ -926,7 +926,7 @@ div.modal-forms-modal-content .form-item label {
 }
 
 //Course, Events, Volunteer, Newsletter & Share Your Story Webforms
-.node-event, .node-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform {
+.node-event, .node-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform, .section-share-your-story-new {
   .webform-component-number,
   .webform-component-textfield,
   .webform-component-email,
@@ -940,7 +940,7 @@ div.modal-forms-modal-content .form-item label {
     , input[type=file]
     , textarea {
       clear: both;
-      width: 66.6%;
+      width: 69.4%;
       border-radius: 5px;
 
       @include border-radius(5px);
@@ -972,6 +972,13 @@ div.modal-forms-modal-content .form-item label {
         border: 2px solid $error-border;
       }
     }
+
+    @include breakpoint($not-mobile) {
+      label {
+        width: 69.4%;
+        float: left;
+      }
+    }
   }
 
   .webform-component-select, .webform-component-date {
@@ -987,7 +994,7 @@ div.modal-forms-modal-content .form-item label {
 
     @include breakpoint($not-mobile) {
       .grippie {
-        width: 66.6%;
+        width: 69.4%;
       }
     }
   }
@@ -1003,4 +1010,12 @@ div.modal-forms-modal-content .form-item label {
       margin: 8px;
     }
   }
+}
+
+//Share your story webform
+.webform-share-your-story {
+  background: white;
+  padding: 1.5em;
+  margin-bottom: 3em;
+  border: 1px solid #d2d5d6;
 }

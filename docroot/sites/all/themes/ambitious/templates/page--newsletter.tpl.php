@@ -102,6 +102,11 @@ if (!$default_image == 1): ?>
   <div class="img-holder">
     <div class="caption-frame">
       <div class="region region-caption-holder">
+        <?php if ($page['breadcrumb']): ?> 
+              <div class="easy-breadcrumb"> 
+                <?php print render($page['breadcrumb']); ?>
+              </div>
+            <?php endif; ?>
           <div class="caption-text">
             <div class="caption-text-titles">
                 <div class="caption-text-title caption-text-title-1">               
@@ -119,9 +124,38 @@ if (!$default_image == 1): ?>
       style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
     </div>
     </div>
+    <?php if (!$default_image == 1): ?>
+    <div class="holder">
+      <span class="pic-by">  
+          <?php 
+            $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+            $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]); 
+            if(render($viewitemscredit)){ 
+            print t('© Photo by ') . render($viewitemscredit);
+            }
+          ?>          
+      </span>
+    </div>
+  <?php endif; ?>
   </section>
 <?php else: ?>
-  <div class="top-header"></div>
+  <section class="top-header">
+    <div class="top-header-inner">
+      <div class="page-links">
+        <?php print render($page['content_top']); ?> 
+
+        <!-- BEGIN BREADCRUMB -->
+        <!-- rendering out easy breadcrumb on the page -->
+        <?php if ($page['breadcrumb']): ?>
+          <div class="easy_breadcrumb">
+            <?php print render($page['breadcrumb']); ?>
+          </div>
+        <?php endif; ?>  
+        <!-- END BREADCRUMB -->
+        
+      </div>
+    </div>
+  </section>
 <?php endif; ?>
 
 <?php if ($page['content_top']): ?>  
