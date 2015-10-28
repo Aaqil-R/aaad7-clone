@@ -93,11 +93,15 @@
   print render($page['header'])
   ?>
   <!-- / header -->
-
   <section class="visual header_banner">
   <div class="img-holder">
     <div class="caption-frame">
       <div class="region region-caption-holder">
+        <?php if ($page['breadcrumb']): ?> 
+              <div class="easy-breadcrumb"> 
+                <?php print render($page['breadcrumb']); ?>
+              </div>
+            <?php endif; ?>
           <div class="caption-text">
             <div class="caption-text-titles">
                 <div class="caption-text-title caption-text-title-1">               
@@ -149,9 +153,9 @@
   <section id="highlighted">
     <?php print render($page['highlighted']); ?>
 
-    <?php if ($breadcrumb): ?>
-    <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
-  <?php endif; ?>
+    <?php //if ($breadcrumb): ?>
+    <!-- <h1 class="breadcrumb"><?php //print $breadcrumb; ?></h1> -->
+  <?php //endif; ?>
 
 </section> <!-- /highlighted -->
 <?php endif; ?>

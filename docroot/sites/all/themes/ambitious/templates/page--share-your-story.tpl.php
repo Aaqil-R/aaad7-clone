@@ -120,6 +120,7 @@
 
  <?php if ($page['image_holder']): ?>
 <section class="header_banner banner-nav">
+
     <!-- commented below code because it's hiding the menu on forum page and its an empty div tag -->
      <?php /*<div class="banner_text_main">
         <?php if ($page['caption_holder']): ?>
@@ -152,8 +153,23 @@
 </section> <!-- /highlighted -->
 <?php endif; ?>
 
-<div class="top-header">
-  </div>
+<section class="top-header">
+    <div class="top-header-inner">
+      <div class="page-links">
+        <?php print render($page['content_top']); ?> 
+
+        <!-- BEGIN BREADCRUMB -->
+        <!-- rendering out easy breadcrumb on the page -->
+        <?php if ($page['breadcrumb']): ?>
+          <div class="easy_breadcrumb">
+            <?php print render($page['breadcrumb']); ?>
+          </div>
+        <?php endif; ?>  
+        <!-- END BREADCRUMB -->
+        
+      </div>
+    </div>
+  </section>
 
 <?php if ($page['content_top']): ?>  
   <section class="my-voice-block" id="content_top">
