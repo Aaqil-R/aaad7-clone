@@ -141,7 +141,23 @@ if (!$default_image == 1): ?>
   <?php endif; ?>
   </section>
 <?php else: ?>
-  <div class="top-header"></div>
+  <section class="top-header">
+    <div class="top-header-inner">
+      <div class="page-links">
+        <?php print render($page['content_top']); ?> 
+
+        <!-- BEGIN BREADCRUMB -->
+        <!-- rendering out easy breadcrumb on the page -->
+        <?php if ($page['breadcrumb']): ?>
+          <div class="easy_breadcrumb">
+            <?php print render($page['breadcrumb']); ?>
+          </div>
+        <?php endif; ?>  
+        <!-- END BREADCRUMB -->
+        
+      </div>
+    </div>
+  </section>
 <?php endif; ?>
 
 <?php if ($page['content_top']): ?>  
