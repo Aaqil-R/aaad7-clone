@@ -119,6 +119,19 @@ if (!$default_image == 1): ?>
       style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
     </div>
     </div>
+    <?php if (!$default_image == 1): ?>
+    <div class="holder">
+      <span class="pic-by">  
+          <?php 
+            $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+            $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]); 
+            if(render($viewitemscredit)){ 
+            print t('© Photo by ') . render($viewitemscredit);
+            }
+          ?>          
+      </span>
+    </div>
+  <?php endif; ?>
   </section>
 <?php else: ?>
   <div class="top-header"></div>
