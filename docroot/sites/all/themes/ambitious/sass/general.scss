@@ -1461,3 +1461,19 @@ iframe {
     width: 80%;
   }
 }
+
+//Signup Form - Thank You box
+.node-type-event, .node-type-course, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .node-type-share-your-story {
+  .content-header {
+    .status {
+      @include span(12 of 12);
+
+      background: #2CAA55;
+      text-align: center;
+
+      p {
+        color: white;
+      }
+    }
+  }
+}
