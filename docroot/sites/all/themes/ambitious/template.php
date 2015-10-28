@@ -753,7 +753,7 @@ function ambitious_preprocess_page(&$vars) {
       //   array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
       // }
       //array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
-      if(!($page_name == 'campaigns' || $page_name == 'events' ||$page_name == 'courses')){
+      if(!($page_name == 'campaigns' || $page_name == 'events' || $page_name == 'courses')){
         //skipping it for the three content types pages
         array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
       }
