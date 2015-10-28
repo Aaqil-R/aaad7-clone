@@ -737,7 +737,9 @@ function ambitious_preprocess_page(&$vars) {
     foreach ($split_url as $path) {
       $cumulative_path .= '__' . $path;
       $path_name = 'page' . $cumulative_path;
-      array_splice($vars['theme_hook_suggestions'], -1, 0, str_replace('-','_',$path_name));
+      if($path != 'courses'){
+        array_splice($vars['theme_hook_suggestions'], -1, 0, str_replace('-','_',$path_name));        
+      }
     }
 
     // This does just the page name on its own & is considered more specific than the longest path
