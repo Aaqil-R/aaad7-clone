@@ -1418,25 +1418,63 @@ iframe {
   }
 
   .details-box {
+    //background: $orange;
     background: #F3F3F3;
-    border: 1px solid #CACACA;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     float: left;
     width: 100%;
+    padding: 25px;
+
+    /*p {
+      color: $white;
+    }*/
 
     .details-title {
       border-bottom: 1px solid #CACACA;
-      padding: 10px;
+      padding: 15px;
+    }
+
+    .details-time,
+    .details-location {
+      float: left;
+      width: 100%;
+
+      p {
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+        padding-right: 1em;
+
+        @include breakpoint(min-width $mobile) {
+          width: auto;
+        }
+
+
+        &:first-child {
+          //font-size: 3em;
+          //opacity: 0.1;
+          font-size: 1.35em;
+
+          //color: $black;
+          margin-bottom: 0.35em;
+
+          @include breakpoint(min-width $mobile) {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
 
     .details-time {
-      width: 50%;
-      float: left;
-      padding: 10px;
-    }
+      margin-bottom: 1.5em;
 
-    .details-location {
-      padding: 10px;
+      p {
+        &:first-child {
+          padding-right: 2.8em;
+        }
+      }
     }
   }
 }
