@@ -5,9 +5,11 @@ body.sidebar {
     max-width: none;
     padding: 0;
   }
+
   #sidebar, #sidebar:before {
     width: 25%;
   }
+
   #sidebar {
     float: left;
     padding-top: 5em;
@@ -15,23 +17,28 @@ body.sidebar {
     font-size: 1.2em;
     min-height: 16em;
     letter-spacing: -1px;
+
     ul {
       list-style: none;
       float: right;
+
       a {
         padding: 0.8em 1.5em 0.8em 2.5em;
         display: block;
         color: $shuttle_gray_dark;
         text-align: left;
+
         &.active {
           background: $white;
           color: inherit;
         }
+
         &:hover {
           color: inherit;
         }
       }
     }
+
     &:before {
       content: '';
       position: absolute;
@@ -40,10 +47,12 @@ body.sidebar {
       z-index: -1;
       left: 0;
       background: $porcelain;
+
       @include breakpoint($mobile) {
         content: none;
       }
     }
+
     @include breakpoint($mobile) {
       width: 100%;
       padding: 1em;
@@ -58,6 +67,7 @@ body.sidebar {
   font-size: 1.1em;
   text-align: center;
   position: relative;
+
   select {
     padding: 0.6em 1em;
     width: 100%;
@@ -74,6 +84,7 @@ body.sidebar {
     display: block;
     vertical-align: middle;
   }
+
   &:after {
     content: '';
     background: image-url("arrow-down.png");
@@ -85,6 +96,7 @@ body.sidebar {
     position: absolute;
     pointer-events: none;
   }
+
   &:before {
     /*content:'';
     right:6px; top:0px;
@@ -114,6 +126,7 @@ body.profile .top-header {
   z-index: -1;
   left: 25%;
   background: $white;
+
   @include breakpoint($mobile) {
     content: none;
   }
@@ -123,24 +136,30 @@ body.profile .top-header {
   float: left;
   padding-left: 6em;
   padding-top: 3em;
+
   .holder {
     max-width: 790px;
   }
+
   h1 {
     display: inline-block;
     margin-bottom: 0.6em;
   }
+
   h2 {
     font-size: 2.1em;
+
     @include breakpoint($mobile) {
       font-size: 1.7em;
     }
   }
+
   .member-since {
     font-size: 1.2em;
     color: $shuttle_gray_dark;
     float: right;
     line-height: 4.5em;
+
     @include breakpoint($mobile) {
       font-size: 1em;
       float: none;
@@ -148,50 +167,62 @@ body.profile .top-header {
       display: block;
     }
   }
+
   .profile-info {
     line-height: 1.9em;
+
     a {
       text-decoration: underline;
     }
   }
+
   .profile-main > section {
     margin-bottom: 5em;
+
     @include breakpoint($mobile) {
       margin-bottom: 4em;
+
       &.profile-info {
         margin-top: 1em;
         margin-bottom: 2em;
       }
     }
   }
+
   .profile-picture {
     float: left;
     clear: right;
     margin-right: 4em;
+
     @include breakpoint($mobile) {
       margin: 2em auto;
       display: block;
       float: none;
     }
   }
+
   h3 {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 0;
   }
+
   dl {
     font-size: 1.2em;
     float: left;
+
     @include breakpoint($mobile) {
       font-size: 1em;
       float: none;
       clear: both;
     }
   }
+
   dt {
     float: left;
     clear: left;
     min-width: 6em;
+
     @include breakpoint($mobile) {
       margin: 0;
       width: auto;
@@ -199,10 +230,12 @@ body.profile .top-header {
       min-width: inherit;
     }
   }
+
   dd {
     font-weight: bold;
     display: inline-block;
     float: left;
+
     @include breakpoint($mobile) {
       margin: 0;
       width: auto;
@@ -210,20 +243,25 @@ body.profile .top-header {
       margin-left: 12px;
     }
   }
+
   .about-me {
     clear: both;
+
     h2 {
       margin-bottom: 0.5em;
     }
   }
+
   .connect {
     h3 {
       margin: 1em 0;
+
       @include breakpoint($mobile) {
         font-size: 1.4em;
       }
     }
   }
+
   .recent-activity {
     .tabs {
       font-size: 1.4em;
@@ -232,31 +270,38 @@ body.profile .top-header {
       margin: 2.5em 0 2em;
       padding: 0;
       text-transform: lowercase;
+
       li {
         float: left;
         width: 33%;
       }
+
       a {
         display: block;
         border-bottom: 6px solid $wrapper-bg;
+
         &.active, &:hover {
           border-color: $orange;
         }
       }
+
       @include breakpoint($mobile) {
         text-align: left;
+
         li {
           width: auto;
           float: none;
         }
+
         border-color: $orange;
       }
     }
   }
+
   @include breakpoint($mobile) {
     padding: 2em 0 0;
     width: auto;
-    float: none;
+    float: left;
     margin: 2em 1.4em;
     clear: both;
   }
@@ -265,19 +310,24 @@ body.profile .top-header {
 #comments {
   clear: both;
   padding-top: 2em;
+
   .comment {
     margin: 2em 0;
   }
+
   .profile-picture {
     float: none;
   }
+
   h4 {
     font-size: 1.1em;
     margin: 0.3em 0;
   }
+
   .comment-left {
     float: left;
   }
+
   .comment-body {
     padding: 1.4em 2em;
     border: 2px solid $gray;
@@ -285,6 +335,7 @@ body.profile .top-header {
     font-size: 1.2em;
     line-height: 1.4em;
     position: relative;
+
     &:before {
       background: image-url("comment-tip-left.png") 0 0 no-repeat;
       width: 26px;
@@ -296,26 +347,31 @@ body.profile .top-header {
       top: 16px;
     }
   }
+
   @include breakpoint($mobile) {
     padding: 0;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+
     .comment {
       display: inline-block;
       vertical-align: top;
     }
+
     .profile-picture {
       float: left;
       margin: 0 1em 1.5em 0;
       width: 35%;
       height: auto;
     }
+
     .comment-left {
       float: none;
       margin-bottom: 1em;
       width: 100%;
     }
+
     .comment-body {
       border: none;
       margin: 0;
@@ -323,6 +379,7 @@ body.profile .top-header {
       clear: both;
       height: 100%;
       white-space: normal;
+
       &:before {
         content: none;
       }
@@ -340,42 +397,78 @@ body.profile .top-header {
 /* LOGIN PAGE */
 .profile-main {
   min-height: 430px;
+
   @include breakpoint($mobile) {
     padding-left: 15px;
     padding-right: 15px;
   }
 
+
   //Moved from general.scss : Anees
   #user-profile-form {
+    .group-account {
+      fieldset.form-type-password {
+        .password-parent {
+          width: 100%;
+        }
+      }
+
+      .description {
+        clear: both;
+      }
+    }
+
     .description {
       width: auto;
       max-width: 530px;
-      float: left;
+      float: none;
     }
+
     fieldset {
       padding-left: 0;
       padding-right: 0;
+      float: none;
     }
+
     label {
       position: static;
     }
+
     .field-type-text-long {
-      max-width: 520px;
+      //max-width: 520px;
+      width: 80%;
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
     }
+
     .password-strength {
       float: none;
       margin-bottom: 20px;
-      width: 100%;
-      max-width: 530px;
+      width: 80%;
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+
+      //max-width: 530px;
+   
     }
-    input[type=password] {
-      width: 100%;
-      max-width: 530px;
-    }
+
+    // input[type=password], [type=text] {
+    //   width: 100%;
+    //   max-width: 530px;
+    // }
+
     .form-type-password.form-item-pass-pass2 {
       width: 100%;
-      max-width: 590px;
+
+      //max-width: 590px;
+   
     }
+
     .field-name-field-type-of-user {
       fieldset {
         float: left;
@@ -383,38 +476,48 @@ body.profile .top-header {
       }
     }
   }
+
   //Moved from general.scss : Anees
   #user-register-form {
     label {
       top: 17px;
     }
   }
+
   #user-login, #user-pass, #user-register-form, #user-profile-form {
-    float: left;
+    //float: left;
+
     label {
-      position: absolute;
+      position: inherit;
       top: 17px;
       left: 26px;
     }
+
     input[type="email"], input[type="text"], .select, input[type="password"] {
       float: left;
       clear: both;
       width: 80%;
       border-radius: 5px;
       border-color: $mercury;
+
       @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+
       margin-bottom: 20px;
       padding: 12px 23px;
+
       @include breakpoint($mobile) {
         width: 100%;
       }
 
+
       font-size: 18px;
+
       &:focus {
         border: 2px solid $yellow;
         padding: 11px 22px;
         color: $base-link-color;
       }
+
       &.error, &.error:focus {
         border: 2px solid $error-border;
         padding: 11px 22px;
@@ -422,19 +525,24 @@ body.profile .top-header {
         background: $error-bg;
       }
     }
+
     input[type="submit"] {
       float: left;
       clear: both;
       border: none;
+
       // added backgournd, color, border-radius - > nanda Globalsoftlab
       @include border-radius(5px);
+
       background: $orange;
       color: $white;
       border-bottom: 5px solid $orange-dark;
       margin-right: 20px;
+
       @include breakpoint($mobile) {
         margin-bottom: 20px;
       }
+
 
       &:hover {
         border-bottom-width: 3px;
@@ -443,6 +551,7 @@ body.profile .top-header {
       }
     }
   }
+
   .hybridauth-widget-wrapper {
     clear: both;
   }
@@ -462,13 +571,16 @@ body.profile .top-header {
       }
     }
   }
+
   .easy-breadcrumb {
     padding-top: 0;
   }
+
   .view-user-profile {
     img {
       display: none;
     }
+
     .comment-left {
       img {
         width: 60px;
@@ -477,20 +589,24 @@ body.profile .top-header {
       }
     }
   }
+
   tr {
     fieldset {
       padding: 0;
     }
   }
+
   #privatemsg-list-form {
     .form-item-operation {
       padding-top: 0;
       padding-left: 0;
+
       @include breakpoint($mobile) {
         width: 99%;
         margin: 25px 0 15px 0;
       }
     }
+
     #edit-delete {
       @include breakpoint($mobile) {
         width: 99%;
@@ -511,6 +627,7 @@ body.profile .top-header {
   color: $shamrock;
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
+
   @include breakpoint($mobile) {
     color: $orange;
   }
@@ -520,6 +637,7 @@ body.profile .top-header {
 
 #quicktabs-user_profile_page ul.quicktabs-tabs {
   background: $white;
+
   li {
     &:last-child::before {
       position: absolute;
@@ -532,27 +650,33 @@ body.profile .top-header {
       -webkit-transition: -webkit-transform 0.3s;
       transition: transform 0.3s;
       z-index: 99;
+
       @include breakpoint($mobile) {
         display: none;
       }
     }
+
     &:first-child.active ~ li:last-child::before {
       -webkit-transform: translate3d(-200%, 0, 0);
       transform: translate3d(-200%, 0, 0);
     }
+
     &:nth-child(2).active ~ li:last-child::before {
       -webkit-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0);
     }
+
     &:nth-child(3).active ~ li:last-child::before {
       -webkit-transform: translate3d(-200%, 0, 0);
       transform: translate3d(-200%, 0, 0);
     }
+
     &:nth-child(4).active ~ li:last-child::before {
       -webkit-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0);
     }
   }
+
   li.active a {
     color: $orange;
   }
@@ -562,6 +686,7 @@ body.profile .top-header {
 
 #quicktabs-user_profile_page {
   text-align: center;
+
   ul.quicktabs-tabs {
     position: relative;
     display: -ms-flexbox;
@@ -584,9 +709,11 @@ body.profile .top-header {
     -ms-justify-content: center;
     justify-content: center;
     margin-bottom: -10px;
+
     @include breakpoint($mobile) {
       margin-bottom: 15px;
     }
+
 
     li {
       position: relative;
@@ -598,6 +725,7 @@ body.profile .top-header {
       -moz-flex: 1;
       -ms-flex: 1;
       flex: 1;
+
       @include breakpoint($mobile) {
         -webkit-flex: inherit;
         -moz-flex: inherit;
@@ -607,11 +735,14 @@ body.profile .top-header {
         width: 100%;
       }
 
+
       a {
         padding-top: 22.4px;
         padding-bottom: 24px;
+
         @include transition($type: padding, $time: 0.3s, $ease: ease);
       }
+
       &.active {
         a {
           padding-top: 30.4px;
@@ -619,6 +750,7 @@ body.profile .top-header {
         }
       }
     }
+
     a:focus {
       outline: none;
     }
@@ -659,9 +791,11 @@ body.profile .top-header {
   ul {
     display: inline-block;
   }
+
   li {
     float: left;
   }
+
   a.username {
     border-radius: 10px;
     min-width: 210px;
@@ -672,6 +806,7 @@ body.profile .top-header {
     margin: 5px;
     font-size: 20px;
     color: $dark-gray;
+
     &:hover {
       border: 3px solid $orange;
       color: $black;
