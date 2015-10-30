@@ -626,20 +626,16 @@ function get_subscribed_events($array){
 
 
 function mailchimp_custom_node_insert($node){
-	//dpm($node);
 	//getting the node title
 	$title = $node->title;
 	//getting the field content details 
 	$event_code = field_get_items('node', $node, 'field_event_code');
 	$event_code1 = $event_code[0]['value'];
-	//dpm($event_code1);
 	if($event_code1 == ''){
 		//update the code to generate the event code
 		$eventdate = field_get_items('node', $node, 'field_event_date');
 		$eventdate1 = $eventdate[0]['value'];
-		// dpm($updatedvalue1);
 		$eventcode = date('dmy',$eventdate1);
-		//dpm($eventcode);
 		$event_code1 = $title.$eventcode;
 	}
 
@@ -704,19 +700,10 @@ function mailchimp_custom_node_update($node){
 
 	if($updatedvalue1 == ''){
 		//update the code to generate the event code
-
-		// $test1 = field_get_items('node', $node, 'field_event_date');
-		// $test2 = field_get_items('node', $loaded_node, 'field_event_date');
-		// dpm($test1);
-		// dpm($test2);
-
 		$eventdate = field_get_items('node', $node, 'field_event_date');
 		$eventdate1 = $eventdate[0]['value'];
-		// dpm($updatedvalue1);
 		$eventcode = date('dmy',$eventdate1);
-		//dpm($eventcode);
 		$updatedvalue1 = $title.$eventcode;
-		//dpm($updatedvalue1);
 		$node->field_event_code[$node->language][0]['value'] = $updatedvalue1;      
 		field_attach_update('node', $node);
 	}
