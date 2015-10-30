@@ -4,9 +4,11 @@ require("vendor/autoload.php");
 
 
 function mailchimp_custom_init(){
-// $node = node_load(677789);
+// $node = node_load(677793);
 // $title = $node->title;
-// dpm($title);
+// dpm($node);
+// $date = $node->created;
+// dpm($date);
 
 // $updatedvalue = field_get_items('node', $node, 'field_event_date');
 // $updatedvalue1 = $updatedvalue[0]['value'];
@@ -628,17 +630,6 @@ function get_subscribed_events($array){
 function mailchimp_custom_node_insert($node){
 	//getting the node title
 	$title = $node->title;
-	//getting the field content details 
-	$event_code = field_get_items('node', $node, 'field_event_code');
-	$event_code1 = $event_code[0]['value'];
-	if($event_code1 == ''){
-		//update the code to generate the event code
-		$eventdate = field_get_items('node', $node, 'field_event_date');
-		$eventdate1 = $eventdate[0]['value'];
-		$eventcode = date('dmy',$eventdate1);
-		$event_code1 = $title.$eventcode;
-	}
-
 	//defining the creating content type
 	$contenttype = $node->type;
 	$enabled_content_types = array(
@@ -652,6 +643,27 @@ function mailchimp_custom_node_insert($node){
 	
 	if (in_array($contenttype, $enabled_content_types)) 
 	{
+		$event_code = field_get_items('node', $node, 'field_event_code');
+		$event_code1 = $event_code[0]['value'];
+		//check which type node this is events or courses
+		if($node->type == 'events' || $node->type == 'courses')
+		{	
+			if($event_code1 == ''){
+				//update the code to generate the event code
+				$eventdate = field_get_items('node', $node, 'field_event_date');
+				$eventdate1 = $eventdate[0]['value'];
+				$eventcode = date('dmy',$eventdate1);
+				$event_code1 = $title.$eventcode;
+			}
+		}
+		//this is for the other three content types
+		else{
+			if($event_code1 == ''){
+				$event_code1 = $node->created;
+				$eventcode = date('dmy',$event_code1);
+				$event_code1 = $title.$eventcode;
+			}
+		}
 		//check whether the webform is enabled for the content
 		if(isset($node->webform['nid']))
 		{
@@ -698,16 +710,33 @@ function mailchimp_custom_node_update($node){
 	$earliervalue1 = $earliervalue[0]['value'];
 	$updatedvalue1 = $updatedvalue[0]['value'];	 
 
-	if($updatedvalue1 == ''){
-		//update the code to generate the event code
-		$eventdate = field_get_items('node', $node, 'field_event_date');
-		$eventdate1 = $eventdate[0]['value'];
-		$eventcode = date('dmy',$eventdate1);
-		$updatedvalue1 = $title.$eventcode;
-		$node->field_event_code[$node->language][0]['value'] = $updatedvalue1;      
-		field_attach_update('node', $node);
-	}
 
+//new codes
+		//check which type node this is events or courses
+		if($node->type == 'events' || $node->type == 'courses')
+		{	
+			if($updatedvalue1 == ''){
+		//update the code to generate the event code
+				$eventdate = field_get_items('node', $node, 'field_event_date');
+				$eventdate1 = $eventdate[0]['value'];
+				$eventcode = date('dmy',$eventdate1);
+				$updatedvalue1 = $title.$eventcode;
+				$node->field_event_code[$node->language][0]['value'] = $updatedvalue1;      
+				field_attach_update('node', $node);
+			}
+		}
+		//this is for the other three content types
+		else{
+			if($updatedvalue1 == ''){
+				$updatedvalue1 = $node->created;
+				$eventcode = date('dmy',$updatedvalue1);
+				$updatedvalue1 = $title.$eventcode;
+				$node->field_event_code[$node->language][0]['value'] = $updatedvalue1;      
+				field_attach_update('node', $node);
+			}
+		}
+
+//end of the codes
 	// //defining the creating content type
 	$contenttype = $node->type;
 	$enabled_content_types = array(
