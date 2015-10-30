@@ -714,9 +714,9 @@ function mailchimp_custom_node_update($node){
 		$eventdate1 = $eventdate[0]['value'];
 		// dpm($updatedvalue1);
 		$eventcode = date('dmy',$eventdate1);
-		dpm($eventcode);
+		//dpm($eventcode);
 		$updatedvalue1 = $title.$eventcode;
-		dpm($updatedvalue1);
+		//dpm($updatedvalue1);
 		$node->field_event_code[$node->language][0]['value'] = $updatedvalue1;      
 		field_attach_update('node', $node);
 	}
