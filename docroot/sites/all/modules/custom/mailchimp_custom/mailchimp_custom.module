@@ -1,8 +1,6 @@
 <?php
 require("vendor/autoload.php");
 
-
-
 function mailchimp_custom_init(){
 // $node = node_load(677793);
 // $title = $node->title;
@@ -598,7 +596,7 @@ function print_event_list($result3){
 	$total_events['campaigns']=$subscribed_campaign;
 	//print_r($total_events);
 	return $total_events;
-};
+}
 
 function print_data($result3, $var){
 	$data = $result3['data']['0']['merges'][$var];
@@ -616,7 +614,7 @@ function get_subscribed_events($array){
 		}
 	}
 	return $subscribed_events;
-};
+}
 
 //get the first name , lastname , phone number , post code , address , city , country
 // function print_event_list($result3){
@@ -673,7 +671,6 @@ function mailchimp_custom_node_insert($node){
 			$list_id = '20af80b11d';
 
 			$groupid = getresults($contenttype);
-
 			if($groupid != ''){
 				//subscribing to a group
 				$submittingdata = array(
@@ -794,7 +791,6 @@ function getresults($contenttype){
 	);
 	$result = $MailChimp->call('lists/interest-groupings', $getdata);
 
-
 	$key = '';
 	$id = '';
 	switch ($contenttype) {
@@ -815,7 +811,7 @@ function getresults($contenttype){
     break;
 	}
 
-	if($key != ''){
+	if(isset($key)){
 		$id = $result[$key]['id'];	
 	}
 	return $id;
