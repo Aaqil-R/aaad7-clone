@@ -25,6 +25,16 @@ Drupal.behaviors.ambitious = {
 	    location.href = '/search/forum-discussion/'+ $(this).val();
 	  }
 	});
+    
+	//implementation of apache solr redirect to search result page -  this is for ajax
+	$('#edit-search-job-vacancies').keypress(function (e) {
+	  var key = e.which;
+	  if (key == 13) {
+	    e.stopPropagation();
+	    e.preventDefault();
+	    location.href = '/search/job-vacancies/'+ $(this).val();
+	  }
+	});
 		   
 	//navigate to donate page with the value from give what you can
 	$("input[name='submitted[give_what_you_can]']").click(function () {
