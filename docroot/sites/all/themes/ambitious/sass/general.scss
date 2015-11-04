@@ -832,13 +832,19 @@ article.node-223806, article.node-223591 {
 
 
     @include breakpoint($mini-mobile) {
-      ul li a {
-        float: left;
-        width: 100%;
-        text-align: center;
+      ul {
+        position: absolute;
+        top: -20px;
+        right: 0;
 
-        img {
-          margin: 0;
+        li a {
+          float: left;
+          width: 100%;
+          text-align: center;
+
+          img {
+            margin: 0;
+          }
         }
       }
     }
