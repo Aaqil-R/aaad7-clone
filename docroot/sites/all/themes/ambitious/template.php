@@ -136,7 +136,7 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 //=====================================
 
 function ambitious_preprocess_html(&$variables) {
-  drupal_add_css('http://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
+  drupal_add_css('https://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
   
   // == Check if the user registered or not in home page step forms ==//
   global $user; 
