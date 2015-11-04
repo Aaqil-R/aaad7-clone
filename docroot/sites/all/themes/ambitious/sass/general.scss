@@ -831,6 +831,19 @@ article.node-223806, article.node-223591 {
     }
 
 
+    @include breakpoint($mini-mobile) {
+      ul li a {
+        float: left;
+        width: 100%;
+        text-align: center;
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+
+
     @include breakpoint($mobile) {
       ul {
         li.last {
