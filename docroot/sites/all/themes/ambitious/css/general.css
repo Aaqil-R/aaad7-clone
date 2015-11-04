@@ -1879,20 +1879,54 @@ iframe {
 .view-display-id-list_vacancies_page fieldset.form-item-field-job-category-tid {
   padding-top: 0;
 }
-
-/* line 1556, ../sass/general.scss */
-section.card.job-card {
-  margin: 0.3em;
+@media (max-width: 767px) {
+  /* line 1555, ../sass/general.scss */
+  .view-display-id-list_vacancies_page .sort-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-/* line 1559, ../sass/general.scss */
-section.card.job-card h3 {
+/* line 1563, ../sass/general.scss */
+.view-display-id-list_vacancies_page .views-row-last .card.job-card {
+  margin-bottom: 50px;
+}
+/* line 1568, ../sass/general.scss */
+.view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+  display: block;
+  margin-left: 25px;
+}
+@media (max-width: 990px) {
+  /* line 1568, ../sass/general.scss */
+  .view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+    width: 250px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1568, ../sass/general.scss */
+  .view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+/* line 1584, ../sass/general.scss */
+section.job-card {
+  margin: 0.3em;
+  float: left;
+}
+/* line 1588, ../sass/general.scss */
+section.job-card h3 {
   font-weight: bold;
   font-size: 22px;
   font-size: 1.375em;
   line-height: 32px;
   text-decoration: underline;
 }
-/* line 1567, ../sass/general.scss */
-section.card.job-card .close-date {
+/* line 1596, ../sass/general.scss */
+section.job-card .close-date {
   font-weight: bold;
+}
+/* line 1600, ../sass/general.scss */
+section.job-card img {
+  width: 100%;
 }
