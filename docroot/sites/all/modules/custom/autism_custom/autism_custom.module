@@ -391,7 +391,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
    $form['search_job_vacancies'] = array(
     '#type' => 'textfield',
     '#attributes' => array(
-      'placeholder' => 'Search the community',
+      'placeholder' => 'Search jobs',
     ),
    );
    $form['#info']['search_box'] = array('value' => 'search_job_vacancies');
