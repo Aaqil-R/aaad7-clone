@@ -430,9 +430,9 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
       $nodescount +=$count; 
     }
     if(0 < $nodescount){
-      $form['field_job_category_tid']['#options']['All'] = "Show all events (".$nodescount.")";
+      $form['field_job_category_tid']['#options']['All'] = "Show all jobs (".$nodescount.")";
     }else{
-      $form['field_job_category_tid']['#options']['All'] = "Show all events";
+      $form['field_job_category_tid']['#options']['All'] = "Show all jobs";
     }
   }
 
