@@ -729,7 +729,7 @@ function ambitious_preprocess_page(&$vars) {
     // Get the url_alias and make each item part of an array
     $url_alias = drupal_get_path_alias($_GET['q']);
     $split_url = explode('/', $url_alias);
-
+    
     // Add the full path template pages
     // Insert 2nd to last to allow page--node--[nid] to be last
     $cumulative_path = '';
@@ -747,9 +747,9 @@ function ambitious_preprocess_page(&$vars) {
     
     // Also we don't want to do this if there were no paths on the URL
     // Again, add 2nd to last to preserve page--node--[nid] if we do add it in
+
     if (count($split_url) > 1) {
       $page_name = end($split_url);
-      //dpm($page_name);
       // if($page_name != 'campaigns'){
       //   //skipping it for the three content types pages
       //   array_splice($vars['theme_hook_suggestions'], -1, 0, 'page__'.str_replace('-','_',$page_name));
