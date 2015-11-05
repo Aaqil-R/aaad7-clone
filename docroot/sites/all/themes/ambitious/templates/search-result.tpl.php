@@ -78,14 +78,16 @@
 
 //gets the current page URL and checks for http or https & the port whether its in local or not
  $pageURL = 'http';
+ $imageURL = 'http';
  if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
  $pageURL .= "://";
+ $imageURL .= "://";
  if ($_SERVER["SERVER_PORT"] != "80") {
   $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
-  $imageURL = $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"];
+  $imageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"];
  } else {
   $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-  $imageURL = $_SERVER["SERVER_NAME"];
+  $imageURL .= $_SERVER["SERVER_NAME"];
  }
 
  //echo $imageURL;

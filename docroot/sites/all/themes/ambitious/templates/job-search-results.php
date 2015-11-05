@@ -5,7 +5,12 @@
   $closing_date = $t->field_closing_date['und'][0]['value'];
 ?>
 
-
+<?php 
+$nowtime = time();
+$close_date = date_create($closing_date);
+$close_date_unix = date_timestamp_get($close_date);
+if ($nowtime < $close_date_unix ) {
+?>
     <div class="post card card--item" style="">
       <section class="job-card">
           <div> 
@@ -19,9 +24,10 @@
             </h3>
             <div class="close-date">
               Closing Date: 
-                <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php echo $closing_date; ?></span>
+                <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php echo date("Y-m-d",$close_date_unix); ?></span>
             </div>
           </div>
       </section>
     </div>
+<?php    } ?>
 
