@@ -1,8 +1,13 @@
 <?php 
   //echo $t->field_closing_date['und'][0]['value']; 
   //$job_title = $t->title;
-  $job_image = $imageURL . "/sites/default/files/styles/tile_image/public/" . $t->field_featured_image['und'][0]['filename'];
-  $closing_date = $t->field_closing_date['und'][0]['value'];
+
+  // $image = $t->field_featured_image[LANGUAGE_NONE][0]['uri'];
+  // $job_image = $imageURL . "/sites/default/files/styles/tile_image/public/" . $t->field_featured_image['und'][0]['filename'];
+   $closing_date = $t->field_closing_date['und'][0]['value'];
+
+  //dpr($t);
+
 ?>
 
 <?php 
@@ -15,7 +20,13 @@ if ($nowtime < $close_date_unix ) {
       <section class="job-card">
           <div> 
             <a href="/vacancies/test-vacancy">
-              <img typeof="foaf:Image" src="<?php echo $job_image; ?>" alt="">
+              <?php
+                $getitemsimage = field_get_items('node', $t ,'field_featured_image');      
+                $viewitemsimage = field_view_value('node', $t ,'field_featured_image'
+                , $getitemsimage[0]
+                , array('settings' => array('image_style' => 'tile_image')));
+                print render($viewitemsimage);
+              ?>
             </a>
           </div>
           <div class="content">
@@ -23,8 +34,7 @@ if ($nowtime < $close_date_unix ) {
               <a href="<?php print $url; ?>"><?php print $title; ?></a>
             </h3>
             <div class="close-date">
-              Closing Date: 
-                <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php echo date("Y-m-d",$close_date_unix); ?></span>
+              Closing Date: <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php echo date("Y-m-d",$close_date_unix); ?></span>
             </div>
           </div>
       </section>
