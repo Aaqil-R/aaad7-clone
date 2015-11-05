@@ -412,6 +412,13 @@ Drupal.behaviors.ambitious = {
             "gutter" : $gutter,
         	"percentPosition" : true
         });
+
+        $('.job-card-layout').masonry ({
+            "itemSelector": ".card--item",
+            "columnWidth": $columnWidth,
+            "gutter" : $gutter,
+        	"percentPosition" : true
+        });
     });
 //end of the new codes amalan
 $(window).resize(function () {
