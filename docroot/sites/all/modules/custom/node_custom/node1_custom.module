@@ -59,7 +59,7 @@ function aah_gn_petition_report_distribute_submit($form, &$form_state) {
 				if (strpos($body, $str) !== false) 
 				{
 					$updatedvalue1 = str_replace($str,"", $body);
-					dpm($updatedvalue1);
+					//dpm($updatedvalue1);
 					$products->body[$products->language][0]['value'] = $updatedvalue1;      
 					field_attach_update('node', $products);
 
