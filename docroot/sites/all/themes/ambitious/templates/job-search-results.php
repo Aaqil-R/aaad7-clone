@@ -25,7 +25,16 @@ if ($nowtime < $close_date_unix ) {
                 $viewitemsimage = field_view_value('node', $t ,'field_featured_image'
                 , $getitemsimage[0]
                 , array('settings' => array('image_style' => 'tile_image')));
-                print render($viewitemsimage);
+                if($viewitemsimage['#item'] == '')
+                {
+                  //rendering the default image
+                  $view = field_view_field('node', $t, 'field_featured_image', array('settings' => array('image_style' => 'tile_image')));
+                  print render($view);
+                }
+                else{
+                  //rendering the provided image
+                  print render($viewitemsimage);
+                }      
               ?>
             </a>
           </div>
