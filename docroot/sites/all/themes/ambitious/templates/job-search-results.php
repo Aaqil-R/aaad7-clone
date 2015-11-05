@@ -1,52 +1,47 @@
 <?php 
-  //echo $t->field_closing_date['und'][0]['value']; 
-  //$job_title = $t->title;
+  $close_date_unix = date_timestamp_get(date_create($t->field_closing_date['und'][0]['value']));
 
-  // $image = $t->field_featured_image[LANGUAGE_NONE][0]['uri'];
-  // $job_image = $imageURL . "/sites/default/files/styles/tile_image/public/" . $t->field_featured_image['und'][0]['filename'];
-   $closing_date = $t->field_closing_date['und'][0]['value'];
+  // initialize closed date caption
+  $closed_date_caption = "Closed for applications";
 
-  //dpr($t);
-
+  // check if close date has passed
+  // if closed date has passed then 
+  // show text "Closed for applications"
+  // in red.
+  // if not closed the render as date.
+  if (time() < $close_date_unix) {
+      $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
+  }
 ?>
+<div class="post card card--item" style="">
+  <section class="job-card">
+      <div> 
+        <a href="/vacancies/test-vacancy">
+          <?php
 
-<?php 
-$nowtime = time();
-$close_date = date_create($closing_date);
-$close_date_unix = date_timestamp_get($close_date);
-if ($nowtime < $close_date_unix ) {
-?>
-    <div class="post card card--item" style="">
-      <section class="job-card">
-          <div> 
-            <a href="/vacancies/test-vacancy">
-              <?php
-                $getitemsimage = field_get_items('node', $t ,'field_featured_image');      
-                $viewitemsimage = field_view_value('node', $t ,'field_featured_image'
+            $viewitemsimage = array();
+
+            if(isset($t->field_featured_image)){
+              $getitemsimage = field_get_items('node', $t ,'field_featured_image');
+              $viewitemsimage = field_view_value('node'
+                , $t 
+                ,'field_featured_image'
                 , $getitemsimage[0]
                 , array('settings' => array('image_style' => 'tile_image')));
-                if($viewitemsimage['#item'] == '')
-                {
-                  //rendering the default image
-                  $view = field_view_field('node', $t, 'field_featured_image', array('settings' => array('image_style' => 'tile_image')));
-                  print render($view);
-                }
-                else{
-                  //rendering the provided image
-                  print render($viewitemsimage);
-                }      
-              ?>
-            </a>
-          </div>
-          <div class="content">
-            <h3 <?php print $title_attributes; ?>>
-              <a href="<?php print $url; ?>"><?php print $title; ?></a>
-            </h3>
-            <div class="close-date">
-              Closing Date: <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php echo date("Y-m-d",$close_date_unix); ?></span>
-            </div>
-          </div>
-      </section>
-    </div>
-<?php    } ?>
 
+              print render($viewitemsimage);
+            } 
+
+          ?>
+        </a>
+      </div>
+      <div class="content">
+        <h3 <?php print $title_attributes; ?>>
+          <a href="<?php print $url; ?>"><?php print $title; ?></a>
+        </h3>
+        <div class="close-date">
+          <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
+        </div>
+      </div>
+  </section>
+</div>
