@@ -1570,10 +1570,39 @@ iframe {
   fieldset.form-item-field-job-category-tid {
     padding-top: 0;
   }
+
+  .sort-block {
+    @include breakpoint($mobile) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .views-row-last {
+    .card.job-card {
+      margin-bottom: 50px;
+    }
+  }
+
+  .search-text.job-category.forum-page {
+    display: block;
+    margin-left: 25px;
+
+    @include breakpoint($tablet) {
+      width: 250px;
+    }
+
+
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
 }
 
-section.card.job-card {
-  margin: 0.3em;
+section.job-card {
+  // margin: 0.3em;
+  // float: left;
 
   h3 {
     font-weight: bold;
@@ -1585,5 +1614,9 @@ section.card.job-card {
 
   .close-date {
     font-weight: bold;
+  }
+
+  img {
+    width: 100%;
   }
 }
