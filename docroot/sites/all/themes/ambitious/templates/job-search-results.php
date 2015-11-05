@@ -15,7 +15,10 @@ if ($nowtime < $close_date_unix ) {
       <section class="job-card">
           <div> 
             <a href="/vacancies/test-vacancy">
-              <img typeof="foaf:Image" src="<?php echo $job_image; ?>" alt="">
+              <?php
+                 $view = field_view_field('node', $t, 'field_featured_image');
+                print render($view);
+               ?>
             </a>
           </div>
           <div class="content">
