@@ -25,7 +25,8 @@
 ?>
 <?php if ($search_results): ?>
   <h2><?php print t('Search results');?></h2>
-  <ol class="search-results posts-columns columns-full <?php print $module; ?>-results" style="padding: 0;">
+  <ol class="job-card-layout search-results posts-columns columns-full <?php print $module; ?>-results" style="padding: 0;">
+  <div class="card--width"></div><div class="card--gutter"></div>
      <?php print $search_results; ?>
   </ol>
   <?php print $pager; ?>
