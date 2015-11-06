@@ -3,6 +3,7 @@
 
   // initialize closed date caption
   $closed_date_caption = "Closed for applications";
+  $closed_date_class = "date-display-single closed";
 
   // check if close date has passed
   // if closed date has passed then 
@@ -11,6 +12,7 @@
   // if not closed the render as date.
   if (time() < $close_date_unix) {
       $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
+      $closed_date_class = "date-display-single";
   }
 ?>
 <div class="post card card--item" style="">
@@ -40,7 +42,7 @@
           <a href="<?php print $url; ?>"><?php print $title; ?></a>
         </h3>
         <div class="close-date">
-          <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
+            <span class="<?php print $closed_date_class?>" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
         </div>
       </div>
   </section>
