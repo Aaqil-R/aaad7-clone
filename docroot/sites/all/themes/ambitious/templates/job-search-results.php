@@ -31,6 +31,12 @@
                 , $getitemsimage[0]
                 , array('settings' => array('image_style' => 'tile_image')));
 
+              if(!isset($viewitemsimage['#item']))
+                  {  
+                   //rendering the default image
+                   $viewitemsimage = field_view_field('node', $t, 'field_featured_image', array('settings' => array('image_style' => 'tile_image')));
+                  }
+
               print render($viewitemsimage);
             } 
 
