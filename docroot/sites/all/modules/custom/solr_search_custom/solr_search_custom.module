@@ -1,0 +1,39 @@
+<?php
+function solr_search_custom_init(){
+
+}
+
+function solr_search_custom_apachesolr_index_document_build_node(ApacheSolrDocument $document, $entity, $entity_type, $env_id) {
+  if ($entity->type == 'job_vacancy') {
+    $entity_date = field_get_items('node', $entity, 'field_closing_date');
+    // Add the end date of the entity_date field as a sort field to the solr index
+    if (!empty($entity_date)) {
+      $document->addField('ds_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value'])));
+    }
+  }
+  return $document;
+}
+
+
+function solr_search_custom_apachesolr_query_prepare($query) {
+ // Add a sort on date.
+ if (arg(1) == 'job-vacancies') {
+   $query->setAvailableSort('ds_end_date', array(
+     'title' => t('End date'),
+     'default' => 'asc',
+   ));
+ }
+}
+
+
+function solr_search_custom_apachesolr_query_alter($query) {
+  if (arg(1) == 'job-vacancies') {
+  	$query->addFilter('ds_end_date', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]'); 
+    //$query->addFilter('dm_field_date_end', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]');
+    $query->addParam('fl', 'ds_end_date');
+    $query->setSolrsort('ds_end_date', 'asc');
+  }
+  //dpm($query);
+}
+
+?>
