@@ -18,7 +18,7 @@
 <div class="post card card--item" style="">
   <section class="job-card">
       <div> 
-        <a href="/vacancies/test-vacancy">
+        <a href="<?php print $url; ?>">
           <?php
 
             $viewitemsimage = array();
