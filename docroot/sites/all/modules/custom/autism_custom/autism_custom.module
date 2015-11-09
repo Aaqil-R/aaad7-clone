@@ -416,7 +416,9 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
             $enddate = field_get_items('node', $node, 'field_closing_date');
             $enddatetime = $enddate[0]['value'];
             //create date object 
+
             $close_date = date_create($enddatetime);
+            $close_date->modify('+1 day');
             //convert time to unix time format
             $close_date_unix = date_timestamp_get($close_date);
             //if endtime is greater than current time increase the count
