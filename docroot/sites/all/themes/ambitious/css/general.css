@@ -1909,25 +1909,50 @@ iframe {
   margin-bottom: 50px;
 }
 /* line 1587, ../sass/general.scss */
-.view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+.view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
   display: block;
-  margin-left: 25px;
+  margin: 0 !important;
+  background: none;
+  padding: 0;
+  width: auto;
 }
 @media (max-width: 990px) {
   /* line 1587, ../sass/general.scss */
-  .view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+  .view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
     width: 250px;
   }
 }
 @media (max-width: 767px) {
   /* line 1587, ../sass/general.scss */
-  .view-display-id-list_vacancies_page .search-text.job-category.forum-page {
+  .view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+/* line 1605, ../sass/general.scss */
+.view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering .icon-search {
+  right: 15px;
+}
+/* line 1611, ../sass/general.scss */
+.view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
+  display: block;
+  margin-left: 25px;
+}
+@media (max-width: 990px) {
+  /* line 1611, ../sass/general.scss */
+  .view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
+    width: 250px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1611, ../sass/general.scss */
+  .view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
     width: 100%;
     margin-left: 0px;
   }
 }
 
-/* line 1607, ../sass/general.scss */
+/* line 1631, ../sass/general.scss */
 section.job-card h3 {
   font-weight: bold;
   font-size: 22px;
@@ -1935,20 +1960,20 @@ section.job-card h3 {
   line-height: 32px;
   text-decoration: underline;
 }
-/* line 1615, ../sass/general.scss */
+/* line 1639, ../sass/general.scss */
 section.job-card .close-date {
   font-weight: bold;
 }
-/* line 1619, ../sass/general.scss */
+/* line 1643, ../sass/general.scss */
 section.job-card img {
   width: 100%;
 }
 
-/* line 1627, ../sass/general.scss */
+/* line 1651, ../sass/general.scss */
 .job-card-layout .post.card.card--item .field-name-field-featured-image .field-label {
   display: none;
 }
-/* line 1632, ../sass/general.scss */
+/* line 1656, ../sass/general.scss */
 .job-card-layout .post.card.card--item span.date-display-single.closed {
   color: red;
 }

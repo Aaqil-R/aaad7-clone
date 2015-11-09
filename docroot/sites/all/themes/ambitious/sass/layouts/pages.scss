@@ -124,7 +124,8 @@
   }
 }
 
-.node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .node-type-webform, .webform-share-your-story {
+.node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns,
+.node-type-webform, .webform-share-your-story, .page-signup-form {
   background: $white;
 
   form {
@@ -158,6 +159,17 @@
         float: left;
         padding-left: 0;
       }
+    }
+  }
+}
+
+//Sign Up form page
+.page-signup-form {
+  #main {
+    background: white;
+
+    .view-display-id-signup_form {
+      background: none;
     }
   }
 }
