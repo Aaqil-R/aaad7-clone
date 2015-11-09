@@ -107,97 +107,66 @@
   <?php print render($title_suffix); ?>
 
 <?php 
-//to print the entire content
-//dpr($content); 
+  //defining the variables
+  $date1 = new DateTime();
+  $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
+
+  $date2 = new DateTime();
+  $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
+
+  //getting the eventcode tobe send as a parameter  on the link 
+  $eventcode = $node->field_event_code['und'][0]['value'];
 ?>
 
 <!-- My codes to display the events -->
 <div class"event-form">
-<!-- <p><strong>Start Date : </strong>
-<?php 
-  //since date1 and date 2 are always mandatory we dont need to check whether they are null
-
-  //to print the first date
-  $date1 = new DateTime();
-  $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
-
-  echo $date1->format('l, d F Y') . "\n";
-?>
-</p>  
-<p><strong>End Date : </strong>
-<?php
-  //to print the second date
-  $date2 = new DateTime();
-  $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
-  
-  //to check whether both are the same else print both.
-  if($date1 != $date2):
-    echo $date2->format('l, d F Y') . "\n";
-  endif;
-?>
-</p> 
-
-
-<?php if(isset($content['field_location'])): ?>
-<p><strong>Location : </strong>
-<?php 
-  //to print the location
-  echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
-?>
-</p>
-<?php endif;?>-->
-
-<div class="details-box">
-  <!-- <div class="details-title">
-    <p><strong>Details</strong></p>
-  </div> -->
-  <div class="details-time">
-    <p><strong>Date</strong></p>
-    <p><?php 
-    echo $date1->format('l, d F Y');
-      //to check whether both are the same else print both.
-      if($date1 != $date2):
-        echo  " - " . $date2->format('l, d F Y') . "\n";
-      endif;
-    ?></p>
-  </div>
-  <div class="details-location">
-    <?php if(isset($content['field_location'])): ?>
-      <p><strong>Location</strong></p>
+  <div class="details-box">
+    <div class="details-time">
+      <p><strong>Date</strong></p>
       <p><?php 
-        //to print the location
-        echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
-      ?>
-      </p>
-    <?php endif;?> 
+      echo $date1->format('l, d F Y');
+        //to check whether both are the same else print both.
+        if($date1 != $date2):
+          echo  " - " . $date2->format('l, d F Y') . "\n";
+        endif;
+      ?></p>
+    </div>
+    <div class="details-location">
+      <?php if(isset($content['field_location'])): ?>
+        <p><strong>Location</strong></p>
+        <p><?php 
+          //to print the location
+          echo $content['field_location']['#object']->field_location['und'][0]['safe_value'];
+        ?>
+        </p>
+      <?php endif;?> 
+    </div>
   </div>
-</div>
 
-<?php
-  if(isset($content['body'])):
-  print render($content['body']);
-  endif;
-?>
+  <?php
+    if(isset($content['body'])):
+      print render($content['body']);
+    endif;
+  ?>
 
-<?php
-  $getexternal_link = field_get_items('node', $node ,'field_bsd_tools_integration');
-  $viewexternal_link = field_view_value('node', $node ,'field_bsd_tools_integration'
-  , $getexternal_link[0]);
-
-  if(isset($content['field_bsd_tools_integration'])):
-  //$external_link = $content['field_bsd_tools_integration']['#object']->field_bsd_tools_integration['und'][0]['safe_value'];
-  //print render($viewexternal_link);
-?>
-  <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
-<?php
-  endif;
-?>
-
-<?php
-  if(isset($content['webform'])):
-  print render($content['webform']);
-  endif; 
-?>
-
-</div>
+  <?php
+    $getexternal_link = field_get_items('node', $node ,'field_bsd_tools_integration');
+    $viewexternal_link = field_view_value('node', $node ,'field_bsd_tools_integration'
+    , $getexternal_link[0]);
+  ?>
+  <?php if(isset($content['field_bsd_tools_integration'])): ?>
+      <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
+  <?php else : 
+    //generating the link including the parameters.
+    $link = $nodeid."?type=".$type."&eventcode=".$eventcode;
+  ?>
+    <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>"> Signup </a>
+  <?php endif; ?>
+  <?php
+  // Hide the webform from the original page
+  // if(isset($content['webform'])):
+  // print render($content['webform']);
+  // endif; 
+  ?>
+  </div>
 </div>
