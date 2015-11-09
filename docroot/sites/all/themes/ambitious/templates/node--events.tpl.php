@@ -116,6 +116,9 @@
 
   //getting the eventcode tobe send as a parameter  on the link 
   $eventcode = $node->field_event_code['und'][0]['value'];
+
+  //getting the nodeid
+  $nodeid = $node->nid;
 ?>
 
 <!-- My codes to display the events -->
