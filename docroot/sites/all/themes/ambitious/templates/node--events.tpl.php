@@ -107,6 +107,7 @@
   <?php print render($title_suffix); ?>
 
 <?php 
+
   //defining the variables
   $date1 = new DateTime();
   $date1->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value']);
@@ -151,7 +152,7 @@
       print render($content['body']);
     endif;
   ?>
-
+  <div>
   <?php
     $getexternal_link = field_get_items('node', $node ,'field_bsd_tools_integration');
     $viewexternal_link = field_view_value('node', $node ,'field_bsd_tools_integration'
@@ -161,7 +162,8 @@
       <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
   <?php else : 
     //generating the link including the parameters.
-    $link = $nodeid."?type=".$type."&eventcode=".$eventcode;
+    //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
+    $link = $nodeid;
   ?>
     <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>"> Signup </a>
   <?php endif; ?>
@@ -170,6 +172,9 @@
   // if(isset($content['webform'])):
   // print render($content['webform']);
   // endif; 
+  //render the additonal links.
+    print render($additional_links_node);
   ?>
+  </div>
   </div>
 </div>

@@ -937,6 +937,23 @@ function ambitious_preprocess_node(&$variables){
       , array('settings' => array('image_style' => 'basic_page_mobile')));
     $variables['mobileimage'] = $viewitemsimage;
   }
+
+  //new codes to be tested
+  if($variables['node']->type == "events")
+    {
+      $link = array();
+      $node = node_load($variables['node']->nid);
+      $additionallinks = field_get_items('node', $node, 'field_additional_links');
+      $num = count($additionallinks);
+      for($i=0 ; $i<$num ; $i++){
+        $viewadditionallinks = field_view_value('node', $node ,'field_additional_links'
+            , $additionallinks[$i]);
+        $test = $viewadditionallinks;
+
+        array_push($link, $viewadditionallinks);
+      }
+      $variables['additional_links_node'] = $link;
+    }
 }
 
 function ambitious_preprocess_comment_wrapper(&$vars){
@@ -1151,5 +1168,4 @@ function ambitious_gettags($node){
     }
   return $topic;
 }
-
 
