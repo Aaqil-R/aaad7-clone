@@ -119,6 +119,12 @@ textarea {
   background: $white;
 }
 
+.node-type-sign-up-webform, .page-sign-up-webforms {
+  .webform-component-select {
+    background: none;
+  }
+}
+
 .page-node-74606 {
   .form-actions {
     float: left;
@@ -926,7 +932,8 @@ div.modal-forms-modal-content .form-item label {
 }
 
 //Course, Events, Volunteer, Newsletter & Share Your Story Webforms
-.node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform, .webform-share-your-story {
+.node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform,
+.webform-share-your-story, .page-signup-form {
   .webform-component-number,
   .webform-component-textfield,
   .webform-component-email,
@@ -1009,6 +1016,12 @@ div.modal-forms-modal-content .form-item label {
       float: left;
       margin: 8px;
     }
+  }
+}
+
+.page-signup-form {
+  .webform-component-select {
+    background: none;
   }
 }
 

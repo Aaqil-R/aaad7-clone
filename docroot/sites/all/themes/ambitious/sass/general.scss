@@ -1584,7 +1584,31 @@ iframe {
     }
   }
 
-  .search-text.job-category.forum-page {
+  .search-text.job-category.forum-page.title-filtering {
+    display: block;
+    margin: 0 !important;
+    background: none;
+    padding: 0;
+    width: auto;
+
+    @include breakpoint($tablet) {
+      width: 250px;
+    }
+
+
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-left: 0px;
+    }
+
+
+    .icon-search {
+      right: 15px;
+    }
+  }
+
+  //.search-text.job-category.forum-page,
+  fieldset.form-item.form-type-textfield.form-item-title {
     display: block;
     margin-left: 25px;
 
