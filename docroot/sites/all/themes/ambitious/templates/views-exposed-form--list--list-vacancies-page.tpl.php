@@ -36,10 +36,12 @@
 
 <div class="sort-block">  
   <div class="title-filter">
-       <?php print $widgets['filter-field_job_category_tid']->widget; unset($widgets['filter-field_job_category_tid']) ?>
+    <?php print $widgets['filter-field_job_category_tid']->widget; unset($widgets['filter-field_job_category_tid']) ?>
+    
   </div>
   <div class="search-text job-category forum-page">
       <?php print $widgets['search_box']->widget; unset($widgets['search_box']) ?>
+      <?php //print $widgets['filter-title']->widget; unset($widgets['filter-title']) ?>
         <span class="icon-search"></span>
   </div>
 				 <?php foreach ($widgets as $id => $widget): ?>
