@@ -481,7 +481,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			}
 			else
 			{
-				echo "user not found";
+				//echo "user not found";
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
 				if($contenttype == 'events'){
