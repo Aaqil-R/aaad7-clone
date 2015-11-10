@@ -75,7 +75,6 @@ function mailchimp_custom_init(){
 }
 
 function mailchimp_custom_webform_submission_insert($node, $submission){
-
 	//dpm($submission->nid);
 	// define the mail chimp api key and the list id.
 	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
@@ -110,7 +109,6 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 	// check if we need to fire integrate this webform submission to mail chimp.
 	if (in_array($contenttype, $enabled_content_types)) 
 	{
-
 		//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
 		//dpm($submission);
 	
@@ -139,7 +137,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		$volunteers = '';
 		$support = '';
 		$update = '';
+		$charity_place='';
 
+		$charity_name = 'Apply for charity place';
 
 		// mapping out the webform components by form_key rather than index as this would make the 
 		// order in which the elements are added in the webform irrelavant.
@@ -223,6 +223,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				case 'update':
 					$update = $submission->data[$key][0];	
 				break;
+				case 'charity_place':
+					$charity_place = $submission->data[$key][0];	
+				break;
 			}
 
 			// dpm('Event array here is');
@@ -240,7 +243,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			// country
 		}
 		//end of the new code set
-
+		//dpm($charity_place);
 		//$nid = $node->nid;		
 		//dpm($node);
 		// $contenttype = $node->type;
@@ -251,7 +254,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		// check if the user has chosen to subscribe to our mailing subscription.
 		if($did_subscribe)
 		{
-			//dpm('i came here');
+			//dpm('i am subscribed');
 			//dpm('enabled');
 			//replace api with the clients api
 			//$MailChimp = new \Drewm\MailChimp('cd1f99363f8227c11b3130efb6039c31-us11');
@@ -317,11 +320,22 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				$volunteer = $eventlist['volunteer'];
 				$campaigns = $eventlist['campaigns'];
 
+				//add the charity places when subscribing	
+				$applyforCharity = $eventlist['apply_for_charity_place'];
+				$IhavemyOwnPlace = $eventlist['i_have_my_own_place'];
+
 				//dpm($eventlist);
 				//check for the event type and add the event to the correct array
 				if($contenttype == 'events'){
 					//dpm("i am a event");
 					array_push($events, $newevent);
+					//check the conditon which the user has selected. and depending on that update the group that needs to be updated
+					if($charity_place == 1){
+						array_push($applyforCharity, $newevent);
+					}
+					elseif($charity_place == 2){
+						array_push($IhavemyOwnPlace, $newevent);
+					}
 				}
 				elseif($contenttype == 'courses')
 				{
@@ -429,6 +443,14 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				                'name' => 'Campaign',
 				                'groups' => $campaigns
 				                ),
+				            5 => array(
+				                'name' => 'I Have my Own Place',
+				                'groups' => $IhavemyOwnPlace
+				                ),
+				            6 => array(
+				                'name' => 'Apply for charity place',
+				                'groups' => $applyforCharity
+				                ),
 				            ),
 				        'phone'=>$phonenumber,
 				        'postcode'=>$postcode,
@@ -464,6 +486,9 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				$name = '';
 				if($contenttype == 'events'){
 					$name = 'Events';
+					if($charity_place == 1){
+						$charity_name = 'I Have my Own Place';
+					}
 				}
 				elseif($contenttype == 'courses')
 				{
@@ -497,7 +522,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				            0 => array(
 				                'name' => $name,
 				                'groups' => $neweventarray
-				                )
+				                ),
+				            1 => array(
+				                'name' => $charity_name,
+				                'groups' => $neweventarray
+				                ),
 				            ),
 				        'phone'=>$phonenumber,
 				        'postcode'=>$postcode,
@@ -588,12 +617,20 @@ function print_event_list($result3){
 		elseif($group['name'] == 'Campaign'){
 			$subscribed_campaign = get_subscribed_events($subscribed_list);
 		}
+		elseif($group['name'] == 'Apply for charity place'){
+			$subscribed_applycharityplace = get_subscribed_events($subscribed_list);
+		}
+		elseif($group['name'] == 'I Have my Own Place'){
+			$subscribed_owncharityplace = get_subscribed_events($subscribed_list);
+		}
 	}
 	$total_events['events']=$subscribed_events;
 	$total_events['courses']=$subscribed_courses;
 	$total_events['news']=$subscribed_news;
 	$total_events['volunteer']=$subscribed_volunteers;
 	$total_events['campaigns']=$subscribed_campaign;
+	$total_events['apply_for_charity_place']=$subscribed_applycharityplace;
+	$total_events['i_have_my_own_place']=$subscribed_owncharityplace;
 	//print_r($total_events);
 	return $total_events;
 }
@@ -687,6 +724,33 @@ function mailchimp_custom_node_insert($node){
 				$node->field_event_code[$node->language][0]['value'] = $event_code1;      
 				field_attach_update('node', $node);
 			}
+
+			//put the events codes with an if condition in this place where when an event is created two groups to be created.
+			if($contenttype == 'events'){
+				//get the new group ids
+				$charityid1 = getresultsofCharityPlace(1);
+				//create the group in I have my own place
+				$submittingdata1 = array(
+					'apikey' => $api_key,
+					'id' => $list_id,
+					'group_name' => $event_code1,
+					'grouping_id' => $charityid1,
+					);
+				$result1 = $MailChimp->call('lists/interest-group-add', $submittingdata1);
+				dpm($result1);
+				//get the new group ids
+				$charityid2 = getresultsofCharityPlace(2);
+				//create the group in Apply for charity place
+				$submittingdata2 = array(
+					'apikey' => $api_key,
+					'id' => $list_id,
+					'group_name' => $event_code1,
+					'grouping_id' => $charityid2,
+					);
+				$result2 = $MailChimp->call('lists/interest-group-add', $submittingdata2);
+				dpm($result2);					
+			}
+
 		}
 		else{
 			//write code when the webform is not set
@@ -772,6 +836,34 @@ function mailchimp_custom_node_update($node){
 			$result = $MailChimp->call('lists/interest-group-update', $submittingdata);
 			//dpm($result);
 			}
+
+			//put the events codes with an if condition in this place where when an event is updated two groups to be updated.
+			if($contenttype == 'events'){
+				//updating the groups here
+				$charityid1 = getresultsofCharityPlace(1);
+				//Updating the I have my own place name
+				$submittingdata1 = array(
+					'apikey' => $api_key,
+					'id' => $list_id,
+					'old_name' => $earliervalue1,
+					'new_name' => $updatedvalue1,
+					'grouping_id' => $charityid1,
+					);
+				$result1 = $MailChimp->call('lists/interest-group-update', $submittingdata1);
+				dpm($result1);
+				//Updating the Apply for the charity place
+				$charityid2 = getresultsofCharityPlace(2);
+
+				$submittingdata2 = array(
+					'apikey' => $api_key,
+					'id' => $list_id,
+					'old_name' => $earliervalue1,
+					'new_name' => $updatedvalue1,
+					'grouping_id' => $charityid2,
+					);
+				$result2 = $MailChimp->call('lists/interest-group-update', $submittingdata2);		
+				dpm($result2);		
+			}
 		}
 		else{
 			//write code when the webform is not set
@@ -817,5 +909,32 @@ function getresults($contenttype){
 	return $id;
 }
 
+function getresultsofCharityPlace($num){
+	$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
+	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
+	$list_id = '20af80b11d';
+	$getdata = array(
+		'apikey' => $api_key,
+		'id' => $list_id,
+	);
+	$result = $MailChimp->call('lists/interest-groupings', $getdata);
+
+	//dpm($result);
+
+	$key = '';
+	$id = '';
+
+	if($num == 1)
+	{
+		$key = array_search('I Have my Own Place', array_column($result, 'name'));
+	}
+	elseif($num == 2){
+		$key = array_search('Apply for charity place', array_column($result, 'name'));
+	}
+	if(isset($key)){
+		$id = $result[$key]['id'];	
+	}
+	return $id;
+}
 
 ?>
