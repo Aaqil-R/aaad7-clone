@@ -1863,6 +1863,31 @@ iframe {
   color: white;
 }
 
+/* line 1539, ../sass/general.scss */
+.view-display-id-list_vacancies_page {
+  /* .search-text.job-category.forum-page.title-filtering {
+    display: block;
+    margin: 0 !important;
+    background: none;
+    padding: 0;
+    width: auto;
+
+    @include breakpoint($tablet) {
+      width: 250px;
+    }
+
+
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-left: 0px;
+    }
+
+
+    .icon-search {
+      right: 15px;
+    }
+  } */
+}
 /* line 1540, ../sass/general.scss */
 .view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
   background-color: #eef2f3;
@@ -1908,31 +1933,6 @@ iframe {
 .view-display-id-list_vacancies_page .views-row-last .card.job-card {
   margin-bottom: 50px;
 }
-/* line 1587, ../sass/general.scss */
-.view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
-  display: block;
-  margin: 0 !important;
-  background: none;
-  padding: 0;
-  width: auto;
-}
-@media (max-width: 990px) {
-  /* line 1587, ../sass/general.scss */
-  .view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
-    width: 250px;
-  }
-}
-@media (max-width: 767px) {
-  /* line 1587, ../sass/general.scss */
-  .view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering {
-    width: 100%;
-    margin-left: 0px;
-  }
-}
-/* line 1605, ../sass/general.scss */
-.view-display-id-list_vacancies_page .search-text.job-category.forum-page.title-filtering .icon-search {
-  right: 15px;
-}
 /* line 1610, ../sass/general.scss */
 .view-display-id-list_vacancies_page .search-text.job-category.forum-page,
 .view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
@@ -1964,7 +1964,7 @@ section.job-card h3 {
   text-decoration: underline;
 }
 /* line 1639, ../sass/general.scss */
-section.job-card .close-date {
+section.job-card .close-date, section.job-card .salary, section.job-card .job-location, section.job-card .job-commitment {
   font-weight: bold;
 }
 /* line 1643, ../sass/general.scss */
