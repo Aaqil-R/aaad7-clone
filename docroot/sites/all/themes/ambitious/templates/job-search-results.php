@@ -37,7 +37,7 @@
       }
 
       if(isset($t->field_time_commitment[und][1][value])) {
-        $commitment = "Full Time & Part Time" ;
+        $commitment = "Full Time, Part Time" ;
         $job_commitment = 'Commitment: ' .  $commitment;
       } 
       else {
