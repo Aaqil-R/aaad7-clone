@@ -77,9 +77,8 @@ function mailchimp_custom_init(){
 function mailchimp_custom_webform_submission_insert($node, $submission){
 	//dpm($submission->nid);
 	// define the mail chimp api key and the list id.
-	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-	$list_id = '20af80b11d';
-
+	$api_key = getapikey();
+	$list_id = getlistid();
 	// extract the parent content type.
 	$contenttype = $node->type;
 	//dpm($contenttype);
@@ -704,8 +703,8 @@ function mailchimp_custom_node_insert($node){
 		{
 			//write the code when the content has the webform enabled.
 			$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-			$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-			$list_id = '20af80b11d';
+			$api_key = getapikey();
+			$list_id = getlistid();
 
 			$groupid = getresults($contenttype);
 			if($groupid != ''){
@@ -819,8 +818,8 @@ function mailchimp_custom_node_update($node){
 			$title = $node->title;
 
 			$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-			$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-			$list_id = '20af80b11d';
+			$api_key = getapikey();
+			$list_id = getlistid();
 
 			$groupid = getresults($contenttype);
 
@@ -875,8 +874,8 @@ function mailchimp_custom_node_update($node){
 
 function getresults($contenttype){
 	$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-	$list_id = '20af80b11d';
+	$api_key = getapikey();
+	$list_id = getlistid();
 	$getdata = array(
 		'apikey' => $api_key,
 		'id' => $list_id,
@@ -911,8 +910,8 @@ function getresults($contenttype){
 
 function getresultsofCharityPlace($num){
 	$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-	$list_id = '20af80b11d';
+	$api_key = getapikey();
+	$list_id = getlistid();
 	$getdata = array(
 		'apikey' => $api_key,
 		'id' => $list_id,
@@ -937,4 +936,11 @@ function getresultsofCharityPlace($num){
 	return $id;
 }
 
+function getapikey(){
+	return '698807ce039f92ea3b417de902be2a94-us11';
+}
+
+function getlistid(){
+	return 'c4a8cbf5c3';
+}
 ?>
