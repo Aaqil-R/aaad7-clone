@@ -124,6 +124,12 @@
   //to print the End date
   $date2 = new DateTime();
   $date2->setTimestamp($content['field_event_date']['#object']->field_event_date['und'][0]['value2']);
+
+  //getting the eventcode tobe send as a parameter  on the link 
+  $eventcode = $node->field_event_code['und'][0]['value'];
+
+  //getting the nodeid
+  $nodeid = $node->nid;
 ?>
 
 <div class="details-box">
@@ -162,20 +168,23 @@
   $getexternal_link = field_get_items('node', $node ,'field_bsd_tools_integration');
   $viewexternal_link = field_view_value('node', $node ,'field_bsd_tools_integration'
   , $getexternal_link[0]);
-
-  if(isset($content['field_bsd_tools_integration'])):
-  //$external_link = $content['field_bsd_tools_integration']['#object']->field_bsd_tools_integration['und'][0]['safe_value'];
-  //print render($viewexternal_link);
-?>
-  <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
-<?php
-  endif;
 ?>
 
+  <?php if(isset($content['field_bsd_tools_integration'])): ?>
+      <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>"> Signup </a>
+  <?php else : 
+    //generating the link including the parameters.
+    //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
+    $link = $nodeid;
+  ?>
+    <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>"> Signup </a>
+  <?php endif; ?>
+
 <?php
-  if(isset($content['webform'])):
-  print render($content['webform']);
-  endif; 
+  // hiding the webforms
+  // if(isset($content['webform'])):
+  // print render($content['webform']);
+  // endif; 
 ?>
 
 </div>
