@@ -943,4 +943,32 @@ function getapikey(){
 function getlistid(){
 	return 'c4a8cbf5c3';
 }
+
+//new codes
+
+function mailchimp_custom_node_validate($node, $form, &$form_state){
+	//checking the content type
+	$contenttype = $node->type;
+	$enabled_content_types = array(
+		'events'
+		,'courses'
+	);
+	//check whether the content type belongs to one defined in array
+	if (in_array($contenttype, $enabled_content_types)){
+		//load the bsd field
+		$items = field_get_items('node', $node, 'field_bsd_tools_integration');
+		$first_value = $items[0]['value'];
+		//check whether the string is null if so we do not need to consider the scenario
+		if($first_value != ''){
+			//check whether the string starts with http.
+			//this will cover https also
+			if(substr( $first_value, 0, 4 ) != "http")
+			{
+				//throw a form validation error when the string does not start with http
+				form_set_error('field_bsd_tools_integration', t('Please add the link with http://'));
+			}
+		}
+		
+	}
+}
 ?>
