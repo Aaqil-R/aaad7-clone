@@ -737,7 +737,7 @@ function mailchimp_custom_node_insert($node){
 					'grouping_id' => $charityid1,
 					);
 				$result1 = $MailChimp->call('lists/interest-group-add', $submittingdata1);
-				dpm($result1);
+				//dpm($result1);
 				//get the new group ids
 				$charityid2 = getresultsofCharityPlace(2);
 				//create the group in Apply for charity place
@@ -748,7 +748,7 @@ function mailchimp_custom_node_insert($node){
 					'grouping_id' => $charityid2,
 					);
 				$result2 = $MailChimp->call('lists/interest-group-add', $submittingdata2);
-				dpm($result2);					
+				//dpm($result2);					
 			}
 
 		}
@@ -850,7 +850,7 @@ function mailchimp_custom_node_update($node){
 					'grouping_id' => $charityid1,
 					);
 				$result1 = $MailChimp->call('lists/interest-group-update', $submittingdata1);
-				dpm($result1);
+				//dpm($result1);
 				//Updating the Apply for the charity place
 				$charityid2 = getresultsofCharityPlace(2);
 
@@ -862,7 +862,7 @@ function mailchimp_custom_node_update($node){
 					'grouping_id' => $charityid2,
 					);
 				$result2 = $MailChimp->call('lists/interest-group-update', $submittingdata2);		
-				dpm($result2);		
+				//dpm($result2);		
 			}
 		}
 		else{
