@@ -255,19 +255,24 @@ Drupal.behaviors.ambitious = {
     } 
 	
 	//anchor links
-	$(".node a[href*='ft']").click(function(event){
-          event.preventDefault();  
-          var myval = $(this).attr('href');  
-            if(myval.replace('_','') != "undefined"){
-              myval = myval.replace('_',''); 
-            }
-          $('html, body').animate({scrollTop: $(myval).offset().top - 120}, 'slow'); 
-       });
-       $("a[href*='ftn']").each(function(){
-         var name =  $(this).attr('name');  
-             name = name.replace('_','');   
-         $(this).attr('id', name);
-       });
+	//why is this function there????????? 
+	//the reason for commenting this code is when the external links are created in events / courses 
+	//and if the link contains the letter "ft" for example www.ft.com / www.software.com it does not 
+	//navigate - Amalan
+
+	// $(".node a[href*='ft']").click(function(event){
+ //          event.preventDefault();  
+ //          var myval = $(this).attr('href');  
+ //            if(myval.replace('_','') != "undefined"){
+ //              myval = myval.replace('_',''); 
+ //            }
+ //          $('html, body').animate({scrollTop: $(myval).offset().top - 120}, 'slow'); 
+ //       });
+ //       $("a[href*='ftn']").each(function(){
+ //         var name =  $(this).attr('name');  
+ //             name = name.replace('_','');   
+ //         $(this).attr('id', name);
+ //       });
        
 	// on click video popup
 	$(".node .view-display-id-stream_topic_page .views-row, .view-display-id-my_voice_blog .views-row, .view-display-id-voices_from_the_spectrum_page .views-row").each(function( index ) { 
