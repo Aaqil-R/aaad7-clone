@@ -164,8 +164,11 @@
     //generating the link including the parameters.
     //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
     $link = $nodeid;
+    // $content_title = strtolower(str_replace(" ","_", $title));//strpos($title, '%20');
+    // echo $content_title;
   ?>
-    <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>"> Signup </a>
+    <!-- <a class="btn btn-external-link" href="/signup-form/<?php //print render($link); ?>"> Signup </a> -->
+    <a class="btn btn-external-link" href="/signup-form/<?php print $type; ?>/<?php print $title; ?>/<?php print render($link); ?>"> Signup </a>
   <?php endif; ?>
   <?php
   // Hide the webform from the original page

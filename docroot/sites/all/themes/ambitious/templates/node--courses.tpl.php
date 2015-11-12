@@ -177,7 +177,8 @@
     //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
     $link = $nodeid;
   ?>
-    <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>"> Signup </a>
+    <<!-- a class="btn btn-external-link" href="/signup-form/<?php //print render($link); ?>"> Signup </a> -->
+    <a class="btn btn-external-link" href="/signup-form/<?php print $type; ?>/<?php print $title; ?>/<?php print render($link); ?>"> Signup </a>
   <?php endif; ?>
 
 <?php
