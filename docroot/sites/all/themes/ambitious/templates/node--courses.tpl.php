@@ -178,7 +178,7 @@
     $link = $nodeid;
     $content_title = strtolower(str_replace(" ","-", $title));
   ?>
-    <<!-- a class="btn btn-external-link" href="/signup-form/<?php //print render($link); ?>"> Signup </a> -->
+    <!-- a class="btn btn-external-link" href="/signup-form/<?php //print render($link); ?>"> Signup </a> -->
     <a class="btn btn-external-link" href="/signup-form/<?php print $type; ?>/<?php print $content_title; ?>/<?php print render($link); ?>"> Signup </a>
   <?php endif; ?>
 
