@@ -1,15 +1,48 @@
 <?php
 //Source from:  https://github.com/stripe/stripe-php
-
-
-//require("vendor/autoload.php");
 require('init.php');
-//require_once("lib/Stripe.php");
-
 
 function stripe_custom_init(){
 	dpm("I am coming here");
+	// create_subscriber();
+	// create_plan();
+	// create_ontime_patment();
+}
 
+function create_subscriber(){
+	\Stripe\Stripe::setApiKey("sk_test_cmi32OHLo1FuZ8RBKzBTvfPt");
+
+	$token = \Stripe\Token::create(array(
+	  "card" => array(
+	    "number" => "4242424242424242",
+	    "exp_month" => 11,
+	    "exp_year" => 2016,
+	    "cvc" => "314"
+	  )
+	));
+
+	$customer = \Stripe\Customer::create(array(
+	  "source" => $token,
+	  "plan" => "gold",
+	  "email" => "payinguser@example.com")
+	);
+}
+
+function create_plan(){
+	//creating a new plan
+	\Stripe\Stripe::setApiKey("sk_test_cmi32OHLo1FuZ8RBKzBTvfPt");
+
+	$test = \Stripe\Plan::create(array(
+	  "amount" => 2000,
+	  "interval" => "month",
+	  "name" => "Amazing Gold Plan",
+	  "currency" => "usd",
+	  "id" => "gold")
+	);
+	dpm($test);
+}
+
+function create_ontime_patment(){
 	//defining the api key 
 	\Stripe\Stripe::setApiKey('sk_test_cmi32OHLo1FuZ8RBKzBTvfPt');
 
@@ -17,15 +50,11 @@ function stripe_custom_init(){
 	$myCard = array('number' => '4242424242424242', 'exp_month' => 8, 'exp_year' => 2018);
 
 	//defining the charge details for one time payments
-	// $charge = \Stripe\Charge::create(array('card' => $myCard, 
-	// 										'amount' => 2000, 
-	// 										'currency' => 'usd'));
-	// echo $charge;
-	
-
-
-	//dpr($charge);
-
+	$charge = \Stripe\Charge::create(array('card' => $myCard, 
+											'amount' => 2000, 
+											'currency' => 'usd'));
+	echo $charge;
+	//dpm($charge);
 }
 
 function stripe_custom_webform_submission_insert($node, $submission){
@@ -41,36 +70,35 @@ function stripe_custom_webform_submission_presave($node, $submission){
 	//$contenttype = $node->type;
 	if($contenttype == 'donations'){
 		//TODO:add the codes inside this to only be applicable to the donations.
-	}
-
-	foreach ($node->webform['components'] as $key => $field) 
-	{
-		switch ($field['form_key']) 
+		foreach ($node->webform['components'] as $key => $field) 
 		{
-			case 'firstname':
-				$firstname = $submission->data[$key][0];
-			break;
-			case 'amount':
-				$amount = $submission->data[$key][0];
-			break;
+			switch ($field['form_key']) 
+			{
+				case 'firstname':
+					$firstname = $submission->data[$key][0];
+				break;
+				case 'amount':
+					$amount = $submission->data[$key][0];
+				break;
+			}
 		}
-	}
 
-	dpm($firstname);
-	$newname = maskstring($firstname);
-	dpm($newname);
+		dpm($firstname);
+		$newname = maskstring($firstname);
+		dpm($newname);
 
-	//updating it with new values
-	foreach ($node->webform['components'] as $key => $field) 
-	{
-		switch ($field['form_key']) 
+		//updating it with new values
+		foreach ($node->webform['components'] as $key => $field) 
 		{
-			case 'firstname':
-				$submission->data[$key][0] = 'Testing name';
-			break;
-			case 'amount':
-				$submission->data[$key][0] = 123456;
-			break;
+			switch ($field['form_key']) 
+			{
+				case 'firstname':
+					$submission->data[$key][0] = 'Testing name';
+				break;
+				case 'amount':
+					$submission->data[$key][0] = 123456;
+				break;
+			}
 		}
 	}
 }
@@ -87,6 +115,7 @@ function maskstring($number){
 	return $number;
 }
 
+//not calling this at the moment.
 function FormatCreditCard($cc)
 {    // Clean out extra data that might be in the cc
     $cc = str_replace(array('-',' '),'',$cc);
