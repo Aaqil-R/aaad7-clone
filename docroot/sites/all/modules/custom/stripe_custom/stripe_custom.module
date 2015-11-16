@@ -3,14 +3,27 @@
 require('init.php');
 
 function stripe_custom_init(){
-	dpm("I am coming here");
-	// create_subscriber();
-	// create_plan();
-	// create_ontime_patment();
+
 }
 
-function create_subscriber(){
-	\Stripe\Stripe::setApiKey("sk_test_cmi32OHLo1FuZ8RBKzBTvfPt");
+function stripe_custom_webform_submission_insert($node, $submission){
+	//TODO : Find a way to create the ID dynamically when creating a subscription plan
+	$val = create_plan(120 , "id6");
+	//dpm("value is : ".$val);
+	if($val == 0){
+		//The plan is created Successfully. Subscribe the user to the plan here.
+		//TODO : Create the subscriber here
+	}
+	else{
+		//TODO : Update the DB with the error log.
+	}
+}
+
+
+function create_subscriber($plan){
+	//TODO : the plan should be dynamically created
+	//TODO : Get the card details , email from the function.
+	\Stripe\Stripe::setApiKey(get_api());
 
 	$token = \Stripe\Token::create(array(
 	  "card" => array(
@@ -23,30 +36,51 @@ function create_subscriber(){
 
 	$customer = \Stripe\Customer::create(array(
 	  "source" => $token,
-	  "plan" => "gold",
+	  "plan" => $plan,
 	  "email" => "payinguser@example.com")
 	);
+
+	dpm($customer);
 }
 
-function create_plan(){
-	//creating a new plan
-	\Stripe\Stripe::setApiKey("sk_test_cmi32OHLo1FuZ8RBKzBTvfPt");
+function create_plan($amount , $id){
+	//TODO : When creating a new plan the amount must come from the webform submission
+	try {
+		//creating a new plan
+		\Stripe\Stripe::setApiKey(get_api());
 
-	$test = \Stripe\Plan::create(array(
-	  "amount" => 2000,
-	  "interval" => "month",
-	  "name" => "Amazing Gold Plan",
-	  "currency" => "usd",
-	  "id" => "gold")
-	);
-	dpm($test);
+		$test = \Stripe\Plan::create(array(
+		  "amount" => $amount,
+		  "interval" => "month",
+		  "name" => "new Plan",
+		  "currency" => "usd",
+		  "id" => $id)
+		);
+		return 0;
+	} catch(\Stripe\Error\Card $e) {
+		return -1;
+	} catch (\Stripe\Error\RateLimit $e) {
+		return -1;
+	} catch (\Stripe\Error\InvalidRequest $e) {
+		return -1;
+	} catch (\Stripe\Error\Authentication $e) {
+		return -1;
+	} catch (\Stripe\Error\ApiConnection $e) {
+		return -1;
+	} catch (\Stripe\Error\Base $e) {
+		return -1;
+	} catch (Exception $e) {
+		return -1;
+	}
 }
 
 function create_ontime_patment(){
 	//defining the api key 
-	\Stripe\Stripe::setApiKey('sk_test_cmi32OHLo1FuZ8RBKzBTvfPt');
+	\Stripe\Stripe::setApiKey(get_api());
 
 	//defining the card details
+	//TODO : Create the details from the function do not call the details directly 
+	//in the payment method.
 	$myCard = array('number' => '4242424242424242', 'exp_month' => 8, 'exp_year' => 2018);
 
 	//defining the charge details for one time payments
@@ -57,15 +91,8 @@ function create_ontime_patment(){
 	//dpm($charge);
 }
 
-function stripe_custom_webform_submission_insert($node, $submission){
-	// $contenttype = $node->type;
-	// if($contenttype == 'donations'){
-	// 	dpm("lalala");
-	// }
-}
-
 function stripe_custom_webform_submission_presave($node, $submission){
-	dpm($node);
+	// dpm($node);
 	//dpm($submission);
 	//$contenttype = $node->type;
 	if($contenttype == 'donations'){
@@ -103,10 +130,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 	}
 }
 
-
-
-
-
 function maskstring($number){
 	$count = strlen($number);
 	for( $i=0; $i<$count-4 ; $i++){
@@ -136,4 +159,9 @@ function FormatCreditCard($cc)
     return $newCreditCard;
 }
 
+//Setting the Api key of Stripe.
+//Change it when setup to the live environment.
+function get_api(){
+	return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
+}
 ?>
