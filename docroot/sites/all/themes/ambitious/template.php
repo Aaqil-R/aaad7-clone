@@ -439,6 +439,17 @@ function ambitious_preprocess_views_view_unformatted(&$vars){
   }
 }
 
+function ambitious_views_pre_render(&$view) {
+  $results = &$view->result;
+  foreach ($results as $key => $result) {
+    if ($view->current_display == 'events_page') {
+      $body1 = $result->field_body[0]['rendered']['#markup'];
+      $body1 = preg_replace("/&nbsp;/",'',$body1);
+      $result->field_body[0]['rendered']['#markup'] = $body1;
+    }    
+  }
+}
+
 function ambitious_links__node__comment($variables) {
    
   if(isset($variables['links']['comment_forbidden']['title'])){
