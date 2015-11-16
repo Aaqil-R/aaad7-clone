@@ -439,11 +439,14 @@ function ambitious_preprocess_views_view_unformatted(&$vars){
   }
 }
 
+//this is done as a client request where when the client adds a image inside the body field then 
+//the image should not appear in the events.
 function ambitious_views_pre_render(&$view) {
   $results = &$view->result;
   foreach ($results as $key => $result) {
     if ($view->current_display == 'events_page') {
       $body1 = $result->field_body[0]['rendered']['#markup'];
+      //$body1 = preg_replace("/<img[^>]+\>/i", "", $body1);
       $body1 = preg_replace("/&nbsp;/",'',$body1);
       $result->field_body[0]['rendered']['#markup'] = $body1;
     }    
