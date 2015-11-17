@@ -933,7 +933,7 @@ div.modal-forms-modal-content .form-item label {
 
 //Course, Events, Volunteer, Newsletter & Share Your Story Webforms
 .node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform,
-.webform-share-your-story, .page-signup-form {
+.webform-share-your-story, .page-signup-form, .node-donations {
   .webform-component-number,
   .webform-component-textfield,
   .webform-component-email,
@@ -1031,4 +1031,69 @@ div.modal-forms-modal-content .form-item label {
   padding: 1.5em;
   margin-bottom: 3em;
   border: 1px solid #d2d5d6;
+}
+
+.charity-field {
+  // background: #EEF2F3;
+  // padding: 10px;
+  // border: 2px solid #D0D0D0;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+
+  label {
+    p {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  .webform-component--charity-place {
+    label {
+      p {
+        color: white;
+      }
+    }
+
+    input[type=radio] {
+      display: none !important;
+
+      //Important used to override the common input field style
+   
+    }
+
+    input[type=radio] + label {
+      border: medium none;
+      cursor: pointer;
+      display: inline-block;
+      font-family: inherit;
+      font-size: inherit;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      outline: medium none;
+      padding: 25px 80px;
+      position: relative;
+      line-height: 29px;
+      background: #F15500;
+      box-shadow: 0px 6px #3CADE4;
+      -webkit-box-shadow: 0px 6px #C63502;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 10px;
+      width: 300px;
+      margin-right: 15px;
+      float: left;
+    }
+
+    input[type=radio]:checked + label {
+      top: 2px;
+      -webkit-box-shadow: 0px 4px #C63502;
+      box-shadow: 0px 4px #C63502;
+    }
+  }
 }

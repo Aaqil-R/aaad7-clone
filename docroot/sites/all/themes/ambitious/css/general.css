@@ -1980,3 +1980,43 @@ section.job-card img {
 .job-card-layout .post.card.card--item span.date-display-single.closed {
   color: red;
 }
+
+@media (min-width: 768px) {
+  /* line 1665, ../sass/general.scss */
+  .node-type-job-vacancy section#content-area {
+    width: 65%;
+    float: left;
+  }
+}
+/* line 1672, ../sass/general.scss */
+.node-type-job-vacancy section#content_bottom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  /* line 1672, ../sass/general.scss */
+  .node-type-job-vacancy section#content_bottom {
+    float: right;
+    width: 30%;
+    margin: 0;
+  }
+}
+/* line 1683, ../sass/general.scss */
+.node-type-job-vacancy section#content_bottom h2.block__title.block-title {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 1688, ../sass/general.scss */
+  .node-type-job-vacancy section#content_bottom .view-header h2 {
+    font-size: 40px;
+    line-height: 30px;
+  }
+}
+/* line 1696, ../sass/general.scss */
+.node-type-job-vacancy section#content_bottom .views-row {
+  margin-bottom: 1.69492%;
+  background: #ffffff;
+  padding: 1em;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}

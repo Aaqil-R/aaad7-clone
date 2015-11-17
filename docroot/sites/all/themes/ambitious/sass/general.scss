@@ -1658,3 +1658,47 @@ section.job-card {
     }
   }
 }
+
+//Job Vacancy Download Cards
+.node-type-job-vacancy {
+  @include breakpoint($not-all-mobile) {
+    section#content-area {
+      width: 65%;
+      float: left;
+    }
+  }
+
+
+  section#content_bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint($not-all-mobile) {
+      float: right;
+      width: 30%;
+      margin: 0;
+    }
+
+
+    h2.block__title.block-title {
+      display: none;
+    }
+
+    .view-header {
+      h2 {
+        @include breakpoint($not-all-mobile) {
+          font-size: 40px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .views-row {
+      margin-bottom: 1.69492%;
+      background: #ffffff;
+      padding: 1em;
+      -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

@@ -125,7 +125,7 @@
 }
 
 .node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns,
-.node-type-webform, .webform-share-your-story, .page-signup-form {
+.node-type-webform, .webform-share-your-story, .page-signup-form, .node-donations {
   background: $white;
 
   form {
@@ -184,3 +184,39 @@
 //     clear: both;
 //   }
 // }
+
+//Donation Page
+.node-type-donations {
+  #wrapper {
+    background: blue;
+
+    .node-donations {
+      background: none;
+
+      form {
+        background: aqua;
+        width: 500px;
+        padding: 10px;
+
+        .webform-progressbar {
+          display: none;
+        }
+
+        .webform-steps-wrapper {
+          background: none;
+          border: none;
+        }
+
+        span.webform-step {
+          background: none;
+          border: none;
+
+          span {
+            background: #F15500;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+}
