@@ -8,42 +8,66 @@ function stripe_custom_init(){
 
 function stripe_custom_webform_submission_insert($node, $submission){
 	//TODO : Find a way to create the ID dynamically when creating a subscription plan
-	$val = create_plan(120 , "id6");
-	//dpm("value is : ".$val);
+	$val = create_plan(120 , "id6" , "myplan");
 	if($val == 0){
 		//The plan is created Successfully. Subscribe the user to the plan here.
 		//TODO : Create the subscriber here
 	}
 	else{
 		//TODO : Update the DB with the error log.
+		dpm("I am coming here");
+	}
+	//TODO : create the card details from the webfrom submission
+	//creating a card
+	$card = array(
+		    	"number" => "4242424242424242",
+		    	"exp_month" => 11,
+		    	"exp_year" => 2016,
+		   		"cvc" => "314"
+		  	);
+
+	//creating a subscriber
+	//$test = create_subscriber('id6','amalan@test.com',$card);
+	//dpm($test);
+
+	$var = create_onetime_patment($card,500);
+	dpm($var);
+	
+}
+
+
+function create_subscriber($plan , $email , $card){
+	try {
+		\Stripe\Stripe::setApiKey(get_api());
+
+		$token = \Stripe\Token::create(array(
+		  "card" => $card,
+		));
+
+		$customer = \Stripe\Customer::create(array(
+		  "source" => $token,
+		  "plan" => $plan,
+		  "email" => $email)
+		);
+		return 0;
+	} catch(\Stripe\Error\Card $e) {
+		return -1;
+	} catch (\Stripe\Error\RateLimit $e) {
+		return -1;
+	} catch (\Stripe\Error\InvalidRequest $e) {
+		return -1;
+	} catch (\Stripe\Error\Authentication $e) {
+		return -1;
+	} catch (\Stripe\Error\ApiConnection $e) {
+		return -1;
+	} catch (\Stripe\Error\Base $e) {
+		return -1;
+	} catch (Exception $e) {
+		return -1;
 	}
 }
 
-
-function create_subscriber($plan){
-	//TODO : the plan should be dynamically created
-	//TODO : Get the card details , email from the function.
-	\Stripe\Stripe::setApiKey(get_api());
-
-	$token = \Stripe\Token::create(array(
-	  "card" => array(
-	    "number" => "4242424242424242",
-	    "exp_month" => 11,
-	    "exp_year" => 2016,
-	    "cvc" => "314"
-	  )
-	));
-
-	$customer = \Stripe\Customer::create(array(
-	  "source" => $token,
-	  "plan" => $plan,
-	  "email" => "payinguser@example.com")
-	);
-
-	dpm($customer);
-}
-
-function create_plan($amount , $id){
+function create_plan($amount , $id , $name){
 	//TODO : When creating a new plan the amount must come from the webform submission
 	try {
 		//creating a new plan
@@ -52,7 +76,7 @@ function create_plan($amount , $id){
 		$test = \Stripe\Plan::create(array(
 		  "amount" => $amount,
 		  "interval" => "month",
-		  "name" => "new Plan",
+		  "name" => $name,
 		  "currency" => "usd",
 		  "id" => $id)
 		);
@@ -74,29 +98,36 @@ function create_plan($amount , $id){
 	}
 }
 
-function create_ontime_patment(){
-	//defining the api key 
-	\Stripe\Stripe::setApiKey(get_api());
+function create_onetime_patment($card,$amount){
+	try {
+		//defining the api key 
+		\Stripe\Stripe::setApiKey(get_api());
 
-	//defining the card details
-	//TODO : Create the details from the function do not call the details directly 
-	//in the payment method.
-	$myCard = array('number' => '4242424242424242', 'exp_month' => 8, 'exp_year' => 2018);
-
-	//defining the charge details for one time payments
-	$charge = \Stripe\Charge::create(array('card' => $myCard, 
-											'amount' => 2000, 
-											'currency' => 'usd'));
-	echo $charge;
-	//dpm($charge);
+		//defining the charge details for one time payments
+		$charge = \Stripe\Charge::create(array('card' => $card, 
+												'amount' => $amount, 
+												'currency' => 'usd'));
+		echo $charge;
+		return 0;
+	} catch(\Stripe\Error\Card $e) {
+		return -1;
+	} catch (\Stripe\Error\RateLimit $e) {
+		return -1;
+	} catch (\Stripe\Error\InvalidRequest $e) {
+		return -1;
+	} catch (\Stripe\Error\Authentication $e) {
+		return -1;
+	} catch (\Stripe\Error\ApiConnection $e) {
+		return -1;
+	} catch (\Stripe\Error\Base $e) {
+		return -1;
+	} catch (Exception $e) {
+		return -1;
+	}
 }
 
 function stripe_custom_webform_submission_presave($node, $submission){
-	// dpm($node);
-	//dpm($submission);
-	//$contenttype = $node->type;
 	if($contenttype == 'donations'){
-		//TODO:add the codes inside this to only be applicable to the donations.
 		foreach ($node->webform['components'] as $key => $field) 
 		{
 			switch ($field['form_key']) 
@@ -110,10 +141,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			}
 		}
 
-		dpm($firstname);
-		$newname = maskstring($firstname);
-		dpm($newname);
-
 		//updating it with new values
 		foreach ($node->webform['components'] as $key => $field) 
 		{
@@ -123,7 +150,9 @@ function stripe_custom_webform_submission_presave($node, $submission){
 					$submission->data[$key][0] = 'Testing name';
 				break;
 				case 'amount':
-					$submission->data[$key][0] = 123456;
+					//masking the number
+					$number = maskstring($submission->data[$key][0]);
+					$submission->data[$key][0] = $number;
 				break;
 			}
 		}
