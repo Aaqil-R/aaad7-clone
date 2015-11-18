@@ -736,24 +736,25 @@ $(window).resize(function () {
 /*----- Sticky Nav Bar End -----*/
 
 //Job Vacancy Sticky Cards
-	$(document).ready(function() {
-			console.log('resize');
-			var $sidebar   = $("#content_bottom"), 
-	        	$window    = $(window),
-	        	offset     = $sidebar.offset(),
-	        	topPadding = 150;
-		    $window.scroll(function() {
-		        if ($window.scrollTop() > offset.top) {
-		            $sidebar.stop().animate({
-		                marginTop: $window.scrollTop() - offset.top + topPadding + 70
-		            });
-		        } else {
-		            $sidebar.stop().animate({
-		                marginTop: 0
-		            });
-		        }
-		    });	
-	}); 
+	// $(document).ready(function() {
+	// 		console.log('resize');
+	// 		var $sidebar   = $("#content_bottom"), 
+	//         	$window    = $(window),
+	//         	$div_height = $("#content_bottom"),
+	//         	offset     = $sidebar.offset(),
+	//         	topPadding = 220;
+	// 	    $window.scroll(function() {
+	// 	        if ($window.scrollTop() > offset.top) {
+	// 	            $sidebar.stop().animate({
+	// 	                marginTop: $window.scrollTop() - offset.top + $div_height.height() 
+	// 	            });
+	// 	        } else {
+	// 	            $sidebar.stop().animate({
+	// 	                marginTop: 0
+	// 	            });
+	// 	        }
+	// 	    });	
+	// }); 
 /*----- Job Vacancy Sticky Cards -----*/
 
 })(jQuery, Drupal, this, this.document);
