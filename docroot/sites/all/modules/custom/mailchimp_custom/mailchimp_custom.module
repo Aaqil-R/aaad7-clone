@@ -2,75 +2,6 @@
 require("vendor/autoload.php");
 
 function mailchimp_custom_init(){
-// $node = node_load(677793);
-// $title = $node->title;
-// dpm($node);
-// $date = $node->created;
-// dpm($date);
-
-// $updatedvalue = field_get_items('node', $node, 'field_event_date');
-// $updatedvalue1 = $updatedvalue[0]['value'];
-// dpm($updatedvalue1);
-
-// $eventcode = date('dmy',$updatedvalue1);
-// dpm($eventcode);
-// $new = $title.$eventcode;
-
-
-// // dpm("hahaha");
-// dpm($new);
-// dpm("hahaha");
-
-	//to see the list id.
-	 //$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	// $result1 = $MailChimp->call('/lists/list');
-	// dpm($result1);
-
-	// $api_key = '698807ce039f92ea3b417de902be2a94-us11';
-	// $list_id = '20af80b11d';
-
-	//checking to which group the user must be subscribed.
-	// $getdata = array(
-	// 				'apikey' => $api_key,
-	// 				'id' => $list_id,
-	// 				);
-	// $result = $MailChimp->call('lists/interest-groupings', $getdata);
-
-	// $MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	// 		$api_key = '698807ce039f92ea3b417de902be2a94-us11';
-	// 		$list_id = '20af80b11d';
-			// $key = array_search('Events', array_column($result, 'name'));
-			// dpm($key);
-			// foreach ($result as $value) {
-			// 	# code...
-			// 	$groupname = $value['name'];
-			// 	$groupid = $value['id'];
-
-
-			// 	dpm($value['name']); 
-			// }
-
-	//subscribing to a group
-	// $submittingdata = array(
-	// 				'apikey' => $api_key,
-	// 				'id' => $list_id,
-	// 				'group_name' => 'testing',
-	// 				);
-	// $result = $MailChimp->call('lists/interest-group-add', $submittingdata);
-	//dpm($result);
-	// $result3 = $MailChimp->call('/lists/member-info', array(
-	// 			'id' => '20af80b11d',
-	// 		    'emails' => array(
-	// 		    	0 => array('email'=>'nishan@thesmallaxe.com'))
-	// 		    )
-	// 		);
-
-	//dpr($result3);
-	 // $record = array(
-  //   "resultset" => 'this is a test to see',
-  //   );
-  // drupal_write_record('mailchimp_error_log', $record);
-  // dpm($record);
 
 }
 
@@ -313,6 +244,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			if($result3['success_count'] == 1)
 			{
 				//if the user exsist then we must get the earlier subscribed events
+
 				$eventlist = print_event_list($result3);
 				$events = $eventlist['events'];
 				$courses = $eventlist['courses'];
@@ -422,7 +354,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					'merge_vars' => array(
 				        'groupings' => array(
 				            0 => array(
-				                'name' => 'Events',
+				                'name' => 'Fundraising',
 				                'groups' => $events
 				                ),
 
@@ -432,11 +364,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				                ),
 
 				            2 => array(
-				                'name' => 'Newsletters',
+				                'name' => 'External newsletter',
 				                'groups' => $news
 				                ),
 				            3 => array(
-				                'name' => 'Volunteer',
+				                'name' => 'Participation',
 				                'groups' => $volunteer
 				                ),
 				            4 => array(
@@ -461,8 +393,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				        'occupation'=>$occupation,
 				        'employer'=>$employer,
 				        'birth_day'=>$date_of_birth,
-				        'pledge'=>$pledge,
-				        'offer'=>$offer,
+				        // 'pledge'=>$pledge,
+				        // 'offer'=>$offer,
 				        'descripton'=>$describe_you,
 				        'age'=>$age,
 				        'volunteers'=>$volunteers,
@@ -485,7 +417,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
 				if($contenttype == 'events'){
-					$name = 'Events';
+					$name = 'Fundraising';
 					if($charity_place == 1){
 						$charity_name = 'I Have my Own Place';
 					}
@@ -498,11 +430,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 				elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
 				{
-					$name = 'Newsletters';
+					$name = 'External newsletter';
 				}
 				elseif($contenttype == 'volunteer')
 				{
-					$name = 'Volunteer';
+					$name = 'Participation';
 				}
 				elseif($contenttype == 'campaigns')
 				{
@@ -602,16 +534,16 @@ function print_event_list($result3){
 	foreach ($subscribed_groups_list as $group) {
 		$subscribed_list = $group['groups'];
 		//$subscribed_list_name = $group['name'];
-		if($group['name'] == 'Events'){
+		if($group['name'] == 'Fundraising'){
 			$subscribed_events = get_subscribed_events($subscribed_list);
 		}
 		elseif($group['name'] == 'Courses'){
 			$subscribed_courses = get_subscribed_events($subscribed_list);
 		}
-		elseif($group['name'] == 'Newsletters'){
+		elseif($group['name'] == 'External newsletter'){
 			$subscribed_news = get_subscribed_events($subscribed_list);
 		}
-		elseif($group['name'] == 'Volunteer'){
+		elseif($group['name'] == 'Participation'){
 			$subscribed_volunteers = get_subscribed_events($subscribed_list);
 		}
 		elseif($group['name'] == 'Campaign'){
@@ -890,13 +822,13 @@ function getresults($contenttype){
         $key = array_search('Courses', array_column($result, 'name'));
         break;
     case "events":
-        $key = array_search('Events', array_column($result, 'name'));
+        $key = array_search('Fundraising', array_column($result, 'name'));
         break;
     case "newsletter":
-        $key = array_search('Newsletters', array_column($result, 'name'));
+        $key = array_search('External newsletter', array_column($result, 'name'));
         break;
     case "volunteer":
-    	$key = array_search('Volunteer', array_column($result, 'name'));
+    	$key = array_search('Participation', array_column($result, 'name'));
     break;
     case "campaigns":
     	$key = array_search('Campaign', array_column($result, 'name'));
