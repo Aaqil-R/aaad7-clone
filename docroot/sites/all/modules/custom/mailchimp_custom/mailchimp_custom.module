@@ -413,6 +413,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 			}
 			else
 			{
+				dpm("I came here");
 				//echo "user not found";
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
@@ -485,6 +486,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 
 				$result = $MailChimp->call('lists/subscribe', $submittingdata);
 
+				dpm($result);
 
 				// $record = array(
     // 				"resultset" => 'this is the test',
