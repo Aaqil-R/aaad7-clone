@@ -188,15 +188,34 @@
 //Donation Page
 .node-type-donations {
   #wrapper {
-    background: blue;
+    //background: blue;
+    background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    .title {
+      display: none;
+    }
 
     .node-donations {
       background: none;
 
       form {
-        background: aqua;
-        width: 500px;
+        background: white;
+        width: 40%;
         padding: 10px;
+
+        .webform-component--first-text-area {
+          h4 {
+            margin: none;
+          }
+
+          p {
+            font-weight: bold;
+          }
+        }
 
         .webform-progressbar {
           display: none;
@@ -205,16 +224,101 @@
         .webform-steps-wrapper {
           background: none;
           border: none;
-        }
 
-        span.webform-step {
-          background: none;
-          border: none;
+          span.disabled {
+            span {
+              background: #E2E2E2;
+            }
+          }
+
+          span.webform-step {
+            background: none;
+            border: none;
+          }
 
           span {
-            background: #F15500;
+            background: #FBBA00;
             border-radius: 50px;
+
+            /* width: 21px; */
+            /* height: 22px; */
+            padding: 7px;
+            line-height: 0.5;
+            margin: 0;
+            color: white;
           }
+        }
+
+        .webform-component--other-amount {
+          input {
+            width: 100%;
+          }
+        }
+
+        .webform-component--donation-type {
+          input[type="checkbox"] {
+            // display: none;
+            background: none;
+            border: 2px solid black;
+          }
+        }
+
+        .webform-component--select-an-amount {
+          fieldset {
+            width: 33%;
+            float: left;
+          }
+
+          input[type=radio] {
+            display: none !important;
+
+            //Important used to override the common input field style
+         
+          }
+
+          input[type=radio] + label {
+            border: medium none;
+            cursor: pointer;
+            display: inline-block;
+            font-family: inherit;
+            font-size: inherit;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            outline: medium none;
+            padding: 25px 80px;
+            position: relative;
+            line-height: 29px;
+            background: #fbba00;
+            box-shadow: 0px 6px #f07d2c;
+            -webkit-box-shadow: 0px 6px #f07d2c;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            margin-right: 15px;
+            float: left;
+            font-size: 2em;
+            font-weight: bold;
+          }
+
+          input[type=radio]:checked + label {
+            top: 2px;
+            background: #F15500;
+            -webkit-box-shadow: 0px 4px #C63502;
+            box-shadow: 0px 4px #C63502;
+          }
+        }
+
+        .hover-text-one, .hover-text-two {
+          display: none;
+        }
+
+        .form-radios fieldset:nth-child(1):hover + .hover-text-one {
+          display: block;
         }
       }
     }
