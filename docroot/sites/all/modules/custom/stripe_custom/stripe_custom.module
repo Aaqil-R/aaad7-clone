@@ -3,7 +3,6 @@
 require('init.php');
 
 function stripe_custom_init(){
-
 	// $select_an_amount=10;
 	// $id='amalannewtest';
 	// $name_of_the_plan='amalannewtest';
@@ -13,8 +12,13 @@ function stripe_custom_init(){
 
 // 	$date = '2016-11-01';
 // 	$year = substr($date,0,strpos($date,'-'));
-
-
+// 	$card1 = array();
+// 			$card1['number'] = '4242424242424242';
+// 			$card1['exp_month'] = '11';
+// 			$card1['exp_year'] = '2016';
+// 			$card1['cvc'] = '314';
+// $test = create_onetime_patment($card1,50);
+// dpm($test);
 
 // 	$month = substr($date,strpos($date,'-')+1,strpos($date,'-',strpos($date,'-')));
 	
@@ -169,13 +173,13 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan(intval($select_an_amount) , $id , $name_of_the_plan);
+			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan);
 			//check whether the Plan was created
 			if($val == 0){
 				dpm("Recurring plan created");
 				//The plan is created Successfully. Subscribe the user to the plan here.
 				//TODO : Create the subscriber here
-
+				$card1 = array();
 				$card1['number'] = $cardnumber;
 				$card1['exp_month'] = $expiration_month;
 				$card1['exp_year'] = $expiration_year;
@@ -199,12 +203,13 @@ function stripe_custom_webform_submission_presave($node, $submission){
 		//Create a one time payment
 		else{
 			//creating the card details
+			$card1 = array();
 			$card1['number'] = $cardnumber;
 			$card1['exp_month'] = $expiration_month;
 			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
-			$var = create_onetime_patment($card,intval($select_an_amount));
+			$var = create_onetime_patment($card1,intval($select_an_amount)*100);
 			if($val1 == 0){
 				dpm("One time payment added");
 			}
@@ -304,19 +309,27 @@ function create_onetime_patment($card,$amount){
 												'currency' => 'usd'));
 		echo $charge;
 		return 0;
+
 	} catch(\Stripe\Error\Card $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
+		//dpm($e);
 		return -1;
 	} catch (Exception $e) {
+		//dpm($e);
 		return -1;
 	}
 }
