@@ -263,7 +263,7 @@ function create_plan($amount , $id , $name){
 		  "amount" => $amount,
 		  "interval" => "month",
 		  "name" => $name,
-		  "currency" => "usd",
+		  "currency" => "gbp",
 		  "id" => $id)
 		);
 
@@ -306,7 +306,7 @@ function create_onetime_patment($card,$amount){
 		//defining the charge details for one time payments
 		$charge = \Stripe\Charge::create(array('card' => $card, 
 												'amount' => $amount, 
-												'currency' => 'usd'));
+												'currency' => 'gbp'));
 		echo $charge;
 		return 0;
 
