@@ -355,33 +355,33 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				    'email' => array('email'=>$email),
 					'merge_vars' => array(
 				        'groupings' => array(
-				            0 => array(
-				                'name' => 'Fundraising',
-				                'groups' => $events
-				                ),
+				            // 0 => array(
+				            //     'name' => 'Fundraising',
+				            //     'groups' => $events
+				            //     ),
 
-				            1 => array(
+				            0 => array(
 				                'name' => 'Courses',
 				                'groups' => $courses
 				                ),
 
-				            2 => array(
+				            1 => array(
 				                'name' => 'External newsletter',
 				                'groups' => $news
 				                ),
-				            3 => array(
+				            2 => array(
 				                'name' => 'Participation',
 				                'groups' => $volunteer
 				                ),
-				            4 => array(
+				            3 => array(
 				                'name' => 'Campaign',
 				                'groups' => $campaigns
 				                ),
-				            5 => array(
+				            4 => array(
 				                'name' => 'I Have my Own Place',
 				                'groups' => $IhavemyOwnPlace
 				                ),
-				            6 => array(
+				            5 => array(
 				                'name' => 'Apply for charity place',
 				                'groups' => $applyforCharity
 				                ),
@@ -420,9 +420,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				//bit of modification done from the normal way. in order to add the new user
 				$name = '';
 				if($contenttype == 'events'){
-					$name = 'Fundraising';
 					if($charity_place == 1){
-						$charity_name = 'I Have my Own Place';
+						$name = 'I Have my Own Place';
+					}
+					else{
+						$name = 'Apply for charity place';
 					}
 				}
 				elseif($contenttype == 'courses')
@@ -458,10 +460,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				                'name' => $name,
 				                'groups' => $neweventarray
 				                ),
-				            1 => array(
-				                'name' => $charity_name,
-				                'groups' => $neweventarray
-				                ),
+				            // 1 => array(
+				            //     'name' => $charity_name,
+				            //     'groups' => $neweventarray
+				            //     ),
 				            ),
 				        'phone'=>$phonenumber,
 				        'postcode'=>$postcode,
