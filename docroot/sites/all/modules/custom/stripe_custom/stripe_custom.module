@@ -3,36 +3,194 @@
 require('init.php');
 
 function stripe_custom_init(){
-
 }
 
 function stripe_custom_webform_submission_insert($node, $submission){
-	//TODO : Find a way to create the ID dynamically when creating a subscription plan
-	$val = create_plan(120 , "id6" , "myplan");
-	if($val == 0){
-		//The plan is created Successfully. Subscribe the user to the plan here.
-		//TODO : Create the subscriber here
-	}
-	else{
-		//TODO : Update the DB with the error log.
-		dpm("I am coming here");
-	}
-	//TODO : create the card details from the webfrom submission
-	//creating a card
-	$card = array(
-		    	"number" => "4242424242424242",
-		    	"exp_month" => 11,
-		    	"exp_year" => 2016,
-		   		"cvc" => "314"
-		  	);
+	$contenttype = $node->type;
+	if($contenttype == 'donations'){
+		//Gather the submitted form Values
+		foreach ($node->webform['components'] as $key => $field) 
+		{
+			switch ($field['form_key']) 
+			{
+				//first page details
+				case 'select_an_amount':
+					$select_an_amount = $submission->data[$key][0];
+					
+				break;
+				case 'donation_type':
+					$donation_type = $submission->data[$key][0];
 
-	//creating a subscriber
-	//$test = create_subscriber('id6','amalan@test.com',$card);
-	//dpm($test);
+				break;
+				case 'other_amount':
+					$other_amount = $submission->data[$key][0];
 
-	$var = create_onetime_patment($card,500);
-	dpm($var);
-	
+				break;
+				//second page details
+				case 'firstname':
+					$firstname = $submission->data[$key][0];
+
+				break;
+				case 'lastname':
+					$lastname = $submission->data[$key][0];
+
+				break;
+				case 'email':
+					$email = $submission->data[$key][0];
+
+				break;
+				case 'card_number':
+					$card_number = $submission->data[$key][0];
+
+				break;
+				case 'expiration_date':
+					$expiration_date = $submission->data[$key][0];
+
+				break;
+				case 'cv_number':
+					$cv_number = $submission->data[$key][0];
+
+				break;
+				// case 'cardnumber':
+				// 	$cardnumber = $submission->data[$key][0];
+				// break;
+				// case 'cardnumber':
+				// 	$cardnumber = $submission->data[$key][0];
+				// break;
+			}
+		}
+
+		//dpm($select_an_amount);
+		dpm($donation_type);
+		//dpm($other_amount);
+		//dpm($firstname);
+		//dpm($lastname);
+		//dpm($email);
+		//dpm($card_number);
+		//dpm($expiration_date);
+		//dpm($cv_number);
+
+
+		//check for the submission type. 
+	}
+}
+
+//function stripe_custom_webform_submission_presave($node, $submission){
+function test($node, $submission){
+	$contenttype = $node->type;
+	//Only donations webforms we are considering
+	if($contenttype == 'donations'){
+		//Gather the submitted form Values
+		foreach ($node->webform['components'] as $key => $field) 
+		{
+			switch ($field['form_key']) 
+			{
+				//first page details
+				case 'select_an_amount':
+					$select_an_amount = $submission->data[$key][0];
+					
+				break;
+				case 'donation_type':
+					$donation_type = $submission->data[$key][0];
+
+				break;
+				case 'other_amount':
+					$other_amount = $submission->data[$key][0];
+
+				break;
+				//second page details
+				case 'firstname':
+					$firstname = $submission->data[$key][0];
+
+				break;
+				case 'lastname':
+					$lastname = $submission->data[$key][0];
+
+				break;
+				case 'email':
+					$email = $submission->data[$key][0];
+
+				break;
+				case 'card_number':
+					$cardnumber = $submission->data[$key][0];
+
+				break;
+				case 'expiration_date':
+					$expiration_date = $submission->data[$key][0];
+
+				break;
+				case 'cv_number':
+					$cv_number = $submission->data[$key][0];
+
+				break;
+			}
+		}
+
+		//updating only the card value with the new value before saving to Database
+		foreach ($node->webform['components'] as $key => $field) 
+		{
+			switch ($field['form_key']) 
+			{
+				//chaing the card number
+				case 'card_number':
+					//masking the number
+					$maskedcardnumber = maskstring($submission->data[$key][0]);
+					$submission->data[$key][0] = $maskedcardnumber;
+				break;
+			}
+		}
+
+		//check the Payment type
+		if($donation_type == 'Recurring'){
+			//create the ID dynamically when creating a subscription plan
+			$date1 = date('dmyHis',time());;
+			$id = $firstname.$date1;
+			$name_of_the_plan = $firstname.'-'.$date1; 
+
+			//TODO: Change the amount and get it from the webform
+			$val = create_plan($select_an_amount , $id , $name_of_the_plan);
+
+			//check whether the Plan was created
+			if($val == 0){
+				//The plan is created Successfully. Subscribe the user to the plan here.
+				//TODO : Create the subscriber here
+
+				$card1['number'] = $cardnumber;
+				$card1['exp_month'] = 11;
+				$card1['exp_year'] = 2016;
+				$card1['cvc'] = $cv_number;
+
+				$email = 'pnamalan@gmail.com';
+				$val1 = create_subscriber($id,$email,$card1);
+				//dpm($val1);
+				if($val1 == 0){
+					dpm("Subscribed Sucessfully");
+				}
+				else{
+					//Plan is created successfully But subscriber is not saved to te plan
+				}
+			}
+			else{
+				//TODO : Update the DB with the error log.
+			}
+		}
+		//Create a one time payment
+		else{
+			//creating the card details
+			$card1['number'] = $cardnumber;
+			$card1['exp_month'] = 11;
+			$card1['exp_year'] = 2016;
+			$card1['cvc'] = $cv_number;
+			
+			$var = create_onetime_patment($card,$select_an_amount);
+			if($val1 == 0){
+				dpm("One time payment added");
+			}
+			else{
+				//One time plan Failes
+			}
+		}
+	}
 }
 
 
