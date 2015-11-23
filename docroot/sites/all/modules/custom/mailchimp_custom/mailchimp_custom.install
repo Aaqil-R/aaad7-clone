@@ -17,6 +17,19 @@ function mailchimp_custom_schema() {
         'type' => 'text',
         'size' => 'medium',
         'not null' => TRUE),
+
+      'error' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+
+      'errortime' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+      
       ),
     'primary key' => array('ID'),
   );

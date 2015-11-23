@@ -516,6 +516,8 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				$test = serialize($submittingdata);
 				$record = array(
     				"resultset" => $test,
+    				"error" => $result['error'],
+    				"errortime" => time(),
     			);
   				drupal_write_record('mailchimp_error_log', $record);
 
