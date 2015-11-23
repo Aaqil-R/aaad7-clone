@@ -1,26 +1,39 @@
 <?php
 
 function stripe_custom_schema() {
-  // $schema = array();
+  $schema = array();
  
-  // $schema['mailchimp_error_log'] = array(
-  //   'description' => t('The base table for nodes.'),
-  //   'fields' => array(
-  //     'ID' => array(
-  //       'description' => 'The primary identifier for table.',
-  //       'type' => 'serial',
-  //       'unsigned' => TRUE,
-  //       'not null' => TRUE),
+  $schema['stripe_error_log'] = array(
+    'description' => t('The base table for nodes.'),
+    'fields' => array(
+      'ID' => array(
+        'description' => 'The primary identifier for table.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE),
 
-  //     'resultset' => array(
-  //       'description' => 'The results of the error',
-  //       'type' => 'text',
-  //       'size' => 'medium',
-  //       'not null' => TRUE),
-  //     ),
-  //   'primary key' => array('ID'),
-  // );
-  // return $schema;
+      'result' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+
+      'data' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+
+      'datatime' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+      
+      ),
+    'primary key' => array('ID'),
+  );
+  return $schema;
 }
 
 

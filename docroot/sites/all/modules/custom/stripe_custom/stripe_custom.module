@@ -134,6 +134,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 					$email = $submission->data[$key][0];
 
 				break;
+				//Third page details
 				case 'card_number':
 					$cardnumber = $submission->data[$key][0];
 
@@ -185,7 +186,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$card1['exp_year'] = $expiration_year;
 				$card1['cvc'] = $cv_number;
 
-				//$email = 'pnamalan@gmail.com';
 				$val1 = create_subscriber($id,$email,$card1);
 				if($val1 == 0){
 					dpm("recurring Subscriber subscribed Sucessfully");
@@ -196,7 +196,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				}
 			}
 			else{
-				//TODO : Update the DB with the error log.
+				//TODO : must log this data into database
 				dpm("Recurring plan not created");
 			}
 		}
@@ -216,6 +216,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			else{
 				//One time plan Failes
 				dpm("One time payment failed");
+				//TODO : must log this data into database
 			}
 		}
 	}
@@ -254,7 +255,6 @@ function create_subscriber($plan , $email , $card){
 }
 
 function create_plan($amount , $id , $name){
-	//TODO : When creating a new plan the amount must come from the webform submission
 	try {
 		//creating a new plan
 		\Stripe\Stripe::setApiKey(get_api());
@@ -344,8 +344,18 @@ function maskstring($number){
 
 
 //Setting the Api key of Stripe.
-//Change it when setup to the live environment.
+//TODO : Change it when setup to the live environment.
 function get_api(){
 	return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
+}
+
+//TODO: Not yet tested. Must code this segment
+function stripe_data_log($result , $data){
+	$record = array(
+    	"result" => $result,
+    	"data" => $data,
+    	"datatime" => time(),
+    );
+  	drupal_write_record('stripe_error_log', $record);
 }
 ?>
