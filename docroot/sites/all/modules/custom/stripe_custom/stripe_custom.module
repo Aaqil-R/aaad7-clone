@@ -3,80 +3,91 @@
 require('init.php');
 
 function stripe_custom_init(){
+// 	$date = '2016-11-01';
+// 	$year = substr($date,0,strpos($date,'-'));
+
+
+
+// 	$month = substr($date,strpos($date,'-')+1,strpos($date,'-',strpos($date,'-')));
+	
+
+// 	dpm($date);
+// 	dpm($month);
+// 	dpm($year);
+
+
+// 	$date=date_create("2013-04-15");
+
+// 	$test = date_format($date,"Y/m/d H:i:s");
+// 	dpm($test);	
+// //	dpm(date_format($date,"Y/m/d H:i:s"));
+
 }
 
-function stripe_custom_webform_submission_insert($node, $submission){
-	$contenttype = $node->type;
-	if($contenttype == 'donations'){
-		//Gather the submitted form Values
-		foreach ($node->webform['components'] as $key => $field) 
-		{
-			switch ($field['form_key']) 
-			{
-				//first page details
-				case 'select_an_amount':
-					$select_an_amount = $submission->data[$key][0];
+// function stripe_custom_webform_submission_insert($node, $submission){
+// 	$contenttype = $node->type;
+// 	if($contenttype == 'donations'){
+// 		//Gather the submitted form Values
+// 		foreach ($node->webform['components'] as $key => $field) 
+// 		{
+// 			switch ($field['form_key']) 
+// 			{
+// 				//first page details
+// 				case 'select_an_amount':
+// 					$select_an_amount = $submission->data[$key][0];
 					
-				break;
-				case 'donation_type':
-					$donation_type = $submission->data[$key][0];
+// 				break;
+// 				case 'donation_type':
+// 					$donation_type = $submission->data[$key][0];
 
-				break;
-				case 'other_amount':
-					$other_amount = $submission->data[$key][0];
+// 				break;
+// 				case 'other_amount':
+// 					$other_amount = $submission->data[$key][0];
 
-				break;
-				//second page details
-				case 'firstname':
-					$firstname = $submission->data[$key][0];
+// 				break;
+// 				//second page details
+// 				case 'firstname':
+// 					$firstname = $submission->data[$key][0];
 
-				break;
-				case 'lastname':
-					$lastname = $submission->data[$key][0];
+// 				break;
+// 				case 'lastname':
+// 					$lastname = $submission->data[$key][0];
 
-				break;
-				case 'email':
-					$email = $submission->data[$key][0];
+// 				break;
+// 				case 'email':
+// 					$email = $submission->data[$key][0];
 
-				break;
-				case 'card_number':
-					$card_number = $submission->data[$key][0];
+// 				break;
+// 				case 'card_number':
+// 					$card_number = $submission->data[$key][0];
 
-				break;
-				case 'expiration_date':
-					$expiration_date = $submission->data[$key][0];
+// 				break;
+// 				case 'expiration_date':
+// 					$expiration_date = $submission->data[$key][0];
+// 					$date = date_create($expiration_date);
+// 					$expiration_year = date_format($date,"Y");
+// 					$expiration_month = date_format($date,"m");
 
-				break;
-				case 'cv_number':
-					$cv_number = $submission->data[$key][0];
-
-				break;
-				// case 'cardnumber':
-				// 	$cardnumber = $submission->data[$key][0];
-				// break;
-				// case 'cardnumber':
-				// 	$cardnumber = $submission->data[$key][0];
-				// break;
-			}
-		}
-
-		//dpm($select_an_amount);
-		dpm($donation_type);
-		//dpm($other_amount);
-		//dpm($firstname);
-		//dpm($lastname);
-		//dpm($email);
-		//dpm($card_number);
-		//dpm($expiration_date);
-		//dpm($cv_number);
+// 				break;
+// 				case 'cv_number':
+// 					$cv_number = $submission->data[$key][0];
+// 				break;
+// 			}
+// 		}
+// 		//dpm($other_amount);
+// 		//dpm($firstname);
+// 		//dpm($lastname);
+// 		//dpm($email);
+// 		//dpm($card_number);
+// 		//dpm($cv_number);
 
 
-		//check for the submission type. 
-	}
-}
+// 		//check for the submission type. 
+// 	}
+// }
 
-//function stripe_custom_webform_submission_presave($node, $submission){
-function test($node, $submission){
+function stripe_custom_webform_submission_presave($node, $submission){
+//function test($node, $submission){
 	$contenttype = $node->type;
 	//Only donations webforms we are considering
 	if($contenttype == 'donations'){
@@ -117,6 +128,9 @@ function test($node, $submission){
 				break;
 				case 'expiration_date':
 					$expiration_date = $submission->data[$key][0];
+					$date = date_create($expiration_date);
+					$expiration_year = date_format($date,"Y");
+					$expiration_month = date_format($date,"m");
 
 				break;
 				case 'cv_number':
@@ -152,34 +166,36 @@ function test($node, $submission){
 
 			//check whether the Plan was created
 			if($val == 0){
+				dpm("Recurring plan created");
 				//The plan is created Successfully. Subscribe the user to the plan here.
 				//TODO : Create the subscriber here
 
 				$card1['number'] = $cardnumber;
-				$card1['exp_month'] = 11;
-				$card1['exp_year'] = 2016;
+				$card1['exp_month'] = $expiration_month;
+				$card1['exp_year'] = $expiration_year;
 				$card1['cvc'] = $cv_number;
 
-				$email = 'pnamalan@gmail.com';
+				//$email = 'pnamalan@gmail.com';
 				$val1 = create_subscriber($id,$email,$card1);
-				//dpm($val1);
 				if($val1 == 0){
-					dpm("Subscribed Sucessfully");
+					dpm("recurring Subscriber subscribed Sucessfully");
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
+					dpm("recurring Subscriber not subscribed");
 				}
 			}
 			else{
 				//TODO : Update the DB with the error log.
+				dpm("Recurring plan not created");
 			}
 		}
 		//Create a one time payment
 		else{
 			//creating the card details
 			$card1['number'] = $cardnumber;
-			$card1['exp_month'] = 11;
-			$card1['exp_year'] = 2016;
+			$card1['exp_month'] = $expiration_month;
+			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
 			$var = create_onetime_patment($card,$select_an_amount);
@@ -188,6 +204,7 @@ function test($node, $submission){
 			}
 			else{
 				//One time plan Failes
+				dpm("One time payment failed");
 			}
 		}
 	}
@@ -235,7 +252,7 @@ function create_plan($amount , $id , $name){
 		  "amount" => $amount,
 		  "interval" => "month",
 		  "name" => $name,
-		  "currency" => "usd",
+		  "currency" => "gbp",
 		  "id" => $id)
 		);
 		return 0;
@@ -264,7 +281,7 @@ function create_onetime_patment($card,$amount){
 		//defining the charge details for one time payments
 		$charge = \Stripe\Charge::create(array('card' => $card, 
 												'amount' => $amount, 
-												'currency' => 'usd'));
+												'currency' => 'gbp'));
 		echo $charge;
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
@@ -284,39 +301,6 @@ function create_onetime_patment($card,$amount){
 	}
 }
 
-function stripe_custom_webform_submission_presave($node, $submission){
-	if($contenttype == 'donations'){
-		foreach ($node->webform['components'] as $key => $field) 
-		{
-			switch ($field['form_key']) 
-			{
-				case 'firstname':
-					$firstname = $submission->data[$key][0];
-				break;
-				case 'amount':
-					$amount = $submission->data[$key][0];
-				break;
-			}
-		}
-
-		//updating it with new values
-		foreach ($node->webform['components'] as $key => $field) 
-		{
-			switch ($field['form_key']) 
-			{
-				case 'firstname':
-					$submission->data[$key][0] = 'Testing name';
-				break;
-				case 'amount':
-					//masking the number
-					$number = maskstring($submission->data[$key][0]);
-					$submission->data[$key][0] = $number;
-				break;
-			}
-		}
-	}
-}
-
 function maskstring($number){
 	$count = strlen($number);
 	for( $i=0; $i<$count-4 ; $i++){
@@ -325,26 +309,6 @@ function maskstring($number){
 	return $number;
 }
 
-//not calling this at the moment.
-function FormatCreditCard($cc)
-{    // Clean out extra data that might be in the cc
-    $cc = str_replace(array('-',' '),'',$cc);
-    // Get the CC Length
-    $cc_length = strlen($cc);
-    // Initialize the new credit card to contian the last four digits
-    $newCreditCard = substr($cc,-4);
-    // Walk backwards through the credit card number and add a dash after every fourth digit
-    for($i=$cc_length-5;$i>=0;$i--){
-        // If on the fourth character add a dash
-        if((($i+1)-$cc_length)%4 == 0){
-            $newCreditCard = '-'.$newCreditCard;
-        }
-        // Add the current character to the new credit card
-        $newCreditCard = $cc[$i].$newCreditCard;
-    }
-    // Return the formatted credit card number
-    return $newCreditCard;
-}
 
 //Setting the Api key of Stripe.
 //Change it when setup to the live environment.
