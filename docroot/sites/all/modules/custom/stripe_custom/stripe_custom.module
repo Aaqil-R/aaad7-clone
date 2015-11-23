@@ -3,6 +3,14 @@
 require('init.php');
 
 function stripe_custom_init(){
+
+	// $select_an_amount=10;
+	// $id='amalannewtest';
+	// $name_of_the_plan='amalannewtest';
+	// $val = create_plan($select_an_amount , $id , $name_of_the_plan);
+	// dpm($val);
+
+
 // 	$date = '2016-11-01';
 // 	$year = substr($date,0,strpos($date,'-'));
 
@@ -153,7 +161,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				break;
 			}
 		}
-
 		//check the Payment type
 		if($donation_type == 'Recurring'){
 			//create the ID dynamically when creating a subscription plan
@@ -162,8 +169,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan($select_an_amount , $id , $name_of_the_plan);
-
+			$val = create_plan(intval($select_an_amount) , $id , $name_of_the_plan);
 			//check whether the Plan was created
 			if($val == 0){
 				dpm("Recurring plan created");
@@ -198,7 +204,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
-			$var = create_onetime_patment($card,$select_an_amount);
+			$var = create_onetime_patment($card,intval($select_an_amount));
 			if($val1 == 0){
 				dpm("One time payment added");
 			}
@@ -252,23 +258,37 @@ function create_plan($amount , $id , $name){
 		  "amount" => $amount,
 		  "interval" => "month",
 		  "name" => $name,
-		  "currency" => "gbp",
+		  "currency" => "usd",
 		  "id" => $id)
 		);
+
+		// dpm($test);
+		// $obj = json_decode($test);
+
+		// print_r($test);
+		// dpm($test);
+
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
+		//dpm($e);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
+		//dpm($e);
 		return -1;
 	} catch (Exception $e) {
+		//dpm($e);
 		return -1;
 	}
 }
@@ -281,7 +301,7 @@ function create_onetime_patment($card,$amount){
 		//defining the charge details for one time payments
 		$charge = \Stripe\Charge::create(array('card' => $card, 
 												'amount' => $amount, 
-												'currency' => 'gbp'));
+												'currency' => 'usd'));
 		echo $charge;
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
