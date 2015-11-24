@@ -257,8 +257,14 @@ function create_plan($amount , $id , $name){
 		  "id" => $id)
 		);
 
-		$data = serialize($plan);
-		$result = 'Successfully created the plan';
+
+		$dataset = array(
+				'amount'=>$amount,
+				'name'=>$name,
+				'id'=>$id,
+			);
+		$data = serialize($dataset);
+		$result = serialize($plan);
 		stripe_data_log($result,$data);
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
@@ -343,8 +349,8 @@ function create_onetime_patment($card,$amount){
 		$charge = \Stripe\Charge::create(array('card' => $card, 
 												'amount' => $amount, 
 												'currency' => 'gbp'));
-		$data = serialize($charge);
-		$result = 'Successfully created One time payment';
+		$data = serialize($card);
+		$result = serialize($charge);
 		stripe_data_log($result,$data);
 		return 0;
 
