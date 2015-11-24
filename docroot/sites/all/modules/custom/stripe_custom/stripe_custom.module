@@ -34,6 +34,7 @@ function stripe_custom_init(){
 function stripe_custom_webform_submission_presave($node, $submission){
 //function test($node, $submission){
 	$contenttype = $node->type;
+	$formid = $node->webform['nid'];
 	//Only donations webforms we are considering
 	if($contenttype == 'donations'){
 		//Gather the submitted form Values
@@ -107,7 +108,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan);
+			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid);
 			//check whether the Plan was created
 			if($val == 0){
 				dpm("Recurring plan created");
@@ -119,7 +120,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$card1['exp_year'] = $expiration_year;
 				$card1['cvc'] = $cv_number;
 
-				$val1 = create_subscriber($id,$email,$card1);
+				$val1 = create_subscriber($id,$email,$card1,$formid);
 				if($val1 == 0){
 					dpm("recurring Subscriber subscribed Sucessfully");
 				}
@@ -142,21 +143,19 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
-			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100);
+			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid);
 			if($val1 == 0){
 				dpm("One time payment added");
 			}
 			else{
-				//One time plan Failes
 				dpm("One time payment failed");
-				//TODO : must log this data into database
 			}
 		}
 	}
 }
 
 
-function create_subscriber($plan , $email , $card){
+function create_subscriber($plan , $email , $card,$formid){
 	try {
 		\Stripe\Stripe::setApiKey(get_api());
 
@@ -177,41 +176,41 @@ function create_subscriber($plan , $email , $card){
 		);
 
 		$result = serialize($customer);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	}
 }
 
-function create_plan($amount , $id , $name){
+function create_plan($amount , $id , $name ,$formid){
 	try {
 
 		$dataset = array(
@@ -233,40 +232,40 @@ function create_plan($amount , $id , $name){
 		);
 		
 		$result = serialize($plan);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	}
 }
 
-function create_onetime_patment($card,$amount){
+function create_onetime_patment($card,$amount,$formid){
 	try {
 		$data = serialize($card);
 		$data = addItem($data, $amount , 'amount');
@@ -279,36 +278,36 @@ function create_onetime_patment($card,$amount){
 												'amount' => $amount, 
 												'currency' => 'gbp'));
 		$result = serialize($charge);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
-		stripe_data_log($result,$data);
+		stripe_data_log($result,$data,$formid);
 		return -1;
 	}
 }
@@ -329,10 +328,11 @@ function get_api(){
 }
 
 //Logging the transactions and the results in a Database
-function stripe_data_log($result , $data){
+function stripe_data_log($result , $data , $formid){
 	$record = array(
     	"result" => $result,
     	"data" => $data,
+    	"formid" => $formid,
     	"datatime" => time(),
     );
   	drupal_write_record('stripe_error_log', $record);

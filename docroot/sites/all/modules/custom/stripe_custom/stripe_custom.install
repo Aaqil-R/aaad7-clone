@@ -24,6 +24,12 @@ function stripe_custom_schema() {
         'size' => 'medium',
         'not null' => TRUE),
 
+      'formid' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+
       'datatime' => array(
         'description' => 'The results of the error',
         'type' => 'text',
