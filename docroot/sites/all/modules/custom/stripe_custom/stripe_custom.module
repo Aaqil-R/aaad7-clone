@@ -15,78 +15,21 @@ function stripe_custom_init(){
 
 // 	$date = '2016-11-01';
 // 	$year = substr($date,0,strpos($date,'-'));
-	// $card1 = array();
-	// //$card1['number'] = '4242424242424242456456';
-	// $card1['number'] = '4242424242424242';
-	// $card1['exp_month'] = '11';
-	// $card1['exp_year'] = '2016';
-	// $card1['cvc'] = '314';
-	// $test = create_onetime_patment($card1,50);
-// dpm($test);
+// 	$card1 = array();
+// 	$card1['number'] = '4242424242424242456456';
+// 	//$card1['number'] = '4242424242424242';
+// 	$card1['exp_month'] = '11';
+// 	$card1['exp_year'] = '2016';
+// 	$card1['cvc'] = '314';
+// 	//$test = create_onetime_patment($card1,50);
+// // dpm($test);
+
+// 	$plan='amalannewtest1';
+// 	$email='amalantest@gmail.com';
+// 	$test = create_subscriber($plan , $email , $card1);
+// 	dpm($test);
 
 }
-
-// function stripe_custom_webform_submission_insert($node, $submission){
-// 	$contenttype = $node->type;
-// 	if($contenttype == 'donations'){
-// 		//Gather the submitted form Values
-// 		foreach ($node->webform['components'] as $key => $field) 
-// 		{
-// 			switch ($field['form_key']) 
-// 			{
-// 				//first page details
-// 				case 'select_an_amount':
-// 					$select_an_amount = $submission->data[$key][0];
-					
-// 				break;
-// 				case 'donation_type':
-// 					$donation_type = $submission->data[$key][0];
-
-// 				break;
-// 				case 'other_amount':
-// 					$other_amount = $submission->data[$key][0];
-
-// 				break;
-// 				//second page details
-// 				case 'firstname':
-// 					$firstname = $submission->data[$key][0];
-
-// 				break;
-// 				case 'lastname':
-// 					$lastname = $submission->data[$key][0];
-
-// 				break;
-// 				case 'email':
-// 					$email = $submission->data[$key][0];
-
-// 				break;
-// 				case 'card_number':
-// 					$card_number = $submission->data[$key][0];
-
-// 				break;
-// 				case 'expiration_date':
-// 					$expiration_date = $submission->data[$key][0];
-// 					$date = date_create($expiration_date);
-// 					$expiration_year = date_format($date,"Y");
-// 					$expiration_month = date_format($date,"m");
-
-// 				break;
-// 				case 'cv_number':
-// 					$cv_number = $submission->data[$key][0];
-// 				break;
-// 			}
-// 		}
-// 		//dpm($other_amount);
-// 		//dpm($firstname);
-// 		//dpm($lastname);
-// 		//dpm($email);
-// 		//dpm($card_number);
-// 		//dpm($cv_number);
-
-
-// 		//check for the submission type. 
-// 	}
-// }
 
 function stripe_custom_webform_submission_presave($node, $submission){
 //function test($node, $submission){
@@ -217,29 +160,53 @@ function create_subscriber($plan , $email , $card){
 	try {
 		\Stripe\Stripe::setApiKey(get_api());
 
+		//creating the dataset for db logs
+		$data = serialize($card);
+		$data = addItem($data, $plan , 'plan');
+		$data = addItem($data, $email , 'email');
+
+		//connecting to APIS
 		$token = \Stripe\Token::create(array(
 		  "card" => $card,
 		));
-
+		
 		$customer = \Stripe\Customer::create(array(
 		  "source" => $token,
 		  "plan" => $plan,
 		  "email" => $email)
 		);
+
+		$result = serialize($customer);
+		stripe_data_log($result,$data);
 		return 0;
+
 	} catch(\Stripe\Error\Card $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	} catch (Exception $e) {
+		$result = serialize($e->jsonBody['error']);
+		stripe_data_log($result,$data);
 		return -1;
 	}
 }
@@ -407,7 +374,7 @@ function get_api(){
 	return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
 }
 
-//TODO: Not yet tested. Must code this segment
+//Logging the transactions and the results in a Database
 function stripe_data_log($result , $data){
 	$record = array(
     	"result" => $result,
@@ -415,5 +382,12 @@ function stripe_data_log($result , $data){
     	"datatime" => time(),
     );
   	drupal_write_record('stripe_error_log', $record);
+}
+
+function addItem($serializedArray, $item , $key)
+{
+   $a = unserialize($serializedArray);
+   $a[$key] = $item;
+   return serialize($a);
 }
 ?>
