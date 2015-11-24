@@ -213,6 +213,14 @@ function create_subscriber($plan , $email , $card){
 
 function create_plan($amount , $id , $name){
 	try {
+
+		$dataset = array(
+				'amount'=>$amount,
+				'name'=>$name,
+				'id'=>$id,
+			);
+		$data = serialize($dataset);
+
 		//creating a new plan
 		\Stripe\Stripe::setApiKey(get_api());
 
@@ -223,84 +231,35 @@ function create_plan($amount , $id , $name){
 		  "currency" => "gbp",
 		  "id" => $id)
 		);
-
-
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
+		
 		$result = serialize($plan);
 		stripe_data_log($result,$data);
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
 	} catch (Exception $e) {
-		$dataset = array(
-				'amount'=>$amount,
-				'name'=>$name,
-				'id'=>$id,
-			);
-		$data = serialize($dataset);
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data);
 		return -1;
