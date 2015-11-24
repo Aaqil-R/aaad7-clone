@@ -344,7 +344,7 @@ function create_onetime_patment($card,$amount){
 												'amount' => $amount, 
 												'currency' => 'gbp'));
 		$data = serialize($charge);
-		$result = 'Successfully created';
+		$result = 'Successfully created One time payment';
 		stripe_data_log($result,$data);
 		return 0;
 
