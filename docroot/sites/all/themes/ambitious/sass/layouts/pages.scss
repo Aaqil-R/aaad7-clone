@@ -313,12 +313,17 @@
           }
         }
 
-        .hover-text-one, .hover-text-two {
+        .webform-component--hover-and-selection-text-two, .webform-component--hover-and-selection-text-one {
           display: none;
+          background: #F15500;
+          float: left;
+          padding: 10px;
+          border-radius: 10px;
+          color: white;
         }
 
-        .form-radios fieldset:nth-child(1):hover + .hover-text-one {
-          display: block;
+        .webform-component--hover-and-selection-text-one {
+          background: #FBBA00;
         }
       }
     }
