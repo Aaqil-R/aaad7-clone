@@ -757,4 +757,24 @@ $(window).resize(function () {
 	// }); 
 /*----- Job Vacancy Sticky Cards -----*/
 
+//Donation Page Hover 
+$(document).ready(function () {
+	$('.form-item-submitted-select-an-amount label.option').on({
+	    mouseover: function(){
+	    	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
+				$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
+			}
+	    },
+	     mouseleave: function(){
+	        $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	    },
+	    click: function(){
+	    	$('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
+	    	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	        $(this).off('mouseleave');
+	    }
+	});
+});
+
+
 })(jQuery, Drupal, this, this.document);
