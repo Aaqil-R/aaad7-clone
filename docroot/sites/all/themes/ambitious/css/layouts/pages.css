@@ -612,14 +612,20 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 /* line 267, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount fieldset {
-  width: 33%;
+  width: 100%;
   float: left;
 }
-/* line 272, ../../sass/layouts/pages.scss */
+@media (min-width: 1080px) {
+  /* line 267, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount fieldset {
+    width: 33%;
+  }
+}
+/* line 276, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio] {
   display: none !important;
 }
-/* line 279, ../../sass/layouts/pages.scss */
+/* line 283, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio] + label {
   border: medium none;
   cursor: pointer;
@@ -648,23 +654,28 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   font-size: 2em;
   font-weight: bold;
 }
-/* line 308, ../../sass/layouts/pages.scss */
+/* line 312, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio]:checked + label {
   top: 2px;
   background: #F15500;
   -webkit-box-shadow: 0px 4px #C63502;
   box-shadow: 0px 4px #C63502;
 }
-/* line 316, ../../sass/layouts/pages.scss */
+/* line 320, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one {
   display: none;
   background: #F15500;
   float: left;
   padding: 10px;
   border-radius: 10px;
-  color: white;
+  margin-bottom: 10px;
 }
-/* line 325, ../../sass/layouts/pages.scss */
+/* line 328, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two p, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one p {
+  color: white;
+  margin: 0;
+}
+/* line 334, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one {
   background: #FBBA00;
 }

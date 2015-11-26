@@ -265,8 +265,12 @@
 
         .webform-component--select-an-amount {
           fieldset {
-            width: 33%;
+            width: 100%;
             float: left;
+
+            @include breakpoint($all-desktop) {
+              width: 33%;
+            }
           }
 
           input[type=radio] {
@@ -319,7 +323,12 @@
           float: left;
           padding: 10px;
           border-radius: 10px;
-          color: white;
+          margin-bottom: 10px;
+
+          p {
+            color: white;
+            margin: 0;
+          }
         }
 
         .webform-component--hover-and-selection-text-one {
