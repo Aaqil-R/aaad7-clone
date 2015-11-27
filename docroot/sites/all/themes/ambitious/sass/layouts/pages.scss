@@ -205,7 +205,7 @@
       .field-name-body {
         background: white;
         padding: 20px;
-        width: 40%;
+        width: 45%;
         margin: 100px 0 35px 0;
 
         @include breakpoint($tablet-small) {
@@ -221,13 +221,14 @@
         p {
           margin: 0;
           font-size: 17px;
+          font-weight: bold;
         }
       }
 
       form {
         background: white;
-        width: 40%;
-        padding: 10px;
+        width: 45%;
+        padding: 35px;
 
         @include breakpoint($tablet-small) {
           width: 80%;
@@ -240,6 +241,8 @@
 
 
         .webform-component--first-text-area {
+          padding: 0 10px;
+
           h4 {
             margin: 0;
           }
@@ -252,7 +255,9 @@
           }
 
           p {
-            font-weight: bold;
+            font-weight: 400;
+            margin: 0;
+            color: black;
           }
         }
 
@@ -290,13 +295,30 @@
           }
         }
 
+        .webform-component-optionsmarkup {
+          label p {
+            margin: 0;
+          }
+
+          label.option p {
+            font-size: 15px;
+            font-weight: bold;
+            text-align: justify;
+          }
+        }
+
         .webform-component--other-amount {
+          padding: 0 10px;
+
           input {
             width: 100%;
+            font-weight: bold;
           }
         }
 
         .webform-component--donation-type {
+          padding: 0 10px;
+
           input[type="checkbox"] {
             // display: none;
             background: none;
@@ -305,6 +327,16 @@
         }
 
         .webform-component--select-an-amount {
+          // .selection-amount {
+          //   fieldset:nth-child(1) {
+          //     padding-left: 0;
+          //   }
+
+          //   fieldset:nth-child(3) {
+          //     padding-right: 0;
+          //   }
+          // }
+
           fieldset {
             width: 100%;
             float: left;
@@ -348,6 +380,21 @@
             float: left;
             font-size: 2em;
             font-weight: bold;
+
+            @include breakpoint($all-desktop) {
+              &:hover:after {
+                content: '';
+                position: absolute;
+                left: 30%;
+                top: 132%;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #FBBA00;
+                clear: both;
+              }
+            }
           }
 
           input[type=radio]:checked + label {
@@ -355,20 +402,48 @@
             background: #F15500;
             -webkit-box-shadow: 0px 4px #C63502;
             box-shadow: 0px 4px #C63502;
+
+            @include breakpoint($all-desktop) {
+              &:after {
+                content: '';
+                position: absolute;
+                left: 30%;
+                top: 132%;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #F15500;
+                clear: both;
+              }
+            }
           }
         }
 
-        .webform-component--hover-and-selection-text-two, .webform-component--hover-and-selection-text-one {
+        .js-active {
+          display: block !important;
+        }
+
+        .js-deactive {
+          display: none !important;
+        }
+
+        .webform-component--hover-and-selection-text-two {
           display: none;
+        }
+
+        .webform-component--hover-and-selection-text-two, .webform-component--hover-and-selection-text-one {
           background: #F15500;
           float: left;
-          padding: 10px;
+          padding: 10px 50px;
           border-radius: 10px;
-          margin-bottom: 10px;
+          margin: 20px 10px;
+          text-align: center;
 
           p {
             color: white;
             margin: 0;
+            font-size: 17px;
           }
         }
 
@@ -377,6 +452,8 @@
         }
 
         .form-actions {
+          padding: 0 10px;
+
           @include breakpoint($all-small-mobile) {
             input {
               padding: 5px 10px;
