@@ -202,14 +202,53 @@
     .node-donations {
       background: none;
 
+      .field-name-body {
+        background: white;
+        padding: 20px;
+        width: 40%;
+        margin: 100px 0 35px 0;
+
+        @include breakpoint($tablet-small) {
+          width: 80%;
+        }
+
+
+        @include breakpoint($desktop-small) {
+          width: 60%;
+        }
+
+
+        p {
+          margin: 0;
+          font-size: 17px;
+        }
+      }
+
       form {
         background: white;
         width: 40%;
         padding: 10px;
 
+        @include breakpoint($tablet-small) {
+          width: 80%;
+        }
+
+
+        @include breakpoint($desktop-small) {
+          width: 60%;
+        }
+
+
         .webform-component--first-text-area {
           h4 {
-            margin: none;
+            margin: 0;
+          }
+
+          a {
+            text-decoration: none !important;
+
+            //Important used to override the default a tag style
+         
           }
 
           p {
@@ -246,6 +285,8 @@
             line-height: 0.5;
             margin: 0;
             color: white;
+            pointer-events: none;
+            cursor: default;
           }
         }
 
@@ -265,8 +306,12 @@
 
         .webform-component--select-an-amount {
           fieldset {
-            width: 33%;
+            width: 100%;
             float: left;
+
+            @include breakpoint($all-desktop) {
+              width: 33%;
+            }
           }
 
           input[type=radio] {
@@ -313,12 +358,31 @@
           }
         }
 
-        .hover-text-one, .hover-text-two {
+        .webform-component--hover-and-selection-text-two, .webform-component--hover-and-selection-text-one {
           display: none;
+          background: #F15500;
+          float: left;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+
+          p {
+            color: white;
+            margin: 0;
+          }
         }
 
-        .form-radios fieldset:nth-child(1):hover + .hover-text-one {
-          display: block;
+        .webform-component--hover-and-selection-text-one {
+          background: #FBBA00;
+        }
+
+        .form-actions {
+          @include breakpoint($all-small-mobile) {
+            input {
+              padding: 5px 10px;
+              font-size: 14px;
+            }
+          }
         }
       }
     }

@@ -559,38 +559,78 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   background: none;
 }
 /* line 205, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations .field-name-body {
+  background: white;
+  padding: 20px;
+  width: 40%;
+  margin: 100px 0 35px 0;
+}
+@media (max-width: 767px) {
+  /* line 205, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations .field-name-body {
+    width: 80%;
+  }
+}
+@media (max-width: 1080px) {
+  /* line 205, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations .field-name-body {
+    width: 60%;
+  }
+}
+/* line 221, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations .field-name-body p {
+  margin: 0;
+  font-size: 17px;
+}
+/* line 227, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form {
   background: white;
   width: 40%;
   padding: 10px;
 }
-/* line 211, ../../sass/layouts/pages.scss */
-.node-type-donations #wrapper .node-donations form .webform-component--first-text-area h4 {
-  margin: none;
+@media (max-width: 767px) {
+  /* line 227, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations form {
+    width: 80%;
+  }
 }
-/* line 215, ../../sass/layouts/pages.scss */
+@media (max-width: 1080px) {
+  /* line 227, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations form {
+    width: 60%;
+  }
+}
+/* line 243, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--first-text-area h4 {
+  margin: 0;
+}
+/* line 247, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--first-text-area a {
+  text-decoration: none !important;
+}
+/* line 254, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--first-text-area p {
   font-weight: bold;
 }
-/* line 220, ../../sass/layouts/pages.scss */
+/* line 259, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-progressbar {
   display: none;
 }
-/* line 224, ../../sass/layouts/pages.scss */
+/* line 263, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
   background: none;
   border: none;
 }
-/* line 229, ../../sass/layouts/pages.scss */
+/* line 268, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.disabled span {
   background: #E2E2E2;
 }
-/* line 234, ../../sass/layouts/pages.scss */
+/* line 273, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.webform-step {
   background: none;
   border: none;
 }
-/* line 239, ../../sass/layouts/pages.scss */
+/* line 278, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span {
   background: #FBBA00;
   border-radius: 50px;
@@ -600,26 +640,34 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   line-height: 0.5;
   margin: 0;
   color: white;
+  pointer-events: none;
+  cursor: default;
 }
-/* line 253, ../../sass/layouts/pages.scss */
+/* line 294, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--other-amount input {
   width: 100%;
 }
-/* line 259, ../../sass/layouts/pages.scss */
+/* line 300, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--donation-type input[type="checkbox"] {
   background: none;
   border: 2px solid black;
 }
-/* line 267, ../../sass/layouts/pages.scss */
+/* line 308, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount fieldset {
-  width: 33%;
+  width: 100%;
   float: left;
 }
-/* line 272, ../../sass/layouts/pages.scss */
+@media (min-width: 1080px) {
+  /* line 308, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount fieldset {
+    width: 33%;
+  }
+}
+/* line 317, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio] {
   display: none !important;
 }
-/* line 279, ../../sass/layouts/pages.scss */
+/* line 324, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio] + label {
   border: medium none;
   cursor: pointer;
@@ -648,18 +696,35 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   font-size: 2em;
   font-weight: bold;
 }
-/* line 308, ../../sass/layouts/pages.scss */
+/* line 353, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--select-an-amount input[type=radio]:checked + label {
   top: 2px;
   background: #F15500;
   -webkit-box-shadow: 0px 4px #C63502;
   box-shadow: 0px 4px #C63502;
 }
-/* line 316, ../../sass/layouts/pages.scss */
-.node-type-donations #wrapper .node-donations form .hover-text-one, .node-type-donations #wrapper .node-donations form .hover-text-two {
+/* line 361, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one {
   display: none;
+  background: #F15500;
+  float: left;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
-/* line 320, ../../sass/layouts/pages.scss */
-.node-type-donations #wrapper .node-donations form .form-radios fieldset:nth-child(1):hover + .hover-text-one {
-  display: block;
+/* line 369, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two p, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one p {
+  color: white;
+  margin: 0;
+}
+/* line 375, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one {
+  background: #FBBA00;
+}
+@media (max-width: 480px) {
+  /* line 381, ../../sass/layouts/pages.scss */
+  .node-type-donations #wrapper .node-donations form .form-actions input {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
