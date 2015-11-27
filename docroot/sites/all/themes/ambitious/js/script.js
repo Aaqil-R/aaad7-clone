@@ -759,22 +759,69 @@ $(window).resize(function () {
 
 //Donation Page Hover 
 $(document).ready(function () {
+
+	// if($('.node-donations input[type=radio]').is(':checked')) {
+	//     	$('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
+	//     	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	//     }
+
+	 
+
 	$('.form-item-submitted-select-an-amount label.option').on({
-	    mouseover: function(){
-	    	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
-				$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
-			}
-	    },
-	     mouseleave: function(){
-	        $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	    },
+	  //   mouseover: function(){
+	  //   	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
+			// 	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
+			// }
+	  //   },
+	    // mouseleave: function(){
+	    //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	    // },
+
 	    click: function(){
-	    	$('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
-	    	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	        $(this).off('mouseleave');
+	    	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
+	    	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	        // $(this).off('mouseleave');
+	        $('.webform-component--hover-and-selection-text-two').addClass("js-active");
+	        $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
 	    }
 	});
+
+	
+    // if (!$('.webform-component--hover-and-selection-text-two').hasClass( "js-active" )) {
+    // 	$('.webform-component--hover-and-selection-text-two').addClass("js-active");
+    // 	$('.webform-component--hover-and-selection-text-one').removeClass("js-active");
+    // }
+    // else{
+    // 	$('.webform-component--hover-and-selection-text-one').addClass("js-active");
+    // 	$('.webform-component--hover-and-selection-text-two').removeClass("js-active");
+    // }
+
+ //    var amount = $(".node-donations input[type=radio]").val();
+ //    //var amount1 = amount.trim();
+ //    console.log(amount);
+	// // switch(amount1) {
+	// //  	case "40": 
+	// //  		alert(0);
+	// //  		break;
+	// //  } 
+	
 });
+
+// $( window ).unload(function() {
+//  $('.webform-component--hover-and-selection-text-two').addClass("js-active");
+//     	$('.webform-component--hover-and-selection-text-one').removeClass("js-active");
+// });
+
+// $( "div.foo" ).toggleClass(function() {
+//   if ( $( this ).parent().is( ".bar" ) ) {
+//     return "happy";
+//   } else {
+//     return "sad";
+//   }
+// });
+	
+
+
 
 
 })(jQuery, Drupal, this, this.document);
