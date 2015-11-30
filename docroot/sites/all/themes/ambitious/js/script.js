@@ -786,31 +786,62 @@ $(document).ready(function () {
 	    }
 	});
 
+	$('.form-actions input.webform-previous').on({
+	    click: function(){
+	        $('.webform-component--hover-and-selection-text-two').addClass("js-active");
+	        $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
+	    }
+	});
+
 	
-    // if (!$('.webform-component--hover-and-selection-text-two').hasClass( "js-active" )) {
+    // if (!$(".node-donations input[type=radio]:checked")) {
     // 	$('.webform-component--hover-and-selection-text-two').addClass("js-active");
-    // 	$('.webform-component--hover-and-selection-text-one').removeClass("js-active");
+    // 	$('.webform-component--hover-and-selection-text-one').removeClass("js-deactive");
+    // 	alert("test");
     // }
     // else{
     // 	$('.webform-component--hover-and-selection-text-one').addClass("js-active");
-    // 	$('.webform-component--hover-and-selection-text-two').removeClass("js-active");
+    // 	$('.webform-component--hover-and-selection-text-two').removeClass("js-deactive");
     // }
 
+
+	
+
  //    var amount = $(".node-donations input[type=radio]").val();
- //    //var amount1 = amount.trim();
+ //    // var amount1 = amount.trim();
  //    console.log(amount);
-	// // switch(amount1) {
-	// //  	case "40": 
-	// //  		alert(0);
-	// //  		break;
-	// //  } 
+	// switch(amount1) {
+	//  	case "40 ": 
+	//  		alert(0);
+	//  		break;
+	//  } 
+
+	// var loc = window.location.toString();
+ //    var page = loc.substring(
+ //        loc.lastIndexOf('/',0) + 1, 
+ //        loc.length);
+    // $('.webform-component--hover-and-selection-text-two' + page + '"]').addClass('js-active');
+
+    // if(jQuery(".nav li.ziele").hasClass("active")) {
+    // 	jQuery("#index ul li.ziele").addClass("active");
+    // }
+
+    if($("input.selection-amount").prop("checked", true)) { 
+ 		$('.webform-component--hover-and-selection-text-two').addClass("js-active");
+	    $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
+ 	}
 	
 });
 
-// $( window ).unload(function() {
-//  $('.webform-component--hover-and-selection-text-two').addClass("js-active");
-//     	$('.webform-component--hover-and-selection-text-one').removeClass("js-active");
-// });
+// window.onload = function() {
+ 	
+
+//  	// $('#element').click(function() { 
+//  	// 	if($('#radio_button').is(':checked')) { 
+//  	// 		alert("it's checked"); 
+//  	// 	} 
+//  	// });
+// };
 
 // $( "div.foo" ).toggleClass(function() {
 //   if ( $( this ).parent().is( ".bar" ) ) {
@@ -819,7 +850,8 @@ $(document).ready(function () {
 //     return "sad";
 //   }
 // });
-	
+
+
 
 
 
