@@ -933,7 +933,7 @@ div.modal-forms-modal-content .form-item label {
 
 //Course, Events, Volunteer, Newsletter & Share Your Story Webforms
 .node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns, .share-your-story-webform,
-.webform-share-your-story, .page-signup-form, .node-donations {
+.webform-share-your-story, .page-signup-form {
   .webform-component-number,
   .webform-component-textfield,
   .webform-component-email,
@@ -1096,5 +1096,83 @@ div.modal-forms-modal-content .form-item label {
       -webkit-box-shadow: 0px 4px #C63502;
       box-shadow: 0px 4px #C63502;
     }
+  }
+}
+
+//Donation Page Form
+.node-donations {
+  .webform-component-number,
+  .webform-component-textfield,
+  .webform-component-email,
+  .webform-component-textarea {
+    input[type=submit]
+    , input[type=text]
+    , input[type=search]
+    , input[type=tel]
+    , input[type=password]
+    , input[type=email]
+    , input[type=file]
+    , textarea {
+      clear: both;
+      width: 100%;
+      border-radius: 5px;
+
+      @include border-radius(5px);
+
+      font-size: 18px;
+      border-bottom: 2px solid;
+      border-color: $mercury;
+
+      @include box-shadow(inset 1px 1px 2px rgba(112, 112, 112, 1));
+
+      margin-bottom: 1em;
+      padding: 12px 23px;
+
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
+
+
+      &:focus {
+        outline: none;
+        color: #2A2E31;
+
+        //border: 2px solid #FBB900 !important;
+        border-color: #FBB900 !important;
+        box-shadow: inset 1px 1px 2px #FBB900 !important;
+      }
+
+      &.error {
+        border: 2px solid $error-border;
+      }
+    }
+
+    @include breakpoint($not-mobile) {
+      label {
+        width: 69.4%;
+        float: left;
+      }
+    }
+  }
+
+  .form-checkboxes, .form-radios {
+    input.form-checkbox, input.form-radio {
+      float: left;
+      margin: 8px;
+    }
+  }
+
+  .webform-component-select, .webform-component-date {
+    padding-bottom: 20px;
+  }
+
+  .webform-component-date {
+    fieldset {
+      padding-left: 0;
+    }
+  }
+
+  .webform-component--donation-type--Recurring, .webform-component--gift-aid-check-box--1 {
+    margin-bottom: 1em;
   }
 }
