@@ -501,13 +501,49 @@
         }
 
         .form-actions {
-          padding: 0 10px;
+          // padding: 0 10px;
 
           @include breakpoint($all-small-mobile) {
             input {
               padding: 5px 10px;
               font-size: 14px;
             }
+          }
+
+
+          input.webform-next, input.webform-submit {
+            width: 100%;
+
+            // float: right;
+            margin-right: 0;
+
+            @include breakpoint($not-mobile) {
+              width: 62%;
+            }
+          }
+
+          input.webform-previous {
+            width: 100%;
+            background: #fbba00;
+
+            // box-shadow: 0px 6px #f07d2c;
+            // -webkit-box-shadow: 0px 6px #f07d2c;
+            border-bottom: 5px solid #f07d2c;
+            margin-bottom: 10px;
+
+            @include breakpoint($not-mobile) {
+              width: 35%;
+              margin-bottom: 0px;
+            }
+
+
+            &:hover {
+              border-bottom-width: 3px;
+            }
+          }
+
+          input#edit-webform-ajax-next-677871 {
+            width: 100%;
           }
         }
       }
