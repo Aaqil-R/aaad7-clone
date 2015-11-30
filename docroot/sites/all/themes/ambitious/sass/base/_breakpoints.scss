@@ -2,25 +2,41 @@
 $base-min-width: 320px;
 $large-mobile: 480px;
 $tablet-small: 767px;
-$tablet: 990px;                 // tablet
-$desktop-small: 1080px;
-$desktop: 1180px; // desktop
-$large-screen: 1300px; // desktop
+$tablet: 990px;
 
-$tablet-range: 768px 1023px;    // sample ragne - how does thi match with line 3?
+// tablet
+$desktop-small: 1080px;
+$desktop: 1180px;
+
+// desktop
+$large-screen: 1300px;
+
+// desktop
+
+$tablet-range: 768px 1023px;
+
+// sample ragne - how does thi match with line 3?
 
 $small-mobile: 400px;
-$mobile: 767px;                 // mobile - is this below this height?
-$mobile-hi-res: 767px (min-resolution 1.5dppx);  // mobile retina 
-$not-mobile: min-width 767px;
-$mini-mobile: max-width 480px; 
-$not-mini-mobile:min-width 480;
+$mobile: 767px;
 
-$not-desktop:min-width 1180px;
-$all-desktop:min-width 1080px;
-$not-all-mobile:min-width 768px;//whats the difference between this and line 10?
-$all-large-mobile:481px 769px;
-$all-small-mobile:max-width 480px;
-$all-tiny-mobile:max-width 320px;//but we have a min-width set?
+// mobile - is this below this height?
+$mobile-hi-res: 767px (min-resolution 1.5dppx);
+
+// mobile retina
+$not-mobile: min-width 767px;
+$mini-mobile: max-width 480px;
+$not-mini-mobile: min-width 480px;
+
+$not-desktop: min-width 1180px;
+$all-desktop: min-width 1080px;
+$not-all-mobile: min-width 768px;
+
+//whats the difference between this and line 10?
+$all-large-mobile: 481px 769px;
+$all-small-mobile: max-width 480px;
+$all-tiny-mobile: max-width 320px;
+
+//but we have a min-width set?
 
 //why are there two lists? This makes almost no sense.
