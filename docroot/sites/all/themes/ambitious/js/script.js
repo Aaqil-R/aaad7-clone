@@ -815,6 +815,22 @@ $(document).ready(function () {
 	//   }
 	// );
 
+
+	$("div[class*=edit-submitted-select-an-amount-").mouseover(function() { 
+		var selectedAmount = $(this.id).val(); 
+
+		if (selectedAmount) {	    		
+	    	// Reset the other message selections
+	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+	    	// Based on this lets activate the appropriate message
+	    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+	    	// Activate the appropriate message
+	    	$(messageId).toggleClass("js-active");
+		}
+	});
+
 	$(".form-item-submitted-select-an-amount label.option").hover(
 	  function () {
 	    var selectedAmount = $('input[type=radio]').val();
