@@ -755,19 +755,10 @@ $(window).resize(function () {
 	// 	        }
 	// 	    });	
 	// }); 
-/*----- Job Vacancy Sticky Cards -----*/
+	/*----- Job Vacancy Sticky Cards -----*/
 
-//Donation Page Hover 
-$(document).ready(function () {
-
-	console.log("Entering the document.ready function on line 753.");
-
-	// We are assuming that the option buttons are using the configuration
-	// value_of_{n}
-	// Lets see what amount has been selected
-	var selectedAmount = $('input[type=radio]:checked').val();
-
-		console.log("Selected Amount: " + selectedAmount);
+	function handleDonationAmountSelection(selectedAmount){
+		// console.log("Selected Amount: " + selectedAmount);
 
 		if (selectedAmount) {	    		
 	    	// Reset the other message selections
@@ -779,87 +770,44 @@ $(document).ready(function () {
 	    	// Activate the appropriate message
 	    	$(messageId).toggleClass("js-active");
 		}
-	
-
-	$('.form-item-submitted-select-an-amount label.option').on({
-	    click: function(){
-	    	
-	    	//The variable selectedAmount gets the value of the radio button selected
-	    	$('input[type=radio]').change(function() {
-		        var selectedAmount = this.value;
-
-		        // Lets see what amount has been selected
-		    	console.log("Selected Amount: " + selectedAmount);
-
-		    	if (selectedAmount) {	    		
-			    	// Reset the other message selections
-			    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
-
-			    	// Based on this lets activate the appropriate message
-			    	var messageId = ".webform-component--value-of-" + selectedAmount;
-
-			    	// Activate the appropriate message
-			    	$(messageId).toggleClass("js-active");
-		    	}
-
-		    });
-	    }
-	});
-
-	// $(".form-item-submitted-select-an-amount label.option").mouseover(
-	//   function () {
-	//   	$('input[type=radio]').change(function() {
-	// 	        var selectedAmount = this.value;
-	// 	        console.log(selectedAmount);
-	// 	});
-	//   }
-	// );
-
-
-	$("label[for*=edit-submitted-select-an-amount-").mouseover(function() { 
-
-		console.log($("#" + $(this).attr("for") + ":radio").val());
-
-		var selectedAmount = $("#" + $(this).attr("for") + ":radio").val(); 
-
-		if (selectedAmount) {	    		
-	    	// Reset the other message selections
-	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
-
-	    	// Based on this lets activate the appropriate message
-	    	var messageId = ".webform-component--value-of-" + selectedAmount;
-
-	    	// Activate the appropriate message
-	    	$(messageId).toggleClass("js-active");
-		}
-	});
-
-	function handleAmountSelection(){
-
-	};
-});
-
-function pricepoint(){
-	var selectedAmount = $('input[type=radio]:checked').val();
-
-	console.log("Selected Amount: " + selectedAmount);
-
-	if (selectedAmount) {	    		
-    	// Reset the other message selections
-    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
-
-    	// Based on this lets activate the appropriate message
-    	var messageId = ".webform-component--value-of-" + selectedAmount;
-
-    	// Activate the appropriate message
-    	$(messageId).toggleClass("js-active");
 	}
 
-    };
+	//Donation Page Hover 
+	$(document).ready(function () {
 
+		// We are assuming that the option buttons are using the configuration
+		// value_of_{n}
+		// Lets see what amount has been selected
+		var selectedAmount = $('input[type=radio]:checked').val();
+		handleDonationAmountSelection(selectedAmount);
+			
+		$('.form-item-submitted-select-an-amount label.option').on({
+		    change: function(){
+			    var selectedAmount = this.value;
+				handleDonationAmountSelection(selectedAmount);
+		    }
+		});
 
-$(document).ajaxComplete(function () {
-    pricepoint();
-});
+		$("label[for*=edit-submitted-select-an-amount-").mouseover(function() { 
+
+			// console.log($("#" + $(this).attr("for") + ":radio").val());
+
+			var selectedAmount = $("#" + $(this).attr("for") + ":radio").val(); 
+			handleDonationAmountSelection(selectedAmount);
+		});
+
+		$("#edit-submitted-other-amount").on("keyup", function(){
+			$("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
+		});
+
+		$("[id*=edit-submitted-select-an-amount-]").on("click", function(){
+			$("#edit-submitted-other-amount").val(0);
+		});
+	});
+
+	$(document).ajaxComplete(function () {
+	    var selectedAmount = $('input[type=radio]:checked').val();
+	    handleDonationAmountSelection(selectedAmount);
+	});
 
 })(jQuery, Drupal, this, this.document);
