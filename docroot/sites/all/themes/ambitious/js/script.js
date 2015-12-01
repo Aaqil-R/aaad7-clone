@@ -762,23 +762,43 @@ $(document).ready(function () {
 
 	// We are assuming that the option buttons are using the configuration
 	// value_of_{n}
+	// Lets see what amount has been selected
+	var selectedAmount = $('input[type=radio]:checked').val();
+
+	if (selectedAmount) {	    		
+    	// Reset the other message selections
+    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+    	// Based on this lets activate the appropriate message
+    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+    	// Activate the appropriate message
+    	$(messageId).toggleClass("js-active");
+	}
 
 	$('.form-item-submitted-select-an-amount label.option').on({
 	    click: function(){
-
 	    	// Lets see what amount has been selected
 	    	var selectedAmount = $('input[type=radio]:checked').val();
 
-	    	// Based on this lets activate the appropriate message
-	    	var messageId = ".webform-component--value-of-" + selectedAmount;
+	    	console.log("Selected Amount: " + selectedAmount);
 
-	    	// Activate the appropriate message
-	    	$(messageId).addClass("js-active");
+	    	if (selectedAmount) {	    		
+		    	// Reset the other message selections
+		    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+		    	// Based on this lets activate the appropriate message
+		    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+		    	// Activate the appropriate message
+		    	$(messageId).toggleClass("js-active");
+	    	}
 	    }
 	});
 
+	function handleAmountSelection(){
 
-	 
+	}	 
 
 	// $('.form-item-submitted-select-an-amount label.option').on({
 	//   //   mouseover: function(){
