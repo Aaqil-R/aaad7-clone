@@ -760,6 +760,8 @@ $(window).resize(function () {
 //Donation Page Hover 
 $(document).ready(function () {
 
+	console.log("Entering the document.ready function on line 753.");
+
 	// We are assuming that the option buttons are using the configuration
 	// value_of_{n}
 	// Lets see what amount has been selected
