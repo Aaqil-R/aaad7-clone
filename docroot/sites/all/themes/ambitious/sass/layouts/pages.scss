@@ -523,17 +523,15 @@
           display: none !important;
         }
 
-        .webform-component--hover-and-selection-text-two {
-          display: none;
-        }
-
-        .webform-component--hover-and-selection-text-two, .webform-component--hover-and-selection-text-one {
+        div[class*="webform-component--value-of-"] {
           background: #F15500;
           float: left;
           padding: 10px 25px;
           border-radius: 10px;
           margin: 20px 10px;
           text-align: center;
+
+          display: none;
 
           @include breakpoint($not-mobile) {
             padding: 10px 50px;

@@ -31,6 +31,11 @@ function stripe_custom_init(){
 
 }
 
+// function stripe_custom_webform_submission_insert($node, $submission){
+// 	dpm($node);
+// 	// dpm($node->webform['components'])
+// }
+
 function stripe_custom_webform_submission_presave($node, $submission){
 //function test($node, $submission){
 	$contenttype = $node->type;
@@ -143,7 +148,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
-			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid);
+			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email);
 			if($val1 == 0){
 				dpm("One time payment added");
 			}
@@ -265,7 +270,7 @@ function create_plan($amount , $id , $name ,$formid){
 	}
 }
 
-function create_onetime_patment($card,$amount,$formid){
+function create_onetime_patment($card,$amount,$formid ,$email){
 	try {
 		$data = serialize($card);
 		$data = addItem($data, $amount , 'amount');
@@ -276,7 +281,8 @@ function create_onetime_patment($card,$amount,$formid){
 		//defining the charge details for one time payments
 		$charge = \Stripe\Charge::create(array('card' => $card, 
 												'amount' => $amount, 
-												'currency' => 'gbp'));
+												'currency' => 'gbp',
+												'receipt_email' => $email));
 		$result = serialize($charge);
 		stripe_data_log($result,$data,$formid);
 		return 0;
@@ -338,10 +344,43 @@ function stripe_data_log($result , $data , $formid){
   	drupal_write_record('stripe_error_log', $record);
 }
 
+//serializing data before adding to the database
 function addItem($serializedArray, $item , $key)
 {
    $a = unserialize($serializedArray);
    $a[$key] = $item;
    return serialize($a);
 }
+
+//getting the values from the webfrom submission
+function getwebformvalues(){
+
+}
+
+//updating the webform submission values
+function setwebformvalues(){
+
+}
+
+
+
+//new codes that need 
+// private function prepareFields($components, $submission){
+
+// 			$component_array = array();
+
+// 			foreach ($components as $key => $field) {
+// 				$component_array[$field['form_key']] = $submission->data[$key][0];
+// 			}
+
+// 			return $component_array;
+// 		}
+
+// 		function getFields(){
+// 			return $this->fields;
+// 		}
+
+// 		function getField($field_key){
+// 			return $this->fields[$field_key];
+// 		}
 ?>
