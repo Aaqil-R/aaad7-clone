@@ -765,6 +765,8 @@ $(document).ready(function () {
 	// Lets see what amount has been selected
 	var selectedAmount = $('input[type=radio]:checked').val();
 
+	console.log("Selected Amount: " + selectedAmount);
+
 	if (selectedAmount) {	    		
     	// Reset the other message selections
     	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
