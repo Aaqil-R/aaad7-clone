@@ -640,7 +640,7 @@ function mailchimp_custom_node_insert($node){
 		$event_code = field_get_items('node', $node, 'field_event_code');
 		$event_code1 = $event_code[0]['value'];
 		//check which type node this is events or courses
-		if($node->type == 'events' || $node->type == 'courses' || $node->type == 'donations')
+		if($node->type == 'events' || $node->type == 'courses')
 		{	
 			if($event_code1 == ''){
 				//update the code to generate the event code
