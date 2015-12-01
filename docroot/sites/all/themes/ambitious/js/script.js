@@ -819,6 +819,8 @@ $(document).ready(function () {
 	$("div[class*=edit-submitted-select-an-amount-").mouseover(function() { 
 		var selectedAmount = $(this.id).val(); 
 
+		console.log("from hover: " + selectedAmount);
+
 		if (selectedAmount) {	    		
 	    	// Reset the other message selections
 	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
