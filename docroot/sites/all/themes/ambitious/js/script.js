@@ -816,8 +816,8 @@ $(document).ready(function () {
 	// );
 
 
-	$("[id*=edit-submitted-select-an-amount-").mouseover(function() { 
-		var selectedAmount = $(this.id).val(); 
+	$("label[id*=edit-submitted-select-an-amount-").mouseover(function() { 
+		var selectedAmount = $("radio[id=" + this.id+ "]").val(); 
 
 		console.log("from hover: " + this.id + selectedAmount);
 
