@@ -782,21 +782,26 @@ $(document).ready(function () {
 
 	$('.form-item-submitted-select-an-amount label.option').on({
 	    click: function(){
-	    	// Lets see what amount has been selected
-	    	var selectedAmount = $('input[type=radio]:checked').val();
+	    	
+	    	//The variable selectedAmount gets the value of the radio button selected
+	    	$('input[type=radio]').change(function() {
+		        var selectedAmount = this.value;
 
-	    	console.log("Selected Amount: " + selectedAmount);
+		        // Lets see what amount has been selected
+		    	console.log("Selected Amount: " + selectedAmount);
 
-	    	if (selectedAmount) {	    		
-		    	// Reset the other message selections
-		    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+		    	if (selectedAmount) {	    		
+			    	// Reset the other message selections
+			    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
 
-		    	// Based on this lets activate the appropriate message
-		    	var messageId = ".webform-component--value-of-" + selectedAmount;
+			    	// Based on this lets activate the appropriate message
+			    	var messageId = ".webform-component--value-of-" + selectedAmount;
 
-		    	// Activate the appropriate message
-		    	$(messageId).toggleClass("js-active");
-	    	}
+			    	// Activate the appropriate message
+			    	$(messageId).toggleClass("js-active");
+		    	}
+
+		    });
 	    }
 	});
 
@@ -804,24 +809,24 @@ $(document).ready(function () {
 
 	}	 
 
-	// $('.form-item-submitted-select-an-amount label.option').on({
-	//   //   mouseover: function(){
-	//   //   	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
-	// 		// 	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
-	// 		// }
-	//   //   },
-	//     // mouseleave: function(){
-	//     //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	//     // },
+	$('.form-item-submitted-select-an-amount label.option').on({
+	    mouseover: function(){
+	    	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
+				$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
+			}
+	    },
+	    // mouseleave: function(){
+	    //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	    // },
 
-	//     click: function(){
-	//     	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
-	//     	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	//         // $(this).off('mouseleave');
-	//         $('.webform-component--hover-and-selection-text-two').addClass("js-active");
-	//         $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
-	//     }
-	// });
+	    // click: function(){
+	    // 	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
+	    // 	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	    //     // $(this).off('mouseleave');
+	    //     $('.webform-component--hover-and-selection-text-two').addClass("js-active");
+	    //     $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
+	    // }
+	});
 
 	// $('.form-actions input.webform-previous').on({
 	//     click: function(){
