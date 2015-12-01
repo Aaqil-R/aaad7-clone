@@ -801,7 +801,7 @@ $(window).resize(function () {
 		});
 
 		$("[id*=edit-submitted-select-an-amount-]").on("click", function(){
-			$("#edit-submitted-other-amount").val(0);
+			$("#edit-submitted-other-amount").val("");
 		});
 	});
 
