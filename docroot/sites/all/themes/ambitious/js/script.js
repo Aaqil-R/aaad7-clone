@@ -408,8 +408,8 @@ Drupal.behaviors.ambitious = {
             "percentPosition": true
         });
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	  	// console.log($columnWidth);
+	  	// console.log($gutter);
 
 	  	$('.card-layout .view-content').masonry ({
             "itemSelector": ".card--item",
