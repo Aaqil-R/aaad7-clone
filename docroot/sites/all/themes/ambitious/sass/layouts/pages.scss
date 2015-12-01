@@ -472,10 +472,6 @@
           display: none !important;
         }
 
-        .webform-component--hover-and-selection-text-two {
-          display: none;
-        }
-
         div[class*="webform-component--value-of-"] {
           background: #F15500;
           float: left;
@@ -483,6 +479,8 @@
           border-radius: 10px;
           margin: 20px 10px;
           text-align: center;
+
+          display: none;
 
           @include breakpoint($not-mobile) {
             padding: 10px 50px;
