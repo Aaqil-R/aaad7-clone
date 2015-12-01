@@ -624,15 +624,32 @@
 
 //Donation Page Thank You page
 .page-node-677871.page-node-done {
-  div#content-header {
-    display: none;
-  }
+  #wrapper {
+    background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
-  .webform-progressbar {
-    display: none;
-  }
+    #main {
+      padding: 150px 0;
+    }
 
-  section#content-area {
-    text-align: center;
+    div#content-header {
+      display: none;
+    }
+
+    .webform-progressbar {
+      display: none;
+    }
+
+    section#content-area {
+      text-align: center;
+    }
+
+    .webform-confirmation {
+      background: white;
+      width: 45%;
+    }
   }
 }

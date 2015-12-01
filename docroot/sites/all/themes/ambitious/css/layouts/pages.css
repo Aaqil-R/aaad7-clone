@@ -943,14 +943,31 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 
 /* line 627, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done div#content-header {
+.page-node-677871.page-node-done #wrapper {
+  background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+/* line 634, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper #main {
+  padding: 150px 0;
+}
+/* line 638, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper div#content-header {
   display: none;
 }
-/* line 631, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done .webform-progressbar {
+/* line 642, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper .webform-progressbar {
   display: none;
 }
-/* line 635, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done section#content-area {
+/* line 646, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper section#content-area {
   text-align: center;
+}
+/* line 650, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper .webform-confirmation {
+  background: white;
+  width: 45%;
 }
