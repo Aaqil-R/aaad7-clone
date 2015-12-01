@@ -3337,6 +3337,10 @@ div.modal-forms-modal-content .form-item label {
   box-shadow: 0px 4px #C63502;
 }
 
+/* line 1103, ../sass/forms.scss */
+.node-donations {
+  /* Base for label styling */
+}
 /* line 1108, ../sass/forms.scss */
 .node-donations .webform-component-number input[type=submit]
 , .node-donations .webform-component-number input[type=text]
@@ -3397,7 +3401,9 @@ div.modal-forms-modal-content .form-item label {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  font-size: 18px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 15px;
   border-bottom: 2px solid;
   border-color: #e4e4e4;
   -webkit-box-shadow: inset 1px 1px 2px #707070;
@@ -3463,7 +3469,7 @@ div.modal-forms-modal-content .form-item label {
     width: 100%;
   }
 }
-/* line 1136, ../sass/forms.scss */
+/* line 1138, ../sass/forms.scss */
 .node-donations .webform-component-number input[type=submit]:focus
 , .node-donations .webform-component-number input[type=text]:focus
 , .node-donations .webform-component-number input[type=search]:focus
@@ -3522,7 +3528,7 @@ div.modal-forms-modal-content .form-item label {
   border-color: #FBB900 !important;
   box-shadow: inset 1px 1px 2px #FBB900 !important;
 }
-/* line 1145, ../sass/forms.scss */
+/* line 1147, ../sass/forms.scss */
 .node-donations .webform-component-number input[type=submit].error
 , .node-donations .webform-component-number input[type=text].error
 , .node-donations .webform-component-number input[type=search].error
@@ -3579,7 +3585,7 @@ div.modal-forms-modal-content .form-item label {
   border: 2px solid #ff5458;
 }
 @media (min-width: 767px) {
-  /* line 1151, ../sass/forms.scss */
+  /* line 1153, ../sass/forms.scss */
   .node-donations .webform-component-number label,
   .node-donations .webform-component-textfield label,
   .node-donations .webform-component-email label,
@@ -3588,20 +3594,117 @@ div.modal-forms-modal-content .form-item label {
     float: left;
   }
 }
-/* line 1159, ../sass/forms.scss */
+/* line 1160, ../sass/forms.scss */
+.node-donations .webform-component-number::-webkit-input-placeholder,
+.node-donations .webform-component-textfield::-webkit-input-placeholder,
+.node-donations .webform-component-email::-webkit-input-placeholder,
+.node-donations .webform-component-textarea::-webkit-input-placeholder {
+  color: #636C73;
+}
+/* line 1164, ../sass/forms.scss */
+.node-donations .webform-component-number:-moz-placeholder,
+.node-donations .webform-component-textfield:-moz-placeholder,
+.node-donations .webform-component-email:-moz-placeholder,
+.node-donations .webform-component-textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #636C73;
+}
+/* line 1169, ../sass/forms.scss */
+.node-donations .webform-component-number::-moz-placeholder,
+.node-donations .webform-component-textfield::-moz-placeholder,
+.node-donations .webform-component-email::-moz-placeholder,
+.node-donations .webform-component-textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #636C73;
+}
+/* line 1174, ../sass/forms.scss */
+.node-donations .webform-component-number:-ms-input-placeholder,
+.node-donations .webform-component-textfield:-ms-input-placeholder,
+.node-donations .webform-component-email:-ms-input-placeholder,
+.node-donations .webform-component-textarea:-ms-input-placeholder {
+  color: #636C73;
+}
+/* line 1180, ../sass/forms.scss */
+.node-donations [type="checkbox"] {
+  /* checked mark aspect changes */
+  /* disabled checkbox */
+  /* accessibility */
+}
+/* line 1181, ../sass/forms.scss */
+.node-donations [type="checkbox"]:not(:checked), .node-donations [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+/* line 1186, ../sass/forms.scss */
+.node-donations [type="checkbox"]:not(:checked) + label, .node-donations [type="checkbox"]:checked + label {
+  position: relative;
+  /* padding-left: 25px; */
+  cursor: pointer;
+  /* checkbox aspect */
+  /* checked mark aspect */
+}
+/* line 1193, ../sass/forms.scss */
+.node-donations [type="checkbox"]:not(:checked) + label:before, .node-donations [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  background: #ffffff;
+}
+/* line 1206, ../sass/forms.scss */
+.node-donations [type="checkbox"]:not(:checked) + label:after, .node-donations [type="checkbox"]:checked + label:after {
+  content: '\2714';
+  color: #F15500;
+  transition: all .2s;
+  position: absolute;
+  top: -25px;
+  left: 2px;
+}
+/* line 1226, ../sass/forms.scss */
+.node-donations [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+/* line 1231, ../sass/forms.scss */
+.node-donations [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* line 1240, ../sass/forms.scss */
+.node-donations [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations [type="checkbox"]:disabled:checked + label:before {
+  border-color: #bbb;
+  background-color: #ddd;
+}
+/* line 1247, ../sass/forms.scss */
+.node-donations [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+/* line 1251, ../sass/forms.scss */
+.node-donations [type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* line 1256, ../sass/forms.scss */
+.node-donations [type="checkbox"]:checked:focus + label:before, .node-donations [type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid black;
+}
+/* line 1263, ../sass/forms.scss */
 .node-donations .form-checkboxes input.form-checkbox, .node-donations .form-checkboxes input.form-radio, .node-donations .form-radios input.form-checkbox, .node-donations .form-radios input.form-radio {
   float: left;
   margin: 8px;
 }
-/* line 1165, ../sass/forms.scss */
-.node-donations .webform-component-select, .node-donations .webform-component-date {
-  padding-bottom: 20px;
+/* line 1269, ../sass/forms.scss */
+.node-donations .webform-component-select, .node-donations .webform-component-date, .node-donations .webform-component-optionsmarkup {
+  padding-bottom: 20px !important;
 }
-/* line 1170, ../sass/forms.scss */
+/* line 1277, ../sass/forms.scss */
 .node-donations .webform-component-date fieldset {
   padding-left: 0;
 }
-/* line 1175, ../sass/forms.scss */
+/* line 1282, ../sass/forms.scss */
 .node-donations .webform-component--donation-type--Recurring, .node-donations .webform-component--gift-aid-check-box--1 {
   margin-bottom: 1em;
 }
