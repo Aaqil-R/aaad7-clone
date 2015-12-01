@@ -595,7 +595,7 @@
           }
 
           input.webform-previous + input.webform-next, input.webform-previous + input.webform-submit,
-          input[type="submit"]:disabled + input.webform-submit, input[type="submit"]:disabled + input.webform-next {
+          div.ajax-progress.ajax-progress-throbber + input.webform-next, div.ajax-progress.ajax-progress-throbber + input.webform-submit {
             // &, &:active {
             width: 62% !important;
 
