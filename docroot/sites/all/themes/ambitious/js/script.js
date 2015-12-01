@@ -817,6 +817,9 @@ $(document).ready(function () {
 
 
 	$("label[for*=edit-submitted-select-an-amount-").mouseover(function() { 
+
+		console.log($(this).attr("for"));
+
 		var selectedAmount = $("radio[id=" + $(this).attr("for") + "]").val(); 
 
 		if (selectedAmount) {	    		
