@@ -116,7 +116,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid);
 			//check whether the Plan was created
 			if($val == 0){
-				dpm("Recurring plan created");
+				//dpm("Recurring plan created");
 				//The plan is created Successfully. Subscribe the user to the plan here.
 				//TODO : Create the subscriber here
 				$card1 = array();
@@ -127,16 +127,16 @@ function stripe_custom_webform_submission_presave($node, $submission){
 
 				$val1 = create_subscriber($id,$email,$card1,$formid);
 				if($val1 == 0){
-					dpm("recurring Subscriber subscribed Sucessfully");
+					//dpm("recurring Subscriber subscribed Sucessfully");
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
-					dpm("recurring Subscriber not subscribed");
+					//dpm("recurring Subscriber not subscribed");
 				}
 			}
 			else{
 				//TODO : must log this data into database
-				dpm("Recurring plan not created");
+				//dpm("Recurring plan not created");
 			}
 		}
 		//Create a one time payment
@@ -150,10 +150,10 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			
 			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email);
 			if($val1 == 0){
-				dpm("One time payment added");
+				//dpm("One time payment added");
 			}
 			else{
-				dpm("One time payment failed");
+				//dpm("One time payment failed");
 			}
 		}
 	}
