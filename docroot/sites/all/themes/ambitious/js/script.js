@@ -818,9 +818,9 @@ $(document).ready(function () {
 
 	$("label[for*=edit-submitted-select-an-amount-").mouseover(function() { 
 
-		console.log($("#" + $(this).attr("for") + ":radio]").val());
+		console.log($("#" + $(this).attr("for") + ":radio").val());
 
-		var selectedAmount = $("radio[id=" + $(this).attr("for") + "]").val(); 
+		var selectedAmount = $("#" + $(this).attr("for") + ":radio").val(); 
 
 		if (selectedAmount) {	    		
 	    	// Reset the other message selections
