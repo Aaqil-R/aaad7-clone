@@ -298,7 +298,7 @@
           background-color: white;
 
           @include breakpoint($not-mini-mobile) {
-            width: 50%;
+            width: 20%;
           }
 
 
@@ -530,7 +530,6 @@
           border-radius: 10px;
           margin: 20px 10px;
           text-align: center;
-
           display: none;
 
           @include breakpoint($not-mobile) {
@@ -548,6 +547,28 @@
 
         .webform-component--hover-and-selection-text-one {
           background: #FBBA00;
+        }
+
+        .webform-component--hover-and-selection-text-two {
+          background: #F15500;
+
+          // display: none;
+       
+        }
+
+        .webform-component--hover-and-selection-text-one, .webform-component--hover-and-selection-text-two {
+          float: left;
+          margin: 20px 10px;
+          border-radius: 15px;
+          text-align: center;
+
+          p {
+            font-size: 14px;
+            padding: 20px 50px;
+            color: white;
+            margin: 0;
+            line-height: 17px;
+          }
         }
 
         .form-actions {
