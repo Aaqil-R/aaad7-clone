@@ -408,8 +408,8 @@ Drupal.behaviors.ambitious = {
             "percentPosition": true
         });
 
-	  	console.log($columnWidth);
-	  	console.log($gutter);
+	  	// console.log($columnWidth);
+	  	// console.log($gutter);
 
 	  	$('.card-layout .view-content').masonry ({
             "itemSelector": ".card--item",
@@ -760,10 +760,14 @@ $(window).resize(function () {
 //Donation Page Hover 
 $(document).ready(function () {
 
+	console.log("Entering the document.ready function on line 753.");
+
 	// We are assuming that the option buttons are using the configuration
 	// value_of_{n}
 	// Lets see what amount has been selected
 	var selectedAmount = $('input[type=radio]:checked').val();
+
+	console.log("Selected Amount: " + selectedAmount);
 
 	if (selectedAmount) {	    		
     	// Reset the other message selections

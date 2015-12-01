@@ -1119,7 +1119,9 @@ div.modal-forms-modal-content .form-item label {
 
       @include border-radius(5px);
 
-      font-size: 18px;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 15px;
       border-bottom: 2px solid;
       border-color: $mercury;
 
@@ -1153,6 +1155,108 @@ div.modal-forms-modal-content .form-item label {
         float: left;
       }
     }
+
+
+    &::-webkit-input-placeholder {
+      color: #636C73;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #636C73;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #636C73;
+    }
+
+    &:-ms-input-placeholder {
+      color: #636C73;
+    }
+  }
+
+  /* Base for label styling */
+  [type="checkbox"] {
+    &:not(:checked),
+    &:checked {
+      position: absolute;
+      left: -9999px;
+
+      + label {
+        position: relative;
+
+        /* padding-left: 25px; */
+        cursor: pointer;
+
+        /* checkbox aspect */
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 2px;
+          width: 15px;
+          height: 15px;
+          border: 2px solid #000000;
+          border-radius: 3px;
+          background: $white;
+        }
+
+        /* checked mark aspect */
+        &:after {
+          content: '\2714';
+
+          // width: 17px;
+          // height: 14px;
+          // position: absolute;
+          // top: 3px;
+          // left: 4px;
+          // font-size: 18px;
+          // line-height: 0.8;
+          color: #F15500;
+          transition: all .2s;
+          position: absolute;
+          top: -25px;
+          left: 2px;
+        }
+      }
+    }
+
+    /* checked mark aspect changes */
+    &:not(:checked) + label:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:checked + label:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* disabled checkbox */
+    &:disabled:not(:checked),
+    &:disabled:checked {
+      + label {
+        &:before {
+          border-color: #bbb;
+          background-color: #ddd;
+        }
+      }
+    }
+
+    &:disabled:checked + label:after {
+      color: #999;
+    }
+
+    &:disabled + label {
+      color: #aaa;
+    }
+
+    /* accessibility */
+    &:checked:focus + label:before,
+    &:not(:checked):focus + label:before {
+      border: 1px solid black;
+    }
   }
 
   .form-checkboxes, .form-radios {
@@ -1162,8 +1266,11 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
-  .webform-component-select, .webform-component-date {
-    padding-bottom: 20px;
+  .webform-component-select, .webform-component-date, .webform-component-optionsmarkup {
+    padding-bottom: 20px !important;
+
+    //Important used to override the common style
+ 
   }
 
   .webform-component-date {
