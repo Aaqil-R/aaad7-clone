@@ -21,6 +21,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		,'volunteer'
 		,'campaigns'
 		,'testwebform'
+		,'donations'
 	);
 
 	//if the webform is one of the 6 the add the test webform content type
@@ -253,6 +254,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				$news = $eventlist['news'];
 				$volunteer = $eventlist['volunteer'];
 				$campaigns = $eventlist['campaigns'];
+				$donations = $eventlist['donation'];
 
 				//add the charity places when subscribing	
 				$applyforCharity = $eventlist['apply_for_charity_place'];
@@ -292,6 +294,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				{
 					// dpm("i am a course");
 					array_push($campaigns, $newevent);
+				}
+				elseif($contenttype == 'donations')
+				{
+					array_push($donations, $newevent);
 				}
 				//Gathering exsisting details.
 				if ($lastname == NULL || $lastname == ''){
@@ -385,6 +391,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				                'name' => 'Apply for charity place',
 				                'groups' => $applyforCharity
 				                ),
+				            6 => array(
+				                'name' => 'Donation',
+				                'groups' => $donations
+				                ),
 				            ),
 				        'phone'=>$phonenumber,
 				        'postcode'=>$postcode,
@@ -444,6 +454,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 				elseif($contenttype == 'campaigns')
 				{
 					$name = 'Campaign';
+				}
+				elseif($contenttype == 'donations')
+				{
+					$name = 'Donation';
 				}
 				//create a new user
 
@@ -563,6 +577,9 @@ function print_event_list($result3){
 		elseif($group['name'] == 'I Have my Own Place'){
 			$subscribed_owncharityplace = get_subscribed_events($subscribed_list);
 		}
+		elseif($group['name'] == 'Donation'){
+			$subscribed_donations = get_subscribed_events($subscribed_list);
+		}
 	}
 	$total_events['events']=$subscribed_events;
 	$total_events['courses']=$subscribed_courses;
@@ -571,6 +588,7 @@ function print_event_list($result3){
 	$total_events['campaigns']=$subscribed_campaign;
 	$total_events['apply_for_charity_place']=$subscribed_applycharityplace;
 	$total_events['i_have_my_own_place']=$subscribed_owncharityplace;
+	$total_events['donation']=$subscribed_donations;
 	//print_r($total_events);
 	return $total_events;
 }
@@ -614,6 +632,7 @@ function mailchimp_custom_node_insert($node){
 		,'volunteer'
 		,'campaigns'
 		,'testwebform'
+		,'donations'
 	);
 	
 	if (in_array($contenttype, $enabled_content_types)) 
@@ -621,7 +640,7 @@ function mailchimp_custom_node_insert($node){
 		$event_code = field_get_items('node', $node, 'field_event_code');
 		$event_code1 = $event_code[0]['value'];
 		//check which type node this is events or courses
-		if($node->type == 'events' || $node->type == 'courses')
+		if($node->type == 'events' || $node->type == 'courses' || $node->type == 'donations')
 		{	
 			if($event_code1 == ''){
 				//update the code to generate the event code
@@ -714,7 +733,7 @@ function mailchimp_custom_node_update($node){
 
 //new codes
 		//check which type node this is events or courses
-		if($node->type == 'events' || $node->type == 'courses')
+		if($node->type == 'events' || $node->type == 'courses' || $node->type =='donations')
 		{	
 			if($updatedvalue1 == ''){
 		//update the code to generate the event code
@@ -747,6 +766,7 @@ function mailchimp_custom_node_update($node){
 		,'volunteer'
 		,'campaigns'
 		,'testwebform'
+		,'donations'
 	);
 	
 	if (in_array($contenttype, $enabled_content_types)) 
@@ -841,6 +861,9 @@ function getresults($contenttype){
     case "campaigns":
     	$key = array_search('Campaign', array_column($result, 'name'));
     break;
+    case "donations":
+    	$key = array_search('Donation', array_column($result, 'name'));
+    break;
 	}
 
 	if(isset($key)){
@@ -882,8 +905,10 @@ function getapikey(){
 }
 
 function getlistid(){
-	//return 'c4a8cbf5c3';
-	return '82ee1f4953';
+	return '821dc7ebcb';
+	//below one is the live id
+	//when update uncomment the below line and comment the earlier id
+	//return '82ee1f4953';
 }
 
 //new codes
