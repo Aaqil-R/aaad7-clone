@@ -3697,14 +3697,35 @@ div.modal-forms-modal-content .form-item label {
   margin: 8px;
 }
 /* line 1269, ../sass/forms.scss */
+.node-donations .webform-component--city, .node-donations .webform-component--post-code {
+  width: 50%;
+  float: left;
+}
+/* line 1274, ../sass/forms.scss */
+.node-donations .form-item-submitted-expiration-date-year {
+  padding-right: 0;
+}
+/* line 1278, ../sass/forms.scss */
+.node-donations .form-item-submitted-expiration-date-month, .node-donations .form-item-submitted-expiration-date-year {
+  float: left !important;
+}
+/* line 1284, ../sass/forms.scss */
+.node-donations .form-item-submitted-expiration-date-month .form-element .jcf-select, .node-donations .form-item-submitted-expiration-date-year .form-element .jcf-select {
+  min-width: 185px;
+}
+/* line 1290, ../sass/forms.scss */
+.node-donations .webform-component--country .jcf-select {
+  min-width: 100% !important;
+}
+/* line 1294, ../sass/forms.scss */
 .node-donations .webform-component-select, .node-donations .webform-component-date, .node-donations .webform-component-optionsmarkup {
   padding-bottom: 20px !important;
 }
-/* line 1277, ../sass/forms.scss */
+/* line 1302, ../sass/forms.scss */
 .node-donations .webform-component-date fieldset {
   padding-left: 0;
 }
-/* line 1282, ../sass/forms.scss */
+/* line 1307, ../sass/forms.scss */
 .node-donations .webform-component--donation-type--Recurring, .node-donations .webform-component--gift-aid-check-box--1 {
   margin-bottom: 1em;
 }

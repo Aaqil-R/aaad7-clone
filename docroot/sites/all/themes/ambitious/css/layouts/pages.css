@@ -634,7 +634,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 .node-type-donations #wrapper .node-donations form .webform-component--first-text-area p {
   font-weight: 400;
   margin: 0;
-  color: #2A2E31;
+  color: #636C73;
   font-size: 20px;
 }
 /* line 285, ../../sass/layouts/pages.scss */
@@ -913,13 +913,12 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   width: 100%;
   margin-right: 0;
 }
-@media (min-width: 767px) {
-  /* line 585, ../../sass/layouts/pages.scss */
-  .node-type-donations #wrapper .node-donations form .form-actions input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions input.webform-submit {
-    width: 62%;
-  }
+/* line 597, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-submit,
+.node-type-donations #wrapper .node-donations form .form-actions input[type="submit"]:disabled + input.webform-submit, .node-type-donations #wrapper .node-donations form .form-actions input[type="submit"]:disabled + input.webform-next {
+  width: 62% !important;
 }
-/* line 596, ../../sass/layouts/pages.scss */
+/* line 606, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
   width: 100%;
   background: #fbba00;
@@ -927,30 +926,47 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   margin-bottom: 10px;
 }
 @media (min-width: 767px) {
-  /* line 596, ../../sass/layouts/pages.scss */
+  /* line 606, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
     width: 35%;
     margin-bottom: 0px;
   }
 }
-/* line 611, ../../sass/layouts/pages.scss */
+/* line 621, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous:hover {
   border-bottom-width: 3px;
 }
-/* line 616, ../../sass/layouts/pages.scss */
+/* line 626, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input#edit-webform-ajax-next-677871 {
   width: 100%;
 }
 
-/* line 627, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done div#content-header {
+/* line 637, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper {
+  background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+/* line 644, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper #main {
+  padding: 150px 0;
+}
+/* line 648, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper div#content-header {
   display: none;
 }
-/* line 631, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done .webform-progressbar {
+/* line 652, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper .webform-progressbar {
   display: none;
 }
-/* line 635, ../../sass/layouts/pages.scss */
-.page-node-677871.page-node-done section#content-area {
+/* line 656, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper section#content-area {
   text-align: center;
+}
+/* line 660, ../../sass/layouts/pages.scss */
+.page-node-677871.page-node-done #wrapper .webform-confirmation {
+  background: white;
+  width: 45%;
 }
