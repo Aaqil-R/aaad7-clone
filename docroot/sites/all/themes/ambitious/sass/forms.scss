@@ -1266,6 +1266,31 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
+  .webform-component--city, .webform-component--post-code {
+    width: 50%;
+    float: left;
+  }
+
+  .form-item-submitted-expiration-date-year {
+    padding-right: 0;
+  }
+
+  .form-item-submitted-expiration-date-month, .form-item-submitted-expiration-date-year {
+    float: left !important;
+
+    //Overriding common form styles
+
+    .form-element {
+      .jcf-select {
+        min-width: 185px;
+      }
+    }
+  }
+
+  .webform-component--country .jcf-select {
+    min-width: 100% !important;
+  }
+
   .webform-component-select, .webform-component-date, .webform-component-optionsmarkup {
     padding-bottom: 20px !important;
 

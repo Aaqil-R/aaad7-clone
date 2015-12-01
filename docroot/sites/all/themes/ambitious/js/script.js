@@ -767,6 +767,53 @@ $(document).ready(function () {
 	// Lets see what amount has been selected
 	var selectedAmount = $('input[type=radio]:checked').val();
 
+		console.log("Selected Amount: " + selectedAmount);
+
+		if (selectedAmount) {	    		
+	    	// Reset the other message selections
+	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+	    	// Based on this lets activate the appropriate message
+	    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+	    	// Activate the appropriate message
+	    	$(messageId).toggleClass("js-active");
+		}
+	
+
+	$('.form-item-submitted-select-an-amount label.option').on({
+	    click: function(){
+	    	
+	    	//The variable selectedAmount gets the value of the radio button selected
+	    	$('input[type=radio]').change(function() {
+		        var selectedAmount = this.value;
+
+		        // Lets see what amount has been selected
+		    	console.log("Selected Amount: " + selectedAmount);
+
+		    	if (selectedAmount) {	    		
+			    	// Reset the other message selections
+			    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+			    	// Based on this lets activate the appropriate message
+			    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+			    	// Activate the appropriate message
+			    	$(messageId).toggleClass("js-active");
+		    	}
+
+		    });
+	    }
+	});
+
+	function handleAmountSelection(){
+
+	};
+});
+
+function pricepoint(){
+	var selectedAmount = $('input[type=radio]:checked').val();
+
 	console.log("Selected Amount: " + selectedAmount);
 
 	if (selectedAmount) {	    		
@@ -779,118 +826,12 @@ $(document).ready(function () {
     	// Activate the appropriate message
     	$(messageId).toggleClass("js-active");
 	}
-
-	$('.form-item-submitted-select-an-amount label.option').on({
-	    click: function(){
-	    	// Lets see what amount has been selected
-	    	var selectedAmount = $('input[type=radio]:checked').val();
-
-	    	console.log("Selected Amount: " + selectedAmount);
-
-	    	if (selectedAmount) {	    		
-		    	// Reset the other message selections
-		    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
-
-		    	// Based on this lets activate the appropriate message
-		    	var messageId = ".webform-component--value-of-" + selectedAmount;
-
-		    	// Activate the appropriate message
-		    	$(messageId).toggleClass("js-active");
-	    	}
-	    }
-	});
-
-	function handleAmountSelection(){
-
-	}	 
-
-	// $('.form-item-submitted-select-an-amount label.option').on({
-	//   //   mouseover: function(){
-	//   //   	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
-	// 		// 	$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
-	// 		// }
-	//   //   },
-	//     // mouseleave: function(){
-	//     //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	//     // },
-
-	//     click: function(){
-	//     	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
-	//     	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	//         // $(this).off('mouseleave');
-	//         $('.webform-component--hover-and-selection-text-two').addClass("js-active");
-	//         $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
-	//     }
-	// });
-
-	// $('.form-actions input.webform-previous').on({
-	//     click: function(){
-	//         $('.webform-component--hover-and-selection-text-two').addClass("js-active");
-	//         $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
-	//     }
-	// });
-
 	
-    // if (!$(".node-donations input[type=radio]:checked")) {
-    // 	$('.webform-component--hover-and-selection-text-two').addClass("js-active");
-    // 	$('.webform-component--hover-and-selection-text-one').removeClass("js-deactive");
-    // 	alert("test");
-    // }
-    // else{
-    // 	$('.webform-component--hover-and-selection-text-one').addClass("js-active");
-    // 	$('.webform-component--hover-and-selection-text-two').removeClass("js-deactive");
-    // }
+    };
 
 
-	
-
- //    var amount = $(".node-donations input[type=radio]").val();
- //    // var amount1 = amount.trim();
- //    console.log(amount);
-	// switch(amount1) {
-	//  	case "40 ": 
-	//  		alert(0);
-	//  		break;
-	//  } 
-
-	// var loc = window.location.toString();
- //    var page = loc.substring(
- //        loc.lastIndexOf('/',0) + 1, 
- //        loc.length);
-    // $('.webform-component--hover-and-selection-text-two' + page + '"]').addClass('js-active');
-
-    // if(jQuery(".nav li.ziele").hasClass("active")) {
-    // 	jQuery("#index ul li.ziele").addClass("active");
-    // }
-
-  //   if($("input.selection-amount").prop("checked", true)) { 
- 	// 	$('.webform-component--hover-and-selection-text-two').addClass("js-active");
-	 //    $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
- 	// }
-	
+$(document).ajaxComplete(function () {
+    pricepoint();
 });
-
-// window.onload = function() {
- 	
-
-//  	// $('#element').click(function() { 
-//  	// 	if($('#radio_button').is(':checked')) { 
-//  	// 		alert("it's checked"); 
-//  	// 	} 
-//  	// });
-// };
-
-// $( "div.foo" ).toggleClass(function() {
-//   if ( $( this ).parent().is( ".bar" ) ) {
-//     return "happy";
-//   } else {
-//     return "sad";
-//   }
-// });
-
-
-
-
-
 
 })(jQuery, Drupal, this, this.document);
