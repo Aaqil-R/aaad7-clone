@@ -767,18 +767,19 @@ $(document).ready(function () {
 	// Lets see what amount has been selected
 	var selectedAmount = $('input[type=radio]:checked').val();
 
-	console.log("Selected Amount: " + selectedAmount);
+		console.log("Selected Amount: " + selectedAmount);
 
-	if (selectedAmount) {	    		
-    	// Reset the other message selections
-    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+		if (selectedAmount) {	    		
+	    	// Reset the other message selections
+	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
 
-    	// Based on this lets activate the appropriate message
-    	var messageId = ".webform-component--value-of-" + selectedAmount;
+	    	// Based on this lets activate the appropriate message
+	    	var messageId = ".webform-component--value-of-" + selectedAmount;
 
-    	// Activate the appropriate message
-    	$(messageId).toggleClass("js-active");
-	}
+	    	// Activate the appropriate message
+	    	$(messageId).toggleClass("js-active");
+		}
+	
 
 	$('.form-item-submitted-select-an-amount label.option').on({
 	    click: function(){
@@ -807,26 +808,31 @@ $(document).ready(function () {
 
 	function handleAmountSelection(){
 
-	}	 
+	};
 
-	$('.form-item-submitted-select-an-amount label.option').on({
-	    mouseover: function(){
-	    	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
-				$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
-			}
-	    },
-	    // mouseleave: function(){
-	    //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	    // },
 
-	    // click: function(){
-	    // 	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
-	    // 	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
-	    //     // $(this).off('mouseleave');
-	    //     $('.webform-component--hover-and-selection-text-two').addClass("js-active");
-	    //     $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
-	    // }
-	});
+	
+		// var selectedAmount = $('input[type=radio]:checked').val();
+		// alert(selectedAmount);
+		
+	// $('.form-item-submitted-select-an-amount label.option').on({
+	//     mouseover: function(){
+	//     	if($('.webform-component--hover-and-selection-text-two:visible').length == 0){
+	// 			$('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).show();
+	// 		}
+	//     },
+	//     // mouseleave: function(){
+	//     //     $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	//     // },
+
+	//     // click: function(){
+	//     // 	// $('.webform-component--hover-and-selection-text-two'+$(this).prop('id')).show();
+	//     // 	// $('.webform-component--hover-and-selection-text-one'+$(this).prop('id')).hide();
+	//     //     // $(this).off('mouseleave');
+	//     //     $('.webform-component--hover-and-selection-text-two').addClass("js-active");
+	//     //     $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
+	//     // }
+	// });
 
 	// $('.form-actions input.webform-previous').on({
 	//     click: function(){
@@ -873,6 +879,31 @@ $(document).ready(function () {
 	 //    $('.webform-component--hover-and-selection-text-one').addClass("js-deactive");
  	// }
 	
+});
+
+
+	function pricepoint(){
+		var selectedAmount = $('input[type=radio]:checked').val();
+
+		console.log("Selected Amount: " + selectedAmount);
+
+		if (selectedAmount) {	    		
+	    	// Reset the other message selections
+	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+	    	// Based on this lets activate the appropriate message
+	    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+	    	// Activate the appropriate message
+	    	$(messageId).toggleClass("js-active");
+		}
+
+		// console.log("ajaxComplete");
+	    };
+
+
+$(document).ajaxComplete(function () {
+    pricepoint();
 });
 
 // window.onload = function() {
