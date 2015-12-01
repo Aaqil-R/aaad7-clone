@@ -816,10 +816,10 @@ $(document).ready(function () {
 	// );
 
 
-	$("div[class*=edit-submitted-select-an-amount-").mouseover(function() { 
+	$("[id*=edit-submitted-select-an-amount-").mouseover(function() { 
 		var selectedAmount = $(this.id).val(); 
 
-		console.log("from hover: " + selectedAmount);
+		console.log("from hover: " + this.id + selectedAmount);
 
 		if (selectedAmount) {	    		
 	    	// Reset the other message selections
@@ -832,26 +832,6 @@ $(document).ready(function () {
 	    	$(messageId).toggleClass("js-active");
 		}
 	});
-
-	$(".form-item-submitted-select-an-amount label.option").hover(
-	  function () {
-	    var selectedAmount = $('input[type=radio]').val();
-
-		console.log("Selected Amount: " + selectedAmount);
-
-		if (selectedAmount) {	    		
-	    	// Reset the other message selections
-	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
-
-	    	// Based on this lets activate the appropriate message
-	    	var messageId = ".webform-component--value-of-" + selectedAmount;
-
-	    	// Activate the appropriate message
-	    	$(messageId).toggleClass("js-active");
-		}
-	  }
-	);
-
 
 	function handleAmountSelection(){
 
