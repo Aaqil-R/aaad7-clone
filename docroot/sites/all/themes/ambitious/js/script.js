@@ -806,6 +806,35 @@ $(document).ready(function () {
 	    }
 	});
 
+	// $(".form-item-submitted-select-an-amount label.option").mouseover(
+	//   function () {
+	//   	$('input[type=radio]').change(function() {
+	// 	        var selectedAmount = this.value;
+	// 	        console.log(selectedAmount);
+	// 	});
+	//   }
+	// );
+
+	$(".form-item-submitted-select-an-amount label.option").hover(
+	  function () {
+	    var selectedAmount = $('input[type=radio]').val();
+
+		console.log("Selected Amount: " + selectedAmount);
+
+		if (selectedAmount) {	    		
+	    	// Reset the other message selections
+	    	$("[class*=webform-component--value-of-]").removeClass("js-active"); 
+
+	    	// Based on this lets activate the appropriate message
+	    	var messageId = ".webform-component--value-of-" + selectedAmount;
+
+	    	// Activate the appropriate message
+	    	$(messageId).toggleClass("js-active");
+		}
+	  }
+	);
+
+
 	function handleAmountSelection(){
 
 	};
@@ -826,7 +855,7 @@ function pricepoint(){
     	// Activate the appropriate message
     	$(messageId).toggleClass("js-active");
 	}
-	
+
     };
 
 

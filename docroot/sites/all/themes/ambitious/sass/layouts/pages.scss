@@ -277,7 +277,7 @@
           p {
             font-weight: 400;
             margin: 0;
-            color: #2A2E31;
+            color: #636C73;
             font-size: 20px;
           }
         }
@@ -588,13 +588,19 @@
             // float: right;
             margin-right: 0;
 
-            @include breakpoint($not-mobile) {
-              width: 62%;
-            }
+            // @include breakpoint($not-mobile) {
+            //   width: 62%;
+            // }
+         
           }
 
-          input.webform-previous + input.webform-next {
+          input.webform-previous + input.webform-next, input.webform-previous + input.webform-submit,
+          input[type="submit"]:disabled + input.webform-submit, input[type="submit"]:disabled + input.webform-next {
+            // &, &:active {
             width: 62% !important;
+
+            // }
+         
           }
 
           input.webform-previous {
