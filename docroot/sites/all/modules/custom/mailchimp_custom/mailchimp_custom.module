@@ -733,7 +733,7 @@ function mailchimp_custom_node_update($node){
 
 //new codes
 		//check which type node this is events or courses
-		if($node->type == 'events' || $node->type == 'courses' || $node->type =='donations')
+		if($node->type == 'events' || $node->type == 'courses')
 		{	
 			if($updatedvalue1 == ''){
 		//update the code to generate the event code
