@@ -2,20 +2,18 @@
 function thermo_custom_init(){
 
 	$node = menu_get_object();
+	if($node->type == 'donations'){
+		$test = thermo_get_result($node->webform['nid']);
 
-	//dpm($node->webform['nid']);
-
-	$test = thermo_get_result($node->webform['nid']);
-
-	// dpm($test);
-	// dpm($node);
-	dpm($node->field_maximum_donation_amount['und'][0]['value']);
-
-	$definedamount = $node->field_maximum_donation_amount['und'][0]['value'];
-	drupal_add_js(array('thermo_custom' => array('supporter_count' => $test)), 'setting');
-	drupal_add_js(array('thermo_custom' => array('definedamount' => $definedamount)), 'setting');
-
-	drupal_add_js(drupal_get_path('module', 'thermo_custom') . '/thermo_custom.js', 'file'); 
+		$definedamount = 5000 ; 
+		if(!empty($node->field_maximum_donation_amount)){
+			$definedamount = $node->field_maximum_donation_amount['und'][0]['value'];
+		}
+				
+		drupal_add_js(array('thermo_custom' => array('supporter_count' => $test)), 'setting');
+		drupal_add_js(array('thermo_custom' => array('definedamount' => $definedamount)), 'setting');
+		drupal_add_js(drupal_get_path('module', 'thermo_custom') . '/thermo_custom.js', 'file');
+	}
 }
 
 function thermo_custom_webform_submission_presave($node, $submission){
