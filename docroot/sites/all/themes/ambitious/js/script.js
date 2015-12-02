@@ -796,6 +796,14 @@ $(window).resize(function () {
 			handleDonationAmountSelection(selectedAmount);
 		});
 
+
+		$("label[for*=edit-submitted-select-an-amount-").mouseleave(function() { 
+
+			var selectedAmount = $('input[type=radio]:checked').val();
+			handleDonationAmountSelection(selectedAmount);
+
+		});
+
 		$("#edit-submitted-other-amount").on("keyup", function(){
 			$("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
 		});

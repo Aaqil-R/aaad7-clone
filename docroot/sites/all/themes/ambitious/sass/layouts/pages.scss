@@ -210,45 +210,54 @@
       .field-name-body {
         background: white;
         padding: 20px;
-        width: 45%;
+        width: 75%;
         margin: 90px 0 35px 0;
 
-        @include breakpoint($tablet-small) {
-          width: 80%;
+        @include breakpoint($not-mobile) {
+          width: 60%;
         }
 
 
-        @include breakpoint($desktop-small) {
-          width: 60%;
+        @include breakpoint($all-large-mobile) {
+          width: 50%;
+        }
+
+
+        @include breakpoint($all-desktop) {
+          width: 45%;
         }
 
 
         p {
           margin: 0;
-          font-size: 20px;
+          font-size: 15px;
+          font-weight: bold;
 
-          // font-weight: bold;
-       
+          @include breakpoint($not-mobile) {
+            font-size: 20px;
+            font-weight: normal;
+          }
         }
       }
 
       form {
         background: white;
-        width: 45%;
+        width: 75%;
         padding: 10px;
 
         @include breakpoint($not-mobile) {
           padding: 35px;
-        }
-
-
-        @include breakpoint($tablet-small) {
-          width: 80%;
-        }
-
-
-        @include breakpoint($desktop-small) {
           width: 60%;
+        }
+
+
+        @include breakpoint($all-large-mobile) {
+          width: 50%;
+        }
+
+
+        @include breakpoint($all-desktop) {
+          width: 45%;
         }
 
 
@@ -292,7 +301,7 @@
           left: 10px;
           position: relative;
           border: 2px solid #E2E2E2;
-          width: 50%;
+          width: 45%;
           height: 3px;
           margin: 20px 0;
           background-color: white;
@@ -302,13 +311,15 @@
           }
 
 
-          // @include breakpoint($all-large-mobile) {
-          //   width: 70%;
-          // }
+          @include breakpoint($all-large-mobile) {
+            width: 40%;
+          }
 
-          // @include breakpoint($not-mobile) {
-          //   width: 20%;
-          // }
+
+          @include breakpoint($not-mobile) {
+            width: 20%;
+          }
+
 
           span.disabled {
             padding-left: 0px;
@@ -328,11 +339,11 @@
             }
 
             &:nth-child(2) {
-              left: 40%;
+              left: 50%;
             }
 
             &:nth-child(3) {
-              left: 80%;
+              left: 100%;
             }
           }
 
@@ -349,10 +360,12 @@
             cursor: default;
             top: -5px;
             padding-left: 6px;
+            position: absolute;
 
-            @include breakpoint($not-mini-mobile) {
-              position: absolute;
-            }
+            // @include breakpoint($not-mini-mobile) {
+            //   position: absolute;
+            // }
+         
           }
         }
 
@@ -373,7 +386,8 @@
           label.option p {
             font-size: 13px;
             font-weight: bold;
-            text-align: justify;
+
+            /* text-align: justify; */
             color: #636C73;
             padding-left: 20px;
             line-height: 20px;
@@ -411,8 +425,12 @@
         }
 
         .webform-component--donation-type {
-          padding: 0 10px;
-          height: 35px;
+          padding: 5px 10px;
+          height: 45px;
+
+          // @include breakpoint($not-mini-mobile) {
+          //   height: 35px;
+          // }
 
           input[type="checkbox"] {
             // display: none;
@@ -574,13 +592,14 @@
         .form-actions {
           padding: 0 10px;
 
-          @include breakpoint($all-small-mobile) {
-            input {
+          input {
+            font-size: 17px;
+
+            @include breakpoint($mobile) {
               padding: 5px 10px;
               font-size: 14px;
             }
           }
-
 
           input.webform-next, input.webform-submit {
             width: 100%;
@@ -596,10 +615,14 @@
 
           input.webform-previous + input.webform-next, input.webform-previous + input.webform-submit,
           div.ajax-progress.ajax-progress-throbber + input.webform-next, div.ajax-progress.ajax-progress-throbber + input.webform-submit {
-            // &, &:active {
-            width: 62% !important;
+            width: 100% !important;
 
-            // }
+            @include breakpoint($not-mobile) {
+              width: 61% !important;
+            }
+
+
+            // Important used to override the common styles
          
           }
 
