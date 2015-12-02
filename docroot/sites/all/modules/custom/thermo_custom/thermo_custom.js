@@ -10,7 +10,7 @@
       console.log(collectedamount);
 
       $('#donation_goal').goalProgress({
-        goalAmount: 2000,
+        goalAmount: definedamount,
         currentAmount: collectedamount,
         textBefore: '£',
         textAfter: ' raised so far'
