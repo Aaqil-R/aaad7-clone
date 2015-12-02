@@ -779,7 +779,10 @@ $(window).resize(function () {
 		// value_of_{n}
 		// Lets see what amount has been selected
 		var selectedAmount = $('input[type=radio]:checked').val();
-		handleDonationAmountSelection(selectedAmount);
+		if ($('input[type=radio]:checked')) {
+			handleDonationAmountSelection(selectedAmount);
+		}
+		
 			
 		$('.form-item-submitted-select-an-amount label.option').on({
 		    change: function(){
@@ -794,6 +797,7 @@ $(window).resize(function () {
 
 			var selectedAmount = $("#" + $(this).attr("for") + ":radio").val(); 
 			handleDonationAmountSelection(selectedAmount);
+			$('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
 		});
 
 
@@ -801,6 +805,7 @@ $(window).resize(function () {
 
 			var selectedAmount = $('input[type=radio]:checked').val();
 			handleDonationAmountSelection(selectedAmount);
+			$('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
 
 		});
 
@@ -811,11 +816,13 @@ $(window).resize(function () {
 		$("[id*=edit-submitted-select-an-amount-]").on("click", function(){
 			$("#edit-submitted-other-amount").val("");
 		});
+
 	});
 
 	$(document).ajaxComplete(function () {
 	    var selectedAmount = $('input[type=radio]:checked').val();
 	    handleDonationAmountSelection(selectedAmount);
 	});
+
 
 })(jQuery, Drupal, this, this.document);
