@@ -1,0 +1,39 @@
+<?php
+
+function thermo_custom_schema() {
+  $schema = array();
+ 
+  $schema['thermo_count_log'] = array(
+    'description' => t('The base table for nodes.'),
+    'fields' => array(
+      'ID' => array(
+        'description' => 'The primary identifier for table.',
+        'type' => 'int',
+        'not null' => TRUE),
+
+      'DonationObtained' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+
+      'datatime' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE),
+      ),
+    'primary key' => array('ID'),
+  );
+  return $schema;
+}
+
+
+/**
+ * Implements hook_install().
+ */
+// function donation_custom_install() {
+
+// }
+
+?>

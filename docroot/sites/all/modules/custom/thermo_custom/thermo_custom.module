@@ -1,0 +1,96 @@
+<?php
+function thermo_custom_init(){
+
+	$node = menu_get_object();
+
+	//dpm($node->webform['nid']);
+
+	$test = thermo_get_result($node->webform['nid']);
+
+	// dpm($test);
+	// dpm($node);
+	dpm($node->field_maximum_donation_amount['und'][0]['value']);
+
+	$definedamount = $node->field_maximum_donation_amount['und'][0]['value'];
+	drupal_add_js(array('thermo_custom' => array('supporter_count' => $test)), 'setting');
+	drupal_add_js(array('thermo_custom' => array('definedamount' => $definedamount)), 'setting');
+
+	drupal_add_js(drupal_get_path('module', 'thermo_custom') . '/thermo_custom.js', 'file'); 
+}
+
+function thermo_custom_webform_submission_presave($node, $submission){
+	$contenttype = $node->type;
+	$formid = $node->webform['nid'];
+	//Only donations webforms we are considering
+	if($contenttype == 'donations'){
+		//Gather the submitted form Values
+		foreach ($node->webform['components'] as $key => $field) 
+		{
+			switch ($field['form_key']) 
+			{
+				//first page details
+				case 'select_an_amount':
+					$select_an_amount = $submission->data[$key][0];
+				break;
+			}
+		}
+
+		//check whether the result is laready available
+		$result = db_select('thermo_count_log', 't')
+		    ->fields('t')
+		    ->condition('ID', $formid,'=')
+		    ->execute()
+		    ->fetchAssoc();
+
+		$count = count($result);
+		//if result exsist then update the result
+		if($count > 1){
+			$amount = $result['DonationObtained'] + $select_an_amount;
+		  	thermo_update_data_log($formid , $amount);
+		}
+		//else create a new result
+		else{
+		   	thermo_create_data_log($formid , $select_an_amount);
+		}
+	}
+}
+
+//Logging the transactions and the results in a Database
+function thermo_create_data_log($id , $amount){
+	$test = db_insert('thermo_count_log')->fields(array(
+    	'ID' => $id,
+    	'DonationObtained' => $amount,
+    	'datatime' => time(),
+  	))
+  	->execute();
+}
+
+function thermo_update_data_log($id , $amount){
+	$test = db_update('thermo_count_log')->fields(array(
+    	'DonationObtained' => $amount,
+    	'datatime' => time(),
+  	))
+  	->condition('ID', $id , '=')
+  	->execute();
+}
+
+
+function thermo_get_result($formid){
+	$amount = 0;
+
+	$result = db_select('thermo_count_log', 't')
+		->fields('t')
+		->condition('ID', $formid,'=')
+		->execute()
+		->fetchAssoc();
+
+	$count = count($result);
+	//if result exsist then update the result
+	if($count > 1){
+		$amount = $result['DonationObtained'];
+	}
+
+	return $amount;
+}
+
+?>
