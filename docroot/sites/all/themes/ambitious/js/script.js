@@ -789,7 +789,7 @@ $(window).resize(function () {
 
 			    var selectedAmount = this.value;
 				handleDonationAmountSelection(selectedAmount);
-				
+
 		    }
 		});
 
@@ -813,6 +813,13 @@ $(window).resize(function () {
 		});
 
 		$("#edit-submitted-other-amount").on("keyup", function(){
+
+			$("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
+
+		});
+
+		// doing it for iOS.
+		$("#edit-submitted-other-amount").on("keypress", function(){
 
 			$("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
 
