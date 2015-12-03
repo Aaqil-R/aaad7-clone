@@ -1218,7 +1218,7 @@ div.modal-forms-modal-content .form-item label {
             color: #F15500;
             transition: all .2s;
             position: absolute;
-            top: -45px;
+            top: -25px;
             left: 2px;
           }
         }
@@ -1284,13 +1284,11 @@ div.modal-forms-modal-content .form-item label {
             top: -140px;
 
             @include breakpoint($all-large-mobile) {
-              // 481px 769px
               top: -115px;
             }
 
 
             @include breakpoint($not-mobile) {
-              //min 767px
               top: -105px;
             }
           }
