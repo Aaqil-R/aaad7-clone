@@ -1176,7 +1176,8 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
-  .webform-component--donation-type, .webform-component--donation-checkbox-1, .webform-component--gift-aid-check-box {
+  .webform-component--donation-type, .webform-component--donation-checkbox-1, .webform-component--gift-aid-check-box,
+  .webform-component--donation-type--Recurring, .webform-component--agree-condition--1, .webform-component--gift-aid-check-box--1 {
     /* Base for label styling */
     [type="checkbox"] {
       &:not(:checked),
@@ -1261,7 +1262,7 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
-  .webform-component--donation-checkbox-1 {
+  .webform-component--donation-checkbox-1, .webform-component--agree-condition--1 {
     [type="checkbox"] {
       &:not(:checked),
       &:checked {
@@ -1274,7 +1275,7 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
-  .webform-component--gift-aid-check-box {
+  .webform-component--gift-aid-check-box, .webform-component--gift-aid-check-box--1 {
     [type="checkbox"] {
       &:not(:checked),
       &:checked {
