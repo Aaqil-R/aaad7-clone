@@ -5,10 +5,6 @@
       var collectedamount = parseInt(Drupal.settings.thermo_custom.supporter_count);
       var definedamount = parseInt(Drupal.settings.thermo_custom.definedamount);
 
-      console.log("I am here");
-      console.log(definedamount);
-      console.log(collectedamount);
-
       $('#donation_goal').goalProgress({
         goalAmount: definedamount,
         currentAmount: collectedamount,
