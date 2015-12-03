@@ -210,16 +210,16 @@
       .field-name-body {
         background: white;
         padding: 20px;
-        width: 75%;
+        width: 100%;
         margin: 90px 0 35px 0;
 
         @include breakpoint($not-mobile) {
-          width: 60%;
+          width: 55%;
         }
 
 
         @include breakpoint($all-large-mobile) {
-          width: 50%;
+          width: 70%;
         }
 
 
@@ -242,17 +242,17 @@
 
       form {
         background: white;
-        width: 75%;
+        width: 100%;
         padding: 10px;
 
         @include breakpoint($not-mobile) {
           padding: 35px;
-          width: 60%;
+          width: 55%;
         }
 
 
         @include breakpoint($all-large-mobile) {
-          width: 50%;
+          width: 70%;
         }
 
 
@@ -301,7 +301,7 @@
           left: 10px;
           position: relative;
           border: 2px solid #E2E2E2;
-          width: 45%;
+          width: 25%;
           height: 3px;
           margin: 20px 0;
           background-color: white;
@@ -381,6 +381,7 @@
         .webform-component-optionsmarkup {
           label p {
             margin: 0;
+            font-size: 16px;
           }
 
           label.option p {
@@ -560,6 +561,69 @@
             margin: 0;
             font-size: 14px;
             line-height: 17px;
+          }
+        }
+
+        .webform-component--donation-checkbox-1 {
+          label.option p {
+            height: 40px;
+          }
+        }
+
+        .webform-component--gift-aid-check-box {
+          label.option p {
+            height: 135px;
+
+            @include breakpoint($all-large-mobile) {
+              // 481px 769px
+              height: 110px;
+            }
+
+
+            @include breakpoint($not-mobile) {
+              //min 767px
+              height: 100px;
+            }
+          }
+        }
+
+        .webform-component--card-number-tooltip {
+          display: none;
+          background: yellowgreen;
+          padding: 15px;
+          width: 200px;
+          text-align: center;
+
+          // position: absolute;
+          left: 70%;
+          top: 290px;
+          border-radius: 10px;
+
+          &::after, :after {
+            position: absolute;
+            top: 20px;
+            left: -15px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-right: solid 15px rgb(154, 205, 50);
+            border-bottom: solid 15px transparent;
+            border-top: solid 15px transparent;
+          }
+
+          @include breakpoint($not-mobile) {
+            left: 55%;
+            position: absolute;
+          }
+
+
+          @include breakpoint($all-large-mobile) {
+            left: 70%;
+          }
+
+
+          @include breakpoint($all-desktop) {
+            left: 45%;
           }
         }
 
