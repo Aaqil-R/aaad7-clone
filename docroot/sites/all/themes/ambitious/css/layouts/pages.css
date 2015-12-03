@@ -1079,5 +1079,12 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 .page-node-677871.page-node-done #wrapper .webform-confirmation,
 .page-node-685796.page-node-done #wrapper .webform-confirmation {
   background: white;
-  width: 45%;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  /* line 755, ../../sass/layouts/pages.scss */
+  .page-node-677871.page-node-done #wrapper .webform-confirmation,
+  .page-node-685796.page-node-done #wrapper .webform-confirmation {
+    width: 45%;
+  }
 }

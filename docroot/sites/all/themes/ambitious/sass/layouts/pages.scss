@@ -754,7 +754,11 @@
 
     .webform-confirmation {
       background: white;
-      width: 45%;
+      width: 100%;
+
+      @include breakpoint($not-mobile) {
+        width: 45%;
+      }
     }
   }
 }
