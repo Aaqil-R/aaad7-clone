@@ -786,8 +786,10 @@ $(window).resize(function () {
 			
 		$('.form-item-submitted-select-an-amount label.option').on({
 		    change: function(){
+
 			    var selectedAmount = this.value;
 				handleDonationAmountSelection(selectedAmount);
+				
 		    }
 		});
 
@@ -798,6 +800,7 @@ $(window).resize(function () {
 			var selectedAmount = $("#" + $(this).attr("for") + ":radio").val(); 
 			handleDonationAmountSelection(selectedAmount);
 			$('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
+
 		});
 
 
@@ -810,11 +813,16 @@ $(window).resize(function () {
 		});
 
 		$("#edit-submitted-other-amount").on("keyup", function(){
+
 			$("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
+
 		});
 
-		$("[id*=edit-submitted-select-an-amount-]").on("click", function(){
+		$("[id*=edit-submitted-select-an-amount-]").on("change", function(){
+
 			$("#edit-submitted-other-amount").val("");
+			handleDonationAmountSelection(selectedAmount);
+
 		});
 
 	});
