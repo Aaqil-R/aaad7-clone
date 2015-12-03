@@ -1176,86 +1176,125 @@ div.modal-forms-modal-content .form-item label {
     }
   }
 
-  /* Base for label styling */
-  [type="checkbox"] {
-    &:not(:checked),
-    &:checked {
-      position: absolute;
-      left: -9999px;
+  .webform-component--donation-type, .webform-component--donation-checkbox-1, .webform-component--gift-aid-check-box {
+    /* Base for label styling */
+    [type="checkbox"] {
+      &:not(:checked),
+      &:checked {
+        position: absolute;
+        left: -9999px;
 
-      + label {
-        position: relative;
+        + label {
+          position: relative;
 
-        /* padding-left: 25px; */
-        cursor: pointer;
+          /* padding-left: 25px; */
+          cursor: pointer;
 
-        /* checkbox aspect */
-        &:before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 2px;
-          width: 15px;
-          height: 15px;
-          border: 2px solid #000000;
-          border-radius: 3px;
-          background: $white;
+          /* checkbox aspect */
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #000000;
+            border-radius: 3px;
+            background: $white;
+          }
+
+          /* checked mark aspect */
+          &:after {
+            content: '\2714';
+
+            // width: 17px;
+            // height: 14px;
+            // position: absolute;
+            // top: 3px;
+            // left: 4px;
+            // font-size: 18px;
+            // line-height: 0.8;
+            color: #F15500;
+            transition: all .2s;
+            position: absolute;
+            top: -25px;
+            left: 2px;
+          }
         }
+      }
 
-        /* checked mark aspect */
-        &:after {
-          content: '\2714';
+      /* checked mark aspect changes */
+      &:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0);
+      }
 
-          // width: 17px;
-          // height: 14px;
-          // position: absolute;
-          // top: 3px;
-          // left: 4px;
-          // font-size: 18px;
-          // line-height: 0.8;
-          color: #F15500;
-          transition: all .2s;
-          position: absolute;
-          top: -25px;
-          left: 2px;
+      &:checked + label:after {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* disabled checkbox */
+      &:disabled:not(:checked),
+      &:disabled:checked {
+        + label {
+          &:before {
+            border-color: #bbb;
+            background-color: #ddd;
+          }
+        }
+      }
+
+      &:disabled:checked + label:after {
+        color: #999;
+      }
+
+      &:disabled + label {
+        color: #aaa;
+      }
+
+      /* accessibility */
+      &:checked:focus + label:before,
+      &:not(:checked):focus + label:before {
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .webform-component--donation-checkbox-1 {
+    [type="checkbox"] {
+      &:not(:checked),
+      &:checked {
+        + label {
+          &:after {
+            top: -45px;
+          }
         }
       }
     }
+  }
 
-    /* checked mark aspect changes */
-    &:not(:checked) + label:after {
-      opacity: 0;
-      transform: scale(0);
-    }
+  .webform-component--gift-aid-check-box {
+    [type="checkbox"] {
+      &:not(:checked),
+      &:checked {
+        + label {
+          &:after {
+            top: -140px;
 
-    &:checked + label:after {
-      opacity: 1;
-      transform: scale(1);
-    }
+            @include breakpoint($all-large-mobile) {
+              // 481px 769px
+              top: -115px;
+            }
 
-    /* disabled checkbox */
-    &:disabled:not(:checked),
-    &:disabled:checked {
-      + label {
-        &:before {
-          border-color: #bbb;
-          background-color: #ddd;
+
+            @include breakpoint($not-mobile) {
+              //min 767px
+              top: -105px;
+            }
+          }
         }
       }
-    }
-
-    &:disabled:checked + label:after {
-      color: #999;
-    }
-
-    &:disabled + label {
-      color: #aaa;
-    }
-
-    /* accessibility */
-    &:checked:focus + label:before,
-    &:not(:checked):focus + label:before {
-      border: 1px solid black;
     }
   }
 
@@ -1291,7 +1330,7 @@ div.modal-forms-modal-content .form-item label {
     min-width: 100% !important;
   }
 
-  .webform-component-select, .webform-component-date, .webform-component-optionsmarkup {
+  .webform-component-select, .webform-component-date {
     padding-bottom: 20px !important;
 
     //Important used to override the common style
