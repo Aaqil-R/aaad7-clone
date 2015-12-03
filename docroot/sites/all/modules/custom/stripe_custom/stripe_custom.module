@@ -3,38 +3,11 @@
 require('init.php');
 
 function stripe_custom_init(){
-	//writing the query
-	//stripe_data_log('result1','data1');
-
-	// $select_an_amount='10';
-	// $id='amalannewtest1';
-	// $name_of_the_plan='amalannewtest1';
-	// $val = create_plan($select_an_amount , $id , $name_of_the_plan);
-	// dpm($val);
-
-
-// 	$date = '2016-11-01';
-// 	$year = substr($date,0,strpos($date,'-'));
-// 	$card1 = array();
-// 	$card1['number'] = '4242424242424242456456';
-// 	//$card1['number'] = '4242424242424242';
-// 	$card1['exp_month'] = '11';
-// 	$card1['exp_year'] = '2016';
-// 	$card1['cvc'] = '314';
-// 	//$test = create_onetime_patment($card1,50);
-// // dpm($test);
-
-// 	$plan='amalannewtest1';
-// 	$email='amalantest@gmail.com';
-// 	$test = create_subscriber($plan , $email , $card1);
-// 	dpm($test);
-
+	//dpm("loaded");
 }
 
-// function stripe_custom_webform_submission_insert($node, $submission){
-// 	dpm($node);
-// 	// dpm($node->webform['components'])
-// }
+//function stripe_custom_webform_submission_insert($node, $submission){
+//}
 
 function stripe_custom_webform_submission_presave($node, $submission){
 //function test($node, $submission){
@@ -91,6 +64,15 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				break;
 			}
 		}
+
+		//checking whether the other amount is entered
+
+		if($other_amount != '')
+		{
+			$select_an_amount = $other_amount;
+		}
+		//$select_an_amount
+		//$other_amount
 
 		//updating only the card value with the new value before saving to Database
 		foreach ($node->webform['components'] as $key => $field) 
