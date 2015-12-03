@@ -187,6 +187,8 @@
 
 //Donation Page
 .node-type-donations {
+  cursor: pointer;
+
   #main {
     padding-top: 40px;
     padding-bottom: 45px;
@@ -374,6 +376,7 @@
             p {
               padding-left: 20px;
               line-height: 20px;
+              height: 20px;
             }
           }
         }
@@ -564,15 +567,15 @@
           }
         }
 
-        .webform-component--donation-checkbox-1 {
+        .webform-component--donation-checkbox-1, .webform-component--agree-condition--1 {
           label.option p {
             height: 40px;
           }
         }
 
-        .webform-component--gift-aid-check-box {
+        .webform-component--gift-aid-check-box, .webform-component--gift-aid-check-box--1 {
           label.option p {
-            height: 135px;
+            height: 145px;
 
             @include breakpoint($all-large-mobile) {
               height: 110px;
@@ -751,7 +754,11 @@
 
     .webform-confirmation {
       background: white;
-      width: 45%;
+      width: 100%;
+
+      @include breakpoint($not-mobile) {
+        width: 45%;
+      }
     }
   }
 }

@@ -3621,30 +3621,38 @@ div.modal-forms-modal-content .form-item label {
   color: #636C73;
 }
 /* line 1179, ../sass/forms.scss */
-.node-donations .webform-component--donation-type, .node-donations .webform-component--donation-checkbox-1, .node-donations .webform-component--gift-aid-check-box {
+.node-donations .webform-component--donation-type, .node-donations .webform-component--donation-checkbox-1, .node-donations .webform-component--gift-aid-check-box,
+.node-donations .webform-component--donation-type--Recurring, .node-donations .webform-component--agree-condition--1, .node-donations .webform-component--gift-aid-check-box--1 {
   /* Base for label styling */
 }
-/* line 1181, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"], .node-donations .webform-component--donation-checkbox-1 [type="checkbox"], .node-donations .webform-component--gift-aid-check-box [type="checkbox"] {
+/* line 1182, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"], .node-donations .webform-component--donation-checkbox-1 [type="checkbox"], .node-donations .webform-component--gift-aid-check-box [type="checkbox"],
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"], .node-donations .webform-component--agree-condition--1 [type="checkbox"], .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"] {
   /* checked mark aspect changes */
   /* disabled checkbox */
   /* accessibility */
 }
-/* line 1182, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked), .node-donations .webform-component--donation-type [type="checkbox"]:checked, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked), .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked), .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked {
+/* line 1183, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked), .node-donations .webform-component--donation-type [type="checkbox"]:checked, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked), .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked), .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked),
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked), .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked), .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
 }
-/* line 1187, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label {
+/* line 1188, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label {
   position: relative;
   /* padding-left: 25px; */
   cursor: pointer;
   /* checkbox aspect */
   /* checked mark aspect */
 }
-/* line 1194, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:before {
+/* line 1195, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -3655,8 +3663,10 @@ div.modal-forms-modal-content .form-item label {
   border-radius: 3px;
   background: #ffffff;
 }
-/* line 1207, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after {
+/* line 1208, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
   content: '\2714';
   color: #F15500;
   transition: all .2s;
@@ -3664,88 +3674,96 @@ div.modal-forms-modal-content .form-item label {
   top: -25px;
   left: 2px;
 }
-/* line 1227, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after {
+/* line 1228, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   transform: scale(0);
 }
-/* line 1232, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after {
+/* line 1233, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
 }
-/* line 1241, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:before {
+/* line 1242, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:not(:checked) + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:checked + label:before {
   border-color: #bbb;
   background-color: #ddd;
 }
-/* line 1248, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:after {
+/* line 1249, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:after,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:checked + label:after {
   color: #999;
 }
-/* line 1252, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:disabled + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled + label {
+/* line 1253, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:disabled + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled + label,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled + label, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled + label, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled + label {
   color: #aaa;
 }
-/* line 1257, ../sass/forms.scss */
-.node-donations .webform-component--donation-type [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked):focus + label:before {
+/* line 1258, ../sass/forms.scss */
+.node-donations .webform-component--donation-type [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked):focus + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked:focus + label:before,
+.node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked):focus + label:before {
   border: 1px solid black;
 }
-/* line 1269, ../sass/forms.scss */
-.node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after {
+/* line 1270, ../sass/forms.scss */
+.node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after {
   top: -45px;
 }
-/* line 1282, ../sass/forms.scss */
-.node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after {
-  top: -140px;
+/* line 1283, ../sass/forms.scss */
+.node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
+  top: -150px;
 }
 @media (min-width: 481px) and (max-width: 769px) {
-  /* line 1282, ../sass/forms.scss */
-  .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after {
+  /* line 1283, ../sass/forms.scss */
+  .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
     top: -115px;
   }
 }
 @media (min-width: 767px) {
-  /* line 1282, ../sass/forms.scss */
-  .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after {
+  /* line 1283, ../sass/forms.scss */
+  .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
     top: -105px;
   }
 }
-/* line 1302, ../sass/forms.scss */
+/* line 1301, ../sass/forms.scss */
 .node-donations .form-checkboxes input.form-checkbox, .node-donations .form-checkboxes input.form-radio, .node-donations .form-radios input.form-checkbox, .node-donations .form-radios input.form-radio {
   float: left;
   margin: 8px;
 }
-/* line 1308, ../sass/forms.scss */
+/* line 1307, ../sass/forms.scss */
 .node-donations .webform-component--city, .node-donations .webform-component--post-code {
   width: 50%;
   float: left;
 }
-/* line 1313, ../sass/forms.scss */
+/* line 1312, ../sass/forms.scss */
 .node-donations .form-item-submitted-expiration-date-year {
   padding-right: 0;
 }
-/* line 1317, ../sass/forms.scss */
+/* line 1316, ../sass/forms.scss */
 .node-donations .form-item-submitted-expiration-date-month, .node-donations .form-item-submitted-expiration-date-year {
   float: left !important;
 }
-/* line 1323, ../sass/forms.scss */
+/* line 1322, ../sass/forms.scss */
 .node-donations .form-item-submitted-expiration-date-month .form-element .jcf-select, .node-donations .form-item-submitted-expiration-date-year .form-element .jcf-select {
   min-width: 185px;
 }
-/* line 1329, ../sass/forms.scss */
+/* line 1328, ../sass/forms.scss */
 .node-donations .webform-component--country .jcf-select {
   min-width: 100% !important;
 }
-/* line 1333, ../sass/forms.scss */
+/* line 1332, ../sass/forms.scss */
 .node-donations .webform-component-select, .node-donations .webform-component-date {
   padding-bottom: 20px !important;
 }
-/* line 1341, ../sass/forms.scss */
+/* line 1340, ../sass/forms.scss */
 .node-donations .webform-component-date fieldset {
   padding-left: 0;
 }
-/* line 1346, ../sass/forms.scss */
+/* line 1345, ../sass/forms.scss */
 .node-donations .webform-component--donation-type--Recurring, .node-donations .webform-component--gift-aid-check-box--1 {
   margin-bottom: 1em;
 }
