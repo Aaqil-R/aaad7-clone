@@ -575,15 +575,19 @@
             height: 135px;
 
             @include breakpoint($all-large-mobile) {
-              // 481px 769px
               height: 110px;
             }
 
 
             @include breakpoint($not-mobile) {
-              //min 767px
               height: 100px;
             }
+          }
+        }
+
+        .form-item {
+          label.element-invisible {
+            display: none;
           }
         }
 
