@@ -15,7 +15,17 @@
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ambitious = {
-  attach: function(context, settings) {     
+  attach: function(context, settings) {  
+
+  	$('#edit-submitted-donation-type-1').click(function() {    
+        if($("#edit-submitted-donation-type-1").is(':checked')){
+    		$(".webform-component--recurring-date").css("display", "block");
+    	}
+		else{
+	    	$(".webform-component--recurring-date").css("display", "none");
+		}
+    });
+
 	//implementation of apache solr redirect to search result page -  this is for ajax
 	$('#edit-search-community').keypress(function (e) {
 	  var key = e.which;
