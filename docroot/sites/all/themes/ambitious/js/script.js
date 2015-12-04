@@ -17,6 +17,7 @@
 Drupal.behaviors.ambitious = {
   attach: function(context, settings) { 
 
+  	//adding the donations recurrent date. and hiding it
   	$('#edit-submitted-donation-type-1').click(function() {    
         if($("#edit-submitted-donation-type-1").is(':checked')){
     		$(".webform-component--recurring-date").css("display", "block");
@@ -25,7 +26,7 @@ Drupal.behaviors.ambitious = {
 	    	$(".webform-component--recurring-date").css("display", "none");
 		}
     });
-    
+
   	$('#edit-submitted-donation-type-1').click(function() {    
         if($("#edit-submitted-donation-type-1").is(':checked')){
     		$(".webform-component--recurring-date").css("display", "block");
