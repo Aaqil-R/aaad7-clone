@@ -864,5 +864,51 @@
         handleDonationAmountSelection(selectedAmount);
     });
 
+    setInterval(function() {
+        $(document).ajaxComplete(function() {
+            var mobile = 767;
+            if ($(window).width() > mobile) {
+                //Tooltip hover for Card Number Field
+                $(".webform-component--card-number").mouseover(function() {
+
+                    $(".webform-component--card-number-tooltip").addClass("js-active");
+                });
+
+
+                $(".webform-component--card-number").mouseleave(function() {
+
+                    $(".webform-component--card-number-tooltip").removeClass("js-active");
+
+                });
+
+                //Tooltip hover for CVV Number Field
+                $(".webform-component--cv-number").mouseover(function() {
+
+                    $(".webform-component--cvv-tooltip ").addClass("js-active");
+                });
+
+
+                $(".webform-component--cv-number").mouseleave(function() {
+
+                    $(".webform-component--cvv-tooltip").removeClass("js-active");
+
+                });
+            }
+
+
+            if ($(window).width() < mobile) {
+                //Tooltip hover for Card Number Field
+                $('#edit-submitted-card-number').on("click", function() {
+                    $(".webform-component--card-number-tooltip").toggleClass("js-active");
+                });
+
+                //Tooltip hover for CVV Number Field
+                $('#edit-submitted-cv-number').on("click", function() {
+                    $(".webform-component--cvv-tooltip").toggleClass("js-active");
+                });
+            }
+        });
+    }, 1);
+
 
 })(jQuery, Drupal, this, this.document);
