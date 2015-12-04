@@ -3,19 +3,57 @@
 require('init.php');
 
 function stripe_custom_init(){
-	//dpm("loaded");
+	//select_trial_period(4);
+	// $recurring_date = "2013-03-03";
+	// $date = date_create($recurring_date);
+	// $recurring_date_format = date_format($date,"d");
+	// dpm($recurring_date_format);
+
+	// $result = select_trial_period($recurring_date_format);
+	// dpm('My value '.$result);
 }
 
 //function stripe_custom_webform_submission_insert($node, $submission){
 //}
 
+function select_trial_period($selected_date){
+
+	$trial_period = 0 ; 
+
+	$currentdate = date('d',time());
+	dpm('selected date '.$selected_date);
+	dpm('current date '.$currentdate);
+
+	if(intval($currentdate) == intval($selected_date))
+	{
+		$trial_period = 0;
+	}
+	elseif(intval($currentdate) < intval($selected_date)){
+		$trial_period = $selected_date - $currentdate;
+	}
+	else{
+		$date = date('Y-m-', strtotime('+1 month'));
+		$selected_date1 = strval($selected_date);
+		$testdate = $date.$selected_date1;
+		$now = time();
+		$your_date = strtotime($testdate);
+    	$datediff = $your_date - $now;
+  		$trial_period = floor($datediff/(60*60*24));
+	}
+
+	dpm('Trial period '.$trial_period);
+	return $trial_period;
+}
+
 function stripe_custom_webform_submission_presave($node, $submission){
+	dpm($submission);
 //function test($node, $submission){
 	$contenttype = $node->type;
 	$formid = $node->webform['nid'];
 	//Only donations webforms we are considering
 	if($contenttype == 'donations'){
 		//Gather the submitted form Values
+		$trial_period = 0;
 		foreach ($node->webform['components'] as $key => $field) 
 		{
 			switch ($field['form_key']) 
@@ -60,7 +98,12 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				break;
 				case 'cv_number':
 					$cv_number = $submission->data[$key][0];
-
+				break;
+				case 'recurring_date':
+					$recurring_date_raw = $submission->data[$key][0];
+					$date = date_create($recurring_date_raw);
+					$recurring_date = date_format($date,"d");
+					$trial_period = select_trial_period($recurring_date);
 				break;
 			}
 		}
@@ -95,7 +138,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid);
+			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid,$trial_period);
 			//check whether the Plan was created
 			if($val == 0){
 				//dpm("Recurring plan created");
@@ -197,7 +240,7 @@ function create_subscriber($plan , $email , $card,$formid){
 	}
 }
 
-function create_plan($amount , $id , $name ,$formid){
+function create_plan($amount , $id , $name ,$formid ,$trial_period){
 	try {
 
 		$dataset = array(
@@ -215,7 +258,8 @@ function create_plan($amount , $id , $name ,$formid){
 		  "interval" => "month",
 		  "name" => $name,
 		  "currency" => "gbp",
-		  "id" => $id)
+		  "id" => $id,
+		  "trial_period_days" => intval($trial_period))
 		);
 		
 		$result = serialize($plan);
