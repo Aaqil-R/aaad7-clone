@@ -926,5 +926,12 @@
         // }
     });
 
+    //Thank you page social share 
+    $(window).load(function() {
+        $('#share-button').on("click", function() {
+            $(".social-sharing-box").toggleClass("social-active");
+        });
+    });
+
 
 })(jQuery, Drupal, this, this.document);
