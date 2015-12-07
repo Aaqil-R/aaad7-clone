@@ -822,6 +822,20 @@ function ambitious_preprocess_page(&$vars) {
         , $getitemscaption2[0]);
       $vars['captiontwo'] = $viewitemscaption2;    
     }
+
+    //check for the donations type
+    if($currentNode->type == "donations")
+    { 
+      //dpm("I am coming here");
+      $node = node_load($currentNode->nid);
+      $backgroundimage1 = field_get_items('node', $node ,'field_donation_background_image');
+      $backgroundimage = field_view_value('node', $node ,'field_donation_background_image'
+        , $backgroundimage1[0]);
+      $vars['backgroundimage'] = $backgroundimage; 
+
+      //dpm($backgroundimage);
+    }
+
   }
 // rendering fields of "share-your-story"
   if($currentNode) {

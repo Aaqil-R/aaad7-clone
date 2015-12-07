@@ -86,7 +86,10 @@
   */
   ?>
 
-  <div id="wrapper" class="page">
+  <div id="wrapper" class="page" <?php if($backgroundimage): ?>
+           style="background-image: url('/<?php print variable_get('file_public_path', conf_path().'/files').'/'; print($backgroundimage['#item']['filename']); ?>')"
+        <?php endif; ?>>
+        >
     <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
 
     <!-- including header region into the template -->
