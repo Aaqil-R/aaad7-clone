@@ -881,7 +881,6 @@
 
         $(document).ajaxComplete(function() {
 
-            // if ($(window).width() < mobile) {
             //Tooltip hover for Card Number Field
             $('#edit-submitted-card-number').on("click", function() {
                 $(".webform-component--card-number-tooltip").toggleClass("js-active");
@@ -891,14 +890,11 @@
             $('#edit-submitted-cv-number').on("click", function() {
                 $(".webform-component--cvv-tooltip").toggleClass("js-active");
             });
-            // }
         });
 
     }
 
     $(document).ajaxComplete(function() {
-        // var mobile = 767;
-        // if ($(window).width() > mobile) {
         //Tooltip hover for Card Number Field
         $(".webform-component--card-number").mouseover(function() {
 
@@ -924,7 +920,13 @@
             $(".webform-component--cvv-tooltip").removeClass("js-active");
 
         });
-        // }
+
+        //Checking for content-header and adding top style
+        if ($(".tabs-primary").length > 0) {
+            console.log("working");
+            $('.webform-component--card-number-tooltip').css("top", "280px");
+            $('.webform-component--cvv-tooltip').css("top", "430px");
+        }
     });
 
     //Thank you page social share 
