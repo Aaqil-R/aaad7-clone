@@ -187,21 +187,82 @@
 
 //Donation Page
 .node-type-donations {
+  overflow-x: hidden;
+
   #main {
-    padding-top: 40px;
     padding-bottom: 45px;
+
+    @include breakpoint($not-mobile) {
+      padding-top: 40px;
+    }
+
+
+    #content-header {
+      position: relative;
+      z-index: 5;
+    }
   }
 
   #wrapper {
     //background: blue;
-    background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+    // background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 
+    @include breakpoint($tablet-small) {
+      background-image: none !important;
+    }
+
+
     .title {
       display: none;
+    }
+
+    .field-name-field-donation-background-image {
+      z-index: 0;
+      top: -30px;
+      width: 100vw;
+      position: relative;
+
+      .field-item {
+        @include breakpoint($tablet-small) {
+          position: relative;
+          display: inline-block;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, transparent));
+            background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 85%, rgb(255, 255, 255) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+          }
+        }
+
+
+        img {
+          width: 100%;
+
+          @include breakpoint($tablet-small) {
+            display: inline-block;
+          }
+        }
+      }
+
+      @include breakpoint($not-all-mobile) {
+        // position: fixed;
+        // left: 0%;
+        display: none;
+      }
     }
 
     .node-donations {
@@ -212,6 +273,8 @@
         padding: 20px;
         width: 100%;
         margin: 90px 0 35px 0;
+        position: relative;
+        z-index: 1;
 
         @include breakpoint($not-mobile) {
           width: 55%;
@@ -220,6 +283,8 @@
 
         @include breakpoint($all-large-mobile) {
           width: 70%;
+          margin: auto;
+          margin-top: 90px;
         }
 
 
@@ -244,6 +309,8 @@
         background: white;
         width: 100%;
         padding: 10px;
+        position: relative;
+        z-index: 1;
 
         @include breakpoint($not-mobile) {
           padding: 35px;
@@ -253,6 +320,7 @@
 
         @include breakpoint($all-large-mobile) {
           width: 70%;
+          margin: auto;
         }
 
 
@@ -755,14 +823,15 @@
 }
 
 //Donation Page Thank You page
-.page-node-677871.page-node-done,
-.page-node-685796.page-node-done {
+// .page-node-677871.page-node-done,
+// .page-node-685796.page-node-done
+.page-node-done {
   #wrapper {
-    background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    // background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: cover;
 
     #main {
       padding: 150px 0;
@@ -788,5 +857,90 @@
         width: 45%;
       }
     }
+  }
+
+  .st-sharethis-counter {
+    &:after {
+      margin-top: 0 !important;
+    }
+
+    &:before {
+      top: 4px !important;
+    }
+  }
+
+  .social-sharing-box {
+    display: none;
+    background: #FFFFFF;
+    padding: 10px;
+    float: right;
+
+    /* border-radius: 10px;
+    margin: 30px 0;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75); */
+    border: 2px dotted #8E8E8E;
+
+    @include breakpoint($large-mobile) {
+      float: left;
+      margin-top: 20px;
+    }
+
+
+    .social-sharing-donation {
+      width: 205px;
+      margin: auto;
+
+      // background: black;
+      // padding: 20px;
+      // float: left;
+      // border-radius: 20px;
+
+      .facebook-icon, .twitter-icon, .gplus-icon {
+        span.hyperspan {
+          padding: 3px 19px 28px 19px;
+          opacity: 0;
+        }
+      }
+
+      .facebook-icon {
+        background-image: url("/sites/all/themes/ambitious/images/facebook-hover.png");
+      }
+
+      .twitter-icon {
+        background-image: url("/sites/all/themes/ambitious/images/twitter-hover.png");
+      }
+
+      .gplus-icon {
+        background-image: url("/sites/all/themes/ambitious/images/google-hover.png");
+      }
+    }
+  }
+
+  .social-slide {
+    // background-image: url("path/to/image.png");
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+    float: left;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+
+  .social-slide:hover {
+    background-position: 0px -48px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
+  }
+
+  .social-active {
+    display: block !important;
+  }
+
+  .topic-share {
+    float: left;
   }
 }
