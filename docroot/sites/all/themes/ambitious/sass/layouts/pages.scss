@@ -309,7 +309,7 @@
         background: white;
         width: 100%;
         padding: 10px;
-        position: relative;
+        position: inherit;
         z-index: 1;
 
         @include breakpoint($not-mobile) {
@@ -683,7 +683,7 @@
 
           // position: absolute;
           left: 55%;
-          top: 300px;
+          top: 115px;
           border-radius: 10px;
 
           &::after, :after {
@@ -726,7 +726,7 @@
 
         .webform-component--cvv-tooltip {
           @include breakpoint($not-mobile) {
-            top: 450px;
+            top: 330px;
           }
         }
 
