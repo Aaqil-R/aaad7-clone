@@ -2,7 +2,8 @@
 function thermo_custom_init(){
 
 	$node = menu_get_object();
-	if($node->type == 'donations'){
+	//Edit is included to make sure that it does not affect the admin pages to edit donations
+	if($node->type == 'donations' && arg(2) != 'edit'){
 		$test = thermo_get_result($node->webform['nid']);
 
 		$definedamount = 5000 ; 
