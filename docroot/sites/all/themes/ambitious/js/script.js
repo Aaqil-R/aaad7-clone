@@ -840,6 +840,7 @@
         $("#edit-submitted-other-amount").on("keyup", function() {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
+            $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
 
         });
 
