@@ -923,7 +923,7 @@
 
         //Checking for content-header and adding top style
         if ($(".tabs-primary").length > 0) {
-            console.log("working");
+            // console.log("working");
             $('.webform-component--card-number-tooltip').css("top", "280px");
             $('.webform-component--cvv-tooltip').css("top", "430px");
         }
