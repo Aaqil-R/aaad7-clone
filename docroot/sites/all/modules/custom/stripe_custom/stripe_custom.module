@@ -523,7 +523,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	function stripe_custom_menu() {		
 		
 		$items['download/donations'] = array(
-			'title' => t('Download petitions'),
+			'title' => t('Download Donations Data'),
 			'page callback' => 'stripe_custom_download_form', 
 			'access arguments' => array('access stripe_custom content'),
 			//'access callback' => TRUE,
