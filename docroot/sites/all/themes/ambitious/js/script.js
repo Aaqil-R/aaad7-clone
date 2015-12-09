@@ -840,6 +840,7 @@
         $("#edit-submitted-other-amount").on("keyup", function() {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
+            $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
 
         });
 
@@ -880,7 +881,6 @@
 
         $(document).ajaxComplete(function() {
 
-            // if ($(window).width() < mobile) {
             //Tooltip hover for Card Number Field
             $('#edit-submitted-card-number').on("click", function() {
                 $(".webform-component--card-number-tooltip").toggleClass("js-active");
@@ -890,14 +890,11 @@
             $('#edit-submitted-cv-number').on("click", function() {
                 $(".webform-component--cvv-tooltip").toggleClass("js-active");
             });
-            // }
         });
 
     }
 
     $(document).ajaxComplete(function() {
-        // var mobile = 767;
-        // if ($(window).width() > mobile) {
         //Tooltip hover for Card Number Field
         $(".webform-component--card-number").mouseover(function() {
 
@@ -923,15 +920,21 @@
             $(".webform-component--cvv-tooltip").removeClass("js-active");
 
         });
-        // }
+
+        //Checking for content-header and adding top style
+        if ($(".tabs-primary").length > 0) {
+            // console.log("working");
+            $('.webform-component--card-number-tooltip').css("top", "280px");
+            $('.webform-component--cvv-tooltip').css("top", "430px");
+        }
     });
 
     //Thank you page social share 
-    $(window).load(function() {
-        $('#share-button').on("click", function() {
-            $(".social-sharing-box").toggleClass("social-active");
-        });
-    });
+    // $(window).load(function() {
+    //     $('#share-button').on("click", function() {
+    //         $(".social-sharing-box").toggleClass("social-active");
+    //     });
+    // });
 
 
 })(jQuery, Drupal, this, this.document);

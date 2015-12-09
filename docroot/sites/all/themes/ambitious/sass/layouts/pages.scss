@@ -309,7 +309,7 @@
         background: white;
         width: 100%;
         padding: 10px;
-        position: relative;
+        position: inherit;
         z-index: 1;
 
         @include breakpoint($not-mobile) {
@@ -683,7 +683,7 @@
 
           // position: absolute;
           left: 55%;
-          top: 300px;
+          top: 115px;
           border-radius: 10px;
 
           &::after, :after {
@@ -726,7 +726,7 @@
 
         .webform-component--cvv-tooltip {
           @include breakpoint($not-mobile) {
-            top: 450px;
+            top: 330px;
           }
         }
 
@@ -825,122 +825,136 @@
 //Donation Page Thank You page
 // .page-node-677871.page-node-done,
 // .page-node-685796.page-node-done
-.page-node-done {
+.page-node-done,
+.node-type-thank-you-page {
   #wrapper {
     // background-image: url("/sites/all/themes/ambitious/images/Background-image.jpg");
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
     #main {
       padding: 150px 0;
     }
 
     div#content-header {
-      display: none;
+      h1.title {
+        display: none;
+      }
     }
 
-    .webform-progressbar {
-      display: none;
-    }
+    // .webform-progressbar {
+    //   display: none;
+    // }
 
     section#content-area {
       text-align: center;
     }
 
-    .webform-confirmation {
+    .webform-confirmation, .field-name-body {
       background: white;
       width: 100%;
+      padding: 70px 35px;
 
       @include breakpoint($not-mobile) {
         width: 45%;
       }
     }
-  }
 
-  .st-sharethis-counter {
-    &:after {
-      margin-top: 0 !important;
-    }
-
-    &:before {
-      top: 4px !important;
-    }
-  }
-
-  .social-sharing-box {
-    display: none;
-    background: #FFFFFF;
-    padding: 10px;
-    float: right;
-
-    /* border-radius: 10px;
-    margin: 30px 0;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75); */
-    border: 2px dotted #8E8E8E;
-
-    @include breakpoint($large-mobile) {
+    .sharethis-buttons {
       float: left;
       margin-top: 20px;
-    }
-
-
-    .social-sharing-donation {
-      width: 205px;
-      margin: auto;
-
-      // background: black;
-      // padding: 20px;
-      // float: left;
-      // border-radius: 20px;
-
-      .facebook-icon, .twitter-icon, .gplus-icon {
-        span.hyperspan {
-          padding: 3px 19px 28px 19px;
-          opacity: 0;
-        }
-      }
-
-      .facebook-icon {
-        background-image: url("/sites/all/themes/ambitious/images/facebook-hover.png");
-      }
-
-      .twitter-icon {
-        background-image: url("/sites/all/themes/ambitious/images/twitter-hover.png");
-      }
-
-      .gplus-icon {
-        background-image: url("/sites/all/themes/ambitious/images/google-hover.png");
-      }
+      width: 45%;
+      background: #ffffff;
+      border: 1px solid #d2d5d6;
+      padding: 20px 18px;
     }
   }
 
-  .social-slide {
-    // background-image: url("path/to/image.png");
-    height: 48px;
-    width: 48px;
-    margin: 10px;
-    float: left;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-    transition: all ease 0.3s;
-  }
+  // All commented codes are of the default webform thank you page.
 
-  .social-slide:hover {
-    background-position: 0px -48px;
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
-  }
+  // .st-sharethis-counter {
+  //   &:after {
+  //     margin-top: 0 !important;
+  //   }
 
-  .social-active {
-    display: block !important;
-  }
+  //   &:before {
+  //     top: 4px !important;
+  //   }
+  // }
 
-  .topic-share {
-    float: left;
-  }
+  // .social-sharing-box {
+  //   display: none;
+  //   background: #FFFFFF;
+  //   padding: 10px;
+  //   float: right;
+
+  //   /* border-radius: 10px;
+  //   margin: 30px 0;
+  //   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  //   -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  //   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  //   border: 2px dotted #8E8E8E;
+
+  //   @include breakpoint($large-mobile) {
+  //     float: left;
+  //     margin-top: 20px;
+  //   }
+
+  //   .social-sharing-donation {
+  //     width: 205px;
+  //     margin: auto;
+
+  //     // background: black;
+  //     // padding: 20px;
+  //     // float: left;
+  //     // border-radius: 20px;
+
+  //     .facebook-icon, .twitter-icon, .gplus-icon {
+  //       span.hyperspan {
+  //         padding: 3px 19px 28px 19px;
+  //         opacity: 0;
+  //       }
+  //     }
+
+  //     .facebook-icon {
+  //       background-image: url("/sites/all/themes/ambitious/images/facebook-hover.png");
+  //     }
+
+  //     .twitter-icon {
+  //       background-image: url("/sites/all/themes/ambitious/images/twitter-hover.png");
+  //     }
+
+  //     .gplus-icon {
+  //       background-image: url("/sites/all/themes/ambitious/images/google-hover.png");
+  //     }
+  //   }
+  // }
+
+  // .social-slide {
+  //   // background-image: url("path/to/image.png");
+  //   height: 48px;
+  //   width: 48px;
+  //   margin: 10px;
+  //   float: left;
+  //   -webkit-transition: all ease 0.3s;
+  //   -moz-transition: all ease 0.3s;
+  //   -o-transition: all ease 0.3s;
+  //   -ms-transition: all ease 0.3s;
+  //   transition: all ease 0.3s;
+  // }
+
+  // .social-slide:hover {
+  //   background-position: 0px -48px;
+  //   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
+  // }
+
+  // .social-active {
+  //   display: block !important;
+  // }
+
+  // .topic-share {
+  //   float: left;
+  // }
 }

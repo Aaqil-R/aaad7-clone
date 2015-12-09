@@ -1320,7 +1320,8 @@ div.modal-forms-modal-content .form-item label {
 
     .form-element {
       .jcf-select {
-        min-width: 185px;
+        min-width: 100%;
+        width: 100%;
       }
     }
   }
@@ -1339,6 +1340,12 @@ div.modal-forms-modal-content .form-item label {
   .webform-component-date {
     fieldset {
       padding-left: 0;
+
+      @include span(6 of 12);
+
+      &:last-child {
+        @include last;
+      }
     }
   }
 
