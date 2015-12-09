@@ -824,7 +824,7 @@ function ambitious_preprocess_page(&$vars) {
     }
 
     //check for the donations type
-    if($currentNode->type == "donations")
+    if($currentNode->type == "donations" || "thank_you_page")
     { 
       //dpm("I am coming here");
       $node = node_load($currentNode->nid);
