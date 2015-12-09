@@ -10,8 +10,8 @@ function select_trial_period($selected_date){
 	$trial_period = 0 ; 
 
 	$currentdate = date('d',time());
-	dpm('selected date '.$selected_date);
-	dpm('current date '.$currentdate);
+	// dpm('selected date '.$selected_date);
+	// dpm('current date '.$currentdate);
 
 	if(intval($currentdate) == intval($selected_date))
 	{
