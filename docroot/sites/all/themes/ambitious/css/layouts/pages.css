@@ -1140,105 +1140,52 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   width: 100%;
 }
 
-/* line 836, ../../sass/layouts/pages.scss */
-.page-node-done #wrapper #main {
+/* line 830, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper,
+.node-type-thank-you-page #wrapper {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+/* line 837, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper #main,
+.node-type-thank-you-page #wrapper #main {
   padding: 150px 0;
 }
-/* line 840, ../../sass/layouts/pages.scss */
-.page-node-done #wrapper div#content-header {
+/* line 842, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper div#content-header h1.title,
+.node-type-thank-you-page #wrapper div#content-header h1.title {
   display: none;
 }
-/* line 844, ../../sass/layouts/pages.scss */
-.page-node-done #wrapper .webform-progressbar {
-  display: none;
-}
-/* line 848, ../../sass/layouts/pages.scss */
-.page-node-done #wrapper section#content-area {
+/* line 851, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper section#content-area,
+.node-type-thank-you-page #wrapper section#content-area {
   text-align: center;
 }
-/* line 852, ../../sass/layouts/pages.scss */
-.page-node-done #wrapper .webform-confirmation {
+/* line 855, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper .webform-confirmation, .page-node-done #wrapper .field-name-body,
+.node-type-thank-you-page #wrapper .webform-confirmation,
+.node-type-thank-you-page #wrapper .field-name-body {
   background: white;
   width: 100%;
+  padding: 70px 35px;
 }
 @media (min-width: 767px) {
-  /* line 852, ../../sass/layouts/pages.scss */
-  .page-node-done #wrapper .webform-confirmation {
+  /* line 855, ../../sass/layouts/pages.scss */
+  .page-node-done #wrapper .webform-confirmation, .page-node-done #wrapper .field-name-body,
+  .node-type-thank-you-page #wrapper .webform-confirmation,
+  .node-type-thank-you-page #wrapper .field-name-body {
     width: 45%;
   }
 }
-/* line 863, ../../sass/layouts/pages.scss */
-.page-node-done .st-sharethis-counter:after {
-  margin-top: 0 !important;
-}
-/* line 867, ../../sass/layouts/pages.scss */
-.page-node-done .st-sharethis-counter:before {
-  top: 4px !important;
-}
-/* line 872, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box {
-  display: none;
-  background: #FFFFFF;
-  padding: 10px;
-  float: right;
-  /* border-radius: 10px;
-  margin: 30px 0;
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75); */
-  border: 2px dotted #8E8E8E;
-}
-@media (max-width: 480px) {
-  /* line 872, ../../sass/layouts/pages.scss */
-  .page-node-done .social-sharing-box {
-    float: left;
-    margin-top: 20px;
-  }
-}
-/* line 891, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box .social-sharing-donation {
-  width: 205px;
-  margin: auto;
-}
-/* line 901, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box .social-sharing-donation .facebook-icon span.hyperspan, .page-node-done .social-sharing-box .social-sharing-donation .twitter-icon span.hyperspan, .page-node-done .social-sharing-box .social-sharing-donation .gplus-icon span.hyperspan {
-  padding: 3px 19px 28px 19px;
-  opacity: 0;
-}
-/* line 907, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box .social-sharing-donation .facebook-icon {
-  background-image: url("/sites/all/themes/ambitious/images/facebook-hover.png");
-}
-/* line 911, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box .social-sharing-donation .twitter-icon {
-  background-image: url("/sites/all/themes/ambitious/images/twitter-hover.png");
-}
-/* line 915, ../../sass/layouts/pages.scss */
-.page-node-done .social-sharing-box .social-sharing-donation .gplus-icon {
-  background-image: url("/sites/all/themes/ambitious/images/google-hover.png");
-}
-/* line 921, ../../sass/layouts/pages.scss */
-.page-node-done .social-slide {
-  height: 48px;
-  width: 48px;
-  margin: 10px;
+/* line 865, ../../sass/layouts/pages.scss */
+.page-node-done #wrapper .sharethis-buttons,
+.node-type-thank-you-page #wrapper .sharethis-buttons {
   float: left;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  -ms-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-}
-/* line 934, ../../sass/layouts/pages.scss */
-.page-node-done .social-slide:hover {
-  background-position: 0px -48px;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.8);
-}
-/* line 939, ../../sass/layouts/pages.scss */
-.page-node-done .social-active {
-  display: block !important;
-}
-/* line 943, ../../sass/layouts/pages.scss */
-.page-node-done .topic-share {
-  float: left;
+  margin-top: 20px;
+  width: 45%;
+  background: #ffffff;
+  border: 1px solid #d2d5d6;
+  padding: 20px 18px;
 }
