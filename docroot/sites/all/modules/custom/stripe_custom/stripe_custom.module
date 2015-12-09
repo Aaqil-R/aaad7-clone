@@ -3,18 +3,7 @@
 require('init.php');
 
 function stripe_custom_init(){
-	//select_trial_period(4);
-	// $recurring_date = "2013-03-03";
-	// $date = date_create($recurring_date);
-	// $recurring_date_format = date_format($date,"d");
-	// dpm($recurring_date_format);
-
-	// $result = select_trial_period($recurring_date_format);
-	// dpm('My value '.$result);
 }
-
-//function stripe_custom_webform_submission_insert($node, $submission){
-//}
 
 function select_trial_period($selected_date){
 
@@ -40,20 +29,17 @@ function select_trial_period($selected_date){
     	$datediff = $your_date - $now;
   		$trial_period = floor($datediff/(60*60*24));
 	}
-
-	dpm('Trial period '.$trial_period);
 	return $trial_period;
 }
 
 function stripe_custom_webform_submission_presave($node, $submission){
-	dpm($submission);
-//function test($node, $submission){
 	$contenttype = $node->type;
 	$formid = $node->webform['nid'];
 	//Only donations webforms we are considering
 	if($contenttype == 'donations'){
 		//Gather the submitted form Values
 		$trial_period = 0;
+		$csv = array();
 		foreach ($node->webform['components'] as $key => $field) 
 		{
 			switch ($field['form_key']) 
@@ -61,49 +47,87 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				//first page details
 				case 'select_an_amount':
 					$select_an_amount = $submission->data[$key][0];
-					
+					$csv['amount']=$select_an_amount;
 				break;
+
 				case 'donation_type':
 					$donation_type = $submission->data[$key][0];
-
+					$csv['donationtype'] = $donation_type;
 				break;
+
 				case 'other_amount':
 					$other_amount = $submission->data[$key][0];
-
 				break;
-				//second page details
+
 				case 'firstname':
 					$firstname = $submission->data[$key][0];
-
+					$csv['firstname'] = $firstname;
 				break;
+
 				case 'lastname':
 					$lastname = $submission->data[$key][0];
-
+					$csv['lastname'] = $lastname;
 				break;
+
 				case 'email':
 					$email = $submission->data[$key][0];
-
+					$csv['email'] = $email;
 				break;
+
 				//Third page details
 				case 'card_number':
 					$cardnumber = $submission->data[$key][0];
-
+					//masking the number
+					$maskedcardnumber = maskstring($submission->data[$key][0]);
+					$submission->data[$key][0] = $maskedcardnumber;
+					$csv['creditcard'] = $maskedcardnumber;
 				break;
+
 				case 'expiration_date':
 					$expiration_date = $submission->data[$key][0];
 					$date = date_create($expiration_date);
 					$expiration_year = date_format($date,"Y");
 					$expiration_month = date_format($date,"m");
-
 				break;
 				case 'cv_number':
 					$cv_number = $submission->data[$key][0];
 				break;
+
 				case 'recurring_date':
 					$recurring_date_raw = $submission->data[$key][0];
 					$date = date_create($recurring_date_raw);
 					$recurring_date = date_format($date,"d");
 					$trial_period = select_trial_period($recurring_date);
+					$csv['recurringdate'] = $recurring_date;
+				break;
+
+				//adding the new field informations
+				case 'node_type':
+					$csv['phonenumber'] = $submission->data[$key][0];
+				break;
+
+				case 'address1':
+					$csv['addressline1'] = $submission->data[$key][0];
+				break;
+
+				case 'address2':
+					$csv['addressline2'] = $submission->data[$key][0];
+				break;
+
+				case 'city':
+					$csv['city'] = $submission->data[$key][0];
+				break;
+
+				case 'post_code':
+					$csv['postcode'] = $submission->data[$key][0];
+				break;
+
+				case 'country':
+					$csv['country'] = $submission->data[$key][0];
+				break;
+
+				case 'gift_aid_check_box':
+					$csv['giftaid'] = $submission->data[$key][0];
 				break;
 			}
 		}
@@ -113,23 +137,9 @@ function stripe_custom_webform_submission_presave($node, $submission){
 		if($other_amount != '')
 		{
 			$select_an_amount = $other_amount;
+			$csv['amount']=$other_amount;
 		}
-		//$select_an_amount
-		//$other_amount
 
-		//updating only the card value with the new value before saving to Database
-		foreach ($node->webform['components'] as $key => $field) 
-		{
-			switch ($field['form_key']) 
-			{
-				//chaing the card number
-				case 'card_number':
-					//masking the number
-					$maskedcardnumber = maskstring($submission->data[$key][0]);
-					$submission->data[$key][0] = $maskedcardnumber;
-				break;
-			}
-		}
 		//check the Payment type
 		if($donation_type == 'Recurring'){
 			//create the ID dynamically when creating a subscription plan
@@ -138,7 +148,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid,$trial_period);
+			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid,$trial_period ,$csv);
 			//check whether the Plan was created
 			if($val == 0){
 				//dpm("Recurring plan created");
@@ -150,7 +160,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$card1['exp_year'] = $expiration_year;
 				$card1['cvc'] = $cv_number;
 
-				$val1 = create_subscriber($id,$email,$card1,$formid);
+				$val1 = create_subscriber($id,$email,$card1,$formid,$csv);
 				if($val1 == 0){
 					//dpm("recurring Subscriber subscribed Sucessfully");
 				}
@@ -173,7 +183,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['exp_year'] = $expiration_year;
 			$card1['cvc'] = $cv_number;
 			
-			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email);
+			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email,$csv);
 			if($val1 == 0){
 				//dpm("One time payment added");
 			}
@@ -185,7 +195,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 }
 
 
-function create_subscriber($plan , $email , $card,$formid){
+function create_subscriber($plan , $email , $card,$formid ,$csv){
 	try {
 		\Stripe\Stripe::setApiKey(get_api());
 
@@ -207,40 +217,72 @@ function create_subscriber($plan , $email , $card,$formid){
 
 		$result = serialize($customer);
 		stripe_data_log($result,$data,$formid);
+		$status = "success";
+		$reference = $customer->id;
+		stripe_csv_data_log($csv , $status , "" , $reference);
+		//$test = $charge->__toJSON();
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	}
 }
 
-function create_plan($amount , $id , $name ,$formid ,$trial_period){
+function create_plan($amount , $id , $name , $formid , $trial_period , $csv){
 	try {
 
 		$dataset = array(
@@ -264,39 +306,71 @@ function create_plan($amount , $id , $name ,$formid ,$trial_period){
 		
 		$result = serialize($plan);
 		stripe_data_log($result,$data,$formid);
+		// $status = "success";
+		// $reference = $plan->id;
+		// stripe_csv_data_log($csv , $status , "" , $reference);
+		//$test = $charge->__toJSON();
 		return 0;
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		// $status = "failed";
+		// $message = $e->jsonBody['error']['message'];
+		// $reference = $e->requestId;
+  //   	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	}
 }
 
-function create_onetime_patment($card,$amount,$formid ,$email){
+function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 	try {
 		$data = serialize($card);
 		$data = addItem($data, $amount , 'amount');
@@ -311,35 +385,68 @@ function create_onetime_patment($card,$amount,$formid ,$email){
 												'receipt_email' => $email));
 		$result = serialize($charge);
 		stripe_data_log($result,$data,$formid);
+
+		$status = "success";
+		$reference = $charge->id;
+		stripe_csv_data_log($csv , $status , "" , $reference);
+		//$test = $charge->__toJSON();
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
+		$status = "failed";
+		$message = $e->jsonBody['error']['message'];
+		$reference = $e->requestId;
+    	stripe_csv_data_log($csv , $status , $message , $reference);
 		return -1;
 	}
 }
@@ -378,35 +485,166 @@ function addItem($serializedArray, $item , $key)
    return serialize($a);
 }
 
-//getting the values from the webfrom submission
-function getwebformvalues(){
 
+function stripe_csv_data_log($csv , $status , $message , $reference){
+	$record123 = array(
+		"firstname" => $csv['firstname'],
+    	"lastname" => $csv['lastname'],
+    	"email" => $csv['email'],
+    	"phonenumber" => $csv['phonenumber'],
+		"addressline1" => $csv['addressline1'],
+		"addressline2" => $csv['addressline2'],
+		"city" => $csv['city'],
+		"postcode" => $csv['postcode'],
+		"country" => $csv['country'],
+		"giftaid" => $csv['giftaid'],
+		"amount" => $csv['amount'],
+		"donationtype" => $csv['donationtype'],
+		"recurringdate" => $csv['recurringdate'],
+		"submissiondatetime" => time(),
+		"creditcard" => $csv['creditcard'],
+		"status" => $status,
+		"errormessage" => $message,
+		"reference" => $reference,
+    );
+   	drupal_write_record('donation_csv_log', $record123);
 }
 
-//updating the webform submission values
-function setwebformvalues(){
+	//csv details
+	function stripe_custom_permission() {
+	  return array(
+    	'access stripe_custom content' => array(
+    		'title' => t('Access permision to view the webform submissions'),
+    		)
+  		);
+	}
 
-}
+	//new codes that are added
+	function stripe_custom_menu() {		
+		
+		$items['download/donations'] = array(
+			'title' => t('Download petitions'),
+			'page callback' => 'stripe_custom_download_form', 
+			'access arguments' => array('access stripe_custom content'),
+			//'access callback' => TRUE,
+			'type' => MENU_CALLBACK,
+		);
+		
+		return $items;
+	}
+	
+	/**
+	*	Return the form.
+	*/
+	function stripe_custom_download_form() {		
+		
+		return drupal_get_form('stripe_custom_download_page');
+		
+	}
+	
+	/**
+	*	Build the form.
+	*/
+	function stripe_custom_download_page($form_state){
+
+		$form['description_text'] = array(
+  			'#markup' => '<p>Click the generate button to download the submissons.</p>'
+		);
 
 
+		$form['submit'] = array(
+			'#type' => 'submit',
+			'#value' => t('Generate'),
+			'#submit' => array('stripe_custom_download_submit')
+		);
+		
+		$form['buttons']['add'] = array(
+      		'#type' => 'submit',
+      		'#value' => t('Home'),
+      		'#submit' => array('go_to'),
+      	);
 
-//new codes that need 
-// private function prepareFields($components, $submission){
+		return $form;	
+	}
 
-// 			$component_array = array();
+	function go_to(){
+		//drupal_goto('http://www.mind.org.uk/');
+		drupal_goto('<front>');
+	}
+	
+	/**
+	*	Handle the form submission.
+	*/
+	function stripe_custom_download_submit($form, &$form_state) {	
+			
+		$filename = 'donations_submissions';
+		
+		drupal_add_http_header('Content-Type', 'text/csv; utf-8');
+		drupal_add_http_header('Content-Disposition', 'attachment; filename='.$filename.'.csv');
+ 
+		// Instead of writing to a file, we write to the output stream.
+		$fh = fopen('php://output', 'w');
+ 
+		// Add a header row
+		fputcsv($fh, array(t('Id number'), 
+			t('firstname'), 
+			t('lastname'), 
+			t('email'),
+			t('phonenumber'), 
+			t('addressline1'), 
+			t('addressline2'),
+			t('city'), 
+			t('postcode'),
+			t('country'),
+			t('giftaid'), 
+			t('amount'), 
+			t('donationtype'),
+			t('recurringdate'), 
+			t('submissiondatetime'), 
+			t('creditcard'),
+			t('status'), 
+			t('errormessage'), 
+			t('reference')));
 
-// 			foreach ($components as $key => $field) {
-// 				$component_array[$field['form_key']] = $submission->data[$key][0];
-// 			}
+		$results = db_select('donation_csv_log', 'd')
+		->fields('d')
+		->execute()
+		->fetchAll();
 
-// 			return $component_array;
-// 		}
+		foreach($results as $result) {
+			//getting the date formatted
+			$date = new DateTime("@$result->submissiondatetime");
+			$formatteddate = $date->format('Y-m-d H:i:s');
 
-// 		function getFields(){
-// 			return $this->fields;
-// 		}
+			fputcsv($fh, array($result->ID, 
+				$result->firstname, 
+				$result->lastname, 
+				$result->email, 
+				$result->phonenumber, 
+				$result->addressline1, 
+				$result->addressline2, 
+				$result->city,
+				$result->postcode, 
+				$result->country, 
+				$result->giftaid, 
+				$result->amount, 
+				$result->donationtype, 
+				$result->recurringdate, 
+				$formatteddate, 
+				$result->creditcard,
+				$result->status,
+				$result->errormessage,
+				$result->reference));
+		}
 
-// 		function getField($field_key){
-// 			return $this->fields[$field_key];
-// 		}
+		fclose($fh);
+		
+		drupal_exit();
+
+		$form['results']['#value'] = "Test";
+
+		return $form['results'];
+	}
+
+
 ?>
