@@ -10,9 +10,12 @@ function stripe_custom_init(){
 
 	// $nid = arg(1);
 	// $node = node_load($nid);
+	// dpm($node);
 	// $my_field_items = field_get_items('node', $node, 'field_thankyou_message');
 	// $output = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
 	// dpm(render($output));
+
+	sendmail(677071 , 'amalantest@gmail.com');
 
 
 }
@@ -702,10 +705,10 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	  	// Failure.
 		//dpm('Fail');
 	}
+}
 
-	function sendmail($nid , $email){
+function sendmail($nid , $email){
 		$message = get_thankyou_message($nid);
 		create_mails($email,$message);
 	}
-}
 ?>
