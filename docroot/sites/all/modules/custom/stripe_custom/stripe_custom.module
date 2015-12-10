@@ -4,7 +4,7 @@ require('init.php');
 
 function stripe_custom_init(){
 
-	create_mails('amalantest@gmail.com','test message to see the output');
+	//create_mails('amalantest@gmail.com','test message to see the output');
 	// $nodeid = arg(1);
 	// dpm($nodeid);
 
@@ -690,7 +690,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 
 	// The format function must be called before calling the mail function. 
 	//$message = $system->format($message);
-	//dpm($message);
+	dpm($message);
 	if ($system->mail($message)) {
 		// Success.
 		dpm('Success');
