@@ -666,12 +666,61 @@
           clear: both;
         }
 
-        input#edit-submitted-card-number, input#edit-submitted-cv-number {
-          background-image: url("/sites/all/themes/ambitious/images/info-icon.png");
-          background-repeat: no-repeat;
-          background-position: right 10px center;
-          background-size: 6%;
+        .webform-component--card-number, .webform-component--cv-number {
+          input#edit-submitted-card-number, input#edit-submitted-cv-number {
+            background-image: url("/sites/all/themes/ambitious/images/info-icon.png");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 6%;
+
+            // margin-bottom: -15px;
+         
+          }
+
+          &:hover {
+            input#edit-submitted-card-number, input#edit-submitted-cv-number {
+              margin-bottom: -15px;
+            }
+
+            &:after {
+              // position: absolute;
+              // top: 10px;
+              // left: -15px;
+              // content: '';
+              // width: 0;
+              // height: 0;
+              // border-right: solid 15px #FBBA00;
+              // border-bottom: solid 15px transparent;
+              // border-top: solid 15px transparent;
+
+              content: '';
+
+              // position: inherit;
+              // left: 21%;
+              // top: 320px;
+              width: 0;
+              height: 0;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-bottom: 20px solid #FBBA00;
+              clear: both;
+              border-top: solid 15px transparent;
+              margin-top: -20px;
+              margin-left: 43%;
+
+              // float: left;
+           
+            }
+          }
         }
+
+        // .webform-component--cv-number{
+        //   &:hover {
+        //     &:after {
+        //       top: ;
+        //     }
+        //   }
+        // }
 
         .webform-component--card-number-tooltip, .webform-component--cvv-tooltip {
           display: none;
@@ -685,18 +734,8 @@
           left: 55%;
           top: 115px;
           border-radius: 10px;
-
-          &::after, :after {
-            position: absolute;
-            top: 10px;
-            left: -15px;
-            content: '';
-            width: 0;
-            height: 0;
-            border-right: solid 15px #FBBA00;
-            border-bottom: solid 15px transparent;
-            border-top: solid 15px transparent;
-          }
+          margin: 25px 10px;
+          margin-top: 10px;
 
           p {
             margin: 0;
@@ -709,10 +748,9 @@
           }
 
 
-          @include breakpoint($not-mobile) {
-            position: absolute;
-          }
-
+          // @include breakpoint($not-mobile) {
+          //   position: absolute;
+          // }
 
           @include breakpoint($all-large-mobile) {
             left: 70%;
@@ -728,6 +766,12 @@
           @include breakpoint($not-mobile) {
             top: 330px;
           }
+
+
+          // &::after, :after {
+          //   top: 470px;
+          // }
+       
         }
 
         .webform-component--hover-and-selection-text-one {

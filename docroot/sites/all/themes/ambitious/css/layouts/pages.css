@@ -997,14 +997,31 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 .node-type-donations #wrapper .node-donations form .webform-component--cv-number {
   clear: both;
 }
-/* line 669, ../../sass/layouts/pages.scss */
-.node-type-donations #wrapper .node-donations form input#edit-submitted-card-number, .node-type-donations #wrapper .node-donations form input#edit-submitted-cv-number {
+/* line 670, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--card-number input#edit-submitted-card-number, .node-type-donations #wrapper .node-donations form .webform-component--card-number input#edit-submitted-cv-number, .node-type-donations #wrapper .node-donations form .webform-component--cv-number input#edit-submitted-card-number, .node-type-donations #wrapper .node-donations form .webform-component--cv-number input#edit-submitted-cv-number {
   background-image: url("/sites/all/themes/ambitious/images/info-icon.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 6%;
 }
-/* line 676, ../../sass/layouts/pages.scss */
+/* line 681, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--card-number:hover input#edit-submitted-card-number, .node-type-donations #wrapper .node-donations form .webform-component--card-number:hover input#edit-submitted-cv-number, .node-type-donations #wrapper .node-donations form .webform-component--cv-number:hover input#edit-submitted-card-number, .node-type-donations #wrapper .node-donations form .webform-component--cv-number:hover input#edit-submitted-cv-number {
+  margin-bottom: -15px;
+}
+/* line 685, ../../sass/layouts/pages.scss */
+.node-type-donations #wrapper .node-donations form .webform-component--card-number:hover:after, .node-type-donations #wrapper .node-donations form .webform-component--cv-number:hover:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #FBBA00;
+  clear: both;
+  border-top: solid 15px transparent;
+  margin-top: -20px;
+  margin-left: 43%;
+}
+/* line 725, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
   display: none;
   background: #FBBA00;
@@ -1013,71 +1030,55 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   left: 55%;
   top: 115px;
   border-radius: 10px;
+  margin: 25px 10px;
+  margin-top: 10px;
 }
-/* line 689, ../../sass/layouts/pages.scss */
-.node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip::after, .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip :after, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip::after, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip :after {
-  position: absolute;
-  top: 10px;
-  left: -15px;
-  content: '';
-  width: 0;
-  height: 0;
-  border-right: solid 15px #FBBA00;
-  border-bottom: solid 15px transparent;
-  border-top: solid 15px transparent;
-}
-/* line 701, ../../sass/layouts/pages.scss */
+/* line 740, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip p, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip p {
   margin: 0;
   color: white;
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  /* line 676, ../../sass/layouts/pages.scss */
+  /* line 725, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
     margin: 20px 10px;
   }
 }
-@media (min-width: 767px) {
-  /* line 676, ../../sass/layouts/pages.scss */
-  .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
-    position: absolute;
-  }
-}
 @media (min-width: 481px) and (max-width: 769px) {
-  /* line 676, ../../sass/layouts/pages.scss */
+  /* line 725, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
     left: 70%;
   }
 }
 @media (min-width: 1080px) {
-  /* line 676, ../../sass/layouts/pages.scss */
+  /* line 725, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-component--card-number-tooltip, .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
     left: 45%;
   }
 }
 @media (min-width: 767px) {
-  /* line 727, ../../sass/layouts/pages.scss */
+  /* line 765, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-component--cvv-tooltip {
     top: 330px;
   }
 }
-/* line 733, ../../sass/layouts/pages.scss */
+/* line 777, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one {
   background: #FBBA00;
 }
-/* line 737, ../../sass/layouts/pages.scss */
+/* line 781, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two {
   background: #F15500;
 }
-/* line 744, ../../sass/layouts/pages.scss */
+/* line 788, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two {
   float: left;
   margin: 20px 10px;
   border-radius: 15px;
   text-align: center;
 }
-/* line 750, ../../sass/layouts/pages.scss */
+/* line 794, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-one p, .node-type-donations #wrapper .node-donations form .webform-component--hover-and-selection-text-two p {
   font-size: 14px;
   padding: 20px 50px;
@@ -1085,39 +1086,39 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   margin: 0;
   line-height: 17px;
 }
-/* line 759, ../../sass/layouts/pages.scss */
+/* line 803, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions {
   padding: 0 10px;
 }
-/* line 762, ../../sass/layouts/pages.scss */
+/* line 806, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input {
   font-size: 17px;
 }
 @media (max-width: 767px) {
-  /* line 762, ../../sass/layouts/pages.scss */
+  /* line 806, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input {
     padding: 5px 10px;
     font-size: 14px;
   }
 }
-/* line 771, ../../sass/layouts/pages.scss */
+/* line 815, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions input.webform-submit {
   width: 100%;
   margin-right: 0;
 }
-/* line 783, ../../sass/layouts/pages.scss */
+/* line 827, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-submit,
 .node-type-donations #wrapper .node-donations form .form-actions div.ajax-progress.ajax-progress-throbber + input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions div.ajax-progress.ajax-progress-throbber + input.webform-submit {
   width: 100% !important;
 }
 @media (min-width: 767px) {
-  /* line 783, ../../sass/layouts/pages.scss */
+  /* line 827, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous + input.webform-submit,
   .node-type-donations #wrapper .node-donations form .form-actions div.ajax-progress.ajax-progress-throbber + input.webform-next, .node-type-donations #wrapper .node-donations form .form-actions div.ajax-progress.ajax-progress-throbber + input.webform-submit {
     width: 61% !important;
   }
 }
-/* line 796, ../../sass/layouts/pages.scss */
+/* line 840, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
   width: 100%;
   background: #fbba00;
@@ -1125,22 +1126,22 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   margin-bottom: 10px;
 }
 @media (min-width: 767px) {
-  /* line 796, ../../sass/layouts/pages.scss */
+  /* line 840, ../../sass/layouts/pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
     width: 35%;
     margin-bottom: 0px;
   }
 }
-/* line 811, ../../sass/layouts/pages.scss */
+/* line 855, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous:hover {
   border-bottom-width: 3px;
 }
-/* line 816, ../../sass/layouts/pages.scss */
+/* line 860, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .form-actions input#edit-webform-ajax-next-677871 {
   width: 100%;
 }
 
-/* line 830, ../../sass/layouts/pages.scss */
+/* line 874, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper,
 .node-type-thank-you-page #wrapper {
   background-repeat: no-repeat;
@@ -1148,22 +1149,22 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   background-position: center;
   background-size: cover;
 }
-/* line 837, ../../sass/layouts/pages.scss */
+/* line 881, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper #main,
 .node-type-thank-you-page #wrapper #main {
   padding: 150px 0;
 }
-/* line 842, ../../sass/layouts/pages.scss */
+/* line 886, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper div#content-header h1.title,
 .node-type-thank-you-page #wrapper div#content-header h1.title {
   display: none;
 }
-/* line 851, ../../sass/layouts/pages.scss */
+/* line 895, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper section#content-area,
 .node-type-thank-you-page #wrapper section#content-area {
   text-align: center;
 }
-/* line 855, ../../sass/layouts/pages.scss */
+/* line 899, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper .webform-confirmation, .page-node-done #wrapper .field-name-body,
 .node-type-thank-you-page #wrapper .webform-confirmation,
 .node-type-thank-you-page #wrapper .field-name-body {
@@ -1172,14 +1173,14 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   padding: 70px 35px;
 }
 @media (min-width: 767px) {
-  /* line 855, ../../sass/layouts/pages.scss */
+  /* line 899, ../../sass/layouts/pages.scss */
   .page-node-done #wrapper .webform-confirmation, .page-node-done #wrapper .field-name-body,
   .node-type-thank-you-page #wrapper .webform-confirmation,
   .node-type-thank-you-page #wrapper .field-name-body {
     width: 45%;
   }
 }
-/* line 865, ../../sass/layouts/pages.scss */
+/* line 909, ../../sass/layouts/pages.scss */
 .page-node-done #wrapper .sharethis-buttons,
 .node-type-thank-you-page #wrapper .sharethis-buttons {
   float: left;
