@@ -12,8 +12,11 @@ function stripe_custom_init(){
 	// $node = node_load($nid);
 	// dpm($node);
 	// $my_field_items = field_get_items('node', $node, 'field_thankyou_message');
-	// $output = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
-	// dpm(render($output));
+	// //$output = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
+	// $output = $my_field_items[0]['value'];
+	// dpm($output);
+	// dpm($my_field_items);
+	//dpm(render($output));
 
 	//sendmail(677071 , 'amalantest@gmail.com');
 
@@ -668,8 +671,9 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		//$nid = arg(1);
 		$node = node_load($nid);
 		$my_field_items = field_get_items('node', $node, 'field_thankyou_message');
-		$message = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
-		$output = render($message);
+		//$message = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
+		//$output = render($message);
+		$output = $my_field_items[0]['value'];
 		return $output;
 	}
 
