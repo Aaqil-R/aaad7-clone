@@ -685,16 +685,29 @@
           left: 55%;
           top: 115px;
           border-radius: 10px;
+          margin: 25px 10px;
 
           &::after, :after {
-            position: absolute;
-            top: 10px;
-            left: -15px;
+            // position: absolute;
+            // top: 10px;
+            // left: -15px;
+            // content: '';
+            // width: 0;
+            // height: 0;
+            // border-right: solid 15px #FBBA00;
+            // border-bottom: solid 15px transparent;
+            // border-top: solid 15px transparent;
+
             content: '';
+            position: absolute;
+            left: 21%;
+            top: 320px;
             width: 0;
             height: 0;
-            border-right: solid 15px #FBBA00;
-            border-bottom: solid 15px transparent;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #FBBA00;
+            clear: both;
             border-top: solid 15px transparent;
           }
 
@@ -709,10 +722,9 @@
           }
 
 
-          @include breakpoint($not-mobile) {
-            position: absolute;
-          }
-
+          // @include breakpoint($not-mobile) {
+          //   position: absolute;
+          // }
 
           @include breakpoint($all-large-mobile) {
             left: 70%;
@@ -727,6 +739,11 @@
         .webform-component--cvv-tooltip {
           @include breakpoint($not-mobile) {
             top: 330px;
+          }
+
+
+          &::after, :after {
+            top: 470px;
           }
         }
 
