@@ -45,6 +45,7 @@ function select_trial_period($selected_date){
 }
 
 function stripe_custom_webform_submission_presave($node, $submission){
+	$nid = $node->nid;
 	$contenttype = $node->type;
 	$formid = $node->webform['nid'];
 	//Only donations webforms we are considering
@@ -175,6 +176,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$val1 = create_subscriber($id,$email,$card1,$formid,$csv);
 				if($val1 == 0){
 					//dpm("recurring Subscriber subscribed Sucessfully");
+					sendmail($nid , $email);
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
@@ -198,6 +200,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email,$csv);
 			if($val1 == 0){
 				//dpm("One time payment added");
+				sendmail($nid , $email);
 			}
 			else{
 				//dpm("One time payment failed");
@@ -658,7 +661,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		return $form['results'];
 	}
 
-	function get_message($nid){
+	function get_thankyou_message($nid){
 		//$nid = arg(1);
 		$node = node_load($nid);
 		$my_field_items = field_get_items('node', $node, 'field_thankyou_message');
@@ -690,14 +693,19 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 
 	// The format function must be called before calling the mail function. 
 	//$message = $system->format($message);
-	dpm($message);
+	//dpm($message);
 	if ($system->mail($message)) {
 		// Success.
-		dpm('Success');
+		//dpm('Success');
 	}
 	else {
 	  	// Failure.
-		dpm('Fail');
+		//dpm('Fail');
+	}
+
+	function sendmail($nid , $email){
+		$message = get_thankyou_message($nid);
+		create_mails($email,$message);
 	}
 }
 ?>
