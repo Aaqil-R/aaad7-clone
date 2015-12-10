@@ -3,6 +3,18 @@
 require('init.php');
 
 function stripe_custom_init(){
+
+	create_mails('amalantest@gmail.com','test message to see the output');
+	// $nodeid = arg(1);
+	// dpm($nodeid);
+
+	// $nid = arg(1);
+	// $node = node_load($nid);
+	// $my_field_items = field_get_items('node', $node, 'field_thankyou_message');
+	// $output = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
+	// dpm(render($output));
+
+
 }
 
 function select_trial_period($selected_date){
@@ -646,5 +658,46 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		return $form['results'];
 	}
 
+	function get_message($nid){
+		//$nid = arg(1);
+		$node = node_load($nid);
+		$my_field_items = field_get_items('node', $node, 'field_thankyou_message');
+		$message = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
+		$output = render($message);
+		return $output;
+	}
 
+	function create_mails($email,$message){
+
+	$var = 'http://'.$_SERVER['HTTP_HOST'];
+	$mailbody = $message;
+	
+	$my_module = 'stripe_custom';
+	$my_mail_token = 'bar';
+	$from = variable_get('system_mail', 'ambitiousaboutautism.org.uk');	
+	$message = array(
+	  'id' => $my_module . '_' . $my_mail_token,
+	  'to' => $email,
+	  'subject' => 'Donation Confirmation',
+	  'body' => $mailbody,
+	  'headers' => array(
+	    'From' => $from,
+	    'Sender' => $from,
+	    'Return-Path' => $from,
+	  ),
+	);
+	$system = drupal_mail_system($my_module, $my_mail_token);
+
+	// The format function must be called before calling the mail function. 
+	//$message = $system->format($message);
+	//dpm($message);
+	if ($system->mail($message)) {
+		// Success.
+		dpm('Success');
+	}
+	else {
+	  	// Failure.
+		dpm('Fail');
+	}
+}
 ?>
