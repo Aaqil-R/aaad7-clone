@@ -166,7 +166,7 @@
 <?php if($_GET['result'] == 'error'): ?>
   <div class="field-name-body">
   <?php $message = 'Sorry unable to process your request. Please try again in sometime.' ; ?>
-  <p><?php echo $message; ?></p>
+  <h4><?php echo $message; ?></h4>
   </div>
 <?php else :?>
   <section id="content-area">
