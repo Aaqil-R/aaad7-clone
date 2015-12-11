@@ -309,7 +309,7 @@
         background: white;
         width: 100%;
         padding: 10px;
-        position: inherit;
+        position: relative;
         z-index: 1;
 
         @include breakpoint($not-mobile) {
@@ -667,51 +667,60 @@
         }
 
         .webform-component--card-number, .webform-component--cv-number {
-          input#edit-submitted-card-number, input#edit-submitted-cv-number {
-            background-image: url("/sites/all/themes/ambitious/images/info-icon.png");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 6%;
-
-            // margin-bottom: -15px;
-         
-          }
-
-          &:hover {
+          @include breakpoint($not-mobile) {
             input#edit-submitted-card-number, input#edit-submitted-cv-number {
-              margin-bottom: -15px;
-            }
+              background-image: url("/sites/all/themes/ambitious/images/info-icon.png");
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+              background-size: 6%;
 
-            &:after {
-              // position: absolute;
-              // top: 10px;
-              // left: -15px;
-              // content: '';
-              // width: 0;
-              // height: 0;
-              // border-right: solid 15px #FBBA00;
-              // border-bottom: solid 15px transparent;
-              // border-top: solid 15px transparent;
-
-              content: '';
-
-              // position: inherit;
-              // left: 21%;
-              // top: 320px;
-              width: 0;
-              height: 0;
-              border-left: 20px solid transparent;
-              border-right: 20px solid transparent;
-              border-bottom: 20px solid #FBBA00;
-              clear: both;
-              border-top: solid 15px transparent;
-              margin-top: -20px;
-              margin-left: 43%;
-
-              // float: left;
+              // margin-bottom: -15px;
            
             }
+
+            &:hover {
+              margin-bottom: 7px;
+
+              & + .webform-component--card-number-tooltip, + .webform-component--cvv-tooltip {
+                display: block;
+              }
+
+              input#edit-submitted-card-number, input#edit-submitted-cv-number {
+                margin-bottom: -15px;
+              }
+
+              &:after {
+                // position: absolute;
+                // top: 10px;
+                // left: -15px;
+                // content: '';
+                // width: 0;
+                // height: 0;
+                // border-right: solid 15px #FBBA00;
+                // border-bottom: solid 15px transparent;
+                // border-top: solid 15px transparent;
+
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #FBBA00;
+                clear: both;
+                border-top: solid 15px transparent;
+                top: 0;
+                margin-left: 43%;
+                position: relative;
+
+                // float: left;
+             
+              }
+            }
           }
+        }
+
+        .webform-component--card-number {
+          &:hover {}
         }
 
         // .webform-component--cv-number{
@@ -726,16 +735,18 @@
           display: none;
           background: #FBBA00;
           padding: 10px;
-
-          // width: 200px;
+          width: 70%;
           text-align: center;
+          position: absolute;
 
-          // position: absolute;
-          left: 55%;
-          top: 115px;
+          // left: 55%;
+          // top: 115px;
+          // bottom: 0;
+          right: 0;
           border-radius: 10px;
           margin: 25px 10px;
           margin-top: 10px;
+          z-index: 1;
 
           p {
             margin: 0;
@@ -753,21 +764,20 @@
           //   position: absolute;
           // }
 
-          @include breakpoint($all-large-mobile) {
-            left: 70%;
-          }
+          // @include breakpoint($all-large-mobile) {
+          //   left: 70%;
+          // }
 
-
-          @include breakpoint($all-desktop) {
-            left: 45%;
-          }
+          // @include breakpoint($all-desktop) {
+          //   left: 45%;
+          // }
+       
         }
 
         .webform-component--cvv-tooltip {
-          @include breakpoint($not-mobile) {
-            top: 330px;
-          }
-
+          // @include breakpoint($not-mobile) {
+          //   top: 330px;
+          // }
 
           // &::after, :after {
           //   top: 470px;
