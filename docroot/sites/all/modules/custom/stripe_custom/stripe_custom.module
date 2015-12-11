@@ -3,6 +3,22 @@
 require('init.php');
 
 function stripe_custom_init(){
+	// $role = 'Donation Admins';
+	// $emailaddresses = array();
+
+	// //selecting the users for a given role and getting their emails
+	// $sql = "SELECT users.name as name , users.mail as emails
+	// 		FROM role , users_roles , users 
+	// 		WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and users.status = 1 and role.name = '".$role."'";
+	// $result = db_query($sql);
+	// foreach ($result as $record) {
+	// 	$name = $record->name;
+ //    	$email = $record->emails;
+ // 		$emailaddresses[$name] = $email ;
+	// }
+
+	// dpm($emailaddresses);
+	//return $emailaddresses;
 
 	//create_mails('amalantest@gmail.com','test message to see the output');
 	// $nodeid = arg(1);
@@ -242,6 +258,9 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$reference = $customer->id;
 		stripe_csv_data_log($csv , $status , "" , $reference);
 		//$test = $charge->__toJSON();
+
+		//including the email here so that we can send the mail with reference number
+		sendmailsadmin($reference);
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
@@ -411,6 +430,8 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$reference = $charge->id;
 		stripe_csv_data_log($csv , $status , "" , $reference);
 		//$test = $charge->__toJSON();
+
+		sendmailsadmin($reference);
 		return 0;
 
 	} catch(\Stripe\Error\Card $e) {
@@ -677,10 +698,10 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		return $output;
 	}
 
-	function create_mails($email,$message){
+	function create_mails($email,$messagebody){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = $message;
+	$mailbody = $messagebody;
 	
 	$my_module = 'stripe_custom';
 	$my_mail_token = 'bar';
@@ -712,7 +733,70 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 }
 
 function sendmail($nid , $email){
-		$message = get_thankyou_message($nid);
-		create_mails($email,$message);
+	$message = get_thankyou_message($nid);
+	create_mails($email,$message);
+}
+
+
+function get_email_address($role){
+	//creating an array which will store the email addresses of the user
+	$emailaddresses = array();
+
+	//selecting the users for a given role and getting their emails
+	$sql = "SELECT users.name as name , users.mail as emails
+			FROM role , users_roles , users 
+			WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and users.status = 1 and role.name = '".$role."'";
+	$result = db_query($sql);
+	foreach ($result as $record) {
+		$name = $record->name;
+    	$email = $record->emails;
+ 		$emailaddresses[$name] = $email ;
 	}
+	return $emailaddresses;
+}
+
+
+function sendmailsadmin($referencenumber){
+	$emails = get_email_address('Donation Admins');
+	foreach ($emails as $email) {
+		//call the function to create mail here
+		create_admin_mails($email,$referencenumber);
+	}
+}
+
+function create_admin_mails($email,$referencenumber){
+
+	$var = 'http://'.$_SERVER['HTTP_HOST'];
+	$mailbody = 'A new donation has been added. The reference number is '.$referencenumber;
+	
+	$my_module = 'stripe_custom';
+	$my_mail_token = 'bar';
+	$from = variable_get('system_mail', 'ambitiousaboutautism.org.uk');	
+	$message = array(
+	  'id' => $my_module . '_' . $my_mail_token,
+	  'to' => $email,
+	  'subject' => 'New Donation Added',
+	  'body' => $mailbody,
+	  'headers' => array(
+	    'From' => $from,
+	    'Sender' => $from,
+	    'Return-Path' => $from,
+	  ),
+	);
+	$system = drupal_mail_system($my_module, $my_mail_token);
+
+	// The format function must be called before calling the mail function. 
+	//$message = $system->format($message);
+	//dpm($message);
+	if ($system->mail($message)) {
+		// Success.
+		//dpm('Success');
+	}
+	else {
+	  	// Failure.
+		//dpm('Fail');
+	}
+}
+
+
 ?>
