@@ -203,6 +203,16 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
 					//dpm("recurring Subscriber not subscribed");
+					foreach ($node->webform['components'] as $key => $field) 
+					{
+						switch ($field['form_key']) 
+						{
+							//first page details
+							case 'stripe_status':
+								$submission->data[$key][0] = "error";
+							break;
+						}
+					}
 				}
 			}
 			else{
