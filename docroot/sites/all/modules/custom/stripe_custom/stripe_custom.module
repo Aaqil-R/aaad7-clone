@@ -6,7 +6,7 @@ function stripe_custom_init(){
 	// dpm("testing mail");
 	// $messagebody = '<a href="google.com">Google testing update</a>';
 	// create_mails('amalantest@gmail.com',$messagebody);
-	
+
 	// $role = 'Donation Admins';
 	// $emailaddresses = array();
 
@@ -364,6 +364,7 @@ function create_plan($amount , $id , $name , $formid , $trial_period , $csv){
 		  "name" => $name,
 		  "currency" => "gbp",
 		  "id" => $id,
+		  'receipt_email' => $email,
 		  "trial_period_days" => intval($trial_period))
 		);
 		
