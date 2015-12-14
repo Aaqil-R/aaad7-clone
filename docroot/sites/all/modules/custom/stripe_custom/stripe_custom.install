@@ -156,6 +156,13 @@ function stripe_custom_schema() {
         'type' => 'text',
         'size' => 'medium',
         'not null' => False),
+
+      'formid' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => False),
+
       ),
     'primary key' => array('ID'),
   );
