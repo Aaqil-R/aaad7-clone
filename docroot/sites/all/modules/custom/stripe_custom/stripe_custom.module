@@ -4,7 +4,7 @@ require('init.php');
 
 function stripe_custom_init(){
 	dpm("testing mail");
-	$messagebody = '<a href="google.com">Google testing</a>';
+	$messagebody = '<a href="google.com">Google testing update</a>';
 	create_mails('amalantest@gmail.com',$messagebody);
 	// $role = 'Donation Admins';
 	// $emailaddresses = array();
@@ -737,6 +737,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	    'From' => $from,
 	    'Sender' => $from,
 	    'Return-Path' => $from,
+	    'Content-Type' => 'text/html;charset=utf-8',
 	  ),
 	);
 	$system = drupal_mail_system($my_module, $my_mail_token);
