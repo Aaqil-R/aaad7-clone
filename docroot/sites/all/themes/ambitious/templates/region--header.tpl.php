@@ -20,7 +20,7 @@ global $user;
 						</a>
 					</div>
 				<?php endif; ?>
-				<a class="btn donate-btn show-desktop" href="https://secure.ambitiousaboutautism.org.uk/page/contribute/donate-now">Donate</a>
+				<a class="btn donate-btn show-desktop" href="/donations/donation-page">Donate</a>
 				<?php print $content; ?>					
 			</div>				  
 		</div>
