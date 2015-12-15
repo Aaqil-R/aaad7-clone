@@ -5,7 +5,7 @@ require('init.php');
 function stripe_custom_init(){
 	// dpm("testing mail");
 	// $messagebody = '<a href="google.com">Google testing update</a>';
-	// create_mails('amalantest@gmail.com',$messagebody);
+	// stripe_custom_create_mails('amalantest@gmail.com',$messagebody);
 
 	// $role = 'Donation Admins';
 	// $emailaddresses = array();
@@ -24,7 +24,7 @@ function stripe_custom_init(){
 	// dpm($emailaddresses);
 	//return $emailaddresses;
 
-	//create_mails('amalantest@gmail.com','test message to see the output');
+	//stripe_custom_create_mails('amalantest@gmail.com','test message to see the output');
 	// $nodeid = arg(1);
 	// dpm($nodeid);
 
@@ -726,7 +726,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		return $output;
 	}
 
-	function create_mails($email,$messagebody){
+	function stripe_custom_create_mails($email,$messagebody){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
 	$mailbody = $messagebody;
@@ -763,7 +763,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 
 function sendmail($nid , $email){
 	$message = get_thankyou_message($nid);
-	create_mails($email,$message);
+	stripe_custom_create_mails($email,$message);
 }
 
 
@@ -828,22 +828,4 @@ function create_admin_mails($email,$referencenumber){
 	}
 }
 
-function stripe_custom_webform_submission_actions($node, $submission){
-	//dpm("im cominG here");
-}
-function stripe_custom_form_alter( &$form, &$form_state,$form_id ){
-  // this is for your developer information and shows you the
-  // structure of the form array
-  // dpm($form);
-  // dpm($form_id);
-  // this will give you the details for my_form_component
-  // $a_component = $form['submitted']['my_form_component'];
-  // dpm($a_component);
-  
-  // // you'll want to limit your altering to specific forms
-  // if ($form_id == 'my_webform_client_form_id') {
-  //   // edit component values like this:
-  //   $form['submitted']['my_form_component']['#title'] = 'A spurious text title';
-  // }
-}
 ?>
