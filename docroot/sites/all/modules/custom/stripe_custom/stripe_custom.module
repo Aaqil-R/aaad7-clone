@@ -746,7 +746,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	$message = array(
 	  'id' => $my_module . '_' . $my_mail_token,
 	  'to' => $email,
-	  'subject' => 'Donation Confirmation',
+	  'subject' => 'Thank you for your Donation',
 	  'body' => $mailbody,
 	  'headers' => array(
 	    'From' => $from,
