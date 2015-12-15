@@ -767,7 +767,7 @@ function sendmail($nid , $email){
 }
 
 
-function get_email_address($role){
+function stripe_custom_get_email_address($role){
 	//creating an array which will store the email addresses of the user
 	$emailaddresses = array();
 
@@ -786,7 +786,7 @@ function get_email_address($role){
 
 
 function sendmailsadmin($referencenumber){
-	$emails = get_email_address('Donation Admins');
+	$emails = stripe_custom_get_email_address('Donation Admins');
 	foreach ($emails as $email) {
 		//call the function to create mail here
 		create_admin_mails($email,$referencenumber);
