@@ -802,7 +802,7 @@ function create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress)
 	$mailbody = 'A new donation has been added. <br> 
 		The reference number is :'.$referencenumber.'<br>
 		Name of the Donator : '.$name.'<br>
-		Amount Donated : '.$amount.'<br>
+		Amount Donated : '.$amount.'£<br>
 		Contact Email Address : '.$emailaddress;
 	
 	$my_module = 'stripe_custom';
