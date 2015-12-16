@@ -863,6 +863,23 @@
     $(document).ajaxComplete(function() {
         var selectedAmount = $('input[type=radio]:checked').val();
         handleDonationAmountSelection(selectedAmount);
+
+        $("label[for*=edit-submitted-select-an-amount-").mouseover(function() {
+
+            var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
+            handleDonationAmountSelection(selectedAmount);
+            $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
+
+        });
+
+
+        $("label[for*=edit-submitted-select-an-amount-").mouseleave(function() {
+
+            var selectedAmount = $('input[type=radio]:checked').val();
+            handleDonationAmountSelection(selectedAmount);
+            $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
+
+        });
     });
 
 
