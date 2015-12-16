@@ -880,6 +880,21 @@
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
 
         });
+
+        //Checking for a field to decide the webform step and changing the step colors
+        if ($(".webform-component--first-text-area").length > 0) {
+            // console.log("working");
+            $('.webform-steps-wrapper span:nth-child(1) span').css("background-color", "#FBBA00");
+            $('.webform-steps-wrapper span:nth-child(2) span').css("background-color", "#E2E2E2");
+            $('.webform-steps-wrapper span:nth-child(3) span').css("background-color", "#E2E2E2");
+        }
+
+        if ($(".webform-component--firstname").length > 0) {
+            // console.log("working");
+            $('.webform-steps-wrapper span:nth-child(1) span').css("background-color", "#FBBA00");
+            $('.webform-steps-wrapper span:nth-child(2) span').css("background-color", "#FBBA00");
+            $('.webform-steps-wrapper span:nth-child(3) span').css("background-color", "#E2E2E2");
+        }
     });
 
 
