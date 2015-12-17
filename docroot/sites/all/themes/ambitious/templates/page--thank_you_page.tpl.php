@@ -86,18 +86,6 @@
   */
   ?>
 
-  <?php
-    // $title=urlencode('Title of Your iFrame Tab');
-
-    // $url=urlencode('http://www.facebook.com/wordpressdesign');
-
-    // $summary=urlencode('Custom message that summarizes what your tab is about, or just a simple message to tell people to check out your tab.');
-
-    // $image=urlencode('http://www.yourdomain.com/images/share-thumbnail.jpg');
-
-  ?>
-
-
   <div id="wrapper" class="page" <?php if($backgroundimage): ?>
            style="background-image: url('/<?php print variable_get('file_public_path', conf_path().'/files').'/'; print($backgroundimage['#item']['filename']); ?>')"
         <?php endif; ?>>
@@ -189,10 +177,17 @@
   <?php print render($page['content']) ?>
 
   <div class="sharethis-buttons">
+  <?php echo $_SERVER['SERVER_NAME']; ?>
     <p class="text-center">
-      <a href="#" data-href="https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donations/donation-page" data-layout="button_count" class="csbuttons" data-type="facebook" data-txt="I have just contributed to a worthy cause. Help support Ambitious About Autism." ><img src="/sites/all/themes/ambitious/images/share_button/fb.png" alt=""></a>
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" . <?php echo $_SERVER['SERVER_NAME']; ?> ."/donations/donation-page" 
+      onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="csuttons" data-type="facebook" ><img src="/sites/all/themes/ambitious/images/share_button/fb.png" alt=""></a>
       <a href="#" class="csbuttons" data-type="twitter" data-txt="I have just contributed to a worthy cause. Help support Ambitious About Autism." ><img src="/sites/all/themes/ambitious/images/share_button/tw.png" alt=""></a>
       <!-- <a href="#" class="csbuttons" data-type="google" data-lang="fr"><img src="/sites/all/themes/ambitious/images/share_button/gp.png" alt=""></a> -->
+
+<!--   <div class="fb-share-button" 
+      data-href="https://www.ambitiousaboutautism.org.uk/donations/donation-page" 
+      data-layout="button_count"> -->
+  </div>
     </p>
   </div>
   </section>
