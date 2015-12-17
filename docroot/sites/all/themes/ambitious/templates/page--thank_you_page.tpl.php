@@ -177,9 +177,8 @@
   <?php print render($page['content']) ?>
 
   <div class="sharethis-buttons">
-  <?php echo $_SERVER['SERVER_NAME']; ?>
     <p class="text-center">
-      <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" . <?php echo $_SERVER['SERVER_NAME']; ?> ."/donations/donation-page" 
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $_SERVER['SERVER_NAME']; ?>/donations/donation-page" 
       onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="csuttons" data-type="facebook" ><img src="/sites/all/themes/ambitious/images/share_button/fb.png" alt=""></a>
       <a href="#" class="csbuttons" data-type="twitter" data-txt="I have just contributed to a worthy cause. Help support Ambitious About Autism." ><img src="/sites/all/themes/ambitious/images/share_button/tw.png" alt=""></a>
       <!-- <a href="#" class="csbuttons" data-type="google" data-lang="fr"><img src="/sites/all/themes/ambitious/images/share_button/gp.png" alt=""></a> -->
