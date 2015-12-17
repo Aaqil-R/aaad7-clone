@@ -466,6 +466,16 @@
           }
         }
 
+        .webform-component--gift-aid-condition-text {
+          p {
+            font-size: 11px;
+            font-weight: bold;
+            color: #636C73;
+            padding-left: 20px;
+            line-height: 20px;
+          }
+        }
+
         .webform-component--other-amount {
           padding: 0 10px;
 
@@ -643,15 +653,15 @@
 
         .webform-component--gift-aid-check-box, .webform-component--gift-aid-check-box--1 {
           label.option p {
-            height: 145px;
+            height: 75px;
 
             @include breakpoint($all-large-mobile) {
-              height: 110px;
+              height: 70px;
             }
 
 
             @include breakpoint($not-mobile) {
-              height: 100px;
+              height: 50px;
             }
           }
         }
