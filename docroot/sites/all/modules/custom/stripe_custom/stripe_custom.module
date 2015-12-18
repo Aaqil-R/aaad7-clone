@@ -790,7 +790,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	function stripe_custom_create_mails($email,$messagebody,$emailname){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'Dear '.$emailname.'<br>'.$messagebody;
+	$mailbody = 'Dear '.$emailname.'!<br>'.$messagebody;
 	
 	$my_module = 'stripe_custom';
 	$my_mail_token = 'bar';
