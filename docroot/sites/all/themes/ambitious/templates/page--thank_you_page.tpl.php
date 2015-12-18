@@ -169,7 +169,7 @@
 <?php //echo $_GET['result'];?>
 <?php if($_GET['result'] == 'error'): ?>
   <div class="field-name-body">
-  <?php $message = 'We are unable to process your request at this time. Please double check your details and try again. Alternatively, please dial 020 8815 5433 to process your donation over the telephone or email <a href="mailto:fundraising@ambitiousaboutautism.org.uk" target="_top">Send Mail</a>. ' ; ?>
+  <?php $message = 'We are unable to process your request at this time. Please double check your details and try again. Alternatively, please dial 020 8815 5433 to process your donation over the telephone or email <a href="mailto:fundraising@ambitiousaboutautism.org.uk" target="_top">fundraising@ambitiousaboutautism.org.uk</a>. ' ; ?>
   <h4><?php echo $message; ?></h4>
   </div>
 <?php else :?>
