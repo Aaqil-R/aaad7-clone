@@ -608,8 +608,8 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		"status" => $status,
 		"errormessage" => $message,
 		"reference" => $reference,
-		"formid" => $csv['formid']
-		"expirydate"=> $csv['expirydate'];
+		"formid" => $csv['formid'],
+		"expirydate"=> $csv['expirydate']
     );
    	drupal_write_record('donation_csv_log', $record123);
 }
