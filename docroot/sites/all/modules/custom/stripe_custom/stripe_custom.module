@@ -223,11 +223,11 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$card1['exp_year'] = $expiration_year;
 				$card1['cvc'] = $cv_number;
 				$card1['name'] = $firstname.' '.$lastname;
-
+				$emailname = $card1['name'];
 				$val1 = create_subscriber($id,$email,$card1,$formid,$csv);
 				if($val1 == 0){
 					//dpm("recurring Subscriber subscribed Sucessfully");
-					sendmail($nid , $email);
+					sendmail($nid , $email ,$emailname);
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
@@ -262,7 +262,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email,$csv);
 			if($val1 == 0){
 				//dpm("One time payment added");
-				sendmail($nid , $email);
+				sendmail($nid , $email ,$emailname);
 			}
 			else{
 				foreach ($node->webform['components'] as $key => $field) 
@@ -787,10 +787,10 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		return $output;
 	}
 
-	function stripe_custom_create_mails($email,$messagebody){
+	function stripe_custom_create_mails($email,$messagebody,$emailname){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = $messagebody;
+	$mailbody = 'Dear '.$emailname.'<br>'.$messagebody;
 	
 	$my_module = 'stripe_custom';
 	$my_mail_token = 'bar';
@@ -822,9 +822,9 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	}
 }
 
-function sendmail($nid , $email){
+function sendmail($nid , $email ,$emailname);{
 	$message = get_thankyou_message($nid);
-	stripe_custom_create_mails($email,$message);
+	stripe_custom_create_mails($email,$message,$emailname);
 }
 
 
