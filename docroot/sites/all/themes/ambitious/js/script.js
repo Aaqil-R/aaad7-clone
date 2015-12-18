@@ -21,16 +21,21 @@
             $('#edit-submitted-donation-type-1').click(function() {
                 if ($("#edit-submitted-donation-type-1").is(':checked')) {
                     $(".webform-component--recurring-date").css("display", "block");
+                    $(".webform-component--donation-period").css("display", "block");
+                    
                 } else {
                     $(".webform-component--recurring-date").css("display", "none");
+                    $(".webform-component--donation-period").css("display", "none");
                 }
             });
 
             $('#edit-submitted-donation-type-1').click(function() {
                 if ($("#edit-submitted-donation-type-1").is(':checked')) {
                     $(".webform-component--recurring-date").css("display", "block");
+                    $(".webform-component--donation-period").css("display", "block");
                 } else {
                     $(".webform-component--recurring-date").css("display", "none");
+                    $(".webform-component--donation-period").css("display", "none");
                 }
             });
 
