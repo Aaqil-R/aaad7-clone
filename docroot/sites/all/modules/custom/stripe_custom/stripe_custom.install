@@ -127,6 +127,18 @@ function stripe_custom_schema() {
         'size' => 'medium',
         'not null' => False),
 
+      'donationperiod' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => False),
+
+      'donationinterval' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => False),
+
       'submissiondatetime' => array(
         'description' => 'The results of the error',
         'type' => 'text',

@@ -3,6 +3,15 @@
 require('init.php');
 
 function stripe_custom_init(){
+
+	// $results = db_select('donation_csv_log', 'd')
+	// 	->fields('d',array('ID'))
+	// 	->execute()
+	// 	->fetchAll();
+
+	// dpm($results);
+
+
 	// dpm("testing mail");
 	// $messagebody = '<a href="google.com">Google testing update</a>';
 	// stripe_custom_create_mails('amalantest@gmail.com',$messagebody);
@@ -143,6 +152,17 @@ function stripe_custom_webform_submission_presave($node, $submission){
 					$csv['recurringdate'] = $recurring_date;
 				break;
 
+				case 'donation_period':
+					$donationperiod = $submission->data[$key][0];
+					$csv['donationperiod'] = $donationperiod;
+					$csv['donationinterval'] = 1;
+					if($donationperiod == 'quarter'){
+						//overiding the quarter year process
+						$csv['donationperiod'] = "month";
+						$csv['donationinterval'] = 3;
+					}
+				break;
+
 				//adding the new field informations
 				case 'node_type':
 					$csv['phonenumber'] = $submission->data[$key][0];
@@ -179,7 +199,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 		if($other_amount != '')
 		{
 			$select_an_amount = $other_amount;
-			$csv['amount']=$other_amount;
+			$csv['amount'] = $other_amount;
 		}
 
 		//check the Payment type
@@ -363,7 +383,8 @@ function create_plan($amount , $id , $name , $formid , $trial_period , $csv){
 
 		$plan = \Stripe\Plan::create(array(
 		  "amount" => $amount,
-		  "interval" => "month",
+		  "interval" => $csv['donationperiod'],
+		  "interval_count" => $csv['donationinterval'],
 		  "name" => $name,
 		  "currency" => "gbp",
 		  "id" => $id,
@@ -577,6 +598,8 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		"amount" => $csv['amount'],
 		"donationtype" => $csv['donationtype'],
 		"recurringdate" => $csv['recurringdate'],
+		"donationperiod" => $csv['donationperiod'],
+		"donationinterval" => $csv['donationinterval'],
 		"submissiondatetime" => time(),
 		"creditcard" => $csv['creditcard'],
 		"status" => $status,
@@ -707,7 +730,9 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 				$result->giftaid, 
 				$result->amount, 
 				$result->donationtype, 
-				$result->recurringdate, 
+				$result->recurringdate,
+				$result->donationperiod,
+				$result->donationinterval, 
 				$formatteddate, 
 				$result->creditcard,
 				$result->status,
