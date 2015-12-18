@@ -175,6 +175,12 @@ function stripe_custom_schema() {
         'size' => 'medium',
         'not null' => False),
 
+      'expirydate' => array(
+        'description' => 'The results of the error',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => False),
+
       ),
     'primary key' => array('ID'),
   );
