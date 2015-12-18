@@ -714,7 +714,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 			t('formid')));
 
 		$results = db_select('donation_csv_log', 'd')
-		->fields('d'array('ID',
+		->fields('d',array('ID',
 						'firstname',
 						'lastname',
 						'email',
