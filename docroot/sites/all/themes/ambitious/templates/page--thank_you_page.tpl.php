@@ -169,14 +169,14 @@
 <?php //echo $_GET['result'];?>
 <?php if($_GET['result'] == 'error'): ?>
   <div class="field-name-body">
-  <?php $message = 'Sorry unable to process your request. Please try again in sometime.' ; ?>
+  <?php $message = 'We are unable to process your request at this time. Please double check your details and try again. Alternatively, please dial 020 8815 5433 to process your donation over the telephone or email <a href="mailto:fundraising@ambitiousaboutautism.org.uk" target="_top">Send Mail</a>. ' ; ?>
   <h4><?php echo $message; ?></h4>
   </div>
 <?php else :?>
   <section id="content-area">
   <?php print render($page['content']) ?>
 
-  <div class="sharethis-buttons">
+  <div class="sharethis-buttons">We are unable to process your request at this time. Please double check your details and try again. Alternatively, please dial 020 8815 5433 to process your donation over the telephone or email fundraising@ambitiousaboutautism.org.uk. 
     <p class="text-center">
       <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $_SERVER['SERVER_NAME']; ?>/donations/donation-page" 
       onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="csuttons" data-type="facebook" ><img src="/sites/all/themes/ambitious/images/share_button/fb.png" alt=""></a>
