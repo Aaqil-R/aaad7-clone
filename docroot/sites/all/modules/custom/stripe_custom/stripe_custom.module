@@ -225,20 +225,24 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				$card1['name'] = $firstname.' '.$lastname;
 				$emailname = $card1['name'];
 				$val1 = create_subscriber($id,$email,$card1,$formid,$csv);
-				if($val1 == 0){
+				if($val1 === 0){
 					//dpm("recurring Subscriber subscribed Sucessfully");
 					sendmail($nid , $email ,$emailname);
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
 					//dpm("recurring Subscriber not subscribed");
+					$message = "error";
+					if($val1 == 'Your card was declined.'){
+						$message = "card-declined";
+					}
 					foreach ($node->webform['components'] as $key => $field) 
 					{
 						switch ($field['form_key']) 
 						{
-							//first page details
+							//first page details			
 							case 'stripe_status':
-								$submission->data[$key][0] = "error";
+								$submission->data[$key][0] = $message;
 							break;
 						}
 					}
@@ -260,18 +264,22 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['name'] = $firstname.' '.$lastname;
 			$emailname = $card1['name'];
 			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email,$csv);
-			if($val1 == 0){
+			if($val1 === 0){
 				//dpm("One time payment added");
 				sendmail($nid , $email ,$emailname);
 			}
 			else{
+				$message = "error";
+				if($val1 == 'Your card was declined.'){
+					$message = "card-declined";
+				}
 				foreach ($node->webform['components'] as $key => $field) 
 				{
 					switch ($field['form_key']) 
 					{
-						//first page details
+						//first page details			
 						case 'stripe_status':
-							$submission->data[$key][0] = "error";
+							$submission->data[$key][0] = $message;
 						break;
 					}
 				}
@@ -319,7 +327,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -327,7 +335,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -335,7 +343,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -343,7 +351,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -351,7 +359,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -359,7 +367,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -367,7 +375,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	}
 }
 
@@ -492,7 +500,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\RateLimit $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -500,7 +508,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\InvalidRequest $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -508,7 +516,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\Authentication $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -516,7 +524,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\ApiConnection $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -524,7 +532,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (\Stripe\Error\Base $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -532,7 +540,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	} catch (Exception $e) {
 		$result = serialize($e->jsonBody['error']);
 		stripe_data_log($result,$data,$formid);
@@ -540,7 +548,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 		$message = $e->jsonBody['error']['message'];
 		$reference = $e->requestId;
     	stripe_csv_data_log($csv , $status , $message , $reference);
-		return -1;
+		return $message;
 	}
 }
 
@@ -790,7 +798,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	function stripe_custom_create_mails($email,$messagebody,$emailname){
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
-	$mailbody = 'Dear '.$emailname.'!<br>'.$messagebody;
+	$mailbody = 'Dear '.$emailname.'<br>'.$messagebody;
 	
 	$my_module = 'stripe_custom';
 	$my_mail_token = 'bar';
