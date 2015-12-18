@@ -822,7 +822,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	}
 }
 
-function sendmail($nid , $email ,$emailname);{
+function sendmail($nid , $email ,$emailname){
 	$message = get_thankyou_message($nid);
 	stripe_custom_create_mails($email,$message,$emailname);
 }
