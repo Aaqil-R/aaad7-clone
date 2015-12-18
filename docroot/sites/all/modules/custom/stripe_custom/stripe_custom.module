@@ -137,6 +137,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 					$date = date_create($expiration_date);
 					$expiration_year = date_format($date,"Y");
 					$expiration_month = date_format($date,"m");
+					$csv['expirydate'] = $expiration_date;
 				break;
 				case 'cv_number':
 					$cv_number = $submission->data[$key][0];
@@ -605,7 +606,8 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 		"status" => $status,
 		"errormessage" => $message,
 		"reference" => $reference,
-		"formid" => $csv['formid'],
+		"formid" => $csv['formid']
+		"expirydate"=> $csv['expirydate'];
     );
    	drupal_write_record('donation_csv_log', $record123);
 }
@@ -699,7 +701,9 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 			t('giftaid'), 
 			t('amount'), 
 			t('donationtype'),
-			t('recurringdate'), 
+			t('recurringdate'),
+			t('donationperiod'), 
+			t('donationinterval'),  
 			t('submissiondatetime'), 
 			t('creditcard'),
 			t('status'), 
@@ -708,7 +712,28 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 			t('formid')));
 
 		$results = db_select('donation_csv_log', 'd')
-		->fields('d')
+		->fields('d'array('ID',
+						'firstname',
+						'lastname',
+						'email',
+						'phonenumber',
+						'addressline1',
+						'addressline2',
+						'city',
+						'postcode',
+						'country',
+						'giftaid',
+						'amount',
+						'donationtype',
+						'recurringdate',
+						'donationperiod',
+						'donationinterval',
+						'submissiondatetime',
+						'creditcard',
+						'status',
+						'errormessage',
+						'reference',
+						'formid',))
 		->execute()
 		->fetchAll();
 
