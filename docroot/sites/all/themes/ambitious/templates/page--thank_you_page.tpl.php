@@ -177,7 +177,7 @@
   <div class="field-name-body">
   <h4>
     <div class="error">
-      <?php echo 'Sorry the card is declined.';?>
+      <?php echo 'Your card is declined.';?>
     </div>
     <div>
       <?php echo 'Please double check your details and try again. Alternatively, please dial 020 8815 5433 to process your donation over the telephone or email <a href="mailto:fundraising@ambitiousaboutautism.org.uk" target="_top">fundraising@ambitiousaboutautism.org.uk</a>.'; ?>
