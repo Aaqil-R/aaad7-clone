@@ -871,7 +871,7 @@ function create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress)
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
 	$mailbody = 'A new donation has been added. <br> 
 		Reference number : '.$referencenumber.'<br>
-		Name of the Donator : '.$name.'<br>
+		Name of the Donor : '.$name.'<br>
 		Amount Donated : '.$amount.'£<br>
 		Contact Email Address : '.$emailaddress;
 	
