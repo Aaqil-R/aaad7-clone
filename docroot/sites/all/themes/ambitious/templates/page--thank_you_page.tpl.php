@@ -85,6 +85,44 @@
   * @see https://drupal.org/node/1728148
   */
   ?>
+  <?php 
+    $transid = $_GET['id'];
+    $transactiontotal = intval(lists_session("total"));
+    $sku = lists_session("sku");
+    $name = lists_session("name");
+    $price = intval(lists_session("price"));
+    $quantity = intval(lists_session("quantity"));
+
+    //adding them to the datalayer
+
+    if(!is_null($sku)){
+      datalayer_add(array(
+      'event' => 'Donation',
+      'transactionId' => $transid,
+      'transactionTotal' => $transactiontotal, 
+      'transactionProducts' => [array(
+        'sku' => $sku,
+        'name' => $name,
+        'price' => $price,
+        'quantity' => $quantity,
+        )]
+      ));
+    }
+    //closing the session values
+    stripe_custom_unset_session();
+  ?>
+  // <script>
+  // dataLayer = [{
+  //   'transactionId' : '<?php echo $transid;?>',
+  //   'transactionTotal' : '<?php echo $transactiontotal; ?>',
+  //   'transactionProducts' : [{
+  //     'sku' : '<?php echo $sku; ?>',
+  //     'name' : '<?php echo $name; ?>',
+  //     'price' : '<?php echo $price; ?>',
+  //     'quantity' : '<?php echo $quantity; ?>'
+  //   }]
+  // }];
+  // </script>
 
   <div id="wrapper" class="page" <?php if($backgroundimage): ?>
            style="background-image: url('/<?php print variable_get('file_public_path', conf_path().'/files').'/'; print($backgroundimage['#item']['filename']); ?>')"
@@ -161,7 +199,6 @@
 
 </div> <!-- /content-header -->
 <?php endif; ?>
-
 <?php if($_GET['result'] == 'error'): ?>
   <div class="field-name-body">
   <h4>
