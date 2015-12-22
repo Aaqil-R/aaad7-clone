@@ -228,6 +228,15 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				if($val1 === 0){
 					//dpm("recurring Subscriber subscribed Sucessfully");
 					sendmail($nid , $email ,$emailname);
+					//stripe_custom_create_session('name' , $card1['name']);
+					//lists_session("s_key", $card1['name']);
+
+					lists_session("total", $csv['amount']);
+					lists_session("sku", 'GeneralDonation');
+					lists_session("name", 'Recurring');
+					lists_session("price", $csv['amount']);
+					lists_session("quantity", 1);
+
 				}
 				else{
 					//Plan is created successfully But subscriber is not saved to te plan
@@ -267,6 +276,13 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			if($val1 === 0){
 				//dpm("One time payment added");
 				sendmail($nid , $email ,$emailname);
+
+				//lists_session("s_key", $card1['name']);
+				lists_session("total", $csv['amount']);
+				lists_session("sku", 'GeneralDonation');
+				lists_session("name", 'OneTime');
+				lists_session("price", $csv['amount']);
+				lists_session("quantity", 1);
 			}
 			else{
 				$message = "error";
@@ -571,8 +587,8 @@ function stripe_custom_maskstring($number){
 //Setting the Api key of Stripe.
 //TODO : Change it when setup to the live environment.
 function get_api(){
-	//return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
-	return "sk_live_bosZHuNWOrBdX01FgIw72Y2O";
+	return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
+	//return "sk_live_bosZHuNWOrBdX01FgIw72Y2O";
 }
 
 //Logging the transactions and the results in a Database
@@ -904,5 +920,30 @@ function create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress)
 		//dpm('Fail');
 	}
 }
+
+
+// function stripe_custom_create_session($key , $value){
+// 	$_SESSION['stripe_custom'][$key] = $value;
+// //	$_SESSION['mymodule']['param1']
+// 	return $_SESSION['stripe_custom'][$key];
+// }
+
+
+function lists_session($key, $value = NULL) {
+  static $storage;
+  if ($value) {
+    $storage[$key] = $value ;
+    $_SESSION['stripe_custom'][$key] = $value ;   // I use 'lists' in case some other module uses 'type' in $_SESSION
+  }
+  else if (empty($storage[$key]) && isset($_SESSION['stripe_custom'][$key])) {
+    $storage[$key] = $_SESSION['stripe_custom'][$key];
+  }
+  return $storage[$key];
+}
+
+function stripe_custom_unset_session(){
+	unset($_SESSION['stripe_custom']);
+}
+
 
 ?>
