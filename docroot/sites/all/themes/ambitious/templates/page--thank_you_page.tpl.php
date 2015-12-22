@@ -111,19 +111,6 @@
     //closing the session values
     stripe_custom_unset_session();
   ?>
-  // <script>
-  // dataLayer = [{
-  //   'transactionId' : '<?php echo $transid;?>',
-  //   'transactionTotal' : '<?php echo $transactiontotal; ?>',
-  //   'transactionProducts' : [{
-  //     'sku' : '<?php echo $sku; ?>',
-  //     'name' : '<?php echo $name; ?>',
-  //     'price' : '<?php echo $price; ?>',
-  //     'quantity' : '<?php echo $quantity; ?>'
-  //   }]
-  // }];
-  // </script>
-
   <div id="wrapper" class="page" <?php if($backgroundimage): ?>
            style="background-image: url('/<?php print variable_get('file_public_path', conf_path().'/files').'/'; print($backgroundimage['#item']['filename']); ?>')"
         <?php endif; ?>>
