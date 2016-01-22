@@ -22,7 +22,7 @@
                 if ($("#edit-submitted-donation-type-1").is(':checked')) {
                     $(".webform-component--recurring-date").css("display", "block");
                     $(".webform-component--donation-period").css("display", "block");
-                    
+
                 } else {
                     $(".webform-component--recurring-date").css("display", "none");
                     $(".webform-component--donation-period").css("display", "none");
@@ -902,30 +902,37 @@
         }
     });
 
-    $(document).ready(function(){
+    $(document).ready(function() {
         var host = window.location.origin;
-        $('.csbuttons').cSButtons({total : "#total","url"   : host + "/donations/donation-page",});
+        $('.csbuttons').cSButtons({
+            total: "#total",
+            "url": host + "/donations/donation-page",
+        });
 
         var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-36251023-1']);
-          _gaq.push(['_setDomainName', 'jqueryscript.net']);
-          _gaq.push(['_trackPageview']);
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
 
         (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-        
+
     });
 
 
@@ -1000,5 +1007,24 @@
     //     });
     // });
 
+    function meter_width() {
+        $("#block-views-donation-block").css({
+            'left': ($(".node-donations form").width() + 84 + 'px')
+        });
+
+        $('.goal-counter').height($(".node-donations form").height() - 75);
+    }
+
+    $(window).load(function() {
+        meter_width();
+    });
+
+    $(document).ajaxComplete(function(event) {
+        meter_width();
+    });
+
+    $(window).resize(function() {
+        meter_width();
+    });
 
 })(jQuery, Drupal, this, this.document);
