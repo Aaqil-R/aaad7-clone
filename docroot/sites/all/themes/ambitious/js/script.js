@@ -1013,6 +1013,25 @@
         });
 
         $('.goal-counter').height($(".node-donations form").height() - 75);
+
+        if ($(window).width() >= 768) {
+            $(".node-donations .field-name-body").addClass("body-width");
+
+            var body_width = ($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
+
+            console.log(body_width);
+
+            // $(".body-width").css("width", $(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
+            // $(".body-width").css({
+            //     width: body_width + "px"
+            // });
+            $('.body-width').width($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
+        } else {
+            // $(".node-donations .field-name-body").removeClass("body-width");
+            $('.body-width').attr('style', function(i, style) {
+                return style.replace(/width[^;]+;?/g, '');
+            });
+        }
     }
 
     $(window).load(function() {
