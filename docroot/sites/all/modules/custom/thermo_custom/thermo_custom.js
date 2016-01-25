@@ -11,6 +11,13 @@
                 textBefore: '£',
                 textAfter: ' Raised so far'
             });
+
+            $('#donation_goal_landscape').goalProgress_landscape({
+                goalAmount: definedamount,
+                currentAmount: collectedamount,
+                textBefore: '£',
+                textAfter: ' Raised so far'
+            });
         }
     };
 }(jQuery));
