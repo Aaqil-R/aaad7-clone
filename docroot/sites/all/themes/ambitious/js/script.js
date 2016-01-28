@@ -832,11 +832,11 @@
             var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
             handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-            console.log('mouseover');
+            // console.log('mouseover');
         });
 
         // $("label[for*=edit-submitted-select-an-amount-").mouseleave(function(event) {
-
+        // 
         //     var selectedAmount = $('input[type=radio]:checked').val();
         //     handleDonationAmountSelection(selectedAmount, event);
         //     $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
@@ -848,7 +848,7 @@
             var selectedAmount = $('input[type=radio]:checked').val();
             handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
-            console.log('mouseleave');
+            // console.log('mouseleave');
         });
 
 
@@ -857,14 +857,14 @@
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-            console.log('keyup');
+            // console.log('keyup');
         });
 
         // doing it for iOS.
         $("#edit-submitted-other-amount").on("keypress", function(event) {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
-            console.log('keypress');
+            // console.log('keypress');
         });
 
         // $("[id*=edit-submitted-select-an-amount-]").on("change", function(event) {
