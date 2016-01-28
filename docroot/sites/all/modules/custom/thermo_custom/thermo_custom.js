@@ -16,8 +16,56 @@
                 goalAmount: definedamount,
                 currentAmount: collectedamount,
                 textBefore: '£',
-                textAfter: ' Raised so far'
+                // textAfter: 'Raised '
             });
         }
     };
+
+    function meter_width() {
+        $("#block-views-donation-block").css({
+            'left': ($(".node-donations form").width() + 84 + 'px')
+        });
+
+        $("#block-views-donation-block").css({
+            'top': ($('.node-donations form').position().top + 'px')
+        });
+
+        $('.view-id-donation .goal-counter').height($(".node-donations form").height() - 75);
+
+        if ($(window).width() >= 768) {
+            $(".node-donations .field-name-body").addClass("body-width");
+
+            var body_width = ($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
+
+            $('.view-id-donation .body-width').width($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
+
+            // $('.webform-component--thermometer .goal-amount').append($('.goal-counter_landscape'));
+
+        } else {
+            $('.webform-component--thermometer .goal-counter').height($(".node-donations form").width() - 45);
+
+            $('.webform-component--thermometer .target-amount').insertBefore($('.goal-counter_landscape'));
+
+            $('.view-id-donation .body-width').attr('style', function(i, style) {
+                return style.replace(/width[^;]+;?/g, '');
+            });
+        }
+
+        var oldhtml = $('.gained-amount').html();
+        var newhtml = oldhtml.replace(/NaN/g, " 0");
+        $('.gained-amount').html(newhtml);
+    }
+
+    $(window).load(function() {
+        meter_width();
+    });
+
+    $(document).ajaxComplete(function(event) {
+        meter_width();
+    });
+
+    $(window).resize(function() {
+        meter_width();
+    });
+
 }(jQuery));
