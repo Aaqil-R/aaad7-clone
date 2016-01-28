@@ -830,37 +830,36 @@
             var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
             handleDonationAmountSelection(selectedAmount);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-
+            // console.log('mouseover');
         });
-
 
         $("label[for*=edit-submitted-select-an-amount-").mouseleave(function() {
 
             var selectedAmount = $('input[type=radio]:checked').val();
             handleDonationAmountSelection(selectedAmount);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
-
+            // console.log('mouseleave');
         });
 
         $("#edit-submitted-other-amount").on("keyup", function() {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-
+            // console.log('keyup');
         });
 
         // doing it for iOS.
         $("#edit-submitted-other-amount").on("keypress", function() {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
-
+            // console.log('keypress');
         });
 
         $("[id*=edit-submitted-select-an-amount-]").on("change", function() {
 
             $("#edit-submitted-other-amount").val("");
             handleDonationAmountSelection(selectedAmount);
-
+            // console.log('change');
         });
 
     });
@@ -1007,44 +1006,5 @@
     //     });
     // });
 
-    function meter_width() {
-        $("#block-views-donation-block").css({
-            'left': ($(".node-donations form").width() + 84 + 'px')
-        });
-
-        $("#block-views-donation-block").css({
-            'top': ($('.node-donations form').position().top + 'px')
-        });
-
-        $('.goal-counter').height($(".node-donations form").height() - 75);
-
-        if ($(window).width() >= 768) {
-            $(".node-donations .field-name-body").addClass("body-width");
-
-            var body_width = ($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
-
-            $('.body-width').width($(".node-donations form").width() + $("#block-views-donation-block").width() + 58);
-        } else {
-            $('.body-width').attr('style', function(i, style) {
-                return style.replace(/width[^;]+;?/g, '');
-            });
-        }
-
-        var oldhtml = $('.gained-amount').html();
-        var newhtml = oldhtml.replace(/NaN/g, " 0");
-        $('.gained-amount').html(newhtml);
-    }
-
-    $(window).load(function() {
-        meter_width();
-    });
-
-    $(document).ajaxComplete(function(event) {
-        meter_width();
-    });
-
-    $(window).resize(function() {
-        meter_width();
-    });
 
 })(jQuery, Drupal, this, this.document);
