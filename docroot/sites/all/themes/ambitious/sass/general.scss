@@ -1726,6 +1726,7 @@ section.job-card {
   }
 }
 
+// , .webform-component--thermometer
 #block-views-donation-block {
   display: none;
   float: left;
@@ -1855,6 +1856,150 @@ section.job-card {
       float: left;
       width: 25%;
       display: none;
+
+      @include breakpoint($tablet) {
+        width: 20%;
+      }
+
+
+      padding: 3px 0;
+      font-size: 1.25em;
+      text-align: center;
+      color: #333;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+    }
+
+    span.goalAmount {
+      display: none;
+      text-indent: -9999px;
+    }
+  }
+}
+
+.webform-component--thermometer {
+  display: block;
+  padding: 0 12px;
+
+  @include breakpoint(min-width $tablet-small) {
+    display: none;
+  }
+
+
+  .target-amount {
+    color: #2A2E31;
+    text-align: center;
+
+    // padding: 0 20px;
+    line-height: 30px;
+    font-size: 1.25em;
+    font-weight: 700;
+
+    // float: left;
+    width: auto;
+    margin-top: 20px;
+
+    span {
+      color: #F15628;
+      font-size: 20px;
+      text-align: center;
+
+      // float: left;
+      width: 100%;
+    }
+  }
+
+  .goal-counter_landscape {
+    overflow: hidden;
+    margin: 20px auto;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+
+    // height: 68px;
+    background: #d3d5d9;
+    border-radius: 10px;
+    color: transparent;
+
+    // background-image: -webkit-linear-gradient(top, #ebecef, #bfc3c7);
+    // background-image: -moz-linear-gradient(top, #ebecef, #bfc3c7);
+    // background-image: -o-linear-gradient(top, #ebecef, #bfc3c7);
+    // background-image: linear-gradient(to bottom, #ebecef, #bfc3c7);
+    // -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 6px #b6babe, 0 7px rgba(255, 255, 255, 0.1);
+    // box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 6px #b6babe, 0 7px rgba(255, 255, 255, 0.1);
+    h1 {
+      display: none;
+    }
+
+    .goalProgress {
+      float: left;
+      width: 100%;
+
+      // @include breakpoint($tablet) {
+      //   width: 80%;
+      // }
+
+      display: block;
+      overflow: hidden;
+
+      // height: 42px;
+      // margin: 13px 0;
+      background: #b8b8b8;
+      border-radius: 6px;
+
+      // background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+      // background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+      // background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+      // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+      // -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+      // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+   
+    }
+
+    .progressBar {
+      display: block;
+      min-width: 35px;
+      height: 42px;
+      line-height: 42px;
+
+      // padding-left: 10px;
+      background: #1997e6;
+      background-image: -webkit-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -webkit-linear-gradient(left, #204E25, #37b049);
+      background-image: -moz-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -moz-linear-gradient(left, #204E25, #37b049);
+      background-image: -o-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -o-linear-gradient(left, #204E25, #37b049);
+      background-image: linear-gradient(to bottom, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), linear-gradient(to right, #204E25, #37b049);
+      -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
+      color: #fff;
+      font-size: 1.25em;
+      font-weight: 700;
+      display: block;
+      overflow: hidden;
+      width: 20px;
+
+      .gained-amount {
+        color: #F15628;
+        font-size: 20px;
+        text-align: center;
+
+        // float: left;
+        padding-left: 5px;
+      }
+
+      .gained-text {
+        color: #2A2E31;
+        float: left;
+
+        // text-transform: capitalize;
+        // text-align: center;
+        // padding: 0 20px;
+        // line-height: 30px;
+     
+      }
+    }
+
+    .goal-amount {
+      float: left;
+      width: 25%;
 
       @include breakpoint($tablet) {
         width: 20%;

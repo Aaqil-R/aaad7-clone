@@ -2046,7 +2046,7 @@ section.job-card img {
   color: #F15628;
 }
 
-/* line 1729, ../sass/general.scss */
+/* line 1730, ../sass/general.scss */
 #block-views-donation-block {
   display: none;
   float: left;
@@ -2057,12 +2057,12 @@ section.job-card img {
   padding: 30px 0 30px 30px;
 }
 @media (min-width: 768px) {
-  /* line 1729, ../sass/general.scss */
+  /* line 1730, ../sass/general.scss */
   #block-views-donation-block {
     display: block;
   }
 }
-/* line 1751, ../sass/general.scss */
+/* line 1752, ../sass/general.scss */
 #block-views-donation-block .target-amount {
   color: #2A2E31;
   text-align: center;
@@ -2073,7 +2073,7 @@ section.job-card img {
   width: auto;
   margin-bottom: 25px;
 }
-/* line 1763, ../sass/general.scss */
+/* line 1764, ../sass/general.scss */
 #block-views-donation-block .target-amount span {
   color: #F15628;
   font-size: 20px;
@@ -2081,7 +2081,7 @@ section.job-card img {
   float: left;
   width: 100%;
 }
-/* line 1772, ../sass/general.scss */
+/* line 1773, ../sass/general.scss */
 #block-views-donation-block .goal-counter {
   max-width: 130px;
   overflow: hidden;
@@ -2096,7 +2096,7 @@ section.job-card img {
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 2px 4px transparent, 0 0 0 1px transparent, 0 0 0 6px #D8D8D8, 0 7px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 2px 4px transparent, 0 0 0 1px transparent, 0 0 0 6px #D8D8D8, 0 7px rgba(255, 255, 255, 0.1);
 }
-/* line 1788, ../sass/general.scss */
+/* line 1789, ../sass/general.scss */
 #block-views-donation-block .goal-counter .goalProgress {
   position: relative;
   float: left;
@@ -2112,7 +2112,7 @@ section.job-card img {
   -webkit-box-shadow: inset 0 1px 2px #D8D8D8, 0 1px #D8D8D8;
   box-shadow: inset 0 1px 2px #D8D8D8, 0 1px #D8D8D8;
 }
-/* line 1811, ../sass/general.scss */
+/* line 1812, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar {
   position: absolute;
   bottom: 0;
@@ -2134,20 +2134,20 @@ section.job-card img {
   overflow: hidden;
   width: 100%;
 }
-/* line 1838, ../sass/general.scss */
+/* line 1839, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar .gained-amount {
   color: #F15628;
   font-size: 20px;
   text-align: center;
 }
-/* line 1844, ../sass/general.scss */
+/* line 1845, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar .gained-text {
   color: #2A2E31;
   text-align: center;
   padding: 0 20px;
   line-height: 30px;
 }
-/* line 1854, ../sass/general.scss */
+/* line 1855, ../sass/general.scss */
 #block-views-donation-block .goal-counter .goal-amount {
   float: left;
   width: 25%;
@@ -2159,13 +2159,119 @@ section.job-card img {
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
 }
 @media (max-width: 990px) {
-  /* line 1854, ../sass/general.scss */
+  /* line 1855, ../sass/general.scss */
   #block-views-donation-block .goal-counter .goal-amount {
     width: 20%;
   }
 }
-/* line 1871, ../sass/general.scss */
+/* line 1872, ../sass/general.scss */
 #block-views-donation-block .goal-counter span.goalAmount {
+  display: none;
+  text-indent: -9999px;
+}
+
+/* line 1879, ../sass/general.scss */
+.webform-component--thermometer {
+  display: block;
+  padding: 0 12px;
+}
+@media (min-width: 767px) {
+  /* line 1879, ../sass/general.scss */
+  .webform-component--thermometer {
+    display: none;
+  }
+}
+/* line 1888, ../sass/general.scss */
+.webform-component--thermometer .target-amount {
+  color: #2A2E31;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.25em;
+  font-weight: 700;
+  width: auto;
+  margin-top: 20px;
+}
+/* line 1901, ../sass/general.scss */
+.webform-component--thermometer .target-amount span {
+  color: #F15628;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+/* line 1911, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape {
+  overflow: hidden;
+  margin: 20px auto;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #d3d5d9;
+  border-radius: 10px;
+  color: transparent;
+}
+/* line 1929, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape h1 {
+  display: none;
+}
+/* line 1933, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape .goalProgress {
+  float: left;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  background: #b8b8b8;
+  border-radius: 6px;
+}
+/* line 1958, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape .progressBar {
+  display: block;
+  min-width: 35px;
+  height: 42px;
+  line-height: 42px;
+  background: #1997e6;
+  background-image: -webkit-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -webkit-linear-gradient(left, #204E25, #37b049);
+  background-image: -moz-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -moz-linear-gradient(left, #204E25, #37b049);
+  background-image: -o-linear-gradient(top, #F2F0F1, #F2F0F1 60%, #F2F0F1 61%, #F2F0F1), -o-linear-gradient(left, #204E25, #37b049);
+  background-image: linear-gradient(to bottom, #f2f0f1, #f2f0f1 60%, #f2f0f1 61%, #f2f0f1), linear-gradient(to right, #204e25, #37b049);
+  -webkit-box-shadow: inset 0 1px transparent, inset 0 0 0 1px transparent;
+  box-shadow: inset 0 1px transparent, inset 0 0 0 1px transparent;
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 700;
+  display: block;
+  overflow: hidden;
+  width: 20px;
+}
+/* line 1979, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape .progressBar .gained-amount {
+  color: #F15628;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 5px;
+}
+/* line 1987, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape .progressBar .gained-text {
+  color: #2A2E31;
+  float: left;
+}
+/* line 1999, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape .goal-amount {
+  float: left;
+  width: 25%;
+  padding: 3px 0;
+  font-size: 1.25em;
+  text-align: center;
+  color: #333;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 990px) {
+  /* line 1999, ../sass/general.scss */
+  .webform-component--thermometer .goal-counter_landscape .goal-amount {
+    width: 20%;
+  }
+}
+/* line 2015, ../sass/general.scss */
+.webform-component--thermometer .goal-counter_landscape span.goalAmount {
   display: none;
   text-indent: -9999px;
 }
