@@ -782,7 +782,7 @@
     // }); 
     /*----- Job Vacancy Sticky Cards -----*/
 
-    function handleDonationAmountSelection(selectedAmount) {
+    function handleDonationAmountSelection(selectedAmount, event) {
         // console.log("Selected Amount: " + selectedAmount);
 
         if (selectedAmount) {
@@ -791,6 +791,8 @@
 
             // Based on this lets activate the appropriate message
             var messageId = ".webform-component--value-of-" + selectedAmount;
+
+            console.log(messageId + " " + event.type + " " + event.target.id);
 
             // Activate the appropriate message
             $(messageId).toggleClass("js-active");
@@ -805,7 +807,7 @@
         // Lets see what amount has been selected
         var selectedAmount = $('input[type=radio]:checked').val();
         if ($('input[type=radio]:checked')) {
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
         }
 
 
@@ -813,74 +815,84 @@
         //     change: function(){
 
         // 	    var selectedAmount = this.value;
-        // 		handleDonationAmountSelection(selectedAmount);
+        // 		handleDonationAmountSelection(selectedAmount, event);
 
         //     }
         // });
 
         $("input[type=radio]").on("change", function(event) {
             var selectedAmount = $('input[type=radio]:checked').val();
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
         });
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseover(function() {
+        $("label[for*=edit-submitted-select-an-amount-").mouseover(function(event) {
 
             // console.log($("#" + $(this).attr("for") + ":radio").val());
 
             var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-            // console.log('mouseover');
+            console.log('mouseover');
         });
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseleave(function() {
+        // $("label[for*=edit-submitted-select-an-amount-").mouseleave(function(event) {
+
+        //     var selectedAmount = $('input[type=radio]:checked').val();
+        //     handleDonationAmountSelection(selectedAmount, event);
+        //     $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
+        //     console.log('mouseleave');
+        // });
+
+        $("[id*=edit-submitted-select-an-amount-]").on("change", function(event) {
 
             var selectedAmount = $('input[type=radio]:checked').val();
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
-            // console.log('mouseleave');
+            console.log('mouseleave');
         });
 
-        $("#edit-submitted-other-amount").on("keyup", function() {
+
+
+        $("#edit-submitted-other-amount").on("keyup", function(event) {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
-            // console.log('keyup');
+            console.log('keyup');
         });
 
         // doing it for iOS.
-        $("#edit-submitted-other-amount").on("keypress", function() {
+        $("#edit-submitted-other-amount").on("keypress", function(event) {
 
             $("[id*=edit-submitted-select-an-amount-]").prop('checked', false);
-            // console.log('keypress');
+            console.log('keypress');
         });
 
-        $("[id*=edit-submitted-select-an-amount-]").on("change", function() {
+        // $("[id*=edit-submitted-select-an-amount-]").on("change", function(event) {
 
-            $("#edit-submitted-other-amount").val("");
-            handleDonationAmountSelection(selectedAmount);
-            // console.log('change');
-        });
+        //     $("#edit-submitted-other-amount").val("");
+        //     handleDonationAmountSelection(selectedAmount, event);
+        //     console.log('change');
+        // });
 
     });
 
     $(document).ajaxComplete(function() {
         var selectedAmount = $('input[type=radio]:checked').val();
-        handleDonationAmountSelection(selectedAmount);
+        handleDonationAmountSelection(selectedAmount, event);
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseover(function() {
+        $("label[for*=edit-submitted-select-an-amount-").mouseover(function(event) {
 
             var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#FBBA00");
 
         });
 
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseleave(function() {
+        $("label[for*=edit-submitted-select-an-amount-").mouseleave(function(event) {
 
             var selectedAmount = $('input[type=radio]:checked').val();
-            handleDonationAmountSelection(selectedAmount);
+            handleDonationAmountSelection(selectedAmount, event);
             $('.node-type-donations #wrapper .node-donations form div[class*="webform-component--value-of-"]').css("background-color", "#F15500");
 
         });
