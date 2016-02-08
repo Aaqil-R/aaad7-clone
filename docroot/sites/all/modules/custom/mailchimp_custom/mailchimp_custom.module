@@ -267,10 +267,10 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					array_push($events, $newevent);
 					//check the conditon which the user has selected. and depending on that update the group that needs to be updated
 					if($charity_place == 1){
-						array_push($applyforCharity, $newevent);
+						array_push($IhavemyOwnPlace, $newevent);
 					}
 					elseif($charity_place == 2){
-						array_push($IhavemyOwnPlace, $newevent);
+						array_push($applyforCharity, $newevent);
 					}
 				}
 				elseif($contenttype == 'courses')
