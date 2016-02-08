@@ -4,23 +4,27 @@
   //background: image-url("wid_bg.jpg") $page-background;
   background: $page-background;
   width: 100%;
-  display: table;
   height: 100%;
   position: relative;
+  display: table;
+
   //overflow: scroll;
   word-wrap: break-word;
   table-layout: fixed;
   margin-top: 143px;
   transition: margin 0.5s, transform 2s;
+
   //overflow-x: hidden;
   @include breakpoint($mobile) {
     margin-top: 175px;
+    display: block;
   }
 }
 
 .header_fixed {
   #wrapper {
     margin-top: 73px;
+
     @include breakpoint($mobile) {
       margin-top: 70px;
     }
