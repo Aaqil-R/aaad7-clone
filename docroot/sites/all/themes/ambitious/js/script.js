@@ -946,6 +946,20 @@
 
     });
 
+        $(document).ready(function() {
+            console.log("Disable images");
+            console.log(jQuery('img'));
+            $('img').mousedown(function(event) {
+                console.log('Clicked');
+                console.log(event);
+
+                if (event.button == 2) {
+                    alert("Right clicks disabled");
+                    return false;
+                };
+            });
+        })
+
 
     /**
      * jQuery.browser.mobile (http://detectmobilebrowser.com/)
