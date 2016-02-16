@@ -947,14 +947,10 @@
     });
 
         $(document).ready(function() {
-            console.log("Disable images");
-            console.log(jQuery('img'));
             $('img').mousedown(function(event) {
-                console.log('Clicked');
-                console.log(event);
 
                 if (event.button == 2) {
-                    alert("Right clicks disabled");
+                    alert("This operation is not supported");
                     return false;
                 };
             });
