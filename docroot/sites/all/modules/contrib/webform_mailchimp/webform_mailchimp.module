@@ -138,7 +138,8 @@ function webform_mailchimp_webform_submission_insert($node, $submission) {
       $q = mailchimp_get_api_object();
       if ($q) {
         foreach ($mailchimp_lists as $mailchimp_list) {
-          $success = $q->listSubscribe($mailchimp_list, $email_address, $mergefields_replacements, 'html', FALSE, TRUE);
+          //$success = $q->listSubscribe($mailchimp_list, $email_address, $mergefields_replacements, 'html', FALSE, TRUE);
+          $success = $q->lists->subscribe($mailchimp_list, array('email' => $email_address), $mergefields_replacements, 'html', FALSE, TRUE);
           if ($success) {
             watchdog('webform_mailchimp', 'E-mail subscribed: %email', array('%email' => $email_address), WATCHDOG_INFO);
           }
