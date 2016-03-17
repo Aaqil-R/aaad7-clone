@@ -827,7 +827,7 @@
             handleDonationAmountSelection(selectedAmount, event);
         });
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseover(function(event) {
+        $("label[for*='edit-submitted-select-an-amount-']").mouseover(function(event) {
 
             // console.log($("#" + $(this).attr("for") + ":radio").val());
 
