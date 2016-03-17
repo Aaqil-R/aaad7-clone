@@ -837,7 +837,7 @@
             // console.log('mouseover');
         });
 
-        // $("label[for*=edit-submitted-select-an-amount-").mouseleave(function(event) {
+        // $("label[for*='edit-submitted-select-an-amount-']").mouseleave(function(event) {
         // 
         //     var selectedAmount = $('input[type=radio]:checked').val();
         //     handleDonationAmountSelection(selectedAmount, event);
@@ -882,7 +882,7 @@
         var selectedAmount = $('input[type=radio]:checked').val();
         handleDonationAmountSelection(selectedAmount, null);
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseover(function(event) {
+        $("label[for*='edit-submitted-select-an-amount-']").mouseover(function(event) {
 
             var selectedAmount = $("#" + $(this).attr("for") + ":radio").val();
             handleDonationAmountSelection(selectedAmount, event);
@@ -891,7 +891,7 @@
         });
 
 
-        $("label[for*=edit-submitted-select-an-amount-").mouseleave(function(event) {
+        $("label[for*='edit-submitted-select-an-amount-']").mouseleave(function(event) {
 
             var selectedAmount = $('input[type=radio]:checked').val();
             handleDonationAmountSelection(selectedAmount, event);
