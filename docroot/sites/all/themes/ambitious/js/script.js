@@ -792,7 +792,7 @@
             // Based on this lets activate the appropriate message
             var messageId = ".webform-component--value-of-" + selectedAmount;
 
-            if !(event){
+            if (!event){
                 console.log(messageId + " " + event.type + " " + event.target.id);
             }
 
