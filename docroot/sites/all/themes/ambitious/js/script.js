@@ -792,7 +792,8 @@
             // Based on this lets activate the appropriate message
             var messageId = ".webform-component--value-of-" + selectedAmount;
 
-            console.log(messageId + " " + event.type + " " + event.target.id);
+
+                console.log(messageId + " " + event.type + " " + event.target.id);
 
             // Activate the appropriate message
             $(messageId).toggleClass("js-active");
@@ -800,14 +801,14 @@
     }
 
     //Donation Page Hover 
-    $(document).ready(function() {
+    $(document).ready(function(overarchingevent) {
 
         // We are assuming that the option buttons are using the configuration
         // value_of_{n}
         // Lets see what amount has been selected
         var selectedAmount = $('input[type=radio]:checked').val();
         if ($('input[type=radio]:checked')) {
-            handleDonationAmountSelection(selectedAmount, event);
+            handleDonationAmountSelection(selectedAmount, overarchingevent);
         }
 
 
@@ -876,9 +877,9 @@
 
     });
 
-    $(document).ajaxComplete(function() {
+    $(document).ajaxComplete(function(overarchingevent) {
         var selectedAmount = $('input[type=radio]:checked').val();
-        handleDonationAmountSelection(selectedAmount, event);
+        handleDonationAmountSelection(selectedAmount, overarchingevent);
 
         $("label[for*=edit-submitted-select-an-amount-").mouseover(function(event) {
 
