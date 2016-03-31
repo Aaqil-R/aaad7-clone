@@ -19,6 +19,11 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
   endif;
 ?>
 
+<?php
+  $node = node_load(687506);
+      $content1 = $node->body['und'][0]['value'];
+      //print render($content1);
+?>
 <?php foreach ($rows as $id => $row): ?>
   <?php render($row); ?>
   <?php if ($id == 0 && isset($node)):?> 
@@ -40,11 +45,14 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 <?php endforeach; ?>
 
   <?php if($view->query->pager->current_page == $noofpage): ?>
-     <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> navigation-block ">
+     <!-- <div class="<?php if ($classes_array[$id]) print ' ' . $classes_array[$id]; ?> navigation-block "> -->
       <?php
       //D7
-      $block = module_invoke('block', 'block_view', '91');
-      print render($block['content']);
+      //$block = module_invoke('block', 'block_view', '91');
+      //print render($block['content']);
+      // $node = node_load(687506);
+      // $content1 = $node->body['und'][0]['value'];
+      // print render($content1);
       ?>
-    </div>
+    <!-- </div> -->
   <?php endif; ?>
