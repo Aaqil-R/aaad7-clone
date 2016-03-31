@@ -57,7 +57,7 @@ $links = sharethis_node_view($node, 'full', 'en');
          print l('<div class="text-area"><span class="title">Next topic:</span><span class="topic">'.$next_title.'</span></div>        <span class="icon-Rightarrow"></span>','node/'.$next_nid.'', array('html' => TRUE, 'attributes' => array('class' => 'btn-next'))); 
        }
        ?>
-     </div>
+     </div> 
    </div>
    <div class="caption-frame">
     <div class="region region-caption-holder">
