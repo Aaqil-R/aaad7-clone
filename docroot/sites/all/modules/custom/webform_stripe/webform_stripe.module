@@ -145,7 +145,8 @@ function webform_stripe_form_webform_client_form_alter(&$form, &$form_state, $fo
 /**
  * Ajax callback which validates form and prompts for payment.
  */
-function webform_stripe_ajax_callback($cid) {
+function webform_stripe_ajax_callback($cid) {  
+
   // Get the form, build it, and validate it. See ajax_form_callback() and
   // drupal_process_form().
   list($form, $form_state, $form_id, $form_build_id, $commands) = ajax_get_form();
@@ -154,9 +155,9 @@ function webform_stripe_ajax_callback($cid) {
   drupal_validate_form($form['#form_id'], $form, $form_state);
 
   // If form had any validation errors, return it and display the messages.
-  if (form_get_errors()) {
-    return $form;
-  }
+  // if (form_get_errors()) {
+  //   return $form;
+  // }
 
   // The Stripe Payment component.
   $component = $form['#node']->webform['components'][$cid];
@@ -190,15 +191,39 @@ function webform_stripe_ajax_callback($cid) {
     $params[$key] = check_plain($setting);
   }
 
-  // Prompt for payment.
-  return array(
-    '#type' => 'ajax',
-    '#commands' => array(
-      array(
-        'command' => 'stripeCheckout',
-        'params' => $params,
-        'selector' => '.webform-stripe-token',
+  $payment_selection_map = array("1"=>"own_place", "2"=>"charity_place");
+
+  $triggering_condition = $params['triggering_condition'];
+  $params['charity_place_value'] =$form_state['values']['submitted']['charity_place'];
+
+  $participation_selection = ($form_state['values']['submitted']['charity_place'] !== NULL) ? $payment_selection_map[$form_state['values']['submitted']['charity_place']] : $form_state['values']['submitted']['charity_place'];
+
+  $params['payment_selection'] = $participation_selection;
+
+ if (($triggering_condition == $participation_selection)
+    || $triggering_condition === NULL 
+    || $participation_selection === NULL){
+    // Prompt for payment.
+    return array(
+      '#type' => 'ajax',
+      '#commands' => array(
+        array(
+          'command' => 'stripeCheckout',
+          'params' => $params,
+          'selector' => '.webform-stripe-token',
+        ),
       ),
-    ),
-  );
+    );
+  } else {
+    // Prompt for payment.
+    return array(
+      '#type' => 'ajax',
+      '#commands' => array(
+        array(
+          'command' => 'proceedWithoutCheckout',
+          'params' => $params,
+        ),
+      ),
+    ); 
+  }   
 }

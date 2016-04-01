@@ -65,6 +65,29 @@ function _webform_edit_webform_stripe($component) {
     '#default_value' => $component['extra']['webform_stripe']['email'],
   );
 
+  /** START;
+   *  custom implementation for Ambitious About Autism
+   *  do we need to show this on own place or charity
+   *  place?
+   */
+
+  // the options to display in our form radio buttons
+  $options = array(
+    'own_place' => t('Own Place'),
+    'charity_place' => t('Charity Place'), 
+    'none' => t('None')
+  );
+
+  $form['webform_stripe']['triggering_condition'] = array(
+    '#type' => 'radios',
+    '#title' => t('Triggering Condition'),
+    '#options' => $options,
+    '#description' => t('When should the user be prompted to make a payment?'),
+    '#default_value' => $component['extra']['webform_stripe']['triggering_condition'],
+  );
+
+  /** END; */
+
   $form['#validate'][] = '_webform_edit_webform_stripe_validate';
   return $form;
 }
