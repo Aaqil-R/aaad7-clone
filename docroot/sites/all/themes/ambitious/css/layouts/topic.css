@@ -966,7 +966,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 /* line 135, ../../sass/layouts/topic.scss */
 #comments .comment-body:before, .page-user .quicktabs_main .comment-body:before {
-  background: url('../../images/comment-tip-left.png?1444630437') 0 0 no-repeat;
+  background: url('../../images/comment-tip-left.png?1459322684') 0 0 no-repeat;
   width: 26px;
   height: 31px;
   content: '';
@@ -1952,7 +1952,7 @@ html.no-touch .form-type-bef-checkbox:hover:before {
   content: "";
   position: absolute;
   left: -24px;
-  background: url('../../images/sprite.png?1444630439') no-repeat -1px -162px;
+  background: url('../../images/sprite.png?1459322685') no-repeat -1px -162px;
   width: 24px;
   top: 15px;
   height: 32px;
@@ -2037,7 +2037,7 @@ fieldset {
 @media (max-width: 767px) {
   /* line 1241, ../../sass/layouts/topic.scss */
   .node-type-topic .block-inspire.orange-box {
-    background-image: url('../../images/action-bg2.jpg?1444630437');
+    background-image: url('../../images/action-bg2.jpg?1459322684');
   }
 }
 
@@ -2377,7 +2377,7 @@ fieldset {
 }
 /* line 1606, ../../sass/layouts/topic.scss */
 .page-node-74566 .posts-columns.columns-full .block-symptoms {
-  background-image: url('../../images/action-bg6.jpg?1444630437');
+  background-image: url('../../images/action-bg6.jpg?1459322684');
 }
 @media (max-width: 767px) {
   /* line 1609, ../../sass/layouts/topic.scss */
@@ -3081,7 +3081,7 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   content: "";
   position: absolute;
   left: -24px;
-  background: url('../../images/sprite.png?1444630439') no-repeat -1px -162px;
+  background: url('../../images/sprite.png?1459322685') no-repeat -1px -162px;
   width: 24px;
   top: 15px;
   height: 32px;
@@ -3133,5 +3133,16 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
 
 /* line 2338, ../../sass/layouts/topic.scss */
 .node-type-topic .view-filters .form-item-sort-by {
+  display: none;
+}
+
+/** css for policy page only to hide content**/
+/* line 2345, ../../sass/layouts/topic.scss */
+article.node-687506 .field-name-body {
+  display: none;
+}
+
+/* line 2349, ../../sass/layouts/topic.scss */
+#block-views-stream-block-12 .views-exposed-form {
   display: none;
 }

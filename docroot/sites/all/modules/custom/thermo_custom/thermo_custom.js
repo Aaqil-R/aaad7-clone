@@ -52,7 +52,13 @@
         }
 
         // Handling the disabled thermometer.
-        isNaN(jQuery('.gained-amount').html()) ? 0 : jQuery('.gained-amount').html();        
+
+        if ($('.gained-amount').length > 0) {
+            var oldhtml = $('.gained-amount').html();
+            var newhtml = oldhtml.replace(/NaN/g, " 0");
+            $('.gained-amount').html(newhtml);
+        }
+        // isNaN(jQuery('.gained-amount').html()) ? 0 : jQuery('.gained-amount').html();        
     }
 
     $(window).load(function() {
