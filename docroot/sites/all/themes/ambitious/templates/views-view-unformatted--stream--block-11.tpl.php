@@ -20,10 +20,11 @@ $noofpage = round($no,0, PHP_ROUND_HALF_DOWN);
 ?>
 
 <?php
-
+  $node;
+  
   if ($parent_node = menu_get_object()) {
     // Get the nid
-    $nid = $node->nid;
+    $nid = $parent_node->nid;
     $node = node_load($nid);
     $content1 = $node->body['und'][0]['value'];
   }
