@@ -412,6 +412,21 @@ function ambitious_preprocess_views_exposed_form(&$vars) {
     $links = sharethis_node_view($node, 'full', 'en');
     $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
   }
+
+  if($vars['form']['#id'] == 'views-exposed-form-stream-block-8'||$vars['form']['#id'] ==  'views-exposed-form-stream-block-9'){
+    $node = node_load(arg(1)); 
+    $vars['node'] = node_load(arg(1)); 
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+  }
+
+  if($vars['form']['#id'] == 'views-exposed-form-stream-block-11'){
+    $node = node_load(arg(1)); 
+    $vars['node'] = node_load(arg(1)); 
+    $links = sharethis_node_view($node, 'full', 'en');
+    $vars['share_button'] = '<div class="topic-share">'.$node->content['sharethis']['#value'].'</div>';
+  }
+   // dpm($vars);
 }
 
 function ambitious_preprocess_views_view_masonry(&$vars) {  
