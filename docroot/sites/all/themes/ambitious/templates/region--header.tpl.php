@@ -20,7 +20,9 @@ global $user;
 						</a>
 					</div>
 				<?php endif; ?>
-				<a class="btn donate-btn show-desktop" href="/donations/donation-page">Donate</a>
+				<!-- <a class="btn donate-btn show-desktop" href="/donations/donation-page">Donate</a> -->
+				<?php 	$block = module_invoke('block', 'block_view', '211');
+						print render($block['content']); ?>
 				<?php print $content; ?>					
 			</div>				  
 		</div>
