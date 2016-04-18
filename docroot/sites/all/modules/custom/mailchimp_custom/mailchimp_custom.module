@@ -551,7 +551,7 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 		// dpm($contenttype);
 		// dpm($charity_place);
 		if($contenttype == 'events'){
-			if($charity_place != 2){
+			if($charity_place == 1){
 				drupal_goto('event-registration-submitted');
 			}
 		}
