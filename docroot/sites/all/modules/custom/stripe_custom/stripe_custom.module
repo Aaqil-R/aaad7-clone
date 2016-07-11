@@ -174,7 +174,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$name_of_the_plan = $firstname.'-'.$date1; 
 
 			//TODO: Change the amount and get it from the webform
-			$val = create_plan(intval($select_an_amount)*100 , $id , $name_of_the_plan,$formid,$trial_period ,$csv);
+			$val = create_plan($select_an_amount, $id , $name_of_the_plan,$formid,$trial_period ,$csv);
 			//check whether the Plan was created
 			if($val == 0){
 				//dpm("Recurring plan created");
@@ -235,7 +235,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			$card1['cvc'] = $cv_number;
 			$card1['name'] = $firstname.' '.$lastname;
 			$emailname = $card1['name'];
-			$val1 = create_onetime_patment($card1,intval($select_an_amount)*100,$formid,$email,$csv);
+			$val1 = create_onetime_patment($card1,$select_an_amount,$formid,$email,$csv);
 			if($val1 === 0){
 				//dpm("One time payment added");
 				sendmail($nid , $email ,$emailname);
