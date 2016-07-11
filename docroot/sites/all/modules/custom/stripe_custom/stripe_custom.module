@@ -4,62 +4,21 @@ require('init.php');
 
 function stripe_custom_init(){
 
-	// $results = db_select('donation_csv_log', 'd')
-	// 	->fields('d',array('ID'))
-	// 	->execute()
-	// 	->fetchAll();
+}
 
-	// dpm($results);
-
-
-	// dpm("testing mail");
-	// $messagebody = '<a href="google.com">Google testing update</a>';
-	// stripe_custom_create_mails('amalantest@gmail.com',$messagebody);
-
-	// $role = 'Donation Admins';
-	// $emailaddresses = array();
-
-	// //selecting the users for a given role and getting their emails
-	// $sql = "SELECT users.name as name , users.mail as emails
-	// 		FROM role , users_roles , users 
-	// 		WHERE role.rid = users_roles.rid and users_roles.uid = users.uid and users.status = 1 and role.name = '".$role."'";
-	// $result = db_query($sql);
-	// foreach ($result as $record) {
-	// 	$name = $record->name;
- //    	$email = $record->emails;
- // 		$emailaddresses[$name] = $email ;
-	// }
-
-	// dpm($emailaddresses);
-	//return $emailaddresses;
-
-	//stripe_custom_create_mails('amalantest@gmail.com','test message to see the output');
-	// $nodeid = arg(1);
-	// dpm($nodeid);
-
-	// $nid = arg(1);
-	// $node = node_load($nid);
-	// dpm($node);
-	// $my_field_items = field_get_items('node', $node, 'field_thankyou_message');
-	// //$output = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
-	// $output = $my_field_items[0]['value'];
-	// dpm($output);
-	// dpm($my_field_items);
-	//dpm(render($output));
-
-	//sendmail(677071 , 'amalantest@gmail.com');
-
-
+//Function to format the number to full integer
+function stripe_custom_format_curreny($value , $fallbackValue){
+	$newValue = preg_replace("/[^0-9\.]/", '', $value);
+	if($newValue == ''){
+		//If the entered value is wrong or character then send the preselected radio button value.
+		return intval($fallbackValue*100);
+	}
+	return intval($newValue*100);
 }
 
 function select_trial_period($selected_date){
-
 	$trial_period = 0 ; 
-
 	$currentdate = date('d',time());
-	// dpm('selected date '.$selected_date);
-	// dpm('current date '.$currentdate);
-
 	if(intval($currentdate) == intval($selected_date))
 	{
 		$trial_period = 0;
@@ -96,7 +55,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				//first page details
 				case 'select_an_amount':
 					$select_an_amount = $submission->data[$key][0];
-					$csv['amount']=$select_an_amount;
+					// $csv['amount']=$select_an_amount;
 				break;
 
 				case 'donation_type':
@@ -196,12 +155,16 @@ function stripe_custom_webform_submission_presave($node, $submission){
 		}
 
 		//checking whether the other amount is entered
+		// if($other_amount != '')
+		// {
+		// 	$select_an_amount = $other_amount;
+		// 	$csv['amount'] = $other_amount;
+		// }
 
-		if($other_amount != '')
-		{
-			$select_an_amount = $other_amount;
-			$csv['amount'] = $other_amount;
-		}
+		//Processing the selected amount
+		$select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
+		//Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
+		$csv['amount'] = number_format((float)$select_an_amount/100, 2, '.', '');
 
 		//check the Payment type
 		if($donation_type == 'Recurring'){
