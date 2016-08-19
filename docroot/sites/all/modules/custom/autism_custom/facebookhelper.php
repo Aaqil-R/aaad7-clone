@@ -20,7 +20,7 @@
 				$this->fb = json_decode($this->response , true);
 				return $fb_count = $this->fb[0]->like_count;
 			}
-			catch{
+			catch(Exception $e){
 				//If there are any errors return 0;
 				watchdog('autism_custom', 'Facebook count error');
 				return 0;
