@@ -18,6 +18,7 @@
       margin-top: 66px;
     }
   }
+
   //TODO: Commented the code to check whether it's need or not
   // #block-block-26.caption-text .caption-text-titles .caption-text-title {
   //   //@include breakpoint(1320px) {
@@ -45,34 +46,42 @@
   //-webkit-animation: caption-text-titles 1s; /* Chrome, Safari, Opera
   //animation: caption-text-titles 1s;
   @include animation(caption-text-titles 1s);
+
   position: relative;
   margin-top: 75px;
+
   //new code
   @include breakpoint($mobile) {
     padding: 0 0px;
   }
 
+
   .caption-text-titles {
     text-align: left;
+
     @include breakpoint($mobile) {
       text-align: center;
       margin-left: 0em;
     }
+
 
     .caption-text-title {
       float: left;
       width: 100%;
       line-height: inherit !important;
       margin-bottom: 10px;
+
       @include breakpoint($mobile) {
         float: none;
       }
+
 
       @include breakpoint($tablet-small $desktop-small) {
         float: none;
         display: inline-block;
         text-align: center;
       }
+
 
       span {
         @include breakpoint($tablet-small $desktop-small) {
@@ -81,6 +90,7 @@
           text-align: center;
         }
 
+
         @include breakpoint($mobile) {
           //padding: initial;
           padding: 0 0 0 0;
@@ -88,14 +98,18 @@
           float: none;
         }
 
+
         float: left;
         letter-spacing: -1px;
         background: $white;
+
         //line-height: 1.8em;
         padding: 15px 25px 20px 25px;
+
         //box-shadow: 10px 0 0 $white, -10px 0 0 $white;
      
       }
+
       //&.caption-text-title-1{
       //  @include breakpoint($mobile){
       //    padding-left: 35%;
@@ -105,16 +119,18 @@
         margin-left: 80px;
         font-size: 36px;
         font-family: $helvetica-cn;
-        display: none;
+
         @include breakpoint($mobile) {
           margin-left: 0px;
         }
       }
     }
   }
+
   @include breakpoint($tablet-small $desktop) {
     margin-left: 0;
     margin-top: 100px;
+
     .caption-text-titles {
       .caption-text-title.caption-text-title-2 {
         //margin-left: 130px;
@@ -125,8 +141,10 @@
     }
   }
 
+
   @include breakpoint(min-width $desktop-small) {
     margin-left: 0;
+
     //margin-top:9em;
     //margin-top: 55px;
     .caption-text-titles {
@@ -274,10 +292,12 @@
 .caption-text-title-1 {
   &.title2 {
     margin-top: 10px;
+
     @include breakpoint($all-desktop) {
       // 768px +
       margin-left: 186px;
     }
+
 
     // @include breakpoint($mobile) {
     //     // 768px -
@@ -297,6 +317,7 @@
       @include breakpoint($desktop) {
         margin-left: 1em;
       }
+
 
       @include breakpoint($mobile) {
         margin-left: 0em;
