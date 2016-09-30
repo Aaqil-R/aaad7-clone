@@ -38,7 +38,7 @@ global $user;
 		<div class="holder">
 				<div class="logo">
 					<a href="<?php print $link; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Ambitious About Autism'); ?>"></a>
-					<a class="btn donate-btn show-mobile" href="/donations/donation-page">Donate</a>
+					<a class="btn donate-btn show-mobile" href="/giving">Donate</a>
 				</div> <!-- /logo -->
 			<ul class="right-info">
 				<li><a href="#" class="school-opener"><span class="icon-Close"></span> <span class="menu-text">Our Schools &amp; College</span><span class="close">Close</span></a></li>
