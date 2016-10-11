@@ -59,6 +59,16 @@
                 }
             });
 
+             //implementation of apache solr redirect to search result page -  this is for ajax
+            $('#edit-search-field').keypress(function(e) {
+                var key = e.which;
+                if (key == 13) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    location.href = '/search/courses/' + $(this).val();
+                }
+            });
+
             //navigate to donate page with the value from give what you can
             $("input[name='submitted[give_what_you_can]']").click(function() {
                 window.location = $("input[name='submitted[donate_page]']").val() + '?amt=' + $(this).val();

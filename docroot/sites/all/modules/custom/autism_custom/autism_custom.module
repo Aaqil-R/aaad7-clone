@@ -385,7 +385,20 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
       $form['field_event_tid']['#options']['All'] = "Show all events";
     }
   }
-   elseif ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-block-1') {
+
+  //course page category count and the search
+ if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-block-1') {
+   $form['search_field'] = array(
+    '#type' => 'textfield',
+    '#attributes' => array(
+    'placeholder' => 'Search courses',
+    ),
+   );
+   $form['#info']['search_field'] = array('value' => 'search_field');
+   $form['#validate'][] = 'autism_custom_search_community_submit';
+  }
+
+   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-block-1') {
     $nodescount = "";  
     //check the current time
     $nowtime = time();

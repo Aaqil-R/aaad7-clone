@@ -29,11 +29,17 @@
   ?>
 <?php endif; ?> 
 
-
+<?php $searchfilter = $widgets['search_field']; ?>
+<?php unset($widgets['search_field']); ?>
 
 <div class="sort-block">
-<div class="search-text forum-page"><input type="text" value="Search the community"></div>
-<?php //dpr($widgets); ?>
+<div class="title-filter">
+    <?php print $widgets['filter-field_categories_tid']->widget; 
+    unset($widgets['filter-field_categories_tid']) ?>  
+  </div>
+
+
+
   <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
         <?php if (!empty($widget->label)): ?>
@@ -58,6 +64,17 @@
         <?php endif; ?>
       </div>
     <?php endforeach; ?>
+    <div class="search-text job-category">
+      <?php 
+      print $searchfilter->widget;
+      //print $widgets['search_field']->widget; 
+      //unset($widgets['search_field']); ?>
+      <pre><?php dpr($widget); ?></pre>
+      
+      <?php //print $widgets['filter-title']->widget; unset($widgets['filter-title']) ?>
+        <span class="icon-search"></span>
+    </div>
+
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
@@ -85,6 +102,7 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?> 
+
 
 </div>
  

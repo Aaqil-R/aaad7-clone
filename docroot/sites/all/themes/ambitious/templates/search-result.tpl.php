@@ -100,6 +100,11 @@
       include 'job-search-results.php';
   }
 
+  if (strpos($pageURL,"courses")) {
+      include 'courses-search-results.php';
+  }
+
+
 ?>
 
 

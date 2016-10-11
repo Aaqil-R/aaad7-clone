@@ -10,6 +10,12 @@ function solr_search_custom_apachesolr_index_document_build_node(ApacheSolrDocum
     if (!empty($entity_date)) {
       $document->addField('ds_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value'])));
     }
+  }  elseif ($entity->type == 'courses') {
+    $entity_date = field_get_items('node', $entity, 'field_event_date');
+    // Add the end date of the entity_date field as a sort field to the solr index
+    if (!empty($entity_date)) {
+      $document->addField('dc_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value2'])));
+    }
   }
   return $document;
 }
@@ -18,6 +24,11 @@ function solr_search_custom_apachesolr_index_document_build_node(ApacheSolrDocum
 function solr_search_custom_apachesolr_query_prepare($query) {
  // Add a sort on date.
  if (arg(1) == 'job-vacancies') {
+   $query->setAvailableSort('ds_end_date', array(
+     'title' => t('End date'),
+     'default' => 'asc',
+   ));
+ } elseif (arg(1) == 'courses') {
    $query->setAvailableSort('ds_end_date', array(
      'title' => t('End date'),
      'default' => 'asc',
@@ -32,8 +43,13 @@ function solr_search_custom_apachesolr_query_alter($query) {
     //$query->addFilter('dm_field_date_end', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]');
     $query->addParam('fl', 'ds_end_date');
     $query->setSolrsort('ds_end_date', 'asc');
+  }elseif (arg(1) == 'courses') {
+    $query->addFilter('dc_end_date', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]'); 
+    //$query->addFilter('dm_field_date_end', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]');
+    $query->addParam('fl', 'dc_end_date');
+    $query->setSolrsort('dc_end_date', 'asc');
   }
-  //dpm($query);
+  dpm($query);
 }
 
 ?>
