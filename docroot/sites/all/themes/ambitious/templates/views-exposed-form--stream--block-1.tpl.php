@@ -69,7 +69,7 @@
       print $searchfilter->widget;
       //print $widgets['search_field']->widget; 
       //unset($widgets['search_field']); ?>
-      <pre><?php dpr($widget); ?></pre>
+      <pre><?php //dpr($widget); ?></pre>
       
       <?php //print $widgets['filter-title']->widget; unset($widgets['filter-title']) ?>
         <span class="icon-search"></span>
