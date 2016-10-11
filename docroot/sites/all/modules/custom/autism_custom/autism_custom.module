@@ -350,6 +350,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
    $form['#info']['search_box'] = array('value' => 'search_community');
    $form['#validate'][] = 'autism_custom_search_community_submit';
   }
+
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-events-page') {
     $nodescount = "";  
     //check the current time
@@ -382,6 +383,40 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
       $form['field_event_tid']['#options']['All'] = "Show all events (".$nodescount.")";
     }else{
       $form['field_event_tid']['#options']['All'] = "Show all events";
+    }
+  }
+   elseif ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-stream-block-1') {
+    $nodescount = "";  
+    //check the current time
+    $nowtime = time();
+    foreach ($form['field_categories_tid']['#options'] as $tid => $val){  
+      if($tid!= "All"){
+        $count = 0;
+        //check the values of the event start date 
+        $testarray = (taxonomy_select_nodes($tid, FALSE));
+        //getting the array count
+        $arraycount = count($testarray);
+        for($i = 0 ; $i < $arraycount ; $i = $i+1){
+          //loading each node
+          $node = node_load($testarray[$i]);
+          //checking if the node is published
+          if($node->status == '1'){
+            $enddate = field_get_items('node', $node, 'field_event_date');
+            $enddatetime = $enddate[0]['value2'];
+            //if endtime is greater than current time increase the count
+            if($nowtime < $enddatetime){
+              $count = $count + 1;
+            }
+          }   
+        } 
+        $form['field_categories_tid']['#options'][$tid] = $form['field_categories_tid']['#options'][$tid]." (".$count.")";
+      }   
+      $nodescount +=$count; 
+    }
+    if(0 < $nodescount){
+      $form['field_categories_tid']['#options']['All'] = "Show all categories (".$nodescount.")";
+    }else{
+      $form['field_categories_tid']['#options']['All'] = "Show all categories";
     }
   }
 
