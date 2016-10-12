@@ -15,10 +15,10 @@ function solr_search_custom_apachesolr_index_document_build_node(ApacheSolrDocum
     //TODO : Does all the contents have a closing date.
     if (!empty($entity_date)) {
       if(!empty($entity_date[0]['value2'])){
-        $document->addField('dc_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value2'])));        
+        $document->addField('ds_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value2'])));        
       }
       else{
-        $document->addField('dc_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value'])));
+        $document->addField('ds_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value'])));
       }
     }
   }
@@ -34,7 +34,7 @@ function solr_search_custom_apachesolr_query_prepare($query) {
      'default' => 'asc',
    ));
  } elseif (arg(1) == 'courses') {
-   $query->setAvailableSort('dc_end_date', array(
+   $query->setAvailableSort('ds_end_date', array(
      'title' => t('End date'),
      'default' => 'asc',
    ));
@@ -47,9 +47,9 @@ function solr_search_custom_apachesolr_query_alter($query) {
     $query->addParam('fl', 'ds_end_date');
     $query->setSolrsort('ds_end_date', 'asc');
   }elseif (arg(1) == 'courses') {
-    //$query->addFilter('dc_end_date', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]'); 
-    $query->addParam('fl', 'dc_end_date');
-    $query->setSolrsort('dc_end_date', 'asc');
+    $query->addFilter('ds_end_date', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]'); 
+    $query->addParam('fl', 'ds_end_date');
+    $query->setSolrsort('ds_end_date', 'asc');
   }
 }
 
