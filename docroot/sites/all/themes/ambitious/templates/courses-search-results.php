@@ -1,9 +1,9 @@
 <?php 
   if(!empty($t->field_event_date['und'][0]['value2'])){
-    $close_date_unix = date_timestamp_get(date_create($t->field_event_date['und'][0]['value2']));  
+    $close_date_unix = $t->field_event_date['und'][0]['value2'];  
   }
   else{
-    $close_date_unix = date_timestamp_get(date_create($t->field_event_date['und'][0]['value']));  
+    $close_date_unix = $t->field_event_date['und'][0]['value'];  
   }
 
   //initializing the salary/location/commitment
@@ -69,7 +69,7 @@
         <div class="close-date">
             <span class="<?php print $closed_date_class?>" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
         </div>
-        <!-- <div class="salary">
+         <!-- <div class="salary">
             <span class="<?php //print $closed_date_class?>" ><?php //print $salary; ?></span>
         </div> -->
         <div class="job-location">
