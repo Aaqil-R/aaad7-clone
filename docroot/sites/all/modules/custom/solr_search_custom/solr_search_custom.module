@@ -12,7 +12,7 @@ function solr_search_custom_apachesolr_index_document_build_node(ApacheSolrDocum
     }
   }  elseif ($entity->type == 'courses') {
     $entity_date = field_get_items('node', $entity, 'field_event_date');
-    // Add the end date of the entity_date field as a sort field to the solr index
+    //TODO : Does all the contents have a closing date.
     if (!empty($entity_date)) {
       $document->addField('dc_end_date', apachesolr_date_iso(strtotime($entity_date[0]['value2'])));
     }
@@ -29,13 +29,12 @@ function solr_search_custom_apachesolr_query_prepare($query) {
      'default' => 'asc',
    ));
  } elseif (arg(1) == 'courses') {
-   $query->setAvailableSort('ds_end_date', array(
+   $query->setAvailableSort('dc_end_date', array(
      'title' => t('End date'),
      'default' => 'asc',
    ));
  }
 }
-
 
 function solr_search_custom_apachesolr_query_alter($query) {
   if (arg(1) == 'job-vacancies') {
@@ -49,7 +48,7 @@ function solr_search_custom_apachesolr_query_alter($query) {
     $query->addParam('fl', 'dc_end_date');
     $query->setSolrsort('dc_end_date', 'asc');
   }
-  dpm($query);
+  //dpm($query);
 }
 
 ?>
