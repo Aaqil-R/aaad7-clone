@@ -66,6 +66,9 @@
         <h3 <?php print $title_attributes; ?>>
           <a href="<?php print $url; ?>"><?php print $title; ?></a>
         </h3>
+        <p>Close date unix : <?php print $close_date_unix; ?></p>
+        <p>Close date: <?php print $t->field_event_date['und'][0]['value2']; ?></p>
+        <p>Start date: <?php print $t->field_event_date['und'][0]['value']; ?></p>
         <div class="close-date">
             <span class="<?php print $closed_date_class?>" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
         </div>
