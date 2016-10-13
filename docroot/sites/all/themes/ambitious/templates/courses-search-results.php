@@ -29,7 +29,7 @@
         $location = 'Location: ' . $t->field_location[und][0][value];
       } 
       else {
-        $location = 'Location: ' . $commitment;
+        $location = 'Location: empty';
       }
 
   }
