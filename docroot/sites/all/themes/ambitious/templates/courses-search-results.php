@@ -32,7 +32,7 @@
       
 //  }
 ?>
-<?php if (time() < $close_date_unix) { ?>
+
 <div class="post card card--item" style="">
   <section class="job-card">
       <div> 
@@ -75,6 +75,3 @@
       </div>
   </section>
 </div>
-<?php
-  }
-?>
