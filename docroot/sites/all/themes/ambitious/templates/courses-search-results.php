@@ -6,6 +6,7 @@
     $close_date_unix = $t->field_event_date['und'][0]['value'];  
   }
 
+
   //initializing the salary/location/commitment
 
   $location = "";
@@ -28,12 +29,10 @@
        if (isset($t->field_location[und][0][value])) {
         $location = 'Location: ' . $t->field_location[und][0][value];
       } 
-      else {
-        $location = 'Location: empty';
-      }
-
+      
   }
 ?>
+<?php if (time() < $close_date_unix) { ?>
 <div class="post card card--item" style="">
   <section class="job-card">
       <div> 
@@ -70,12 +69,12 @@
         <div class="close-date">
             <span class="<?php print $closed_date_class?>" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
         </div>
-         <!-- <div class="salary">
-            <span class="<?php //print $closed_date_class?>" ><?php //print $salary; ?></span>
-        </div> -->
         <div class="job-location">
             <span class="<?php print $closed_date_class?>" ><?php print $location; ?></span>
         </div>
       </div>
   </section>
 </div>
+<?php
+  }
+?>
