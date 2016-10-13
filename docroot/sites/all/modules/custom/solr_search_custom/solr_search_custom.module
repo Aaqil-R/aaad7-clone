@@ -47,7 +47,7 @@ function solr_search_custom_apachesolr_query_alter($query) {
     $query->addParam('fl', 'ds_end_date');
     $query->setSolrsort('ds_end_date', 'asc');
   }elseif (arg(1) == 'courses') {
-    $query->addFilter('ds_end_date', '['. apachesolr_date_iso('TODAY') .' TO *]'); 
+    $query->addFilter('ds_end_date', '['. apachesolr_date_iso(strtotime('TODAY')) .' TO *]'); 
     $query->addParam('fl', 'ds_end_date');
     $query->setSolrsort('ds_end_date', 'asc');
   }
