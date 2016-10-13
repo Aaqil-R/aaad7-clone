@@ -402,7 +402,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
     $nodescount = "";  
     //check the current time
     $nowtime = time();
-    foreach ($form['field_categories_tid']['#options'] as $tid => $val){  
+    foreach ($form['field_category_tid']['#options'] as $tid => $val){  
       if($tid!= "All"){
         $count = 0;
         //check the values of the event start date 
@@ -422,14 +422,14 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
             }
           }   
         } 
-        $form['field_categories_tid']['#options'][$tid] = $form['field_categories_tid']['#options'][$tid]." (".$count.")";
+        $form['field_category_tid']['#options'][$tid] = $form['field_category_tid']['#options'][$tid]." (".$count.")";
       }   
       $nodescount +=$count; 
     }
     if(0 < $nodescount){
-      $form['field_categories_tid']['#options']['All'] = "Show all categories (".$nodescount.")";
+      $form['field_category_tid']['#options']['All'] = "Show all categories (".$nodescount.")";
     }else{
-      $form['field_categories_tid']['#options']['All'] = "Show all categories";
+      $form['field_category_tid']['#options']['All'] = "Show all categories";
     }
   }
 
