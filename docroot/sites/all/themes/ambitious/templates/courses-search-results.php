@@ -22,15 +22,15 @@
   // if not closed the render as date.
   // also checks whether the other fields 
   // are popluated and prints them.
-  if (time() < $close_date_unix) {
-      $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
-      $closed_date_class = "date-display-single";
+  //if (time() < $close_date_unix) {
+    //  $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
+     // $closed_date_class = "date-display-single";
 
-       if (isset($t->field_location[und][0][value])) {
-        $location = 'Location: ' . $t->field_location[und][0][value];
-      } 
+      // if (isset($t->field_location[und][0][value])) {
+     //   $location = 'Location: ' . $t->field_location[und][0][value];
+    // } 
       
-  }
+//  }
 ?>
 <?php if (time() < $close_date_unix) { ?>
 <div class="post card card--item" style="">
