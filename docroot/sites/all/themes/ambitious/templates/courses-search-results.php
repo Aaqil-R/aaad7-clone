@@ -12,8 +12,12 @@
   $location = "";
 
   // initialize closed date caption
-  $closed_date_caption = "Closed for applications";
-  $closed_date_class = "date-display-single closed";
+  //$closed_date_caption = "Closed for applications";
+  //$closed_date_class = "date-display-single closed";
+  
+  $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
+  $closed_date_class = "date-display-single";
+  $location = 'Location: ' . $t->field_location[und][0][value];
 
   // check if close date has passed
   // if closed date has passed then 
