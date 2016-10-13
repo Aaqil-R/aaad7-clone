@@ -35,7 +35,7 @@
   }
 ?>
 <div class="post card card--item" style="">
-  <section class="course-card">
+  <section class="job-card">
       <div> 
         <a href="<?php print $url; ?>">
           <?php
