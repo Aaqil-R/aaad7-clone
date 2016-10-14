@@ -40,8 +40,8 @@
     
   </div>
   <div class="search-text job-category forum-page">
-      <?php print $widgets['search_box']->widget; unset($widgets['search_box']) ?>
-      <?php //print $widgets['filter-title']->widget; unset($widgets['filter-title']) ?>
+      
+      <input placeholder="Search jobs" type="search" id="edit-search-job-vacancies" name="search_field_job_vacancies" value="" size="60" maxlength="128" autocomplete="off" >
         <span class="icon-search"></span>
   </div>
 				 <?php foreach ($widgets as $id => $widget): ?>

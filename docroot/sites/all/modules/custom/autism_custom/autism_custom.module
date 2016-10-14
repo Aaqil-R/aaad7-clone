@@ -425,16 +425,7 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
 
 
   //Job Vacancy Category Count & Search
-  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-list-list-vacancies-page') {
-   $form['search_job_vacancies'] = array(
-    '#type' => 'textfield',
-    '#attributes' => array(
-      'placeholder' => 'Search jobs',
-    ),
-   );
-   $form['#info']['search_box'] = array('value' => 'search_job_vacancies');
-   $form['#validate'][] = 'autism_custom_search_community_submit';
-  }
+
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-list-list-vacancies-page') {
     $nodescount = "";  
     //check the current time
