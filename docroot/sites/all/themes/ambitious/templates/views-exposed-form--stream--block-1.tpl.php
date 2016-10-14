@@ -65,14 +65,8 @@
       </div>
     <?php endforeach; ?>
     <div class="search-text job-category">
-      <?php 
-      print $searchfilter->widget;
-      //print $widgets['search_field']->widget; 
-      //unset($widgets['search_field']); ?>
-      <pre><?php //dpr($widget); ?></pre>
-      
-      <?php //print $widgets['filter-title']->widget; unset($widgets['filter-title']) ?>
-        <span class="icon-search"></span>
+    <input placeholder="Search courses" type="search" id="edit-search-field" name="search_field_courses" value="" size="60" maxlength="128" autocomplete="off" >
+    <span class="icon-search"></span>
     </div>
 
     <?php if (!empty($sort_by)): ?>
