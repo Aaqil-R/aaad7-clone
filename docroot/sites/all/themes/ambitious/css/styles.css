@@ -937,12 +937,30 @@ table {
   max-width: 200px;
 }
 
-/* line 537, ../sass/styles.scss */
+/* line 536, ../sass/styles.scss */
+#search-form #edit-basic label {
+  display: block !important;
+}
+/* line 541, ../sass/styles.scss */
 #search-form #edit-basic .form-item:first-child {
-  max-width: 355px;
+  max-width: 300px;
   margin: 0px;
 }
-/* line 544, ../sass/styles.scss */
+@media (max-width: 767px) {
+  /* line 541, ../sass/styles.scss */
+  #search-form #edit-basic .form-item:first-child {
+    max-width: 100%;
+  }
+}
+/* line 548, ../sass/styles.scss */
+#search-form #edit-basic .form-item:first-child input {
+  width: 100%;
+}
+/* line 557, ../sass/styles.scss */
+#search-form .search-form.gss .container-inline label {
+  display: block;
+}
+/* line 563, ../sass/styles.scss */
 #search-form #edit-keys {
   border-radius: 5px;
   font-size: 18px;
@@ -952,14 +970,26 @@ table {
   box-shadow: inset 1px 1px 2px #707070;
   padding: 12px 23px;
 }
-/* line 554, ../sass/styles.scss */
+/* line 573, ../sass/styles.scss */
 #search-form #edit-submit {
-  margin-top: 8px;
+  margin-top: 32px;
   margin-bottom: 30px;
   clear: right;
 }
+@media (max-width: 767px) {
+  /* line 573, ../sass/styles.scss */
+  #search-form #edit-submit {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
 
-/* line 563, ../sass/styles.scss */
+/* line 587, ../sass/styles.scss */
 .page-search #content-area h2 {
   display: none;
+}
+
+/* line 594, ../sass/styles.scss */
+.posts-columns .post {
+  float: left;
 }

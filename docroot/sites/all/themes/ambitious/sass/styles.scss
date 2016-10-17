@@ -533,10 +533,31 @@ table {
 
 #search-form {
   #edit-basic {
+    label {
+      display: block !important;
+    }
+
     .form-item {
       &:first-child {
-        max-width: 355px;
+        max-width: 300px;
         margin: 0px;
+
+        @include breakpoint($mobile) {
+          max-width: 100%;
+        }
+
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .search-form.gss {
+    .container-inline {
+      label {
+        display: block;
       }
     }
   }
@@ -552,9 +573,14 @@ table {
   }
 
   #edit-submit {
-    margin-top: 8px;
+    margin-top: 32px;
     margin-bottom: 30px;
     clear: right;
+
+    @include breakpoint($mobile) {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -563,5 +589,11 @@ table {
     h2 {
       display: none;
     }
+  }
+}
+
+.posts-columns {
+  .post {
+    float: left;
   }
 }

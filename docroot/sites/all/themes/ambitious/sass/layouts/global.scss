@@ -59,15 +59,18 @@ html.js input.throbbing {
 // System tabs
 ul.tabs-primary {
   padding: 12px 6px;
+
   li {
     list-style: none;
     display: inline-block;
     padding: 10px;
     background: $gray;
+
     &.is-active {
       background: $orange;
     }
   }
+
   a {
     color: $white;
   }
@@ -92,6 +95,7 @@ div#admin-toolbar.vertical div.admin-tab {
 // Main Section
 #main {
   position: relative;
+
   @include breakpoint($mobile) {
     padding-left: 0;
     padding-right: 0;
@@ -104,37 +108,48 @@ div#admin-toolbar.vertical div.admin-tab {
   background: $white;
   padding: 35px 50px 37px 44px;
   margin: 70px 0 50px 0;
+
   @include breakpoint($mobile) {
     padding: 27px 15px;
   }
 
+
   h4 {
     margin: 0 0 17px;
   }
+
   .comments {
     font-size: 18px;
     color: $menu-grey;
+
     .required {
       color: $orange;
     }
+
     label {
       float: left;
+
       &.label-block {
         width: 100%;
       }
     }
+
     fieldset {
       margin: 0 0 20px 0;
+
       @include breakpoint($mobile) {
         margin: 0 0 10px 0;
       }
 
+
       &.submit-actions {
         margin: 0;
+
         @include breakpoint($mobile) {
           .btn.btn-left {
             margin-left: 6px;
             padding: 3px 15px;
+
             &:first-child {
               margin-left: 0;
             }
@@ -142,32 +157,35 @@ div#admin-toolbar.vertical div.admin-tab {
         }
       }
     }
+
     strong {
       color: $heading-link;
       margin-left: 10px;
+
       @include breakpoint($tablet) {
         font-weight: normal;
       }
     }
+
     /* commented lines of code by amalan to check the 
-    		.form-element{
-    			@include linear-gradient($menu-grey,$page-background);
-    			padding:2px;
-    			float:left;
-    			margin:6px 0 0 0;
-    			@include border-radius(5px);
-    			//max-width:506px;
-    			width:100%;
-    			input[type=text],input[type=email],textarea{
-    				float:left;
-    				@include border-radius(5px);
-    				width:100%;
-    				border:none;
-    			}
-    			textarea{
-    				height:183px;
-    			}
-    		}
+        .form-element{
+          @include linear-gradient($menu-grey,$page-background);
+          padding:2px;
+          float:left;
+          margin:6px 0 0 0;
+          @include border-radius(5px);
+          //max-width:506px;
+          width:100%;
+          input[type=text],input[type=email],textarea{
+            float:left;
+            @include border-radius(5px);
+            width:100%;
+            border:none;
+          }
+          textarea{
+            height:183px;
+          }
+        }
     */
   }
 }
@@ -176,71 +194,92 @@ div#admin-toolbar.vertical div.admin-tab {
 .comment-list {
   h4 {
     @include fontsize(23, 16);
+
     a {
       font-size: 16px;
       text-decoration: underline;
       margin-left: 0;
     }
   }
+
   ul.comment-listing {
     @extend %listreset;
+
     position: relative;
+
     &.children {
       margin-left: 30px;
     }
+
     li {
       .comment-left {
         @include span(2 of 8);
+
         //float:left;
         //width:79px;
         font-size: 13px;
+
         img {
           @include border-radius(5px);
+
           overflow: hidden;
           margin: 0 0 4px 0;
         }
+
         a {
           text-decoration: underline;
           font-weight: bold;
           color: $base-link-color;
+
           &:hover {
             text-decoration: none;
           }
         }
+
         cite {
           margin: 0 0 7px 0;
           font-style: normal;
           display: block;
         }
+
         time {
           margin: 0 0 17px 0;
         }
       }
+
       .comment-right {
-        //	@include span(6 of 8 last);
+        //  @include span(6 of 8 last);
         border: 2px solid $border-color;
+
         //padding:16px 26px 13px 26px;
         //margin:0 0 27px 112px;
         font-size: 16px;
         background: $white;
         word-wrap: break-word;
+
         @include breakpoint($mobile) {
           // padding:15px;
           // @include span(8 of 8);
         }
 
+
         .links {
           margin-bottom: 17px;
         }
+
         ul {
           @extend %clearfix;
+
           @extend %listreset;
+
           li {
             float: left;
             margin: 0 11px 0 0;
+
             a {
               text-decoration: underline;
               font-weight: bold;
+
               &:hover {
                 text-decoration: none;
               }
@@ -274,6 +313,7 @@ div#admin-toolbar.vertical div.admin-tab {
 
 .item-list {
   clear: both;
+
   .pager {
     text-align: center;
     padding: 30px 10px 60px 10px;
@@ -281,23 +321,29 @@ div#admin-toolbar.vertical div.admin-tab {
     width: 100%;
     position: relative;
     clear: both;
+
     li {
       background: $white;
       display: inline;
       list-style: none;
       margin-right: 3px;
+
       @include border-radius(5px);
+
       &:hover, &.pager-current {
         color: $white;
         background: $base-text-color;
+
         a {
           //color:$white;
           color: $loadmore-hover;
         }
       }
+
       &.pager-ellipsis, &.pager-current {
         padding: 4px 12px;
       }
+
       a {
         text-decoration: none;
         line-height: 1.5em;
@@ -312,6 +358,7 @@ div#admin-toolbar.vertical div.admin-tab {
   &.pager-current {
     background: #FBB900;
   }
+
   a:hover {
     color: $white;
     background: #FBB900;
@@ -328,35 +375,44 @@ table {
   border-spacing: 0;
   padding-top: 15px;
   margin-bottom: 15px;
+
   td, th {
     border: 1px solid transparent;
     min-height: 30px;
+
     @include transition($type: all, $time: 0.2s, $ease: ease);
+
     text-align: left;
   }
+
   th {
     background: $menu-grey;
     font-weight: bold;
     color: $white;
     padding: 9px;
+
     a {
       color: $white;
     }
   }
+
   tr {
     td {
       background: $white;
       text-align: left;
       padding: 10px;
+
       &:hover {
         background: $menu-grey;
         color: $white;
       }
     }
+
     &:nth-child(odd), &.odd {
       td {
         background: $page-background;
         color: $menu-grey;
+
         a {
           color: $menu-grey;
         }
@@ -381,6 +437,7 @@ table {
 //==== Global Display class
 .only-mobile {
   display: none;
+
   @include breakpoint($mobile) {
     display: block;
   }
@@ -388,6 +445,7 @@ table {
 
 .not-mobile {
   display: none;
+
   @include breakpoint($not-mobile) {
     display: block;
   }
