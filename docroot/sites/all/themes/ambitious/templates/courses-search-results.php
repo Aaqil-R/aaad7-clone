@@ -40,7 +40,7 @@
 <li class="<?php print $classes; ?> post views-row <?php print $attributes; ?>"> 
    <div class="forum-text">           
     <div class="forum-left"> 
-     <div class="image-holder">
+     <div class="image-holder course-result">
         <a href="<?php print $url; ?>">
           <?php
 
