@@ -18,7 +18,7 @@
   $closed_date_caption = 'Closing Date: ' . date("Y-m-d",$close_date_unix);
   $closed_date_class = "date-display-single";
   $location = 'Location: ' . $t->field_location[und][0][value];
-
+  $description = $t->body['und'][0][value];
   // check if close date has passed
   // if closed date has passed then 
   // show text "Closed for applications"
@@ -37,9 +37,10 @@
 //  }
 ?>
 
-<div class="post card card--item" style="">
-  <section class="job-card">
-      <div> 
+<li class="<?php print $classes; ?> post views-row <?php print $attributes; ?>"> 
+   <div class="forum-text">           
+    <div class="forum-left"> 
+     <div class="image-holder">
         <a href="<?php print $url; ?>">
           <?php
 
@@ -64,18 +65,23 @@
 
           ?>
         </a>
-      </div>
-      <div class="content">
-        <h3 <?php print $title_attributes; ?>>
-          <a href="<?php print $url; ?>"><?php print $title; ?></a>
-        </h3>
-       
-        <div class="close-date">
+     </div> 
+   </div>
+   <div class="info add forum-right">
+    <h3 class="title"<?php print $title_attributes; ?>>
+     <a href="<?php print $url; ?>"><?php print $title; ?></a>
+    </h3>
+    <?php if ($snippet): ?>
+      <p class="search-snippet"><?php print $description; ?></p>
+    <?php endif; ?>
+    <div class="close-date">
             <span class="<?php print $closed_date_class?>" property="dc:date" datatype="xsd:dateTime" content="2015-11-12T00:00:00+00:00"><?php print $closed_date_caption; ?></span>
         </div>
         <div class="job-location">
             <span class="<?php print $closed_date_class?>" ><?php print $location; ?></span>
         </div>
-      </div>
-  </section>
-</div>
+   </div>
+  </div>
+
+ 
+</li>
