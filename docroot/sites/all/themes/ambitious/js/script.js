@@ -621,7 +621,7 @@
             if (typeof stButtons === 'object') {
                 // In case we're being attached after new content was placed via Ajax,
                 // force ShareThis to create the new buttons.
-                stButtons.locateElements();
+                //stButtons.locateElements();
             }
         }
     };
