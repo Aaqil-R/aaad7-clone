@@ -2026,3 +2026,38 @@ section.job-card {
     padding-left: 0;
   }
 }
+
+//Who we are bullet point updates
+.section-who-we-are{
+  .webform-style{
+    .webform-client-form-224896{
+      .webform-component--topic{
+        float:left;
+      }
+      fieldset{
+        display:block;
+        float:none;
+        input[type="checkbox"]{
+          @include breakpoint($mobile) {
+            width:5%;
+            margin-top:10px;
+            float:left;
+          }
+        }
+        label{
+          display: inline-block;
+          @include breakpoint($mobile) {
+            width:90%;
+          }
+        }
+      }
+      .form-actions{
+        @include breakpoint($tablet) {
+          float:left;
+        }
+      }
+    }
+  }
+}
+
+
