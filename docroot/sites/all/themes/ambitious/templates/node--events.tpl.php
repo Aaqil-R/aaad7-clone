@@ -165,10 +165,8 @@
     * if there is no text specified 'Signup' is printed. 
     */
     $buttonText = 'Signup';
-    if(isset($node->field_button_text_events['und'][0]['value'])){
-    $buttonText = $node->field_button_text_events['und'][0]['value'];
-    } else {
-      $buttonText = 'Signup';
+    if(isset($node->field_button_text['und'][0]['value'])){
+      $buttonText = $node->field_button_text['und'][0]['value'];
     }
   ?>
 

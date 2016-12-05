@@ -178,8 +178,6 @@
       $buttonText = 'Signup';
       if(isset($node->field_button_text['und'][0]['value'])){
         $buttonText = $node->field_button_text['und'][0]['value'];
-      } else {
-        $buttonText = 'Signup';
       }
 ?>
 
