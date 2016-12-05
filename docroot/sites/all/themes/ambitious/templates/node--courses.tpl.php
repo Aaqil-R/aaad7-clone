@@ -175,7 +175,7 @@
   * this ($buttonText) will set the submit button text if there is a value is set from the cms
   * if there is no text specified 'Signup' is printed. 
   */
-      $buttonText = 'Signup';
+      $buttonText = 'Sign up';
       if(isset($node->field_button_text['und'][0]['value'])){
         $buttonText = $node->field_button_text['und'][0]['value'];
       }
