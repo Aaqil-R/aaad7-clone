@@ -16,6 +16,16 @@
     // To understand behaviors, see https://drupal.org/node/756722#behaviors
     Drupal.behaviors.ambitious = {
         attach: function(context, settings) {
+            // Add class if has class
+            if ($('div').hasClass('alert-messages')) {
+                $(document.body).toggleClass('has-alert');
+            }
+            // Fadeout on click event for messages
+            $('.alert-messages .close').click(function() {
+                $('.alert-messages').fadeOut('slow');
+                // Remove class once clicked
+                $(document.body).removeClass('has-alert');
+            });
 
             //adding the donations recurrent date. and hiding it
             $('#edit-submitted-donation-type-1').click(function() {
