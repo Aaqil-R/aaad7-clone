@@ -93,13 +93,14 @@
   ?>
 <!-- / header -->
 <?php print $messages; ?> 
-   
+<!-- Adding alerts -->
+<?php if ($page['image_holder']): ?>
+  <?php print render($page['image_holder']); ?>
+  <!-- /image holder -->
+<?php endif; ?>
 <section class="visual header_banner">
     <div class="img-holder">
-          <?php if ($page['image_holder']): ?>
-            <?php print render($page['image_holder']); ?>
-            <!-- /image holder -->
-          <?php endif; ?>
+          
       <div class="caption-frame">
 
         <div class="region region-caption-holder">
