@@ -216,8 +216,7 @@
   <?php endif; ?>
 
   </main> <!-- /main -->
-
-
+    
     <!-- action columns -->
     <section class="action-block">
       <!-- Render the action block region. -->

@@ -7,7 +7,6 @@
  * @ingroup views_templates
  */ 
  $myvar = get_defined_vars();  
- // dpm($myvar);
 ?>
 
 
@@ -15,7 +14,7 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?> 
 <?php foreach ($rows as $id => $row): ?> 
-    <?php // print $row;  ?>   
+    <?php // print $row; ?>   
     <?php 
       $node_type = $myvar['variables']['view']->result[$id]->node_type;      
       
