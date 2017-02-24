@@ -19,7 +19,7 @@ CKEDITOR.editorConfig = function( config )
         { name : 'Heading 4'   , element : 'h4' },
         { name : 'Float Right', element : 'div', attributes : { 'style' : 'float:right;' } },
         { name : 'Float Left', element : 'div', attributes : { 'style' : 'float:left;' } },
-        { name : 'featured colums', element : 'div', attributes : { 'style' : 'float:right; display:inline-block; margin-right:20px; width: 30%' } },
+        { name : 'featured colums', element : 'div', attributes : { 'class' : 'featured-colums' } },
         { name : 'Preformatted Text', element : 'pre' },
         { name : 'Quote: red',   element: 'span', attributes: { 'class': 'quote' } },
   ];

@@ -230,7 +230,7 @@
           <?php print render($page['services']); ?>
           <!--column one -->
         </div>
-      </div>      
+      </div>    
   </section><!-- /services -->
 
 

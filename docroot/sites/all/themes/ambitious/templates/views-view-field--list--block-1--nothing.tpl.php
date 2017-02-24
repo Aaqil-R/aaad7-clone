@@ -25,7 +25,7 @@
 <?php 
 
 $values = explode('^.^', $output); 
-dpm($values);
+// dpm($values);
 
   $title = $values[3];
   $image = $values[0];
