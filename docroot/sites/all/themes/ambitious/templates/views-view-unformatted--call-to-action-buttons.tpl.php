@@ -7,7 +7,7 @@
  * @ingroup views_templates
  */ 
  $myvar = get_defined_vars();  
-  dpm($myvar);
+  // dpm($myvar);
 ?>
 
 
