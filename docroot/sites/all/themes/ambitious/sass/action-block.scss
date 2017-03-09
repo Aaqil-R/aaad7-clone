@@ -1417,6 +1417,14 @@ a.btn#not_right_now {
 }
 
 .front {
+  #main {
+    margin-top: 170px;
+
+    @include breakpoint($mobile) {
+      margin-top: 20px;
+    }
+  }
+
   .slider-block .holder {
     max-width: 500px !important;
   }
