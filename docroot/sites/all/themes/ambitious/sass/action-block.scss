@@ -1280,73 +1280,6 @@ a.btn#not_right_now {
   }
 }
 
-// .block_main_feature {
-//   height: 334px;
-//   max-height: 334px;
-//   float: left;
-//   width: 100%;
-//   background-position: center top;
-
-//   @include breakpoint($mobile) {
-//     width: 100%;
-//     height: 255px;
-//     margin-bottom: 20px;
-//     padding-bottom: 15px;
-
-//     .title, .text, .text1, .text2, .text3 {
-//       float: left;
-//       width: 100%;
-//       white-space: inherit;
-//       height: auto;
-//       min-height: inherit;
-//     }
-
-//     img {
-//       display: none;
-//     }
-//   }
-
-//   .text {
-//     display: block;
-//     font-size: 45px;
-//     line-height: 48px;
-//     margin: 0 0 55px;
-//     font-family: $header-font-family;
-//     font-weight: normal;
-
-//     span {
-//       // display: inline;
-//       line-height: 73px;
-
-//       // margin-left: -50px;
-//       // margin-right: 50px;
-//       white-space: pre-wrap;
-//     }
-//   }
-
-//   .text2 {
-//     display: inline-block;
-//     vertical-align: top;
-//     margin: 30px 0 11px 30px;
-//     background: #ffffff;
-//     padding: 6px 19px 5px;
-//   }
-
-//   .text1 {
-//     margin: 10px 30px 0px 30px;
-//   }
-
-//   .btn.btn-transparent {
-//     min-width: 206px;
-//     text-align: left;
-//     padding: 10px 20px;
-//     display: inline-block;
-//     margin-right: 10px;
-//     border-width: 2px;
-//   }
-
-// }
-
 /** action block bottom **/
 .articles-block .block-symptoms {
   padding: 30px 10px 37px 39px;
@@ -1453,5 +1386,42 @@ a.btn#not_right_now {
     @include breakpoint($mobile) {
       min-height: 130px;
     }
+  }
+}
+
+.articles-block {
+  .ambitious-block-system {
+    padding-top: 0px;
+  }
+}
+
+.block_main_feature {
+  background-color: $orange-light;
+}
+
+.block-close {
+  display: none;
+}
+
+#block-header-form-are-you-with-us {
+  display: none;
+}
+
+.cta-button {
+  margin: 20px;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.front {
+  .slider-block .holder {
+    max-width: 500px !important;
+  }
+
+  .slider-block .block {
+    padding: 0 !important;
   }
 }

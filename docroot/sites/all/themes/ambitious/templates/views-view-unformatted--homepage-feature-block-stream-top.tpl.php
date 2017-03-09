@@ -120,36 +120,9 @@
       if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action_link_third[0]))
         $action_link_third = $myvar['variables']['view']->result[$id]->field_field_call_to_action_link_third[0]['raw']['url'];
 
-      //feature four links 
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_one_text[0]))
-        $link_one_text = $myvar['variables']['view']->result[$id]->field_field_link_one_text[0]['raw']['value'];
 
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_one[0]))
-        $link_one_url = $myvar['variables']['view']->result[$id]->field_field_link_one[0]['raw']['url'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_two_text[0]))
-        $link_two_text = $myvar['variables']['view']->result[$id]->field_field_link_two_text[0]['raw']['value'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_two[0]))
-        $link_two_url = $myvar['variables']['view']->result[$id]->field_field_link_two[0]['raw']['url'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_three_text[0]))
-        $link_three_text = $myvar['variables']['view']->result[$id]->field_field_link_three_text[0]['raw']['value'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_three[0]))
-        $link_three_url = $myvar['variables']['view']->result[$id]->field_field_link_three[0]['raw']['url'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_four_text[0]))
-        $link_four_text = $myvar['variables']['view']->result[$id]->field_field_link_four_text[0]['raw']['value'];
-
-      if(isset($myvar['variables']['view']->result[$id]->field_field_link_four[0]))
-        $link_four_url = $myvar['variables']['view']->result[$id]->field_field_link_four[0]['raw']['url'];
    ?> 
 
-    <?php // Feature Action Block ?> 
-
-
-       <?php/* if($node_type == 'feature_action_block'):*/ ?>
       <div class="block_main_feature" <?=$background?>>
         <div class="block-image promo_block node-<?=$nid?>" >      
 
@@ -159,54 +132,24 @@
        <strong style="color:<?php print $tout_text_color?> ; " class="text text2"><span><?=$tout_text?></span></strong>
         <?php endif; ?>
 
-        <?php if (!empty($body)) : ?>
+        
         <div class="feature-block-wrapper">
         <?php print $body  ?>
 
-        <?php if(!empty($action_text )) : ?>
+
          <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?>
-
-         <?php if(!empty($action_text_second )) : ?>
+ 
          <a href="<?=$action_link_second?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_second ?>" ><?=$action_text_second ?><em class="icon-Rightarrow"></em></a>
-        <?php endif;?>
-
-        <?php if(!empty($action_text_third )) : ?>
+ 
          <a href="<?=$action_link_third?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_third ?>" ><?=$action_text_third ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?>
+    
        </div>
 
-        <!-- feature four link section   -->
-        <?php elseif (!empty($description_cloums)) : ?>
-
-        <div class="feature-block-wrapper">
-        <div class="link-wrapper">
-        <?php if (!empty($link_one_text)) : ?>
-         <a href="<?=$link_one_url?>" class="" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$link_one_text ?>" ><?=$link_one_text ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?> 
-
-        <?php if (!empty($link_two_text)) : ?>
-         <a href="<?=$link_two_url?>" class="" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$link_two_text ?>" ><?=$link_two_text ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?> 
-
-        <?php if (!empty( $link_three_text)) : ?>
-         <a href="<?=$link_three_url?>" class="" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$link_three_text ?>" ><?=$link_three_text ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?> 
-
-        <?php if (!empty($link_four_text)) : ?>
-         <a href="<?=$link_four_url?>" class="" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$link_four_text ?>" ><?=$link_four_text ?><em class="icon-Rightarrow"></em></a>
-         <?php endif;?> 
-         </div>
-        <div class="description-wrapper">
-        <?php print $description_cloums?>
-        </div>
-        </div>
-
-        <?php endif;?> 
+        
 
        </div>
        </div>
-    <?php /* endif;*/ ?> 
+
 
 
 <?php endforeach; ?>
