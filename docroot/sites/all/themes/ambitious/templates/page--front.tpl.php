@@ -131,7 +131,7 @@
             </h1>
         </div>
         <?php endif; ?>
-
+<?php echo views_embed_view('view_machine_name', 'call_to_action_buttons'); ?>
         </div>
       </div>
       <div class="region region-image-holder" 
@@ -155,8 +155,8 @@
   <?php if ($page['header_form']): ?>    <!-- slider block -->
     <section class=" slider-block">
       <div class="holder">
-      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
-      <?php print render($page['header_form']); ?>       
+      <!-- <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>       -->
+      <?php  ///print render($page['header_form']); ?>       
       </div>
     </section>
   <?php endif; ?>
