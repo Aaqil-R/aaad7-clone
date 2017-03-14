@@ -131,7 +131,12 @@
             </h1>
         </div>
         <?php endif; ?>
-<?php echo views_embed_view('view_machine_name', 'call_to_action_buttons'); ?>
+<?php //print views_embed_view('call_to_action_buttons', 'call to action buttons');  
+
+?>
+<?php if ($page['caption_holder']): ?>
+  <?php print render($page['caption_holder']); ?>
+  <?php endif; ?>
         </div>
       </div>
       <div class="region region-image-holder" 
@@ -156,7 +161,7 @@
     <section class=" slider-block">
       <div class="holder">
       <!-- <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>       -->
-      <?php  ///print render($page['header_form']); ?>       
+      <?php  print render($page['header_form']); ?>       
       </div>
     </section>
   <?php endif; ?>
