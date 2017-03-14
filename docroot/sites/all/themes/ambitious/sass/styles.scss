@@ -683,15 +683,30 @@ table {
     height: 230px;
     position: relative;
     margin: 0 auto;
+
+    @include breakpoint($mobile) {
+      padding: 10px;
+      width: 317px;
+      height: 289px;
+    }
   }
 
   .call-action-buttons {
     top: -133px;
     position: absolute;
     right: 20%;
+
+    @include breakpoint($mobile) {
+      top: -162px;
+      right: 11%;
+    }
   }
 
   .visual .img-holder .region-image-holder {
     height: 65%;
+
+    @include breakpoint($mobile) {
+      height: 100%;
+    }
   }
 }

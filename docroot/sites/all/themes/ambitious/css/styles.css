@@ -1074,13 +1074,34 @@ table {
   position: relative;
   margin: 0 auto;
 }
-/* line 688, ../sass/styles.scss */
+@media (max-width: 767px) {
+  /* line 679, ../sass/styles.scss */
+  .front .caption-text .caption-text-titles {
+    padding: 10px;
+    width: 317px;
+    height: 289px;
+  }
+}
+/* line 694, ../sass/styles.scss */
 .front .call-action-buttons {
   top: -133px;
   position: absolute;
   right: 20%;
 }
-/* line 694, ../sass/styles.scss */
+@media (max-width: 767px) {
+  /* line 694, ../sass/styles.scss */
+  .front .call-action-buttons {
+    top: -162px;
+    right: 11%;
+  }
+}
+/* line 705, ../sass/styles.scss */
 .front .visual .img-holder .region-image-holder {
   height: 65%;
+}
+@media (max-width: 767px) {
+  /* line 705, ../sass/styles.scss */
+  .front .visual .img-holder .region-image-holder {
+    height: 100%;
+  }
 }
