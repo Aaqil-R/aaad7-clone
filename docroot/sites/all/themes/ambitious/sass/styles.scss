@@ -692,18 +692,18 @@ table {
 
 
     .caption-text-title span {
-      padding: 0 0 0 56px;
+      padding: 0 0 0 56px !important;
 
       @include breakpoint($mobile) {
-        padding: 0;
+        padding: 0 !important;
       }
     }
 
     .caption-text-title-1 span {
-      padding-top: 20px;
+      padding-top: 20px !important;
 
       @include breakpoint($mobile) {
-        padding-top: 0px;
+        padding-top: 0px !important;
       }
     }
   }
