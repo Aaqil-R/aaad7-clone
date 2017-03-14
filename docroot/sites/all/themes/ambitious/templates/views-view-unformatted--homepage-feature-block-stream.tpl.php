@@ -102,14 +102,17 @@
       else 
         $description_cloums = '';
 
-      if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action__text[0]))
+       if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action__text[0]))
         $action_text = $myvar['variables']['view']->result[$id]->field_field_call_to_action__text[0]['raw']['value'];
 
-      if(isset($myvar['variables']['view']->result[$id]->field_field__feature_link[0]))
-        $action_link = $myvar['variables']['view']->result[$id]->field_field__feature_link[0]['raw']['url'];
+      if(isset($myvar['variables']['view']->result[$id]->field_field___feature_link[0]))
+        $action_link = $myvar['variables']['view']->result[$id]->field_field___feature_link[0]['raw']['url'];
+
+
 
       if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action_text_second[0]))
         $action_text_second = $myvar['variables']['view']->result[$id]->field_field_call_to_action_text_second[0]['raw']['value'];
+
 
       if(isset($myvar['variables']['view']->result[$id]->field_field_call_to_action_link_second[0]))
         $action_link_second = $myvar['variables']['view']->result[$id]->field_field_call_to_action_link_second[0]['raw']['url'];
