@@ -694,11 +694,17 @@ table {
     .caption-text-title span {
       padding: 0 0 0 56px;
 
-      @include breakpoint($mobile) {}
+      @include breakpoint($mobile) {
+        padding: 0;
+      }
     }
 
     .caption-text-title-1 span {
       padding-top: 20px;
+
+      @include breakpoint($mobile) {
+        padding-top: 0px;
+      }
     }
   }
 
@@ -722,6 +728,8 @@ table {
   }
 
   .visual .img-holder .caption-frame {
+    top: 9%;
+
     @include breakpoint($mobile) {
       top: 17%;
     }
