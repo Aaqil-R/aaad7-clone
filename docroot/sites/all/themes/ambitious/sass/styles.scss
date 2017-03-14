@@ -680,7 +680,7 @@ table {
     display: block;
     background-color: $white;
     width: 900px;
-    height: 230px;
+    height: 206px;
     position: relative;
     margin: 0 auto;
 
@@ -689,12 +689,23 @@ table {
       width: 317px;
       height: 289px;
     }
+
+
+    .caption-text-title span {
+      padding: 0 0 0 56px;
+
+      @include breakpoint($mobile) {}
+    }
+
+    .caption-text-title-1 span {
+      padding-top: 20px;
+    }
   }
 
   .call-action-buttons {
-    top: -133px;
+    top: -124px;
     position: absolute;
-    right: 20%;
+    right: 17%;
 
     @include breakpoint($mobile) {
       top: -162px;
