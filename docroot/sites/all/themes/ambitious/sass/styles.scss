@@ -709,4 +709,16 @@ table {
       height: 100%;
     }
   }
+
+  .visual .img-holder .caption-frame {
+    @include breakpoint($mobile) {
+      top: 17%;
+    }
+  }
+
+  .visual .holder {
+    @include breakpoint($mobile) {
+      top: 0px !important;
+    }
+  }
 }

@@ -1119,9 +1119,21 @@ a.btn#not_right_now {
   width: auto;
   background-size: cover;
 
+  @include breakpoint($mobile) {
+    padding: 20px;
+  }
+
+
   .btn {
     padding: 10px 20px;
     margin: 10px;
+
+    @include breakpoint($mobile) {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
 
   .text {
@@ -1287,6 +1299,11 @@ a.btn#not_right_now {
   width: auto;
   background-size: cover;
 
+  @include breakpoint($mobile) {
+    padding: 20px;
+  }
+
+
   .btn {
     padding: 10px 20px;
   }
@@ -1298,6 +1315,11 @@ a.btn#not_right_now {
     margin: 0 0 0;
     font-family: $header-font-family;
     font-weight: normal;
+
+    @include breakpoint($mobile) {
+      min-height: 130px;
+    }
+
 
     #main2 & {
       margin: 0 0 6px;
