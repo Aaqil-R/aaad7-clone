@@ -139,15 +139,17 @@
         <div class="feature-block-wrapper">
         <?php print $body  ?>
 
-        
-         <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>
-         
+    <?php if(!empty($action_link )) : ?>
+         <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>         
+    <?php endif; ?>
 
-        
+    <?php if(!empty($action_link_second )) : ?>
          <a href="<?=$action_link_second?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_second ?>" ><?=$action_text_second ?><em class="icon-Rightarrow"></em></a>
-        
+    <?php endif; ?>
+
+    <?php if(!empty($action_link_third )) : ?>
          <a href="<?=$action_link_third?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_third ?>" ><?=$action_text_third ?><em class="icon-Rightarrow"></em></a>
-         
+    <?php endif; ?>
        </div>
 
 
