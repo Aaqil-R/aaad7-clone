@@ -1317,90 +1317,85 @@ a.btn#not_right_now {
 }
 
 /** action block bottom **/
-.articles-block .block-symptoms {
-  padding: 30px 10px 37px 39px;
-  width: auto;
-  background-size: cover;
+// .articles-block .block-symptoms {
+//   padding: 30px 10px 37px 39px;
+//   width: auto;
+//   background-size: cover;
 
-  @include breakpoint($mobile) {
-    padding: 20px;
-  }
+//   @include breakpoint($mobile) {
+//     padding: 20px;
+//   }
 
+//   .btn {
+//     padding: 10px 20px;
+//   }
 
-  .btn {
-    padding: 10px 20px;
-  }
+//   .text {
+//     display: block;
+//     font-size: 45px;
+//     line-height: 48px;
+//     margin: 0 0 0;
+//     font-family: $header-font-family;
+//     font-weight: normal;
 
-  .text {
-    display: block;
-    font-size: 45px;
-    line-height: 48px;
-    margin: 0 0 0;
-    font-family: $header-font-family;
-    font-weight: normal;
+//     @include breakpoint($mobile) {
+//       min-height: 130px;
+//     }
 
-    @include breakpoint($mobile) {
-      min-height: 130px;
-    }
+//     #main2 & {
+//       margin: 0 0 6px;
+//     }
 
+//     @include breakpoint($tablet) {
+//       font-size: 25px;
+//       line-height: 28px;
+//     }
 
-    #main2 & {
-      margin: 0 0 6px;
-    }
+//     @include breakpoint($mobile) {
+//       margin: 0 0 5px;
+//     }
 
-    @include breakpoint($tablet) {
-      font-size: 25px;
-      line-height: 28px;
-    }
+//     span {
+//       color: $heading-link;
+//       display: inline-block;
+//       vertical-align: top;
+//       margin: 0 0 11px;
+//       background: $white;
+//       padding: 6px 19px 5px;
 
+//       @include breakpoint($mobile) {
+//         padding: 3px 10px 6px;
+//         margin: 0 0 5px;
+//       }
 
-    @include breakpoint($mobile) {
-      margin: 0 0 5px;
-    }
+//       &.add {
+//         margin: 0 0 0px 62px;
 
+//         @include breakpoint($mobile) {
+//           margin: 0 0 0px 19px;
+//         }
+//       }
+//     }
+//   }
 
-    span {
-      color: $heading-link;
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 0 11px;
-      background: $white;
-      padding: 6px 19px 5px;
+//   .text {
+//     min-height: 160px;
+//     margin-bottom: 0;
 
-      @include breakpoint($mobile) {
-        padding: 3px 10px 6px;
-        margin: 0 0 5px;
-      }
+//     span {
+//       display: inline;
+//       line-height: 73px;
 
+//       // margin-left: -50px;
+//       margin-right: 50px;
+//       white-space: pre-wrap;
 
-      &.add {
-        margin: 0 0 0px 62px;
-
-        @include breakpoint($mobile) {
-          margin: 0 0 0px 19px;
-        }
-      }
-    }
-  }
-
-  .text {
-    min-height: 160px;
-    margin-bottom: 0;
-
-    span {
-      display: inline;
-      line-height: 73px;
-
-      // margin-left: -50px;
-      margin-right: 50px;
-      white-space: pre-wrap;
-
-      @include breakpoint($tablet) {
-        line-height: 45px;
-      }
-    }
-  }
-}
+//       @include breakpoint($tablet) {
+//         line-height: 45px;
+//       }
+//     }
+//   }
+// }
 
 .core_action_block {
   .text1 {
