@@ -605,8 +605,9 @@
 
   .view-display-id-block_stream_homepage {
     .btn.btn-transparent {
-      min-width: 206px;
-      text-align: left;
+      width: 100%;
+      padding: 10px 18px;
+      text-align: center;
     }
   }
 
@@ -617,9 +618,9 @@
     margin-bottom: 6px;
     border-width: 2px;
 
-    @include breakpoint($mobile) {
-      width: auto;
-      padding: 10px 18px;
+    @include breakpoint($tablet) {
+      min-width: 206px;
+      text-align: left;
     }
 
 
