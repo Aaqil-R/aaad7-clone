@@ -232,6 +232,7 @@
         <div class="articles-columns" >
           <?php print render($page['services']); ?>
           <!--column one -->
+          <?php print views_embed_view('block_stream', 'block_stream_homepage_bottom');  ?>
         </div>
       </div>    
   </section><!-- /services -->
