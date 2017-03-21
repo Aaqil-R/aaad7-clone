@@ -129,14 +129,12 @@
               <?php endif; ?>        
             <?php endif; ?>
             </h1>
+            <?php print views_embed_view('card_stream', 'call_to_action_buttons');  ?>
         </div>
         <?php endif; ?>
-<?php //print views_embed_view('call_to_action_buttons', 'call to action buttons');  
 
-?>
-<?php if ($page['caption_holder']): ?>
-  <?php print render($page['caption_holder']); ?>
-  <?php endif; ?>
+
+
         </div>
       </div>
       <div class="region region-image-holder" 
