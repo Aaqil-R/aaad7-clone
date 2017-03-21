@@ -1141,6 +1141,11 @@ a.btn#not_right_now {
     color: $white;
     margin-right: 20px;
 
+    @include breakpoint($mobile) {
+      margin-right: 0px;
+    }
+
+
     p {
       font-size: 22px;
       margin-bottom: 30px;
