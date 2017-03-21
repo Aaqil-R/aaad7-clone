@@ -608,6 +608,11 @@
       width: 100%;
       padding: 10px 18px;
       text-align: center;
+
+      @include breakpoint($tablet) {
+        min-width: 206px;
+        text-align: left;
+      }
     }
   }
 
