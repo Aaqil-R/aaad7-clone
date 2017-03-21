@@ -37,6 +37,7 @@ field .
     visibility: hidden;
     z-index: 998;
     position: relative;
+    background: $white;
 
     .block {
       // Add box shadow to Home page Form
@@ -228,6 +229,7 @@ field .
 
 .header_banner {
   z-index: 0;
+  background: $white;
 }
 
 //-------------------------------------
@@ -2028,36 +2030,39 @@ section.job-card {
 }
 
 //Who we are bullet point updates
-.section-who-we-are{
-  .webform-style{
-    .webform-client-form-224896{
-      .webform-component--topic{
-        float:left;
+.section-who-we-are {
+  .webform-style {
+    .webform-client-form-224896 {
+      .webform-component--topic {
+        float: left;
       }
-      fieldset{
-        display:block;
-        float:none;
-        input[type="checkbox"]{
+
+      fieldset {
+        display: block;
+        float: none;
+
+        input[type="checkbox"] {
           @include breakpoint($mobile) {
-            width:5%;
-            margin-top:10px;
-            float:left;
+            width: 5%;
+            margin-top: 10px;
+            float: left;
           }
         }
-        label{
+
+        label {
           display: inline-block;
+
           @include breakpoint($mobile) {
-            width:90%;
+            width: 90%;
           }
         }
       }
-      .form-actions{
+
+      .form-actions {
         @include breakpoint($tablet) {
-          float:left;
+          float: left;
         }
       }
     }
   }
 }
-
-
