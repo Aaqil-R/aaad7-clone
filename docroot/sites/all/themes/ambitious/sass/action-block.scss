@@ -605,13 +605,14 @@
 
   .view-display-id-block_stream_homepage {
     .btn.btn-transparent {
-      width: 100%;
+      width: 206px;
       padding: 10px 18px;
-      text-align: center;
+      text-align: left;
 
       @include breakpoint($tablet) {
-        min-width: 206px;
-        text-align: left;
+        // min-width: 206px;
+        width: 100%;
+        text-align: center;
       }
     }
   }
