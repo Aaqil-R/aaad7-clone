@@ -1354,6 +1354,11 @@ a.btn#not_right_now {
 
   .btn {
     padding: 10px 20px;
+
+    @include breakpoint($tablet-range) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .text {
