@@ -1521,6 +1521,12 @@ a.btn#not_right_now {
     min-height: 565px;
     margin-bottom: 30px;
 
+    @include breakpoint($tablet) {
+      max-height: 660px;
+      min-height: 660px;
+    }
+
+
     h4 {
       a {
         // font-size: 22px !important;

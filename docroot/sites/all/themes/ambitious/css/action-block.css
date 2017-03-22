@@ -1966,18 +1966,25 @@ a.btn#not_right_now {
   min-height: 565px;
   margin-bottom: 30px;
 }
-/* line 1531, ../sass/action-block.scss */
+@media (max-width: 990px) {
+  /* line 1519, ../sass/action-block.scss */
+  .what-we-do .card {
+    max-height: 660px;
+    min-height: 660px;
+  }
+}
+/* line 1537, ../sass/action-block.scss */
 .what-we-do .card p {
   font-size: 22px;
   line-height: 30px;
 }
 
-/* line 1538, ../sass/action-block.scss */
+/* line 1544, ../sass/action-block.scss */
 .card-layout {
   margin-bottom: 30px;
 }
 
-/* line 1542, ../sass/action-block.scss */
+/* line 1548, ../sass/action-block.scss */
 .articles-columns {
   margin-bottom: 0.5em;
 }

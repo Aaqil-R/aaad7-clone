@@ -728,8 +728,12 @@ table {
       top: 0px;
       right: 11%;
       margin-top: 150px;
+    }
 
-      // margin-right: 20px;
+
+    @include breakpoint($tablet) {
+      top: 210px;
+      left: 37%;
     }
   }
 
