@@ -27,9 +27,14 @@
 
     if(isset($myvar['variables']['view']->result[$id]->field_field_button_links[0]))
         $title = $myvar['variables']['view']->result[$id]->field_field_button_links[0]['raw']['title'];
+
+      if(isset($myvar['variables']['view']->result[$id]->field_field_shadow_color[0]))
+        $shadow_color = $myvar['variables']['view']->result[$id]->field_field_shadow_color[0]['rendered']['#markup'];
+      else 
+        $shadow_color = '';
      ?>
 
-<div style="background:<?php print $background_color?>; box-shadow:0px 5px rgba(0, 0, 0, 0.8) !important;" class="btn cta-button"> <a href="<?php print $link ?>"> <?php print $title ?></a></div>
+<div style="background:<?php print $background_color?>; box-shadow:0px 5px <?php print $shadow_color?>; !important;" class="btn cta-button"> <a href="<?php print $link ?>"> <?php print $title ?></a></div>
 
 <?php endforeach; ?>
  
