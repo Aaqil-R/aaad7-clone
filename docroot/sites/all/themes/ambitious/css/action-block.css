@@ -1827,11 +1827,16 @@ a.btn#not_right_now {
 #main2 .action-block-bottom .block-symptoms .text {
   margin: 0 0 6px;
 }
-@media (max-width: 990px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* line 1377, ../sass/action-block.scss */
   .action-block-bottom .block-symptoms .text {
-    font-size: 25px;
-    line-height: 28px;
+    font-size: 34px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 1399, ../sass/action-block.scss */
+  .action-block-bottom .block-symptoms .text:first-child {
+    min-height: 203px;
   }
 }
 @media (max-width: 767px) {
@@ -1840,7 +1845,7 @@ a.btn#not_right_now {
     margin: 0 0 5px;
   }
 }
-/* line 1405, ../sass/action-block.scss */
+/* line 1410, ../sass/action-block.scss */
 .action-block-bottom .block-symptoms .text span {
   color: #081318;
   display: inline-block;
@@ -1850,28 +1855,28 @@ a.btn#not_right_now {
   padding: 6px 19px 5px;
 }
 @media (max-width: 767px) {
-  /* line 1405, ../sass/action-block.scss */
+  /* line 1410, ../sass/action-block.scss */
   .action-block-bottom .block-symptoms .text span {
     padding: 3px 10px 6px;
     margin: 0 0 5px;
   }
 }
-/* line 1419, ../sass/action-block.scss */
+/* line 1424, ../sass/action-block.scss */
 .action-block-bottom .block-symptoms .text span.add {
   margin: 0 0 0px 62px;
 }
 @media (max-width: 767px) {
-  /* line 1419, ../sass/action-block.scss */
+  /* line 1424, ../sass/action-block.scss */
   .action-block-bottom .block-symptoms .text span.add {
     margin: 0 0 0px 19px;
   }
 }
-/* line 1429, ../sass/action-block.scss */
+/* line 1434, ../sass/action-block.scss */
 .action-block-bottom .block-symptoms .text {
   min-height: 160px;
   margin-bottom: 0;
 }
-/* line 1433, ../sass/action-block.scss */
+/* line 1438, ../sass/action-block.scss */
 .action-block-bottom .block-symptoms .text span {
   display: inline;
   line-height: 73px;
@@ -1879,13 +1884,13 @@ a.btn#not_right_now {
   white-space: pre-wrap;
 }
 @media (max-width: 990px) {
-  /* line 1433, ../sass/action-block.scss */
+  /* line 1438, ../sass/action-block.scss */
   .action-block-bottom .block-symptoms .text span {
     line-height: 45px;
   }
 }
 
-/* line 1449, ../sass/action-block.scss */
+/* line 1454, ../sass/action-block.scss */
 .core_action_block .text1 {
   font-size: 44px;
   white-space: pre-line;
@@ -1895,109 +1900,109 @@ a.btn#not_right_now {
   margin-top: 14px;
 }
 @media (max-width: 990px) {
-  /* line 1449, ../sass/action-block.scss */
+  /* line 1454, ../sass/action-block.scss */
   .core_action_block .text1 {
     font-size: 34px;
     line-height: normal;
   }
 }
 @media (max-width: 767px) {
-  /* line 1449, ../sass/action-block.scss */
+  /* line 1454, ../sass/action-block.scss */
   .core_action_block .text1 {
     font-size: 29px;
     line-height: normal;
     min-height: 130px;
   }
 }
-/* line 1470, ../sass/action-block.scss */
+/* line 1475, ../sass/action-block.scss */
 .core_action_block .text2 {
   margin-left: 50px;
   min-height: 175px;
   margin-top: 18px;
 }
 @media (max-width: 767px) {
-  /* line 1470, ../sass/action-block.scss */
+  /* line 1475, ../sass/action-block.scss */
   .core_action_block .text2 {
     min-height: 130px;
   }
 }
 
-/* line 1482, ../sass/action-block.scss */
+/* line 1487, ../sass/action-block.scss */
 .articles-block .ambitious-block-system {
   padding-top: 0px;
 }
 
-/* line 1487, ../sass/action-block.scss */
+/* line 1492, ../sass/action-block.scss */
 .block_main_feature {
   background-color: #f07d00;
 }
 
-/* line 1491, ../sass/action-block.scss */
+/* line 1496, ../sass/action-block.scss */
 .block-close {
   display: none;
 }
 
-/* line 1495, ../sass/action-block.scss */
+/* line 1500, ../sass/action-block.scss */
 #block-header-form-are-you-with-us {
   display: none;
 }
 
-/* line 1499, ../sass/action-block.scss */
+/* line 1504, ../sass/action-block.scss */
 .btn.cta-button {
   margin: 10px;
   padding: 5px 20px !important;
 }
-/* line 1508, ../sass/action-block.scss */
+/* line 1513, ../sass/action-block.scss */
 .btn.cta-button a {
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
 }
 
-/* line 1516, ../sass/action-block.scss */
+/* line 1521, ../sass/action-block.scss */
 .front #main {
   margin-top: 70px;
 }
 @media (max-width: 767px) {
-  /* line 1516, ../sass/action-block.scss */
+  /* line 1521, ../sass/action-block.scss */
   .front #main {
     margin-top: 20px;
   }
 }
-/* line 1524, ../sass/action-block.scss */
+/* line 1529, ../sass/action-block.scss */
 .front #wrapper {
   background: #ffffff !important;
 }
-/* line 1528, ../sass/action-block.scss */
+/* line 1533, ../sass/action-block.scss */
 .front .slider-block .holder {
   max-width: 26.2% !important;
 }
-/* line 1532, ../sass/action-block.scss */
+/* line 1537, ../sass/action-block.scss */
 .front .slider-block .block {
   padding: 0 !important;
 }
 @media (max-width: 767px) {
-  /* line 1536, ../sass/action-block.scss */
+  /* line 1541, ../sass/action-block.scss */
   .front .slider-block {
     margin-top: 10px !important;
   }
 }
 
-/* line 1544, ../sass/action-block.scss */
+/* line 1549, ../sass/action-block.scss */
 .what-we-do .card {
   max-height: 565px;
   min-height: 565px;
   margin-bottom: 30px;
 }
 @media (max-width: 990px) {
-  /* line 1544, ../sass/action-block.scss */
+  /* line 1549, ../sass/action-block.scss */
   .what-we-do .card {
     max-height: 660px;
     min-height: 660px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1544, ../sass/action-block.scss */
+  /* line 1549, ../sass/action-block.scss */
   .what-we-do .card {
     min-height: 315px;
     max-height: 475px;
@@ -2005,23 +2010,23 @@ a.btn#not_right_now {
     -webkit-box-shadow: none;
   }
 }
-/* line 1570, ../sass/action-block.scss */
+/* line 1575, ../sass/action-block.scss */
 .what-we-do .card p {
   font-size: 22px;
   line-height: 30px;
 }
 
-/* line 1577, ../sass/action-block.scss */
+/* line 1582, ../sass/action-block.scss */
 .card-layout {
   margin-bottom: 30px;
 }
 
-/* line 1581, ../sass/action-block.scss */
+/* line 1586, ../sass/action-block.scss */
 .articles-columns {
   margin-bottom: 0.5em;
 }
 
-/* line 1586, ../sass/action-block.scss */
+/* line 1591, ../sass/action-block.scss */
 .view-display-id-block_stream_homepage_bottom .btn.btn-transparent:hover {
   top: 0px;
 }

@@ -1391,11 +1391,16 @@ a.btn#not_right_now {
       margin: 0 0 6px;
     }
 
-    @include breakpoint($tablet) {
-      font-size: 25px;
-      line-height: 28px;
+    @include breakpoint($tablet-range) {
+      font-size: 34px;
     }
 
+
+    &:first-child {
+      @include breakpoint($tablet-range) {
+        min-height: 203px;
+      }
+    }
 
     @include breakpoint($mobile) {
       margin: 0 0 5px;
