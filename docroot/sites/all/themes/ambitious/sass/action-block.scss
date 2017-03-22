@@ -1175,7 +1175,7 @@ a.btn#not_right_now {
     }
 
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       padding: 25px 80px;
     }
   }
@@ -1525,6 +1525,12 @@ a.btn#not_right_now {
     @include breakpoint($tablet) {
       max-height: 660px;
       min-height: 660px;
+    }
+
+
+    @include breakpoint($mobile) {
+      min-height: 360px;
+      max-height: 360px;
     }
 
 

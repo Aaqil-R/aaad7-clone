@@ -1598,7 +1598,7 @@ a.btn#not_right_now {
     margin-right: 0px;
   }
 }
-@media (max-width: 990px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* line 1165, ../sass/action-block.scss */
   .feature-action-block .promo_block .btn {
     padding: 25px 80px;
@@ -1974,18 +1974,25 @@ a.btn#not_right_now {
     min-height: 660px;
   }
 }
-/* line 1538, ../sass/action-block.scss */
+@media (max-width: 767px) {
+  /* line 1520, ../sass/action-block.scss */
+  .what-we-do .card {
+    min-height: 360px;
+    max-height: 360px;
+  }
+}
+/* line 1544, ../sass/action-block.scss */
 .what-we-do .card p {
   font-size: 22px;
   line-height: 30px;
 }
 
-/* line 1545, ../sass/action-block.scss */
+/* line 1551, ../sass/action-block.scss */
 .card-layout {
   margin-bottom: 30px;
 }
 
-/* line 1549, ../sass/action-block.scss */
+/* line 1555, ../sass/action-block.scss */
 .articles-columns {
   margin-bottom: 0.5em;
 }
