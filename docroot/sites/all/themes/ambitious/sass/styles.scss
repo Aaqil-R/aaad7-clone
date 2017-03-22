@@ -691,11 +691,22 @@ table {
     }
 
 
+    @include breakpoint($tablet) {
+      width: 620px;
+      height: 283px;
+    }
+
+
     .caption-text-title span {
       padding: 0 0 0 56px !important;
 
       @include breakpoint($mobile) {
         padding: 0 !important;
+      }
+
+
+      @include breakpoint($tablet) {
+        padding: 0 0 0 0 !important;
       }
     }
 

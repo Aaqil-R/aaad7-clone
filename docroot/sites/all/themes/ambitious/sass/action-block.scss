@@ -1172,6 +1172,11 @@ a.btn#not_right_now {
       margin-left: 0px;
       margin-right: 0px;
     }
+
+
+    include breakpoint($tablet) {
+      padding: 0px 0px;
+    }
   }
 
   .text {
@@ -1518,13 +1523,14 @@ a.btn#not_right_now {
 
     h4 {
       a {
-        font-size: 22px !important;
+        // font-size: 22px !important;
+     
       }
     }
 
     p {
-      font-size: 22px !important;
-      line-height: 30px !important;
+      font-size: 22px;
+      line-height: 30px;
     }
   }
 }
