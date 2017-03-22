@@ -691,7 +691,7 @@ table {
     }
 
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       width: 620px;
       height: 283px;
     }
@@ -705,7 +705,7 @@ table {
       }
 
 
-      @include breakpoint($tablet) {
+      @include breakpoint($tablet-range) {
         padding: 0 0 0 0 !important;
       }
     }
@@ -731,7 +731,7 @@ table {
     }
 
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       top: 210px;
       left: 37%;
     }
