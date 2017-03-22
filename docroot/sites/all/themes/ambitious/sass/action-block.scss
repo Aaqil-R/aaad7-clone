@@ -1342,6 +1342,12 @@ a.btn#not_right_now {
   background: $white;
 }
 
+.action-block .block-symptoms {
+  @include breakpoint($tablet-range) {
+    padding: 30px;
+  }
+}
+
 .action-block-bottom .block-symptoms {
   padding: 30px 10px 37px 39px;
   width: auto;
@@ -1353,7 +1359,7 @@ a.btn#not_right_now {
 
 
   @include breakpoint($tablet-range) {
-    padding: 30px 10px 37px 30px;
+    padding: 30px;
   }
 
 
