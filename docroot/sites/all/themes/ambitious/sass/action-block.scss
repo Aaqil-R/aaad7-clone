@@ -1574,13 +1574,13 @@ a.btn#not_right_now {
       max-height: 475px;
       box-shadow: none;
       -webkit-box-shadow: none;
+      margin-bottom: 0px;
     }
 
 
     h4 {
-      a {
-        // font-size: 22px !important;
-     
+      @include breakpoint($mobile) {
+        margin-top: 0.5em;
       }
     }
 
@@ -1602,5 +1602,15 @@ a.btn#not_right_now {
 .view-display-id-block_stream_homepage_bottom {
   .btn.btn-transparent:hover {
     top: 0px;
+  }
+}
+
+.card--item feature-row {
+  .views-field-title info {
+    h5 {
+      @include breakpoint($mobile) {
+        font-size: 24px;
+      }
+    }
   }
 }
