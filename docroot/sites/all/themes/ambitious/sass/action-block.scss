@@ -77,8 +77,6 @@
   @include transition($type: all, $time: 0.4s, $ease: ease);
 
   @include breakpoint($mobile) {
-    background: none;
-
     .text, .title {
       width: 50%;
 
@@ -1536,6 +1534,7 @@ a.btn#not_right_now {
 
     @include breakpoint($mobile) {
       margin-top: 20px;
+      background: $white;
     }
   }
 
