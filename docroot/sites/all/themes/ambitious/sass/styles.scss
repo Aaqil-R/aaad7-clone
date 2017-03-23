@@ -693,7 +693,7 @@ table {
 
     @include breakpoint($tablet-range) {
       width: 620px;
-      height: 283px;
+      height: 315px;
     }
 
 
@@ -732,8 +732,8 @@ table {
 
 
     @include breakpoint($tablet-range) {
-      top: 210px;
-      left: 33%;
+      top: 218px;
+      right: 26%;
     }
   }
 
@@ -750,6 +750,11 @@ table {
 
     @include breakpoint($mobile) {
       top: 17% !important;
+    }
+
+
+    @include breakpoint($tablet-range) {
+      top: 1% !important;
     }
   }
 
