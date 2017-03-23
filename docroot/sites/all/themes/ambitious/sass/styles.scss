@@ -715,6 +715,7 @@ table {
 
       @include breakpoint($mobile) {
         padding-top: 0px !important;
+        line-height: 38px;
       }
     }
   }
@@ -746,15 +747,15 @@ table {
   }
 
   .visual .img-holder .caption-frame {
-    top: 9% !important;
+    top: 9%;
 
     @include breakpoint($mobile) {
-      top: 17% !important;
+      top: 17%;
     }
 
 
     @include breakpoint($tablet-range) {
-      top: 1% !important;
+      top: 1%;
     }
   }
 
