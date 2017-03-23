@@ -1493,6 +1493,18 @@ a.btn#not_right_now {
   .ambitious-block-system {
     padding-top: 0px;
   }
+
+  @include breakpoint($mobile) {
+    background: #ffffff;
+  }
+
+
+  h2 {
+    @include breakpoint($mobile) {
+      margin: 20px 10px;
+      font-size: 29px;
+    }
+  }
 }
 
 .block_main_feature {
