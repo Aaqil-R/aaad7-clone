@@ -1184,7 +1184,7 @@ a.btn#not_right_now {
 
   .text {
     display: block;
-    font-size: 45px;
+    font-size: 45px !important;
     line-height: 48px;
     margin: 10px 0 35px;
     font-family: $header-font-family;
@@ -1195,13 +1195,15 @@ a.btn#not_right_now {
     }
 
     @include breakpoint($tablet-range) {
-      font-size: 29px;
-      line-height: 40px;
+      font-size: 25px !important;
+      line-height: 50px;
     }
 
 
     @include breakpoint($mobile) {
       margin: 0 0 5px;
+      font-size: 29px !important;
+      line-height: 40px;
     }
 
 
