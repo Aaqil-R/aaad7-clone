@@ -6,39 +6,39 @@
 //header visual
 
 //first row
-.visual {
-  &.no-overlay {
-    overflow: hidden;
+// .visual {
+//   &.no-overlay {
+//     overflow: hidden;
 
-    @include breakpoint($mobile) {
-      height: auto;
-      margin: 0;
-    }
-  }
+//     @include breakpoint($mobile) {
+//       height: auto;
+//       margin: 0;
+//     }
+//   }
 
-  .img-holder {
-    .caption-frame {
-      padding: 0;
+//   .img-holder {
+//     .caption-frame {
+//       padding: 0;
 
-      .caption {
-        .title {
-          margin-top: 85px;
-          padding: 10px;
+//       .caption {
+//         .title {
+//           margin-top: 85px;
+//           padding: 10px;
 
-          .title-third {
-            @include breakpoint($mobile) {
-              margin-top: 10%;
-            }
-          }
-        }
+//           .title-third {
+//             @include breakpoint($mobile) {
+//               margin-top: 10%;
+//             }
+//           }
+//         }
 
-        .title-row-2 {
-          padding: 0 0 0 238px;
-        }
-      }
-    }
-  }
-}
+//         .title-row-2 {
+//           padding: 0 0 0 238px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // moving second title row TODO add .title-row-2 to the main css where title is and remove the double class name in the html
 .visual .img-holder .caption-frame .caption .title-row-2 {
@@ -54,37 +54,36 @@
     }
   }
 
-  .visual .img-holder .caption-frame .caption .title {
-    @include breakpoint($mobile) {
-      margin-top: 40px;
-    }
-  }
+  // .visual .img-holder .caption-frame .caption .title {
+  //   @include breakpoint($mobile) {
+  //     margin-top: 40px;
+  //   }
+  // }
 }
 
 // end from content.scss
 
 // start from all.scss
 
-.front {
-  .visual.header_banner {
-    .img-holder {
-      height: 770px;
-    }
+// .front {
+//   .visual.header_banner {
+//     .img-holder {
+//       height: 770px;
+//     }
 
-    &.no-overlay {
-      margin-bottom: 31em;
+//     &.no-overlay {
+//       margin-bottom: 31em;
 
-      @include breakpoint($mobile) {
-        margin-bottom: 90px;
-      }
+//       @include breakpoint($mobile) {
+//         margin-bottom: 90px;
+//       }
 
-
-      .img-holder {
-        height: 420px;
-      }
-    }
-  }
-}
+//       .img-holder {
+//         height: 420px;
+//       }
+//     }
+//   }
+// }
 
 /* visual block styles */
 .visual {
@@ -780,63 +779,61 @@
   }
 }
 
-@include breakpoint($mobile) {
-  .front {
-    .visual.header_banner {
-      .img-holder {
-        height: 375px;
-      }
-    }
-  }
-}
-
+// @include breakpoint($mobile) {
+//   .front {
+//     .visual.header_banner {
+//       .img-holder {
+//         height: 375px;
+//       }
+//     }
+//   }
+// }
 
 // end from all.scss
 
 //=== Visual Section ===//
-.visual {
-  // max-height: 770px;
-  overflow: hidden;
+// .visual {
+//   // max-height: 770px;
+//   overflow: hidden;
 
-  .img-holder {
-    .caption-frame {
-      z-index: 998;
-      position: absolute;
-      top: 0;
-      width: 100%;
+//   .img-holder {
+//     .caption-frame {
+//       z-index: 998;
+//       position: absolute;
+//       top: 0;
+//       width: 100%;
 
-      @include breakpoint($mobile) {
-        top: 45%;
+//       @include breakpoint($mobile) {
+//         top: 45%;
 
-        .caption-text {
-          margin-top: 0;
-        }
-      }
+//         .caption-text {
+//           margin-top: 0;
+//         }
+//       }
 
+//       .region-caption-holder {
+//         max-width: 1080px;
+//         margin: 0 auto;
+//         margin-top: 1.5em;
+//         padding: 0 15px;
 
-      .region-caption-holder {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 1.5em;
-        padding: 0 15px;
+//         @include breakpoint($mobile) {
+//           padding: 0 0px;
+//           margin-top: 0;
+//         }
+//       }
 
-        @include breakpoint($mobile) {
-          padding: 0 0px;
-          margin-top: 0;
-        }
-      }
+//       .caption {
+//         padding: 70px 0 0;
+//         color: $heading-link;
 
-      .caption {
-        padding: 70px 0 0;
-        color: $heading-link;
-
-        .title {
-          position: relative;
-        }
-      }
-    }
-  }
-}
+//         .title {
+//           position: relative;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // .front {
 //   .visual {

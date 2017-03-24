@@ -121,9 +121,9 @@ field .
     }
   }
 
-  .visual {
-    max-height: none;
-  }
+  // .visual {
+  //   max-height: none;
+  // }
 
   .visual .holder {
     @include breakpoint($mobile) {
@@ -134,27 +134,6 @@ field .
       .pic-by {
         padding: 0 0 10px 0;
       }
-    }
-  }
-
-  .visual .img-holder {
-    max-height: 825px;
-  }
-
-  .visual .img-holder .caption-frame .caption {
-    @include breakpoint($mobile) {
-      padding: 60px 0 0;
-    }
-
-
-    @include breakpoint($not-mobile) {
-      padding: 80px 0 0;
-    }
-  }
-
-  .visual .img-holder .caption-frame .caption .title {
-    @include breakpoint($mobile) {
-      right: 0px;
     }
   }
 
@@ -229,11 +208,11 @@ field .
   }
 }
 
-.header_banner {
-  z-index: 0;
+// .header_banner {
+//   z-index: 0;
 
-  // background: $white;
-}
+// background: $white;
+// }
 
 //-------------------------------------
 .search-text {
