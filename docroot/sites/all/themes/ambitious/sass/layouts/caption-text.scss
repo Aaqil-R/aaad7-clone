@@ -13,11 +13,11 @@
 // Caption Block
 
 .front {
-  .caption-text {
-    @include breakpoint(min-width $desktop) {
-      margin-top: 66px;
-    }
-  }
+  // .caption-text {
+  //   @include breakpoint(min-width $desktop) {
+  //     margin-top: 66px;
+  //   }
+  // }
 
   //TODO: Commented the code to check whether it's need or not
   // #block-block-26.caption-text .caption-text-titles .caption-text-title {
@@ -48,7 +48,8 @@
   @include animation(caption-text-titles 1s);
 
   position: relative;
-  margin-top: 75px;
+
+  // margin-top: 75px;
 
   //new code
   @include breakpoint($mobile) {
