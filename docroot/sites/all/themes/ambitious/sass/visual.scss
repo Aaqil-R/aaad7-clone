@@ -129,7 +129,7 @@
       top: 0;
       transform: translateX(-50%);
       left: 50%;
-      width: 900px;
+      width: 70%;
     }
 
     .region-image-holder {
@@ -405,8 +405,11 @@
 
   .holder {
     margin: 0 auto;
-    max-width: 1080px;
+
+    // max-width: 1080px;
     padding: 11px 15px;
+    display: inline-block;
+    width: 100%;
 
     @include breakpoint($mobile) {
       padding: 7px 21px;
