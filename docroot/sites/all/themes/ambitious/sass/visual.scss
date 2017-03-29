@@ -6,44 +6,44 @@
 //header visual
 
 //first row
-.visual {
-  &.no-overlay {
-    overflow: hidden;
+// .visual {
+//   &.no-overlay {
+//     overflow: hidden;
 
-    @include breakpoint($mobile) {
-      height: auto;
-      margin: 0;
-    }
-  }
+//     @include breakpoint($mobile) {
+//       height: auto;
+//       margin: 0;
+//     }
+//   }
 
-  .img-holder {
-    .caption-frame {
-      padding: 0;
+//   // .img-holder {
+//   //   .caption-frame {
+//   //     padding: 0;
 
-      .caption {
-        .title {
-          margin-top: 85px;
-          padding: 10px;
+//   //     .caption {
+//   //       .title {
+//   //         margin-top: 85px;
+//   //         padding: 10px;
 
-          .title-third {
-            @include breakpoint($mobile) {
-              margin-top: 10%;
-            }
-          }
-        }
+//   //         .title-third {
+//   //           @include breakpoint($mobile) {
+//   //             margin-top: 10%;
+//   //           }
+//   //         }
+//   //       }
 
-        .title-row-2 {
-          padding: 0 0 0 238px;
-        }
-      }
-    }
-  }
-}
+//   //       .title-row-2 {
+//   //         padding: 0 0 0 238px;
+//   //       }
+//   //     }
+//   //   }
+//   // }
+// }
 
 // moving second title row TODO add .title-row-2 to the main css where title is and remove the double class name in the html
-.visual .img-holder .caption-frame .caption .title-row-2 {
-  padding: 0 0 0 238px;
-}
+// .visual .img-holder .caption-frame .caption .title-row-2 {
+//   padding: 0 0 0 238px;
+// }
 
 //INDEX PAGE SPECIFIC MOBILE
 //remove filters from mobile view
@@ -54,11 +54,11 @@
     }
   }
 
-  .visual .img-holder .caption-frame .caption .title {
-    @include breakpoint($mobile) {
-      margin-top: 40px;
-    }
-  }
+  // .visual .img-holder .caption-frame .caption .title {
+  //   @include breakpoint($mobile) {
+  //     margin-top: 40px;
+  //   }
+  // }
 }
 
 // end from content.scss
@@ -92,28 +92,27 @@
 
   @include transition($type: all, $time: 0.4s, $ease: ease);
 
-  &.visual-white {
-    background: $white;
-    margin-bottom: 0;
-    padding-bottom: 20px;
+  // &.visual-white {
+  //   background: $white;
+  //   margin-bottom: 0;
+  //   padding-bottom: 20px;
 
-    @include breakpoint($tablet) {
-      .img-holder .caption-frame {
-        padding: 0;
+  //   @include breakpoint($tablet) {
+  //     .img-holder .caption-frame {
+  //       padding: 0;
 
-        br {
-          display: block;
-        }
-      }
-    }
+  //       br {
+  //         display: block;
+  //       }
+  //     }
+  //   }
 
-
-    @include breakpoint($mobile) {
-      .img-holder .caption-frame .caption .title {
-        font-size: 27px;
-      }
-    }
-  }
+  //   @include breakpoint($mobile) {
+  //     .img-holder .caption-frame .caption .title {
+  //       font-size: 27px;
+  //     }
+  //   }
+  // }
 
   .img-holder {
     width: 100%;
@@ -126,7 +125,7 @@
 
     .region-image-holder {
       //this dom needs to be refactored wheels within wheels
-      height: 500px;
+      min-height: 500px;
       width: 100%;
       background-size: cover;
       background-position: center;
@@ -791,47 +790,47 @@
 //=== Visual Section ===//
 .visual {
   // max-height: 770px;
-  overflow: hidden;
+  // overflow: hidden;
 
-  .img-holder {
-    .caption-frame {
-      z-index: 998;
-      position: absolute;
-      top: 0;
-      transform: translateX(-50%);
-      left: 50%;
-      width: 900px;
+  // .img-holder {
+  //   .caption-frame {
+  //     z-index: 998;
+  //     position: absolute;
+  //     top: 0;
+  //     transform: translateX(-50%);
+  //     left: 50%;
+  //     width: 900px;
 
-      // @include breakpoint($mobile) {
-      //   top: 45%;
+  //     // @include breakpoint($mobile) {
+  //     //   top: 45%;
 
-      //   .caption-text {
-      //     margin-top: 0;
-      //   }
-      // }
+  //     //   .caption-text {
+  //     //     margin-top: 0;
+  //     //   }
+  //     // }
 
-      .region-caption-holder {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 1.5em;
-        padding: 0 15px;
+  //     .region-caption-holder {
+  //       max-width: 1080px;
+  //       margin: 0 auto;
+  //       margin-top: 1.5em;
+  //       padding: 0 15px;
 
-        @include breakpoint($mobile) {
-          padding: 0 0px;
-          margin-top: 0;
-        }
-      }
+  //       @include breakpoint($mobile) {
+  //         padding: 0 0px;
+  //         margin-top: 0;
+  //       }
+  //     }
 
-      .caption {
-        padding: 70px 0 0;
-        color: $heading-link;
+  //     .caption {
+  //       padding: 70px 0 0;
+  //       color: $heading-link;
 
-        .title {
-          position: relative;
-        }
-      }
-    }
-  }
+  //       .title {
+  //         position: relative;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 // .front {
@@ -885,14 +884,14 @@
 }
 
 //=== Visual Section - not Front page ===//
-.not-front {
-  .visual .img-holder .caption-frame .caption {
-    @include breakpoint($not-mobile) {
-      padding: 0;
-      margin-top: -1.5em;
-    }
-  }
-}
+// .not-front {
+//   .visual .img-holder .caption-frame .caption {
+//     @include breakpoint($not-mobile) {
+//       padding: 0;
+//       margin-top: -1.5em;
+//     }
+//   }
+// }
 
 // Signature text bolding
 .signature-bold-text {
