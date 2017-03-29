@@ -106,14 +106,14 @@
         <div class="region region-caption-holder">
           <?php if($captionone || $captiontwo ): ?>
           <div class="caption-text">
-            <h1 class="caption-text-titles">
+            <div class="caption-text-titles">
             <?php if($captionone): ?>
               <?php $captionone_render = trim(render($captionone)); ?>
               <?php if(!empty($captionone_render)): ?>
                 <div class="caption-text-title caption-text-title-1">               
-                    <span>
-                        <?php print $captionone_render; ?>              
-                    </span>
+                    
+                        <h1><?php print $captionone_render; ?>   </h1>           
+                    
                 </div>
               <?php endif; ?>
             <?php endif; ?>
@@ -122,13 +122,13 @@
               <?php $captiontwo_render = render($captiontwo); ?>
               <?php if(!empty($captiontwo_render)): ?>              
                 <div class="caption-text-title caption-text-title-2">
-                    <span> 
-                        <?php print $captiontwo_render; ?>               
-                    </span>
+                     
+                        <h1><?php print $captiontwo_render; ?>   </h1>             
+                   
                 </div>
               <?php endif; ?>        
             <?php endif; ?>
-            </h1>
+            </div>
             <?php print views_embed_view('card_stream', 'call_to_action_buttons');  ?>
         </div>
         <?php endif; ?>
