@@ -129,10 +129,15 @@
       top: 0;
       transform: translateX(-50%);
       left: 50%;
-      width: 55%;
+      width: 95%;
 
-      @include breakpoint($mobile) {
+      @include breakpoint($tablet-range) {
         width: 95%;
+      }
+
+
+      @include breakpoint($all-desktop) {
+        width: 55%;
       }
     }
 
