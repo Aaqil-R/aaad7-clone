@@ -690,6 +690,15 @@ table {
             margin-bottom: 0.2em;
           }
         }
+
+        .call-action-buttons {
+          .view-content {
+            @include breakpoint($desktop-small) {
+              float: right;
+              margin-top: -65px;
+            }
+          }
+        }
       }
     }
   }
