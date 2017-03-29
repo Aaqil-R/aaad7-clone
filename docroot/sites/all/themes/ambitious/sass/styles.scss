@@ -676,6 +676,14 @@ table {
 }
 
 .front {
+  .visual {
+    .img-holder {
+      .caption-frame {
+        background: $white;
+      }
+    }
+  }
+
   // .caption-frame {
   //   display: block;
   //   background-color: $white;
@@ -717,23 +725,23 @@ table {
   //   }
   // }
 
-  .call-action-buttons {
-    top: 103px;
-    position: absolute;
-    right: 18%;
+  // .call-action-buttons {
+  // top: 103px;
+  // position: absolute;
+  // right: 18%;
 
-    @include breakpoint($mobile) {
-      top: 0px;
-      right: 8%;
-      margin-top: 167px;
-    }
+  // @include breakpoint($all-desktop) {
+  //   top: 0px;
+  //   right: 8%;
+  //   margin-top: 167px;
+  // }
 
+  // @include breakpoint($tablet-range) {
+  //   top: 218px;
+  //   right: 31%;
+  // }
 
-    @include breakpoint($tablet-range) {
-      top: 218px;
-      right: 31%;
-    }
-  }
+  // }
 
   // .visual .img-holder .region-image-holder {
   //   height: 100%;
