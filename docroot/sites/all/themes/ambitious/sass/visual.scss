@@ -151,29 +151,26 @@
     }
 
     .caption-frame {
-      @include breakpoint($desktop) {
-        &.caption-frame-arrows {
-          padding: 0 0 0 70px;
-        }
-      }
+      // @include breakpoint($desktop) {
+      //   &.caption-frame-arrows {
+      //     padding: 0 0 0 70px;
+      //   }
+      // }
 
+      // @include breakpoint($mobile) {
+      //   &.caption-frame-arrows {
+      //     padding: 0;
+      //   }
+      // }
 
-      @include breakpoint($mobile) {
-        &.caption-frame-arrows {
-          padding: 0;
-        }
-      }
+      // @include breakpoint($mobile) {
+      //   padding: 0 30px;
+      //   text-align: center;
 
-
-      @include breakpoint($mobile) {
-        padding: 0 30px;
-        text-align: center;
-
-        br {
-          display: none;
-        }
-      }
-
+      //   br {
+      //     display: none;
+      //   }
+      // }
 
       .caption {
         padding: 44px 0 0;
@@ -800,7 +797,7 @@
     .caption-frame {
       z-index: 998;
       position: absolute;
-      top: 23%;
+      top: 0;
       transform: translateX(-50%);
       left: 50%;
       width: 900px;
