@@ -155,14 +155,14 @@
     <?php endif; ?>         
   </section>
 
-  <?php if ($page['header_form']): ?>    <!-- slider block -->
-    <section class=" slider-block">
+  <?php //if ($page['header_form']): ?>    <!-- slider block -->
+   <!--  <section class=" slider-block">
       <div class="holder">
-      <!-- <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>       -->
-      <?php  print render($page['header_form']); ?>       
+      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
+      <?php  //print render($page['header_form']); ?>       
       </div>
-    </section>
-  <?php endif; ?>
+    </section> -->
+  <?php //endif; ?>
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
