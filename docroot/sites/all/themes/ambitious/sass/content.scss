@@ -645,34 +645,33 @@ a {
 //Moved from general.scss : Anees
 //Consider moving to a new scss file for the slider blocks.
 .front {
-  .slider-container {
-    @include breakpoint($tablet) {
-      height: auto;
-    }
-  }
+  // .slider-container {
+  //   @include breakpoint($tablet) {
+  //     height: auto;
+  //   }
+  // }
 
-  .slider-block {
-    @include breakpoint($mobile) {
-      top: -30px;
-      margin-top: -130px;
-    }
-  }
+  // .slider-block {
+  //   @include breakpoint($mobile) {
+  //     top: -30px;
+  //     margin-top: -130px;
+  //   }
+  // }
 
-  .slider-block .block {
-    @include breakpoint($tablet) {
-      padding-bottom: 40px;
-    }
-  }
+  // .slider-block .block {
+  //   @include breakpoint($tablet) {
+  //     padding-bottom: 40px;
+  //   }
+  // }
 }
 
 .slider-block {
-  margin-top: -555px;
+  // margin-top: -555px;
 
-  @include breakpoint($mobile) {
-    margin-top: 0;
-    background: transparent;
-  }
-
+  // @include breakpoint($mobile) {
+  //   margin-top: 0;
+  //   background: transparent;
+  // }
 
   .block {
     padding: 26px 0 0;
