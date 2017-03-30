@@ -131,12 +131,12 @@
       left: 50%;
       width: 95%;
 
-      @include breakpoint($tablet-range) {
+      @include breakpoint($tablet) {
         width: 95%;
       }
 
 
-      @include breakpoint($all-desktop) {
+      @include breakpoint($desktop-large) {
         width: 55%;
       }
     }
