@@ -1624,5 +1624,10 @@ a.btn#not_right_now {
     bottom: 143px;
     left: 27px;
     background: $orange;
+
+    @include breakpoint($tablet) {
+      bottom: 174px;
+      left: 29px;
+    }
   }
 }
