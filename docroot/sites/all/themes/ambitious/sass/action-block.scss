@@ -1609,7 +1609,7 @@ a.btn#not_right_now {
   }
 }
 
-.view-display-id-home_page card-layout {
+#block-views-card-stream-home-page {
   .views-field-title info {
     h5 {
       @include breakpoint($mobile) {
@@ -1618,16 +1618,18 @@ a.btn#not_right_now {
     }
   }
 
-  .feature-holder {
-    position: absolute;
-    z-index: 2;
-    top: 200px !important;
-    left: 27px;
-    background: $orange;
+  .card--item {
+    .feature-holder {
+      position: absolute;
+      z-index: 2;
+      top: 200px !important;
+      left: 27px;
+      background: $orange;
 
-    @include breakpoint($tablet) {
-      bottom: 174px;
-      left: 29px;
+      @include breakpoint($tablet) {
+        bottom: 174px;
+        left: 29px;
+      }
     }
   }
 }
