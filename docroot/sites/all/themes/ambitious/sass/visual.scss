@@ -131,7 +131,7 @@
       left: 50%;
       width: 95%;
 
-      @include breakpoint($tablet-range) {
+      @include breakpoint($tablet) {
         width: 95%;
       }
 
@@ -141,9 +141,10 @@
       }
 
 
-      @include breakpoint($tablet-vmax) {
-        width: 75%;
-      }
+      // @include breakpoint($tablet-vmax) {
+      //   width: 75%;
+      // }
+   
     }
 
     .region-image-holder {
