@@ -720,8 +720,12 @@ a.btn:hover {
 
 // call to action button styles
 .btn_default {
-  margin-left: 10px;
   padding: 4px 20px !important;
+
+  @include breakpoint($tablet) {
+    margin-left: 10px;
+  }
+
 
   a {
     text-decoration: none;

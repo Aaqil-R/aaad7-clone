@@ -455,7 +455,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   top: 6px;
   margin-left: 11px;
 }
-@media (max-width: 990px) {
+@media (max-width: 768px) {
   /* line 53, ../sass/buttons.scss */
   .btn span .icon-Rightarrow {
     font-size: 16px;
@@ -1072,10 +1072,15 @@ a.btn:hover {
 
 /* line 722, ../sass/buttons.scss */
 .btn_default {
-  margin-left: 10px;
   padding: 4px 20px !important;
 }
-/* line 726, ../sass/buttons.scss */
+@media (max-width: 768px) {
+  /* line 722, ../sass/buttons.scss */
+  .btn_default {
+    margin-left: 10px;
+  }
+}
+/* line 730, ../sass/buttons.scss */
 .btn_default a {
   text-decoration: none;
   color: #ffffff;

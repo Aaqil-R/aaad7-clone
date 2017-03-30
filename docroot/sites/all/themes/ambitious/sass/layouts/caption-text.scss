@@ -66,66 +66,63 @@
     }
 
 
-    .caption-text-title {
-      float: left;
-      width: 100%;
-      line-height: inherit !important;
-      margin-bottom: 10px;
+    // .caption-text-title {
+    //   float: left;
+    //   width: 100%;
+    //   line-height: inherit !important;
+    //   margin-bottom: 10px;
 
-      @include breakpoint($mobile) {
-        float: none;
-      }
+    //   @include breakpoint($mobile) {
+    //     float: none;
+    //   }
 
+    // @include breakpoint($tablet-small $desktop-small) {
+    //   float: none;
+    //   display: inline-block;
+    //   text-align: center;
+    // }
 
-      @include breakpoint($tablet-small $desktop-small) {
-        float: none;
-        display: inline-block;
-        text-align: center;
-      }
+    // span {
+    //   @include breakpoint($tablet-small $desktop-small) {
+    //     float: none;
+    //     display: inline-block;
+    //     text-align: center;
+    //   }
 
+    //   @include breakpoint($mobile) {
+    //     //padding: initial;
+    //     padding: 0 0 0 0;
+    //     box-shadow: 10px 0px 0px $white, -10px 0px 0px $white;
+    //     float: none;
+    //   }
 
-      span {
-        @include breakpoint($tablet-small $desktop-small) {
-          float: none;
-          display: inline-block;
-          text-align: center;
-        }
+    //   float: left;
+    //   letter-spacing: -1px;
+    //   background: $white;
 
+    //   //line-height: 1.8em;
+    //   padding: 15px 25px 20px 25px;
 
-        @include breakpoint($mobile) {
-          //padding: initial;
-          padding: 0 0 0 0;
-          box-shadow: 10px 0px 0px $white, -10px 0px 0px $white;
-          float: none;
-        }
+    //   //box-shadow: 10px 0 0 $white, -10px 0 0 $white;
 
+    // }
 
-        float: left;
-        letter-spacing: -1px;
-        background: $white;
+    //&.caption-text-title-1{
+    //  @include breakpoint($mobile){
+    //    padding-left: 35%;
+    //  }
+    //}
+    // &.caption-text-title-2 {
+    //   margin-left: 80px;
+    //   font-size: 36px;
+    //   font-family: $helvetica-cn;
 
-        //line-height: 1.8em;
-        padding: 15px 25px 20px 25px;
-
-        //box-shadow: 10px 0 0 $white, -10px 0 0 $white;
-     
-      }
-
-      //&.caption-text-title-1{
-      //  @include breakpoint($mobile){
-      //    padding-left: 35%;
-      //  }
-      //}
-      &.caption-text-title-2 {
-        margin-left: 80px;
-        font-size: 36px;
-        font-family: $helvetica-cn;
-
-        @include breakpoint($mobile) {
-          margin-left: 0px;
-        }
-      }
-    }
+    //   @include breakpoint($mobile) {
+    //     margin-left: 0px;
+    //   }
+    // }
+    // }
+ 
   }
 
   @include breakpoint($tablet-small $desktop) {
@@ -157,15 +154,15 @@
   }
 }
 
-.front {
-  .caption-text-titles {
-    .caption-text-title.caption-text-title-2 {
-      @include breakpoint(min-width $desktop-small) {
-        // margin-left: 200px;
-      }
-    }
-  }
-}
+// .front {
+//   .caption-text-titles {
+//     .caption-text-title.caption-text-title-2 {
+//       @include breakpoint(min-width $desktop-small) {
+//         // margin-left: 200px;
+//       }
+//     }
+//   }
+// }
 
 // Main wrapper of titles
   /*.caption-text-titles{
