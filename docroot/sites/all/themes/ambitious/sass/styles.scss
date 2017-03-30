@@ -693,7 +693,13 @@ table {
 
         .call-action-buttons {
           .view-content {
-            @include breakpoint($all-desktop) {
+            @include breakpoint($desktop-large) {
+              float: right;
+              margin-top: -65px;
+            }
+
+
+            @include breakpoint($tablet) {
               float: right;
               margin-top: -65px;
             }
