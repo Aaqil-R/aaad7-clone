@@ -693,7 +693,7 @@ table {
 
         .call-action-buttons {
           .view-content {
-            @include breakpoint($all-desktop) {
+            @include breakpoint($not-all-mobile) {
               float: right;
               margin-top: -65px;
             }
