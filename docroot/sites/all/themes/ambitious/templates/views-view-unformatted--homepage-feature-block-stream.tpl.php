@@ -41,7 +41,10 @@
       
       
       // dpm($background_color);
+      if(isset($myvar['variables']['view']->result[$id]->field_field_feature_image[0]['raw']['filename']))
       $background = "style='background-image: url(".file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_feature_image[0]['raw']['filename']))."); background-size:cover; background-color:$background_color;'";    
+    else 
+        $background = '';
       
       //Issue fix
      /* if(isset($myvar['variables']['view']->result[$id]->field_field_feature_call_to_action_tex[0]))
