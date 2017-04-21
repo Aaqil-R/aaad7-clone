@@ -403,7 +403,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 21, ../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.11/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1074,49 +1074,39 @@ table {
 .front .visual .img-holder .caption-frame .caption-text-title h1 {
   margin-bottom: 0.2em;
 }
-@media (min-width: 768px) {
-  /* line 695, ../sass/styles.scss */
-  .front .visual .img-holder .caption-frame .call-action-buttons .view-content {
-    float: right;
-    margin-top: -65px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* line 695, ../sass/styles.scss */
-  .front .visual .img-holder .caption-frame .call-action-buttons .view-content {
-    float: right;
-    margin-top: -65px;
-  }
+/* line 695, ../sass/styles.scss */
+.front .visual .img-holder .caption-frame .call-action-buttons .view-content {
+  text-align: center;
 }
 
-/* line 796, ../sass/styles.scss */
+/* line 787, ../sass/styles.scss */
 .not-front .caption-text {
   margin-top: 75px;
 }
-/* line 800, ../sass/styles.scss */
+/* line 791, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title {
   float: left;
   width: 100%;
   line-height: inherit !important;
   margin-bottom: 10px;
 }
-/* line 806, ../sass/styles.scss */
+/* line 797, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title span {
   float: left;
   letter-spacing: -1px;
   background: #ffffff;
   padding: 15px 25px 20px 25px;
 }
-/* line 813, ../sass/styles.scss */
+/* line 804, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   font-size: 36px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
-/* line 821, ../sass/styles.scss */
+/* line 812, ../sass/styles.scss */
 .not-front .visual .img-holder .caption-frame {
   max-width: 1080px;
 }
-/* line 826, ../sass/styles.scss */
+/* line 817, ../sass/styles.scss */
 .not-front.node-type-page .block-easy-breadcrumb .easy-breadcrumb {
   padding-top: 0px;
 }
