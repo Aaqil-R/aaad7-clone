@@ -693,16 +693,7 @@ table {
 
         .call-action-buttons {
           .view-content {
-            @include breakpoint($not-all-mobile) {
-              float: right;
-              margin-top: -65px;
-            }
-
-
-            @include breakpoint($tablet-range) {
-              float: right;
-              margin-top: -65px;
-            }
+            text-align: center;
           }
         }
       }
