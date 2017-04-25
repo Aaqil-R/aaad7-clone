@@ -217,8 +217,6 @@ a {
   .holder {
     @include container;
 
-    padding: 0 15px;
-
     .close, .block-close {
       width: 37px;
       background: $white;
@@ -228,6 +226,7 @@ a {
       margin-left: -37px;
 
       @include breakpoint($mobile) {
+        padding: 0 15px;
         margin-top: -30px;
         z-index: 7;
         float: none;
@@ -593,7 +592,7 @@ a {
     position: relative;
     z-index: 4;
     margin-top: 15px;
-    padding: 60px 15px 80px;
+    padding: 60px 0 80px;
 
     @include breakpoint($mobile) {
       padding: 60px 15px 240px;
