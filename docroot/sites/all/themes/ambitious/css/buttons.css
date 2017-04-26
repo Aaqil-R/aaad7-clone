@@ -603,14 +603,26 @@ body > .jcf-select-drop.jcf-drop-flipped {
   box-shadow: none;
   border: 2px solid #ffffff;
 }
-/* line 209, ../sass/buttons.scss */
+/* line 207, ../sass/buttons.scss */
+.btn.btn-transparent .icon-Rightarrow {
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  left: 0;
+}
+/* line 214, ../sass/buttons.scss */
 .btn.btn-transparent:hover {
   top: 1px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 2px solid #ffffff;
 }
-/* line 219, ../sass/buttons.scss */
+/* line 223, ../sass/buttons.scss */
+.btn.btn-transparent:hover .icon-Rightarrow {
+  left: 10px;
+}
+/* line 228, ../sass/buttons.scss */
 .btn.btn-transparent em {
   padding-left: 25px;
 }
@@ -620,7 +632,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     font-size: 14px;
     padding: 7px 18px;
   }
-  /* line 227, ../sass/buttons.scss */
+  /* line 236, ../sass/buttons.scss */
   .btn.btn-transparent em {
     padding-left: 5px;
   }
@@ -631,62 +643,62 @@ body > .jcf-select-drop.jcf-drop-flipped {
     font-size: 20px;
   }
 }
-/* line 238, ../sass/buttons.scss */
+/* line 247, ../sass/buttons.scss */
 .btn.btn-left {
   float: left;
 }
-/* line 242, ../sass/buttons.scss */
+/* line 251, ../sass/buttons.scss */
 .btn.btn-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 246, ../sass/buttons.scss */
+  /* line 255, ../sass/buttons.scss */
   .btn .desktop {
     display: none;
   }
 }
 
-/* line 255, ../sass/buttons.scss */
+/* line 264, ../sass/buttons.scss */
 a.btn:hover {
   color: #ffffff;
 }
 
-/* line 268, ../sass/buttons.scss */
+/* line 277, ../sass/buttons.scss */
 .footer-button .view-footer {
   text-align: center;
   clear: both;
   padding-top: 25px;
 }
 @media (max-width: 767px) {
-  /* line 268, ../sass/buttons.scss */
+  /* line 277, ../sass/buttons.scss */
   .footer-button .view-footer {
     margin-bottom: 10px;
   }
 }
-/* line 278, ../sass/buttons.scss */
+/* line 287, ../sass/buttons.scss */
 .footer-button .view-footer a.btn {
   padding: 9px 30px;
   line-height: 30px;
 }
 @media (max-width: 767px) {
-  /* line 278, ../sass/buttons.scss */
+  /* line 287, ../sass/buttons.scss */
   .footer-button .view-footer a.btn {
     width: 100%;
     margin-bottom: 25px;
   }
 }
 
-/* line 294, ../sass/buttons.scss */
+/* line 303, ../sass/buttons.scss */
 .front .articles-block .view-footer {
   padding-top: 28px;
 }
 
-/* line 304, ../sass/buttons.scss */
+/* line 313, ../sass/buttons.scss */
 .btn.facebook-btn {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 304, ../sass/buttons.scss */
+  /* line 313, ../sass/buttons.scss */
   .btn.facebook-btn {
     display: block;
     margin-top: 20px;
@@ -695,19 +707,19 @@ a.btn:hover {
     box-shadow: 0px 6px #1a427e;
     background: #4b69aa;
   }
-  /* line 316, ../sass/buttons.scss */
+  /* line 325, ../sass/buttons.scss */
   .btn.facebook-btn:hover {
     top: 2px;
     -webkit-box-shadow: 0px 4px #1a427e;
     box-shadow: 0px 4px #1a427e;
   }
 }
-/* line 327, ../sass/buttons.scss */
+/* line 336, ../sass/buttons.scss */
 .btn.twitter-btn {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 327, ../sass/buttons.scss */
+  /* line 336, ../sass/buttons.scss */
   .btn.twitter-btn {
     display: block;
     margin-top: 20px;
@@ -716,27 +728,27 @@ a.btn:hover {
     box-shadow: 0px 6px #0275d1;
     background: #2289ff;
   }
-  /* line 339, ../sass/buttons.scss */
+  /* line 348, ../sass/buttons.scss */
   .btn.twitter-btn:hover {
     top: 2px;
     -webkit-box-shadow: 0px 4px #0275d1;
     box-shadow: 0px 4px #0275d1;
   }
 }
-/* line 349, ../sass/buttons.scss */
+/* line 358, ../sass/buttons.scss */
 .btn.btn-google {
   -webkit-box-shadow: 0px 6px #ab1005;
   box-shadow: 0px 6px #ab1005;
   background: #f44336;
 }
-/* line 354, ../sass/buttons.scss */
+/* line 363, ../sass/buttons.scss */
 .btn.btn-google:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #ab1005;
   box-shadow: 0px 4px #ab1005;
 }
 
-/* line 364, ../sass/buttons.scss */
+/* line 373, ../sass/buttons.scss */
 .icon-connection {
   font-size: 29px;
   padding: 6px 0 0;
@@ -749,7 +761,7 @@ a.btn:hover {
   color: #e30087;
 }
 @media (max-width: 767px) {
-  /* line 364, ../sass/buttons.scss */
+  /* line 373, ../sass/buttons.scss */
   .icon-connection {
     height: 33px;
     width: 34px;
@@ -758,81 +770,81 @@ a.btn:hover {
   }
 }
 
-/* line 385, ../sass/buttons.scss */
+/* line 394, ../sass/buttons.scss */
 .shadow-btn:hover {
   box-shadow: 0 1px #ffffff;
 }
 
 @media (max-width: 767px) {
-  /* line 390, ../sass/buttons.scss */
+  /* line 399, ../sass/buttons.scss */
   .youtube-btn {
     margin-bottom: 0px;
   }
 }
 @media (max-width: 999px) {
-  /* line 396, ../sass/buttons.scss */
+  /* line 405, ../sass/buttons.scss */
   .youtube-btn span.icon-YouTube {
     display: none;
   }
 }
 
-/* line 404, ../sass/buttons.scss */
+/* line 413, ../sass/buttons.scss */
 .sort-block .btn {
   padding: 4px 19px;
   margin-top: 2px;
 }
 @media (max-width: 767px) {
-  /* line 404, ../sass/buttons.scss */
+  /* line 413, ../sass/buttons.scss */
   .sort-block .btn {
     margin-top: 0px;
   }
 }
 
-/* line 415, ../sass/buttons.scss */
+/* line 424, ../sass/buttons.scss */
 .footer .btn {
   padding: 4px 19px;
   margin-top: 0px;
 }
 
-/* line 421, ../sass/buttons.scss */
+/* line 430, ../sass/buttons.scss */
 .btn-facebook {
   -webkit-box-shadow: 0px 6px #1a427e;
   box-shadow: 0px 6px #1a427e;
   background: #4b69aa;
 }
-/* line 426, ../sass/buttons.scss */
+/* line 435, ../sass/buttons.scss */
 .btn-facebook:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #1a427e;
   box-shadow: 0px 4px #1a427e;
 }
 
-/* line 436, ../sass/buttons.scss */
+/* line 445, ../sass/buttons.scss */
 .btn-twitter {
   -webkit-box-shadow: 0px 6px #0275d1;
   box-shadow: 0px 6px #0275d1;
   background: #2289ff;
 }
-/* line 441, ../sass/buttons.scss */
+/* line 450, ../sass/buttons.scss */
 .btn-twitter:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #0275d1;
   box-shadow: 0px 4px #0275d1;
 }
 
-/* line 450, ../sass/buttons.scss */
+/* line 459, ../sass/buttons.scss */
 .featured-mobile-btn {
   margin-bottom: 0px;
 }
 @media (max-width: 767px) {
-  /* line 450, ../sass/buttons.scss */
+  /* line 459, ../sass/buttons.scss */
   .featured-mobile-btn {
     padding: 0px;
     margin-bottom: 0px;
   }
 }
 @media (max-width: 767px) {
-  /* line 459, ../sass/buttons.scss */
+  /* line 468, ../sass/buttons.scss */
   .featured-mobile-btn a.btn {
     margin-bottom: 0px;
     margin-left: 0px;
@@ -841,13 +853,13 @@ a.btn:hover {
   }
 }
 
-/* line 469, ../sass/buttons.scss */
+/* line 478, ../sass/buttons.scss */
 .nav-holder {
   top: 0px;
 }
 
 /*SHARE BUTTON*/
-/* line 475, ../sass/buttons.scss */
+/* line 484, ../sass/buttons.scss */
 .st_sharethis_button .stButton {
   display: inline-block;
   float: right;
@@ -866,48 +878,48 @@ a.btn:hover {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 767px) {
-  /* line 475, ../sass/buttons.scss */
+  /* line 484, ../sass/buttons.scss */
   .st_sharethis_button .stButton {
     padding-top: 7px;
     font-size: 16px;
   }
 }
-/* line 508, ../sass/buttons.scss */
+/* line 517, ../sass/buttons.scss */
 .st_sharethis_button .stButton:hover {
   top: 2px;
   -webkit-box-shadow: 0px 4px #007e2a;
   box-shadow: 0px 4px #007e2a;
 }
-/* line 518, ../sass/buttons.scss */
+/* line 527, ../sass/buttons.scss */
 .st_sharethis_button .stButton:active {
   top: 6px;
   color: #ffffff;
   -webkit-box-shadow: 0px 0px #007e2a;
   box-shadow: 0px 0px #007e2a;
 }
-/* line 528, ../sass/buttons.scss */
+/* line 537, ../sass/buttons.scss */
 .st_sharethis_button .stButton:visited {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 533, ../sass/buttons.scss */
+/* line 542, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter {
   background: none !important;
   width: 109px;
 }
 @media (max-width: 767px) {
-  /* line 533, ../sass/buttons.scss */
+  /* line 542, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter {
     width: 124px;
   }
 }
 @media (max-width: 400px) {
-  /* line 533, ../sass/buttons.scss */
+  /* line 542, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter {
     width: 110px;
   }
 }
-/* line 547, ../sass/buttons.scss */
+/* line 556, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:after {
   font-size: 18px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, sans-serif;
@@ -918,13 +930,13 @@ a.btn:hover {
   padding-right: 29px;
 }
 @media (max-width: 767px) {
-  /* line 547, ../sass/buttons.scss */
+  /* line 556, ../sass/buttons.scss */
   .st_sharethis_button .stButton .st-sharethis-counter:after {
     margin-top: -23px;
     font-size: 17px;
   }
 }
-/* line 562, ../sass/buttons.scss */
+/* line 571, ../sass/buttons.scss */
 .st_sharethis_button .stButton .st-sharethis-counter:before {
   font-family: 'icomoon';
   speak: none;
@@ -945,37 +957,37 @@ a.btn:hover {
   top: -4px;
 }
 
-/* line 587, ../sass/buttons.scss */
+/* line 596, ../sass/buttons.scss */
 .section-talk-to-others .forum-page.topic.filterbutton {
   padding: 4px 10px;
   float: left;
   margin-right: 1px;
 }
 @media (min-width: 1180px) {
-  /* line 587, ../sass/buttons.scss */
+  /* line 596, ../sass/buttons.scss */
   .section-talk-to-others .forum-page.topic.filterbutton {
     padding: 4px 20px;
   }
 }
 @media (min-width: 767px) {
-  /* line 597, ../sass/buttons.scss */
+  /* line 606, ../sass/buttons.scss */
   .section-talk-to-others .topic-share {
     float: left;
     margin-top: 2px;
   }
 }
 @media (min-width: 1080px) {
-  /* line 597, ../sass/buttons.scss */
+  /* line 606, ../sass/buttons.scss */
   .section-talk-to-others .topic-share {
     float: right;
   }
 }
-/* line 609, ../sass/buttons.scss */
+/* line 618, ../sass/buttons.scss */
 .section-talk-to-others .st_sharethis_button .stButton {
   padding: 5px 14px;
 }
 
-/* line 616, ../sass/buttons.scss */
+/* line 625, ../sass/buttons.scss */
 .connect .btn {
   padding-left: 19px;
   padding-right: 19px;
@@ -984,7 +996,7 @@ a.btn:hover {
   margin-right: 1.2em;
 }
 
-/* line 626, ../sass/buttons.scss */
+/* line 635, ../sass/buttons.scss */
 .right-arrow {
   font-family: 'icomoon';
   speak: none;
@@ -996,7 +1008,7 @@ a.btn:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 637, ../sass/buttons.scss */
+/* line 646, ../sass/buttons.scss */
 .right-arrow:after {
   content: "\e60b";
   display: inline-block;
@@ -1005,12 +1017,12 @@ a.btn:hover {
   top: 4px;
 }
 
-/* line 647, ../sass/buttons.scss */
+/* line 656, ../sass/buttons.scss */
 .btn-wider {
   padding: 12px 34px;
 }
 
-/* line 652, ../sass/buttons.scss */
+/* line 661, ../sass/buttons.scss */
 .btn-default {
   padding-top: 0.4em;
   padding-right: 1.4em;
@@ -1022,18 +1034,18 @@ a.btn:hover {
 }
 
 @media (min-width: 767px) {
-  /* line 665, ../sass/buttons.scss */
+  /* line 674, ../sass/buttons.scss */
   .webform-client-form-74681 a.btn {
     font-size: 20px;
   }
 }
 
-/* line 674, ../sass/buttons.scss */
+/* line 683, ../sass/buttons.scss */
 .page-node-74596 .my-voice-intro-menu h6 a.btn {
   padding: 2px 20px;
 }
 
-/* line 682, ../sass/buttons.scss */
+/* line 691, ../sass/buttons.scss */
 .btn-rightarrow:after {
   content: "\e60b";
   font-family: 'icomoon';
@@ -1049,7 +1061,7 @@ a.btn:hover {
   padding-left: 16px;
 }
 
-/* line 697, ../sass/buttons.scss */
+/* line 706, ../sass/buttons.scss */
 .btn.clear-all {
   font-size: 18px;
   padding-top: 6px;
@@ -1058,12 +1070,12 @@ a.btn:hover {
   max-width: 110px;
 }
 
-/* line 708, ../sass/buttons.scss */
+/* line 717, ../sass/buttons.scss */
 .more-btn a .icon-Downarrow {
   color: #d2d5d6;
 }
 
-/* line 715, ../sass/buttons.scss */
+/* line 724, ../sass/buttons.scss */
 .btn-external-link {
   padding: 9px 30px;
   line-height: 30px;
@@ -1071,11 +1083,11 @@ a.btn:hover {
   margin-right: 20px;
 }
 
-/* line 723, ../sass/buttons.scss */
+/* line 732, ../sass/buttons.scss */
 .btn_default {
   padding: 4px 20px !important;
 }
-/* line 726, ../sass/buttons.scss */
+/* line 735, ../sass/buttons.scss */
 .btn_default a {
   text-decoration: none;
   color: #ffffff;

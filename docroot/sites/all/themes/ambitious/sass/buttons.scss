@@ -204,6 +204,12 @@
 
     @include box-shadow(none);
 
+    .icon-Rightarrow {
+      @include transition($type: all, $time: 0.4s, $ease: ease);
+
+      left: 0;
+    }
+
     border: 2px solid $white;
 
     &:hover {
@@ -214,6 +220,10 @@
       @include box-shadow(none);
 
       border: 2px solid $white;
+
+      .icon-Rightarrow {
+        left: 10px;
+      }
     }
 
     em {

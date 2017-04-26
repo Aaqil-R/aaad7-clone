@@ -44,7 +44,8 @@
       if(isset($myvar['variables']['view']->result[$id]->field_field_feature_image[0]['raw']['filename']))
       $background = "style='background-image: url(".file_create_url(file_build_uri($myvar['variables']['view']->result[$id]->field_field_feature_image[0]['raw']['filename']))."); background-size:cover; background-color:$background_color;'";    
     else 
-        $background = '';
+        // $background = "style='background-color:" . $background_color; . "'";;
+        $background = "style='background-color:" . $background_color . "'";
       
       //Issue fix
      /* if(isset($myvar['variables']['view']->result[$id]->field_field_feature_call_to_action_tex[0]))
@@ -129,7 +130,7 @@
 
    ?> 
 
-      <div class="block_main_feature" <?=$background?>>
+      <div class="block_main_feature" <?=$background?>; > 
         <div class="block-image promo_block node-<?=$nid?>" >      
 
          <?php if( $font_size == 'large'): ?>          
@@ -143,15 +144,15 @@
         <?php print $body  ?>
 
     <?php if(!empty($action_link )) : ?>
-         <a href="<?=$action_link?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>         
+         <a href="<?=$action_link?>" class="btn btn-transparent" title="<?=$action_text ?>" ><?=$action_text ?><em class="icon-Rightarrow"></em></a>         
     <?php endif; ?>
 
     <?php if(!empty($action_link_second )) : ?>
-         <a href="<?=$action_link_second?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_second ?>" ><?=$action_text_second ?><em class="icon-Rightarrow"></em></a>
+         <a href="<?=$action_link_second?>" class="btn btn-transparent" title="<?=$action_text_second ?>" ><?=$action_text_second ?><em class="icon-Rightarrow"></em></a>
     <?php endif; ?>
 
     <?php if(!empty($action_link_third )) : ?>
-         <a href="<?=$action_link_third?>" class="btn btn-transparent" onmouseover="this.style.background = '<?=$background_color?>'" onmouseout="this.style.background = 'none'" title="<?=$action_text_third ?>" ><?=$action_text_third ?><em class="icon-Rightarrow"></em></a>
+         <a href="<?=$action_link_third?>" class="btn btn-transparent" title="<?=$action_text_third ?>" ><?=$action_text_third ?><em class="icon-Rightarrow"></em></a>
     <?php endif; ?>
        </div>
 
