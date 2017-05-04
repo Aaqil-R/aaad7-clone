@@ -25,10 +25,10 @@ function aaa_feature_action_block_views_api($module = NULL, $api = NULL) {
  */
 function aaa_feature_action_block_node_info() {
   $items = array(
-    'core_action_block' => array(
-      'name' => t('Core Action Block'),
+    'feature_action_block' => array(
+      'name' => t('Feature action block'),
       'base' => 'node_content',
-      'description' => t('Part of a suite of blocks to be available across the site; the purpose of the Core Action Block is to be to always be driving towards actions.'),
+      'description' => t('The text will be displayed on the Home page featured action block sections.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
