@@ -1,0 +1,17 @@
+name = Call to action buttons
+description = Content type and view for call to action buttons
+core = 7.x
+package = Features
+dependencies[] = color_field
+dependencies[] = features
+dependencies[] = link
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = field_button_color
+features[field_base][] = field_button_links
+features[field_instance][] = node-call_to_action_button-field_button_color
+features[field_instance][] = node-call_to_action_button-field_button_links
+features[node][] = call_to_action_button
+features[views_view][] = card_stream
+features_exclude[dependencies][ctools] = ctools
