@@ -129,7 +129,7 @@
               <?php endif; ?>        
             <?php endif; ?>
             </div>
-            <?php print views_embed_view('card_stream', 'call_to_action_buttons');  ?>
+            <?php print views_embed_view('card_stream', 'buttons');  ?>
         </div>
         <?php endif; ?>
 
