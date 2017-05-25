@@ -671,11 +671,12 @@ function mailchimp_custom_node_insert($node){
 		//check whether the webform is enabled for the content
 		if(isset($node->webform['nid']))
 		{
-			//write the code when the content has the webform enabled.
-			$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-			$api_key = getapikey();
+			$api_key = getapikey();			
 			$list_id = getlistid();
 
+			//write the code when the content has the webform enabled.
+			$MailChimp = new \Drewm\MailChimp($api_key);
+			
 			$groupid = getresults($contenttype);
 			if($groupid != ''){
 				//subscribing to a group
@@ -788,9 +789,11 @@ function mailchimp_custom_node_update($node){
 			//getting the node title
 			$title = $node->title;
 
-			$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-			$api_key = getapikey();
+			$api_key = getapikey();			
 			$list_id = getlistid();
+
+			//write the code when the content has the webform enabled.
+			$MailChimp = new \Drewm\MailChimp($api_key);
 
 			$groupid = getresults($contenttype);
 
@@ -844,9 +847,12 @@ function mailchimp_custom_node_update($node){
 
 
 function getresults($contenttype){
-	$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	$api_key = getapikey();
+	$api_key = getapikey();			
 	$list_id = getlistid();
+
+	//write the code when the content has the webform enabled.
+	$MailChimp = new \Drewm\MailChimp($api_key);
+
 	$getdata = array(
 		'apikey' => $api_key,
 		'id' => $list_id,
@@ -883,9 +889,12 @@ function getresults($contenttype){
 }
 
 function getresultsofCharityPlace($num){
-	$MailChimp = new \Drewm\MailChimp('698807ce039f92ea3b417de902be2a94-us11');
-	$api_key = getapikey();
+	$api_key = getapikey();			
 	$list_id = getlistid();
+
+	//write the code when the content has the webform enabled.
+	$MailChimp = new \Drewm\MailChimp($api_key);
+	
 	$getdata = array(
 		'apikey' => $api_key,
 		'id' => $list_id,
