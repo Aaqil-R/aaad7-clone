@@ -38,6 +38,8 @@ field .
     z-index: 998;
     position: relative;
 
+    // background: $white;
+
     .block {
       // Add box shadow to Home page Form
       @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
@@ -126,7 +128,8 @@ field .
   .visual .holder {
     @include breakpoint($mobile) {
       position: relative;
-      top: -100px;
+
+      // top: -100px;
 
       .pic-by {
         padding: 0 0 10px 0;
@@ -134,26 +137,25 @@ field .
     }
   }
 
-  .visual .img-holder {
-    max-height: 825px;
-  }
+  // .visual .img-holder {
+  //   // max-height: 825px;
+  // }
 
-  .visual .img-holder .caption-frame .caption {
-    @include breakpoint($mobile) {
-      padding: 60px 0 0;
-    }
+  // .visual .img-holder .caption-frame .caption {
+  //   @include breakpoint($mobile) {
+  //     padding: 60px 0 0;
+  //   }
 
+  //   @include breakpoint($not-mobile) {
+  //     padding: 80px 0 0;
+  //   }
+  // }
 
-    @include breakpoint($not-mobile) {
-      padding: 80px 0 0;
-    }
-  }
-
-  .visual .img-holder .caption-frame .caption .title {
-    @include breakpoint($mobile) {
-      right: 0;
-    }
-  }
+  // .visual .img-holder .caption-frame .caption .title {
+  //   @include breakpoint($mobile) {
+  //     right: 0px;
+  //   }
+  // }
 
   // Social Holder
   .social-block {
@@ -228,6 +230,8 @@ field .
 
 .header_banner {
   z-index: 0;
+
+  // background: $white;
 }
 
 //-------------------------------------
@@ -883,7 +887,7 @@ article.node-223806, article.node-223591 {
 
 // Image Holder - Fixing for the mobile devices
 .img-holder {
-  position: relative;
+  // position: relative;
 
   img {
     width: 100%;
@@ -958,7 +962,7 @@ article.node-223806 {
     //padding-top: 15px;
     // Is this commented code needed?
     padding-top: 0px;
-    margin-top: 34px;
+    margin-top: 0px;
 
     @include breakpoint($mobile) {
       padding-top: 0px;
@@ -2028,36 +2032,39 @@ section.job-card {
 }
 
 //Who we are bullet point updates
-.section-who-we-are{
-  .webform-style{
-    .webform-client-form-224896{
-      .webform-component--topic{
-        float:left;
+.section-who-we-are {
+  .webform-style {
+    .webform-client-form-224896 {
+      .webform-component--topic {
+        float: left;
       }
-      fieldset{
-        display:block;
-        float:none;
-        input[type="checkbox"]{
+
+      fieldset {
+        display: block;
+        float: none;
+
+        input[type="checkbox"] {
           @include breakpoint($mobile) {
-            width:5%;
-            margin-top:10px;
-            float:left;
+            width: 5%;
+            margin-top: 10px;
+            float: left;
           }
         }
-        label{
+
+        label {
           display: inline-block;
+
           @include breakpoint($mobile) {
-            width:90%;
+            width: 90%;
           }
         }
       }
-      .form-actions{
+
+      .form-actions {
         @include breakpoint($tablet) {
-          float:left;
+          float: left;
         }
       }
     }
   }
 }
-
-

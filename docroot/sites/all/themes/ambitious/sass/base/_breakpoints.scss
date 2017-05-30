@@ -2,11 +2,13 @@
 $base-min-width: 320px;
 $large-mobile: 480px;
 $tablet-small: 767px;
-$tablet: 990px;
+
+// $tablet: 990px;
 
 // tablet
 $desktop-small: 1080px;
-$desktop: 1180px;
+
+// $desktop: 1180px;
 
 // desktop
 $large-screen: 1300px;
@@ -18,7 +20,8 @@ $tablet-range: 768px 1023px;
 // sample ragne - how does thi match with line 3?
 
 $small-mobile: 400px;
-$mobile: 767px;
+
+// $mobile: 767px;
 
 // mobile - is this below this height?
 $mobile-hi-res: 767px (min-resolution 1.5dppx);
@@ -40,3 +43,11 @@ $all-tiny-mobile: max-width 320px;
 //but we have a min-width set?
 
 //why are there two lists? This makes almost no sense.
+
+//these are the correct break points above code should be removed after all refactore is done
+$mobile-small: 480px;
+$mobile: 767px;
+$tablet: 768px;
+$tablet-vmax: 992px;
+$desktop: 1200px;
+$desktop-large: 1400px;

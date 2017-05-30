@@ -6,6 +6,7 @@
 
 .card-stream {
   @include container;
+
   /* .view-content {
        @include breakpoint (min-width $large-mobile) {
            @include columns(2);
@@ -19,54 +20,68 @@
   .views-row.post {
     //resetting styles from post and applying them to the inside wrapper
     background: transparent;
+
     //@include break-inside(avoid);
     margin: 0;
     padding: 0;
     border: none;
+
     @include box-shadow(none);
+
     .views-field {
       padding: 20px 21px;
       margin: 0 0 30px;
       background: $white;
       border: 1px solid $gray;
+
       @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+
       .info {
         padding: 13px 0 0 0;
+
         //below breakpoints are temporary fix for the card alignments
         @include breakpoint(min-width $large-mobile) {
           min-height: 67px;
         }
 
+
         @include breakpoint($mobile) {
           min-height: 39px;
         }
+
 
         @include breakpoint(min-width $tablet-small) {
           min-height: 71px;
         }
       }
     }
+
     @include breakpoint(min-width $large-mobile) {
       width: span(6 of 12 no-gutter);
+
       &.feature-row {
         h2, p {
           margin: 0 15px 30px 15px;
         }
       }
+
       .views-field {
         margin: 0 15px 30px 15px;
       }
     }
 
+
     @include breakpoint($mobile) {
       width: 100%;
     }
+
 
     @include breakpoint(min-width $tablet-small) {
       //@include remove last;
       width: 33.33%;
     }
   }
+
   //width;
   //  padding: 20px 21px;
   //  position: relative;
@@ -95,6 +110,7 @@
   .footer-text {
     font-size: 12px;
   }
+
   .btn {
     padding: 12px 19px;
   }
@@ -102,30 +118,38 @@
 
 .home-stream {
   @include container;
+
   .post {
     width: span(4 of 12);
+
     &:nth-of-type(3n) {
       @include last;
     }
+
     @include breakpoint($mobile) {
       @include span(12 of 12);
     }
+
 
     .footer-text {
       font-size: 12px;
     }
   }
+
   //refactor to remove this and make it a home-stream only modifier and then update views
   @include breakpoint(min-width $tablet-small) {
     .views-row:nth-child(1) {
       background: none;
       padding: 0;
       border: none;
+
       @include box-shadow(none);
+
       // min-height: 333px;
    
     }
   }
+
 
   .btn {
     padding: 12px 19px;
@@ -154,9 +178,11 @@
     border-color: $orange;
     color: $orange;
   }
+
   .my-voice-post .content .num-holder a .text {
     color: $orange;
   }
+
   .my-voice-post .content .num-holder a .num:after {
     background-position: -40px 0;
   }
@@ -172,6 +198,7 @@
 // Sets masonry column size
 .card-layout {
   @include container;
+
   // debug lines for the susy baseline grid.
   // @include show-grid(12);
 }
@@ -180,6 +207,7 @@
   @include breakpoint(min-width $large-mobile) {
     width: span(6 of 12 no-gutters);
   }
+
 
   @include breakpoint(min-width $tablet-small) {
     width: span(4 of 12 no-gutters);
@@ -199,6 +227,7 @@
   // mobile first being used here.
   width: 100%;
   margin-bottom: gutter();
+
   @include breakpoint(min-width $large-mobile) {
     // setting the size of the card layout with susy.
     // masonry will pick up this sizing to apply the 
@@ -210,20 +239,25 @@
     @include span(6 of 12 no-gutters);
   }
 
+
   @include breakpoint(min-width $tablet-small) {
     @include span(4 of 12 no-gutters);
   }
 
+
   background: $white;
   padding: 1em;
+
   // TODO:
   @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+
   // TODO: need to revisit this.
   .footer-text {
     font-size: 12px;
   }
+
   .info {
-    padding: 14px 0 4px 11px;
+    padding: 14px 0 4px 0;
   }
 }
 

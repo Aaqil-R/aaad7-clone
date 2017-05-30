@@ -106,14 +106,14 @@
         <div class="region region-caption-holder">
           <?php if($captionone || $captiontwo ): ?>
           <div class="caption-text">
-            <h1 class="caption-text-titles">
+            <div class="caption-text-titles">
             <?php if($captionone): ?>
               <?php $captionone_render = trim(render($captionone)); ?>
               <?php if(!empty($captionone_render)): ?>
                 <div class="caption-text-title caption-text-title-1">               
-                    <span>
-                        <?php print $captionone_render; ?>              
-                    </span>
+                    
+                        <h1><?php print $captionone_render; ?>   </h1>           
+                    
                 </div>
               <?php endif; ?>
             <?php endif; ?>
@@ -122,15 +122,18 @@
               <?php $captiontwo_render = render($captiontwo); ?>
               <?php if(!empty($captiontwo_render)): ?>              
                 <div class="caption-text-title caption-text-title-2">
-                    <span> 
-                        <?php print $captiontwo_render; ?>               
-                    </span>
+                     
+                        <h1><?php print $captiontwo_render; ?>   </h1>             
+                   
                 </div>
               <?php endif; ?>        
             <?php endif; ?>
-            </h1>
+            </div>
+            <?php print views_embed_view('card_stream', 'block_2');  ?>
         </div>
         <?php endif; ?>
+
+
 
         </div>
       </div>
@@ -152,14 +155,14 @@
     <?php endif; ?>         
   </section>
 
-  <?php if ($page['header_form']): ?>    <!-- slider block -->
-    <section class=" slider-block">
+  <?php //if ($page['header_form']): ?>    <!-- slider block -->
+   <!--  <section class=" slider-block">
       <div class="holder">
       <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
-      <?php print render($page['header_form']); ?>       
+      <?php  //print render($page['header_form']); ?>       
       </div>
-    </section>
-  <?php endif; ?>
+    </section> -->
+  <?php //endif; ?>
   <?php if ($page['navigation']): ?>
     <section id="navigation">
       <?php print render($page['navigation']); ?>
@@ -216,8 +219,7 @@
   <?php endif; ?>
 
   </main> <!-- /main -->
-
-
+    
     <!-- action columns -->
     <section class="action-block">
       <!-- Render the action block region. -->
@@ -226,14 +228,17 @@
     
     <section class="articles-block" >
       <div class="holder">
-        <h2>What we do</h2>
+        <h2>We are Ambitious about Autism</h2>
         <div class="articles-columns" >
           <?php print render($page['services']); ?>
           <!--column one -->
-        </div>
-      </div>      
-  </section><!-- /services -->
 
+        </div>
+      </div>    
+  </section><!-- /services -->
+<section class="action-block-bottom" >
+<?php print views_embed_view('block_stream', 'block_stream_homepage_bottom');  ?>
+</section><!-- /services -->
 
   <section class="social-block">
     <div class="holder">

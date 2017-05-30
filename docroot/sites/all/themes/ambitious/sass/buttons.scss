@@ -66,6 +66,7 @@
     @include box-shadow(0px 6px $green-dark);
 
     background: $green;
+    margin-right: 10px;
 
     &:hover {
       // replace the displacement of the button from the top
@@ -130,6 +131,66 @@
     }
   }
 
+  &.btn_light_blue {
+    @include box-shadow(0px 6px $blue-shadow);
+
+    background: $blue-light;
+
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+
+      // displace the button shadow
+      @include box-shadow(0px 4px $blue-shadow);
+    }
+
+    &:active {
+      top: 6px;
+
+      @include box-shadow(0px 0px $blue-shadow);
+    }
+  }
+
+  &.btn_navy_blue {
+    @include box-shadow(0px 6px $navy-dark);
+
+    background: $navy-blue;
+
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+
+      // displace the button shadow
+      @include box-shadow(0px 4px $navy-dark);
+    }
+
+    &:active {
+      top: 6px;
+
+      @include box-shadow(0px 0px $navy-dark);
+    }
+  }
+
+  &.btn_yellow {
+    @include box-shadow(0px 6px $yellow-dark);
+
+    background: $yellow;
+
+    &:hover {
+      // replace the displacement of the button from the top
+      top: 2px;
+
+      // displace the button shadow
+      @include box-shadow(0px 4px $yellow-dark);
+    }
+
+    &:active {
+      top: 6px;
+
+      @include box-shadow(0px 0px $yellow-dark);
+    }
+  }
+
   &.bt-left {
     margin: 0 0 0 23px;
 
@@ -143,7 +204,13 @@
 
     @include box-shadow(none);
 
-    border: 3px solid $white;
+    .icon-Rightarrow {
+      @include transition($type: all, $time: 0.4s, $ease: ease);
+
+      left: 0;
+    }
+
+    border: 2px solid $white;
 
     &:hover {
       // replace the displacement of the button from the top
@@ -153,6 +220,10 @@
       @include box-shadow(none);
 
       border: 2px solid $white;
+
+      .icon-Rightarrow {
+        left: 10px;
+      }
     }
 
     em {
@@ -166,6 +237,11 @@
       em {
         padding-left: 5px;
       }
+    }
+
+
+    @include breakpoint($tablet-range) {
+      font-size: 20px;
     }
   }
 
@@ -192,13 +268,12 @@ a.btn:hover {
 
 // Views - footer button
 .footer-button {
-  //margin-bottom: 130px;
-  margin-bottom: $graphic-padding;
+  // margin-bottom: 130px;
+  // margin-bottom: $graphic-padding;
 
-  @include breakpoint($mobile) {
-    margin-bottom: 30px;
-  }
-
+  // @include breakpoint($mobile) {
+  //   margin-bottom: 30px;
+  // }
 
   .view-footer {
     text-align: center;
@@ -220,6 +295,13 @@ a.btn:hover {
         margin-bottom: 25px;
       }
     }
+  }
+}
+
+//Caption frame on home page button style adjustments
+.caption-frame {
+  .btn {
+    margin-top: 10px;
   }
 }
 
@@ -652,4 +734,15 @@ a.btn:hover {
   line-height: 30px;
   margin-bottom: 30px;
   margin-right: 20px;
+}
+
+// call to action button styles
+.btn_default {
+  padding: 4px 20px !important;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 24px;
+  }
 }

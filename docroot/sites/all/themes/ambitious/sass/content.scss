@@ -217,8 +217,6 @@ a {
   .holder {
     @include container;
 
-    padding: 0 15px;
-
     .close, .block-close {
       width: 37px;
       background: $white;
@@ -228,6 +226,7 @@ a {
       margin-left: -37px;
 
       @include breakpoint($mobile) {
+        padding: 0 15px;
         margin-top: -30px;
         z-index: 7;
         float: none;
@@ -593,7 +592,7 @@ a {
     position: relative;
     z-index: 4;
     margin-top: 15px;
-    padding: 60px 15px 80px;
+    padding: 60px 0 80px;
 
     @include breakpoint($mobile) {
       padding: 60px 15px 240px;
@@ -645,34 +644,40 @@ a {
 //Moved from general.scss : Anees
 //Consider moving to a new scss file for the slider blocks.
 .front {
-  .slider-container {
-    @include breakpoint($tablet) {
-      height: auto;
-    }
-  }
+  // .slider-container {
+  //   @include breakpoint($tablet) {
+  //     height: auto;
+  //   }
+  // }
 
-  .slider-block {
-    @include breakpoint($mobile) {
-      top: -30px;
-      margin-top: -130px;
-    }
-  }
+  // .slider-block {
+  //   @include breakpoint($mobile) {
+  //     top: -30px;
+  //     margin-top: -130px;
+  //   }
+  // }
 
-  .slider-block .block {
-    @include breakpoint($tablet) {
-      padding-bottom: 40px;
-    }
-  }
+  // .slider-block .block {
+  //   @include breakpoint($tablet) {
+  //     padding-bottom: 40px;
+  //   }
+  // }
+  // .header_banner {
+  //   .img-holder {
+  //     .region-image-holder {
+  //       height: 500px;
+  //     }
+  //   }
+  // }
 }
 
 .slider-block {
-  margin-top: -555px;
+  // margin-top: -555px;
 
-  @include breakpoint($mobile) {
-    margin-top: 0;
-    background: transparent;
-  }
-
+  // @include breakpoint($mobile) {
+  //   margin-top: 0;
+  //   background: transparent;
+  // }
 
   .block {
     padding: 26px 0 0;
@@ -749,17 +754,18 @@ a {
   }
 
   .holder {
-    margin-bottom: 130px;
-    padding: 0 15px;
+    // margin-bottom: 130px;
+    // padding: 0 15px;
 
-    @include breakpoint($mobile) {
-      margin-bottom: 20px;
+    // @include breakpoint($mobile) {
+    //   margin-bottom: 20px;
 
-      // without this the close button
-      // for the webform gets cut off.
-      margin-top: 1em;
-      padding: 0 0px;
-    }
+    //   // without this the close button
+    //   // for the webform gets cut off.
+    //   margin-top: 1em;
+    //   padding: 0 0px;
+    // }
+ 
   }
 }
 

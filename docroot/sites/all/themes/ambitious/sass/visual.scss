@@ -6,39 +6,44 @@
 //header visual
 
 //first row
-.visual {
-  &.no-overlay {
-    overflow: hidden;
-    @include breakpoint($mobile) {
-      height: auto;
-      margin: 0;
-    }
-  }
-  .img-holder {
-    .caption-frame {
-      padding: 0;
-      .caption {
-        .title {
-          margin-top: 85px;
-          padding: 10px;
-          .title-third {
-            @include breakpoint($mobile) {
-              margin-top: 10%;
-            }
-          }
-        }
-        .title-row-2 {
-          padding: 0 0 0 238px;
-        }
-      }
-    }
-  }
-}
+// .visual {
+//   &.no-overlay {
+//     overflow: hidden;
+
+//     @include breakpoint($mobile) {
+//       height: auto;
+//       margin: 0;
+//     }
+//   }
+
+//   // .img-holder {
+//   //   .caption-frame {
+//   //     padding: 0;
+
+//   //     .caption {
+//   //       .title {
+//   //         margin-top: 85px;
+//   //         padding: 10px;
+
+//   //         .title-third {
+//   //           @include breakpoint($mobile) {
+//   //             margin-top: 10%;
+//   //           }
+//   //         }
+//   //       }
+
+//   //       .title-row-2 {
+//   //         padding: 0 0 0 238px;
+//   //       }
+//   //     }
+//   //   }
+//   // }
+// }
 
 // moving second title row TODO add .title-row-2 to the main css where title is and remove the double class name in the html
-.visual .img-holder .caption-frame .caption .title-row-2 {
-  padding: 0 0 0 238px;
-}
+// .visual .img-holder .caption-frame .caption .title-row-2 {
+//   padding: 0 0 0 238px;
+// }
 
 //INDEX PAGE SPECIFIC MOBILE
 //remove filters from mobile view
@@ -48,124 +53,169 @@
       display: none;
     }
   }
-  .visual .img-holder .caption-frame .caption .title {
-    @include breakpoint($mobile) {
-      margin-top: 40px;
-    }
-  }
+
+  // .visual .img-holder .caption-frame .caption .title {
+  //   @include breakpoint($mobile) {
+  //     margin-top: 40px;
+  //   }
+  // }
 }
 
 // end from content.scss
 
 // start from all.scss
 
-.front {
-  .visual.header_banner {
-    .img-holder {
-      height: 770px;
-    }
-    &.no-overlay {
-      margin-bottom: 31em;
-      @include breakpoint($mobile) {
-        margin-bottom: 90px;
-      }
+// .front {
+//   .visual.header_banner {
+//     .img-holder {
+//       height: 770px;
+//     }
 
-      .img-holder {
-        height: 420px;
-      }
-    }
-  }
-}
+//     &.no-overlay {
+//       margin-bottom: 31em;
+
+//       @include breakpoint($mobile) {
+//         margin-bottom: 90px;
+//       }
+
+//       .img-holder {
+//         height: 420px;
+//       }
+//     }
+//   }
+// }
 
 /* visual block styles */
 .visual {
   width: 100%;
   position: relative;
-  @include transition($type: all, $time: 0.4s, $ease: ease);
-  &.visual-white {
-    background: $white;
-    margin-bottom: 0;
-    padding-bottom: 20px;
-    @include breakpoint($tablet) {
-      .img-holder .caption-frame {
-        padding: 0;
-        br {
-          display: block;
-        }
-      }
-    }
 
-    @include breakpoint($mobile) {
-      .img-holder .caption-frame .caption .title {
-        font-size: 27px;
-      }
-    }
-  }
+  @include transition($type: all, $time: 0.4s, $ease: ease);
+
+  // &.visual-white {
+  //   background: $white;
+  //   margin-bottom: 0;
+  //   padding-bottom: 20px;
+
+  //   @include breakpoint($tablet) {
+  //     .img-holder .caption-frame {
+  //       padding: 0;
+
+  //       br {
+  //         display: block;
+  //       }
+  //     }
+  //   }
+
+  //   @include breakpoint($mobile) {
+  //     .img-holder .caption-frame .caption .title {
+  //       font-size: 27px;
+  //     }
+  //   }
+  // }
+
   .img-holder {
     width: 100%;
-    height: 497px;
+
+    // height: 497px;
+
     //height: 407px;
     position: relative;
     overflow: hidden;
+
+    .caption-frame {
+      z-index: 998;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 100%;
+      max-width: 833px;
+
+      // @include breakpoint($tablet) {
+      //   width: 95%;
+      // }
+
+      // @include breakpoint($all-desktop) {
+      //   width: 55%;
+      // }
+
+      // @include breakpoint($tablet-vmax) {
+      //   width: 75%;
+      // }
+   
+    }
+
     .region-image-holder {
       //this dom needs to be refactored wheels within wheels
-      height: 100%;
+      min-height: 500px;
       width: 100%;
       background-size: cover;
-      background-position: center;
+      background-position: top center;
+      height: 100%;
     }
-    @include breakpoint($mobile) {
-      height: 280px;
-    }
+
+    // @include breakpoint($mobile) {
+    //   height: 280px;
+    // }
 
     //background: url(../images/img26.jpg) no-repeat 0 0;
     .myvoice & {
       max-height: 30em;
     }
+
     img {
       display: block;
       width: 100%;
+
       @include breakpoint($mobile) {
         width: 130%;
       }
     }
+
     .caption-frame {
-      @include breakpoint($desktop) {
-        &.caption-frame-arrows {
-          padding: 0 0 0 70px;
-        }
-      }
+      // @include breakpoint($desktop) {
+      //   &.caption-frame-arrows {
+      //     padding: 0 0 0 70px;
+      //   }
+      // }
 
-      @include breakpoint($mobile) {
-        &.caption-frame-arrows {
-          padding: 0;
-        }
-      }
+      // @include breakpoint($mobile) {
+      //   &.caption-frame-arrows {
+      //     padding: 0;
+      //   }
+      // }
 
-      @include breakpoint($mobile) {
-        padding: 0 30px;
-        text-align: center;
-        br {
-          display: none;
-        }
-      }
+      // @include breakpoint($mobile) {
+      //   padding: 0 30px;
+      //   text-align: center;
+
+      //   br {
+      //     display: none;
+      //   }
+      // }
 
       .caption {
         padding: 44px 0 0;
+
         h1 {
           margin: 0;
         }
+
         @include breakpoint($desktop) {
           padding: 0;
         }
 
+
         @include breakpoint($mobile) {
           height: 100%;
           white-space: nowrap;
+
           &:after {
             content: '';
             display: inline-block;
             height: 100%;
+
             /* the same as min-height */
             width: 1px;
             overflow: hidden;
@@ -174,88 +224,112 @@
           }
         }
 
+
         .title {
           display: inline-block;
           vertical-align: top;
           font-size: 66px;
           line-height: 75px;
           margin: 0 0 10px;
+
           //padding:0 0 0 40px;
           font-weight: normal;
           width: 100%;
           color: $heading-link;
+
           .page-school & {
             padding: 0 0 0 40px;
           }
+
           @include breakpoint($mobile) {
             padding: 0;
           }
+
 
           span {
             background: $white;
             padding: 18px 25px;
             display: inline-block;
           }
+
           &.title-second {
             margin: 40px 0 10px;
+
             @include breakpoint($tablet) {
               margin: 25px 0 0 10px;
             }
 
+
             @include breakpoint($mobile) {
               margin: 10px 0 0 0px;
+
               br {
                 display: block;
               }
+
               span {
                 padding: 2px 10px;
               }
             }
+
 
             span {
               @extend %clearfix;
             }
           }
+
           .title-third {
             margin: 10px 0 0 188px;
+
             @include breakpoint($tablet) {
               margin: 10px 0 0 140px;
             }
 
+
             @include breakpoint($mobile) {
               margin-left: 0;
+
               span {
                 padding: 2px 10px;
               }
             }
           }
+
           .title-fourth {
             margin: 10px 0 0 188px;
+
             @include breakpoint($tablet) {
               margin: 10px 0 0 130px;
             }
+
 
             @include breakpoint($mobile) {
               margin-left: 0px;
             }
           }
+
           .title-five {
             margin: 10px 0 0 180px;
+
             @include breakpoint($tablet) {
               margin: 10px 0 0 140px;
             }
+
 
             @include breakpoint($mobile) {
               margin: 10px 0 0 10px;
             }
           }
+
           @include breakpoint($tablet) {
             font-size: 45px;
             line-height: 45px;
+
             span {
               padding: 10px 15px;
             }
           }
+
 
           @include breakpoint($mobile) {
             font-size: 33px;
@@ -263,11 +337,13 @@
             vertical-align: middle;
             white-space: nowrap;
             margin: 0;
+
             span {
               padding: 10px;
             }
           }
         }
+
         .text {
           display: inline-block;
           vertical-align: top;
@@ -276,25 +352,32 @@
           line-height: 35px;
           margin: 0 0 0 159px;
           padding: 19px 24px;
+
           @include breakpoint($tablet) {
             font-size: 23px;
             line-height: 27px;
             margin: 0 0 0 80px;
           }
 
+
           @include breakpoint($mobile) {
             display: none;
           }
         }
       }
+
       .page-links {
         letter-spacing: -4px;
+
         @extend %listreset;
+
         text-align: right;
         padding: 30px 12px 0 0;
+
         @include breakpoint($mobile) {
           display: none;
         }
+
 
         li {
           display: inline-block;
@@ -305,11 +388,13 @@
           position: relative;
           text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
           padding: 0 3px 0 13px;
+
           &:first-child {
             &:after {
               display: none;
             }
           }
+
           &:after {
             position: absolute;
             left: 0;
@@ -319,9 +404,11 @@
             height: 16px;
             background: url(../images/sprite.png) no-repeat 0 -62px;
           }
+
           a {
             color: $white;
             text-decoration: underline;
+
             &:hover {
               text-decoration: none;
             }
@@ -330,14 +417,20 @@
       }
     }
   }
+
   .holder {
     margin: 0 auto;
-    max-width: 1080px;
+
+    // max-width: 1080px;
     padding: 11px 15px;
+    display: inline-block;
+    width: 100%;
+
     @include breakpoint($mobile) {
       padding: 7px 21px;
       max-width: 92.5%;
     }
+
 
     .pic-by {
       display: block;
@@ -346,22 +439,26 @@
       line-height: 16px;
       color: $menu-grey;
       z-index: 9999;
+
       @include breakpoint($mobile) {
         font-size: 12px;
         line-height: 15px;
         text-align: left;
       }
 
+
       a {
         color: $heading-link;
         font-weight: bold;
         text-decoration: underline;
+
         &:hover {
           text-decoration: none;
         }
       }
     }
   }
+
   .btn-next {
     position: absolute;
     right: 0;
@@ -371,24 +468,31 @@
     background: $orange;
     color: $white;
     text-decoration: none;
+
     @include border-radius(5px 0 0 5px);
+
     padding: 0 18px 0 12px;
     right: 0;
     overflow: hidden;
+
     @include transition($type: all, $time: 0.2s, $ease: ease);
+
     @include breakpoint($mobile) {
       background: none;
       padding: 10px 0 0 0;
       margin: -37px 21px 0 0;
     }
 
+
     &:hover {
       right: 0;
+
       .text-area {
         margin-right: 10px;
         opacity: 1;
       }
     }
+
     .text-area {
       display: none;
       float: left;
@@ -396,40 +500,49 @@
       min-width: 111px;
       display: block;
       margin-right: -100px;
+
       @include transition($type: all, $time: 0.5s, $ease: ease);
+
       opacity: 0;
+
       .title {
         display: block;
         font-size: 16px;
         line-height: 18px;
       }
+
       .topic {
         font-size: 22px;
         line-height: 22px;
         display: block;
       }
     }
+
     .icon-Rightarrow {
       float: left;
       font-size: 27px;
       line-height: 40px;
       padding: 15px 0 14px;
       width: 19px;
+
       @include breakpoint($mobile) {
         padding: 0;
         font-size: 32px;
       }
     }
+
     &:hover {
       .text-area {
         display: block;
         padding: 15px 0 14px 15px;
+
         @include breakpoint($mobile) {
           display: none;
         }
       }
     }
   }
+
   .btn-perv {
     position: absolute;
     left: 0;
@@ -439,66 +552,84 @@
     background: $orange;
     color: $white;
     text-decoration: none;
+
     @include border-radius(0 5px 5px 0);
+
     padding: 0 3px 0 16px;
     left: 0;
+
     @include transition($type: all, $time: 0.2s, $ease: ease);
+
     overflow: hidden;
+
     @include breakpoint($mobile) {
       background: none;
       padding: 0;
       margin: -36px 0 0  21px;
     }
 
+
     &:hover {
       left: 0;
+
       .text-area {
         margin-left: 0px;
         opacity: 1;
       }
     }
+
     .text-area {
       float: left;
       padding: 15px 0 0 15px;
       min-width: 111px;
       display: block;
       margin-left: -100px;
+
       @include transition($type: all, $time: 0.2s, $ease: ease);
+
       opacity: 0;
+
       .title {
         display: block;
         font-size: 16px;
         line-height: 18px;
       }
+
       .topic {
         font-size: 22px;
         line-height: 22px;
         display: block;
       }
     }
+
     .icon-Leftarrow {
       float: left;
       font-size: 27px;
       line-height: 40px;
       padding: 15px 0 14px;
       width: 25px;
+
       @include breakpoint($mobile) {
         padding: 0;
         padding-top: 10px;
         font-size: 32px;
       }
     }
+
     &:hover {
       .text-area {
         display: block;
         padding: 15px 10px 14px 15px;
+
         @include transition($type: all, $time: 0.4s, $ease: ease);
+
         @include breakpoint($mobile) {
           display: none;
         }
       }
     }
   }
+
   .slider-main {
     position: absolute;
     bottom: 80px;
@@ -507,6 +638,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+
     @include breakpoint(999px) {
       position: static;
       background: $white;
@@ -516,120 +648,151 @@
       margin-top: 20px;
     }
 
+
     .slider-box {
       max-width: 872px;
+
       @include transition($type: all, $time: 0.4s, $ease: ease);
+
       margin: 0 auto;
       position: relative;
       margin-top: 32px;
+
       @include breakpoint($large-screen) {
         width: 95%;
         max-width: 1080px;
       }
+
 
       @include breakpoint($mobile) {
         margin: 0px;
         width: auto;
       }
 
+
       .slider-action {
         @extend %clearfix;
       }
+
       .slider-action {
         @extend %clearfix;
+
         a {
           top: 102px;
           position: absolute;
           font-size: 39px;
           color: $green;
           left: 34px;
+
           @include breakpoint($large-screen) {
             left: 24px;
             top: 78px;
           }
 
+
           &.right-arrow {
             left: auto;
             right: 34px;
+
             @include breakpoint($large-screen) {
               right: 24px;
             }
           }
+
           &:hover, &:focus, &:active {
             color: $orange;
           }
+
           @include breakpoint($desktop) {
             left: 14px;
             top: 52px;
+
             &.right-arrow {
               left: auto;
               right: 14px;
             }
           }
 
+
           @include breakpoint($tablet) {
             top: 62px;
           }
+
 
           @include breakpoint($mobile) {
             top: 40%;
             font-size: 22px;
             left: 0px;
+
             &.right-arrow {
               right: 0px;
             }
           }
         }
       }
+
       .slider-box-text {
         @include transition($type: all, $time: 0.4s, $ease: ease);
+
         background: $white;
         padding: 43px 94px;
+
         @include breakpoint($large-screen) {
           padding: 23px 84px;
         }
+
 
         img {
           max-width: 239px;
           float: left;
           margin-right: 30px;
+
           @include breakpoint($desktop) {
             display: none;
           }
         }
+
         h4 {
           font-size: 24px;
           font-weight: normal;
           font-family: $base-font-family;
           margin-bottom: 15px;
           line-height: 36px;
+
           @include breakpoint($tablet) {
             font-size: 19px;
             font-weight: bold;
           }
         }
+
         p {
           font-size: 18px;
+
           @include breakpoint($tablet) {
             font-size: 16px;
           }
         }
+
         a.read-more-link {
           font-size: 18px;
           font-family: $font-bold;
           text-decoration: underline;
         }
+
         @include breakpoint($desktop) {
           padding: 17px 54px;
         }
 
+
         @include breakpoint($tablet) {
           padding: 23px 54px;
           margin-top: 10px;
+
           img {
             display: none;
           }
         }
+
 
         @include breakpoint($mobile) {
           padding: 0px 30px;
@@ -639,94 +802,107 @@
   }
 }
 
-@include breakpoint($mobile) {
-  .front {
-    .visual.header_banner {
-      .img-holder {
-        height: 375px;
-      }
-    }
-  }
-}
-
+// @include breakpoint($mobile) {
+//   .front {
+//     .visual.header_banner {
+//       .img-holder {
+//         height: 375px;
+//       }
+//     }
+//   }
+// }
 
 // end from all.scss
 
 //=== Visual Section ===//
 .visual {
   // max-height: 770px;
-  overflow: hidden;
-  .img-holder {
-    .caption-frame {
-      z-index: 998;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      @include breakpoint($mobile) {
-        top: 45%;
-        .caption-text {
-          margin-top: 0;
-        }
-      }
+  // overflow: hidden;
 
-      .region-caption-holder {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 1.5em;
-        padding: 0 15px;
-        @include breakpoint($mobile) {
-          padding: 0 0px;
-          margin-top: 0;
-        }
-      }
-      .caption {
-        padding: 70px 0 0;
-        color: $heading-link;
-        .title {
-          position: relative;
-        }
-      }
-    }
-  }
+  // .img-holder {
+  //   .caption-frame {
+  //     z-index: 998;
+  //     position: absolute;
+  //     top: 0;
+  //     transform: translateX(-50%);
+  //     left: 50%;
+  //     width: 900px;
+
+  //     // @include breakpoint($mobile) {
+  //     //   top: 45%;
+
+  //     //   .caption-text {
+  //     //     margin-top: 0;
+  //     //   }
+  //     // }
+
+  //     .region-caption-holder {
+  //       max-width: 1080px;
+  //       margin: 0 auto;
+  //       margin-top: 1.5em;
+  //       padding: 0 15px;
+
+  //       @include breakpoint($mobile) {
+  //         padding: 0 0px;
+  //         margin-top: 0;
+  //       }
+  //     }
+
+  //     .caption {
+  //       padding: 70px 0 0;
+  //       color: $heading-link;
+
+  //       .title {
+  //         position: relative;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
-.front {
-  .visual {
-    .img-holder {
-      .caption-frame {
-        @include breakpoint($mobile) {
-          top: 27%;
-        }
-      }
-    }
-  }
-}
+// .front {
+//   .visual {
+//     .img-holder {
+//       .caption-frame {
+//         @include breakpoint($mobile) {
+//           top: 27%;
+//         }
+//       }
+//     }
+//   }
+// }
 
 //=== Slider Block Section ===//
 .slider-block {
   z-index: 1100;
   position: relative;
-  top: 24px;
+
+  // top: 24px;
   .r-s-arrow {
     a {
       text-decoration: none;
     }
   }
+
   .l-s-arrow {
     a {
       text-decoration: none;
     }
   }
+
   a {
     &.btn-left {
       margin-right: 10px;
     }
+
     &.btn {
       padding: 11px 16px;
     }
+
     &.btn-right {
       position: relative;
       right: 85px;
+
       @include breakpoint($mobile) {
         right: 0;
       }
@@ -735,14 +911,14 @@
 }
 
 //=== Visual Section - not Front page ===//
-.not-front {
-  .visual .img-holder .caption-frame .caption {
-    @include breakpoint($not-mobile) {
-      padding: 0;
-      margin-top: -1.5em;
-    }
-  }
-}
+// .not-front {
+//   .visual .img-holder .caption-frame .caption {
+//     @include breakpoint($not-mobile) {
+//       padding: 0;
+//       margin-top: -1.5em;
+//     }
+//   }
+// }
 
 // Signature text bolding
 .signature-bold-text {
