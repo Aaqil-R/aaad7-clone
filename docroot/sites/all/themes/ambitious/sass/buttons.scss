@@ -10,13 +10,12 @@
   color: $white;
   text-align: center;
   text-decoration: none;
-  margin-top: 5px;
-  margin-bottom: 5px;
   outline: medium none;
   padding: 25px 80px;
   position: relative;
   line-height: 29px;
   background: none, repeat, scroll, 0, 0, $orange;
+  margin: 5px;
 
   // drop the shadow
   @include box-shadow(0px 6px $orange-dark);
@@ -66,7 +65,6 @@
     @include box-shadow(0px 6px $green-dark);
 
     background: $green;
-    margin-right: 10px;
 
     &:hover {
       // replace the displacement of the button from the top
