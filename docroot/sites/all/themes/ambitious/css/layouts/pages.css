@@ -1283,27 +1283,30 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 
 /* line 1109, ../../sass/layouts/pages.scss */
-.cse .gsc-control-cse, .gsc-control-cse {
+.cse .gsc-control-cse,
+.gsc-control-cse {
   padding: 0 !important;
   border: none !important;
 }
 
-/* line 1114, ../../sass/layouts/pages.scss */
+/* line 1115, ../../sass/layouts/pages.scss */
 form.gsc-search-box,
 .gsc-above-wrapper-area,
 .gsc-results-close-btn,
-.gcsc-branding,
-.gsc-url-top {
+.gsc-url-top,
+.gsc-resultsHeader {
   display: none !important;
 }
 
-/* line 1122, ../../sass/layouts/pages.scss */
-table.gsc-table-result tr:nth-child(odd) td, table tr.odd td {
+/* line 1123, ../../sass/layouts/pages.scss */
+table.gsc-table-result tr:nth-child(odd) td,
+table tr.odd td {
   background: #ffffff;
 }
 
-/* line 1126, ../../sass/layouts/pages.scss */
-.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+/* line 1128, ../../sass/layouts/pages.scss */
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
   background: white !important;
   margin-bottom: 3em !important;
   padding: 20px 21px !important;
@@ -1313,29 +1316,33 @@ table.gsc-table-result tr:nth-child(odd) td, table tr.odd td {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-/* line 1136, ../../sass/layouts/pages.scss */
+/* line 1139, ../../sass/layouts/pages.scss */
 .gsc-tabData.gsc-tabdActive {
   background: #eef2f3;
 }
 
-/* line 1140, ../../sass/layouts/pages.scss */
-.gs-webResult.gs-result a.gs-title:link,
-.gs-webResult.gs-result a.gs-title:link b,
+/* line 1146, ../../sass/layouts/pages.scss */
+.gs-webResult.gs-result a.gs-title b, .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:focus, .gs-webResult.gs-result a.gs-title:visited,
+.gs-imageResult a.gs-title b,
 .gs-imageResult a.gs-title:link,
-.gs-imageResult a.gs-title:link b {
-  color: black !important;
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:focus,
+.gs-imageResult a.gs-title:visited {
+  color: #000000 !important;
   font-weight: bold;
   font-size: 2rem;
   line-height: 2rem;
   text-decoration: underline;
 }
 
-/* line 1151, ../../sass/layouts/pages.scss */
-.gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType {
+/* line 1160, ../../sass/layouts/pages.scss */
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
   font-size: 1.5rem;
 }
 
-/* line 1155, ../../sass/layouts/pages.scss */
+/* line 1166, ../../sass/layouts/pages.scss */
 #search-form #edit-keys {
   height: 45px;
 }
