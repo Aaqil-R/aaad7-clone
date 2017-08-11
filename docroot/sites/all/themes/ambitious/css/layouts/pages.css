@@ -1277,8 +1277,9 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 /* line 1103, ../../sass/layouts/pages.scss */
 .gsc-control-cse div {
   position: relative !important;
+  z-index: 0;
 }
-/* line 1106, ../../sass/layouts/pages.scss */
+/* line 1107, ../../sass/layouts/pages.scss */
 .gsc-control-cse div.gs-image-box {
   width: 80px !important;
   position: absolute !important;
@@ -1286,24 +1287,24 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   top: 0;
 }
 
-/* line 1114, ../../sass/layouts/pages.scss */
+/* line 1115, ../../sass/layouts/pages.scss */
 .gs-bidi-start-align.gs-snippet {
-  padding-left: 72px;
+  padding-left: 102px;
 }
 
-/* line 1118, ../../sass/layouts/pages.scss */
+/* line 1119, ../../sass/layouts/pages.scss */
 .gsc-wrapper {
   position: relative;
 }
 
-/* line 1122, ../../sass/layouts/pages.scss */
+/* line 1123, ../../sass/layouts/pages.scss */
 .cse .gsc-control-cse,
 .gsc-control-cse {
   padding: 0 !important;
   border: none !important;
 }
 
-/* line 1128, ../../sass/layouts/pages.scss */
+/* line 1129, ../../sass/layouts/pages.scss */
 form.gsc-search-box,
 .gsc-above-wrapper-area,
 .gsc-results-close-btn,
@@ -1314,13 +1315,13 @@ form.gsc-search-box,
   display: none !important;
 }
 
-/* line 1138, ../../sass/layouts/pages.scss */
+/* line 1139, ../../sass/layouts/pages.scss */
 table.gsc-table-result tr:nth-child(odd) td,
 table tr.odd td {
   background: #ffffff;
 }
 
-/* line 1143, ../../sass/layouts/pages.scss */
+/* line 1144, ../../sass/layouts/pages.scss */
 .gsc-webResult.gsc-result,
 .gsc-results .gsc-imageResult {
   background: white !important;
@@ -1332,19 +1333,19 @@ table tr.odd td {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-/* line 1154, ../../sass/layouts/pages.scss */
+/* line 1155, ../../sass/layouts/pages.scss */
 .gsc-tabData.gsc-tabdActive {
   background: #eef2f3;
 }
 
-/* line 1161, ../../sass/layouts/pages.scss */
+/* line 1162, ../../sass/layouts/pages.scss */
 .gs-webResult.gs-result a.gs-title b, .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:focus, .gs-webResult.gs-result a.gs-title:visited,
 .gs-imageResult a.gs-title b,
 .gs-imageResult a.gs-title:link,
 .gs-imageResult a.gs-title:hover,
 .gs-imageResult a.gs-title:focus,
 .gs-imageResult a.gs-title:visited {
-  color: #000000 !important;
+  color: #2a2e31 !important;
   font-weight: bold;
   font-size: 2rem;
   line-height: 2rem;
@@ -1352,7 +1353,7 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
 }
 
-/* line 1176, ../../sass/layouts/pages.scss */
+/* line 1177, ../../sass/layouts/pages.scss */
 .gs-webResult .gs-snippet,
 .gs-imageResult .gs-snippet,
 .gs-fileFormatType {
@@ -1360,13 +1361,57 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
 
-/* line 1183, ../../sass/layouts/pages.scss */
+/* line 1184, ../../sass/layouts/pages.scss */
 #search-form #edit-keys {
   height: 45px;
 }
 
-/* line 1187, ../../sass/layouts/pages.scss */
+/* line 1188, ../../sass/layouts/pages.scss */
 .gs-result .gs-title,
 .gsc-control-cse .gsc-table-result {
-  padding-left: 45px;
+  padding-left: 48px;
+}
+
+/* line 1193, ../../sass/layouts/pages.scss */
+.gsc-thumbnail {
+  padding: 0 !important;
+}
+
+/* line 1197, ../../sass/layouts/pages.scss */
+.gs-web-image-box-portrait {
+  height: 85px !important;
+}
+/* line 1200, ../../sass/layouts/pages.scss */
+.gs-web-image-box-portrait img.gs-image {
+  max-width: 80px !important;
+  max-height: 80px !important;
+}
+
+/* line 1206, ../../sass/layouts/pages.scss */
+.gs-snippet {
+  color: #2a2e31 !important;
+}
+
+/* line 1210, ../../sass/layouts/pages.scss */
+.gs-web-image-box-landscape img.gs-image {
+  max-width: 85px !important;
+}
+
+/* line 1214, ../../sass/layouts/pages.scss */
+.gsc-cursor-box {
+  text-align: center !important;
+}
+/* line 1216, ../../sass/layouts/pages.scss */
+.gsc-cursor-box .gsc-cursor-page {
+  background-color: transparent !important;
+  color: #2a2e31 !important;
+  font-size: 24px;
+}
+/* line 1220, ../../sass/layouts/pages.scss */
+.gsc-cursor-box .gsc-cursor-page:hover, .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
+  color: #f07d00 !important;
+}
+/* line 1225, ../../sass/layouts/pages.scss */
+.gsc-cursor-box .gsc-cursor-page:hover {
+  text-decoration: none !important;
 }

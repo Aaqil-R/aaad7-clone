@@ -1102,6 +1102,7 @@
 
 .gsc-control-cse div {
   position: relative !important;
+  z-index: 0;
 
   &.gs-image-box {
     width: 80px !important;
@@ -1112,7 +1113,7 @@
 }
 
 .gs-bidi-start-align.gs-snippet {
-  padding-left: 72px;
+  padding-left: 102px;
 }
 
 .gsc-wrapper {
@@ -1163,7 +1164,7 @@ table tr.odd td {
     &:hover,
     &:focus,
     &:visited {
-      color: $black !important;
+      color: $base-link-color !important;
       font-weight: bold;
       font-size: 2rem;
       line-height: 2rem;
@@ -1186,5 +1187,43 @@ table tr.odd td {
 
 .gs-result .gs-title,
 .gsc-control-cse .gsc-table-result {
-  padding-left: 45px;
+  padding-left: 48px;
+}
+
+.gsc-thumbnail {
+  padding: 0 !important;
+}
+
+.gs-web-image-box-portrait {
+  height: 85px !important;
+
+  img.gs-image {
+    max-width: 80px !important;
+    max-height: 80px !important;
+  }
+}
+
+.gs-snippet {
+  color: $base-link-color !important;
+}
+
+.gs-web-image-box-landscape img.gs-image {
+  max-width: 85px !important;
+}
+
+.gsc-cursor-box {
+  text-align: center !important;
+  .gsc-cursor-page {
+    background-color: transparent !important;
+    color: $base-link-color !important;
+    font-size: 24px;
+    &:hover,
+    &.gsc-cursor-current-page {
+      color: $orange-light !important;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
 }
