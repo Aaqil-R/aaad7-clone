@@ -432,24 +432,38 @@ a.video_bt, .isvideo {
       fieldset {
         label {
           position: relative;
+          padding-left: 2.5rem;
         }
 
         label:before {
           content: '';
           position: absolute;
-          width: 25px;
-          height: 25px;
+          width: 35px;
+          height: 35px;
+          left: -15px;
+          background-size: contain;
+          top: -5px;
+        }
+
+        &:nth-child(1) {
+          label {
+            display: none;
+          }
         }
 
         &:nth-child(2) {
           label:before {
             background: image-url("AAA-Filter-Info-icon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
           }
         }
 
         &:nth-child(3) {
           label:before {
             background: image-url("AAA-Filter-Stories-icon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
           }
         }
       }
