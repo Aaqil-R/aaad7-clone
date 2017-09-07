@@ -411,6 +411,7 @@ a.video_bt, .isvideo {
       display: inline;
       cursor: pointer;
       color: $light-grey;
+      font-size: 18px;
 
       &[for="edit-field-post-type-tid"] {
         float: left;
@@ -424,6 +425,33 @@ a.video_bt, .isvideo {
 
       &[type="radio"]:checked + label {
         font-weight: bold;
+      }
+    }
+
+    #edit-field-post-type-tid {
+      fieldset {
+        label {
+          position: relative;
+        }
+
+        label:before {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 25px;
+        }
+
+        &:nth-child(2) {
+          label:before {
+            background: image-url("AAA-Filter-Info-icon.png");
+          }
+        }
+
+        &:nth-child(3) {
+          label:before {
+            background: image-url("AAA-Filter-Stories-icon.png");
+          }
+        }
       }
     }
   }
