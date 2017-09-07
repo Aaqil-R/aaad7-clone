@@ -408,7 +408,23 @@ a.video_bt, .isvideo {
   &,
   &.view-display-id-stream_topic_page {
     label {
-      display: block;
+      display: inline;
+      cursor: pointer;
+      color: $light-grey;
+
+      &[for="edit-field-post-type-tid"] {
+        float: left;
+        margin-right: 1rem;
+        cursor: auto;
+      }
+    }
+
+    input {
+      display: none;
+
+      &[type="radio"]:checked + label {
+        font-weight: bold;
+      }
     }
   }
 }
