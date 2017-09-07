@@ -346,7 +346,11 @@ a.video_bt, .isvideo {
   }
 }
 
-.view-display-id-stream_topic_page, .view-display-id-stream_forum_page, .view-display-id-events_page, .view-display-id-voices_from_the_spectrum_page, .node-type-my-voice-topic {
+.view-display-id-stream_topic_page,
+.view-display-id-stream_forum_page,
+.view-display-id-events_page,
+.view-display-id-voices_from_the_spectrum_page,
+.node-type-my-voice-topic {
   .sort-block {
     label {
       display: none;
@@ -396,6 +400,15 @@ a.video_bt, .isvideo {
   .featured-button {
     .feature-holder {
       display: inherit;
+    }
+  }
+}
+
+.topic-child-posts {
+  &,
+  &.view-display-id-stream_topic_page {
+    label {
+      display: block;
     }
   }
 }
