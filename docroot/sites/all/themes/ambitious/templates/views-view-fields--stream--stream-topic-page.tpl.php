@@ -57,7 +57,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a>       
-							<a href="#" title="Type" class="feature-holder information <?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>">
+							<a href="#" title="Type" class="feature-holder <?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>">
 								<span class="icon-Type"></span>
 								<span class="text"><?php print strip_tags($fields['field_post_type']->content); ?></span>
 							</a>
