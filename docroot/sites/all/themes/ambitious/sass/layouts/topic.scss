@@ -420,10 +420,10 @@ a.video_bt, .isvideo {
       }
     }
 
-    input {
+    input[type="radio"] {
       display: none;
 
-      &[type="radio"]:checked + label {
+      &:checked + label {
         font-weight: bold;
       }
     }
