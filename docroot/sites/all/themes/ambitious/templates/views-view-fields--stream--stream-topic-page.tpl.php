@@ -11,6 +11,7 @@ $ourfields = array('title'
 	, 'field_source'
 	, 'nid'
 	, 'field_standfirst'
+	, 'field_post_type'
 	, 'comment');
 
 $ourfieldsourse =  strip_tags($fields['field_source']->content);
@@ -55,7 +56,12 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 							<a href="#" title="Featured" class="feature-holder">
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
+							</a>       
+							<a href="#" title="Type" class="feature-holder">
+								<span class="icon-<?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>"></span>
+								<span class="text"><?php print strip_tags($fields['field_post_type']->content); ?></span>
 							</a>
+
               <div class="image-section"><?php print $fields['field_featured_image']->content; if($fields['field_has_video']->content == 1){ print $fields['field_video_author']->content; } ?></div>
               <div class="video-section element-invisible"><?php print $fields['field_video_embed']->content; ?> </div>
 						</div>
@@ -85,6 +91,7 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 	  <?php print $field->wrapper_prefix; ?>
 	    <?php print $field->label_html; ?>
 	    <?php print $field->content; ?>
+	    <?php //dpm(strip_tags($fields['field_post_type']->content)); ?>
 	  <?php print $field->wrapper_suffix; ?>
   <?php endif;?>
 <?php endforeach; ?>
