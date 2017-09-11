@@ -57,9 +57,9 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a>       
-							<a href="#" title="Type" class="feature-holder">
-								<span class="icon-<?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>"></span>
-								<span class="text"><?php print strip_tags($fields['field_post_type']->content); ?></span>
+							<a href="#" title="Type" class="feature-holder information <?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>">
+								<span class="icon-Type"></span>
+								<span class="text"><?php print strip_tags($fields['field_post_type']->content); ?>Information</span>
 							</a>
 
               <div class="image-section"><?php print $fields['field_featured_image']->content; if($fields['field_has_video']->content == 1){ print $fields['field_video_author']->content; } ?></div>
