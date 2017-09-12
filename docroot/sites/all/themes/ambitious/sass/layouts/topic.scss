@@ -890,15 +890,30 @@ html.no-touch .form-type-bef-checkbox {
       left: 5px;
       background: $orange;
 
-      .icon-Featured,
-      .icon-Type {
-        position: relative;
-        z-index: 1;
-        background: image-url("aaa-story-icon.svg") $white center center no-repeat;
-        background-size: contain !important;
+      .icon-Featured {
+        font-size: 24px;
+        padding: 6px 0 0;
         float: left;
+        background: $white;
+        line-height: 30px;
         height: 45px;
         width: 45px;
+        text-align: center;
+        color: $orange;
+      }
+
+      &.stories,
+      &.information {
+        bottom: 60px;
+        .icon-Type {
+          position: relative;
+          z-index: 1;
+          background: image-url("aaa-story-icon.svg") $white center center no-repeat;
+          background-size: contain !important;
+          float: left;
+          height: 45px;
+          width: 45px;
+        }
       }
 
       .text {              
