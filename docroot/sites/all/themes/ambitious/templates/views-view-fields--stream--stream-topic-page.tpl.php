@@ -53,16 +53,19 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 						<div class="img-holder video-<?php print $fields['field_has_video']->content; ?>"> 
                                    <span class="icon-Playbutton video-icon"></span>
                                     
-							<a href="#" title="Featured" class="feature-holder">
-								<span class="icon-Featured"></span>
-								<span class="text">Featured</span>
-							</a> 
-							<?php if (isset($fields['field_post_type']->content) && strtolower(strip_tags($fields['field_post_type']->content)) != ''):?>      
-								<a href="#" title="Type" class="card__category card__category--<?php (strtolower(strip_tags($fields['field_post_type']->content)) == 'stories') ? print "orange" : print "blue"; ?>">
-									<span class="card__categoryicon card__categoryicon--<?php print strtolower(strip_tags($fields['field_post_type']->content)) ?>"></span>
-									<span class="card__categorytext"><?php print strip_tags($fields['field_post_type']->content); ?></span>
-								</a>
-							<?php endif; ?>
+                            	
+                            <div class="card-icon-holder">
+								<a href="#" title="Featured" class="feature-holder">
+									<span class="icon-Featured"></span>
+									<span class="text">Featured</span>
+								</a> 
+								<?php if (isset($fields['field_post_type']->content) && strtolower(strip_tags($fields['field_post_type']->content)) != ''):?>      
+									<a href="#" title="Type" class="card__category card__category--<?php (strtolower(strip_tags($fields['field_post_type']->content)) == 'stories') ? print "orange" : print "blue"; ?>">
+										<span class="card__categoryicon card__categoryicon--<?php print strtolower(strip_tags($fields['field_post_type']->content)) ?>"></span>
+										<span class="card__categorytext"><?php print strip_tags($fields['field_post_type']->content); ?></span>
+									</a>
+								<?php endif; ?>
+                            </div>
 
 
               <div class="image-section"><?php print $fields['field_featured_image']->content; if($fields['field_has_video']->content == 1){ print $fields['field_video_author']->content; } ?></div>
