@@ -4,12 +4,28 @@
 
 .card {}
 
-.card__category {
-  bottom: 60px;
-  overflow: hidden;
+// Change the below code to BEM
+.topic-child-posts .feature-row .img-holder .feature-holder {
+  margin-bottom: 5px;
+  position: static;
+  bottom: 0px;
+  left: 0px;
+  background: transparent;
+
+  .text {
+    background: $orange;
+  }
+}
+
+.card-icon-holder {
   position: absolute;
-  z-index: 1000;
   left: 5px;
+  bottom: 10px;
+}
+
+.card__category {
+  overflow: hidden;
+  float: left;
 
   &:hover .card__categorytext {
     margin-left: 0;

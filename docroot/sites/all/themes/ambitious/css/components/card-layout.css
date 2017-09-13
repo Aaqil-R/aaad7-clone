@@ -404,20 +404,37 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default background
  */
 /* Card layout across site */
-/* line 7, ../../sass/components/card-layout.scss */
-.card__category {
-  bottom: 60px;
-  overflow: hidden;
-  position: absolute;
-  z-index: 1000;
-  left: 5px;
+/* line 8, ../../sass/components/card-layout.scss */
+.topic-child-posts .feature-row .img-holder .feature-holder {
+  margin-bottom: 5px;
+  position: static;
+  bottom: 0px;
+  left: 0px;
+  background: transparent;
 }
-/* line 14, ../../sass/components/card-layout.scss */
+/* line 15, ../../sass/components/card-layout.scss */
+.topic-child-posts .feature-row .img-holder .feature-holder .text {
+  background: #f15500;
+}
+
+/* line 20, ../../sass/components/card-layout.scss */
+.card-icon-holder {
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+}
+
+/* line 25, ../../sass/components/card-layout.scss */
+.card__category {
+  overflow: hidden;
+  float: left;
+}
+/* line 29, ../../sass/components/card-layout.scss */
 .card__category:hover .card__categorytext {
   margin-left: 0;
 }
 
-/* line 19, ../../sass/components/card-layout.scss */
+/* line 34, ../../sass/components/card-layout.scss */
 .card__categorytext {
   float: left;
   font-size: 18px;
@@ -433,7 +450,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   transition: all 0.4s ease;
 }
 
-/* line 32, ../../sass/components/card-layout.scss */
+/* line 47, ../../sass/components/card-layout.scss */
 .card__categoryicon {
   position: relative;
   z-index: 1;
@@ -443,22 +460,22 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 45px;
 }
 
-/* line 41, ../../sass/components/card-layout.scss */
+/* line 56, ../../sass/components/card-layout.scss */
 .card__categoryicon--stories {
   background: url('../../images/aaa-story-icon.svg?1505188381') #ffffff center center no-repeat;
 }
 
-/* line 45, ../../sass/components/card-layout.scss */
+/* line 60, ../../sass/components/card-layout.scss */
 .card__categoryicon--information {
   background: url('../../images/aaa-information-icon.svg?1505188381') #ffffff center center no-repeat;
 }
 
-/* line 49, ../../sass/components/card-layout.scss */
+/* line 64, ../../sass/components/card-layout.scss */
 .card__category--blue {
   background: #5bc5ed;
 }
 
-/* line 53, ../../sass/components/card-layout.scss */
+/* line 68, ../../sass/components/card-layout.scss */
 .card__category--orange {
   background: #f15500;
 }
