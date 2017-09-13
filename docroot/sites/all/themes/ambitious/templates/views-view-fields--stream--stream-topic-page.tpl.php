@@ -57,10 +57,10 @@ $ourfieldsourse =  strip_tags($fields['field_source']->content);
 								<span class="icon-Featured"></span>
 								<span class="text">Featured</span>
 							</a> 
-							<?php if (isset($fields['field_post_type']->content)):?>      
-								<a href="#" title="Type" class="feature-holder <?php print strtolower(strip_tags($fields['field_post_type']->content)); ?>">
-									<span class="icon-Type"></span>
-									<span class="text"><?php print strip_tags($fields['field_post_type']->content); ?></span>
+							<?php if (isset($fields['field_post_type']->content) && strtolower(strip_tags($fields['field_post_type']->content)) != ''):?>      
+								<a href="#" title="Type" class="card__category card__category--<?php (strtolower(strip_tags($fields['field_post_type']->content)) == 'stories') ? print "orange" : print "blue"; ?>">
+									<span class="card__categoryicon card__categoryicon--<?php print strtolower(strip_tags($fields['field_post_type']->content)) ?>"></span>
+									<span class="card__categorytext"><?php print strip_tags($fields['field_post_type']->content); ?></span>
 								</a>
 							<?php endif; ?>
 
