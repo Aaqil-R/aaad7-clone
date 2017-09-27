@@ -447,13 +447,18 @@ a.video_bt, .isvideo {
 
         &:nth-child(1) {
           label {
-            display: none;
+            &:before {
+              content: none;
+            }
+
+            margin-right: 1rem;
+            padding-left: 0;
           }
         }
 
         &:nth-child(2) {
           label:before {
-            background: image-url("aaa-story-icon.svg");            
+            background: image-url("aaa-story-icon.svg");
             background-size: contain;
             background-repeat: no-repeat;
           }
@@ -461,7 +466,7 @@ a.video_bt, .isvideo {
 
         &:nth-child(3) {
           label:before {
-            background: image-url("aaa-information-icon.svg");            
+            background: image-url("aaa-information-icon.svg");
             background-size: contain;
             background-repeat: no-repeat;
           }
@@ -905,6 +910,7 @@ html.no-touch .form-type-bef-checkbox {
       &.stories,
       &.information {
         bottom: 60px;
+
         .icon-Type {
           position: relative;
           z-index: 1;
@@ -916,7 +922,7 @@ html.no-touch .form-type-bef-checkbox {
         }
       }
 
-      .text {              
+      .text {
         display: none;
         float: left;
         font-size: 18px;
