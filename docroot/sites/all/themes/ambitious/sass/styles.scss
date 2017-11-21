@@ -260,6 +260,21 @@ table {
   padding-bottom: 4em;
 }
 
+.main-layout-plain {
+  padding: 1.5em;
+  padding-bottom: 4em;
+}
+
+.node-type-job-vacancy #content-header {
+  margin-top: 0;
+  padding: 0;
+
+  @include breakpoint($large-mobile) {
+    margin-top: 220px;
+    padding: 0 0.8em;
+  }
+}
+
 .field-name-field-salary
 , .field-name-field-time-commitment
 , .field-name-field-vacancy-location {
