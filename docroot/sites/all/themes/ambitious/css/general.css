@@ -13,7 +13,14 @@
   font-weight: normal;
   font-style: normal;
 }
-/* line 21, ../sass/base/_font-icons.scss */
+@font-face {
+  font-family: 'icomoon-new';
+  src: url("../fonts/new-icomoon.eot?y5zyxa");
+  src: url("../fonts/new-icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../fonts/new-icomoon.woff?y5zyxa") format("woff"), url("../fonts/new-icomoon.ttf?y5zyxa") format("truetype"), url("../fonts/new-icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 33, ../sass/base/_font-icons.scss */
 [class^="icon-"], .jcf-select .jcf-select-opener:after, .jcf-select.jcf-drop-active .jcf-select-opener:after, [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -27,114 +34,124 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 35, ../sass/base/_font-icons.scss */
+/* line 47, ../sass/base/_font-icons.scss */
+[class^="icon-new"], [class*=" icon-new"] {
+  font-family: 'icomoon-new';
+}
+
+/* line 51, ../sass/base/_font-icons.scss */
 .icon-connection:before {
   content: "\e615";
 }
 
-/* line 39, ../sass/base/_font-icons.scss */
+/* line 55, ../sass/base/_font-icons.scss */
 .icon-Calendar:before {
   content: "\e601";
 }
 
-/* line 43, ../sass/base/_font-icons.scss */
+/* line 59, ../sass/base/_font-icons.scss */
 .icon-Close:before {
   content: "\e602";
 }
 
-/* line 47, ../sass/base/_font-icons.scss */
+/* line 63, ../sass/base/_font-icons.scss */
 .icon-Downarrow:before {
   content: "\e603";
 }
 
-/* line 51, ../sass/base/_font-icons.scss */
+/* line 67, ../sass/base/_font-icons.scss */
 .icon-Facebook:before {
   content: "\e604";
 }
 
-/* line 55, ../sass/base/_font-icons.scss */
+/* line 71, ../sass/base/_font-icons.scss */
 .icon-Featured:before {
   content: "\e605";
 }
 
-/* line 59, ../sass/base/_font-icons.scss */
+/* line 75, ../sass/base/_font-icons.scss */
 .icon-google:before {
   content: "\e606";
 }
 
-/* line 63, ../sass/base/_font-icons.scss */
+/* line 79, ../sass/base/_font-icons.scss */
 .icon-Hottopic:before {
   content: "\e607";
 }
 
-/* line 67, ../sass/base/_font-icons.scss */
+/* line 83, ../sass/base/_font-icons.scss */
 .icon-Leftarrow:before {
   content: "\e608";
 }
 
-/* line 71, ../sass/base/_font-icons.scss */
+/* line 87, ../sass/base/_font-icons.scss */
 .icon-Playbutton:before {
   content: "\e609";
 }
 
-/* line 75, ../sass/base/_font-icons.scss */
+/* line 91, ../sass/base/_font-icons.scss */
 .icon-Plus:before {
   content: "\e60a";
 }
 
-/* line 79, ../sass/base/_font-icons.scss */
+/* line 95, ../sass/base/_font-icons.scss */
 .icon-Rightarrow:before {
   content: "\e60b";
 }
 
-/* line 83, ../sass/base/_font-icons.scss */
+/* line 99, ../sass/base/_font-icons.scss */
 .icon-search:before {
   content: "\e60c";
 }
 
-/* line 87, ../sass/base/_font-icons.scss */
+/* line 103, ../sass/base/_font-icons.scss */
 .icon-Share:before {
   content: "\e60d";
 }
 
-/* line 91, ../sass/base/_font-icons.scss */
+/* line 107, ../sass/base/_font-icons.scss */
 .icon-Speech1:before {
   content: "\e60e";
 }
 
-/* line 95, ../sass/base/_font-icons.scss */
+/* line 111, ../sass/base/_font-icons.scss */
 .icon-Speech-outline:before {
   content: "\e60f";
 }
 
-/* line 99, ../sass/base/_font-icons.scss */
+/* line 115, ../sass/base/_font-icons.scss */
 .icon-Time:before {
   content: "\e610";
 }
 
-/* line 103, ../sass/base/_font-icons.scss */
+/* line 119, ../sass/base/_font-icons.scss */
 .icon-Twitter:before {
   content: "\e611";
 }
 
-/* line 107, ../sass/base/_font-icons.scss */
+/* line 123, ../sass/base/_font-icons.scss */
 .icon-Uparrow:before {
   content: "\e612";
 }
 
-/* line 111, ../sass/base/_font-icons.scss */
+/* line 127, ../sass/base/_font-icons.scss */
 .icon-Voice:before {
   content: "\e613";
 }
 
-/* line 115, ../sass/base/_font-icons.scss */
+/* line 131, ../sass/base/_font-icons.scss */
 .icon-YouTube:before {
   content: "\e614";
 }
 
-/* line 119, ../sass/base/_font-icons.scss */
+/* line 135, ../sass/base/_font-icons.scss */
 .icon-Tick:before {
   content: "\e600";
+}
+
+/* line 139, ../sass/base/_font-icons.scss */
+.icon-new-Instagram:before {
+  content: "\ea92";
 }
 
 /* custom select styles */
@@ -1954,31 +1971,31 @@ section.job-card img {
   color: red;
 }
 
-/* line 1673, ../sass/general.scss */
+/* line 1672, ../sass/general.scss */
 .node-type-job-vacancy section#content_bottom {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 1673, ../sass/general.scss */
+  /* line 1672, ../sass/general.scss */
   .node-type-job-vacancy section#content_bottom {
     float: right;
     width: 30%;
     margin: 0;
   }
 }
-/* line 1684, ../sass/general.scss */
+/* line 1683, ../sass/general.scss */
 .node-type-job-vacancy section#content_bottom h2.block__title.block-title {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 1689, ../sass/general.scss */
+  /* line 1688, ../sass/general.scss */
   .node-type-job-vacancy section#content_bottom .view-header h2 {
     font-size: 40px;
     line-height: 30px;
   }
 }
-/* line 1697, ../sass/general.scss */
+/* line 1696, ../sass/general.scss */
 .node-type-job-vacancy section#content_bottom .views-row {
   margin-bottom: 6.69492%;
   background: #ffffff;
@@ -1988,12 +2005,12 @@ section.job-card img {
   font-weight: bold;
 }
 
-/* line 1709, ../sass/general.scss */
+/* line 1708, ../sass/general.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 1715, ../sass/general.scss */
+/* line 1714, ../sass/general.scss */
 .donation_target {
   max-width: 130px;
   overflow: hidden;
@@ -2005,14 +2022,14 @@ section.job-card img {
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 1726, ../sass/general.scss */
+/* line 1725, ../sass/general.scss */
 .donation_target span {
   float: left;
   width: 100%;
   color: #F15628;
 }
 
-/* line 1734, ../sass/general.scss */
+/* line 1733, ../sass/general.scss */
 #block-views-donation-block {
   display: none;
   float: left;
@@ -2023,12 +2040,12 @@ section.job-card img {
   padding: 30px 0 30px 30px;
 }
 @media (min-width: 768px) {
-  /* line 1734, ../sass/general.scss */
+  /* line 1733, ../sass/general.scss */
   #block-views-donation-block {
     display: block;
   }
 }
-/* line 1756, ../sass/general.scss */
+/* line 1755, ../sass/general.scss */
 #block-views-donation-block .target-amount {
   color: #2A2E31;
   text-align: center;
@@ -2039,7 +2056,7 @@ section.job-card img {
   width: auto;
   margin-bottom: 25px;
 }
-/* line 1768, ../sass/general.scss */
+/* line 1767, ../sass/general.scss */
 #block-views-donation-block .target-amount span {
   color: #F15628;
   font-size: 20px;
@@ -2047,7 +2064,7 @@ section.job-card img {
   float: left;
   width: 100%;
 }
-/* line 1777, ../sass/general.scss */
+/* line 1776, ../sass/general.scss */
 #block-views-donation-block .goal-counter {
   max-width: 130px;
   overflow: hidden;
@@ -2062,7 +2079,7 @@ section.job-card img {
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 2px 4px transparent, 0 0 0 1px transparent, 0 0 0 6px #D8D8D8, 0 7px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 2px 4px transparent, 0 0 0 1px transparent, 0 0 0 6px #D8D8D8, 0 7px rgba(255, 255, 255, 0.1);
 }
-/* line 1793, ../sass/general.scss */
+/* line 1792, ../sass/general.scss */
 #block-views-donation-block .goal-counter .goalProgress {
   position: relative;
   float: left;
@@ -2078,7 +2095,7 @@ section.job-card img {
   -webkit-box-shadow: inset 0 1px 2px #D8D8D8, 0 1px #D8D8D8;
   box-shadow: inset 0 1px 2px #D8D8D8, 0 1px #D8D8D8;
 }
-/* line 1816, ../sass/general.scss */
+/* line 1815, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar {
   position: absolute;
   bottom: 0;
@@ -2100,20 +2117,20 @@ section.job-card img {
   overflow: hidden;
   width: 100%;
 }
-/* line 1843, ../sass/general.scss */
+/* line 1842, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar .gained-amount {
   color: #F15628;
   font-size: 20px;
   text-align: center;
 }
-/* line 1849, ../sass/general.scss */
+/* line 1848, ../sass/general.scss */
 #block-views-donation-block .goal-counter .progressBar .gained-text {
   color: #2A2E31;
   text-align: center;
   padding: 0 20px;
   line-height: 30px;
 }
-/* line 1859, ../sass/general.scss */
+/* line 1858, ../sass/general.scss */
 #block-views-donation-block .goal-counter .goal-amount {
   float: left;
   width: 25%;
@@ -2125,29 +2142,29 @@ section.job-card img {
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
 }
 @media (max-width: 768px) {
-  /* line 1859, ../sass/general.scss */
+  /* line 1858, ../sass/general.scss */
   #block-views-donation-block .goal-counter .goal-amount {
     width: 20%;
   }
 }
-/* line 1876, ../sass/general.scss */
+/* line 1875, ../sass/general.scss */
 #block-views-donation-block .goal-counter span.goalAmount {
   display: none;
   text-indent: -9999px;
 }
 
-/* line 1883, ../sass/general.scss */
+/* line 1882, ../sass/general.scss */
 .webform-component--thermometer {
   display: block;
   padding: 0 12px;
 }
 @media (min-width: 767px) {
-  /* line 1883, ../sass/general.scss */
+  /* line 1882, ../sass/general.scss */
   .webform-component--thermometer {
     display: none;
   }
 }
-/* line 1892, ../sass/general.scss */
+/* line 1891, ../sass/general.scss */
 .webform-component--thermometer .target-amount {
   color: #2A2E31;
   text-align: center;
@@ -2157,14 +2174,14 @@ section.job-card img {
   width: auto;
   margin-top: 20px;
 }
-/* line 1905, ../sass/general.scss */
+/* line 1904, ../sass/general.scss */
 .webform-component--thermometer .target-amount span {
   color: #F15628;
   font-size: 20px;
   text-align: center;
   width: 100%;
 }
-/* line 1915, ../sass/general.scss */
+/* line 1914, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape {
   overflow: hidden;
   margin: 20px auto;
@@ -2175,11 +2192,11 @@ section.job-card img {
   border-radius: 10px;
   color: transparent;
 }
-/* line 1933, ../sass/general.scss */
+/* line 1932, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape h1 {
   display: none;
 }
-/* line 1937, ../sass/general.scss */
+/* line 1936, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape .goalProgress {
   float: left;
   width: 100%;
@@ -2188,7 +2205,7 @@ section.job-card img {
   background: #b8b8b8;
   border-radius: 6px;
 }
-/* line 1962, ../sass/general.scss */
+/* line 1961, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape .progressBar {
   display: block;
   min-width: 35px;
@@ -2208,19 +2225,19 @@ section.job-card img {
   overflow: hidden;
   width: 20px;
 }
-/* line 1983, ../sass/general.scss */
+/* line 1982, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape .progressBar .gained-amount {
   color: #F15628;
   font-size: 20px;
   text-align: center;
   padding-left: 5px;
 }
-/* line 1992, ../sass/general.scss */
+/* line 1991, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape .progressBar .gained-text {
   color: #2A2E31;
   float: left;
 }
-/* line 2004, ../sass/general.scss */
+/* line 2003, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape .goal-amount {
   float: left;
   width: 25%;
@@ -2231,51 +2248,51 @@ section.job-card img {
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
 }
 @media (max-width: 768px) {
-  /* line 2004, ../sass/general.scss */
+  /* line 2003, ../sass/general.scss */
   .webform-component--thermometer .goal-counter_landscape .goal-amount {
     width: 20%;
   }
 }
-/* line 2020, ../sass/general.scss */
+/* line 2019, ../sass/general.scss */
 .webform-component--thermometer .goal-counter_landscape span.goalAmount {
   display: none;
   text-indent: -9999px;
 }
 
-/* line 2029, ../sass/general.scss */
+/* line 2028, ../sass/general.scss */
 .page-vacancy-approval .edit-status-wrapper, .page-vacancy-approval .form-item-status {
   padding-left: 0;
 }
 
-/* line 2038, ../sass/general.scss */
+/* line 2037, ../sass/general.scss */
 .section-who-we-are .webform-style .webform-client-form-224896 .webform-component--topic {
   float: left;
 }
-/* line 2042, ../sass/general.scss */
+/* line 2041, ../sass/general.scss */
 .section-who-we-are .webform-style .webform-client-form-224896 fieldset {
   display: block;
   float: none;
 }
 @media (max-width: 767px) {
-  /* line 2046, ../sass/general.scss */
+  /* line 2045, ../sass/general.scss */
   .section-who-we-are .webform-style .webform-client-form-224896 fieldset input[type="checkbox"] {
     width: 5%;
     margin-top: 10px;
     float: left;
   }
 }
-/* line 2054, ../sass/general.scss */
+/* line 2053, ../sass/general.scss */
 .section-who-we-are .webform-style .webform-client-form-224896 fieldset label {
   display: inline-block;
 }
 @media (max-width: 767px) {
-  /* line 2054, ../sass/general.scss */
+  /* line 2053, ../sass/general.scss */
   .section-who-we-are .webform-style .webform-client-form-224896 fieldset label {
     width: 90%;
   }
 }
 @media (max-width: 768px) {
-  /* line 2063, ../sass/general.scss */
+  /* line 2062, ../sass/general.scss */
   .section-who-we-are .webform-style .webform-client-form-224896 .form-actions {
     float: left;
   }
