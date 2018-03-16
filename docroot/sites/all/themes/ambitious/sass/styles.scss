@@ -717,9 +717,32 @@ table {
             text-align: center;
           }
         }
+
+        &.caption-video{
+          top: auto;
+          bottom: 0;
+        }
       }
     }
   }
+
+
+.u-video__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+.u-video {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
 
   // .caption-frame {
   //   display: block;
