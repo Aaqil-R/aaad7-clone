@@ -742,7 +742,7 @@ table {
       .caption-text-titles{
         display: none;
       }
-      
+
       .region-image-holder{
         display: none;
       }
@@ -765,6 +765,10 @@ table {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+
+   @include breakpoint($mobile) {
+    display: none
+  }
 }
 
 .u-video {
@@ -773,11 +777,7 @@ table {
   left: 0;
   width: 100%;
   height: 100%; 
-  display: block; 
-
-  @include breakpoint($mobile) {
-    display: none
-  }
+  display: block;  
 }
 
 

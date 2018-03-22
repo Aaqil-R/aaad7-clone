@@ -1155,7 +1155,13 @@ table {
   height: 0;
   overflow: hidden;
 }
-/* line 770, ../sass/styles.scss */
+@media (max-width: 767px) {
+  /* line 763, ../sass/styles.scss */
+  .front .u-video__wrapper {
+    display: none;
+  }
+}
+/* line 774, ../sass/styles.scss */
 .front .u-video {
   position: absolute;
   top: -25px;
@@ -1164,41 +1170,35 @@ table {
   height: 100%;
   display: block;
 }
-@media (max-width: 767px) {
-  /* line 770, ../sass/styles.scss */
-  .front .u-video {
-    display: none;
-  }
-}
 
-/* line 868, ../sass/styles.scss */
+/* line 870, ../sass/styles.scss */
 .not-front .caption-text {
   margin-top: 75px;
 }
-/* line 872, ../sass/styles.scss */
+/* line 874, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title {
   float: left;
   width: 100%;
   line-height: inherit !important;
   margin-bottom: 10px;
 }
-/* line 878, ../sass/styles.scss */
+/* line 880, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title span {
   float: left;
   letter-spacing: -1px;
   background: #ffffff;
   padding: 15px 25px 20px 25px;
 }
-/* line 885, ../sass/styles.scss */
+/* line 887, ../sass/styles.scss */
 .not-front .caption-text .caption-text-titles .caption-text-title.caption-text-title-2 {
   font-size: 36px;
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
-/* line 893, ../sass/styles.scss */
+/* line 895, ../sass/styles.scss */
 .not-front .visual .img-holder .caption-frame {
   max-width: 1080px;
 }
-/* line 898, ../sass/styles.scss */
+/* line 900, ../sass/styles.scss */
 .not-front.node-type-page .block-easy-breadcrumb .easy-breadcrumb {
   padding-top: 0px;
 }
