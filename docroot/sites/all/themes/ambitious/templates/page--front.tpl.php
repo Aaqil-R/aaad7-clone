@@ -141,7 +141,7 @@
       <?php endif; ?>
       <?php if(isset($node->field_hero_video['und'][0]['video_id'])): ?>
       	<div class="u-video__wrapper">
-  	      <iframe class="u-video" id="youtubeVid" src="https://www.youtube.com/embed/<?php print $node->field_hero_video['und'][0]['video_id']  ?>?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> 
+  	      <iframe class="u-video" id="youtubeVid" src="https://www.youtube.com/embed/<?php print $node->field_hero_video['und'][0]['video_id']  ?>?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;playlist=<?php print $node->field_hero_video['und'][0]['video_id']  ?>&amp;loop=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> 
       	</div>
       <?php endif; ?>
     </div>
