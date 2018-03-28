@@ -95,66 +95,60 @@
   <!-- / header -->
 
   <section class="visual header_banner">
-    <div class="img-holder">
+    <div class="img-holder <?php print (isset($node->field_hero_video['und'][0]['video_id']))? 'with-video':'' ?>">
       <div class="caption-frame">
-
         <div class="region region-caption-holder">
-
           <!-- BEGIN BREADCRUMB -->
           <!-- rendering out easy breadcrumb on the page -->
-          <?php if ($page['breadcrumb']): ?> 
-            <div class="easy-breadcrumb"> 
-              <?php print render($page['breadcrumb']); ?>
+          <?php if ($page['breadcrumb']): ?>
+            <div class="easy-breadcrumb">
+                <?php print render($page['breadcrumb']); ?>
             </div>
           <?php endif; ?>
           <!-- END BREADCRUMB -->
-
           <?php if($captionone || $captiontwo ): ?>
-          <div class="caption-text">
-            <h1 class="caption-text-titles">
-            <?php if($captionone): ?>
-              <?php $captionone_render = trim(render($captionone)); ?>
-              <?php if(!empty($captionone_render)): ?>
-                <div class="caption-text-title caption-text-title-1">               
-                    <span>
-                        <?php print $captionone_render; ?>              
-                    </span>
-                </div>
-              <?php endif; ?>
-            <?php endif; ?>
+            <div class="caption-text">
+              <h1 class="caption-text-titles">
+                <?php if($captionone): ?>
+                  <?php $captionone_render = trim(render($captionone)); ?>
+                  <?php if(!empty($captionone_render)): ?>
+                    <div class="caption-text-title caption-text-title-1">               
+                        <span><?php print $captionone_render; ?> </span>
+                    </div>
+                  <?php endif; ?>
+                <?php endif; ?>
 
-            <?php if($captiontwo): ?>
-              <?php $captiontwo_render = render($captiontwo); ?>
-              <?php if(!empty($captiontwo_render)): ?>              
-                <div class="caption-text-title caption-text-title-2">
-                    <span> 
-                        <?php print $captiontwo_render; ?>               
-                    </span>
-                </div>
-              <?php endif; ?>        
-            <?php endif; ?>
-            </h1>
-        </div>
-        <?php endif; ?>
+                <?php if($captiontwo): ?>
+                  <?php $captiontwo_render = render($captiontwo); ?>
+                  <?php if(!empty($captiontwo_render)): ?>              
+                    <div class="caption-text-title caption-text-title-2">
+                      <span><?php print $captiontwo_render; ?></span>
+                    </div>
+                  <?php endif; ?>        
+                <?php endif; ?>
+              </h1>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
-      <div class="region region-image-holder"
-        <?php if($image): ?>
-           style="background-image: url('/<?php print variable_get('file_public_path', conf_path().'/files').'/'; print($image['#item']['filename']); ?>')"
-        <?php endif; ?>>
-          
-      </div>
+      <?php if($image): ?>
+        <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+        </div> 
+      <?php endif; ?>
+      <?php if(isset($node->field_hero_video['und'][0]['video_id'])): ?>
+        <div class="u-video__wrapper">
+          <iframe class="u-video" id="youtubeVid" src="https://www.youtube.com/embed/<?php print $node->field_hero_video['und'][0]['video_id']  ?>?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;playlist=<?php print $node->field_hero_video['und'][0]['video_id']  ?>&amp;loop=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> 
+        </div>
+      <?php endif; ?>
     </div>
-    <?php if($credit): ?>
+    <?php if($credit && !isset($node->field_hero_video['und'][0]['video_id']) ): ?>
       <?php $credit_render = render($credit); ?>
       <?php if(!empty($credit_render)): ?>
         <div class="holder">
-          <span class="pic-by">          
-              <?php print t('© Photo by ') . render($credit_render); ?>          
-          </span>
+          <span class="pic-by"><?php print t('© Photo by ') . render($credit_render); ?></span>
         </div>
       <?php endif; ?>
-    <?php endif; ?>         
+    <?php endif; ?>
   </section>
 
 

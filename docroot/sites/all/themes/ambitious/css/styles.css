@@ -1124,21 +1124,26 @@ table {
   top: auto;
   bottom: 0;
 }
-/* line 731, ../sass/styles.scss */
-.front .img-holder.with-video .region-image-holder {
+
+/* line 733, ../sass/styles.scss */
+.img-holder.with-video .region-image-holder {
   display: block;
 }
+
 @media (min-width: 767px) {
-  /* line 742, ../sass/styles.scss */
-  .front .img-holder.with-video .caption-text-titles {
+  /* line 744, ../sass/styles.scss */
+  .front .img-holder.with-video .caption-text-titles,
+  .not-front .img-holder.with-video .caption-text-titles {
     display: none;
   }
-  /* line 746, ../sass/styles.scss */
-  .front .img-holder.with-video .region-image-holder {
+  /* line 748, ../sass/styles.scss */
+  .front .img-holder.with-video .region-image-holder,
+  .not-front .img-holder.with-video .region-image-holder {
     display: none;
   }
-  /* line 750, ../sass/styles.scss */
-  .front .img-holder.with-video .caption-frame {
+  /* line 752, ../sass/styles.scss */
+  .front .img-holder.with-video .caption-frame,
+  .not-front .img-holder.with-video .caption-frame {
     transform: none;
     left: initial;
     width: auto;
@@ -1148,21 +1153,22 @@ table {
     right: 0;
   }
 }
-/* line 763, ../sass/styles.scss */
-.front .u-video__wrapper {
+/* line 766, ../sass/styles.scss */
+.u-video__wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  /* line 763, ../sass/styles.scss */
-  .front .u-video__wrapper {
+  /* line 766, ../sass/styles.scss */
+  .u-video__wrapper {
     display: none;
   }
 }
-/* line 774, ../sass/styles.scss */
-.front .u-video {
+
+/* line 777, ../sass/styles.scss */
+.u-video {
   position: absolute;
   top: -25px;
   left: 0;

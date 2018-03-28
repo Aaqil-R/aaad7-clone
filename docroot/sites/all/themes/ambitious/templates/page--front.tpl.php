@@ -98,45 +98,38 @@
   <?php print render($page['image_holder']); ?>
   <!-- /image holder -->
 <?php endif; ?>
-<section class="visual header_banner">
+  <section class="visual header_banner">
     <div class="img-holder <?php print (isset($node->field_hero_video['und'][0]['video_id']))? 'with-video':'' ?>">
       <div class="caption-frame">
         <div class="region region-caption-holder">
           <?php if($captionone || $captiontwo ): ?>
-          <div class="caption-text">
-            <div class="caption-text-titles">
-            <?php if($captionone): ?>
-              <?php $captionone_render = trim(render($captionone)); ?>
-              <?php if(!empty($captionone_render)): ?>
-                <div class="caption-text-title caption-text-title-1">               
-                    
-                        <h1><?php print $captionone_render; ?>   </h1>           
-                    
-                </div>
+            <div class="caption-text">
+              <div class="caption-text-titles">
+              <?php if($captionone): ?>
+                <?php $captionone_render = trim(render($captionone)); ?>
+                <?php if(!empty($captionone_render)): ?>
+                  <div class="caption-text-title caption-text-title-1">               
+                    <h1><?php print $captionone_render; ?></h1>           
+                  </div>
+                <?php endif; ?>
               <?php endif; ?>
-            <?php endif; ?>
 
-            <?php if($captiontwo): ?>
-              <?php $captiontwo_render = render($captiontwo); ?>
-              <?php if(!empty($captiontwo_render)): ?>              
-                <div class="caption-text-title caption-text-title-2">
-                     
-                        <h1><?php print $captiontwo_render; ?>   </h1>             
-                   
-                </div>
-              <?php endif; ?>        
-            <?php endif; ?>
+              <?php if($captiontwo): ?>
+                <?php $captiontwo_render = render($captiontwo); ?>
+                <?php if(!empty($captiontwo_render)): ?>              
+                  <div class="caption-text-title caption-text-title-2">
+                    <h1><?php print $captiontwo_render; ?>   </h1>             
+                  </div>
+                <?php endif; ?>        
+              <?php endif; ?>
+              </div>
+              <?php print views_embed_view('card_stream', 'block_2');  ?>
             </div>
-            <?php print views_embed_view('card_stream', 'block_2');  ?>
-        </div>
-        <?php endif; ?>
-
-
-
+          <?php endif; ?>
         </div>
       </div>
       <?php if($image): ?>
-	      <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+        <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
         </div> 
       <?php endif; ?>
       <?php if(isset($node->field_hero_video['und'][0]['video_id'])): ?>
@@ -145,7 +138,7 @@
       	</div>
       <?php endif; ?>
     </div>
-    <?php if($credit): ?>
+    <?php if($credit && !isset($node->field_hero_video['und'][0]['video_id']) ): ?>
       <?php $credit_render = render($credit); ?>
       <?php if(!empty($credit_render)): ?>
         <div class="holder">

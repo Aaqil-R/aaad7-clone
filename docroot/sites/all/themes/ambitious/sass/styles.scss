@@ -725,7 +725,9 @@ table {
       }
     }
   }
-  
+}
+
+
 .img-holder{
   &.with-video {
     .region-image-holder{
@@ -734,27 +736,28 @@ table {
   }
 }
 
-@include breakpoint($not-mobile){
+@include breakpoint($not-mobile) {
+  .front,
+  .not-front{
+    .img-holder{
+      &.with-video {
+        .caption-text-titles{
+          display: none;
+        }
 
+        .region-image-holder{
+          display: none;
+        }
 
-  .img-holder{
-    &.with-video {
-      .caption-text-titles{
-        display: none;
-      }
-
-      .region-image-holder{
-        display: none;
-      }
-
-      .caption-frame {
-        transform: none;
-        left: initial;
-        width: auto;
-        max-width: initial;
-        background: transparent;
-        top: 0;
-        right: 0;
+        .caption-frame {
+          transform: none;
+          left: initial;
+          width: auto;
+          max-width: initial;
+          background: transparent;
+          top: 0;
+          right: 0;
+        }
       }
     }
   }
@@ -861,7 +864,6 @@ table {
   //     top: 0px;
   //   }
   // }
-}
 
 // inner pages caption text styles
 .not-front {
