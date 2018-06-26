@@ -95,181 +95,174 @@
   <!-- / header -->
 
   <section class="visual header_banner">
-  <div class="img-holder">
-    <div class="caption-frame">
-      <div class="region region-caption-holder">
-        <?php if ($page['breadcrumb']): ?> 
-                <div class="easy-breadcrumb"> 
-                  <?php print render($page['breadcrumb']); ?>
-                </div>
-              <?php endif; ?>
+    <div class="img-holder">
+      <div class="caption-frame">
+        <div class="region region-caption-holder">
+          <?php if ($page['breadcrumb']): ?> 
+            <div class="easy-breadcrumb"> 
+              <?php print render($page['breadcrumb']); ?>
+            </div>
+          <?php endif; ?>
           <div class="caption-text">
             <div class="caption-text-titles">
-                <div class="caption-text-title caption-text-title-1">               
-                  <span>
-                      <?php if ($title): ?>
-                        <h1 class="title"><?php print $title; ?></h1>
-                      <?php endif; ?>              
-                  </span>
-                </div>                    
+              <div class="caption-text-title caption-text-title-1">               
+                <span>
+                  <?php if ($title): ?>
+                    <h1 class="title"><?php print $title; ?></h1>
+                  <?php endif; ?>              
+                </span>                   
+              </div>
             </div>
           </div>
-      </div>
-    </div>
-    <div class="region region-image-holder"
+        </div>
+      <div class="region region-image-holder"
       style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
-    </div>
+      </div>
     </div>
     <div class="holder">
       <span class="pic-by">  
-          <?php 
-            $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
-            $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]);
-            if(render($viewitemscredit)){     
+        <?php 
+          $getitemscredit = field_get_items('node', $node ,'field_photo_credit');
+          $viewitemscredit = field_view_value('node', $node ,'field_photo_credit', $getitemscredit[0]);
+          if(render($viewitemscredit)){     
             print t('© Photo by ') . render($viewitemscredit);
-            }
-          ?>          
+          }
+        ?>          
       </span>
-    </div>       
+    </div>  
     <?php  //print render ($content['field_photo_credit']); 
-  // dpr($content['field_featured_image']);?>   
+    // dpr($content['field_featured_image']);?>   
   </section>
 
 
 
-<?php if ($page['header_form']): ?>    <!-- slider block -->
-  <section class="slider-block">
-    <div class="holder">
-      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
-      <?php print render($page['header_form']); ?>       
-    </div>
-  </section>
-<?php endif; ?>
-
-<?php if ($page['navigation']): ?>
-  <section id="navigation">
-    <?php print render($page['navigation']); ?>
-  </section> <!-- /navigation -->
-<?php endif; ?>
-
-<?php if ($page['highlighted']): ?>
-  <section id="highlighted">
-    <?php print render($page['highlighted']); ?>
-
-    <?php if ($breadcrumb): ?>
-    <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
+  <?php if ($page['header_form']): ?>    <!-- slider block -->
+    <section class="slider-block">
+      <div class="holder">
+        <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>      
+        <?php print render($page['header_form']); ?>       
+      </div>
+    </section>
   <?php endif; ?>
 
-</section> <!-- /highlighted -->
-<?php endif; ?>
-<?php if ($page['content_top']): ?>  
-  <section class="my-voice-block" id="content_top">
-    <div class="holder">
-      <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
-      <div class="block">
-        <div class="my-voice-columns">
-          <?php print render($page['content_top']); ?>
+  <?php if ($page['navigation']): ?>
+    <section id="navigation">
+      <?php print render($page['navigation']); ?>
+    </section> <!-- /navigation -->
+  <?php endif; ?>
+
+  <?php if ($page['highlighted']): ?>
+    <section id="highlighted">
+      <?php print render($page['highlighted']); ?>
+      <?php if ($breadcrumb): ?>
+        <h1 class="breadcrumb"><?php print $breadcrumb; ?></h1>
+      <?php endif; ?>
+    </section> <!-- /highlighted -->
+  <?php endif; ?>
+
+
+  <?php if ($page['content_top']): ?>  
+    <section class="my-voice-block" id="content_top">
+      <div class="holder">
+        <div class="block-close"><a href="#"><span class="icon-Close"></span></a></div>
+        <div class="block">
+          <div class="my-voice-columns">
+            <?php print render($page['content_top']); ?>
+          </div>
         </div>
       </div>
+    </section>
+  <?php endif; ?>
+
+
+
+
+  <main id="main">
+    <?php if ($messages || $tabs || $action_links): ?>
+      <div id="content-header">
+        <?php print  $messages; ?>
+        <?php print render($page['help']); ?>
+
+        <?php if ($tabs): ?>
+          <div class="tabs"><?php print render($tabs); ?></div>
+        <?php endif; ?>
+
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+
+      </div> <!-- /content-header -->
+    <?php endif; ?>
+
+    <section id="content-area">
+      <?php print render($page['content']) ?>
+    </section> <!-- /content -->
+
+    <div>
+      <?php
+      print render($output);
+      ?>
     </div>
-  </section>
-<?php endif; ?>
-<main id="main">
-
-
-  <?php if ($messages || $tabs || $action_links): ?>
-  <div id="content-header">
-
-    
-
-
-  <?php print  $messages; ?>
-  <?php print render($page['help']); ?>
-
-
-  <?php if ($tabs): ?>
-  <div class="tabs"><?php print render($tabs); ?></div>
-<?php endif; ?>
-
-
-<?php if ($action_links): ?>
-  <ul class="action-links"><?php print render($action_links); ?></ul>
-<?php endif; ?>
-
-</div> <!-- /content-header -->
-<?php endif; ?>
-
-<section id="content-area">
-  <?php print render($page['content']) ?>
-</section> <!-- /content -->
-
-<div>
-  <?php
-    print render($output);
-  ?>
-<div>
-
 
     <?php
-// Render the sidebars to see if there's anything in them.
-    $sidebar_first  = render($page['sidebar_first']);
-    $sidebar_second = render($page['sidebar_second']);
+      // Render the sidebars to see if there's anything in them.
+      $sidebar_first  = render($page['sidebar_first']);
+      $sidebar_second = render($page['sidebar_second']);
     ?>
 
     <?php if ($page['content_bottom']): ?>
-    <section id="content_bottom">
-      <?php print render($page['content_bottom']); ?>
-    </section> <!-- /content-bottom -->
+      <section id="content_bottom">
+        <?php print render($page['content_bottom']); ?>
+      </section> <!-- /content-bottom -->
+    <?php endif; ?>
+  </main> <!-- /main -->
+
+  <?php if ($page['action']): ?>
+    <!-- action columns -->
+    <section class="action-block">
+      <!-- <div class="holder"> -->
+      <?php print render($page['action']); ?>
+      <!-- </div> -->
+    </section>
+    <!-- fourm block -->
   <?php endif; ?>
 
-</main> <!-- /main -->
-<?php if ($page['action']): ?>
-  <!-- action columns -->
-  <section class="action-block">
-    <!-- <div class="holder"> -->
-    <?php print render($page['action']); ?>
-    <!-- </div> -->
-  </section>
-  <!-- fourm block -->
-<?php endif; ?>
+  <!-- including the article blocks -->
+  <?php if ($page['services']): ?>
+    <section class="services" >
+      <?php print render($page['services']); ?>     
+    </section>
+  <?php endif; ?>
 
-<!-- including the article blocks -->
-<?php if ($page['services']): ?>
-  <section class="services" >
-    <?php print render($page['services']); ?>     
-  </section>
-<?php endif; ?>
-<!-- including the social blocks -->
-<?php if ($page['social']): ?>
-  <section class="social-block">
-    <div class="holder">
-      <h1>Stay ambitious</h1>
-      <div class="block">
-        <div class="social-columns" >
-          <?php print render($page['social']); ?>
+  <!-- including the social blocks -->
+  <?php if ($page['social']): ?>
+    <section class="social-block">
+      <div class="holder">
+        <h1>Stay ambitious</h1>
+        <div class="block">
+          <div class="social-columns" >
+            <?php print render($page['social']); ?>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="bg-stretch home-bg-stretch">
-    </div>
-  </section>
-<?php endif; ?>
+      <div class="bg-stretch home-bg-stretch"></div>
+    </section>
+  <?php endif; ?>
 
-
-<footer id="footer">
-  <div class="holder">
-    <div class="logo">
-      <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print $base_path; ?>sites/all/themes/ambitious/images/logo-footer.png"></a>
-    </div>
-    <div class="right-footer">
-      <?php print render($page['footer_right']); ?>
-    </div><!-- /footer Right --> 
-    <div class="company-info">          
-      <?php print render($page['footer_copyright']); ?>
-      <span class="design-by">Designed by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>. Built by <a href="http://weare.thesmallaxe.com" target="_blank">The Small Axe</a>.</span>    </div><!-- /footer copyright -->              
-  </div>      
-</footer> <!-- /footer -->
-<a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
+  <footer id="footer">
+    <div class="holder">
+      <div class="logo">
+        <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print $base_path; ?>sites/all/themes/ambitious/images/logo-footer.png"></a>
+      </div>
+      <div class="right-footer">
+        <?php print render($page['footer_right']); ?>
+      </div><!-- /footer Right --> 
+      <div class="company-info">          
+        <?php print render($page['footer_copyright']); ?>
+        <span class="design-by">Designed by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>. Built by <a href="http://weare.thesmallaxe.com" target="_blank">The Small Axe</a>.</span>    </div><!-- /footer copyright -->              
+    </div>      
+  </footer> <!-- /footer -->
+  <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
 <?php print render($user_picture); ?>
 <?php print render($page['bottom']); ?>
