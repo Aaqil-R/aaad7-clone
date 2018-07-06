@@ -105,7 +105,7 @@
           <?php endif; ?>
           <div class="caption-text">
             <div class="caption-text-titles">
-              <div class="caption-text-title caption-text-title-1">               
+              <div class="caption-text-title caption-text-title-1">
                 <span>
                   <?php if ($title): ?>
                     <h1 class="title"><?php print $title; ?></h1>
@@ -115,10 +115,11 @@
             </div>
           </div>
         </div>
-      <div class="region region-image-holder"
-      style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
+      </div>
+      <div class="region region-image-holder" style="background-image: url('<?php print file_create_url($node->field_featured_image[LANGUAGE_NONE][0]['uri']);?>')">
       </div>
     </div>
+    
     <div class="holder">
       <span class="pic-by">  
         <?php 
