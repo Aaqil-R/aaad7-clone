@@ -424,7 +424,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 #wrapper {
   background: #eef2f3;
   width: 100%;
-  height: 100%;
   position: relative;
   display: table;
   word-wrap: break-word;
@@ -435,30 +434,36 @@ body > .jcf-select-drop.jcf-drop-flipped {
 @media (max-width: 767px) {
   /* line 3, ../sass/wrapper.scss */
   #wrapper {
-    margin-top: 175px;
+    margin-top: 209px;
     display: block;
   }
 }
+@media (min-width: 768px) {
+  /* line 3, ../sass/wrapper.scss */
+  #wrapper {
+    height: 100%;
+  }
+}
 
-/* line 25, ../sass/wrapper.scss */
+/* line 28, ../sass/wrapper.scss */
 .header_fixed #wrapper {
   margin-top: 73px;
 }
 @media (max-width: 767px) {
-  /* line 25, ../sass/wrapper.scss */
+  /* line 28, ../sass/wrapper.scss */
   .header_fixed #wrapper {
     margin-top: 70px;
   }
 }
 
-/* line 35, ../sass/wrapper.scss */
+/* line 38, ../sass/wrapper.scss */
 .node-type-page #wrapper {
   background: #ffffff;
 }
 
-/* line 43, ../sass/wrapper.scss */
+/* line 46, ../sass/wrapper.scss */
 .page-node-74591
 #wrapper, .page-node-74611
 #wrapper, .page-node-74596 #wrapper {
-  background: url('../images/wid_bg.jpg?1485149572') #eef2f3;
+  background: url('../images/wid_bg.jpg?1529561601') #eef2f3;
 }
