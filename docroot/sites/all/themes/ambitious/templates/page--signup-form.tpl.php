@@ -120,7 +120,6 @@
   //print render($page['#views_contextual_links_info']['views_ui']['view']->result[0]->field_field_featured_image[0])?>
   
   <main id="main">
-
     <?php if ($messages || $tabs || $action_links): ?>
 
       <div id="content-header">
@@ -162,21 +161,6 @@
         <?php print render($page['content_bottom']); ?>
       </section> <!-- /content-bottom -->
     <?php endif; ?>
-
-      <footer id="footer">
-    <div class="holder asd sad">
-      <div class="logo">
-        <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print $base_path; ?>sites/all/themes/ambitious/images/logo-footer.png"></a>
-      </div>
-      <div class="right-footer">
-        <?php print render($page['footer_right']); ?>
-      </div><!-- /footer Right --> 
-      <div class="company-info">          
-        <?php print render($page['footer_copyright']); ?>
-        <span class="design-by">Designed by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>. Built by <a href="http://weare.thesmallaxe.com" target="_blank">The Small Axe</a>.</span>    </div><!-- /footer copyright -->              
-    </div>      
-  </footer> <!-- /footer -->
-
   </main> <!-- /main -->
 
   <?php if ($page['action']): ?>
@@ -211,9 +195,22 @@
     </section>
   <?php endif; ?>
 
-
-
   <a accesskey="t" href="#wrapper" class="accessibility">Back to top</a>  
 </div>
+
+<footer id="footer">
+  <div class="holder asd sad">
+    <div class="logo">
+      <a href="<?php print $front_page; ?>"><img alt="Ambitious About Autism" src="<?php print $base_path; ?>sites/all/themes/ambitious/images/logo-footer.png"></a>
+    </div>
+    <div class="right-footer">
+      <?php print render($page['footer_right']); ?>
+    </div><!-- /footer Right --> 
+    <div class="company-info">          
+      <?php print render($page['footer_copyright']); ?>
+      <span class="design-by">Designed by <a href="https://www.bluestatedigital.com" target="_blank">Blue State Digital</a>. Built by <a href="http://weare.thesmallaxe.com" target="_blank">The Small Axe</a>.</span>    </div><!-- /footer copyright -->              
+  </div>      
+</footer> <!-- /footer -->
+
 <?php print render($user_picture); ?>
 <?php print render($page['bottom']); ?>
