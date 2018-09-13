@@ -4,15 +4,6 @@ require('init.php');
 
 function stripe_custom_init(){
 	// aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
-	// dpm("test");
-
-	// $record = array(
- //  	"data" => 'data',
- //  	"customessage" => 'appear',
- //  	"timestamp" => time(),
- //  );
-	// dpm(drupal_write_record('aaa_logger', $record));
-	// dpm("init dbcall");
 }
 
 //Function to format the number to full integer
@@ -776,6 +767,7 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 
 	function stripe_custom_create_mails($email,$messagebody,$emailname){
 
+
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
 	$mailbody = 'Dear '.$emailname.'<br>'.$messagebody;
 	
@@ -806,7 +798,11 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 
 function sendmail($nid , $email ,$emailname){
 	$message = get_thankyou_message($nid);
-	stripe_custom_create_mails($email,$message,$emailname);
+	try {
+		stripe_custom_create_mails($email,$message,$emailname);
+	} catch (Exception $e) {
+		aaa_data_log($e , 'Send mail exception');
+  }
 }
 
 
@@ -835,7 +831,11 @@ function sendmailsadmin($referencenumber ,  $csv){
 	$emailaddress = $csv['email']; 
 	foreach ($emails as $email) {
 		//call the function to create mail here
-		create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress);
+		try {
+			create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress);
+		} catch (Exception $e) {
+			aaa_data_log($e , 'Send admin mail exception for this '.$email);
+	  }
 	}
 }
 
