@@ -153,13 +153,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			}
 		}
 
-		//checking whether the other amount is entered
-		// if($other_amount != '')
-		// {
-		// 	$select_an_amount = $other_amount;
-		// 	$csv['amount'] = $other_amount;
-		// }
-
 		//Processing the selected amount
 		$select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
 		//Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
@@ -765,11 +758,8 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	}
 
 	function get_thankyou_message($nid){
-		//$nid = arg(1);
 		$node = node_load($nid);
 		$my_field_items = field_get_items('node', $node, 'field_thankyou_message');
-		//$message = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
-		//$output = render($message);
 		$output = $my_field_items[0]['value'];
 		return $output;
 	}
@@ -796,17 +786,10 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	);
 	$system = drupal_mail_system($my_module, $my_mail_token);
 
-	// The format function must be called before calling the mail function. 
-	//$message = $system->format($message);
-	//dpm($message);
 	if ($system->mail($message)) {
-		// Success.
-		//dpm('Success');
 		aaa_data_log($email , 'Mail sent successfully');
 	}
 	else {
-	  	// Failure.
-		//dpm('Fail');
 		aaa_data_log($email , 'Mail sending failed');
 	}
 }
@@ -873,15 +856,11 @@ function create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress)
 	$system = drupal_mail_system($my_module, $my_mail_token);
 
 	// The format function must be called before calling the mail function. 
-	//$message = $system->format($message);
-	//dpm($message);
 	if ($system->mail($message)) {
-		// Success.
-		//dpm('Success');
+		aaa_data_log($email , 'Admin Mail sent successfully');
 	}
 	else {
-	  	// Failure.
-		//dpm('Fail');
+		aaa_data_log($email , 'Admin Mail sending failed');
 	}
 }
 
