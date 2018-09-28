@@ -132,30 +132,11 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 // */
 
 
-// Adding a Fonts
+// Adding Fonts
 //=====================================
 
 function ambitious_preprocess_html(&$variables) {
-  drupal_add_css('https://fast.fonts.net/cssapi/aa5fc6a4-3498-4f2c-8559-9f785aeeb36b.css', array('type' => 'external'));
   
-   // Check if the user registered or not in home page step forms 
-  global $user; 
-  $userid = 0; //initializing the variable 
-  // if($user->uid){ 
-  //   $node_id = node_load(74666)->nid; 
-  //   if(!empty($node_id) && drupal_is_front_page()){
-  //     $webformid = webform_get_submissions($node_id);  
-  //     foreach ($webformid as $myval){
-  //       if($myval->uid == $user->uid){
-  //         $userid = 1; 
-  //         break;
-  //       }
-  //     }
-  //     if($userid == 1){ 
-  //       $variables['classes_array'][] = 'webform-registered-home';
-  //     }
-  //   }    
-  // }   
 }
 
 function ambitious_preprocess_region(&$variables) {
