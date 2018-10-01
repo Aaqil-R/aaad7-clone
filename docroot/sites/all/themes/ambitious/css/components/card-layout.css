@@ -430,8 +430,32 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot?y5zyxa");
+  src: url("../../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/icomoon.woff?y5zyxa") format("woff"), url("../../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon-new';
+  src: url("../../fonts/new-icomoon.eot?y5zyxa");
+  src: url("../../fonts/new-icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/new-icomoon.woff?y5zyxa") format("woff"), url("../../fonts/new-icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/new-icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-55Roma.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("../../fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-55Roma.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-75Bold.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("../../fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-75Bold.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
 /* Card layout across site */
-/* line 8, ../../sass/components/card-layout.scss */
+/* line 45, ../../sass/components/card-layout.scss */
 .topic-child-posts .feature-row .img-holder .feature-holder {
   margin-bottom: 5px;
   position: static;
@@ -439,29 +463,29 @@ body > .jcf-select-drop.jcf-drop-flipped {
   left: 0px;
   background: transparent;
 }
-/* line 15, ../../sass/components/card-layout.scss */
+/* line 52, ../../sass/components/card-layout.scss */
 .topic-child-posts .feature-row .img-holder .feature-holder .text {
   background: #f15500;
 }
 
-/* line 20, ../../sass/components/card-layout.scss */
+/* line 57, ../../sass/components/card-layout.scss */
 .card-icon-holder {
   position: absolute;
   left: 5px;
   bottom: 10px;
 }
 
-/* line 26, ../../sass/components/card-layout.scss */
+/* line 63, ../../sass/components/card-layout.scss */
 .card__category {
   overflow: hidden;
   float: left;
 }
-/* line 30, ../../sass/components/card-layout.scss */
+/* line 67, ../../sass/components/card-layout.scss */
 .card__category:hover .card__categorytext {
   margin-left: 0;
 }
 
-/* line 35, ../../sass/components/card-layout.scss */
+/* line 72, ../../sass/components/card-layout.scss */
 .card__categorytext {
   float: left;
   font-size: 18px;
@@ -477,7 +501,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   transition: all 0.4s ease;
 }
 
-/* line 48, ../../sass/components/card-layout.scss */
+/* line 85, ../../sass/components/card-layout.scss */
 .card__categoryicon {
   position: relative;
   z-index: 1;
@@ -487,22 +511,22 @@ body > .jcf-select-drop.jcf-drop-flipped {
   width: 45px;
 }
 
-/* line 57, ../../sass/components/card-layout.scss */
+/* line 94, ../../sass/components/card-layout.scss */
 .card__categoryicon--stories {
   background: url('../../images/aaa-story-icon.svg?1536819776') #ffffff center center no-repeat;
 }
 
-/* line 61, ../../sass/components/card-layout.scss */
+/* line 98, ../../sass/components/card-layout.scss */
 .card__categoryicon--information {
   background: url('../../images/aaa-information-icon.svg?1536819776') #ffffff center center no-repeat;
 }
 
-/* line 65, ../../sass/components/card-layout.scss */
+/* line 102, ../../sass/components/card-layout.scss */
 .card__category--blue {
   background: #5bc5ed;
 }
 
-/* line 69, ../../sass/components/card-layout.scss */
+/* line 106, ../../sass/components/card-layout.scss */
 .card__category--orange {
   background: #f15500;
 }

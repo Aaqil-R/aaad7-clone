@@ -444,6 +444,30 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot?y5zyxa");
+  src: url("../../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/icomoon.woff?y5zyxa") format("woff"), url("../../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon-new';
+  src: url("../../fonts/new-icomoon.eot?y5zyxa");
+  src: url("../../fonts/new-icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/new-icomoon.woff?y5zyxa") format("woff"), url("../../fonts/new-icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/new-icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-55Roma.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("../../fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-55Roma.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-75Bold.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("../../fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-75Bold.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
 /*
    edit by nanda
      
@@ -452,7 +476,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
    
 */
 /* footer styles */
-/* line 14, ../../sass/layouts/footer.scss */
+/* line 51, ../../sass/layouts/footer.scss */
 #footer {
   clear: both;
   width: 100%;
@@ -465,7 +489,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   /* footer logo styles */
   /* social networks styles */
 }
-/* line 30, ../../sass/layouts/footer.scss */
+/* line 67, ../../sass/layouts/footer.scss */
 #footer .holder {
   position: relative;
   z-index: 9;
@@ -483,12 +507,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
   font-size: 0.9375em;
 }
 @media (max-width: 767px) {
-  /* line 30, ../../sass/layouts/footer.scss */
+  /* line 67, ../../sass/layouts/footer.scss */
   #footer .holder {
     padding: 30px 20px;
   }
 }
-/* line 52, ../../sass/layouts/footer.scss */
+/* line 89, ../../sass/layouts/footer.scss */
 #footer h2 {
   font-size: 18px;
   line-height: 22px;
@@ -496,31 +520,31 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #d2d5d6 !important;
 }
 @media (max-width: 768px) {
-  /* line 52, ../../sass/layouts/footer.scss */
+  /* line 89, ../../sass/layouts/footer.scss */
   #footer h2 {
     font-size: 17px;
   }
 }
-/* line 63, ../../sass/layouts/footer.scss */
+/* line 100, ../../sass/layouts/footer.scss */
 #footer .block-title {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
-/* line 71, ../../sass/layouts/footer.scss */
+/* line 108, ../../sass/layouts/footer.scss */
 #footer .nav ul li {
   font-size: 16px;
   line-height: 20px;
   margin: 0 0 16px;
 }
-/* line 76, ../../sass/layouts/footer.scss */
+/* line 113, ../../sass/layouts/footer.scss */
 #footer .nav ul li a {
   color: #d2d5d6;
   text-decoration: underline;
 }
-/* line 80, ../../sass/layouts/footer.scss */
+/* line 117, ../../sass/layouts/footer.scss */
 #footer .nav ul li a:hover {
   text-decoration: none;
 }
-/* line 89, ../../sass/layouts/footer.scss */
+/* line 126, ../../sass/layouts/footer.scss */
 #footer .logo {
   display: block;
   width: 115px;
@@ -528,17 +552,17 @@ body > .jcf-select-drop.jcf-drop-flipped {
   position: relative;
   top: -49px;
 }
-/* line 96, ../../sass/layouts/footer.scss */
+/* line 133, ../../sass/layouts/footer.scss */
 #footer .logo a {
   display: block;
 }
-/* line 99, ../../sass/layouts/footer.scss */
+/* line 136, ../../sass/layouts/footer.scss */
 #footer .logo a img {
   width: 100%;
   height: auto;
   display: block;
 }
-/* line 107, ../../sass/layouts/footer.scss */
+/* line 144, ../../sass/layouts/footer.scss */
 #footer .company-info {
   float: left;
   width: 45%;
@@ -550,7 +574,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 116, ../../sass/layouts/footer.scss */
+/* line 153, ../../sass/layouts/footer.scss */
 #footer .company-info p {
   margin: 0;
   color: #d2d5d6;
@@ -558,41 +582,41 @@ body > .jcf-select-drop.jcf-drop-flipped {
   line-height: 22px;
 }
 @media (max-width: 767px) {
-  /* line 107, ../../sass/layouts/footer.scss */
+  /* line 144, ../../sass/layouts/footer.scss */
   #footer .company-info {
     width: 100%;
     float: none;
     margin: 0 0 30px;
   }
 }
-/* line 130, ../../sass/layouts/footer.scss */
+/* line 167, ../../sass/layouts/footer.scss */
 #footer .company-info a {
   color: #96a0a7;
   font-weight: normal;
   text-decoration: none;
 }
-/* line 135, ../../sass/layouts/footer.scss */
+/* line 172, ../../sass/layouts/footer.scss */
 #footer .company-info a:hover {
   color: #ffffff;
 }
-/* line 140, ../../sass/layouts/footer.scss */
+/* line 177, ../../sass/layouts/footer.scss */
 #footer .company-info .design-by {
   display: block;
   margin-top: 20px;
   color: #96a0a7;
 }
-/* line 147, ../../sass/layouts/footer.scss */
+/* line 184, ../../sass/layouts/footer.scss */
 #footer .social-holder {
   margin: -13px 0 25px;
   /* social networks styles */
 }
 @media (max-width: 767px) {
-  /* line 147, ../../sass/layouts/footer.scss */
+  /* line 184, ../../sass/layouts/footer.scss */
   #footer .social-holder {
     margin: -210px 0 0 0;
   }
 }
-/* line 159, ../../sass/layouts/footer.scss */
+/* line 196, ../../sass/layouts/footer.scss */
 #footer .social-holder .title, #footer .region-footer-copyright .social-holder h2 {
   float: left;
   font-size: 16px;
@@ -601,42 +625,42 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin: 0 19px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 159, ../../sass/layouts/footer.scss */
+  /* line 196, ../../sass/layouts/footer.scss */
   #footer .social-holder .title, #footer .region-footer-copyright .social-holder h2 {
     font-weight: bold;
   }
 }
-/* line 172, ../../sass/layouts/footer.scss */
+/* line 209, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks, #footer .region-footer-copyright .social-holder ul {
   float: left;
 }
-/* line 177, ../../sass/layouts/footer.scss */
+/* line 214, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li, #footer .region-footer-copyright .social-holder ul li {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin: 0 11px 0 0;
 }
-/* line 183, ../../sass/layouts/footer.scss */
+/* line 220, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li a, #footer .region-footer-copyright .social-holder ul li a {
   color: #d2d5d6;
   text-decoration: none;
 }
-/* line 187, ../../sass/layouts/footer.scss */
+/* line 224, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li a:hover, #footer .region-footer-copyright .social-holder ul li a:hover {
   color: #ffffff;
 }
-/* line 192, ../../sass/layouts/footer.scss */
+/* line 229, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li em, #footer .region-footer-copyright .social-holder ul li em {
   display: none;
 }
-/* line 196, ../../sass/layouts/footer.scss */
+/* line 233, ../../sass/layouts/footer.scss */
 #footer .social-holder .social-networks li .icon-YouTube, #footer .region-footer-copyright .social-holder ul li .icon-YouTube {
   font-size: 23px;
   display: block;
   margin: -4px 0 0 -2px;
 }
-/* line 205, ../../sass/layouts/footer.scss */
+/* line 242, ../../sass/layouts/footer.scss */
 #footer .right-footer {
   float: right;
   width: 48.6%;
@@ -646,14 +670,14 @@ body > .jcf-select-drop.jcf-drop-flipped {
   transition: all 0.4s ease;
 }
 @media (max-width: 768px) {
-  /* line 205, ../../sass/layouts/footer.scss */
+  /* line 242, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 55%;
     position: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 205, ../../sass/layouts/footer.scss */
+  /* line 242, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     width: 100%;
     position: none;
@@ -662,66 +686,66 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (min-width: 767px) {
-  /* line 205, ../../sass/layouts/footer.scss */
+  /* line 242, ../../sass/layouts/footer.scss */
   #footer .right-footer {
     margin-top: -88px;
   }
 }
-/* line 230, ../../sass/layouts/footer.scss */
+/* line 267, ../../sass/layouts/footer.scss */
 #footer .left-footer {
   float: left;
   width: 45%;
 }
 @media (max-width: 768px) {
-  /* line 230, ../../sass/layouts/footer.scss */
+  /* line 267, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 55%;
   }
 }
 @media (max-width: 767px) {
-  /* line 230, ../../sass/layouts/footer.scss */
+  /* line 267, ../../sass/layouts/footer.scss */
   #footer .left-footer {
     width: 100%;
     float: none;
     overflow: hidden;
   }
 }
-/* line 246, ../../sass/layouts/footer.scss */
+/* line 283, ../../sass/layouts/footer.scss */
 #footer .contact-info {
   float: left;
   width: 31.7%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 246, ../../sass/layouts/footer.scss */
+  /* line 283, ../../sass/layouts/footer.scss */
   #footer .contact-info {
     width: 50%;
   }
 }
-/* line 256, ../../sass/layouts/footer.scss */
+/* line 293, ../../sass/layouts/footer.scss */
 #footer .school-info {
   float: left;
   width: 39%;
   padding: 0 5px 0 0;
 }
 @media (max-width: 767px) {
-  /* line 256, ../../sass/layouts/footer.scss */
+  /* line 293, ../../sass/layouts/footer.scss */
   #footer .school-info {
     display: none;
   }
 }
-/* line 266, ../../sass/layouts/footer.scss */
+/* line 303, ../../sass/layouts/footer.scss */
 #footer .web-info {
   float: left;
   width: 29%;
 }
 @media (max-width: 767px) {
-  /* line 266, ../../sass/layouts/footer.scss */
+  /* line 303, ../../sass/layouts/footer.scss */
   #footer .web-info {
     width: 50%;
   }
 }
-/* line 275, ../../sass/layouts/footer.scss */
+/* line 312, ../../sass/layouts/footer.scss */
 #footer .title, #footer .region-footer-copyright .social-holder h2 {
   display: block;
   font-size: 27px;
@@ -729,72 +753,72 @@ body > .jcf-select-drop.jcf-drop-flipped {
   color: #081318;
 }
 @media (max-width: 767px) {
-  /* line 275, ../../sass/layouts/footer.scss */
+  /* line 312, ../../sass/layouts/footer.scss */
   #footer .title, #footer .region-footer-copyright .social-holder h2 {
     font-size: 22px;
     line-height: 30px;
   }
 }
-/* line 288, ../../sass/layouts/footer.scss */
+/* line 325, ../../sass/layouts/footer.scss */
 #footer .social-networks, #footer .region-footer-copyright .social-holder ul {
   float: left;
 }
-/* line 293, ../../sass/layouts/footer.scss */
+/* line 330, ../../sass/layouts/footer.scss */
 #footer .social-networks li, #footer .region-footer-copyright .social-holder ul li {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin: 0 11px 0 0;
 }
-/* line 299, ../../sass/layouts/footer.scss */
+/* line 336, ../../sass/layouts/footer.scss */
 #footer .social-networks li a, #footer .region-footer-copyright .social-holder ul li a {
   color: #d2d5d6;
   text-decoration: none;
 }
-/* line 303, ../../sass/layouts/footer.scss */
+/* line 340, ../../sass/layouts/footer.scss */
 #footer .social-networks li a:hover, #footer .region-footer-copyright .social-holder ul li a:hover {
   color: #ffffff;
 }
-/* line 308, ../../sass/layouts/footer.scss */
+/* line 345, ../../sass/layouts/footer.scss */
 #footer .social-networks li em, #footer .region-footer-copyright .social-holder ul li em {
   display: none;
 }
-/* line 312, ../../sass/layouts/footer.scss */
+/* line 349, ../../sass/layouts/footer.scss */
 #footer .social-networks li .icon-YouTube, #footer .region-footer-copyright .social-holder ul li .icon-YouTube {
   font-size: 23px;
   display: block;
   margin: -4px 0 0 -2px;
 }
 @media (max-width: 767px) {
-  /* line 333, ../../sass/layouts/footer.scss */
+  /* line 370, ../../sass/layouts/footer.scss */
   #footer .region-footer-copyright .block.last.even {
     margin-top: 210px;
   }
 }
 @media (max-width: 767px) {
-  /* line 340, ../../sass/layouts/footer.scss */
+  /* line 377, ../../sass/layouts/footer.scss */
   #footer .region-footer-right {
     margin-top: 45px;
   }
 }
-/* line 346, ../../sass/layouts/footer.scss */
+/* line 383, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul {
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-/* line 351, ../../sass/layouts/footer.scss */
+/* line 388, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li {
   font-size: 16px;
   line-height: 20px;
   margin: 0 0 16px;
 }
-/* line 356, ../../sass/layouts/footer.scss */
+/* line 393, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a {
   color: #d2d5d6;
   text-decoration: underline;
 }
-/* line 360, ../../sass/layouts/footer.scss */
+/* line 397, ../../sass/layouts/footer.scss */
 #footer .region-footer-right ul li a:hover {
   text-decoration: none;
 }

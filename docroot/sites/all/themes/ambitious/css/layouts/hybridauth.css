@@ -430,29 +430,53 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 3, ../../sass/layouts/hybridauth.scss */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot?y5zyxa");
+  src: url("../../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/icomoon.woff?y5zyxa") format("woff"), url("../../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon-new';
+  src: url("../../fonts/new-icomoon.eot?y5zyxa");
+  src: url("../../fonts/new-icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/new-icomoon.woff?y5zyxa") format("woff"), url("../../fonts/new-icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/new-icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-55Roma.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("../../fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-55Roma.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-75Bold.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("../../fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-75Bold.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
+/* line 40, ../../sass/layouts/hybridauth.scss */
 .icon-Google:before {
   content: "\e606";
 }
 
-/* line 8, ../../sass/layouts/hybridauth.scss */
+/* line 45, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth #main {
   background: #ffffff;
 }
-/* line 11, ../../sass/layouts/hybridauth.scss */
+/* line 48, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth fieldset {
   float: none;
   padding-left: 0px;
 }
-/* line 14, ../../sass/layouts/hybridauth.scss */
+/* line 51, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth fieldset.form-wrapper {
   min-height: 550px;
 }
-/* line 17, ../../sass/layouts/hybridauth.scss */
+/* line 54, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth fieldset .password-strength {
   margin-top: 0px;
 }
-/* line 22, ../../sass/layouts/hybridauth.scss */
+/* line 59, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth input.username {
   width: 16em;
   float: left;
@@ -465,16 +489,16 @@ body > .jcf-select-drop.jcf-drop-flipped {
   padding: 12px 23px;
   font-size: 18px;
 }
-/* line 34, ../../sass/layouts/hybridauth.scss */
+/* line 71, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth legend {
   font-weight: bold;
 }
-/* line 37, ../../sass/layouts/hybridauth.scss */
+/* line 74, ../../sass/layouts/hybridauth.scss */
 .page-hybridauth .description {
   float: left;
 }
 
-/* line 43, ../../sass/layouts/hybridauth.scss */
+/* line 80, ../../sass/layouts/hybridauth.scss */
 .hybridauth-google, .hybridauth-twitter, .hybridauth-facebook {
   border-radius: 5px;
   color: #ffffff;
@@ -495,48 +519,48 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-bottom: 5px;
 }
 
-/* line 63, ../../sass/layouts/hybridauth.scss */
+/* line 100, ../../sass/layouts/hybridauth.scss */
 .hybridauth-google {
   background: #EA3032;
   border-bottom: 5px solid #81090B;
 }
-/* line 66, ../../sass/layouts/hybridauth.scss */
+/* line 103, ../../sass/layouts/hybridauth.scss */
 .hybridauth-google:before {
   content: "\e606";
 }
 
-/* line 71, ../../sass/layouts/hybridauth.scss */
+/* line 108, ../../sass/layouts/hybridauth.scss */
 .hybridauth-twitter {
   background: #2289ff;
   border-bottom: 5px solid #1a427e;
 }
-/* line 74, ../../sass/layouts/hybridauth.scss */
+/* line 111, ../../sass/layouts/hybridauth.scss */
 .hybridauth-twitter:before {
   content: "\e611";
 }
 
-/* line 79, ../../sass/layouts/hybridauth.scss */
+/* line 116, ../../sass/layouts/hybridauth.scss */
 .hybridauth-facebook {
   background: #4b69aa;
   border-bottom: 5px solid #1a427e;
 }
-/* line 82, ../../sass/layouts/hybridauth.scss */
+/* line 119, ../../sass/layouts/hybridauth.scss */
 .hybridauth-facebook:before {
   content: "\e604";
 }
 
-/* line 90, ../../sass/layouts/hybridauth.scss */
+/* line 127, ../../sass/layouts/hybridauth.scss */
 #modalContent .hybridauth-widget-wrapper .item-list {
   margin-left: 0;
 }
 
-/* line 97, ../../sass/layouts/hybridauth.scss */
+/* line 134, ../../sass/layouts/hybridauth.scss */
 .hybridauth-widget {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
-/* line 101, ../../sass/layouts/hybridauth.scss */
+/* line 138, ../../sass/layouts/hybridauth.scss */
 .hybridauth-widget .hybridauth-icon {
   margin-right: 5px;
   margin-bottom: 10px;

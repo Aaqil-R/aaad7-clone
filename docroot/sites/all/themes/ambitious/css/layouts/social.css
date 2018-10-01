@@ -430,14 +430,38 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot?y5zyxa");
+  src: url("../../fonts/icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/icomoon.woff?y5zyxa") format("woff"), url("../../fonts/icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon-new';
+  src: url("../../fonts/new-icomoon.eot?y5zyxa");
+  src: url("../../fonts/new-icomoon.eot?#iefixy5zyxa") format("embedded-opentype"), url("../../fonts/new-icomoon.woff?y5zyxa") format("woff"), url("../../fonts/new-icomoon.ttf?y5zyxa") format("truetype"), url("../../fonts/new-icomoon.svg?y5zyxa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-55Roma.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-55Roma.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("../../fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-55Roma.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("../../fonts/HelveticaNeueW01-75Bold.eot?#iefix") format("eot"), url("../../fonts/HelveticaNeueW01-75Bold.woff2") format("woff2"), url("../../fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("../../fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("../../fonts/HelveticaNeueW01-75Bold.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
 @media (max-width: 767px) {
-  /* line 4, ../../sass/layouts/social.scss */
+  /* line 41, ../../sass/layouts/social.scss */
   .social-block {
     background: #eef2f3;
   }
 }
 @media (max-width: 767px) {
-  /* line 9, ../../sass/layouts/social.scss */
+  /* line 46, ../../sass/layouts/social.scss */
   .social-block h1 {
     margin-left: 18px;
     font-size: 30px;
@@ -446,46 +470,46 @@ body > .jcf-select-drop.jcf-drop-flipped {
   }
 }
 @media (max-width: 767px) {
-  /* line 17, ../../sass/layouts/social.scss */
+  /* line 54, ../../sass/layouts/social.scss */
   .social-block .block {
     padding: 0 20px 13px;
     background: none;
   }
-  /* line 25, ../../sass/layouts/social.scss */
+  /* line 62, ../../sass/layouts/social.scss */
   .social-block .block.numbers {
     font-weight: bold;
   }
 }
 @media (max-width: 767px) {
-  /* line 29, ../../sass/layouts/social.scss */
+  /* line 66, ../../sass/layouts/social.scss */
   .social-block .block .block-facebook {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 34, ../../sass/layouts/social.scss */
+  /* line 71, ../../sass/layouts/social.scss */
   .social-block .block .block-twitter {
     display: none;
   }
 }
-/* line 40, ../../sass/layouts/social.scss */
+/* line 77, ../../sass/layouts/social.scss */
 .social-block .block .block-youtube p {
   position: relative;
 }
-/* line 55, ../../sass/layouts/social.scss */
+/* line 92, ../../sass/layouts/social.scss */
 .social-block .home-bg-stretch {
   background: url('../../images/socialbg.jpg?1536819777') no-repeat;
   background-size: cover;
 }
-/* line 60, ../../sass/layouts/social.scss */
+/* line 97, ../../sass/layouts/social.scss */
 .social-block .member {
   text-decoration: underline;
 }
-/* line 63, ../../sass/layouts/social.scss */
+/* line 100, ../../sass/layouts/social.scss */
 .social-block .member:hover {
   text-decoration: none;
 }
-/* line 68, ../../sass/layouts/social.scss */
+/* line 105, ../../sass/layouts/social.scss */
 .social-block .youtube {
   text-align: center;
 }
