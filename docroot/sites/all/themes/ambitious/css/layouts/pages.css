@@ -154,6 +154,16 @@
   content: "\ea92";
 }
 
+@font-face {
+  font-family: "HelveticaNeueW01-55Roma";
+  src: url("../fonts/HelveticaNeueW01-55Roma.eot?#iefix");
+  src: url("../fonts/HelveticaNeueW01-55Roma.eot?#iefix") format("eot"), url("../fonts/HelveticaNeueW01-55Roma.woff2") format("woff2"), url("../fonts/HelveticaNeueW01-55Roma.woff") format("woff"), url("../fonts/HelveticaNeueW01-55Roma.ttf") format("truetype"), url("../fonts/HelveticaNeueW01-55Roma.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeueW01-75Bold";
+  src: url("../fonts/HelveticaNeueW01-75Bold.eot?#iefix");
+  src: url("../fonts/HelveticaNeueW01-75Bold.eot?#iefix") format("eot"), url("../fonts/HelveticaNeueW01-75Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueW01-75Bold.woff") format("woff"), url("../fonts/HelveticaNeueW01-75Bold.ttf") format("truetype"), url("../fonts/HelveticaNeueW01-75Bold.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
 /* custom select styles */
 /* line 2, ../../sass/base/_jcf.scss */
 .jcf-select {
@@ -1037,7 +1047,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 /* line 690, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--donation-checkbox-1 label.option p, .node-type-donations #wrapper .node-donations form .webform-component--agree-condition--1 label.option p {
-  height: 40px;
+  min-height: 40px;
 }
 /* line 696, ../../sass/layouts/pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-component--gift-aid-check-box label.option p, .node-type-donations #wrapper .node-donations form .webform-component--gift-aid-check-box--1 label.option p {

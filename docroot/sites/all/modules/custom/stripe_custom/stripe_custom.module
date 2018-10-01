@@ -3,14 +3,13 @@
 require('init.php');
 
 function stripe_custom_init(){
-
+	// aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
 }
 
 //Function to format the number to full integer
 function stripe_custom_format_curreny($value , $fallbackValue){
 	$newValue = preg_replace("/[^0-9\.]/", '', $value);
 	if($newValue == ''){
-		//If the entered value is wrong or character then send the preselected radio button value.
 		return intval($fallbackValue*100);
 	}
 	return intval($newValue*100);
@@ -154,13 +153,6 @@ function stripe_custom_webform_submission_presave($node, $submission){
 			}
 		}
 
-		//checking whether the other amount is entered
-		// if($other_amount != '')
-		// {
-		// 	$select_an_amount = $other_amount;
-		// 	$csv['amount'] = $other_amount;
-		// }
-
 		//Processing the selected amount
 		$select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
 		//Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
@@ -264,6 +256,7 @@ function stripe_custom_webform_submission_presave($node, $submission){
 				}
 			}
 		}
+		aaa_data_log('Drupal Prehook' , 'Prehook webform submission presave executed successfully');
 	}
 }
 
@@ -293,8 +286,7 @@ function create_subscriber($plan , $email , $card,$formid ,$csv){
 		$status = "success";
 		$reference = $customer->id;
 		stripe_csv_data_log($csv , $status , "" , $reference);
-		//$test = $charge->__toJSON();
-
+		aaa_data_log($result , 'Subscriber created successfully');
 		//including the email here so that we can send the mail with reference number
 		sendmailsadmin($reference , $csv);
 		return 0;
@@ -384,6 +376,7 @@ function create_plan($amount , $id , $name , $formid , $trial_period , $csv){
 		
 		$result = serialize($plan);
 		stripe_data_log($result,$data,$formid);
+		aaa_data_log($result , "Plan created successfully");
 		// $status = "success";
 		// $reference = $plan->id;
 		// stripe_csv_data_log($csv , $status , "" , $reference);
@@ -463,7 +456,7 @@ function create_onetime_patment($card,$amount,$formid ,$email ,$csv){
 												'receipt_email' => $email));
 		$result = serialize($charge);
 		stripe_data_log($result,$data,$formid);
-
+		aaa_data_log($result , 'One time payment created Successfully');
 		$status = "success";
 		$reference = $charge->id;
 		stripe_csv_data_log($csv , $status , "" , $reference);
@@ -766,16 +759,14 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	}
 
 	function get_thankyou_message($nid){
-		//$nid = arg(1);
 		$node = node_load($nid);
 		$my_field_items = field_get_items('node', $node, 'field_thankyou_message');
-		//$message = field_view_value('node', $node, 'field_thankyou_message', $my_field_items[0]);
-		//$output = render($message);
 		$output = $my_field_items[0]['value'];
 		return $output;
 	}
 
 	function stripe_custom_create_mails($email,$messagebody,$emailname){
+
 
 	$var = 'http://'.$_SERVER['HTTP_HOST'];
 	$mailbody = 'Dear '.$emailname.'<br>'.$messagebody;
@@ -797,22 +788,21 @@ function stripe_csv_data_log($csv , $status , $message , $reference){
 	);
 	$system = drupal_mail_system($my_module, $my_mail_token);
 
-	// The format function must be called before calling the mail function. 
-	//$message = $system->format($message);
-	//dpm($message);
 	if ($system->mail($message)) {
-		// Success.
-		//dpm('Success');
+		aaa_data_log($email , 'Mail sent successfully');
 	}
 	else {
-	  	// Failure.
-		//dpm('Fail');
+		aaa_data_log($email , 'Mail sending failed');
 	}
 }
 
 function sendmail($nid , $email ,$emailname){
 	$message = get_thankyou_message($nid);
-	stripe_custom_create_mails($email,$message,$emailname);
+	try {
+		stripe_custom_create_mails($email,$message,$emailname);
+	} catch (Exception $e) {
+		aaa_data_log($e , 'Send mail exception');
+  }
 }
 
 
@@ -841,7 +831,11 @@ function sendmailsadmin($referencenumber ,  $csv){
 	$emailaddress = $csv['email']; 
 	foreach ($emails as $email) {
 		//call the function to create mail here
-		create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress);
+		try {
+			create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress);
+		} catch (Exception $e) {
+			aaa_data_log($e , 'Send admin mail exception for this '.$email);
+	  }
 	}
 }
 
@@ -872,25 +866,13 @@ function create_admin_mails($email,$referencenumber,$amount,$name,$emailaddress)
 	$system = drupal_mail_system($my_module, $my_mail_token);
 
 	// The format function must be called before calling the mail function. 
-	//$message = $system->format($message);
-	//dpm($message);
 	if ($system->mail($message)) {
-		// Success.
-		//dpm('Success');
+		aaa_data_log($email , 'Admin Mail sent successfully');
 	}
 	else {
-	  	// Failure.
-		//dpm('Fail');
+		aaa_data_log($email , 'Admin Mail sending failed');
 	}
 }
-
-
-// function stripe_custom_create_session($key , $value){
-// 	$_SESSION['stripe_custom'][$key] = $value;
-// //	$_SESSION['mymodule']['param1']
-// 	return $_SESSION['stripe_custom'][$key];
-// }
-
 
 function lists_session($key, $value = NULL) {
   static $storage;
@@ -908,5 +890,31 @@ function stripe_custom_unset_session(){
 	unset($_SESSION['stripe_custom']);
 }
 
+/**
+ * Add new Table for further logs.
+ */
+function stripe_custom_update_7101() {
+  $schema['aaa_logger'] = array(
+    'description' => 'AAA Debug logger',
+    'fields' => array(
+      'ID' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'data' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+      'timestamp' => array('type' => 'text', 'size' => 'medium', 'not null' => TRUE),
+      'customessage' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+    ),
+    'primary key' => array('ID'),
+  );
+  db_create_table('aaa_logger', $schema['aaa_logger']);
+}
+
+//Logging the transactions and the results in a Database
+function aaa_data_log($data , $customessage){
+	$datarecord = array(
+  	"data" => $data,
+  	"timestamp" => time(),
+  	"customessage" => $customessage,
+  );
+	drupal_write_record('aaa_logger', $datarecord);
+}
 
 ?>

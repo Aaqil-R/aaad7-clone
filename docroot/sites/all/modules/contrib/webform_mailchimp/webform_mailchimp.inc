@@ -128,6 +128,14 @@ function _webform_edit_mailchimp($component) {
     '#description' => t('Check this if users do not need to be able to set or unset wether they want to subscribe. Note that you still need to check wether the checkbox should be checked by default.'),
     '#default_value' => !empty($component['extra']['checkbox_hidden']) ? $component['extra']['checkbox_hidden'] : 0,
     '#weight' => 4,
+  );
+
+  $form['extra']['use_radios'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use radio buttons instead of a checkbox.'),
+    '#description' => t('When set to mandatory with no default value, this will force the user to consciously choose an option.'),
+    '#default_value' => !empty($component['extra']['use_radios']) ? $component['extra']['use_radios'] : 0,
+    '#weight' => 5,
     '#suffix' => '</div>',
   );
 
@@ -136,7 +144,7 @@ function _webform_edit_mailchimp($component) {
     '#title' => t('Mailchimp merge fields'),
     '#description' => t('Enter one key|value pair per line. Use the MailChimp field tag as the key and the webform field key as the value. For example "FNAME|firstname"'),
     '#default_value' => !empty($component['extra']['mergefields']) ? $component['extra']['mergefields'] : '',
-    '#weight' => 5,
+    '#weight' => 6,
   );
 
   $form['extra']['interestfields'] = array(
@@ -144,7 +152,7 @@ function _webform_edit_mailchimp($component) {
     '#title' => t('Mailchimp interests fields'),
     '#description' => t('Enter one key|value pair per line. Use the MailChimp group name as the key and the webform field (checkboxes or dropdown) key as the value. For example "FOOD|types_of_food_you_like"'),
     '#default_value' => !empty($component['extra']['interestfields']) ? $component['extra']['interestfields'] : '',
-    '#weight' => 6,
+    '#weight' => 7,
   );
 
   return $form;
@@ -204,15 +212,29 @@ function _webform_render_mailchimp($component, $value = NULL, $filter = TRUE) {
       );
     }
     else {
-      $element['mailchimp_signup'] = array(
-        '#type'              => 'checkbox',
-        '#title'             => !empty($component['extra']['checkbox_label']) ? _webform_filter_xss($component['extra']['checkbox_label']) : t('Subscribe to newsletter'),
-        '#default_value'     => !empty($component['extra']['checkbox_checked_by_default']) ? $component['extra']['checkbox_checked_by_default'] : 0,
-        '#description'       => $filter ? _webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
-        '#theme_wrappers'    => array('webform_element'),
-        '#webform_component' => $component,
-        '#weight'            => $component['weight'],
-      );
+      if($component['extra']['use_radios'] == 1){
+		    $element['mailchimp_signup'] = array(
+		      '#type'              => 'radios',
+					'#options'           => array(1 => t('Yes'), 0 => t('No')),
+					'#required'          => $component['mandatory'],
+		      '#title'             => !empty($component['extra']['checkbox_label']) ? _webform_filter_xss($component['extra']['checkbox_label']) : t('Subscribe to newsletter'),
+		      '#default_value'     => !empty($component['extra']['checkbox_checked_by_default']) ? $component['extra']['checkbox_checked_by_default'] : array(),
+		      '#description'       => $filter ? _webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
+		      '#webform_component' => $component,
+		      '#weight'            => $component['weight'],
+		    );
+      }
+			else{
+	      $element['mailchimp_signup'] = array(
+	        '#type'              => 'checkbox',
+	        '#title'             => !empty($component['extra']['checkbox_label']) ? _webform_filter_xss($component['extra']['checkbox_label']) : t('Subscribe to newsletter'),
+	        '#default_value'     => !empty($component['extra']['checkbox_checked_by_default']) ? $component['extra']['checkbox_checked_by_default'] : 0,
+	        '#description'       => $filter ? _webform_filter_descriptions($component['extra']['description']) : $component['extra']['description'],
+	        '#theme_wrappers'    => array('webform_element'),
+	        '#webform_component' => $component,
+	        '#weight'            => $component['weight'],
+	      );
+			}
     }
   }
 
