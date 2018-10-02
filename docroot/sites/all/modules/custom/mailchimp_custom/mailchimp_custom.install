@@ -33,6 +33,17 @@ function mailchimp_custom_schema() {
       ),
     'primary key' => array('ID'),
   );
+
+  $schema['aaa_logger_mailchimp'] = array(
+    'description' => 'AAA Debug logger',
+    'fields' => array(
+      'ID' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'data' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+      'timestamp' => array('type' => 'text', 'size' => 'medium', 'not null' => TRUE),
+      'customessage' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+    ),
+    'primary key' => array('ID'),
+  );
   return $schema;
 }
 

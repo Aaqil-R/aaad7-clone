@@ -960,4 +960,32 @@ function mailchimp_custom_node_validate($node, $form, &$form_state){
 		
 	}
 }
+
+/**
+ * Add new Table for further logs.
+ */
+function stripe_custom_update_7101() {
+  $schema['aaa_logger_mailchimp'] = array(
+    'description' => 'AAA Mailchimp Debug logger',
+    'fields' => array(
+      'ID' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'data' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+      'timestamp' => array('type' => 'text', 'size' => 'medium', 'not null' => TRUE),
+      'customessage' => array('type' => 'text', 'size' => 'medium', 'not null' => False),
+    ),
+    'primary key' => array('ID'),
+  );
+  db_create_table('aaa_logger_mailchimp', $schema['aaa_logger_mailchimp']);
+}
+
+//Logging the transactions and the results in a Database
+function aaa_mailchimp_data_log($data , $customessage){
+	$datarecord = array(
+  	"data" => $data,
+  	"timestamp" => time(),
+  	"customessage" => $customessage,
+  );
+	drupal_write_record('aaa_logger_mailchimp', $datarecord);
+}
+
 ?>
