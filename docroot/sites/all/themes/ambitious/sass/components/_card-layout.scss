@@ -1,0 +1,71 @@
+@import "base/base";
+
+/* Card layout across site */
+
+.card {}
+
+// Change the below code to BEM
+.topic-child-posts .feature-row .img-holder .feature-holder {
+  margin-bottom: 5px;
+  position: static;
+  bottom: 0px;
+  left: 0px;
+  background: transparent;
+
+  .text {
+    background: $orange;
+  }
+}
+
+.card-icon-holder {
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+}
+
+.card__category {
+  overflow: hidden;
+  float: left;
+
+  &:hover .card__categorytext {
+    margin-left: 0;
+  }
+}
+
+.card__categorytext {
+  float: left;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px 5px;
+  min-width: 109px;
+  text-align: center;
+  color: $white;
+  margin-left: -134px;
+
+  @include transition($type: all, $time: 0.4s, $ease: ease);
+}
+
+.card__categoryicon {
+  position: relative;
+  z-index: 1;
+  background-size: contain !important;
+  float: left;
+  height: 45px;
+  width: 45px;
+}
+
+.card__categoryicon--stories {
+  background: image-url("aaa-story-icon.svg") $white center center no-repeat;
+}
+
+.card__categoryicon--information {
+  background: image-url("aaa-information-icon.svg") $white center center no-repeat;
+}
+
+.card__category--blue {
+  background: $blue-light;
+}
+
+.card__category--orange {
+  background: $orange;
+}

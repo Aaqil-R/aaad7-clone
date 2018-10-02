@@ -1,0 +1,75 @@
+@import "base/base";
+
+//=== Social Section ===//
+.social-block{
+	@include breakpoint($mobile){
+	background: $wrapper-bg;
+	}
+
+	h1{
+		@include breakpoint($mobile){
+			margin-left: 18px;
+			font-size: 30px;
+			font-weight: bold;
+			background: none;
+		}
+	}
+	.block{
+		// TODO: Remove; commenting this out because it causes the front page; social block to 
+		// lose all its padding.
+		// padding: 0;
+		@include breakpoint($mobile){
+			padding: 0 20px 13px;
+			background: none;
+
+			&.numbers{
+				font-weight: bold;
+			}
+		}
+		.block-facebook{
+			@include breakpoint($mobile){
+				display: none;
+			}
+		}
+		.block-twitter{
+			@include breakpoint($mobile){
+				display: none;
+			}
+		}
+		.block-youtube{
+			p{
+				position: relative;
+				
+			}
+			.btn{
+				
+			}			
+
+			}
+
+
+			
+	}
+
+	// Home home-bg-stretch image
+	.home-bg-stretch{
+		background: image-url('socialbg.jpg') no-repeat;
+		background-size: cover;
+	}
+
+	.member{
+		text-decoration: underline;
+		
+		&:hover {
+        	text-decoration: none;
+    	}
+	}
+
+	.youtube{
+		text-align: center;
+	}
+	//commented to align the social block button to have the same size of fb and twitter button
+	// .btn{
+	// 	padding : 11px 25px;
+	// }
+}
