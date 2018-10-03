@@ -6,430 +6,436 @@ function mailchimp_custom_init(){
 }
 
 function mailchimp_custom_webform_submission_insert($node, $submission){
-	//dpm($submission->nid);
-	// define the mail chimp api key and the list id.
-	$api_key = getapikey();
-	$list_id = getlistid();
-	// extract the parent content type.
-	$contenttype = $node->type;
-	// initialize and array with the content types we want this to fire for.
-	$enabled_content_types = array(
-		'events'
-		,'courses'
-		,'newsletter'
-		,'volunteer'
-		,'campaigns'
-		,'testwebform'
-		,'donations'
-	);
+	try {
+		//dpm($submission->nid);
+		// define the mail chimp api key and the list id.
+		$api_key = getapikey();
+		$list_id = getlistid();
+		// extract the parent content type.
+		$contenttype = $node->type;
+		// initialize and array with the content types we want this to fire for.
+		$enabled_content_types = array(
+			'events'
+			,'courses'
+			,'newsletter'
+			,'volunteer'
+			,'campaigns'
+			,'testwebform'
+			,'donations'
+		);
 
-	//if the webform is one of the 6 the add the test webform content type
-	//homepage - are you with us 74666 - done
-	//get in touch - 224896
-	//join ustoday - 74621 - done
-	//events - 74601
-	//work for us - 223446 
-	//share you story 677426 - in dev
-	//share you story 677451 - in staging done
-	//share you story 685606 - in live
-	$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677451 ,685606);
-	$webformid = $submission->nid;
-	if(in_array($webformid ,$webform_array )){
-		$contenttype = 'testwebform';
-	}
-	// check if we need to fire integrate this webform submission to mail chimp.
-	if (in_array($contenttype, $enabled_content_types)) 
-	{
-		//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
-		//defining the variables
-		$email ='';
-		$firstname = '';
-		$lastname = '';
-		$newevent = '';
-		$neweventarray = array();
-		$phonenumber = '';
-		$postcode = '';
-		$address = '';
-		$address1='';
-		$address2='';
-		$city = '';
-		$country = '';
-		$did_subscribe = false;
-		$occupation = '';
-		$employer = '';
-		$date_of_birth = '';
-		$pledge = '';
-		$offer = '';
-		$describe_you = '';
-		$age = '';
-		$volunteers = '';
-		$support = '';
-		$update = '';
-		$charity_place='';
-
-		$charity_name = 'Apply for charity place';
-
-		// mapping out the webform components by form_key rather than index as this would make the 
-		// order in which the elements are added in the webform irrelavant.
-		foreach ($node->webform['components'] as $key => $field) 
-		{
-			switch ($field['form_key']) 
-			{
-				case 'email':
-				case 'email_address':
-					$email = $submission->data[$key][0];
-				break;
-				case 'firstname':
-				case 'first_name':
-					$firstname = $submission->data[$key][0];
-				break;
-				case 'lastname':
-					$lastname = $submission->data[$key][0];
-				break;
-				case 'agree_condition':
-					$did_subscribe = $submission->data[$key][0];
-				break;
-				case 'event_name':
-					$newevent = $submission->data[$key][0];
-					$neweventarray = array($submission->data[$key][0]);
-				break;
-				case 'node_type':
-					$phonenumber = $submission->data[$key][0];
-				break;
-				case 'post_code':
-					$postcode = $submission->data[$key][0];
-				break;
-				case 'address1':
-					$address1 = $submission->data[$key][0];
-				break;
-				case 'address2':
-					$address2 = $submission->data[$key][0];
-				break;
-				case 'city':
-					$city = $submission->data[$key][0];
-				break;
-				case 'country':
-					$country = $submission->data[$key][0];	
-				break;
-				case 'occupation':
-					$occupation = $submission->data[$key][0];	
-				break;
-				case 'employer':
-					$employer = $submission->data[$key][0];	
-				break;
-				case 'date_of_birth':
-					$date_of_birth = $submission->data[$key][0];	
-				break;
-				case 'pledge':
-					$pledge = $submission->data[$key][0];	
-				break;
-				case 'offer':
-					$offer = $submission->data[$key][0];	
-				break;
-				case 'describe_you':
-					$describe_you = $submission->data[$key][0];	
-				break;
-				case 'age':
-					$age = $submission->data[$key][0];	
-				break;
-				case 'volunteers':
-					$volunteers = $submission->data[$key][0];
-				break;
-				case 'support':
-					$support = $submission->data[$key][0];	
-				break;
-				case 'update':
-					$update = $submission->data[$key][0];	
-				break;
-				case 'charity_place':
-					$charity_place = $submission->data[$key][0];	
-				break;
-			}
+		//if the webform is one of the 6 the add the test webform content type
+		//homepage - are you with us 74666 - done
+		//get in touch - 224896
+		//join ustoday - 74621 - done
+		//events - 74601
+		//work for us - 223446 
+		//share you story 677426 - in dev
+		//share you story 677451 - in staging done
+		//share you story 685606 - in live
+		$webform_array = array(74666, 224896, 74621 , 74601 , 223446 ,677451 ,685606);
+		$webformid = $submission->nid;
+		if(in_array($webformid ,$webform_array )){
+			$contenttype = 'testwebform';
 		}
-		// check if the user has chosen to subscribe to our mailing subscription.
-		if($did_subscribe)
+		// check if we need to fire integrate this webform submission to mail chimp.
+		if (in_array($contenttype, $enabled_content_types)) 
 		{
-			$MailChimp = new \Drewm\MailChimp($api_key);
-			//check whether the subscriber is from the list
-			$result3 = $MailChimp->call('/lists/member-info', array(
-				'id' => $list_id,
-			    'emails' => array(
-			    	0 => array('email'=>$email))
-			    )
-			);
-			if($pledge == 1):
-				$pledge = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
-			endif;
+			//check the node type we dont need this as we will be looking the webforms from the mailchimp subscription
+			//defining the variables
+			$email ='';
+			$firstname = '';
+			$lastname = '';
+			$newevent = '';
+			$neweventarray = array();
+			$phonenumber = '';
+			$postcode = '';
+			$address = '';
+			$address1='';
+			$address2='';
+			$city = '';
+			$country = '';
+			$did_subscribe = false;
+			$occupation = '';
+			$employer = '';
+			$date_of_birth = '';
+			$pledge = '';
+			$offer = '';
+			$describe_you = '';
+			$age = '';
+			$volunteers = '';
+			$support = '';
+			$update = '';
+			$charity_place='';
 
-			if($offer == 1):
-				$offer = 'My employer offer a matched giving scheme';
-			endif;
+			$charity_name = 'Apply for charity place';
 
-			if($describe_you == 1):
-				$describe_you = 'Parent / Carer';
-			elseif($describe_you == 2):
-				$describe_you = 'Professional';
-			elseif($describe_you == 3):
-				$describe_you = 'Aged 16-25';
-			endif;
-
-			if($support == 1):
-				$support = 'I support this campaign.';
-			endif;
-
-			if($update == 1):
-				$update = 'I would like to receive updates about this campaign.';
-			endif;
-
-			//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
-			if($result3['success_count'] == 1)
+			// mapping out the webform components by form_key rather than index as this would make the 
+			// order in which the elements are added in the webform irrelavant.
+			foreach ($node->webform['components'] as $key => $field) 
 			{
-				//if the user exsist then we must get the earlier subscribed events
-
-				$eventlist = print_event_list($result3);
-				$events = $eventlist['events'];
-				$courses = $eventlist['courses'];
-				$news = $eventlist['news'];
-				$volunteer = $eventlist['volunteer'];
-				$campaigns = $eventlist['campaigns'];
-				$donations = $eventlist['donation'];
-
-				//add the charity places when subscribing	
-				$applyforCharity = $eventlist['apply_for_charity_place'];
-				$IhavemyOwnPlace = $eventlist['i_have_my_own_place'];
-
-				//check for the event type and add the event to the correct array
-				if($contenttype == 'events'){
-					array_push($events, $newevent);
-					//check the conditon which the user has selected. and depending on that update the group that needs to be updated
-					if($charity_place == 1){
-						array_push($IhavemyOwnPlace, $newevent);
-					}
-					else{
-						array_push($applyforCharity, $newevent);
-					}
-				}
-				elseif($contenttype == 'courses')
+				switch ($field['form_key']) 
 				{
-					array_push($courses, $newevent);
+					case 'email':
+					case 'email_address':
+						$email = $submission->data[$key][0];
+					break;
+					case 'firstname':
+					case 'first_name':
+						$firstname = $submission->data[$key][0];
+					break;
+					case 'lastname':
+						$lastname = $submission->data[$key][0];
+					break;
+					case 'agree_condition':
+						$did_subscribe = $submission->data[$key][0];
+					break;
+					case 'event_name':
+						$newevent = $submission->data[$key][0];
+						$neweventarray = array($submission->data[$key][0]);
+					break;
+					case 'node_type':
+						$phonenumber = $submission->data[$key][0];
+					break;
+					case 'post_code':
+						$postcode = $submission->data[$key][0];
+					break;
+					case 'address1':
+						$address1 = $submission->data[$key][0];
+					break;
+					case 'address2':
+						$address2 = $submission->data[$key][0];
+					break;
+					case 'city':
+						$city = $submission->data[$key][0];
+					break;
+					case 'country':
+						$country = $submission->data[$key][0];	
+					break;
+					case 'occupation':
+						$occupation = $submission->data[$key][0];	
+					break;
+					case 'employer':
+						$employer = $submission->data[$key][0];	
+					break;
+					case 'date_of_birth':
+						$date_of_birth = $submission->data[$key][0];	
+					break;
+					case 'pledge':
+						$pledge = $submission->data[$key][0];	
+					break;
+					case 'offer':
+						$offer = $submission->data[$key][0];	
+					break;
+					case 'describe_you':
+						$describe_you = $submission->data[$key][0];	
+					break;
+					case 'age':
+						$age = $submission->data[$key][0];	
+					break;
+					case 'volunteers':
+						$volunteers = $submission->data[$key][0];
+					break;
+					case 'support':
+						$support = $submission->data[$key][0];	
+					break;
+					case 'update':
+						$update = $submission->data[$key][0];	
+					break;
+					case 'charity_place':
+						$charity_place = $submission->data[$key][0];	
+					break;
 				}
-				elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
-				{
-					array_push($news, $newevent);
-				}
-				elseif($contenttype == 'volunteer')
-				{
-					array_push($volunteer, $newevent);
-				}
-				elseif($contenttype == 'campaigns')
-				{
-					array_push($campaigns, $newevent);
-				}
-				elseif($contenttype == 'donations')
-				{
-					array_push($donations, $newevent);
-				}
-				//Gathering exsisting details.
-				if ($lastname == NULL || $lastname == ''){
-					$lastname = print_data($result3, 'LNAME');
-				}
-				if ($phonenumber == NULL || $phonenumber == ''){
-					$phonenumber = print_data($result3, 'PHONE');
-				}
-				if ($postcode == NULL || $postcode == ''){
-					$postcode = print_data($result3, 'POSTCODE');
-				}
-				if ($address1 == NULL || $address1 == ''){
-					$address1 = print_data($result3, 'ADDRESS1');
-				}
-				if ($address2 == NULL || $address2 == ''){
-					$address2 = print_data($result3, 'ADDRESS2');
-				}
-				if ($city == NULL || $city == ''){
-					$city = print_data($result3, 'CITY');
-				}
-				if ($country == NULL || $country == ''){
-					$country = print_data($result3, 'COUNTRY');
-				}
-				if ($occupation == NULL || $occupation == ''){
-					$occupation = print_data($result3, 'OCCUPATION');
-				}
-				if ($employer == NULL || $employer == ''){
-					$employer = print_data($result3, 'EMPLOYER');
-				}
-				if ($date_of_birth == NULL || $date_of_birth == ''){
-					$date_of_birth = print_data($result3, 'BIRTH_DAY');
-				}
-				if ($pledge == NULL || $pledge == ''){
-					$pledge = print_data($result3, 'PLEDGE');
-				}
-				if ($offer == NULL || $offer == ''){
-					$offer = print_data($result3, 'OFFER');
-				}
-				if ($describe_you == NULL || $describe_you == ''){
-					$describe_you = print_data($result3, 'DESCRIPTON');
-				}
-				if ($age == NULL || $age == ''){
-					$age = print_data($result3, 'AGE');
-				}
-				if ($volunteers == NULL || $volunteers == ''){
-					$volunteers = print_data($result3, 'VOLUNTEERS');
-				}
-				if ($support == NULL || $support == ''){
-					$support = print_data($result3, 'SUPPORT');
-				}
-				if ($update == NULL || $update == ''){
-					$update = print_data($result3, 'UPDATE');
-				}
-				//update the current user
-				//prepare the submitting data
-				$submittingdata = array(
+			}
+			// check if the user has chosen to subscribe to our mailing subscription.
+			if($did_subscribe)
+			{
+				$MailChimp = new \Drewm\MailChimp($api_key);
+				//check whether the subscriber is from the list
+				$result3 = $MailChimp->call('/lists/member-info', array(
 					'id' => $list_id,
-				    'email' => array('email'=>$email),
-					'merge_vars' => array(
-				        'groupings' => array(
-				            0 => array(
-				                'name' => 'Courses',
-				                'groups' => $courses
-				                ),
-				            1 => array(
-				                'name' => 'External newsletter',
-				                'groups' => $news
-				                ),
-				            2 => array(
-				                'name' => 'Participation',
-				                'groups' => $volunteer
-				                ),
-				            3 => array(
-				                'name' => 'Campaign',
-				                'groups' => $campaigns
-				                ),
-				            4 => array(
-				                'name' => 'I Have my Own Place',
-				                'groups' => $IhavemyOwnPlace
-				                ),
-				            5 => array(
-				                'name' => 'Apply for charity place',
-				                'groups' => $applyforCharity
-				                ),
-				            6 => array(
-				                'name' => 'Donation',
-				                'groups' => $donations
-				                ),
-				            ),
-				        'phone'=>$phonenumber,
-				        'postcode'=>$postcode,
-				        'address1'=>$address1,
-				        'address2'=>$address2,
-				        'city'=>$city,
-				        'country'=>$country,
-				        'occupation'=>$occupation,
-				        'employer'=>$employer,
-				        'birth_day'=>$date_of_birth,
-				        'descripton'=>$describe_you,
-				        'age'=>$age,
-				        'volunteers'=>$volunteers,
-				        'support'=>$support,
-				        'update'=>$update
-				        ),
-				   	'double_optin' => true,
-				    'update_existing' => true,
-				    'replace_interests' => true,
-				    'send_welcome' => false,
-				    );
-				$result = $MailChimp->call('/lists/update-member', $submittingdata);
-			}
-			else
-			{
-				$name = '';
-				if($contenttype == 'events'){
-					if($charity_place == 1){
-						$name = 'I Have my Own Place';
+				    'emails' => array(
+				    	0 => array('email'=>$email))
+				    )
+				);
+				aaa_mailchimp_data_log($result3 , 'List member info API CALL results line no 161');
+				if($pledge == 1):
+					$pledge = 'I pledge to raise at least £250 (exc. Gift Aid) for Ambitious about Autism';
+				endif;
+
+				if($offer == 1):
+					$offer = 'My employer offer a matched giving scheme';
+				endif;
+
+				if($describe_you == 1):
+					$describe_you = 'Parent / Carer';
+				elseif($describe_you == 2):
+					$describe_you = 'Professional';
+				elseif($describe_you == 3):
+					$describe_you = 'Aged 16-25';
+				endif;
+
+				if($support == 1):
+					$support = 'I support this campaign.';
+				endif;
+
+				if($update == 1):
+					$update = 'I would like to receive updates about this campaign.';
+				endif;
+
+				//from the result we have to check the success count and if its 0 the we must create a new user or update the exsisting user
+				if($result3['success_count'] == 1)
+				{
+					//if the user exsist then we must get the earlier subscribed events
+
+					$eventlist = print_event_list($result3);
+					$events = $eventlist['events'];
+					$courses = $eventlist['courses'];
+					$news = $eventlist['news'];
+					$volunteer = $eventlist['volunteer'];
+					$campaigns = $eventlist['campaigns'];
+					$donations = $eventlist['donation'];
+
+					//add the charity places when subscribing	
+					$applyforCharity = $eventlist['apply_for_charity_place'];
+					$IhavemyOwnPlace = $eventlist['i_have_my_own_place'];
+
+					//check for the event type and add the event to the correct array
+					if($contenttype == 'events'){
+						array_push($events, $newevent);
+						//check the conditon which the user has selected. and depending on that update the group that needs to be updated
+						if($charity_place == 1){
+							array_push($IhavemyOwnPlace, $newevent);
+						}
+						else{
+							array_push($applyforCharity, $newevent);
+						}
 					}
-					else{
-						$name = 'Apply for charity place';
+					elseif($contenttype == 'courses')
+					{
+						array_push($courses, $newevent);
 					}
+					elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
+					{
+						array_push($news, $newevent);
+					}
+					elseif($contenttype == 'volunteer')
+					{
+						array_push($volunteer, $newevent);
+					}
+					elseif($contenttype == 'campaigns')
+					{
+						array_push($campaigns, $newevent);
+					}
+					elseif($contenttype == 'donations')
+					{
+						array_push($donations, $newevent);
+					}
+					//Gathering exsisting details.
+					if ($lastname == NULL || $lastname == ''){
+						$lastname = print_data($result3, 'LNAME');
+					}
+					if ($phonenumber == NULL || $phonenumber == ''){
+						$phonenumber = print_data($result3, 'PHONE');
+					}
+					if ($postcode == NULL || $postcode == ''){
+						$postcode = print_data($result3, 'POSTCODE');
+					}
+					if ($address1 == NULL || $address1 == ''){
+						$address1 = print_data($result3, 'ADDRESS1');
+					}
+					if ($address2 == NULL || $address2 == ''){
+						$address2 = print_data($result3, 'ADDRESS2');
+					}
+					if ($city == NULL || $city == ''){
+						$city = print_data($result3, 'CITY');
+					}
+					if ($country == NULL || $country == ''){
+						$country = print_data($result3, 'COUNTRY');
+					}
+					if ($occupation == NULL || $occupation == ''){
+						$occupation = print_data($result3, 'OCCUPATION');
+					}
+					if ($employer == NULL || $employer == ''){
+						$employer = print_data($result3, 'EMPLOYER');
+					}
+					if ($date_of_birth == NULL || $date_of_birth == ''){
+						$date_of_birth = print_data($result3, 'BIRTH_DAY');
+					}
+					if ($pledge == NULL || $pledge == ''){
+						$pledge = print_data($result3, 'PLEDGE');
+					}
+					if ($offer == NULL || $offer == ''){
+						$offer = print_data($result3, 'OFFER');
+					}
+					if ($describe_you == NULL || $describe_you == ''){
+						$describe_you = print_data($result3, 'DESCRIPTON');
+					}
+					if ($age == NULL || $age == ''){
+						$age = print_data($result3, 'AGE');
+					}
+					if ($volunteers == NULL || $volunteers == ''){
+						$volunteers = print_data($result3, 'VOLUNTEERS');
+					}
+					if ($support == NULL || $support == ''){
+						$support = print_data($result3, 'SUPPORT');
+					}
+					if ($update == NULL || $update == ''){
+						$update = print_data($result3, 'UPDATE');
+					}
+					//update the current user
+					//prepare the submitting data
+					$submittingdata = array(
+						'id' => $list_id,
+					    'email' => array('email'=>$email),
+						'merge_vars' => array(
+					        'groupings' => array(
+					            0 => array(
+					                'name' => 'Courses',
+					                'groups' => $courses
+					                ),
+					            1 => array(
+					                'name' => 'External newsletter',
+					                'groups' => $news
+					                ),
+					            2 => array(
+					                'name' => 'Participation',
+					                'groups' => $volunteer
+					                ),
+					            3 => array(
+					                'name' => 'Campaign',
+					                'groups' => $campaigns
+					                ),
+					            4 => array(
+					                'name' => 'I Have my Own Place',
+					                'groups' => $IhavemyOwnPlace
+					                ),
+					            5 => array(
+					                'name' => 'Apply for charity place',
+					                'groups' => $applyforCharity
+					                ),
+					            6 => array(
+					                'name' => 'Donation',
+					                'groups' => $donations
+					                ),
+					            ),
+					        'phone'=>$phonenumber,
+					        'postcode'=>$postcode,
+					        'address1'=>$address1,
+					        'address2'=>$address2,
+					        'city'=>$city,
+					        'country'=>$country,
+					        'occupation'=>$occupation,
+					        'employer'=>$employer,
+					        'birth_day'=>$date_of_birth,
+					        'descripton'=>$describe_you,
+					        'age'=>$age,
+					        'volunteers'=>$volunteers,
+					        'support'=>$support,
+					        'update'=>$update
+					        ),
+					   	'double_optin' => true,
+					    'update_existing' => true,
+					    'replace_interests' => true,
+					    'send_welcome' => false,
+					    );
+					$result = $MailChimp->call('/lists/update-member', $submittingdata);
+					aaa_mailchimp_data_log($submittingdata , 'List Update member API CALL results line no 343');
+					aaa_mailchimp_data_log($result , 'List Update member API CALL results line no 344');
 				}
-				elseif($contenttype == 'courses')
+				else
 				{
-					$name = 'Courses';
+					$name = '';
+					if($contenttype == 'events'){
+						if($charity_place == 1){
+							$name = 'I Have my Own Place';
+						}
+						else{
+							$name = 'Apply for charity place';
+						}
+					}
+					elseif($contenttype == 'courses')
+					{
+						$name = 'Courses';
+					}
+
+					elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
+					{
+						$name = 'External newsletter';
+					}
+					elseif($contenttype == 'volunteer')
+					{
+						$name = 'Participation';
+					}
+					elseif($contenttype == 'campaigns')
+					{
+						$name = 'Campaign';
+					}
+					elseif($contenttype == 'donations')
+					{
+						$name = 'Donation';
+					}
+					$submittingdata = array(
+					    'id' => $list_id,
+					    'email' => array('email'=>$email),
+					    'merge_vars' => array(
+					    	'fname'=>$firstname, 
+					        'lname'=>$lastname,
+					        'groupings' => array(
+					            0 => array(
+					                'name' => $name,
+					                'groups' => $neweventarray
+					                ),
+					            ),
+					        'phone'=>$phonenumber,
+					        'postcode'=>$postcode,
+					        'address1'=>$address1,
+					        'address2'=>$address2,
+					        'city'=>$city,
+					        'country'=>$country,
+					        'occupation'=>$occupation,
+					        'employer'=>$employer,
+					        'birth_day'=>$date_of_birth,
+					        'pledge'=>$pledge,
+					        'offer'=>$offer,
+					        'descripton'=>$describe_you,
+					        'age'=>$age,
+					        'volunteers'=>$volunteers,
+					        'support'=>$support,
+					        'update'=>$update
+					        ),
+					    'double_optin'      => true,
+					    'update_existing'   => true,
+					    'replace_interests' => true,
+					    'send_welcome'      => false,
+					    );
+
+					$result = $MailChimp->call('lists/subscribe', $submittingdata);
+					aaa_mailchimp_data_log($submittingdata , 'List Subscribe API CALL results line no 414');
+					aaa_mailchimp_data_log($result , 'List Subscribe API CALL results line no 415');
 				}
 
-				elseif($contenttype == 'testwebform' || $contenttype == 'newsletter')
-				{
-					$name = 'External newsletter';
+				if(isset($result['error'])){
+					$test = serialize($submittingdata);
+					$record = array(
+	    				"resultset" => $test,
+	    				"error" => $result['error'],
+	    				"errortime" => time(),
+	    			);
+	  				drupal_write_record('mailchimp_error_log', $record);
 				}
-				elseif($contenttype == 'volunteer')
-				{
-					$name = 'Participation';
+				else{
 				}
-				elseif($contenttype == 'campaigns')
-				{
-					$name = 'Campaign';
-				}
-				elseif($contenttype == 'donations')
-				{
-					$name = 'Donation';
-				}
-				$submittingdata = array(
-				    'id' => $list_id,
-				    'email' => array('email'=>$email),
-				    'merge_vars' => array(
-				    	'fname'=>$firstname, 
-				        'lname'=>$lastname,
-				        'groupings' => array(
-				            0 => array(
-				                'name' => $name,
-				                'groups' => $neweventarray
-				                ),
-				            ),
-				        'phone'=>$phonenumber,
-				        'postcode'=>$postcode,
-				        'address1'=>$address1,
-				        'address2'=>$address2,
-				        'city'=>$city,
-				        'country'=>$country,
-				        'occupation'=>$occupation,
-				        'employer'=>$employer,
-				        'birth_day'=>$date_of_birth,
-				        'pledge'=>$pledge,
-				        'offer'=>$offer,
-				        'descripton'=>$describe_you,
-				        'age'=>$age,
-				        'volunteers'=>$volunteers,
-				        'support'=>$support,
-				        'update'=>$update
-				        ),
-				    'double_optin'      => true,
-				    'update_existing'   => true,
-				    'replace_interests' => true,
-				    'send_welcome'      => false,
-				    );
-
-				$result = $MailChimp->call('lists/subscribe', $submittingdata);
 			}
-
-			if(isset($result['error'])){
-				$test = serialize($submittingdata);
-				$record = array(
-    				"resultset" => $test,
-    				"error" => $result['error'],
-    				"errortime" => time(),
-    			);
-  				drupal_write_record('mailchimp_error_log', $record);
-			}
-			else{
+			if($contenttype == 'events'){
+				if($charity_place == 1){
+					drupal_goto('event-registration-submitted');
+				}
 			}
 		}
-		else
-		{
-		}
-		if($contenttype == 'events'){
-			if($charity_place == 1){
-				drupal_goto('event-registration-submitted');
-			}
-		}
-	}	
+	} catch (Exception $e) {
+		aaa_mailchimp_data_log($e , 'Mailchimp custom webform submission insert Failed due to exception');
+  }	
 }
 
 function print_event_list($result3){
@@ -826,7 +832,7 @@ function stripe_custom_update_7101() {
 //Logging the transactions and the results in a Database
 function aaa_mailchimp_data_log($data , $customessage){
 	$datarecord = array(
-  	"data" => $data,
+  	"data" => serialize($data),
   	"timestamp" => time(),
   	"customessage" => $customessage,
   );
