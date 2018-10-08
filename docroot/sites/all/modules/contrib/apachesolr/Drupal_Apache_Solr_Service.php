@@ -440,9 +440,8 @@ class DrupalApacheSolrService implements DrupalApacheSolrServiceInterface {
       $caller = $this->findCaller();
       watchdog(
         'Apache Solr',
-        t('Environment @env_id; HTTP Status: %http_status; <br>Message: %status_message; <br>Response: %response; <br>Request: %request; <br>Caller: %function (line %line of %file)'),
+        t('HTTP Status: %http_status; <br>Message: %status_message; <br>Response: %response; <br>Request: %request; <br>Caller: %function (line %line of %file)'),
         array(
-          '@env_id' => $this->getId(),
           '%http_status' => $code,
           '%status_message' => $response->status_message,
           '%response' => $response->data,
@@ -554,9 +553,6 @@ class DrupalApacheSolrService implements DrupalApacheSolrServiceInterface {
     }
 
     $result = drupal_http_request($url, $options);
-    if (empty($result->status_message)) {
-      $result->status_message = '[unknown error]';
-    }
 
     if (!isset($result->code) || $result->code < 0) {
       $result->code = 0;

@@ -461,8 +461,6 @@ function apachesolr_settings(array $form, array &$form_state) {
     $rows[$environment_id]['data'] = array_merge($rows[$environment_id]['data'], $confs);
     $rows[$environment_id]['data'] = array_merge($rows[$environment_id]['data'], $ops);
   }
-  // Custom CSS for Admin ApacheSolr table.
-  $form['#attached']['css'][] = drupal_get_path('module', 'apachesolr') . '/apachesolr.css';
 
   $form['apachesolr_host_settings']['actions'] = array(
     '#markup' => '<ul class="action-links">' . drupal_render($actions) . '</ul>',
@@ -564,7 +562,7 @@ function apachesolr_status_page($environment = array()) {
     $data = $solr->getLuke();
   }
   catch (Exception $e) {
-    apachesolr_log_exception($environment['env_id'], $e);
+    watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
     drupal_set_message(nl2br(check_plain($e->getMessage())), "warning");
     $data = new stdClass;
     $data->fields = array();
@@ -609,7 +607,7 @@ function apachesolr_status_page($environment = array()) {
       $messages[] = array(t('Pending Deletions'), t('@deletes_total', $stats_summary));
     }
     catch (Exception $e) {
-      apachesolr_log_exception($environment['env_id'], $e);
+      watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
     }
   }
   if (empty($messages)) {
@@ -669,7 +667,7 @@ function apachesolr_index_report(array $environment = array()) {
     $data = $solr->getLuke();
   }
   catch (Exception $e) {
-    apachesolr_log_exception($environment['env_id'], $e);
+    watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
     drupal_set_message(nl2br(check_plain($e->getMessage())), "warning");
     return $output;
   }
@@ -693,7 +691,7 @@ function apachesolr_index_report(array $environment = array()) {
       }
     }
     catch (Exception $e) {
-      apachesolr_log_exception($environment['env_id'], $e);
+      watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
       $data->fields = array();
     }
   }
@@ -766,7 +764,7 @@ function apachesolr_config_files_overview(array $environment = array()) {
     $xml = simplexml_load_string($response->data);
   }
   catch (Exception $e) {
-    apachesolr_log_exception($env_id, $e);
+    watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
     drupal_set_message(nl2br(check_plain($e->getMessage())), "warning");
   }
 
@@ -783,7 +781,7 @@ function apachesolr_config_files_overview(array $environment = array()) {
       }
       // Get data from the files.
       $name = ((string)$item->attributes()) ? (string)$item->attributes() : t('No name found');
-      $files[$item_id]['name'] = l($name, 'admin/reports/apachesolr/' . $env_id . '/conf/' . $name, array('query' => array('no_fast_404' => 1)));
+      $files[$item_id]['name'] = l($name, 'admin/reports/apachesolr/' . $env_id . '/conf/' . $name);
 
       // Retrieve the date attribute
       if (isset($item->date)) {
@@ -846,7 +844,7 @@ function apachesolr_config_file($name, array $environment = array()) {
     drupal_set_title(check_plain($name));
   }
   catch (Exception $e) {
-    apachesolr_log_exception($env_id, $e);
+    watchdog('Apache Solr', nl2br(check_plain($e->getMessage())), NULL, WATCHDOG_ERROR);
     drupal_set_message(nl2br(check_plain($e->getMessage())), "warning");
   }
   return $output;
@@ -1167,7 +1165,7 @@ function apachesolr_index_batch_index_entities($env_id, $total_limit = NULL, &$c
       }
     }
     catch (Exception $e) {
-      apachesolr_log_exception($env_id, $e);
+      watchdog('Apache Solr', $e->getMessage(), NULL, WATCHDOG_ERROR);
       return FALSE;
     }
 
