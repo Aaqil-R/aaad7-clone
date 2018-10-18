@@ -2065,3 +2065,19 @@ section.job-card {
     }
   }
 }
+
+
+.breadcrumb-hide {
+  .easy-breadcrumb {
+    display: none;
+  }
+}
+
+.inlay-right {
+  text-align: center;
+  
+  @include breakpoint($tablet) {
+    float: right;
+    margin-left: 20px;
+  }
+}
