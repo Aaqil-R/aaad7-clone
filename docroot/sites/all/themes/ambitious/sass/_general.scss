@@ -2074,10 +2074,10 @@ section.job-card {
 }
 
 .inlay-right {
-  text-align: center;
+  float: right;
+  margin-left: 20px;
   
   @include breakpoint($tablet) {
-    float: right;
-    margin-left: 20px;
+    text-align: center;
   }
 }
