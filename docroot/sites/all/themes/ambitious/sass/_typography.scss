@@ -108,6 +108,17 @@ h6, .h6 {
   margin: 0 0 20px;
   font-family: $base-font-family;
   color: $base-text-color;
+
+    @include breakpoint($tablet) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 p,

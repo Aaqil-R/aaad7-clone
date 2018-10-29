@@ -1422,8 +1422,22 @@ h6, .h6 {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
   color: #383c40;
 }
+@media (max-width: 768px) {
+  /* line 104, ../sass/_typography.scss */
+  .subheading {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 104, ../sass/_typography.scss */
+  .subheading {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 
-/* line 113, ../sass/_typography.scss */
+/* line 124, ../sass/_typography.scss */
 p,
 .field .field-name-body .field-type-text-with-summary div {
   font-size: 18px;
@@ -1433,7 +1447,7 @@ p,
   color: #383c40;
 }
 @media (max-width: 767px) {
-  /* line 113, ../sass/_typography.scss */
+  /* line 124, ../sass/_typography.scss */
   p,
   .field .field-name-body .field-type-text-with-summary div {
     font-size: 16px;
@@ -1441,28 +1455,28 @@ p,
   }
 }
 
-/* line 144, ../sass/_typography.scss */
+/* line 155, ../sass/_typography.scss */
 .p2 {
   font-size: 13px;
   line-height: 18px;
   color: #d2d5d6;
 }
 @media (max-width: 767px) {
-  /* line 144, ../sass/_typography.scss */
+  /* line 155, ../sass/_typography.scss */
   .p2 {
     font-size: 12px;
     line-height: 17px;
   }
 }
 
-/* line 155, ../sass/_typography.scss */
+/* line 166, ../sass/_typography.scss */
 blockquote {
   quotes: none;
   margin-bottom: 30px;
   margin-left: 36px;
   position: relative;
 }
-/* line 161, ../sass/_typography.scss */
+/* line 172, ../sass/_typography.scss */
 blockquote:before {
   content: "";
   top: 8px;
@@ -1473,19 +1487,19 @@ blockquote:before {
   position: absolute;
 }
 @media (max-width: 767px) {
-  /* line 161, ../sass/_typography.scss */
+  /* line 172, ../sass/_typography.scss */
   blockquote:before {
     left: -25px;
   }
 }
-/* line 175, ../sass/_typography.scss */
+/* line 186, ../sass/_typography.scss */
 blockquote q,
 blockquote p {
   font-size: 24px;
   line-height: 36px;
 }
 @media (max-width: 768px) {
-  /* line 175, ../sass/_typography.scss */
+  /* line 186, ../sass/_typography.scss */
   blockquote q,
   blockquote p {
     font-size: 22px;
@@ -1493,7 +1507,7 @@ blockquote p {
   }
 }
 @media (max-width: 767px) {
-  /* line 175, ../sass/_typography.scss */
+  /* line 186, ../sass/_typography.scss */
   blockquote q,
   blockquote p {
     font-size: 16px;
@@ -1502,50 +1516,50 @@ blockquote p {
   }
 }
 
-/* line 196, ../sass/_typography.scss */
+/* line 207, ../sass/_typography.scss */
 .field-name-body h2 {
   font-size: 33px;
 }
 @media (max-width: 768px) {
-  /* line 196, ../sass/_typography.scss */
+  /* line 207, ../sass/_typography.scss */
   .field-name-body h2 {
     font-size: 32px;
   }
 }
 @media (max-width: 767px) {
-  /* line 196, ../sass/_typography.scss */
+  /* line 207, ../sass/_typography.scss */
   .field-name-body h2 {
     font-size: 27px;
   }
 }
-/* line 210, ../sass/_typography.scss */
+/* line 221, ../sass/_typography.scss */
 .field-name-body h3 {
   font-size: 24px;
 }
 @media (max-width: 767px) {
-  /* line 210, ../sass/_typography.scss */
+  /* line 221, ../sass/_typography.scss */
   .field-name-body h3 {
     font-size: 24px;
   }
 }
-/* line 219, ../sass/_typography.scss */
+/* line 230, ../sass/_typography.scss */
 .field-name-body h4 {
   font-size: 22px;
 }
 @media (max-width: 768px) {
-  /* line 219, ../sass/_typography.scss */
+  /* line 230, ../sass/_typography.scss */
   .field-name-body h4 {
     font-size: 22px;
   }
 }
 @media (max-width: 767px) {
-  /* line 219, ../sass/_typography.scss */
+  /* line 230, ../sass/_typography.scss */
   .field-name-body h4 {
     font-size: 20px;
   }
 }
 
-/* line 234, ../sass/_typography.scss */
+/* line 245, ../sass/_typography.scss */
 .articles-block h2,
 .card h4, .card h3,
 .social-block h1, .social-block h3,
@@ -1558,20 +1572,20 @@ h2.block__title {
   color: #2a2e31 !important;
 }
 
-/* line 247, ../sass/_typography.scss */
+/* line 258, ../sass/_typography.scss */
 .card-transparent h4 {
   font-size: 28px;
   line-height: 28px;
 }
 @media (max-width: 767px) {
-  /* line 247, ../sass/_typography.scss */
+  /* line 258, ../sass/_typography.scss */
   .card-transparent h4 {
     font-size: 25px;
     line-height: 25px;
   }
 }
 
-/* line 260, ../sass/_typography.scss */
+/* line 271, ../sass/_typography.scss */
 .story_author h4 {
   color: #2a2e31;
 }
