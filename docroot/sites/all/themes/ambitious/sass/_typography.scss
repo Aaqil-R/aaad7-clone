@@ -199,6 +199,19 @@ blockquote {
       line-height: 25px;
       margin-left: 25px;
     }
+
+    &:before {
+      content: "\201C";
+      position: relative;
+      font-size: inherit;
+      color: inherit;
+    }
+    &:after {
+      content: "\201D";
+      position: relative;
+      font-size: inherit;
+      color: inherit;
+    }
   }
 }
 
