@@ -9,8 +9,19 @@
   width: auto;
 }
 
+// Article page content not filling column
 .node-type-article {
 	.field-item {
 		float: none;
 	}
+}
+
+// Main container size on tab
+.node-type-page {
+  #main {
+    @include breakpoint($desktop-small) {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
 }
