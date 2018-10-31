@@ -33,7 +33,7 @@ h2, .h2 {
   font-size: 45px;
   line-height: 50px;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($tablet-range) {
     font-size: 42px;
     line-height: 47px;
   }
@@ -49,7 +49,7 @@ h3, .h3 {
   font-size: 36px;
   line-height: 40px;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($tablet-range) {
     font-size: 32px;
     line-height: 38px;
   }
@@ -98,7 +98,7 @@ h6, .h6 {
   font-family: $base-font-family;
   color: $base-text-color;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
     font-size: 22px;
     line-height: 32px;
   }
@@ -177,7 +177,7 @@ blockquote {
     font-size: 24px;
     line-height: 36px;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       font-size: 22px;
       line-height: 34px;
     }
@@ -210,7 +210,7 @@ blockquote {
     font-size: 33px;
 
     //font-size: 36px;
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       font-size: 32px;
     }
 
@@ -232,7 +232,7 @@ blockquote {
   h4 {
     font-size: 22px;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       font-size: 22px;
     }
 
