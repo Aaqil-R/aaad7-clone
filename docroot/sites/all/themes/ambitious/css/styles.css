@@ -30396,34 +30396,6 @@ section.job-card img {
   display: none;
 }
 
-/* line 2076, ../sass/_general.scss */
-.inlay-right {
-  float: right;
-  margin-left: 20px;
-}
-@media (max-width: 768px) {
-  /* line 2076, ../sass/_general.scss */
-  .inlay-right {
-    text-align: center;
-    float: none;
-    margin: 0;
-  }
-}
-
-/* line 2087, ../sass/_general.scss */
-.inlay-left {
-  float: left;
-  margin-right: 20px;
-}
-@media (max-width: 768px) {
-  /* line 2087, ../sass/_general.scss */
-  .inlay-left {
-    text-align: center;
-    float: none;
-    margin: 0;
-  }
-}
-
 /* line 3, ../sass/base/_markup-mixins.scss */
 .signup-columns:after, .my-voice-columns:after, .community-columns:after, .slider-container:after, .articles-columns:after, .social-columns:after, .webform-submit:after, input[type=submit]:after, .home_forum_share:after, #content_top .my-voice-columns .webform-client-form.webform-client-form-74621 input[type="submit"]:after, .approach-main:after, .about-us:after, .about-us .content:after, .about-us .find-us h4:after, .about-us .coming-up h4:after, .about-us .coming-up ul li:after, .sort-block:after, .posts-columns:after, .posts-columns .text-block .btn-holder:after, .posts-columns .text-block-second .btn-holder:after, .posts-columns .post-actions .action:after, .posts-columns .post-my-voice-actions .action:after, .page-main:after, .comment-list ul.comment-listing li .comment-right ul:after, .btn:after, .form-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-submit:after, .node-type-forum-discussion .comment-block .form-actions #edit-preview:after, .page-comment-reply .comment-block .form-actions #edit-submit:after, .page-comment-reply .comment-block .form-actions #edit-preview:after, .page-comment .comment-block .form-actions #edit-submit:after, .page-comment .comment-block .form-actions #edit-preview:after, .page-comment #content-area form.comment-form .form-actions #edit-submit:after, .page-comment #content-area form.comment-form .form-actions #edit-preview:after, .page-comment #content-area #privatemsg-new .form-actions #edit-submit:after, .page-comment #content-area #privatemsg-new .form-actions #edit-preview:after, .page-messages #content-area form.comment-form .form-actions #edit-submit:after, .page-messages #content-area form.comment-form .form-actions #edit-preview:after, .page-messages #content-area #privatemsg-new .form-actions #edit-submit:after, .page-messages #content-area #privatemsg-new .form-actions #edit-preview:after, .st_sharethis_button .stButton:after, .action-block .holder:after, .visual .img-holder .caption-frame .caption .title.title-second span:after, .visual .img-holder .caption-frame .caption #footer .region-footer-copyright .social-holder h2.title-second span:after, #footer .region-footer-copyright .social-holder .visual .img-holder .caption-frame .caption h2.title-second span:after, .visual .slider-main .slider-box .slider-action:after, .top-bar .holder:after, #header .header-top .holder:after, #footer .holder:after, #footer .social-holder:after, .page-node-74596 .sort-block:after, .section-my-voice .sort-block:after, .my-voice-home .sort-block:after, .view-id-stream.view-display-id-stream_forum_page .post:after, .node-type-forum-discussion .comment-block:after, .page-comment-reply .comment-block:after, .page-comment .comment-block:after, .node-type-forum-discussion .comment-list ul.comment-listing li .comment-right ul:after, .page-comment-reply .comment-list ul.comment-listing li .comment-right ul:after, .page-comment .comment-list ul.comment-listing li .comment-right ul:after, .page-comment #content-area form.comment-form:after, .page-comment #content-area #privatemsg-new:after, .page-messages #content-area form.comment-form:after, .page-messages #content-area #privatemsg-new:after, .page-comment #content-area li .comment-right ul:after, .page-messages #content-area li .comment-right ul:after, .posts-columns.columns-full .row .forum-text:after, .posts-columns.columns-full .views-row .forum-text:after, .posts-columns.columns-full .row .footer:after, .posts-columns.columns-full .views-row .footer:after, .my-voice-intro:after, .my-voice-main .sort-block:after, #main2:after, #main2 .article-tags:after, #main2 .article-left .article-left-holder .comment-list ul.comment-listing li .comment-right ul:after, #main2 .article-left .article-left-holder .article-info:after, #main2 .article-left .article-left-holder .article-info cite span:after {
   content: " ";
@@ -31000,14 +30972,50 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* Overrides */
-/* line 6, ../sass/_overrides.scss */
+/* line 4, ../sass/_overrides.scss */
+.inlay-right {
+  float: right;
+  margin-left: 30px;
+}
+@media (max-width: 768px) {
+  /* line 4, ../sass/_overrides.scss */
+  .inlay-right {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+}
+
+/* line 15, ../sass/_overrides.scss */
+.inlay-left {
+  float: left;
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  /* line 15, ../sass/_overrides.scss */
+  .inlay-left {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+}
+
+/* line 28, ../sass/_overrides.scss */
 .node-type-article #content_bottom .masonry-item,
 .node-type-my-voice-blog #content_bottom .masonry-item,
 .node-type-school-values #content_bottom .masonry-item {
   width: auto;
 }
 
-/* line 13, ../sass/_overrides.scss */
+/* line 36, ../sass/_overrides.scss */
 .node-type-article .field-item {
   float: none;
+}
+
+@media (max-width: 1080px) {
+  /* line 43, ../sass/_overrides.scss */
+  .node-type-page #main {
+    max-width: 90%;
+    margin-top: 20px;
+  }
 }

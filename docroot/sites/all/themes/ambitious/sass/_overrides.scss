@@ -1,16 +1,49 @@
 /* Overrides */
 
+// Image positioning class on wysiwyg
+.inlay-right {
+  float: right;
+  margin-left: 30px;
+  
+  @include breakpoint($tablet) {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+}
+
+.inlay-left {
+  float: left;
+  margin-right: 30px;
+  
+  @include breakpoint($tablet) {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+}
+
 // Sidebar masonry fix that
 // a column is getting a 30% of width
-
 .node-type-article #content_bottom .masonry-item,
 .node-type-my-voice-blog #content_bottom .masonry-item,
 .node-type-school-values #content_bottom .masonry-item {
   width: auto;
 }
 
+// Article page content not filling column
 .node-type-article {
 	.field-item {
 		float: none;
 	}
+}
+
+// Main container size on tab
+.node-type-page {
+  #main {
+    @include breakpoint($desktop-small) {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
 }
