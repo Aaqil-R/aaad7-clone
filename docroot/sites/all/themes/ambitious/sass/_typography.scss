@@ -39,7 +39,7 @@ h2, .h2 {
   }
 
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 27px;
     line-height: 32px;
   }
@@ -55,7 +55,7 @@ h3, .h3 {
   }
 
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 27px;
     line-height: 32px;
   }
@@ -69,7 +69,7 @@ h4, .h4 {
     font-family: $helvetica-cn;
   }
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 24px;
     line-height: 30px;
   }
@@ -79,7 +79,7 @@ h5, .h5 {
   font-size: 22px;
   line-height: 30px;
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 20px;
     line-height: 26px;
   }
@@ -118,7 +118,7 @@ p {
   margin-top: 0;
   color: $base-text-color;
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 16px;
     line-height: 25px;
   }
@@ -146,7 +146,7 @@ p {
   line-height: 18px;
   color: $gray;
 
-  @include breakpoint($mobile-small) {
+  @include breakpoint($mobile) {
     font-size: 12px;
     line-height: 17px;
   }
@@ -167,7 +167,7 @@ blockquote {
     background: #5bc5ed;
     position: absolute;
 
-    @include breakpoint($mobile-small) {
+    @include breakpoint($mobile) {
       left: -25px;
     }
   }
@@ -183,7 +183,7 @@ blockquote {
     }
 
 
-    @include breakpoint($mobile-small) {
+    @include breakpoint($mobile) {
       font-size: 16px;
       line-height: 25px;
       margin-left: 25px;
@@ -215,7 +215,7 @@ blockquote {
 //     }
 
 
-//     @include breakpoint($mobile-small) {
+//     @include breakpoint($mobile) {
 //       font-size: 27px;
 //     }
 //   }
@@ -224,7 +224,7 @@ blockquote {
 //     font-size: 24px;
 
 //     //font-size: 27px;
-//     @include breakpoint($mobile-small) {
+//     @include breakpoint($mobile) {
 //       font-size: 24px;
 //     }
 //   }
@@ -237,7 +237,7 @@ blockquote {
 //     }
 
 
-//     @include breakpoint($mobile-small) {
+//     @include breakpoint($mobile) {
 //       font-size: 20px;
 //     }
 //   }
@@ -261,7 +261,7 @@ h2.block__title {
     font-size: 28px;
     line-height: 28px;
 
-    @include breakpoint($mobile-small) {
+    @include breakpoint($mobile) {
       font-size: 25px;
       line-height: 25px;
     }
