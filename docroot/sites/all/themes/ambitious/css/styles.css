@@ -30929,55 +30929,58 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 /* Overrides */
-/* line 4, ../sass/_overrides.scss */
-.inlay-right {
-  float: right;
+@media (max-width: 768px) {
+  /* line 26, ../sass/_overrides.scss */
+  .media-element-container {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+}
+/* line 34, ../sass/_overrides.scss */
+.media-element-container.media-float-right img {
   margin-left: 30px;
 }
-@media (max-width: 768px) {
-  /* line 4, ../sass/_overrides.scss */
-  .inlay-right {
-    text-align: center;
-    float: none;
-    margin: 0;
-  }
+/* line 38, ../sass/_overrides.scss */
+.media-element-container.media-float-right .field-name-field-caption {
+  float: right;
 }
-
-/* line 15, ../sass/_overrides.scss */
-.inlay-left {
-  float: left;
+/* line 44, ../sass/_overrides.scss */
+.media-element-container.media-float-left img {
   margin-right: 30px;
 }
-@media (max-width: 768px) {
-  /* line 15, ../sass/_overrides.scss */
-  .inlay-left {
-    text-align: center;
-    float: none;
-    margin: 0;
-  }
+/* line 48, ../sass/_overrides.scss */
+.media-element-container.media-float-left .field-name-field-caption {
+  float: left;
+}
+/* line 53, ../sass/_overrides.scss */
+.media-element-container .field-name-field-caption {
+  clear: both;
+  font-size: 12px;
+  color: #808080;
 }
 
-/* line 28, ../sass/_overrides.scss */
+/* line 62, ../sass/_overrides.scss */
 .node-type-article #content_bottom .masonry-item,
 .node-type-my-voice-blog #content_bottom .masonry-item,
 .node-type-school-values #content_bottom .masonry-item {
   width: auto;
 }
 
-/* line 36, ../sass/_overrides.scss */
+/* line 70, ../sass/_overrides.scss */
 .node-type-article .field-item {
   float: none;
 }
 
 @media (max-width: 1080px) {
-  /* line 43, ../sass/_overrides.scss */
+  /* line 77, ../sass/_overrides.scss */
   .node-type-page #main {
     max-width: 90%;
     margin-top: 20px;
   }
 }
 
-/* line 53, ../sass/_overrides.scss */
+/* line 87, ../sass/_overrides.scss */
 .field.field-name-body.field-type-text-with-summary img {
   max-width: 100%;
 }

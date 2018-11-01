@@ -1,25 +1,59 @@
 /* Overrides */
 
 // Image positioning class on wysiwyg
-.inlay-right {
-  float: right;
-  margin-left: 30px;
+// .inlay-right {
+//   float: right;
+//   margin-left: 30px;
   
-  @include breakpoint($tablet) {
-    text-align: center;
-    float: none;
-    margin: 0;
-  }
-}
+//   @include breakpoint($tablet) {
+//     text-align: center;
+//     float: none;
+//     margin: 0;
+//   }
+// }
 
-.inlay-left {
-  float: left;
-  margin-right: 30px;
+// .inlay-left {
+//   float: left;
+//   margin-right: 30px;
   
-  @include breakpoint($tablet) {
-    text-align: center;
-    float: none;
-    margin: 0;
+//   @include breakpoint($tablet) {
+//     text-align: center;
+//     float: none;
+//     margin: 0;
+//   }
+// }
+
+.media-element-container {
+	@include breakpoint($tablet) {
+		text-align: center;
+		float: none;
+		margin: 0;
+	}
+
+	&.media-float-right {
+		img {
+			margin-left: 30px;
+		}
+
+		.field-name-field-caption {
+			float: right;
+		}
+	}
+
+	&.media-float-left {
+		img {
+			margin-right: 30px;
+		}
+
+		.field-name-field-caption {
+			float: left;
+		}
+	}
+
+  .field-name-field-caption {
+  	clear: both;
+    font-size: 12px;
+    color: #808080;
   }
 }
 
