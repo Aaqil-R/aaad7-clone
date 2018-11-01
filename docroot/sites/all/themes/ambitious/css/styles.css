@@ -30941,80 +30941,92 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .media-element-container.media-float-right {
   float: right;
 }
-/* line 36, ../sass/_overrides.scss */
+@media (max-width: 768px) {
+  /* line 33, ../sass/_overrides.scss */
+  .media-element-container.media-float-right {
+    float: none;
+  }
+}
+/* line 40, ../sass/_overrides.scss */
 .media-element-container.media-float-right img {
   margin-left: 30px;
 }
 @media (max-width: 768px) {
-  /* line 36, ../sass/_overrides.scss */
+  /* line 40, ../sass/_overrides.scss */
   .media-element-container.media-float-right img {
-    float: none;
+    float: none !important;
     margin: 0;
   }
 }
-/* line 45, ../sass/_overrides.scss */
+/* line 49, ../sass/_overrides.scss */
 .media-element-container.media-float-right .field-name-field-caption {
   float: right;
 }
 @media (max-width: 768px) {
-  /* line 45, ../sass/_overrides.scss */
+  /* line 49, ../sass/_overrides.scss */
   .media-element-container.media-float-right .field-name-field-caption {
     float: none;
   }
 }
-/* line 54, ../sass/_overrides.scss */
+/* line 58, ../sass/_overrides.scss */
 .media-element-container.media-float-left {
   float: left;
 }
-/* line 57, ../sass/_overrides.scss */
+@media (max-width: 768px) {
+  /* line 58, ../sass/_overrides.scss */
+  .media-element-container.media-float-left {
+    float: none;
+  }
+}
+/* line 65, ../sass/_overrides.scss */
 .media-element-container.media-float-left img {
   margin-right: 30px;
 }
 @media (max-width: 768px) {
-  /* line 57, ../sass/_overrides.scss */
+  /* line 65, ../sass/_overrides.scss */
   .media-element-container.media-float-left img {
-    float: none;
+    float: none !important;
     margin: 0;
   }
 }
-/* line 66, ../sass/_overrides.scss */
+/* line 74, ../sass/_overrides.scss */
 .media-element-container.media-float-left .field-name-field-caption {
   float: left;
 }
 @media (max-width: 768px) {
-  /* line 66, ../sass/_overrides.scss */
+  /* line 74, ../sass/_overrides.scss */
   .media-element-container.media-float-left .field-name-field-caption {
     float: none;
   }
 }
-/* line 75, ../sass/_overrides.scss */
+/* line 83, ../sass/_overrides.scss */
 .media-element-container .field-name-field-caption {
   clear: both;
   font-size: 12px;
   color: #808080;
 }
 
-/* line 84, ../sass/_overrides.scss */
+/* line 92, ../sass/_overrides.scss */
 .node-type-article #content_bottom .masonry-item,
 .node-type-my-voice-blog #content_bottom .masonry-item,
 .node-type-school-values #content_bottom .masonry-item {
   width: auto;
 }
 
-/* line 92, ../sass/_overrides.scss */
+/* line 100, ../sass/_overrides.scss */
 .node-type-article .field-item {
   float: none;
 }
 
 @media (max-width: 1080px) {
-  /* line 99, ../sass/_overrides.scss */
+  /* line 107, ../sass/_overrides.scss */
   .node-type-page #main {
     max-width: 90%;
     margin-top: 20px;
   }
 }
 
-/* line 109, ../sass/_overrides.scss */
+/* line 117, ../sass/_overrides.scss */
 .field.field-name-body.field-type-text-with-summary img {
   max-width: 100%;
 }

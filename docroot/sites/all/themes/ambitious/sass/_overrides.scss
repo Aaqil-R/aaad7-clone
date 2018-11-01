@@ -33,11 +33,15 @@
 	&.media-float-right {
 		float: right;
 
+		@include breakpoint($tablet) {
+			float: none;
+		}
+
 		img {
 			margin-left: 30px;
 
 			@include breakpoint($tablet) {
-				float: none;
+				float: none !important;
 				margin: 0;
 			}
 		}
@@ -54,11 +58,15 @@
 	&.media-float-left {
 		float: left;
 
+		@include breakpoint($tablet) {
+			float: none;
+		}
+
 		img {
 			margin-right: 30px;
 
 			@include breakpoint($tablet) {
-				float: none;
+				float: none !important;
 				margin: 0;
 			}
 		}
