@@ -35,10 +35,19 @@
 
 		img {
 			margin-left: 30px;
+
+			@include breakpoint($tablet) {
+				float: none;
+				margin: 0;
+			}
 		}
 
 		.field-name-field-caption {
 			float: right;
+
+			@include breakpoint($tablet) {
+				float: none;
+			}
 		}
 	}
 
@@ -47,17 +56,19 @@
 
 		img {
 			margin-right: 30px;
+
+			@include breakpoint($tablet) {
+				float: none;
+				margin: 0;
+			}
 		}
 
 		.field-name-field-caption {
 			float: left;
-		}
-	}
-	
-	img {
-		@include breakpoint($tablet) {
-			float: none;
-			margin: 0;
+
+			@include breakpoint($tablet) {
+				float: none;
+			}
 		}
 	}
 
@@ -65,10 +76,6 @@
 		clear: both;
 		font-size: 12px;
 		color: #808080;
-
-		@include breakpoint($tablet) {
-			float: none;
-		}
 	}
 }
 
