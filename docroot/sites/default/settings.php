@@ -270,7 +270,7 @@ $drupal_hash_salt = '';
 if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 	switch ($_ENV['AH_SITE_ENVIRONMENT'])
     {
-    case 'dev': $base_url = 'http://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/';
+    case 'dev': $base_url = 'https://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com/';
             break;
     case 'test': $base_url = 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/';
              break;
