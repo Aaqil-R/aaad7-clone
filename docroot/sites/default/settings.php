@@ -266,8 +266,19 @@ $drupal_hash_salt = '';
  * It is not allowed to have a trailing slash; Drupal will add it
  * for you.
  */
-# $base_url = 'http://www.example.com';  // NO trailing slash!
-
+// $base_url = 'http://www.example.com';  // NO trailing slash!
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+	switch ($_ENV['AH_SITE_ENVIRONMENT'])
+    {
+    case 'dev': $base_url = 'https://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com';
+            break;
+    case 'test': $base_url = 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com';
+             break;
+    case 'prod': $base_url = 'https://www.ambitiousaboutautism.org.uk';
+            break;
+    }
+}
+// $base_url = "http://ambitiousaboutautism.dev.dd:8083";
 /**
  * PHP settings:
  *
