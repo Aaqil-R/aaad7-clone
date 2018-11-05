@@ -1,0 +1,120 @@
+/* Overrides */
+
+// Image positioning class on wysiwyg
+// .inlay-right {
+//   float: right;
+//   margin-left: 30px;
+  
+//   @include breakpoint($tablet) {
+//     text-align: center;
+//     float: none;
+//     margin: 0;
+//   }
+// }
+
+// .inlay-left {
+//   float: left;
+//   margin-right: 30px;
+  
+//   @include breakpoint($tablet) {
+//     text-align: center;
+//     float: none;
+//     margin: 0;
+//   }
+// }
+
+.media-element-container {
+	@include breakpoint($tablet) {
+		text-align: center;
+		float: none;
+		margin: 0;
+	}
+
+	&.media-float-right {
+		float: right;
+
+		@include breakpoint($tablet) {
+			float: none;
+		}
+
+		img {
+			margin-left: 30px;
+
+			@include breakpoint($tablet) {
+				float: none !important;
+				margin: 0;
+			}
+		}
+
+		.field-name-field-caption {
+			float: right;
+
+			@include breakpoint($tablet) {
+				float: none;
+			}
+		}
+	}
+
+	&.media-float-left {
+		float: left;
+
+		@include breakpoint($tablet) {
+			float: none;
+		}
+
+		img {
+			margin-right: 30px;
+
+			@include breakpoint($tablet) {
+				float: none !important;
+				margin: 0;
+			}
+		}
+
+		.field-name-field-caption {
+			float: left;
+
+			@include breakpoint($tablet) {
+				float: none;
+			}
+		}
+	}
+
+	.field-name-field-caption {
+		clear: both;
+		font-size: 12px;
+		color: #808080;
+	}
+}
+
+// Sidebar masonry fix that
+// a column is getting a 30% of width
+.node-type-article #content_bottom .masonry-item,
+.node-type-my-voice-blog #content_bottom .masonry-item,
+.node-type-school-values #content_bottom .masonry-item {
+  width: auto;
+}
+
+// Article page content not filling column
+.node-type-article {
+	.field-item {
+		float: none;
+	}
+}
+
+// Main container size on tab
+.node-type-page {
+  #main {
+    @include breakpoint($desktop-small) {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Making images in the body field 100% by default
+.field.field-name-body.field-type-text-with-summary {
+	img {
+		max-width: 100%;
+	}
+}

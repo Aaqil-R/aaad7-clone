@@ -33,7 +33,7 @@ h2, .h2 {
   font-size: 45px;
   line-height: 50px;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($tablet-range) {
     font-size: 42px;
     line-height: 47px;
   }
@@ -49,7 +49,7 @@ h3, .h3 {
   font-size: 36px;
   line-height: 40px;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($tablet-range) {
     font-size: 32px;
     line-height: 38px;
   }
@@ -79,12 +79,6 @@ h5, .h5 {
   font-size: 22px;
   line-height: 30px;
 
-  @include breakpoint($tablet) {
-    font-size: 22px;
-    line-height: 47px;
-  }
-
-
   @include breakpoint($mobile) {
     font-size: 20px;
     line-height: 26px;
@@ -94,11 +88,6 @@ h5, .h5 {
 h6, .h6 {
   font-size: 18px;
   line-height: 24px;
-
-  @include breakpoint($tablet) {
-    font-size: 18px;
-    line-height: 24px;
-  }
 }
 
 .subheading {
@@ -108,10 +97,21 @@ h6, .h6 {
   margin: 0 0 20px;
   font-family: $base-font-family;
   color: $base-text-color;
+
+    @include breakpoint($tablet-range) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+
+  @include breakpoint($mini-mobile) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
-p,
-div {
+
+p {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 20px;
@@ -156,12 +156,28 @@ blockquote {
   quotes: none;
   margin-bottom: 30px;
   margin-left: 36px;
+  position: relative;
 
-  q {
+  &:before {
+    content: "";
+    top: 8px;
+    left: -36px;
+    width: 6px;
+    height: calc(100% - 15px);
+    background: #5bc5ed;
+    position: absolute;
+
+    @include breakpoint($mobile) {
+      left: -25px;
+    }
+  }
+
+  q,
+  p {
     font-size: 24px;
     line-height: 36px;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($tablet-range) {
       font-size: 22px;
       line-height: 34px;
     }
@@ -172,47 +188,60 @@ blockquote {
       line-height: 25px;
       margin-left: 25px;
     }
+
+    &:before {
+      content: "\201C";
+      position: relative;
+      font-size: inherit;
+      color: inherit;
+    }
+    &:after {
+      content: "\201D";
+      position: relative;
+      font-size: inherit;
+      color: inherit;
+    }
   }
 }
 
 //new changes with wysiwig editing
-.field-name-body {
-  h2 {
-    font-size: 33px;
+// .field-name-body {
+//   h2 {
+//     font-size: 33px;
 
-    //font-size: 36px;
-    @include breakpoint($tablet) {
-      font-size: 32px;
-    }
-
-
-    @include breakpoint($mobile) {
-      font-size: 27px;
-    }
-  }
-
-  h3 {
-    font-size: 24px;
-
-    //font-size: 27px;
-    @include breakpoint($mobile) {
-      font-size: 24px;
-    }
-  }
-
-  h4 {
-    font-size: 22px;
-
-    @include breakpoint($tablet) {
-      font-size: 22px;
-    }
+//     //font-size: 36px;
+//     @include breakpoint($tablet-range) {
+//       font-size: 32px;
+//     }
 
 
-    @include breakpoint($mobile) {
-      font-size: 20px;
-    }
-  }
-}
+//     @include breakpoint($mobile) {
+//       font-size: 27px;
+//     }
+//   }
+
+//   h3 {
+//     font-size: 24px;
+
+//     //font-size: 27px;
+//     @include breakpoint($mobile) {
+//       font-size: 24px;
+//     }
+//   }
+
+//   h4 {
+//     font-size: 22px;
+
+//     @include breakpoint($tablet-range) {
+//       font-size: 22px;
+//     }
+
+
+//     @include breakpoint($mobile) {
+//       font-size: 20px;
+//     }
+//   }
+// }
 
 //Color Change of H4
 .articles-block h2,
