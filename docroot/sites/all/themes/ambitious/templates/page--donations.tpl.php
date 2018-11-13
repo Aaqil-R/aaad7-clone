@@ -87,9 +87,8 @@
   ?>
 
   <div id="wrapper" class="page" <?php if($backgroundimage): ?>
-           style="background-image: url(('<?php echo file_create_url($backgroundimage['#item']['uri']); ?>')"
-        <?php endif; ?>>
-        >
+           style="background-image: url('<?php echo file_create_url($backgroundimage['#item']['uri']); ?>')"
+        <?php endif; ?> >
     <a class="accessibility" href="#main" accesskey="s">Skip to Content</a>
 
     <!-- including header region into the template -->
