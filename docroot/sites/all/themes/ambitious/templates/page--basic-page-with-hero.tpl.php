@@ -132,9 +132,11 @@
         </div>
       </div>
       <?php if($image): ?>
-        <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+        <div class="region region-image-holder" 
+        style="background-image: url('<?php echo file_create_url($image['#item']['uri']); ?>')">
         </div> 
       <?php endif; ?>
+
       <?php if(isset($node->field_hero_video['und'][0]['video_id'])): ?>
         <div class="u-video__wrapper">
           <iframe class="u-video" id="youtubeVid" src="https://www.youtube.com/embed/<?php print $node->field_hero_video['und'][0]['video_id']  ?>?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;playlist=<?php print $node->field_hero_video['und'][0]['video_id']  ?>&amp;loop=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe> 
