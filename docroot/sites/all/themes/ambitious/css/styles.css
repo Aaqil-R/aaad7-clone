@@ -31191,3 +31191,225 @@ body > .jcf-select-drop.jcf-drop-flipped {
     width: auto;
   }
 }
+/* Basic Accordion Styles */
+/* line 138, ../sass/components/_styles-ast-external.scss */
+.accordion {
+  margin-top: 2em;
+  width: 42em;
+}
+
+/* line 143, ../sass/components/_styles-ast-external.scss */
+.accordion input[name=panel] {
+  display: none;
+}
+
+/* line 146, ../sass/components/_styles-ast-external.scss */
+.accordion label {
+  position: relative;
+  display: block;
+  padding: .75em .5em;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #f07d00;
+  color: white;
+  box-shadow: inset 0 2px 0 #fff;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+
+/* line 160, ../sass/components/_styles-ast-external.scss */
+.accordion label:after {
+  content: "+";
+  position: absolute;
+  right: 1em;
+  width: 1.25em;
+  height: 1.25em;
+  color: #5bc5ed;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  box-sizing: border-box;
+  line-height: 1em;
+  border: 1px solid #5bc5ed;
+}
+
+/* line 174, ../sass/components/_styles-ast-external.scss */
+.accordion label:hover {
+  color: white;
+  background-color: #fbb900;
+}
+
+/* line 178, ../sass/components/_styles-ast-external.scss */
+.accordion input:checked + label {
+  color: white;
+  background-color: #fbb900;
+}
+
+/* line 182, ../sass/components/_styles-ast-external.scss */
+.accordion input:checked + label:after {
+  content: "-";
+  /* adjust line-height to vertically center icon */
+  line-height: 1em;
+}
+
+/* line 187, ../sass/components/_styles-ast-external.scss */
+.accordion .accordion__content {
+  overflow: hidden;
+  max-height: 0em;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 1.5em;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+
+/* line 196, ../sass/components/_styles-ast-external.scss */
+.accordion .accordion__content:not(:last-of-type) {
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.25), inset 4px 0 0 0 #2980b9, inset 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+/* line 199, ../sass/components/_styles-ast-external.scss */
+.accordion .accordion__content .accordion__header {
+  padding: 1em 0;
+}
+
+/* line 202, ../sass/components/_styles-ast-external.scss */
+.accordion .accordion__content p:first-of-type {
+  padding-top: 1em;
+}
+
+/* line 206, ../sass/components/_styles-ast-external.scss */
+input[name=panel]:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+
+/* END accordion styles */
+/* Education section menu version including top-level and AST sub-section menus as per Adrian and Aleks 19 Nov 2018
+*  Note: prior to converting this to a Drupal menu block. We may have to redo these once we go from manual HTML CSS to implementing this and similar menus as Drupal menu blocks
+ */
+/* line 215, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu {
+  border-left: 1px solid #f07d00;
+  padding: .5em;
+  box-sizing: border-box;
+  margin-left: 1.4em;
+  padding-top: 0;
+}
+
+/* line 223, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu h4 {
+  margin-left: 0.2em;
+  margin-bottom: 0;
+}
+
+/* line 228, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu h4 a {
+  text-decoration: none;
+  color: #f07d00;
+}
+
+/* line 233, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* line 240, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu li {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0.2em;
+  padding-left: 0;
+}
+
+/* line 247, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu li h5 {
+  font-size: 1.2em;
+  line-height: 1.1em;
+  color: #f07d00;
+  margin-bottom: 0.1em;
+  margin-top: .5em;
+}
+
+/* line 255, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu li a {
+  display: block;
+  padding: .1em .4rem .1em .2em;
+  padding-left: .5em;
+  color: #f07d00 !important;
+  border: 0px solid #fff;
+  border-radius: 4px;
+  transition: all .3s ease-in-out;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* line 266, ../sass/components/_styles-ast-external.scss */
+.schools-ast-menu li li a {
+  margin-left: .5em;
+  color: #fbb900 !important;
+}
+
+/* END of Education section menu prior to conversion to Drupal menu block */
+@media only screen and (min-width: 768px) {
+  /* line 273, ../sass/components/_styles-ast-external.scss */
+  .accordion {
+    margin-top: 2em;
+    width: 64%;
+  }
+
+  /* line 278, ../sass/components/_styles-ast-external.scss */
+  schools-ast-menu {
+    width: 30%;
+    float: right;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 287, ../sass/components/_styles-ast-external.scss */
+  .visual .img-holder .region-image-holder {
+    min-height: 180px;
+  }
+
+  /* line 290, ../sass/components/_styles-ast-external.scss */
+  .not-front .caption-text {
+    margin-top: 84px;
+  }
+
+  /* line 294, ../sass/components/_styles-ast-external.scss */
+  .not-front .caption-text .caption-text-titles .caption-text-title span {
+    float: left;
+    letter-spacing: -1px;
+    background: #ffffff;
+    padding: 12px 18px 16px 18px;
+    font-size: 2.8rem;
+    line-height: 2.9rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* make sure this is below the non media css for these selectors thanks  */
+  /* line 305, ../sass/components/_styles-ast-external.scss */
+  .schools-ast-menu {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+
+  /* line 311, ../sass/components/_styles-ast-external.scss */
+  .ast-trustees .trustee:first-of-type .details {
+    width: auto;
+  }
+}
+/* utility css flexbox for making horizontal displays of contained blocks */
+/* line 317, ../sass/components/_styles-ast-external.scss */
+.flex-container-aaa {
+  display: flex;
+  flex-wrap: wrap;
+}

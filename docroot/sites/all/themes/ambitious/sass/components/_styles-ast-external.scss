@@ -133,3 +133,188 @@
 @media only screen and (max-width: 480px) {
  .trustee .details {width: auto;}
 }
+
+/* Basic Accordion Styles */
+.accordion {
+  margin-top: 2em;
+width: 42em;
+}
+
+.accordion input[name=panel] {
+  display: none;
+}
+.accordion label {
+     position: relative;
+    display: block;
+    padding: .75em .5em;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: rgba(240, 125, 0, 1);
+    color: white;
+    box-shadow: inset 0 2px 0 #fff;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+
+.accordion label:after {
+content: "+";
+    position: absolute;
+    right: 1em;
+    width: 1.25em;
+    height: 1.25em;
+    color: rgba(91, 197, 237, 1);
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-sizing: border-box;
+    line-height: 1em;
+    border: 1px solid rgba(91, 197, 237, 1);
+}
+.accordion label:hover {
+  color: white;
+  background-color: rgba(251, 185, 0, 1);
+}
+.accordion input:checked + label {
+  color: white;
+  background-color: rgba(251, 185, 0, 1);
+}
+.accordion input:checked + label:after {
+  content: "-";
+  /* adjust line-height to vertically center icon */
+  line-height: 1em;
+}
+.accordion .accordion__content {
+  overflow: hidden;
+    max-height: 0em;
+box-sizing: border-box;
+    position: relative;
+    padding: 0 1.5em;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+.accordion .accordion__content:not(:last-of-type) {
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.25), inset 4px 0 0 0 #2980b9, inset 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+.accordion .accordion__content .accordion__header {
+  padding: 1em 0;
+}
+.accordion .accordion__content p:first-of-type {
+ padding-top:1em;
+}
+
+input[name=panel]:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+/* END accordion styles */
+
+/* Education section menu version including top-level and AST sub-section menus as per Adrian and Aleks 19 Nov 2018
+*  Note: prior to converting this to a Drupal menu block. We may have to redo these once we go from manual HTML CSS to implementing this and similar menus as Drupal menu blocks
+ */
+.schools-ast-menu {
+    border-left: 1px solid rgba(240, 125, 0, 1);
+    padding: .5em;
+    box-sizing: border-box;
+    margin-left: 1.4em;
+    padding-top:0;
+}
+
+.schools-ast-menu h4 {
+    margin-left: 0.2em;
+    margin-bottom: 0;
+}
+
+.schools-ast-menu h4 a {
+    text-decoration: none;
+    color: rgba(240, 125, 0, 1);
+}
+
+.schools-ast-menu ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.schools-ast-menu li {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0.2em;
+    padding-left: 0;
+}
+
+.schools-ast-menu li h5 {
+font-size: 1.2em;
+    line-height: 1.1em;
+    color: rgba(240, 125, 0, 1);
+    margin-bottom: 0.1em;
+    margin-top: .5em;
+}
+
+.schools-ast-menu li a {
+    display: block;
+    padding: .1em .4rem .1em .2em;
+    padding-left: .5em;
+    color: rgba(240, 125, 0, 1) !important;
+    border: 0px solid #fff;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.schools-ast-menu li li a {
+    margin-left: .5em;
+    color: rgba(251, 185, 0, 1) !important;
+}
+/* END of Education section menu prior to conversion to Drupal menu block */
+
+@media only screen and (min-width: 768px) {
+.accordion {
+    margin-top: 2em;
+    width: 64%;
+}
+
+schools-ast-menu {
+    width: 30%;
+    float: right;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    .visual .img-holder .region-image-holder {
+        min-height: 180px;
+    }
+    .not-front .caption-text {
+        margin-top: 84px;
+    }
+
+    .not-front .caption-text .caption-text-titles .caption-text-title span {
+        float: left;
+        letter-spacing: -1px;
+        background: #ffffff;
+        padding: 12px 18px 16px 18px;
+        font-size: 2.8rem;
+        line-height: 2.9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {  /* make sure this is below the non media css for these selectors thanks  */
+    .schools-ast-menu {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 1.5em;
+    }
+    .ast-trustees .trustee:first-of-type .details {
+        width: auto;
+    }
+}
+
+/* utility css flexbox for making horizontal displays of contained blocks */
+.flex-container-aaa {
+    display: flex;
+    flex-wrap: wrap;
+}
