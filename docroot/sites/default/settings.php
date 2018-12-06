@@ -266,8 +266,19 @@ $drupal_hash_salt = '';
  * It is not allowed to have a trailing slash; Drupal will add it
  * for you.
  */
-# $base_url = 'http://www.example.com';  // NO trailing slash!
-
+// $base_url = 'http://www.example.com';  // NO trailing slash!
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+	switch ($_ENV['AH_SITE_ENVIRONMENT'])
+    {
+    case 'dev': $base_url = 'https://ambitiousaboutautismzqxcu3kr3v.devcloud.acquia-sites.com';
+            break;
+    case 'test': $base_url = 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com';
+             break;
+    case 'prod': $base_url = 'https://www.ambitiousaboutautism.org.uk';
+            break;
+    }
+}
+// $base_url = "http://ambitiousaboutautism.dev.dd:8083";
 /**
  * PHP settings:
  *
@@ -590,3 +601,19 @@ if (file_exists('/var/www/site-php')) {
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/ambitiousaboutautism/ambitiousaboutautism-settings.inc');
 }
+
+/**
+ * Memcache configs
+ *
+ */
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['lock_inc'] = 'sites/all/modules/contrib/memcache/memcache-lock.inc';
+$conf['memcache_stampede_protection'] = TRUE;
+$conf['cache_default_class'] = 'MemCacheDrupal';
+
+  // The 'cache_form' bin must be assigned to non-volatile storage.
+  $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+
+  // Don't bootstrap the database when serving pages from the cache.
+  $conf['page_cache_without_database'] = TRUE;
+  $conf['page_cache_invoke_hooks'] = FALSE;
