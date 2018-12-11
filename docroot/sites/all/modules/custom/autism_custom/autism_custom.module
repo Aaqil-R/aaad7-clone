@@ -356,8 +356,8 @@ function autism_custom_form_alter(&$form, &$form_state, $form_id) {
     //check the current time
     $nowtime = time();
     foreach ($form['field_event_tid']['#options'] as $tid => $val){  
+      $count = 0;
       if($tid!= "All"){
-        $count = 0;
         //check the values of the event start date 
         $testarray = (taxonomy_select_nodes($tid, FALSE));
         //getting the array count
