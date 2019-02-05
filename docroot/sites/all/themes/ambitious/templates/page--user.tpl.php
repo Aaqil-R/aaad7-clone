@@ -143,25 +143,19 @@
 <?php endif; ?>	
 <main id="main" role="main"> 
 			<nav id="sidebar">
-			     <?php if($user->uid OR $page['content']['system_main']['#account']->uid) {?>
-			     <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
+	     <?php if($user->uid == arg(1) || user_access('administer users') ): ?>
 				<ul>
 					<li><a href="/user" class="active">My profile</a></li>
-					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Edit profile</a></li>
-					<li><a href="/user/<?php print $page['content']['system_main']['#account']->uid; ?>/edit">Reset password</a></li>
+					<li><a href="/user/<?php print arg(1); ?>/edit">Edit profile</a></li>
+					<li><a href="/user/<?php print arg(1); ?>/edit">Reset password</a></li>
 					<li class="show_mobile"><a href="/user/logout" >Logout</a></li>
 				</ul>
 				<?php else: ?>
 				<ul>
 					<li><a href="/user" class="active">User profile</a></li>
-			     </ul>
-			     <?php endif; ?>
-                
-			     <?php } else {
-			         print render($tabs);
-			       }
-			     ?>
-			</nav>
+		     </ul>
+		     <?php endif; ?>
+       </nav>
                
 			<div class="profile-body">
 				<div class="holder">
