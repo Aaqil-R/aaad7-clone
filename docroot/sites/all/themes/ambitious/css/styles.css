@@ -794,9 +794,23 @@ table {
   margin-top: 30px;
   padding: 0 0.5em;
 }
+
+.node-type-opportunities #content-header {
+  margin-top: 30px;
+  padding: 0 0.5em;  
+}
+
+.node-type-opportunities #wrapper,
+.node-type-opportunities #main {
+  background-color: #ffffff; 
+}
 @media (max-width: 767px) {
   /* line 269, ../sass/_common.scss */
   .node-type-job-vacancy #content-header {
+    margin-top: 220px;
+    padding: 0 1.5em;
+  }
+  .node-type-opportunities #content-header {
     margin-top: 220px;
     padding: 0 1.5em;
   }
@@ -6683,7 +6697,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 
 /* line 137, ../sass/layouts/_pages.scss */
-.node-events, .node-courses, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns,
+.node-events, .node-courses, .node-opportunities, .node-type-volunteer, .node-type-newsletter, .node-type-campaigns,
 .node-type-webform, .webform-share-your-story, .page-signup-form, .node-donations {
   background: #ffffff;
 }
@@ -29788,7 +29802,7 @@ iframe {
   padding: 40px 20px 20px 20px;
 }
 /* line 1441, ../sass/_general.scss */
-.node-type-events .details-box, .node-type-courses .details-box, .node-type-volunteer .details-box, .node-type-newsletter .details-box, .node-type-campaigns .details-box, .node-type-share-your-story .details-box {
+.node-type-events .details-box, .node-type-courses .details-box, .node-type-opportunities .details-box, .node-type-volunteer .details-box, .node-type-newsletter .details-box, .node-type-campaigns .details-box, .node-type-share-your-story .details-box {
   background: #F3F3F3;
   border-radius: 5px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
@@ -29801,7 +29815,7 @@ iframe {
   }*/
 }
 /* line 1454, ../sass/_general.scss */
-.node-type-events .details-box .details-title, .node-type-courses .details-box .details-title, .node-type-volunteer .details-box .details-title, .node-type-newsletter .details-box .details-title, .node-type-campaigns .details-box .details-title, .node-type-share-your-story .details-box .details-title {
+.node-type-events .details-box .details-title, .node-type-courses .details-box .details-title, .node-type-opportunities .details-box .details-title, .node-type-volunteer .details-box .details-title, .node-type-newsletter .details-box .details-title, .node-type-campaigns .details-box .details-title, .node-type-share-your-story .details-box .details-title {
   border-bottom: 1px solid #CACACA;
   padding: 15px;
 }
@@ -29809,6 +29823,7 @@ iframe {
 .node-type-events .details-box .details-time,
 .node-type-events .details-box .details-location, .node-type-courses .details-box .details-time,
 .node-type-courses .details-box .details-location, .node-type-volunteer .details-box .details-time,
+.node-type-opportunities .details-box .details-location,
 .node-type-volunteer .details-box .details-location, .node-type-newsletter .details-box .details-time,
 .node-type-newsletter .details-box .details-location, .node-type-campaigns .details-box .details-time,
 .node-type-campaigns .details-box .details-location, .node-type-share-your-story .details-box .details-time,
@@ -29820,6 +29835,7 @@ iframe {
 .node-type-events .details-box .details-time p,
 .node-type-events .details-box .details-location p, .node-type-courses .details-box .details-time p,
 .node-type-courses .details-box .details-location p, .node-type-volunteer .details-box .details-time p,
+.node-type-opportunities .details-box .details-location p,
 .node-type-volunteer .details-box .details-location p, .node-type-newsletter .details-box .details-time p,
 .node-type-newsletter .details-box .details-location p, .node-type-campaigns .details-box .details-time p,
 .node-type-campaigns .details-box .details-location p, .node-type-share-your-story .details-box .details-time p,
@@ -29834,6 +29850,7 @@ iframe {
   .node-type-events .details-box .details-time p,
   .node-type-events .details-box .details-location p, .node-type-courses .details-box .details-time p,
   .node-type-courses .details-box .details-location p, .node-type-volunteer .details-box .details-time p,
+  .node-type-opportunities .details-box .details-location p,
   .node-type-volunteer .details-box .details-location p, .node-type-newsletter .details-box .details-time p,
   .node-type-newsletter .details-box .details-location p, .node-type-campaigns .details-box .details-time p,
   .node-type-campaigns .details-box .details-location p, .node-type-share-your-story .details-box .details-time p,
@@ -29845,6 +29862,7 @@ iframe {
 .node-type-events .details-box .details-time p:first-child,
 .node-type-events .details-box .details-location p:first-child, .node-type-courses .details-box .details-time p:first-child,
 .node-type-courses .details-box .details-location p:first-child, .node-type-volunteer .details-box .details-time p:first-child,
+.node-type-opportunities .details-box .details-location p:first-child,
 .node-type-volunteer .details-box .details-location p:first-child, .node-type-newsletter .details-box .details-time p:first-child,
 .node-type-newsletter .details-box .details-location p:first-child, .node-type-campaigns .details-box .details-time p:first-child,
 .node-type-campaigns .details-box .details-location p:first-child, .node-type-share-your-story .details-box .details-time p:first-child,
@@ -29857,6 +29875,7 @@ iframe {
   .node-type-events .details-box .details-time p:first-child,
   .node-type-events .details-box .details-location p:first-child, .node-type-courses .details-box .details-time p:first-child,
   .node-type-courses .details-box .details-location p:first-child, .node-type-volunteer .details-box .details-time p:first-child,
+  .node-type-opportunities .details-box .details-location p:first-child,
   .node-type-volunteer .details-box .details-location p:first-child, .node-type-newsletter .details-box .details-time p:first-child,
   .node-type-newsletter .details-box .details-location p:first-child, .node-type-campaigns .details-box .details-time p:first-child,
   .node-type-campaigns .details-box .details-location p:first-child, .node-type-share-your-story .details-box .details-time p:first-child,
@@ -29865,11 +29884,11 @@ iframe {
   }
 }
 /* line 1490, ../sass/_general.scss */
-.node-type-events .details-box .details-time, .node-type-courses .details-box .details-time, .node-type-volunteer .details-box .details-time, .node-type-newsletter .details-box .details-time, .node-type-campaigns .details-box .details-time, .node-type-share-your-story .details-box .details-time {
+.node-type-events .details-box .details-time, .node-type-courses .details-box .details-time, .node-type-opportunities .details-box .details-time, .node-type-volunteer .details-box .details-time, .node-type-newsletter .details-box .details-time, .node-type-campaigns .details-box .details-time, .node-type-share-your-story .details-box .details-time {
   margin-bottom: 1.5em;
 }
 /* line 1494, ../sass/_general.scss */
-.node-type-events .details-box .details-time p:first-child, .node-type-courses .details-box .details-time p:first-child, .node-type-volunteer .details-box .details-time p:first-child, .node-type-newsletter .details-box .details-time p:first-child, .node-type-campaigns .details-box .details-time p:first-child, .node-type-share-your-story .details-box .details-time p:first-child {
+.node-type-events .details-box .details-time p:first-child, .node-type-courses .details-box .details-time p:first-child, .node-type-opportunities .details-box .details-time p:first-child, .node-type-volunteer .details-box .details-time p:first-child, .node-type-newsletter .details-box .details-time p:first-child, .node-type-campaigns .details-box .details-time p:first-child, .node-type-share-your-story .details-box .details-time p:first-child {
   padding-right: 2.8em;
 }
 
@@ -29889,7 +29908,7 @@ iframe {
 }
 
 /* line 1526, ../sass/_general.scss */
-.node-type-events .content-header .status, .node-type-course .content-header .status, .node-type-volunteer .content-header .status, .node-type-newsletter .content-header .status, .node-type-campaigns .content-header .status, .node-type-share-your-story .content-header .status {
+.node-type-events .content-header .status, .node-type-course .content-header .status, .node-type-volunteer .content-header .status, .node-type-opportunities .content-header .status, .node-type-newsletter .content-header .status, .node-type-campaigns .content-header .status, .node-type-share-your-story .content-header .status {
   width: 100%;
   float: left;
   margin-left: 0;
@@ -29898,7 +29917,7 @@ iframe {
   text-align: center;
 }
 /* line 1532, ../sass/_general.scss */
-.node-type-events .content-header .status p, .node-type-course .content-header .status p, .node-type-volunteer .content-header .status p, .node-type-newsletter .content-header .status p, .node-type-campaigns .content-header .status p, .node-type-share-your-story .content-header .status p {
+.node-type-events .content-header .status p, .node-type-course .content-header .status p, .node-type-volunteer .content-header .status p, .node-type-opportunities .content-header .status p, .node-type-newsletter .content-header .status p, .node-type-campaigns .content-header .status p, .node-type-share-your-story .content-header .status p {
   color: white;
 }
 
@@ -29973,7 +29992,7 @@ iframe {
   margin-bottom: 50px;
 }
 /* line 1610, ../sass/_general.scss */
-.view-display-id-list_vacancies_page .search-text.job-category.forum-page,
+.view-display-id-list_vacancies_page .search-text.job-category.forum-page, .view-display-id-opportunities_opportunities_page,
 .view-display-id-list_vacancies_page fieldset.form-item.form-type-textfield.form-item-title {
   display: block;
   margin-left: 25px;
