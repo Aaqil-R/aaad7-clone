@@ -90,19 +90,22 @@
       hide($content['links']);
     ?>
 
-  <?php print render($title_prefix); ?>
+  <!-- <?php //print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php //print $title; ?></a></h2>
+    <h2<?php //print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php //print $title; ?></a></h2>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
+  <?php //print render($title_suffix); ?> -->
 
+<!-- My custom code -->
 
-<!-- My codes to display the events -->
-<div>
-  <p align="right">
-    <img style="margin-bottom: 15px;" width="312px" height="187px" src="<?php print file_create_url($content['field_company_logo']['#object']->field_company_logo['und'][0]['uri']); ?>" />
-  </p>  
-</div>
+<!-- <div id="wrapper-opportunities">
+  <div id="leftcolumn-opportunities">
+    <h1 class="title">Business Director</h1>
+  </div>
+  <div id="rightcolumn-opportunities">
+    <img style="margin-bottom: 5px; margin-left: 150px;" width="312px" height="187px" src="<?php print file_create_url($content['field_company_logo']['#object']->field_company_logo['und'][0]['uri']); ?>" />
+  </div>
+</div> -->
 
 <div>
   <div class="details-box">
