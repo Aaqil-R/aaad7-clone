@@ -123,13 +123,13 @@
                 <?php endif; ?>        
               <?php endif; ?>
               </div>
-              <?php print views_embed_view('card_stream', 'block_2');  ?>
             </div>
           <?php endif; ?>
         </div>
       </div>
       <?php if($image): ?>
         <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+          <?php print render($page['caption_holder']); ?>
         </div> 
       <?php endif; ?>
       <?php if(isset($node->field_hero_video['und'][0]['video_id'])): ?>
