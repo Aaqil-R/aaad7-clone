@@ -128,7 +128,7 @@
         </div>
       </div>
       <?php if($image): ?>
-        <div class="region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+        <div class="home region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
           <?php print render($page['caption_holder']); ?>
         </div> 
       <?php endif; ?>
