@@ -31468,6 +31468,10 @@ input[name=panel]:checked ~ .accordion__content {
 /**/
 /* line 362, ../sass/components/_styles-ast-external.scss */
 .homepage-cta {
+  top: 50px;
+  left: 25px;
+  width: 33vw;
+  max-width: 40%;
   position: absolute;
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.87);
@@ -31476,19 +31480,19 @@ input[name=panel]:checked ~ .accordion__content {
 @media (max-width: 768px) {
   /* line 362, ../sass/components/_styles-ast-external.scss */
   .homepage-cta {
-    top: 50px;
-    left: 25px;
-    width: 33vw;
-    max-width: 40%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100%;
   }
 }
 
-/* line 376, ../sass/components/_styles-ast-external.scss */
+/* line 380, ../sass/components/_styles-ast-external.scss */
 .front.no-frame .visual .img-holder .caption-frame {
   display: none;
 }
 
-/* line 380, ../sass/components/_styles-ast-external.scss */
+/* line 384, ../sass/components/_styles-ast-external.scss */
 .front .region.region-caption-holder {
   margin: 0 auto;
   max-width: 1080px;
@@ -31496,7 +31500,7 @@ input[name=panel]:checked ~ .accordion__content {
 }
 
 @media (max-width: 768px) {
-  /* line 387, ../sass/components/_styles-ast-external.scss */
+  /* line 391, ../sass/components/_styles-ast-external.scss */
   .front .visual .img-holder .region-image-holder {
     min-height: 50vh;
   }
