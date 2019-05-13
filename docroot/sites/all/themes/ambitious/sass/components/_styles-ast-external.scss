@@ -358,14 +358,18 @@ schools-ast-menu {
 }
 
 /**/
+
 .homepage-cta {
-    position: absolute;
+    @include breakpoint($tablet) {
+        position: absolute;
+        padding: 25px;
+        background-color: rgba(255,255,255,0.87);
+        border-radius: 10px;
+    }
+
     top: 50px;
     left: 25px;
     width: 33vw;
-    padding: 25px;
-    background-color: rgba(255,255,255,0.87);
-    border-radius: 10px;
     max-width: 40%;
 }
 
@@ -378,4 +382,11 @@ schools-ast-menu {
     max-width: 1080px;
     position: relative;
 }
+
+@include breakpoint($tablet) {
+    .front .visual .img-holder .region-image-holder {
+        min-height: 50vh;
+    }
+}
+
 /**/
