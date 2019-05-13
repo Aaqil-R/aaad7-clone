@@ -31468,18 +31468,18 @@ input[name=panel]:checked ~ .accordion__content {
 /**/
 /* line 362, ../sass/components/_styles-ast-external.scss */
 .homepage-cta {
-  top: 50px;
-  left: 25px;
-  width: 33vw;
-  max-width: 40%;
+  position: absolute;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.87);
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   /* line 362, ../sass/components/_styles-ast-external.scss */
   .homepage-cta {
-    position: absolute;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.87);
-    border-radius: 10px;
+    top: 50px;
+    left: 25px;
+    width: 33vw;
+    max-width: 40%;
   }
 }
 
