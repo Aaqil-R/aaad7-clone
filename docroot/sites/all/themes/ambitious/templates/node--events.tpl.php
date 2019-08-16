@@ -164,25 +164,32 @@
     * this ($buttonText) will set the submit button text if there is a value is set from the cms
     * if there is no text specified 'Signup' is printed. 
     */
-    $buttonText = 'Sign up';
-    if(isset($node->field_button_text['und'][0]['value'])){
-      $buttonText = $node->field_button_text['und'][0]['value'];
+    if(isset($node->field_sign_up_url['und'][0]['title'])){
+      $buttonText = $node->field_sign_up_url['und'][0]['title'];
+    }
+
+    if(isset($node->field_sign_up_url['und'][0]['url'])){
+      $link = $node->field_sign_up_url['und'][0]['url'];
     }
   ?>
 
   <?php if(isset($content['field_bsd_tools_integration'])): ?>
-      <a class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>">
+      <a target="_blank" class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>">
       <?php print $buttonText; ?>
       </a>
   <?php else : 
     //generating the link including the parameters.
     //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
-    $link = $nodeid;
+    //$link = $nodeid;
     $content_title = strtolower(str_replace(" ","-", $title));
   ?>
-    <a class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>">
+ 
+  <?php if(isset($node->field_sign_up_url['und'][0]['title'])): ?>
+    <a target="_blank" class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>">
     <?php print $buttonText; ?>      
     </a>
+    <?php endif; ?>
+ 
     <!-- <a class="btn btn-external-link" href="/signup-form/<?php print $type; ?>/<?php print $content_title; ?>/<?php print render($link); ?>"> Signup </a> -->
   <?php endif; ?>
   <?php
