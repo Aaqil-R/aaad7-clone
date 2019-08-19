@@ -172,20 +172,22 @@
       $link = $node->field_sign_up_url['und'][0]['url'];
     }
   ?>
-
+  
   <?php if(isset($content['field_bsd_tools_integration'])): ?>
+  <?php if(isset($node->field_sign_up_url['und'][0]['title'])): ?>
       <a target="_blank" class="btn btn-external-link" href="<?php print render($viewexternal_link); ?>">
       <?php print $buttonText; ?>
       </a>
+      <?php endif; ?>
   <?php else : 
     //generating the link including the parameters.
     //$link = $nodeid."?type=".$type."&eventcode=".$eventcode;
     //$link = $nodeid;
     $content_title = strtolower(str_replace(" ","-", $title));
   ?>
- 
+
   <?php if(isset($node->field_sign_up_url['und'][0]['title'])): ?>
-    <a target="_blank" class="btn btn-external-link" href="/signup-form/<?php print render($link); ?>">
+    <a target="_blank" class="btn btn-external-link" href="<?php print render($link); ?>">
     <?php print $buttonText; ?>      
     </a>
     <?php endif; ?>
