@@ -4,10 +4,7 @@ require('init.php');
 function stripe_custom_init()
 {
   // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
-  if ($_SESSION['stripe_custom']['payment_session']) {
-    var_dump($_SESSION['stripe_custom']['payment_session']);
-    die();
-  }
+
 }
 
 //Function to format the number to full integer
@@ -170,7 +167,8 @@ function stripe_custom_webform_submission_presave($node, $submission)
           //lists_session("payment_session", $val1->id);
           drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
           //dpm("recurring Subscriber subscribed Sucessfully");
-          sendmail($nid, $email, $emailname);
+          //sendmail($nid, $email, $emailname);
+          lists_session("payment_session", $val1->id);
           //stripe_custom_create_session('name' , $card1['name']);
           //lists_session("s_key", $card1['name']);
           lists_session("total", $csv['amount']);
@@ -212,10 +210,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
       $val1 = create_onetime_patment($card1, $select_an_amount, $formid, $email, $csv, $nid);
       if ($val1->id) {
 
-        //lists_session("payment_session", $val1->id);
+        lists_session("payment_session", $val1->id);
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
-        sendmail($nid, $email, $emailname);
+       // sendmail($nid, $email, $emailname);
         //lists_session("s_key", $card1['name']);
         lists_session("total", $csv['amount']);
         lists_session("sku", 'GeneralDonation');
@@ -363,7 +361,7 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
       "currency" => "gbp",
       "id" => $id,
       'receipt_email' => $email,
-      "trial_period_days" => intval($trial_period))
+      "trial_period_days" => 0)
   );
   return $plan;
 
