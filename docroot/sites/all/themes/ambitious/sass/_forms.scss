@@ -1291,16 +1291,7 @@ div.modal-forms-modal-content .form-item label {
       &:checked {
         + label {
           &:after {
-            top: -80px;
-
-            @include breakpoint($all-large-mobile) {
-              top: -75px;
-            }
-
-
-            @include breakpoint($not-mobile) {
-              top: -55px;
-            }
+            top: -6px;
           }
         }
       }
