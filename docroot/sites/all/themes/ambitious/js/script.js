@@ -205,6 +205,19 @@
             // end document.ready
 
             $(document).ajaxComplete(function() {
+              if(Drupal.settings.stripe_custom) {
+                var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
+                stripe.redirectToCheckout({
+                  // Make the id field from the Checkout Session creation API response
+                  // available to this file, so you can provide it as parameter here
+                  // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+                  sessionId: Drupal.settings.stripe_custom.payment_session
+                }).then(function (result) {
+                  // If `redirectToCheckout` fails due to a browser or network
+                  // error, display the localized error message to your customer
+                  // using `result.error.message`.
+                });
+              }
 
                 $('.view-display-id-stream_forum_page').mobileNav({
                     hideOnClickOutside: true,

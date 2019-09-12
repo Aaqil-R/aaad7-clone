@@ -41,6 +41,7 @@
       <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
       <![endif]-->
     <?php endif; ?>
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
