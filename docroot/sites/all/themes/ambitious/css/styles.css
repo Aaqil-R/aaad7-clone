@@ -5966,7 +5966,7 @@ div.modal-forms-modal-content .form-item label {
   color: #F15500;
   transition: all .2s;
   position: absolute;
-  top: -25px;
+  top: -6px;
   left: 2px;
 }
 /* line 1238, ../sass/_forms.scss */
@@ -6992,19 +6992,19 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 @media (min-width: 480px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 20%;
+    width: 10%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 40%;
+    width: 10%;
   }
 }
 @media (min-width: 767px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 20%;
+    width: 10%;
   }
 }
 /* line 409, ../sass/layouts/_pages.scss */
@@ -7027,7 +7027,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 /* line 426, ../sass/layouts/_pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.webform-step:nth-child(2) {
-  left: 50%;
+  left: 100%;
 }
 /* line 430, ../sass/layouts/_pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.webform-step:nth-child(3) {
@@ -7394,14 +7394,13 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
   width: 100%;
   background: #fbba00;
-  border-bottom: 5px solid #f07d2c;
   margin-bottom: 10px;
 }
 @media (min-width: 767px) {
   /* line 902, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
     width: 35%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 /* line 917, ../sass/layouts/_pages.scss */
@@ -7456,42 +7455,43 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 /* line 972, ../sass/layouts/_pages.scss */
 .page-node-done #wrapper .sharethis-buttons,
 .node-type-thank-you-page #wrapper .sharethis-buttons {
-  float: left;
+  margin: 10px 0;
+  display: inline-block;
   margin-top: 20px;
   width: 45%;
   background: #ffffff;
   border: 1px solid #d2d5d6;
   padding: 7px 18px 0 18px;
 }
-/* line 982, ../sass/layouts/_pages.scss */
+/* line 984, ../sass/layouts/_pages.scss */
 .page-node-done #wrapper .sharethis-buttons p.text-center,
 .node-type-thank-you-page #wrapper .sharethis-buttons p.text-center {
   text-align: right;
   margin: 0;
 }
 
-/* line 1078, ../sass/layouts/_pages.scss */
+/* line 1080, ../sass/layouts/_pages.scss */
 .pgae-download-donations #main {
   padding-bottom: 50px;
 }
 
-/* line 1084, ../sass/layouts/_pages.scss */
+/* line 1086, ../sass/layouts/_pages.scss */
 .section-policy h1.title {
   display: none;
 }
 
-/* line 1089, ../sass/layouts/_pages.scss */
+/* line 1091, ../sass/layouts/_pages.scss */
 .gsc-overflow-hidden {
   overflow: auto !important;
 }
 
-/* line 1093, ../sass/layouts/_pages.scss */
+/* line 1095, ../sass/layouts/_pages.scss */
 .gsc-results-wrapper-visible {
   opacity: 1 !important;
   visibility: visible !important;
 }
 
-/* line 1098, ../sass/layouts/_pages.scss */
+/* line 1100, ../sass/layouts/_pages.scss */
 .gsc-results-wrapper-overlay {
   border: inherit;
   margin: inherit;
@@ -7506,7 +7506,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   top: 0 !important;
 }
 
-/* line 1112, ../sass/layouts/_pages.scss */
+/* line 1114, ../sass/layouts/_pages.scss */
 .gsc-modal-background-image {
   position: static !important;
   height: 100%;
@@ -7514,12 +7514,12 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   background-color: transparent;
 }
 
-/* line 1119, ../sass/layouts/_pages.scss */
+/* line 1121, ../sass/layouts/_pages.scss */
 .gsc-control-cse div {
   position: relative !important;
   z-index: 0;
 }
-/* line 1123, ../sass/layouts/_pages.scss */
+/* line 1125, ../sass/layouts/_pages.scss */
 .gsc-control-cse div.gs-image-box {
   width: 80px !important;
   position: absolute !important;
@@ -7527,24 +7527,24 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   top: 0;
 }
 
-/* line 1131, ../sass/layouts/_pages.scss */
+/* line 1133, ../sass/layouts/_pages.scss */
 .gs-bidi-start-align.gs-snippet {
   padding-left: 102px;
 }
 
-/* line 1135, ../sass/layouts/_pages.scss */
+/* line 1137, ../sass/layouts/_pages.scss */
 .gsc-wrapper {
   position: relative;
 }
 
-/* line 1139, ../sass/layouts/_pages.scss */
+/* line 1141, ../sass/layouts/_pages.scss */
 .cse .gsc-control-cse,
 .gsc-control-cse {
   padding: 0 !important;
   border: none !important;
 }
 
-/* line 1145, ../sass/layouts/_pages.scss */
+/* line 1147, ../sass/layouts/_pages.scss */
 form.gsc-search-box,
 .gsc-above-wrapper-area,
 .gsc-results-close-btn,
@@ -7555,13 +7555,13 @@ form.gsc-search-box,
   display: none !important;
 }
 
-/* line 1155, ../sass/layouts/_pages.scss */
+/* line 1157, ../sass/layouts/_pages.scss */
 table.gsc-table-result tr:nth-child(odd) td,
 table tr.odd td {
   background: white;
 }
 
-/* line 1160, ../sass/layouts/_pages.scss */
+/* line 1162, ../sass/layouts/_pages.scss */
 .gsc-webResult.gsc-result,
 .gsc-results .gsc-imageResult {
   background: white !important;
@@ -7574,12 +7574,12 @@ table tr.odd td {
   min-height: 125px;
 }
 
-/* line 1172, ../sass/layouts/_pages.scss */
+/* line 1174, ../sass/layouts/_pages.scss */
 .gsc-tabData.gsc-tabdActive {
   background: #eef2f3;
 }
 
-/* line 1179, ../sass/layouts/_pages.scss */
+/* line 1181, ../sass/layouts/_pages.scss */
 .gs-webResult.gs-result a.gs-title b, .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:focus, .gs-webResult.gs-result a.gs-title:visited,
 .gs-imageResult a.gs-title b,
 .gs-imageResult a.gs-title:link,
@@ -7594,7 +7594,7 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
 }
 
-/* line 1194, ../sass/layouts/_pages.scss */
+/* line 1196, ../sass/layouts/_pages.scss */
 .gs-webResult .gs-snippet,
 .gs-imageResult .gs-snippet,
 .gs-fileFormatType {
@@ -7602,63 +7602,63 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
 
-/* line 1201, ../sass/layouts/_pages.scss */
+/* line 1203, ../sass/layouts/_pages.scss */
 #search-form #edit-keys {
   height: 45px;
 }
 
-/* line 1205, ../sass/layouts/_pages.scss */
+/* line 1207, ../sass/layouts/_pages.scss */
 .gs-result .gs-title,
 .gsc-control-cse .gsc-table-result {
   padding-left: 48px;
 }
 
-/* line 1210, ../sass/layouts/_pages.scss */
+/* line 1212, ../sass/layouts/_pages.scss */
 .gsc-thumbnail {
   padding: 0 !important;
 }
 
-/* line 1214, ../sass/layouts/_pages.scss */
+/* line 1216, ../sass/layouts/_pages.scss */
 .gs-web-image-box-portrait {
   height: 85px !important;
 }
-/* line 1217, ../sass/layouts/_pages.scss */
+/* line 1219, ../sass/layouts/_pages.scss */
 .gs-web-image-box-portrait img.gs-image {
   max-width: 80px !important;
   max-height: 80px !important;
 }
 
-/* line 1223, ../sass/layouts/_pages.scss */
+/* line 1225, ../sass/layouts/_pages.scss */
 .gs-snippet {
   color: #2a2e31 !important;
 }
 
-/* line 1227, ../sass/layouts/_pages.scss */
+/* line 1229, ../sass/layouts/_pages.scss */
 .gs-web-image-box-landscape img.gs-image {
   max-width: 85px !important;
 }
 
-/* line 1231, ../sass/layouts/_pages.scss */
+/* line 1233, ../sass/layouts/_pages.scss */
 .gsc-cursor-box {
   text-align: center !important;
   margin: 60px 0 30px !important;
 }
-/* line 1234, ../sass/layouts/_pages.scss */
+/* line 1236, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page {
   background-color: transparent !important;
   color: #2a2e31 !important;
   font-size: 24px;
 }
-/* line 1238, ../sass/layouts/_pages.scss */
+/* line 1240, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page:hover, .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
   color: #f07d00 !important;
 }
-/* line 1243, ../sass/layouts/_pages.scss */
+/* line 1245, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page:hover {
   text-decoration: none !important;
 }
 
-/* line 1249, ../sass/layouts/_pages.scss */
+/* line 1251, ../sass/layouts/_pages.scss */
 .gsc-table-result {
   margin-bottom: 0 !important;
 }
