@@ -4,8 +4,9 @@ require('init.php');
 function stripe_custom_init()
 {
   // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
-  if ($_SESSION['stripe_custom']['create_plan']) {
-    var_dump($_SESSION['stripe_custom']['create_plan']);
+  if ($_SESSION['stripe_custom']['payment_session']) {
+    var_dump($_SESSION['stripe_custom']['payment_session']);
+    die();
   }
 }
 
