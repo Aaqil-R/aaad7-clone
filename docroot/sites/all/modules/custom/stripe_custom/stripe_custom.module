@@ -345,7 +345,7 @@ function create_subscriber($plan)
 function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
 {
 //	try {
-  dpm(serialize($csv));
+  dpm( '>> create_plan ->>>'.serialize($csv));
   $dataset = array(
     'amount' => $amount,
     'name' => $name,
