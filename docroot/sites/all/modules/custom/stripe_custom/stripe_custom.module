@@ -244,7 +244,8 @@ function stripe_custom_webform_submission_presave($node, $submission)
 
 function create_subscriber($plan,$trial_period )
 {
-  //try {
+
+  watchdog('create_subscriber' ,$trial_period);
   \Stripe\Stripe::setApiKey(get_api());
   return $session = \Stripe\Checkout\Session::create(
     [
