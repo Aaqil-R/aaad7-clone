@@ -75,26 +75,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $csv['email'] = $email;
           break;
 
-        //Third page details
-        /*				case 'card_number':
-                  $cardnumber = $submission->data[$key][0];
-                  //masking the number
-                  $maskedcardnumber = maskstring($submission->data[$key][0]);
-                  $submission->data[$key][0] = $maskedcardnumber;
-                  $csv['creditcard'] = $maskedcardnumber;
-                break;*/
-        /*				case 'expiration_date':
-                  $expiration_date = $submission->data[$key][0];
-                  $date = date_create($expiration_date);
-                  $expiration_year = date_format($date,"Y");
-                  $expiration_month = date_format($date,"m");
-                  $csv['expirydate'] = $expiration_date;
-                break;*/
-        /*				case 'cv_number':
-                  $cv_number = $submission->data[$key][0];
-                  $maskedcv = stripe_custom_maskstring($submission->data[$key][0]);
-                  $submission->data[$key][0] = $maskedcv;
-                break;*/
         case 'recurring_date':
           $recurring_date_raw = $submission->data[$key][0];
           $date = date_create($recurring_date_raw);
@@ -669,7 +649,7 @@ function lists_session($key, $value = NULL)
 
 function stripe_custom_unset_session()
 {
-  unset($_SESSION['stripe_custom']);
+//  unset($_SESSION['stripe_custom']);
 }
 
 /**
