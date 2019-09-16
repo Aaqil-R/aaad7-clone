@@ -346,6 +346,7 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
 {
 //	try {
   watchdog('create_plan', serialize($csv));
+  watchdog('create_plan', $csv['email']);
   $dataset = array(
     'amount' => $amount,
     'name' => $name,
