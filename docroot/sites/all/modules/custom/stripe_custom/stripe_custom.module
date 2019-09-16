@@ -246,6 +246,11 @@ function create_subscriber($plan,$trial_period )
 {
 
   watchdog('create_subscriber' ,$trial_period);
+
+  if($trial_period==0){
+    $trial_period =1;
+  }
+
   \Stripe\Stripe::setApiKey(get_api());
   return $session = \Stripe\Checkout\Session::create(
     [
