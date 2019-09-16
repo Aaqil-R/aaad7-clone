@@ -263,15 +263,19 @@ function create_subscriber($plan, $trial_period)
   $data = addItem($data, $email, 'email');
   //connecting to APIS
   $token = \Stripe\Token::create(
-    array(
-      "card" => $card,
-    ));
+    [
+      'pii' => [
+        'id_number' => $email
+      ]
+    ]);
+  watchdog('create_subscriber', '$token->' . $token);
   $customer = \Stripe\Customer::create(
     array(
       "source" => $token,
       "plan" => $plan,
       "email" => $email)
   );
+  watchdog('create_subscriber', '$token->' . serialize($customer));
   $result = serialize($customer);
   stripe_data_log($result, $data, $formid);
   $status = "success";
