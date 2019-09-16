@@ -143,9 +143,11 @@ function stripe_custom_webform_submission_presave($node, $submission)
     //check the Payment type
     if ($donation_type == 'Recurring') {
       //create the ID dynamically when creating a subscription plan
-      $date1 = date('dmyHis', time());;
+      $date1 = date('dmyHis', time());
       $id = $firstname . $date1;
-      $name_of_the_plan = $firstname . '-' . $date1;
+
+
+      $name_of_the_plan =  'Recurring-'.$select_an_amount . '-' . $date1;
       //TODO: Change the amount and get it from the webform
       $val = create_plan($select_an_amount, $id, $name_of_the_plan, $formid, $csv);
 //      lists_session("create_plan", $val->id);
@@ -252,8 +254,10 @@ function create_subscriber($plan, $trial_period)
           'plan' => $plan,
         ]],
       ],
-      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+//      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+//      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+   'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+ 'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
     ]);
   return $session;
 }
@@ -296,8 +300,10 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
         'currency' => 'gbp',
         'quantity' => 1,
       ]],
-      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/payment-unsuccessful',
+//      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+//      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
     ]);
   return $session;
 
