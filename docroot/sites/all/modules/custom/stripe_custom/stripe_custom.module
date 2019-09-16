@@ -257,33 +257,6 @@ function create_subscriber($plan, $trial_period)
       'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
       'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
     ]);
-  //creating the dataset for db logs
-  $data = serialize($card);
-  $data = addItem($data, $plan, 'plan');
-  $data = addItem($data, $email, 'email');
-  //connecting to APIS
-  $token = \Stripe\Token::create(
-    [
-      'pii' => [
-        'id_number' => $email
-      ]
-    ]);
-  watchdog('create_subscriber', '$token->' . $token);
-  $customer = \Stripe\Customer::create(
-    array(
-      "source" => $token,
-      "plan" => $plan,
-      "email" => $email)
-  );
-  watchdog('create_subscriber', '$token->' . serialize($customer));
-  $result = serialize($customer);
-  stripe_data_log($result, $data, $formid);
-  $status = "success";
-  $reference = $customer->id;
-  stripe_csv_data_log($csv, $status, "", $reference);
-  aaa_data_log($result, 'Subscriber created successfully');
-  //including the email here so that we can send the mail with reference number
-  sendmailsadmin($reference, $csv);
   return $session;
 }
 
