@@ -345,8 +345,8 @@ function create_subscriber($plan)
 function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
 {
 //	try {
-  watchdog('create_plan', serialize($csv));
-  watchdog('create_plan', $csv['email']);
+//  watchdog('create_plan', serialize($csv));
+//  watchdog('create_plan', $csv['email']);
   $dataset = array(
     'amount' => $amount,
     'name' => $name,
@@ -354,6 +354,9 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
   );
   $data = serialize($dataset);
   //creating a new plan
+  /**
+   *       'receipt_email' => $csv['email'], not  in new  lib
+   */
   \Stripe\Stripe::setApiKey(get_api());
   $plan = \Stripe\Plan::create(
     array(
@@ -363,7 +366,6 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
       "name" => $name,
       "currency" => "gbp",
       "id" => $id,
-      'receipt_email' => $csv['email'],
       "trial_period_days" => intval($trial_period))
   );
   return $plan;
