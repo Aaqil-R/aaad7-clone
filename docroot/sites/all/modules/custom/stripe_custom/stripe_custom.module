@@ -151,7 +151,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
       $id = $firstname . $date1;
       $name_of_the_plan = $firstname . '-' . $date1;
       //TODO: Change the amount and get it from the webform
-      $val = create_plan($select_an_amount, $id, $name_of_the_plan, $formid, $trial_period, $csv);
+      $val = create_plan($select_an_amount, $id, $name_of_the_plan, $formid, $csv);
 //      lists_session("create_plan", $val->id);
       //check whether the Plan was created
       if ($val->id) {
@@ -161,7 +161,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
         $card1 = array();
         $card1['name'] = $firstname . ' ' . $lastname;
         $emailname = $card1['name'];
-        $val1 = create_subscriber($id);
+        $val1 = create_subscriber($id ,$trial_period);
         if ($val1->id) {
 
           //lists_session("payment_session", $val1->id);
@@ -242,7 +242,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
 
 }
 
-function create_subscriber($plan)
+function create_subscriber($plan,$trial_period )
 {
   //try {
   \Stripe\Stripe::setApiKey(get_api());
@@ -250,6 +250,7 @@ function create_subscriber($plan)
     [
       'payment_method_types' => ['card'],
       'subscription_data' => [
+        'trial_period_days'=>$trial_period,
         'items' => [[
           'plan' => $plan,
         ]],
@@ -342,12 +343,10 @@ function create_subscriber($plan)
 //	}
 }
 
-function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
+function create_plan($amount, $id, $name, $formid, $csv)
 {
 //	try {
-  watchdog('create_plan', serialize($csv));
-  watchdog('create_plan', intval($trial_period));
-  watchdog('create_plan', $trial_period);
+ // watchdog('create_plan', serialize($csv));
   $dataset = array(
     'amount' => $amount,
     'name' => $name,
@@ -357,6 +356,7 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
   //creating a new plan
   /**
    *       'receipt_email' => $csv['email'], not  in new  lib
+   *  "trial_period_days" => intval($trial_period) =>  "trial_period_days" => 0
    */
   \Stripe\Stripe::setApiKey(get_api());
   $plan = \Stripe\Plan::create(
@@ -367,7 +367,8 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
       "name" => $name,
       "currency" => "gbp",
       "id" => $id,
-      "trial_period_days" => intval($trial_period))
+      "trial_period_days" => 0
+    )
   );
   return $plan;
 
