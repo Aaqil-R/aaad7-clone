@@ -362,7 +362,7 @@ function create_plan($amount, $id, $name, $formid, $trial_period, $csv)
       "currency" => "gbp",
       "id" => $id,
       'receipt_email' => $email,
-      "trial_period_days" => 0)
+      "trial_period_days" => intval($trial_period))
   );
   return $plan;
 
