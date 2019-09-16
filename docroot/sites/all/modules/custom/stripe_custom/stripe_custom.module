@@ -4,7 +4,6 @@ require('init.php');
 function stripe_custom_init()
 {
   // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
-
 }
 
 //Function to format the number to full integer
@@ -139,9 +138,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
     }
     //Processing the selected amount
     $select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
-
-
-
     //Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
     $csv['amount'] = number_format((float)$select_an_amount / 100, 2, '.', '');
     //check the Payment type
@@ -161,7 +157,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
         $card1 = array();
         $card1['name'] = $firstname . ' ' . $lastname;
         $emailname = $card1['name'];
-        $val1 = create_subscriber($id ,$trial_period);
+        $val1 = create_subscriber($id, $trial_period);
         if ($val1->id) {
 
           //lists_session("payment_session", $val1->id);
@@ -213,7 +209,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
         lists_session("payment_session", $val1->id);
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
-
         sendmail($nid, $email, $emailname);
         //lists_session("s_key", $card1['name']);
         lists_session("total", $csv['amount']);
@@ -242,117 +237,56 @@ function stripe_custom_webform_submission_presave($node, $submission)
 
 }
 
-function create_subscriber($plan,$trial_period )
+function create_subscriber($plan, $trial_period)
 {
 
-  watchdog('create_subscriber' ,$trial_period);
-
-  if($trial_period==0){
-    $trial_period =1;
+  watchdog('create_subscriber', $trial_period);
+  if ($trial_period == 0) {
+    $trial_period = 1;
   }
-
   \Stripe\Stripe::setApiKey(get_api());
-  return $session = \Stripe\Checkout\Session::create(
+  $session = \Stripe\Checkout\Session::create(
     [
       'payment_method_types' => ['card'],
       'subscription_data' => [
-        'trial_period_days'=>$trial_period,
+        'trial_period_days' => $trial_period,
         'items' => [[
           'plan' => $plan,
         ]],
       ],
       'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/payment-unsuccessful',
+      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
     ]);
   //creating the dataset for db logs
-//		$data = serialize($card);
-//		$data = addItem($data, $plan , 'plan');
-//		$data = addItem($data, $email , 'email');
-//
-//		//connecting to APIS
-//		$token = \Stripe\Token::create(array(
-//		  "card" => $card,
-//		));
-//
-//		$customer = \Stripe\Customer::create(array(
-//		  "source" => $token,
-//		  "plan" => $plan,
-//		  "email" => $email)
-//		);
-//
-//		$result = serialize($customer);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "success";
-//		$reference = $customer->id;
-//		stripe_csv_data_log($csv , $status , "" , $reference);
-//		aaa_data_log($result , 'Subscriber created successfully');
-//		//including the email here so that we can send the mail with reference number
-//		sendmailsadmin($reference , $csv);
-//		return 0;
-//
-//	} catch(\Stripe\Error\Card $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (\Stripe\Error\RateLimit $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (\Stripe\Error\InvalidRequest $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (\Stripe\Error\Authentication $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (\Stripe\Error\ApiConnection $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (\Stripe\Error\Base $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	} catch (Exception $e) {
-//		$result = serialize($e->jsonBody['error']);
-//		stripe_data_log($result,$data,$formid);
-//		$status = "failed";
-//		$message = $e->jsonBody['error']['message'];
-//		$reference = $e->requestId;
-//    	stripe_csv_data_log($csv , $status , $message , $reference);
-//		return $message;
-//	}
+  $data = serialize($card);
+  $data = addItem($data, $plan, 'plan');
+  $data = addItem($data, $email, 'email');
+  //connecting to APIS
+  $token = \Stripe\Token::create(
+    array(
+      "card" => $card,
+    ));
+  $customer = \Stripe\Customer::create(
+    array(
+      "source" => $token,
+      "plan" => $plan,
+      "email" => $email)
+  );
+  $result = serialize($customer);
+  stripe_data_log($result, $data, $formid);
+  $status = "success";
+  $reference = $customer->id;
+  stripe_csv_data_log($csv, $status, "", $reference);
+  aaa_data_log($result, 'Subscriber created successfully');
+  //including the email here so that we can send the mail with reference number
+  sendmailsadmin($reference, $csv);
+  return $session;
 }
 
 function create_plan($amount, $id, $name, $formid, $csv)
 {
 //	try {
- // watchdog('create_plan', serialize($csv));
+  // watchdog('create_plan', serialize($csv));
   $dataset = array(
     'amount' => $amount,
     'name' => $name,
