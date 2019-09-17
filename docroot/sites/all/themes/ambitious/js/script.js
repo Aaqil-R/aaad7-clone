@@ -208,9 +208,7 @@
 
 
               if(Drupal.settings.stripe_custom) {
-
                 alert(JSON.stringify(Drupal.settings.stripe_custom.payment_session));
-
                 console.log(Drupal.settings.stripe_custom.payment_session);
                 var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
                 stripe.redirectToCheckout({
@@ -224,7 +222,7 @@
                   // using `result.error.message`.
                   // console.log(result.error.message);
 
-                  alert(JSON.stringify(result));
+                  //alert(JSON.stringify(result));
                 });
               }
 
