@@ -3,14 +3,7 @@
 require('init.php');
 function stripe_custom_init()
 {
-
-  // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
-
-
   if(isset($_SESSION['stripe_custom']['payment_session'])){
-   // echo 'payment 11111111111111';
-   // var_dump(isset($_SESSION['stripe_custom']['payment_session']));
-
     ?>
     <script src="https://js.stripe.com/v3/"></script>
     <script>
@@ -33,8 +26,6 @@ function stripe_custom_init()
         display: none !important;
       }
     </style>
-
-
     <?php
     unset($_SESSION['stripe_custom']);
   }
@@ -108,27 +99,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $email = $submission->data[$key][0];
           $csv['email'] = $email;
           break;
-
-        //Third page details
-        /*				case 'card_number':
-                  $cardnumber = $submission->data[$key][0];
-                  //masking the number
-                  $maskedcardnumber = maskstring($submission->data[$key][0]);
-                  $submission->data[$key][0] = $maskedcardnumber;
-                  $csv['creditcard'] = $maskedcardnumber;
-                break;*/
-        /*				case 'expiration_date':
-                  $expiration_date = $submission->data[$key][0];
-                  $date = date_create($expiration_date);
-                  $expiration_year = date_format($date,"Y");
-                  $expiration_month = date_format($date,"m");
-                  $csv['expirydate'] = $expiration_date;
-                break;*/
-        /*				case 'cv_number':
-                  $cv_number = $submission->data[$key][0];
-                  $maskedcv = stripe_custom_maskstring($submission->data[$key][0]);
-                  $submission->data[$key][0] = $maskedcv;
-                break;*/
         case 'recurring_date':
           $recurring_date_raw = $submission->data[$key][0];
           $date = date_create($recurring_date_raw);
@@ -286,8 +256,8 @@ function create_subscriber($plan, $trial_period)
           'plan' => $plan,
         ]],
       ],
-      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
     ]);
   return $session;
 }
@@ -330,8 +300,8 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
         'currency' => 'gbp',
         'quantity' => 1,
       ]],
-      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/payment-unsuccessful',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
     ]);
   return $session;
 
