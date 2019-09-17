@@ -46,10 +46,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
   if ($contenttype == 'donations') {
     //Gather the submitted form Values
     $trial_period = 0;
-    //$donation_type ='one time';
     $csv = array();
     $csv['formid'] = $formid;
-   // watchdog('stripe-form', '1 -->' . serialize($node->webform['components']));
+    $donation_type  = '';
+
     foreach ($node->webform['components'] as $key => $field) {
       switch ($field['form_key']) {
         //first page details
@@ -57,12 +57,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $select_an_amount = $submission->data[$key][0];
           // $csv['amount']=$select_an_amount;
           break;
-        case 'donation_type':
-          if($submission->data[$key]) {
-            $donation_type = $submission->data[$key][0];
-            $csv['donationtype'] = $donation_type;
-          }
-          break;
+//        case 'donation_type':
+//          $donation_type = $submission->data[$key][0];
+//          $csv['donationtype'] = $donation_type;
+//          break;
         case 'other_amount':
           $other_amount = $submission->data[$key][0];
           break;
@@ -78,6 +76,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $email = $submission->data[$key][0];
           $csv['email'] = $email;
           break;
+
         case 'recurring_date':
           $recurring_date_raw = $submission->data[$key][0];
           $date = date_create($recurring_date_raw);
@@ -114,19 +113,14 @@ function stripe_custom_webform_submission_presave($node, $submission)
         case 'country':
           $csv['country'] = $submission->data[$key][0];
           break;
-        case 'gift_aid_check_box':
-          if ($submission->data[$key]) {
-            $csv['giftaid'] = $submission->data[$key][0];
-//            watchdog('stripe-form', '3 -->' . serialize($submission));
-//            watchdog('stripe-form', '4 --> key --> ' . $key);
-//            watchdog('stripe-form', '5 -->' . serialize($submission->data));
-//            watchdog('stripe-form', '6 -->' . serialize($submission->data[$key]));
-//            watchdog('stripe-form', '6.5 -->' . serialize($submission->data[$key][0]));
-          }
-          break;
+//        case 'gift_aid_check_box':
+//          $csv['giftaid'] = $submission->data[$key][0];
+//          break;
       }
     }
-    //watchdog('stripe-form', '2 -->' . serialize($csv));
+
+
+
     //Processing the selected amount
     $select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
     //Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
@@ -136,7 +130,9 @@ function stripe_custom_webform_submission_presave($node, $submission)
       //create the ID dynamically when creating a subscription plan
       $date1 = date('dmyHis', time());
       $id = $firstname . $date1;
-      $name_of_the_plan = 'Recurring ' . $select_an_amount;
+
+
+      $name_of_the_plan =  'Recurring '.$select_an_amount;
       //TODO: Change the amount and get it from the webform
       $val = create_plan($select_an_amount, $id, $name_of_the_plan, $formid, $csv);
 //      lists_session("create_plan", $val->id);
@@ -195,40 +191,12 @@ function stripe_custom_webform_submission_presave($node, $submission)
       $card1['name'] = $firstname . ' ' . $lastname;
       $emailname = $card1['name'];
       $val1 = create_onetime_patment($card1, $select_an_amount, $formid, $email, $csv, $nid);
-
       if ($val1->id) {
-        watchdog('payment' ,serialize($val1));
+
+        lists_session("payment_session", $val1->id);
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
         sendmail($nid, $email, $emailname);
-
-        ?>
-        <script src="https://js.stripe.com/v3/"></script>
-
-        <script>
-
-          var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
-          stripe.redirectToCheckout({
-            // Make the id field from the Checkout Session creation API response
-            // available to this file, so you can provide it as parameter here
-            // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-            sessionId: '<?php echo $val1->id; ?>'
-          }).then(function (result) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
-            // console.log(result.error.message);
-
-            //alert(JSON.stringify(result));
-          });
-          }
-        </script>
-
-        <?php
-
-
-
-
         //lists_session("s_key", $card1['name']);
         lists_session("total", $csv['amount']);
         lists_session("sku", 'GeneralDonation');
@@ -273,8 +241,8 @@ function create_subscriber($plan, $trial_period)
       ],
 //      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
 //      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
-      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+   'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+ 'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
     ]);
   return $session;
 }
@@ -686,7 +654,7 @@ function lists_session($key, $value = NULL)
 
 function stripe_custom_unset_session()
 {
-unset($_SESSION['stripe_custom']);
+//  unset($_SESSION['stripe_custom']);
 }
 
 /**
