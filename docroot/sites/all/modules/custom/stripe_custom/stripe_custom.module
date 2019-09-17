@@ -46,6 +46,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
   if ($contenttype == 'donations') {
     //Gather the submitted form Values
     $trial_period = 0;
+    $donation_type ='one time';
     $csv = array();
     $csv['formid'] = $formid;
     watchdog('stripe-form', '1 -->' . serialize($node->webform['components']));
@@ -57,8 +58,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
           // $csv['amount']=$select_an_amount;
           break;
         case 'donation_type':
-          $donation_type = $submission->data[$key][0];
-          $csv['donationtype'] = $donation_type;
+          if($submission->data[$key]) {
+            $donation_type = $submission->data[$key][0];
+            $csv['donationtype'] = $donation_type;
+          }
           break;
         case 'other_amount':
           $other_amount = $submission->data[$key][0];
