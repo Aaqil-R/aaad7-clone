@@ -8,9 +8,9 @@ function stripe_custom_init()
 
 
   if(isset($_SESSION['stripe_custom']['payment_session'])){
-    echo 'payment 11111111111111';
-    var_dump(isset($_SESSION['stripe_custom']['payment_session']));
-    unset($_SESSION['stripe_custom']);
+   // echo 'payment 11111111111111';
+   // var_dump(isset($_SESSION['stripe_custom']['payment_session']));
+
     ?>
     <script src="https://js.stripe.com/v3/"></script>
     <script>
@@ -36,6 +36,7 @@ function stripe_custom_init()
 
 
     <?php
+    unset($_SESSION['stripe_custom']);
   }
 }
 
