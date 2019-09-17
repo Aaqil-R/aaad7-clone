@@ -8,7 +8,12 @@ function stripe_custom_init()
     $hash = $_GET['hash'];
     $hash = base64_decode($hash);
     $hash = unserialize($hash);
-    var_dump($hash);
+
+    stripe_custom_create_mails($hash['email'], 'test after submit' , $hash['name']);
+
+
+
+
   }
   if (isset($_SESSION['stripe_custom']['payment_session'])) {
     ?>
