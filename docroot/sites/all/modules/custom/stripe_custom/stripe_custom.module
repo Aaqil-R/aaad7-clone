@@ -663,7 +663,9 @@ function lists_session($key, $value = NULL)
 
 function stripe_custom_unset_session()
 {
-  unset($_SESSION['stripe_custom']);
+  if(isset($_SESSION['stripe_custom'])) {
+    unset($_SESSION['stripe_custom']);
+  }
 }
 
 /**
