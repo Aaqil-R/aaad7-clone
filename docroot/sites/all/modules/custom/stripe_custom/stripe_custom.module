@@ -9,6 +9,8 @@ function stripe_custom_init()
     $hash = base64_decode($hash);
     $hash = unserialize($hash);
 
+
+    var_dump($hash);
     stripe_custom_create_mails($hash['email'], 'test after submit' , $hash['name']);
 
 
