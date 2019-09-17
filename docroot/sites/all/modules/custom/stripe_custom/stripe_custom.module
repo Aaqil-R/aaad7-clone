@@ -195,6 +195,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
       $card1['name'] = $firstname . ' ' . $lastname;
       $emailname = $card1['name'];
       $val1 = create_onetime_patment($card1, $select_an_amount, $formid, $email, $csv, $nid);
+      watchdog('payment' ,serialize($val1));
       if ($val1->id) {
 
         lists_session("payment_session", $val1->id);
