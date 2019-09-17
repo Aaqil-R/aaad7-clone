@@ -198,7 +198,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
 
       if ($val1->id) {
         watchdog('payment' ,serialize($val1));
-        lists_session("payment_session", $val1->id);
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
         sendmail($nid, $email, $emailname);
@@ -659,7 +658,7 @@ function lists_session($key, $value = NULL)
 
 function stripe_custom_unset_session()
 {
-//  unset($_SESSION['stripe_custom']);
+unset($_SESSION['stripe_custom']);
 }
 
 /**

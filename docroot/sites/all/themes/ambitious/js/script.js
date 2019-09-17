@@ -209,6 +209,8 @@
 
               if(Drupal.settings.stripe_custom) {
 
+                alert(JSON.stringify(Drupal.settings.stripe_custom.payment_session));
+
                 console.log(Drupal.settings.stripe_custom.payment_session);
                 var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
                 stripe.redirectToCheckout({
