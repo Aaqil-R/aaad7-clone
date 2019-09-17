@@ -161,7 +161,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
         $card1 = array();
         $card1['name'] = $firstname . ' ' . $lastname;
         $emailname = $card1['name'];
-        $val1 = create_subscriber($id, $trial_period);
+        $val1 = create_subscriber($id, $trial_period ,$csv);
         if ($val1->id) {
 
           //lists_session("payment_session", $val1->id);
@@ -241,8 +241,12 @@ function stripe_custom_webform_submission_presave($node, $submission)
 
 }
 
-function create_subscriber($plan, $trial_period)
+function create_subscriber($plan, $trial_period,$csv)
 {
+
+
+  $mail_send_key = base64_encode(serialize(array('email'=>$csv['email'] , 'name'=>$csv['firstname'])));
+
   if ($trial_period == 0) {
     $trial_period = 1;
   }
@@ -256,7 +260,7 @@ function create_subscriber($plan, $trial_period)
           'plan' => $plan,
         ]],
       ],
-      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you?hash='.$mail_send_key,
       'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
     ]);
   return $session;
@@ -287,6 +291,11 @@ function create_plan($amount, $id, $name, $formid, $csv)
 
 function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
 {
+
+  $mail_send_key = base64_encode(serialize(array('email'=>$csv['email'] , 'name'=>$csv['firstname'])));
+
+
+
   //defining the api key
   \Stripe\Stripe::setApiKey(get_api());
   //defining the charge details for one time payments
@@ -300,7 +309,7 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
         'currency' => 'gbp',
         'quantity' => 1,
       ]],
-      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you?hash='.$mail_send_key,
       'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
     ]);
   return $session;
