@@ -207,7 +207,7 @@
             $(document).ajaxComplete(function() {
               if(Drupal.settings.stripe_custom) {
 
-                console.log(Drupal.settings.stripe_custom.payment_session);
+/*                console.log(Drupal.settings.stripe_custom.payment_session);
                 var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
                 stripe.redirectToCheckout({
                   // Make the id field from the Checkout Session creation API response
@@ -219,7 +219,7 @@
                   // error, display the localized error message to your customer
                   // using `result.error.message`.
                   // console.log(result.error.message);
-                });
+                });*/
               }
 
                 $('.view-display-id-stream_forum_page').mobileNav({

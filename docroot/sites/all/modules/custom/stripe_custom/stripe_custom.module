@@ -3,20 +3,13 @@
 require('init.php');
 function stripe_custom_init()
 {
-  ?>
-  <style>
-
-    body{
-      display: none !important;
-    }
-  </style>
-
-
-  <?php
 
   // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
 
+  var_dump(isset($_SESSION['stripe_custom']));
   if(isset($_SESSION['stripe_custom']['payment_session'])){
+    echo 'payment 11111111111111';
+    var_dump(isset($_SESSION['stripe_custom']['payment_session']));
     unset($_SESSION['stripe_custom']);
     ?>
     <style>
