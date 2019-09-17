@@ -48,10 +48,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
     $trial_period = 0;
     $csv = array();
     $csv['formid'] = $formid;
-
-
-    watchdog('stripe-form',  '1 -->'. serialize($node->webform['components']));
-
+    watchdog('stripe-form', '1 -->' . serialize($node->webform['components']));
     foreach ($node->webform['components'] as $key => $field) {
       switch ($field['form_key']) {
         //first page details
@@ -78,7 +75,6 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $email = $submission->data[$key][0];
           $csv['email'] = $email;
           break;
-
         case 'recurring_date':
           $recurring_date_raw = $submission->data[$key][0];
           $date = date_create($recurring_date_raw);
@@ -116,19 +112,18 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $csv['country'] = $submission->data[$key][0];
           break;
         case 'gift_aid_check_box':
-          $csv['giftaid'] = $submission->data[$key][0];
-
-          watchdog('stripe-form',  '3 -->'. serialize($submission));
-          watchdog('stripe-form',  '4 --> key --> '. $key);
-          watchdog('stripe-form',  '5 -->'. serialize($submission->data));
-          watchdog('stripe-form',  '6 -->'. serialize($submission->data[$key]));
-          watchdog('stripe-form',  '6.5 -->'. serialize($submission->data[$key][0]));
+          if ($submission->data[$key]) {
+            $csv['giftaid'] = $submission->data[$key][0];
+            watchdog('stripe-form', '3 -->' . serialize($submission));
+            watchdog('stripe-form', '4 --> key --> ' . $key);
+            watchdog('stripe-form', '5 -->' . serialize($submission->data));
+            watchdog('stripe-form', '6 -->' . serialize($submission->data[$key]));
+            watchdog('stripe-form', '6.5 -->' . serialize($submission->data[$key][0]));
+          }
           break;
       }
     }
-
-    watchdog('stripe-form',  '2 -->'. serialize($csv));
-
+    watchdog('stripe-form', '2 -->' . serialize($csv));
     //Processing the selected amount
     $select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
     //Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
@@ -138,9 +133,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
       //create the ID dynamically when creating a subscription plan
       $date1 = date('dmyHis', time());
       $id = $firstname . $date1;
-
-
-      $name_of_the_plan =  'Recurring '.$select_an_amount;
+      $name_of_the_plan = 'Recurring ' . $select_an_amount;
       //TODO: Change the amount and get it from the webform
       $val = create_plan($select_an_amount, $id, $name_of_the_plan, $formid, $csv);
 //      lists_session("create_plan", $val->id);
@@ -249,8 +242,8 @@ function create_subscriber($plan, $trial_period)
       ],
 //      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
 //      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you',
-   'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
- 'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
+      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you',
     ]);
   return $session;
 }
