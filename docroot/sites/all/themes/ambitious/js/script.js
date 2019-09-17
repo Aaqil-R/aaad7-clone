@@ -206,7 +206,7 @@
 
             $(document).ajaxComplete(function() {
 
-              alert(JSON.stringify(Drupal.settings.stripe_custom));
+
               if(Drupal.settings.stripe_custom) {
 
                 console.log(Drupal.settings.stripe_custom.payment_session);
@@ -221,6 +221,8 @@
                   // error, display the localized error message to your customer
                   // using `result.error.message`.
                   // console.log(result.error.message);
+
+                  alert(JSON.stringify(result));
                 });
               }
 
