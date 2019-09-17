@@ -48,6 +48,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
     $trial_period = 0;
     $csv = array();
     $csv['formid'] = $formid;
+
+
+    watchdog('stripe-form',  '1 -->'. serialize($node->webform['components']));
+
     foreach ($node->webform['components'] as $key => $field) {
       switch ($field['form_key']) {
         //first page details
@@ -116,6 +120,9 @@ function stripe_custom_webform_submission_presave($node, $submission)
           break;
       }
     }
+
+    watchdog('stripe-form',  '2 -->'. serialize($csv));
+
     //Processing the selected amount
     $select_an_amount = stripe_custom_format_curreny($other_amount, $select_an_amount);
     //Here we save on the csv the exact amount of user in Rupees. ($1.50 etc)
