@@ -90,11 +90,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					case 'agree_condition':
 					  if($did_subscribe = $submission->data[$key]) {
               $did_subscribe = $submission->data[$key][0];
-              watchdog('stripe-form', '7 -->' . serialize($submission));
-              watchdog('stripe-form', '8 --> key --> ' . serialize($key));
-              watchdog('stripe-form', '9 -->' . serialize($submission->data));
-              watchdog('stripe-form', '10 -->' . serialize($submission->data[$key]));
-              watchdog('stripe-form', '10.5 -->' . serialize($submission->data[$key][0]));
+//              watchdog('stripe-form', '7 -->' . serialize($submission));
+//              watchdog('stripe-form', '8 --> key --> ' . serialize($key));
+//              watchdog('stripe-form', '9 -->' . serialize($submission->data));
+//              watchdog('stripe-form', '10 -->' . serialize($submission->data[$key]));
+//              watchdog('stripe-form', '10.5 -->' . serialize($submission->data[$key][0]));
             }
 					break;
 					case 'event_name':
