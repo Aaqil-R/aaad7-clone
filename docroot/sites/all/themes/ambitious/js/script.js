@@ -205,7 +205,11 @@
             // end document.ready
 
             $(document).ajaxComplete(function() {
+
+              alert(JSON.stringify(Drupal.settings.stripe_custom));
               if(Drupal.settings.stripe_custom) {
+
+                console.log(Drupal.settings.stripe_custom.payment_session);
                 var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
                 stripe.redirectToCheckout({
                   // Make the id field from the Checkout Session creation API response
@@ -216,6 +220,7 @@
                   // If `redirectToCheckout` fails due to a browser or network
                   // error, display the localized error message to your customer
                   // using `result.error.message`.
+                  // console.log(result.error.message);
                 });
               }
 
