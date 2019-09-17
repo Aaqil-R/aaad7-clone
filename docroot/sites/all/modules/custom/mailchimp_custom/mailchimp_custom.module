@@ -89,6 +89,11 @@ function mailchimp_custom_webform_submission_insert($node, $submission){
 					break;
 					case 'agree_condition':
 						$did_subscribe = $submission->data[$key][0];
+
+            watchdog('stripe-form',  '7 -->'. serialize($submission));
+            watchdog('stripe-form',  '8 --> key --> '. serialize($key));
+            watchdog('stripe-form',  '9 -->'. serialize($submission->data));
+            watchdog('stripe-form',  '10 -->'. serialize($submission->data[$key]));
 					break;
 					case 'event_name':
 						$newevent = $submission->data[$key][0];
