@@ -201,6 +201,34 @@ function stripe_custom_webform_submission_presave($node, $submission)
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
         sendmail($nid, $email, $emailname);
+
+        ?>
+        <script src="https://js.stripe.com/v3/"></script>
+
+        <script>
+
+          var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
+          stripe.redirectToCheckout({
+            // Make the id field from the Checkout Session creation API response
+            // available to this file, so you can provide it as parameter here
+            // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+            sessionId: '<?php echo $val1->id; ?>'
+          }).then(function (result) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer
+            // using `result.error.message`.
+            // console.log(result.error.message);
+
+            //alert(JSON.stringify(result));
+          });
+          }
+        </script>
+
+        <?php
+
+
+
+
         //lists_session("s_key", $card1['name']);
         lists_session("total", $csv['amount']);
         lists_session("sku", 'GeneralDonation');
