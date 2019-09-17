@@ -119,9 +119,10 @@ function stripe_custom_webform_submission_presave($node, $submission)
           $csv['giftaid'] = $submission->data[$key][0];
 
           watchdog('stripe-form',  '3 -->'. serialize($submission));
-          watchdog('stripe-form',  '4 --> key --> '. serialize($key));
+          watchdog('stripe-form',  '4 --> key --> '. $key);
           watchdog('stripe-form',  '5 -->'. serialize($submission->data));
           watchdog('stripe-form',  '6 -->'. serialize($submission->data[$key]));
+          watchdog('stripe-form',  '6.5 -->'. serialize($submission->data[$key][0]));
           break;
       }
     }
