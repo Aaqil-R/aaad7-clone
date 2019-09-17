@@ -6,7 +6,7 @@ function stripe_custom_init()
 
   // aaa_data_log('amalan@thesmallaxe.com' , 'Mail sent successfully');
 
-  var_dump(isset($_SESSION['stripe_custom']));
+
   if(isset($_SESSION['stripe_custom']['payment_session'])){
     echo 'payment 11111111111111';
     var_dump(isset($_SESSION['stripe_custom']['payment_session']));
@@ -682,9 +682,9 @@ function lists_session($key, $value = NULL)
 
 function stripe_custom_unset_session()
 {
-  if(isset($_SESSION['stripe_custom'])) {
-    unset($_SESSION['stripe_custom']);
-  }
+//  if(isset($_SESSION['stripe_custom'])) {
+//    unset($_SESSION['stripe_custom']);
+//  }
 }
 
 /**
