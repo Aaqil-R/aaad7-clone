@@ -6,7 +6,7 @@ function stripe_custom_init()
 
   if ($_GET['hash'] && $_GET['hash'] != "") {
 
-    var_dump($_SESSION['stripe_custom']['payment_session_email_send']);
+    //var_dump($_SESSION['stripe_custom']['payment_session_email_send']);
     $hash = $_GET['hash'];
     $hash = base64_decode($hash);
     $hash = unserialize($hash);
