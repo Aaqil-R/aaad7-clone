@@ -5,6 +5,9 @@ function stripe_custom_init()
 {
 
   if ($_GET['hash'] && $_GET['hash'] != "") {
+
+    var_dump($_SESSION['stripe_custom']['payment_session_email_send']);
+
     $hash = $_GET['hash'];
     $hash = base64_decode($hash);
     $hash = unserialize($hash);
@@ -12,6 +15,11 @@ function stripe_custom_init()
     stripe_custom_create_mails(
       $hash['email'],
       'test after submit', $hash['name']);
+
+
+
+    lists_session("payment_session_email_send", array($hash['email'] =>true));
+
 
   }
   if (isset($_SESSION['stripe_custom']['payment_session'])) {
