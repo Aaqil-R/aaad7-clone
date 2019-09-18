@@ -23,11 +23,8 @@ function stripe_custom_init()
     <script>
       // live
       //var stripe = Stripe('pk_live_VAe8JjwROTEt2ya0bJsDMAYX');
-
       // test
       var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
-
-
       stripe.redirectToCheckout({
         // Make the id field from the Checkout Session creation API response
         // available to this file, so you can provide it as parameter here
@@ -265,7 +262,9 @@ function create_subscriber($plan, $trial_period, $csv)
 {
 
   $mail_send_key =
-    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid'=>$csv['nid'])));
+    base64_encode(
+      serialize(
+        array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid' => $csv['nid'])));
   if ($trial_period == 0) {
     $trial_period = 1;
   }
@@ -313,7 +312,9 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
 {
 
   $mail_send_key =
-    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid'=>$csv['nid'])));
+    base64_encode(
+      serialize(
+        array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid' => $csv['nid'])));
   //defining the api key
   \Stripe\Stripe::setApiKey(get_api());
   //defining the charge details for one time payments
