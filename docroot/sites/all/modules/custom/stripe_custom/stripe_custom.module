@@ -12,10 +12,7 @@ function stripe_custom_init()
     $hash = unserialize($hash);
     //var_dump($hash);
     if (!isset($_SESSION['stripe_custom']['payment_session_email_send'][$hash['email']][$hash['time']])) {
-
-      stripe_custom_create_mails(
-        $hash['email'],
-        'test after submit', $hash['name']);
+      sendmail($hash['nid'], $hash['email'], $hash['name']);
     }
     lists_session("payment_session_email_send", array($hash['email'] => array($hash['time'] => true)));
 
@@ -89,6 +86,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
     $trial_period = 0;
     $csv = array();
     $csv['formid'] = $formid;
+    $csv['nid'] = $nid;
     foreach ($node->webform['components'] as $key => $field) {
       switch ($field['form_key']) {
         //first page details
@@ -229,7 +227,7 @@ function stripe_custom_webform_submission_presave($node, $submission)
         lists_session("payment_session", $val1->id);
         drupal_add_js(array('stripe_custom' => array('payment_session' => $val1->id)), 'setting');
         //dpm("One time payment added");
-        sendmail($nid, $email, $emailname);
+        // sendmail($nid, $email, $emailname);
         //lists_session("s_key", $card1['name']);
         lists_session("total", $csv['amount']);
         lists_session("sku", 'GeneralDonation');
@@ -261,7 +259,7 @@ function create_subscriber($plan, $trial_period, $csv)
 {
 
   $mail_send_key =
-    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'))));
+    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid'=>$csv['nid'])));
   if ($trial_period == 0) {
     $trial_period = 1;
   }
@@ -309,7 +307,7 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
 {
 
   $mail_send_key =
-    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'))));
+    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'), 'nid'=>$csv['nid'])));
   //defining the api key
   \Stripe\Stripe::setApiKey(get_api());
   //defining the charge details for one time payments
