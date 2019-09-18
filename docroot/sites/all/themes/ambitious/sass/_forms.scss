@@ -1212,6 +1212,10 @@ div.modal-forms-modal-content .form-item label {
             border: 2px solid #000000;
             border-radius: 3px;
             background: $white;
+
+            @-moz-document url-prefix() {
+              top: 19px;
+            }
           }
 
           /* checked mark aspect */
@@ -1234,6 +1238,10 @@ div.modal-forms-modal-content .form-item label {
             @supports (-webkit-overflow-scrolling: touch) {
               font-size: 14px;
               top: -26px;
+            }
+
+            @-moz-document url-prefix() {
+              top: 12px;
             }
           }
         }
@@ -1282,12 +1290,22 @@ div.modal-forms-modal-content .form-item label {
       &:not(:checked),
       &:checked {
         + label {
+          &:before {
+            @-moz-document url-prefix() {
+              top: 20px;
+            }
+          }
+
           &:after {
             top: -6px;
 
             @supports (-webkit-overflow-scrolling: touch) {
               font-size: 14px;
               top: -86px;
+            }
+
+            @-moz-document url-prefix() {
+              top: 15px;
             }
           }
         }
@@ -1304,8 +1322,11 @@ div.modal-forms-modal-content .form-item label {
             top: -6px;
 
             @supports (-webkit-overflow-scrolling: touch) {
-              
               top: -81px;
+            }
+
+            @-moz-document url-prefix() {
+              top: 14px;
             }
           }
         }
