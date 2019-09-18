@@ -1230,6 +1230,10 @@ div.modal-forms-modal-content .form-item label {
             position: absolute;
             top: -6px;
             left: 2px;
+
+            @supports (-webkit-overflow-scrolling: touch) {
+              top: -26px;
+            }
           }
         }
       }
@@ -1279,6 +1283,10 @@ div.modal-forms-modal-content .form-item label {
         + label {
           &:after {
             top: -6px;
+
+            @supports (-webkit-overflow-scrolling: touch) {
+              top: -86px;
+            }
           }
         }
       }
@@ -1292,6 +1300,10 @@ div.modal-forms-modal-content .form-item label {
         + label {
           &:after {
             top: -6px;
+
+            @supports (-webkit-overflow-scrolling: touch) {
+              top: -81px;
+            }
           }
         }
       }
