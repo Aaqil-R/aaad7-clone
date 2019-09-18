@@ -7,19 +7,17 @@ function stripe_custom_init()
   if ($_GET['hash'] && $_GET['hash'] != "") {
 
     var_dump($_SESSION['stripe_custom']['payment_session_email_send']);
-
     $hash = $_GET['hash'];
     $hash = base64_decode($hash);
     $hash = unserialize($hash);
     //var_dump($hash);
-    stripe_custom_create_mails(
-      $hash['email'],
-      'test after submit', $hash['name']);
+    if (!isset($_SESSION['stripe_custom']['payment_session_email_send'][$hash['email']][$hash['time']])) {
 
-
-
-    lists_session("payment_session_email_send", array($hash['email'] =>array($hash['name']=>true)));
-
+      stripe_custom_create_mails(
+        $hash['email'],
+        'test after submit', $hash['name']);
+    }
+    lists_session("payment_session_email_send", array($hash['email'] => array($hash['time'] => true)));
 
   }
   if (isset($_SESSION['stripe_custom']['payment_session'])) {
@@ -262,7 +260,8 @@ function stripe_custom_webform_submission_presave($node, $submission)
 function create_subscriber($plan, $trial_period, $csv)
 {
 
-  $mail_send_key = base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'],'time'=>date('Ymdhis'))));
+  $mail_send_key =
+    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'))));
   if ($trial_period == 0) {
     $trial_period = 1;
   }
@@ -309,7 +308,8 @@ function create_plan($amount, $id, $name, $formid, $csv)
 function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
 {
 
-  $mail_send_key = base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'],'time'=>date('Ymdhis'))));
+  $mail_send_key =
+    base64_encode(serialize(array('email' => $csv['email'], 'name' => $csv['firstname'], 'time' => date('Ymdhis'))));
   //defining the api key
   \Stripe\Stripe::setApiKey(get_api());
   //defining the charge details for one time payments
