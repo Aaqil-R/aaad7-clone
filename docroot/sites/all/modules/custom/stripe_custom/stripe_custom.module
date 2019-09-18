@@ -273,7 +273,7 @@ function create_subscriber($plan, $trial_period, $csv)
     [
       'payment_method_types' => ['card'],
       'subscription_data' => [
-        'trial_period_days' => $trial_period,
+        //'trial_period_days' => $trial_period,
         'items' => [[
           'plan' => $plan,
         ]],
