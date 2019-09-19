@@ -275,15 +275,27 @@ function create_subscriber($plan, $trial_period, $csv)
         'id_number' => md5($csv['email'] . date('Ymdhis'))
       ]
     ]);
+  $token = \Stripe\Token::create(
+    [
+      'account' => [
+        'individual' => [
+          'first_name' => $csv['firstname'],
+          'last_name' => $csv['lastname'],
+          'email' => $csv['email'],
+          'phone' => $csv['phonenumber']
+        ],
+        'tos_shown_and_accepted' => true
+      ]
+    ]);
   watchdog('token', serialize($token));
   $customer = \Stripe\Customer::create(
     [
       "email" => $csv['email'],
       "name" => $csv['firstname'] . ' ' . $csv['lastname'],
       'phone' => $csv['phonenumber'],
-      'source'=>$token->id
+      'source' => $token->id
     ]);
-watchdog('customer' , serialize($customer));
+  watchdog('customer', serialize($customer));
   $subscription = \Stripe\Subscription::create(
     [
       'customer' => $customer->id,
