@@ -272,8 +272,8 @@ function create_subscriber($plan, $trial_period, $csv)
   $session = \Stripe\Checkout\Session::create(
     [
       'payment_method_types' => ['card'],
+      'billing_cycle_anchor'=>1569836675,
       'subscription_data' => [
-        'billing_cycle_anchor'=>1569836675,
         //'trial_period_days' => $trial_period,
         'items' => [[
           'plan' => $plan,
