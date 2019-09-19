@@ -269,52 +269,15 @@ function create_subscriber($plan, $trial_period, $csv)
     $trial_period = 1;
   }
   \Stripe\Stripe::setApiKey(get_api());
-  $token = \Stripe\Token::create(
-    [
-      'pii' => [
-        'id_number' => md5($csv['email'] . date('Ymdhis'))
-      ]
-    ]);
-  $token = \Stripe\Token::create(
-    [
-      'account' => [
-        'individual' => [
-          'email' => $csv['email'],
-        ],
-        'tos_shown_and_accepted' => true
-      ]
-    ]);
-  watchdog('token', serialize($token));
-  try {
-    \Stripe\Customer::create(
-      [
-        "email" => $csv['email'],
-        'source' => $token->id
-      ]);
-
-  } catch (\Stripe\Error\Base $e) {
-    // Code to do something with the $e exception object when an error occurs
-    watchdog('customer 0', serialize($e->getMessage()));
-  } catch (Exception $e) {
-
-    watchdog('customer 1', serialize($e->getMessage()));
-    // Catch any other non-Stripe exceptions
-  }
-
-
-  
-  $subscription = \Stripe\Subscription::create(
-    [
-      'customer' => $customer->id,
-      'items' => [[
-        'plan' => $plan,
-      ]],
-      'billing_cycle_anchor' => 1569839861,
-    ]);
-  watchdog('subscription', serialize($subscription));
   $session = \Stripe\Checkout\Session::create(
     [
-      'subscription' => $subscription->id,
+      'payment_method_types' => ['card'],
+      'subscription_data' => [
+        'trial_period_days' => $trial_period,
+        'items' => [[
+          'plan' => $plan,
+        ]],
+      ],
       'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you?hash=' .
         $mail_send_key,
       'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
