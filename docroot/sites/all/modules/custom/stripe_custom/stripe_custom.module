@@ -280,9 +280,10 @@ function create_subscriber($plan, $trial_period, $csv)
     [
       "email" => $csv['email'],
       "name" => $csv['firstname'] . ' ' . $csv['lastname'],
-      'phone' => $csv['phonenumber']
+      'phone' => $csv['phonenumber'],
+      'source'=>$token->id
     ]);
-  //watchdog('customer' , serialize($customer));
+watchdog('customer' , serialize($customer));
   $subscription = \Stripe\Subscription::create(
     [
       'customer' => $customer->id,
