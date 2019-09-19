@@ -285,12 +285,24 @@ function create_subscriber($plan, $trial_period, $csv)
       ]
     ]);
   watchdog('token', serialize($token));
-  $customer = \Stripe\Customer::create(
-    [
-      "email" => $csv['email'],
-      'source' => $token->id
-    ]);
-  watchdog('customer', serialize($customer));
+  try {
+    \Stripe\Customer::create(
+      [
+        "email" => $csv['email'],
+        'source' => $token->id
+      ]);
+
+  } catch (\Stripe\Error\Base $e) {
+    // Code to do something with the $e exception object when an error occurs
+    watchdog('customer 0', serialize($e->getMessage()));
+  } catch (Exception $e) {
+
+    watchdog('customer 1', serialize($e->getMessage()));
+    // Catch any other non-Stripe exceptions
+  }
+
+
+  
   $subscription = \Stripe\Subscription::create(
     [
       'customer' => $customer->id,
