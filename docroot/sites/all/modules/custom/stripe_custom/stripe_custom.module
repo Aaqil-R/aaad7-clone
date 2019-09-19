@@ -269,12 +269,23 @@ function create_subscriber($plan, $trial_period, $csv)
     $trial_period = 1;
   }
   \Stripe\Stripe::setApiKey(get_api());
+
+  $customer = \Stripe\Customer::create(
+    [
+      "email" => $csv['email'],
+      "name" => $csv['firstname'] . ' ' . $csv['lastname'],
+      'phone' => $csv['phonenumber']
+    ]);
+
+  watchdog('customer' , serialize($customer));
+
+
   $session = \Stripe\Checkout\Session::create(
     [
       'payment_method_types' => ['card'],
-      'billing_cycle_anchor'=>1569836675,
+      'subscription' => '',
       'subscription_data' => [
-        //'trial_period_days' => $trial_period,
+        'trial_period_days' => $trial_period,
         'items' => [[
           'plan' => $plan,
         ]],
