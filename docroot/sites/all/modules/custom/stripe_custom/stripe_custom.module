@@ -269,6 +269,13 @@ function create_subscriber($plan, $trial_period, $csv)
     $trial_period = 1;
   }
   \Stripe\Stripe::setApiKey(get_api());
+  $token = \Stripe\Token::create(
+    [
+      'pii' => [
+        'id_number' => md5($csv['email'] . date('Ymdhis'))
+      ]
+    ]);
+  watchdog('token', serialize($token));
   $customer = \Stripe\Customer::create(
     [
       "email" => $csv['email'],
@@ -284,9 +291,7 @@ function create_subscriber($plan, $trial_period, $csv)
       ]],
       'billing_cycle_anchor' => 1569839861,
     ]);
-
-watchdog('subscription' , serialize($subscription));
-
+  watchdog('subscription', serialize($subscription));
   $session = \Stripe\Checkout\Session::create(
     [
       'subscription' => $subscription->id,
