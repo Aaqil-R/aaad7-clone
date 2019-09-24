@@ -22,9 +22,9 @@ function stripe_custom_init()
     <script src="https://js.stripe.com/v3/"></script>
     <script>
       // live
-      //var stripe = Stripe('pk_live_VAe8JjwROTEt2ya0bJsDMAYX');
+      var stripe = Stripe('pk_live_VAe8JjwROTEt2ya0bJsDMAYX');
       // test
-      var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
+      //var stripe = Stripe('pk_test_ct5xEyP1BDEBzPNdDKjblEgI');
       stripe.redirectToCheckout({
         // Make the id field from the Checkout Session creation API response
         // available to this file, so you can provide it as parameter here
@@ -358,8 +358,8 @@ function stripe_custom_maskstring($number)
 //TODO : Change it when setup to the live environment.
 function get_api()
 {
-  return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
-  //return "sk_live_bosZHuNWOrBdX01FgIw72Y2O";
+ // return "sk_test_cmi32OHLo1FuZ8RBKzBTvfPt";
+  return "sk_live_bosZHuNWOrBdX01FgIw72Y2O";
 }
 
 //Logging the transactions and the results in a Database
