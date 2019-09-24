@@ -278,9 +278,9 @@ function create_subscriber($plan, $trial_period, $csv)
           'plan' => $plan,
         ]],
       ],
-      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you?hash=' .
+      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you?hash=' .
         $mail_send_key,
-      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
+      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/payment-unsuccessful',
     ]);
   return $session;
 }
@@ -328,9 +328,9 @@ function create_onetime_patment($card, $amount, $formid, $email, $csv, $nid)
         'currency' => 'gbp',
         'quantity' => 1,
       ]],
-      'success_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/donation-page-thank-you?hash=' .
+      'success_url' => 'https://www.ambitiousaboutautism.org.uk/donation-page-thank-you?hash=' .
         $mail_send_key,
-      'cancel_url' => 'https://ambitiousaboutautismk9jbsrjcty.devcloud.acquia-sites.com/payment-unsuccessful',
+      'cancel_url' => 'https://www.ambitiousaboutautism.org.uk/payment-unsuccessful',
     ]);
   return $session;
 
