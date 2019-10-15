@@ -256,9 +256,15 @@ function ambitious_menu_link(&$variables) {
 		if ($element['#below']) {
 		$sub_menu = drupal_render($element['#below']);
 		}
-  
-		$output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
-		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    
+    if ($element['#attributes']['class'][1] == "is-expanded") {
+      $output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    } else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    }
+		
 	}
 	
 	if($element['#theme'] == 'menu_link__menu_main_menu_features_item') //if its features menu add the arrows to the links
