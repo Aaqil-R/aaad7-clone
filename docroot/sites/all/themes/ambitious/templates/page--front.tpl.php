@@ -127,8 +127,13 @@
           <?php endif; ?>
         </div>
       </div>
+      <?php dpm($image); ?>
       <?php if($image): ?>
-        <div class="home region region-image-holder" style="background-image: url('/<?php print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')">
+       <!--  <div class="home region region-image-holder" style="background-image: url('/<?php //print variable_get('file_public_path', conf_path() . '/files') . '/'; print($image['#item']['filename']); ?>')"> -->
+
+          <div class="home region region-image-holder" style="background-image: url('<?php print file_create_url($image['#item']['uri']); ?>')">
+
+
           <div class="cta-holder">
             <?php print render($page['caption_holder']); ?>
           </div>
