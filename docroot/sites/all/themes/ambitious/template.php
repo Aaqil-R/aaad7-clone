@@ -732,6 +732,10 @@ function ambitious_field__field_closing_date(&$variables){
     $form['recipient']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['recipient']['#description']."</span></a>";
     $form['body']['#format'] = 'plain_text';
    }
+
+  //  if($form_id == 'webform_client_form_702566'){
+  //   $form_state['redirect'] = '/sites/all/themes/ambitious/files/RftS-toolkit-v8-pp1-33_BB_11_12_19.pdf';
+  // }
 }
 
 
