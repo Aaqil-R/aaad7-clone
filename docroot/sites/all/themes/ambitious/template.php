@@ -733,9 +733,9 @@ function ambitious_field__field_closing_date(&$variables){
     $form['body']['#format'] = 'plain_text';
    }
 
-   if($form_id == 'webform_client_form_702566'){
-    $form_state['redirect'] == '/sites/all/themes/ambitious/files/RftS-toolkit-v8-pp1-33_BB_11_12_19.pdf';
-  }
+  //  if($form_id == 'webform_client_form_702566'){
+  //   $form_state['redirect'] == '/sites/all/themes/ambitious/files/RftS-toolkit-v8-pp1-33_BB_11_12_19.pdf';
+  // }
 }
 
 
