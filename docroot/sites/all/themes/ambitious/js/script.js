@@ -205,7 +205,6 @@
             // end document.ready
 
             $(document).ajaxComplete(function() {
-
                 $('.view-display-id-stream_forum_page').mobileNav({
                     hideOnClickOutside: true,
                     menuActiveClass: 'filter-active',
