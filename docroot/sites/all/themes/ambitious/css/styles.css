@@ -496,7 +496,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
  * set default font size, line height and font family
  * set default background
  */
-/* line 14, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.1.3/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/susy-2.2.14/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1984,7 +1984,7 @@ a:hover.tooltips span.tooltip-content {
 }
 /* line 334, ../sass/_content.scss */
 .action-block .block-spectrum {
-  background-image: url('../images/bg07.jpg?1449160475');
+  background-image: url('../images/bg07.jpg?1562326301');
   float: right;
 }
 /* line 338, ../sass/_content.scss */
@@ -3757,7 +3757,7 @@ div.modal-forms-modal-content .form-item label {
 .images-list li .name {
   float: left;
   width: 100%;
-  text-aign: center;
+  text-align: center;
 }
 
 /* line 940, ../sass/_forms.scss */
@@ -5958,7 +5958,15 @@ div.modal-forms-modal-content .form-item label {
   border-radius: 3px;
   background: #ffffff;
 }
-/* line 1218, ../sass/_forms.scss */
+@-moz-document url-prefix() {
+  /* line 1205, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:before,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:before,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:before {
+    top: 19px;
+  }
+}
+/* line 1222, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
@@ -5966,115 +5974,268 @@ div.modal-forms-modal-content .form-item label {
   color: #F15500;
   transition: all .2s;
   position: absolute;
-  top: -25px;
+  top: -6px;
   left: 2px;
 }
-/* line 1238, ../sass/_forms.scss */
+@supports (-webkit-overflow-scrolling: touch) {
+  /* line 1222, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
+    font-size: 14px;
+    top: -26px;
+  }
+}
+@-moz-document url-prefix() {
+  /* line 1222, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after,
+  .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
+    top: 12px;
+  }
+}
+/* line 1251, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   transform: scale(0);
 }
-/* line 1243, ../sass/_forms.scss */
+/* line 1256, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
 }
-/* line 1252, ../sass/_forms.scss */
+/* line 1265, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:before,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:not(:checked) + label:before,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:checked + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:not(:checked) + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:checked + label:before {
   border-color: #bbb;
   background-color: #ddd;
 }
-/* line 1259, ../sass/_forms.scss */
+/* line 1272, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled:checked + label:after,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled:checked + label:after {
   color: #999;
 }
-/* line 1263, ../sass/_forms.scss */
+/* line 1276, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:disabled + label, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:disabled + label, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:disabled + label,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:disabled + label, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:disabled + label, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:disabled + label {
   color: #aaa;
 }
-/* line 1268, ../sass/_forms.scss */
+/* line 1281, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-type [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked):focus + label:before,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:checked:focus + label:before,
 .node-donations .webform-component--donation-type--Recurring [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked):focus + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked:focus + label:before, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked):focus + label:before {
   border: 1px solid black;
 }
-/* line 1280, ../sass/_forms.scss */
+@-moz-document url-prefix() {
+  /* line 1293, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:before, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:before {
+    top: 20px;
+  }
+}
+/* line 1299, ../sass/_forms.scss */
 .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after {
-  top: -45px;
+  top: -6px;
 }
-/* line 1293, ../sass/_forms.scss */
+@supports (-webkit-overflow-scrolling: touch) {
+  /* line 1299, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after {
+    font-size: 14px;
+    top: -86px;
+  }
+}
+@-moz-document url-prefix() {
+  /* line 1299, ../sass/_forms.scss */
+  .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--donation-checkbox-1 [type="checkbox"]:checked + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--agree-condition--1 [type="checkbox"]:checked + label:after {
+    top: 15px;
+  }
+}
+/* line 1321, ../sass/_forms.scss */
 .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
-  top: -80px;
+  top: -6px;
 }
-@media (min-width: 481px) and (max-width: 767px) {
-  /* line 1293, ../sass/_forms.scss */
+@supports (-webkit-overflow-scrolling: touch) {
+  /* line 1321, ../sass/_forms.scss */
   .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
-    top: -75px;
+    top: -81px;
   }
 }
-@media (min-width: 767px) {
-  /* line 1293, ../sass/_forms.scss */
+@-moz-document url-prefix() {
+  /* line 1321, ../sass/_forms.scss */
   .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box [type="checkbox"]:checked + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:not(:checked) + label:after, .node-donations .webform-component--gift-aid-check-box--1 [type="checkbox"]:checked + label:after {
-    top: -55px;
+    top: 14px;
   }
 }
-/* line 1311, ../sass/_forms.scss */
+/* line 1338, ../sass/_forms.scss */
 .node-donations .form-checkboxes input.form-checkbox, .node-donations .form-checkboxes input.form-radio, .node-donations .form-radios input.form-checkbox, .node-donations .form-radios input.form-radio {
   float: left;
   margin: 8px;
 }
-/* line 1317, ../sass/_forms.scss */
+/* line 1344, ../sass/_forms.scss */
 .node-donations .webform-component--city, .node-donations .webform-component--post-code {
   width: 50%;
   float: left;
 }
-/* line 1322, ../sass/_forms.scss */
+/* line 1349, ../sass/_forms.scss */
 .node-donations .form-item-submitted-expiration-date-year {
   padding-right: 0;
 }
-/* line 1326, ../sass/_forms.scss */
+/* line 1353, ../sass/_forms.scss */
 .node-donations .form-item-submitted-expiration-date-month, .node-donations .form-item-submitted-expiration-date-year {
   float: left !important;
 }
-/* line 1332, ../sass/_forms.scss */
+/* line 1359, ../sass/_forms.scss */
 .node-donations .form-item-submitted-expiration-date-month .form-element .jcf-select, .node-donations .form-item-submitted-expiration-date-year .form-element .jcf-select {
   min-width: 100%;
   width: 100%;
 }
-/* line 1339, ../sass/_forms.scss */
+/* line 1366, ../sass/_forms.scss */
 .node-donations .webform-component--country .jcf-select {
   min-width: 100% !important;
 }
-/* line 1343, ../sass/_forms.scss */
+/* line 1370, ../sass/_forms.scss */
 .node-donations .webform-component-select, .node-donations .webform-component-date {
   padding-bottom: 20px !important;
 }
-/* line 1351, ../sass/_forms.scss */
+/* line 1378, ../sass/_forms.scss */
 .node-donations .webform-component-date fieldset {
   padding-left: 0;
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 1356, ../sass/_forms.scss */
+/* line 1383, ../sass/_forms.scss */
 .node-donations .webform-component-date fieldset:last-child {
   float: right;
   margin-right: 0;
 }
-/* line 1362, ../sass/_forms.scss */
+/* line 1389, ../sass/_forms.scss */
 .node-donations .webform-component--donation-type--Recurring, .node-donations .webform-component--gift-aid-check-box--1 {
   margin-bottom: 1em;
 }
 
-/* line 1367, ../sass/_forms.scss */
+/* line 1394, ../sass/_forms.scss */
 .captcha {
   margin-bottom: 1em;
+}
+
+/* line 1399, ../sass/_forms.scss */
+#webform-client-form-700031 {
+  margin-bottom: 20px;
+}
+/* line 1401, ../sass/_forms.scss */
+#webform-client-form-700031 .webform-component--date-of-birth {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 1405, ../sass/_forms.scss */
+#webform-client-form-700031 #edit-submitted-reason,
+#webform-client-form-700031 #edit-submitted-if-so-which-event-did-you-take-part-in-and-how-much-did-you-raise,
+#webform-client-form-700031 #edit-submitted-please-provide-your-social-media-details,
+#webform-client-form-700031 #edit-submitted-oulined-plan {
+  margin-top: 0.5em;
+}
+/* line 1411, ../sass/_forms.scss */
+#webform-client-form-700031 .webform-component--reason {
+  margin-bottom: 1em;
+}
+/* line 1414, ../sass/_forms.scss */
+#webform-client-form-700031 .webform-component--if-so-which-event-did-you-take-part-in-and-how-much-did-you-raise {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 1418, ../sass/_forms.scss */
+#webform-client-form-700031 .webform-component--oulined-plan {
+  margin-bottom: 1em;
+}
+
+/* line 1423, ../sass/_forms.scss */
+#webform-client-form-700026 {
+  margin-bottom: 20px;
+}
+/* line 1425, ../sass/_forms.scss */
+#webform-client-form-700026 .webform-component--date-of-birth {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 1429, ../sass/_forms.scss */
+#webform-client-form-700026 #edit-submitted-reason,
+#webform-client-form-700026 #edit-submitted-if-so-which-event-did-you-take-part-in-and-how-much-did-you-raise,
+#webform-client-form-700026 #edit-submitted-please-provide-your-social-media-details {
+  margin-top: 0.5em;
+}
+/* line 1435, ../sass/_forms.scss */
+#webform-client-form-700026 .webform-component--have-you-taken-part-in-an-event-for-charity-before {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 1440, ../sass/_forms.scss */
+#webform-client-form-700026 .webform-component--if-you-would-be-interested-in-registering-for-a-place-in-any-of-our-other-events-please-select-the-appropriate-option {
+  margin-top: 1em;
+}
+
+/* line 1446, ../sass/_forms.scss */
+label {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  /* line 1446, ../sass/_forms.scss */
+  label {
+    font-size: 16px;
+  }
+}
+
+/* line 1454, ../sass/_forms.scss */
+.webform-component-radios {
+  margin-bottom: 1em;
+}
+
+/* line 1458, ../sass/_forms.scss */
+#webform-client-form-702566 {
+  margin-bottom: 3em;
+}
+/* line 1461, ../sass/_forms.scss */
+#webform-client-form-702566 label {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  /* line 1461, ../sass/_forms.scss */
+  #webform-client-form-702566 label {
+    font-size: 16px;
+  }
+}
+/* line 1467, ../sass/_forms.scss */
+#webform-client-form-702566 .webform-component-select {
+  background: none;
+}
+/* line 1470, ../sass/_forms.scss */
+#webform-client-form-702566 .jcf-select-form-select,
+#webform-client-form-702566 input {
+  width: 40%;
+}
+@media (max-width: 767px) {
+  /* line 1470, ../sass/_forms.scss */
+  #webform-client-form-702566 .jcf-select-form-select,
+  #webform-client-form-702566 input {
+    width: 100%;
+  }
+}
+/* line 1477, ../sass/_forms.scss */
+#webform-client-form-702566 .form-type-checkbox {
+  position: relative;
+}
+/* line 1479, ../sass/_forms.scss */
+#webform-client-form-702566 .form-type-checkbox input {
+  left: 0;
+  position: absolute;
+  top: 12px;
+}
+/* line 1484, ../sass/_forms.scss */
+#webform-client-form-702566 .form-type-checkbox label {
+  max-width: 40%;
+  padding-left: 20px;
 }
 
 /* line 3, ../sass/base/_markup-mixins.scss */
@@ -6937,19 +7098,19 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 @media (min-width: 480px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 20%;
+    width: 10%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 40%;
+    width: 10%;
   }
 }
 @media (min-width: 767px) {
   /* line 383, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .webform-steps-wrapper {
-    width: 20%;
+    width: 10%;
   }
 }
 /* line 409, ../sass/layouts/_pages.scss */
@@ -6972,7 +7133,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 }
 /* line 426, ../sass/layouts/_pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.webform-step:nth-child(2) {
-  left: 50%;
+  left: 100%;
 }
 /* line 430, ../sass/layouts/_pages.scss */
 .node-type-donations #wrapper .node-donations form .webform-steps-wrapper span.webform-step:nth-child(3) {
@@ -7339,14 +7500,13 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
   width: 100%;
   background: #fbba00;
-  border-bottom: 5px solid #f07d2c;
   margin-bottom: 10px;
 }
 @media (min-width: 767px) {
   /* line 902, ../sass/layouts/_pages.scss */
   .node-type-donations #wrapper .node-donations form .form-actions input.webform-previous {
     width: 35%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 /* line 917, ../sass/layouts/_pages.scss */
@@ -7401,42 +7561,43 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
 /* line 972, ../sass/layouts/_pages.scss */
 .page-node-done #wrapper .sharethis-buttons,
 .node-type-thank-you-page #wrapper .sharethis-buttons {
-  float: left;
+  margin: 10px 0;
+  display: inline-block;
   margin-top: 20px;
   width: 45%;
   background: #ffffff;
   border: 1px solid #d2d5d6;
   padding: 7px 18px 0 18px;
 }
-/* line 982, ../sass/layouts/_pages.scss */
+/* line 983, ../sass/layouts/_pages.scss */
 .page-node-done #wrapper .sharethis-buttons p.text-center,
 .node-type-thank-you-page #wrapper .sharethis-buttons p.text-center {
   text-align: right;
   margin: 0;
 }
 
-/* line 1078, ../sass/layouts/_pages.scss */
+/* line 1079, ../sass/layouts/_pages.scss */
 .pgae-download-donations #main {
   padding-bottom: 50px;
 }
 
-/* line 1084, ../sass/layouts/_pages.scss */
+/* line 1085, ../sass/layouts/_pages.scss */
 .section-policy h1.title {
   display: none;
 }
 
-/* line 1089, ../sass/layouts/_pages.scss */
+/* line 1090, ../sass/layouts/_pages.scss */
 .gsc-overflow-hidden {
   overflow: auto !important;
 }
 
-/* line 1093, ../sass/layouts/_pages.scss */
+/* line 1094, ../sass/layouts/_pages.scss */
 .gsc-results-wrapper-visible {
   opacity: 1 !important;
   visibility: visible !important;
 }
 
-/* line 1098, ../sass/layouts/_pages.scss */
+/* line 1099, ../sass/layouts/_pages.scss */
 .gsc-results-wrapper-overlay {
   border: inherit;
   margin: inherit;
@@ -7451,7 +7612,7 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   top: 0 !important;
 }
 
-/* line 1112, ../sass/layouts/_pages.scss */
+/* line 1113, ../sass/layouts/_pages.scss */
 .gsc-modal-background-image {
   position: static !important;
   height: 100%;
@@ -7459,12 +7620,12 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   background-color: transparent;
 }
 
-/* line 1119, ../sass/layouts/_pages.scss */
+/* line 1120, ../sass/layouts/_pages.scss */
 .gsc-control-cse div {
   position: relative !important;
   z-index: 0;
 }
-/* line 1123, ../sass/layouts/_pages.scss */
+/* line 1124, ../sass/layouts/_pages.scss */
 .gsc-control-cse div.gs-image-box {
   width: 80px !important;
   position: absolute !important;
@@ -7472,24 +7633,24 @@ h1.title, .node-type-basic-page-with-hero-large h1.title {
   top: 0;
 }
 
-/* line 1131, ../sass/layouts/_pages.scss */
+/* line 1132, ../sass/layouts/_pages.scss */
 .gs-bidi-start-align.gs-snippet {
   padding-left: 102px;
 }
 
-/* line 1135, ../sass/layouts/_pages.scss */
+/* line 1136, ../sass/layouts/_pages.scss */
 .gsc-wrapper {
   position: relative;
 }
 
-/* line 1139, ../sass/layouts/_pages.scss */
+/* line 1140, ../sass/layouts/_pages.scss */
 .cse .gsc-control-cse,
 .gsc-control-cse {
   padding: 0 !important;
   border: none !important;
 }
 
-/* line 1145, ../sass/layouts/_pages.scss */
+/* line 1146, ../sass/layouts/_pages.scss */
 form.gsc-search-box,
 .gsc-above-wrapper-area,
 .gsc-results-close-btn,
@@ -7500,13 +7661,13 @@ form.gsc-search-box,
   display: none !important;
 }
 
-/* line 1155, ../sass/layouts/_pages.scss */
+/* line 1156, ../sass/layouts/_pages.scss */
 table.gsc-table-result tr:nth-child(odd) td,
 table tr.odd td {
   background: #ffffff;
 }
 
-/* line 1160, ../sass/layouts/_pages.scss */
+/* line 1161, ../sass/layouts/_pages.scss */
 .gsc-webResult.gsc-result,
 .gsc-results .gsc-imageResult {
   background: white !important;
@@ -7519,12 +7680,12 @@ table tr.odd td {
   min-height: 125px;
 }
 
-/* line 1172, ../sass/layouts/_pages.scss */
+/* line 1173, ../sass/layouts/_pages.scss */
 .gsc-tabData.gsc-tabdActive {
   background: #eef2f3;
 }
 
-/* line 1179, ../sass/layouts/_pages.scss */
+/* line 1180, ../sass/layouts/_pages.scss */
 .gs-webResult.gs-result a.gs-title b, .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:focus, .gs-webResult.gs-result a.gs-title:visited,
 .gs-imageResult a.gs-title b,
 .gs-imageResult a.gs-title:link,
@@ -7539,7 +7700,7 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
 }
 
-/* line 1194, ../sass/layouts/_pages.scss */
+/* line 1195, ../sass/layouts/_pages.scss */
 .gs-webResult .gs-snippet,
 .gs-imageResult .gs-snippet,
 .gs-fileFormatType {
@@ -7547,63 +7708,63 @@ table tr.odd td {
   font-family: "HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
 }
 
-/* line 1201, ../sass/layouts/_pages.scss */
+/* line 1202, ../sass/layouts/_pages.scss */
 #search-form #edit-keys {
   height: 45px;
 }
 
-/* line 1205, ../sass/layouts/_pages.scss */
+/* line 1206, ../sass/layouts/_pages.scss */
 .gs-result .gs-title,
 .gsc-control-cse .gsc-table-result {
   padding-left: 48px;
 }
 
-/* line 1210, ../sass/layouts/_pages.scss */
+/* line 1211, ../sass/layouts/_pages.scss */
 .gsc-thumbnail {
   padding: 0 !important;
 }
 
-/* line 1214, ../sass/layouts/_pages.scss */
+/* line 1215, ../sass/layouts/_pages.scss */
 .gs-web-image-box-portrait {
   height: 85px !important;
 }
-/* line 1217, ../sass/layouts/_pages.scss */
+/* line 1218, ../sass/layouts/_pages.scss */
 .gs-web-image-box-portrait img.gs-image {
   max-width: 80px !important;
   max-height: 80px !important;
 }
 
-/* line 1223, ../sass/layouts/_pages.scss */
+/* line 1224, ../sass/layouts/_pages.scss */
 .gs-snippet {
   color: #2a2e31 !important;
 }
 
-/* line 1227, ../sass/layouts/_pages.scss */
+/* line 1228, ../sass/layouts/_pages.scss */
 .gs-web-image-box-landscape img.gs-image {
   max-width: 85px !important;
 }
 
-/* line 1231, ../sass/layouts/_pages.scss */
+/* line 1232, ../sass/layouts/_pages.scss */
 .gsc-cursor-box {
   text-align: center !important;
   margin: 60px 0 30px !important;
 }
-/* line 1234, ../sass/layouts/_pages.scss */
+/* line 1235, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page {
   background-color: transparent !important;
   color: #2a2e31 !important;
   font-size: 24px;
 }
-/* line 1238, ../sass/layouts/_pages.scss */
+/* line 1239, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page:hover, .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
   color: #f07d00 !important;
 }
-/* line 1243, ../sass/layouts/_pages.scss */
+/* line 1244, ../sass/layouts/_pages.scss */
 .gsc-cursor-box .gsc-cursor-page:hover {
   text-decoration: none !important;
 }
 
-/* line 1249, ../sass/layouts/_pages.scss */
+/* line 1250, ../sass/layouts/_pages.scss */
 .gsc-table-result {
   margin-bottom: 0 !important;
 }
@@ -7626,7 +7787,7 @@ html body {
 }
 /* line 14, ../sass/_all.scss */
 html body.myvoice {
-  background: url('../images/wid_bg.jpg?1449160475') #eef2f3;
+  background: url('../images/wid_bg.jpg?1562326301') #eef2f3;
 }
 
 /* line 20, ../sass/_all.scss */
@@ -8772,7 +8933,7 @@ html body.node-type-forum-discussion, html body.node-type-forum {
 .posts-columns .post-actions {
   text-align: center;
   vertical-align: middle;
-  background-image: url('../images/aged-16-25.jpg?1458213364');
+  background-image: url('../images/aged-16-25.jpg?1562326301');
   position: relative;
   max-height: 315px;
   padding: 0;
@@ -8857,7 +9018,7 @@ html body.node-type-forum-discussion, html body.node-type-forum {
 .posts-columns .post-my-voice-actions {
   text-align: center;
   vertical-align: middle;
-  background-image: url('../images/my-voice.jpg?1449160475');
+  background-image: url('../images/my-voice.jpg?1562326301');
   position: relative;
   max-height: 315px;
   background-repeat: no-repeat;
@@ -9518,7 +9679,7 @@ html body.node-type-forum-discussion, html body.node-type-forum {
   content: "";
   width: 10px;
   height: 16px;
-  background: url('../images/sprite.png?1449160475') no-repeat -14px -62px;
+  background: url('../images/sprite.png?1562326301') no-repeat -14px -62px;
 }
 /* line 1895, ../sass/_all.scss */
 .top-header .top-header-inner .page-links li a {
@@ -10146,7 +10307,7 @@ body {
 /* these apply to auto-completing form fields */
 /* line 26, ../sass/layouts/_global.scss */
 html.js input.form-autocomplete {
-  background-image: url('../images/ajax-loader.gif?1449160475');
+  background-image: url('../images/ajax-loader.gif?1562326301');
   background-position: 100% 0px;
   background-repeat: no-repeat;
 }
@@ -11307,7 +11468,7 @@ a.btn:hover, a.form-submit:hover, .node-type-forum-discussion .comment-block .fo
 .page-node-74591
 #wrapper, .page-node-74611
 #wrapper, .page-node-74596 #wrapper {
-  background: url('../images/wid_bg.jpg?1449160475') #eef2f3;
+  background: url('../images/wid_bg.jpg?1562326301') #eef2f3;
 }
 
 /* line 1, ../sass/_action-block.scss */
@@ -12382,63 +12543,58 @@ a.btn#not_right_now, a#not_right_now.form-submit {
 .card--item.feature-row a {
   text-decoration: none;
 }
-/* line 1118, ../sass/_action-block.scss */
-.card--item.feature-row .views-field-field-promo-description {
-  font-size: 22px;
-  line-height: 30px;
-}
 
-/* line 1125, ../sass/_action-block.scss */
+/* line 1119, ../sass/_action-block.scss */
 .view-display-id-homepage_feature_block_stream_top {
   min-height: 350px;
 }
 
-/* line 1129, ../sass/_action-block.scss */
+/* line 1123, ../sass/_action-block.scss */
 .feature-action-block {
   margin-top: 30px;
 }
 
-/* line 1133, ../sass/_action-block.scss */
+/* line 1127, ../sass/_action-block.scss */
 .feature-action-block .promo_block {
   padding: 30px 10px 37px 39px;
   width: auto;
   background-size: cover;
 }
 @media (max-width: 767px) {
-  /* line 1133, ../sass/_action-block.scss */
+  /* line 1127, ../sass/_action-block.scss */
   .feature-action-block .promo_block {
     padding: 20px;
   }
 }
-/* line 1143, ../sass/_action-block.scss */
+/* line 1137, ../sass/_action-block.scss */
 .feature-action-block .promo_block .feature-block-wrapper {
   color: #ffffff;
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  /* line 1143, ../sass/_action-block.scss */
+  /* line 1137, ../sass/_action-block.scss */
   .feature-action-block .promo_block .feature-block-wrapper {
     margin-right: 0px;
   }
 }
-/* line 1152, ../sass/_action-block.scss */
+/* line 1146, ../sass/_action-block.scss */
 .feature-action-block .promo_block .feature-block-wrapper p {
   font-size: 22px;
   margin-bottom: 30px;
   line-height: 30px;
 }
-/* line 1158, ../sass/_action-block.scss */
+/* line 1152, ../sass/_action-block.scss */
 .feature-action-block .promo_block .feature-block-wrapper h1, .feature-action-block .promo_block .feature-block-wrapper h2, .feature-action-block .promo_block .feature-block-wrapper h3, .feature-action-block .promo_block .feature-block-wrapper h4, .feature-action-block .promo_block .feature-block-wrapper h5, .feature-action-block .promo_block .feature-block-wrapper h6, .feature-action-block .promo_block .feature-block-wrapper p {
   color: #ffffff;
 }
-/* line 1163, ../sass/_action-block.scss */
+/* line 1157, ../sass/_action-block.scss */
 .feature-action-block .promo_block .btn, .feature-action-block .promo_block .form-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-submit, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-preview, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-submit, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-preview, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-submit, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-preview, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-submit, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-preview, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-submit, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-preview, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview {
   padding: 10px 20px;
   margin-right: 30px;
   top: 0px;
 }
 @media (max-width: 767px) {
-  /* line 1163, ../sass/_action-block.scss */
+  /* line 1157, ../sass/_action-block.scss */
   .feature-action-block .promo_block .btn, .feature-action-block .promo_block .form-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-submit, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-preview, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-submit, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-preview, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-submit, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-preview, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-submit, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-preview, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-submit, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-preview, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview {
     padding-left: 0px;
     padding-right: 0px;
@@ -12447,14 +12603,14 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1163, ../sass/_action-block.scss */
+  /* line 1157, ../sass/_action-block.scss */
   .feature-action-block .promo_block .btn, .feature-action-block .promo_block .form-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-submit, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment .comment-block .form-actions #edit-preview, .page-comment .comment-block .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-submit, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area form.comment-form .form-actions #edit-preview, .page-comment #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-submit, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-comment #content-area #privatemsg-new .form-actions #edit-preview, .page-comment #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-submit, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area form.comment-form .form-actions #edit-preview, .page-messages #content-area form.comment-form .form-actions .feature-action-block .promo_block #edit-preview, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-submit, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-submit, .feature-action-block .promo_block .page-messages #content-area #privatemsg-new .form-actions #edit-preview, .page-messages #content-area #privatemsg-new .form-actions .feature-action-block .promo_block #edit-preview {
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 20px;
   }
 }
-/* line 1183, ../sass/_action-block.scss */
+/* line 1177, ../sass/_action-block.scss */
 .feature-action-block .promo_block .text {
   display: block;
   font-size: 45px;
@@ -12463,25 +12619,25 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   font-family: "HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
-/* line 1191, ../sass/_action-block.scss */
+/* line 1185, ../sass/_action-block.scss */
 #main2 .feature-action-block .promo_block .text {
   margin: 0 0 6px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1183, ../sass/_action-block.scss */
+  /* line 1177, ../sass/_action-block.scss */
   .feature-action-block .promo_block .text {
     line-height: 50px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1183, ../sass/_action-block.scss */
+  /* line 1177, ../sass/_action-block.scss */
   .feature-action-block .promo_block .text {
     margin: 0 0 20px;
     font-size: 29px;
     line-height: 40px;
   }
 }
-/* line 1208, ../sass/_action-block.scss */
+/* line 1202, ../sass/_action-block.scss */
 .feature-action-block .promo_block .text span {
   color: #081318;
   display: inline-block;
@@ -12491,23 +12647,23 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   padding: 6px 19px 5px;
 }
 @media (max-width: 767px) {
-  /* line 1208, ../sass/_action-block.scss */
+  /* line 1202, ../sass/_action-block.scss */
   .feature-action-block .promo_block .text span {
     padding: 3px 10px 6px;
     margin: 0 0 5px;
   }
 }
-/* line 1222, ../sass/_action-block.scss */
+/* line 1216, ../sass/_action-block.scss */
 .feature-action-block .promo_block .text span.add {
   margin: 0 0 0px 62px;
 }
 @media (max-width: 767px) {
-  /* line 1222, ../sass/_action-block.scss */
+  /* line 1216, ../sass/_action-block.scss */
   .feature-action-block .promo_block .text span.add {
     margin: 0 0 0px 19px;
   }
 }
-/* line 1236, ../sass/_action-block.scss */
+/* line 1230, ../sass/_action-block.scss */
 .feature-action-block .promo_block .text span {
   display: inline;
   line-height: 73px;
@@ -12515,17 +12671,17 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   white-space: pre-wrap;
 }
 @media (max-width: 768px) {
-  /* line 1236, ../sass/_action-block.scss */
+  /* line 1230, ../sass/_action-block.scss */
   .feature-action-block .promo_block .text span {
     line-height: 45px;
   }
 }
 
-/* line 1251, ../sass/_action-block.scss */
+/* line 1245, ../sass/_action-block.scss */
 .block_main_feature {
   min-height: 300px;
 }
-/* line 1254, ../sass/_action-block.scss */
+/* line 1248, ../sass/_action-block.scss */
 .block_main_feature .text1 {
   font-size: 44px;
   white-space: pre-line;
@@ -12534,67 +12690,67 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   margin-top: 14px;
 }
 @media (max-width: 768px) {
-  /* line 1254, ../sass/_action-block.scss */
+  /* line 1248, ../sass/_action-block.scss */
   .block_main_feature .text1 {
     font-size: 34px;
     line-height: normal;
   }
 }
 @media (max-width: 767px) {
-  /* line 1254, ../sass/_action-block.scss */
+  /* line 1248, ../sass/_action-block.scss */
   .block_main_feature .text1 {
     font-size: 29px;
     line-height: normal;
   }
 }
-/* line 1277, ../sass/_action-block.scss */
+/* line 1271, ../sass/_action-block.scss */
 .block_main_feature .text2 {
   margin-left: 50px;
   margin-top: 18px;
 }
 
-/* line 1289, ../sass/_action-block.scss */
+/* line 1283, ../sass/_action-block.scss */
 .link-wrapper {
   max-width: 30%;
   display: inline-block;
   margin-right: 20px;
 }
 @media (max-width: 768px) {
-  /* line 1289, ../sass/_action-block.scss */
+  /* line 1283, ../sass/_action-block.scss */
   .link-wrapper {
     max-width: 20%;
   }
 }
 @media (max-width: 767px) {
-  /* line 1289, ../sass/_action-block.scss */
+  /* line 1283, ../sass/_action-block.scss */
   .link-wrapper {
     max-width: 100%;
     display: block;
     margin-right: 0px;
   }
 }
-/* line 1306, ../sass/_action-block.scss */
+/* line 1300, ../sass/_action-block.scss */
 .link-wrapper a {
   display: block;
   text-decoration: none;
   color: #000000;
 }
 
-/* line 1313, ../sass/_action-block.scss */
+/* line 1307, ../sass/_action-block.scss */
 .description-wrapper {
   max-width: 70%;
   display: inline-block;
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  /* line 1313, ../sass/_action-block.scss */
+  /* line 1307, ../sass/_action-block.scss */
   .description-wrapper {
     max-width: 100%;
     display: block;
   }
 }
 
-/* line 1324, ../sass/_action-block.scss */
+/* line 1318, ../sass/_action-block.scss */
 .featured-colums {
   float: right;
   display: inline-block;
@@ -12602,13 +12758,13 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   width: 30%;
 }
 @media (max-width: 768px) {
-  /* line 1324, ../sass/_action-block.scss */
+  /* line 1318, ../sass/_action-block.scss */
   .featured-colums {
     width: 27%;
   }
 }
 @media (max-width: 767px) {
-  /* line 1324, ../sass/_action-block.scss */
+  /* line 1318, ../sass/_action-block.scss */
   .featured-colums {
     width: 100%;
     display: block;
@@ -12617,48 +12773,48 @@ a.btn#not_right_now, a#not_right_now.form-submit {
 }
 
 /** action block bottom **/
-/* line 1343, ../sass/_action-block.scss */
+/* line 1337, ../sass/_action-block.scss */
 .action-block-bottom {
   background: #ffffff;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1347, ../sass/_action-block.scss */
+  /* line 1341, ../sass/_action-block.scss */
   .action-block .block-symptoms {
     padding: 35px;
   }
 }
 
-/* line 1353, ../sass/_action-block.scss */
+/* line 1347, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms {
   padding: 30px 10px 37px 39px;
   width: auto;
   background-size: cover;
 }
 @media (max-width: 767px) {
-  /* line 1353, ../sass/_action-block.scss */
+  /* line 1347, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms {
     padding: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1353, ../sass/_action-block.scss */
+  /* line 1347, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms {
     padding: 35px;
   }
 }
-/* line 1368, ../sass/_action-block.scss */
+/* line 1362, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .btn, .action-block-bottom .block-symptoms .form-submit, .action-block-bottom .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment .comment-block .form-actions #edit-submit, .page-comment .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment .comment-block .form-actions #edit-preview, .page-comment .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment #content-area form.comment-form .form-actions #edit-submit, .page-comment #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment #content-area form.comment-form .form-actions #edit-preview, .page-comment #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment #content-area #privatemsg-new .form-actions #edit-submit, .page-comment #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment #content-area #privatemsg-new .form-actions #edit-preview, .page-comment #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-messages #content-area form.comment-form .form-actions #edit-submit, .page-messages #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-messages #content-area form.comment-form .form-actions #edit-preview, .page-messages #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-messages #content-area #privatemsg-new .form-actions #edit-submit, .page-messages #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-messages #content-area #privatemsg-new .form-actions #edit-preview, .page-messages #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-preview {
   padding: 10px 20px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1368, ../sass/_action-block.scss */
+  /* line 1362, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .btn, .action-block-bottom .block-symptoms .form-submit, .action-block-bottom .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-submit, .node-type-forum-discussion .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .node-type-forum-discussion .comment-block .form-actions #edit-preview, .node-type-forum-discussion .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment-reply .comment-block .form-actions #edit-submit, .page-comment-reply .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment-reply .comment-block .form-actions #edit-preview, .page-comment-reply .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment .comment-block .form-actions #edit-submit, .page-comment .comment-block .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment .comment-block .form-actions #edit-preview, .page-comment .comment-block .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment #content-area form.comment-form .form-actions #edit-submit, .page-comment #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment #content-area form.comment-form .form-actions #edit-preview, .page-comment #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-comment #content-area #privatemsg-new .form-actions #edit-submit, .page-comment #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-comment #content-area #privatemsg-new .form-actions #edit-preview, .page-comment #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-messages #content-area form.comment-form .form-actions #edit-submit, .page-messages #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-messages #content-area form.comment-form .form-actions #edit-preview, .page-messages #content-area form.comment-form .form-actions .action-block-bottom .block-symptoms #edit-preview, .action-block-bottom .block-symptoms .page-messages #content-area #privatemsg-new .form-actions #edit-submit, .page-messages #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-submit, .action-block-bottom .block-symptoms .page-messages #content-area #privatemsg-new .form-actions #edit-preview, .page-messages #content-area #privatemsg-new .form-actions .action-block-bottom .block-symptoms #edit-preview {
     width: 100%;
     text-align: center;
   }
 }
-/* line 1377, ../sass/_action-block.scss */
+/* line 1371, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .text {
   display: block;
   font-size: 45px;
@@ -12668,29 +12824,29 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   font-weight: normal;
 }
 @media (max-width: 767px) {
-  /* line 1377, ../sass/_action-block.scss */
+  /* line 1371, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text {
     min-height: 130px;
   }
 }
-/* line 1390, ../sass/_action-block.scss */
+/* line 1384, ../sass/_action-block.scss */
 #main2 .action-block-bottom .block-symptoms .text {
   margin: 0 0 6px;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1377, ../sass/_action-block.scss */
+  /* line 1371, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text {
     font-size: 34px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 1399, ../sass/_action-block.scss */
+  /* line 1393, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text:first-child {
     min-height: 203px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1377, ../sass/_action-block.scss */
+  /* line 1371, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text {
     margin: 0 0 5px;
     font-size: 29px;
@@ -12698,7 +12854,7 @@ a.btn#not_right_now, a#not_right_now.form-submit {
     min-height: 130px;
   }
 }
-/* line 1413, ../sass/_action-block.scss */
+/* line 1407, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .text span {
   color: #081318;
   display: inline-block;
@@ -12708,28 +12864,28 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   padding: 6px 19px 5px;
 }
 @media (max-width: 767px) {
-  /* line 1413, ../sass/_action-block.scss */
+  /* line 1407, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text span {
     padding: 3px 10px 6px;
     margin: 0 0 5px;
   }
 }
-/* line 1427, ../sass/_action-block.scss */
+/* line 1421, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .text span.add {
   margin: 0 0 0px 62px;
 }
 @media (max-width: 767px) {
-  /* line 1427, ../sass/_action-block.scss */
+  /* line 1421, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text span.add {
     margin: 0 0 0px 19px;
   }
 }
-/* line 1437, ../sass/_action-block.scss */
+/* line 1431, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .text {
   min-height: 160px;
   margin-bottom: 0;
 }
-/* line 1441, ../sass/_action-block.scss */
+/* line 1435, ../sass/_action-block.scss */
 .action-block-bottom .block-symptoms .text span {
   display: inline;
   line-height: 73px;
@@ -12737,13 +12893,13 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   white-space: pre-wrap;
 }
 @media (max-width: 768px) {
-  /* line 1441, ../sass/_action-block.scss */
+  /* line 1435, ../sass/_action-block.scss */
   .action-block-bottom .block-symptoms .text span {
     line-height: 45px;
   }
 }
 
-/* line 1457, ../sass/_action-block.scss */
+/* line 1451, ../sass/_action-block.scss */
 .core_action_block .text1 {
   font-size: 44px;
   white-space: pre-line;
@@ -12753,117 +12909,117 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   margin-top: 14px;
 }
 @media (max-width: 768px) {
-  /* line 1457, ../sass/_action-block.scss */
+  /* line 1451, ../sass/_action-block.scss */
   .core_action_block .text1 {
     font-size: 34px;
     line-height: normal;
   }
 }
 @media (max-width: 767px) {
-  /* line 1457, ../sass/_action-block.scss */
+  /* line 1451, ../sass/_action-block.scss */
   .core_action_block .text1 {
     font-size: 29px;
     line-height: normal;
     min-height: 130px;
   }
 }
-/* line 1480, ../sass/_action-block.scss */
+/* line 1474, ../sass/_action-block.scss */
 .core_action_block .text2 {
   margin-left: 50px;
   min-height: 175px;
   margin-top: 18px;
 }
 @media (max-width: 767px) {
-  /* line 1480, ../sass/_action-block.scss */
+  /* line 1474, ../sass/_action-block.scss */
   .core_action_block .text2 {
     min-height: 130px;
   }
 }
 
-/* line 1492, ../sass/_action-block.scss */
+/* line 1486, ../sass/_action-block.scss */
 .articles-block .ambitious-block-system {
   padding-top: 0px;
 }
 @media (max-width: 767px) {
-  /* line 1491, ../sass/_action-block.scss */
+  /* line 1485, ../sass/_action-block.scss */
   .articles-block {
     background: #ffffff;
   }
 }
 @media (max-width: 767px) {
-  /* line 1501, ../sass/_action-block.scss */
+  /* line 1495, ../sass/_action-block.scss */
   .articles-block h2 {
     margin: 20px 10px;
     font-size: 29px;
   }
 }
 
-/* line 1509, ../sass/_action-block.scss */
+/* line 1503, ../sass/_action-block.scss */
 .block_main_feature {
   background-color: #f07d00;
 }
 
-/* line 1514, ../sass/_action-block.scss */
+/* line 1508, ../sass/_action-block.scss */
 .green .block_main_feature {
   background-color: #bccf00;
 }
 
-/* line 1519, ../sass/_action-block.scss */
+/* line 1513, ../sass/_action-block.scss */
 .block-close {
   display: none;
 }
 
-/* line 1523, ../sass/_action-block.scss */
+/* line 1517, ../sass/_action-block.scss */
 #block-header-form-are-you-with-us {
   display: none;
 }
 
-/* line 1527, ../sass/_action-block.scss */
+/* line 1521, ../sass/_action-block.scss */
 .btn.cta-button, .cta-button.form-submit, .node-type-forum-discussion .comment-block .form-actions .cta-button#edit-submit, .node-type-forum-discussion .comment-block .form-actions .cta-button#edit-preview, .page-comment-reply .comment-block .form-actions .cta-button#edit-submit, .page-comment-reply .comment-block .form-actions .cta-button#edit-preview, .page-comment .comment-block .form-actions .cta-button#edit-submit, .page-comment .comment-block .form-actions .cta-button#edit-preview, .page-comment #content-area form.comment-form .form-actions .cta-button#edit-submit, .page-comment #content-area form.comment-form .form-actions .cta-button#edit-preview, .page-comment #content-area #privatemsg-new .form-actions .cta-button#edit-submit, .page-comment #content-area #privatemsg-new .form-actions .cta-button#edit-preview, .page-messages #content-area form.comment-form .form-actions .cta-button#edit-submit, .page-messages #content-area form.comment-form .form-actions .cta-button#edit-preview, .page-messages #content-area #privatemsg-new .form-actions .cta-button#edit-submit, .page-messages #content-area #privatemsg-new .form-actions .cta-button#edit-preview {
   margin: 10px;
   padding: 5px 20px !important;
 }
-/* line 1531, ../sass/_action-block.scss */
+/* line 1525, ../sass/_action-block.scss */
 .btn.cta-button a, .cta-button.form-submit a, .node-type-forum-discussion .comment-block .form-actions .cta-button#edit-submit a, .node-type-forum-discussion .comment-block .form-actions .cta-button#edit-preview a, .page-comment-reply .comment-block .form-actions .cta-button#edit-submit a, .page-comment-reply .comment-block .form-actions .cta-button#edit-preview a, .page-comment .comment-block .form-actions .cta-button#edit-submit a, .page-comment .comment-block .form-actions .cta-button#edit-preview a, .page-comment #content-area form.comment-form .form-actions .cta-button#edit-submit a, .page-comment #content-area form.comment-form .form-actions .cta-button#edit-preview a, .page-comment #content-area #privatemsg-new .form-actions .cta-button#edit-submit a, .page-comment #content-area #privatemsg-new .form-actions .cta-button#edit-preview a, .page-messages #content-area form.comment-form .form-actions .cta-button#edit-submit a, .page-messages #content-area form.comment-form .form-actions .cta-button#edit-preview a, .page-messages #content-area #privatemsg-new .form-actions .cta-button#edit-submit a, .page-messages #content-area #privatemsg-new .form-actions .cta-button#edit-preview a {
   text-decoration: none;
   color: #ffffff;
   font-size: 24px;
 }
 
-/* line 1548, ../sass/_action-block.scss */
+/* line 1542, ../sass/_action-block.scss */
 .front #wrapper {
   background: #ffffff;
 }
-/* line 1552, ../sass/_action-block.scss */
+/* line 1546, ../sass/_action-block.scss */
 .front .slider-block .holder {
   max-width: 26.2%;
 }
-/* line 1556, ../sass/_action-block.scss */
+/* line 1550, ../sass/_action-block.scss */
 .front .slider-block .block {
   padding: 0;
 }
 @media (max-width: 767px) {
-  /* line 1560, ../sass/_action-block.scss */
+  /* line 1554, ../sass/_action-block.scss */
   .front .slider-block {
     margin-top: 10px !important;
   }
 }
 
-/* line 1568, ../sass/_action-block.scss */
+/* line 1562, ../sass/_action-block.scss */
 .what-we-do .card {
   max-height: 565px;
   min-height: 565px;
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  /* line 1568, ../sass/_action-block.scss */
+  /* line 1562, ../sass/_action-block.scss */
   .what-we-do .card {
     max-height: 660px;
     min-height: 660px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1568, ../sass/_action-block.scss */
+  /* line 1562, ../sass/_action-block.scss */
   .what-we-do .card {
     min-height: 315px;
     max-height: 475px;
@@ -12873,34 +13029,34 @@ a.btn#not_right_now, a#not_right_now.form-submit {
   }
 }
 @media (max-width: 767px) {
-  /* line 1588, ../sass/_action-block.scss */
+  /* line 1582, ../sass/_action-block.scss */
   .what-we-do .card h4 {
     margin-top: 0.5em;
   }
 }
-/* line 1594, ../sass/_action-block.scss */
+/* line 1588, ../sass/_action-block.scss */
 .what-we-do .card p {
   font-size: 22px;
   line-height: 30px;
 }
 
-/* line 1601, ../sass/_action-block.scss */
+/* line 1595, ../sass/_action-block.scss */
 .card-layout {
   margin-bottom: 30px;
 }
 
-/* line 1605, ../sass/_action-block.scss */
+/* line 1599, ../sass/_action-block.scss */
 .articles-columns {
   margin-bottom: 0.5em;
 }
 
-/* line 1610, ../sass/_action-block.scss */
+/* line 1604, ../sass/_action-block.scss */
 .view-display-id-block_stream_homepage_bottom .btn.btn-transparent:hover, .view-display-id-block_stream_homepage_bottom .btn-transparent.form-submit:hover, .view-display-id-block_stream_homepage_bottom .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-submit:hover, .node-type-forum-discussion .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .node-type-forum-discussion .comment-block .form-actions .btn-transparent#edit-preview:hover, .node-type-forum-discussion .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-comment-reply .comment-block .form-actions .btn-transparent#edit-submit:hover, .page-comment-reply .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-comment-reply .comment-block .form-actions .btn-transparent#edit-preview:hover, .page-comment-reply .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-comment .comment-block .form-actions .btn-transparent#edit-submit:hover, .page-comment .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-comment .comment-block .form-actions .btn-transparent#edit-preview:hover, .page-comment .comment-block .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-comment #content-area form.comment-form .form-actions .btn-transparent#edit-submit:hover, .page-comment #content-area form.comment-form .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-comment #content-area form.comment-form .form-actions .btn-transparent#edit-preview:hover, .page-comment #content-area form.comment-form .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-comment #content-area #privatemsg-new .form-actions .btn-transparent#edit-submit:hover, .page-comment #content-area #privatemsg-new .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-comment #content-area #privatemsg-new .form-actions .btn-transparent#edit-preview:hover, .page-comment #content-area #privatemsg-new .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-messages #content-area form.comment-form .form-actions .btn-transparent#edit-submit:hover, .page-messages #content-area form.comment-form .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-messages #content-area form.comment-form .form-actions .btn-transparent#edit-preview:hover, .page-messages #content-area form.comment-form .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover, .view-display-id-block_stream_homepage_bottom .page-messages #content-area #privatemsg-new .form-actions .btn-transparent#edit-submit:hover, .page-messages #content-area #privatemsg-new .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-submit:hover, .view-display-id-block_stream_homepage_bottom .page-messages #content-area #privatemsg-new .form-actions .btn-transparent#edit-preview:hover, .page-messages #content-area #privatemsg-new .form-actions .view-display-id-block_stream_homepage_bottom .btn-transparent#edit-preview:hover {
   top: 0px;
 }
 
 @media (max-width: 767px) {
-  /* line 1617, ../sass/_action-block.scss */
+  /* line 1611, ../sass/_action-block.scss */
   #block-views-card-stream-home-page .views-field-title info h5 {
     font-size: 24px;
   }
@@ -14780,7 +14936,7 @@ ul a {
   content: "";
   width: 31px;
   height: 23px;
-  background: url('../images/sprite.png?1449160475') no-repeat;
+  background: url('../images/sprite.png?1562326301') no-repeat;
 }
 /* line 370, ../sass/layouts/_header.scss */
 .right-info a.menu-opener:hover:after {
@@ -14901,22 +15057,22 @@ ul a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 61, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 61, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]:-moz-placeholder, .search-slide .search-form input[type="text"]:-moz-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 64, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 64, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]::-moz-placeholder, .search-slide .search-form input[type="text"]::-moz-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 67, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 67, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]:-ms-input-placeholder, .search-slide .search-form input[type="text"]:-ms-input-placeholder {
   font-weight: 200;
   color: #636c73;
 }
-/* line 56, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+/* line 56, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
 .search-slide .search-form input[type="search"]::-webkit-input-placeholder, .search-slide .search-form input[type="text"]::-webkit-input-placeholder {
   font-weight: 200;
   color: #636c73;
@@ -15981,7 +16137,7 @@ nav ul li a:hover {
 /* BREAD CRUMB */
 /* line 1608, ../sass/layouts/_header.scss */
 .node-type-forum-discussion .header_image, .node-type-simple-page .header_image, .node-type-forum .header_image, .page-forum-stats .header_image {
-  background: url('../images/top-header-bg.png?1449160475') no-repeat left #5bc5ed;
+  background: url('../images/top-header-bg.png?1562326301') no-repeat left #5bc5ed;
   height: 83px;
   width: 100%;
   -moz-transition: all 0.4s ease;
@@ -16546,7 +16702,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   height: auto !important;
   background: #383c40;
   position: relative;
-  margin-top: 20px;
+  margin-top: 60px;
   z-index: 0;
   /* footer logo styles */
   /* social networks styles */
@@ -17475,7 +17631,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 /* line 88, ../sass/layouts/_profile.scss */
 .responsive-menu:after {
   content: '';
-  background: url('../images/arrow-down.png?1449160475');
+  background: url('../images/arrow-down.png?1562326301');
   width: 22px;
   height: 14px;
   right: 15px;
@@ -17748,7 +17904,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 /* line 339, ../sass/layouts/_profile.scss */
 #comments .comment-body:before, .page-user .quicktabs_main .comment-body:before {
-  background: url('../images/comment-tip-left.png?1449160475') 0 0 no-repeat;
+  background: url('../images/comment-tip-left.png?1562326301') 0 0 no-repeat;
   width: 26px;
   height: 31px;
   content: '';
@@ -18708,7 +18864,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 /* line 55, ../sass/layouts/_social.scss */
 .social-block .home-bg-stretch {
-  background: url('../images/socialbg.jpg?1449160475') no-repeat;
+  background: url('../images/socialbg.jpg?1562326301') no-repeat;
   background-size: cover;
 }
 /* line 60, ../sass/layouts/_social.scss */
@@ -20082,7 +20238,7 @@ body.sidebar #sidebar:before, .page-user #sidebar:before {
 }
 /* line 135, ../sass/layouts/_topic.scss */
 #comments .comment-body:before, .page-user .quicktabs_main .comment-body:before {
-  background: url('../images/comment-tip-left.png?1449160475') 0 0 no-repeat;
+  background: url('../images/comment-tip-left.png?1562326301') 0 0 no-repeat;
   width: 26px;
   height: 31px;
   content: '';
@@ -20398,13 +20554,13 @@ a.video_bt, .isvideo {
 }
 /* line 460, ../sass/layouts/_topic.scss */
 .topic-child-posts #edit-field-post-type-tid fieldset:nth-child(2) label:before, .topic-child-posts.view-display-id-stream_topic_page #edit-field-post-type-tid fieldset:nth-child(2) label:before {
-  background: url('../images/aaa-story-icon.svg?1521692626');
+  background: url('../images/aaa-story-icon.svg?1562326301');
   background-size: contain;
   background-repeat: no-repeat;
 }
 /* line 468, ../sass/layouts/_topic.scss */
 .topic-child-posts #edit-field-post-type-tid fieldset:nth-child(3) label:before, .topic-child-posts.view-display-id-stream_topic_page #edit-field-post-type-tid fieldset:nth-child(3) label:before {
-  background: url('../images/aaa-information-icon.svg?1521692626');
+  background: url('../images/aaa-information-icon.svg?1562326301');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -20828,7 +20984,7 @@ html.no-touch .form-type-bef-checkbox:hover:before {
 .feature-row .img-holder .feature-holder.stories .icon-Type, .feature-row .img-holder .feature-holder.information .icon-Type {
   position: relative;
   z-index: 1;
-  background: url('../images/aaa-story-icon.svg?1521692626') #ffffff center center no-repeat;
+  background: url('../images/aaa-story-icon.svg?1562326301') #ffffff center center no-repeat;
   background-size: contain !important;
   float: left;
   height: 45px;
@@ -20851,7 +21007,7 @@ html.no-touch .form-type-bef-checkbox:hover:before {
 }
 /* line 939, ../sass/layouts/_topic.scss */
 .feature-row .img-holder .feature-holder.information .icon-Type {
-  background: url('../images/aaa-information-icon.svg?1521692626') #ffffff center center no-repeat;
+  background: url('../images/aaa-information-icon.svg?1562326301') #ffffff center center no-repeat;
 }
 
 /* line 949, ../sass/layouts/_topic.scss */
@@ -21152,7 +21308,7 @@ html.no-touch .form-type-bef-checkbox:hover:before {
   content: "";
   position: absolute;
   left: -24px;
-  background: url('../images/sprite.png?1449160475') no-repeat -1px -162px;
+  background: url('../images/sprite.png?1562326301') no-repeat -1px -162px;
   width: 24px;
   top: 15px;
   height: 32px;
@@ -21237,7 +21393,7 @@ fieldset {
 @media (max-width: 767px) {
   /* line 1340, ../sass/layouts/_topic.scss */
   .node-type-topic .block-inspire.orange-box {
-    background-image: url('../images/action-bg2.jpg?1449160475');
+    background-image: url('../images/action-bg2.jpg?1562326301');
   }
 }
 
@@ -21577,7 +21733,7 @@ fieldset {
 }
 /* line 1705, ../sass/layouts/_topic.scss */
 .page-node-74566 .posts-columns.columns-full .block-symptoms {
-  background-image: url('../images/action-bg6.jpg?1449160475');
+  background-image: url('../images/action-bg6.jpg?1562326301');
 }
 @media (max-width: 767px) {
   /* line 1708, ../sass/layouts/_topic.scss */
@@ -22281,7 +22437,7 @@ h1.title, .node-type-basic-page-with-hero-large .forum-page, .node-type-basic-pa
   content: "";
   position: absolute;
   left: -24px;
-  background: url('../images/sprite.png?1449160475') no-repeat -1px -162px;
+  background: url('../images/sprite.png?1562326301') no-repeat -1px -162px;
   width: 24px;
   top: 15px;
   height: 32px;
@@ -24241,7 +24397,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .page-node-75336 .post-my-voice-actions,
 .node-type-basic-page-with-hero .post-my-voice-actions,
 .node-type-basic-page-with-hero-form .post-my-voice-actions {
-  background-image: url('../images/my-voice.jpg?1449160475');
+  background-image: url('../images/my-voice.jpg?1562326301');
 }
 /* line 13, ../sass/layouts/_understanding-autism.scss */
 .page-node-74591 .post-my-voice-actions a,
@@ -25085,7 +25241,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 */
 /* line 9, ../sass/layouts/_voice-page.scss */
 .my-voice-home .banner_text {
-  background-image: url('../images/my-voice-large-logo.png?1449160475');
+  background-image: url('../images/my-voice-large-logo.png?1562326301');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75%;
@@ -25514,7 +25670,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 255, ../sass/layouts/_voice-page.scss */
 .page-node-74596 #wrapper {
-  background-image: url('../images/wid_bg.jpg?1449160475');
+  background-image: url('../images/wid_bg.jpg?1562326301');
 }
 /* line 259, ../sass/layouts/_voice-page.scss */
 .page-node-74596 .form-text {
@@ -25564,7 +25720,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 
 /* line 315, ../sass/layouts/_voice-page.scss */
 .view-content .navigation-block {
-  background-image: url('../images/aged-16-25.jpg?1458213364');
+  background-image: url('../images/aged-16-25.jpg?1562326301');
   background-size: cover;
 }
 /* line 319, ../sass/layouts/_voice-page.scss */
@@ -25620,7 +25776,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 }
 /* line 377, ../sass/layouts/_voice-page.scss */
 .view-content .age-post {
-  background-image: url('../images/my-voice.jpg?1449160475');
+  background-image: url('../images/my-voice.jpg?1562326301');
 }
 /* line 381, ../sass/layouts/_voice-page.scss */
 .view-content .card-transparent {
@@ -26086,7 +26242,7 @@ nav .main-menu-2 li a .icon-Uparrow {
   right: 8px;
   bottom: -13px;
   content: "";
-  background: url('../images/sprite.png?1449160475') no-repeat -128px 0;
+  background: url('../images/sprite.png?1562326301') no-repeat -128px 0;
   width: 12px;
   height: 13px;
 }
@@ -26117,7 +26273,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 }
 /* line 889, ../sass/layouts/_voice-page.scss */
 .my-voice-post .content .comment-count {
-  background: no-repeat url('../images/comment-sprite.png?1449160475');
+  background: no-repeat url('../images/comment-sprite.png?1562326301');
   padding: 7px 0px 17px 0;
   width: 46px;
   text-align: center;
@@ -26136,7 +26292,7 @@ nav .main-menu-2 li a .icon-Uparrow {
 }
 /* line 905, ../sass/layouts/_voice-page.scss */
 .my-voice-post .content .comment-count.zero {
-  background: no-repeat url('../images/comment-sprite.png?1449160475') 0 -52px;
+  background: no-repeat url('../images/comment-sprite.png?1562326301') 0 -52px;
 }
 /* line 908, ../sass/layouts/_voice-page.scss */
 .my-voice-post .content .comment-count.zero .count {
@@ -26760,7 +26916,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 /* line 3, ../sass/layouts/_article.scss */
 #main2 {
   color: #081318;
-  background: url('../images/wid_bg.png?1449160475') repeat-y center #ffffff;
+  background: url('../images/wid_bg.png?1562326301') repeat-y center #ffffff;
   width: 100%;
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -27176,7 +27332,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   content: "";
   position: absolute;
   left: 120px;
-  background: url('../images/sprite.png?1449160475') no-repeat -1px -162px;
+  background: url('../images/sprite.png?1562326301') no-repeat -1px -162px;
   width: 24px;
   top: 15px;
   height: 32px;
@@ -27364,7 +27520,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   content: "";
   width: 10px;
   height: 16px;
-  background: url('../images/sprite.png?1449160475') no-repeat -14px -62px;
+  background: url('../images/sprite.png?1562326301') no-repeat -14px -62px;
 }
 /* line 603, ../sass/layouts/_article.scss */
 #main2 .article-left .article-left-holder .article-info cite a.first {
@@ -27511,7 +27667,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   .node-type-article #wrapper,
   .node-type-my-voice-blog #wrapper,
   .node-type-school-values #wrapper {
-    background: url('../images/wid_bg.png?1449160475') repeat-y center #ffffff;
+    background: url('../images/wid_bg.png?1562326301') repeat-y center #ffffff;
     background-position: 42%;
   }
 }
@@ -27601,7 +27757,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    background: url('../images/wid_bg.png?1449160475') repeat-y center #ffffff;
+    background: url('../images/wid_bg.png?1562326301') repeat-y center #ffffff;
     background-position: 75%;
     padding: 0 10px;
   }
@@ -28444,7 +28600,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
   margin-bottom: 1em;
   padding: 1em;
 }
-/* line 38, C:/Compilers/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .section-community-champions-forum .comment-wrapper .comment:after, .section-forums .comment-wrapper .comment:after {
   content: "";
   display: table;
@@ -30909,12 +31065,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 /* line 57, ../sass/components/_card-layout.scss */
 .card__categoryicon--stories {
-  background: url('../images/aaa-story-icon.svg?1521692626') #ffffff center center no-repeat;
+  background: url('../images/aaa-story-icon.svg?1562326301') #ffffff center center no-repeat;
 }
 
 /* line 61, ../sass/components/_card-layout.scss */
 .card__categoryicon--information {
-  background: url('../images/aaa-information-icon.svg?1521692626') #ffffff center center no-repeat;
+  background: url('../images/aaa-information-icon.svg?1562326301') #ffffff center center no-repeat;
 }
 
 /* line 65, ../sass/components/_card-layout.scss */

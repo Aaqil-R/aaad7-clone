@@ -2,11 +2,11 @@
 function thermo_custom_init(){
 
 	// $test = thermo_get_result1(677871);
-	$test1 = thermo_get_result(677871);
+//	$test1 = thermo_get_result(677871);
 	// dpm($test);
 	//dpm($test1);
 
-	$node = menu_get_object();
+/*	$node = menu_get_object();
 	//Edit is included to make sure that it does not affect the admin pages to edit donations
 	if($node->type == 'donations' && arg(2) != 'edit'){
 		$test = thermo_get_result($node->webform['nid']);
@@ -19,7 +19,7 @@ function thermo_custom_init(){
 		drupal_add_js(array('thermo_custom' => array('supporter_count' => $test)), 'setting');
 		drupal_add_js(array('thermo_custom' => array('definedamount' => $definedamount)), 'setting');
 		drupal_add_js(drupal_get_path('module', 'thermo_custom') . '/thermo_custom.js', 'file');
-	}
+	}*/
 }
 
 function thermo_custom_webform_submission_presave($node, $submission){

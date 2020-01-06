@@ -256,9 +256,15 @@ function ambitious_menu_link(&$variables) {
 		if ($element['#below']) {
 		$sub_menu = drupal_render($element['#below']);
 		}
-  
-		$output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
-		return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    
+    if ($element['#attributes']['class'][1] == "is-expanded") {
+      $output = l($element['#title'].'<span class="icon-Downarrow opener-sub"></span><span class="icon-Uparrow opener-sub"></span>', $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    } else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']). '>'.$output .'<ul class="slide js-slide-hidden">'. $sub_menu ."</ul>"."</li>\n";
+    }
+		
 	}
 	
 	if($element['#theme'] == 'menu_link__menu_main_menu_features_item') //if its features menu add the arrows to the links
@@ -726,6 +732,10 @@ function ambitious_field__field_closing_date(&$variables){
     $form['recipient']['#description'] = "<a class='tooltips'><span class='btn-tooltip'>?</span><span class='tooltip-content'>".$form['recipient']['#description']."</span></a>";
     $form['body']['#format'] = 'plain_text';
    }
+
+  //  if($form_id == 'webform_client_form_702566'){
+  //   $form_state['redirect'] = '/sites/all/themes/ambitious/files/RftS-toolkit-v8-pp1-33_BB_11_12_19.pdf';
+  // }
 }
 
 
