@@ -1049,5 +1049,12 @@
     //     });
     // });
 
+    // Contact form on click redirect to rtfs pdf file
+    setTimeout(function(){
+        $('#webform-client-form-224896 .form-actions .webform-submit').click(function() {
+            var go_to_url = '/sites/all/themes/ambitious/files/RftS-toolkit-v8-pp1-33_BB_11_12_19.pdf';
+            window.open(go_to_url, '_target');
+        });
+    }, 2000);
 
 })(jQuery, Drupal, this, this.document);
