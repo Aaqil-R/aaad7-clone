@@ -1487,3 +1487,44 @@ label {
     }
   }
 }
+
+.section-events {
+  #content-area {
+    form {
+      label {
+        padding-bottom: 5px;
+      }
+
+      .webform-component--title {
+        label {
+          display: inline-block;
+          line-height: 1;
+          width: 100%;
+        }
+      }
+      
+      .webform-component--date-of-birth {
+        .webform-container-inline {
+          display: flex;
+
+          @include breakpoint($desktop) {
+            display: block;
+          }
+
+          fieldset.form-type-select {
+            padding-left: 0;
+            padding-right: 15px;
+            
+            @include breakpoint($desktop) {
+              padding-right: 0;
+            }
+          }
+
+          // .webform-calendar.hasDatepicker {
+          //   display: none;
+          // }
+        }
+      }
+    }
+  }
+}
