@@ -842,4 +842,14 @@ function aaa_mailchimp_data_log($data , $customessage){
 	drupal_write_record('aaa_logger_mailchimp', $datarecord);
 }
 
+/**
+ * Changing checkbox and select list value to a string
+ * Form - right-from-the-start / node/702566/webform.
+ */
+function mailchimp_custom_webform_submission_presave($node, &$submission) {
+  if ($submission->nid == '702566') {
+  	$i_am = implode(",", $submission->data[6]);
+  	$i_am = str_replace("_"," ", $i_am);
+  }
+}
 ?>
