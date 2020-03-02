@@ -854,12 +854,12 @@ function mailchimp_custom_webform_submission_presave($node, &$submission) {
   }
 
   if ($submission->nid == '702426') {
-  	// dpm($submission->data[11]);
+  	dpm($submission->data[11]);
   	$i_am = implode(",", $submission->data[11]);
   	$i_am = str_replace("_"," ", $i_am);
-  	// dpm($i_am);
-  	$submission->data[11] = $i_am;
-  	// dpm($submission);
+  	dpm($i_am);
+  	$submission->data[11][0] = $i_am;
+  	dpm($submission);
   }
 }
 ?>
