@@ -847,9 +847,19 @@ function aaa_mailchimp_data_log($data , $customessage){
  * Form - right-from-the-start / node/702566/webform.
  */
 function mailchimp_custom_webform_submission_presave($node, &$submission) {
+	// dpm($submission);
   if ($submission->nid == '702566') {
   	$i_am = implode(",", $submission->data[6]);
   	$i_am = str_replace("_"," ", $i_am);
+  }
+
+  if ($submission->nid == '702426') {
+  	// dpm($submission->data[11]);
+  	$i_am = implode(",", $submission->data[11]);
+  	$i_am = str_replace("_"," ", $i_am);
+  	// dpm($i_am);
+  	$submission->data[11] = $i_am;
+  	// dpm($submission);
   }
 }
 ?>
