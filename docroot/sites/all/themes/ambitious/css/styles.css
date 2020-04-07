@@ -31728,7 +31728,7 @@ input[name=panel]:checked ~ .accordion__content {
 }
 /**/
 /* Overriding styles for the forum site */
-/* line 5, ../sass/_forumsite.scss */
+/* line 6, ../sass/_forumsite.scss */
 .section-talk-about-autism #block-menu-menu-header-top-menu,
 .section-talk-about-autism a.donate-btn,
 .section-talk-about-autism .header-top .right-info,
@@ -31736,16 +31736,22 @@ input[name=panel]:checked ~ .accordion__content {
 .node-type-forum-discussion #block-menu-menu-header-top-menu,
 .node-type-forum-discussion a.donate-btn,
 .node-type-forum-discussion .header-top .right-info,
-.node-type-forum-discussion .region.region-footer-right {
+.node-type-forum-discussion .region.region-footer-right,
+.page-search-forum-discussion #block-menu-menu-header-top-menu,
+.page-search-forum-discussion a.donate-btn,
+.page-search-forum-discussion .header-top .right-info,
+.page-search-forum-discussion .region.region-footer-right {
   display: none !important;
 }
-/* line 13, ../sass/_forumsite.scss */
+/* line 14, ../sass/_forumsite.scss */
 .section-talk-about-autism .easy-breadcrumb span:first-of-type,
-.node-type-forum-discussion .easy-breadcrumb span:first-of-type {
+.node-type-forum-discussion .easy-breadcrumb span:first-of-type,
+.page-search-forum-discussion .easy-breadcrumb span:first-of-type {
   pointer-events: none;
 }
-/* line 18, ../sass/_forumsite.scss */
+/* line 19, ../sass/_forumsite.scss */
 .section-talk-about-autism #logo,
-.node-type-forum-discussion #logo {
+.node-type-forum-discussion #logo,
+.page-search-forum-discussion #logo {
   pointer-events: none;
 }
